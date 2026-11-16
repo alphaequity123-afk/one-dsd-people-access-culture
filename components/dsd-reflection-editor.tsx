@@ -22,7 +22,7 @@ function openNote(): { notes: Notes; status: string; unreadable: boolean } {
       ])) as Notes;
       return { notes, status: "Your saved note is open.", unreadable: false };
     }
-    return { notes: { ...empty }, status: "Your note saves automatically on this device.", unreadable: false };
+    return { notes: { ...empty }, status: "Your note saves automatically.", unreadable: false };
   } catch { return { notes: { ...empty }, status: "Your saved note could not be opened. It has not been replaced. You can write and download a new copy; clear the saved note explicitly before saving a replacement.", unreadable: true }; }
 }
 export default function ReflectionEditor() {
@@ -35,17 +35,17 @@ export default function ReflectionEditor() {
       setState({ notes, status: "Your new note stays on this page. The unreadable saved note has not been replaced; download this copy before leaving.", unreadable: true });
       return;
     }
-    let status = "Saved on this device.";
+    let status = "Saved.";
     try {
       if (Object.values(notes).some(Boolean)) localStorage.setItem(KEY, JSON.stringify(notes));
-      else { localStorage.removeItem(KEY); status = "Your note saves automatically on this device."; }
+      else { localStorage.removeItem(KEY); status = "Your note saves automatically."; }
     } catch { status = "This device could not save your change. Download a copy to keep your work."; }
     setState({ notes, status, unreadable: false });
   }
   function clearNote() {
     try {
       localStorage.removeItem(KEY);
-      setState({ notes: { ...empty }, status: "Your note was cleared from this device.", unreadable: false });
+      setState({ notes: { ...empty }, status: "Your note was cleared.", unreadable: false });
       setConfirmClear(false);
       setManualCopy(false);
     } catch {
@@ -71,11 +71,11 @@ export default function ReflectionEditor() {
     }
   }
   return <div className="dsd-reflection-form">
-    <p>This note stays on this device and is not submitted to the program. Keep names and private client, case, health, or personnel information out of your reflection.</p>
+    <p>Keep names and private client, case, health, or personnel information out of your reflection.</p>
     <p className="dsd-save-status" role="status" aria-live="polite">{status}</p>
     {fields.map(field => <div key={field.key}><label htmlFor={`reflection-${field.key}`}>{field.label}</label><textarea id={`reflection-${field.key}`} rows={field.rows} value={notes[field.key]} onChange={event => update({ ...notes, [field.key]: event.target.value })} /></div>)}
     <div className="dsd-form-actions"><button type="button" onClick={download}>Download your note</button><button type="button" onClick={() => setConfirmClear(true)}>Clear this note</button></div>
-    {confirmClear ? <div role="group" aria-label="Confirm clearing your note"><p>Remove the saved note from this device?</p><div className="dsd-form-actions"><button type="button" onClick={clearNote}>Yes, clear the note</button><button type="button" onClick={() => setConfirmClear(false)}>Keep my note</button></div></div> : null}
+    {confirmClear ? <div role="group" aria-label="Confirm clearing your note"><p>Remove the saved note?</p><div className="dsd-form-actions"><button type="button" onClick={clearNote}>Yes, clear the note</button><button type="button" onClick={() => setConfirmClear(false)}>Keep my note</button></div></div> : null}
     {manualCopy ? <div><label htmlFor="reflection-copy">Copy your complete note</label><textarea id="reflection-copy" readOnly rows={12} value={text} onFocus={event => event.currentTarget.select()} /></div> : null}
   </div>;
 }

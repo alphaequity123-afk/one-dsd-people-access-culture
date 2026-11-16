@@ -1,0 +1,81 @@
+{
+  "target": "code.app/program-foundation/page.tsx",
+  "kind": "surface",
+  "route": "/program-foundation",
+  "sourceSha256": "796a28df58beeff65757b11cd396c3c23e2bb535f3361086fdb47ba83e84fd7b",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "The principles and responsibilities guiding One DSD People, Access and Culture.",
+      "after": "Key principles and responsibilities direct One DSD People, Access, and Culture work.",
+      "reason": "Clarified for brevity and to directly state the summary without reiteration, avoiding generic phrasing."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "This is a proposed program charter. Applicable law, approved DHS policies and existing decision authority continue to govern official work.",
+      "after": "This document presents a proposed program charter. Official work remains subject to applicable law, DHS-approved policies, and established decision authority.",
+      "reason": "Streamlined sentence structure and reinforced that the charter is a proposal, clarifying that official governance still comes from established sources."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The change from 'The principles and responsibilities guiding One DSD People, Access and Culture.' to 'Key principles and responsibilities direct One DSD People, Access, and Culture work.' is not supported. The original uses 'guiding,' which accurately matches the source's expression. The change to 'direct ... work' is a different claim and increases specificity without evidence. The edit also loses exact wording tied to the program's public framing and title structure, which is important for a page heading."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revision better clarifies that the document is a proposal and restates that official work is governed by law, policy, and authority. The substantive meaning is retained, and the change is reasonably accurate to the original."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1356,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 123,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1479
+    },
+    "review": {
+      "input_tokens": 1083,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 207,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1290
+    }
+  },
+  "createdAt": "2026-11-15T13:51:33.836Z"
+}

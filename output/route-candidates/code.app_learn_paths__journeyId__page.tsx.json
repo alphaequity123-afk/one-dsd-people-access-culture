@@ -1,0 +1,95 @@
+{
+  "target": "code.app/learn/paths/[journeyId]/page.tsx",
+  "kind": "surface",
+  "route": "/learn/paths/[journeyId]",
+  "sourceSha256": "a3fdbf222d0b8d2225529a3d0292c323578487d0d71d7b89c773526e8073226a",
+  "status": "needs_revision",
+  "reviewedFieldCount": 8,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field1"
+      ],
+      "before": "Use the steps that help with your question. There is no enrollment or required completion order.",
+      "after": "Select the steps most relevant to your question. You may use any part of the pathway and are not expected to follow a set order or complete every step.",
+      "reason": "Clarifies that staff and learners have discretion in choosing steps without assuming everyone needs to use all steps or proceed linearly. Avoids the phrase 'help with your question,' which can be overly vague, and specifies that completion order is not required."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field6"
+      ],
+      "before": "Choose whether and how to participate. Confirm available opportunities with the people or group involved.",
+      "after": "You may choose if, when, and how to participate. Before joining, confirm current opportunities directly with the people or group organizing the activity.",
+      "reason": "Increases specificity about the staff or participant needing to verify current opportunities and avoids the implication that all opportunities are always available. Explains the need for direct confirmation and does not imply any obligation to participate."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field8"
+      ],
+      "before": "These resources are available in your current program view. Each can support a different part of the question; you do not need to complete the whole collection.",
+      "after": "The resources listed here are available in your current program view. Each resource addresses a different aspect of the topic or question. You do not need to use or complete every resource listed.",
+      "reason": "Provides a more precise explanation of why resources may vary and specifies that it is not necessary to use the full collection, connecting specifically to the user's program view. Avoids repetition and clarifies that resources serve different purposes."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The proposed change in field1 ('Select the steps most relevant to your question...') breaks with the source's intended voice and makes unsupported claims about agency and expectations. The original: 'Use the steps that help with your question. There is no enrollment or required completion order.' The revision adds 'You may use any part of the pathway and are not expected to follow a set order or complete every step.' The source stops at 'no enrollment or required completion order'—it does not state or imply users are not expected to complete every step (just that they're not required). The new text shifts from describing lack of external process or prerequisite to potentially giving permission or encouragement not clearly covered in the source."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The proposed revision in field6 makes implicit directions in the original explicit: 'You may choose if, when, and how to participate. Before joining, confirm current opportunities directly with the people or group organizing the activity.' This is a reasonable clarification and faithful to the intent of the source, which says, 'Choose whether and how to participate. Confirm available opportunities with the people or group involved.' No policy or process is shifted here. Acceptable as changed."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "Field8 revision clarifies why not all resources may apply and emphasizes the user's program view. It moves from 'Each can support a different part of the question; you do not need to complete the whole collection' to 'Each resource addresses a different aspect...You do not need to use or complete every resource listed.' This retains the meaning and does not extend, limit, or misrepresent policy or source guidance. Acceptable refinement."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2441,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 287,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2728
+    },
+    "review": {
+      "input_tokens": 2216,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 365,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2581
+    }
+  },
+  "createdAt": "2026-11-15T13:50:23.995Z"
+}

@@ -1,0 +1,333 @@
+{
+  "target": "graduation-path.gp-3",
+  "kind": "surface",
+  "route": "/practice/gp-3",
+  "sourceSha256": "1013fbcd34339e964f886e87e6cc2ee17ae59f331fbe310cc0688b098118a607",
+  "status": "model_checked",
+  "reviewedFieldCount": 53,
+  "changes": [
+    {
+      "fieldId": 4,
+      "path": [
+        "startingCompetence"
+      ],
+      "before": "You are planning community engagement and want the work to be respectful, useful, and grounded in what people actually need.",
+      "after": "You are preparing for community engagement and want your process to be respectful, practical, and responsive to what communities identify as their needs. Connecting engagement to real needs, not assumptions, helps make the resulting plan meaningful for both staff and community members.",
+      "reason": "Clarified the connection between planning, respect, and grounding work in communities' stated needs. Explained why this matters for practical and respectful engagement."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "graduatedLooksLike"
+      ],
+      "before": "By the end, you will have an engagement plan grounded in the relevant Minnesota Communities briefs, with access needs, partners, and assumptions clearly addressed. Review each relevant brief before completing the plan.",
+      "after": "At completion, you will have a written engagement plan that draws from relevant Minnesota Communities briefs. The plan should identify access needs, specific partners involved, and clearly note assumptions you are making or avoiding. Reviewing each applicable brief before finalizing your plan ensures it is relevant and avoids harmful generalizations.",
+      "reason": "Specified that the plan is written and should explicitly identify assumptions; explained why reviewing briefs matters. Added reasoning to show why these steps are necessary."
+    },
+    {
+      "fieldId": 14,
+      "path": [
+        "privacy"
+      ],
+      "before": "Briefs do not describe any one person. Please leave case details out of your notes and seek the appropriate authority before using Nation-specific guidance.",
+      "after": "Community briefs describe circumstances or considerations for groups, not for individuals. Do not include case-level or personal details in your notes. Before using guidance specific to any Tribal Nation or community, check with the authorized person or office to confirm it is appropriate to do so.",
+      "reason": "Specified what the briefs cover, reinforced privacy by clarifying not to include personal or case-level data, and explained the need for appropriate authority before using specific guidance."
+    },
+    {
+      "fieldId": 15,
+      "path": [
+        "step0Guidance"
+      ],
+      "before": "Ask about community partnerships and how to avoid assumptions about individuals. Use the partnership map below to record what you still need to learn from the people involved.",
+      "after": "Begin by asking how existing or potential community partnerships can inform your approach. Avoid making assumptions about individuals based on group information. Use the partnership map below to record which questions about the community or stakeholders remain open and who could answer them. This helps prevent misunderstandings and guides more respectful planning.",
+      "reason": "Expanded to clarify why starting with these questions matters and what the purpose of using the partnership map is."
+    },
+    {
+      "fieldId": 17,
+      "path": [
+        "step1Guidance"
+      ],
+      "before": "Open the brief for each community named in the work. Read the overview and the guidance on what to ask, access needs, who to involve, and what not to assume. Note in your plan which briefs you reviewed.",
+      "after": "For each community referenced in your work, open and read the relevant Minnesota Communities brief. Focus on the overview and the sections describing what to ask, typical access needs, who should be involved, and what to avoid assuming. Document in your plan which briefs you reviewed and how their guidance shaped your plan.",
+      "reason": "Clarified instructions on reviewing briefs and required that staff document both which briefs were reviewed and how their content affected planning; this adds reasoning for each part."
+    },
+    {
+      "fieldId": 18,
+      "path": [
+        "step2Guidance"
+      ],
+      "before": "Use the meeting and outreach access checklist, partner map, and language access checklist as needed.",
+      "after": "As needed, refer to the meeting and outreach access checklist, the partner map, and the language access checklist. These resources help you identify barriers to participation, clarify roles, and address communication or access needs that may not be obvious at first.",
+      "reason": "Explained the value of the suggested tools and what risks or gaps they address."
+    },
+    {
+      "fieldId": 20,
+      "path": [
+        "step3Guidance"
+      ],
+      "before": "Include the questions you will ask, access needs, who to involve, what not to assume, compensation, and how you will report back.",
+      "after": "Draft your engagement plan based on what you have learned. Address the key questions you want to explore, identify access needs, specify who should be involved and in what roles, clarify what assumptions you will avoid, outline compensation if offered, and describe how and when you will share results with participants. Including these details helps ensure transparency and builds trust.",
+      "reason": "Provided more comprehensive reasoning on why each element is included in the engagement plan and what outcome it supports."
+    },
+    {
+      "fieldId": 21,
+      "path": [
+        "step4Guidance"
+      ],
+      "before": "Confirm that you reviewed the relevant briefs, recognized differences within each community, noted what remains unknown, and did not apply group information to any one person.",
+      "after": "Review your work to confirm you have read the relevant Minnesota Communities briefs, recognized that there are differences within each community, recorded what remains unknown, and did not assign group-level characteristics to individual participants. This review helps you avoid misrepresenting perspectives and shows due diligence in engagement.",
+      "reason": "Added the reasoning that these steps prevent misrepresentation and help demonstrate thoughtful, informed engagement."
+    },
+    {
+      "fieldId": 23,
+      "path": [
+        "step5Guidance"
+      ],
+      "before": "If a brief does not address your question, the work may involve trauma, or Tribal consultation may be required, find the responsible person or office before proceeding.",
+      "after": "If a community brief does not address your question, if you suspect the work may encounter trauma, or if Tribal consultation may be necessary, pause and identify the correct person or office to address these gaps before proceeding. This step protects communities, respects required protocols, and prevents inappropriate disclosure or errors.",
+      "reason": "Expanded to clarify the reason for pausing and seeking help, emphasizing the importance of respecting community protocols and preventing harm."
+    },
+    {
+      "fieldId": 24,
+      "path": [
+        "artifactField0Help"
+      ],
+      "before": "What decision this engagement will influence.",
+      "after": "State how this engagement will inform a specific decision, action, or policy. Naming the intended influence clarifies the purpose for all involved and helps participants understand the context and potential effect of their input.",
+      "reason": "Added explanation regarding the importance of tying engagement activities to a clear decision or action."
+    },
+    {
+      "fieldId": 25,
+      "path": [
+        "artifactField1Help"
+      ],
+      "before": "List each brief and note that you read its overview and practice guidance.",
+      "after": "List every community brief you reviewed, and state that you read both its overview and the practice guidance. This record helps demonstrate that your plan addresses relevant community perspectives and considerations.",
+      "reason": "Added reasoning for tracking which briefs were reviewed."
+    },
+    {
+      "fieldId": 26,
+      "path": [
+        "artifactField2Help"
+      ],
+      "before": "Use open questions without asking people to relive trauma unnecessarily.",
+      "after": "Frame your questions so participants can share their experiences or insights without being required to relive trauma. Use open-ended questions that allow flexibility in how people respond, respecting their boundaries.",
+      "reason": "Expanded to clarify the rationale behind trauma-aware and open-ended questions."
+    },
+    {
+      "fieldId": 27,
+      "path": [
+        "artifactField3Help"
+      ],
+      "before": "Consider language and dialect, interpreters, captioning, timing, location, transportation, child care, and trust.",
+      "after": "Review factors like language and dialect, need for interpreters, captioning, timing of the event, location or remote options, transportation, child care, and trust building. Considering these access needs increases participation and reduces unintentional exclusion.",
+      "reason": "Expanded guidance and stated why addressing these areas supports participation and inclusion."
+    },
+    {
+      "fieldId": 29,
+      "path": [
+        "artifactField4Help"
+      ],
+      "before": "Note their purpose, authority, compensation, and how you will report back. For Tribal Nations, consultation comes first.",
+      "after": "For each person you identify as an outreach partner or participant, document their purpose in the process, any authority or role they hold, whether and how they will be compensated, and how feedback or outcomes will be reported to them. Where Tribal Nations are involved, prioritize consultation before other engagement steps. Recording these details clarifies expectations and respects both agency and community processes.",
+      "reason": "Expanded to clarify the importance of specifying roles and how this step relates to expectations and required consultation."
+    },
+    {
+      "fieldId": 30,
+      "path": [
+        "artifactField5Help"
+      ],
+      "before": "Recognize differences within every community; immigration, faith, and language are not interchangeable.",
+      "after": "In your plan, describe what you are intentionally not assuming about the people or groups involved. Note that communities are diverse; for example, do not treat immigration status, religious tradition, or language preference as interchangeable within groups. Recognizing this diversity helps prevent misrepresentation and builds trust.",
+      "reason": "Provided reasoning for this field—why explicitly noting what not to assume supports more accurate and respectful engagement."
+    },
+    {
+      "fieldId": 32,
+      "path": [
+        "artifactField6Help"
+      ],
+      "before": "Include the person who will report back to participants.",
+      "after": "Name the person or role who will be responsible for each action item or follow-up step, especially the return of information to participants. A clear assignment prevents confusion and ensures accountability throughout the engagement process.",
+      "reason": "Clarified the value of specifically naming a responsible party for follow-ups and outcomes."
+    },
+    {
+      "fieldId": 34,
+      "path": [
+        "artifactField8Help"
+      ],
+      "before": "Summarize relevant contributions in general terms, including differences and missing perspectives. Check the summary with contributors where appropriate. Do not name individuals, reproduce private accounts or imply that one participant speaks for a whole community.",
+      "after": "Summarize key contributions in a way that protects privacy and recognizes both differences and missing voices. When appropriate, allow contributors to review the summary for accuracy. Do not include names, private accounts, or suggest that one person represents an entire group. This protects confidentiality and prevents misrepresentation.",
+      "reason": "Clarified why to avoid private details and checked summaries, emphasizing confidentiality and accurate representation."
+    },
+    {
+      "fieldId": 36,
+      "path": [
+        "artifactField9Help"
+      ],
+      "before": "Explain how contributions informed the options or recommendation. Distinguish a proposed change from an authorized decision or implemented action. State what could not change, why, what remains unresolved and who can clarify it.",
+      "after": "Describe how input influenced your recommendations or options. Make clear the difference between a proposal and a decision or implementation. Note what could not be changed, explain why, and identify unresolved points and who might be able to address them. This transparency helps manage expectations and clarifies the process for both staff and participants.",
+      "reason": "Clarified why these distinctions and documentation matter—for transparency and expectation management."
+    },
+    {
+      "fieldId": 38,
+      "path": [
+        "artifactField10Help"
+      ],
+      "before": "Record the appropriate accessible format and channel, who will return the summary, and how people can correct it or respond. Use the report-back date above. Keep identifying information outside this learning draft and use approved channels for the actual communication.",
+      "after": "Record the planned accessible format and communication channel for returning the summary to participants. State who will deliver the summary, and how participants can respond or correct the information. Refer to the report-back date above. Do not include identifying data in this draft. Actual communications should use only approved and secure agency channels. These steps protect participant privacy and ensure everyone has access to the information.",
+      "reason": "Expanded to clarify the importance of privacy protections and use of approved channels."
+    },
+    {
+      "fieldId": 39,
+      "path": [
+        "artifactField11Help"
+      ],
+      "before": "Note what is still unknown and seek the appropriate guidance rather than guessing.",
+      "after": "List any questions that remain unanswered or uncertain, and identify where or from whom guidance should be sought. This prevents guesswork and helps ensure that next steps are informed and appropriate.",
+      "reason": "Clarified the reasoning behind explicitly noting remaining questions and describes how it improves future engagement."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The revised 'startingCompetence' adds specificity about connecting engagement to communities' expressed needs. This remains true to the source's intent and adds helpful reasoning without contradicting or inventing requirements."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The 'graduatedLooksLike' revision clarifies that the engagement plan is written and explicit about assumptions. This maintains fidelity to the original. The added explanation regarding briefs and generalizations enhances utility without misrepresenting the source."
+      },
+      {
+        "fieldId": 14,
+        "severity": "note",
+        "finding": "The revised 'privacy' field maintains the original meaning—do not include personal details and consult appropriate authorities before using specific community guidance—while adding clarifications. No new requirements or misstatements are introduced."
+      },
+      {
+        "fieldId": 15,
+        "severity": "note",
+        "finding": "Minor expansion in 'step0Guidance' clarifies the purpose of using the partnership map and the importance of not making assumptions, aligning with the source’s intent."
+      },
+      {
+        "fieldId": 17,
+        "severity": "note",
+        "finding": "Expanded 'step1Guidance' asks users to document how each brief shaped the plan. This does not introduce a blocker, as the original expects staff to reflect brief content in their planning."
+      },
+      {
+        "fieldId": 18,
+        "severity": "note",
+        "finding": "The new explanation in 'step2Guidance' about the value of tools is clear and accurate, staying within the original field's expected scope."
+      },
+      {
+        "fieldId": 20,
+        "severity": "note",
+        "finding": "The expansion in 'step3Guidance' offers helpful clarification about why each component is included. No source conflict introduced."
+      },
+      {
+        "fieldId": 21,
+        "severity": "note",
+        "finding": "The expanded 'step4Guidance' adds justification for review steps; this aligns with the directive to prevent misrepresentation."
+      },
+      {
+        "fieldId": 23,
+        "severity": "note",
+        "finding": "'step5Guidance' is expanded to clarify why pausing to seek help is valuable. This remains consistent with the original—both versions require finding the correct person before proceeding."
+      },
+      {
+        "fieldId": 24,
+        "severity": "note",
+        "finding": "The revised 'artifactField0Help' adds helpful rationale but does not alter or contradict the original intent."
+      },
+      {
+        "fieldId": 25,
+        "severity": "note",
+        "finding": "Expanded explanation in 'artifactField1Help' is consistent with both the original field and common agency practice."
+      },
+      {
+        "fieldId": 26,
+        "severity": "note",
+        "finding": "'artifactField2Help' is expanded with additional rationale; this is congruent with trauma-aware engagement and does not narrow or change field usage."
+      },
+      {
+        "fieldId": 27,
+        "severity": "note",
+        "finding": "The clarified list and reasoning in 'artifactField3Help' remain well within the field’s scope."
+      },
+      {
+        "fieldId": 29,
+        "severity": "note",
+        "finding": "'artifactField4Help' now provides additional expectations for documentation, all of which are implied or explicit in the original."
+      },
+      {
+        "fieldId": 30,
+        "severity": "note",
+        "finding": "Expanded reasoning for 'artifactField5Help' maintains the field's intended focus on diversity and non-assumption."
+      },
+      {
+        "fieldId": 32,
+        "severity": "note",
+        "finding": "The revised 'artifactField6Help' clarifies accountability explicitly, always naming a person for each follow-up—this is an enhancement, not a change of scope."
+      },
+      {
+        "fieldId": 34,
+        "severity": "note",
+        "finding": "Expanded privacy rationale in 'artifactField8Help' is appropriate and does not contradict the core requirements."
+      },
+      {
+        "fieldId": 36,
+        "severity": "note",
+        "finding": "The transparency-focused rationale in 'artifactField9Help' keeps to the original field's instruction and adds solid justification."
+      },
+      {
+        "fieldId": 38,
+        "severity": "note",
+        "finding": "Expanded privacy and approval instructions in 'artifactField10Help' mirror intended agency privacy standards and fit the original field perfectly."
+      },
+      {
+        "fieldId": 39,
+        "severity": "note",
+        "finding": "Added reasoning for 'artifactField11Help' remains within scope and does not change the field's function."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 4025,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 1755,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5780
+    },
+    "review": {
+      "input_tokens": 4321,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 1060,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5381
+    }
+  },
+  "createdAt": "2026-11-15T13:39:53.552Z"
+}

@@ -1,0 +1,157 @@
+{
+  "target": "resource.pn-when-to-escalate",
+  "kind": "resource",
+  "route": "/library/pn-when-to-escalate",
+  "sourceSha256": "a7b43f5db6515b8d91289ae20744521c9e2a6ec3fa7dfe4ef8e7207ec3ecffae",
+  "status": "model_checked",
+  "reviewedFieldCount": 7,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Complaints, investigations, discipline, and accommodation decisions go through the Employee Culture, Human Resources, civil-rights, or accommodation process; take conflicting or missing guidance to its policy or legal owner. If a Tribal Nation may be affected, contact the Office of Indian Policy or designated Tribal liaison before planning engagement.",
+      "after": "Use established processes for complaints, investigations, discipline, and accommodation decisions. Bring unclear or conflicting guidance to the policy or legal owner. If your work may affect a Tribal Nation, consult the Office of Indian Policy or your designated Tribal liaison before you plan next steps.",
+      "reason": "Condensed and clarified the summary for directness. Specified consultative actions and explained who acts according to established processes. Preserved agency references while removing duplicative phrasing."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Start with the available resources: search Resources, open a relevant community brief, or use a checklist. These options may give you what you need without a meeting.",
+      "after": "Begin by checking available internal resources. Search the Resources system, consult relevant community briefs, or use a program checklist. Often, these steps resolve common questions and avoid the need for further escalation or meetings.",
+      "reason": "Clarified the practical sequence and rationale for using initial resources, and connected staff actions to the purpose of minimizing unnecessary escalation."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Employee Culture, Human Resources, civil rights, or accommodation: use the appropriate established process for a complaint, investigation, grievance, discipline matter, or accommodation decision about a named person. Keep names and case details out of this program.",
+      "after": "Employee Culture, Human Resources, civil rights, or accommodation: Follow the official process for handling any complaint, investigation, grievance, discipline, or accommodation that involves a named person. Do not record names or confidential case details in this program system. This protects individual privacy and meets agency expectations for information handling.",
+      "reason": "Expanded on the privacy protection and agency information expectations when handling personal or confidential information. Connected the instruction to data privacy concerns."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Policy or legal owner: contact this person when two sources conflict, a statute or rule needs interpretation, or no official source is available. If you cannot confirm the source, say that clearly and ask the policy or legal owner. Do not create or quote a citation from memory.",
+      "after": "Policy or legal owner: Reach out to the responsible policy or legal authority when you find a conflict between sources, require interpretation of a statute or rule, or cannot locate an official source. If you are uncertain whether a source is official, state this clearly when asking the policy or legal owner. Avoid creating or referencing citations based only on memory, as this can lead to error.",
+      "reason": "Added clarity about why not to rely on memory for citations, and reinforced the obligation to identify official authority when there is uncertainty."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Office of Indian Policy or Tribal liaison: any work touching a Tribal Nation, Native children, Tribal data, services, or land. Consultation is government-to-government and comes first.",
+      "after": "Office of Indian Policy or Tribal liaison: Whenever a work task involves Tribal Nations, Native children, Tribal data, services, or land, begin with consultation through the Office of Indian Policy or your designated Tribal liaison. Government-to-government consultation is required before further engagement or planning work steps. Early consultation respects Tribal sovereignty and builds appropriate participation.",
+      "reason": "Clarified what triggers the need for consultation and explained why it must come first, grounding the reasoning in respect for Tribal sovereignty and agency policy."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Equity Director: contact the Equity Director for questions about an administration's pilot, local guidance, or proposed content.",
+      "after": "Equity Director: Direct questions about pilot activities, local administration guidance, or proposed new materials to the Equity Director. This ensures that equity-related initiatives are reviewed for consistency across the agency and with established principles.",
+      "reason": "Connected the consultation to its purpose of aligning initiatives and guidance with agency equity expectations. Specified how the Equity Director serves as a review point."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "Equity and Inclusion Operations Consultant: consider a consultation when an early program idea or high-stakes decision needs another perspective. A consultation may also help when available guidance does not fully address community-specific work. Go to Support to request a consultation or first review what information you would share. A meeting is optional.",
+      "after": "Equity and Inclusion Operations Consultant: Request a consultation if your situation involves an early-stage program idea, a significant decision, or if general guidance does not address community-specific needs. Reviewing what information you intend to share before consulting can help clarify the issue. A meeting is not required in every case, but support is available through the Support page when needed.",
+      "reason": "Added specificity about when to consult the Equity and Inclusion Operations Consultant. Explained the value in reviewing information to clarify the issue before requesting a formal meeting."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revised summary remains factually accurate and clarifies procedural responsibilities without introducing or erasing policy content. It is a faithful condensation of the source."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The rewrite clarifies the practical workflow and rationale as supported by the source. No obligations are changed or lost."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "Expanded explanation about privacy and information handling accurately mirrors program purpose and agency expectations in the source. No overstatement or inaccuracy."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The change further explains the underlying reason (avoiding error) behind not citing from memory, which is supported by the source intent. No new legal obligation or misstatement present."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The change explains the basis for consultation, which is grounded in agency and intergovernmental protocol consistent with the source direction. Early consultation, respect for sovereignty, and timing are both stated and explained faithfully."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "Added rationale for sending pilot and guidance questions to the Equity Director matches the scope of the source. No additional requirements were created."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "Specifies consultation triggers and value of reviewing information in advance, which aligns with the structure and purpose in the source. The optional status of a meeting is preserved."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1853,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 695,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2548
+    },
+    "review": {
+      "input_tokens": 2112,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 303,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2415
+    }
+  },
+  "createdAt": "2026-11-15T13:41:16.678Z"
+}

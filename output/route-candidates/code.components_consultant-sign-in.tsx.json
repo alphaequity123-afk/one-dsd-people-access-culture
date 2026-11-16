@@ -1,0 +1,67 @@
+{
+  "target": "code.components/consultant-sign-in.tsx",
+  "kind": "surface",
+  "route": "components/consultant-sign-in.tsx",
+  "sourceSha256": "d34a055b45d02bb42a678778ca730359454eeb33bad1939b60c1a24e820e2a6c",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "The workspace access key did not match. Check it and try again.",
+      "after": "The workspace access key you entered does not match our records. Check the key for accuracy and try again. Reviewing your entry can help prevent repeated errors and avoids unnecessary access delays.",
+      "reason": "Clarified the source of the error and explained the importance of checking the entry as part of a professional workflow. This revision provides more context and aligns with the standard's requirement to explain why the action matters when missing."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed change alters both the meaning and intent of the original message. The source statement, 'The workspace access key did not match. Check it and try again.', is a direct, concise notification about the mismatch, as shows in the provided source. The suggested replacement ('The workspace access key you entered does not match our records. Check the key for accuracy and try again. Reviewing your entry can help prevent repeated errors and avoids unnecessary access delays.') introduces new phrasing ('our records'), adds an explanation about workflow, and suggests consequences and broader professional recommendations not present in the original code. This is not simply a clarification—it rewrites and extends the message, violating the requirement to preserve the exact meaning of official notification text and avoid generic padding. The original text is already clear about the needed action."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1395,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 104,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1499
+    },
+    "review": {
+      "input_tokens": 1111,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 183,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1294
+    }
+  },
+  "createdAt": "2026-11-15T13:52:39.773Z"
+}

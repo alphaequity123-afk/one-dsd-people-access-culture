@@ -1,0 +1,67 @@
+{
+  "target": "code.app/learn/engagement-resources/page.tsx",
+  "kind": "surface",
+  "route": "/learn/engagement-resources",
+  "sourceSha256": "144f44445361d47ae7f58dea0810d1c10df31fdd4973ef892ee51fcd429d7e0e",
+  "status": "needs_revision",
+  "reviewedFieldCount": 7,
+  "changes": [
+    {
+      "fieldId": 6,
+      "path": [
+        "field8"
+      ],
+      "before": "The original documents are preserved. ADSA materials describe their administration’s context, including internal processes and contacts. Their inclusion for staff and public readers does not make every example a requirement for every service. Use the source dates and applicable current processes when planning.",
+      "after": "Original documents are preserved to maintain accuracy and clarity of context. ADSA materials reflect their own administration’s internal practices and contacts. These examples are provided to inform both staff and public readers, but not every detail or process applies to all services. When planning, check the document dates and confirm which procedures are currently in effect or required for your specific situation.",
+      "reason": "Clarifies that the preserved documents retain administrative context, and explains why it matters to check dates and applicability—so that staff do not assume uniform requirements. Connects the value of preservation with guidance for professional judgment."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 6,
+        "severity": "blocker",
+        "finding": "The revision alters the original record’s language and specific professional cautions. The source text carefully notes 'Their inclusion for staff and public readers does not make every example a requirement for every service,' while the rewrite generalizes this to 'not every detail or process applies to all services.' This removes the source’s explicit caution about examples not being requirements. The original also specifies, 'Use the source dates and applicable current processes when planning,' which the rewrite recasts as 'check the document dates and confirm which procedures are currently in effect or required for your specific situation,' changing both form and required action. For a page intended to preserve official records and context, altering source wording and condensing cautions is not supported."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1838,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 171,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2009
+    },
+    "review": {
+      "input_tokens": 1467,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 184,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1651
+    }
+  },
+  "createdAt": "2026-11-15T13:49:47.995Z"
+}

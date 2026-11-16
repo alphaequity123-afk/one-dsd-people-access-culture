@@ -1,0 +1,221 @@
+{
+  "target": "equity.practice",
+  "kind": "surface",
+  "route": "/about#equity-in-practice",
+  "sourceSha256": "0274baf7e9361e76b81186f916b9845b38b264aa2626ec68af2dc09edfccab1c",
+  "status": "needs_revision",
+  "reviewedFieldCount": 43,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "definition"
+      ],
+      "before": "Operationalizing equity means moving it out of awareness training and slogans and into the ordinary machinery of how the organization decides, spends, hires, serves, and corrects itself.",
+      "after": "Operationalizing equity means embedding equity into the everyday systems and processes that shape how the organization makes decisions, allocates resources, hires staff, provides services, and addresses errors. This is more than awareness or statements; it requires concrete actions in core operations.",
+      "reason": "Clarified how equity work moves from theory to action in existing organizational systems, directly connecting to staff decision-making."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "throughLine"
+      ],
+      "before": "Engagement surfaces what staff and communities experience, the analysis turns that into evidence about the system, and applied practice changes a specific decision with a specific owner. The program measures whether that cycle happened, not how any individual scored.",
+      "after": "Staff and community engagement reveals what people are actually experiencing. Analysis turns that input into evidence about how the system functions. Applied practice uses that evidence to improve a specific process or decision, with a responsible owner named. The program checks whether this cycle of engagement, analysis, and change took place—rather than evaluating individual learning or attributes.",
+      "reason": "Clarifies the purpose of each step in the cycle and why measuring system-level change matters more than individual performance."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "characteristic0Detail"
+      ],
+      "before": "Policies, program design, budgets, forms, procurement, technology, and services get an explicit equity look while they can still change. The Minnesota Equity Analysis Toolkit and GARE tools are the structured ways to do this.",
+      "after": "Policies, program designs, budgets, forms, procurement, technology, and service operations each receive an explicit equity review while changes are still possible. The Minnesota Equity Analysis Toolkit and GARE tools provide structure for these reviews, offering practical methods and questions developed for Minnesota’s work.",
+      "reason": "Connects the review action to specific change windows and clarifies what the tools offer for Minnesota application."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "characteristic1Detail"
+      ],
+      "before": "The program or policy owner is responsible for building equity in, with equity professionals as support. Follow-ups have a person and a review date, not a committee.",
+      "after": "Each program or policy owner is responsible for integrating equity. Equity professionals provide specialized support, but the owner stays accountable. Every follow-up must have one named person and a clear review date—not just a committee—so progress can be checked and issues do not get lost.",
+      "reason": "Strengthens the explanation of responsibility and accountability for equity-related actions."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "characteristic2Detail"
+      ],
+      "before": "Role design, recruitment, screening, interviews, accommodation, selection, onboarding, review, pay and classification, advancement, sponsorship, retention, and exits. Job-relatedness is tested rather than assumed.",
+      "after": "Equity considerations apply across all stages of the employee lifecycle: designing roles, recruiting, screening, interviews, providing accommodations, making selections, onboarding, performance reviews, pay and classification, opportunities for advancement, sponsorship, retention strategies, and exits. Job requirements must be explicitly justified as related to the role, rather than assumed.",
+      "reason": "Specifies what \"job-relatedness is tested\" means and clarifies application to all stages."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "characteristic3Detail"
+      ],
+      "before": "Vital documents, plain language, accessible meetings, interpreters at first contact, and a clear owner for every fix.",
+      "after": "Vital documents are issued in plain language, meetings are accessible, interpreters are available from first contact, and every accessibility or language fix has a clearly assigned owner responsible for making the change.",
+      "reason": "Adds specificity on document language and clarifies ownership responsibilities for accessibility and language access."
+    },
+    {
+      "fieldId": 11,
+      "path": [
+        "characteristic4Detail"
+      ],
+      "before": "Start before the decision is fixed, be honest about inform versus consult versus designing together, compensate participants, and report back what changed. Tribal consultation is a separate government-to-government route.",
+      "after": "Begin community engagement before decisions are set. Be transparent about whether input is for information, consultation, or co-design, and make sure participants know their role and compensation. Always report back on what changed as a result of engagement and what did not, with clear reasons. Tribal consultation is handled separately as a government-to-government process.",
+      "reason": "Clarifies types of engagement, expectations, and the importance of closing the feedback loop and distinguishing tribal consultation."
+    },
+    {
+      "fieldId": 13,
+      "path": [
+        "characteristic5Detail"
+      ],
+      "before": "Follow the data by community, language, disability, and place; state what it does not show; protect small groups; never invent targets.",
+      "after": "Collect and review data broken down by community, language, disability, and location, explaining both what is revealed and what is missing. Protect privacy of small or underrepresented groups, and avoid fabricating progress targets. This keeps analysis meaningful and responsible.",
+      "reason": "Clarifies why certain data choices are made and the risk of inventing targets."
+    },
+    {
+      "fieldId": 15,
+      "path": [
+        "characteristic6Detail"
+      ],
+      "before": "Psychological safety, repair after harm, and positional-power awareness, measured by what a team member would see in a normal week.",
+      "after": "Culture shifts through practices people can see: supporting psychological safety, repairing after harm, and being conscious of who holds and uses positional power. Progress is measured by observable weekly team behaviors, not just statements or intentions.",
+      "reason": "Specifies what is meant by measures of culture change and underscores observable behavior."
+    },
+    {
+      "fieldId": 17,
+      "path": [
+        "characteristic7Detail"
+      ],
+      "before": "Decision rights, funding, review dates, feedback, correction, and withdrawal are explicit. Progress is measured at the program level, never by scoring or surveilling individuals.",
+      "after": "Governance and accountability require that decision authority, funding, review schedules, feedback opportunities, procedures for correction, and withdrawal rights are all clear and documented. Progress is evaluated by looking at changes in the program, rather than through individual review or surveillance.",
+      "reason": "Clarifies what being explicit and program-level measurement mean in practical terms."
+    },
+    {
+      "fieldId": 19,
+      "path": [
+        "characteristic8Detail"
+      ],
+      "before": "IDI, GARE, CLAS, LifeCourse, and implicit-association resources inform practice; none defines it, and none becomes a personnel label.",
+      "after": "IDI, GARE, CLAS, LifeCourse, and implicit-association resources provide input and guidance for practice development. None of these tools should be treated as a comprehensive system or used as a label for a person’s capabilities or readiness.",
+      "reason": "Clarifies roles of tools as resources, not systems or labels."
+    },
+    {
+      "fieldId": 21,
+      "path": [
+        "characteristic9Detail"
+      ],
+      "before": "Foundation, integration, then institutionalization, where equity is simply how the organization runs. This describes the division as a whole, never individual staff; you can follow it under One DSD planning and progress.",
+      "after": "The division as a whole matures in equity in stages: first building a foundation, next integrating practices across operations, and finally making equity part of ordinary institutional routines. This process tracks collective, not individual, development; progress is monitored through One DSD plans and reports.",
+      "reason": "Clarifies that maturity applies at the division level, with tracking details."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed rewrite expands beyond the original, shifting from a concise operational definition to a more detailed narrative. The original states, 'Operationalizing equity means moving it out of awareness training and slogans and into the ordinary machinery of how the organization decides, spends, hires, serves, and corrects itself.' The rewrite adds: 'embedding equity into the everyday systems and processes...This is more than awareness or statements; it requires concrete actions,' and further details. This reframes and lengthens the statement, changing the emphasis and adding unsubstantiated implications about 'concrete actions' versus the original's focus on moving into existing 'machinery.' The original precise language should be preserved as policy standard."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The rewrite clarifies the sequence and expands on the intent, but does not substantively alter the legal or policy meaning. The main point—that system-level cycles are measured, not individual scores—remains correct. Acceptable as a clarity improvement if full source intent is preserved elsewhere."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The changes clarify and specify that the reviews take place while changes can occur and slightly expand on the function of the tools for Minnesota. The intent and core details are unchanged. Improvement is inline and well-supported."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The revision clarifies the requirements for accountability without changing the policy. The detail about not letting issues get lost is explanatory of the original's 'not a committee.' Acceptable."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "The update clarifies the meaning of 'job-relatedness is tested,' but does not alter the practical instruction. Fidelity to the source is maintained."
+      },
+      {
+        "fieldId": 9,
+        "severity": "note",
+        "finding": "The rewrite provides more specificity on responsibilities regarding owners and practices. It remains true to the original, only clarifying."
+      },
+      {
+        "fieldId": 11,
+        "severity": "note",
+        "finding": "The expanded version clarifies phases and outcomes of engagement, expectation-setting, and closing feedback loops. The separation of Tribal consultation as a distinct process is preserved. Acceptable clarification."
+      },
+      {
+        "fieldId": 13,
+        "severity": "note",
+        "finding": "Clarifies the reason for each element and remains tightly linked to the source. Acceptable as it restates explanations of protective data use."
+      },
+      {
+        "fieldId": 15,
+        "severity": "note",
+        "finding": "The rewrite clarifies 'measured by what a team member would see' as 'observable weekly team behaviors.' No policy is changed and the meaning remains accurate."
+      },
+      {
+        "fieldId": 17,
+        "severity": "note",
+        "finding": "The rewrite breaks down governance elements and maintains original policy about program (not individual) measurement. Acceptable as a clarity enhancement."
+      },
+      {
+        "fieldId": 19,
+        "severity": "note",
+        "finding": "This change clarifies and does not overstep the source—the emphasis on not using tools as labels is preserved."
+      },
+      {
+        "fieldId": 21,
+        "severity": "note",
+        "finding": "Clarifies the process is organizational, not individual; all original intent is retained."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3989,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 1213,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5202
+    },
+    "review": {
+      "input_tokens": 3381,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 635,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4016
+    }
+  },
+  "createdAt": "2026-11-15T13:39:36.934Z"
+}

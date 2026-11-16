@@ -1,0 +1,112 @@
+{
+  "target": "resource.guide-one-dsd-quarterly-report",
+  "kind": "resource",
+  "route": "/library/guide-one-dsd-quarterly-report",
+  "sourceSha256": "ff070cfa09c7c579f6c328f6e69f66ce0184fd4e7ea8e611e447d0638d23e4c3",
+  "status": "needs_revision",
+  "reviewedFieldCount": 4,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Prepare an honest account of progress, separate examples from real evidence, and identify the next action.",
+      "after": "Give a clear summary of progress, note the difference between illustrative examples and verified data, and specify what should happen next.",
+      "reason": "Improves clarity and explains the expectation for accuracy and follow-up in reporting, in line with program standards for professional guidance."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Prepare an honest account of progress, separate examples from real evidence, and identify the next action.",
+      "after": "Give a clear summary of progress. Distinguish between examples, which help explain a point, and evidence, which documents actual results. For each reporting period, indicate the next step or decision needed based on the analysis.",
+      "reason": "Provides connected, precise reasoning for each part: honest reporting matters for accuracy; examples and evidence serve different purposes; identifying the next step connects reporting to action."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Staff throughout DHS can use these resources independently. The Equity and Inclusion Operations Consultant leads the program and offers guidance and feedback; staff and decision owners carry out their own work.",
+      "after": "Staff in any DHS division may use these resources independently in their regular work. The Equity and Inclusion Operations Consultant leads the program by offering guidance and feedback, but each team and decision owner is responsible for analyzing their own activities and recording progress.",
+      "reason": "Clarifies responsibility for both program leadership and individual staff, connecting the consultant's role to staff actions."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "These program resources support analysis and planning. They do not replace official policy, required consultation, or the authority of the responsible office.",
+      "after": "These resources are meant to support analysis and planning. They complement but do not replace official policy, required consultations, or the decision-making authority of the responsible office. Use them to inform your planning, but check current policy and consult as needed.",
+      "reason": "Clarifies that these resources are supplementary tools and reinforces the need to refer to official policy and authority, with an explanation of why staff should check other sources."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The change shifts from 'honest account' to 'clear summary,' which alters the core value emphasized in the source. 'Honest account' signals an ethical duty not fully captured by 'clear summary.' The new text also omits the imperative nature of separating examples from evidence."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The rewrite introduces explanation ('examples...help explain a point,' 'evidence...documents actual results') that isn't in the original. It also prescribes structure ('for each reporting period, indicate the next step') that exceeds the scope of the source, which simply states to 'identify the next action.' This makes the instruction more prescriptive than supported."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revised field offers helpful clarification and does not contradict the source, but the addition of 'each team...analyzing their own activities' is an interpretation. This is a note, not a blocker, since it aligns with the overall message and does not introduce an unsupported claim."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "Adding that resources 'complement but do not replace' clarifies the original, and the added operational guidance ('Use them to inform your planning, but check current policy and consult as needed') is a reasonable interpretation, not a legal change. Still, it is less strictly source-grounded and veers toward minor commissioning, so it's a note."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1428,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 331,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1759
+    },
+    "review": {
+      "input_tokens": 1347,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 312,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1659
+    }
+  },
+  "createdAt": "2026-11-15T13:43:15.503Z"
+}

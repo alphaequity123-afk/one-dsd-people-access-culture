@@ -1,0 +1,186 @@
+{
+  "target": "resource.ja-accommodation-across-transitions",
+  "kind": "resource",
+  "route": "/library/ja-accommodation-across-transitions",
+  "sourceSha256": "9c7c1e1e15f9ad1184c8ae27bdea9e030abd8ea5d10e615dbb0db9498dcf5a53",
+  "status": "needs_revision",
+  "reviewedFieldCount": 9,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Accommodations that work in a current role are often lost in a rotation, acting assignment, leadership cohort, or interview process because no one owns them across the transition. This aid names each transition, its owner, and what to carry forward.",
+      "after": "When employees move into a new role—such as during a rotation, acting assignment, leadership program, or interview—the accommodations that enabled their success are often left behind because no one takes responsibility for carrying them forward. This aid identifies each type of job transition, clarifies who should be responsible during each step, and specifies what information needs to move with the employee.",
+      "reason": "Improved clarity by explicitly connecting the loss of accommodations to staff responsibility and made the explanation more precise about the practical purpose."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "The cliff is invisible to the people who design pathways and very visible to the people who fall off it. Naming an owner for accommodations across each transition is a small change that removes a structural barrier.",
+      "after": "People designing career pathways may not notice when accommodations are dropped, but for those affected, the impact is clear and harmful. Assigning responsibility for accommodations during every transition can help prevent people from losing necessary support, making advancement more accessible and reducing avoidable barriers.",
+      "reason": "Expanded the rationale by explaining the practical effects for both pathway designers and affected employees, making the importance of naming an owner more explicit."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Transitions to plan for: nomination and application, interview or selection event, acting or stretch assignment, leadership cohort or program, new team or new supervisor, and return from leave.",
+      "after": "Transitions that may result in lost accommodations include: nomination and application, interview or selection events, acting or stretch assignments, participation in leadership cohorts or programs, joining a new team or receiving a new supervisor, and returning from leave.",
+      "reason": "Reworded to directly connect transitions to potential risk, clarify examples, and improve flow for professional staff."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "For each transition, name one owner responsible for carrying existing accommodations forward and for offering accommodation to everyone entering it. The owner is a person, not a process.",
+      "after": "At each transition, identify a specific person who is responsible both for ensuring that any existing accommodations are carried forward and for offering accommodations to everyone entering the new setting. Assigning a person—not a process—gives clear point-of-contact for accountability.",
+      "reason": "Emphasized the need for an identified individual with accountability, clarified ownership, and explained why a person rather than a process is necessary."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Carry the accommodation, not the diagnosis. The receiving supervisor or program needs to know what works, not why. The accommodation process holds the confidential record.",
+      "after": "Transfer the details of the accommodation itself—not medical or diagnostic information. The person receiving the information, usually a supervisor or program lead, only needs to know what supports are needed in practice. Confidential records about a person’s diagnosis or medical history remain within the formal accommodation process, not with the supervisor.",
+      "reason": "Expanded on why only the accommodation, not the diagnosis, should be transferred, emphasizing confidentiality and practical needs."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Offer accommodation to everyone at every transition, in the same sentence used for logistics, so no one has to disclose to receive it.",
+      "after": "When communicating logistics for each transition, include an explicit offer of accommodations to everyone involved. This reduces the need for individuals to disclose a disability or health condition in order to be considered for or receive support.",
+      "reason": "Clarified how and why to offer accommodations proactively, explaining the impact on disclosure and equity."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Design cohort events accessible by default: materials in advance, captioning, flexible participation formats, no timed or drag-based activities, and time to rest.",
+      "after": "By default, structure cohort or group events to be accessible: provide materials in advance, use captioning, offer participation in multiple formats, avoid timed or drag-and-drop activities, and schedule time for rest breaks. Building accessibility into event planning removes common participation barriers.",
+      "reason": "Strengthened reasoning on proactive accessible design and specified why these elements matter."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "Check after the transition. Ask everyone, not only people who requested something, whether the arrangements worked, and fix what did not.",
+      "after": "After any transition, follow up with all involved—regardless of whether they requested accommodations—to assess if the arrangements met their needs. Address any issues that arise to support ongoing effectiveness and inclusion.",
+      "reason": "Clarified the purpose of post-transition follow-up and its role in supporting inclusion and continuous improvement."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "body",
+        6
+      ],
+      "before": "Boundaries. Accommodation decisions and disputes belong to Human Resources and the accommodation process. This aid is about pathway design and ownership; it does not decide any accommodation.",
+      "after": "Limits of this aid: Decisions about whether to provide a requested accommodation, and how to resolve disputes about accommodations, are the responsibility of Human Resources and the formal accommodation process. This aid focuses on identifying ownership within pathway design; it does not grant authority to determine or deny accommodations.",
+      "reason": "Clarified boundaries by identifying formal decision-makers, explaining what this guidance covers and what it does not."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed rewrite alters the original claim that accommodations are lost because \"no one owns them across the transition,\" shifting the cause to general staff responsibility and practical process. The source emphasizes the absence of a clear owner across transitions as the core explanation. The rewrite's focus on clarifying staff steps is not fully source-supported—it subtly changes the meaning by reframing the problem less as systemic/ownership and more as individual/administrative action. This is a substantive shift from the aid's intent."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The rationale for why naming an owner matters is expanded, but the explanation remains faithful to the source's claim: that the 'cliff' is unseen by designers and obvious to those affected, and that naming an owner removes a barrier. The added details are not misleading."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The reworded identification of transitions does not introduce new transitions or remove any source-listed transition. The connection to loss risk is consistent with source intent. This is a valid editorial clarification."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The rewrite reframes the original's 'name one owner' to 'identify a specific person,' and explains why individual accountability is required. This remains within the scope of the source."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The revision restates and slightly expands the source by naming supervisor/program lead, but retains the message: transfer accommodation, not diagnosis, and keep confidential info in the formal process."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The proposal clarifies the procedure for offering accommodations without altering the source's basic recommendation or intent."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The rewrite changes 'no timed or drag-based activities' to 'avoid timed or drag-and-drop activities,' but does not lose or alter intent. It expands rationale in a supported way."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "This restatement better explains the inclusive check-in after transition, matching the source's intent."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "Expanding 'Boundaries' to 'Limits of this aid' and clarifying the division of responsibility does not change the policy or introduce non-source content."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1934,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 773,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2707
+    },
+    "review": {
+      "input_tokens": 2255,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 484,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2739
+    }
+  },
+  "createdAt": "2026-11-15T13:43:05.708Z"
+}

@@ -1,0 +1,67 @@
+{
+  "target": "code.components/team-sign-in.tsx",
+  "kind": "surface",
+  "route": "components/team-sign-in.tsx",
+  "sourceSha256": "6744ccf32df2c1633953ee7236baffcf59011dcb90668379dfa40d462066e457",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "The team key did not match. Check it and try again.",
+      "after": "The team key you entered does not match our records. Verify the key and try again to access the team space.",
+      "reason": "The revision clarifies that the entered key was incorrect, refers to the team's records as the point of verification, and identifies the purpose—accessing the team space. This provides a more precise explanation of the issue and its relevance for the user."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The original source text is: 'The team key did not match. Check it and try again.' The proposed revision changes the meaning in several key ways: (1) It adds 'you entered,' changing the agent from generic to refer directly to the user's action. (2) It claims 'does not match our records'—the source does not state or imply any check against records, only a match check. (3) It introduces 'to access the team space'—the source stops at explaining the mismatch, not stating the goal. These alterations are unsupported by the source and add specifics that are not present, violating the requirements to preserve original meaning and scope."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1345,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 98,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1443
+    },
+    "review": {
+      "input_tokens": 1055,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 158,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1213
+    }
+  },
+  "createdAt": "2026-11-15T13:56:33.703Z"
+}

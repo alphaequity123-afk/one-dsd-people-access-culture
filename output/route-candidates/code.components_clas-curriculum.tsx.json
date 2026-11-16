@@ -1,0 +1,81 @@
+{
+  "target": "code.components/clas-curriculum.tsx",
+  "kind": "surface",
+  "route": "components/clas-curriculum.tsx",
+  "sourceSha256": "9c3f290da36c49e572ee8c43f394bd6766ecb31f9ed8ac10396e9b1f88998fed",
+  "status": "needs_revision",
+  "reviewedFieldCount": 24,
+  "changes": [
+    {
+      "fieldId": 6,
+      "path": [
+        "field6"
+      ],
+      "before": "You do not need a group. You can pause, revisit a lesson or use the sample service notice. Reflection is optional and does not need to be shared. Leave names, case details and other private information out of learning notes.",
+      "after": "You do not need to complete these lessons as a group. You may pause at any time, revisit lesson content, or refer to the sample service notice. Reflection exercises are optional and do not require sharing unless your team requests it. Keep learning notes free of names, specific case details, or other private information to protect privacy and ensure learning records remain general.",
+      "reason": "Revised to clarify how staff can use the curriculum individually or with others; added reasoning about privacy for learning notes."
+    },
+    {
+      "fieldId": 23,
+      "path": [
+        "field26"
+      ],
+      "before": "Use the current procedures applicable to your role and program when taking action.",
+      "after": "Follow the current procedures that apply to your program and professional role when taking any action. This ensures alignment with existing requirements and program authority.",
+      "reason": "Added reasoning about why using current procedures is necessary and whose authority applies."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 6,
+        "severity": "blocker",
+        "finding": "The revision introduces new claims absent from the source. The source simply reassures users that no group is needed, lessons can be paused or revisited, a sample service notice is available, reflection is optional and private, and that private information should be omitted from learning notes. The revision adds that reflection exercises 'do not require sharing unless your team requests it' and further reasoning on privacy—neither is in the source code. Stick with the source language and do not add conditions or explanations absent from the official program description."
+      },
+      {
+        "fieldId": 23,
+        "severity": "blocker",
+        "finding": "The revision expands the instruction to specify that following procedures ensures 'alignment with existing requirements and program authority.' This reasoning is not present in the source, which simply states: 'Use the current procedures applicable to your role and program when taking action.' Added explanations about authority and alignment introduce material not present in the official text."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 5792,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 217,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 6009
+    },
+    "review": {
+      "input_tokens": 4922,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 204,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5126
+    }
+  },
+  "createdAt": "2026-11-15T13:52:25.864Z"
+}

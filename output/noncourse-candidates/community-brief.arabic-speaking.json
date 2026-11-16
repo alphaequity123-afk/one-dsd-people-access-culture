@@ -1,0 +1,96 @@
+{
+  "target": "community-brief.arabic-speaking",
+  "kind": "surface",
+  "route": "/minnesota-communities/arabic-speaking",
+  "sourceSha256": "5d546855c51a58ceb362f4976a3f8043743acb17c2cc7a148432bdd05f12686e",
+  "status": "model_checked",
+  "reviewedFieldCount": 19,
+  "changes": [
+    {
+      "fieldId": 2,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Arabic varieties differ enough that an interpreter from one region may not serve another well; Arabic is also a religious language for many non-Arab Muslims, which is not the same as a household language.",
+      "after": "It is important to check which Arabic variety a person uses because dialects can be distinct enough that an interpreter from one region may not effectively communicate with someone from another. Additionally, Arabic serves as a religious language for many non-Arab Muslims, which does not necessarily reflect a person’s household or everyday language. Without identifying these differences, there is a risk of miscommunication or inappropriate language support.",
+      "reason": "Expanded explanation ties directly to practical staff action and clarifies consequences of not checking Arabic variety."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "nameNote"
+      ],
+      "before": "Ask which variety of Arabic and how names appear on documents.",
+      "after": "Ask which Arabic variety a person speaks and how their names are listed on official documents. This helps match the interpreter more closely to the person’s background and ensures accuracy when reviewing records or translation.",
+      "reason": "Adds practical reason for asking about name appearance and language variety, focused on service accuracy and documentation."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "accessChecks",
+        0
+      ],
+      "before": "Regional variety on the request when possible.",
+      "after": "List the specific regional variety of Arabic needed whenever possible in the interpreter request. This helps prevent mismatches that could cause miscommunication.",
+      "reason": "Explains the reason for specifying regional variety in requests, connecting it to effective communication."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The expanded text in 'whyItMatters' is supported by the source's original intent. It remains within the scope of the original explanation—identifying interpreter mismatch risk and the distinction of Arabic as a religious versus household language—and adds practical consequences for not checking dialect. The addition does not distort or overstate the source, and is justified by the kind of practical, colleague-focused guidance established in the standard. The text is within the policy's grade and style guidance."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The update to 'nameNote' deepens the reasoning without introducing unsupported instructions. The clarification ('This helps match... and ensures accuracy') remains within the reason for asking, as implied in the original field, and is common practice in official document review. This does not invent obligations or procedures beyond those implied by the context and serves the standard’s intent of adding substantive, source-grounded clarity."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "The full sentence in 'accessChecks' explains the original note ('Regional variety on the request when possible.') with practical justification for staff. It does not alter or contradict the original requirement; rather, it improves source-grounded engagement and clarifies the impact on communication, consistent with source and standard."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2076,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 278,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2354
+    },
+    "review": {
+      "input_tokens": 1410,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 278,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1688
+    }
+  },
+  "createdAt": "2026-11-15T13:40:36.768Z"
+}

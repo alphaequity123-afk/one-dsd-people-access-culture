@@ -1,0 +1,95 @@
+{
+  "target": "code.components/multimedia/critical-incident-scene.tsx",
+  "kind": "surface",
+  "route": "components/multimedia/critical-incident-scene.tsx",
+  "sourceSha256": "57211e0754cdf5217658ee06a494a9c6ec14201da11faf97e7a908e93f145a39",
+  "status": "model_checked",
+  "reviewedFieldCount": 20,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "A participant asks for the file and time to read it. The scenario does not tell us why they need either.",
+      "after": "A participant requests the file and additional time to read it. The scene notes the request for both, but does not explain the participant’s reasons or circumstances.",
+      "reason": "Clarifies that the scene does not provide reasoning and clearly distinguishes observable actions from unconfirmed motives or needs."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "field8"
+      ],
+      "before": "Use the scene to practice the lesson’s four lines. Look for the timing, materials and requests that can be described. The dialogue below supplies the facts of this practice event.",
+      "after": "Use this practice scene to apply the lesson’s four lines. Identify when the materials were provided and what was requested in the conversation. The dialogue supplies only what occurred; avoid adding interpretations or motives.",
+      "reason": "Refines the instruction to emphasize distinguishing observed facts from added assumptions, in line with the standard for professional reasoning."
+    },
+    {
+      "fieldId": 13,
+      "path": [
+        "field14"
+      ],
+      "before": "Use “Notes to take with you” below to draft your response. Separate what the scene tells you from what you would need to ask.",
+      "after": "Use the “Notes to take with you” section below to develop your response. Separate information that is directly shown in the scene from questions you would need to ask to understand the situation fully.",
+      "reason": "Expands and clarifies the instruction, specifying why it matters to distinguish direct evidence from further inquiry."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The change is editorial: 'A participant asks for the file and time to read it. The scenario does not tell us why they need either.' becomes 'A participant requests the file and additional time to read it. The scene notes the request for both, but does not explain the participant’s reasons or circumstances.' The new text remains faithful to the source and its intent, providing slightly more precise distinction between observable request and unconfirmed motives—the meaning and boundary is unchanged. This fits the source, which states: 'A participant asks for the file and time to read it. The scenario does not tell us why they need either.'"
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "The revision 'Use this practice scene to apply the lesson’s four lines. Identify when the materials were provided and what was requested in the conversation. The dialogue supplies only what occurred; avoid adding interpretations or motives.' rewords and clarifies, but reflects the substantive instructions in the source, which called for observing timing, materials, and requests. The clarification about avoiding added interpretations matches the pedagogical intent and source example, and is appropriate under the standard."
+      },
+      {
+        "fieldId": 13,
+        "severity": "note",
+        "finding": "The change further explains the reason for separating observed and inferred information, and is substantively consistent with the source: 'Separate what the scene tells you from what you would need to ask.' The expansion to specify 'to understand the situation fully' makes explicit a professional reasoning habit the source expects, and the overall intent is unchanged."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 4171,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 323,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4494
+    },
+    "review": {
+      "input_tokens": 3461,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 327,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3788
+    }
+  },
+  "createdAt": "2026-11-15T13:54:12.372Z"
+}

@@ -1,0 +1,95 @@
+{
+  "target": "code.app/learn/readings/pathways/page.tsx",
+  "kind": "surface",
+  "route": "/learn/readings/pathways",
+  "sourceSha256": "f8afb7acc089c4bb0fa09448e56645b131a7c4d8827e25f9bb9c182e76422377",
+  "status": "needs_revision",
+  "reviewedFieldCount": 5,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field2"
+      ],
+      "before": "Directors, managers, supervisors and staff can use these suggestions individually or with colleagues. Choose by the work you are doing, not by your job title. Use practice examples or information appropriate to share.",
+      "after": "Directors, managers, supervisors, and staff may use these suggestions either alone or with colleagues. Select suggestions that match the work you are doing, not your position or title. When sharing examples or information, use material that is suitable and respects privacy or consent when needed.",
+      "reason": "Clarified use by all roles without referencing ability and explained the importance of choosing work-appropriate examples, with added specificity about considering privacy or consent when sharing."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field4"
+      ],
+      "before": "Before reopening your notes, explain the idea in your own words. After trying it, write down what happened, what remains uncertain and one adjustment you would make. Revisit the question after your next relevant task or team conversation.",
+      "after": "Before reviewing your notes, restate the idea in your own words. After you have tried applying it, record what happened, what is still unclear, and one change you would make. Revisit the question after your next related task or team discussion to compare your observations and thinking over time.",
+      "reason": "Improved clarity of instructions, made sequence clearer, and added purpose for each reflective step. Specified that the revisit involves comparing outcomes, supporting shared learning and continuous improvement."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field5"
+      ],
+      "before": "These activities are suggestions written for this program. They do not replace the authors’ arguments, official guidance or the perspectives of people affected by a decision.",
+      "after": "These activities are suggestions written for use in this program. They do not replace the authors’ reasoning, official policy, or the lived perspectives of people affected by a decision.",
+      "reason": "Clarified that program suggestions supplement, but do not substitute for, source materials or stakeholder views. Used more precise terms for reasoning, policy, and lived experience."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The rewrite changes the original scope by adding a privacy or consent condition for sharing examples, which is not present in the source. The source merely says 'Use practice examples or information appropriate to share,' which advises appropriateness but does not introduce privacy, consent, or a formal privacy warning. Also, the original says to choose \"by the work you are doing, not by your job title\"; the rewrite paraphrases this in a way that could suggest more restrictive selection by role. The original flatly states the resource is for directors, managers, supervisors and staff, and warns not to choose by title, but does not mention 'respects privacy or consent.' The edit adds unsupported legal/ethical implications and changes emphasis about role/use."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The rewrite for field 4 clarifies the instructions and sequences without blocking issues, but it adds 'compare your observations and thinking over time,' which is not stated or implied in the original, though it is broadly reasonable for the context. Not a blocker but extrapolates slightly."
+      },
+      {
+        "fieldId": 4,
+        "severity": "blocker",
+        "finding": "The change in field 5 shifts 'authors’ arguments, official guidance or the perspectives of people affected' to 'authors’ reasoning, official policy, or the lived perspectives of people affected.' This is not wholly equivalent. 'Official guidance' and 'official policy' are not always the same. 'Arguments' and 'reasoning' differ; the former refers to claims made, while the latter refers to the reasoning process. 'The lived perspectives' is more specific than 'the perspectives' and introduces jargon not found in the source. This rewording changes the meaning and precision of the disclaimer as written."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1989,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 346,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2335
+    },
+    "review": {
+      "input_tokens": 1839,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 374,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2213
+    }
+  },
+  "createdAt": "2026-11-15T13:50:29.224Z"
+}

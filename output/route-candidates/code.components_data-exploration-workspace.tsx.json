@@ -1,0 +1,109 @@
+{
+  "target": "code.components/data-exploration-workspace.tsx",
+  "kind": "surface",
+  "route": "components/data-exploration-workspace.tsx",
+  "sourceSha256": "32ad017d0629de02634e1f49a256f34dded80e5c745069d29db82eda05c2ddd5",
+  "status": "needs_revision",
+  "reviewedFieldCount": 27,
+  "changes": [
+    {
+      "fieldId": 2,
+      "path": [
+        "field3"
+      ],
+      "before": "Compare groups, follow change over time, and decide what needs a closer look. Start with the ADSA goals or explore data from any DHS program.",
+      "after": "You can compare groups, track changes over different reporting periods, and determine what may require further examination. Start with the ADSA goals or use data from any DHS program to support your analysis. Each option can help you identify meaningful differences or trends that may inform an equity review.",
+      "reason": "Expanded the explanation with explicit connections to DHS staff tasks and clarified the practical purposes of each action. The revision emphasizes how comparing groups or examining trends supports deeper analysis rather than simply stating features."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field5"
+      ],
+      "before": "Use group totals with no names, identifying details, or individual employee records. Files are examined on this device; opening a file does not publish it.",
+      "after": "Use only group-level totals; do not include names, identifying details, or individual staff records. Files are reviewed locally on this device—opening a file does not publish your data or make it available to others.",
+      "reason": "Clarified why staff must use group-level data and what protecting identifiers accomplishes. Specific language replaced the general instruction to reduce risk of misunderstanding regarding data handling and privacy."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field7"
+      ],
+      "before": "Use this only on a device you trust. A downloaded working copy includes the original group totals, including small groups; keep it private.",
+      "after": "Only use this setting on a device you trust to store sensitive information. Downloaded working copies will include all original group totals, even for small groups. Protect the file to reduce the risk of disclosing private details.",
+      "reason": "Clarified why staff should use caution when saving a working copy, specifying that all group totals—including sensitive ones—are included and require protection to prevent possible disclosure. This makes the privacy rationale explicit."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "field8"
+      ],
+      "before": "A CSV file contains one row for each group and reporting period. Include the program, goal, measure, group, period, count, total, source, and source date. A count records how many met the measure, and a total records how many were eligible. Leave missing figures blank. Give each row a unique ID.",
+      "after": "A CSV file must have one row for every combination of group and reporting period. Required columns include program, goal, measure, group, period, numerator (count), denominator (total), source, and source date. The \"count\" is the number who met the measure; the \"total\" is the number eligible. If a figure is missing, leave it blank. Use a unique ID for each row to prevent confusion when merging or comparing files.",
+      "reason": "Clarified that each combination must have its own row and each required column serves a distinct purpose. The reason for unique IDs is explained in connection with data management practices used by DHS/DSD staff."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The expanded field correctly clarifies the actions, context, and purpose for DHS staff. It does not exceed the evidence or introduce policy claims. This addition aligns with the standard and is source-supported."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The change adds specificity and directness to the privacy instruction, making the intent clearer without adding unsupported claims. This aligns with policy expectations and better supports staff understanding."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "The revision on group data retention clarifies the privacy implications for staff, restates the potential risk, and explicitly connects the instruction with personal information protection. No blocker identified."
+      },
+      {
+        "fieldId": 8,
+        "severity": "blocker",
+        "finding": "The revised version alters the required field names: original language uses 'count' and 'total' but the change introduces 'numerator (count)' and 'denominator (total)'. The UI, help text, and data model consistently mention 'count' and 'total', not 'numerator' and 'denominator'. Further, stating that a row is for each 'combination' slightly raises precision without fundamentally changing the scope, but the source does not support the suggestion that the unique ID is needed 'to prevent confusion when merging or comparing files'—the source simply says 'Give each row a unique ID.' The restatement is not fully source-supported and creates mismatches in terminology that are liable to confuse users when compared to UI labels, CSV templates, and backend processing."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 9547,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 487,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 10034
+    },
+    "review": {
+      "input_tokens": 8849,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 322,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 9171
+    }
+  },
+  "createdAt": "2026-11-15T13:53:03.068Z"
+}

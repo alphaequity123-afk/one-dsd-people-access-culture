@@ -1,0 +1,109 @@
+{
+  "target": "code.app/consultant/resources/page.tsx",
+  "kind": "surface",
+  "route": "/consultant/resources",
+  "sourceSha256": "27d58a50b2d08edb69032aa8885f87064ad176ae351819620840944661d9b166",
+  "status": "needs_revision",
+  "reviewedFieldCount": 4,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Resource review is not connected in this copy of the program.",
+      "after": "Resource review is unavailable in this program copy. Staff cannot access draft or published resources for review decisions here.",
+      "reason": "Clarifies why resource review is unavailable and what practical limitation this imposes for staff. Adds specificity on the implication for workflow."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "No resource drafts are waiting for review.",
+      "after": "There are no draft resources awaiting review at this time.",
+      "reason": "Improves clarity and aligns with standard program communication. \"At this time\" emphasizes temporality."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "Published and withdrawn resources",
+      "after": "Resource publication and withdrawal history",
+      "reason": "Replaces generic wording with a more specific and connected heading to support staff quickly identifying the section's purpose."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": "No resource history is available in this program view.",
+      "after": "This program view does not show resource history. Staff cannot check prior published or withdrawn resources here.",
+      "reason": "Explains the consequence for staff when the history is unavailable, clarifying what is and is not accessible in this program state."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The source text: 'Resource review is not connected in this copy of the program.' The proposed change: 'Resource review is unavailable in this program copy. Staff cannot access draft or published resources for review decisions here.' The addition implies draft and published resources are inaccessible, but the source only states resource review is 'not connected.' There is no evidence that both draft and published resources are inaccessible or that staff action is limited as described. The added explanation exceeds what the source claims and introduces unsupported workflow limitations."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The change from 'No resource drafts are waiting for review.' to 'There are no draft resources awaiting review at this time.' is within reasonable language variation and does not materially alter meaning. Both versions reflect exactly what is shown if drafts.length === 0."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The section heading change from 'Published and withdrawn resources' to 'Resource publication and withdrawal history' alters the mode from noun listing to an implied record or chronology. The source heading is specific to resource states (published, withdrawn) while the proposed heading might suggest a broader or different set of content, which is not directly supported by the list rendered in the code. This is an interpretive change, not a direct rewrite, and is not justified by the source."
+      },
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "The change from 'No resource history is available in this program view.' to 'This program view does not show resource history. Staff cannot check prior published or withdrawn resources here.' goes beyond the source. The original only states the absence of resource history information in the current view. The added statement about staff’s inability to check prior published or withdrawn resources is more specific than supported; the code merely states what appears in the present view context, not overall access rights or workflow impact."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1901,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 209,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2110
+    },
+    "review": {
+      "input_tokens": 1699,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 400,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2099
+    }
+  },
+  "createdAt": "2026-11-15T13:48:11.613Z"
+}

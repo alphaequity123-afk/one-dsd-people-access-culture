@@ -1,0 +1,67 @@
+{
+  "target": "code.components/equity-analysis-ladder.tsx",
+  "kind": "surface",
+  "route": "components/equity-analysis-ladder.tsx",
+  "sourceSha256": "fbbd4ed9abab2a9b410f5121110ba26559d5041a2285fcabb67bf11702403b49",
+  "status": "needs_revision",
+  "reviewedFieldCount": 3,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Equity analysis scales with the stakes. Most decisions need a short, honest check; a few need sustained attention from several people. Each level below points to the next, so you can start small and go deeper only when the work calls for it. When DHS policy requires a full equity analysis, a quick check does not satisfy it: see",
+      "after": "Adjust the depth of your equity analysis based on the importance and impact of the decision. Most routine choices benefit from a brief, direct review, while more significant or complex decisions require deeper and more collaborative analysis. The sequence below is designed to help you match your approach to the scale of the decision. Guidance at each level explains when to proceed further. If agency policy requires a full equity analysis, completing only a quick check is not sufficient; refer to",
+      "reason": "Improved clarity about why depth matters, specifying that the purpose is to match the analysis to the decision's scale and impact. Replaced rhetorical language with direct explanation and provided context for why to proceed to deeper engagement. Retained clear reference to agency policy requirement."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The revision substitutes several sentences of original meaning, omitting the factual statement 'Equity analysis scales with the stakes' and the brief characterization that 'Each level below points to the next, so you can start small and go deeper only when the work calls for it.' The rewritten text adds generalizations (such as 'the importance and impact of the decision') and substitutes 'direct' and 'collaborative' for the original 'short, honest check' and 'sustained attention from several people.' These are authorial interpretations or extrapolations not supported by the source text. The rhetorical effect and some substance are lost in translation, changing descriptive guidance into a procedural imperative and weakening the link to the actual process in RUNGS. The plain language standard calls for a professional, source-anchored explanation, not reinterpretation by analogy or substitution. The rewritten text is not source-faithful and is a blocker for accurate policy and practice communication."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2036,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 172,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2208
+    },
+    "review": {
+      "input_tokens": 1777,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 214,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1991
+    }
+  },
+  "createdAt": "2026-11-15T13:53:26.007Z"
+}

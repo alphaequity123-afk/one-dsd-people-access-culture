@@ -1,0 +1,67 @@
+{
+  "target": "dsd-program.support-planning",
+  "kind": "surface",
+  "route": "/one-dsd/programs/support-planning",
+  "sourceSha256": "6804c7e106257c6b4122ac71677fe92f534eb5b2043ad6ff672533934f4cc3c1",
+  "status": "model_checked",
+  "reviewedFieldCount": 5,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "intro"
+      ],
+      "before": "Standards and support for the people who plan services with individuals and families.",
+      "after": "Guidance, standards, and resources for staff responsible for working directly with people and families to develop support plans and manage service eligibility, access, and coordination. This includes practical tools and clarifications for consistently meeting state and federal requirements while keeping each person's needs and choices central to planning. Clear, coordinated support planning reduces confusion, helps manage risks, and improves service access for those receiving disability services.",
+      "reason": "Expanded the summary to clarify what staff do in this area, the types of guidance and tools provided, and why consistent, person-centered planning matters for individuals and system performance."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The expanded introduction accurately aligns with established objectives for support planning and case management within DSD, including person-centered planning, managing eligibility, service access, and compliance. It provides additional context and rationale for the work, enhancing clarity for a professional audience without introducing unsupported claims or legal shifts. The explanation that clear planning reduces confusion, manages risks, and improves access is supported by established best practices and guidance referenced in source materials."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1174,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 146,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1320
+    },
+    "review": {
+      "input_tokens": 834,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 106,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 940
+    }
+  },
+  "createdAt": "2026-11-15T13:38:30.470Z"
+}

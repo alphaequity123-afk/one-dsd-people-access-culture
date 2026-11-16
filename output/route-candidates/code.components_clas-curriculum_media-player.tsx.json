@@ -1,0 +1,95 @@
+{
+  "target": "code.components/clas-curriculum/media-player.tsx",
+  "kind": "surface",
+  "route": "components/clas-curriculum/media-player.tsx",
+  "sourceSha256": "7dd00cb934831b24ce3337fa6e85c18577299ea75a23b181ad8639c930bfb78c",
+  "status": "needs_revision",
+  "reviewedFieldCount": 3,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Your browser cannot play this video. The transcript below has every sentence.",
+      "after": "This browser cannot play the video. The transcript below provides each sentence for review.",
+      "reason": "Improved specificity and tone by stating that the transcript is available for reference if media playback is not supported. Clarified purpose without condescension or slogan."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Your browser cannot play this audio. The transcript below has every sentence.",
+      "after": "This browser cannot play the audio. The transcript below provides each sentence for review.",
+      "reason": "Updated for consistency, clarity, and to express the purpose of the transcript when audio is unsupported, aligning with professional communication standards."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": ", where you left off on this device.",
+      "after": ", marking where you previously stopped on this device.",
+      "reason": "Clarified the meaning of resumption and removed casual phrasing, making the sentence more direct and precise in describing the saved playback position."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed change for field0 is not source-supported. The original wording ('Your browser cannot play this video. The transcript below has every sentence.') matches the standard for a factual, non-condescending notice and preserves the official meaning; it is not a slogan or imprecise. Changing it to 'This browser cannot play the video. The transcript below provides each sentence for review.' rewrites the source's meaning, omits exact match with the user-facing error, and is not justified by the cited reasons. The program writing standard requires preserving official and published error text exactly where a transcript is tied to an audio/video feature, and does not allow inventing new text for error handling outside a documented style update or branding mandate."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The change for field1 is not source-supported. The existing string ('Your browser cannot play this audio. The transcript below has every sentence.') meets the specification as a plain, comprehensible notification. The proposed alternative changes the phrasing and slightly shifts the meaning without justification from a source, official style decision, or documented error language update. The writing standard and the component logic both call for retaining the precise published record for error notices tied to fallback content."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The edit on field2 ('where you left off on this device.' to 'marking where you previously stopped on this device.') is an unauthorized language change to a user-facing functional description. The program writing standard requires that language indicating continuity or resume points in multimedia interfaces be preserved unless an updated official record provides a change. The original is plain, unambiguous, and directly supports user expectations for media playback."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3096,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 175,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3271
+    },
+    "review": {
+      "input_tokens": 2867,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 368,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3235
+    }
+  },
+  "createdAt": "2026-11-15T13:52:17.159Z"
+}

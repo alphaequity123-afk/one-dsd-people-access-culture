@@ -51,7 +51,6 @@ export default async function CommunityOutreachPage() {
         <summary className="min-h-11 cursor-pointer font-semibold" id="care-title">Before you use the figures and the directory</summary>
         <p className={styles.note}>{text("numbersNote")}</p>
         <p>{text("tribalNote")} <Link href="/learn/tribal-referral">Native American and Tribal-specific guidance</Link>.</p>
-        <p>{text("privacyNote")}</p>
       </details>
     </div>
   </EditableSurfaceRegion>;

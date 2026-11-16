@@ -1,0 +1,361 @@
+{
+  "target": "community-brief.karen",
+  "kind": "surface",
+  "route": "/minnesota-communities/karen",
+  "sourceSha256": "6ad0a9959110c1ed6aeca5a15b40e931d2b2d683d3914ca5881412bff3a25be3",
+  "status": "needs_revision",
+  "reviewedFieldCount": 22,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "whoAndWhere"
+      ],
+      "before": "Karen (Kayin) people from Burma/Myanmar lived through decades of conflict with the Burmese state, long stays in camps in Thailand, and resettlement into the Twin Cities and Greater Minnesota, including southern Minnesota towns.",
+      "after": "Karen (Kayin) people from Burma/Myanmar have experienced many years of political conflict with the Burmese state, extended periods in refugee camps in Thailand, and have resettled throughout the Twin Cities and Greater Minnesota, including rural towns in the southern part of the state. This context shapes families’ experiences before and after arriving in Minnesota.",
+      "reason": "Expanded to clarify the impact of displacement and why settlement patterns matter for service access."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "A broad 'Burmese' or 'Asian' category may keep a Karen person from receiving the right support. S'gaw and Pwo may require different interpreters. Services must also reach Karen communities in rural Minnesota, not only St. Paul.",
+      "after": "Using a broad label such as 'Burmese' or 'Asian' can prevent a Karen person from receiving services that match their language and cultural needs. S'gaw Karen and Pwo Karen are distinct dialects—requesting the correct interpreter ensures effective communication. Programs need to include Karen communities in rural Minnesota, not just the St. Paul area, to avoid unintentional gaps in outreach or service delivery.",
+      "reason": "Clarified the consequences of broad categories, emphasized interpreter accuracy, and explained why reaching rural areas is necessary."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "withinGroupDiversity"
+      ],
+      "before": "Baptist and Buddhist streams both live here. Literacy in the language of the form is not guaranteed.",
+      "after": "Both Baptist and Buddhist Karen live in Minnesota, often within the same local area. Not all Karen Minnesotans read or write the language used on official forms, which affects how they receive and understand information.",
+      "reason": "Specified the local presence of multiple faiths and linked literacy to information access."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "alsoUsedNames",
+        0
+      ],
+      "before": "Kayin (official Burmese usage)",
+      "after": "Kayin (the term used officially in Burma)",
+      "reason": "Clarified that 'Kayin' is the official Burmese term, reflecting how it is used in the country of origin."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "alsoUsedNames",
+        1
+      ],
+      "before": "Burmese (a national label, not this community)",
+      "after": "Burmese (the national category; not specific to the Karen community)",
+      "reason": "Clarified that 'Burmese' is a national term and does not identify Karen individuals."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "nameNote"
+      ],
+      "before": "Ask which Karen language the household speaks and how names appear on documents.",
+      "after": "Ask which Karen language or dialect is spoken in the household, and confirm how family members' names appear on legal or official documents.",
+      "reason": "Added specificity to the language question and clarified the type of documents being referenced."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "whatToAsk",
+        2
+      ],
+      "before": "Which church or community organization, if any, does the family want involved?",
+      "after": "Does the family wish to involve a particular church or community organization? If so, which one?",
+      "reason": "Restated as a clear question to check specific preferences."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "whatToAsk",
+        3
+      ],
+      "before": "Do you agree with this plan? Please tell me if not.",
+      "after": "Do you agree with the proposed plan? Please let me know if you would like changes.",
+      "reason": "Clarified intent and invited concrete input, reducing potential miscommunication."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "accessChecks",
+        0
+      ],
+      "before": "Dialect on the interpreter request.",
+      "after": "Include the specific Karen dialect (S'gaw or Pwo) when requesting an interpreter.",
+      "reason": "Added detail to ensure dialect is specified and reduces the risk of miscommunication."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "accessChecks",
+        1
+      ],
+      "before": "Church networks are often the real information channel; a mailed notice may not be.",
+      "after": "Recognize that church networks often share information more effectively than mail; sent notices may not reach everyone.",
+      "reason": "Clarified why mailed notices may not work and linked to the role of church networks."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "accessChecks",
+        2
+      ],
+      "before": "Transportation and distance in Greater Minnesota counties.",
+      "after": "Consider the impact of transportation challenges and long distances when serving Karen households in Greater Minnesota counties.",
+      "reason": "Specified the relevance for service planning in rural areas."
+    },
+    {
+      "fieldId": 11,
+      "path": [
+        "whoToInvolve",
+        0
+      ],
+      "before": "Language access lead or interpreter services, with the dialect written on the request.",
+      "after": "Engage language access staff or interpreter services, ensuring the interpreter request lists the correct Karen dialect.",
+      "reason": "Clarified who to engage and highlighted the importance of dialect specification."
+    },
+    {
+      "fieldId": 12,
+      "path": [
+        "whoToInvolve",
+        1
+      ],
+      "before": "Equity Director for the administration or the person responsible for the program.",
+      "after": "Consult with the Equity Director or the program’s designated equity lead to address potential barriers or gaps in service.",
+      "reason": "Specified the action and tied it to addressing equity."
+    },
+    {
+      "fieldId": 13,
+      "path": [
+        "whoToInvolve",
+        2
+      ],
+      "before": "Community partner organizations identified in this brief, with a clear purpose, role, compensation, and plan to report back.",
+      "after": "Involve community-based partner organizations described in this brief, and clarify their specific role, compensation, and how they will report on activities.",
+      "reason": "Emphasized defining expectations and practical arrangements for partners."
+    },
+    {
+      "fieldId": 14,
+      "path": [
+        "whoToInvolve",
+        3
+      ],
+      "before": "Karen-led organizations in Minnesota, as partners.",
+      "after": "Work directly with Karen-led organizations in Minnesota to support meaningful community involvement in planning and decision-making.",
+      "reason": "Explained the purpose of partnership with Karen-led organizations."
+    },
+    {
+      "fieldId": 15,
+      "path": [
+        "whatNotToAssume",
+        0
+      ],
+      "before": "Do not assume a smile or quiet endurance is consent.",
+      "after": "A smile or quiet agreement does not always indicate consent. Confirm understanding and agreement directly with the person or family.",
+      "reason": "Explained why checking for consent is necessary."
+    },
+    {
+      "fieldId": 16,
+      "path": [
+        "whatNotToAssume",
+        1
+      ],
+      "before": "Do not rely on a single news story for cultural context about Burma or Myanmar.",
+      "after": "Do not rely on a single news source or story for understanding Karen communities or current issues in Burma/Myanmar.",
+      "reason": "Clarified that multiple sources are needed for context."
+    },
+    {
+      "fieldId": 17,
+      "path": [
+        "whatNotToAssume",
+        2
+      ],
+      "before": "Do not assume the family lives in the Twin Cities.",
+      "after": "Do not assume every Karen family is in the Twin Cities; many live in Greater Minnesota.",
+      "reason": "Made the implication clear for service planning."
+    },
+    {
+      "fieldId": 18,
+      "path": [
+        "spotlightBody"
+      ],
+      "before": "The Karen Organization of Minnesota connects cultural learning with youth development and community life. Its work includes a weaving circle and opportunities for young people to tell stories through theater. These are places where people share skills and shape what comes next.",
+      "after": "The Karen Organization of Minnesota creates opportunities for cultural learning, youth development, and community connection. For example, a weaving circle teaches traditional skills, and theater programs encourage young people to share their stories and experiences. These spaces foster skills and support community development.",
+      "reason": "Expanded on the types of programs and clarified their impact."
+    },
+    {
+      "fieldId": 19,
+      "path": [
+        "spotlightLinkLabel"
+      ],
+      "before": "Explore the Karen Organization of Minnesota",
+      "after": "Learn more about the Karen Organization of Minnesota",
+      "reason": "Provided a neutral invitation to explore resources, avoiding directive language."
+    },
+    {
+      "fieldId": 20,
+      "path": [
+        "reflectionBody"
+      ],
+      "before": "What interests and skills might a young person want you to notice beyond the reason for a referral?",
+      "after": "Beyond the immediate referral, what strengths, interests, or talents might a young person in the Karen community want you to notice?",
+      "reason": "Focused the reflection question on concrete strengths and interests."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The added sentence ('This context shapes families’ experiences before and after arriving in Minnesota.') goes beyond the evidence offered in the original source. The insertion of reasoning and causal framing not expressed in the original brief is not supported by the provided surface source. Retain only the narrated facts per the source, not implied generalizations."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The rewrite restates the original meanings with added clarity, and provides justified elaboration on the consequences of vague categories and interpreter error. The revised field is more explicit but does not materially misstate or invent new obligations."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "This field is acceptably expanded, as the original surface source identifies both Baptist and Buddhist Karen in Minnesota and flags uncertain literacy: expansion is reasonable, not speculative."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "Clarification of 'Kayin' as the official Burmese term reflects the original intent, supports user understanding, and does not misrepresent the source."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "Expansion to clarify 'Burmese' as a general category retains the intent and slightly improves specificity."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "Adding the dialect aspect and specifying official documents does not materially alter the meaning, and it clarifies the intent of the original field."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "Restating as a fuller question still aligns with the original prompt; no blocker."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "Expanding the prompt to invite concrete input does not overstep the instructional nature of this guidance."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "Detail added here (S'gaw or Pwo) is in line with the rest of the source information and serves clarity."
+      },
+      {
+        "fieldId": 9,
+        "severity": "note",
+        "finding": "Added clarity about why church networks are communication channels is non-blocking and provides explanatory value."
+      },
+      {
+        "fieldId": 10,
+        "severity": "note",
+        "finding": "Rewording for the rural context is aligned with the intent of alerting about service barriers in Greater Minnesota."
+      },
+      {
+        "fieldId": 11,
+        "severity": "note",
+        "finding": "No unsupported claims added; this is a stylistic and clarifying revision."
+      },
+      {
+        "fieldId": 12,
+        "severity": "note",
+        "finding": "Enhancement connects the field to explicit equity concerns, which is implicit in the 'who to involve' list."
+      },
+      {
+        "fieldId": 13,
+        "severity": "note",
+        "finding": "No added obligation or unsupported content; this is an elaboration of procedure for engagement with partners."
+      },
+      {
+        "fieldId": 14,
+        "severity": "note",
+        "finding": "Adding a bit more specificity to the purpose of partnering with Karen-led orgs is not a blocker."
+      },
+      {
+        "fieldId": 15,
+        "severity": "note",
+        "finding": "This is an acceptable clarification on the importance of explicitly confirming consent."
+      },
+      {
+        "fieldId": 16,
+        "severity": "note",
+        "finding": "Elaboration for clarity does not contradict the original field."
+      },
+      {
+        "fieldId": 17,
+        "severity": "note",
+        "finding": "Added specificity about rural locations is not a blocker."
+      },
+      {
+        "fieldId": 18,
+        "severity": "blocker",
+        "finding": "The new text ('For example, a weaving circle teaches traditional skills, and theater programs encourage young people to share their stories and experiences. These spaces foster skills and support community development.') invents new detail not present in the original surface source, which only listed a weaving circle and theater in a single sentence and did not frame community development as a result. This expansion creates a narrative and claims of impact beyond the evidence provided."
+      },
+      {
+        "fieldId": 19,
+        "severity": "note",
+        "finding": "'Learn more' is a neutral alternative to 'Explore'. Either is permitted; this is non-blocking."
+      },
+      {
+        "fieldId": 20,
+        "severity": "note",
+        "finding": "Expanded to give examples of strengths, as implied by the original, without introducing unsupported claims."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2281,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 1121,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3402
+    },
+    "review": {
+      "input_tokens": 2834,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 1070,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3904
+    }
+  },
+  "createdAt": "2026-11-15T13:40:16.412Z"
+}

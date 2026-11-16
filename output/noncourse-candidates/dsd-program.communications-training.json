@@ -1,0 +1,67 @@
+{
+  "target": "dsd-program.communications-training",
+  "kind": "surface",
+  "route": "/one-dsd/programs/communications-training",
+  "sourceSha256": "adb1e162a6ed69ff5c4c80904c3ad18a3586ebfefd83d9f29da68394468605ed",
+  "status": "needs_revision",
+  "reviewedFieldCount": 5,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "intro"
+      ],
+      "before": "Division learning, internal and external communication, and plain-language practice.",
+      "after": "Division learning includes training for staff and partners, clear internal and external communications, and using plain language so that information is accessible to everyone. These practices help staff understand expectations, share updates accurately, and maintain clear records of guidance. When teams adopt plain-language approaches, they reduce confusion for colleagues and people who use DSD services. Explaining decisions in straightforward language improves trust and helps everyone make informed choices. Routine communication planning also clarifies roles and follow-up steps, especially during changes in policy or operations.",
+      "reason": "Expanded to explain why clear learning and communication practices matter, detailing how these actions support staff, maintain records, and serve people who use services, as required by the standard."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The expanded 'intro' adds substantial new explanation about why clear learning and communication matter, mentioning support for staff and service users, the importance of accurate updates, records of guidance, trust, roles, and follow-up. The original source only listed: 'Division learning, internal and external communication, and plain-language practice.' The expansion introduces unsupported claims and changes the source's scope, which does not comply with the policy requiring strict adherence to the evidence."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1168,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 168,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1336
+    },
+    "review": {
+      "input_tokens": 851,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 131,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 982
+    }
+  },
+  "createdAt": "2026-11-15T13:38:42.511Z"
+}

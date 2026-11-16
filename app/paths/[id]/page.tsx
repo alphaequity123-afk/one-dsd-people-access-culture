@@ -12,7 +12,6 @@ import { domainForPath, getDomain } from "@/lib/domains";
 import { domainSurfaceId } from "@/lib/domains/surfaces";
 import { consultationIntakeEnabled } from "@/lib/intelligence/consult/availability";
 import { ProgramContextNote } from "@/components/program-context";
-import { ParticipationNotice } from "@/components/participation-notice";
 import { canonicalStaffHref, contextualizeSupportAction } from "@/lib/product";
 import { requestedContentScope, requestedProductContext } from "@/lib/product/request-context";
 import { EditableSurfaceRegion, prepareEditableSurface } from "@/components/editable-surface";
@@ -108,7 +107,7 @@ export default async function PathPage({ params, searchParams }: { params: Promi
                 <li key={f}>{f}</li>
               ))}
             </ul>
-            <p className="mt-3 text-sm text-muted">{stringValue(shell, "privacyLabel")}: {p.privacy}</p>
+            {p.privacy ? <p className="mt-3 text-sm text-muted">{stringValue(shell, "privacyLabel")}: {p.privacy}</p> : null}
             {p.hrWall ? <p className="mt-2 text-sm font-bold" style={{ color: "var(--red-strong)" }}>{stringValue(shell, "confidentialRouteNote")}</p> : null}
           </div>
         </section>
@@ -120,7 +119,7 @@ export default async function PathPage({ params, searchParams }: { params: Promi
           </h2>
           <p className="notice mt-2" role="note">
             <strong>Read it here, then download it to use. </strong>
-            This page does not save anything you write, so keep your notes in your own working file.
+            Keep your notes in your own working file.
           </p>
           <PathBrowse path={p} />
         </section>
@@ -129,10 +128,7 @@ export default async function PathPage({ params, searchParams }: { params: Promi
           <p className="mt-2">Reading notes from the program&apos;s collection, for the thinking behind these steps.</p>
           <ul className="mt-3 list-disc pl-6">{readingsFor(p.id, 4).map(item => <li key={item.id}><Link href={item.href}>{item.title}</Link>{item.why ? <span className="block text-sm">{item.why}</span> : null}</li>)}</ul>
         </section> : null}
-        <details className="card mt-8"><summary className="font-semibold">Carry this preparation into practice</summary><p className="mt-3">Use the downloaded checklist to prepare your working notes. A draft does not authorize a change; confirm the applicable requirements and responsible decision before implementation. Keep identifying information out of practice notes.</p><p className="mt-3"><Link href={withWorkOrigin("/my-work/plan", origin)}>Prepare an action and review plan</Link> for a step within your responsibility. After an approach is used, <Link href={withWorkOrigin("/program/reflection", origin)}>record what happened and what remains uncertain</Link>.</p>{p.id === "gp-2" ? <p className="mt-3">Before recommending a policy change, <Link href={withWorkOrigin("/practice/requirements", origin)}>prepare a requirements crosswalk</Link> to identify source authority, affected work and unresolved questions for the person responsible.</p> : null}{p.id === "gp-3" ? <p className="mt-3">The optional report-back draft in the engagement checklist helps explain what was heard, what changed, what could not change and why. Return the appropriate summary to participants through an approved accessible channel; this page does not send it.</p> : null}{p.id === "gp-4" ? <p className="mt-3">The optional expertise brief can help a workgroup describe the knowledge it needs, a proposed contribution and the review required before engaging someone. <Link href={withWorkOrigin("/support/right-person", origin)}>Find the person or area responsible</Link> for program requirements, procurement, professional advice or access support. No provider, qualification, permission or funding is established by completing the brief.</p> : null}</details>
-        <div className="mt-10">
-          <ParticipationNotice surface="path_practice" />
-        </div>
+        <details className="card mt-8"><summary className="font-semibold">Carry this preparation into practice</summary><p className="mt-3">Use the downloaded checklist to prepare your working notes. A draft does not authorize a change; confirm the applicable requirements and responsible decision before implementation. Keep identifying information out of practice notes.</p><p className="mt-3"><Link href={withWorkOrigin("/my-work/plan", origin)}>Prepare an action and review plan</Link> for a step within your responsibility. After an approach is used, <Link href={withWorkOrigin("/program/reflection", origin)}>record what happened and what remains uncertain</Link>.</p>{p.id === "gp-2" ? <p className="mt-3">Before recommending a policy change, <Link href={withWorkOrigin("/practice/requirements", origin)}>prepare a requirements crosswalk</Link> to identify source authority, affected work and unresolved questions for the person responsible.</p> : null}{p.id === "gp-3" ? <p className="mt-3">The optional report-back draft in the engagement checklist helps explain what was heard, what changed, what could not change and why. Return the appropriate summary to participants through an approved accessible channel.</p> : null}{p.id === "gp-4" ? <p className="mt-3">The optional expertise brief can help a workgroup describe the knowledge it needs, a proposed contribution and the review required before engaging someone. <Link href={withWorkOrigin("/support/right-person", origin)}>Find the person or area responsible</Link> for program requirements, procurement, professional advice or access support. No provider, qualification, permission or funding is established by completing the brief.</p> : null}</details>
       </div>
       </EditableSurfaceRegion>
     </EditableSurfaceRegion>

@@ -1,0 +1,81 @@
+{
+  "target": "code.components/my-view-client.tsx",
+  "kind": "surface",
+  "route": "components/my-view-client.tsx",
+  "sourceSha256": "91ad7350af995dc6606d1562448b4bad0f730b4fb51d893229eecb61d9872939",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Some saved information could not be opened. It is still on this device. You can try opening the related page again or remove the saved information here.",
+      "after": "Some saved information could not be read. It remains stored on this device. You can try returning to the associated page to open it, or choose to remove the saved information on this page. This can help clear storage issues or avoid confusion from outdated data.",
+      "reason": "Revised for clarity on why unreadable saved information might matter, specifying actions and potential consequences for maintaining data accuracy or storage."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Deleting all private information also removes your practice plans, practice reflection, and saved resources from this browser. Files you have downloaded remain on your device.",
+      "after": "When you delete all private information from this browser, your practice plans, practice reflection notes, and saved resources are also removed. Any files you have downloaded are still on your device. Clearing this data may be necessary if you want to reset your saved work, address storage problems, or prepare this browser for shared use.",
+      "reason": "Expanded to state why deleting private information matters and what consequences users should expect, specifying the practical effects and reasoning for the action."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed change for field0 deviates from the exact wording of the official message shown in the code: 'Some saved information could not be opened. It is still on this device. You can try opening the related page again or remove the saved information here.' The rewrite adds explanations about potential storage issues and possible consequences ('to avoid confusion from outdated data', 'to help clear storage issues', etc.) that are not present or supported in the source. Preserving the official user-facing notice is required by policy, and explanations or added reasoning not present in the source should not be introduced into these notification fields."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The revised field1 text expands the original message with explanations and extra context ('may be necessary if you want to reset your saved work, address storage problems, or prepare this browser for shared use') that are not present in the source. The notification in code only says: 'Deleting all private information also removes your practice plans, practice reflection, and saved resources from this browser. Files you have downloaded remain on your device.' The rewrite departs from the official notification by giving advice and listing user motivations not found in the actual source text."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 4414,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 202,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4616
+    },
+    "review": {
+      "input_tokens": 4220,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 295,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4515
+    }
+  },
+  "createdAt": "2026-11-15T13:54:55.492Z"
+}

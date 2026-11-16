@@ -1,0 +1,81 @@
+{
+  "target": "code.app/equity-review/structural/page.tsx",
+  "kind": "surface",
+  "route": "/equity-review/structural",
+  "sourceSha256": "5d1a40a2a121c52ae8eff50ada3a3d49003df4db1b5b127a1a6bafe14df62f5d",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Examine barriers in a DHS process, trace decision points, and develop an action with a responsible role and a review date.",
+      "after": "Review a DHS process to identify barriers, map key decision points, and propose a specific action with assigned responsibility and a clear review date.",
+      "reason": "Clarifies the need to connect each step—identifying barriers and analyzing decisions—to the final task of proposing an actionable change. Specifies the importance of assigning responsibility and establishing a review date to support implementation and accountable follow-up."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Use these eight steps for a policy, service, or workplace process anywhere in DHS. Work independently or with colleagues, and ask the Equity and Inclusion Operations Consultant for guidance when helpful.",
+      "after": "Apply these eight steps to any DHS policy, service, or workplace process. You may complete the review on your own or with colleagues. If questions arise, consult the Equity and Inclusion Operations Consultant for insight or direction.",
+      "reason": "Strengthens clarity by explicitly stating where and how to apply the steps, refers to collaboration as an option rather than an expectation, and explains that consulting the identified staff provides further explanation or guidance when needed."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revision rewrites the original instead of clarifying. The original: 'Examine barriers in a DHS process, trace decision points, and develop an action with a responsible role and a review date.' The proposed: 'Review a DHS process to identify barriers, map key decision points, and propose a specific action with assigned responsibility and a clear review date.' While similar in meaning, the revision introduces 'propose a specific action' (implying a new step or outcome) and specifies 'assigned responsibility' and 'clear review date,' which may create the sense of additional obligations or specificity not supported by the original. This is a change, not a clarification. Policy and instruction wording must be preserved."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The rewrite improves clarity but is not strictly necessary. The difference is minimal: both versions specify that the steps can be used for a policy, service, or workplace process anywhere in DHS, and both allow independent or collaborative work. The rewrite expands slightly on the consultant's role but does not add legal or procedural obligations."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1570,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 192,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1762
+    },
+    "review": {
+      "input_tokens": 1366,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 270,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1636
+    }
+  },
+  "createdAt": "2026-11-15T13:48:50.522Z"
+}

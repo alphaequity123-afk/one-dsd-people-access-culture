@@ -1,0 +1,137 @@
+{
+  "target": "code.app/site-map/page.tsx",
+  "kind": "surface",
+  "route": "/site-map",
+  "sourceSha256": "d654cc918df4cfd418e8fcade877180ef7aec7e6041a287070ec053cc973db34",
+  "status": "needs_revision",
+  "reviewedFieldCount": 6,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Find learning, resources and practical support for your work.",
+      "after": "Find resources, learning tools, and practical support relevant to your work with DSD and Minnesota DHS.",
+      "reason": "Clarifies that the resources are tied to DSD and DHS work, adding context for staff. The original statement was sufficiently brief but benefitted from this additional specificity without introducing new requirements or unsupported claims."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Prepare and review a piece of work",
+      "after": "Prepare or review your work",
+      "reason": "Uses plain language to describe the purpose, reflecting the direct application to staff activities. The revision gives a concise action-oriented label, consistent with internal guidance style."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "These resources help connect understanding with an analysis, plan or review. Choose what fits your responsibility; a prepared draft does not authorize a change.",
+      "after": "Use these resources to inform an analysis, plan, or review related to your area of responsibility. Selecting materials that match your work supports informed decision-making. Drafting a document does not itself authorize changes; follow designated approval processes.",
+      "reason": "Clarifies how resources connect to analysis and planning, and why matching them to responsibility matters. Explains the reason and consequence of preparing a draft without authority, in line with the writing standard's requirement for substantive explanation."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": "Within Aging and Disability Services",
+      "after": "Resources for Aging and Disability Services staff",
+      "reason": "Makes the section heading explicit about its audience. The revised heading helps staff quickly see its connection to their role, improving navigability and specificity."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field4"
+      ],
+      "before": "Aging and Disability Services Administration",
+      "after": "Aging and Disability Services Administration (ADSA)",
+      "reason": "Adds the common abbreviation for clarity, as it is referenced elsewhere and within DHS. This helps staff distinguish this unit from other parts of DHS, especially those new to the administration."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field8"
+      ],
+      "before": "DSD planning and reviewing progress",
+      "after": "Planning and reviewing DSD progress",
+      "reason": "Reorders the words for consistency with professional subject headings and to clarify that the activity relates to DSD as a whole. This more directly reflects DHS and DSD practice around planning and review."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revision adds 'relevant to your work with DSD and Minnesota DHS,' introducing a specific scope that is not supported by the source. The original says only 'your work.' The source contains no reference or limitation to DSD or Minnesota DHS for this statement and offers generic site-wide navigation. Adding this detail, while plausible, overstates site scope for users who may represent a broader or external audience."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "This is a stylistic rewording that maintains the intent and is supportable by the source. Either version is clear and accurate."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revision clarifies reasoning for staff and expands on the approval process. While the addition of designated approval processes is not explicit in the source, it can be inferred from agency expectations. The broader explanation is reasonable as long as it avoids inventing specific DHS policy, which it does."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "Changing the heading to 'Resources for Aging and Disability Services staff' clarifies the audience, but this introduces an audience statement ('for staff') that is an inference. The source text is a navigational heading, and this inference matches the standard of making labels more explicit for clarity. Not a blocker."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "Adding the abbreviation '(ADSA)' is accurate and clarifies the source without changing meaning. This is an editorial clarification, not a policy or content shift."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "Changing the word order for clarity is an allowable editorial adjustment. Meaning remains preserved."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2227,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 398,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2625
+    },
+    "review": {
+      "input_tokens": 2201,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 355,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2556
+    }
+  },
+  "createdAt": "2026-11-15T13:51:48.164Z"
+}

@@ -1,0 +1,81 @@
+{
+  "target": "equity-toolkit.home",
+  "kind": "surface",
+  "route": "/learn/equity-toolkit",
+  "sourceSha256": "7ce701986b43c98929aecdfa04e7f0bb5d4d99736e7dc5a22f901892448bcbe7",
+  "status": "needs_revision",
+  "reviewedFieldCount": 101,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "intro"
+      ],
+      "before": "Examine how a decision may affect people differently, consider alternatives, and prepare for a conversation about what should happen next.",
+      "after": "This toolkit helps you examine how a decision could affect people in different ways, identify possible alternatives, and prepare for a conversation about next steps.",
+      "reason": "The revision clarifies the toolkit's function and intended outcomes in plain language, connecting the examination of impacts, alternatives, and decision preparation. It avoids ambiguity and ties the sentence more directly to process in DHS/DSD contexts."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "companionNote"
+      ],
+      "before": "These five steps are a program companion, not the official toolkit sequence. Optional practice does not replace the toolkit, required review, or engagement with affected people.",
+      "after": "These five companion steps are for learning and practice; they are not the official toolkit sequence or a substitute for required review. Using this practice does not replace the official toolkit or direct engagement with affected people.",
+      "reason": "This revision explains the distinction between the companion steps and the official process, clarifies the role of practice, and avoids ambiguity about what does or does not replace required engagement."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed revision for the intro field adds explanatory material (\"This toolkit helps you...\"), increases sentence length, and introduces new phrasing about 'intended outcomes' and 'DHS/DSD contexts' not present in the original source. The existing wording is already in clear, plain language and the purpose is not ambiguous. The change also subtly shifts from 'may affect' (potential, open event) to 'could affect' (arguably similar but the original is more open and less determined) and from 'what should happen next' (a broad phrasing) to 'next steps' (which can be interpreted as more procedural, possibly narrowing the framing). In sum, the revision adds unnecessary padding and reframing not grounded in the source."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The proposed revision for companionNote expands the source in ways unsupported by the evidence. The original states: 'These five steps are a program companion, not the official toolkit sequence. Optional practice does not replace the toolkit, required review, or engagement with affected people.' The proposed change adds that the steps are 'for learning and practice' (not in the source), describes them as 'not a substitute for required review' (which rephrases but also subtly broadens the claim), and repeats that practice does not replace the official toolkit or direct engagement (which the original says more concisely). Overall, the new version introduces longer, less direct phrasing, changes the official expression 'companion, not the official toolkit sequence' to 'companion steps' for learning (which changes meaning), and elaborates on 'substitute' in ways not present in the official wording. This expands and alters the meaning beyond what is supported by the source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 7168,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 383,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 7551
+    },
+    "review": {
+      "input_tokens": 3506,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 380,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3886
+    }
+  },
+  "createdAt": "2026-11-15T13:37:24.957Z"
+}

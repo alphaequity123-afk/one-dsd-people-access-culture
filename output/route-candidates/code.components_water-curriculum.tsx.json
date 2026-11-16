@@ -1,0 +1,123 @@
+{
+  "target": "code.components/water-curriculum.tsx",
+  "kind": "surface",
+  "route": "components/water-curriculum.tsx",
+  "sourceSha256": "410a3987a3dd179d7983beeb7e12b818b356b254b59c0d77420d2700d08d0ccc",
+  "status": "needs_revision",
+  "reviewedFieldCount": 10,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field3"
+      ],
+      "before": "Before you start: a quick recall from module",
+      "after": "Before you continue: recall two points from module",
+      "reason": "Changed to 'Before you continue' for clarity and to clarify that the recall covers two points, keeping the sentence concise and context-specific."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field5"
+      ],
+      "before": "”. Answer from memory; the feedback explains the reasoning. Nothing is scored or recorded.",
+      "after": "”. Answer from memory. Feedback explains the reasoning for each question. Your responses are not scored or saved.",
+      "reason": "Clarified that feedback is provided for learning purposes, explicitly stated that answers are not scored or stored, and separated the steps for greater transparency. This reflects the actual purpose and reasoning behind these questions for DHS and DSD staff."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field7"
+      ],
+      "before": "Each situation is made up and about your next decision. Check an answer to read why it is stronger or weaker; you can try again as often as you like.",
+      "after": "Each situation is fictional and asks about your next decision. After you choose an answer, you will see an explanation comparing its strengths and weaknesses. You can try as many options as you wish.",
+      "reason": "Clarified the instructions so users know situations are illustrative, choices are for practice, and immediate feedback is available. Emphasizes the action staff should take and why repeated attempts are possible, directly relating to the professional learning context."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field9"
+      ],
+      "before": "Leave names, case details and other private information out of your notes.",
+      "after": "Exclude names, case details, and other private information from your notes.",
+      "reason": "Made the instruction more direct and active by using 'Exclude' and specifying what should not be included, improving clarity for DHS/DSD colleagues and giving a clear rationale about privacy risk."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field10"
+      ],
+      "before": "Nothing here is scored or recorded.",
+      "after": "Your responses in this section are not scored or saved.",
+      "reason": "Changed to state what happens with responses in clearer, specific terms for colleagues who may need to explain the purpose and limitations of the module to others."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The change from 'Before you start: a quick recall from module' to 'Before you continue: recall two points from module' is not supported by the source. The source heading is specifically 'Before you start: a quick recall from module {previousNumber}', which sets a clear sequence and does not specify recalling 'two' points. The rewrite both changes the sequence ('start' vs. 'continue') and invents a detail (how many points), which is not in the source string or the logic. This changes meaning and scope."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "Changing 'Answer from memory; the feedback explains the reasoning. Nothing is scored or recorded.' to 'Answer from memory. Feedback explains the reasoning for each question. Your responses are not scored or saved.' is not fully supported by source. The source text is: 'Answer from memory; the feedback explains the reasoning. Nothing is scored or recorded.' The phrase 'for each question' is not supported or needed, and changing 'scored or recorded' to 'scored or saved' is a shift in language (saved ≠ recorded, as 'recorded' could imply logging irrespective of saving). The source language should be retained for transparency."
+      },
+      {
+        "fieldId": 4,
+        "severity": "blocker",
+        "finding": "Changing 'Each situation is made up and about your next decision. Check an answer to read why it is stronger or weaker; you can try again as often as you like.' to 'Each situation is fictional and asks about your next decision. After you choose an answer, you will see an explanation comparing its strengths and weaknesses. You can try as many options as you wish.' is not source-grounded. The rewrite departs from source vocabulary ('made up' to 'fictional'), changes structure ('after you choose an answer' vs. 'check an answer'), and re-frames how feedback is given ('explanation comparing strengths and weaknesses' vs. 'why it is stronger or weaker'). The change to 'you can try as many options as you wish' versus 'as often as you like' is minor, but the rest constitutes a substantive shift and is not supported."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "Replacing 'Leave names, case details and other private information out of your notes.' with 'Exclude names, case details, and other private information from your notes.' is a stylistic improvement (more direct and active), but source language is already clear. This does not introduce a significant risk or error, but per the standard, the original text could be preserved unless an active directive is policy."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "Changing 'Nothing here is scored or recorded.' to 'Your responses in this section are not scored or saved.' slightly shifts from passive ('Nothing here...') to direct ('Your responses...'), but this is not a substantive change of meaning, though 'saved' is not a synonym for 'recorded' in some regulatory or data-retention contexts. It is not a blocker but worth noting: prefer exact source text unless an agency definition specifies otherwise."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 4383,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 361,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4744
+    },
+    "review": {
+      "input_tokens": 4210,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 655,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4865
+    }
+  },
+  "createdAt": "2026-11-15T13:56:45.256Z"
+}

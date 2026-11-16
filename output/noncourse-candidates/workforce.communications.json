@@ -1,0 +1,67 @@
+{
+  "target": "workforce.communications",
+  "kind": "surface",
+  "route": "/consultant/workforce/communications",
+  "sourceSha256": "8784347892da14ea2e47fefd417b7ce5a289c7fcef5e3b8dfb5d6e6f7926f57b",
+  "status": "model_checked",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "relationship"
+      ],
+      "before": "Listed as an agency area or associated service. This does not establish a direct reporting line.",
+      "after": "Communications is identified as an agency area or an associated service. This listing does not indicate or imply a direct reporting relationship.",
+      "reason": "Clarified the language to specify that listing Communications as an area or service does not suggest any management or hierarchical reporting connection. This avoids possible misinterpretation and maintains factual accuracy."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The rewrite clarifies that the listing of Communications does not indicate or imply a direct reporting relationship. While this is similar in substance to the original, the word 'imply' slightly strengthens the caution against misinterpretation. Both versions are supported by the source, which simply lists agency areas without specifying reporting structures. The change improves reader clarity and does not alter underlying facts."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1091,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 86,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1177
+    },
+    "review": {
+      "input_tokens": 789,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 115,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 904
+    }
+  },
+  "createdAt": "2026-11-15T13:37:49.145Z"
+}

@@ -1,0 +1,67 @@
+{
+  "target": "code.app/community-outreach/policies/[id]/page.tsx",
+  "kind": "surface",
+  "route": "/community-outreach/policies/[id]",
+  "sourceSha256": "48482b72b4ef858de2f551a0418f5bdcdcdc77ce0729cb551d4107eb5157d673",
+  "status": "needs_revision",
+  "reviewedFieldCount": 3,
+  "changes": [
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "This is a summary written in plain language. The policy itself is the source document linked below. Check the date on the source before relying on it.",
+      "after": "This summary restates the policy in plain language for clarity. Refer to the policy source document linked below for the official wording, and always check the source date before making decisions or applying its content.",
+      "reason": "Clarified the purpose of the summary and explained why users must verify details with the source document, as this supports informed decision-making and grounds policy reference on the documented source."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The proposed change alters the factual, official disclaimer. The original text: \"This is a summary written in plain language. The policy itself is the source document linked below. Check the date on the source before relying on it.\" states simply that the summary is in plain language and directs users to the source document—without further interpretation or justification. The edit, \"This summary restates the policy in plain language for clarity. Refer to the policy source document linked below for the official wording, and always check the source date before making decisions or applying its content,\" expands on intent (\"for clarity\"), adds context that is not from the source, and introduces decision-based language (\"making decisions or applying its content\"). These changes do not reflect the exact language or limited assurance provided in the source code, and thus do not meet the preservation or wording standard required for official records and disclaimers."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2624,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 103,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2727
+    },
+    "review": {
+      "input_tokens": 2298,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 203,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2501
+    }
+  },
+  "createdAt": "2026-11-15T13:47:46.417Z"
+}

@@ -1,0 +1,137 @@
+{
+  "target": "code.components/hub/statewide-services-chart.tsx",
+  "kind": "surface",
+  "route": "components/hub/statewide-services-chart.tsx",
+  "sourceSha256": "5cb399d1e7cdc0a4ad37bceedc318a7d0efa6016947c3f9cdc433d07050500bf",
+  "status": "needs_revision",
+  "reviewedFieldCount": 6,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Who lives in Minnesota, and who receives home and community-based services",
+      "after": "Minnesota population and people receiving home and community-based services",
+      "reason": "Shortened for clarity and specificity in a heading. This heading is used for the chart and should be concise while remaining clear about its content."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field2"
+      ],
+      "before": ", all ages. A difference is a question to look into, not an explanation.",
+      "after": ", all ages. A difference between population and service share helps identify groups that may have different access to or use of services, but it does not explain the reasons why.",
+      "reason": "Expanded to clarify the significance of a difference without assuming it holds a single meaning. Offers the reasoning for this comparison in compliance with the standard."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field4"
+      ],
+      "before": "Share of people receiving services",
+      "after": "People receiving home and community-based services",
+      "reason": "Clarified to explicitly reference 'home and community-based services,' as the chart and source are about this service population, not all service recipients."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field5"
+      ],
+      "before": "Paired bars by race and ethnicity; the same figures are in the table below.",
+      "after": "Bar chart by race and ethnicity with a table below showing the same figures.",
+      "reason": "Clarified the purpose and content of the alternative text to aid accessibility and accuracy."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field7"
+      ],
+      "before": "Share of people receiving services",
+      "after": "People receiving home and community-based services",
+      "reason": "For consistency and clarity, matched Field 2 revision to reflect correct service description."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field8"
+      ],
+      "before": "People whose race is not recorded count in the services total but in no group, so the service shares add to less than 100%.",
+      "after": "People whose race is not recorded are included in the total number receiving services, but they are not counted in any race or ethnicity group. For this reason, the shares by group add up to less than 100%.",
+      "reason": "Reworded for clarity and specificity. This revision explains why the totals do not reach 100% in a way that is precise and easier to trace back to reported data practice."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed revised heading ('Minnesota population and people receiving home and community-based services') is not supported by the source, which specifies: 'Who lives in Minnesota, and who receives home and community-based services'. The revision removes the question framing and obscures the chart's comparative aim. The heading must remain as in the source or—if shortened—retain both the comparative structure and intent. The change reduces clarity and is not justified by the provided reason."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The expanded clarification about interpreting differences between population and service share is reasonable and consistent with the standard. The extra explanatory sentence is traceable to the chart's instructional intent and does not improperly invent a policy or legal assurance."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "Changing 'Share of people receiving services' to 'People receiving home and community-based services' in the legend label does increase specificity and matches the chart's actual measures. This clarification is reasonable, provided other instances are consistent."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The revision of the alternative text for the chart from 'Paired bars by race and ethnicity; the same figures are in the table below.' to 'Bar chart by race and ethnicity with a table below showing the same figures.' is a minor clarification and remains accurate to the content and accessibility purpose."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "Matching the revised label for the second series in the table header ('People receiving home and community-based services') to be consistent with the previous legend revision is reasonable and reflects the intended data."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The rewording for the note about unreported race is clearer and does not misrepresent the data. The substance is unchanged, and the explanation is more explicit."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3017,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 359,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3376
+    },
+    "review": {
+      "input_tokens": 2951,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 391,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3342
+    }
+  },
+  "createdAt": "2026-11-15T13:53:50.350Z"
+}

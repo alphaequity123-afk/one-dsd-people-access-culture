@@ -1,0 +1,81 @@
+{
+  "target": "code.app/my-work/reflections/page.tsx",
+  "kind": "surface",
+  "route": "/my-work/reflections",
+  "sourceSha256": "a6bee10053ae3b80bcfa192f3104b66578e7e4d7551e0677be74f0575a599f09",
+  "status": "needs_revision",
+  "reviewedFieldCount": 3,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "A few honest lines after a lesson, a hard moment or a finished piece of work. Three questions carry most of it: what happened, why it matters, and what you will do next.",
+      "after": "Write a few direct lines after completing a lesson, facing a difficult situation, or finishing a project. Focus on three basic questions: what happened, why it matters in your daily work or growth, and what you intend to do next. This approach helps you make sense of events and plan practical improvements.",
+      "reason": "Clarified the function and value of the notebook. Added reasoning for answering each question and specified the context and outcomes relevant to DHS and DSD staff. Avoided generic language, explaining why reflecting on these questions informs practice and ongoing learning."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "Set a date to look back. When it arrives, the notebook shows you the reflection the next time you open this page.",
+      "after": "Choose a date to review your reflection. When the date comes, your notebook will bring up the entry the next time you visit this page, helping you track changes or progress over time.",
+      "reason": "Explained the purpose of setting a date and how reviewing at set intervals supports learning and self-assessment in DHS/DSD work. Clarified how the system uses the date to prompt review."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed rewrite changes the original meaning and scope. The source is: 'A few honest lines after a lesson, a hard moment or a finished piece of work. Three questions carry most of it: what happened, why it matters, and what you will do next.' The suggestion adds unstated rationale ('helps you make sense of events and plan practical improvements'), interpretation ('focus on', 'in your daily work or growth'), and context ('completing a lesson, facing a difficult situation, or finishing a project'). The source does not ascribe these intended outcomes or specify context as limited to daily work or growth. The standard requires source-faithful, not speculative, explanation for core text."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The rewrite of field2 is an acceptable elaboration: it clarifies how the date works and connects the reflection review to ongoing development without inventing new procedures or policy requirements. This is a factual extension, not a material change, because it describes the system's documented behavior and typical use. This would pass if submitted alone."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1643,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 223,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1866
+    },
+    "review": {
+      "input_tokens": 1448,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 241,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1689
+    }
+  },
+  "createdAt": "2026-11-15T13:50:52.810Z"
+}

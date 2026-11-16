@@ -1,0 +1,414 @@
+{
+  "records": [
+    {
+      "target": "graduation-path.gp-1",
+      "kind": "surface",
+      "route": "/practice/gp-1",
+      "original": {
+        "title": "New program or service concept",
+        "staffLabel": "I'm planning something new",
+        "signals": [
+          "An early program or service idea",
+          "A new digital application or online service",
+          "A service redesign before the design is settled"
+        ],
+        "startingCompetence": "You have a program idea and want a clear way to consider equity and access before the design is settled.",
+        "graduatedLooksLike": "By the end, you will have a completed equity and access checklist for your program, with clear responsibilities and a review date. You can usually complete routine planning without a consultation, use the same approach for future work, and seek another perspective when added judgment would help.",
+        "askStarters": [
+          "We're planning a new digital application for benefits renewals. What equity questions should we ask before the design is settled?",
+          "What access assumptions should I consider while the idea is still taking shape?",
+          "Who should be involved before the design is fixed?"
+        ],
+        "artifactTitle": "Equity and access planning checklist",
+        "needsWork": [
+          "A quick answer with no next step",
+          "A completed checklist without clear responsibilities or a review date",
+          "An equity section added without considering access or burden"
+        ],
+        "readyToUse": [
+          "The checklist is connected to your program",
+          "Access, involvement, and assumptions are addressed",
+          "Questions that remain are clearly noted and taken to the right people"
+        ],
+        "privacy": "Do not include client names or case IDs, and describe populations only in general terms. Your progress is saved only on this computer and is not used to rank anyone.",
+        "step0Title": "Explore the first questions",
+        "step0Guidance": "Ask about program design. Use their sources and limits to identify the equity and access questions to record in your checklist before the design is settled.",
+        "step0Links": [
+          {
+            "label": "Ask a question",
+            "href": "/ask?path=gp-1"
+          }
+        ],
+        "step1Title": "Consider community context",
+        "step1Guidance": "If the work names Minnesota communities or partners, read the relevant brief. Focus on what to ask, access needs, who to involve, and what not to assume.",
+        "step1Links": [
+          {
+            "label": "Explore Minnesota Communities",
+            "href": "/minnesota-communities"
+          }
+        ],
+        "step2Title": "Choose practical resources",
+        "step2Guidance": "Use the launch checklist, the journey and burden questions, and the partner map to work through your idea.",
+        "step2Links": [
+          {
+            "label": "Launch equity and access checklist",
+            "href": "/library/ja-launch-embed-checklist"
+          },
+          {
+            "label": "Journey and burden questions",
+            "href": "/library/ja-process-burden"
+          },
+          {
+            "label": "Partner map",
+            "href": "/library/ja-stakeholder-map"
+          }
+        ],
+        "step3Title": "Draft your equity and access checklist",
+        "step3Guidance": "Complete the checklist for your program. Your notes are saved only on this computer, so please leave out client names and case details.",
+        "step3Links": [],
+        "step4Title": "Review your work",
+        "step4Guidance": "Confirm who is responsible, the access needs you considered, who was involved, what you chose not to assume, the review date, and any questions that remain.",
+        "step4Links": [],
+        "step5Title": "Find the right person when needed",
+        "step5Guidance": "If the idea is high stakes or questions remain, use your checklist to explain the work to the responsible person or office. Use existing workplace channels to contact them.",
+        "step5Links": [
+          {
+            "label": "Find the right person",
+            "href": "/support/right-person?area=policy_program_service_design"
+          }
+        ],
+        "artifactField0Label": "Program or service name",
+        "artifactField0Help": "Use the program or service name, not a client's name.",
+        "artifactField1Label": "Who this is for, and who carries the burden if it does not work",
+        "artifactField1Help": "Use general terms and consider which communities may be missing from the design process.",
+        "artifactField2Label": "Access needs and assumptions",
+        "artifactField2Help": "Consider broadband, a printer, English, transportation, daytime availability, a person people can reach instead, and accessible documents.",
+        "artifactField3Label": "Languages and vital documents",
+        "artifactField3Help": "Note the languages people may need, which documents need translation and review by a qualified translator, and how an interpreter will be available at first contact.",
+        "artifactField4Label": "Steps or barriers you can remove",
+        "artifactField4Help": "Consider the number of steps, documents, and trips, along with requirements that may be easy to miss.",
+        "artifactField5Label": "Who is involved before the design is settled, and what role they have",
+        "artifactField5Help": "Consider the Equity Director, accessibility and language access leads, community partners, and Tribal consultation when applicable.",
+        "artifactField6Label": "What you chose not to assume",
+        "artifactField6Help": "Note the assumptions you avoided about the people affected.",
+        "artifactField7Label": "Who is responsible for each follow-up",
+        "artifactField7Help": "Add one line for each follow-up, including the action and the person responsible.",
+        "artifactField8Label": "Next review date",
+        "artifactField8Help": "Choose a date when you will return to this work.",
+        "artifactField9Label": "Questions that remain",
+        "artifactField9Help": "Note what you still need to learn and who can help.",
+        "reviewRule0Label": "Every follow-up has a named owner",
+        "reviewRule0Message": "Please name the person responsible for each follow-up.",
+        "reviewRule1Label": "A next review date is set",
+        "reviewRule1Message": "Please choose a specific date to review this work again.",
+        "reviewRule2Label": "This is connected to your specific work",
+        "reviewRule2Message": "Please name the program, notice, session, or team this is for.",
+        "reviewRule3Label": "Language, disability, and communication access were considered for this work",
+        "reviewRule3Message": "Please note the access checks you completed, including language, disability and communication access, and the effort the process asks of people.",
+        "reviewRule4Label": "You named who was involved and the role they had",
+        "reviewRule4Message": "Please list who was involved before the design was settled and what role or decision-making authority they had.",
+        "reviewRule5Label": "You noted what you chose not to assume",
+        "reviewRule5Message": "Please note what you chose not to assume about the people affected."
+      },
+      "changes": [
+        {
+          "path": [
+            "graduatedLooksLike"
+          ],
+          "before": "By the end, you will have a completed equity and access checklist for your program, with clear responsibilities and a review date. You can usually complete routine planning without a consultation, use the same approach for future work, and seek another perspective when added judgment would help.",
+          "after": "Use the checklist to prepare a program-specific account of access barriers, people to involve, responsibilities and questions for review. This preparation supports a discussion with the people responsible for the work; it does not establish that a design is ready or remove required review.",
+          "reason": "Replace unsupported independence/completion claims with useful preparation, individual inquiry and clear review authority; align to published read/download route."
+        },
+        {
+          "path": [
+            "privacy"
+          ],
+          "before": "Do not include client names or case IDs, and describe populations only in general terms. Your progress is saved only on this computer and is not used to rank anyone.",
+          "after": "Leave out client names, case IDs and identifying accounts. Use general descriptions in the published checklist, and keep any completed working file according to the information rules for your work.",
+          "reason": "Replace unsupported independence/completion claims with useful preparation, individual inquiry and clear review authority; align to published read/download route."
+        },
+        {
+          "path": [
+            "step0Guidance"
+          ],
+          "before": "Ask about program design. Use their sources and limits to identify the equity and access questions to record in your checklist before the design is settled.",
+          "after": "Ask about the proposed design, then examine the response’s sources and limits. Record the equity and access questions you still need to investigate while choices remain open.",
+          "reason": "Replace unsupported independence/completion claims with useful preparation, individual inquiry and clear review authority; align to published read/download route."
+        },
+        {
+          "path": [
+            "step3Guidance"
+          ],
+          "before": "Complete the checklist for your program. Your notes are saved only on this computer, so please leave out client names and case details.",
+          "after": "Use the checklist to record what is known, what remains uncertain and who needs to contribute. Keep names and case details out of the working notes.",
+          "reason": "Replace unsupported independence/completion claims with useful preparation, individual inquiry and clear review authority; align to published read/download route."
+        }
+      ]
+    },
+    {
+      "target": "graduation-path.gp-2",
+      "kind": "surface",
+      "route": "/practice/gp-2",
+      "original": {
+        "title": "Policy, form, or notice change",
+        "staffLabel": "I'm changing a form, notice, or policy",
+        "signals": [
+          "A staff- or public-facing form, letter, or notice",
+          "A policy or procedure text change",
+          "A process change people must follow"
+        ],
+        "startingCompetence": "You are preparing a policy, form, notice, or letter and want to make sure it is clear, accessible, and workable for the people who will use it.",
+        "graduatedLooksLike": "By the end, you will have a clear record of the change, its effect on people, access needs, sources, follow-up responsibilities, and a review date. You can usually complete routine changes with these resources and ask the policy owner or your Equity Director about high-stakes questions or conflicting Official sources.",
+        "askStarters": [
+          "We are changing a renewal notice. What access and burden questions should we work through?",
+          "Where is the plain language checklist?",
+          "Two guidance documents disagree about a notice requirement. What should I do?"
+        ],
+        "artifactTitle": "Change impact notes and access checklist",
+        "needsWork": [
+          "A general statement that equity was considered without any language, access, or process details",
+          "A statute cited from memory"
+        ],
+        "readyToUse": [
+          "Specific notes about barriers and access",
+          "Sources are clearly labeled",
+          "Unanswered policy questions are taken to the policy owner"
+        ],
+        "privacy": "No individual accommodation case details; general access needs only.",
+        "step0Title": "Consider access and impact",
+        "step0Guidance": "Ask about plain language, access, and service processes. Compare it with the policy or rule you are changing, and record questions that need an official source or the policy owner’s judgment.",
+        "step0Links": [
+          {
+            "label": "Ask a question",
+            "href": "/ask?path=gp-2"
+          }
+        ],
+        "step1Title": "Consider community context",
+        "step1Guidance": "If the change may affect particular Minnesota communities more heavily, read the relevant brief for language, naming, and access considerations.",
+        "step1Links": [
+          {
+            "label": "Explore Minnesota Communities",
+            "href": "/minnesota-communities"
+          }
+        ],
+        "step2Title": "Choose practical resources",
+        "step2Guidance": "Use the change-planning guide, plain-language checklist, language access checklist, and equity impact questions as needed.",
+        "step2Links": [
+          {
+            "label": "Form, notice, or letter change guide",
+            "href": "/library/ja-form-notice-change"
+          },
+          {
+            "label": "Plain language and accessible documents",
+            "href": "/library/ja-plain-language"
+          },
+          {
+            "label": "Language access checklist",
+            "href": "/library/ja-language-access-checklist"
+          }
+        ],
+        "step3Title": "Draft your change and access notes",
+        "step3Guidance": "Record who will be affected, access needs, the effort the process asks of people, source labels, follow-up responsibilities, and a review date.",
+        "step3Links": [],
+        "step4Title": "Review your work",
+        "step4Guidance": "Confirm that every source is clearly labeled, access needs and process barriers are specific, and the next steps have responsible people and dates.",
+        "step4Links": [],
+        "step5Title": "Find the right person when needed",
+        "step5Guidance": "If the stakes are high or official sources conflict, find the person or office responsible for the decision. Most day-to-day access questions can be worked through with these resources.",
+        "step5Links": [
+          {
+            "label": "Find the right person",
+            "href": "/support/right-person?area=policy_program_service_design"
+          }
+        ],
+        "artifactField0Label": "Form, notice, or policy name",
+        "artifactField0Help": "What is changing.",
+        "artifactField1Label": "Who receives this and what they will need to do",
+        "artifactField1Help": "Consider who may not be able to complete the steps and what happens then.",
+        "artifactField2Label": "Language and access notes",
+        "artifactField2Help": "Is this a vital document? Which languages are needed? Has it had a plain-language review? Are accessible formats and phone or in-person options available?",
+        "artifactField3Label": "Time, steps, and other barriers",
+        "artifactField3Help": "Consider deadlines, required documents, and return methods. Note anything that can be removed or simplified.",
+        "artifactField4Label": "Sources and their authority labels",
+        "artifactField4Help": "Identify the source, its date and scope, and whether it is binding law or approved policy, official guidance, or an outside perspective. Confirm applicable requirements with the responsible office; a learning aid cannot override them. Where sources conflict or the meaning is uncertain, record what is unresolved and who must clarify it before a decision. Do not describe a recommendation as an authorized requirement.",
+        "artifactField5Label": "Who reviewed this before release",
+        "artifactField5Help": "Consider communications, language access, accessibility, and the policy owner.",
+        "artifactField6Label": "What you chose not to assume",
+        "artifactField6Help": "Note the assumptions you avoided about the people receiving this.",
+        "artifactField7Label": "Who will address each barrier",
+        "artifactField7Help": "Add one line for each barrier, including the action and the person responsible.",
+        "artifactField8Label": "Next review date",
+        "artifactField8Help": "",
+        "reviewRule0Label": "Every follow-up has a named owner",
+        "reviewRule0Message": "Please name the person responsible for each follow-up.",
+        "reviewRule1Label": "A next review date is set",
+        "reviewRule1Message": "Please choose a specific date to review this work again.",
+        "reviewRule2Label": "This is connected to your specific work",
+        "reviewRule2Message": "Please name the program, notice, session, or team this is for.",
+        "reviewRule3Label": "Language, disability, and communication access were considered for this work",
+        "reviewRule3Message": "Please note the access checks you completed, including language, disability and communication access, and the effort the process asks of people.",
+        "reviewRule4Label": "You named who was involved and the role they had",
+        "reviewRule4Message": "Please list who was involved before the design was settled and what role or decision-making authority they had.",
+        "reviewRule5Label": "You noted what you chose not to assume",
+        "reviewRule5Message": "Please note what you chose not to assume about the people affected.",
+        "reviewRule6Label": "Every source has an authority label and can be verified",
+        "reviewRule6Message": "Please label each source Official, Guidance, or Outside source; check before use. If a citation came from memory, leave it out and ask the policy owner."
+      },
+      "changes": [
+        {
+          "path": [
+            "graduatedLooksLike"
+          ],
+          "before": "By the end, you will have a clear record of the change, its effect on people, access needs, sources, follow-up responsibilities, and a review date. You can usually complete routine changes with these resources and ask the policy owner or your Equity Director about high-stakes questions or conflicting Official sources.",
+          "after": "Prepare a record of the proposed change, its possible effects, access needs, sources and follow-up responsibilities. Use it to support review with the policy owner and other responsible offices. A completed checklist does not resolve a conflict between sources or authorize a change.",
+          "reason": "Replace unsupported independence/completion claims with useful preparation, individual inquiry and clear review authority; align to published read/download route."
+        },
+        {
+          "path": [
+            "step0Guidance"
+          ],
+          "before": "Ask about plain language, access, and service processes. Compare it with the policy or rule you are changing, and record questions that need an official source or the policy owner’s judgment.",
+          "after": "Ask about plain language, access and service processes. Compare the response with the policy or rule being considered, and record questions that require an official source or the policy owner’s judgment.",
+          "reason": "Replace unsupported independence/completion claims with useful preparation, individual inquiry and clear review authority; align to published read/download route."
+        },
+        {
+          "path": [
+            "step5Guidance"
+          ],
+          "before": "If the stakes are high or official sources conflict, find the person or office responsible for the decision. Most day-to-day access questions can be worked through with these resources.",
+          "after": "Confirm who must review or authorize the proposed change. If official sources conflict or their meaning is uncertain, take the specific question and source references to the responsible office before proceeding.",
+          "reason": "Replace unsupported independence/completion claims with useful preparation, individual inquiry and clear review authority; align to published read/download route."
+        }
+      ]
+    },
+    {
+      "target": "graduation-path.gp-3",
+      "kind": "surface",
+      "route": "/practice/gp-3",
+      "original": {
+        "title": "Community engagement or shared design effort",
+        "staffLabel": "I'm planning work with a community",
+        "signals": [
+          "Outreach, listening sessions, advisory groups, shared design",
+          "Work that names Minnesota communities or partners"
+        ],
+        "startingCompetence": "You are planning community engagement and want the work to be respectful, useful, and grounded in what people actually need.",
+        "graduatedLooksLike": "By the end, you will have an engagement plan grounded in the relevant Minnesota Communities briefs, with access needs, partners, and assumptions clearly addressed. Review each relevant brief before completing the plan.",
+        "askStarters": [
+          "How should we plan a listening session with Somali families in Greater Minnesota without stereotyping?",
+          "What does the partnership spine mean for a shared design effort?",
+          "Who should be involved in a community engagement plan?"
+        ],
+        "artifactTitle": "Engagement plan",
+        "needsWork": [
+          "General cultural facts with no connection to the work",
+          "Applying information about a group to a named person"
+        ],
+        "readyToUse": [
+          "The plan addresses questions, access, involvement, and assumptions",
+          "Differences within the community are recognized",
+          "Questions that remain are clearly noted"
+        ],
+        "privacy": "Briefs do not describe any one person. Please leave case details out of your notes and seek the appropriate authority before using Nation-specific guidance.",
+        "step0Title": "Plan a respectful approach",
+        "step0Guidance": "Ask about community partnerships and how to avoid assumptions about individuals. Use the partnership map below to record what you still need to learn from the people involved.",
+        "step0Links": [
+          {
+            "label": "Ask a question",
+            "href": "/ask?path=gp-3"
+          }
+        ],
+        "step1Title": "Read the relevant community briefs",
+        "step1Guidance": "Open the brief for each community named in the work. Read the overview and the guidance on what to ask, access needs, who to involve, and what not to assume. Note in your plan which briefs you reviewed.",
+        "step1Links": [
+          {
+            "label": "Explore Minnesota Communities",
+            "href": "/minnesota-communities"
+          }
+        ],
+        "step2Title": "Choose practical resources",
+        "step2Guidance": "Use the meeting and outreach access checklist, partner map, and language access checklist as needed.",
+        "step2Links": [
+          {
+            "label": "Access checks before a meeting or outreach",
+            "href": "/library/ja-access-checks"
+          },
+          {
+            "label": "Partner map",
+            "href": "/library/ja-stakeholder-map"
+          }
+        ],
+        "step3Title": "Draft your engagement plan",
+        "step3Guidance": "Include the questions you will ask, access needs, who to involve, what not to assume, compensation, and how you will report back.",
+        "step3Links": [],
+        "step4Title": "Review your work",
+        "step4Guidance": "Confirm that you reviewed the relevant briefs, recognized differences within each community, noted what remains unknown, and did not apply group information to any one person.",
+        "step4Links": [],
+        "step5Title": "Find the right person when needed",
+        "step5Guidance": "If a brief does not address your question, the work may involve trauma, or Tribal consultation may be required, find the responsible person or office before proceeding.",
+        "step5Links": [
+          {
+            "label": "Find the right person",
+            "href": "/support/right-person?area=community_engagement_co_design"
+          }
+        ],
+        "artifactField0Label": "Effort name and purpose",
+        "artifactField0Help": "What decision this engagement will influence.",
+        "artifactField1Label": "Community briefs you reviewed",
+        "artifactField1Help": "List each brief and note that you read its overview and practice guidance.",
+        "artifactField2Label": "What you will ask",
+        "artifactField2Help": "Use open questions without asking people to relive trauma unnecessarily.",
+        "artifactField3Label": "Access needs",
+        "artifactField3Help": "Consider language and dialect, interpreters, captioning, timing, location, transportation, child care, and trust.",
+        "artifactField4Label": "Who to involve, why, and in what role",
+        "artifactField4Help": "Note their purpose, authority, compensation, and how you will report back. For Tribal Nations, consultation comes first.",
+        "artifactField5Label": "What not to assume",
+        "artifactField5Help": "Recognize differences within every community; immigration, faith, and language are not interchangeable.",
+        "artifactField6Label": "Who is responsible for each follow-up",
+        "artifactField6Help": "Include the person who will report back to participants.",
+        "artifactField7Label": "Report-back and review date",
+        "artifactField7Help": "",
+        "artifactField8Label": "Report-back draft: what we heard",
+        "artifactField8Help": "Summarize relevant contributions in general terms, including differences and missing perspectives. Check the summary with contributors where appropriate. Do not name individuals, reproduce private accounts or imply that one participant speaks for a whole community.",
+        "artifactField9Label": "Report-back draft: what changed and why",
+        "artifactField9Help": "Explain how contributions informed the options or recommendation. Distinguish a proposed change from an authorized decision or implemented action. State what could not change, why, what remains unresolved and who can clarify it.",
+        "artifactField10Label": "Report-back draft: returning to participants",
+        "artifactField10Help": "Record the appropriate accessible format and channel, who will return the summary, and how people can correct it or respond. Use the report-back date above. Keep identifying information outside this learning draft and use approved channels for the actual communication.",
+        "artifactField11Label": "Questions that remain",
+        "artifactField11Help": "Note what is still unknown and seek the appropriate guidance rather than guessing.",
+        "reviewRule0Label": "Every follow-up has a named owner",
+        "reviewRule0Message": "Please name the person responsible for each follow-up.",
+        "reviewRule1Label": "A next review date is set",
+        "reviewRule1Message": "Please choose a specific date to review this work again.",
+        "reviewRule2Label": "This is connected to your specific work",
+        "reviewRule2Message": "Please name the program, notice, session, or team this is for.",
+        "reviewRule3Label": "Language, disability, and communication access were considered for this work",
+        "reviewRule3Message": "Please note the access checks you completed, including language, disability and communication access, and the effort the process asks of people.",
+        "reviewRule4Label": "You named who was involved and the role they had",
+        "reviewRule4Message": "Please list who was involved before the design was settled and what role or decision-making authority they had.",
+        "reviewRule5Label": "You noted what you chose not to assume",
+        "reviewRule5Message": "Please note what you chose not to assume about the people affected.",
+        "reviewRule6Label": "The relevant Minnesota Communities briefs were reviewed",
+        "reviewRule6Message": "Please open the brief for each community named in the work and note that you read its overview and practice guidance."
+      },
+      "changes": [
+        {
+          "path": [
+            "graduatedLooksLike"
+          ],
+          "before": "By the end, you will have an engagement plan grounded in the relevant Minnesota Communities briefs, with access needs, partners, and assumptions clearly addressed. Review each relevant brief before completing the plan.",
+          "after": "Prepare an engagement plan that connects community context with the decision people can influence. Identify participation supports, the people and partners to involve, unresolved questions and how you will report back. Review relevant briefs as preparation for direct engagement; reading a brief does not establish a community’s agreement or an individual’s preferences.",
+          "reason": "Replace unsupported independence/completion claims with useful preparation, individual inquiry and clear review authority; align to published read/download route."
+        },
+        {
+          "path": [
+            "step1Guidance"
+          ],
+          "before": "Open the brief for each community named in the work. Read the overview and the guidance on what to ask, access needs, who to involve, and what not to assume. Note in your plan which briefs you reviewed.",
+          "after": "Read the relevant community briefs to understand context and develop questions about participation and access. Note which sources informed the plan and what still needs to be learned directly from participants. Do not treat a brief as a profile of the people you will meet.",
+          "reason": "Replace unsupported independence/completion claims with useful preparation, individual inquiry and clear review authority; align to published read/download route."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "target": "code.app/one-dsd/amplify/mentoring/page.tsx",
+  "kind": "surface",
+  "route": "/one-dsd/amplify/mentoring",
+  "sourceSha256": "c0298aa75729affc957260e8404551fb616d1201e031575a97b1b80a96960421",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Grow with one another | Amplify Equity",
+      "after": "Mentoring approach | Amplify Equity",
+      "reason": "The revision clarifies the specific focus of the page, signaling that the content addresses the approach and practices related to mentoring within the Amplify Equity program context. 'Grow with one another' was less precise and did not convey the direct subject matter for DHS and DSD staff."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The original title 'Grow with one another | Amplify Equity' is fully supported by the complete source and is the exact text used in the metadata.title property. There is no evidence in the code surface or context to justify changing the page title to 'Mentoring approach | Amplify Equity.' The revision imposes a different emphasis and may alter the intended framing of the page. Any change to program branding, official language, or subject focus in a metadata field must be directly supported by formal guidance or specific source material."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1069,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 110,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1179
+    },
+    "review": {
+      "input_tokens": 771,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 127,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 898
+    }
+  },
+  "createdAt": "2026-11-15T13:50:55.537Z"
+}

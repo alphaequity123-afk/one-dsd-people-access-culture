@@ -8,7 +8,6 @@ import { observeVoiceActivity, recordVoiceTurnTiming, voiceAvailabilityNotice, v
 type MicState = "unknown" | "granted" | "prompt" | "denied";
 
 /** What happens to speech, shown in the small print under the Ask window. */
-export const VOICE_PRIVACY_NOTE = "When you speak, your browser or an outside service writes down your words. No audio is saved on this site.";
 
 /** The browser's own speech recognition, where it has one. Words arrive while the person is still speaking. */
 type Recognition = {

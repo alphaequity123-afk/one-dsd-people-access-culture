@@ -1,0 +1,95 @@
+{
+  "target": "code.components/visual-studio-panel.tsx",
+  "kind": "surface",
+  "route": "components/visual-studio-panel.tsx",
+  "sourceSha256": "c084e43a93a99265153377eba065cef4d0fd56ead1da6647f6a355434f323dbb",
+  "status": "needs_revision",
+  "reviewedFieldCount": 19,
+  "changes": [
+    {
+      "fieldId": 11,
+      "path": [
+        "field12"
+      ],
+      "before": "Choose a setting to create an editable scene with three abstract figures. Your dialogue and learning purpose are saved with the project for you to develop in Blender.",
+      "after": "Select a setting to design an editable scene using three abstract figures. The scene brief captures your intended dialogue and learning objective. These are saved with the project file for further development in Blender, which lets you adjust characters, layout, and other visual elements.",
+      "reason": "Clarified that the scene brief captures both dialogue and the learning objective, and added practical context about further scene development in Blender. Connected statements for clearer explanation of purpose."
+    },
+    {
+      "fieldId": 12,
+      "path": [
+        "field13"
+      ],
+      "before": "Choosing a starter replaces the current brief. Start with an example, then add details that fit your work.",
+      "after": "Selecting a starter replaces your current brief with the example content. This option helps you begin with a structured scenario. You can then revise or add details that directly align with your own work context.",
+      "reason": "Clarified the action's effect and explained that the starter provides a reference scenario, which staff can modify to suit actual practice. Avoided the ambiguous 'start with an example' instruction."
+    },
+    {
+      "fieldId": 14,
+      "path": [
+        "field15"
+      ],
+      "before": "Shape the conversation in up to six lines. These are editable notes for the scene; the preview is a still image without spoken audio.",
+      "after": "Draft up to six exchanges to outline the conversation. These are editable notations for planning purposes; the generated still preview will not include spoken audio, but the written lines will support building and presenting the scenario visually.",
+      "reason": "Clarified that these are editable notations, explained the preview's limits, and described how drafting dialogue supports scene planning and visualization."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 12,
+        "severity": "blocker",
+        "finding": "Field 12's revision introduces a substantially different explanation and alters both scope and intent. The source ('Choose a setting to create an editable scene with three abstract figures. Your dialogue and learning purpose are saved with the project for you to develop in Blender.') uses 'Choose a setting,' but the rewrite switches to 'Select a setting to design...using three abstract figures,' shifting from user action to a more elaborate directive. The original emphasizes that dialogue and learning purpose are saved, for later development in Blender. The revision adds, 'scene brief captures your intended dialogue and learning objective', but the source already covers this plainly in the phrase 'your dialogue and learning purpose are saved with the project.' The extension ('for further development in Blender, which lets you adjust characters, layout, and other visual elements') is unsupported padding: the source only says development in Blender, without specifying adjustment of characters, layout, or visual elements. These are unstated claims that expand the scope beyond the original and contradict the policy to avoid generic padding or added detail not in the text. Do not insert instructional or promotional language about Blender's capabilities unless they appear in the quoted text or other page surface explanation. The original sentence structure is clearly readable and complete as is."
+      },
+      {
+        "fieldId": 13,
+        "severity": "note",
+        "finding": "Field 13's revision is more verbose but does not fundamentally alter the meaning. It somewhat clarifies the process—however, 'the starter provides a reference scenario' is an accurate extension of 'start with an example,' so this update is editorially acceptable (though not required by the standard for short supporting explanations like this)."
+      },
+      {
+        "fieldId": 15,
+        "severity": "blocker",
+        "finding": "Field 15's revision substitutes 'Draft up to six exchanges to outline the conversation. These are editable notations for planning purposes; the generated still preview will not include spoken audio, but the written lines will support building and presenting the scenario visually.' for 'Shape the conversation in up to six lines. These are editable notes for the scene; the preview is a still image without spoken audio.' This is material rewording: 'Shape the conversation' is more concrete than 'Draft up to six exchanges to outline the conversation,' and 'these are editable notations for planning purposes' is a weaker, broader phrase than 'these are editable notes for the scene.' Most notably, 'the written lines will support building and presenting the scenario visually' is an unsupported claim: the source doesn't say how the notes will support scene construction or presentation—it simply says they are editable notes and the preview is a still image. The new version is not faithful to the source in meaning or detail, straying into speculative explanation not grounded in this page. Use only supported, source-based explanation for instructions of record."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 8946,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 308,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 9254
+    },
+    "review": {
+      "input_tokens": 8364,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 603,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 8967
+    }
+  },
+  "createdAt": "2026-11-15T13:56:42.127Z"
+}

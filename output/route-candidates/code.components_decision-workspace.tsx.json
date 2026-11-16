@@ -1,0 +1,67 @@
+{
+  "target": "code.components/decision-workspace.tsx",
+  "kind": "surface",
+  "route": "components/decision-workspace.tsx",
+  "sourceSha256": "f9b7960327a316cfea81591533bd6ab470f8db94150bb3de0d91cdb75685ecec",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Tools open in a new tab so your notes stay here.",
+      "after": "Links to tools open in a new browser tab. Your notes are not changed by exploring these resources, so you do not lose your work in progress.",
+      "reason": "Clarified how tools open and why this matters: opening in a new tab keeps the user's current notes unchanged, which protects against losing unsaved work when viewing resources. This revision directly explains the connection between the technical design and its practical effect for staff."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed text changes both tone and specificity beyond the source. The source field reads: \"Tools open in a new tab so your notes stay here.\" This is a succinct declarative notice. The rewritten version, \"Links to tools open in a new browser tab. Your notes are not changed by exploring these resources, so you do not lose your work in progress,\" introduces several changes beyond clarification: \n\n1. \"Links to tools open...\" substitutes a more generic framing than just \"Tools,\" possibly changing meaning in a way not grounded by the source implementation, which references both links and workflows separately.\n2. The rewritten text explantively assures that \"Your notes are not changed... so you do not lose your work in progress\" – while the code does attempt to prevent data loss by opening resources in a new tab, it does not guarantee that notes will be preserved in every case (for example, the unsaved/draft state can still be lost due to user actions, browser crashes, session expiry, etc.). The original source does not offer this additional assurance or detailed causal reasoning.\n3. The rewrite increases length and assertiveness about privacy and risk mitigation. Without explicit program documentation to support these stronger claims about decision-notes' safety, this is padding and overstatement per standard. \n\nThe original alert is direct, short, and unambiguous, fitting the code's intent and program-writing standard. The rewritten field oversteps the original, introducing unsupported assurances and explanation.\n"
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 6119,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 106,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 6225
+    },
+    "review": {
+      "input_tokens": 5837,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 328,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 6165
+    }
+  },
+  "createdAt": "2026-11-15T13:53:03.180Z"
+}

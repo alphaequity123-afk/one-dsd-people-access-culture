@@ -1,0 +1,81 @@
+{
+  "target": "code.app/consultant/resources/[id]/page.tsx",
+  "kind": "surface",
+  "route": "/consultant/resources/[id]",
+  "sourceSha256": "a6e57402a9b2f56fd9d3cca13c803abb6843f57482c08876185986eea3675573",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Resource review is not connected in this copy of the program.",
+      "after": "Resource review is unavailable in this version of the program. Staff cannot review or approve resources here. This affects the ability to track changes and control published material through the intended review process.",
+      "reason": "Clarified that resource review is unavailable in this instance, explained the operational impact for staff, and specified why this limitation matters in DSD work."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": ", not here. It has no separate release review in this workspace.",
+      "after": ", not within this page. This item does not use the release review process in this workspace.",
+      "reason": "Specified the lack of release review only pertains to this location, and clarified where staff should expect the release workflow to occur."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed change alters the meaning of the notice. The original ('Resource review is not connected in this copy of the program.') simply states this feature is not connected in this instance or deployment, with no claims about tracking, publishing, or staff ability. The change ('Resource review is unavailable in this version of the program. Staff cannot review or approve resources here. This affects the ability to track changes and control published material through the intended review process.') introduces details about staff actions and program-wide impacts, which are not specified in the source. It also generalizes the reason and consequence, where the source narrowly signals the technical status for this copy."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "This change is not a blocker, but changes nuance by elaborating that the absence of release review applies 'not within this page,' and rephrases for explicitness. However, this does not misrepresent the factual situation and adds clarity for users."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1948,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 146,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2094
+    },
+    "review": {
+      "input_tokens": 1698,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 214,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1912
+    }
+  },
+  "createdAt": "2026-11-15T13:48:12.346Z"
+}

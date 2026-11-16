@@ -1,0 +1,95 @@
+{
+  "target": "code.app/support/page.tsx",
+  "kind": "surface",
+  "route": "/support",
+  "sourceSha256": "4eb4e67e5300931fd8aba2bbd8ed92f324da6d2fa6a566434c498b37920fedfe",
+  "status": "needs_revision",
+  "reviewedFieldCount": 3,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Find a practical starting point, or connect with the person who can help you take the next step.",
+      "after": "Start with available information or tools, or identify someone with the right expertise to address your current question.",
+      "reason": "Clarifies the expectation to use existing resources and recognize when you need to consult a colleague, tying this to practical decision making in DHS and DSD work. The revision avoids vague language about 'the next step' and spells out what taking action or connecting with the right person enables."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field2"
+      ],
+      "before": "Find guidance for referrals, access barriers and questions about support.",
+      "after": "Refer to this section for guidance on making referrals, addressing access problems, or clarifying how to get support from other teams.",
+      "reason": "Improves the specificity around actions and needs served: making referrals, addressing access issues, and clarifying support. This makes the guidance more concrete and ties it to typical scenarios staff encounter when another team's help is needed."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field3"
+      ],
+      "before": "Use the Library, common questions, or Find the right person for guidance with your work.",
+      "after": "Consult the Library, review common questions, or use Find the right person when you need clear direction on a policy or task.",
+      "reason": "Clarifies that these resources address specific policy or procedural questions, not just a general call for guidance with 'your work.' This ties the use of the Library, Q&A, and referral tools more directly to DHS and DSD work processes."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revised text ('Start with available information or tools, or identify someone with the right expertise to address your current question.') is more specific, but the source surface (as shown in code) uses: 'Find a practical starting point, or connect with the person who can help you take the next step.' The change drops the inviting, accessible tone in favor of a more directive instruction and replaces 'the person who can help you take the next step' with 'someone with the right expertise to address your current question.' This removes the emphasis on action and stepwise support, and narrows the original's welcoming framing. The source does not support this reframing, and the new version takes unnecessary liberties."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "This change increases clarity and details but is not a material departure from the source. Both versions sit within the surface's context as summary directional text; the new version is more explicit about typical scenarios where guidance may be needed and stays within the practical intent of the source."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "This rewrite specifies the kinds of direction offered and brings in more concrete references to policy or procedure. While the tone and specificity are changed, it remains in scope as a 'note'—however, the new wording discards some generality for increased clarity, without introducing error or restriction unsupported by the code context."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2115,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 314,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2429
+    },
+    "review": {
+      "input_tokens": 1978,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 303,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2281
+    }
+  },
+  "createdAt": "2026-11-15T13:51:50.356Z"
+}

@@ -1,0 +1,13 @@
+{
+  "target": "code.components/dsd-practice-planner.tsx",
+  "kind": "surface",
+  "route": "components/dsd-practice-planner.tsx",
+  "context": "\"use client\";\nimport dynamic from \"next/dynamic\";\nexport const DsdPracticePlanner = dynamic(() => import(\"./dsd-practice-planner-editor\"), {\n  ssr: false,\n  loading: () => <p role=\"status\">Opening your practice plans…</p>,\n});\n",
+  "protectedFields": [],
+  "values": {
+    "field0": "Opening your practice plans…"
+  },
+  "status": "no_editable_prose",
+  "changes": [],
+  "issues": []
+}

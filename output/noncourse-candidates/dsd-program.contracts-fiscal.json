@@ -1,0 +1,97 @@
+{
+  "target": "dsd-program.contracts-fiscal",
+  "kind": "surface",
+  "route": "/one-dsd/programs/contracts-fiscal",
+  "sourceSha256": "45457cd34b70c1c266adddc979e1a5c2e5987f7edb33fe034a94e9d22718bc99",
+  "status": "model_checked",
+  "reviewedFieldCount": 4,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "intro"
+      ],
+      "before": "Contracting, grants, rates, and capacity building for the division's providers and partners.",
+      "after": "DSD staff support providers and partners through contracts, grants, rate-setting, and efforts to strengthen service capacity. This work helps ensure that the people and organizations delivering disability services can meet program and participant needs.",
+      "reason": "Expanded the explanation for professional clarity, connecting contract, grant, rate, and capacity work directly to provider and partner support as well as outcomes for people served. This clarifies the role and importance of these functions for DSD operations."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "equityEntryPoints",
+        0
+      ],
+      "before": "Who wins awards and who never applies",
+      "after": "Which organizations receive awards and which consistently do not apply",
+      "reason": "Clarified that the point concerns not only current awardees but also patterns of non-application, which is relevant for understanding barriers to access and equity in the contracting and grants process."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "equityEntryPoints",
+        2
+      ],
+      "before": "Reporting that shows who is served",
+      "after": "Reviewing data to understand which groups and communities the division's programs reach",
+      "reason": "Expanded to clarify that reporting should inform understanding about which groups actually receive services, supporting equity analysis and decision-making."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revised introduction expands clarity and explicitness about the purpose and beneficiaries of DSD contracts, grants, rates, and capacity work. It aligns with the professional audience and does not misrepresent the scope or policy, building on but not contradicting the source."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revised equity entry point clarifies the concern about non-applicants, which is implicit in the original and relevant for equity analysis. The edit does not introduce blockers or unsupported claims."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The edit strengthens the explanation of the reporting equity entry point by describing its purpose (to understand service reach across groups and communities), which is appropriate for professional clarity and remains grounded in the original focus."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1160,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 223,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1383
+    },
+    "review": {
+      "input_tokens": 957,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 174,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1131
+    }
+  },
+  "createdAt": "2026-11-15T13:38:40.037Z"
+}

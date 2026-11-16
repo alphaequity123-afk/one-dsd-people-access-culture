@@ -1,0 +1,81 @@
+{
+  "target": "code.components/program-work-summary.tsx",
+  "kind": "surface",
+  "route": "components/program-work-summary.tsx",
+  "sourceSha256": "4cc34ff95266897567fcfe235148bedad50bd798ddae206dfff191354e179717",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Prepare a summary for review or report-back",
+      "after": "Summary preparation for review or reporting back",
+      "reason": "Improved consistency with the summary’s intended use, clarified that the action is not simply preparing a document but preparing it for a specific review or reporting purpose. Uses professional phrasing typical for DSD or DHS staff-to-staff guidance."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Keep the question, recommendation, sources and reported next steps together. This file is a working summary; use existing agency channels for official decisions and records.",
+      "after": "Keep the main question, recommendation, sources, and anticipated next steps with the summary. Use this file as a working summary only; submit official decisions and records through your agency's standard channels. Keeping these elements together supports accurate communication during reviews and when summarizing actions taken or required.",
+      "reason": "Clarified which components to group in the summary and explained why this approach matters for work processes. Specified that the file is for working use and distinguished it from official records, providing the practical reason to use agency channels for final decisions and documentation."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed new label ('Summary preparation for review or reporting back') is less direct and introduces ambiguity compared to the source ('Prepare a summary for review or report-back'). The original is an action-oriented, user-facing instruction matching both the underlying function and the DHS/DSD guidance style for summary tools. The revised text is not a clear instruction or heading. The change is unsupported and diminishes user clarity."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The rewrites for field 1 add minor clarification and rationale but generally preserve meaning. While rewording adds some explanation, it maintains the intent of the guidance in the source. No blocker found for field 1, but the added rationale, though perhaps slightly verbose, is allowed as additional context."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1603,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 198,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1801
+    },
+    "review": {
+      "input_tokens": 1406,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 207,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1613
+    }
+  },
+  "createdAt": "2026-11-15T13:55:47.515Z"
+}

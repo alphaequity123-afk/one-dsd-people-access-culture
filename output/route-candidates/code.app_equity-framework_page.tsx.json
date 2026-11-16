@@ -1,0 +1,81 @@
+{
+  "target": "code.app/equity-framework/page.tsx",
+  "kind": "surface",
+  "route": "/equity-framework",
+  "sourceSha256": "d4f6a473b12d1a6b88b27dbc3c5e65e6ef56c43fcf108ee8f473acfd21833e1b",
+  "status": "needs_revision",
+  "reviewedFieldCount": 45,
+  "changes": [
+    {
+      "fieldId": 6,
+      "path": [
+        "field7"
+      ],
+      "before": "The framework runs as a continuous cycle: assess, plan, implement, measure, learn, improve. Each stage matches one step of the program’s value sequence,¹¹ and each stage names where the work happens in One DHS and in One DSD. Move to the next stage when the people involved agree, not on a date.",
+      "after": "The framework organizes improvement as a repeating sequence: assess, plan, implement, measure, learn, and improve. Each stage lines up with a step in the program value sequence¹¹ and makes clear where the actual work should happen in One DHS and One DSD. Advance to the next stage once participants agree that the work is ready; the timeline is not set by the calendar but by agreement among those responsible.",
+      "reason": "Clarifies the connection between stages and program value sequence, specifies how stage movement is decided, and explains the practical importance of participant agreement over fixed dates in the improvement process."
+    },
+    {
+      "fieldId": 17,
+      "path": [
+        "field23"
+      ],
+      "before": "The work moves through foundations, integration and sustainment. There are no years attached. A stage is complete when its readiness conditions are met and the responsible offices agree; timing is left open.",
+      "after": "Work moves through three stages: foundations, integration, and sustainment. These stages are not calendar-bound. A stage is completed only when established readiness conditions are met and the accountable offices have reviewed and agreed. Timing is intentionally flexible so that each program area can set its own pace depending on local context and readiness. Omitting the calendar guideline would risk pushing work ahead before it is prepared, leading to superficial compliance rather than durable practice.",
+      "reason": "Adds detail on the point and effect of no fixed calendar, specifies the parties who must agree on readiness, and explains the consequence of omitting the reasoning for timing flexibility."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 6,
+        "severity": "blocker",
+        "finding": "The proposed rewrite (field7) elaborates and re-frames the intent beyond what the source states. The source says: \"The framework runs as a continuous cycle: assess, plan, implement, measure, learn, improve. Each stage matches one step of the program’s value sequence,¹¹ and each stage names where the work happens in One DHS and in One DSD. Move to the next stage when the people involved agree, not on a date.\" The rewrite changes 'matches' to 'lines up with,' interprets 'makes clear where the actual work should happen' instead of 'names,' and especially adds specification about 'participants' and 'those responsible' that is not directly supported by the original text. The paragraph adds a level of interpretation and explanation not present in the source—it is not a restatement but an altered, extended meaning. This is not supported."
+      },
+      {
+        "fieldId": 17,
+        "severity": "blocker",
+        "finding": "The proposed rewrite (field23) both preserves and expands meaning: it adds new explanation ('Timing is intentionally flexible so that each program area can set its own pace depending on local context and readiness...' and reasons about 'superficial compliance'), which is not found in the plain-language source: 'The work moves through foundations, integration and sustainment. There are no years attached. A stage is complete when its readiness conditions are met and the responsible offices agree; timing is left open.' The new version adds reasoning and consequences that are not present, changes 'responsible offices' to 'accountable offices' and expands on localized interpretation. These are not justified by the evidence in the source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 11451,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 360,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 11811
+    },
+    "review": {
+      "input_tokens": 9916,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 382,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 10298
+    }
+  },
+  "createdAt": "2026-11-15T13:48:37.477Z"
+}

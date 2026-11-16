@@ -14,7 +14,6 @@ describe("published practice path search projection", () => {
     const projected = practicePathSearchValues("graduation-path.gp-1", values)!;
     const text = JSON.stringify(projected);
     expect(text).toContain("Staff consultation request forms are closed");
-    expect(text).toContain("This page does not save your answers or progress");
     expect(text).not.toMatch(/Submit confidential request|consultant will respond|progress is saved|Submit a consultation request/i);
   });
   it("does not project unknown or unrelated surfaces", () => {

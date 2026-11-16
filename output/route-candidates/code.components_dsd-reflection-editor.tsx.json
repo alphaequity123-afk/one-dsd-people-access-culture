@@ -1,0 +1,67 @@
+{
+  "target": "code.components/dsd-reflection-editor.tsx",
+  "kind": "surface",
+  "route": "components/dsd-reflection-editor.tsx",
+  "sourceSha256": "0db1028c73e73f72fcdd98c6fbb3080ce4737fd67db24d8457ce73121696646f",
+  "status": "needs_revision",
+  "reviewedFieldCount": 5,
+  "changes": [
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": "This note stays on this device and is not submitted to the program. Keep names and private client, case, health, or personnel information out of your reflection.",
+      "after": "Your note is only stored on this device and is not shared with the program. Do not include names or private information related to clients, cases, health, or personnel in your reflection. This helps prevent accidental sharing of sensitive data and supports privacy requirements.",
+      "reason": "Improved the explanation by linking the instruction to privacy and the consequences of including sensitive information. Added reasoning for omitting private details, avoiding empty repetition."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "The revised text changes the meaning regarding privacy and introduces a false privacy assurance. The source says: \"This note stays on this device and is not submitted to the program. Keep names and private client, case, health, or personnel information out of your reflection.\" The proposed text, \"Your note is only stored on this device and is not shared with the program. Do not include names or private information related to clients, cases, health, or personnel in your reflection. This helps prevent accidental sharing of sensitive data and supports privacy requirements,\" presents a stronger guarantee (\"only stored on this device\" and \"not shared\") than the source, which only claims the reflection is not submitted to the program—not an absolute technical assurance about storage, sharing, or system security. The rationale about preventing accidental sharing and privacy requirements is not stated in the source. Program writing standard requires fidelity to the original where official privacy commitments are involved. The source's simple privacy instruction and limit MUST be preserved."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2666,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 114,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2780
+    },
+    "review": {
+      "input_tokens": 2290,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 220,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2510
+    }
+  },
+  "createdAt": "2026-11-15T13:53:13.286Z"
+}

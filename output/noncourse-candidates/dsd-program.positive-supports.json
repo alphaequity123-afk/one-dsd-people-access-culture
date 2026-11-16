@@ -1,0 +1,97 @@
+{
+  "target": "dsd-program.positive-supports",
+  "kind": "surface",
+  "route": "/one-dsd/programs/positive-supports",
+  "sourceSha256": "bfdc09ad99ddf52e6f68ed89e8ac8f7caf9c904f0a9c060b9d833dd1e62bace5",
+  "status": "needs_revision",
+  "reviewedFieldCount": 4,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "intro"
+      ],
+      "before": "Guidance and oversight for positive support strategies and person-centered planning.",
+      "after": "Summary: This page explains how Minnesota DHS provides guidance and oversight for positive support strategies and person-centered planning. These methods aim to help people achieve their goals and improve quality of life, rather than focusing on correction or punishment.\n\nDHS uses positive supports to guide services toward respectful, effective approaches that build on each person’s strengths and preferences. Person-centered planning aims to involve individuals, families, and teams in making decisions that match their needs and choices. Oversight helps staff apply these strategies consistently, prevents unnecessary restrictions, and identifies opportunities to improve services. Using these approaches can reduce the use of punitive measures, improve relationships, and promote greater independence for people receiving disability services.",
+      "reason": "Expanded the summary to clarify what positive supports and person-centered planning mean in DHS context, how DHS provides oversight, and why these actions matter for staff and quality of service. Connected explanation to Minnesota DHS services and explained the importance of preventing unnecessary restrictions."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "equityEntryPoints",
+        1
+      ],
+      "before": "Whose behavior is treated as a problem",
+      "after": "Who is labeled as having problematic behavior, and how these decisions are made",
+      "reason": "Clarified the issue by emphasizing the decision process and how labeling can vary, which matters for equity in support."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "equityEntryPoints",
+        2
+      ],
+      "before": "Access to positive supports across communities",
+      "after": "Whether people in all communities have equal access to positive supports and resources",
+      "reason": "Expanded for clarity about what \"access\" means, focusing on actual service availability and resources in different communities."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The added summary expands on the source by explaining the intended outcomes (achievement of goals, improved quality of life), describes positive supports as building on 'strengths and preferences,' and defines oversight in terms not substantiated in the source text. The original source is limited to 'Guidance and oversight for positive support strategies and person-centered planning' and does not offer the asserted rationale, mechanisms, or intended service outcomes. The new text invents policy rationale and means not grounded in the provided source. Blocked until supported by the full, cited source text or corresponding policy."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "Acceptable—clarifies the original entry point without inventing new meaning. The new wording makes explicit that the process of labeling behavior is subject to decision and may vary, which is consistent with the purpose of an equity entry point."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "Acceptable—the change clarifies 'access' by connecting it directly to 'equal access to positive supports and resources.' This is a permissible clarification and does not introduce unsupported policy."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1146,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 308,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1454
+    },
+    "review": {
+      "input_tokens": 1031,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 266,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1297
+    }
+  },
+  "createdAt": "2026-11-15T13:38:34.041Z"
+}

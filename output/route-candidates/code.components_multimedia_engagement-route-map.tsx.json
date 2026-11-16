@@ -1,0 +1,81 @@
+{
+  "target": "code.components/multimedia/engagement-route-map.tsx",
+  "kind": "surface",
+  "route": "components/multimedia/engagement-route-map.tsx",
+  "sourceSha256": "7ce61992e92862e02160bd37757a5d55413d0c9bb9e28aa76dc688b5f3b59c0c",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Find your way by your question",
+      "after": "Navigate by your question",
+      "reason": "Revised to use a concise verb and clarify action. The new wording preserves the original intent for staff to use their specific question as their entry point while improving directness."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Choose any starting point. Every path connects to the same program; there is no required order.",
+      "after": "Start anywhere. All these routes connect to the same program content, and you do not need to follow a sequence.",
+      "reason": "Clarified that staff can begin with any route and that all options lead to the same set of program resources. Added specificity by clarifying that there is no required sequence for exploring content."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The original 'Find your way by your question' directly supports the source and is the literal summary for the <details> element. The proposed change 'Navigate by your question' removes the invitation and shift in tone, diluting encouragement to action with the original question-based method. The original line is short, direct, and matches the source intent precisely."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revision to field 1 ('Start anywhere. All these routes connect to the same program content, and you do not need to follow a sequence.') closely matches the source meaning and expands for clarity without introducing unsupported claims. While slightly longer, it preserves the invitation and source limits. This change is acceptable as it remains true to the source and does not create new requirements or misrepresent scope."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1583,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 137,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1720
+    },
+    "review": {
+      "input_tokens": 1325,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 184,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1509
+    }
+  },
+  "createdAt": "2026-11-15T13:54:30.398Z"
+}

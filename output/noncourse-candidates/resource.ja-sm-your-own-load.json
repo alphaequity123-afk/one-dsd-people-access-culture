@@ -1,0 +1,171 @@
+{
+  "target": "resource.ja-sm-your-own-load",
+  "kind": "resource",
+  "route": "/library/ja-sm-your-own-load",
+  "sourceSha256": "14df25de367af8ee95925d72c5ba3f987b198c367b2ba7c436005164719494f4",
+  "status": "needs_revision",
+  "reviewedFieldCount": 8,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Help you see what you carry, turn it into something your manager can act on, and use support before you need it badly.",
+      "after": "Identify your current workload, communicate what you are carrying to your manager in a concrete way, and find support early—before stress becomes unmanageable.",
+      "reason": "The revised summary clarifies who the guidance is for, emphasizes purposeful communication, and directly states the value of early support. This increases specificity and professionalism for a colleague audience."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Use it monthly, or whenever you notice you have stopped noticing.",
+      "after": "Regularly reviewing your own workload can help you address signs of overload before they disrupt your work or well-being. Use this tool each month or when you realize you’ve stopped paying attention to your own needs and limits.",
+      "reason": "Expands and clarifies why the review matters and when to use it, connecting the action with workplace and personal impact."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Remember. You are someone's staff too. \"I'm overwhelmed\" describes you. \"Here are three things, and I can do two\" describes the work. Delegating is fair only if something comes off their plate. You have the same rights you tell staff to use.",
+      "after": "Remember that everyone, including you, is both a staff member and a support for others. When you say \"I'm overwhelmed,\" you're acknowledging your experience. When you say, \"Here are three things, and I can do two,\" you're describing your capacity and the work itself. When delegating tasks, ensure it does not simply add to someone else’s responsibilities without removing something else. You are entitled to the same boundaries, support, and workplace rights you explain to others.",
+      "reason": "Clarifies each concept, connects them to supervision practice, and makes expectations explicit, improving professional tone and practical relevance."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Check the five kinds of load. My own work. My people. Things I can't talk about. Other people's hardest moments. Being the middle. What's circled that no one above me knows about?",
+      "after": "Check these five types of workload: your own direct tasks, responsibilities related to your team, issues you cannot discuss, supporting others through their most difficult situations, and being caught between differing expectations or needs. Consider: Have you circled anything on your list that no one at a higher level is aware of?",
+      "reason": "Spells out each kind of load for clarity, situates the reflection step, and connects the activity to workplace dynamics."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Bring it to your manager. What's happening. What it costs. The choices. What I recommend. What I need, and by when. Keep out staff names and medical details. Write down what was agreed.",
+      "after": "When you meet with your manager, clearly describe what is happening, what the current workload is costing you or the team, available choices for addressing it, your recommendations, and what support or change you need—including by when. Exclude staff names and sensitive medical details to maintain privacy. Write down what you and your manager agree to so expectations are clear for both of you.",
+      "reason": "Expands on why each step is necessary, clarifies privacy boundaries, and emphasizes the importance of documentation."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Check your habits. Am I doing someone's work with no end date? Am I the only channel for something that doesn't need me? Who got the last three things I handed off? Am I sending email at night? When did I last take leave?",
+      "after": "Review your current work habits. Are you regularly taking on others’ work with no set time limit? Are you acting as the sole point of contact for issues that could be shared or assigned differently? Track who received the last three tasks you delegated. Pay attention to patterns, such as sending emails at night or delaying taking leave. These habits may signal an unsustainable workload.",
+      "reason": "Clarifies the reasoning behind each self-check, guiding staff to identify patterns that affect balance and long-term sustainability."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "My support plan. One peer: no names, and clear rules. One confidential option: the Employee Assistance Program, or my own provider. One place for my rights: Human Resources, the ADA coordinator or my representative. In danger: call or text 988, or follow emergency procedures.",
+      "after": "Make a practical support plan: Identify a peer to check in with—without sharing client names, and with clear boundaries. Know at least one confidential resource, such as the Employee Assistance Program or your own provider, for when you need support. Know where to find guidance on your rights, such as Human Resources, the ADA coordinator, or your union representative. If you or anyone is in danger, call or text 988, or follow your office emergency procedures.",
+      "reason": "Clarifies each support option, the nature of confidentiality, and what to do in crisis, with reasoning for each contact point."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "Do next. Choose one thing to drop, move or make visible this month. Put a date on it.",
+      "after": "Decide on one specific change to make this month—such as dropping, moving, or making a workload issue more visible. Set a date by which you will take this action or follow up.",
+      "reason": "Restates the original to clarify the decision-making process and the importance of setting a concrete timeline."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The source summary's plain-language construction ('Help you see what you carry, turn it into something your manager can act on, and use support before you need it badly.') directly grounds the job aid's informal and action-oriented framing. The rewrite adds specificity ('identify your current workload,' 'communicate what you are carrying to your manager in a concrete way'), and says 'before stress becomes unmanageable' instead of 'before you need it badly,' both of which shift the intended tone and voice. The original concisely cues self-care and practical help, not diagnostic terms ('stress' or 'unmanageable') that the job aid avoids. This loses both tone and intent, so this is a blocker."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revision clarifies the rationale, is accurate to the source's intent ('address signs of overload before they disrupt your work or well-being'), and correctly says to review monthly or when you've 'stopped paying attention.' No material finding."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The rewrite clarifies source meanings, preserves the supervisor-oriented message, and makes implicit expectations explicit. Acceptable expansion."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "This analysis of the five types of load is accurate to the source language and intent. The amplified description fits the program writing standard."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "Expands with embedded reasoning for each source item—makes privacy and documentation points explicit. This fits the intent and instructional value without loss of meaning."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The rewrite takes the source's habit-check points, explains the intent of each, and links them to long-term sustainability, but does not change their meaning or policy implication."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "This is an acceptable clarification. It restates the original support points, makes confidentiality explicit, and reinforces the reason for each type of support. No blocker."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "The change restates the practical instruction and adds the rationale for setting a deadline, which is within the source's implicit intent. Acceptable."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1881,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 913,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2794
+    },
+    "review": {
+      "input_tokens": 2248,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 467,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2715
+    }
+  },
+  "createdAt": "2026-11-15T13:43:59.191Z"
+}

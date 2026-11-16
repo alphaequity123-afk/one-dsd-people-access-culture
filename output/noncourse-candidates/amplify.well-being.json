@@ -1,0 +1,226 @@
+{
+  "target": "amplify.well-being",
+  "kind": "surface",
+  "route": "/one-dsd/amplify/well-being",
+  "sourceSha256": "fc1f15418c5e12a0f862782b8bdc8a577d8d93df22434c1b88372abd629b08ff",
+  "status": "needs_revision",
+  "reviewedFieldCount": 14,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "intro"
+      ],
+      "before": "Connection, breathing room, and the way work is organized all shape the working day. Explore what helps you and your colleagues feel supported.",
+      "after": "The way we connect, take breaks, and organize our work shapes our well-being each day. Consider what actions or changes help you and your colleagues feel supported in your roles.",
+      "reason": "Revised for specificity and to clarify the relevance of each factor to well-being in the professional setting."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "section0Body"
+      ],
+      "before": "Enjoy a quiet moment, a shared interest, or a conversation that has nothing to do with the next task. Choose what works for you. Rest and enjoyment do not need a work product to justify them.",
+      "after": "Take the time for a quiet moment, a shared hobby, or a conversation unrelated to immediate tasks. Choose the type of break that best supports your well-being. Meaningful rest and enjoyment do not require justification by work output; they contribute to sustained effectiveness and well-being.",
+      "reason": "Clarified the professional value of breaks and rest, connecting relaxation to effectiveness and well-being."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "section1Title"
+      ],
+      "before": "What helps work feel manageable?",
+      "after": "What makes work feel manageable?",
+      "reason": "Shortened and clarified the title for directness without loss of content."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "section1Body",
+        0
+      ],
+      "before": "Clear priorities and a shared understanding of what can wait.",
+      "after": "Establish clear priorities and agree on which tasks can be deferred.",
+      "reason": "Clarified the statement for professional context and intention, specifying the value of shared understanding."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "section1Body",
+        1
+      ],
+      "before": "Meetings with a purpose and more than one way to contribute.",
+      "after": "Hold meetings with defined goals and flexible participation methods.",
+      "reason": "Specified the purpose of meetings and clarified what \"more than one way to contribute\" entails."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "section1Body",
+        2
+      ],
+      "before": "Helpful handoffs and information that is easy to find.",
+      "after": "Share information and hand off work in ways that are straightforward and easy to understand.",
+      "reason": "Clarified expected actions and the attributes that make handoffs and information helpful."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "section1Body",
+        3
+      ],
+      "before": "Room to ask questions, seek support, and take available breaks.",
+      "after": "Make space for questions, offer support when requested, and encourage people to take breaks that fit their needs.",
+      "reason": "Described practical ways to implement support and breaks, clarifying their function."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "section1Body",
+        4
+      ],
+      "before": "Recognition for the everyday work that helps others succeed.",
+      "after": "Acknowledge the daily contributions that allow team members and partners to succeed.",
+      "reason": "Clarified the scope of recognition, making explicit who benefits from such work."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "section2Body"
+      ],
+      "before": "A useful pause can help in the moment. A recurring difficulty may also deserve a change in how work is arranged. Colleagues can explore an unclear process or avoidable burden and decide whether to carry an idea forward.",
+      "after": "Taking a brief pause can help with immediate stress, but recurring challenges may call for reviewing or changing work arrangements. Colleagues can discuss unclear processes or ongoing burdens and decide together whether to propose a change or adaptation.",
+      "reason": "Distinguished between momentary relief and sustained workplace changes, clarifying why noticing ongoing conditions is important."
+    },
+    {
+      "fieldId": 11,
+      "path": [
+        "section3Body"
+      ],
+      "before": "A seated activity, a quiet alternative, a remote connection, or a written contribution can make a gathering work for more people. No one needs to explain a health condition or personal circumstance to choose an option.",
+      "after": "Offering options such as seated activities, quiet alternatives, remote participation, or written input allows more people to be involved. Staff do not need to explain personal or health circumstances to choose the option that works best for them.",
+      "reason": "Clarified the access options as part of inclusive practice and specified that staff discretion is respected."
+    },
+    {
+      "fieldId": 12,
+      "path": [
+        "section4Body"
+      ],
+      "before": "What is something we could make clearer, simpler, or more considerate in our everyday work? Start with a small example and leave room for different experiences.",
+      "after": "What aspects of our everyday work could be made clearer, simpler, or more considerate? Begin with a specific example, and invite varied perspectives for a more complete understanding.",
+      "reason": "Clarified why to start with a specific example and the purpose of encouraging diverse perspectives."
+    },
+    {
+      "fieldId": 13,
+      "path": [
+        "section5Body"
+      ],
+      "before": "Use the program's support routes when a question needs individual attention. A gathering can offer connection; personal health or workplace concerns may call for a different conversation.",
+      "after": "Use the program's established support channels for individual questions or concerns. While gatherings can foster connection, matters related to personal health or workplace situations may be better addressed through a different conversation path that offers privacy and targeted assistance.",
+      "reason": "Clarified the distinction between different support routes and the types of concerns best addressed in each, specifying the value of privacy and targeted assistance."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revision introduces a subtle shift in scope and adds unsupported causality. The source states: 'Connection, breathing room, and the way work is organized all shape the working day.' The rewrite incorrectly recasts this as 'The way we connect, take breaks, and organize our work shapes our well-being each day,' making the causal link more direct and specific to well-being, rather than generally to the working day. It also transforms the call to 'explore' into 'consider what actions or changes,' which alters the original tone and focus."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The revision adds specificity by connecting rest to effectiveness and well-being. This aligns with the professional context and does not introduce unsupported claims."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The change from 'What helps work feel manageable?' to 'What makes work feel manageable?' is stylistic and does not change the meaning or introduce an unsupported claim."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The rewrite ('Establish clear priorities and agree on which tasks can be deferred.') is supported by the intent of the original ('Clear priorities and a shared understanding of what can wait.') and does not add unsupported obligations."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "'Hold meetings with defined goals and flexible participation methods' is a valid restatement of 'Meetings with a purpose and more than one way to contribute.' It clarifies rather than alters the meaning."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "The modified text ('Share information and hand off work in ways that are straightforward and easy to understand.') retains the sense of helpfulness and access to information present in the original."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "The revision ('Make space for questions, offer support when requested, and encourage people to take breaks that fit their needs.') expands on the original ('Room to ask questions, seek support, and take available breaks.') by specifying practical actions without overstating requirements."
+      },
+      {
+        "fieldId": 9,
+        "severity": "note",
+        "finding": "Recognition and acknowledgement as revised is within the scope of the source. The focus on 'team members and partners' simply clarifies 'others' from the original."
+      },
+      {
+        "fieldId": 10,
+        "severity": "note",
+        "finding": "Distinguishing between momentary and ongoing difficulties ('Taking a brief pause can help with immediate stress, but recurring challenges may call for reviewing or changing work arrangements...') is supported by the source, which mentions both 'a useful pause' and 'a recurring difficulty.'"
+      },
+      {
+        "fieldId": 11,
+        "severity": "note",
+        "finding": "The clarification of options for participation and emphasizing staff discretion is aligned with the source."
+      },
+      {
+        "fieldId": 12,
+        "severity": "note",
+        "finding": "The revision clarifies the reason for starting with examples and encourages diverse perspectives, making the purpose explicit but not changing the source meaning."
+      },
+      {
+        "fieldId": 13,
+        "severity": "note",
+        "finding": "Clarifying the distinction between support channels and privacy is helpful and remains within the intended meaning of the source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2076,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 709,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2785
+    },
+    "review": {
+      "input_tokens": 2260,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 641,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2901
+    }
+  },
+  "createdAt": "2026-11-15T13:37:07.492Z"
+}

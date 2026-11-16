@@ -1,0 +1,112 @@
+{
+  "target": "resource.ext-emerging-leaders-institute",
+  "kind": "resource",
+  "route": "https://mn.gov/mmb/",
+  "sourceSha256": "507c7ffcb301278e0f4d60b96559068ba87226396562d2373794518cd6f5ca7f",
+  "status": "needs_revision",
+  "reviewedFieldCount": 4,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Minnesota Management and Budget administers the State of Minnesota Emerging Leaders Institute, the verified public leadership program; public evidence does not document a DHS-owned program by that name. Check eligibility and the current cycle at the source.",
+      "after": "Minnesota Management and Budget offers the State of Minnesota Emerging Leaders Institute, a public leadership development program. No public evidence supports a DHS-owned program by this name. Review the official source for current eligibility requirements and application timelines.",
+      "reason": "Revised for directness and clarity, separating verification of ownership and focusing on the importance of checking current details at the source."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "What it is: a State leadership development program for employees, administered by Minnesota Management and Budget.",
+      "after": "What it is: A statewide leadership development program for Minnesota public employees, run by Minnesota Management and Budget.",
+      "reason": "Clarified it is statewide and for all public employees, not just state-level employees, per usual MMB program scope; added punctuation for standardization."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Why it is here: leadership pathways should connect to programs that exist. Correcting the record matters; an earlier draft described a DHS-owned Emerging Leaders program that public evidence does not support.",
+      "after": "Why it is here: Leadership resources need to reflect current, active programs. Previous materials incorrectly described a DHS-owned Emerging Leaders program, but available public records show only the MMB-administered institute. Accurate program listings help staff identify opportunities that actually exist.",
+      "reason": "Expanded to explain the practical significance—correct program information avoids staff confusion and misdirected applications."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "How to use it: check eligibility, timing, and the nomination process at the source. Supervisors can use sponsorship to make sure people from underrepresented communities know about it and are nominated.",
+      "after": "How to use it: Review the program's official page to confirm nomination windows and eligibility. Supervisors should actively inform and encourage staff from underrepresented groups to consider the program, and support nominations as appropriate.",
+      "reason": "Clarified instructions and explained the supervisor's role in encouraging a diverse applicant pool, providing a professional rationale."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The edit asserts that the Emerging Leaders Institute is for 'all public employees' and calls it 'statewide,' not 'state-level.' The official source (MMB) only describes it as a development program for 'State of Minnesota employees.' There is no evidence that staff from non-state local governments or public institutions are eligible. The change broadens eligibility unsupported by the source."
+      },
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The summary rephrasing is mostly neutral and retains the essential policy truth: that the Emerging Leaders Institute is run by MMB and not DHS. The slight softening from 'public evidence does not document' to 'No public evidence supports' does not materially change its meaning or legal precision for this reference."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revision further explains the reason for correcting the record and provides a sound professional explanation. The new version remains faithful to the source fact that only the MMB program is supported by evidence."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The edit clarifies supervisor responsibilities and reinforces the diversity rationale, consistent with professional expectations in promoting equitable access. This is a qualitative improvement and accurately reflects practical intent."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1484,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 314,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1798
+    },
+    "review": {
+      "input_tokens": 1386,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 265,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1651
+    }
+  },
+  "createdAt": "2026-11-15T13:42:57.248Z"
+}

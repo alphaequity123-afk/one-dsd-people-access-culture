@@ -1,0 +1,123 @@
+{
+  "target": "one-dsd.program-overview",
+  "kind": "surface",
+  "route": "/one-dsd/programs",
+  "sourceSha256": "0350be3c804eaa7fcc20f906d5ae14684dc583f87b7d3503568dce03f6569a4c",
+  "status": "model_checked",
+  "reviewedFieldCount": 91,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "intro"
+      ],
+      "before": "Understand the services DSD supports, the people and partners involved, and where equity can improve everyday decisions.",
+      "after": "This page summarizes the services DSD supports, the key participants, and the areas where considering equity can improve daily work.",
+      "reason": "Improved clarity and directness, and connected the purpose to the practical audience. Eliminated unnecessary abstraction and explained that this is an overview."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "servicesIntro"
+      ],
+      "before": "Find the program context, a useful question for your work, and a direct route to guidance.",
+      "after": "Review each major service area for background, a guiding question relevant to your responsibilities, and a direct route to official guidance. Use this structure to connect broader policy questions to the practical challenges you see.",
+      "reason": "Specified each element, stated how structure points to work needs, and clarified the intended use."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "practiceIntro"
+      ],
+      "before": "The Equity Outcome Map provides the shared foundation. The six ADSA implementation goals connect that purpose to practical work in the Aging and Disability Services Administration.",
+      "after": "The Equity Outcome Map establishes our shared starting point. The six implementation goals of the Aging and Disability Services Administration (ADSA) clarify how that purpose translates to concrete actions within DSD and related areas.",
+      "reason": "Clarified the relationship and aligned wording with agency naming; made the connection between outcomes and implementation actions explicit."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "prioritiesIntro"
+      ],
+      "before": "The division overview identifies these risks and executive watch items. The questions below help directors, managers, supervisors, and staff connect each priority to people, access, and outcomes.",
+      "after": "The division overview lists current risks and executive monitoring topics. The guiding questions below help staff at all levels frame each priority in terms of effects on people, access, and results. Thoughtful use of these questions strengthens decision-making and makes priorities relevant to practical work.",
+      "reason": "Clarified how and why to use the questions. Connected analysis to specific outcomes and the purpose of the list."
+    },
+    {
+      "fieldId": 21,
+      "path": [
+        "sourceNote"
+      ],
+      "before": "Division responsibilities, priorities, and named contacts are drawn from the division overview supplied October 12, 2026. Program links and the CFSS transition guidance were checked October 14, 2026. Use current DHS guidance for program requirements and confirm current staff assignments when routing a question.",
+      "after": "Division responsibilities, priorities, and staff contacts are based on the division overview shared October 12, 2026. Program links and CFSS transition guidance were last confirmed October 14, 2026. Always use the most recent DHS guidance for program requirements, and verify current staff assignments before routing questions.",
+      "reason": "Improved precision about dates and directed staff to check for current information. This addresses the need for up-to-date routing and use of policy."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The rewrite maintains source intent—summarizing DSD services and audiences—while clarifying that the page is an overview and how equity relates to daily work. No blockers present."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "This clarifies the main activities covered (background, guiding question, official guidance) and the application to staff work. Matches source scope, increases specificity, and gives needed context."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The new text accurately expresses that the Equity Outcome Map is foundational, and the six ADSA goals guide implementation—without overstating. The relationship of concepts is preserved and clarified."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "The edit properly explains why directors and staff should use guiding questions for priorities, encouraging practical application and thoughtful analysis. This aligns with source content and purpose."
+      },
+      {
+        "fieldId": 21,
+        "severity": "note",
+        "finding": "This version keeps the evidentiary dates, clarifies the need to check current guidance and staff assignments, and matches the intent and specifics of the official record. No compliance or policy issues."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 6255,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 579,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 6834
+    },
+    "review": {
+      "input_tokens": 3641,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 311,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3952
+    }
+  },
+  "createdAt": "2026-11-15T13:38:29.588Z"
+}

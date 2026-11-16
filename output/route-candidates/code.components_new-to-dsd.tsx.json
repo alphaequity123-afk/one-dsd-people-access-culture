@@ -1,0 +1,81 @@
+{
+  "target": "code.components/new-to-dsd.tsx",
+  "kind": "surface",
+  "route": "components/new-to-dsd.tsx",
+  "sourceSha256": "ed8bb3a28a10f07d5722052cde327949cfa8e23693198e72c9ff585b2f3b8083",
+  "status": "needs_revision",
+  "reviewedFieldCount": 8,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Welcome. Whether you joined the division last week or have years of experience behind you, this program is built to meet you where you are. It brings together learning, practical tools, and the people and perspectives that shape disability services in Minnesota. Taking part is voluntary; existing agency requirements, including required equity analysis, still apply.",
+      "after": "Welcome. Whether you joined DSD recently or have long experience, this program supports you by connecting learning resources, practical tools, and the insights of people involved in Minnesota disability services. Participation is optional. All standing agency requirements—including required equity analyses—still apply. You will find support for your work, but the responsibility for meeting established expectations remains with each staff member under agency policy.",
+      "reason": "Clarified that the program offers support but does not alter required responsibilities or agency policy. Improved specificity about how participation interacts with existing requirements and why that distinction matters for staff choices."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "field7"
+      ],
+      "before": "You belong to a division with its own programs, colleagues, and shared commitments. Explore the division’s programs, connect with people through the One DSD Team and Amplify Equity, and use the learning and tools here to strengthen a real piece of work. DSD sits within the Aging and Disability Services Administration at Minnesota DHS, and agency policy and delegated responsibilities continue to guide decisions.",
+      "after": "As a member of DSD, you participate in a division with distinct programs, colleagues, and shared commitments. You can explore DSD’s programs, connect through groups like the One DSD Team and Amplify Equity, or apply available learning and tools to support your daily work. DSD is part of the Aging and Disability Services Administration at Minnesota DHS. Agency policy, along with delegated responsibilities, continues to guide your decisions. Engaging with these resources can help you address challenges and meet division priorities, but does not change your formal responsibilities under policy.",
+      "reason": "Added context about the ways staff may use the materials and clarified that using program resources can inform but does not supersede existing policy or responsibilities."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The revision goes beyond the source by substantially expanding and rewording the required disclaimer. The source states: 'Taking part is voluntary; existing agency requirements, including required equity analysis, still apply.' The revision adds: 'Participation is optional. All standing agency requirements—including required equity analyses—still apply. You will find support for your work, but the responsibility for meeting established expectations remains with each staff member under agency policy.' The further explanation of who retains responsibility and the implication that established expectations remain with each staff member introduces a new legal framing ('responsibility... remains with each staff member under agency policy') that the original source does not specify. The extra language risks shifting the meaning and is unsupported by the provided source."
+      },
+      {
+        "fieldId": 7,
+        "severity": "blocker",
+        "finding": "The revision introduces new content not found in the source. The original says: 'You belong to a division with its own programs, colleagues, and shared commitments. Explore the division’s programs, connect with people through the One DSD Team and Amplify Equity, and use the learning and tools here to strengthen a real piece of work. DSD sits within the Aging and Disability Services Administration at Minnesota DHS, and agency policy and delegated responsibilities continue to guide decisions.' The rewrite adds: 'Engaging with these resources can help you address challenges and meet division priorities, but does not change your formal responsibilities under policy.' This injects an unsupported distinction and a prescriptive statement about 'formal responsibilities under policy' that the source does not address. The remainder shifts from an open-ended encouragement to a partially instructional tone not present in the original."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3347,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 299,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3646
+    },
+    "review": {
+      "input_tokens": 3080,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 346,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3426
+    }
+  },
+  "createdAt": "2026-11-15T13:54:56.119Z"
+}

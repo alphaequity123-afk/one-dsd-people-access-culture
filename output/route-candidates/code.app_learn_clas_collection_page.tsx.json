@@ -1,0 +1,123 @@
+{
+  "target": "code.app/learn/clas/collection/page.tsx",
+  "kind": "surface",
+  "route": "/learn/clas/collection",
+  "sourceSha256": "8615073854beee7b8cc99c8d5588b99ff2840c4330d7633264e436630580675d",
+  "status": "needs_revision",
+  "reviewedFieldCount": 17,
+  "changes": [
+    {
+      "fieldId": 3,
+      "path": [
+        "field4"
+      ],
+      "before": "Put culturally and linguistically appropriate services into everyday practice.",
+      "after": "Apply culturally and linguistically appropriate services to daily work.",
+      "reason": "Clarified the expected action (apply in practice) and removed a slogan-like construction, focusing on the professional use of CLAS principles."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field5"
+      ],
+      "before": "Follow one work example through nine connected lessons, from understanding a barrier to planning and reviewing an improvement. Use the collection on your own or share it with colleagues.",
+      "after": "Work through nine connected lessons using one example, starting with identifying a barrier and progressing to improvement planning and review. You can study independently or review the materials with coworkers.",
+      "reason": "Clarified the instructional sequence and added context about collaborative use, making the connection between steps more explicit."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "field9"
+      ],
+      "before": "Scan the QR code on the welcome image with a phone or tablet to open the One DSD app. The code opens the main app; use the collection link above to go directly to this CLAS curriculum.",
+      "after": "Scan the QR code from the welcome image using a phone or tablet to open the main One DSD app. To go directly to this CLAS curriculum, use the collection link in the section above instead of the main QR code.",
+      "reason": "Improved the specificity and order of actions, clarified that the QR code leads to the main app (not directly to CLAS), and gave a reason to use the link above."
+    },
+    {
+      "fieldId": 11,
+      "path": [
+        "field12"
+      ],
+      "before": "Each lesson includes a video, discussion audio, full text, captions and individual practice. Pause and return at your own pace.",
+      "after": "Each lesson includes a video, discussion audio, a complete transcript, captions, and a related practice activity. You can pause and return whenever needed to fit learning into your schedule.",
+      "reason": "Increased specificity about provided materials and explained the value of flexible pacing for busy professionals."
+    },
+    {
+      "fieldId": 16,
+      "path": [
+        "field18"
+      ],
+      "before": "Use a non-sensitive work example. Keep official records in approved systems and confirm the current requirements and procedures for your role.",
+      "after": "Use a work example that does not include sensitive information. When keeping records, use approved systems and check current requirements and procedures for your job duties.",
+      "reason": "Clarified what counts as a non-sensitive example, emphasized compliance with documentation standards, and connected actions to professional responsibilities."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "The proposed change from \"Put culturally and linguistically appropriate services into everyday practice.\" to \"Apply culturally and linguistically appropriate services to daily work.\" is not source-supported. The original text is clear, matches the source, and is used as a lede in the existing program structure. The new language introduces at least a subtle shift in both tone and meaning (\"apply\" suggests direct application, \"put into everyday practice\" includes ongoing use and perhaps broader cultural adoption). No evidence supports this change."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The revised explanation for field5 clarifies the instructional sequence and expands the collaborative context. While it introduces more explicit language, all key points are traceable to the original: working through nine lessons with an ongoing example, beginning with a barrier, through to improvement planning and review, and use by individuals or colleagues. This change is source-accurate and clarifying."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "The expanded language on scanning the QR code correctly preserves the distinction that the QR code opens the main app, not the CLAS curriculum directly. It reorders and clarifies for accuracy with no loss or distortion. This change is source-faithful and improves specificity."
+      },
+      {
+        "fieldId": 11,
+        "severity": "blocker",
+        "finding": "The source for field12 lists \"full text\"; the rewrite substitutes \"a complete transcript\" in a context where 'full text' is not explicitly transcript (it may include both transcript and written lesson content). Adding \"a related practice activity\" (where the original has \"individual practice\") is not fully supported: the type of practice is described, but the change loses the original term's breadth. The language about flexible pacing is supportive but less precise than \"pause and return at your own pace.\" The change is not source-accurate, and key meanings are altered."
+      },
+      {
+        "fieldId": 16,
+        "severity": "note",
+        "finding": "The revision to field18 clarifies—without changing—intent: it defines nonsensitive examples and emphasizes official documentation with a plain-language connection to job duties. This maintains and clarifies the original requirement, is source-faithful, and is acceptable."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2802,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 375,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3177
+    },
+    "review": {
+      "input_tokens": 2444,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 464,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2908
+    }
+  },
+  "createdAt": "2026-11-15T13:49:31.522Z"
+}

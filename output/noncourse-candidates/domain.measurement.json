@@ -1,0 +1,138 @@
+{
+  "target": "domain.measurement",
+  "kind": "surface",
+  "route": "/areas/measurement",
+  "sourceSha256": "5957f428b1d4c9e8d4e5ea1dcbfff961ffb4add944d39d089ed672376fdec5fe",
+  "status": "needs_revision",
+  "reviewedFieldCount": 16,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "summary"
+      ],
+      "before": "Telling the difference between a platform that works and a program that improves equity practice, using baselines, mixed methods, disaggregation with protection, and honest limits.",
+      "after": "Distinguishing between a system that tracks activity and a program that actually improves equity practice. This involves setting and using baseline data, applying both quantitative and qualitative methods, disaggregating data while protecting participant identity, and being transparent about what results can and cannot show.",
+      "reason": "Increase specificity and clarity around the distinctions and methods involved, as well as the reasoning for protective and honest measurement."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Legacy data systems were built for billing and eligibility, not equity analysis. Good measurement protects private learning, refuses invented targets, and reports what the evidence does and does not show.",
+      "after": "Most existing data systems were designed to meet requirements for billing and eligibility, rather than to support equity analysis or continuous improvement. When we measure equitably, we must consider that learning—whether individual or group—should remain private where appropriate, avoid setting targets unsupported by evidence, and clearly describe both the findings and the real limitations of our methods. This approach gives decision-makers better understanding without overstating what the data can prove.",
+      "reason": "Clarifies the issue with legacy systems, and expands why intentional, protective measurement changes practice; explains why honest limits inform decision-makers’ interpretation."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "firstQuestions",
+        1
+      ],
+      "before": "What is the baseline, the denominator, and the smallest group we will report?",
+      "after": "What is the baseline data, how do we define our denominator, and what is the smallest group size for which we will report data to protect privacy?",
+      "reason": "Clarifies the privacy reasoning for smallest group size and distinguishes the terms more explicitly."
+    },
+    {
+      "fieldId": 11,
+      "path": [
+        "taskEvaluationPlanOutcome"
+      ],
+      "before": "A logic model with baseline, mixed-method evidence, disaggregation rules, small-group protection, and limits stated plainly.",
+      "after": "A logic model that includes a baseline, draws from both quantitative and qualitative evidence, applies clear disaggregation practices, protects small groups from identification, and states any analytic or reporting limits in straightforward language.",
+      "reason": "Expands on mixed-method evidence and specifies the elements expected in reporting, so staff consider why each component is necessary."
+    },
+    {
+      "fieldId": 14,
+      "path": [
+        "taskReadDisaggregatedDataOutcome"
+      ],
+      "before": "Clear statements of what the data shows, what it does not, and which small groups are protected from identification.",
+      "after": "Accurate statements about what the analyzed data can justifiably indicate, what uncertainties or gaps remain, and a transparent description of any small groups whose privacy is protected from disclosure.",
+      "reason": "Adds reasoning about uncertainty and gap reporting, and clarifies the need for transparent communication about privacy protections."
+    },
+    {
+      "fieldId": 15,
+      "path": [
+        "taskReadDisaggregatedDataAskStarter"
+      ],
+      "before": "How do I present service data by race and language without exposing small groups or overclaiming causes?",
+      "after": "What steps should I take to show differences in outcomes by race and language, without identifying members of small groups or claiming the program caused the outcomes without sufficient evidence?",
+      "reason": "Expands the guidance to make explicit the steps related to both privacy and causal inference, supporting more thoughtful practice."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The proposed summary rewrites the distinction between a 'platform that works' (implied as measurement system) and a 'program that improves equity practice,' but the source widely treats 'platform' as data system, not just an activity tracker. The new version changes meaning by asserting that a 'system' only tracks activity rather than enables evidence, weakening the original's caution against confusing outputs with improvement. It introduces 'transparency' mechanisms not stated in the original and may erode the connotation of honest practical limits."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The expansion mostly preserves the source's meaning and intent, clarifying the difference between legacy data purposes and current equity needs, and appropriately explains the importance of protecting private learning, evidence-based targets, and transparent limits. It is an acceptable elaboration rather than a revision altering the central point."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The revision clarifies the privacy rationale for reporting thresholds. The source already implies protection for small groups and distinguishes denominators, so this is an acceptable clarification."
+      },
+      {
+        "fieldId": 11,
+        "severity": "note",
+        "finding": "The change provides clearer guidance about the logic model's required elements and maintains all substantive requirements: mixed-method evidence, disaggregation, privacy, and limitations. This is an acceptable improvement for professional staff."
+      },
+      {
+        "fieldId": 14,
+        "severity": "note",
+        "finding": "This revision does not alter the intent but expands the explanation of 'what the data does not show' toward uncertainties and explicit gap reporting. This matches the original's call for honest limits."
+      },
+      {
+        "fieldId": 15,
+        "severity": "note",
+        "finding": "The expansion is a clear elaboration. It covers both privacy and causal claims without overstating source content and adds explicitness helpful for new staff."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1938,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 592,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2530
+    },
+    "review": {
+      "input_tokens": 1751,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 380,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2131
+    }
+  },
+  "createdAt": "2026-11-15T13:39:28.126Z"
+}

@@ -1,0 +1,494 @@
+{
+  "status": "pending_independent_review",
+  "records": [
+    {
+      "kind": "resource",
+      "target": "resource.ja-sm-first-week",
+      "route": "/library/ja-sm-first-week",
+      "original": {
+        "id": "ja-sm-first-week",
+        "title": "First-week card: moments you do not handle alone",
+        "type": "job_aid",
+        "authority": "guidance",
+        "layer": "L2",
+        "summary": "To tell you what to do in the first minutes of a moment you cannot handle alone, and whom to call.",
+        "whyItMatters": "Fill in the contacts for your division. Keep this page out of the app.",
+        "body": [
+          "Remember. Report possible harassment or discrimination immediately. No threshold, no written complaint needed. A request needs no special words. Move it forward promptly. Check the contract before you change someone's work. Pause decisions affecting someone who has just made a report or a request. Then check them.",
+          "Someone tells you about harassment or discrimination. Listen, take notes, and do not promise secrecy. Say: \"I have to take this to Human Resources today, and I'll tell you what happens next.\" Report the same day to Human Resources or the Affirmative Action Officer: ____________ Do not investigate or confront anyone yourself.",
+          "Someone mentions a medical or access need. Ask: \"What would help?\" Do not ask for a diagnosis or a note. Write down an oral request. Forward it promptly, and tell the person who decides. ADA coordinator: ____________ Consult the ADA coordinator before any denial, or when questions arise.",
+          "You plan to change hours, duties or rules. Which agreement covers each person? MAPE, AFSCME, MMA, Managerial Plan, or other: ____________ MAPE: 14 calendar days for permanent hour changes, unless mutually waived. Article 28 for work rules. Check other agreements directly. Call labor relations before you announce: ____________",
+          "Someone asks for sign-off on a long-term action. Ask: \"Where is the equity analysis?\" Ask which people are affected and what changes for them, including language and disability access.",
+          "Other contacts. Human Resources partner: ____________ Tribal liaison, and ADSA for Tribal learning: ____________ Where my required training is tracked: ____________",
+          "Do next. Hold the first round of one-to-ones, using the same core questions for everyone."
+        ],
+        "nextActions": [
+          {
+            "label": "Take the course: Your First Week as a Supervisor: What You Now Answer For",
+            "href": "/courses/sm-first-week"
+          },
+          {
+            "label": "For leaders, supervisors, managers, and directors",
+            "href": "/leading"
+          }
+        ],
+        "tags": [
+          "supervision",
+          "first week",
+          "harassment report",
+          "accommodation request",
+          "labor agreement"
+        ],
+        "intents": [
+          "workplace_culture",
+          "escalation",
+          "next_actions"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2026-10-31",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "provenance": "Built from the course's job aid in the supervisor and manager curriculum; the owner approved all 19 courses on October 31, 2026.",
+        "version": "1.0.0"
+      },
+      "changes": [
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "To tell you what to do in the first minutes of a moment you cannot handle alone, and whom to call.",
+          "after": "Prepare for the first response to a report, an access request or a proposed change to someone’s work, and identify the office responsible for the next step.",
+          "reason": "Make the supervisory purpose, evidence and responsibility explicit without expanding source legal or contract claims."
+        },
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "Fill in the contacts for your division. Keep this page out of the app.",
+          "after": "A supervisor’s first response can affect whether a concern reaches the responsible office promptly. Identify your division’s contacts before an issue arises, and keep completed working notes outside this learning app.",
+          "reason": "Make the supervisory purpose, evidence and responsibility explicit without expanding source legal or contract claims."
+        }
+      ]
+    },
+    {
+      "kind": "resource",
+      "target": "resource.ja-sm-fair-assignments",
+      "route": "/library/ja-sm-fair-assignments",
+      "original": {
+        "id": "ja-sm-fair-assignments",
+        "title": "The swap test",
+        "type": "job_aid",
+        "authority": "guidance",
+        "layer": "L2",
+        "summary": "To check that a decision about someone's work rests on criteria that would hold for anyone.",
+        "whyItMatters": "Use it for assignments, schedules, telework, reassignments and nominations.",
+        "body": [
+          "Remember. One standard applies to all employees, in every direction. A small harm can count, even if pay and title do not change. Same criteria does not always mean same outcome. An accommodation is an added duty, and it stays private. A pattern prompts a review of process. Do not choose an individual by a trait to balance it.",
+          "Before you decide. Write what the work needs, in one or two lines, before you think of names. Offer it openly, using the same message for everyone eligible. State language or other skills as skills you can check.",
+          "The test. Swap the person's race, sex, age, religion, disability, national origin or family situation. Keep the work and the record the same. Would you still say your reason? Would you say it to the person who did not get the work? Watch for these words: fit, relate, comfortable, natural, \"hands full,\" \"connect,\" \"prove yourself.\"",
+          "Before you act. Has this person recently made a report, joined an investigation or asked for an accommodation? Call Human Resources first. Is this a permanent hours change, reassignment, telework change or new rule? Check the agreement, and call labor relations. MAPE: Article 16, Section 2 for reassignment factors. Article 27 for hours and telework. Article 28 for work rules. Check other agreements directly.",
+          "After you decide. Write one line: the work, the criteria, the person and the reason. Leave out personal traits. Once a month, check three things: criteria first, record kept, open offer or second look.",
+          "Do next. Use this page on your next assignment, and write the one-line record the same day."
+        ],
+        "nextActions": [
+          {
+            "label": "Take the course: Fair Assignments, Schedules and Visibility",
+            "href": "/courses/sm-fair-assignments"
+          },
+          {
+            "label": "For leaders, supervisors, managers, and directors",
+            "href": "/leading"
+          }
+        ],
+        "tags": [
+          "supervision",
+          "assignments",
+          "schedules",
+          "telework",
+          "swap test"
+        ],
+        "intents": [
+          "workplace_culture",
+          "practice_method"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2026-10-31",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "provenance": "Built from the course's job aid in the supervisor and manager curriculum; the owner approved all 19 courses on October 31, 2026.",
+        "version": "1.0.0"
+      },
+      "changes": [
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "To check that a decision about someone's work rests on criteria that would hold for anyone.",
+          "after": "Test whether an assignment, schedule or nomination rests on job-related criteria that you can apply and explain consistently.",
+          "reason": "Make the supervisory purpose, evidence and responsibility explicit without expanding source legal or contract claims."
+        },
+        {
+          "path": [
+            "body",
+            1
+          ],
+          "before": "Before you decide. Write what the work needs, in one or two lines, before you think of names. Offer it openly, using the same message for everyone eligible. State language or other skills as skills you can check.",
+          "after": "Before you decide, describe what the work requires before considering names. Offer the opportunity openly to everyone eligible, using consistent information about the work and the selection criteria. Define language proficiency or other relevant skills in terms you can assess, so familiarity with a candidate does not substitute for evidence.",
+          "reason": "Make the supervisory purpose, evidence and responsibility explicit without expanding source legal or contract claims."
+        }
+      ]
+    },
+    {
+      "kind": "resource",
+      "target": "resource.ja-sm-rating-and-what-follows",
+      "route": "/library/ja-sm-rating-and-what-follows",
+      "original": {
+        "id": "ja-sm-rating-and-what-follows",
+        "title": "From rating to what follows",
+        "type": "job_aid",
+        "authority": "guidance",
+        "layer": "L2",
+        "summary": "To help you write a rating from evidence and follow it through to the decisions it affects.",
+        "whyItMatters": "Use before, during and after a review cycle.",
+        "body": [
+          "Remember. Equal ratings do not guarantee equal results. Watch the handoff. Same headings and same amount of evidence for everyone. Keep the ADA, FMLA, the Employee Assistance Program and health details off the form. A response or an appeal is a right. It is not a mark against anyone. These contract terms come from MAPE 2025-2027. Check other agreements directly.",
+          "All year. One or two lines per person after each one-to-one. Include invisible work, good news and problems. Raise problems when they happen, so the rating is no surprise.",
+          "Before you submit. Swap check: same words for the same behavior? Seen-it check: can you name a date or piece of work? Recency check: does your evidence cover the whole period? Lower than last year? Check what changed, what happened in between and whether the person has heard this before. Any leave, late accommodation, report or grievance in the period? Call Human Resources or the ADA coordinator.",
+          "At the handoff. Name the decision, and state its criteria. Start from the roster of everyone eligible. Compare evidence side by side. Check against the ratings, write the reason and get a second look. MAPE step increases: written notice before the anniversary date, or the increase shall be granted.",
+          "The meeting and after. Ask for their view first. Share evidence and next steps. Signing does not mean agreeing. Written response: 30 calendar days from receipt. Appeal: 30 days from the official date of rating. Representative may attend the appeal if they ask. Report any discrimination or retaliation claim immediately to Human Resources or the Affirmative Action Officer. Keep their assignments and your note-taking the same as for everyone else.",
+          "Do next. Start an evidence file with the same headings for each person this week."
+        ],
+        "nextActions": [
+          {
+            "label": "Take the course: The Rating and What Follows From It",
+            "href": "/courses/sm-rating-and-what-follows"
+          },
+          {
+            "label": "For leaders, supervisors, managers, and directors",
+            "href": "/leading"
+          }
+        ],
+        "tags": [
+          "supervision",
+          "performance review",
+          "ratings",
+          "evidence file",
+          "pay and advancement"
+        ],
+        "intents": [
+          "workplace_culture",
+          "practice_method"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2026-10-31",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "provenance": "Built from the course's job aid in the supervisor and manager curriculum; the owner approved all 19 courses on October 31, 2026.",
+        "version": "1.0.0"
+      },
+      "changes": [
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "To help you write a rating from evidence and follow it through to the decisions it affects.",
+          "after": "Connect a performance rating to documented work across the review period, then examine how that rating is used in later decisions.",
+          "reason": "Make the supervisory purpose, evidence and responsibility explicit without expanding source legal or contract claims."
+        },
+        {
+          "path": [
+            "body",
+            1
+          ],
+          "before": "All year. One or two lines per person after each one-to-one. Include invisible work, good news and problems. Raise problems when they happen, so the rating is no surprise.",
+          "after": "Throughout the review period, record relevant examples after each one-to-one, using the same headings for each employee. Include contributions that may be less visible, progress and concerns. Discuss concerns when they arise so the employee has an opportunity to understand and respond before the formal rating.",
+          "reason": "Make the supervisory purpose, evidence and responsibility explicit without expanding source legal or contract claims."
+        }
+      ]
+    },
+    {
+      "kind": "resource",
+      "target": "resource.ja-sm-corrective-action",
+      "route": "/library/ja-sm-corrective-action",
+      "original": {
+        "id": "ja-sm-corrective-action",
+        "title": "Before you correct: a one-page checklist",
+        "type": "job_aid",
+        "authority": "guidance",
+        "layer": "L2",
+        "summary": "To help you prepare fair corrective action, follow the steps and know when to call.",
+        "whyItMatters": "Contract terms here come from MAPE 2025-2027. For AFSCME, MMA, the Managerial Plan or any other agreement, read that document and ask labor relations.",
+        "body": [
+          "Remember. Discipline is only for just cause, and corrective where appropriate. Call early, before you speak to the employee about consequences. Report harassment and discrimination immediately. Do not investigate them yourself. Same conduct, same response. Ask how similar situations were handled.",
+          "First check. Was the expectation clear and known? Is it applied to everyone? Has anyone raised it privately? Initial minor issues come first, and if corrected they stay out of the file. Ask: \"What's getting in the way?\" Anything medical goes to the ADA coordinator.",
+          "Pause and call if. The person has recently made a report, requested an accommodation, been a witness, filed a grievance or taken leave. A conversation is turning into questioning that may lead to discipline. You feel pressure to act fast to make a point.",
+          "Questioning that may lead to discipline. Advise the employee of the nature of the investigation. Offer union representation. Any waiver must be in writing, before questioning. Arrange any interpreter or accommodation first. State no conclusions or consequences. Pause sentence: \"I want to stop here so that we do this properly. I'll get back to you by ____.\"",
+          "MAPE discipline, Article 8. Oral reprimand (identify it as such), written reprimand, suspension, demotion, discharge. Not necessarily in this order. Do not embarrass anyone. Give written notice of specific reasons to the employee and union for anything above an oral reprimand. For suspension or discharge: a chance to hear the evidence and respond, with representation. Each disciplinary entry states the corrective action expected, except discharge.",
+          "Records. Out of the file: corrected minor issues, oral reprimands, investigations without discipline. Removal on written request: letter of expectation at 6 months; written reprimand at 18 months; suspension record of 10 days or less at 3 years, with no further discipline. Notes: date, facts, no guesses, no labels. Ask Human Resources where they belong, and how long to keep them.",
+          "Contacts. Labor relations: ____________ Human Resources: ____________ ADA coordinator: ____________ Affirmative Action Officer: ____________",
+          "Do next. Call labor relations this week to introduce yourself, and ask who holds the authority for each step at DHS."
+        ],
+        "nextActions": [
+          {
+            "label": "Take the course: Corrective Action and Labor Agreements",
+            "href": "/courses/sm-corrective-action"
+          },
+          {
+            "label": "For leaders, supervisors, managers, and directors",
+            "href": "/leading"
+          }
+        ],
+        "tags": [
+          "supervision",
+          "corrective action",
+          "discipline",
+          "labor agreement",
+          "union representation"
+        ],
+        "intents": [
+          "workplace_culture",
+          "escalation"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2026-10-31",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "provenance": "Built from the course's job aid in the supervisor and manager curriculum; the owner approved all 19 courses on October 31, 2026.",
+        "version": "1.0.0"
+      },
+      "changes": [
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "To help you prepare fair corrective action, follow the steps and know when to call.",
+          "after": "Prepare the evidence and questions needed for a fair response to a performance or conduct concern, and consult the responsible office before acting.",
+          "reason": "Make the supervisory purpose, evidence and responsibility explicit without expanding source legal or contract claims."
+        }
+      ]
+    },
+    {
+      "kind": "resource",
+      "target": "resource.ja-sm-named-in-complaint",
+      "route": "/library/ja-sm-named-in-complaint",
+      "original": {
+        "id": "ja-sm-named-in-complaint",
+        "title": "Named in a complaint: first steps and steady habits",
+        "type": "job_aid",
+        "authority": "guidance",
+        "layer": "L2",
+        "summary": "Help you take the right steps in the right order when you learn a complaint names you, and keep your team out of it.",
+        "whyItMatters": "One page for the worst week.",
+        "body": [
+          "Remember. A complaint is not a finding. It is also not nothing. Call before you talk. Delete nothing. Everyone keeps their rights, including you.",
+          "First day. Stop. Say nothing to the team about it. Write a private note: what, who told you, when. Call Human Resources. Ask who is handling it, what you may say, and who reviews your decisions for now. If an employee tells you directly: thank them, say you must pass it on, and report it that day to Human Resources or the Affirmative Action Officer. Find your own contract or plan, and your representative or adviser.",
+          "Never. Try to find out who filed. Ask the team what they have heard. Reach out to \"clear the air.\" Start a new file on anyone. Delete, edit or tidy any record. Talk to possible witnesses about the matter.",
+          "Before any decision about staff. Would I decide this with no complaint on the table? Is it the way I treat others in the same spot? Did I write the work reason first? Could it discourage someone from raising a concern? Who else looked at it?",
+          "Taking part. Tell the truth. Say what you do not remember. Hand over what is asked for. Ask for the access you need. Ask what you may discuss afterward.",
+          "After it closes. No victory lap and no public penance. Keep protecting everyone who took part. Check your decisions at three months. Choose one change in practice.",
+          "Do next. Save your Human Resources contact and your own contract today. Do it now, when it costs you nothing."
+        ],
+        "nextActions": [
+          {
+            "label": "Take the course: When You Are Named in a Complaint",
+            "href": "/courses/sm-named-in-complaint"
+          },
+          {
+            "label": "For leaders, supervisors, managers, and directors",
+            "href": "/leading"
+          }
+        ],
+        "tags": [
+          "supervision",
+          "complaint",
+          "retaliation",
+          "investigation",
+          "representation"
+        ],
+        "intents": [
+          "workplace_culture",
+          "escalation"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2026-10-31",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "provenance": "Built from the course's job aid in the supervisor and manager curriculum; the owner approved all 19 courses on October 31, 2026.",
+        "version": "1.0.0"
+      },
+      "changes": [
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "Help you take the right steps in the right order when you learn a complaint names you, and keep your team out of it.",
+          "after": "Respond to a complaint that names you without interfering with the review, retaliating or pressuring the people involved.",
+          "reason": "Make the supervisory purpose, evidence and responsibility explicit without expanding source legal or contract claims."
+        },
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "One page for the worst week.",
+          "after": "A complaint requires a careful response while its facts are being examined. Keep the review with the responsible office, preserve records and examine whether your own decisions could discourage participation.",
+          "reason": "Make the supervisory purpose, evidence and responsibility explicit without expanding source legal or contract claims."
+        },
+        {
+          "path": [
+            "body",
+            5
+          ],
+          "before": "After it closes. No victory lap and no public penance. Keep protecting everyone who took part. Check your decisions at three months. Choose one change in practice.",
+          "after": "After the matter closes, follow the responsible office’s directions about what may be shared. Avoid public comments that could identify, embarrass or discourage anyone who participated. Continue reviewing work decisions for consistent criteria, and identify any practice that needs to change.",
+          "reason": "Make the supervisory purpose, evidence and responsibility explicit without expanding source legal or contract claims."
+        },
+        {
+          "path": [
+            "body",
+            6
+          ],
+          "before": "Do next. Save your Human Resources contact and your own contract today. Do it now, when it costs you nothing.",
+          "after": "Prepare before a concern arises: save your Human Resources contact and locate the contract or plan that applies to your position. Know where to ask about representation, advice and the next steps in a review.",
+          "reason": "Make the supervisory purpose, evidence and responsibility explicit without expanding source legal or contract claims."
+        }
+      ]
+    },
+    {
+      "kind": "resource",
+      "target": "resource.ja-sm-leave-and-return",
+      "route": "/library/ja-sm-leave-and-return",
+      "original": {
+        "id": "ja-sm-leave-and-return",
+        "title": "Leave and return: what you do, and what you route",
+        "type": "job_aid",
+        "authority": "guidance",
+        "layer": "L2",
+        "summary": "Help you respond well, keep the work running and bring people back to their own job, while Human Resources handles the rules.",
+        "whyItMatters": "For the first call and the first day back.",
+        "body": [
+          "Remember. You do not decide eligibility. Route it the same day. No special words are needed. You need dates and restrictions. You do not need the diagnosis. Time away does not count against someone.",
+          "When someone says they need time away. Thank them. Do not ask why. Offer to contact Human Resources today, or let them do it. Ask what dates they know, then let them go. Do not ask them to delay.",
+          "Coverage. What must continue? What can wait? What stops? Who covers what, and for what stated reason? What comes off each person's plate? Hand off interpreter, format and access needs. Leave out the reason for absence. Tell your manager the real cost.",
+          "Tell the team. What's changing and who covers. \"I keep individual arrangements private for everyone.\"",
+          "Before they return. Confirm date and any restrictions with Human Resources. Check access, equipment and any accommodation. Write a short update. Decide openly what work goes back. Book a one-to-one for day one or two.",
+          "After the return. Rate the work they did while there. Tie \"availability\" and \"presence\" to a work result, or remove them. Offer opportunities on the same criteria. Let them decide. Check their assignments at six months.",
+          "Always route to Human Resources. Repeated absences. Leave running out, or a request for more. Not returning when expected. A safety worry about someone's return. Any performance action.",
+          "Do next. Ask Human Resources today for the current leave process for your team, and save it with this page."
+        ],
+        "nextActions": [
+          {
+            "label": "Take the course: Leave and Return to Work",
+            "href": "/courses/sm-leave-and-return"
+          },
+          {
+            "label": "For leaders, supervisors, managers, and directors",
+            "href": "/leading"
+          }
+        ],
+        "tags": [
+          "supervision",
+          "leave",
+          "return to work",
+          "accommodation",
+          "coverage plan"
+        ],
+        "intents": [
+          "workplace_culture",
+          "access_barriers",
+          "escalation"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2026-10-31",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "provenance": "Built from the course's job aid in the supervisor and manager curriculum; the owner approved all 19 courses on October 31, 2026.",
+        "version": "1.0.0"
+      },
+      "changes": [
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "Help you respond well, keep the work running and bring people back to their own job, while Human Resources handles the rules.",
+          "after": "Coordinate the work during an employee’s absence and prepare for their return, while Human Resources determines the applicable leave and return-to-work requirements.",
+          "reason": "Make the supervisory purpose, evidence and responsibility explicit without expanding source legal or contract claims."
+        }
+      ]
+    },
+    {
+      "kind": "resource",
+      "target": "resource.ja-sm-budget-cuts-separation",
+      "route": "/library/ja-sm-budget-cuts-separation",
+      "original": {
+        "id": "ja-sm-budget-cuts-separation",
+        "title": "Cuts, reassignment and separation: a supervisor's checklist",
+        "type": "job_aid",
+        "authority": "guidance",
+        "layer": "L2",
+        "summary": "Help you stay fair and truthful when positions, duties or people are affected, and call the right people before you act.",
+        "whyItMatters": "Before, during and after.",
+        "body": [
+          "Remember. You can't promise a job. You can promise the truth when you can tell it. Criteria come before names. A pattern calls for a review of process, never a change based on one person's race or sex. If the people go and the work stays, you cut the wrong thing.",
+          "Call first. Labor relations: contract articles on layoff, reassignment and work rules, and representation. Human Resources: what you may say, who says it, what's in writing, references. ADA coordinator: any accommodation or cost question. Tribal liaison and ADSA: any change touching work with Tribal governments.",
+          "Before you give input or reassign. What duty sits behind this function? Who loses what if it stops? What hidden work is in this position? Would I give this reason for anyone on the team? Does any accommodation still work? Is anyone who raised a concern affected? Get a second look. Do uneven effects show? Say so to Human Resources.",
+          "The conversation. Prepare with Human Resources. Practice your first three sentences. Arrange a qualified interpreter, captioning or accessible notice. Never use a coworker to interpret. Say it in the first minute. Stop talking. Then give next steps. If they raise a complaint or leave, take it to Human Resources right away. Don't invent reasons or promise anything.",
+          "After. Ask how they want the team told. Tell the team what's changing, soon, within what you may say. List the work: keep, move, reduce or stop. Take something off each receiver's plate. Check at 30 and 90 days. Write a short look-back for your manager.",
+          "Do next. Find the articles on layoff, reassignment and work rules in each contract that covers your team, and write down your first question for labor relations."
+        ],
+        "nextActions": [
+          {
+            "label": "Take the course: Budget Cuts, Reassignment and Separation",
+            "href": "/courses/sm-budget-cuts-separation"
+          },
+          {
+            "label": "For leaders, supervisors, managers, and directors",
+            "href": "/leading"
+          }
+        ],
+        "tags": [
+          "supervision",
+          "budget cuts",
+          "reassignment",
+          "separation",
+          "labor relations"
+        ],
+        "intents": [
+          "workplace_culture",
+          "escalation"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2026-10-31",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "provenance": "Built from the course's job aid in the supervisor and manager curriculum; the owner approved all 19 courses on October 31, 2026.",
+        "version": "1.0.0"
+      },
+      "changes": [
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "Before, during and after.",
+          "after": "Staff need accurate information about what is changing, what remains uncertain and who can answer questions. Prepare those explanations with the responsible offices before discussing effects on individual positions.",
+          "reason": "Make the supervisory purpose, evidence and responsibility explicit without expanding source legal or contract claims."
+        },
+        {
+          "path": [
+            "body",
+            0
+          ],
+          "before": "Remember. You can't promise a job. You can promise the truth when you can tell it. Criteria come before names. A pattern calls for a review of process, never a change based on one person's race or sex. If the people go and the work stays, you cut the wrong thing.",
+          "after": "Begin with what you are authorized to explain, and distinguish confirmed decisions from unresolved questions. Set job-related criteria before considering names. If effects differ across groups, ask Human Resources to examine the process; do not change an individual decision based on race or sex. Identify which work will continue, move, decrease or stop so a staffing reduction does not leave unexamined demands on the remaining team.",
+          "reason": "Make the supervisory purpose, evidence and responsibility explicit without expanding source legal or contract claims."
+        }
+      ]
+    }
+  ]
+}

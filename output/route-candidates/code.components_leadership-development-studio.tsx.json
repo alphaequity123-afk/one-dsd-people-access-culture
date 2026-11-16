@@ -1,0 +1,95 @@
+{
+  "target": "code.components/leadership-development-studio.tsx",
+  "kind": "surface",
+  "route": "components/leadership-development-studio.tsx",
+  "sourceSha256": "5ea4bcd99135f81ffc569baca14c798fe20911903ba5a45aeadaea9f03954793",
+  "status": "needs_revision",
+  "reviewedFieldCount": 7,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "You can begin through your own curiosity, an encouraging conversation, or a desire to strengthen your current practice. No nomination or minimum service is needed to explore this learning experience.",
+      "after": "You may start by following your own curiosity, discussing growth with a colleague, or deciding to strengthen your current practice. You do not need a nomination or a set minimum of experience to explore this learning opportunity. This approach supports staff who want flexibility in pursuing professional development at any career stage.",
+      "reason": "Clarifies how different motivations can initiate participation and explains why removing eligibility requirements helps flexibility and accessibility."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field4"
+      ],
+      "before": "Connect an aspiration with practice, support, and useful feedback. A small, well-supported opportunity can be a meaningful place to begin.",
+      "after": "Link your aspiration to specific actions, supported practice, and structured feedback. This step helps clarify the connection between your intent and practical steps, making it easier to identify what support is useful and how feedback shapes learning. Beginning with a manageable, well-supported activity can help build confidence and highlight what makes a development effort meaningful.",
+      "reason": "Improves specificity by explaining why these connections matter and how structured support and feedback advance professional learning."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field8"
+      ],
+      "before": "Keep names and private personnel details out of your notes. Your work stays here while you explore the starting points; copy or download it before leaving or reloading this page.",
+      "after": "Do not include names or confidential personnel information in your notes. While you are working through starting points, your entries remain available on this page. Be sure to save or download your work before you leave or refresh, because data entered here is not retained elsewhere. This practice maintains privacy and helps ensure your reflections are not lost unexpectedly.",
+      "reason": "Explains why omitting personal details matters and clarifies the purpose and consequences of the local-only data retention."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The revision adds, \"This approach supports staff who want flexibility in pursuing professional development at any career stage,\" which is an interpretive rationale not found in the source. The source supports that there are no requirements or nomination for beginning, but does not attribute this directly to supporting flexibility or accessibility, or specify 'any career stage.' This extrapolation changes the original scope and inserts policy intent not supported by source evidence."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "Expanded wording is accurate to the instructional scope but adds explanation not explicitly in the original text. However, all details remain grounded in the provided feature, which asked users to connect aspirations with supportive and feedback-rich practice, and to start small. The revision does not misstate the scope, but the added explanation could be flagged as interpretation if ultra-literal reading is required."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The revision accurately expands on why not to include names, the local-only nature of the data, and privacy risks, all of which are implied or standard for such applications but not spelled out in the source. The expansion introduces no inaccurate claims, and clarifies while capturing original meaning, with only minor interpretive content. This passes unless strict literal fidelity is required for every word."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3291,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 303,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3594
+    },
+    "review": {
+      "input_tokens": 3087,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 278,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3365
+    }
+  },
+  "createdAt": "2026-11-15T13:53:58.139Z"
+}

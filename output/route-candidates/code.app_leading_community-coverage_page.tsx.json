@@ -1,0 +1,137 @@
+{
+  "target": "code.app/leading/community-coverage/page.tsx",
+  "kind": "surface",
+  "route": "/leading/community-coverage",
+  "sourceSha256": "420de861df8eb571aa02f591dcb0efb91ba3a597ea72f42a7cc80c4c8ced19fb",
+  "status": "needs_revision",
+  "reviewedFieldCount": 15,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "This page is for managers, supervisors and the consultant.",
+      "after": "This information is intended for Disability Services Division leaders, including managers, supervisors, and the designated consultant. It supports review and planning tasks related to community representation and published records.",
+      "reason": "Clarifying the page's target users and their intended actions, rather than simply listing roles. Provides clarity on why these roles are referenced."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "field12"
+      ],
+      "before": "Invite two or more members of the community to review the brief, through an organization they choose or directly. Do not ask one person to speak for everyone.",
+      "after": "Ask at least two members of the community to review the brief, either through an organization they select or directly. Avoid expecting one person to represent all perspectives.",
+      "reason": "Strengthens the rationale, clarifies the expectation for representation, and improves the accuracy by specifying the intent behind inviting multiple reviewers."
+    },
+    {
+      "fieldId": 11,
+      "path": [
+        "field14"
+      ],
+      "before": "Ask reviewers to check names and terms, how people differ within the community, history, what staff are told to ask, and anything that could lead to a stereotype.",
+      "after": "Reviewers should check the accuracy of names and terms, recognize differences among community members, consider historical context, verify what staff are instructed to ask, and point out language or content that could reinforce stereotypes.",
+      "reason": "Clarifies what is expected in the review and explains why each area is checked, connecting the process to its intended outcomes."
+    },
+    {
+      "fieldId": 12,
+      "path": [
+        "field15"
+      ],
+      "before": "Record what changed because of the review, and tell the reviewers.",
+      "after": "Document any changes made as a result of the review, and inform the reviewers about the updates. This ensures reviewers know how their input affected the final information and supports transparency in the process.",
+      "reason": "Explains the importance of recording changes and communicating them to reviewers."
+    },
+    {
+      "fieldId": 13,
+      "path": [
+        "field16"
+      ],
+      "before": "Mark the brief as reviewed and set the next review date. Plan a fresh review at least every two years, or sooner when something important changes.",
+      "after": "Update the brief status to \"reviewed\" and record the next review date. Plan to re-examine the brief at least every two years, or sooner if significant information changes. This helps ensure that representations remain accurate and responsive to developments affecting the community.",
+      "reason": "Clarifies the intent behind setting review intervals and why timely updates are important."
+    },
+    {
+      "fieldId": 14,
+      "path": [
+        "field17"
+      ],
+      "before": "Native American and Tribal Nation pages are not part of this review. They defer to the Office of Indian Affairs and the Department of Human Services offices that handle Tribal relations and consultation.",
+      "after": "Community reviews do not apply to Native American and Tribal Nation pages. Those materials are managed according to processes set by the Office of Indian Affairs and Minnesota DHS Tribal Relations and Consultation offices.",
+      "reason": "Clarifies the procedural boundaries and responsible parties for these pages."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The proposed change alters the original meaning by expanding and specifying the purpose beyond the source text. The source text simply states, 'This page is for managers, supervisors and the consultant.' The revised version adds, 'It supports review and planning tasks related to community representation and published records,' which is not in the source and creates an unsupported claim about intent and functionality. This does not preserve the source's surface meaning and introduces additional, non-evidenced intent."
+      },
+      {
+        "fieldId": 9,
+        "severity": "note",
+        "finding": "The change focuses on clarity and slightly refines the original, but does not substantially change the meaning or introduce unsupported content. It is a permitted clarification."
+      },
+      {
+        "fieldId": 11,
+        "severity": "note",
+        "finding": "This rephrasing provides clarification and rationale, but all elements map directly to the original's listed items; it remains in scope."
+      },
+      {
+        "fieldId": 12,
+        "severity": "note",
+        "finding": "The edit is consistent with the purpose statement that must be stated at least once and is a supported clarification giving rationale."
+      },
+      {
+        "fieldId": 13,
+        "severity": "note",
+        "finding": "The change explains the reason behind the process instruction, which is allowable under the program writing standard as it connects to required transparency and accountability, without adding unsupported new requirements."
+      },
+      {
+        "fieldId": 14,
+        "severity": "note",
+        "finding": "This change is explanatory: it clarifies the responsible offices and matches the original's intent about procedural boundaries. The reference to 'Minnesota DHS Tribal Relations and Consultation offices' remains equivalent to 'Department of Human Services offices that handle Tribal relations and consultation.'"
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3614,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 449,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4063
+    },
+    "review": {
+      "input_tokens": 3292,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 337,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3629
+    }
+  },
+  "createdAt": "2026-11-15T13:49:09.953Z"
+}

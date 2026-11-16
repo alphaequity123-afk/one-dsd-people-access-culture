@@ -1,0 +1,112 @@
+{
+  "target": "resource.tool-one-dsd-hcbs-review",
+  "kind": "resource",
+  "route": "/library/tool-one-dsd-hcbs-review",
+  "sourceSha256": "3b3bdcaeb91552ba220d9880b74461f23adea31c8d32ea42a39f5d18c91af2ab",
+  "status": "needs_revision",
+  "reviewedFieldCount": 4,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Explore service access, state choices, provider capacity, and the experiences of people using home and community-based services.",
+      "after": "Review how people access services, consider state policy decisions, assess provider capacity, and understand the experiences of people who use home and community-based services.",
+      "reason": "Reworded for directness and clarity about what the tool covers. Used verbs like \"consider\" and \"review\" to describe engagement with each area rather than a general invitation to 'explore.' Specified \"state policy decisions\" for precision."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Explore service access, state choices, provider capacity, and the experiences of people using home and community-based services.",
+      "after": "Review how people access services, consider state policy decisions, assess provider capacity, and understand the experiences of people who use home and community-based services. This tool helps staff examine systemic barriers and contributing factors that affect service equity.",
+      "reason": "Retained the essential areas reviewed; added that the tool is used to examine systemic barriers and contributing factors to make the purpose of analysis clearer."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Staff throughout DHS can use these resources independently. The Equity and Inclusion Operations Consultant leads the program and offers guidance and feedback; staff and decision owners carry out their own work.",
+      "after": "Any DHS staff member may use these materials to inform their work. The Equity and Inclusion Operations Consultant sets direction for the program and provides guidance and feedback; staff and assigned decision makers use the resources as appropriate to their roles.",
+      "reason": "Clarified who can use the resources and specified that use is to inform work, not just independent use. Replaced 'leads the program' with 'sets direction for the program' for precision and specified \"assigned decision makers.\""
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "These program resources support analysis and planning. They do not replace official policy, required consultation, or the authority of the responsible office.",
+      "after": "These resources support staff and teams in analyzing equity issues and planning improvements, but they do not replace official policy, required consultation, or the authority of the responsible office to make final decisions.",
+      "reason": "Expanded on \"support analysis and planning\" by specifying the focus is on equity issues and planning improvements. Added that final decisions remain with the responsible office, clarifying the distinction between guidance and official authority."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The rewrite is not fully supported. The original source uses 'explore' and does not specifically list verbs like 'review,' 'consider,' or 'assess' for each area covered. 'State choices' in the source is less precise than 'state policy decisions' in the rewrite, which adds specificity not in the source. The restatement assigns more intentionality and activity to users than the source claims."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The addition 'This tool helps staff examine systemic barriers and contributing factors that affect service equity' is not supported by the source. The source does not mention barriers or contributing factors, nor does it introduce a focus on 'service equity' in this manner in its opening statement. This new sentence introduces a scope and purpose not grounded in the provided source text."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revision clarifies and restates the roles with minor wording shifts. While 'Any DHS staff member may use these materials to inform their work' is a modest change from 'Staff throughout DHS can use these resources independently,' this remains within the original intent. The remainder preserves the relationship described: the Consultant sets program direction and offers guidance, with staff and those with decision responsibility acting accordingly. This field does not rise to a blocker."
+      },
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "The phrase 'analyzing equity issues and planning improvements' is added, which is not explicitly stated in the original source. The source supports 'analysis and planning' in a general sense but does not limit this to equity issues or improvements, nor does it introduce the language about final decision authority with 'staff and teams.' The rewrite exceeds and narrows the source's stated purpose and scope."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1427,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 380,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1807
+    },
+    "review": {
+      "input_tokens": 1395,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 378,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1773
+    }
+  },
+  "createdAt": "2026-11-15T13:43:11.528Z"
+}

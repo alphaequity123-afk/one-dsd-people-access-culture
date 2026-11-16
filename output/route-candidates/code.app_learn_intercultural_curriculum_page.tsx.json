@@ -1,0 +1,67 @@
+{
+  "target": "code.app/learn/intercultural/curriculum/page.tsx",
+  "kind": "surface",
+  "route": "/learn/intercultural/curriculum",
+  "sourceSha256": "d1a3f499a71eb860da86444dede99f8aa18c3c3eecb20cfaa0552c714a7b6e27",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Download or share this curriculum",
+      "after": "Use these options to download or share the current curriculum. Providing easy access helps staff stay informed and share material with colleagues when needed.",
+      "reason": "Clarifies that the download and share options are available for staff convenience, and explains why these features support everyday work."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The revised field1 ('Use these options to download or share the current curriculum. Providing easy access helps staff stay informed and share material with colleagues when needed.') is not supported by the source code. The source uses the summary text 'Download or share this curriculum' as a label for a details/summary UI element. The revised version adds explanation ('helps staff stay informed...') and a rationale that are not present in the original or elsewhere in the source. According to program writing standard, do not add unsupported explanations, rationale, or claims about the purpose or benefit unless the source warrants it. Field1 must retain the concise, descriptive label from the source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1386,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 98,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1484
+    },
+    "review": {
+      "input_tokens": 1053,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 173,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1226
+    }
+  },
+  "createdAt": "2026-11-15T13:50:04.215Z"
+}

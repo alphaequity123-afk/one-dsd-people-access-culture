@@ -1,0 +1,171 @@
+{
+  "target": "resource.ja-job-relatedness-check",
+  "kind": "resource",
+  "route": "/library/ja-job-relatedness-check",
+  "sourceSha256": "46d99697dfc61d42a1553ce98750939726b755a9d2ef1ff35d5efd3ca4153773",
+  "status": "model_checked",
+  "reviewedFieldCount": 8,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Before keeping any degree, experience, screening, or interview requirement, ask five questions: what work it predicts, what evidence supports that, who it screens out, what alternative shows the same ability, and who signed off.",
+      "after": "Before you include any degree, experience, screening, or interview requirement in a job posting, ask five key questions: what work it predicts, what evidence links the requirement to that work, who it might screen out, what alternatives could demonstrate the same ability, and who has reviewed and approved the reasoning.",
+      "reason": "Clarified the practical application and order of considerations for staff. Added specificity that the questions relate to information included in a job posting. Improved flow and avoided ambiguity around why to ask the questions."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Federal guidance on employee selection expects employers to examine procedures that produce adverse impact and to have evidence that they are job related. This check helps you ask those questions before a posting goes out, without removing qualifications the work really needs.",
+      "after": "Federal guidance on employee selection expects employers to review hiring requirements for adverse impact and to document their job-relatedness. Using this check supports compliance and helps ensure posted qualifications match the actual skills and experience needed for the work. It discourages unnecessary barriers without removing necessary qualifications.",
+      "reason": "Clarified that documentation is an expectation, and explained that the check aligns required qualifications with work needs and minimizes unjustified barriers. Relevant compliance and practical reasons are explicit."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Question 1. What part of the work does this requirement predict? Write the specific tasks. If you cannot name them, the requirement may be a proxy.",
+      "after": "Question 1. What part of the job does this requirement predict or reflect? List the specific tasks or duties for which the requirement is necessary. If you cannot clearly tie the requirement to a part of the job, it may simply serve as a stand-in or proxy and should be reconsidered.",
+      "reason": "Restated for specificity, emphasizing the need to explicitly connect the requirement to actual tasks or duties. Explained the consequence if the connection cannot be named."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Question 2. What evidence do we have that it predicts that work? Consider whether current strong performers all meet it, and whether people without it have done the work well elsewhere.",
+      "after": "Question 2. What evidence shows that this requirement predicts success in those job tasks? For example, do current strong performers meet the requirement, or have people without it performed well in similar roles elsewhere?",
+      "reason": "Clarified intent by framing the evidence directly in terms of predicting job performance. Kept the concrete examples."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Question 3. Who does this requirement screen out? Think about communities, first-generation professionals, people who built skills outside formal education, and people with disabilities who took different paths.",
+      "after": "Question 3. Who does this requirement tend to exclude? Consider groups such as certain communities, first-generation professionals, candidates with experience outside formal education, or people with disabilities who may have followed nontraditional career paths.",
+      "reason": "Made the inquiry more active—who does it tend to exclude, not just screen out—and restated examples concisely while highlighting the reason to consider them."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Question 4. What alternative shows the same ability? Consider a work sample, a portfolio, described experience, a certification, or a structured question in the interview.",
+      "after": "Question 4. What other means could demonstrate the same skill or ability required for this job? Examples include evaluating a work sample, reviewing a professional portfolio, accepting described relevant experience, considering a certification, or including a structured interview question.",
+      "reason": "Clarified the goal is to find alternative ways to assess for the same required skills. Kept practical alternatives."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Question 5. Who reviewed and signed off? Note the hiring manager, the HR partner, and, where practice calls for it, the Equity Director. Keep the reasoning with the posting.",
+      "after": "Question 5. Who has reviewed and approved the inclusion of this requirement? Record the hiring manager, HR partner, and, when required, the Equity Director. Keep a record of your reasoning and attach it to the posting process.",
+      "reason": "Clarified the importance of documenting not only approvals but also the underlying rationale, and referenced actual recordkeeping in the hiring process."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "Do not remove qualifications categorically. Some work requires a license or a specific credential. The point is to know what the work genuinely requires and which credible forms of experience demonstrate capability.",
+      "after": "Never remove required qualifications simply to reduce barriers. Certain positions require a license or credential by law or policy. Focus on confirming what the work genuinely requires and documenting which forms of experience credibly show readiness for the job.",
+      "reason": "Clarified that qualifications should not be removed arbitrarily and gave the rationale for retaining credentials that are legally or functionally required. Emphasized documenting the justification for chosen qualifications."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revised summary remains evidence-based and improves clarity by specifying the job posting context and logical order; it does not add policy or legal requirements beyond the source."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The after version clarifies compliance expectations and expands on practical benefits without distorting the original message or introducing unsupported instructions."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The edit adds detail about the consequence of not being able to tie requirements to job duties. It does not overstate policy or erase qualifications."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "Wording shifts from 'do we have' to 'shows', and the example is rephrased for clarity. The job performance link is consistent with the source’s intent."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The after version restates group examples using more active language; all mentioned groups are supported by the source."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The edit clarifies that the alternatives are used to demonstrate the skill or ability, matching the original's purpose."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The change formalizes the documentation expectation but remains within the original scope and intent."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "The after version preserves the original’s intent, emphasizes legal/policy demands, and correctly warns against arbitrary removal of requirements."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1890,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 737,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2627
+    },
+    "review": {
+      "input_tokens": 2183,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 409,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2592
+    }
+  },
+  "createdAt": "2026-11-15T13:41:46.318Z"
+}

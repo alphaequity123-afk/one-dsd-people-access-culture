@@ -1,0 +1,216 @@
+{
+  "target": "resource.ja-equity-scan-or-full-analysis",
+  "kind": "resource",
+  "route": "/library/ja-equity-scan-or-full-analysis",
+  "sourceSha256": "6d60f9cba678a344b538b5f9b25a4811619287e3ea3ad71fa66e7b0c93e60cf4",
+  "status": "model_checked",
+  "reviewedFieldCount": 11,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Learn how an equity scan differs from a full analysis under the DHS equity policy, what each contains, and how to use the Minnesota Equity Analysis Toolkit while the decision can still change. The policy owner decides which applies.",
+      "after": "This page explains the difference between an equity scan and a full equity analysis under the DHS equity policy, outlines the content of each approach, and describes how to use the Minnesota Equity Analysis Toolkit while the decision is still under consideration. The policy owner is responsible for deciding which method applies.",
+      "reason": "Clarifies decision timing, specific responsibility, and retains a concise preview of content differences and purpose."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "The policy verifies mandatory equity analysis for prolonged or long-term actions going to leadership and other named uses. Doing it well means engaging while choices are open, not documenting after they close.",
+      "after": "The policy requires equity analyses for decisions with prolonged or significant effects that advance to leadership review, as well as for other designated purposes. Acting early in the process allows meaningful consideration of equity options while decisions are still flexible. Completing an analysis after commitments have been made limits its ability to shape outcomes.",
+      "reason": "Clarifies which actions invoke mandatory analysis, explains why early engagement matters, and directly addresses the consequence of late analysis."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Supports a required process. This page helps you do the analysis well. It is not the official record. The completed analysis is kept where your division or the policy owner keeps decision records. Check the current policy and toolkit version with the policy owner before relying on this summary.",
+      "after": "This page guides you in completing an equity analysis but is not the official record. Your division or the policy owner stores the completed analysis following standard decision documentation practices. Before relying on this summary, check with the policy owner to confirm you have the current policy and toolkit edition. Following the correct process ensures compliance and supports informed decision-making.",
+      "reason": "Adds explanation of where records are kept, emphasizes need to use current materials, and ties process to compliance and decision quality."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Determine whether a scan or a full analysis applies. A scan is a brief, structured check for decisions with limited reach. A full analysis is the complete process for prolonged or long-term actions and decisions that go to leadership. When in doubt, ask the policy owner or your Equity Director.",
+      "after": "Start by determining whether a scan or a full analysis applies to your decision. An equity scan is a concise, structured review suited for decisions with limited impact or short duration. A full equity analysis is required for decisions with long-term, substantial, or potentially far-reaching effects, especially those advancing to leadership. If you are uncertain which approach is appropriate, consult the policy owner or your Equity Director to avoid gaps or unnecessary work.",
+      "reason": "Expands on criteria for each method, clarifies when to escalate questions, and explains the benefit of verifying which analysis is required."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Form the right team. Include the decision owner, the people who hold relevant data, staff who deliver the service, and the equity professional for your area. Plan community engagement early enough to change the decision.",
+      "after": "Assemble an analysis team that includes the decision owner, data holders, frontline service staff, and your area's equity professional. Plan for community engagement early enough that input can genuinely affect decisions, instead of simply noting it after choices are made.",
+      "reason": "Clarifies selection of team members by role, and stresses the timing and purpose of community engagement."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Define the decision and the outcomes you want. Write the decision in one sentence and the outcomes in terms of people, not process.",
+      "after": "Define the decision clearly, stating it in a single sentence. Specify the intended outcomes in terms of effects on people, not just processes or internal targets. This clarifies the aims of the analysis and supports meaningful evaluation.",
+      "reason": "Reinforces the need for clarity and relevance to affected people, not internal metrics."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Use quantitative, qualitative, and community evidence. Disaggregate by community, language, disability, and place where the data allows, protect small groups, and record what the evidence does not show.",
+      "after": "Gather evidence from quantitative data, qualitative sources, and community perspectives. Disaggregate information by community, language, disability status, and geography where possible, but ensure privacy for small groups. Note where data are unavailable or incomplete so that gaps are recognized in the analysis.",
+      "reason": "Clarifies forms of evidence, reiterates disaggregation with privacy, and makes the purpose for recording limitations explicit."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "Identify benefits and burdens. Who gains, who pays, and how do burdens fall on people who already carry more?",
+      "after": "Identify the benefits and burdens associated with the decision. Assess who is likely to gain, who may be disadvantaged, and whether the proposed action amplifies existing inequities for groups already facing greater challenges.",
+      "reason": "Refines focus on differential effects and the risk of worsening disparities."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "body",
+        6
+      ],
+      "before": "Develop alternatives. At least two, compared on benefits and burdens. Include the alternative of not proceeding.",
+      "after": "Develop at least two alternatives, including the option of not moving forward. Compare the benefits and burdens of each, considering their possible effects on different groups. This comparison is needed to inform leadership and meet analysis requirements.",
+      "reason": "Clarifies minimum expectation, explains why alternatives—including no action—are needed, and the purpose of comparison."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "body",
+        7
+      ],
+      "before": "Plan implementation, communication, monitoring, and evaluation. Name owners, languages and formats, the human alternative, what you will watch, and when you will look again.",
+      "after": "Outline how the decision will be carried out, how results will be communicated, and how outcomes will be monitored and evaluated. Assign responsibility for actions, specify formats and languages for communication, describe alternatives for people who need human assistance, define what will be tracked, and set timing for follow-up reviews. This ensures accountability and future adjustment if needed.",
+      "reason": "Provides rationale and detail for each listed planning component and connects to practical outcomes."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "body",
+        8
+      ],
+      "before": "Report back. Tell the people who gave input what changed and what did not, and why.",
+      "after": "After making the decision, inform participants and stakeholders about the results of their input. Explain specifically what was changed or retained in response to feedback and the reasons for those choices. This closing step supports transparency and builds trust in future engagement processes.",
+      "reason": "Clarifies who to report to, connects the report to input received, and explains the purpose of transparency in the process."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revised summary is consistent with the source, slightly clarifying decision timing and responsibility. The meaning and content are preserved and aligned with the policy owner's role."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The change better explains when and why the equity analysis is required, and strengthens the explanation of the importance of early engagement. Source intent and scope are preserved."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revision clarifies storage and process without changing core meaning. The emphasis on using the current policy and toolkit is true to the source, and the addition of compliance context is accurate for professional users."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "Expanded criteria for when each analysis applies are supported by the original. The changes add helpful nuance and do not alter the underlying policy message."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The new version provides more explicit guidance on team composition, in line with the source, and strengthens advice on engagement timing and purpose."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The change preserves and extends the instruction to focus outcomes on people, not process, which matches the original message."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The revised language maintains the original's requirements for evidence and data handling, clarifying the intention behind disaggregation and documenting absence of data."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "The revision deepens the focus on how burdens might reinforce inequity, consistent with the original list of questions."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "Expanding the rationale for alternatives (including 'do nothing') matches the intent of the original, adding clarity about the analytic requirement."
+      },
+      {
+        "fieldId": 9,
+        "severity": "note",
+        "finding": "Provides more detail and explains the practical need for each planning step, all of which are grounded in the original bullet points."
+      },
+      {
+        "fieldId": 10,
+        "severity": "note",
+        "finding": "Describing the reporting step in more detail, while keeping the spirit and specifics of the original, fits with the source's call for closing the loop with those who gave input."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2152,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 971,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3123
+    },
+    "review": {
+      "input_tokens": 2656,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 591,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3247
+    }
+  },
+  "createdAt": "2026-11-15T13:42:02.064Z"
+}

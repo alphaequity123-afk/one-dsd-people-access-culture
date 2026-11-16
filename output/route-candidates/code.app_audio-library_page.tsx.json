@@ -1,0 +1,95 @@
+{
+  "target": "code.app/audio-library/page.tsx",
+  "kind": "surface",
+  "route": "/audio-library",
+  "sourceSha256": "4c0dbcfdbb5a43e92f184cf76f6503c5675f6271a4e7be8abf990ecfafd40c2b",
+  "status": "needs_revision",
+  "reviewedFieldCount": 4,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "No stand-alone recordings match this theme yet. Explore the courses below or choose another way to learn.",
+      "after": "No stand-alone recordings match this theme yet. You can review the related courses below or select a different theme to find other learning opportunities.",
+      "reason": "Clarified the rationale for reviewing courses and explicitly stated the alternative action. This strengthens the professional explanation and helps staff understand the practical path when recordings are unavailable for a theme."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "These courses include optional listening alongside the lesson. Open a course to hear its recordings, read the spoken text, and work through its activities.",
+      "after": "Each of these courses provides optional audio recordings as part of the lessons. You can listen to the audio, read the written transcript, and complete the related activities within the course.",
+      "reason": "Added specificity about the format options and explained the sequence of actions for staff or learners. This supports informed choice and clarifies how audio is integrated in the course context."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": "Open the course for listening and practice.",
+      "after": "Select the course to access its audio recordings and work through the lesson activities.",
+      "reason": "Adjusted language for clear instruction and relevance to the staff's purpose, specifying the action and its result."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The proposed rewrite for field1 (\"No stand-alone recordings match this theme yet. You can review the related courses below or select a different theme to find other learning opportunities.\") adds a directive (\"select a different theme to find other learning opportunities\") and reframes the second sentence, which is not supported by the source code. The original simply states: \"Explore the courses below or choose another way to learn.\" The new version adds an explicit suggestion that is not in the source, which oversteps the evidence."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revision to field2 is mostly supported—it reframes the same intended information and keeps within source fact, though it moves from 'optional listening' to 'optional audio recordings,' which is valid, and clarifies that transcripts and activities are present, consistent with code and standard. This is not a blocker."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The new language for field3 is slightly more explicit but remains consistent with the source intent. It does not exceed evidence nor introduce unsupported instructions."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2598,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 216,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2814
+    },
+    "review": {
+      "input_tokens": 2389,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 241,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2630
+    }
+  },
+  "createdAt": "2026-11-15T13:47:27.351Z"
+}

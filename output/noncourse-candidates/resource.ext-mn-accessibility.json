@@ -1,0 +1,97 @@
+{
+  "target": "resource.ext-mn-accessibility",
+  "kind": "resource",
+  "route": "https://mn.gov/mnit/government/policies/accessibility/",
+  "sourceSha256": "eadff9cb2906af06ab6a84ddd69fc519d5c073c61c20d1b5fd5ac3a1bd1d66cc",
+  "status": "model_checked",
+  "reviewedFieldCount": 3,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Minnesota IT Services publishes the state’s digital accessibility standard and guidance on accessible documents. Check the current version at the source before you cite it.",
+      "after": "Minnesota IT Services (MNIT) maintains the official digital accessibility standard and publishes supporting guidance for accessible documents. Always check the source to confirm you are using the most recent version before citing or applying the standard.",
+      "reason": "Clarifies MNIT's role, specifies the need to confirm the most recent version, and connects use directly to agency work. Avoids vague language about publishing and gives a practical instruction for staff."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Minnesota's current digital accessibility standard uses WCAG 2.1 Level AA. Check the current state standard before citing it.",
+      "after": "The state digital accessibility standard currently follows WCAG 2.1 Level AA. Always verify the latest adopted version at the official source before referencing in your work, since standards may change or update over time.",
+      "reason": "Provides reasoning for checking the standard (changes or updates over time) and connects referencing to actual staff work."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Before releasing Word documents, PDFs, or slides, follow Minnesota's current guidance for accessible documents.",
+      "after": "When preparing to release Word documents, PDFs, or presentation slides, review and follow Minnesota's current guidance for accessible documents. This reduces access barriers and aligns products with state expectations for inclusivity.",
+      "reason": "Clarifies staff action, states the importance (reducing access barriers, meeting state expectations), and connects document types to common staff tasks."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revised summary clarifies MNIT's official role and strengthens the instruction to check the source for the latest version. This is supported by the source guidance to 'check the current version at the source before you cite it.' The language remains faithful to the source intent and improves practical specificity for staff use."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The update maintains the factual policy that the standard follows WCAG 2.1 Level AA and elaborates on why to check the standard (because it may change). This extension is warranted by the original line to check the standard before citing it. The clarification remains within scope, accessible, and factually accurate."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revised body text expands on the need for following accessibility guidance by linking it to reducing access barriers and state expectations. These implications directly follow from the purpose of accessibility guidance. The document types listed match the original. The text remains accurate and within the policy's stated intent and scope."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1325,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 258,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1583
+    },
+    "review": {
+      "input_tokens": 1179,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 225,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1404
+    }
+  },
+  "createdAt": "2026-11-15T13:41:36.556Z"
+}

@@ -1,0 +1,171 @@
+{
+  "target": "resource.ref-adsa-engagement-checklist",
+  "kind": "resource",
+  "route": "/library/ref-adsa-engagement-checklist",
+  "sourceSha256": "1fbc4068c4b5ed8311ebf50471477b2c12296c72fb226b012d3704d27dc47b38",
+  "status": "model_checked",
+  "reviewedFieldCount": 8,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "A three-page June 2026 companion for preparing, carrying out, and reporting on community engagement.",
+      "after": "A three-page checklist (June 2026) to support effective planning, implementation, and reporting for community engagement activities.",
+      "reason": "Clarified the document’s purpose and focus by specifying 'effective planning, implementation, and reporting' for community engagement, and dropped 'companion' to prevent ambiguity."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Use this checklist during planning and again before engagement begins to identify missing responsibilities, resources, and access arrangements.",
+      "after": "Refer to this checklist during both initial planning and immediately before engagement starts. It helps confirm that you have identified all needed responsibilities, resources, and arrangements for participant access, reducing the risk of missed steps or overlooked barriers.",
+      "reason": "Expanded to specify why using the checklist at specific points matters, and how it reduces omissions. Clarified 'access arrangements' as relating to participant access."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Before beginning, define the purpose, goals, timeline, expectations, available resources, responsibilities, potential barriers, and mitigation steps. Review existing information and identify gaps.",
+      "after": "Before you begin engagement, define the effort's purpose, goals, timeline, and expectations. Specify available resources, staff responsibilities, and likely barriers, then outline steps to address or reduce those barriers. Review existing background information and clearly identify what is still unknown.",
+      "reason": "Reordered and clarified elements for better logical sequence and specificity. Broke up the original compound list and explained why each is needed."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Consult appropriate teams and partners. Clarify the level of participation using the IAP2 spectrum, and consider an advisory group or subject-matter group when useful.",
+      "after": "Consult with relevant teams and partners to coordinate roles, draw on expertise, and fill knowledge gaps. Use the IAP2 spectrum to define the intended level of public participation. When needed, consider forming an advisory or subject-matter group for guidance or expanded perspective.",
+      "reason": "Expanded reasoning for consulting teams and specifying the IAP2 spectrum, and explained when advisory or subject-matter groups are useful."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Check accessible content, accommodation, communication access, and inclusive language. Plan outreach messages, channels, frequency, and timing with input from the people you hope to reach.",
+      "after": "Review all materials and outreach plans to ensure content is accessible, needed accommodations are arranged, inclusive language is used, and communication channels support access. Coordinate with intended participants to tailor outreach messages, decide which channels are most effective, and set appropriate timing and frequency.",
+      "reason": "Clarified the practical importance of each access step, and added how coordination with participants shapes outreach."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Design activities together where appropriate; plan compensation, flexibility, translation, interpretation, transportation, childcare, and supporting resources according to the engagement and applicable processes.",
+      "after": "Work collaboratively with community members and partners to design engagement activities whenever possible. Plan for participant compensation, flexible scheduling, translation, interpretation services, transportation, childcare, and other supports based on anticipated barriers and in accordance with agency policies or funding requirements.",
+      "reason": "Shifted focus to collaboration, clarified 'according to the engagement and applicable processes,' and explained how planning supports reduce participation barriers."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Identify who needs the findings and how they will receive them. Combine appropriate qualitative and quantitative information, explain how to stay informed, and document engagement and follow-through.",
+      "after": "Determine who will use the engagement findings and how results should be communicated to them. Combine qualitative and quantitative data as appropriate, give clear information on ways participants can stay informed, and thoroughly document both engagement activities and any resulting actions or decisions.",
+      "reason": "Clarified the need to connect findings with decision-makers and explained the reasons behind documenting activities and follow-through."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "The original checklist includes internal ADSA reporting routes. Public readers can use the planning questions with their own contacts and processes. The guide provides fuller context; a checked box alone does not demonstrate meaningful participation.",
+      "after": "The original ADSA checklist includes specific internal routes for reporting within DHS. For external audiences, the planning questions can be adapted for use with your own team or agency processes. The companion guide provides further explanation, while checking boxes alone does not show that participation was meaningful.",
+      "reason": "Clarified who internal and external planning questions apply to, maintained the reference to the companion guide, and refined the explanation about the limitations of checklist compliance."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The rewritten summary remains accurate and supports user understanding; 'companion' was removed for clarity but the meaning is preserved."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revision expands on existing rationale, clarifies timing, and appropriately contextualizes 'access arrangements.' All additions are supported by the intent of the checklist."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The expanded explanation remains fully grounded in the checklist's guidance. The logical sequence and added specifics faithfully interpret and explain source content."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The reasoning for ‘consulting’ is fully consistent with the original, and the expansion makes implicit purpose explicit. The IAP2 reference is preserved and accurately described."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "All practical clarifications about accessibility and engagement steps are consistent with the checklist’s intent. There is no unsupported deviation."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The edited field accurately interprets the original steps and correctly refines process language to clarify collaborative intent and policy context."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The clarification on who needs findings and documentation is justified and supported by the original checklist content."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "The rewrite properly preserves meaning, differentiates internal and external use, and maintains all qualifications and references, matching the source intent."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1812,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 688,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2500
+    },
+    "review": {
+      "input_tokens": 2056,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 410,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2466
+    }
+  },
+  "createdAt": "2026-11-15T13:43:24.921Z"
+}

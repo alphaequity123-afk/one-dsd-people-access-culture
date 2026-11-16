@@ -1,0 +1,111 @@
+{
+  "target": "dsd-scenario.dsd-policy-change",
+  "kind": "surface",
+  "route": "/one-dsd/scenarios/dsd-policy-change",
+  "sourceSha256": "d368213cff0088a5ac22b55a5d636de989f742c7e7ddd7aa547ff2ba04f8e4e0",
+  "status": "model_checked",
+  "reviewedFieldCount": 13,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "situation"
+      ],
+      "before": "A change to documentation requirements for a waiver service is scheduled for leadership approval in four weeks. The change was designed to reduce fraud risk. No one has yet asked which families will find the new requirement hardest to meet.",
+      "after": "A change to documentation requirements for a waiver service is set for leadership review and approval in four weeks. The intended purpose is to reduce fraud risk, but so far, the team has not examined which families or individuals might face the greatest challenges in meeting the new standard. This gap can leave out people who already experience barriers in accessing services, especially if the requirement increases paperwork or verification steps.",
+      "reason": "Expanded to clarify the timing, intention, and why examining the burden matters for affected participants. Flags the risk of increased barriers, which is relevant in a DSD context."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "whatToNotice",
+        1
+      ],
+      "before": "The design goal is legitimate; the burden analysis has not been done.",
+      "after": "Fraud prevention is a justified goal, but there has not been an analysis of who will bear the greatest burden under the new requirements. Skipping this step risks unintentionally concentrating new barriers on families or providers least able to adapt.",
+      "reason": "Explains the value of a burden analysis and its potential impact on equity and service access."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "whatToNotice",
+        2
+      ],
+      "before": "This may require an equity scan or a full analysis under the DHS equity policy.",
+      "after": "Changes with significant participant impact may require either an equity scan or a full analysis under the DHS equity policy. This determination influences whether the process fully considers how different groups are affected and whether mitigation steps are required.",
+      "reason": "Explains when an equity scan or analysis is triggered and why it matters for decision quality."
+    },
+    {
+      "fieldId": 11,
+      "path": [
+        "handoff"
+      ],
+      "before": "The policy owner determines whether an analysis is required and keeps the official record. Your Equity Director helps shape it. DSD staff can request a consultation for a difficult decision.",
+      "after": "The policy owner decides if an equity scan or full analysis is required and maintains the official record. The Equity Director provides guidance on the scope, approach, and documentation. DSD staff should request consultation if they are unsure whether analysis is needed or if the effect on specific groups is unclear. This process matters for meeting agency equity commitments and for defensible leadership decisions.",
+      "reason": "Added explanation showing why each role is important and clarified the consequences of missing the required analysis."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revision expands on potential impacts and makes more explicit the equity risk of the policy change. Its explanation that additional requirements may leave out those with greater barriers is consistent with the original's admission that a burden analysis has not been done, and fits DSD context. It does not introduce unsupported claims, alter legal conditions, or add invented policy."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "Expanded to clarify why a burden analysis matters and to reinforce that skipping analysis can lead to equity concerns. This is implicit in the source scenario and required by the practice context. No overstatement of obligation."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "Clarifies when an equity scan or full analysis may be triggered—'may require'—and why this step influences the decision process. The clarification does not invent new requirements, change obligations, or erase qualifications. Comports with the DHS equity policy context."
+      },
+      {
+        "fieldId": 11,
+        "severity": "note",
+        "finding": "Clarifies the consultative process and adds the reason for each role without exaggerating their authority or duty. Stresses the consequences of bypassing analysis—'meeting agency equity commitments and for defensible leadership decisions'—which is implicit in standard administrative procedure. The revision remains accurate and grounded in the original record and agency goals."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1725,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 404,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2129
+    },
+    "review": {
+      "input_tokens": 1453,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 337,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1790
+    }
+  },
+  "createdAt": "2026-11-15T13:38:57.174Z"
+}

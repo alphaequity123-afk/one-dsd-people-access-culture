@@ -1,0 +1,81 @@
+{
+  "target": "code.app/growth/page.tsx",
+  "kind": "surface",
+  "route": "/growth",
+  "sourceSha256": "524f32f6a4415d7123437d7ba9852e3f4121ed99b45e37fe2aa58ddf878143e1",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "A suggested order for building skill over time, in three steps: start, apply and lead. Nothing here is required or recorded. Take it at your own pace and skip what you already know.",
+      "after": "This page outlines a recommended sequence for developing skills in three stages: start, apply, and lead. None of these steps are mandatory or tracked. You may use these as a reference, proceed in any order, and skip items that cover material you already understand.",
+      "reason": "Clarified that the sequence is a suggested framework, emphasized that participation is voluntary and untracked, and rephrased instructions to align with professional practice. This revision improves connected reasoning and avoids informal encouragement, while providing context for the progression steps."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Roles describe useful connections, not limits. Every resource stays open to everyone.",
+      "after": "Role categories reflect common practice areas and connections—they are not limits on who can access resources. All materials remain available to every staff member regardless of role.",
+      "reason": "Specified the intended purpose of roles as descriptive categories rather than boundaries, and clarified that access is not restricted to any group. This addresses potential ambiguity in the initial statement and gives a more direct explanation relevant to staff use."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revised text changes the tone and narrative scope beyond what the source establishes. The original: 'A suggested order for building skill over time, in three steps: start, apply and lead. Nothing here is required or recorded. Take it at your own pace and skip what you already know.' The rewrite: 'This page outlines a recommended sequence for developing skills in three stages: start, apply, and lead. None of these steps are mandatory or tracked. You may use these as a reference, proceed in any order, and skip items that cover material you already understand.' It breaks source evidence, notably by shifting from 'suggested order' (source wording and meaning) to 'recommended sequence,' which asserts more authoritative guidance. Introducing 'as a reference' and instructing to 'proceed in any order' creates new legal conditions and erases the gentle, illustrative nature of the original. The phrase 'cover material you already understand' is a dilution of 'skip what you already know' and reduces the specific context of knowledge to a generic understanding. The change is not permitted by the standard, as it modifies the quoted meaning and introduces unnecessary rewording. The source's structure and focus should be kept: suggest, describe three steps, stress non-requirement and non-recording, and encourage individual pacing and prior knowledge without broadening into new advisories."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The proposed rewrite clarifies the source's point that role categories are not restrictions and that all resources are open. The change from 'Roles describe useful connections, not limits. Every resource stays open to everyone.' to 'Role categories reflect common practice areas and connections—they are not limits on who can access resources. All materials remain available to every staff member regardless of role.' is a permissible elaboration for professional clarity. It does not change legal meaning nor invent new policy. No blocker here."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1424,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 211,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1635
+    },
+    "review": {
+      "input_tokens": 1239,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 406,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1645
+    }
+  },
+  "createdAt": "2026-11-15T13:49:04.355Z"
+}

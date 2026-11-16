@@ -1,0 +1,81 @@
+{
+  "target": "code.app/my-work/decision-records/page.tsx",
+  "kind": "surface",
+  "route": "/my-work/decision-records",
+  "sourceSha256": "a2043551f08535f26143f1a5e60f7f5aa04a78360ce91a5a8ee90caf1b01fb35",
+  "status": "needs_revision",
+  "reviewedFieldCount": 4,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "A short, plain record of a consequential decision: who it affects, what was heard, the options weighed and why one was chosen. Someone reading it next year should be able to follow the reasoning.",
+      "after": "A decision record briefly documents a significant choice, noting who is affected, what input was considered, which options were discussed, and the reasoning for what was selected. The record should provide enough detail for someone reviewing it in the future to understand the decision-making process and its context.",
+      "reason": "Clarified the connection between components of the record, added why the described content matters, and emphasized professional and practical intent rather than a general summary."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "Keep one for a policy, form, notice, budget, hiring or service change that affects people outside your team. If the Equity Analysis Toolkit applies, the record notes where its analysis is kept. A record supports a decision; the person or area responsible still makes it.",
+      "after": "Create a decision record for any policy, form, notice, budget, hiring, or service change that will affect people outside your immediate team. When the Equity Analysis Toolkit is used, include a note indicating where the related analysis is stored. Decision records support transparency and learning, but the authority to decide remains with the designated person or area.",
+      "reason": "Clarified which situations are included and improved the explanation of why to create a record, emphasizing support for transparency and learning without overstating its authority."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revision replaces the concise, direct source with a more complex paraphrase. The original sets clear requirements: \"A short, plain record of a consequential decision: who it affects, what was heard, the options weighed and why one was chosen. Someone reading it next year should be able to follow the reasoning.\" The rewritten version changes 'short, plain record' to 'briefly documents a significant choice,' and shifts from listing direct criteria to paraphrasing them, introducing 'reasoning for what was selected,' and 'provides enough detail...to understand...process and context.' This softens the requirements, introduces interpretive padding ('reasoning for what was selected,' 'context'), and omits key phrasing about documentation type and length. The revision is not source-faithful and introduces ambiguity about standard and scope."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The edit is mostly accurate: it retains the scope and instruction from the source. The clarifications about outcome and intent—'support transparency and learning'—are slightly interpretive, but do not introduce blockers. The substitution of 'create' for 'keep one' is acceptable given context, as is the change from 'the record notes where its analysis is kept' to 'include a note indicating where the related analysis is stored.' No critical loss or distortion occurs."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1582,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 222,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1804
+    },
+    "review": {
+      "input_tokens": 1363,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 294,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1657
+    }
+  },
+  "createdAt": "2026-11-15T13:50:48.201Z"
+}

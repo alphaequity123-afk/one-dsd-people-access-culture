@@ -1,0 +1,67 @@
+{
+  "target": "workforce.legislative-relations",
+  "kind": "surface",
+  "route": "/consultant/workforce/legislative-relations",
+  "sourceSha256": "c94ebaeffe6de46bba23164f6229dc8592337501f0bd202caff4e5870ffbe5b0",
+  "status": "model_checked",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "relationship"
+      ],
+      "before": "Listed as an agency area or associated service. This does not establish a direct reporting line.",
+      "after": "Legislative Relations appears as an agency area or associated service. Its inclusion in a directory entry does not mean there is a direct reporting relationship. Confirm the relevant contacts or reporting structure with current DHS organizational information when assigning responsibilities or routing requests.",
+      "reason": "The revision clarifies that directory listings do not establish formal reporting lines and explains the need to check current organizational details when questions arise. This added reasoning helps staff understand why the distinction is important for their work."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revision to the 'relationship' field adds clarification without introducing inaccuracies. It preserves the original meaning—that directory listings do not establish direct reporting lines—and gives staff rationale for checking current organizational information. This matches the evidence from the listed DHS organizational information and fulfills the program writing standard's requirements for reasoning and supporting staff understanding. No blocker found."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1101,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 115,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1216
+    },
+    "review": {
+      "input_tokens": 828,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 90,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 918
+    }
+  },
+  "createdAt": "2026-11-15T13:37:54.027Z"
+}

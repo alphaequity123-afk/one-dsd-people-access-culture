@@ -1,0 +1,81 @@
+{
+  "target": "code.app/paths/[id]/page.tsx",
+  "kind": "surface",
+  "route": "/paths/[id]",
+  "sourceSha256": "7198c12d224ff9f3ff4d7f233a7a0d367d3c82e580db949b8163a6138272c014",
+  "status": "needs_revision",
+  "reviewedFieldCount": 16,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field2"
+      ],
+      "before": "This page does not save anything you write, so keep your notes in your own working file.",
+      "after": "This page does not save your input. If you want to record notes or draft responses, use your own local file or working document.",
+      "reason": "Clarified that notes are not retained and gave a direct instruction to use an external file, improving specificity and professional tone."
+    },
+    {
+      "fieldId": 12,
+      "path": [
+        "field13"
+      ],
+      "before": "The optional report-back draft in the engagement checklist helps explain what was heard, what changed, what could not change and why. Return the appropriate summary to participants through an approved accessible channel; this page does not send it.",
+      "after": "The optional report-back draft included in the engagement checklist helps summarize what was heard, what has changed, what could not change, and the reasons. Return your summary to participants using an approved, accessible method. This page does not transmit or notify participants.",
+      "reason": "Improved specificity and separated the steps: drafting the summary, the method of communicating, and noting the limitation of the page. Avoided condescending language and added clarity on reporting workflow."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The proposed revision changes the legal and factual scope of the original. The original source states, 'This page does not save anything you write, so keep your notes in your own working file.' The edit, 'This page does not save your input. If you want to record notes or draft responses, use your own local file or working document,' shortens and re-structures the instruction, but adds new phrasing ('If you want to record notes or draft responses'), which is unnecessary. More importantly, the original is precise: 'anything you write,' which covers any data input, not just drafts or responses. The rewrite, by limiting to 'your input' and providing conditional wording, could cause ambiguity for users about what is or isn't saved. It also alters the directness of the instruction. For this record, standardized notices about privacy/data-saving must remain as in the official lesson, for accuracy and legal clarity."
+      },
+      {
+        "fieldId": 12,
+        "severity": "note",
+        "finding": "The proposed update on field13 shifts some wording and changes passive to active structure. It generally maintains the scope: the requirement to return a summary to participants using an approved, accessible channel, and the explicit statement that the page does not transmit/send anything. However, the addition of 'transmit or notify participants' slightly extends scope (notifying wasn't mentioned before), while the original's wording is tight and scoped only to sending. This is a minor textual change, not a blocker, but avoid interpolating new limitations or features unless the source requires."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 4354,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 204,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4558
+    },
+    "review": {
+      "input_tokens": 3755,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 359,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4114
+    }
+  },
+  "createdAt": "2026-11-15T13:51:21.693Z"
+}

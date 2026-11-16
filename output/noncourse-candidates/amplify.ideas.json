@@ -1,0 +1,243 @@
+{
+  "target": "amplify.ideas",
+  "kind": "surface",
+  "route": "/one-dsd/amplify/ideas",
+  "sourceSha256": "1f18b362e06d601931d8c2578382764bf73d63dd2a3c53ba1d84982643de12d1",
+  "status": "needs_revision",
+  "reviewedFieldCount": 13,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "intro"
+      ],
+      "before": "Notice something that could work better? You can offer a perspective without having a finished solution—or taking on the job of fixing it.",
+      "after": "If you notice something in our work that could be improved, you are encouraged to share your insight or concern, even if you do not have a specific solution or plan to address it yourself.",
+      "reason": "Clarified purpose and inclusive invitation, removed rhetorical language, and specified that a finished solution or implementation is not required."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "resources",
+        1,
+        "label"
+      ],
+      "before": "Facilitation and learning together",
+      "after": "Facilitation and learning with others",
+      "reason": "Refined for clarity; ensures the label directly reflects purpose—interacting and learning with colleagues."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "resources",
+        2,
+        "label"
+      ],
+      "before": "Workplace culture and well-being",
+      "after": "Workplace culture and staff well-being",
+      "reason": "Added specificity by referencing both the workplace context and the focus on staff, aligning with professional language."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "section0Body"
+      ],
+      "before": "A clearer handoff, a more accessible meeting, a development opportunity, or a simpler message can all be useful starting points. Describe the work and its effects. Different experiences can help us understand the same situation more fully.",
+      "after": "Examples such as improving a handoff, making a meeting more accessible, offering a development opportunity, or simplifying communication can serve as practical starting points. Describe both the work process and how it affects people. Colleagues may have different experiences that reveal new aspects of the same situation.",
+      "reason": "Made examples more work-specific, clarified the purpose of describing effects, and explained how diverse experiences contribute to understanding."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "section1Body"
+      ],
+      "before": "The brief below helps you describe what matters, who could benefit, and what you would like considered. You can leave possible solutions open. Keep names and private personnel or case details out of the draft.",
+      "after": "The brief provided below is designed to help you explain what matters, identify who could benefit, and clarify what you would like reviewed or considered. You are not required to propose solutions—raising the issue itself can be valuable. Exclude personal names, confidential personnel matters, or case details in your draft to protect privacy and comply with data guidelines.",
+      "reason": "Clarified the intent of describing issues and who may benefit, explained why solutions are not needed, and explicitly referenced privacy and compliance considerations for omitting personal details."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "section2Body"
+      ],
+      "before": "You can bring your brief to the Amplify co-leads, the One DSD Team, or the Equity and Inclusion Operations Consultant. Agree on what may be shared and where the question belongs.",
+      "after": "After you complete your brief, you may share it with Amplify co-leads, the One DSD Team, or the Equity and Inclusion Operations Consultant. Discuss and agree on what information can be shared further and which group is the best fit to review your question. This helps ensure the right audience and respects appropriate boundaries.",
+      "reason": "Clarified next steps for sharing, added reasoning about audience and boundaries, and explained the value of agreeing on information sharing."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "section3Title"
+      ],
+      "before": "What a useful response looks like",
+      "after": "What a thorough response provides",
+      "reason": "Revised for clarity and specificity to signal the qualities of a complete response."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "section3Body",
+        0
+      ],
+      "before": "An acknowledgment that the idea reached the right person or team.",
+      "after": "A confirmation that your idea or concern has been delivered to the most relevant person or team.",
+      "reason": "Increased specificity about acknowledgment, clarifying that the relevant recipient is identified."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "section3Body",
+        1
+      ],
+      "before": "A clear explanation of what is being considered and any information that would help.",
+      "after": "A clear explanation of what actions or considerations are underway and any context or background information that may be relevant.",
+      "reason": "Specified that explanation should address actions and give helpful context for greater clarity."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "section3Body",
+        2
+      ],
+      "before": "A response explaining the decision, including when a change is not possible.",
+      "after": "A response that outlines the decision-making process and states the decision, including reasons why a proposed change may not be pursued.",
+      "reason": "Clarified that staff should describe both the process and the decision, especially if the idea is not implemented."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "section3Body",
+        3
+      ],
+      "before": "An agreed next step, if there is one, with updates brought back to the people involved.",
+      "after": "A mutually understood next step, when applicable, with updates provided to everyone included in the original effort.",
+      "reason": "Clarified who receives updates and linked the next step to the original participants for transparency."
+    },
+    {
+      "fieldId": 11,
+      "path": [
+        "section4Body"
+      ],
+      "before": "You can contribute an observation, help explore options, or choose to stay involved. Raising an idea does not make you responsible for its implementation. A perspective does not need a majority vote to deserve consideration.",
+      "after": "You choose how to participate: you can share an observation, join in considering options, or remain involved as the idea progresses. Raising a concern does not mean you must carry out the work. A suggestion is valuable on its own and does not depend on majority agreement to be considered.",
+      "reason": "Clarified the individual's control over participation and explained that suggestions merit attention without requiring group consensus."
+    },
+    {
+      "fieldId": 12,
+      "path": [
+        "section5Body"
+      ],
+      "before": "If a change is agreed, ask what became easier and for whom, what remains difficult, and what to adjust. Share an update only with the people and wording agreed for that purpose.",
+      "after": "If a change is made, ask specific questions about what barriers were reduced, who benefits, and what challenges persist or need future attention. When sharing outcomes, use only the method, wording, and recipients previously agreed upon by those involved, to respect privacy and accuracy.",
+      "reason": "Specified types of learning questions that can be asked post-change, and emphasized deliberate, agreed-upon sharing to support privacy and accuracy."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revision introduces a directive, 'you are encouraged to share your insight or concern,' that implies an obligation or proactive invitation which the source does not state. The original source allows someone to 'offer a perspective' without suggesting encouragement or changing the audience's role. Also, the proposed language weakens the source's deliberate avoidance of staff-work ownership: the original's 'not having a finished solution—or taking on the job of fixing it' is replaced by 'plan to address it yourself,' which loses the explicit message about implementation ownership. The rhetorical style is a feature of an open invitation; the rewrite makes it less approachable."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The modification from 'Facilitation and learning together' to 'Facilitation and learning with others' is a minor clarity suggestion and does not materially misrepresent the source."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "Adding 'staff' to 'well-being' is a reasonable clarification, though the original page heading does not limit well-being to staff and could include broader context. This is a note, as it does not falsely claim a new boundary."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "This change adds work-specific phrasing and clarifies examples without introducing unsupported claims. The elaboration is consistent with the intent of the source."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The expansion about privacy and compliance is aligned with DSD standard practice, but the source only says to 'Keep names and private personnel or case details out.' The edit reasonably clarifies the rationale, so this is a note."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "Clarifies and expands on who reviews and what is agreed upon. This retains the original direction and intent."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "Changing 'What a useful response looks like' to 'What a thorough response provides' is a style/tone adjustment and does not alter legal or substantive meaning."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "This change clarifies recipient relevance; it is consistent with source intent."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "The revised explanation broadens what should be communicated (context/background), which is supportable as an improved interpretation."
+      },
+      {
+        "fieldId": 9,
+        "severity": "note",
+        "finding": "Expanding to include 'the decision-making process' is an improvement; the underlying obligation or expectation is unchanged from the source."
+      },
+      {
+        "fieldId": 10,
+        "severity": "note",
+        "finding": "Clarifies process transparency, which is in keeping with the original guidance."
+      },
+      {
+        "fieldId": 11,
+        "severity": "note",
+        "finding": "Emphasizing control over participation aligns with original meaning. Stating that a suggestion does not need consensus is present in the source."
+      },
+      {
+        "fieldId": 12,
+        "severity": "note",
+        "finding": "Clarifying what to ask about after change and emphasizing agreed wording/methods is a supportable elaboration that does not add new requirements."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2081,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 875,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2956
+    },
+    "review": {
+      "input_tokens": 2475,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 791,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3266
+    }
+  },
+  "createdAt": "2026-11-15T13:37:11.819Z"
+}

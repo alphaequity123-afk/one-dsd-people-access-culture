@@ -1,0 +1,95 @@
+{
+  "target": "code.app/data/equity-baseline/layout.tsx",
+  "kind": "surface",
+  "route": "app/data/equity-baseline/layout.tsx",
+  "sourceSha256": "32adb9367ec06e8948eaddcb58b830811c1c67847499e7c667342f6917755b9c",
+  "status": "needs_revision",
+  "reviewedFieldCount": 3,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Managers and supervisors open this page with the leaders access key:",
+      "after": "Managers and supervisors should use the leaders access key to open this page:",
+      "reason": "Replaced the imperative form with a more precise instruction reflecting that this key grants the needed access, and added 'should' to clarify that this is an intended instruction for managers and supervisors."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": ". Share it in person or by direct message, not in a group post.",
+      "after": " Share the key directly with individuals—not in group messages—to limit unnecessary distribution.",
+      "reason": "Clarifies the reasoning for avoiding group posts by directly stating the risk of unnecessary key distribution and specifies intent."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "This page is locked until the Equity and Inclusion Operations Consultant sets up leaders access.",
+      "after": "This page will remain unavailable until the Equity and Inclusion Operations Consultant enables leaders access.",
+      "reason": "Clarifies the state of access by indicating the page remains unavailable rather than simply 'locked,' and specifies the required action for access."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The source states: 'Managers and supervisors open this page with the leaders access key:', which is concise, functional, and informative. The change introduces 'should use' and reframes it as a recommendation ('should') rather than a direct, concrete statement of what they do. The source is instructive and matches standard notification wording. 'Should use' could be interpreted as optional or suggest unexplained flexibility that's not present in the process; the instruction in the source is explicit and accurate. Do not change the modality from factual to recommended unless the source supports that ambiguity."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The source statement—'Share it in person or by direct message, not in a group post.'—is precise and mirrors the justification found in the source comment: 'Share it in person or by direct message, not in a group post.' The proposed change introduces a rationale ('to limit unnecessary distribution'), but the source does not provide or require this explanation in the notice itself. The revision is a well-meaning elaboration but adds content outside the official record and is therefore unsupported."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The source states, 'This page is locked until the Equity and Inclusion Operations Consultant sets up leaders access.' The proposed change rephrases this as, 'This page will remain unavailable until the Equity and Inclusion Operations Consultant enables leaders access.' This changes both terminology ('locked' to 'unavailable', 'sets up' to 'enables') and introduces 'will remain', which subtly shifts the tone away from the brief, status-report format in the official notice. The change is not directly supported and alters the source communication style."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1628,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 180,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1808
+    },
+    "review": {
+      "input_tokens": 1405,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 407,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1812
+    }
+  },
+  "createdAt": "2026-11-15T13:48:23.815Z"
+}

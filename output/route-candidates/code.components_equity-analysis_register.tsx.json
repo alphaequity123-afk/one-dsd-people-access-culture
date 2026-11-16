@@ -1,0 +1,95 @@
+{
+  "target": "code.components/equity-analysis/register.tsx",
+  "kind": "surface",
+  "route": "components/equity-analysis/register.tsx",
+  "sourceSha256": "bb4c1176fe7545b9e38164c8b4688dc040cafb9663b007e2961c9c06400d29c3",
+  "status": "needs_revision",
+  "reviewedFieldCount": 3,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field1"
+      ],
+      "before": "The dates each analysis promised: approval or launch, impact review, outcome review. Mark one done when the review happened. Add it to a calendar to get a reminder a week before.",
+      "after": "Each analysis sets target dates for approval or launch, impact review, and outcome review. Mark a follow-up as done once that review occurs. You can also download a calendar reminder to track upcoming dates and receive a notification one week before the due date.",
+      "reason": "Clarified the purpose of setting and marking follow-ups. Specified that marking follow-up as done should occur after the event, and explained why calendar reminders are available and when they notify users."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field2"
+      ],
+      "before": "Every change to a follow-up or a survey wave, newest first. Reverting puts the earlier value back and is itself recorded. Times are Central.",
+      "after": "The history records every update to a follow-up or survey wave, with the latest changes shown first. When you revert a change, the prior value is restored and the action itself is tracked in the log. All times are in Central time.",
+      "reason": "Clarified both the mechanism and importance of recording changes and reverting them. Made explicit that the revert is recorded as an additional entry. Specified time zone reference and order of display for clarity."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field3"
+      ],
+      "before": "One row per survey wave: percent favorable for the three items the Equity Policy page tracks, respondents, and response rate.",
+      "after": "Each survey wave appears as a row showing percent favorable for the three Equity Policy tracked items, respondent count, and response rate. Only entered waves display on the Equity Policy page; if no data has been entered, no survey results show.",
+      "reason": "Specified what determines display and clarified that only entered survey waves appear on the Equity Policy page, providing needed context on data visibility."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The rewrite alters the meaning of the section. The original: \"The dates each analysis promised: approval or launch, impact review, outcome review. Mark one done when the review happened. Add it to a calendar to get a reminder a week before.\" is a direct, plain inventory of what dates are tracked (the three follow-ups), with two instructional sentences: 'mark one done when the review happened', and 'add it to a calendar ...'. The rewrite shifts to 'Each analysis sets target dates...' (which is not reflected directly on this page: dates tracked, not the act of setting them), adds 'You can also download a calendar reminder', and claims 'receive a notification one week before the due date' (the .ics file is downloadable, but there is no guarantee or control over user-side notifications—different calendar systems handle .ics reminders differently and not all push a reminder by default). This is an embellishment and introduces unsupported claims about notifications. The concise, source-accurate language should be preserved. Blocker."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The changes to field2 clarify order of display, mechanism for reverting, and time zone consistently with the code and original meaning. The edits are supportable."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The changes to field3 improve clarity and make explicit that survey waves only appear if entered. All details are accurate per the code, which only displays entered survey data. This is supportable and helpful."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 7087,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 296,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 7383
+    },
+    "review": {
+      "input_tokens": 6979,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 327,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 7306
+    }
+  },
+  "createdAt": "2026-11-15T13:53:22.051Z"
+}

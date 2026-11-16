@@ -1,0 +1,67 @@
+{
+  "target": "graduation-path.gp-6",
+  "kind": "surface",
+  "route": "/practice/gp-6",
+  "sourceSha256": "fcde49697454b9117916dd962529538e4ba57af7c0fdf4e683bdee3dd0281ca9",
+  "status": "needs_revision",
+  "reviewedFieldCount": 52,
+  "changes": [
+    {
+      "fieldId": 16,
+      "path": [
+        "privacy"
+      ],
+      "before": "Do not include candidate or employee names. Describe the process, not a person. Your progress is saved only on this computer and is not used to rank anyone.",
+      "after": "Do not include candidate or employee names in your plan or examples. Focus your description on the process, roles, and criteria rather than individuals. Your work is saved only on this computer. No progress or details are shared beyond your session, nor are they used to evaluate anyone.",
+      "reason": "Clarified rationale for omitting names and emphasized the importance of focusing on process and criteria. Explained that saved progress is local and not used for evaluation, aligning with the program writing standard for specificity and professional context."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 16,
+        "severity": "blocker",
+        "finding": "The revised privacy statement changes the scope of the privacy assurance and adds unsupported statements. The original: 'Do not include candidate or employee names. Describe the process, not a person. Your progress is saved only on this computer and is not used to rank anyone.' The replacement: 'Do not include candidate or employee names in your plan or examples. Focus your description on the process, roles, and criteria rather than individuals. Your work is saved only on this computer. No progress or details are shared beyond your session, nor are they used to evaluate anyone.' The added requirement to focus on 'roles and criteria rather than individuals' is not in the source. The claim 'No progress or details are shared beyond your session, nor are they used to evaluate anyone' is broader than 'not used to rank anyone.' Each statement in the policy must be source-grounded and cannot expand privacy representations beyond what the program controls. Only the original wording is supported."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3816,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 225,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4041
+    },
+    "review": {
+      "input_tokens": 2016,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 214,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2230
+    }
+  },
+  "createdAt": "2026-11-15T13:39:45.220Z"
+}

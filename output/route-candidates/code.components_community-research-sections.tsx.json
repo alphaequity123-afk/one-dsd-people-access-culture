@@ -1,0 +1,137 @@
+{
+  "target": "code.components/community-research-sections.tsx",
+  "kind": "surface",
+  "route": "components/community-research-sections.tsx",
+  "sourceSha256": "c475b29b52e13242d4be08872c7dbe98f1c0e3ef8b0e6fefe19a7101efcdc9c3",
+  "status": "needs_revision",
+  "reviewedFieldCount": 7,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field1"
+      ],
+      "before": "These stories offer context. They do not describe any individual or represent every experience in a community.",
+      "after": "These accounts offer background and illustrate possible influences in a community context. They do not describe a specific individual or capture every perspective within any group.",
+      "reason": "Clarifies that stories have illustrative rather than representative value, specifies the use for background, and underscores that they do not generalize individual experiences."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field3"
+      ],
+      "before": "Check current services and eligibility with the office or organization before making a connection.",
+      "after": "Staff should verify the current services and eligibility requirements with the specific office or organization before referring a person or suggesting a connection. Policies and program details can change, and providing current information prevents misdirection or confusion.",
+      "reason": "Explains why verification is needed: staff actions can affect service navigation, accuracy, and reliability for the person supported. Adds consequence for missing this action."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field5"
+      ],
+      "before": "These are starting points for learning. Check current services and eligibility with the organization before making a connection.",
+      "after": "This list offers an introduction to organizations and media relevant to service navigation. Always check with each organization to confirm up-to-date services and eligibility, as these may change over time.",
+      "reason": "Gives a more specific purpose, encourages checking for updated information, and connects the list to navigation. Reduces repetition with field 1 and aligns with professional context."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field6"
+      ],
+      "before": "Prepared for One DHS and One DSD People, Access and Culture from the sources listed in each section.",
+      "after": "Prepared for Minnesota DHS and DSD People, Access and Culture, using the sources identified in each section.",
+      "reason": "Clarifies the program context for clarity, corrects stylization, and specifies how source use supports the audience's work."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field7"
+      ],
+      "before": "This page gives context for preparing questions and changing systems. It is not evidence about any individual in planning, eligibility or investigation.",
+      "after": "This page offers background to support staff as they develop questions for planning or consider system changes. It does not provide evidence about individuals for use in eligibility, planning, or investigations.",
+      "reason": "Refines the explanation of the page's purpose, links it to staff activities, and clarifies the limits around its use—why it cannot be relied on for individual determinations."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field9"
+      ],
+      "before": "and name this page and what needs to change.",
+      "after": "and specify both the page and the needed correction.",
+      "reason": "Clarifies the reporting instruction: staff must name the relevant page and the requested change, not just indicate that a change is needed."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "Field 1 ('These stories offer context...') in the original states the stories offer context, do not describe any individual, and do not represent every experience in a community. The proposed change ('These accounts offer background and illustrate possible influences in a community context. They do not describe a specific individual or capture every perspective within any group.') introduces language ('illustrate possible influences,' 'capture every perspective') not in the source, and shifts 'context' to 'background.' The original source is clear, concise, and avoids generalizing. The rewrite changes the scope and meaning and is not supported by the code/source."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "Field 3 expands from the code's 'Check current services and eligibility with the office or organization before making a connection.' to 'Staff should verify the current services and eligibility requirements... Policies and program details can change, and providing current information prevents misdirection or confusion.' This is unsupported expansion: The page provides only a general reminder, not a directive or detailed rationale. The additional explanation for consequences and who should act is not reflected in source."
+      },
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "Field 5 changes 'These are starting points for learning. Check current services and eligibility with the organization before making a connection.' to 'This list offers an introduction... Always check with each organization to confirm up-to-date services and eligibility, as these may change over time.' The rewrite introduces new concepts ('introduction to organizations and media relevant to service navigation,' 'as these may change over time'), shifts tone from starting points to definitive steps, and changes field placement. The source text is simple and general; the rewrite narrows and changes intentions."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "Field 6: The change clarifies 'One DHS and One DSD' to 'Minnesota DHS and DSD,' corrects program context, and meets the intent of the original. Acceptable minor edit for clarity."
+      },
+      {
+        "fieldId": 5,
+        "severity": "blocker",
+        "finding": "Field 7 changes 'This page gives context for preparing questions and changing systems. It is not evidence about any individual in planning, eligibility or investigation.' to 'This page offers background to support staff as they develop questions for planning or consider system changes. It does not provide evidence about individuals for use in eligibility, planning, or investigations.' The rewrite changes audience ('support staff' instead of 'for preparing'), reframes intent, and reorders acceptable uses. The change is more specific than the code, adding structured roles and altering scope and meaning. Not supported by the source."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "Field 9: The change ('and specify both the page and the needed correction.') restates but does not alter the underlying meaning; this clarification is acceptable."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 4006,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 435,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4441
+    },
+    "review": {
+      "input_tokens": 3992,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 599,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4591
+    }
+  },
+  "createdAt": "2026-11-15T13:52:36.778Z"
+}

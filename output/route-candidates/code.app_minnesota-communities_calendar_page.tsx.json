@@ -1,0 +1,81 @@
+{
+  "target": "code.app/minnesota-communities/calendar/page.tsx",
+  "kind": "surface",
+  "route": "/minnesota-communities/calendar",
+  "sourceSha256": "5ee445efe66925f94da2cfca064a49026c24f0a89fd16ee8733b9480ad80b3a7",
+  "status": "needs_revision",
+  "reviewedFieldCount": 7,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Observances, festivals and remembrances across Minnesota&apos;s communities, for planning meetings, deadlines and outreach with care.",
+      "after": "Minnesota’s communities observe a wide variety of holidays, festivals, and days of remembrance. This calendar supports meeting, deadline, and outreach planning by showing key observances during the year.",
+      "reason": "Clarified the purpose and connection to practical DHS and DSD planning. Removed unnecessary wording and connected the calendar’s relevance directly to staff responsibilities."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "A date on this calendar does not tell you whether a particular person observes it. Ask people what they need, and check any date that matters with the organizer or community.",
+      "after": "Not every person or group will observe a listed date. Always ask individuals about their needs, and verify important dates directly with the person, organizer, or community if they relate to your work.",
+      "reason": "Improved instruction clarity and added the reason why verification is necessary, referencing real situations where missed context could affect planning or support."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The proposed change ('Minnesota’s communities observe a wide variety of holidays, festivals, and days of remembrance...') alters the meaning and tone of the original. The original is a succinct, purpose-grounded statement ('Observances, festivals and remembrances across Minnesota's communities, for planning meetings, deadlines and outreach with care.') that directly sets the page's intent and aligns with the program standard for audience and function. The rewrite inserts broad statements of fact not present in the source, and the explanatory framing ('This calendar supports…') is unnecessary here. The original is neither unclear nor less relevant to DHS/DSD staff. Retain the concise, neutral original per standard."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "While the rewrite adds some explanation about why to check/ask and is clear, it slightly generalizes the original message by saying 'not every person or group' instead of the page's precise 'whether a particular person observes it.' However, it generally retains the source's instruction and practical guidance. This is not a blocker, but the edit does not significantly improve over the source wording and could be considered a lateral change rather than required for clarity. Editors may prefer to retain the source for neutrality and specificity per standard."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3651,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 176,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3827
+    },
+    "review": {
+      "input_tokens": 3297,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 275,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3572
+    }
+  },
+  "createdAt": "2026-11-15T13:50:43.457Z"
+}

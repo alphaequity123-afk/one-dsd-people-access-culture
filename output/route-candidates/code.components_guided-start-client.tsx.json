@@ -1,0 +1,109 @@
+{
+  "target": "code.components/guided-start-client.tsx",
+  "kind": "surface",
+  "route": "components/guided-start-client.tsx",
+  "sourceSha256": "913537161f99fe336c21802603c9165c80de93b8672da663a0c3fa148fa24bf0",
+  "status": "needs_revision",
+  "reviewedFieldCount": 4,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Which of these describe your work right now?",
+      "after": "Which situations apply to your current work?",
+      "reason": "Shortens the question while keeping the focus on the user's present tasks. This phrasing is more direct and matches the professional context."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "These suggestions are optional. You can also go directly to Ask, Minnesota Communities, or Resources.",
+      "after": "You do not need to use these suggestions. You may also go directly to Ask, Minnesota Communities, or Resources if that suits your needs.",
+      "reason": "Clarifies that following the suggestions is not required, and explains that users may take another approach if preferred."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "For your privacy and protection, please use the formal channel for this.",
+      "after": "To protect your privacy, use the formal channel for this type of request.",
+      "reason": "More precisely states the expected staff action and its consequence: ensuring confidentiality and proper handling, without using vague language."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": "Several may help. Start with the one closest to your next deadline, and return to the others whenever you need them.",
+      "after": "More than one choice could help. Consider starting with the one tied to your next deadline, and return to others as your work continues.",
+      "reason": "Explains why to prioritize among options based on deadlines and acknowledges that additional resources may be useful later."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The original is: \"Which of these describe your work right now?\" The proposed, \"Which situations apply to your current work?\" shifts from describing to categorizing. The source form collects selected descriptions to guide recommendations, not to screen for 'applicability' or force a determination. This introduces subtle ambiguity about what counts as 'applying.' It also weakens the alignment between the field and the rest of the question/option set (the signals are phrased as descriptions, not formal situations). The brevity is reasonable, but the shift is not fully supported."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revised: \"You do not need to use these suggestions. You may also go directly to Ask, Minnesota Communities, or Resources if that suits your needs.\" This adds mild explanatory wording but substantially preserves the meaning, keeping the original scope and options. Both forms indicate that participation is optional and the other resources are available. No legal or procedural change. Acceptable."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "\"To protect your privacy, use the formal channel for this type of request.\" This does not alter the policy, function, or reassurance in the original: \"For your privacy and protection, please use the formal channel for this.\" 'Please use' and 'use' are equivalent reminders. The minor difference is acceptable, given the policy and instruction is identical."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The revision ('More than one choice could help. Consider starting with the one tied to your next deadline, and return to others as your work continues.') aligns with the intent and explicit advice in the source ('Several may help. Start with the one closest to your next deadline, and return to the others whenever you need them.'). Both express optionality and prioritization based on deadline. The new wording is slightly more explicit about iterative use, which matches the existing implication. Acceptable."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2037,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 289,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2326
+    },
+    "review": {
+      "input_tokens": 1856,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 418,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2274
+    }
+  },
+  "createdAt": "2026-11-15T13:53:42.529Z"
+}

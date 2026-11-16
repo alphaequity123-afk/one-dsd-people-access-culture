@@ -1,0 +1,109 @@
+{
+  "target": "code.app/one-dsd/team/learning-lab/page.tsx",
+  "kind": "surface",
+  "route": "/one-dsd/team/learning-lab",
+  "sourceSha256": "237709f5b1e141372d89c1ccc7c0ce17c1ca9817c418d3e20db657ba45a46aae",
+  "status": "needs_revision",
+  "reviewedFieldCount": 11,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field2"
+      ],
+      "before": "A place to ask, think aloud, and learn together. Bring something you are working through, explore a topic with the consultant, or come to hear another perspective.",
+      "after": "This is a space for colleagues to ask questions, think aloud, and learn with one another. Bring current work to discuss, explore a topic with a consultant, or listen in to hear how others approach similar challenges. Conversations can clarify ideas, build new understanding, or connect you with others working through related issues.",
+      "reason": "Refined to better explain the purpose and value of the Learning Lab and how different ways of participating fit common professional scenarios."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field3"
+      ],
+      "before": "The consultant or a member brings a topic. We explore a short resource or everyday example, make room for different interpretations, and consider what it could mean in practice. Go deeper when the group wants to.",
+      "after": "A consultant or team member introduces a topic the group is facing. Together, we review a brief resource or discuss a practical example, allowing for varying perspectives and interpretations. The group can further examine details or implications as interest and time allow.",
+      "reason": "Clarifies the source of topics, sequence of actions, and the value of participants offering different viewpoints. Explains the purpose of exploring resources and examples directly tied to real work."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field4"
+      ],
+      "before": "Bring a question, an unfinished idea, or a resource you would like to understand. A useful conversation may be all you need. You can participate without taking on an assignment.",
+      "after": "Participants are encouraged to bring a question, a developing idea, or a resource they want to understand better. Often, a thoughtful conversation with colleagues is enough to move work forward. You may join the discussion without needing to prepare or take on future responsibilities.",
+      "reason": "Clarifies what staff should expect to bring, highlights that substantial preparation is not required, and that commitment beyond the session is optional. This addresses practical participation and boundaries."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "field11"
+      ],
+      "before": "Share only what participants agree to carry forward. A learning conversation can inform the team or Amplify without becoming another commitment.",
+      "after": "Participants decide together what ideas or examples should be shared beyond the conversation. These learning conversations can inform later team work or contribute to Amplify, but sharing further remains optional—not every idea turns into a new assignment.",
+      "reason": "Clarifies the process and reasoning behind deciding what to share, addresses boundaries for follow-up, and explains why this agreement matters for participant trust and practical workflow."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The revised text introduces several specifics and perspectives not present in the source. For instance, it states 'listen in to hear how others approach similar challenges,' 'conversations can clarify ideas', and 'connect you with others working through related issues.' The source only says: 'Bring something you are working through, explore a topic with the consultant, or come to hear another perspective.' The elaboration on 'professional scenarios,' the expanded value, and claims of 'building new understanding' and 'connecting' people are not supported by the precise source language, which leaves these as possibilities without directly promising or describing them."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The rewrite materially adds meaning and invents new structure. The source says: 'The consultant or a member brings a topic. We explore a short resource or everyday example, make room for different interpretations, and consider what it could mean in practice. Go deeper when the group wants to.' The proposed text says: 'consultant or team member introduces a topic the group is facing...' and 'the group can further examine details or implications as interest and time allow.' The source does not claim the topic is something the group is facing (it could be exploratory or based on curiosity). ‘Examining implications or details’ is broader than the source’s phrase 'Go deeper when the group wants to.' The rewrite attributes more collaborative agency and a more prescriptive sequence than the source actually describes."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The proposed revision clarifies and expands slightly but remains consistent with the meaning of the source. It still says participants may bring a question or a resource, highlights that a conversation may be sufficient, and states there is no need to prepare or take on assignments. The tone and scope are acceptable, with no additional commitments or requirements invented."
+      },
+      {
+        "fieldId": 9,
+        "severity": "blocker",
+        "finding": "The rewrite expands the process and invents speculative workflow ('can inform later team work or contribute to Amplify, but sharing further remains optional—not every idea turns into a new assignment'), which is not strictly grounded in the source. The original: 'Share only what participants agree to carry forward. A learning conversation can inform the team or Amplify without becoming another commitment.' The revision adds meaning not substantiated in the source, particularly the description of what happens with shared ideas and a more elaborate rationale about participant trust and workflow. This exceeds clarifying boundaries and offers new explanatory claims."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2460,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 400,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2860
+    },
+    "review": {
+      "input_tokens": 2261,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 520,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2781
+    }
+  },
+  "createdAt": "2026-11-15T13:51:12.757Z"
+}

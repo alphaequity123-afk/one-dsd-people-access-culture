@@ -1,0 +1,109 @@
+{
+  "target": "code.app/community-outreach/providers/page.tsx",
+  "kind": "surface",
+  "route": "/community-outreach/providers",
+  "sourceSha256": "a4607250140bfe6aaceeed221f09aa371d5bd7c26f2fe0b04f2c58be99ddf2ef",
+  "status": "needs_revision",
+  "reviewedFieldCount": 9,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Centers for Independent Living, Area Agencies on Aging, contracted health plans, Disability Hub MN, licensed providers and other state-designated agencies, by county.",
+      "after": "This directory lists Centers for Independent Living, Area Agencies on Aging, contracted health plans, Disability Hub MN, licensed providers, and other state-designated agencies by county.",
+      "reason": "Condensed for clarity and directly stated the content as a directory, supporting navigation and professional prose."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": "Organizations that the State of Minnesota designates, contracts, licenses or certifies to serve people with disabilities, and which counties each one serves. Each entry names the public record of its designation.",
+      "after": "This page identifies organizations that the State of Minnesota designates, contracts, licenses, or certifies to serve people with disabilities, along with the counties they serve. For each organization, the public record documenting its designation is included to support program transparency and verification.",
+      "reason": "Clarified the function—identification and documentation. Explained why the record is included, connecting to verification and transparency."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field5"
+      ],
+      "before": "Designation is a matter of public record; it is not a judgment of quality, and it is not a referral. Confirm current details with the organization. Facts checked on",
+      "after": "Designation is publicly documented. It is not an evaluation of quality or a referral. Always check current details directly with the organization. Information is accurate as of the listed fact-check date.",
+      "reason": "Streamlined to separate judgment, referral, and verification, and emphasized individual responsibility for confirming organizational details."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "field9"
+      ],
+      "before": "Providers of home and community-based services are licensed under Minnesota Statutes chapter 245D by the Department of Human Services. There are too many to list here; use the official lookups below to find current licensed providers by county and service.",
+      "after": "Most home and community-based services providers are licensed under Minnesota Statutes, chapter 245D, by the Department of Human Services. Because the provider list is extensive and changes over time, use the official lookup tools below to search by county and service. This method helps ensure you work with current information when coordinating services or answering questions.",
+      "reason": "Explained the legal context, the reason for using lookup tools, and linked it to up-to-date coordination or inquiry. Avoided the indirect reference to 'too many to list' and focused on program relevance."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed change removes exact source terminology (it omits reference to 'by county' at the end, and adds a framing ('this directory lists') not present in the official source). The original phrasing ('Centers for Independent Living, Area Agencies on Aging, contracted health plans, Disability Hub MN, licensed providers and other state-designated agencies, by county.') closely matches the purpose and record style of other DHS hub pages. The rewrite, while clarifying in tone, is not warranted for a title/description field and alters the official list structure. No evidence from the source for changing the phrase type or omitting 'by county'."
+      },
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "The rewrite adds unsupported interpretation ('to support program transparency and verification'), and converts the objective record ('names the public record of its designation') into a reasoned recommendation. The source just provides factual information about designation and counties served. Adding explanations about program transparency and verification is not substantiated by an official policy or directive in the source."
+      },
+      {
+        "fieldId": 4,
+        "severity": "blocker",
+        "finding": "The proposed version ('Designation is publicly documented. It is not an evaluation of quality or a referral. Always check current details directly with the organization. Information is accurate as of the listed fact-check date.') changes legal/privacy statements and introduces general wording not in evidence. The source statement 'Designation is a matter of public record; it is not a judgment of quality, and it is not a referral. Confirm current details with the organization. Facts checked on' is more specific and should be preserved for regulatory and record-keeping reasons."
+      },
+      {
+        "fieldId": 7,
+        "severity": "blocker",
+        "finding": "The proposed change adds claims not in source ('Most home and community-based services providers...'), alters legal scope ('Most' vs. 'Providers of'), and justifies lookup use ('to ensure you work with current information when coordinating services or answering questions') without a documented program directive. The original focuses on the direct fact: 'Providers of home and community-based services are licensed... too many to list here; use the official lookups...' which is sufficient. Avoid inserting presumed purpose or qualifying statutory scope not found in the source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3256,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 362,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3618
+    },
+    "review": {
+      "input_tokens": 3100,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 467,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3567
+    }
+  },
+  "createdAt": "2026-11-15T13:47:50.698Z"
+}

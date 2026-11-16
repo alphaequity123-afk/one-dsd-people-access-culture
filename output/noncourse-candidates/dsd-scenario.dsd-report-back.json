@@ -1,0 +1,126 @@
+{
+  "target": "dsd-scenario.dsd-report-back",
+  "kind": "surface",
+  "route": "/one-dsd/scenarios/dsd-report-back",
+  "sourceSha256": "face33831d2325ac943982fee75f11b63f6160dc072df91a02c1195b008a84c0",
+  "status": "needs_revision",
+  "reviewedFieldCount": 11,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "situation"
+      ],
+      "before": "A DSD team completed listening sessions with families and providers. The notes are rich. The team is unsure what to send back and worries about promising things it cannot deliver.",
+      "after": "A Disability Services Division (DSD) team finished a series of listening sessions with families and providers. The team now has detailed notes but is uncertain what information to share back with participants. They are concerned about raising expectations they may not be able to meet or making promises beyond the team's authority.",
+      "reason": "Clarified the team's position, preserved factual uncertainty, and specified concerns about both content and authority in response to the writing standard."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "whatToNotice",
+        0
+      ],
+      "before": "The report-back is the part most often skipped, and the part that builds trust.",
+      "after": "Reporting back to participants is commonly skipped but is essential for building trust. Completing this step demonstrates respect for everyone’s input and shows how their contributions shape the work.",
+      "reason": "Connected why reporting back is important, stated the consequence of missing this step, and explained its purpose in plain language."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "whatToNotice",
+        1
+      ],
+      "before": "Honesty about what could not change is more valuable than vague promises.",
+      "after": "Stating clearly what could not change and why—using facts about program limits—is more useful than making broad promises. Participants value transparency about constraints more than reassurances that are unlikely to be fulfilled.",
+      "reason": "Specified the type of honesty and the value it brings. Explained why vague promises undermine trust, in line with the writing standard."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "whatToNotice",
+        2
+      ],
+      "before": "Participants' words carry more weight than a summary, with permission and no identification.",
+      "after": "When sharing results, using direct quotations from participants—if they have given permission and can remain anonymous—can reflect their perspectives more accurately than staff-written summaries. This approach helps participants feel heard and ensures the team's summary does not misrepresent their priorities.",
+      "reason": "Added explanation for why direct participant quotes matter, clarified the permission and privacy consideration, and connected to the purpose of accuracy and representation."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "handoff"
+      ],
+      "before": "The program owner approves the report-back. Send it in the languages, formats, and channels the sessions used.",
+      "after": "The program owner reviews and approves the report-back to ensure accuracy and appropriate content. Share the final version in all the same languages, formats, and communication methods used in the original sessions. This approach respects participants’ access needs and supports ongoing engagement.",
+      "reason": "Clarified the program owner's review role and the reason for matching languages, formats, and channels—to preserve access and engagement. Added specificity as required by the writing standard."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The revision substitutes 'Disability Services Division (DSD)' for 'DSD' and expands the scenario by specifying 'a series of listening sessions,' 'detailed notes,' and concerns about 'raising expectations' and 'making promises beyond the team's authority.' The original source simply states: 'A DSD team completed listening sessions with families and providers. The notes are rich. The team is unsure what to send back and worries about promising things it cannot deliver.' The elaboration introduces new content ('series,' 'raising expectations,' 'making promises beyond the team's authority') not present in the source, which goes beyond clarification and alters the scenario's scope. This contradicts the standard's requirements to avoid inventing context or changing source meaning. This is a blocker."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The change rewrites the idea that 'The report-back is the part most often skipped, and the part that builds trust' as 'Reporting back to participants is commonly skipped but is essential for building trust. Completing this step demonstrates respect for everyone’s input and shows how their contributions shape the work.' The new text adds reasoning about 'demonstrates respect' and 'shows how their contributions shape the work,' which, while logical, is not present in the source. The source only asserts that reporting back builds trust. The addition changes the meaning and introduces motivations and effects not supported by the evidence. This is a blocker."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The revision of 'Honesty about what could not change is more valuable than vague promises.' to 'Stating clearly what could not change and why—using facts about program limits—is more useful than making broad promises. Participants value transparency about constraints more than reassurances that are unlikely to be fulfilled.' extrapolates from the source but aligns with the intent. However, the phrase 'Participants value transparency about constraints more than reassurances that are unlikely to be fulfilled' provides a rationalized, source-adjacent explanation. This is a low-severity concern, but not a blocker since it does not distort legal or operational meaning."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The revision clarifies why quotes matter ('reflect their perspectives more accurately than staff-written summaries') and explains the privacy step, which is a larger paraphrase but does not change operational meaning. This amplifies the source rather than misrepresenting it. It is an editorial expansion that adds, but does not remove or contradict, source meaning. Marked as a note, not a blocker."
+      },
+      {
+        "fieldId": 9,
+        "severity": "note",
+        "finding": "The wording change ('reviews and approves... to ensure accuracy and appropriate content' and 'Share the final version in all the same languages, formats, and communication methods used in the original sessions. This approach respects participants’ access needs and supports ongoing engagement') adds supportive rationales for steps present in the source. It does not invent new required actions or legal standards, so it is a note only. The explanation for these standards is valid but not explicit in the source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1561,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 445,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2006
+    },
+    "review": {
+      "input_tokens": 1427,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 644,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2071
+    }
+  },
+  "createdAt": "2026-11-15T13:39:04.583Z"
+}

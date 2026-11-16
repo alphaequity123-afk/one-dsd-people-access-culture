@@ -1,0 +1,151 @@
+{
+  "target": "code.components/consultant-toolkit/outputs.tsx",
+  "kind": "surface",
+  "route": "components/consultant-toolkit/outputs.tsx",
+  "sourceSha256": "17981a445ee653bd30e0f0ef7a5f810b81a4b7f1fd01cce4ed245eb402a81a06",
+  "status": "needs_revision",
+  "reviewedFieldCount": 7,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Each download includes its saved status and source information.",
+      "after": "Each output download includes its saved status and the sources used. This supports tracking what informed the analysis and whether the file matches the most recent work. Providing this context improves clarity when sharing outputs and reduces possible confusion if questions about the data or conclusions arise.",
+      "reason": "Clarifies why saved status and source information are included in the download, connecting to the need for accurate documentation and traceability in DSD practice."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Save your changes first so the download matches your current work.",
+      "after": "Save your changes before downloading so the exports match your current analysis. If you skip this step, the downloaded files may not reflect your latest edits and could cause confusion in review or record-keeping.",
+      "reason": "Explains the importance of saving before downloading, connecting it to practical outcomes if not followed."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "Save the analysis to download it.",
+      "after": "Save the analysis before downloading. Downloads are only available for saved work to ensure you do not distribute incomplete or outdated information.",
+      "reason": "Clarifies why saving is required, naming accuracy and data integrity as priorities rather than just repeating procedural requirements."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field4"
+      ],
+      "before": "The data copy includes the analysis and source text. Store it with the same care as your source documents.",
+      "after": "The data copy includes both the full analysis and the original source text. Store this data with the same care as your primary source documents to protect sensitive information and support future reference or audit.",
+      "reason": "Adds the professional reason for care in handling, referencing typical DSD requirements for source data protection and possible audit needs."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field5"
+      ],
+      "before": "Turn the recommendations into policy changes",
+      "after": "Draft policy changes from recommendations",
+      "reason": "Revises for clarity and action, specifying the process that follows after analysis and connecting text with the following explanation."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field6"
+      ],
+      "before": "Open this analysis in the Equity Policy Analyzer to draft specific changes to policy wording, protocols, processes and training, and to record a decision on each. Your documents, the question and the summary go with it; related application references do not.",
+      "after": "Open this analysis in the Equity Policy Analyzer to translate the recommendations into specific wording changes—for example, edits to policy language, protocols, procedures, or training plans. You can also record decisions on each recommended action. The relevant documents, question, and summary are included; direct application references do not transfer for this step.",
+      "reason": "Clarifies the range of changes that can be made, why each step is taken, and what data transfers to the next tool, using more precise language and connecting the features to DSD work context."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field7"
+      ],
+      "before": "Turn the recommendations into policy changes",
+      "after": "Draft policy changes from recommendations",
+      "reason": "Aligns with labeled action, matching the recommendation-processing step for consistency and clarity."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revision ('Each output download includes its saved status and the sources used. This supports tracking what informed the analysis and whether the file matches the most recent work. Providing this context improves clarity when sharing outputs and reduces possible confusion if questions about the data or conclusions arise.') introduces explanatory and interpretive content about tracking, documentation, and clarity that is not present in the source. The source states only: 'Each download includes its saved status and source information.' The additional detail and rationale are not directly traceable to the source text and add inferred rationale, which is not supported by the source."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The new text ('Save your changes before downloading so the exports match your current analysis. If you skip this step, the downloaded files may not reflect your latest edits and could cause confusion in review or record-keeping.') introduces an explanation of consequences (\"could cause confusion in review or record-keeping\") that is not present in the source, which simply states: 'Save your changes first so the download matches your current work.' This change adds unsupported consequences and expands beyond the source's directive."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The replacement ('Save the analysis before downloading. Downloads are only available for saved work to ensure you do not distribute incomplete or outdated information.') introduces a rationale about avoiding the distribution of incomplete or outdated information that is not in the source, which says only: 'Save the analysis to download it.' The explanation goes beyond the explicit source text."
+      },
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "The revised text ('The data copy includes both the full analysis and the original source text. Store this data with the same care as your primary source documents to protect sensitive information and support future reference or audit.') adds rationale about protecting sensitive information and future audit/reference needs, which are not present in the source, which reads: 'The data copy includes the analysis and source text. Store it with the same care as your source documents.' The additional explanation is not directly supported by the source."
+      },
+      {
+        "fieldId": 4,
+        "severity": "blocker",
+        "finding": "The new label ('Draft policy changes from recommendations') changes the meaning from the source. The source label is 'Turn the recommendations into policy changes,' which directly matches the related heading and clearly describes the action for users. The revision shortens and alters the actionable nature of the phrase and could be less clear in the intended context."
+      },
+      {
+        "fieldId": 5,
+        "severity": "blocker",
+        "finding": "The revision ('Open this analysis in the Equity Policy Analyzer to translate the recommendations into specific wording changes—for example, edits to policy language, protocols, procedures, or training plans. You can also record decisions on each recommended action. The relevant documents, question, and summary are included; direct application references do not transfer for this step.') adds detailed explanation, rationale, and examples (e.g., 'edits to policy language, protocols, procedures, or training plans', 'record decisions on each recommended action', 'relevant documents') that are not present in the source, which states: 'Open this analysis in the Equity Policy Analyzer to draft specific changes to policy wording, protocols, processes and training, and to record a decision on each. Your documents, the question and the summary go with it; related application references do not.' The source already appropriately lists what carries forward and the types of work steps involved, without the inferred interpretation or extra explanation."
+      },
+      {
+        "fieldId": 6,
+        "severity": "blocker",
+        "finding": "This label change ('Draft policy changes from recommendations') repeats the previously cited problem (see fieldId 4): it alters the precise phrase from the source ('Turn the recommendations into policy changes'), weakening the direct, action-driven instruction in the source and introducing new wording without necessity."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2475,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 493,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2968
+    },
+    "review": {
+      "input_tokens": 2534,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 791,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3325
+    }
+  },
+  "createdAt": "2026-11-15T13:52:49.254Z"
+}

@@ -1,0 +1,67 @@
+{
+  "target": "code.components/multimedia/dsd-work-examples.tsx",
+  "kind": "surface",
+  "route": "components/multimedia/dsd-work-examples.tsx",
+  "sourceSha256": "f19f3d0e7544004d9825c39707c5613258274f9410a08c9bf09105f8f4e16e97",
+  "status": "needs_revision",
+  "reviewedFieldCount": 99,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Imagine a person receives a request for information already supplied elsewhere. Follow the handoff before proposing another requirement.",
+      "after": "If someone receives a request for information that they have already provided, trace the steps in the process to find out where duplication may be occurring. Address possible handoff issues before requiring a person to resubmit materials.",
+      "reason": "Improved the summary by explicitly connecting duplicate requests to process gaps and giving a concrete reason: preventing unnecessary work by identifying breakdowns across staff handoffs."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The proposed rewrite introduces a changed meaning and expands beyond the evidence. The source, 'Imagine a person receives a request for information already supplied elsewhere. Follow the handoff before proposing another requirement,' grounds the example in a single specific occurrence (a person receiving a duplicate request) and links the action solely to following the handoff before making another request. The rewrite turns this into a continuous process improvement exercise ('trace the steps in the process to find out where duplication may be occurring,' 'address possible handoff issues before requiring resubmission'), which is not in the source. The proposed version also adds the broader goal of 'preventing unnecessary work by identifying breakdowns across staff handoffs,' which is not stated in the original and shifts the scope from an individual interaction to systemic process analysis."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 12432,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 294,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 12726
+    },
+    "review": {
+      "input_tokens": 8798,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 199,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 8997
+    }
+  },
+  "createdAt": "2026-11-15T13:54:24.103Z"
+}

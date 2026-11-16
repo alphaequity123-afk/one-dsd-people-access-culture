@@ -1,0 +1,182 @@
+{
+  "target": "community-brief.latino",
+  "kind": "surface",
+  "route": "/minnesota-communities/latino",
+  "sourceSha256": "3c9972c03cbcda73c1dadd3bb38803884783bdf71be1afc26db2a50e3d5f6a6a",
+  "status": "needs_revision",
+  "reviewedFieldCount": 27,
+  "changes": [
+    {
+      "fieldId": 3,
+      "path": [
+        "whoAndWhere"
+      ],
+      "before": "Latino Minnesotans include long-settled families, recent arrivals, and U.S.-born generations with roots in Mexico, Central and South America, Puerto Rico, and the Caribbean. A large share lives outside the Twin Cities, in dairy, meatpacking, and farm counties.",
+      "after": "Latino Minnesotans have roots in Mexico, Central and South America, Puerto Rico, and the Caribbean. The community includes long-settled families, U.S.-born generations, and recent arrivals. Many Latino Minnesotans live in Greater Minnesota, where dairy, meatpacking, and agricultural jobs are common, not just in the Twin Cities.",
+      "reason": "Clarifies population origins and the reason for geographic distribution; emphasizes that community presence outside the metro relates to specific industries, which matters for service access."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "'Spanish' on a form is one language among many, and some households speak an Indigenous language first. Immigration status fear shapes help-seeking even for citizens in mixed-status families. Greater Minnesota distance and shift work are access facts.",
+      "after": "A checkbox for 'Spanish' on a form does not account for all language needs. Some households speak Indigenous languages as a first language. Concerns about immigration status influence whether and how people seek help, including among citizens in mixed-status families. For services in Greater Minnesota, rural distance and shift work schedules are practical barriers that affect access.",
+      "reason": "Explains why language specification and immigration concerns shape engagement and why context in Greater Minnesota affects service access."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "withinGroupDiversity"
+      ],
+      "before": "National origin, Indigenous identity, generation, faith, class, and legal status differ widely. Puerto Ricans are U.S. citizens. Do not assume one 'Hispanic' culture.",
+      "after": "Differences in national origin, Indigenous background, generational status, religious affiliation, social class, and immigration or citizenship status are significant within the Latino community. Puerto Ricans are U.S. citizens by birth. Do not group everyone under a single 'Hispanic' culture, as lived experiences and needs vary.",
+      "reason": "Gives more explicit examples of differences and clarifies the significance for program work."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "nameNote"
+      ],
+      "before": "Two surnames are common, and forms that keep only one can create errors in a person's record. Ask which term the person uses for themselves.",
+      "after": "Many people use two surnames, which can lead to mismatches or errors if forms or records accept only one. Clarify which naming convention a person uses, and which term they prefer for themselves.",
+      "reason": "Explains the consequence of not matching names and the importance of respecting naming and term preferences."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "nameUncertainty"
+      ],
+      "before": "Term preference is contested and generational; ask.",
+      "after": "Name and term preference for Latino identity are often debated and may change by generation or individual. Always ask the person which term or name they use.",
+      "reason": "Clarifies contested term use, linking the instruction to the reasoning."
+    },
+    {
+      "fieldId": 13,
+      "path": [
+        "accessChecks",
+        0
+      ],
+      "before": "Spanish interpreter with the right variety; ask about Indigenous languages.",
+      "after": "Check that the interpreter is fluent in the person's language variety. Ask if an Indigenous language other than Spanish is needed.",
+      "reason": "Restates the instruction for clarity, connecting language variety to meaningful service."
+    },
+    {
+      "fieldId": 16,
+      "path": [
+        "whoToInvolve",
+        0
+      ],
+      "before": "Language access lead or interpreter services, with the dialect written on the request.",
+      "after": "Involve the language access lead or interpreter services, and specify the dialect or language variety needed in your request.",
+      "reason": "Clarifies that naming the dialect in a service request supports accurate language access."
+    },
+    {
+      "fieldId": 19,
+      "path": [
+        "whoToInvolve",
+        3
+      ],
+      "before": "Latino-led organizations and parish networks the family names.",
+      "after": "Include Latino-led organizations and parish networks familiar to the family, if relevant to the program effort.",
+      "reason": "Clarifies the context in which to involve community-based and faith networks, making it actionable and relevant for staff."
+    },
+    {
+      "fieldId": 22,
+      "path": [
+        "spotlightBody"
+      ],
+      "before": "The Minnesota Latino Museum’s site describes a museum that “will be located” in Minnesota, not yet an open building, and its work includes exploring Mexican and Latin American music in Minnesota. Music offers one way into a much broader story of creativity and belonging, spanning different homelands and generations. No single tradition represents every Latino Minnesotan.",
+      "after": "The Minnesota Latino Museum is being developed to showcase Latino experiences in the state. While not yet an open facility, the museum's work includes telling the story of Mexican and Latin American music in Minnesota. Music provides an entry point into broader themes of culture, creativity, and belonging, but does not capture the full range of Latino experiences. No single tradition or music style represents all Latino Minnesotans.",
+      "reason": "Clarifies the status of the museum, the focus on music, and the broader diversity of experience."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "The 'after' text moves \"recent arrivals\" to the end and specifically says 'many Latino Minnesotans live in Greater Minnesota' and adds reasoning about agricultural jobs, which is partially correct but alters the evidence-supported scope: the original is precise that a large share is outside the Twin Cities, in dairy, meatpacking, and farm counties. The rewrite introduces new language (\"not just in the Twin Cities\") and inserts a causal relationship (living in Greater Minnesota BECAUSE of specific industries) that is only implied by the source, not directly stated. Stick to original: many do live outside the metro, especially in those job sectors, but do not generalize a rationale or shift the order of evidence."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The new version mostly preserves the shape and facts, but splits ideas into additional sentences for clarity. The explanation of shift work and rural distance as practical barriers is supported by the source. This is an acceptable clarification."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The revised text is more explicit but preserves the original meaning. The expanded explanation on diversity is appropriate and factual."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "Expands explanation of two surnames slightly, clarifying the error risk, without altering the intent or adding unsupported implications."
+      },
+      {
+        "fieldId": 9,
+        "severity": "note",
+        "finding": "The revision is acceptable; it restates that term preferences are debated and generational, consistent with original. 'Always ask' is a clear instruction based on the contested usage."
+      },
+      {
+        "fieldId": 13,
+        "severity": "note",
+        "finding": "The change clarifies 'Spanish interpreter with the right variety' to checking fluency and asking about need for non-Spanish language; factual and matches source intent."
+      },
+      {
+        "fieldId": 16,
+        "severity": "note",
+        "finding": "Clarifies the reason for including dialect in interpreter requests; accuracy is supported by the source."
+      },
+      {
+        "fieldId": 19,
+        "severity": "note",
+        "finding": "Revision clarifies when to involve organizations and ties it to context. The core meaning is preserved."
+      },
+      {
+        "fieldId": 22,
+        "severity": "note",
+        "finding": "Revision explains the museum's development stage, focus, and theme connection, but does not misrepresent the original. Acceptable."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2608,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 887,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3495
+    },
+    "review": {
+      "input_tokens": 2364,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 480,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2844
+    }
+  },
+  "createdAt": "2026-11-15T13:40:25.587Z"
+}

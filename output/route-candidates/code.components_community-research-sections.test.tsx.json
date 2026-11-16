@@ -1,0 +1,67 @@
+{
+  "target": "code.components/community-research-sections.test.tsx",
+  "kind": "surface",
+  "route": "components/community-research-sections.test.tsx",
+  "sourceSha256": "a6100c5dfae834ae30caec90af7cdd86591cb128ef4f828eef7bf35122ca3866",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Background for preparing questions.",
+      "after": "Summary:\n\nUse this background when preparing questions related to disability in your research. It helps frame effective, relevant questions for Minnesota DHS and DSD work.\n\nExplanation:\n\nBackground information provides context for preparing questions connected to disability. When you know how disability is discussed or experienced in a specific community, you can tailor questions to be both respectful and practical for that setting. This preparation guides your interviews or review of community materials, improving the accuracy and relevance of the information you collect. Use this context to clarify your purpose, avoid assumptions, and connect your questions directly to the needs and language of the people and organizations involved.",
+      "reason": "Added a brief summary and expanded explanation to clarify why background context is important when formulating questions. This revision reflects the writing standard by connecting the instruction to professional practice and giving specific, non-repetitive reasoning for the staff action."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed revision for field0 expands the short source line (\"Background for preparing questions.\") into an instructional summary and an in-depth explanation, providing explicit rationale and guidance for use. However, per the program writing standard, the source material must anchor substantive content. Here, the original acts as a placeholder or heading with minimal elaboration—no further detail about use, purpose, DHS/DSD role, or research practice appears in the source. The suggested enhancement invents context, scope, application, and implications not supported by the source. This is generic and extrapolative, violating the requirement to neither invent policy nor broaden the interpretation of sparse content. The revised text is an unsupported expansion and cannot be accepted."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 4938,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 199,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5137
+    },
+    "review": {
+      "input_tokens": 4749,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 168,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4917
+    }
+  },
+  "createdAt": "2026-11-15T13:52:34.456Z"
+}

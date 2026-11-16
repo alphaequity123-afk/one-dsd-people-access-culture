@@ -1,0 +1,186 @@
+{
+  "target": "resource.ja-sm-who-carries-equity-work",
+  "kind": "resource",
+  "route": "/library/ja-sm-who-carries-equity-work",
+  "sourceSha256": "eb00416db7f65556149ac1f032ed07fda48daf7f7fca98fcf7d38af6f3a6487a",
+  "status": "needs_revision",
+  "reviewedFieldCount": 9,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Help you see who is carrying this work, ask for it fairly, make it count and carry your own share.",
+      "after": "See who on your team carries equity and inclusion work, ask for contributions fairly, ensure these efforts are recognized, and carry your own share of the responsibility.",
+      "reason": "Clarified tasks and intent, specified equity and inclusion context, and connected summary to substantive guidance without repetition."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Before you ask, assign or say yes.",
+      "after": "It is important to consider fairness and clarity before you make an equity-related request, delegate work, or agree to take on extra responsibilities. Acting early helps prevent overburdening staff and promotes transparency about who is doing this work.",
+      "reason": "Explained why the prompt timing of decisions matters and clarified the objectives of considering this guidance. Connected to equity work explicitly."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Remember. The work matters, and it shouldn't run on unpaid effort. Ask for the skill. Don't ask someone to stand in for a group. No one's identity tells you their time, skill or interest. A free no is the test of a real ask.",
+      "after": "The work required for equity and inclusion has value, and it should not rely on unpaid or unrecognized effort. When assigning a task, consider the skills needed rather than asking someone to represent a group. An individual's identity does not indicate their availability, abilities, or interest. People must be able to decline such requests freely to make an assignment valid and respectful.",
+      "reason": "Provided more specific reasoning for the guidance, clarified why identity-based assignments are inappropriate, and highlighted the importance of respecting boundaries."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Check your team every quarter. What equity, access, language and community tasks got done? Who did them? Assigned, requested or picked up? Was it in their work plan? Did something come off their plate? Did it count? Use task records only. No identity data.",
+      "after": "Review your team’s contributions to equity, access, language, and community-related tasks every quarter. Identify which tasks were completed, by whom, and through what means—whether by formal assignment, request, or voluntary action. Confirm if these tasks were documented in work plans, whether responsibilities were shifted to accommodate them, and if their efforts were formally recognized. Rely on task records and avoid tracking or using identity information to prevent bias and maintain fairness.",
+      "reason": "Clarified what to look for in quarterly reviews, explained what should and should not be tracked, and why each step matters for fair and effective workload assessment."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "A fair ask. What's the task, and how long does it take? What skill is needed? What moves to make room? Who decides? How is it credited? Open to anyone. Fine to say no.",
+      "after": "For any equity-related assignment, define the specific task and estimate the time required. Identify the necessary skills and consider what existing responsibilities can be adjusted to accommodate the new task. Determine who is responsible for decision-making and how contributions will be recognized. Opportunities should be open to all qualified staff, and declining participation is always acceptable without consequence.",
+      "reason": "Expanded on the elements of a fair assignment, connected each to staff management, and reinforced the right to decline. Specified that recognition and decision rights matter."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Never. Use a coworker as an interpreter. Ask someone to speak for a group or share their story. Send someone to a community because of their background. Send Tribal questions to a Native colleague. Go to the Tribal liaison and ADSA. Hold a no against anyone.",
+      "after": "Do not use colleagues as interpreters or ask anyone to speak for an entire group or disclose their personal story. Do not assign tasks based on someone’s background, such as sending a person to a community meeting for this reason. Direct all Tribal-related questions to the designated Tribal liaison or the Aging and Disability Services Administration (ADSA). Never penalize someone for declining involvement in these situations.",
+      "reason": "Clarified the prohibitions, replaced ambiguous descriptors with proper agency references, and explained the rationale for avoiding identity-based assignments and protecting staff autonomy."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Your share. Fair assignments, consistent ratings, accommodation responses. Reporting immediately under Policies 1436 and 1329. Booking access for your own meetings. Responding when something goes wrong in the room.",
+      "after": "Each supervisor must ensure equity work is fairly assigned, that performance ratings are consistent, and that staff requests for accommodation receive prompt attention. Supervisors are also responsible for immediate reporting under Policies 1436 and 1329, arranging access accommodations for their own meetings, and taking responsibility when issues arise during team interactions.",
+      "reason": "Clarified the scope of supervisory responsibilities, tied actions to named policies, and explained why proactive management matters in these areas."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "If it lands on you. Scope it. Trade it. Redirect it. Decline it. Or say yes on terms. Tell people up front what you have to report. You speak for yourself. You have the same routes as anyone if you're harmed.",
+      "after": "If equity or inclusion work is assigned to you, clarify its scope and consider whether you wish to delegate, decline, negotiate conditions, or accept the task. Be transparent with colleagues about any reporting obligations attached to the work. You speak on your own behalf, and if you experience harm, you have the same support routes as anyone else.",
+      "reason": "Clarified available choices, specified the need for transparency on reporting, and emphasized equal access to support if harmed."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "body",
+        6
+      ],
+      "before": "Do next. Run the quarterly check this week, then choose one task to re-scope, share or take back.",
+      "after": "Action steps: Complete your team’s quarterly review this week. Then, select one current equity task to re-examine—either by redefining its scope, sharing it among more staff, or reclaiming it to ensure fair distribution.",
+      "reason": "Made the next actions more explicit, connected quarterly reviews and practical task adjustment to the overall goals of fair workload and recognition."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revised summary, while still broadly accurate, shifts from 'this work' and the original's purpose of 'help you see, ask for it fairly, make it count and carry your own share,' to a more evaluative and descriptive focus (\"ensure these efforts are recognized... responsibility\"). The source does not explicitly charge the supervisor to 'ensure these efforts are recognized,' or specify a duty to 'see who on your team carries equity and inclusion work'. The summary must not add duties or implications not present in the original guidance. 'Make it count' is not the same as 'ensure these efforts are recognized.'"
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The replacement text invents reasoning and scope: 'It is important to consider fairness and clarity before you make an equity-related request...' and 'Acting early helps prevent overburdening staff and promotes transparency...' The original only gives, 'Before you ask, assign or say yes.' The rest of the context is not provided in 'why it matters' but in specific instruction in the body. Providing a rationale here is unsupported by the source and could mislead about the reason and timing."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "This rewrite increases clarity but does not substantively introduce unsourced claims; the restatement is well-grounded. The expansion is justified."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The elaboration is accurate and remains faithful to the intent and bounds of the source, which concerns quarterly team checking, using only task records, and not identity."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "This expansion clarifies what constitutes a fair ask and remains grounded in the original's checklist approach. No blockers."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The rewrite increases clarity and formalizes correct agency names, staying true to the original guidance: never use a coworker as interpreter, ask their group status, or send someone to a group due to background."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "Clarification and fuller restatement of the original. Explicitly names supervisor responsibilities as the target audience (supported by the title and source context)."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "The rewrite accurately restates the offered autonomy and transparency, though it removes some brevity in favor of clarity. Acceptable."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "No issue; changes are within scope and accurate."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2014,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 906,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2920
+    },
+    "review": {
+      "input_tokens": 2468,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 528,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2996
+    }
+  },
+  "createdAt": "2026-11-15T13:44:01.935Z"
+}

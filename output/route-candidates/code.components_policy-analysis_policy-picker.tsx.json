@@ -1,0 +1,151 @@
+{
+  "target": "code.components/policy-analysis/policy-picker.tsx",
+  "kind": "surface",
+  "route": "components/policy-analysis/policy-picker.tsx",
+  "sourceSha256": "3188b9c8e8deedd179db0929aae900b547128d099847093c5549ae5a5053eb51",
+  "status": "needs_revision",
+  "reviewedFieldCount": 7,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "To analyze a different policy, start a new analysis from the saved analyses list.",
+      "after": "If you want to analyze a different policy, you need to begin a new analysis from the saved analyses list. The current selection cannot be changed mid-analysis to preserve the integrity and traceability of your work.",
+      "reason": "Clarified the reasoning behind the instruction, detailing why users must start over to select a different policy."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field2"
+      ],
+      "before": "A policy from the catalog of policies that shape disability services",
+      "after": "A policy listed in the catalog that shapes disability services",
+      "reason": "Rephrased for precision. This version avoids suggesting that all catalog policies affect all disability services equally and clarifies the catalog's purpose."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field3"
+      ],
+      "before": "A policy that is not in the catalog",
+      "after": "A policy that does not appear in the catalog",
+      "reason": "Made this label more direct and avoided implying that the catalog is exhaustive or that unlisted policies do not affect disability services."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field5"
+      ],
+      "before": "The full web address, starting with https://",
+      "after": "Enter the full web address, starting with https://",
+      "reason": "Rephrased as a direct user instruction for clarity and consistency with standard guidance."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field6"
+      ],
+      "before": "Add the policy text in step 2 by attaching the document or pasting it.",
+      "after": "You will add the policy text in step 2 by attaching the document or pasting it. Missing policy text in this step will prevent a complete analysis later.",
+      "reason": "Added a consequence for missing this step, explaining why the action is relevant for the process."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field7"
+      ],
+      "before": "The catalog entry is a summary written in plain language. The official text makes the analysis exact, because quotations and wording changes are taken from it.",
+      "after": "The catalog entry is written in plain language to summarize the policy. The official policy text provides the exact language for analysis, allowing you to accurately quote or check specific wording. Without the official text, your analysis may miss critical details or context from the policy's language.",
+      "reason": "Expanded to explain why both the plain language summary and the official text matter for accurate policy analysis. Clarifies the practical purpose and the effect of missing the official text."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field9"
+      ],
+      "before": "For example: waiver, interpreter, assessment",
+      "after": "For example: waiver, interpreter, or assessment",
+      "reason": "Added \"or\" for clarity and to match plain English listing conventions."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revised text ('If you want to analyze a different policy, you need to begin a new analysis from the saved analyses list. The current selection cannot be changed mid-analysis to preserve the integrity and traceability of your work.') introduces an unsupported justification ('preserve the integrity and traceability of your work') that is not present in the original source. The source only states the mechanism—start a new analysis to choose another policy—without describing a rationale or workflow integrity principle."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The change from 'A policy from the catalog of policies that shape disability services' to 'A policy listed in the catalog that shapes disability services' streamlines the language and does not add or remove any claim. This change is permitted."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The change from 'A policy that is not in the catalog' to 'A policy that does not appear in the catalog' is a permitted, more direct version without changing meaning."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The rewrite to 'Enter the full web address, starting with https://' simply makes the user instruction explicit; this is within source intent."
+      },
+      {
+        "fieldId": 4,
+        "severity": "blocker",
+        "finding": "The source wording ('Add the policy text in step 2 by attaching the document or pasting it.') is purely instructional. The revision ('You will add the policy text in step 2 by attaching the document or pasting it. Missing policy text in this step will prevent a complete analysis later.') inserts a consequential statement ('Missing policy text in this step will prevent a complete analysis later') that is not found or implied in the source. There is no source support for describing future system behavior or limiting consequences."
+      },
+      {
+        "fieldId": 5,
+        "severity": "blocker",
+        "finding": "The original source only explains: 'The catalog entry is a summary written in plain language. The official text makes the analysis exact, because quotations and wording changes are taken from it.' The rewrite introduces unsupported warnings ('Without the official text, your analysis may miss critical details or context from the policy's language') and reframes purpose with additional explanation not found in the original. This exceeds the allowable scope; the original's explanation must be preserved."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The small edit to add 'or' ('For example: waiver, interpreter, assessment' to 'For example: waiver, interpreter, or assessment') is a plain-English improvement and is acceptable."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3507,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 418,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3925
+    },
+    "review": {
+      "input_tokens": 3493,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 532,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4025
+    }
+  },
+  "createdAt": "2026-11-15T13:55:31.183Z"
+}

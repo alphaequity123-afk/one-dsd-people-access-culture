@@ -1,0 +1,171 @@
+{
+  "target": "resource.lm-plain-language-carries-complexity",
+  "kind": "resource",
+  "route": "/library/lm-plain-language-carries-complexity",
+  "sourceSha256": "63fdc1791c0655911189cc5ca3672d7a104b28dc5182462fa5b44fae73e4002c",
+  "status": "needs_revision",
+  "reviewedFieldCount": 8,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Plain language reduces the work of reading, not the depth of the content. Use progressive disclosure: an immediate answer, why it matters, questions to consider, a practical tool, evidence and sources, and deeper theory for those who want it.",
+      "after": "Plain language makes complex topics easier to read but does not make them less complex. Present information in layers: a direct answer first, followed by explanation, critical questions, actionable tools, supporting evidence, and further theory for those who seek more detail.",
+      "reason": "Clarified that plain language does not simplify the substance and explained progressive disclosure in terms of actual practice steps and staff needs."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Staff are educated adults doing hard work. Talking down to them costs trust. Burying them costs time. Plain language done well respects both.",
+      "after": "DHS and DSD staff bring expertise and address complicated tasks. Oversimplifying can erode trust, while overly dense writing wastes effort. Effective plain language supports informed decisions without sacrificing respect or necessary detail.",
+      "reason": "Added specific connection to DHS and DSD context, explained consequences of misapplied plain language, and emphasized the balance needed."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Start with the answer. Put the main point in the first sentence and the action in the first paragraph.",
+      "after": "Begin with the answer. State the main point in the first sentence and specify the recommended action early in the text.",
+      "reason": "Specified the value of immediate clarity and clarified the role of recommended action at the start."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "One idea per sentence. About twenty words. Prefer the common word unless the precise term matters, and then define it once.",
+      "after": "Write about one idea per sentence, aiming for around twenty words. Use familiar words unless a precise technical term is needed; when you use a technical term, define it the first time.",
+      "reason": "Clarified that technical terms are appropriate when necessary, and specified the need to define them to support staff understanding."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Layer the depth. Short answer, why it matters, questions to consider, a tool to use, the sources, and the deeper material. Readers choose how far to go.",
+      "after": "Organize information in layers. Provide a concise answer, an explanation of its importance, key questions to consider, a practical tool, related evidence or sources, and additional theory. Staff can decide how much detail they need.",
+      "reason": "Clarified what each layer provides and directly tied choice of depth to staff decision-making."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Keep intellectual depth. A plain sentence can carry a sophisticated idea. Cutting nuance is not plain language; it is a different message.",
+      "after": "Maintain intellectual depth. Plain sentences can express complex or nuanced ideas. Omitting context or nuance to simplify language changes the intended meaning and may reduce accuracy.",
+      "reason": "Explained why loss of nuance is a substantive risk, not just a stylistic difference."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Test it. Read it aloud. Ask a colleague what they would do after reading it. If they are unsure, the writing is not finished.",
+      "after": "Test clarity before sharing. Read the text aloud and check with a colleague about what action they would take after reading it. If the next steps are unclear, the explanation needs revision.",
+      "reason": "Connected the instruction to the purpose of supporting staff action."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "Federal plain-language guidance and DHS plain-language practice are the sources for style decisions. Check DHS examples when they are supplied to you.",
+      "after": "Follow federal plain-language guidelines and DHS style practices when making editorial decisions. Review DHS examples when available, as they reflect agency-specific expectations.",
+      "reason": "Clarified the relevance of the sources and stated why DHS examples are significant to editing decisions."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed change alters the meaning by claiming 'Plain language makes complex topics easier to read,' which misleadingly suggests the underlying complexity is reduced. The source correctly states plain language reduces the work of reading, not the depth of the content. The edit's expanded explanation of progressive disclosure, while not inaccurate, loses the original's emphasis that complexity remains. The original meaning should be preserved for accuracy."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The change is supportable, providing greater specificity about the setting and balancing respect with effective communication. It aligns with the intent and language of the source."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "This edit accurately restates and marginally clarifies the original instruction, remaining faithful to the guidance in the source."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "This is a supported clarification, with alignment to the source's meaning: use common words unless the precise term is necessary, and define it once."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "This edit is consistent with the source, elaborating the layers without changing their intent or sequence."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The rewording retains the meaning. 'Omitting context or nuance to simplify language changes the intended message and may reduce accuracy' is an explicit restatement of 'Cutting nuance is not plain language; it is a different message.' Supported."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "This is a supported rewording that clarifies the practical implication of the original instruction."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "The change better explains why particular examples and agency sources matter, which is faithful to the source and adds valuable clarification."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1772,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 549,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2321
+    },
+    "review": {
+      "input_tokens": 1877,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 377,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2254
+    }
+  },
+  "createdAt": "2026-11-15T13:42:17.610Z"
+}

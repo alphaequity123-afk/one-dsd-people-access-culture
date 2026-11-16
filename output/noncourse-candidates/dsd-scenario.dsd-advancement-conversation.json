@@ -1,0 +1,231 @@
+{
+  "target": "dsd-scenario.dsd-advancement-conversation",
+  "kind": "surface",
+  "route": "/one-dsd/scenarios/dsd-advancement-conversation",
+  "sourceSha256": "f7ab4726c9cdec99801700815405cf2dda3a2746d2b59687cd5c3aeb67749093",
+  "status": "needs_revision",
+  "reviewedFieldCount": 12,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "title"
+      ],
+      "before": "A team member says they do not know what it takes to advance",
+      "after": "Team member is unclear about advancement steps",
+      "reason": "Simplified and clarified the title for immediate understanding. It avoids indirect reference and foregrounds the issue."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "situation"
+      ],
+      "before": "In a stay conversation, a team member says they have never been told what the next classification requires, that visible projects go to the same two people, and that they are considering leaving.",
+      "after": "During a stay conversation, a team member shares that they have not received information about the requirements for advancing to the next classification. They also note that high-visibility projects are repeatedly assigned to the same two people and express that this lack of clarity is leading them to consider leaving the team.",
+      "reason": "Clarified the situation by linking the issues raised to retention risk and specifying the type of projects in question. This helps staff see the connection between unclear advancement and turnover."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "whatToNotice",
+        0
+      ],
+      "before": "Advancement requirements are unwritten and therefore unequal.",
+      "after": "When advancement requirements are not clearly documented or communicated, opportunities are distributed unevenly. This lack of transparency can make advancement appear arbitrary or unfair.",
+      "reason": "Expanded reasoning to explain why unwritten requirements lead to inequality. This provides context for why staff should notice and address written versus unwritten standards."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "whatToNotice",
+        1
+      ],
+      "before": "Visible work is assigned by habit.",
+      "after": "Work assignments, especially those with greater visibility, are often given out based on past patterns or habit, rather than through a deliberate or equitable process.",
+      "reason": "Built out reasoning to clarify how assignments are made in practice and why habit can perpetuate unequal access to advancement opportunities."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "whatToNotice",
+        2
+      ],
+      "before": "This is a pattern with an owner, not a personal failing.",
+      "after": "These patterns result from team practices or decision-making routines, not from an individual's shortcomings or lack of initiative.",
+      "reason": "Clarified the distinction between systemic patterns and individual failings to guide colleagues toward systemic solutions rather than blaming individuals."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "questions",
+        0
+      ],
+      "before": "What does the next step actually require, and is it written anywhere?",
+      "after": "What are the actual requirements for the next classification, and have they been documented and communicated to the team?",
+      "reason": "Clarified wording and added communication to ensure focus on both documentation and understanding among staff."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "questions",
+        1
+      ],
+      "before": "Who has had a stretch assignment in the last year, and how did that come to be?",
+      "after": "Who received stretch assignments or visible projects in the last year, and what was the decision-making process for those assignments?",
+      "reason": "Explicitly linked visible projects to assignments, clarified timeframe, and asked about the underlying process to support deeper analysis."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "questions",
+        2
+      ],
+      "before": "What can you change this month, and what needs HR or labor relations?",
+      "after": "What specific changes to assignment practices or communication can you make this month? Which questions or actions require involvement from HR or labor relations?",
+      "reason": "Clarified the focus on actionable steps and distinguished what is within immediate control versus what requires escalation."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "moves",
+        0,
+        "label"
+      ],
+      "before": "Pay, classification, and advancement",
+      "after": "Pay, position classification, and career advancement",
+      "reason": "Added 'career' for precision and aligned terminology with typical HR language for clarity."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "moves",
+        1,
+        "label"
+      ],
+      "before": "Mentoring, sponsorship, and reverse mentoring",
+      "after": "Mentoring and sponsorship, including reverse mentoring",
+      "reason": "Rephrased for clarity and to more clearly connect topics without jargon."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "handoff"
+      ],
+      "before": "Classification and pay questions go to HR and labor relations. Sponsorship and visible work are yours to change now.",
+      "after": "Direct classification and pay issues should be discussed with HR or labor relations. As a supervisor or manager, you have discretion to change how visible work and sponsorship opportunities are assigned within your team.",
+      "reason": "Made division of responsibility clearer and specified supervisor authority regarding visibility and sponsorship as the part staff can act on."
+    },
+    {
+      "fieldId": 11,
+      "path": [
+        "questionsTitle"
+      ],
+      "before": "Questions to ask before acting",
+      "after": "Questions to consider before taking action",
+      "reason": "Rephrased for clarity and to avoid the implication that only these questions matter before acting."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The original title is a direct description of a real-world statement and preserves the voice of the contributor. The new version generalizes and removes the individual's voice, which is important in a scenario-based training. The rewrite does not track the original source and unnecessarily distances the content from the specific scenario described."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revision to the situation field remains true to the evidence, with minor rewording and useful clarification. The change retains full fidelity to the source, correctly connects issues, and does not introduce unsupported content."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The expanded reasoning in this notice field is well supported and closely tied to the evidence. It correctly extends the observed implication of unwritten advancement requirements leading to inequality, in plain language, while keeping with the intent of the original."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The rewritten 'What to notice' is an acceptable clarification and grounds the summary in the context of the scenario. It remains specific to assignment patterns and avoids unsupported claims."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The change emphasizes the systemic nature of advancement barriers without departing from the original meaning. The clarification supports aligned practice and maintains accuracy."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The clarified question still directly reflects the evidence and supports effective actions. Adding 'communication' is an appropriate expansion for staff context."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The revision expands without departing from the scenario. Linking visible projects to assignments and clarifying the timeframe supports analysis and transparency, as seen in the source."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "The edited version adds specificity and guidance but does not alter meaning or introduce unsupported process or policy statements."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "The more precise label is an improvement and accurately reflects HR terminology without stretching the original evidence."
+      },
+      {
+        "fieldId": 9,
+        "severity": "note",
+        "finding": "This edit for clarity is justified and keeps all core concepts from the original."
+      },
+      {
+        "fieldId": 10,
+        "severity": "note",
+        "finding": "The new language makes the distinct responsibilities clearer and remains accurate to the scenario and source, providing useful supervisory guidance."
+      },
+      {
+        "fieldId": 11,
+        "severity": "note",
+        "finding": "The rephrased questions title does not pose a problem. It increases clarity and does not shift the content's purpose."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1618,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 689,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2307
+    },
+    "review": {
+      "input_tokens": 1838,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 513,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2351
+    }
+  },
+  "createdAt": "2026-11-15T13:38:52.301Z"
+}

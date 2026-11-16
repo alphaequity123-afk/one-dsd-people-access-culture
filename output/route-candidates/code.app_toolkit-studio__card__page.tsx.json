@@ -1,0 +1,137 @@
+{
+  "target": "code.app/toolkit-studio/[card]/page.tsx",
+  "kind": "surface",
+  "route": "/toolkit-studio/[card]",
+  "sourceSha256": "81f3a4d2f05cd22de11139f1024c18989a46a76af9ecf2131ac11f75be548dfe",
+  "status": "needs_revision",
+  "reviewedFieldCount": 6,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "About 8–12 minutes. Explore the example at your own pace, guided by what each person says they need. This learning activity is not official policy or a completed equity analysis.",
+      "after": "Plan to spend about 8–12 minutes on this activity. You can move through the example at your own pace, focusing on what each person identifies as important to them. This activity is for practice and does not represent official policy or serve as a finalized equity analysis.",
+      "reason": "Clarified timing and the purpose of the activity, emphasizing its use as practice and differentiating it from policy or analysis without unnecessary repetition."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field2"
+      ],
+      "before": "When Tribal consultation is required.",
+      "after": "When to coordinate Tribal consultation",
+      "reason": "Restated the heading for greater clarity and specificity, reflecting the actual action required."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field3"
+      ],
+      "before": "When work affects a Tribal Nation, coordinate with the Office of Indian Policy or Tribal liaison and follow the government-to-government consultation process. A stakeholder workshop does not replace it. Follow the Nation’s guidance.",
+      "after": "If your work may affect a Tribal Nation, you must coordinate with the Office of Indian Policy or a DHS Tribal liaison and use the government-to-government consultation process. Running a stakeholder workshop is not a substitute for consultation. Always follow the guidance provided by the Tribal Nation.",
+      "reason": "Specified when to coordinate, the required agency partners, and restated the distinction from stakeholder workshops for clarity. Emphasized explicit instruction and why correct coordination matters."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field4"
+      ],
+      "before": "Required reporting and consultation",
+      "after": "Reporting and consultation requirements",
+      "reason": "Made the heading more concise and specific, centering on the required nature of these processes."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field5"
+      ],
+      "before": "The toolkit does not replace these paths.",
+      "after": "The toolkit does not replace required reporting and consultation processes. Use established procedures when these obligations apply.",
+      "reason": "Expanded to clarify that established processes take precedence and to specify the outcome if this step is missed."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field7"
+      ],
+      "before": "Briefs help you ask better questions. They do not tell you what an individual believes, needs, or prefers.",
+      "after": "Culture briefs guide you to ask more specific and relevant questions, but they cannot tell you what a particular person believes, needs, or prefers.",
+      "reason": "Connected the use of briefs to practical work while emphasizing their limits in determining individual needs, as required by the writing standard."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The rewrite invents new framing. The source is: 'About 8–12 minutes. Explore the example at your own pace, guided by what each person says they need. This learning activity is not official policy or a completed equity analysis.' The proposed: 'Plan to spend about 8–12 minutes on this activity. You can move through the example at your own pace, focusing on what each person identifies as important to them. This activity is for practice and does not represent official policy or serve as a finalized equity analysis.' The rewrite adds the word 'practice,' replaces 'guided by what each person says they need' with 'focusing on what each person identifies as important to them' (which is not source language), and shifts 'not official policy or a completed equity analysis' into 'does not represent ... or serve as ...' This alters several phrases, removes 'completed,' and changes intended meaning. Reject: not source-faithful."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The heading was changed from 'When Tribal consultation is required.' to 'When to coordinate Tribal consultation.' The original source is precise about the condition: when required. The rewrite presents coordination as the main focus, generic and slightly off: it could suggest any time versus 'when required.' This materially changes the legal/official trigger. Reject."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The rewrite of the Tribal consultation instruction is not faithful: 'If your work may affect a Tribal Nation, you must coordinate with...' instead of source: 'When work affects a Tribal Nation, coordinate with...' The rewrite adds 'may' and 'must' (source was nonjudgmental, not a compliance directive). It adds 'a DHS' (not in source) and changes 'the' to 'a.' 'Always follow the guidance provided by the Tribal Nation' alters the original's 'Follow the Nation’s guidance.' 'Running a stakeholder workshop is not a substitute for consultation.' introduces new language and omits 'does not replace it.' This is an altered official instruction for Tribal relations—blocker."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The heading 'Required reporting and consultation' was changed to 'Reporting and consultation requirements.' This is a small editorial shift in noun order, not a material meaning change. Still, the original was fine and more parallel to the legal compliance context. Prefer source, but not a blocker."
+      },
+      {
+        "fieldId": 4,
+        "severity": "blocker",
+        "finding": "The source reads: 'The toolkit does not replace these paths.' The rewrite: 'The toolkit does not replace required reporting and consultation processes. Use established procedures when these obligations apply.' This injects generic process language and presumed consequences ('when these obligations apply'), which are not in the source and could shift the perceived procedural burden. This is not minor padding but a shift in scope. Blocker."
+      },
+      {
+        "fieldId": 5,
+        "severity": "blocker",
+        "finding": "The rewrite for cultural briefs lengthens to: 'Culture briefs guide you to ask more specific and relevant questions, but they cannot tell you what a particular person believes, needs, or prefers.' The source: 'Briefs help you ask better questions. They do not tell you what an individual believes, needs, or prefers.' The addition of 'specific and relevant' and shift from 'an individual' to 'a particular person' are not justified by the writing standard or source intent. Overexpands and changes phrasing: reject."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2913,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 473,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3386
+    },
+    "review": {
+      "input_tokens": 2873,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 810,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3683
+    }
+  },
+  "createdAt": "2026-11-15T13:52:03.717Z"
+}

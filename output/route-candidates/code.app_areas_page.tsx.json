@@ -1,0 +1,67 @@
+{
+  "target": "code.app/areas/page.tsx",
+  "kind": "surface",
+  "route": "/areas",
+  "sourceSha256": "ec460e5f434b54b9449edd465da4f846992bce99e4483ddb69ebcb8d13de8509",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field1"
+      ],
+      "before": "Choose the area closest to the decision in front of you. For example, if you are changing a notice, begin with policy, program, and service design; you can return here for related areas.",
+      "after": "Choose the area that aligns most directly with your current decision. For example, if you need to change a notice, start with policy, program, and service design. You can return to this list for context or when your focus changes. Selecting the best-fitting area helps ensure your actions are informed by relevant guidance and supports efficient cross-area coordination if your task overlaps multiple domains.",
+      "reason": "The revised language clarifies the practical reason for matching a decision with an area: to access relevant guidance and coordinate across domains when needed. This change makes the intended use and consequence more explicit for staff making choices about which area to explore."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed rewrite for field1 alters the intent and scope in several ways not supported by the source. The original was: 'Choose the area closest to the decision in front of you. For example, if you are changing a notice, begin with policy, program, and service design; you can return here for related areas.' The rewrite ('Choose the area that aligns most directly with your current decision...Selecting the best-fitting area helps ensure your actions are informed by relevant guidance and supports efficient cross-area coordination if your task overlaps multiple domains.') introduces new concepts (informing actions, ensuring cross-area coordination, supporting efficiency, the user's 'focus' changing). These implications, while plausible, are not substantiated or reflected in the code or original field text. Additionally, the revised version shifts from the original's practical, neutral instruction to advice with outcome assurances not present or evidenced in the source. This constitutes an unsupported change in guidance and a change in meaning."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1815,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 147,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1962
+    },
+    "review": {
+      "input_tokens": 1574,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 232,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1806
+    }
+  },
+  "createdAt": "2026-11-15T13:47:22.990Z"
+}

@@ -1,0 +1,137 @@
+{
+  "target": "code.app/community-outreach/policies/page.tsx",
+  "kind": "surface",
+  "route": "/community-outreach/policies",
+  "sourceSha256": "65f7442d9a0a7adc6599a2b0f7c8a12993e434de770144d0456d6f45769ea5fc",
+  "status": "needs_revision",
+  "reviewedFieldCount": 9,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Plain-language summaries of the Minnesota statutes, rules, manual pages, waiver plans, department policies, bulletins, federal rules and reports that shape disability services, each with its official source.",
+      "after": "Summaries in plain language describe the Minnesota statutes, rules, manual pages, waiver plans, department policies, bulletins, federal rules, and reports that influence disability services. Each summary includes a direct link to its official source.",
+      "reason": "Clarifies that these are not only summaries but that each contains links; uses 'influence' for more specificity and to reflect the actual effect, clarifies document inclusion, and avoids repeated wording."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field4"
+      ],
+      "before": "The statutes, rules, manual pages, waiver plans, department policies, bulletins, federal rules and reports that decide who gets home and community-based services in Minnesota, what they get, and who is responsible.",
+      "after": "Statutes, rules, manual pages, waiver plans, department policies, bulletins, federal rules, and reports affect who is eligible for home and community-based services in Minnesota, what services are provided, and who holds responsibility. These sources guide program decisions and staff actions.",
+      "reason": "Revised to specify the effect of each type of policy on eligibility, provision, and responsibility, and to clarify their impact on program work."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field5"
+      ],
+      "before": "These are summaries written in plain language. The policy itself is the source document: each entry links to it. Check the date on the source before relying on it, because policies change. Facts checked on",
+      "after": "These are written summaries, aimed for clarity. The source document is the policy of record, and each summary links directly to it. Always verify dates on the original source before using a summary, since policies may change. The facts were checked on",
+      "reason": "Improves clarity and conciseness about the role of the summaries and the importance of checking source dates."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field7"
+      ],
+      "before": "About each kind of policy and how to use them",
+      "after": "About policy types and their practical use",
+      "reason": "Uses clearer and more specific language to frame the section as relating to types and applications in practice."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "field8"
+      ],
+      "before": "shows where each policy sits between the Department of Human Services, lead agencies, providers and the people they serve.",
+      "after": "explains where each policy is used by the Department of Human Services, lead agencies, providers, and the people served.",
+      "reason": "Clarifies that the section explains policy application, not just organizational relationships, to better serve practical staff understanding."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "field10"
+      ],
+      "before": "to work through the text of a policy section by section.",
+      "after": "to review and interpret the text of a policy section by section.",
+      "reason": "Clarifies that the analysis involves both review and interpretation, which is relevant when working through source text in professional settings."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The source field (field1) already states that each summary links to the official source ('each with its official source'), so the change does not materially clarify or add anything. However, the proposed rewrite inappropriately changes the wording from 'shape' to 'influence', which is less specific than the original and does not reflect evidence in the source. The original phraseology ('shape disability services') comes from the primary metadata and policy context for these policies; paraphrasing it as 'influence disability services' is not source-supported and erases the scope conferred in the official page title and description. Do not weaken the official framing or introduce different degrees of policy force without evidence."
+      },
+      {
+        "fieldId": 4,
+        "severity": "blocker",
+        "finding": "The source field (field4) accurately reflects the source: 'decide who gets home and community-based services in Minnesota, what they get, and who is responsible.' The rewrite changes 'decide' (which the source uses) to 'affect' and adds a general statement about guiding program decisions and staff actions, which is not in the source. This introduces unsupported content that is not part of the evidence. Do not change official framing or add generalized statements not from the underlying record."
+      },
+      {
+        "fieldId": 5,
+        "severity": "blocker",
+        "finding": "The source field (field5) states: 'These are summaries written in plain language. The policy itself is the source document: each entry links to it. Check the date on the source before relying on it, because policies change. Facts checked on'. The rewrite changes several official phrases, removes the precise instruction 'Check the date on the source before relying on it,' and reframes date verification as 'Always verify dates on the original source before using a summary.' The change to 'the policy of record' is also unsupported by the original. Legal and public records must retain their phrasing. Do not revise instructions about record-checking or qualifying statements."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "This section heading can be clarified for staff, but the original is already clear and aligns with the source context. The proposed rewrite is acceptable as a matter of phrase choice, but not necessary: the original is sufficient and source-supported."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "Both versions clarify the purpose, but the change from 'shows where each policy sits between...' to 'explains where each policy is used by...' is an acceptable synonym and does not misstate the source intent. Still, the original more closely matches the source."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "The change from 'to work through the text of a policy section by section.' to 'to review and interpret the text...' adds interpretation, which is reasonable for professional context, but this is not strictly in the source wording. The original matches the official record."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3430,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 436,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3866
+    },
+    "review": {
+      "input_tokens": 3378,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 682,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4060
+    }
+  },
+  "createdAt": "2026-11-15T13:47:47.481Z"
+}

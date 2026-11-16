@@ -1,0 +1,123 @@
+{
+  "target": "code.app/program/model/page.tsx",
+  "kind": "surface",
+  "route": "/program/model",
+  "sourceSha256": "b1054bd974710fba41fec25c1f86094046c105d0deb45d843bcadc7bdba271d8",
+  "status": "needs_revision",
+  "reviewedFieldCount": 25,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Start with a question, a decision, or something you want to understand more fully. Choose the part of the program that can help you now.",
+      "after": "Begin with your current question, decision, or area you want to understand more clearly. Select the program section that addresses your need.",
+      "reason": "Clarified the starting approach and intent, tailored to the user's actual responsibility. Directly connects user need to program selection, aligning with the writing standard."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field7"
+      ],
+      "before": "These resources support equity in Disability Services Division services, policies, workplace culture, and everyday decisions. Begin with your actual responsibility and the people affected by the work.",
+      "after": "These resources promote equity across Disability Services Division services, policy work, workplace culture, and daily decisions. Focus first on your responsibility and the individuals or groups directly affected by your actions.",
+      "reason": "Clarified scope of resources, specified that responsibility and those affected should guide staff actions, and offered reasoning for why this focus matters."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "field9"
+      ],
+      "before": "A prepared document does not establish approval or implementation. Identify the people affected by the work and the office responsible for the decision.",
+      "after": "Preparing a document supports your analysis but does not itself create approval or implementation. It is necessary to identify who will experience the proposed action and which office is authorized to make the decision.",
+      "reason": "Clarified the difference between preparing work and enacting decisions, and specified why it is important to connect both affected people and responsible offices."
+    },
+    {
+      "fieldId": 19,
+      "path": [
+        "field21"
+      ],
+      "before": "to identify applicable requirements, connect them with sources and prepare evidence for the person responsible. A prepared document does not establish approval or implementation.",
+      "after": "to identify relevant requirements, link each with authoritative sources, and document evidence for the person accountable for the decision. Drafts or supporting documents alone do not create approval or effect implementation.",
+      "reason": "Specified the value in connecting requirements to sources and named the accountable individual. Clarified the significance of documentation as distinct from approval or action."
+    },
+    {
+      "fieldId": 22,
+      "path": [
+        "field26"
+      ],
+      "before": "Completing a course or preparing a document is a starting point. Notice how you use it, whose experience informs your decisions, and what becomes different in practice. What you learn may lead to a new question or a different approach.",
+      "after": "Finishing a course or developing a document begins the process. Pay attention to how you actually use what you've learned, whose perspectives informed your choices, and what changes you observe in practice. Lessons learned often raise further questions or suggest new methods.",
+      "reason": "Clarified purpose of courses and documents as starting points and specified what ongoing learning looks like in professional terms."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed replacement ('Begin with your current question...') adds 'your current question, decision, or area,' which generalizes and adds 'area' not specified in the source. It also changes 'something you want to understand more fully' to 'area you want to understand more clearly,' which shifts meaning. Most importantly, this field is the first paragraph under the page's <h1> and must remain exact as an official program navigation summary. The change is unsupported."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The changes in field7 generally clarify intent but make minor unsupported wording changes: 'promote equity' for 'support equity' is a value shift; 'across Disability Services Division services, policy work...' expands scope. The explicit direction to 'focus first on your responsibility' is supported by the next sentence, so this edit is reasonably aligned, though not strictly necessary."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "The change clarifies and slightly expands on what is meant in the source. However, 'who will experience the proposed action' for 'people affected by the work' is a close, but not exact, paraphrase and introduces 'proposed action,' which narrows from 'work.' This is a reasonable clarification but did not require replacement."
+      },
+      {
+        "fieldId": 19,
+        "severity": "note",
+        "finding": "The revised text adds specificity ('authoritative sources,' 'person accountable for the decision') that is in line with professional guidance, but alters 'applicable requirements' to 'relevant requirements' and uses 'drafts or supporting documents alone' for 'a prepared document,' introducing unnecessary elaboration. Substantially correct but not required."
+      },
+      {
+        "fieldId": 22,
+        "severity": "note",
+        "finding": "Field26's change rewrites for clarity and provides examples of professional reflection, closely mirroring the source intent. The edit is not a required replacement but is permissible for clarity."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3966,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 500,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4466
+    },
+    "review": {
+      "input_tokens": 3372,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 411,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3783
+    }
+  },
+  "createdAt": "2026-11-15T13:51:32.530Z"
+}

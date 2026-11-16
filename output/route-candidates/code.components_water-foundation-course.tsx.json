@@ -1,0 +1,235 @@
+{
+  "target": "code.components/water-foundation-course.tsx",
+  "kind": "surface",
+  "route": "components/water-foundation-course.tsx",
+  "sourceSha256": "c89c94ef4e60a2e2ead439ae7601a1011c9009d95f3398fdb3ab65de9e04a03b",
+  "status": "needs_revision",
+  "reviewedFieldCount": 14,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field2"
+      ],
+      "before": "For staff and leaders · About 1 hour · 12 chapters",
+      "after": "Designed for staff and leaders · Approximately 1 hour · 12 chapters",
+      "reason": "Clarified the audience by specifying 'Designed for' (not only 'For'), and replaced 'About' with 'Approximately' for precision and professional tone. 'Chapters' remains a factual count."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field3"
+      ],
+      "before": "The transcript is available below.",
+      "after": "You can review the full transcript below the video.",
+      "reason": "Specified where the transcript is to help users locate it, and used 'can review' to make the action practical and explicitly accessible."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field4"
+      ],
+      "before": "Pause whenever you need time to reflect or discuss.",
+      "after": "You may pause the course whenever you need time to reflect or discuss a point. This supports thoughtful engagement and allows you to work at the pace needed for your team or learning environment.",
+      "reason": "Explained the reason for pausing and clarified its value, aligning with the program writing standard to explain why actions matter."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field5"
+      ],
+      "before": "Turn the lens toward our own institution",
+      "after": "Examine our own institutional environment",
+      "reason": "Clarified language by replacing 'Turn the lens toward' with 'Examine', making the instruction more literal and specific while preserving intent. This aligns with professional and neutral tone."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field6"
+      ],
+      "before": "This course examines how historically dominant white cultural norms in American and Minnesota institutions can shape what seems normal, credible or fair. It connects that examination to community perspectives, disability and language access, intercultural communication, workforce decisions and leadership responsibility.",
+      "after": "This course analyzes the influence of historically dominant white cultural norms within American and Minnesota institutions, considering how these norms affect what is regarded as normal, credible, or fair. It directly links these patterns to community perspectives, disability and language access, intercultural communication, workforce decisions, and leadership responsibility within our context.",
+      "reason": "Clarified and specified how the course content applies to Minnesota DHS and DSD. Used 'analyzes the influence' for precision, and included 'within our context' to reinforce relevance for the intended audience."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field7"
+      ],
+      "before": "Cultural patterns are a starting point for inquiry. They do not tell us what any individual believes or needs. Responsive practice combines evidence, direct listening and a willingness to change how the organization works.",
+      "after": "Cultural patterns identified at the group level are a starting point for examining systems and decisions. These patterns do not determine individual beliefs or needs. Effective and responsive practice requires collecting relevant evidence, listening directly to people affected, and adjusting organizational approaches based on new information.",
+      "reason": "Clarified that cultural patterns guide inquiry rather than dictate outcomes; specified how staff should combine evidence and listening, and made 'adjusting organizational approaches' more explicit to align with the professional actions expected."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "field8"
+      ],
+      "before": "By the end, you will be able to",
+      "after": "By the end, you should be able to:",
+      "reason": "Added 'should' and a colon for clarity, setting up the bulleted outcome list as practical expectations rather than a guaranteed result. This supports the guidance standard."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "field9"
+      ],
+      "before": "Identify assumptions in a service or workplace decision and distinguish evidence from interpretation.",
+      "after": "Identify assumptions within a service or workplace decision and distinguish between factual evidence and individual interpretation.",
+      "reason": "Clarified that assumptions may be present 'within' decisions, and made the distinction between 'factual evidence' and 'individual interpretation' more precise for professional clarity."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "field10"
+      ],
+      "before": "Use community perspectives and cultural briefs to ask better questions without stereotyping people.",
+      "after": "Use community perspectives and cultural briefs to develop better questions for practice, avoiding stereotyping individuals.",
+      "reason": "Changed 'ask better questions without stereotyping people' to specify the use of these resources for developing better questions, with a clear focus on avoiding individual stereotyping."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "field11"
+      ],
+      "before": "Choose a practical organizational response, identify who can act and decide how to check whether access improves.",
+      "after": "Choose a concrete organizational response, identify those with authority or responsibility to act, and determine how to check whether access improves over time.",
+      "reason": "Specified 'concrete organizational response' and clarified 'who can act' as those with authority or responsibility. Added 'over time' to clarify the ongoing nature of checking for improvement."
+    },
+    {
+      "fieldId": 11,
+      "path": [
+        "field12"
+      ],
+      "before": "Dates and scope matter. Historical findings provide context; they are not presented as current DHS statistics.",
+      "after": "The context, date, and scope of sources affect their relevance. Historical findings offer important background, but are not presented as current DHS statistics unless explicitly stated.",
+      "reason": "Clarified that the attributes of context, date, and scope inform how sources are interpreted, and that historical findings are background—not current statistics—unless otherwise identified."
+    },
+    {
+      "fieldId": 12,
+      "path": [
+        "field13"
+      ],
+      "before": "Continue learning and put it into practice",
+      "after": "Continue building your knowledge and applying it in practice",
+      "reason": "Clarified the intent by specifying both continuing learning and actual application, removing an ambiguous reference to 'put it into practice' and making the call to action clear."
+    },
+    {
+      "fieldId": 13,
+      "path": [
+        "field14"
+      ],
+      "before": "Use the briefs to prepare questions, then explore the tools and courses that match your responsibilities.",
+      "after": "Read the briefs to prepare effective questions that match your responsibilities, then use available tools and courses to support your work.",
+      "reason": "Clarified the instructional sequence for using briefs, questions, tools, and courses. Emphasized matching these steps to staff responsibilities and professional tasks."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The original ('For staff and leaders · About 1 hour · 12 chapters') directly matches the source. The proposed revision ('Designed for staff and leaders · Approximately 1 hour · 12 chapters') introduces 'Designed for' and 'Approximately,' which are not supported by the source. The original is direct, neutral, and factual—there is no support in the source for 'Designed for' or a need for 'Approximately.'"
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The change from 'The transcript is available below.' to 'You can review the full transcript below the video.' adds specificity about where the transcript is seen, which matches the UI structure. While the edit aligns intent with placement, the original is accurate and compliant. This is not a blocker but is an editorial choice."
+      },
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "The added reasoning in 'You may pause the course whenever you need time to reflect or discuss a point. This supports thoughtful engagement and allows you to work at the pace needed for your team or learning environment.' is not found in the source, which simply says 'Pause whenever you need time to reflect or discuss.' The additional language assigns intent and justification absent in the source and is not warranted for such a basic learner instruction."
+      },
+      {
+        "fieldId": 4,
+        "severity": "blocker",
+        "finding": "'Turn the lens toward our own institution' is directly from the source. The replacement ('Examine our own institutional environment') alters the metaphor and does not preserve the original wording or connotation, as required for official headings and cues."
+      },
+      {
+        "fieldId": 5,
+        "severity": "blocker",
+        "finding": "The revision ('This course analyzes the influence...within our context.') adds analytical language and 'within our context' not present in the original ('This course examines how historically dominant white cultural norms...'). The original sentence is simply explanatory, not analytical or location-specific, and should be preserved as written."
+      },
+      {
+        "fieldId": 6,
+        "severity": "blocker",
+        "finding": "The change introduces 'identified at the group level' and expands on methodology and expectations ('Effective and responsive practice requires collecting relevant evidence...'), which are not supported in the source. The original is more concise and does not mention 'group level' or detail 'adjusting organizational approaches based on new information.' The source's original framing is clear and should be kept."
+      },
+      {
+        "fieldId": 7,
+        "severity": "blocker",
+        "finding": "The phrase 'By the end, you will be able to' comes straight from the source. Adding 'should' changes it from an assurance to a weaker prediction, which is an unsupported editorial change."
+      },
+      {
+        "fieldId": 8,
+        "severity": "blocker",
+        "finding": "The original ('Identify assumptions in a service or workplace decision and distinguish evidence from interpretation.') is precise and source-grounded. The addition of 'within' and the further distinction ('distinguish between factual evidence and individual interpretation') inserts new qualifiers and changes the meaning."
+      },
+      {
+        "fieldId": 9,
+        "severity": "blocker",
+        "finding": "The rewritten field shifts from 'ask better questions without stereotyping people' to 'develop better questions for practice, avoiding stereotyping individuals.' This turns a discrete action ('ask') into a process ('develop'), changes 'people' to 'individuals' and alters the directness of the advice. The field should preserve the source language."
+      },
+      {
+        "fieldId": 10,
+        "severity": "blocker",
+        "finding": "The proposal replaces 'practical' with 'concrete,' and elaborates that 'those with authority or responsibility' should act, and that improvement is checked 'over time.' The source says 'who can act'; 'over time' is additive editorializing. Use the source wording."
+      },
+      {
+        "fieldId": 11,
+        "severity": "blocker",
+        "finding": "The original wording speaks directly to the user: 'Dates and scope matter. Historical findings provide context; they are not presented as current DHS statistics.' The rewrite introduces instruction on relevance, conditions for 'unless explicitly stated,' and new implications beyond the source. The original is direct and correct."
+      },
+      {
+        "fieldId": 12,
+        "severity": "blocker",
+        "finding": "The new version ('Continue building your knowledge and applying it in practice') does not match the original label wording ('Continue learning and put it into practice'). The rewrite is unnecessary and not source-supported for what appears to be a tab or section heading."
+      },
+      {
+        "fieldId": 13,
+        "severity": "blocker",
+        "finding": "The original is 'Use the briefs to prepare questions, then explore the tools and courses that match your responsibilities.' The rewritten version unnecessarily changes the sequence and structure ('Read the briefs to prepare effective questions that match your responsibilities, then use available tools and courses to support your work.'), introducing both unsupported qualifiers and different imperatives. Keep the source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3585,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 921,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4506
+    },
+    "review": {
+      "input_tokens": 3987,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 983,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4970
+    }
+  },
+  "createdAt": "2026-11-15T13:56:51.675Z"
+}

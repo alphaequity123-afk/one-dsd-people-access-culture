@@ -1,0 +1,109 @@
+{
+  "target": "code.app/learn/equity-toolkit/policy-review/page.tsx",
+  "kind": "surface",
+  "route": "/learn/equity-toolkit/policy-review",
+  "sourceSha256": "9040450c2f546885a92b6d05589bb84518da5db6da78c47d4a3ec40d2d6f71e8",
+  "status": "needs_revision",
+  "reviewedFieldCount": 7,
+  "changes": [
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "Explore how equity analysis informs policy development, the questions a drafting group considers, and the relationship between analysis and leadership review.",
+      "after": "This page describes how equity analysis applies during policy development at DSD. It outlines key questions a policy drafting group must consider, such as whose needs are represented or possibly missed, and clarifies how equity findings shape both the drafting process and later leadership review. Understanding this connection helps staff make informed decisions and document the reasoning behind recommendations, especially when outcomes affect different groups in distinct ways.",
+      "reason": "Revised for specificity and professional clarity. The revision explains what equity analysis entails, the key questions asked, and why this work matters for both drafting and leadership review. It ties the activity directly to DSD staff tasks and explains how the process informs decisions."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field4"
+      ],
+      "before": ". The original training content, diagrams, and speaker notes are retained in the PowerPoint. Contacts and submission steps describe that training’s process; confirm current arrangements with the responsible office before acting.",
+      "after": "The original training content, diagrams, and speaker notes appear as provided by the source in the PowerPoint file. Information about contacts and submission steps reflects the prior training process and may have changed; always confirm current procedures with the responsible office before proceeding. Retaining this context helps staff understand which steps are set by current policy versus those based on earlier examples or templates.",
+      "reason": "Restructured for clarity and to explain why checking arrangements matters. The revision distinguishes between the original content and current procedures, and specifies the practical reason for confirming which steps apply."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field7"
+      ],
+      "before": "Bring the analysis into your work",
+      "after": "Apply the analysis in daily decisions",
+      "reason": "Replaced ambiguous heading with a directive that encourages staff to use equity analysis in their routine policy-related actions, clarifying the expected connection to day-to-day work."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field8"
+      ],
+      "before": "Identify the policy decision, the people affected, and which options remain open. Use the toolkit to examine those options and agree who will follow through.",
+      "after": "Start by clarifying the policy decision under consideration, identifying who is affected, and determining which alternatives are still available. Use the toolkit to examine these options, and clearly assign next steps. This approach supports transparent decision-making and shared follow‑through among the team.",
+      "reason": "The revision adds stepwise clarity to the process, instructs staff to name affected groups, and explains the importance of assigning next steps. Reasoning on transparency and follow‑through is included per the standard."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The revised field2 introduces details that are unsupported by the source and exceeds the originally scoped summary. The source text says: 'Explore how equity analysis informs policy development, the questions a drafting group considers, and the relationship between analysis and leadership review.' The revision adds: 'such as whose needs are represented or possibly missed,' and explains that the process 'helps staff make informed decisions and document the reasoning behind recommendations, especially when outcomes affect different groups in distinct ways.' These specifics are not present or implied in the surface source and risk misrepresenting the official scope and the nature of equity analysis as depicted on this page. The original is concise and neutral, in line with the program writing standard's source integrity requirements. The expansion should be rejected for introducing policy content and analysis not grounded in the presented source."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The changes to field4 clarify the distinction between original and current process and expand explanation of why confirming procedures matters. This extra context is reasonable professional interpretation and does not misrepresent or contradict the source. Acceptable."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "Changing 'Bring the analysis into your work' to 'Apply the analysis in daily decisions' is a minor rewording that retains the direction and scope of the original intent. This is an acceptable edit within the writing standard."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The revision offers stepwise clarity and adds rationale about transparency and follow-through. While slightly more explicit, this remains within interpretive bounds for staff guidance and does not misrepresent, expand obligations, or contradict the source. Acceptable and aligns with the program writing standard."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1995,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 434,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2429
+    },
+    "review": {
+      "input_tokens": 1947,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 360,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2307
+    }
+  },
+  "createdAt": "2026-11-15T13:50:01.543Z"
+}

@@ -164,7 +164,7 @@ export function DecisionWorkspace({ values, scope = "one-dhs" }: { values?: Edit
       view.opener = null;
       const report = goalPlanHtml({
         title: notes.title || "Untitled analysis",
-        notes: [`One ${scope === "dsd" ? "DSD" : "DHS"} People, Access and Culture`, "Working draft. This is not submitted, approved, or a completed official equity analysis."],
+        notes: [`One ${scope === "dsd" ? "DSD" : "DHS"} People, Access and Culture`, "Working draft. This is not a completed official equity analysis."],
         sections: decisionNotesSections(notes),
       });
       view.document.open(); view.document.write(report); view.document.close();
@@ -193,8 +193,7 @@ export function DecisionWorkspace({ values, scope = "one-dhs" }: { values?: Edit
       <h2 id={`${id}-title`}>{text("title")}</h2>
       <p>{text("intro")}</p>
       <p id={`${id}-privacy`} className={styles.privacy}>{text("privacy")}</p>
-      <p className={styles.noPrint}>{text("saveNote")}</p>
-      <details className={`${styles.details} ${styles.noPrint}`}><summary>{text("aboutNotes")}</summary><p>{text("boundary")}</p><p>{text("retention")}</p></details>
+      <details className={`${styles.details} ${styles.noPrint}`}><summary>{text("aboutNotes")}</summary><p>{text("boundary")}</p></details>
     </header>
     <div className={styles.noPrint}>
       <div className={styles.setup}>

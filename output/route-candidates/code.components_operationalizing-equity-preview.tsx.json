@@ -1,0 +1,81 @@
+{
+  "target": "code.components/operationalizing-equity-preview.tsx",
+  "kind": "surface",
+  "route": "components/operationalizing-equity-preview.tsx",
+  "sourceSha256": "37093921853dba05dc93e02be97623b242f1920c52bd20146abfaddfe64003ce",
+  "status": "needs_revision",
+  "reviewedFieldCount": 4,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Making equity a continuing part of how we plan, carry out and review our work—with the people affected by our decisions.",
+      "after": "We build equity into our planning, actions, and review processes, centering people who are directly affected by our decisions.",
+      "reason": "Clarified the purpose and ongoing nature of operationalizing equity, naming the importance of involvement from those affected by decisions, and explained how equity informs each stage of our work."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field5"
+      ],
+      "before": "Put equity into practice with guided steps, a podcast, examples, and downloadable tools for your work.",
+      "after": "Apply equity in your daily work with practical steps, real-world examples, a podcast, and downloadable templates and checklists you can use with your team.",
+      "reason": "Specified how each resource supports staff in equity work, described the purpose of tools, and named direct benefits for the intended audience."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed rewrite ('We build equity into our planning, actions, and review processes, centering people who are directly affected by our decisions.') materially alters the original meaning by: (1) shifting from a general description ('Making equity a continuing part...with the people affected') to a prescriptive 'we build' wording, which is a change from explanation to self-description; (2) replacing 'with the people affected by our decisions' with 'centering people who are directly affected', which imports the concept of 'centering' that is not present in the source and may imply an additional requirement or priority beyond mere inclusion. The original does not support this extra specificity. The rewrite claims to \"clarify\" but instead both re-frames agency role and adds terminology not supported by the surface."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The revised language for the toolkit ('Apply equity in your daily work with practical steps, real-world examples, a podcast, and downloadable templates and checklists you can use with your team') is more descriptive than the original but introduces: (1) 'real-world examples', which is a reasonable paraphrase for 'examples', and (2) 'templates and checklists', which slightly expands on 'downloadable tools'. While this expansion arguably clarifies what types of tools are present, care is required to ensure that only tool types actually included in the source toolkit are named. If the toolkit does not include both 'templates and checklists', this could mislead. However, severity does not rise to a blocker if the underlying items exist. Editors should check for over-specification against live content."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1604,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 155,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1759
+    },
+    "review": {
+      "input_tokens": 1314,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 354,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1668
+    }
+  },
+  "createdAt": "2026-11-15T13:55:00.574Z"
+}

@@ -33,7 +33,6 @@ import { developmentJourney, developmentModel, stageGuidance } from "@/lib/progr
 import { availableDevelopmentLink, publishedDevelopment } from "@/lib/program/development-published";
 import goalModel from "@/lib/program/equity-goals.json";
 import media from "@/lib/program/equity-video-media.json";
-import { TRAINING_CREDIT_NOTICE } from "@/lib/program/learning-credit";
 import { REFERRAL_ONLY_COURSE_IDS } from "@/lib/program/retired-features";
 import type { DownloadKind } from "../catalog";
 import {
@@ -108,7 +107,6 @@ const collaboration: Builder = async (scope) => {
           }),
         ]);
       }),
-      section("About participation and training credit", [paragraph("Learning here is voluntary. Choose what supports your work and return when it is useful."), paragraph(TRAINING_CREDIT_NOTICE)]),
     ]),
     attribution: programName(scope),
   };
@@ -124,7 +122,6 @@ const diversity: Builder = async (scope) => {
     sections: compactSections([
       section(undefined, [paragraph("Choose a course that speaks to a question or experience you want to explore. Foundation, Intermediate, and Advanced describe the depth of the material. They do not label you or restrict where you can begin. Each course includes four lessons, activities with feedback, a practical job aid, and sources for further reading.")]),
       ...groups.map((group) => section(group.title, [paragraph(group.description), courseTable(group.courses) ?? paragraph("No courses in this group are currently published for this view.")])),
-      section(undefined, [paragraph(TRAINING_CREDIT_NOTICE)]),
     ]),
     attribution: programName(scope),
   };
@@ -163,7 +160,6 @@ const emotionsAndValues: Builder = async (scope) => {
       ]),
       section("About the learning", [
         paragraph("The emotional-intelligence courses draw on research about emotional abilities, regulation, and the limits of assessment. The cultural-values courses combine values research with cultural humility and original public-service examples. Each course includes its sources and explains what those sources can support."),
-        paragraph(TRAINING_CREDIT_NOTICE),
       ]),
     ]),
     attribution: programName(scope),

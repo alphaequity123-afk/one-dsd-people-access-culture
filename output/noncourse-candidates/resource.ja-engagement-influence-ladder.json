@@ -1,0 +1,171 @@
+{
+  "target": "resource.ja-engagement-influence-ladder",
+  "kind": "resource",
+  "route": "/library/ja-engagement-influence-ladder",
+  "sourceSha256": "d6652023a3f1c1bc0e86822562c67b383271421f1a7e1fe1439b7735320f78a3",
+  "status": "needs_revision",
+  "reviewedFieldCount": 9,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Engagement can share influence at five levels, from informing people about a decision to designing it with them. Choose a level honestly, state it plainly, and match the supports, compensation, and report-back to it.",
+      "after": "Engagement can share influence at five levels, ranging from simply informing people about a decision to designing solutions together. Select the right level based on what can truly change, state it clearly to all participants, and align supports, compensation, and how you report back with that level.",
+      "reason": "Clarifies that the selection of engagement level depends on the opportunity for actual change and emphasizes clear communication and alignment of supports, which helps set realistic expectations."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "The most common harm in engagement is asking for input that cannot change anything. Naming the level of influence protects trust and tells people what their time is worth.",
+      "after": "The primary risk in engagement is asking for input without the intent or ability to use it. Stating the real level of influence helps maintain trust, makes expectations clear, and helps people assess if and how they want to participate.",
+      "reason": "Adds explanation that maintaining trust and clarifying expectations are key, and that clear statements allow people to decide whether participation is worthwhile given the real influence possible."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Inform. You tell people what is happening and why. Appropriate when the decision is already made. Say so.",
+      "after": "Inform: You share information about what is happening and the reasons behind decisions. Use this level when decisions are already made. Make sure to state this to avoid giving a false impression of influence.",
+      "reason": "Expands the purpose for using \"Inform\" and clarifies why stating the finality of a decision prevents misunderstanding."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Consult. You ask for input and decide. Appropriate when choices are open and you will explain what you did with the input.",
+      "after": "Consult: You seek input from others and then make the decision yourself. Use when options are still open and plan to report back on how input was considered and what was changed as a result.",
+      "reason": "Clarifies the condition for \"Consult\" (options are open), and connects consulting to the responsibility to report back specifically about input and change."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Involve. People work with you throughout and their concerns shape the options. Appropriate when the decision affects them directly and the timeline allows.",
+      "after": "Involve: Stakeholders work with you throughout the process, and their concerns help shape the available options. Use when people are directly affected and the timeline allows their meaningful participation.",
+      "reason": "Clarifies the role of stakeholder concerns and the need for sufficient time for involvement to be meaningful."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Collaborate. People share in developing options and in the decision. Appropriate when you can share authority and want the result to be owned together.",
+      "after": "Collaborate: Participants actively contribute to developing options and making decisions. Choose this level when you are able and authorized to share decision-making authority and want the outcome to be co-owned.",
+      "reason": "Emphasizes decision-making authority must be shareable and \"co-ownership\" as a goal, increasing clarity on appropriate use."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Design together. People with lived experience lead the design with you. Appropriate when the service is theirs and you are prepared to change how it works.",
+      "after": "Design together: People with relevant lived experience lead the design process with you. Use this level when those affected by the service should decide how it works, and your team can support significant changes.",
+      "reason": "Clarifies when \"Design together\" is appropriate: when those with lived experience should guide design, and readiness for change is present."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "For any level, plan these. Begin before the decision is fixed. Identify who is affected and who is missing. Understand prior contacts so you do not repeat requests or extract labor. Address compensation, language, disability access, format, schedule, setting, technology, and trusted messenger. Document what was heard, what changed, what could not change, and why. Assign an owner for the ongoing relationship.",
+      "after": "For any engagement level, plan ahead:\n- Start before decisions are finalized.\n- Identify who is affected and who is not yet at the table.\n- Review past engagement to avoid repeating requests or extracting unpaid labor.\n- Address compensation, language needs, disability access, formats, schedules, locations, technology, and trust.\n- Document what input was received, what was changed, what could not be changed, and why.\n- Assign responsibility for maintaining the ongoing relationship.",
+      "reason": "Breaks up dense instructions for clarity, expands on specific planning tasks, and grounds each in the agency context. Adds detail on responsibility for relationship continuity."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed revision substitutes 'ranging from simply informing people about a decision to designing solutions together' for 'from informing people about a decision to designing it with them'. The addition of 'solutions' is not sourced; the original confines the ultimate level to designing 'it' (the decision) with them, not unspecified 'solutions'. The change to 'Select the right level based on what can truly change' partially invents new qualifying criteria not directly stated in the source (which says to choose honestly and state it plainly), and 'align supports, compensation, and how you report back with that level' introduces additional interpretation not directly found in 'match the supports, compensation, and report-back to it'. Thus, the new version introduces material and motivational reasons not in evidence."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "Replaces 'The most common harm in engagement is asking for input that cannot change anything' with 'The primary risk in engagement is asking for input without the intent or ability to use it.' The original specifically describes the typical harm (not risk) as related to input that 'cannot change anything'. The phrase 'without the intent or ability to use it' alters the meaning and broadens the basis for harm beyond the clear causality described. The new version asserts, 'makes expectations clear, and helps people assess if and how they want to participate,' which—while plausible—elaborates substantially beyond 'Naming the level of influence protects trust and tells people what their time is worth'. The expansion adds meaning not supported by the source."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "Expands on 'Inform' by elaborating on stating the finality of the decision to avoid a false impression of influence, which is generally in line with 'Say so'. The rest is clarifying detail rather than a material change, but could risk overstating the scope if not controlled."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "Expands on 'Consult' by clarifying that options must be open and there is a responsibility to report back specifically about 'input and change'. The expansion to 'report back on how input was considered and what was changed as a result' could add some prescriptive context but is aligned with 'you will explain what you did with the input'."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "Expands on the role of stakeholders in shaping options and clarifies that a meaningful timeline is required. Retains the original meaning with clarifying detail."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "Expands on the requirement for ability and authority to share decision-making in 'Collaborate' and makes explicit the goal of co-ownership. These clarifications are consistent with the original conditions."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "Expands the rationale for 'Design together' by linking lived experience with leadership of the design process and highlighting readiness for significant change. Retains the core of the original meaning."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "Breaks out instructions for better clarity and adds detail (location, technology, trust, etc.). These are minor clarifications and not blockers, as they are implicit supports in the original direction to 'Address compensation, language, disability access, format, schedule, setting, technology, and trusted messenger.'"
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1987,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 707,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2694
+    },
+    "review": {
+      "input_tokens": 2193,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 803,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2996
+    }
+  },
+  "createdAt": "2026-11-15T13:42:11.360Z"
+}

@@ -1,0 +1,137 @@
+{
+  "target": "code.components/page-edit-controls.tsx",
+  "kind": "surface",
+  "route": "components/page-edit-controls.tsx",
+  "sourceSha256": "918e35961951be075e3d35bc2429568bf03b1e680bd9fa72bd7730555d1236c0",
+  "status": "needs_revision",
+  "reviewedFieldCount": 6,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "The saved page edits could not be read, so this page shows its original wording and new edits cannot be saved. Nothing has been lost.",
+      "after": "Page edits could not be read, so this page now shows its original wording. New edits cannot be saved, but no edits have been lost. This can result from a temporary issue with the saved edits or service connection. If you need to recover edits, wait and try again or check the edit log.",
+      "reason": "Revised for clearer reasoning about why the edits cannot be read and what it means for staff, including practical next steps and possible causes. Avoids assuming edits are never lost, and clarifies what to expect."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "A local path (/library), an anchor (#section), or an address starting with https://.",
+      "after": "Enter a local path (for example, /library), an anchor (such as #section), or a full address that starts with https://.",
+      "reason": "Made the instruction more explicit by starting with an active verb and giving clear examples of each option. This structure improves clarity for staff entering links."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "Change this on every page. It is part of the header or footer, which every page shows.",
+      "after": "Apply this change on every page. Use this option for header or footer wording, which appears on all pages.",
+      "reason": "Clarified the purpose and effect of selecting this option—makes it clear why a staff action is needed and the organizational impact."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": "Edits on this page are visible only to the signed-in owner. To change the header or footer for everyone, open a public page.",
+      "after": "Edits on this page are visible only to the signed-in owner. To update header or footer wording for all users, open and edit a public page instead.",
+      "reason": "Improved specificity by clearly distinguishing edits limited to an owner from those affecting all users, and what staff must do to publish more broadly."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field4"
+      ],
+      "before": "There are no saved edits on this page.",
+      "after": "No saved edits exist on this page.",
+      "reason": "Shortened and clarified for directness, which supports quick identification by staff during review."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field5"
+      ],
+      "before": "This older every-page edit is visible only to the owner. To publish it again, open a public page, select the wording, and save it as an every-page change.",
+      "after": "This older every-page edit is visible only to the owner. To make it public again, open a public page, select the wording, and save it as an every-page change.",
+      "reason": "Clarified the consequence (visibility), and phrased the instruction more precisely as a recommended action rather than a general statement."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "Field 0 changes the level of certainty and practical message about data safety. The source says: \"Nothing has been lost.\" The revision hedges this: \"no edits have been lost\" and then says, \"If you need to recover edits, wait and try again or check the edit log.\" The source assures users that nothing was lost, and this is key to preventing panic or data loss assumptions. Changing this meaning is not supported by the source and alters the guaranteed outcome provided by the component author. The added steps and assumptions (edit log, process advice) are not found or implied in the source."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "Field 1 is acceptable. The revised wording retains the same practical instruction and examples as the code's help text. It clarifies with a verb and restates examples without changing legal, technical, or operational meaning."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "Field 2's revision clarifies but does not change the practical meaning or introduce errors. It is allowable as it only splits the original into clearer sentences and further indicates header/footer usage, which is already in the source."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "Field 3's revision does not substantively change the meaning—the source itself distinguishes owner-only from every-user edits, and the suggestion to edit a public page reflects the source's operational scope."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "Field 4's change from 'There are no saved edits on this page.' to 'No saved edits exist on this page.' is a syntactic clarification, not a change in meaning."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "Field 5's wording change is stylistic and does not alter the operational meaning, and is thus acceptable."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 8304,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 437,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 8741
+    },
+    "review": {
+      "input_tokens": 8313,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 391,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 8704
+    }
+  },
+  "createdAt": "2026-11-15T13:55:11.184Z"
+}

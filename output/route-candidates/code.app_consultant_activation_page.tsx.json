@@ -1,0 +1,137 @@
+{
+  "target": "code.app/consultant/activation/page.tsx",
+  "kind": "surface",
+  "route": "/consultant/activation",
+  "sourceSha256": "abab80b0643ce77ff6e5e2321e862e7f136be427c2dff8bf3853798856a3966f",
+  "status": "needs_revision",
+  "reviewedFieldCount": 11,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Sign-in and contribution records kept separately",
+      "after": "Sign-in and contribution records must use separate database connections to maintain security and prevent cross-access. This requirement ensures that sign-in data and resource contributions remain isolated at the system level.",
+      "reason": "Explains why separate connections are needed for sign-in and contribution records, specifying the security implications relevant to DSD staff."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "Settings match the completed checks",
+      "after": "Configuration settings for activation must match the verified checks. When the configuration does not align, the system may consider the activation incomplete, leading to features being inaccessible until the settings and evidence are consistent.",
+      "reason": "Expands on the practical effect of mismatched settings and verified checks to clarify why exact matching matters for activation."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field6"
+      ],
+      "before": "even when new requests are paused, provided the checks below are met.",
+      "after": "Staff can check the status of an existing request if all tracking requirements are met. This access remains available even while new consultations are paused, enabling ongoing communication about submitted requests.",
+      "reason": "Rephrased to clarify who can check requests, under what circumstances, and why this access is maintained when intake is paused."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field8"
+      ],
+      "before": "Read from config/protected-feature-activation.json. Hosting settings cannot approve a pending entry; a release with dated evidence has to replace it.",
+      "after": "The consultation setup record is read from config/protected-feature-activation.json. System-level hosting settings cannot be used to approve a pending entry. To finalize completion, a new release with dated and verified evidence must replace the current record.",
+      "reason": "Clarifies the separation between hosting settings and the approval process, and specifies that formal evidence in a release is required to move from pending to approved."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "field11"
+      ],
+      "before": "Checks run in order; any remaining checks wait until the first issue is resolved.",
+      "after": "Verification checks are performed in order. If a check fails, subsequent checks will not be evaluated until the first issue is corrected. This sequence helps staff focus on resolving the most immediate activation problem before moving on.",
+      "reason": "Clarifies the consequence of check ordering and why it matters for troubleshooting by staff, tying the sequence to practical support methods."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "field12"
+      ],
+      "before": "Check whether contributors can save and edit resources. Checks run in order; any remaining checks wait until the first issue is resolved.",
+      "after": "Check whether contributors have permission to save and edit resources. Checks are performed sequentially. When a check is not met, later steps will not be evaluated until the current problem is resolved. This approach helps staff address activation issues efficiently, focusing on the specific unmet condition.",
+      "reason": "Rewrites to clarify the specific permission being checked, how the sequence works, and how this helps staff address setup issues with specificity."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The proposed replacement for field1 (Sign-in and contribution records kept separately) makes an inference beyond the source: it turns a technical requirement for separate database URLs into a security explanation (\"to maintain security and prevent cross-access\") and claims these settings \"ensure\" isolation \"at the system level.\" The source requires use of separate connections but does not state the risk model, purpose, effectiveness, or guarantee system-level separation. This change adds a rationale that could mislead, exceeds the official configuration explanation, and does not appear in code or setup instructions."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The explanation for field2 expands on the reason for matching settings to checks. The source implies features 'may be inaccessible' if the settings do not match verified evidence. The expansion is accurate and does not change scope."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The edits to field6 clarify and restate the source accurately. The meaning and scope are unchanged for the audience."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "Field8's rewrite is accurate: it restates the explicit separation between hosting settings and the approval process, and adds clarity that only new evidence within a release updates approval. It closely matches the source."
+      },
+      {
+        "fieldId": 9,
+        "severity": "note",
+        "finding": "Field11's explanation matches the source code, which clearly stops processing at the first unmet requirement. The expanded explanation does not broaden or misrepresent the original."
+      },
+      {
+        "fieldId": 10,
+        "severity": "note",
+        "finding": "Field12's expansion of the explanation does not materially change the scope and provides practical detail in keeping with the code's order-of-checks logic."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 5232,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 493,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5725
+    },
+    "review": {
+      "input_tokens": 5192,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 360,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5552
+    }
+  },
+  "createdAt": "2026-11-15T13:47:54.058Z"
+}

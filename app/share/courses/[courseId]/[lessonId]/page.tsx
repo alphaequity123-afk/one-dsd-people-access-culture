@@ -11,7 +11,6 @@ import { CoursePackSchema } from "@/lib/content/courses/contract";
 import { courseText, sanitizedLesson, lessonObjectives } from "@/lib/content/courses/published";
 import { requestedContentScope } from "@/lib/product/request-context";
 import { ResourceDownloads } from "@/components/resource-downloads";
-import { TRAINING_CREDIT_NOTICE } from "@/lib/program/learning-credit";
 import type { Metadata } from "next";
 import "../../../../courses/courses.css";
 
@@ -69,7 +68,6 @@ export default async function SharedLessonPage({ params }: { params: Promise<{ c
             previous={index > 0 ? shareCourseHref(courseId, course.lessons[index - 1].id) : undefined}
             next={index < course.lessons.length - 1 ? shareCourseHref(courseId, course.lessons[index + 1].id) : undefined}
           />
-          <p className={styles.credit}>{TRAINING_CREDIT_NOTICE}</p>
         </div>
         <nav className={styles.outline} aria-label="Course lessons">
           <h2>Explore this course</h2>

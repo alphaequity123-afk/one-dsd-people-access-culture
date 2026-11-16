@@ -1,0 +1,67 @@
+{
+  "target": "code.app/learn/sources/page.tsx",
+  "kind": "surface",
+  "route": "/learn/sources",
+  "sourceSha256": "7f1e46fb93955ab4fb918589e5726ab345a00e367a92ab6abba48235fb0c38fe",
+  "status": "needs_revision",
+  "reviewedFieldCount": 3,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field1"
+      ],
+      "before": "Explore more than 270 books through summaries, key ideas and questions for reflection, including two suggested books for every Minnesota community brief. Connect a reading with a decision, a conversation or a change you want to make in your work.",
+      "after": "The collection includes more than 270 books, each with a summary, key ideas, and questions for reflection. For each Minnesota community brief, two books are suggested to support your work. You can use these readings to inform decisions, support discussions, or guide changes in your day-to-day responsibilities. Summaries and questions are intended to help you connect ideas to challenges or opportunities you encounter.",
+      "reason": "Increased specificity on the purpose and use of book summaries, added context about selection for Minnesota community briefs, and clarified how staff might apply readings to inform decisions, conversations, or changes in their work. Avoided slogans and added practical reasoning without creating unsupported certainty."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revised text changes the scope and introduces unsupported claims. The source states: \"including two suggested books for every Minnesota community brief\"—the new wording, \"For each Minnesota community brief, two books are suggested to support your work,\" alters the phrasing but retains the intent, so it's acceptable. However, the added sentences—\"Summaries and questions are intended to help you connect ideas to challenges or opportunities you encounter\"—imply a purpose and intent for how summaries/questions should be used, without evidence from the source text. The original only provides a list of uses: \"Connect a reading with a decision, a conversation or a change...\"  The claim about \"guide changes in your day-to-day responsibilities\" and the suggestion that summaries/questions are specifically \"intended\" for personal connection is unstated and introduces inferred program aims that extend beyond the original text. This introduces generic padding and shifts the official meaning. Therefore, this change does not meet the standard for source fidelity."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3099,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 159,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3258
+    },
+    "review": {
+      "input_tokens": 2819,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 222,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3041
+    }
+  },
+  "createdAt": "2026-11-15T13:50:31.368Z"
+}

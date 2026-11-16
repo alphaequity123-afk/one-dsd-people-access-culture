@@ -153,7 +153,7 @@ function markdownSections(markdown: string, leading?: string): DocumentSection[]
 /* ---------- The Water We Swim In ---------- */
 
 const WATER_INTRO =
-  "A voluntary course on Minnesota's mainstream culture: its real strengths, its blind spots, and how it shapes our work with Minnesotans of other cultures and with disabled people and their families.";
+  "A course on Minnesota's mainstream culture: its real strengths, its blind spots, and how it shapes our work with Minnesotans of other cultures and with disabled people and their families.";
 
 function waterDocument(id: string, scope: StaffProgramScope): ResourceDocument | null {
   if (id === "home") {
@@ -163,7 +163,7 @@ function waterDocument(id: string, scope: StaffProgramScope): ResourceDocument |
       subtitle: WATER_INTRO,
       meta: [{ label: "Modules", value: String(WATER_MODULES.length) }],
       sections: compactSections([
-        section(undefined, [paragraph("There are six modules of about 20 minutes each. You can take them in any order, and nothing is collected or graded.")]),
+        section(undefined, [paragraph("There are six modules of about 20 minutes each. You can take them in any order.")]),
         section("Modules", [
           numbered(WATER_MODULES.map((module) => [{ text: module.title, bold: true }, { text: ` — ${module.goal} About ${module.minutes} minutes.` }])),
         ]),

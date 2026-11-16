@@ -1,0 +1,149 @@
+{
+  "revisions": [
+    {
+      "target": "resource.ja-engagement-influence-ladder",
+      "kind": "resource",
+      "route": "/library/ja-engagement-influence-ladder",
+      "status": "draft",
+      "changes": [
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "The most common harm in engagement is asking for input that cannot change anything. Naming the level of influence protects trust and tells people what their time is worth.",
+          "after": "Asking for input when a decision cannot change can leave participants unclear about why they were invited. Explain what is open to influence, who decides, and how input will be used so people can decide whether and how to participate."
+        }
+      ],
+      "reviewNote": "Full original resource read. Removes unsupported prevalence or outcome claims, identity-to-behavior inferences, intent-based harm routing, rigid sentence-length rule and compulsory spotlighting. Maintains inquiry, responsible process and source boundaries. Independent review pending."
+    },
+    {
+      "target": "resource.ja-report-back",
+      "kind": "resource",
+      "route": "/library/ja-report-back",
+      "status": "draft",
+      "changes": [
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "DSD's engagement review found that people rarely learned what happened after they gave input. Closing that loop is the difference between engagement and extraction.",
+          "after": "DSD's engagement review found that people rarely learned what happened after they gave input. Reporting back lets participants examine how their contributions were represented, what influenced the decision, and which questions remain unresolved."
+        }
+      ],
+      "reviewNote": "Full original resource read. Removes unsupported prevalence or outcome claims, identity-to-behavior inferences, intent-based harm routing, rigid sentence-length rule and compulsory spotlighting. Maintains inquiry, responsible process and source boundaries. Independent review pending."
+    },
+    {
+      "target": "resource.pn-cultural-humility-briefs-as-questions",
+      "kind": "resource",
+      "route": "/library/pn-cultural-humility-briefs-as-questions",
+      "status": "draft",
+      "changes": [
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "Generalizations about literacy, oral traditions, health beliefs, or family roles become stereotypes the moment they are applied to a person. The safeguard is a habit: ask, then plan.",
+          "after": "A report about literacy, oral traditions, health beliefs, or family roles does not establish an individual's preferences or needs. Use it to prepare relevant questions, then plan with the person rather than treating the report as a personal profile."
+        },
+        {
+          "path": [
+            "body",
+            0
+          ],
+          "before": "Read a brief for what to ask, not what to conclude. Turn every statement into a question you could ask the person or the community partner.",
+          "after": "Use a brief to understand relevant history and prepare questions about access, preferences, and participation. Ask what matters to the situation rather than turning cultural generalizations into a checklist for the person."
+        },
+        {
+          "path": [
+            "body",
+            1
+          ],
+          "before": "Notice the diversity inside every community. Immigration history, faith, language, disability, age, and class differ within a community as much as between communities.",
+          "after": "Notice diversity within a community. Immigration history, faith, language, disability, age, and class can shape different experiences among people who share a community identity."
+        }
+      ],
+      "reviewNote": "Full original resource read. Removes unsupported prevalence or outcome claims, identity-to-behavior inferences, intent-based harm routing, rigid sentence-length rule and compulsory spotlighting. Maintains inquiry, responsible process and source boundaries. Independent review pending."
+    },
+    {
+      "target": "resource.lm-plain-language-carries-complexity",
+      "kind": "resource",
+      "route": "/library/lm-plain-language-carries-complexity",
+      "status": "draft",
+      "changes": [
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "Staff are educated adults doing hard work. Talking down to them costs trust. Burying them costs time. Plain language done well respects both.",
+          "after": "Staff need explanations that make complex decisions easier to understand without removing uncertainty, competing interests, or the limits of the evidence. Clear structure and precise wording help readers find the action and examine the reasoning behind it."
+        },
+        {
+          "path": [
+            "body",
+            1
+          ],
+          "before": "One idea per sentence. About twenty words. Prefer the common word unless the precise term matters, and then define it once.",
+          "after": "Give each sentence a clear purpose and keep related ideas connected. Prefer familiar words; when a technical term adds precision, explain it. Vary sentence length to preserve the reasoning rather than cutting important qualifications to meet a word count."
+        }
+      ],
+      "reviewNote": "Full original resource read. Removes unsupported prevalence or outcome claims, identity-to-behavior inferences, intent-based harm routing, rigid sentence-length rule and compulsory spotlighting. Maintains inquiry, responsible process and source boundaries. Independent review pending."
+    },
+    {
+      "target": "resource.lm-psychological-safety-and-repair",
+      "kind": "resource",
+      "route": "/library/lm-psychological-safety-and-repair",
+      "status": "draft",
+      "changes": [
+        {
+          "path": [
+            "body",
+            1
+          ],
+          "before": "Separate unfamiliarity from intentional harm. Most harm at work comes from not knowing. Respond to unfamiliarity with information and a chance to change. Respond to intentional harm through the confidential channel.",
+          "after": "Respond to the concern and its impact before assuming intent. Clarify what happened and what support is needed within your role. A lack of knowledge may call for explanation and learning, but it does not erase harm or determine whether a formal reporting process applies."
+        },
+        {
+          "path": [
+            "body",
+            5
+          ],
+          "before": "None of this replaces the confidential channel. Complaints, harassment, and discrimination go to Employee Culture, Human Resources, or the civil-rights channel.",
+          "after": "These practices do not replace established reporting processes. Use the appropriate Employee Culture, Human Resources, or civil-rights channel for complaints, harassment, or discrimination, and explain the applicable privacy limits."
+        }
+      ],
+      "reviewNote": "Full original resource read. Removes unsupported prevalence or outcome claims, identity-to-behavior inferences, intent-based harm routing, rigid sentence-length rule and compulsory spotlighting. Maintains inquiry, responsible process and source boundaries. Independent review pending."
+    },
+    {
+      "target": "resource.lm-power-and-positional-authority",
+      "kind": "resource",
+      "route": "/library/lm-power-and-positional-authority",
+      "status": "draft",
+      "changes": [
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "Supervisors, managers, and people with expertise or tenure hold power that shapes who speaks, who is believed, and whose time counts. The first intercultural skill is seeing that power; the second is using it deliberately.",
+          "after": "Supervisors, managers, and people with expertise or tenure can influence whose ideas are heard, whose account is believed, and whose time is treated as important. Intercultural practice includes examining that influence and using authority to make participation more accessible."
+        },
+        {
+          "path": [
+            "body",
+            1
+          ],
+          "before": "What it does. People with less power wait to be asked, soften disagreement, and stop offering ideas that were ignored once. People with more power mistake that quiet for agreement.",
+          "after": "What it can do. Unequal influence may make people cautious about disagreeing or offering ideas, particularly when earlier concerns were ignored. Silence does not establish agreement, and directness does not establish hostility. Ask what would help people contribute without assuming why someone is quiet."
+        },
+        {
+          "path": [
+            "body",
+            2
+          ],
+          "before": "What to do with it. Speak last. Ask the newest and the quietest first. Credit ideas to the person who had them. Change the format so contribution does not depend on speaking fast in English.",
+          "after": "What to do with it. Leave room for other views before stating your conclusion. Invite contributions without putting a person on the spot, and offer written or later input as well as discussion. Credit ideas to their contributors and avoid making participation depend on speaking quickly in English."
+        }
+      ],
+      "reviewNote": "Full original resource read. Removes unsupported prevalence or outcome claims, identity-to-behavior inferences, intent-based harm routing, rigid sentence-length rule and compulsory spotlighting. Maintains inquiry, responsible process and source boundaries. Independent review pending."
+    }
+  ]
+}

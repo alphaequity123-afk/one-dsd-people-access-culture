@@ -1,0 +1,157 @@
+{
+  "target": "dsd-scenario.dsd-leadership-bottleneck",
+  "kind": "surface",
+  "route": "/one-dsd/scenarios/dsd-leadership-bottleneck",
+  "sourceSha256": "f0c03deaae125b77eb3996c367b894c277f8d1ba6b31115392c386070089a1f4",
+  "status": "model_checked",
+  "reviewedFieldCount": 12,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "situation"
+      ],
+      "before": "Several DSD teams have equity improvements ready, each waiting on the same approval step. The step exists because of a past problem no one can describe. Staff have begun to treat the process as immovable.",
+      "after": "Multiple DSD teams have developed equity improvements, but all are stalled at the same approval step. The original purpose of this step is unclear; no one currently remembers the specific issue it was meant to address. As a result, staff treat this step as a permanent barrier rather than a decision point.",
+      "reason": "Clarifies that the bottleneck is systemic across teams, explains the lack of institutional memory about the reason for the step, and specifies the consequence: staff treat it as an unchangeable barrier. This improves specificity and demonstrates why the step affects progress."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "whatToNotice",
+        0
+      ],
+      "before": "Diffuse responsibility and approval bottlenecks were named repeatedly in DSD listening.",
+      "after": "Staff have repeatedly identified unclear responsibility and approval bottlenecks as barriers during DSD listening sessions.",
+      "reason": "Links the perceived issue to documented input from staff, clarifies the source of the information, and connects it to previous feedback sessions. Improves transparency regarding the evidence for the bottleneck."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "whatToNotice",
+        1
+      ],
+      "before": "The step is a choice someone made, which means it can be changed.",
+      "after": "The approval step was created by a specific choice, not by policy or law, so it can be reconsidered.",
+      "reason": "Clarifies that the step is a discretionary practice, and could be adjusted if revisited. The revision supports staff judgment about whether the step can be changed."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "whatToNotice",
+        2
+      ],
+      "before": "Decision rights are unclear, so nothing moves.",
+      "after": "Because it is unclear who has authority to approve or remove the step, progress stops and responsibility becomes diffused.",
+      "reason": "Explains why the lack of clarity about decision rights creates an impasse and how it contributes to the bottleneck."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "questions",
+        0
+      ],
+      "before": "Who actually holds the decision right for this step, and what would they need to decide?",
+      "after": "Who has the actual authority to approve or change this step? What information or context would they need to make a decision?",
+      "reason": "Improves clarity by separating the question of authority from the process of decision making, focusing on both who and what is needed."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "questions",
+        1
+      ],
+      "before": "What problem was the step meant to solve, and is there a lighter way to solve it?",
+      "after": "What original issue did this approval step address, and could the issue be addressed in a more efficient or less restrictive way?",
+      "reason": "Restates the question with emphasis on seeking alternatives, helping staff evaluate whether the formal step is still necessary."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "questions",
+        2
+      ],
+      "before": "What is the cost of waiting, for whom?",
+      "after": "Who is affected by delays at this step, and what are the specific costs or consequences of waiting for approval?",
+      "reason": "Makes the question more specific by identifying both who is impacted and the nature of the impact, encouraging concrete analysis."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revised wording for the situation field provides more explicit detail about the lack of institutional memory, clearly states the consequence for staff, and aligns with the original meaning. It clarifies rather than rewrites the scope or policy."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "Linking unclear responsibility and approval bottlenecks to staff input from listening sessions is consistent with the source. The added specificity about 'DSD listening sessions' clarifies, without introducing unsupported claims."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "Rewording to specify that the step is a choice and not a legal or policy requirement is supported by the original text ('The step is a choice someone made'). The additional clarity helps, and does not misrepresent the source."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The revised sentence expands on the link between unclear decision rights and lack of progress, without introducing new policy meaning. This remains factual and within the scope of the scenario."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "Rewriting the question to separate 'authority to approve or change' and 'information needed' offers more specificity but is fully supported by the original, maintaining its intent."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "Specifying the search for 'a more efficient or less restrictive way' is implied in the original 'lighter way to solve it.' The adjustment does not misrepresent or broaden the question's scope."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "Clarifying that the question seeks both who is affected and the types of cost/consequence is consistent with and helps expand the practical use of the source question."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1617,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 603,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2220
+    },
+    "review": {
+      "input_tokens": 1560,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 450,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2010
+    }
+  },
+  "createdAt": "2026-11-15T13:39:12.774Z"
+}

@@ -1,0 +1,81 @@
+{
+  "target": "code.app/consultant/toolkit/page.tsx",
+  "kind": "surface",
+  "route": "/consultant/toolkit",
+  "sourceSha256": "c4b07d08f447f684c46c0d709c825db4fa23d849c8e30e6485f08ea11e858889",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Department of Human Services Equity Analysis Toolkit",
+      "after": "DHS Equity Analysis Toolkit",
+      "reason": "Shorten the title for clarity and navigation. 'DHS' is a commonly used abbreviation within staff-facing tools and avoids unnecessary repetition. The toolkit's purpose remains clear on the page."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Department of Human Services Equity Analysis Toolkit",
+      "after": "DHS Equity Analysis Toolkit",
+      "reason": "Shorten for consistent clarity and space efficiency in navigation and headings. The abbreviated form is recognized internally and does not reduce the page's usefulness."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The source file uses the full title 'Department of Human Services Equity Analysis Toolkit' in two locations: the metadata.title and the PageIntro.title. The proposed change to 'DHS Equity Analysis Toolkit' is not supported by the source, which specifies and displays the full agency name in both locations. Abbreviation is not supported by source evidence."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The same unsupported abbreviation (from 'Department of Human Services Equity Analysis Toolkit' to 'DHS Equity Analysis Toolkit') is proposed for field1, corresponding to another instance where the source uses the complete, unabbreviated title. The change is not supported by the source content and alters the official name specified by source evidence."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1240,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 115,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1355
+    },
+    "review": {
+      "input_tokens": 961,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 169,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1130
+    }
+  },
+  "createdAt": "2026-11-15T13:48:15.963Z"
+}

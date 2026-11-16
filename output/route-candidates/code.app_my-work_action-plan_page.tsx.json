@@ -1,0 +1,81 @@
+{
+  "target": "code.app/my-work/action-plan/page.tsx",
+  "kind": "surface",
+  "route": "/my-work/action-plan",
+  "sourceSha256": "b81625d6f60296f5bee6531227681bdc56d56705a5a1c38484687794ae639a62",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Turn one idea into one change you can see at work. Name a small first step, a real moment to try it, and a date thirty days out to look back.",
+      "after": "Select one practical idea and describe how you will use it in your daily work. Identify a realistic first step, decide when you will try it, and set a date within the next thirty days to review what happened.",
+      "reason": "Clarified that users should choose a specific actionable idea and state how and when it will be used in practice, emphasizing realistic and time-bound steps. This adds precision and relevance for professional staff planning."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field2"
+      ],
+      "before": "Change sticks when it is specific, tied to a moment you already face and reviewed soon after. A single behavior you try three times teaches more than a long list you never start. The review questions help you separate what you observed from what you hoped, and decide whether to keep, adjust or stop.",
+      "after": "A small, specific plan is easier to apply and review because it ties your intended change to real situations you already encounter. Trying out a single new action several times provides clearer feedback about what is effective than attempting to overhaul many habits at once. Reviewing your experience helps you distinguish actual changes from expectations, and supports decisions to continue, revise, or stop your approach.",
+      "reason": "Revised to more explicitly explain why small, specific plans are effective in organizational practice, connecting repeated effort and review to observable outcomes and informed judgment."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The change alters both the scope and the meaning relative to the source. The original: 'Turn one idea into one change you can see at work. Name a small first step, a real moment to try it, and a date thirty days out to look back.' The proposed rewrite: 'Select one practical idea and describe how you will use it in your daily work. Identify a realistic first step, decide when you will try it, and set a date within the next thirty days to review what happened.' The rewrite changes the focus from a user-driven, smallest-possible action ('one idea into one change you can see') to a broader task description ('describe how you will use it in your daily work'), loses the coaching simplicity, and weakens the tight linkage to a concrete moment. The rewrite also adds new phrasing (such as 'review what happened') not present in the concise instruction of the source. Per standard, do not add unsupported interpretation or generalization to surface instructional text."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revision to the explanatory field (field2) is largely a restatement. It stays close to the source meaning, elaborates on why specificity and review lead to change, and does not introduce material error. The edit could be accepted, but it is not materially superior to the original: both ground the rationale in repetition, specific action, and reflective review."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1593,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 221,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1814
+    },
+    "review": {
+      "input_tokens": 1418,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 337,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1755
+    }
+  },
+  "createdAt": "2026-11-15T13:50:48.427Z"
+}

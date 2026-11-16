@@ -1,0 +1,85 @@
+{
+  "target": "work-learning.home",
+  "kind": "surface",
+  "route": "/my-work/explore",
+  "sourceSha256": "1c35b9712f0c8020b8c9f8c07a0055046511b06245e2303d24682dc1bb6047cf",
+  "status": "model_checked",
+  "reviewedFieldCount": 24,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "intro"
+      ],
+      "before": "Different responsibilities call for different examples and tools. Explore a starting point that fits what you are doing today.",
+      "after": "Each area of responsibility calls for specific examples and tools. Use this page to find starting points that match your current work, whether you are planning, reviewing, or implementing decisions.",
+      "reason": "Clarified the relationship between responsibilities and the need to select relevant resources, expanded to clarify professional context without condescension."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "choice"
+      ],
+      "before": "These choices are optional. They do not change your access, and you can explore any area.",
+      "after": "Choosing a role or task is optional. These selections simply help narrow resources to what fits your work—they do not change your access or permissions.",
+      "reason": "Clarified the purpose of making a selection and reassured that access remains unchanged, providing greater professional specificity."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "taskNote"
+      ],
+      "before": "The task you choose comes first; related material for your area of work follows.",
+      "after": "The task you select helps prioritize material. After you choose a task, resources specific to your area of work are listed next. This order helps identify the most relevant guidance for your current responsibilities.",
+      "reason": "Explained how the selection influences resource organization, and why task selection matters for prioritizing content, with attention to the workflow."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revised 'intro' text ("
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2395,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 263,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2658
+    },
+    "review": {
+      "input_tokens": 1726,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 30,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1756
+    }
+  },
+  "createdAt": "2026-11-15T13:35:32.523Z"
+}

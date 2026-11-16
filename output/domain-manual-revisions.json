@@ -1,0 +1,180 @@
+{
+  "revisions": [
+    {
+      "target": "domain.access-language",
+      "kind": "surface",
+      "route": "/areas/access-language",
+      "changes": [
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "Making documents, meetings, forms, systems, and contact points usable by people with disabilities and people who use languages other than English, as a matter of practice rather than exception.",
+          "after": "Build accessibility and language access into documents, meetings, forms, systems, and service contact points. Planning for different languages and access needs helps staff identify barriers before someone has to request an exception."
+        },
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "Inaccessible forms, unclear accessibility ownership, and translation gaps were among the most concrete barriers DSD staff named. Each one has a fix with an owner.",
+          "after": "DSD staff named inaccessible forms, unclear responsibility for accessibility, and translation gaps as concrete barriers. Addressing them requires both a practical change and someone responsible for carrying it through; identifying a barrier alone does not make a service usable."
+        }
+      ],
+      "status": "draft",
+      "reviewNote": "Source-grounded editorial revision; independent review pending."
+    },
+    {
+      "target": "domain.community-engagement",
+      "kind": "surface",
+      "route": "/areas/community-engagement",
+      "changes": [
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "Engaging communities while a decision can still change, being honest about how much influence people have, and closing the loop on what happened with their input.",
+          "after": "Involve communities while a decision can still change, explain how much influence participants have, and report what happened with their input. A useful report-back includes what changed, what did not change, and why."
+        },
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "DSD's own engagement review found work that was fragmented, event-based, and repeated without coordination, and found that people rarely heard what changed. Trust is built by fixing those patterns.",
+          "after": "DSD's engagement review described fragmented, event-based work, repeated requests without coordination, and limited reporting on what changed. Coordinating the work and explaining how input affected decisions gives communities a basis for judging whether participation was useful."
+        }
+      ],
+      "status": "draft",
+      "reviewNote": "Source-grounded editorial revision; independent review pending."
+    },
+    {
+      "target": "domain.culture-trust",
+      "kind": "surface",
+      "route": "/areas/culture-trust",
+      "changes": [
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "Everyday practices that let people speak, disagree, learn across difference, and repair harm, without shame, scoring, or hidden judgment.",
+          "after": "Examine the everyday practices that shape whether people can speak, disagree, learn across differences, and address harm. The focus is on observable changes in team practice, without shame, scoring, or hidden judgment."
+        },
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "DSD staff described dominant-culture defaults, limited psychological safety, and doubt that input changes decisions. Culture changes through observable practices with owners, not slogans.",
+          "after": "DSD staff described dominant-culture defaults, limited psychological safety, and doubt that input changes decisions. A team can examine these concerns by identifying a practice to change, naming who can act, and checking what colleagues experience afterward."
+        }
+      ],
+      "status": "draft",
+      "reviewNote": "Source-grounded editorial revision; independent review pending."
+    },
+    {
+      "target": "domain.leadership-systems",
+      "kind": "surface",
+      "route": "/areas/leadership-systems",
+      "changes": [
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "Moving from foundation to integration to institutionalization: decision rights, resources, accountability, and the leadership practices that make equity part of how the organization runs.",
+          "after": "Examine how decision-making authority, resources, and accountability make equity part of routine organizational work. The progression from foundation to integration to institutionalization asks how commitments are established, applied in decisions, and sustained over time."
+        },
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "Approval bottlenecks, diffuse responsibility, and unclear decision rights were named repeatedly. Systems change is leadership work with owners, not an event.",
+          "after": "Approval bottlenecks, diffuse responsibility, and unclear decision-making authority were named repeatedly. Leaders need to identify who can change a process, what resources that person needs, and how follow-through will be reviewed."
+        }
+      ],
+      "status": "draft",
+      "reviewNote": "Source-grounded editorial revision; independent review pending."
+    },
+    {
+      "target": "domain.measurement",
+      "kind": "surface",
+      "route": "/areas/measurement",
+      "changes": [
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "Telling the difference between a platform that works and a program that improves equity practice, using baselines, mixed methods, disaggregation with protection, and honest limits.",
+          "after": "Distinguish a functioning platform from evidence that a program improves equity practice. Use a baseline, numerical and qualitative evidence, and carefully separated group data to examine change while protecting privacy and explaining the limits of the findings."
+        },
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "Legacy data systems were built for billing and eligibility, not equity analysis. Good measurement protects private learning, refuses invented targets, and reports what the evidence does and does not show.",
+          "after": "Legacy data systems designed for billing and eligibility may not answer an equity question. Begin with the decision the evidence will inform, protect private learning, and explain what the available information can support before setting targets or drawing conclusions."
+        },
+        {
+          "path": [
+            "firstQuestions",
+            1
+          ],
+          "before": "What is the baseline, the denominator, and the smallest group we will report?",
+          "after": "What is the baseline, who is included in the denominator, and how will reporting protect small groups from identification?"
+        },
+        {
+          "path": [
+            "taskEvaluationPlanOutcome"
+          ],
+          "before": "A logic model with baseline, mixed-method evidence, disaggregation rules, small-group protection, and limits stated plainly.",
+          "after": "A logic model with a baseline, numerical and qualitative evidence, rules for comparing groups, small-group privacy protections, and clearly stated limits."
+        }
+      ],
+      "status": "draft",
+      "reviewNote": "Source-grounded editorial revision; independent review pending."
+    },
+    {
+      "target": "domain.policy-program-service",
+      "kind": "surface",
+      "route": "/areas/policy-program-service",
+      "changes": [
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "Building equity into the decisions that shape who gets what, how, and with what burden: policies, program design, budgets, forms and notices, technology, and service delivery.",
+          "after": "Examine how policies, budgets, forms, technology, and service design distribute benefits and burdens. Bringing equity questions into these decisions helps staff compare alternatives while there is still an opportunity to change the design."
+        },
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "Engagement that arrives after a decision is final cannot change it. The DHS equity policy makes an equity scan or full analysis part of some decisions, and good practice makes it part of all of them.",
+          "after": "Community input can influence a decision only while that decision remains open to change. The DHS equity policy calls for an equity scan or full analysis for some decisions; this collection also supports considering benefits, burdens, and access in everyday design work."
+        }
+      ],
+      "status": "draft",
+      "reviewNote": "Source-grounded editorial revision; independent review pending."
+    },
+    {
+      "target": "domain.workforce",
+      "kind": "surface",
+      "route": "/areas/workforce",
+      "changes": [
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "Equity in how people are recruited, screened, selected, welcomed, reviewed, paid, promoted, supported, and retained. It covers the whole lifecycle, not a single inclusive-hiring page.",
+          "after": "Examine equity across recruitment, selection, onboarding, review, pay, advancement, support, and retention. Looking across the employment cycle helps connect an immediate concern with the earlier decisions and later opportunities that shape it."
+        },
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "Credential gatekeeping, vague culture-fit judgments, and unclear pathways are among the most consistent barriers DSD staff described. They are also decisions with owners, which means they can change.",
+          "after": "DSD staff described credential gatekeeping, vague culture-fit judgments, and unclear advancement pathways as recurring barriers. Examine who sets these criteria, how they relate to the work, and which changes require HR or labor relations involvement."
+        }
+      ],
+      "status": "draft",
+      "reviewNote": "Source-grounded editorial revision; independent review pending."
+    }
+  ]
+}

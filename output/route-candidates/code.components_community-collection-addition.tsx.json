@@ -1,0 +1,57 @@
+{
+  "target": "code.components/community-collection-addition.tsx",
+  "kind": "surface",
+  "route": "components/community-collection-addition.tsx",
+  "sourceSha256": "7d9edaabd157095e023154bfd76cdec73a17617a39e75b1b154b48fa4bdb8a76",
+  "status": "model_checked",
+  "reviewedFieldCount": 1,
+  "changes": [],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The field accurately preserves the source wording exactly as it appears in the component: `These examples offer context. They do not describe any individual or represent every experience in a community.` There is no change in scope, meaning, qualifications, or instructions. The text appears under the correct conditions in the code and matches the cited usage."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2483,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2498
+    },
+    "review": {
+      "input_tokens": 2083,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 106,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2189
+    }
+  },
+  "createdAt": "2026-11-15T13:52:27.009Z"
+}

@@ -1,0 +1,67 @@
+{
+  "target": "code.app/consultant/library/[id]/page.tsx",
+  "kind": "surface",
+  "route": "/consultant/library/[id]",
+  "sourceSha256": "018cd269651e99f677c0babd708de66b1ecc36d580a1ad86e45bf8d7660b1aee",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field2"
+      ],
+      "before": "Prepare this resource here. Staff will see it after its reviewed version is published.",
+      "after": "You can edit this resource draft here. After review and publication, staff will use the finalized version. This step allows you to refine instructions and ensure accuracy before others rely on the resource.",
+      "reason": "Expanded the explanation to clarify the purpose and importance of preparing the resource, specifically addressing why staff members edit here and how their work supports accurate finalized materials."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The rewritten text expands upon the original by asserting new purposes ('refine instructions', 'ensure accuracy before others rely on the resource'), introduces an implied mandate on the kind of editing expected, and editorializes about the importance and outcomes. The source only directs users to 'prepare this resource here', states that 'staff will see it after its reviewed version is published', and provides no justification or commentary. The change adds context and implications not grounded in the source code or surface text, risking misrepresentation of the scope and purpose of this editing stage."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1789,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 1664
+      },
+      "output_tokens": 95,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1884
+    },
+    "review": {
+      "input_tokens": 1467,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 150,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1617
+    }
+  },
+  "createdAt": "2026-11-15T14:03:14.111Z"
+}

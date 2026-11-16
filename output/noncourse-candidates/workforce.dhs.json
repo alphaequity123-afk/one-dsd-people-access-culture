@@ -1,0 +1,101 @@
+{
+  "target": "workforce.dhs",
+  "kind": "surface",
+  "route": "/consultant/workforce/dhs",
+  "sourceSha256": "5b1e3affe87a9bb454970c2c9d5b3ab9b51bf7b20a8c26fd31d912ac68f526e8",
+  "status": "model_checked",
+  "reviewedFieldCount": 6,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "roles",
+        1,
+        "text"
+      ],
+      "before": "The specification describes professional support for program implementation, including analysis, research, fiscal review, and administrative work. Suggested learning connection: examine a process, interpret evidence, and communicate findings. Actual duties require position-level confirmation.",
+      "after": "This classification covers professional staff who support program implementation through activities such as process analysis, research, fiscal review, and administrative work. The main focus is to develop a clear understanding of program procedures, assess their impact, and communicate findings to improve operations. When using this classification as a learning reference, consider examining specific processes, interpreting evidence, and reporting results in a way that supports program goals. The duties described in the classification specification are broad; any assignment of responsibilities to a person or position must be verified at the position level, as actual tasks can differ between units or based on management direction. Position-level confirmation is necessary to determine what authority or scope of activity any individual holds, which affects decisions about what they may approve or advise on.",
+      "reason": "Expanded the explanation to clarify why confirming position-level tasks matters for responsibility and authority, and emphasized how the classification serves as a learning reference. Connected duties to the purpose of supporting effective program work, in line with the program writing standard."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "roles",
+        3,
+        "text"
+      ],
+      "before": "The specification describes complex work across programs involving policy, legislation, services, or compliance. Suggested learning connection: examine cross-program effects, compare policy options, and plan an improvement with responsible partners. This does not identify the owner's classification.",
+      "after": "This classification describes positions with complex responsibilities that typically span multiple programs and may involve interpreting policy, legislation, service models, or compliance requirements. Staff in these positions often assess the impact of actions across different programs, compare policy or operational options, and propose improvements in coordination with others who have decision-making roles. As a learning connection, consider how policy changes or compliance issues in one program area might affect others and what information is needed to plan improvements collaboratively. Always confirm an individual's actual classification, since the description applies to a group rather than identifying authority or scope of work for a particular person. Authority to make or implement changes depends on role assignment, not just classification.",
+      "reason": "Clarified the nature of responsibilities described by the classification, the importance of cross-program effects, and the need to verify actual role assignments before assuming authority or scope of duties. Explained the value for learning and the limitations of the classification as an indicator of responsibility."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "roles",
+        5,
+        "text"
+      ],
+      "before": "The specification describes program management involving priorities, people, resources, and evaluation. Suggested learning connection: examine resource decisions, clarify responsibility, and assess an improvement. A general classification description does not establish an individual's delegated authority.",
+      "after": "This classification includes program managers responsible for setting priorities, directing staff, allocating resources, and evaluating program outcomes. The classification provides a general description of management duties but does not specify what authority or delegation a particular manager has within a unit or division. For learning purposes, consider questions about resource allocation, clarifying lines of responsibility, and evaluating the results of management decisions. Decisions about management authority and resource control must be confirmed at the position or organizational level, since not every manager with this classification has the same delegated powers.",
+      "reason": "Refined the explanation to stress the difference between the general classification and actual delegated authority. Added reasoning for verifying the specific authority tied to a position instead of assuming what a manager can decide or manage solely based on classification."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The rewrite expands and clarifies the purpose of position-level confirmation and the learning context, while preserving the meaning and evidence from the classification specification. The added detail about responsibilities, learning references, and verification requirements is well grounded in the source. No blockers detected."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The revised explanation more fully addresses the range and complexity of the Program Consultant classification and the need to confirm actual authority or assignment. References to learning use policy, compliance, and cross-program work concretely. It avoids unsupported claims and maintains alignment with the official specification. No blockers found."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The expanded text accurately describes the Program Manager 1 classification, clarifies the limits of general descriptions versus position-level authority, and matches the substance of the supporting source. It correctly reinforces the importance of confirming delegation at the unit or division level. No unsupported legal or practical changes. No blockers identified."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1666,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 575,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2241
+    },
+    "review": {
+      "input_tokens": 1750,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 213,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1963
+    }
+  },
+  "createdAt": "2026-11-15T13:37:33.360Z"
+}

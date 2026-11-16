@@ -1,0 +1,142 @@
+{
+  "target": "resource.lm-facilitation-application",
+  "kind": "resource",
+  "route": "/library/lm-facilitation-application",
+  "sourceSha256": "ad78779081e526980735129e8bfc22ada6254dba36ca8149c2df2a46c8378693",
+  "status": "model_checked",
+  "reviewedFieldCount": 6,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "The best sessions leave participants ready to make a meaningful change in their own work. Begin with what they should be able to do, keep presentations focused, and leave substantial time to practice with real materials.",
+      "after": "Focus sessions on supporting participants to apply learning directly to their work. Start by clarifying what participants should be able to do after the session, keep instruction targeted, and provide ample time for participants to apply new concepts using actual work materials.",
+      "reason": "Reworded to clarify the sequence of planning decisions and emphasize actions that support learning transfer, in line with agency practice. Added reasoning for the recommended approach."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Keep the session connected to practice: limit presentation time so participants can spend at least half the session working with the ideas themselves.",
+      "after": "Structure sessions so that at least half the time is reserved for participants to actively apply session ideas to their own casework, documentation, or planning. This prioritizes practical application and ensures the session addresses real work tasks.",
+      "reason": "Clarified the recommended balance of presentation and practice, specifying where application should happen for DSD or DHS staff. Explained the benefit of connecting learning with actual job responsibilities."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Bring real work: ask participants to bring a notice, a plan, or a meeting they own. Practice on that.",
+      "after": "Encourage participants to bring materials such as an actual notice, service plan, or meeting agenda from their own work. Practicing with items they already use helps clarify questions, address immediate challenges, and link learning to routine tasks.",
+      "reason": "Expanded to provide examples specific to DHS/DSD responsibilities and explain the instructional value of using real work products."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Facilitator role: participants know their own programs. Your role is to offer useful questions, guide the conversation, and keep the group on time.",
+      "after": "As a facilitator, recognize that participants hold essential knowledge of their own programs and daily work. Focus on supporting them by posing relevant questions, steering discussion, and managing time. Your ability to elicit practical insight from the group enhances the session's relevance.",
+      "reason": "Expanded to specify why the facilitator's role is to draw from participants' expertise and to connect this to session goals."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Access: ask in advance what participants need. Arrange captions, spoken-language or sign-language interpretation, translated or accessible materials, and alternatives to dragging or timed activities. Build access into the session from the beginning.",
+      "after": "Assess access needs before the session by asking participants about required accommodations. Prepare for captions, spoken or sign language interpretation, accessible or translated materials, and alternatives to physical or timed elements. Planning for these needs in advance is essential to support full participation for all staff.",
+      "reason": "Reworded for clarity and specificity, and to note the connection between proactive access planning and session effectiveness."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Follow-up: schedule a short check-in to learn whether participants were able to use what they completed.",
+      "after": "Plan a brief follow-up meeting after the session to learn whether and how participants have applied what they practiced. This step helps identify barriers, inform future session design, and demonstrate a commitment to continuous improvement.",
+      "reason": "Explained the purpose and benefit of follow-up, connecting the action to session design and participant support."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revised summary rephrases the original content but retains accuracy: it shifts focus slightly from 'presentations focused' to 'targeted instruction,' which is in line with the source's intent. It adds reasonable explanation about aligning session planning with intended participant outcomes, which is supported by the source."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The edit clarifies that practice should be tied to actual casework, documentation, or planning, directly reflecting the source's recommendation that practice uses 'real materials.' The explanation of why this is prioritized is reasonable and aligns with the source."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The expansion uses concrete examples (notice, service plan, meeting agenda) that match the original's suggestion ('a notice, a plan, or a meeting') and adds a brief rationale for practicing with real work, which is consistent with principles of adult learning but does not overstate the source."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The explanation of the facilitator's role as drawing on participants' expertise and guiding the group is faithful to the original's message ('participants know their own programs... offer useful questions, guide the conversation, keep the group on time') and clarifies the value of this stance without injecting policy."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "This rewrite clarifies existing access guidance and makes requirements explicit but does not add or remove policy. It retains every original accommodation example and provides justification for why proactive planning is essential, expanding the explanatory value appropriately."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The revised follow-up section offers detail about purpose (identifying barriers, informing future design, demonstrating improvement), which is a reasonable expansion of the original's concise instruction. No source intent or scope is compromised."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1573,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 513,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2086
+    },
+    "review": {
+      "input_tokens": 1658,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 386,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2044
+    }
+  },
+  "createdAt": "2026-11-15T13:41:22.994Z"
+}

@@ -17,19 +17,15 @@ function ReviewCountTable({ caption, heading, rows }: { caption: string; heading
   </table>;
 }
 
-/** Shown while One DSD keeps no review totals. */
-export const REVIEW_COUNT_OFF = "Completed reviews are not counted yet. Nothing is recorded when someone finishes a review.";
-
 /** Anonymous totals only: no names, units, counties or review content are stored. */
 export function EquityReviewCountSection({ totals }: { totals: EquityReviewTotals | null }) {
+  if (!PRACTICE_COUNTERS_ENABLED) return null;
   const countedTools = EQUITY_REVIEW_TOOLS_COUNTED.map(tool => EQUITY_REVIEW_TOOL_TITLES[tool]).join(", ");
   return <section className={styles.section} aria-labelledby="reviews-completed-title">
     <h2 id="reviews-completed-title">Equity reviews completed</h2>
-    {!PRACTICE_COUNTERS_ENABLED ? <p>{REVIEW_COUNT_OFF}</p> : <>
-      <p>When staff finish an equity review on this site, one is added to an anonymous count. The count does not record who did the review, where they work, or what they wrote. These are totals only.</p>
-      <p>Right now the count comes from this review: {countedTools}.</p>
-    </>}
-    {!PRACTICE_COUNTERS_ENABLED ? null : totals === null ? <p>The count could not be loaded right now. Try again later.</p>
+    <p>When staff finish an equity review on this site, one is added to the count.</p>
+    <p>Right now the count comes from this review: {countedTools}.</p>
+    {totals === null ? <p>The count could not be loaded right now. Try again later.</p>
       : totals.total === 0 ? <p>No reviews have been counted yet.</p>
       : <>
         <p>{reviews(totals.total)} completed to date. {reviews(totals.lastThreeMonths.reduce((sum, entry) => sum + entry.count, 0))} in the last three months, including this month.</p>

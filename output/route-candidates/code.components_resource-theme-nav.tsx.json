@@ -1,0 +1,67 @@
+{
+  "target": "code.components/resource-theme-nav.tsx",
+  "kind": "surface",
+  "route": "components/resource-theme-nav.tsx",
+  "sourceSha256": "0780535185c410ce4c5e525230411e2f772a6ecf1ebea9d5da99d649512fc730",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Find related learning, useful tools, and ways to apply them in your work.",
+      "after": "Use these themes to locate training, operational tools, and practical examples that support daily tasks. This organization helps you compare resources that match specific responsibilities or questions.",
+      "reason": "Revised to give a more specific explanation of why staff might use these themes and what connecting resources by theme adds to practical work. Now explicitly connects organizing by theme to comparing resources that fit staff responsibilities, addressing purpose and benefit per the writing standard."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed revision changes both the scope and meaning of the original text. The original ('Find related learning, useful tools, and ways to apply them in your work.') is a brief, neutral invitation. The revision ('Use these themes to locate training, operational tools, and practical examples that support daily tasks. This organization helps you compare resources that match specific responsibilities or questions.') makes new claims: 1) It specifically identifies 'training' and 'operational tools' (not supported in the source), 2) Introduces 'practical examples' (not evident in code or RESOURCE_THEMES context), 3) Adds a purpose ('compare resources that match specific responsibilities or questions') not supported by the code, as RESOURCE_THEMES simply provides a thematic organization and does not enable direct comparison or a match to 'responsibilities or questions.' This adds specificity and purpose beyond the neutral description in the source. The proposal also erases the simple, general language in favor of a more complicated, purpose-driven style, which contradicts the requirement to preserve the source's grounded scope and intent."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1240,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 106,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1346
+    },
+    "review": {
+      "input_tokens": 958,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 259,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1217
+    }
+  },
+  "createdAt": "2026-11-15T13:56:13.895Z"
+}

@@ -1,0 +1,13 @@
+{
+  "target": "code.app/consultant/not-found.tsx",
+  "kind": "surface",
+  "route": "app/consultant/not-found.tsx",
+  "context": "import Link from \"@/components/app-link\";\nimport { PageIntro } from \"@/components/ui\";\n\n/**\n * Not-found boundary for the Consultant Workspace. Rendered on the server inside\n * the workspace shell so a 404 under /consultant carries readable text, a\n * heading, and the page landmark without JavaScript.\n */\nexport default function ConsultantNotFound() {\n  return (\n    <>\n      <PageIntro kicker=\"Consultant Workspace\" title=\"We could not find that page\" lede=\"The link may be old, or the item may not be published yet.\" />\n      <div className=\"wrap py-8\">\n        <ul className=\"list-disc pl-6\">\n          <li>\n            <Link href=\"/consultant\">Back to the queue</Link>\n          </li>\n          <li>\n            <Link href=\"/consultant/library\">Open the program collection</Link>\n          </li>\n          <li>\n            <Link href=\"/library\">Search Resources</Link>\n          </li>\n        </ul>\n      </div>\n    </>\n  );\n}\n",
+  "protectedFields": [],
+  "values": {
+    "field0": "Open the program collection"
+  },
+  "status": "no_editable_prose",
+  "changes": [],
+  "issues": []
+}

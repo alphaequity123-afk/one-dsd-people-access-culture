@@ -1,0 +1,286 @@
+{
+  "target": "community-brief.vietnamese",
+  "kind": "surface",
+  "route": "/minnesota-communities/vietnamese",
+  "sourceSha256": "444ffb234822004f07690e99ced9bf5c7b5fdb5a9ba70f1b2f1d74a99acdc5ea",
+  "status": "model_checked",
+  "reviewedFieldCount": 19,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "whoAndWhere"
+      ],
+      "before": "Vietnamese Minnesotans include refugees who arrived after 1975, later family reunification, and U.S.-born generations, mostly in the Twin Cities.",
+      "after": "Vietnamese Minnesotans are individuals and families with origins in Vietnam, including refugees who resettled after 1975, people who arrived later for family reunification, and U.S.-born generations. The largest populations are found in the Twin Cities metropolitan area.",
+      "reason": "Clarified timeframes and migration categories for accuracy and specificity, and connected the summary to the program’s need to recognize generational and migration diversity."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Elders may need Vietnamese for vital conversations while younger relatives use English; do not let a child interpret. Name order (family name first) breaks forms that assume otherwise.",
+      "after": "Many older Vietnamese Minnesotans may rely on Vietnamese for important discussions, while younger family members often use English. Relying on a child for interpretation poses risks of misunderstanding and can place inappropriate responsibility on them. Vietnamese names are written with the family name first, which may not match government form expectations or digital systems that assume a Western order.",
+      "reason": "Added explanation for why children should not interpret and described how differences in name order affect documentation and digital systems."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "withinGroupDiversity"
+      ],
+      "before": "Buddhist, Catholic, and secular households; refugee-era and later arrivals; wide generational differences.",
+      "after": "Within Vietnamese Minnesotan communities there is wide diversity, including Buddhist, Catholic, and non-religious households; differences between refugee-era and post-refugee arrivals; and significant generational variation in language, values, and experiences.",
+      "reason": "Expanded the types of within-group diversity and clarified examples relevant to DHS and DSD work."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "nameNote"
+      ],
+      "before": "Family name comes first in Vietnamese order; ask how the person wants to be addressed and how documents list names.",
+      "after": "Vietnamese names list the family name first, which may affect how documents and records identify people. Always ask how the person prefers to be addressed and how their name appears in legal or official documents to prevent confusion or errors.",
+      "reason": "Connected the naming convention to professional risks (record accuracy, respect, possible errors)."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "whatToAsk",
+        0
+      ],
+      "before": "Would you like a Vietnamese interpreter for this conversation?",
+      "after": "Would you prefer a professional Vietnamese interpreter for this conversation?",
+      "reason": "Clarified that the offer of a professional interpreter aligns with agency expectations and the risks of informal interpretation."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "whatToAsk",
+        2
+      ],
+      "before": "How do your documents list your name?",
+      "after": "How does your legal or official documentation list your full name?",
+      "reason": "Clarified that staff should verify names as documented to reduce errors, which supports correct identification in agency records."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "accessChecks",
+        0
+      ],
+      "before": "Professional interpreter, not a family member.",
+      "after": "Ensure use of a professional interpreter rather than a family member, to preserve accuracy and confidentiality.",
+      "reason": "Added specific reason to support agency expectation and explain the risks of using non-professional interpreters."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "accessChecks",
+        2
+      ],
+      "before": "Translated vital notices with human review.",
+      "after": "Check that all vital notices are translated into Vietnamese and reviewed by a human for clarity and accuracy.",
+      "reason": "Clarified the need for both translation and human review, and why these matter for access and understanding."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "whoToInvolve",
+        0
+      ],
+      "before": "Language access lead or interpreter services, with the dialect written on the request.",
+      "after": "Request assistance from the language access lead or interpreter services, specifying the preferred Vietnamese dialect if possible.",
+      "reason": "Added detail about specifying dialect to reduce miscommunication and clarified staff responsibilities."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "whoToInvolve",
+        1
+      ],
+      "before": "Equity Director for the administration or the person responsible for the program.",
+      "after": "Involve the Equity Director for the agency or the designated program lead as appropriate for the scope of the issue.",
+      "reason": "Clarified role context and responsibility based on program or administrative needs."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "whoToInvolve",
+        2
+      ],
+      "before": "Community partner organizations identified in this brief, with a clear purpose, role, compensation, and plan to report back.",
+      "after": "Coordinate with identified Vietnamese community partner organizations, clearly defining the purpose, roles, compensation, and how information will be reported back to participants and agency staff.",
+      "reason": "Clarified coordination, and why definition of purpose and compensation matter for transparency and partnership."
+    },
+    {
+      "fieldId": 11,
+      "path": [
+        "whatNotToAssume",
+        0
+      ],
+      "before": "Do not assume a younger relative should interpret.",
+      "after": "Do not assume that a younger relative should interpret for an older family member.",
+      "reason": "Expanded and clarified for context, restating the potential risks and why the assumption is problematic."
+    },
+    {
+      "fieldId": 12,
+      "path": [
+        "whatNotToAssume",
+        1
+      ],
+      "before": "Do not assume faith or politics.",
+      "after": "Do not make assumptions about someone's faith tradition or political views based on their Vietnamese heritage.",
+      "reason": "Clarified the substance of the caution by identifying the kinds of assumptions staff may make."
+    },
+    {
+      "fieldId": 13,
+      "path": [
+        "spotlightTitle"
+      ],
+      "before": "A place for history and imagination",
+      "after": "History, art, and community connections",
+      "reason": "Made the spotlight title more specific to the content described in the brief."
+    },
+    {
+      "fieldId": 14,
+      "path": [
+        "spotlightBody"
+      ],
+      "before": "The Vietnamese Minnesotan Museum connects history, art, and cross-cultural learning. Exploring this work offers a view of Vietnamese community life that includes creativity and future aspirations, alongside the histories of migration that brought families to Minnesota.",
+      "after": "The Vietnamese Minnesotan Museum brings together history, artistic expression, and opportunities for cross-cultural learning. Examining this museum’s work offers context about community creativity, forward-looking values, and the migration experiences that shaped Vietnamese families’ lives in Minnesota.",
+      "reason": "Connected the museum’s work more directly to community context relevant to staff, with a clear reason for mention."
+    },
+    {
+      "fieldId": 16,
+      "path": [
+        "reflectionBody"
+      ],
+      "before": "How could you invite an older adult’s perspective directly while also respecting the people they want involved?",
+      "after": "How might you invite the perspective of an older adult directly, while respecting their choices about which family members or trusted supporters should participate?",
+      "reason": "Clarified the active role staff have in both respecting autonomy and supporting appropriate participation."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revision provides more precise timeframes and phrasing ('individuals and families with origins in Vietnam...') and adds a detail about the 'largest populations' in the Twin Cities area. This elaborates but does not distort the original meaning or introduce ungrounded claims. Detail aligns with external demographic sources."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The changes add justified explanation for why children should not interpret and expand on system issues with name order, which support practical understanding for agency staff."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The expanded explanation of within-group diversity matches program needs and remains appropriately sourced, adding nuance without distorting the core message."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "Clarification of name order implications is warranted and aligns with actual risks in records and practice."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "‘Professional’ added to reinforce policy and practical risk. This is a justified clarification."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "Specifies 'legal or official documentation' for clarity and prevents errors—a best practice, not a policy overreach."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "Elaboration on confidentiality/accuracy strengthens the original caution and matches agency standards."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "The changed field explains the necessity (understanding and access), which is appropriate for program clarity."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "Naming the dialect is an appropriate operational detail and aids interpreter accuracy."
+      },
+      {
+        "fieldId": 9,
+        "severity": "note",
+        "finding": "Further specifies staff roles and agency/program distinctions, clarifying responsibility for program users."
+      },
+      {
+        "fieldId": 10,
+        "severity": "note",
+        "finding": "Defines partnership terms and reporting, improving transparency. The changes are supported by best practice and not legally mandatory language."
+      },
+      {
+        "fieldId": 11,
+        "severity": "note",
+        "finding": "Expanding why the assumption is problematic reinforces program intent and source meaning without introducing new risks."
+      },
+      {
+        "fieldId": 12,
+        "severity": "note",
+        "finding": "Expands and clarifies 'faith or politics' to help staff avoid these assumptions. Supported by inclusion best practices."
+      },
+      {
+        "fieldId": 13,
+        "severity": "note",
+        "finding": "The new title reflects the same ideas as the body text—no loss or distortion."
+      },
+      {
+        "fieldId": 14,
+        "severity": "note",
+        "finding": "The revision preserves the connection between museum, community, and migration history. Some wording is changed but retains intent and evidence-supported links."
+      },
+      {
+        "fieldId": 16,
+        "severity": "note",
+        "finding": "Refines and expands the prompt, directly referencing both older adults and their choices—the meaning aligns with the original intent and instructional needs."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2072,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 969,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3041
+    },
+    "review": {
+      "input_tokens": 2463,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 569,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3032
+    }
+  },
+  "createdAt": "2026-11-15T13:40:25.987Z"
+}

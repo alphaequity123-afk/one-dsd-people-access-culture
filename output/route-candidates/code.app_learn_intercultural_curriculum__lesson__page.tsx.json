@@ -1,0 +1,13 @@
+{
+  "target": "code.app/learn/intercultural/curriculum/[lesson]/page.tsx",
+  "kind": "surface",
+  "route": "/learn/intercultural/curriculum/[lesson]",
+  "context": "import { notFound } from 'next/navigation';\nimport { ResourceDownloads } from '@/components/resource-downloads';\nimport InterculturalCurriculum from '@/components/intercultural-curriculum';\nimport curriculum from '@/lib/content/intercultural-curriculum.json';\nimport { interculturalRequestData } from '@/lib/content/intercultural-curriculum-data';\nimport { prepareEditableSurface } from '@/lib/content/prepare-editable-surface';\nimport { requestedContentScope } from '@/lib/product/request-context';\n\nexport const dynamic = 'force-dynamic';\nexport const revalidate = 0;\nexport async function generateMetadata({ params }: { params: Promise<{ lesson: string }> }) {\n  const { lesson } = await params;\n  try {\n    const surface = await prepareEditableSurface('learn.intercultural', { scope: await requestedContentScope(), includeOwner: false });\n    if (surface.available) return { title: curriculum.modules.find(item => item.id === lesson)?.title ?? 'Intercultural learning' };\n  } catch { /* No published lesson title should escape an unavailable parent. */ }\n  return { title: 'Intercultural learning' };\n}\nexport default async function Page({ params }: { params: Promise<{ lesson: string }> }) {\n  const { lesson } = await params;\n  const data = await interculturalRequestData(lesson);\n  if (!data.curriculum.modules.some(item => item.id === lesson)) notFound();\n  const scope = await requestedContentScope();\n  return <InterculturalCurriculum key={lesson} lessonId={lesson} {...data} downloads={<details className=\"border-b border-line pb-3 print:hidden\"><summary className=\"min-h-11 cursor-pointer py-2 font-semibold text-[#183247]\">Download or share this lesson</summary><ResourceDownloads kind=\"intercultural-lesson\" id={lesson} noun=\"lesson\" scope={scope} /></details>}/>;\n}\n",
+  "protectedFields": [],
+  "values": {
+    "field0": "Download or share this lesson"
+  },
+  "status": "no_editable_prose",
+  "changes": [],
+  "issues": []
+}

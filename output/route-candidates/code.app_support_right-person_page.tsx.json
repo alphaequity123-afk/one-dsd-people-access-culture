@@ -1,0 +1,67 @@
+{
+  "target": "code.app/support/right-person/page.tsx",
+  "kind": "surface",
+  "route": "/support/right-person",
+  "sourceSha256": "bbe962ea9b190e6019a4c9ccab4a9de72f0f3e220b4b2093c85b677ea23cc841",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "This helper needs JavaScript. You can still",
+      "after": "This helper does not work unless JavaScript is enabled. If your browser does not support JavaScript, or you have it turned off, you may use the support directory instead.",
+      "reason": "Clarified the dependency on JavaScript and explained the alternative method when JavaScript is unavailable, giving specific instruction and practical context for when the main tool is inaccessible."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed replacement for field0 (\"This helper does not work unless JavaScript is enabled. If your browser does not support JavaScript, or you have it turned off, you may use the support directory instead.\") expands and rewords the original text. The source reads only: \"This helper needs JavaScript. You can still\". The replacement adds a condition about browser support and a specific instruction, which is not present or directly supported by the source. The original function of this field is only as the first part of a sentence, with the completion (directory link and alternative) handled outside this field, as shown in the source code (see <noscript>...</noscript> element). Changing the field's scope and meaning is not supported by the source and alters both the instruction's logic and user experience."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1700,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 93,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1793
+    },
+    "review": {
+      "input_tokens": 1406,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 189,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1595
+    }
+  },
+  "createdAt": "2026-11-15T13:51:49.909Z"
+}

@@ -1,0 +1,81 @@
+{
+  "target": "code.components/development-resource-guide.tsx",
+  "kind": "surface",
+  "route": "components/development-resource-guide.tsx",
+  "sourceSha256": "5f08d79ab4746c677da6083b08e5e5bd3afbc9a29306357ce2391c8d11eb1ec8",
+  "status": "needs_revision",
+  "reviewedFieldCount": 5,
+  "changes": [
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "Choose the question this resource helps you explore, compare it with another relevant perspective, and identify what it changes in your understanding.",
+      "after": "Choose a key question that this resource addresses. Compare your findings with another perspective or source, and identify what, if anything, changes in your understanding. This process helps clarify how information from different sources interacts and supports informed decision-making in your work.",
+      "reason": "Clarifies the reasoning and connection between exploration, comparison, and applied understanding relevant to staff using resources to guide decisions."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field5"
+      ],
+      "before": "What did you notice or try, whose perspective informed it, and what would you keep or adjust?",
+      "after": "Describe what you noticed or attempted, whose input shaped your choices, and what you would decide to continue or change based on those experiences. Reflecting on these points supports ongoing learning and adjustment in your practice.",
+      "reason": "Explains why reflection on experiences, sources, and adjustments matters, framing it as a practical approach to continuous learning relevant to DHS and DSD work."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The revised text for field2 adds unsupported interpretive and metacognitive language (\"clarify how information from different sources interacts and supports informed decision-making in your work\") and generalizes the purpose. The source directs the user to compare a chosen question with another relevant perspective and identify what changes in understanding, but does not make a broad claim about decision-making or how information 'interacts.' The original is specific and tightly aligned to the source code's provided guidance."
+      },
+      {
+        "fieldId": 4,
+        "severity": "blocker",
+        "finding": "The revised field5 alters the structure and intent of the original. The original asks what you noticed or tried, whose perspective informed it, and what you would keep or adjust. The proposed change reframes this as \"Describe what you...\" and introduces 'input' and 'choices' instead of 'perspective' and 'informed.' It also introduces a new rationale (\"Reflecting on these points supports ongoing learning and adjustment in your practice\") that is not present in the original text or code. The source lists three reflective prompts, not an explanation or rationale, and should not be generalized without direct source support."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1897,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 187,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2084
+    },
+    "review": {
+      "input_tokens": 1624,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 254,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1878
+    }
+  },
+  "createdAt": "2026-11-15T13:53:06.717Z"
+}

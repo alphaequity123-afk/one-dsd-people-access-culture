@@ -1,0 +1,95 @@
+{
+  "target": "code.components/development-pathways.tsx",
+  "kind": "surface",
+  "route": "components/development-pathways.tsx",
+  "sourceSha256": "adf6831e84993f9dbab50844483cf74d468b2f1642e3ed0bfe67c3940f0172c1",
+  "status": "needs_revision",
+  "reviewedFieldCount": 3,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "A question. A perspective. A meaningful change.",
+      "after": "Ask a question, consider another perspective, or introduce a change that matters.",
+      "reason": "Clarifies the thought process encouraged in pathways, connects each action (asking, considering, introducing) to specific staff behavior, and drops vague phrasing."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "From learning to equity in practice",
+      "after": "Apply what you learn to advance equity in practice.",
+      "reason": "Clarifies the purpose: using learning specifically to further equity goals in practice, making the transition from learning to doing explicit."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "Find a pathway for your question",
+      "after": "Choose a pathway that fits your question.",
+      "reason": "Improves specificity by guiding the user to select a pathway relevant to their individual question, avoiding the implication that any pathway will suffice."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The original text 'A question. A perspective. A meaningful change.' is lifted exactly from the source. The proposed replacement rewrites this as 'Ask a question, consider another perspective, or introduce a change that matters.', which adds new instructions ('Ask', 'consider', 'introduce') and expands the context, instead of sticking to the evocative, open-ended tone. The new version interprets and expands intent rather than preserving the original field's succinctness and neutrality, which is critical for slogan-like surface text. The proposed text is not directly supported by the source and subtly changes meaning."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The source has 'From learning to equity in practice.' The proposed 'Apply what you learn to advance equity in practice.' is more instructive and goal-directed, adding narrowness (application only for equity) and an imperative tone. The original phrase describes a journey or scope, not an instruction. The edit changes the tone and message."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "Source: 'Find a pathway for your question.' Proposal: 'Choose a pathway that fits your question.' Source offers a general discovery action, not a selection from specific matched options. 'Choose...that fits' suggests a fit/judgment that is not described in the source, and the implied call-to-action is less open. This introduces a nuance not found in the original."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1307,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 163,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1470
+    },
+    "review": {
+      "input_tokens": 1068,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 312,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1380
+    }
+  },
+  "createdAt": "2026-11-15T13:53:07.527Z"
+}

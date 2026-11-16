@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-11-15T14:06:35.396Z",
+  "results": [
+    {
+      "target": "learn.page",
+      "url": "https://one-people-access-culture.up.railway.app/learn?browse=all",
+      "status": 200,
+      "expectedFields": 6,
+      "visibleMatches": 1,
+      "passed": true,
+      "heading": "Learn"
+    },
+    {
+      "target": "learn.hub",
+      "url": "https://one-people-access-culture.up.railway.app/learn?browse=all",
+      "status": 200,
+      "expectedFields": 4,
+      "visibleMatches": 1,
+      "passed": true,
+      "heading": "Learn"
+    }
+  ]
+}

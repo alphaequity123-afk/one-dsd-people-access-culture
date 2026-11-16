@@ -1,0 +1,172 @@
+{
+  "target": "resource.ja-launch-embed-checklist",
+  "kind": "resource",
+  "route": "/library/ja-launch-embed-checklist",
+  "sourceSha256": "433da85794368b8700d4f8553ed4cf3a69bf8c74840981192c7b69d589b0c555",
+  "status": "needs_revision",
+  "reviewedFieldCount": 10,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Use it as a working document for your program, with a responsible person for each follow-up and a review date. This makes the next steps clear and accountable.",
+      "after": "Treat this checklist as a living document for your program. Assign a responsible person for each follow-up action and set a review date. This helps ensure that next steps are clearly defined, tracked, and that accountability is maintained throughout planning and implementation.",
+      "reason": "Added explanation for why assigning responsibility and a review date matters in ongoing program work and clarified the purpose of tracking next steps."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "People and purpose: who it is for; who may be missing; what result would show that a disparity was reduced rather than shifted elsewhere.",
+      "after": "People and purpose: Identify who the work is intended to serve, who might be unintentionally excluded, and what concrete outcome would demonstrate that a disparity was reduced instead of merely shifted to a different group.",
+      "reason": "Expanded reasoning to clarify why specifying intended users, potential exclusions, and a measurable outcome is important to equity goals."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Access: screen reader, keyboard, magnification tested; equally effective phone, in-person, or paper path; documents meet the accessible-document standard.",
+      "after": "Access: Confirm that people can use the service with screen readers, keyboards, and magnifiers. Provide alternatives through phone, in-person, or paper processes that work as effectively as the digital option. Check that all documents follow the accessible-document standard to enable equal participation.",
+      "reason": "Strengthened the explanation by clarifying what it means to test access, why functional alternatives should be equally effective, and how document standards support participation."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Language: languages people will need; vital documents identified for translation with human review; interpreter reachable at first contact.",
+      "after": "Language: Identify the languages required for your audience. Determine which documents are vital and require professional translation with human review. Make sure interpreters can be reached at the first point of contact to avoid language barriers.",
+      "reason": "Clarified the need for identifying necessary languages, specifying document translation standards, and offering interpreter access, giving the reasoning behind each item."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Time and effort: count the steps, documents, and visits from the person's point of view; consider when deadlines or office hours become barriers to eligibility.",
+      "after": "Time and effort: Map out each step, required document, and visit from the participant’s perspective. Consider how deadlines and office hours may create barriers to eligibility and explore options to reduce unnecessary steps or requirements.",
+      "reason": "Expanded to explain why tracking steps from the participant's view is necessary, and suggested reviewing processes to minimize barriers, not just identify them."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Evidence: current use and denial patterns by community, language, disability, and place; missing community knowledge named with a respectful way to get it.",
+      "after": "Evidence: Examine patterns of program use and denial by community, language, disability status, and geography. Identify where there are knowledge gaps about specific communities, and note how you plan to respectfully learn what is missing.",
+      "reason": "Clarified activities under 'Evidence' and explained the importance of understanding and addressing missing knowledge."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "Partners: Equity Director informed; accessibility and language access leads involved; community partners with purpose, authority, compensation, and report-back; Tribal consultation first where applicable.",
+      "after": "Partners: Notify the Equity Director and include leads for accessibility and language access. Collaborate with community partners who have relevant authority, a defined role, compensation, and opportunities to give feedback. When required, begin with Tribal consultation before other steps.",
+      "reason": "Clarified the reasons for involving specific partners, defined meaningful collaboration criteria, and provided clear order for Tribal consultation."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "body",
+        6
+      ],
+      "before": "Decision responsibility: who decides; which rights, rules, and obligations set the limits; what can still change if a rule must remain.",
+      "after": "Decision responsibility: Name who has authority for major decisions. Clearly state which legal rights, rules, or obligations apply and which aspects can be adjusted even if some requirements must stay fixed.",
+      "reason": "Clarified what is meant by decision responsibility and its importance for operational clarity and identifying areas open for adaptation."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The revised text introduces new claims about ongoing tracking and program implementation accountability that are not explicitly stated or implied in the original source. The source only calls for a working document with assignment and review for next steps; it does not warrant the expanded language about implementation tracking."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revised text rephrases and expands reasoning but stays within the source's intent. As an enhancement to practical application, this is acceptable."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The revision clarifies the checklist elements without exceeding the original meaning. It rewords the requirements but keeps the initial obligations intact."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The changes expand and clarify intent but align with the original content and do not add unsupported claims."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The revision clarifies the checklist step, adding suggestions to reduce barriers, which aligns with the original's spirit."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The text reframes the checklist item into a clear full sentence and elaborates the method, which is allowed under the stated program writing standard."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "The expanded wording provides a rationale for each partner and clarifies the sequence required for Tribal consultation, but it does not contradict or distort the source."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "The update clarifies the definition of decision responsibility and makes explicit what is meant by \"what can still change.\" It remains faithful to the original meaning."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1875,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 652,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2527
+    },
+    "review": {
+      "input_tokens": 1984,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 341,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2325
+    }
+  },
+  "createdAt": "2026-11-15T13:40:53.779Z"
+}

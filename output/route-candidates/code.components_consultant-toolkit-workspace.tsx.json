@@ -1,0 +1,81 @@
+{
+  "target": "code.components/consultant-toolkit-workspace.tsx",
+  "kind": "surface",
+  "route": "components/consultant-toolkit-workspace.tsx",
+  "sourceSha256": "63acab1d428c6e957438fd19409943fe274f522122a7187bdf49eb32488ec699",
+  "status": "model_checked",
+  "reviewedFieldCount": 34,
+  "changes": [
+    {
+      "fieldId": 2,
+      "path": [
+        "field3"
+      ],
+      "before": "This is the final saved copy. Reopen it as a draft to make changes and review it again.",
+      "after": "This is the final saved copy. If you need to make changes or add material, reopen it as a draft to update and review again.",
+      "reason": "Clarifies that reopening as draft is necessary to make any changes, which helps staff understand the review cycle and the need to maintain version integrity."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field4"
+      ],
+      "before": "Add the new material below. The same case and your typed notes are kept. Then run the analysis again.",
+      "after": "Add the new material below. Your case and any typed notes already entered will remain. After adding new content, run the analysis again to update the results.",
+      "reason": "Explains that existing work is preserved and clarifies the reason for rerunning analysis after adding material, supporting judgment about when prior findings need to be refreshed."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revised wording in field3 clarifies that users must reopen a final copy as a draft to make or add changes, explaining the process more explicitly. This is faithful to the workflow in the code, which disables editing unless the record is in draft state; the clarification helps staff understand the review cycle and is accurate to the implemented behavior."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The revised wording in field4 clarifies that the existing case and notes are preserved and explicitly states the need to run the analysis again to update the results after adding new content. The explanation supports user judgment and matches the preserve-and-reanalyze workflow expressed in the source. It remains true to the process."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 12971,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 220,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 13191
+    },
+    "review": {
+      "input_tokens": 11719,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 163,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 11882
+    }
+  },
+  "createdAt": "2026-11-15T13:52:49.799Z"
+}

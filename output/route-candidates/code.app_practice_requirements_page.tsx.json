@@ -1,0 +1,81 @@
+{
+  "target": "code.app/practice/requirements/page.tsx",
+  "kind": "surface",
+  "route": "/practice/requirements",
+  "sourceSha256": "7ff458b912867ac6211d6fc1f5451ce3df99da97fe92687c57b51a0982955ba8",
+  "status": "model_checked",
+  "reviewedFieldCount": 6,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "When a policy, service or practice is changing, the people responsible need to see both what is required and how the proposed work addresses it. Use this crosswalk to make those connections visible, including missing evidence and questions about authority.",
+      "after": "When a policy, service, or practice changes, the people doing the work need a clear record of the requirements and evidence that the proposed action meets them. The crosswalk helps you connect each requirement to its source and to the work under review. It also helps track missing evidence, open authority questions, and steps that still need decision or clarification. Keeping these together makes it easier to identify what to resolve before moving forward.",
+      "reason": "Clarified the roles involved, distinguished requirements, evidence, and need to track unresolved issues. Explained the purpose of collecting everything in one tool and the practical effect of doing so."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "Begin with applicable law and binding requirements, then current approved agency policy and delegated procedures. Keep guidance, examples and proposed commitments clearly identified. If sources conflict or applicability is uncertain, record the question and seek the responsible review before relying on an interpretation.",
+      "after": "Start by listing all applicable laws and binding requirements. Then add current approved DHS or DSD policies and any delegated procedures relevant to the work. Guidance documents, examples, and proposed commitments should be labeled and not mixed in with authority sources. If you find conflicting sources or cannot determine if a requirement applies, document the question. Bring unresolved questions to the responsible reviewer for a decision before relying on an interpretation.",
+      "reason": "Increased specificity about what to include and how to distinguish different types of sources. Stated the reason for documenting questions and involving responsible review, connected to why this process matters in agency work."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revision of field1 rephrases and expands slightly for clarity but does not introduce unsupported content. The meaning—that the crosswalk makes visible the requirements, sources, missing evidence, questions of authority, and decision points for a work change—is consistent with the source. The added detail about clarity and tracking outstanding issues falls within the source's scope and intent: 'Use this crosswalk to make those connections visible, including missing evidence and questions about authority.' Explaining the benefit ('makes it easier to identify what to resolve before moving forward') clarifies rather than changes the expected use or process."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The edit to field2 increases specificity by referencing 'DHS or DSD,' replaces 'Begin with' with 'Start by listing,' and uses slightly more explicit instructions. The request that 'guidance documents, examples, and proposed commitments should be labeled and not mixed in with authority sources' directly tracks 'Keep guidance, examples and proposed commitments clearly identified.' The instruction to 'document the question' and 'bring unresolved questions to the responsible reviewer for a decision before relying on an interpretation' follows the source guidance: 'record the question and seek the responsible review before relying on an interpretation.' There is no change of scope, deletion of required nuance, or unsupported addition."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2057,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 283,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2340
+    },
+    "review": {
+      "input_tokens": 1814,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 300,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2114
+    }
+  },
+  "createdAt": "2026-11-15T13:51:26.534Z"
+}

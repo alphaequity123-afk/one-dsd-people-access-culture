@@ -1,0 +1,112 @@
+{
+  "target": "resource.guide-one-dsd-measures",
+  "kind": "resource",
+  "route": "/library/guide-one-dsd-measures",
+  "sourceSha256": "92d6c7aa063003693d4667510259717148dcea5c0482158d716eddaac4bc5b27",
+  "status": "model_checked",
+  "reviewedFieldCount": 4,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Use the 21-measure framework to define evidence, its source, its limits, and who can act on it.",
+      "after": "Use the 21-measure framework to identify what counts as evidence, where the data comes from, its limits, and who is responsible for using it.",
+      "reason": "Clarifies the summary by specifying tasks: identify evidence, sources, limits, and responsible actors. Retains substantive meaning with improved specificity."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Use the 21-measure framework to define evidence, its source, its limits, and who can act on it.",
+      "after": "The 21-measure framework helps staff identify relevant evidence, understand the origin of data, track its boundaries, and determine who has the authority to act on it. This approach makes it easier to assess the adequacy of data and clarify who is responsible for decisions or follow-up.",
+      "reason": "Clarifies the function of the framework, connects the points to professional work, and adds reasoning on why these activities are important."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Staff throughout DHS can use these resources independently. The Equity and Inclusion Operations Consultant leads the program and offers guidance and feedback; staff and decision owners carry out their own work.",
+      "after": "DHS staff across divisions may use these resources directly in their work. The Equity and Inclusion Operations Consultant manages this program, offering guidance and feedback; staff and designated decision owners are expected to apply these tools in their assigned areas.",
+      "reason": "Clarifies who leads, who uses the resources, and the nature of responsibility. Specifies that staff apply tools in their work and shows leadership's role concretely."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "These program resources support analysis and planning. They do not replace official policy, required consultation, or the authority of the responsible office.",
+      "after": "These resources are designed to support review and planning but do not alter official policy, required consultations, or the governing authority of responsible offices. Staff should check existing policy and use these tools to strengthen but not replace established decision processes.",
+      "reason": "Provides specific guidance on the scope of these resources and clarifies why staff must maintain policy alignment. Adds reasoning on the role of these tools in analysis and planning."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revised summary rephrases for clarity (e.g., 'identify what counts as evidence' instead of 'define evidence'). This is an editorial improvement; there is no substantive policy change or unsupported claim. The original meaning and scope are preserved."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The body text expands the explanation. The original merely lists functions; the revision specifies tasks (identify evidence, origin, boundaries, authority), connects to responsibilities, and clarifies why these steps matter (to assess adequacy and clarify responsibility). All ideas are implied in the source. Acceptable as a clarification."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revised wording clarifies roles and expectations, but does not introduce or remove any parties, authorities, or limits. The statement that 'staff and designated decision owners are expected to apply these tools' reflects the source statement about carrying out their own work using these resources. The rewording is editorial and remains faithful."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The change restates that these resources do not replace policy or consultation, then adds guidance that staff 'should check existing policy and use these tools to strengthen but not replace established decision processes.' This addition interprets, not invents, a requirement. It is faithful to the clear intent of the original: program resources support but do not substitute for official rules."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1433,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 355,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1788
+    },
+    "review": {
+      "input_tokens": 1376,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 357,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1733
+    }
+  },
+  "createdAt": "2026-11-15T13:43:17.094Z"
+}

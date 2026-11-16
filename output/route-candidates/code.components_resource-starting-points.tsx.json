@@ -1,0 +1,81 @@
+{
+  "target": "code.components/resource-starting-points.tsx",
+  "kind": "surface",
+  "route": "components/resource-starting-points.tsx",
+  "sourceSha256": "84ce7b349d141c6e6ce6a70670c152eec266e7bad8b617db997e281b619a79d8",
+  "status": "needs_revision",
+  "reviewedFieldCount": 11,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Read the original DHS toolkit source",
+      "after": "View the original DHS toolkit reference",
+      "reason": "Clarified that this link provides access to the official DHS toolkit as a reference source, using familiar terminology and specifying its role. This avoids ambiguity with 'source,' which could imply policy authority rather than a reference document."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field4"
+      ],
+      "before": "Consider who is affected, compare choices, and prepare a reasoned recommendation.",
+      "after": "Identify affected groups, compare options, and prepare a clear recommendation.",
+      "reason": "Clarified what 'consider who is affected' entails, and replaced 'reasoned' with 'clear' to better reflect expectations for analysis and communication within DHS and DSD contexts. Added specificity by naming 'groups' and 'options' to guide more purposeful review."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The change from 'Read the original DHS toolkit source' to 'View the original DHS toolkit reference' is not supported by the source. The original wording ('source') comes directly from the provided code (label: 'Read the original DHS toolkit source'), which matches the code's intent to clearly signal the document's origin and authority. The change to 'reference' creates ambiguity and moves away from the precise language used in the code, and the source does not justify interpreting this as less than the source document or needing clarification."
+      },
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "The change from 'Consider who is affected, compare choices, and prepare a reasoned recommendation.' to 'Identify affected groups, compare options, and prepare a clear recommendation.' is not supported. The original code uses the language 'Consider who is affected, compare choices, and prepare a reasoned recommendation.', which provides a valid, readable summary corresponding to the entry-point function of the link. Switching to 'affected groups', 'options', and 'clear recommendation' narrows the focus and might change the nuance without being justified by the code or broader source context."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2114,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 172,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2286
+    },
+    "review": {
+      "input_tokens": 1656,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 278,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1934
+    }
+  },
+  "createdAt": "2026-11-15T13:56:13.934Z"
+}

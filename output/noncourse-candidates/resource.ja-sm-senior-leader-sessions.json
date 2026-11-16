@@ -1,0 +1,142 @@
+{
+  "target": "resource.ja-sm-senior-leader-sessions",
+  "kind": "resource",
+  "route": "/library/ja-sm-senior-leader-sessions",
+  "sourceSha256": "61f784f2b3f1a1436c4d2c5852fc76c3534ed8901e079202a74df5e6b2c17801",
+  "status": "needs_revision",
+  "reviewedFieldCount": 7,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Four sessions, one set of ground rules",
+      "after": "The session format establishes shared ground rules for open, reflective discussion among senior leaders.",
+      "reason": "Clarified the reason for the session and the function of the ground rules, directly connecting the format and purpose with professional specificity."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Remember. Voluntary. No attendance, no records of the discussion. No identity-based breakouts. No required disclosure. Disagreement carries no consequence. Reporting duties under Policies 1436 and 1329 still apply. The session decides nothing for the organization. Leaders act afterward through normal channels.",
+      "after": "Sessions are voluntary. No attendance is taken and the discussion is not recorded. Group membership is not determined by role or identity, and no one is required to disclose personal or confidential information. Disagreeing with others in the session has no direct consequence. However, mandatory reporting duties defined in Policies 1436 and 1329 still apply. The session itself does not make decisions for the organization. Any formal actions are taken afterward through existing agency channels.",
+      "reason": "Expanded and clarified phrases to explain why these requirements matter, what participation means in practice, and the operational boundaries. Maintained reference to relevant policies and post-session actions."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Every session. Say the opening script. Form small groups at random or by interest. Plan access first. Take down anything on the walls. Collect nothing. End with each person's own next step, kept by them.",
+      "after": "For each session: Start by reading the designated opening script. Organize participants into small groups, either randomly or by interest, but plan for any needed access accommodations in advance. Remove any written material from the walls before discussion. Do not collect written or electronic records from participants. At the end, each participant identifies their next individual step, which remains private to them.",
+      "reason": "Made instructions more specific and connected actions with their purpose: maintaining confidentiality, inclusion, and voluntary follow-up."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "The four sessions. Owner, budget, outcome: Who could stop a process? What's actually paid for? What result might we be wrong about? Measures: What would we report even if it didn't move? What can't we prove at our size? Shifting guidance: What's law, what's an agency position and what's our choice? What stays steady? Program integrity: Do we see confirmed results and access effects together? What do appeals teach us? What's our rule for public words?",
+      "after": "Session topics address key aspects of leadership decisions: \n- Owner, budget, outcome: Who could halt a process? What is financially supported, and which outcomes are not yet confirmed?\n- Measures: What data would we report regardless of its impact? What outcomes cannot be demonstrated with current capacity?\n- Shifting guidance: Which elements are set by law, which reflect agency positions, and what choices do staff have? What direction remains constant?\n- Program integrity: Do available evidence and access data tell the same story? What can be learned from appeals? What is our practice for public communications?",
+      "reason": "Clarified the scope and intent of each session topic and made each question more contextually grounded in the practice of agency leadership decisions."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Refer out. Tribal learning: ADSA and the Tribal liaison. Required training: the state's own training under Minn. Stat. 43A.21. Legal questions, including document retention: your legal staff.",
+      "after": "Consult other resources as needed. For topics involving Tribal matters, seek guidance from ADSA or the Tribal liaison. For mandatory supervisor and manager training, refer to the state's offerings under Minn. Stat. 43A.21. Legal uncertainties, including document retention, should be discussed with agency legal staff.",
+      "reason": "Explained the reason and approach to referring out, specifying what issues require which external expertise or training."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Do next. Pick one session topic, invite two or three peers and read the opening script aloud when you begin.",
+      "after": "Next steps: Select one session topic, invite two or three peer leaders, and begin the meeting by reading the opening script together.",
+      "reason": "Clarified who should participate in the next step and connected it directly to initiating the protocol."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The original 'whyItMatters' line is 'Four sessions, one set of ground rules.' The revised text introduces an explanation linking the session format to 'shared ground rules for open, reflective discussion,' which is an interpretive expansion. The source gives a headline summary; the change adds rationale about openness and reflection not directly in the source. This constitutes an unsupported clarification and shifts what the source emphasizes."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The explanation added to the operational constraints on session participation generally tracks and expands the bullet points from the original, adding specificity that does not misrepresent the original scope or rules. The expansions (such as clarifying operational boundaries and providing examples) are acceptable and supported by the source."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The expanded instructions provide specificity and connect actions to privacy and inclusion, which are reasonably inferred from the original text's structure. The rephrasing does not introduce unsupported claims or overreach beyond what 'plan access' and 'kept by them' mean contextually."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The revised content maintains the intent and scope of each session topic, clarifies the context, and does not introduce unsupported requirements or erase limitations. The wording is longer, but meaning and boundaries are retained as per the original questions."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The change rephrases and gives a more explicit rationale for 'refer out' directives without overstepping what the source permits. The mapping of topics to relevant resources (ADSA/Tribal liaison, statutory training, legal staff) is preserved, and the approach is justified."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The change merely clarifies who is intended as a peer and concretizes that the opening script is jointly read, which is a supported inference from the original job aid direction."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1848,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 618,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2466
+    },
+    "review": {
+      "input_tokens": 2008,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 408,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2416
+    }
+  },
+  "createdAt": "2026-11-15T13:44:26.797Z"
+}

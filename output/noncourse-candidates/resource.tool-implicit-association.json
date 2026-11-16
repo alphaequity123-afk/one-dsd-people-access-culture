@@ -1,0 +1,127 @@
+{
+  "target": "resource.tool-implicit-association",
+  "kind": "resource",
+  "route": "https://implicit.harvard.edu/implicit/",
+  "sourceSha256": "77d686a1d90dff6ba84b2b96af0f8fb4878d05bbdaac1e3ba03a00ce81cffd40",
+  "status": "model_checked",
+  "reviewedFieldCount": 6,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "These public research tools demonstrate automatic associations, supporting individual reflection on how bias can operate without awareness. They are not a measure of a person’s bias, do not predict behavior on their own, and are never a workplace assessment.",
+      "after": "These widely used research tools show how automatic associations can influence responses, often outside awareness. They are designed for individual reflection and are not appropriate for evaluating a person’s bias, predicting behavior, or use in any workplace assessment.",
+      "reason": "Clarifies the tools' function, context, and limitations, avoids implying they precisely measure bias, and specifies they are unsuitable for formal evaluation."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Owner and publisher: research collaborations such as Project Implicit. Status: public research tools with their own terms.",
+      "after": "Owner and publisher: Research collaborations, including Project Implicit. Status: Public research tools governed by their own site terms.",
+      "reason": "Clarifies entities and distinguishes ownership from status, improving specificity for staff referencing authoritative sources."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Purpose: demonstrate that automatic associations exist and can differ from stated beliefs.",
+      "after": "Purpose: To illustrate that people can hold automatic associations that may differ from their reported beliefs. This supports users in considering how bias might operate unconsciously.",
+      "reason": "Joins the demonstration of automatic associations with their practical reflection purpose, making the application for staff clearer."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Evidence base and limits: substantial research on the existence of implicit associations; considerable debate about individual-level reliability and prediction of behavior. Treat results as a reflection prompt, not a diagnosis.",
+      "after": "Evidence base and limits: There is extensive research showing implicit associations exist, but substantial debate continues regarding the tools’ reliability for measuring individuals or predicting specific behaviors. Results are for reflection, not for diagnosis or assessment.",
+      "reason": "More explicitly details what is proven and what remains debated, and why results should be used only for reflection, supporting precise use by DHS and DSD staff."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Misuse risks: labeling a person as biased, using results in hiring or evaluation, treating a single result as stable.",
+      "after": "Risks if misused: Results could be misinterpreted to label someone as biased, inappropriately influence workplace decisions, or be read as a permanent trait. Misuse undermines personal trust and organizational fairness.",
+      "reason": "Clarifies consequences and organizational impact if misapplied, providing stronger context for staff."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revised summary shifts minor emphasis ('can influence responses' vs. 'supporting reflection'), but accurately reflects both the tool’s educational aim and critical limitations, and precisely states no appropriateness for evaluation or diagnosis, as the source supports."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The change clarifies the plural nature of collaborations and that the tools are governed by their own site terms, with no impact on source meaning."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The expansion explicitly states the purpose of self-reflection on unconscious bias, connected to automatic associations, which is consistent with the source intent and public documentation."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "This rewording maintains source meaning by stressing the contrast: robust research supporting existence of implicit associations, ongoing debate regarding individual measurement, and strong limits on interpretation—as intended in the full source text."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The listing of misuse risks expands the consequences to include personal trust and organizational fairness. This is a reasonable professional extension of the explicitly stated misuse risks in the source, adding only consequences, not new risks or conditions."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1575,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 441,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2016
+    },
+    "review": {
+      "input_tokens": 1488,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 287,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1775
+    }
+  },
+  "createdAt": "2026-11-15T13:42:51.295Z"
+}

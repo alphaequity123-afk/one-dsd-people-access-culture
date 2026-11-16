@@ -1,0 +1,459 @@
+{
+  "target": "code.app/learn/equity-toolkit/page.tsx",
+  "kind": "surface",
+  "route": "/learn/equity-toolkit",
+  "sourceSha256": "fd8f1d67855308190cdc080aef8a2ea5ca345c4076400b9bd3f087e9c3334b81",
+  "status": "needs_revision",
+  "reviewedFieldCount": 30,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Connect an analysis with applicable requirements",
+      "after": "Connect your analysis to specific requirements",
+      "reason": "This wording clarifies whose analysis is being supported and emphasizes the staff action of connecting analysis, in line with the explanatory purpose."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Use the requirements crosswalk to distinguish the program constitution, published policy, service standards and local implementation priorities. Record what applies, what needs confirmation and who can authorize a decision.",
+      "after": "Use the requirements crosswalk to compare the program constitution, published policy, service standards, and local implementation priorities. Record which requirements apply, which need to be confirmed, and who has the authority to make decisions.",
+      "reason": "Reworded for clarity, parallel structure, and to specify the purpose of checking and recording requirements and authorization."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "Follow DSD examples connecting the Equity Outcome Map and ADSA goals with a service notice, support planning, contracting, and workforce learning.",
+      "after": "Review DSD examples that link the Equity Outcome Map and ADSA goals to practical tasks such as service notices, support planning, contracting, and workforce development.",
+      "reason": "Focuses on practical connections and clarifies the types of work involved. Replaces 'workforce learning' with 'workforce development' for increased clarity."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": "Use the structural analysis workspace to map decision points, examine requirements and responsibilities, and turn evidence into an action with an owner and a review date.",
+      "after": "Use the structural analysis workspace to outline decision points, review requirements and roles, and document what actions arise from evidence, who is responsible, and when review will occur.",
+      "reason": "Clarifies the purpose of each action and the practical outputs expected from using the workspace."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field4"
+      ],
+      "before": "Use the National Culturally and Linguistically Appropriate Services Standards to prepare service-specific actions, distinguish requirements to confirm, and identify the people responsible and ways to learn from the change.",
+      "after": "Apply the National Culturally and Linguistically Appropriate Services Standards to develop service-specific actions. Note which requirements need confirmation and identify responsible staff and opportunities to learn from implemented changes.",
+      "reason": "Replaces passive with active wording, clarifies that staff use standards to both develop actions and track responsibilities."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field5"
+      ],
+      "before": "Use the One DSD presentation to explore equity analysis in policy work. Read the slides here or download a copy for a team discussion.",
+      "after": "Refer to the One DSD presentation for examples of equity analysis in policy review. You can read the slides here or download them to guide a team discussion.",
+      "reason": "Clarifies that the presentation is for example and reference, specifying the benefit of both viewing and downloading."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field6"
+      ],
+      "before": "Follow a practice CFSS notice revision, see the completed notes, and try a different decision.",
+      "after": "Watch a practice scenario revising a CFSS notice, see completed notes, and consider how trying a different decision affects the outcome.",
+      "reason": "Adds specificity about what staff observe and the intended learning from seeing a different decision in the scenario."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "field7"
+      ],
+      "before": "Choose a starting question, compare options, and save your analysis with a practice plan.",
+      "after": "Select a starting question, compare possible options, and record your analysis in a draft practice plan.",
+      "reason": "Clarifies each step in working through a decision, aligning with expected staff actions."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "field8"
+      ],
+      "before": "Follow one decision through eight connected lessons, individual practice and working notes.",
+      "after": "Trace a single decision through eight connected lessons, with individual practice opportunities and working notes for each stage.",
+      "reason": "Clarifies the structure and progression of the learning series and what is meant by working notes."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "field10"
+      ],
+      "before": "Have a policy, notice or plan in hand?",
+      "after": "Do you have a policy, notice, or plan ready for review?",
+      "reason": "Invites the staff directly to consider preparation for analysis, matching the implied action."
+    },
+    {
+      "fieldId": 11,
+      "path": [
+        "field11"
+      ],
+      "before": "A completed task is only part of the story",
+      "after": "A completed task does not tell the full story",
+      "reason": "This phrasing directly links to analysis by indicating that task completion does not provide full understanding of outcomes."
+    },
+    {
+      "fieldId": 12,
+      "path": [
+        "field12"
+      ],
+      "before": "A team revising a service notice needs to know whether people can understand it and act on it. The toolkit helps connect that question to evidence, possible barriers and a better-supported choice.",
+      "after": "When a team revises a service notice, they must consider whether people can understand and act on it. The toolkit helps link these questions to evidence of barriers and supports a more informed choice.",
+      "reason": "Clarifies staff responsibility within the revision process and the role of the toolkit in facilitating evidence-based decisions."
+    },
+    {
+      "fieldId": 13,
+      "path": [
+        "field13"
+      ],
+      "before": "“The notice was sent.” This records an activity. It does not establish understanding or accessibility.",
+      "after": "“The notice was sent.” This statement records that the task was completed, but it does not show whether the intended audience understood the notice or found it accessible.",
+      "reason": "Explains specifically what the record omits, reinforcing the purpose of deeper analysis."
+    },
+    {
+      "fieldId": 14,
+      "path": [
+        "field15"
+      ],
+      "before": "Whose next step is unclear? Which language or format barriers need attention? What do the people receiving the notice say would help?",
+      "after": "Analysis should clarify whose next steps are uncertain, identify any language or format barriers, and seek input from the people receiving the notice about what would help them.",
+      "reason": "Clarifies actionable questions for staff to consider and the importance of recipient perspectives."
+    },
+    {
+      "fieldId": 15,
+      "path": [
+        "field16"
+      ],
+      "before": "A shorter notice can reduce reading effort, but removing an explanation may create confusion. Compare options against required content and people’s experience, state what the evidence does and does not establish, and identify what would show improvement after an authorized change.",
+      "after": "Shortening a notice can make it easier to read, but removing important explanations may lead to confusion. Compare options based on content requirements and people’s experiences. Clearly state what the evidence supports or does not support, and note what changes would indicate improvement after authorized adjustments.",
+      "reason": "Breaks up complex instructions and clarifies expectations of evidence use and outcome tracking."
+    },
+    {
+      "fieldId": 16,
+      "path": [
+        "field17"
+      ],
+      "before": "See the reasoning in the worked example",
+      "after": "Review the reasoning in the worked example",
+      "reason": "More active voice indicates the instructional step for the staff."
+    },
+    {
+      "fieldId": 17,
+      "path": [
+        "field18"
+      ],
+      "before": "Choose the support your work needs",
+      "after": "Choose support tools for your analysis",
+      "reason": "Clarifies that the section aids tool selection for analysis."
+    },
+    {
+      "fieldId": 18,
+      "path": [
+        "field19"
+      ],
+      "before": "Use these resources alongside an analysis. Begin with the question you are working on; you can return to the others as needed.",
+      "after": "Use these resources to support your analysis. Start with the resource relevant to your immediate question, and return to others as your work continues.",
+      "reason": "Specifies the purpose of resources and when to use them."
+    },
+    {
+      "fieldId": 19,
+      "path": [
+        "field20"
+      ],
+      "before": "The companion podcast walks through the toolkit in conversation, with a full transcript. It plays in the audio library.",
+      "after": "The companion podcast explains the toolkit through staff conversation and includes a full transcript. It is available in the audio library.",
+      "reason": "Specifies who is in conversation and underlines that the transcript supports different accessibility needs."
+    },
+    {
+      "fieldId": 20,
+      "path": [
+        "field21"
+      ],
+      "before": "Listen to the companion podcast",
+      "after": "Access the companion podcast",
+      "reason": "Plainly indicates the resource action; avoids imperative and repetitive language."
+    },
+    {
+      "fieldId": 21,
+      "path": [
+        "field22"
+      ],
+      "before": "Connect the analysis with your wider work",
+      "after": "Relate your analysis to broader work",
+      "reason": "Directs the staff to connect their specific analysis with wider department or division efforts."
+    },
+    {
+      "fieldId": 22,
+      "path": [
+        "field23"
+      ],
+      "before": "The ADSA goals and work plan provide context for applying an analysis. They are available whenever useful; you can start the example or your own draft directly.",
+      "after": "The ADSA goals and work plan supply context for analysis. Refer to them as needed to guide your example or an independent draft.",
+      "reason": "Clarifies that goals and plans assist the reviewer when needed and that both example and independent work are supported."
+    },
+    {
+      "fieldId": 23,
+      "path": [
+        "field24"
+      ],
+      "before": "Explore cultural context for your analysis",
+      "after": "Review cultural context for your analysis",
+      "reason": "Invites a practical review of cultural context, in line with DHS analysis practice."
+    },
+    {
+      "fieldId": 24,
+      "path": [
+        "field25"
+      ],
+      "before": "Aging and Disability Services Administration six goals and work plan",
+      "after": "Aging and Disability Services Administration: six goals and work plan",
+      "reason": "Adds a clarifying colon for document titling convention."
+    },
+    {
+      "fieldId": 25,
+      "path": [
+        "field26"
+      ],
+      "before": "Explore operationalizing equity in everyday work",
+      "after": "Explore equity in day-to-day work",
+      "reason": "'Day-to-day work' offers a clearer alternative to 'everyday work' for this context."
+    },
+    {
+      "fieldId": 26,
+      "path": [
+        "field27"
+      ],
+      "before": "Download or share this toolkit",
+      "after": "Download or share the toolkit",
+      "reason": "Clarifies action and object; omits unnecessary wording."
+    },
+    {
+      "fieldId": 27,
+      "path": [
+        "field28"
+      ],
+      "before": "Get a link to share this toolkit",
+      "after": "Copy a link to share the toolkit",
+      "reason": "Clarifies the staff action (copy) and the toolkit as the object being shared."
+    },
+    {
+      "fieldId": 28,
+      "path": [
+        "field29"
+      ],
+      "before": "The shared link opens the Equity Analysis Toolkit on its own, so you can send it to someone without the rest of the program.",
+      "after": "The shared link opens the Equity Analysis Toolkit directly, making it easier to send to someone who does not need access to the rest of the program.",
+      "reason": "Clarifies the purpose and practical use case for the staff member."
+    },
+    {
+      "fieldId": 29,
+      "path": [
+        "field30"
+      ],
+      "before": "Continue to practice and resources",
+      "after": "Continue to practice and resource tools",
+      "reason": "Clarifies that the next section includes resource tools as well as practice activities."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed change 'Connect your analysis to specific requirements' alters both the wording and, critically, the specificity and professional neutrality of the original. The source wording ('Connect an analysis with applicable requirements') is intentionally generic because it supports program-wide contexts, not only the reader's specific work. The change personalizes to 'your analysis' and 'specific requirements,' potentially narrowing the range from the program's intent (which may not always be about an individual staff analysis) and should not be accepted without program direction in the source. The source language should be retained."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "This change ('compare the program constitution, published policy, ...') is a minor stylistic clarification and is supported by the source's intent."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The proposed rewrite replaces 'workforce learning' with 'workforce development', which changes the meaning in a DHS/DSD context. 'Workforce learning' in the source refers specifically to training and learning activities, while 'workforce development' is a broader and different policy concept. Do not substitute terms; retain the original wording."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "Change clarifies outputs but retains accurate meaning and is justified."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "Change does not add or remove requirements, and clarifies responsibilities. Acceptable."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "Change clarifies usage and is consistent with original meaning."
+      },
+      {
+        "fieldId": 6,
+        "severity": "blocker",
+        "finding": "The change to 'consider how trying a different decision affects the outcome' introduces an unsupported instructional step. The source ('try a different decision') does not imply or require the analysis of effect/outcome. Stick to the original language."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "The change is consistent in specifying steps and retains scope."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "New wording is faithful to the original and clearer."
+      },
+      {
+        "fieldId": 10,
+        "severity": "note",
+        "finding": "Minor, acceptable change in tone consistent with plain language guidance."
+      },
+      {
+        "fieldId": 11,
+        "severity": "note",
+        "finding": "Stylistic clarification. No policy change."
+      },
+      {
+        "fieldId": 12,
+        "severity": "note",
+        "finding": "Paraphrase is faithful and acceptable."
+      },
+      {
+        "fieldId": 13,
+        "severity": "note",
+        "finding": "More specific clarification is supported; change is acceptable."
+      },
+      {
+        "fieldId": 14,
+        "severity": "blocker",
+        "finding": "The rewritten field omits several direct actionable example questions from the source. The original provides specific, direct questions ('Whose next step is unclear? Which language or format barriers need attention?...'), which must be retained and not replaced with more generic process advice."
+      },
+      {
+        "fieldId": 15,
+        "severity": "note",
+        "finding": "Breaks up guidance for clarity, preserves meaning."
+      },
+      {
+        "fieldId": 16,
+        "severity": "note",
+        "finding": "Improves specificity of instructional call."
+      },
+      {
+        "fieldId": 17,
+        "severity": "note",
+        "finding": "Clarifies section purpose in context."
+      },
+      {
+        "fieldId": 18,
+        "severity": "note",
+        "finding": "A stylistic rewrite with equivalent scope and intent."
+      },
+      {
+        "fieldId": 19,
+        "severity": "note",
+        "finding": "Clarifies podcast context, acceptable."
+      },
+      {
+        "fieldId": 20,
+        "severity": "note",
+        "finding": "Changing 'Listen to' to 'Access' is a style choice and not a blocker."
+      },
+      {
+        "fieldId": 21,
+        "severity": "note",
+        "finding": "Reworded for clarity, retains intent."
+      },
+      {
+        "fieldId": 22,
+        "severity": "note",
+        "finding": "No policy or meaning shift detected."
+      },
+      {
+        "fieldId": 23,
+        "severity": "note",
+        "finding": "Stylistic rewording in line with equity analysis practice."
+      },
+      {
+        "fieldId": 24,
+        "severity": "note",
+        "finding": "Document titling clarification is minor and acceptable."
+      },
+      {
+        "fieldId": 25,
+        "severity": "note",
+        "finding": "Change in phrase (day-to-day/everyday) does not block."
+      },
+      {
+        "fieldId": 26,
+        "severity": "note",
+        "finding": "Change is minor and does not affect scope or clarity."
+      },
+      {
+        "fieldId": 27,
+        "severity": "note",
+        "finding": "Acceptable clarification of staff action."
+      },
+      {
+        "fieldId": 28,
+        "severity": "note",
+        "finding": "Refines the explanation, no change in scope or implication."
+      },
+      {
+        "fieldId": 29,
+        "severity": "note",
+        "finding": "Change in wording is minor and maintains accuracy."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 4654,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 1491,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 6145
+    },
+    "review": {
+      "input_tokens": 5499,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 916,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 6415
+    }
+  },
+  "createdAt": "2026-11-15T13:50:07.612Z"
+}

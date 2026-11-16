@@ -1,0 +1,95 @@
+{
+  "target": "code.components/program-connections.tsx",
+  "kind": "surface",
+  "route": "components/program-connections.tsx",
+  "sourceSha256": "066e8932ab85516fb7203e27639d745f4a1535fd7758b5bb4ac945f231ce20d9",
+  "status": "needs_revision",
+  "reviewedFieldCount": 6,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field1"
+      ],
+      "before": "Connection, learning, and practical change belong together. Amplify Equity and the One DSD Team offer different ways to contribute to the same divisional community and connected One DSD program.",
+      "after": "Connection, learning, and practical change work best when linked. Amplify Equity and the One DSD Team each offer a distinct way to participate in our divisional community and the broader One DSD program. By engaging with either or both, staff can influence how we approach shared challenges, learn together, and support one another as colleagues across Disability Services Division.",
+      "reason": "Clarified the connections between learning, action, and community, making the divisional context explicit. Improved professionalism and specificity by framing the value of participation in terms of staff influence and mutual support, as relevant to DSD work."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field2"
+      ],
+      "before": "A conversation can surface a question about how work happens. When participants want to carry it forward, the One DSD Team can help examine the question, explore options, and connect with people who can act.",
+      "after": "A discussion in Amplify Equity might raise a question about how we work. If participants want to develop it further, the One DSD Team can help clarify the question, consider possible approaches, and connect with those positioned to make decisions or changes. This process increases the likelihood that concerns or ideas translate into practical steps.",
+      "reason": "Improved the connection between conversation and organizational action. Specified the roles of both groups and added why escalation to the team matters: to move from raising an issue toward evaluating and implementing possible changes."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field3"
+      ],
+      "before": "The team brings back useful resources, questions for fresh perspectives, invitations to learn, and updates on ideas people shared. That learning can spark another conversation or possibility.",
+      "after": "The One DSD Team shares back new resources, requests for input, opportunities to learn, and updates on ideas raised in the community. These exchanges provide fresh perspectives and can prompt further conversations, supporting ongoing learning and program improvement.",
+      "reason": "Expanded on the loop by clarifying the value of two-way exchange: it informs the group, generates new discussion, and supports program improvement. Made connections to practical learning and program relevance more explicit."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The rewritten text (\"Connection, learning, and practical change work best when linked. Amplify Equity and the One DSD Team each offer a distinct way to participate in our divisional community and the broader One DSD program. By engaging with either or both, staff can influence how we approach shared challenges, learn together, and support one another as colleagues across Disability Services Division.\") goes beyond the source. The source does not make participation explicitly about \"influence,\" \"mutual support,\" or \"approach shared challenges\"—those are interpretive, outcome-based additions. The source frames the value as \"different ways to contribute to the same... community\" and does not ascribe distinct influence or agency (\"influence how we approach shared challenges\"). Scope has broadened beyond the factual, neutral phrasing of the original, and changes the policy implications of participation."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The revised field changes both source meaning and detail: (1) The original is neutral—\"A conversation can surface a question about how work happens. When participants want to carry it forward, the One DSD Team can help examine the question, explore options, and connect with people who can act.\" The rewrite specifies the context as \"Amplify Equity\" and interprets escalation as for 'those positioned to make decisions or changes,' which adds hierarchy and process not present in source. (2) The claim 'increases the likelihood that concerns or ideas translate into practical steps' is a material new claim about the effectiveness of the process, not supported by original. Original text is careful to just say there is an offer to examine, explore, and connect, not a functional outcome."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The rewritten field overstates the scope and purpose of the team's return: The source says, \"The team brings back useful resources, questions for fresh perspectives, invitations to learn, and updates on ideas people shared. That learning can spark another conversation or possibility.\" The new version expands to \"shares back new resources, requests for input, opportunities to learn, and updates on ideas raised in the community. These exchanges provide fresh perspectives and can prompt further conversations, supporting ongoing learning and program improvement.\" This introduces new functions (\"requests for input,\" \"program improvement\") and asserts broader, ongoing change. Source describes a cycle of learning and possibility, not an outcome tied to program improvement or solicitation of feedback."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1857,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 358,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2215
+    },
+    "review": {
+      "input_tokens": 1724,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 521,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2245
+    }
+  },
+  "createdAt": "2026-11-15T13:55:45.366Z"
+}

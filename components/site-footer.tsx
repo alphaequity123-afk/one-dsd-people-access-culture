@@ -6,6 +6,7 @@ import { consultationIntakeEnabled } from "@/lib/intelligence/consult/availabili
 import { PROGRAM } from "@/lib/constants";
 import { requestedProductContext } from "@/lib/product/request-context";
 import { displayProgramName } from "@/lib/brand/legacy-program-name";
+import { withoutSystemNotices } from "@/lib/content/work-guidance";
 
 /** The footer identity line follows the selected program view (One DHS or One DSD), matching the header wordmark. */
 function brandForContext(text: string, oneDsd: boolean): string {
@@ -42,7 +43,7 @@ export async function SiteFooter() {
             <li><Link href={copy.escalationHref}>{copy.escalationLabel}</Link></li>
           </ul>
         </div>
-        <div><p className="kicker">{copy.privacyHeading}</p><p className="m-0 text-sm">{copy.privacyText}</p></div>
+        <div><p className="kicker">{copy.privacyHeading}</p><p className="m-0 text-sm">{withoutSystemNotices(copy.privacyText)}</p></div>
       </div>
       <nav className="wrap footer-bottom" aria-label="About the program"><Link href="/about">About</Link><Link href="/start#new-to-dsd">Program orientation</Link><Link href="/operationalizing-equity">Operationalizing equity</Link><Link href="/equity-policy">DHS equity policy</Link>
         <Link href="/equity-framework">Equity Strategic Framework</Link><Link href="/understanding-dhs">Understanding DHS</Link></nav>

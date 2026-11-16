@@ -1,0 +1,67 @@
+{
+  "target": "code.app/practice/clas/page.tsx",
+  "kind": "surface",
+  "route": "/practice/clas",
+  "sourceSha256": "531dbbdf3526faf55fccd05b4e27a34680ecc5a0e4f1aae7f9df25b855e6ff3d",
+  "status": "needs_revision",
+  "reviewedFieldCount": 9,
+  "changes": [
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": "CLAS means culturally and linguistically appropriate services. Use the standards as a reference for examining communication, workforce preparation, community participation and service improvement. Confirm which standards are relevant to your work and which separate legal, policy or contract requirements apply; this worksheet does not make every standard binding for every service.",
+      "after": "CLAS stands for culturally and linguistically appropriate services. Use the standards to examine how you address communication, train and support your workforce, involve community members, and improve services. Review which CLAS standards apply to your specific work, then check for other legal, policy, or contract requirements that may also affect your decisions. This worksheet is a tool to guide your review, not a set of mandatory standards for every situation.",
+      "reason": "Revised for clarity and specificity. Breaks up long sentences, ties each main standard to familiar DSD work, and explains how the worksheet serves as a guide rather than a requirement. Explains why staff should check both the standards and other requirements."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "The edited version introduces new phrasing and interpretations not present in the original source. The original says: 'Use the standards as a reference for examining communication, workforce preparation, community participation and service improvement.' The revision expands this into a sequence of explanations: 'Use the standards to examine how you address communication, train and support your workforce, involve community members, and improve services.' While intended for clarity, this is not strictly source-backed and shifts the language from a reference overview to explicit process directions, which changes nuance and practical implication.\n\nAdditionally, the revised text: 'Review which CLAS standards apply to your specific work, then check for other legal, policy, or contract requirements that may also affect your decisions. This worksheet is a tool to guide your review, not a set of mandatory standards for every situation.' The original: 'Confirm which standards are relevant to your work and which separate legal, policy or contract requirements apply; this worksheet does not make every standard binding for every service.' The edit breaks the parallelism and slightly changes meaning with 'may also affect your decisions' (not source text) and 'every situation' (instead of the original 'every service'). The tone and scope are altered, and the edit's specificity about how to use the worksheet is not present in the source.\n\nThis exceeds editorial clarity: it reframes source intent in ways not strictly justified by the text. Source wording must be preserved."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2142,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 205,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2347
+    },
+    "review": {
+      "input_tokens": 1750,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 312,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2062
+    }
+  },
+  "createdAt": "2026-11-15T13:51:22.730Z"
+}

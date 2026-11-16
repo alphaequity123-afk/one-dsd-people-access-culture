@@ -1,0 +1,95 @@
+{
+  "target": "community-brief.african-american",
+  "kind": "surface",
+  "route": "/minnesota-communities/african-american",
+  "sourceSha256": "02e065b8ec24d008c61e4b3f235fb11ece7ca846d3e7be55bace1046ee9f82fc",
+  "status": "model_checked",
+  "reviewedFieldCount": 32,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "whoAndWhere"
+      ],
+      "before": "U.S.-born African Americans in Minnesota carry the history of enslavement, the Great Migration, the destruction of Rondo, Northside Minneapolis, policing, and the murder of George Floyd. Minnesota ranks high on quality of life and produces some of the worst racial gaps in the country in education, wealth, homeownership, and criminal legal contact; this has been called the Minnesota Paradox.",
+      "after": "Many U.S.-born African Americans in Minnesota have deep roots shaped by historical events such as enslavement, the Great Migration, the destruction of the Rondo neighborhood in St. Paul, patterns of displacement in North Minneapolis, and repeated encounters with policing—including the murder of George Floyd. Despite Minnesota’s high ranking in overall quality-of-life measures, the state has some of the sharpest racial disparities in the nation. Gaps in education outcomes, household wealth, homeownership, and interactions with the criminal legal system affect Black Minnesotans at rates that contrast starkly with statewide averages. This complex contrast is often referred to as the “Minnesota Paradox.”",
+      "reason": "Clarifies the connection between historical events, local context, and current outcomes, making the explanation more specific and explicit for staff. Adds detail about affected communities and why the term 'Minnesota Paradox' applies."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Color-blind approaches can hide the unequal results a process continues to produce, including disproportionate out-of-home placement. Minnesota law on African American family preservation requires active efforts and family cultural values in case planning; a training is not a substitute.",
+      "after": "Approaches that ignore race can miss how existing processes create unequal results—including the overrepresentation of African American children in out-of-home placements. Minnesota’s statute on African American family preservation makes active, individualized engagement and incorporation of family cultural values part of legally required case planning and reunification. Attending a training is not enough to meet these statutory requirements; actual practice must reflect these principles.",
+      "reason": "Improves specificity about the consequences of color-blind approaches and clarifies the statutory requirements and their implications for daily work."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "withinGroupDiversity"
+      ],
+      "before": "African immigrants and refugees—including Liberian, Nigerian, Ethiopian, Ghanaian, Somali, Oromo, and other communities—come from different nations, languages, and class backgrounds, and may have different relationships to 'Black' identity in the United States. These communities are not interchangeable.",
+      "after": "African immigrants and refugees—including Liberian, Nigerian, Ethiopian, Ghanaian, Somali, Oromo, and other communities in Minnesota—bring distinct national origins, languages, and socioeconomic backgrounds. These communities may define or relate to 'Black' identity differently than U.S.-born African Americans. Each group is shaped by different migration histories, family structures, and experiences with U.S. systems. Do not assume interchangeability between African immigrant communities and U.S.-born Black Minnesotans when considering community strengths or designing interventions.",
+      "reason": "Expands on within-group differences by connecting these distinctions directly to program work and system involvement."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revision to the 'whoAndWhere' field adds local detail (such as specifying Rondo as a neighborhood in St. Paul and language about patterns of displacement in North Minneapolis), clarifies the historical influences, and explicitly associates these histories with current disparities. The expanded phrase \"repeated encounters with policing—including the murder of George Floyd\" is consistent with the source's intent and reflects Minnesota context, as the murder of George Floyd is a defining, widely acknowledged event in discourse about Black Minnesotans. The new language on 'the Minnesota Paradox' simply expands rather than misrepresents the original meaning."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revised 'whyItMatters' correctly grounds the explanation in Minnesota law (citing the need for 'active, individualized engagement and incorporation of family cultural values' as statutory requirements) and adds clarity that training alone does not satisfy the legal obligations. This fits the source's reference to the law and maintains the boundary that program staff and this resource do not interpret statute."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "For 'withinGroupDiversity', the edit increases the explanatory value by tying within-group differences to casework ('when considering community strengths or designing interventions') and clarifies that experiences, definitions, and relationships to 'Black' identity can vary. The edit does not erase or misstate distinctions described in the source and treats program implications accurately."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3247,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 505,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3752
+    },
+    "review": {
+      "input_tokens": 2260,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 310,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2570
+    }
+  },
+  "createdAt": "2026-11-15T13:40:16.247Z"
+}

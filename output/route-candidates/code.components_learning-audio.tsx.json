@@ -1,0 +1,67 @@
+{
+  "target": "code.components/learning-audio.tsx",
+  "kind": "surface",
+  "route": "components/learning-audio.tsx",
+  "sourceSha256": "a4ef6055eec73f080d8c4a6c4231a7ec8fada38a3d939f858e93d9eb7420e52e",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "This recording isn’t playing right now. You can read the words below or try again later.",
+      "after": "This audio recording did not play. You can review the transcript below or try playing the file again later.",
+      "reason": "The revision clarifies the practical options for staff when the audio fails: reviewing the transcript or attempting playback again. It avoids assumptions about the cause and explains the reason for displaying this message. The wording is direct, professional, and avoids unnecessary repetition."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The existing source message ('This recording isn’t playing right now. You can read the words below or try again later.') is precise and directly describes the condition of playback failure. The proposed revision ('This audio recording did not play. You can review the transcript below or try playing the file again later.') changes the characterization of the error—from a present, recoverable unavailability to an implication that the file attempted to play and definitely 'did not play.' The change also reframes the guidance from 'words below' to 'transcript below,' which is not directly supported by the component: the component just states 'the words below,' not whether these words come from a transcript, a summary, or another format, and does not label them as such. Thus, the proposed change includes unsupported claims about the nature of the fallback and the state of the error, contrary to the review standard. The original message stays closer to the minimal evidence in the code and avoids overstating either the severity or the fallback mode."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1248,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 96,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1344
+    },
+    "review": {
+      "input_tokens": 956,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 243,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1199
+    }
+  },
+  "createdAt": "2026-11-15T13:54:06.809Z"
+}

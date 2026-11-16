@@ -1,0 +1,67 @@
+{
+  "target": "resource.ja-report-back",
+  "kind": "resource",
+  "route": "/library/ja-report-back",
+  "sourceSha256": "6b3593b986ed4939a9e74c588d22ef2467993a9d86be147c47378b539782b046",
+  "status": "needs_revision",
+  "reviewedFieldCount": 8,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "DSD's engagement review found that people rarely learned what happened after they gave input. Closing that loop is the difference between engagement and extraction.",
+      "after": "People who participate in engagement efforts often do not hear what happened as a result of their input. When DSD staff share back what was heard, what changed, and the reasons behind what could or could not change, it demonstrates respect for participants’ time and knowledge. Reporting back is necessary to build trust and helps distinguish a genuine engagement process from one that merely collects information without responding to it.",
+      "reason": "Expands on why closing the feedback loop matters, grounding it in respect, trust, and specific outcomes relevant to DSD staff. Clarifies the difference it makes in practice."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The proposed replacement for the 'whyItMatters' field removes the direct reference to DSD's engagement review as the immediate source and generalizes the context from a specific review finding to a broader statement about engagement. The original text: 'DSD's engagement review found that people rarely learned what happened after they gave input. Closing that loop is the difference between engagement and extraction.' is specific, evidence-based, and source-grounded. The revision adds rationale about respect and trust (which is correct but unsourced), and it omits the unique reference to the engagement review's findings, weakening transparency and traceability. This is a blocker per standard because it erases the page's direct connection to official records and introduces unsupported rationale."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1731,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 153,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1884
+    },
+    "review": {
+      "input_tokens": 1189,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 170,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1359
+    }
+  },
+  "createdAt": "2026-11-15T13:42:05.047Z"
+}

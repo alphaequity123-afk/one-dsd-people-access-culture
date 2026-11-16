@@ -1,0 +1,201 @@
+{
+  "target": "resource.pn-measurement-without-surveillance",
+  "kind": "resource",
+  "route": "/library/pn-measurement-without-surveillance",
+  "sourceSha256": "b1cd594cebf83393979be85d2f334fa2cdf5db059aca4b8e92abcd0320f60645",
+  "status": "needs_revision",
+  "reviewedFieldCount": 10,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Learn to tell a platform that works from a program that improves equity, using a logic model, baselines, mixed methods, disaggregation with small-group protection, and honest limits. Individual learning, participation, or assessment results must never be used as performance data.",
+      "after": "Distinguish between a platform that functions and a program that actually improves equity. Use a logic model, baseline comparisons, mixed quantitative and qualitative methods, and disaggregation practices that protect small groups. Always state the limits of what is measured. Do not use information about individual learning, participation, or assessment for performance management.",
+      "reason": "Clarifies the distinction between technology functionality and true progress on equity goals and simplifies language. Makes the prohibition on individual results as performance data explicit and provides a clearer sequence of key measurement principles."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Invented targets, composite scores without validation, and individualized learning surveillance destroy trust and prove nothing. Good measurement is possible and protects people.",
+      "after": "When targets are invented, scores are combined from unvalidated sources, or individual learning is monitored for accountability, we lose trust and meaningful results. Careful measurement focuses on program evidence and respects people's privacy, making findings credible and useful for improvement.",
+      "reason": "Expands on why incorrect metrics harm trust and outcomes, and clarifies how principled measurement supports credible decisions while protecting participants."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Two different questions. Does the platform work: can people find, use, and apply material? Does the program improve equity practice or outcomes: are decisions, services, and workplace patterns changing? Measure both, separately.",
+      "after": "There are two separate questions to answer:\n\n1. Does the platform function as intended—can people find, use, and apply the resources provided?\n2. Does the program actually lead to improved equity in decisions, services, or workplace culture?\n\nEvaluate each question distinctly to avoid confusing usability with substantive equity outcomes.",
+      "reason": "Clarifies both questions and why each must be measured separately, connecting platform usage to substantive changes in equity."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Logic model. Inputs and activities, outputs, outcomes, and impact. Write what you expect to change and by when before you measure.",
+      "after": "Use a logic model to map out expected changes. Identify your program's inputs, activities, outputs, outcomes, and intended impact. Before measurement, explain what you expect to change, the mechanism, and a timeframe for those changes.",
+      "reason": "Expands the reasoning for logic models—making explicit why we connect planned actions to intended changes—and details elements of a good logic model."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Baselines first. No causal claim without a baseline. If there is no baseline, say so and start one.",
+      "after": "Always establish a baseline before attempting to measure change. Without evidence of what existed before, it is not possible to attribute improvement or decline to the program. If you lack a baseline, state this clearly and begin collecting one before making any claims.",
+      "reason": "Explains the purpose of a baseline for attribution, and why measurement is unconvincing without it. Adds instruction if a baseline is missing."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Mixed methods. Numbers show patterns; people's accounts show why. Use both, and give qualitative evidence equal standing.",
+      "after": "Use mixed methods:\n- Quantitative data shows patterns, prevalence, and relationships.\n- Qualitative accounts explain context, meaning, and reasons behind the patterns.\nBoth forms are essential. Present qualitative findings with equal weight to numbers, as each answers different aspects of program performance.",
+      "reason": "Elaborates on mixed methods and why both quantitative and qualitative data are necessary to fully understand equity programs."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Disaggregate with protection. By community, language, disability, and place where the data allows. Set the smallest group you will report, and suppress below it. Ask the data owner about denominators.",
+      "after": "Disaggregate data wherever possible by community, language, disability, and geography. Set a minimum group size for reporting to avoid exposing identities, and do not report data for smaller groups. Always check with the data owner about appropriate denominators and groupings to avoid misinterpretation.",
+      "reason": "Clarifies both the value and the ethical obligation in disaggregation while emphasizing steps to protect privacy and accurate analysis."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "Protect private learning. Learning, reflection, Ask, and practice paths are private. Report only combined totals that cannot identify anyone, and never use them for supervision or evaluation.",
+      "after": "Protect individual privacy in learning. Data on personal learning, reflection exercises, Ask submissions, and practice journeys are confidential. Only report aggregate totals that cannot be traced back to individuals, and do not use such information in supervision or evaluation processes.",
+      "reason": "Clarifies the scope of confidentiality and the specific types of learning data that must be protected—not just excluded from performance review, but kept confidential in reporting."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "body",
+        6
+      ],
+      "before": "Never use assessment results as performance data. Intercultural assessments and similar instruments describe development; they are not scores of competence and must not enter personnel decisions.",
+      "after": "Do not treat assessment results—such as intercultural assessments—as performance or competence scores. These tools are intended for individual or group development, not for personnel decisions or formal evaluation.",
+      "reason": "Specifies types of assessment tools and reiterates their development purpose, clarifying exclusion from staff performance management."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "body",
+        7
+      ],
+      "before": "State the limits. Every report says what the evidence does not show. That sentence is what makes the rest trustworthy.",
+      "after": "State clearly in every report what your evidence does not show or cannot prove. Acknowledging limits makes findings more credible and helps prevent overreach or misuse.",
+      "reason": "Expands on why stating limitations is professionally required, linking it to report credibility and the prevention of over-interpretation."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The rewrite changes the meaning and weakens important boundaries set in the source. The source distinguishes between 'a platform that works' and 'a program that improves equity,' emphasizing that the measurement for each must not be conflated, while the rewrite uses more generic language: 'Distinguish between a platform that functions and a program that actually improves equity.' Most critically, the rewrite shifts from an unqualified prohibition ('must never be used') to 'do not use...for performance management,' which incorrectly narrows the domain. The original source prohibits use for any performance data purpose, not just performance management. The removal of the explicit warning about 'never' for individual data and assessment is unsafe."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "Wording is expanded for clarity, but the points about trust and the dangers of invented targets and surveillance are intact and reasonably represented. The change supports a more detailed explanation but does not fundamentally alter meaning."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revision rephrases the two questions for clarity and format, but the fundamental meaning regarding measuring 'platform works' versus 'program improves equity' is preserved, and the method is supported by the source."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The rewrite expands and clarifies the explanation of a logic model, but all core requirements from the source are present and accurately reflected."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The rewrite adds reasoning and detail about why a baseline is required and what to do in its absence. The original meaning and limits are accurately maintained and expanded."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The rewrite expands on the types and justification for mixed methods but does not alter the original intent or practice limitations."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The rewrite clarifies practices around data disaggregation and protections but is faithful to the limits and instructions of the source."
+      },
+      {
+        "fieldId": 7,
+        "severity": "blocker",
+        "finding": "The revision changes the emphasis from the source's strong privacy stance: 'must never be used as performance data' and 'private.' The rewrite says, 'do not use such information in supervision or evaluation processes' and 'confidential,' which narrows the rule and loses the full privacy protections and boundaries required by the source. The language change erases the broader prohibition and reduces the clarity and enforceability of the original protections."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "The rewrite rephrases the exclusion of assessment scores from performance uses, and clarifies development intent. The original boundary is maintained."
+      },
+      {
+        "fieldId": 9,
+        "severity": "note",
+        "finding": "The rewrite maintains and expands on the requirement to state limitations and why this adds credibility to reports, respecting the official intent."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1955,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 888,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2843
+    },
+    "review": {
+      "input_tokens": 2383,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 589,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2972
+    }
+  },
+  "createdAt": "2026-11-15T13:42:41.236Z"
+}

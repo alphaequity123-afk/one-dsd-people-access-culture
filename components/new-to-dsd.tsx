@@ -46,7 +46,7 @@ export function NewToDsd() {
   return <section id="new-to-dsd" className={styles.orientationPage}>
     <div>
       <h2 className="text-3xl font-semibold">New to DSD, or taking a fresh look?</h2>
-      <p className="mt-4 max-w-3xl text-lg leading-8">Welcome. Whether you joined the division last week or have years of experience behind you, this program is built to meet you where you are. It brings together learning, practical tools, and the people and perspectives that shape disability services in Minnesota. Taking part is voluntary; existing agency requirements, including required equity analysis, still apply.</p>
+      <p className="mt-4 max-w-3xl text-lg leading-8">Welcome. Whether you joined the division last week or have years of experience behind you, this program is built to meet you where you are. It brings together learning, practical tools, and the people and perspectives that shape disability services in Minnesota.</p>
     </div>
     <Link className={styles.guideCard} href="/user-guide">
       <Image unoptimized src="/images/library-reading-and-research.webp" alt="" width={900} height={600} sizes="(min-width: 640px) 220px, 90vw" />

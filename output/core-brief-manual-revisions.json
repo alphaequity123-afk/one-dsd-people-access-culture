@@ -1,0 +1,361 @@
+{
+  "status": "independent_review_pending",
+  "revisions": [
+    {
+      "target": "community-brief.somali",
+      "kind": "surface",
+      "route": "/minnesota-communities/somali",
+      "changes": [
+        {
+          "path": [
+            "nameNote"
+          ],
+          "before": "Naming follows a given name, father's name, and grandfather's name. Many people do not use a family surname the way a database expects one. Do not invent a last name because a field requires it.",
+          "after": "A name may include a given name, a father's name, and a grandfather's name rather than the family surname a database expects. Ask how the person's name appears on their documents and how it should be recorded; do not invent a surname to satisfy a form."
+        }
+      ],
+      "status": "independent_review_pending",
+      "reviewNote": "Root read full original brief. Clarify compressed prose, individual choice, and staff action. Unchanged dates, statistics and source labels are not comprehensively reverified; protected fields and recordings remain unchanged."
+    },
+    {
+      "target": "community-brief.hmong",
+      "kind": "surface",
+      "route": "/minnesota-communities/hmong",
+      "changes": [
+        {
+          "path": [
+            "whoAndWhere"
+          ],
+          "before": "The United States ran a Secret War in Laos; Hmong forces allied with the CIA. After 1975 came persecution, camps in Thailand, and refugee resettlement. St. Paul is a national hub. Most Hmong Minnesotans live in the Twin Cities; many are second and third generation.",
+          "after": "Hmong forces allied with the CIA during the United States' Secret War in Laos. After 1975, persecution, camps in Thailand, and refugee resettlement shaped the history of Hmong communities in Minnesota. St. Paul became a national hub, and most Hmong Minnesotans live in the Twin Cities. Many are now second- or third-generation Minnesotans."
+        },
+        {
+          "path": [
+            "withinGroupDiversity"
+          ],
+          "before": "Traditional healing and Christianity are both widespread. Elders and U.S.-born youth may differ sharply on language and family authority. Clan matters for some families and not for others.",
+          "after": "Traditional healing and Christianity are both widespread, but neither describes every household. Language preferences and views about family authority may differ across generations and within a family. Ask what role, if any, clan relationships have in the support this person wants."
+        },
+        {
+          "path": [
+            "whatNotToAssume",
+            3
+          ],
+          "before": "Do not assume deportation or profiling anxiety is folklore; it is current structure for some families.",
+          "after": "Do not dismiss concerns about deportation or profiling. Ask what, if anything, the person wants you to understand about how those concerns affect access to services."
+        }
+      ],
+      "status": "independent_review_pending",
+      "reviewNote": "Root read full original brief. Clarify compressed prose, individual choice, and staff action. Unchanged dates, statistics and source labels are not comprehensively reverified; protected fields and recordings remain unchanged."
+    },
+    {
+      "target": "community-brief.karen",
+      "kind": "surface",
+      "route": "/minnesota-communities/karen",
+      "changes": [
+        {
+          "path": [
+            "withinGroupDiversity"
+          ],
+          "before": "Baptist and Buddhist streams both live here. Literacy in the language of the form is not guaranteed.",
+          "after": "Karen Minnesotans include Baptist and Buddhist communities. Religious affiliation does not tell you how a person wants to receive information, and a translated form may not be readable for everyone who speaks that language. Ask which spoken and written formats would help."
+        },
+        {
+          "path": [
+            "whatToAsk",
+            3
+          ],
+          "before": "Do you agree with this plan? Please tell me if not.",
+          "after": "Which parts of this plan work for you, and what would you like changed or explained?"
+        },
+        {
+          "path": [
+            "accessChecks",
+            1
+          ],
+          "before": "Church networks are often the real information channel; a mailed notice may not be.",
+          "after": "Ask which information channels the person uses, including any church or community network they name. Check that notices reach them rather than relying on mail alone."
+        }
+      ],
+      "status": "independent_review_pending",
+      "reviewNote": "Root read full original brief. Clarify compressed prose, individual choice, and staff action. Unchanged dates, statistics and source labels are not comprehensively reverified; protected fields and recordings remain unchanged."
+    },
+    {
+      "target": "community-brief.oromo",
+      "kind": "surface",
+      "route": "/minnesota-communities/oromo",
+      "changes": [
+        {
+          "path": [
+            "withinGroupDiversity"
+          ],
+          "before": "Islam, Christianity, and Waaqeffanna all live here; do not assume a Somali religious pattern. U.S.-born children may have never lived in Oromia.",
+          "after": "Oromo Minnesotans include people who practice Islam, Christianity, and Waaqeffanna. U.S.-born children may never have lived in Oromia. Learn about the person's own beliefs and experiences rather than assuming a religious pattern from another East African community."
+        },
+        {
+          "path": [
+            "nameNote"
+          ],
+          "before": "Book Afaan Oromoo on the interpreter line. Ask how names appear on documents.",
+          "after": "Confirm the person's preferred language and request Afaan Oromoo when that is the language they need. Ask how names appear on their documents so the record reflects the person accurately."
+        },
+        {
+          "path": [
+            "accessChecks",
+            0
+          ],
+          "before": "Afaan Oromoo, not Amharic or Somali, on the request.",
+          "after": "Confirm the requested language. When the person needs Afaan Oromoo, do not substitute Amharic or Somali."
+        }
+      ],
+      "status": "independent_review_pending",
+      "reviewNote": "Root read full original brief. Clarify compressed prose, individual choice, and staff action. Unchanged dates, statistics and source labels are not comprehensively reverified; protected fields and recordings remain unchanged."
+    },
+    {
+      "target": "community-brief.african-american",
+      "kind": "surface",
+      "route": "/minnesota-communities/african-american",
+      "changes": [
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "Color-blind approaches can hide the unequal results a process continues to produce, including disproportionate out-of-home placement. Minnesota law on African American family preservation requires active efforts and family cultural values in case planning; a training is not a substitute.",
+          "after": "An approach described as color-blind can overlook unequal results, including disproportionate out-of-home placement. Minnesota's African American Family Preservation and Child Welfare Disproportionality Act establishes active-efforts responsibilities and attention to family social and cultural values. Check the Act's implementation guidance and the requirements that apply to the case; completing a training does not replace the required practice."
+        },
+        {
+          "path": [
+            "whatToAsk",
+            1
+          ],
+          "before": "What has happened before with this agency or with police-involved referrals that we should know?",
+          "after": "What, if anything, would you like us to know about previous experiences with this agency or police-involved referrals?"
+        }
+      ],
+      "status": "independent_review_pending",
+      "reviewNote": "Root read full original brief. Clarify compressed prose, individual choice, and staff action. Unchanged dates, statistics and source labels are not comprehensively reverified; protected fields and recordings remain unchanged."
+    },
+    {
+      "target": "community-brief.latino",
+      "kind": "surface",
+      "route": "/minnesota-communities/latino",
+      "changes": [
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "'Spanish' on a form is one language among many, and some households speak an Indigenous language first. Immigration status fear shapes help-seeking even for citizens in mixed-status families. Greater Minnesota distance and shift work are access facts.",
+          "after": "A Spanish-language option may not meet the needs of a household whose preferred language is an Indigenous language. Fear about immigration status can also affect help-seeking within mixed-status families, including for citizens. Ask about language, distance, and work schedules so the service can respond to the person's circumstances rather than a broad label."
+        },
+        {
+          "path": [
+            "nameUncertainty"
+          ],
+          "before": "Term preference is contested and generational; ask.",
+          "after": "People differ in the identity terms they use, including across generations. Ask which term the person prefers rather than choosing one from age or appearance."
+        }
+      ],
+      "status": "independent_review_pending",
+      "reviewNote": "Root read full original brief. Clarify compressed prose, individual choice, and staff action. Unchanged dates, statistics and source labels are not comprehensively reverified; protected fields and recordings remain unchanged."
+    },
+    {
+      "target": "community-brief.vietnamese",
+      "kind": "surface",
+      "route": "/minnesota-communities/vietnamese",
+      "changes": [
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "Elders may need Vietnamese for vital conversations while younger relatives use English; do not let a child interpret. Name order (family name first) breaks forms that assume otherwise.",
+          "after": "An older adult may want Vietnamese for a service conversation even when younger relatives use English. Ask the person directly and arrange interpretation rather than assigning that responsibility to a child. Check name order against the person's documents, because a form built around a different order can create record errors."
+        },
+        {
+          "path": [
+            "withinGroupDiversity"
+          ],
+          "before": "Buddhist, Catholic, and secular households; refugee-era and later arrivals; wide generational differences.",
+          "after": "Vietnamese Minnesotans include Buddhist, Catholic, and secular households, people who arrived as refugees, and later arrivals. Language preferences and experiences may differ across generations. These histories help frame questions; they do not establish what a particular person believes or needs."
+        }
+      ],
+      "status": "independent_review_pending",
+      "reviewNote": "Root read full original brief. Clarify compressed prose, individual choice, and staff action. Unchanged dates, statistics and source labels are not comprehensively reverified; protected fields and recordings remain unchanged."
+    },
+    {
+      "target": "community-brief.khmer",
+      "kind": "surface",
+      "route": "/minnesota-communities/khmer",
+      "changes": [
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "War and genocide trauma can sit alongside mental-health stigma; older adults may need Khmer for vital conversations. Do not press for history.",
+          "after": "Experiences of war and genocide, and concerns about mental-health stigma, may affect how someone approaches services. They do not establish this person's history or needs. Ask whether a Khmer interpreter would help with the conversation, and allow the person to decide what personal history to share."
+        },
+        {
+          "path": [
+            "withinGroupDiversity"
+          ],
+          "before": "Buddhist temples are central for some families and not others; generations differ sharply on language.",
+          "after": "Buddhist temples are important to some families and not to others. Language use may also differ across generations. Ask which relationships and ways of communicating matter to the person instead of inferring them from Cambodian or Khmer identity."
+        },
+        {
+          "path": [
+            "nameNote"
+          ],
+          "before": "Khmer names may be listed family-name first; ask.",
+          "after": "Khmer names may be listed with the family name first. Ask how the person's documents list the name and how they want to be addressed."
+        }
+      ],
+      "status": "independent_review_pending",
+      "reviewNote": "Root read full original brief. Clarify compressed prose, individual choice, and staff action. Unchanged dates, statistics and source labels are not comprehensively reverified; protected fields and recordings remain unchanged."
+    },
+    {
+      "target": "community-brief.lao",
+      "kind": "surface",
+      "route": "/minnesota-communities/lao",
+      "changes": [
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "'Laotian' on a form can mean Lao, Hmong, or other groups; book the actual language.",
+          "after": "A national label such as Laotian does not identify the language a person needs. It may refer to Lao, Hmong, or other communities with different languages. Confirm the person's language before arranging an interpreter so a broad category does not determine the service offered."
+        },
+        {
+          "path": [
+            "withinGroupDiversity"
+          ],
+          "before": "Buddhist and Christian households; generations differ on language.",
+          "after": "Lao Minnesotans include Buddhist and Christian households, and language use may differ across generations. Ask about the person's preferred language and chosen supports rather than assuming that a religious or national label answers those questions."
+        }
+      ],
+      "status": "independent_review_pending",
+      "reviewNote": "Root read full original brief. Clarify compressed prose, individual choice, and staff action. Unchanged dates, statistics and source labels are not comprehensively reverified; protected fields and recordings remain unchanged."
+    },
+    {
+      "target": "community-brief.russian-speaking",
+      "kind": "surface",
+      "route": "/minnesota-communities/russian-speaking",
+      "changes": [
+        {
+          "path": [
+            "withinGroupDiversity"
+          ],
+          "before": "Jewish, Orthodox Christian, evangelical, and secular households; national identities that may be in conflict.",
+          "after": "Russian-speaking Minnesotans include Jewish, Orthodox Christian, evangelical, and secular households, with different national identities. Those identities may carry tensions that a shared language does not reveal. Let people describe their own affiliations without expecting agreement about politics or history."
+        },
+        {
+          "path": [
+            "whatToAsk",
+            0
+          ],
+          "before": "Which language should we book: Russian or Ukrainian?",
+          "after": "Which language would you like us to arrange for this conversation: Russian, Ukrainian, or another language?"
+        }
+      ],
+      "status": "independent_review_pending",
+      "reviewNote": "Root read full original brief. Clarify compressed prose, individual choice, and staff action. Unchanged dates, statistics and source labels are not comprehensively reverified; protected fields and recordings remain unchanged."
+    },
+    {
+      "target": "community-brief.arabic-speaking",
+      "kind": "surface",
+      "route": "/minnesota-communities/arabic-speaking",
+      "changes": [
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "Arabic varieties differ enough that an interpreter from one region may not serve another well; Arabic is also a religious language for many non-Arab Muslims, which is not the same as a household language.",
+          "after": "An interpreter who uses one regional variety of Arabic may not communicate effectively with every Arabic-speaking person. Confirm the variety needed for the conversation. Arabic also has religious uses among many non-Arab Muslims, so religious affiliation alone does not identify a household's preferred language."
+        },
+        {
+          "path": [
+            "withinGroupDiversity"
+          ],
+          "before": "Muslim, Christian, and secular households; national identities and dialects vary widely.",
+          "after": "Arabic-speaking Minnesotans include Muslim, Christian, and secular households, with different national identities and dialects. Treat Arabic-speaking as a language description, not a complete account of a person's culture, beliefs, or service needs."
+        }
+      ],
+      "status": "independent_review_pending",
+      "reviewNote": "Root read full original brief. Clarify compressed prose, individual choice, and staff action. Unchanged dates, statistics and source labels are not comprehensively reverified; protected fields and recordings remain unchanged."
+    },
+    {
+      "target": "community-brief.deaf-deafblind-hard-of-hearing",
+      "kind": "surface",
+      "route": "/minnesota-communities/deaf-deafblind-hard-of-hearing",
+      "changes": [
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "Effective communication is a legal obligation. Exchanging written notes is not equally effective for a Deaf person who uses sign language, and a family member is not an interpreter. Your process must work with video relay and captioned phone calls.",
+          "after": "Effective communication is a legal obligation. Ask which communication aid or service the person needs and give primary consideration to their request. Written notes may work for some exchanges but may not provide effective access to a complex service conversation. Do not make a family member the default interpreter. Telephone processes must also accept relay calls; work with the accessibility coordinator to arrange effective communication."
+        },
+        {
+          "path": [
+            "withinGroupDiversity"
+          ],
+          "before": "ASL users, oral communicators, cochlear implant users, late-deafened elders, DeafBlind people, and Deaf people from immigrant communities who use other sign languages.",
+          "after": "This community includes ASL users, people who communicate through speech, cochlear implant users, late-deafened older adults, DeafBlind people, and immigrants who use other sign languages. A device, diagnosis, or shared identity does not determine the communication support someone needs."
+        }
+      ],
+      "status": "independent_review_pending",
+      "reviewNote": "Root read full original brief. Clarify compressed prose, individual choice, and staff action. Unchanged dates, statistics and source labels are not comprehensively reverified; protected fields and recordings remain unchanged."
+    },
+    {
+      "target": "community-brief.rural",
+      "kind": "surface",
+      "route": "/minnesota-communities/rural",
+      "changes": [
+        {
+          "path": [
+            "withinGroupDiversity"
+          ],
+          "before": "Iron Range, prairie, forest, and border towns are not one region. Name the town.",
+          "after": "The Iron Range, prairie, forest, and border communities have different local conditions. Name the town or area involved and examine its services, distances, and relationships rather than treating rural Minnesota as one uniform place."
+        },
+        {
+          "path": [
+            "accessChecks",
+            2
+          ],
+          "before": "Open the people brief for the household together with this place brief.",
+          "after": "Use relevant community briefs alongside this place brief to prepare questions. Ask the people involved how local conditions and community connections affect their access."
+        },
+        {
+          "path": [
+            "whatNotToAssume",
+            0
+          ],
+          "before": "Do not romanticize or pathologize.",
+          "after": "Do not portray rural life as uniformly idyllic or as a collection of problems. Examine the specific place, its strengths, and the barriers people describe."
+        }
+      ],
+      "status": "independent_review_pending",
+      "reviewNote": "Root read full original brief. Clarify compressed prose, individual choice, and staff action. Unchanged dates, statistics and source labels are not comprehensively reverified; protected fields and recordings remain unchanged."
+    }
+  ],
+  "sourceEvidence": [
+    {
+      "url": "https://www.ada.gov/resources/effective-communication/",
+      "supports": "Effective communication depends on person and context; Title II primary consideration; note-taking may suffice for some communication; do not require a companion interpreter; accept relay calls."
+    },
+    {
+      "url": "https://www.revisor.mn.gov/statutes/cite/260.63",
+      "supports": "Active efforts include family participation and social and cultural values. Application and implementation guidance must be checked."
+    },
+    {
+      "url": "https://dcyf.mn.gov/partners-and-providers/child-safety-and-permanency/minnesota-african-american-family-preservation/implementing-minnesota-african-american-family-preservation-child-welfare-disproportionality-act",
+      "supports": "Statewide implementation January1,2027; current application must not be implied universal before that date."
+    }
+  ],
+  "reviewedUnchanged": [
+    "communities.brief-shell",
+    "community-brief.tribal-nations"
+  ],
+  "pendingFactCheck": [
+    "African-American deeper0Body dated2023 statistics and2026 appropriation; reviewer checking original attribution."
+  ]
+}

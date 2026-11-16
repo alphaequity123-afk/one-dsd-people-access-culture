@@ -1,0 +1,67 @@
+{
+  "target": "workforce.inspector-general",
+  "kind": "surface",
+  "route": "/consultant/workforce/inspector-general",
+  "sourceSha256": "e08c2d8c3f7ca47cc42a7e846c93db669b7136400db86b9babf78d358a81e3b1",
+  "status": "model_checked",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "relationship"
+      ],
+      "before": "Listed as an agency area or associated service. This does not establish a direct reporting line.",
+      "after": "Recognized as an agency component or related service area. This reference does not imply a supervisory or reporting relationship for DSD staff.",
+      "reason": "Clarified the distinction between agency listing and organizational authority. Used more precise language to explain that directory inclusion does not affect reporting lines, relevant for staff understanding their obligations."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revised wording ('Recognized as an agency component or related service area. This reference does not imply a supervisory or reporting relationship for DSD staff.') is a slightly more explicit restatement of the original phrase. It accurately preserves the core meaning that an agency listing is not a reporting line. There is some added specificity for DSD staff, but it does not contradict or invent policy, and remains appropriate for the directory context. Source materially supports both the original and revised versions."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1096,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 85,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1181
+    },
+    "review": {
+      "input_tokens": 793,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 118,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 911
+    }
+  },
+  "createdAt": "2026-11-15T13:37:46.393Z"
+}

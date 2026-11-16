@@ -1,0 +1,444 @@
+
+> one-dsd-people-access-culture-standalone@0.1.0 test
+> node scripts/testing/run-tests.mjs
+
+
+ RUN  v5.0.5 C:/Users/garyb/Projects/one-dsd-writing-standard-20261115
+
+ ❯ |components| components/director-toolkit-template.test.tsx (2 tests | 1 failed) 174ms
+   ❯ Equity Director toolkit template (2)
+     × renders labeled fields, keeps everything in the page and copies the filled text 84ms
+ ❯ |components| app/leading/leading-pages.test.tsx (9 tests | 1 failed) 23595ms
+   ❯ supervisor and manager pages render with their data (4)
+     × states the promises 57ms
+ ❯ |node| lib/content/leadership-journey.test.ts (11 tests | 2 failed) 38ms
+   ❯ the promises the journey keeps (5)
+     × offers no badge, certificate, score, rating or ranking 7ms
+     × says plainly that it is optional, with nothing to submit and nothing counted 14ms
+ ❯ |node| lib/content/collections.test.ts (18 tests | 1 failed) 1996ms
+   ❯ the promises on these pages (2)
+     × states plainly what is and is not recorded 34ms
+[vitest-pool]: Timeout terminating forks worker for test files C:/Users/garyb/Projects/one-dsd-writing-standard-20261115/lib/intelligence/retrieval/search-excerpt.test.ts.
+[vitest-pool]: Timeout terminating forks worker for test files C:/Users/garyb/Projects/one-dsd-writing-standard-20261115/lib/intelligence/retrieval/equity-data-retrieval.test.ts.
+Could not parse CSS stylesheet
+Could not parse CSS stylesheet
+Not implemented: navigation to another Document
+Not implemented: navigation to another Document
+ ❯ |node| lib/content/clas-curriculum-practice.test.ts (14 tests | 1 failed) 74ms
+   ❯ jobAidText (1)
+     × writes the aid as headed plain text 12ms
+ ❯ |node| lib/content/staff-publication-language.test.ts (1 test | 1 failed) 36ms
+   ❯ reviewed publication presentation (1)
+     × applies the eight reviewed publication variants before route normalization and keeps evidence on final objects 34ms
+(node:11512) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:35196) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 7 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |components| components/director-toolkit-template.test.tsx > Equity Director toolkit template > renders labeled fields, keeps everything in the page and copies the filled text
+AssertionError: expected 'Decision and mitigation logKeep findi…' to contain 'Nothing you type here is saved or sent'
+
+Expected: "Nothing you type here is saved or sent"
+Received: "Decision and mitigation logKeep findings, changes to make, decisions, reasons, owners and open risks in one place.Add a row each time a finding leads to a decision. It also serves as the decision and risk register in governance.Part of Area in the toolkit.Decision or review this log coversLogRowFindingChange to makeDecision madeReasonAccountable owner (role)Open risksDate123Add a rowUse roles, not names. Leave out client information, case details, personnel matters and any sensitive employee concern. Formal concerns go to authorized processes, not to this form. The app does not autosave or submit your entries. Copy, download or print if you need a record before leaving this page.Print this templateCopy as textDownload as textClear"
+
+ ❯ components/director-toolkit-template.test.tsx:28:39
+     26|     expect(document.querySelector("#template-decision-log")).not.toBeN…
+     27|     expect(document.body.textContent).not.toContain("Project recommend…
+     28|     expect(document.body.textContent).toContain("Nothing you type here…
+       |                                       ^
+     29|     const subject = document.querySelector<HTMLInputElement>("#templat…
+     30|     await act(async () => { type(subject, "Notice redesign"); });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/7]⎯
+
+ FAIL  |components| app/leading/leading-pages.test.tsx > supervisor and manager pages render with their data > states the promises
+AssertionError: expected '<div class="_page_919532"><div class=…' to contain 'The one exception is the Equity Analy…'
+
+Expected: "The one exception is the Equity Analysis Toolkit, which is required."
+Received: "<div class="_page_919532"><div class="_content_919532"><p class="_back_919532"><a href="/leading">For leaders, supervisors, managers, and directors</a></p><header class="_intro_919532"><p class="_eyebrow_919532">For leaders, supervisors, managers, and directors</p><h1>How this works</h1><p class="_lede_919532">What is recorded, what is not, and what this space does not do.</p></header><div class="_plain_809a7d"><h2>There is no team view</h2><p>This area shows you no information about your team's learning.</p><ul><li>There is no sign-in for this space. All of it is public, and staff can read every page.</li><li>This leadership area does not give supervisors a learner scoreboard or assign these optional courses.</li><li>This area does not provide supervisors with individual course visits, progress or answers. Anyone using the same browser profile may still see information saved there.</li></ul><h2>What stays in your browser</h2><ul><li>Features that save a place on a suggested path, lesson progress or practice answers keep those items in this browser profile when storage is available.</li><li>The learning-progress feature does not send those saved items to supervisors or program staff. Exporting or sharing a copy is a separate action.</li><li>Anyone using the same browser profile may see saved items. Use the relevant feature to clear them; downloaded, printed or shared copies remain separate.</li></ul><h2>What happens to a question in Ask</h2><ul><li>Questions typed into Ask go to outside services so that it can answer.</li><li>The current service does not intentionally save a question-and-answer copy in the owner workspace. Operational activity may be recorded, and earlier versions may have retained separate records. Supervisors do not receive your browser conversation from Ask.</li><li>Please do not type anyone's name, case, health or personnel details. Ask general questions.</li></ul><h2>What this does not replace</h2><ul><li>This app does not replace training the state requires. It does not count as the training Minn. Stat. 43A.21 requires of supervisors and managers. The state's own training does that.</li><li>It is general information, not legal advice. For a real situation, ask Human Resources, labor relations or your ADA coordinator.</li><li>It does not make or record any personnel, accommodation or complaint decision.</li></ul><h2>Required responsibilities and optional learning</h2><p>This program does not offer training credits. Optional learning here supports DHS responsibilities under the Equity Policy, including applicable equity-analysis requirements and assigned agency training. Complete required training through the agency's designated process.</p><p>The label “Required of all DHS staff” refers to the agency responsibility associated with the Equity Analysis Toolkit. This local companion course does not assign or certify required agency training. Follow the designated agency process for training and the applicable policy requirements for equity analysis. <a href="/courses/dhs-equity-analysis-toolkit">Open the Equity Analysis Toolkit course</a>.</p><h2>Using the learning</h2><p>Use these courses as guidance for your work, alongside current policy and the people and offices responsible for a decision.</p><h2>Tribal and Native American learning</h2><p>This space does not offer Tribal curriculum. One DSD refers Native American and Tribal-specific learning, questions and engagement to ADSA and the responsible Tribal liaison. <a href="/learn/tribal-referral">Native American and Tribal-specific guidance</a>.</p></div><aside class="_continue_919532"><h2>Keep exploring</h2><p><a href="/leading">What are you deciding?</a><a href="/about#participation-title">How participation and privacy work across the program</a></p></aside></div></div>"
+
+ ❯ app/leading/leading-pages.test.tsx:71:18
+     69|     const page = html(LeadingHowThisWorksPage());
+     70|     expect(page).toContain("This area shows you no information about y…
+     71|     expect(page).toContain("The one exception is the Equity Analysis T…
+       |                  ^
+     72|   });
+     73| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/7]⎯
+
+ FAIL  |node| lib/content/clas-curriculum-practice.test.ts > jobAidText > writes the aid as headed plain text
+AssertionError: expected 'Start with the person: a one-page job…' to contain 'WHO TO ASK\n- The responsible office …'
+
+- Expected
++ Received
+
+- WHO TO ASK
+- - The responsible office for the notice.
++ Start with the person: a one-page job aid
++ Start with the person and the purpose
++
++ Use when: Use when you are reviewing a notice, form or instruction that people need to act on.
++
++ BEFORE
++ - Write the notice's purpose in one sentence.
++ - Describe what the person must be able to do.
++
++ DURING
++ - Read it as a recipient would.
++ - Check the assistance offer and the response route.
++
++ AFTER
++ - Note what you can change and what needs coordination.
++
++ REMEMBER
++ - Ask; do not assume needs from a name or appearance.
++ - Use your program's current procedure for changes.
++
++ WHO TO ASK
++ - The person or area responsible for the notice.
++ - Your supervisor for approval routes.
++
++ Use the current procedures applicable to your role and program when taking action.
+
+ ❯ lib/content/clas-curriculum-practice.test.ts:65:18
+     63|     expect(text).toContain('Start with the person: a one-page job aid\…
+     64|     expect(text).toContain('BEFORE\n- Write the notice\'s purpose in o…
+     65|     expect(text).toContain('WHO TO ASK\n- The responsible office for t…
+       |                  ^
+     66|   });
+     67| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/7]⎯
+
+ FAIL  |node| lib/content/collections.test.ts > the promises on these pages > states plainly what is and is not recorded
+AssertionError: expected 'import type { Metadata } from "next";…' to contain 'no team view, no assignments and no s…'
+
+- Expected
++ Received
+
+- no team view, no assignments and no scores
++ import type { Metadata } from "next";
++ import Link from "@/components/app-link";
++ import { LEADING_LABEL, LEADING_PRIVACY_SENTENCE, REQUIRED_COURSE_LABEL, TRIBAL_REFERRAL_HREF } from "@/lib/content/collections";
++ import { TRAINING_CREDIT_NOTICE } from "@/lib/program/learning-credit";
++ import base from "@/app/learn/collaboration/collaboration.module.css";
++ import styles from "@/components/collections.module.css";
++ 
++ export const metadata: Metadata = {
++   title: `How this works | ${LEADING_LABEL}`,
++   description: "What is and is not recorded in the leadership space, and where your progress and questions go.",
++ };
++ 
++ export default function LeadingHowThisWorksPage() {
++   return <div className={base.page}><div className={base.content}>
++     <p className={base.back}><Link href="/leading">{LEADING_LABEL}</Link></p>
++     <header className={base.intro}>
++       <p className={base.eyebrow}>{LEADING_LABEL}</p>
++       <h1>How this works</h1>
++       <p className={base.lede}>What is recorded, what is not, and what this space does not do.</p>
++     </header>
++     <div className={styles.plain}>
++       <h2>There is no team view</h2>
++       <p>{LEADING_PRIVACY_SENTENCE}</p>
++       <ul>
++         <li>There is no sign-in for this space. All of it is public, and staff can read every page.</li>
++         <li>This leadership area does not give supervisors a learner scoreboard or assign these optional courses.</li>
++         <li>This area does not provide supervisors with individual course visits, progress or answers. Anyone using the same browser profile may still see information saved there.</li>
++       </ul>
++       <h2>What stays in your browser</h2>
++       <ul>
++         <li>Features that save a place on a suggested path, lesson progress or practice answers keep those items in this browser profile when storage is available.</li>
++         <li>The learning-progress feature does not send those saved items to supervisors or program staff. Exporting or sharing a copy is a separate action.</li>
++         <li>Anyone using the same browser profile may see saved items. Use the relevant feature to clear them; downloaded, printed or shared copies remain separate.</li>
++       </ul>
++       <h2>What happens to a question in Ask</h2>
++       <ul>
++         <li>Questions typed into Ask go to outside services so that it can answer.</li>
++         <li>The current service does not intentionally save a question-and-answer copy in the owner workspace. Operational activity may be recorded, and earlier versions may have retained separate records. Supervisors do not receive your browser conversation from Ask.</li>
++         <li>Please do not type anyone&apos;s name, case, health or personnel details. Ask general questions.</li>
++       </ul>
++       <h2>What this does not replace</h2>
++       <ul>
++         <li>This app does not replace training the state requires. It does not count as the training Minn. Stat. 43A.21 requires of supervisors and managers. The state&apos;s own training does that.</li>
++         <li>It is general information, not legal advice. For a real situation, ask Human Resources, labor relations or your ADA coordinator.</li>
++         <li>It does not make or record any personnel, accommodation or complaint decision.</li>
++       </ul>
++       <h2>Required responsibilities and optional learning</h2>
++       <p>{TRAINING_CREDIT_NOTICE}</p>
++       <p>The label &ldquo;{REQUIRED_COURSE_LABEL}&rdquo; refers to the agency responsibility associated with the Equity Analysis Toolkit. This local companion course does not assign or certify required agency training. Follow the designated agency process for training and the applicable policy requirements for equity analysis. <Link href="/courses/dhs-equity-analysis-toolkit">Open the Equity Analysis Toolkit course</Link>.</p>
++       <h2>Using the learning</h2>
++       <p>Use these courses as guidance for your work, alongside current policy and the people and offices responsible for a decision.</p>
++       <h2>Tribal and Native American learning</h2>
++       <p>This space does not offer Tribal curriculum. One DSD refers Native American and Tribal-specific learning, questions and engagement to ADSA and the responsible Tribal liaison. <Link href={TRIBAL_REFERRAL_HREF}>Native American and Tribal-specific guidance</Link>.</p>
++     </div>
++     <aside className={base.continue}>
++       <h2>Keep exploring</h2>
++       <p><Link href="/leading">What are you deciding?</Link><Link href="/about#participation-title">How participation and privacy work across the program</Link></p>
++     </aside>
++   </div></div>;
++ }
++
+
+ ❯ lib/content/collections.test.ts:175:456
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/7]⎯
+
+ FAIL  |node| lib/content/leadership-journey.test.ts > the promises the journey keeps > offers no badge, certificate, score, rating or ranking
+AssertionError: expected '\r\nimport { SourceLink } from "@/com…' not to match /\b(badges?|certificat\w*|certif\w*|s…/i
+
+- Expected:
+/\b(badges?|certificat\w*|certif\w*|scores?|scored|ratings?|ranked|ranking|leaderboard|grade[ds]?|points)\b/i
+
++ Received:
+"
+import { SourceLink } from \"@/components/app-link\";
+import type { Metadata } from \"next\";
+import Link from \"@/components/app-link\";
+import { LeadingStartChooser } from \"@/components/leading-start-chooser\";
+import { LEADING_LABEL, LEADING_PATHS, LEADING_PRIVACY_SENTENCE } from \"@/lib/content/collections\";
+import { END_OF_PATH_QUESTIONS, JOURNEY_STEPS, LEARNING_ELSEWHERE, LEARNING_WITH_OTHERS, PATH_JOURNEY, REFLECTION_PROMPTS, SIX_WEEKS, WEEKLY_RHYTHM } from \"@/lib/content/leadership-journey\";
+import base from \"@/app/learn/collaboration/collaboration.module.css\";
+import styles from \"@/components/collections.module.css\";
+
+export const metadata: Metadata = {
+  title: `Your leadership journey | ${LEADING_LABEL}`,
+  description: \"Connect leadership learning with a work decision, reflection and follow-up. This optional path does not enroll you in assigned training; related learning tools explain what they save.\",
+};
+
+export default function LeadingJourneyPage() {
+  const paths = LEADING_PATHS.map(path => ({ slug: path.slug, title: path.title, description: path.description }));
+  return <div className={base.page}><div className={base.content}>
+    <p className={base.back}><Link href=\"/leading\">{LEADING_LABEL}</Link></p>
+    <header className={base.intro}>
+      <p className={base.eyebrow}>Optional</p>
+      <h1>Your leadership journey</h1>
+      <p className={base.lede}>A way to grow as a leader at your own pace, from a first interest in leading to setting direction for others.</p>
+      <p>There is no nomination, no group to join and no deadline. You choose where to start and how fast to go. {LEADING_PRIVACY_SENTENCE} <Link href=\"/leading/how-this-works\">How this works</Link>.</p>
+    </header>
+
+    <section className={styles.section} aria-labelledby=\"journey-round-title\">
+      <h2 id=\"journey-round-title\">How one round works</h2>
+      <p>Each round is small: one lesson, a few lines of reflection, one thing tried in your real work, and a note on what happened. Then you go around again.</p>
+      <ol className=\"list-decimal space-y-2 pl-6\">
+        {JOURNEY_STEPS.map(step => <li key={step.id}><strong>{step.title}.</strong> {step.body} <Link href={step.href}>{step.link}</Link>.</li>)}
+      </ol>
+      <p className={styles.plain}>Combine structured learning with workplace experience and feedback from colleagues. A lesson can introduce a concept; applying it requires attention to the situation, your authority and the people affected. Review what happened before deciding what to retain or change.</p>
+    </section>
+
+    <section className={styles.section} aria-labelledby=\"journey-start-title\">
+      <h2 id=\"journey-start-title\">Find a starting point</h2>
+      <p>Answer two or three questions about your work, or simply choose from the list below.</p>
+      <LeadingStartChooser paths={paths} />
+      <ul className={styles.doors}>
+        {LEADING_PATHS.map(path => <li key={path.slug}><Link className={styles.door} href={`/leading/paths/${path.slug}`}>
+          <span className={styles.doorTitle}>{path.title}</span>
+          {PATH_JOURNEY[path.slug] ? <span>{PATH_JOURNEY[path.slug].question}</span> : <span>{path.description}</span>}
+          <span className={styles.doorAction}>Open this path</span>
+        </Link></li>)}
+      </ul>
+    </section>
+
+    <section className={styles.section} aria-labelledby=\"journey-rhythm-title\">
+      <h2 id=\"journey-rhythm-title\">A steady rhythm</h2>
+      <p>A week that fits inside real work looks something like this. Take less when the week is full.</p>
+      <ul className=\"list-disc pl-6\">
+        {WEEKLY_RHYTHM.map(item => <li key={item.what}>{item.what}: {item.time}</li>)}
+      </ul>
+      <details>
+        <summary>One way to pace a path over six weeks</summary>
+        <ol className=\"mt-2 space-y-2 pl-0\">
+          {SIX_WEEKS.map(week => <li key={week.week}><strong>Week {week.week}.</strong> Learn: {week.learn}. Reflect: {week.reflect}. Apply: {week.apply}.</li>)}
+        </ol>
+        <p className={styles.plain}>This is one example. Any path can be taken faster, slower or in a different order.</p>
+      </details>
+    </section>
+
+    <section className={styles.section} aria-labelledby=\"journey-reflect-title\">
+      <h2 id=\"journey-reflect-title\">Looking back</h2>
+      <p>Use reflection to compare your intention with what happened. Record the observations, their significance and what remains uncertain, then decide what to retain, revise or refer to someone with the relevant responsibility. <Link href=\"/my-work/reflections\">Open your reflection notebook</Link>.</p>
+      <ul className=\"list-disc space-y-2 pl-6\">
+        {REFLECTION_PROMPTS.map(prompt => <li key={prompt.kind}><strong>{prompt.kind}.</strong> {prompt.when} {prompt.questions.join(\" \")}</li>)}
+      </ul>
+      <p className={styles.plain}>When you set a date to look back, the notebook shows it to you the next time you open it. Nothing is sent as a reminder.</p>
+    </section>
+
+    <section className={styles.section} aria-labelledby=\"journey-others-title\">
+      <h2 id=\"journey-others-title\">Learning with others, if you want to</h2>
+      <p>None of this is required. A conversation with someone you trust can deepen what you notice.</p>
+      <ul className={styles.doors}>
+        {LEARNING_WITH_OTHERS.map(place => <li key={place.href}><Link className={styles.door} href={place.href}><span className={styles.doorTitle}>{place.title}</span><span>{place.body}</span></Link></li>)}
+      </ul>
+    </section>
+
+    <section className={styles.section} aria-labelledby=\"journey-elsewhere-title\">
+      <h2 id=\"journey-elsewhere-title\">Free courses elsewhere</h2>
+      <p>For anyone who wants more. These belong to other organizations, open on their sites, and may ask you to create an account there. Confirm any required-training credit through the agency process responsible for that requirement; do not assume that completing an external course satisfies it.</p>
+      <ul className=\"list-disc pl-6\">
+        {LEARNING_ELSEWHERE.map(course => <li key={course.href}><SourceLink className=\"underline\" href={course.href} target=\"_blank\" rel=\"noreferrer\">{course.title}</SourceLink>, {course.provider}. {course.body}</li>)}
+      </ul>
+    </section>
+
+    <section className={styles.section} aria-labelledby=\"journey-end-title\">
+      <h2 id=\"journey-end-title\">At the end of a path</h2>
+      <p>Four questions to ask yourself:</p>
+      <ul className=\"list-disc pl-6\">
+        {END_OF_PATH_QUESTIONS.map(question => <li key={question}>{question}</li>)}
+      </ul>
+      <p className={styles.plain}>This optional path has no completion submission or supervisor score report. Related lessons may save progress or practice responses in your browser profile. If you want something to bring to a development conversation, review and download your action plans and reflections from <Link href=\"/my-work\">My work</Link>. What you share, and with whom, is your choice.</p>
+    </section>
+  </div></div>;
+}
+"
+
+ ❯ lib/content/leadership-journey.test.ts:71:64
+     69|   });
+     70|   it("offers no badge, certificate, score, rating or ranking", () => {
+     71|     for (const text of [everyWord, ...files]) expect(text).not.toMatch…
+       |                                                                ^
+     72|   });
+     73|   it("says plainly that it is optional, with nothing to submit and not…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/7]⎯
+
+ FAIL  |node| lib/content/leadership-journey.test.ts > the promises the journey keeps > says plainly that it is optional, with nothing to submit and nothing counted
+AssertionError: expected '\r\nimport { SourceLink } from "@/com…' to contain 'nothing to submit'
+
+- Expected
++ Received
+
+- nothing to submit
++ 
++ import { SourceLink } from "@/components/app-link";
++ import type { Metadata } from "next";
++ import Link from "@/components/app-link";
++ import { LeadingStartChooser } from "@/components/leading-start-chooser";
++ import { LEADING_LABEL, LEADING_PATHS, LEADING_PRIVACY_SENTENCE } from "@/lib/content/collections";
++ import { END_OF_PATH_QUESTIONS, JOURNEY_STEPS, LEARNING_ELSEWHERE, LEARNING_WITH_OTHERS, PATH_JOURNEY, REFLECTION_PROMPTS, SIX_WEEKS, WEEKLY_RHYTHM } from "@/lib/content/leadership-journey";
++ import base from "@/app/learn/collaboration/collaboration.module.css";
++ import styles from "@/components/collections.module.css";
++ 
++ export const metadata: Metadata = {
++   title: `Your leadership journey | ${LEADING_LABEL}`,
++   description: "Connect leadership learning with a work decision, reflection and follow-up. This optional path does not enroll you in assigned training; related learning tools explain what they save.",
++ };
++ 
++ export default function LeadingJourneyPage() {
++   const paths = LEADING_PATHS.map(path => ({ slug: path.slug, title: path.title, description: path.description }));
++   return <div className={base.page}><div className={base.content}>
++     <p className={base.back}><Link href="/leading">{LEADING_LABEL}</Link></p>
++     <header className={base.intro}>
++       <p className={base.eyebrow}>Optional</p>
++       <h1>Your leadership journey</h1>
++       <p className={base.lede}>A way to grow as a leader at your own pace, from a first interest in leading to setting direction for others.</p>
++       <p>There is no nomination, no group to join and no deadline. You choose where to start and how fast to go. {LEADING_PRIVACY_SENTENCE} <Link href="/leading/how-this-works">How this works</Link>.</p>
++     </header>
++ 
++     <section className={styles.section} aria-labelledby="journey-round-title">
++       <h2 id="journey-round-title">How one round works</h2>
++       <p>Each round is small: one lesson, a few lines of reflection, one thing tried in your real work, and a note on what happened. Then you go around again.</p>
++       <ol className="list-decimal space-y-2 pl-6">
++         {JOURNEY_STEPS.map(step => <li key={step.id}><strong>{step.title}.</strong> {step.body} <Link href={step.href}>{step.link}</Link>.</li>)}
++       </ol>
++       <p className={styles.plain}>Combine structured learning with workplace experience and feedback from colleagues. A lesson can introduce a concept; applying it requires attention to the situation, your authority and the people affected. Review what happened before deciding what to retain or change.</p>
++     </section>
++ 
++     <section className={styles.section} aria-labelledby="journey-start-title">
++       <h2 id="journey-start-title">Find a starting point</h2>
++       <p>Answer two or three questions about your work, or simply choose from the list below.</p>
++       <LeadingStartChooser paths={paths} />
++       <ul className={styles.doors}>
++         {LEADING_PATHS.map(path => <li key={path.slug}><Link className={styles.door} href={`/leading/paths/${path.slug}`}>
++           <span className={styles.doorTitle}>{path.title}</span>
++           {PATH_JOURNEY[path.slug] ? <span>{PATH_JOURNEY[path.slug].question}</span> : <span>{path.description}</span>}
++           <span className={styles.doorAction}>Open this path</span>
++         </Link></li>)}
++       </ul>
++     </section>
++ 
++     <section className={styles.section} aria-labelledby="journey-rhythm-title">
++       <h2 id="journey-rhythm-title">A steady rhythm</h2>
++       <p>A week that fits inside real work looks something like this. Take less when the week is full.</p>
++       <ul className="list-disc pl-6">
++         {WEEKLY_RHYTHM.map(item => <li key={item.what}>{item.what}: {item.time}</li>)}
++       </ul>
++       <details>
++         <summary>One way to pace a path over six weeks</summary>
++         <ol className="mt-2 space-y-2 pl-0">
++           {SIX_WEEKS.map(week => <li key={week.week}><strong>Week {week.week}.</strong> Learn: {week.learn}. Reflect: {week.reflect}. Apply: {week.apply}.</li>)}
++         </ol>
++         <p className={styles.plain}>This is one example. Any path can be taken faster, slower or in a different order.</p>
++       </details>
++     </section>
++ 
++     <section className={styles.section} aria-labelledby="journey-reflect-title">
++       <h2 id="journey-reflect-title">Looking back</h2>
++       <p>Use reflection to compare your intention with what happened. Record the observations, their significance and what remains uncertain, then decide what to retain, revise or refer to someone with the relevant responsibility. <Link href="/my-work/reflections">Open your reflection notebook</Link>.</p>
++       <ul className="list-disc space-y-2 pl-6">
++         {REFLECTION_PROMPTS.map(prompt => <li key={prompt.kind}><strong>{prompt.kind}.</strong> {prompt.when} {prompt.questions.join(" ")}</li>)}
++       </ul>
++       <p className={styles.plain}>When you set a date to look back, the notebook shows it to you the next time you open it. Nothing is sent as a reminder.</p>
++     </section>
++ 
++     <section className={styles.section} aria-labelledby="journey-others-title">
++       <h2 id="journey-others-title">Learning with others, if you want to</h2>
++       <p>None of this is required. A conversation with someone you trust can deepen what you notice.</p>
++       <ul className={styles.doors}>
++         {LEARNING_WITH_OTHERS.map(place => <li key={place.href}><Link className={styles.door} href={place.href}><span className={styles.doorTitle}>{place.title}</span><span>{place.body}</span></Link></li>)}
++       </ul>
++     </section>
++ 
++     <section className={styles.section} aria-labelledby="journey-elsewhere-title">
++       <h2 id="journey-elsewhere-title">Free courses elsewhere</h2>
++       <p>For anyone who wants more. These belong to other organizations, open on their sites, and may ask you to create an account there. Confirm any required-training credit through the agency process responsible for that requirement; do not assume that completing an external course satisfies it.</p>
++       <ul className="list-disc pl-6">
++         {LEARNING_ELSEWHERE.map(course => <li key={course.href}><SourceLink className="underline" href={course.href} target="_blank" rel="noreferrer">{course.title}</SourceLink>, {course.provider}. {course.body}</li>)}
++       </ul>
++     </section>
++ 
++     <section className={styles.section} aria-labelledby="journey-end-title">
++       <h2 id="journey-end-title">At the end of a path</h2>
++       <p>Four questions to ask yourself:</p>
++       <ul className="list-disc pl-6">
++         {END_OF_PATH_QUESTIONS.map(question => <li key={question}>{question}</li>)}
++       </ul>
++       <p className={styles.plain}>This optional path has no completion submission or supervisor score report. Related lessons may save progress or practice responses in your browser profile. If you want something to bring to a development conversation, review and download your action plans and reflections from <Link href="/my-work">My work</Link>. What you share, and with whom, is your choice.</p>
++     </section>
++   </div></div>;
++ }
++
+
+ ❯ lib/content/leadership-journey.test.ts:75:191
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/7]⎯
+
+ FAIL  |node| lib/content/staff-publication-language.test.ts > reviewed publication presentation > applies the eight reviewed publication variants before route normalization and keeps evidence on final objects
+AssertionError: expected 'For each transition, identify the per…' to deeply equal 'For each transition, identify the per…'
+
+Expected: "For each transition, identify the person responsible for coordinating access arrangements with the individual and the designated accommodation office. Confirm what can continue and what requires review before the new activity begins."
+Received: "For each transition, identify the person responsible for coordinating access arrangements with the individual and the person or area responsible for accommodations. Confirm what can continue and what requires review before the new activity begins."
+
+ ❯ lib/content/staff-publication-language.test.ts:24:24
+     22|       for (const change of revision.changes) {
+     23|         const actual = change.path.reduce<unknown>((value, key) => (va…
+     24|         expect(actual).toEqual(change.after);
+       |                        ^
+     25|       }
+     26|       expect(contentEvidence(item)).toEqual({ sourceId: item.id, revis…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/7]⎯
+
+
+ Test Files  6 failed | 191 passed (197)
+      Tests  7 failed | 1547 passed | 1 skipped (1555)
+   Start at  15:23:10
+   Duration  557.72s (tests 50%, import 29%, transform 12%, environment 9%)
+
+Environment  |components| jsdom was created 46 times · 205.25s total, 47% of tracked time
+             create it once per worker with pool: 'vmThreads' (keeps per-file isolation) or isolate: false (shares it across files)
+             learn more: https://vitest.dev/guide/improving-performance#test-environments
+

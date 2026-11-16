@@ -1,0 +1,67 @@
+{
+  "target": "podcast.anti-racism-public-service",
+  "kind": "surface",
+  "route": "/learn#podcast-anti-racism-public-service",
+  "sourceSha256": "a1e00d16dc2b30af6f2ec5be0325418a79d4962817cb2789cf5b834eb4c55e73",
+  "status": "needs_revision",
+  "reviewedFieldCount": 3,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "intro"
+      ],
+      "before": "Two colleagues talk through how the rules, forms and systems we inherit shape who gets fair access to public services, and what staff can check, measure and fix in their own work.",
+      "after": "This episode explores how inherited rules, forms, and system requirements affect fair access to services. The conversation considers what Minnesota DHS and DSD staff can check, measure, or change in their daily work when they notice potential barriers for people seeking help. Colleagues discuss practical steps and questions staff might use to improve equity in service processes.",
+      "reason": "Expanded the summary for clarity and specificity. Contextualized the discussion to connect directly with Minnesota DHS and DSD staff roles and actions. Explained why staff attention and adjustments matter and what can be changed in practice."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The original introduction: \"Two colleagues talk through how the rules, forms and systems we inherit shape who gets fair access to public services, and what staff can check, measure and fix in their own work,\" is a concise, neutral summary. The proposed change introduces specificity—naming 'Minnesota DHS and DSD staff', detailing actions ('when they notice potential barriers for people seeking help'), and elaborating ('Colleagues discuss practical steps and questions staff might use to improve equity in service processes')—that is not fully evidenced in the given source. The source does not specify the agency, nor does it elaborate practical steps and questions within the original summary. Adding these claims could misrepresent the actual podcast content if those details are not actually covered in the episode. The intro must remain a neutral summary that is directly supported by the source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1155,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 139,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1294
+    },
+    "review": {
+      "input_tokens": 854,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 192,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1046
+    }
+  },
+  "createdAt": "2026-11-15T13:38:20.111Z"
+}

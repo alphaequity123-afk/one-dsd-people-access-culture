@@ -1,0 +1,81 @@
+{
+  "target": "graduation-path.gp-1",
+  "kind": "surface",
+  "route": "/practice/gp-1",
+  "sourceSha256": "efa360ac5658cd9026daa544230b1afcba76f627021a00787661035210bb8b55",
+  "status": "model_checked",
+  "reviewedFieldCount": 51,
+  "changes": [
+    {
+      "fieldId": 4,
+      "path": [
+        "startingCompetence"
+      ],
+      "before": "You have a program idea and want a clear way to consider equity and access before the design is settled.",
+      "after": "You have an idea for a new program and need a framework to analyze equity and access before making key design decisions. This helps you identify who is affected, what barriers may exist, and how well the proposal matches the Department’s access and equity commitments.",
+      "reason": "Clarifies the professional intent for staff by connecting the framework to specific equity and access judgments required before finalizing program design."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "graduatedLooksLike"
+      ],
+      "before": "By the end, you will have a completed equity and access checklist for your program, with clear responsibilities and a review date. You can usually complete routine planning without a consultation, use the same approach for future work, and seek another perspective when added judgment would help.",
+      "after": "At the end of this process, you will have a detailed equity and access checklist for your program. The checklist assigns clear responsibilities and includes a next review date. Most routine planning can be completed without external consultation, and this approach can be repeated for new projects. For complex situations, or if additional judgment is required, you should seek input from others.",
+      "reason": "Clarifies expectations for what will be produced, when to involve others, and emphasizes repeatability for future work. Adds reasoning for following this approach."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The revised text restates the original intent with more detail and formality: \"You have an idea for a new program and need a framework to analyze equity and access before making key design decisions. This helps you identify who is affected, what barriers may exist, and how well the proposal matches the Department’s access and equity commitments.\" The elaborations are supported by the artifact's process—specifically, the planning steps and checklist requirements—which guide staff to examine who is affected, possible barriers, and connection to DSD/DHS access and equity work. The change does not introduce unsupported requirements or misrepresent the source."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The revised text ('At the end of this process, you will have a detailed equity and access checklist for your program...') is a more explicit statement of outcomes—naming a detailed checklist, clear responsibilities, and a review date, all consistent with the artifact steps and rubric. Adding guidance about when to seek further input ('For complex situations...seek input from others') is grounded in the original, which stated 'seek another perspective when added judgment would help.' Removed wording is not official policy or a required quote, so the rephrasing and clarification do not contravene source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3825,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 309,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4134
+    },
+    "review": {
+      "input_tokens": 2168,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 275,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2443
+    }
+  },
+  "createdAt": "2026-11-15T13:39:33.854Z"
+}

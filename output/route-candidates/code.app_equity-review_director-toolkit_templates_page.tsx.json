@@ -1,0 +1,95 @@
+{
+  "target": "code.app/equity-review/director-toolkit/templates/page.tsx",
+  "kind": "surface",
+  "route": "/equity-review/director-toolkit/templates",
+  "sourceSha256": "10a1f231d5662ca2d70dd8cad8dcb6a5939d52cc1564c1a33d026d4d586734f0",
+  "status": "needs_revision",
+  "reviewedFieldCount": 4,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Fourteen printable fill-in templates for equity reviews at the Minnesota Department of Human Services. Nothing you type is saved or sent.",
+      "after": "This set includes fourteen printable templates designed for equity reviews at the Minnesota Department of Human Services. You can fill in the templates on your device, but no information you enter will be stored or transmitted.",
+      "reason": "Revised for clarity, specificity, and to explain that templates can be filled in on the device. Added detail about privacy to clarify that data is not saved or sent, which matters for understanding how to use the resource responsibly."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field3"
+      ],
+      "before": "These templates put the DHS Equity Policy, the DHS Equity Analysis Toolkit and the State of Minnesota Equity Analysis Toolkit into practice. They do not replace them. Adapt each one with the people responsible for the work it covers.",
+      "after": "These templates are designed to help you apply the DHS Equity Policy, the DHS Equity Analysis Toolkit, and the State of Minnesota Equity Analysis Toolkit in your daily work. They are not a substitute for these guides. Review and adapt each template in consultation with those responsible for the area it addresses.",
+      "reason": "Clarified that the templates support but do not substitute for official guides. Made the instruction to adapt templates more explicit and described the importance of involving responsible staff to ensure alignment with local context and authority."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field4"
+      ],
+      "before": "These templates run only in your browser. Nothing you type is saved, stored or sent anywhere, and it is gone when you leave the page.",
+      "after": "These templates function entirely within your browser. Any information you enter is available only during your current session and disappears when you close or refresh the page. Nothing you type is saved, stored, or transmitted.",
+      "reason": "Added explanation about session limits and the reason for this design to clarify what happens to data and why a missing save or transmission process matters for user privacy and data security."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revised text introduces new wording and subtly expands the description beyond the source. The original accurately states: \"Fourteen printable fill-in templates for equity reviews at the Minnesota Department of Human Services. Nothing you type is saved or sent.\" This succinctly addresses purpose and privacy as required by the program standard. The rewrite adds: \"This set includes fourteen printable templates designed for equity reviews... You can fill in the templates on your device, but no information you enter will be stored or transmitted.\" This is not strictly inaccurate, but the additional language (\"fill in on your device\") is redundant given \"fill-in templates,\" and the source does not say this nor provide new technical details. The rewrite risks editorial drift on privacy phrasing, when the documented text meets DHS expectations and is also set as official page metadata. Policy and metadata must retain the original wording exactly."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The change maintains the substantive meaning, but introduces a subtle shift: \"Review and adapt each template in consultation with those responsible for the area it addresses\" is more prescriptive than the source: \"Adapt each one with the people responsible for the work it covers.\" The source's language is collaborative rather than instructional. For internal documentation, the change doesn't materially misrepresent policy, but the original better aligns with the collegial, facilitative tone required by the program writing standard. If not strictly legal policy, prefer the original phrasing for tone and intent."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The expanded version restates the source's privacy assurance and gives more detail about browser session behavior: \"Any information you enter is available only during your current session and disappears when you close or refresh the page.\" While accurate, the additional detail is not present in the source text. The original source is already clear about privacy: \"Nothing you type is saved, stored or sent anywhere, and it is gone when you leave the page.\" There is no strict policy error, but the additional technical detail is not referenced and could drift over time if software behavior changes. The source language is preferable for accuracy and documentation stability."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2143,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 305,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2448
+    },
+    "review": {
+      "input_tokens": 2022,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 452,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2474
+    }
+  },
+  "createdAt": "2026-11-15T13:48:47.298Z"
+}

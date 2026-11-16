@@ -1,0 +1,109 @@
+{
+  "target": "code.app/equity-workspace/layout.tsx",
+  "kind": "surface",
+  "route": "app/equity-workspace/layout.tsx",
+  "sourceSha256": "4f91d23a647bbb4d7cf68a85841caa93864db11623df4e9315c88597d7520c0c",
+  "status": "needs_revision",
+  "reviewedFieldCount": 8,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Sign in with your Consultant Workspace access key. You return to this page after signing in.",
+      "after": "Use your Consultant Workspace access key to sign in. After signing in, you will return to this page so you can start or continue your work.",
+      "reason": "Clarified the instruction and explained that returning to the page enables the user to begin or pick up their work."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "Sign in with the One DSD Team key. After signing in, come back to this page.",
+      "after": "Use the One DSD Team key to sign in. After you sign in, return to this page to participate in shared team work.",
+      "reason": "Clarified the purpose of returning to the page and specified participation in shared work."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": "Team sign-in with the shared One DSD Team key is not open at this time. Ask the Equity and Inclusion Operations Consultant to open it, or to work through an analysis with you.",
+      "after": "Team sign-in with the shared One DSD Team key is not available right now. You may ask the Equity and Inclusion Operations Consultant to enable team sign-in, or request that they review an analysis with you.",
+      "reason": "Specified the action for the staff member and clarified that enabling team sign-in or collaborating with the consultant are options. Removed less precise language."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field5"
+      ],
+      "before": "stay open to everyone without signing in.",
+      "after": "remain available to everyone, no sign-in required.",
+      "reason": "Clarified that no one is restricted from access and removed the ambiguity of 'stay open.'"
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The proposed after text extends beyond the supported instruction and adds an unsupported assertion. The source says: \"Sign in with your Consultant Workspace access key. You return to this page after signing in.\" The rewrite says: \"Use your Consultant Workspace access key to sign in. After signing in, you will return to this page so you can start or continue your work.\" The additional clause (\"so you can start or continue your work\") is not in the source or the UI: the source text simply narrates that the user will return here — it does not justify or further guide the user's objective. Adding this is a change of scope and introduces purpose where none is stated in the interface. The existing instruction is direct and matches the UI."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The rewritten text adds explanatory content not present in source and changes the directive's scope. The source is: \"Sign in with the One DSD Team key. After signing in, come back to this page.\" The proposed rewrite introduces, \"participate in shared team work,\" which adds meaning and instructions not stated in source. The source instruction only says to return to the page, not why; this explanatory addition is not UI-supported and introduces assumptions about purpose and next actions."
+      },
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "The rewrite changes substance and omits a key qualifier. The source says: \"Team sign-in with the shared One DSD Team key is not open at this time. Ask the Equity and Inclusion Operations Consultant to open it, or to work through an analysis with you.\" The rewrite: \"not available right now\" (removes the precise time frame: \"at this time\" is site standard), and shifts \"to enable team sign-in\" which is not the consultant's only action. The phrase \"request that they review an analysis with you\" loses the collaborative aspect (\"work through an analysis with you\") and narrows what the consultant might do in a way not supported in source. This is a substantive shift."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The rewrite of 'stay open to everyone without signing in' to 'remain available to everyone, no sign-in required' is a small clarity edit that does not substantively alter the meaning, though 'remain available' is a stylistic swap and the original matches the source 'stay open'. This is not a blocker but is a notable unneeded recast of established phrase."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2404,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 261,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2665
+    },
+    "review": {
+      "input_tokens": 2166,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 524,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2690
+    }
+  },
+  "createdAt": "2026-11-15T13:48:55.221Z"
+}

@@ -1,0 +1,387 @@
+{
+  "target": "community-brief.oromo",
+  "kind": "surface",
+  "route": "/minnesota-communities/oromo",
+  "sourceSha256": "b927d0f60da59a8be1428b1c2f46a80cbaa817d78f602eeeb31404b304b30c66",
+  "status": "needs_revision",
+  "reviewedFieldCount": 23,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "whoAndWhere"
+      ],
+      "before": "Oromo people are the largest nation in the Horn of Africa by language; there is no Oromo nation-state. Minnesota holds one of the largest Oromo communities outside Africa, concentrated in the Twin Cities. Counts disagree widely by method; date the number you cite.",
+      "after": "Oromo people form the largest language group in the Horn of Africa, but do not have a nation-state. In Minnesota, the Oromo community is among the largest outside Africa, with most living in the Twin Cities. Population estimates vary depending on the collection method and source, so always cite the date and source for any number used.",
+      "reason": "Clarified differences in population estimates, avoiding repetition, and specifying the importance of citing source and date for accuracy."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Oromo is distinct from Somali and Amharic, and 'Ethiopian' is not a substitute for Oromo identity. An interpreter requested only as 'Ethiopian' may not meet the person's language needs. Oromo naming practices are also distinct from Amharic and Somali naming practices.",
+      "after": "Oromo identity is not interchangeable with Somali or Amharic, and the term 'Ethiopian' does not substitute for Oromo. If an interpreter is requested only as 'Ethiopian,' this may not address the individual's actual language need. Oromo naming conventions are also different from both Amharic and Somali practices, so additional questions may be needed to accurately document names.",
+      "reason": "Connected explanation of identity, language access, and naming for clarity. Made explicit what can go wrong if distinction is missed."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "withinGroupDiversity"
+      ],
+      "before": "Islam, Christianity, and Waaqeffanna all live here; do not assume a Somali religious pattern. U.S.-born children may have never lived in Oromia.",
+      "after": "There is religious diversity: members of the Oromo community in Minnesota practice Islam, Christianity, and Waaqeffanna. Do not apply Somali religious patterns as a default. U.S.-born children may not have direct experience living in Oromia, which may affect cultural reference points.",
+      "reason": "Clarified how religious diversity and generational experience may influence engagement and cultural understanding."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "alsoUsedNames",
+        0
+      ],
+      "before": "Ethiopian (umbrella; not a substitute)",
+      "after": "Ethiopian (umbrella term—not specific to Oromo)",
+      "reason": "Specified 'Ethiopian' as an umbrella term to clarify for staff why it should not be considered specific enough for Oromo identification."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "nameNote"
+      ],
+      "before": "Book Afaan Oromoo on the interpreter line. Ask how names appear on documents.",
+      "after": "Request an interpreter for Afaan Oromoo, not Amharic or Somali. Ask individuals how their names appear on identification or legal documents to ensure records match.",
+      "reason": "Clarified action and rationale for matching official documentation and correct language access."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "nameUncertainty"
+      ],
+      "before": "Community counts range widely between community estimates and census-based figures; state the source and date.",
+      "after": "Estimates of the Oromo community size vary widely depending on whether community-based or census figures are used. Always cite both the source and the year with any population figure to avoid confusion.",
+      "reason": "Clarified the variation, added why to cite both source and date."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "whatToAsk",
+        2
+      ],
+      "before": "How would you like to be addressed?",
+      "after": "What name should we use when addressing you, and how would you like it written in our records?",
+      "reason": "Specified intent of the question to help with both respectful address and correct documentation."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "accessChecks",
+        0
+      ],
+      "before": "Afaan Oromoo, not Amharic or Somali, on the request.",
+      "after": "Confirm the request is for Afaan Oromoo, not Amharic or Somali, to meet the individual's language need.",
+      "reason": "Made instruction explicit—checking that the request matches the individual's actual language."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "accessChecks",
+        1
+      ],
+      "before": "Translated notices reviewed by an Afaan Oromoo speaker.",
+      "after": "Have any translations reviewed by someone fluent in Afaan Oromoo to check for accuracy and cultural appropriateness.",
+      "reason": "Specified why review is needed, not merely that it happens."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "accessChecks",
+        2
+      ],
+      "before": "Greater Minnesota households exist; do not assume the metro.",
+      "after": "Remember that Oromo households are present in Greater Minnesota as well as the metro; do not assume all families are in the Twin Cities area.",
+      "reason": "Stated the reason behind not presuming metro location—household distribution."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "whoToInvolve",
+        0
+      ],
+      "before": "Language access lead or interpreter services, with the dialect written on the request.",
+      "after": "Involve the language access lead or interpreter services, specifying the dialect in the request to avoid errors and ensure the right match.",
+      "reason": "Explained the importance of specifying dialect and who must ensure accuracy."
+    },
+    {
+      "fieldId": 11,
+      "path": [
+        "whoToInvolve",
+        1
+      ],
+      "before": "Equity Director for the administration or the person responsible for the program.",
+      "after": "Include the Equity Director for the division or the person responsible for program equity to help ensure culturally responsive service.",
+      "reason": "Clarified why to include equity leadership, tied to responsive service."
+    },
+    {
+      "fieldId": 12,
+      "path": [
+        "whoToInvolve",
+        2
+      ],
+      "before": "Community partner organizations identified in this brief, with a clear purpose, role, compensation, and plan to report back.",
+      "after": "Engage community partner organizations identified here, providing a clear role, compensation, expectations, and how their input will be reported back to the community.",
+      "reason": "Clarified the required clarity in partnership: role, compensation, expectations, and accountability."
+    },
+    {
+      "fieldId": 13,
+      "path": [
+        "whoToInvolve",
+        3
+      ],
+      "before": "Oromo community organizations and congregations the family names.",
+      "after": "Also involve Oromo community organizations and congregations familiar with extended family names, as they can help with outreach and context.",
+      "reason": "Explained the specific role these organizations play beyond general outreach."
+    },
+    {
+      "fieldId": 14,
+      "path": [
+        "whatNotToAssume",
+        0
+      ],
+      "before": "Do not use a Somali or broad 'Ethiopian' brief in place of Oromo-specific context.",
+      "after": "Do not substitute Somali or generic 'Ethiopian' information for Oromo-specific context when preparing for service or outreach.",
+      "reason": "Reframed to directly address program staff about the consequence of misusing information."
+    },
+    {
+      "fieldId": 15,
+      "path": [
+        "whatNotToAssume",
+        1
+      ],
+      "before": "Keep the service meeting focused on the person's needs rather than asking them to explain or resolve Ethiopian politics.",
+      "after": "Keep the meeting focused on addressing the individual or family's needs, and do not ask them to explain or mediate Ethiopian political issues.",
+      "reason": "Clarified the importance of staying on topic for effective service and respecting boundaries."
+    },
+    {
+      "fieldId": 16,
+      "path": [
+        "whatNotToAssume",
+        2
+      ],
+      "before": "Do not assume a religious pattern.",
+      "after": "Do not assume a particular religious practice applies; always ask about religious considerations as needed for respectful engagement.",
+      "reason": "Made explicit the impact of assumption—asking when relevant, to improve service."
+    },
+    {
+      "fieldId": 17,
+      "path": [
+        "spotlightTitle"
+      ],
+      "before": "Community told through its own stories",
+      "after": "Community experiences in their own words",
+      "reason": "More concisely signals the content: firsthand perspectives, adding specificity."
+    },
+    {
+      "fieldId": 18,
+      "path": [
+        "spotlightBody"
+      ],
+      "before": "The Oromo Story in Minnesota brings heritage, early community experiences, and regional differences into view through film. Community storytelling offers a richer starting point than a single label: people can describe the traditions and experiences that matter to them.",
+      "after": "The Oromo Story in Minnesota film explores heritage, community formation, and regional diversity. Storytelling by community members reveals a broader range of traditions and personal histories than a single label conveys.",
+      "reason": "Clarified what the film does and why firsthand stories matter for understanding community diversity."
+    },
+    {
+      "fieldId": 19,
+      "path": [
+        "spotlightLinkLabel"
+      ],
+      "before": "Discover the Oromo Story in Minnesota",
+      "after": "Learn more about Oromo perspectives in Minnesota",
+      "reason": "Framed the link clearly as an invitation to deeper community understanding."
+    },
+    {
+      "fieldId": 20,
+      "path": [
+        "reflectionBody"
+      ],
+      "before": "Whose voices would help you understand the range of experiences behind a community name before planning outreach?",
+      "after": "Before planning outreach, whose perspectives would give you a fuller understanding of the diversity within the Oromo community?",
+      "reason": "Clarified the reflection as guidance for seeking input pre-outreach."
+    },
+    {
+      "fieldId": 21,
+      "path": [
+        "source0Label"
+      ],
+      "before": "Minnesota Compass (Ethiopian umbrella profile)",
+      "after": "Minnesota Compass (profile under Ethiopian umbrella category)",
+      "reason": "Clarified this is an umbrella, not a dedicated Oromo profile."
+    },
+    {
+      "fieldId": 22,
+      "path": [
+        "source0Note"
+      ],
+      "before": "Umbrella count; not an Oromo census.",
+      "after": "Population figures here reflect all people reported under 'Ethiopian' and may not accurately represent the Oromo community specifically.",
+      "reason": "Clarified the difference between umbrella and specific group data so staff do not misinterpret the data."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The rewrite from 'Oromo people are the largest nation in the Horn of Africa by language; there is no Oromo nation-state...' to 'Oromo people form the largest language group in the Horn of Africa, but do not have a nation-state...' is generally accurate in fact but loses two specific source elements: 1) 'nation' in Horn of Africa is a loaded, debated term among some Oromo and in migration studies; 'nation' in the sense of 'ethnonation' versus 'language group' is not simply interchangeable. 2) 'Counts disagree widely by method; date the number you cite.' was present and clear; the revision unnecessarily repeats this idea ('Population estimates vary...') and so is more verbose, but does not meaningfully add accuracy. However, the new statement 'Population estimates vary depending on the collection method and source, so always cite the date and source for any number used.' moves the original short call to action into a less noticeable clause, risking it not being read. Given DHS/DSD's instructions, the clear directive to 'date the number you cite' and the explicitness of variability by method are preferable over the split form in the revision. Recommend original wording or a tighter edit that strictly preserves the instruction's directness and the complexity of 'nation.'"
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revised explanation for the difference between Oromo/Somali/Amharic/Ethiopian identity is accurate and acceptable. The interpretation of language access and naming is clearer than the original; this is an improvement."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revision maintains all elements: religious diversity, U.S.-born children's experience. Clarifies why these differences matter for cultural reference. Acceptable."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The new parenthetical is accurate and aids clarity. Acceptable."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "Additional explanation regarding document matching is accurate and clarifies the previous simple direction; acceptable."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The rewrite is more wordy but accurate. Acceptable."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The revised question ('What name should we use...') clarifies the purpose and does not overreach. Acceptable."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "Explicit check for correct language is accurate and improves actionable clarity. Acceptable."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "Additional rationale (accuracy and cultural appropriateness) is helpful; matches intent. Acceptable."
+      },
+      {
+        "fieldId": 9,
+        "severity": "note",
+        "finding": "Expanded explanation for geographic diversity is accurate. Acceptable."
+      },
+      {
+        "fieldId": 10,
+        "severity": "note",
+        "finding": "Expanded to clarify avoiding errors and specifying dialect is accurate and improves the instruction. Acceptable."
+      },
+      {
+        "fieldId": 11,
+        "severity": "note",
+        "finding": "Expanded reason for including equity lead does not change the core qualifier. Acceptable."
+      },
+      {
+        "fieldId": 12,
+        "severity": "note",
+        "finding": "Expanded list of partnership terms is an improvement and aligns with state practice. Acceptable."
+      },
+      {
+        "fieldId": 13,
+        "severity": "note",
+        "finding": "Clarifies why to involve organizations: knowledge of family names for outreach/context. Acceptable."
+      },
+      {
+        "fieldId": 14,
+        "severity": "note",
+        "finding": "Reframing to address staff is accurate, no change in meaning. Acceptable."
+      },
+      {
+        "fieldId": 15,
+        "severity": "note",
+        "finding": "The rewritten field is clearer and matches the source meaning. Acceptable."
+      },
+      {
+        "fieldId": 16,
+        "severity": "note",
+        "finding": "New instruction to ask about religious practice if relevant is procedurally sound and improves equity. Acceptable."
+      },
+      {
+        "fieldId": 17,
+        "severity": "note",
+        "finding": "Title edit is more concise but still signals intent, keeping the source focus. Acceptable."
+      },
+      {
+        "fieldId": 18,
+        "severity": "note",
+        "finding": "Clarifies the film's focus with no change to original meaning. Acceptable."
+      },
+      {
+        "fieldId": 19,
+        "severity": "note",
+        "finding": "Link label is fine, matches destination, and is explicit. Acceptable."
+      },
+      {
+        "fieldId": 20,
+        "severity": "note",
+        "finding": "Changes question focus slightly but not the underlying meaning. Acceptable."
+      },
+      {
+        "fieldId": 21,
+        "severity": "note",
+        "finding": "Clarifies that it is an umbrella and not Oromo-specific. Acceptable."
+      },
+      {
+        "fieldId": 22,
+        "severity": "note",
+        "finding": "The rewritten note is more explicit about inclusivity versus specificity. Acceptable."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2416,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 1288,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3704
+    },
+    "review": {
+      "input_tokens": 3146,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 944,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4090
+    }
+  },
+  "createdAt": "2026-11-15T13:40:19.783Z"
+}

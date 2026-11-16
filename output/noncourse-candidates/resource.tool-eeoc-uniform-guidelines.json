@@ -1,0 +1,127 @@
+{
+  "target": "resource.tool-eeoc-uniform-guidelines",
+  "kind": "resource",
+  "route": "https://www.eeoc.gov/laws/guidance/questions-and-answers-clarify-and-provide-common-interpretation-uniform-guidelines",
+  "sourceSha256": "492f0b65eb87cd76145cce698a7629ca74bdf1dfdb83bc98a795918c3c3635de",
+  "status": "model_checked",
+  "reviewedFieldCount": 5,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "These federal selection guidelines, with the U.S. Equal Employment Opportunity Commission’s questions and answers, call for careful attention to adverse impact and to evidence of job relatedness and validity. Cite and link these public sources; HR and legal partners interpret.",
+      "after": "The Uniform Guidelines on Employee Selection Procedures, released by the U.S. Equal Employment Opportunity Commission with supporting Q&A, advise reviewing selection methods for adverse impact and confirming job relatedness and validity. These guidelines serve as a public reference; human resources and legal staff are responsible for local interpretation.",
+      "reason": "Clarified the agency role, practical function, and scope of interpretation for DHS and DSD; connected intended action with authority and use."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Owner and publisher: U.S. Equal Employment Opportunity Commission and partner agencies. Status: public federal guidance.",
+      "after": "Owner and publisher: U.S. Equal Employment Opportunity Commission and partner agencies. Status: published as federal guidance.",
+      "reason": "Clarified publication status for accuracy; retained original ownership and authority."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Purpose: guidance on how selection procedures should be examined for adverse impact and supported by evidence of job relatedness.",
+      "after": "Purpose: To guide examination of employment selection processes for adverse impact and to require that requirements are supported by evidence of job relatedness.",
+      "reason": "Specified the purpose using a more explicit and directive statement about how and why these guidelines are applied."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Limits: guidance, applied by HR and legal partners. Do not remove qualifications categorically on the basis of this card; determine what the work requires.",
+      "after": "Limits: The guidance is intended for interpretation and application by HR and legal partners. Do not treat this card as grounds to remove qualifications without analysis; review the actual work requirements before making decisions.",
+      "reason": "Clarified the need for analysis and review by qualified roles and emphasized the limits on action without further assessment."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Program use: the job-relatedness check and the inclusive hiring lifecycle follow its questions in practice terms.",
+      "after": "Program use: The job-relatedness check and the inclusive hiring lifecycle adapt these federal guidelines into practical steps relevant to DSD hiring and selection decisions.",
+      "reason": "Linked the guideline's application more directly to DHS/DSD program practice, making explicit its operational use."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The summary rephrases but retains all substantive elements: it clarifies that the guidelines are public, provide a reference, and require HR/legal interpretation. The change does not alter meaning or introduce unsupported scope."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "Changing 'public federal guidance' to 'published as federal guidance' does not change the authority, scope, or interpretation. It clarifies publication status and maintains accuracy."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The purpose statement becomes more explicit about requiring job relatedness and evidence, but this is directly supported by the EEOC source. The change accurately represents the federal guideline's function."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The revised limits section simply clarifies that the guidance is not itself a categorical rule and must be interpreted by HR/legal, which is consistent with both DHS policy and EEOC guidance. Practical caution and limits remain unchanged."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "Adjusting 'in practice terms' to an explicit link with 'practical steps relevant to DSD hiring and selection' grounds the policy in actual DHS/DSD use. This matches the source's intent for agency adaptation. No policy boundaries or legal context are changed."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1575,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 420,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1995
+    },
+    "review": {
+      "input_tokens": 1502,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 277,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1779
+    }
+  },
+  "createdAt": "2026-11-15T13:42:51.952Z"
+}

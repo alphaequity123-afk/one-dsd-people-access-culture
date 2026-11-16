@@ -1,0 +1,109 @@
+{
+  "target": "code.components/community-design-index.tsx",
+  "kind": "surface",
+  "route": "components/community-design-index.tsx",
+  "sourceSha256": "2bbf878538840d9c41da597a33032dbe30f8448795837e560265d9b5d69cf67c",
+  "status": "needs_revision",
+  "reviewedFieldCount": 7,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "(we defer to the Office of Indian Affairs and the Department of Human Services offices that handle Tribal relations and consultation)",
+      "after": "(For these communities, we defer to the Office of Indian Affairs and the Department of Human Services teams responsible for Tribal relations and government-to-government consultation, who have authority for official representation and will lead any engagement or policy discussion.)",
+      "reason": "Clarified that deference includes both responsibility for official representation and the authority to lead engagement or discussions. Specified why this matters: so staff know not to independently interpret, plan, or represent Tribal perspectives, but work through established DHS and intergovernmental channels."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": "No community matched that name. You might try a different spelling, or browse the full collection.",
+      "after": "No community matched that name. Check for spelling errors or browse the full list to find the community brief you need.",
+      "reason": "Specified the practical actions staff can take when their search returns no results. This change ties the purpose of the instruction directly to searching and locating needed information."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field5"
+      ],
+      "before": "for observances, festivals and remembrances across these communities.",
+      "after": "for observances, festivals, and remembrances included across these communities.",
+      "reason": "Added 'included' for clarity and separated items with an Oxford comma to improve readability and accuracy in listing types of events."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field7"
+      ],
+      "before": ": find organizations connected with the Disability Services Division, compare counties, and plan an engagement.",
+      "after": ": locate organizations that regularly work with Disability Services Division programs, compare information across counties, and plan specific engagement activities as part of your outreach.",
+      "reason": "Clarified that staff can find organizations specifically involved with DSD, not just any organizations, and explained that comparison and planning are part of a concrete outreach process."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed change adds unsupported claims ('who have authority for official representation and will lead any engagement or policy discussion') and omits the precise original clause, 'the Department of Human Services offices that handle Tribal relations and consultation.' The original text sets a scope without asserting exclusive authority for engagement or policymaking—those are new claims. The change also erases the qualifying 'offices' in favor of 'teams,' which does not have equivalent meaning or official standing in the referenced context. There is no source evidence for this additional authority/representation language; the original phrase must be preserved."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The revised text provides somewhat more explicit guidance ('Check for spelling errors or browse the full list to find the community brief you need.'). While not strictly source-driven, this expands on the practical instruction and remains within the scope. The change is acceptable."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "Adding 'included' and using an Oxford comma ('for observances, festivals, and remembrances included across these communities') modestly clarifies the types of events referenced. This does not materially change meaning. The edit is acceptable but not required."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "This clarifies that organizations should be regularly involved with Disability Services Division programs and explains that comparison and planning are part of outreach. The specifics added align with the DSD staff focus and enhance staff understanding without introducing unsupported claims. Acceptable as a clarification."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2685,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 318,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3003
+    },
+    "review": {
+      "input_tokens": 2528,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 326,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2854
+    }
+  },
+  "createdAt": "2026-11-15T13:52:30.306Z"
+}

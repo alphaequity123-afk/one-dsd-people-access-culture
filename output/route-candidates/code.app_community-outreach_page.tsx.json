@@ -1,0 +1,95 @@
+{
+  "target": "code.app/community-outreach/page.tsx",
+  "kind": "surface",
+  "route": "/community-outreach",
+  "sourceSha256": "d899f6258de699eea3621480673ff4f6025cf2069dbbe5402c6afabfc16ee79f",
+  "status": "needs_revision",
+  "reviewedFieldCount": 3,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Prepare to work with Minnesota communities, find organizations connected with the Disability Services Division, and involve people in decisions.",
+      "after": "Start by learning how Disability Services Division staff work with Minnesota communities, identify relevant organizations, and involve individuals with disabilities and their chosen supporters in shared decisions. The information on this page helps you understand the organizations and practices that play a role in outreach, and explains how your actions support DSD's mission to connect people with services.",
+      "reason": "Clarified the leading statement by explaining the substantive purpose for staff—why connecting with organizations and involving people in decisions matters for DSD work. Provided a clear connection to DSD's mission and acknowledged how each component (communities, organizations, shared decisions) is relevant to the user's task, as required by the writing standard."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field2"
+      ],
+      "before": "Before you use the figures and the directory",
+      "after": "Key considerations before using the figures and organization directory",
+      "reason": "Revised the heading to provide a clearer purpose—identifying it as a preparatory step that points to the importance of context and accuracy before relying on data or the directory. This helps staff understand this is not just a procedural caution but an active part of professional practice."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field3"
+      ],
+      "before": "Native American and Tribal-specific guidance",
+      "after": "Guidance for working with Native American and Tribal communities",
+      "reason": "Clarified that the guidance is for staff who are engaging specifically with Native American and Tribal communities, specifying the context in which these directions apply and supporting better navigation for users who need culturally specific outreach information."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed revision to field0 substantially expands and revises the introductory statement without direct support from the code source. The source (code.app/community-outreach/page.tsx) sets the text via stringValue(surface.values, key) and originally reads: \"Prepare to work with Minnesota communities, find organizations connected with the Disability Services Division, and involve people in decisions.\" The new version adds program-level context (\"explains how your actions support DSD's mission\"), specific inclusion of \"individuals with disabilities and their chosen supporters,\" and claims about the purpose and uses of the page that are not grounded in the supplied source. This change also introduces a policy connection and explanations not present in the original text, which is limited and neutral. These are unsupported claims and expand beyond allowed scope for this editable field."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The proposed revision to field2, changing \"Before you use the figures and the directory\" to \"Key considerations before using the figures and organization directory,\" is a stylistic improvement that clarifies intent. This adjustment does not introduce new policy, legal, or instructional content and remains consistent with the field's use as a section summary per the source page. Acceptable as minor clarification."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revision to field3, from \"Native American and Tribal-specific guidance\" to \"Guidance for working with Native American and Tribal communities,\" represents a minor clarification that slightly improves user orientation. It is consistent with the surrounding text and labeling in the source page and does not introduce unsupported claims. Acceptable change."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1944,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 295,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2239
+    },
+    "review": {
+      "input_tokens": 1837,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 347,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2184
+    }
+  },
+  "createdAt": "2026-11-15T13:47:43.114Z"
+}

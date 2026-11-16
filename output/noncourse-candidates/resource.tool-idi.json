@@ -1,0 +1,82 @@
+{
+  "target": "resource.tool-idi",
+  "kind": "resource",
+  "route": "https://www.idiinventory.com/",
+  "sourceSha256": "210169d5a062ccc4aaa53f8b1e3d161ea141c7f41092196ca868b418bfe13aea",
+  "status": "needs_revision",
+  "reviewedFieldCount": 8,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Qualified administrators give this proprietary, licensed assessment for individual and group intercultural development. You may describe it, refer to qualified administration, and discuss developmental orientations generally, but never reproduce protected content or use results for selection, performance, access, or profiling.",
+      "after": "Only qualified administrators deliver this proprietary, licensed assessment for individual and group intercultural development. You may refer to the IDI, qualified administration, and general information about developmental orientations, but do not reproduce any protected content or use IDI results for hiring, evaluation, eligibility, or performance decisions.",
+      "reason": "Improved the summary to clarify permissible staff actions and specify restricted uses, directly addressing why these limits matter in practice. Avoided loaded terms such as selection, profiling, or access that may have broader policy implications."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Purpose: describes a developmental orientation toward cultural difference along a continuum from monocultural to intercultural mindsets. This program's continuum draws on both: the licensed IDI instrument describes five orientations — Denial, Polarization, Minimization, Acceptance, and Adaptation — and the program's sixth, Integration, comes from Bennett's Developmental Model of Intercultural Sensitivity and the program's own application; it is not an IDI orientation. In this program, Integration means the people a process affects help design it; in Bennett's model, where the name comes from, it describes identity across cultures. The full continuum moves from not noticing cultural difference, through judging it, through treating it as unimportant next to human sameness, toward genuinely valuing, adapting to, and integrating multiple cultural frames. Used for coaching, group development, and planning.",
+      "after": "Purpose: The IDI describes how individuals or groups orient themselves toward cultural differences, using a developmental continuum that ranges from monocultural to intercultural mindsets. The IDI instrument outlines five orientations: Denial, Polarization, Minimization, Acceptance, and Adaptation. This program references a sixth stage, Integration, taken from Bennett's Developmental Model of Intercultural Sensitivity and adapted to the program's context; Integration is not a formal IDI classification. In this program, Integration means involving those affected by a process in its design, while in Bennett's original usage, it refers to an ability to operate across multiple cultural identities. The full continuum moves from not noticing cultural differences, through negative judgments and minimizing difference, to genuinely valuing, adapting to, and using multiple cultural perspectives. Staff may use this information for coaching, group planning, and development discussions.",
+      "reason": "Removed ambiguity by distinguishing clearly between the IDI's official stages and the program's adaptation. Improved specificity about both the program usage of Integration and its original meaning in Bennett's model. Made links to practical staff use explicit."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The source summary uses the terms 'selection, performance, access, or profiling' to specify restricted uses of IDI results. The proposed revision replaces these with 'hiring, evaluation, eligibility, or performance,' altering the scope and exact meaning of the restriction. Source wording prevents use for selection and access decisions as well as profiling. The change narrows legally and ethically important original prohibitions, which are directly supported by the source and must be preserved. Additionally, 'refer to qualified administration' was changed to 'qualified administration,' losing some of the precise limitation."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The proposed revision improves clarity by explicitly separating program use of 'Integration' from the IDI's official stages and clarifies Bennett's model. However, the original text's description of the full continuum ('not noticing cultural difference, through judging it, through treating it as unimportant next to human sameness, toward genuinely valuing, adapting to, and integrating multiple cultural frames') is condensed, losing slightly the detail about the transition from 'judging' to 'treating as unimportant,' which is relevant for theoretical understanding but not a blocker. Uses of the tool are correctly limited, and no unsupported claims are added."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2074,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 368,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2442
+    },
+    "review": {
+      "input_tokens": 1774,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 273,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2047
+    }
+  },
+  "createdAt": "2026-11-15T13:42:40.788Z"
+}

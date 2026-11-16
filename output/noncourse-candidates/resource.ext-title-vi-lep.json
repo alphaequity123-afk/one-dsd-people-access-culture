@@ -1,0 +1,97 @@
+{
+  "target": "resource.ext-title-vi-lep",
+  "kind": "resource",
+  "route": "https://www.justice.gov/crt/limited-english-proficiency",
+  "sourceSha256": "bd2a0d7f160460b3c1a760c61b894f3ac391ea98c4d7221ea1a8c29c9826ae8d",
+  "status": "model_checked",
+  "reviewedFieldCount": 3,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "As of October 2026, Title VI still bars national-origin discrimination in federally funded programs, but federal language-access direction has changed. Executive Order 14224 (March 2025) revoked Executive Order 13166, the Department of Justice rescinded its 2002 guidance for funding recipients, and lep.gov is suspended pending review.",
+      "after": "Title VI continues to prohibit national-origin discrimination in federally funded programs as of October 2026. However, federal language-access guidance is in transition. Executive Order 14224 (March 2025) revoked Executive Order 13166. In response, the Department of Justice withdrew its 2002 guidance for funding recipients, and lep.gov is offline for review. These shifts may affect agency language-access policies and interpretation practices.",
+      "reason": "Clarified the timeline and connected impacts for DHS and DSD staff. Linked the revoked order to subsequent actions. Explained why the changes matter for Minnesota human services work."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "The Section 1557 rule (45 CFR 92.201) requires reasonable steps toward meaningful access in covered health programs, and Minnesota Health Care Programs directs providers to arrange interpreters. HHS has signaled changes to the Section 1557 rule, so check the date of anything you rely on.",
+      "after": "Section 1557 (45 CFR 92.201) currently requires covered health programs to take reasonable steps to provide meaningful access for people with limited English proficiency. Minnesota Health Care Programs continues to direct providers to arrange interpreters. The U.S. Department of Health and Human Services (HHS) has indicated that changes to the Section 1557 rule are possible, so always verify the date and status of any cited guidance before relying on it for compliance decisions.",
+      "reason": "Expanded on the reason for checking rule dates and referenced compliance decisions relevant to staff. Clearly identified HHS as the federal authority signaling change."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "This program does not interpret Title VI. Before releasing a vital document, follow the current language-access requirements for qualified human review and confirm them with the person responsible for language access in your program.",
+      "after": "This program does not serve as the authority for interpreting Title VI requirements. Before releasing any vital document, ensure compliance with current language-access requirements by obtaining qualified human review and verifying procedures with your program’s designated language-access contact. This step helps prevent errors in critical communications and ensures that DSD standards are upheld.",
+      "reason": "Clarified the limits of program authority, added rationale for the qualified human review, and explained the importance of correct procedures for program operations."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revised summary accurately reflects the essential facts and clarifies context for DHS/DSD staff. It rephrases but does not alter meaning or omit legal qualifications. Impact on agency practices is appropriately stated as potential, consistent with the source's cautious orientation."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revision expands on the practical reason for checking rule dates and clarifies the agency responsible for regulation. All factual claims are grounded in the source, with no unsupported obligations or fabricated content."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "This field reiterates the program's lack of Title VI interpretive authority and refines the guidance without adding legal requirements. The explanation of process improvements and rationale is justified, stays within the scope of the original, and does not misstate the limit of program authority."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1521,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 374,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1895
+    },
+    "review": {
+      "input_tokens": 1491,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 230,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1721
+    }
+  },
+  "createdAt": "2026-11-15T13:41:37.937Z"
+}

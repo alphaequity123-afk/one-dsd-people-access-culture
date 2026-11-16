@@ -1,0 +1,152 @@
+{
+  "target": "amplify.mentoring",
+  "kind": "surface",
+  "route": "/one-dsd/amplify/mentoring",
+  "sourceSha256": "f929bac88199b35b73842d5b8692060ce1aa4a616ef651ebb6bd64c68623fd98",
+  "status": "needs_revision",
+  "reviewedFieldCount": 19,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "intro"
+      ],
+      "before": "A useful conversation can open a door. Find encouragement, exchange practical knowledge, and explore what you want to do next.",
+      "after": "A thoughtful conversation can be an entry point for professional growth. Find encouragement, share practical knowledge, and consider your next steps in DSD.",
+      "reason": "Improved clarity and specificity for DHS and DSD staff, linking the concept to workplace development."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "section0Body"
+      ],
+      "before": "You might want a single conversation, a peer learning partner, a small circle, or an ongoing mentoring relationship. Different people can help with different questions. Begin with what would be useful to you.",
+      "after": "You may prefer a single conversation, a learning partner, a small peer group, or a longer mentoring relationship. Different needs and questions call for different types of support. Begin by clarifying what would be useful to you at this time.",
+      "reason": "Added reasoning for the importance of matching support to need. Improved specificity and professional tone."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "section1Body",
+        3
+      ],
+      "before": "A continuing relationship: agree together on the purpose, availability, and how you will revisit what helps.",
+      "after": "A continuing relationship: decide together on the focus, availability, and how you will check in about what is working.",
+      "reason": "Clarified what is meant by revisiting what helps, using more direct language about the process."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "section2Body"
+      ],
+      "before": "Useful mentoring starts with curiosity. Talk about the support, communication, and opportunities that matter to the person. A familiar route to success may not fit everyone's experience, responsibilities, or circumstances.",
+      "after": "Effective mentoring relies on curiosity and openness. Discuss the forms of support, communication styles, and opportunities that are meaningful to each person. Remember that a familiar path to success may not fit everyone’s current responsibilities, backgrounds, or circumstances.",
+      "reason": "Clarified why discussion matters, emphasizing active consideration of differences. Improved advanced reasoning."
+    },
+    {
+      "fieldId": 16,
+      "path": [
+        "section4Body"
+      ],
+      "before": "Mentoring offers perspective and encouragement. Sponsorship adds active support, such as an introduction or putting someone's work forward for consideration. Both can help, while selection and advancement follow the relevant agency processes.",
+      "after": "Mentoring provides perspective and support, helping colleagues build skills and navigate challenges. Sponsorship goes further by actively supporting someone’s development, for example by making introductions or recommending their work. Mentoring and sponsorship can both play a role, but selection and advancement follow established agency processes and criteria.",
+      "reason": "Expanded detail on how mentoring and sponsorship differ, connected it directly to agency context, and acknowledged procedural limits."
+    },
+    {
+      "fieldId": 17,
+      "path": [
+        "section5Body"
+      ],
+      "before": "Agree on a manageable starting point. You can change the focus, seek another perspective, or finish when the relationship has served its purpose. No one is expected to teach colleagues about an entire community or disclose personal experiences.",
+      "after": "Begin with a manageable focus that works for both participants. As the relationship develops, you can change direction, seek other perspectives, or decide to conclude if it has met its purpose. Colleagues are not expected to explain an entire community or share personal information unless they choose to.",
+      "reason": "Clarified the process and the voluntary nature of sharing, emphasizing boundaries and choice. Improved the reasoning for why flexibility is important."
+    },
+    {
+      "fieldId": 18,
+      "path": [
+        "section6Body"
+      ],
+      "before": "Think of a willing colleague, ask the co-leads for help finding a connection, or bring a question to the Equity and Inclusion Operations Consultant. The conversation planner below can help you prepare.",
+      "after": "Consider reaching out to a colleague you trust, request co-leads’ help to find a match, or bring a question to the Equity and Inclusion Operations Consultant. Use the conversation planner below to prepare for a more productive discussion.",
+      "reason": "Offered more concrete steps and reinforced the practical value of the conversation planner."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The change from 'A useful conversation can open a door. Find encouragement, exchange practical knowledge, and explore what you want to do next.' to 'A thoughtful conversation can be an entry point for professional growth. Find encouragement, share practical knowledge, and consider your next steps in DSD.' is not fully supported by source. The original 'exchange' refers bidirectionally; 'share' may imply more of a one-way flow. The added 'in DSD' applies a workplace context not present in the original, potentially narrowing the scope against source intent."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The revision clarifies the rationale but stays within source meaning—no blocker."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "The clarification accurately interprets 'revisit what helps' without changing scope—no blocker."
+      },
+      {
+        "fieldId": 9,
+        "severity": "note",
+        "finding": "The advancement in reasoning and detail is supported by the original and does not introduce unsupported claims."
+      },
+      {
+        "fieldId": 16,
+        "severity": "note",
+        "finding": "The expanded explanation distinguishes mentoring and sponsorship, adding relevant detail for agency context and keeping procedural limits; no evidence problem."
+      },
+      {
+        "fieldId": 17,
+        "severity": "note",
+        "finding": "The change retains the original meanings of choice, flexibility, and boundaries, simply clarifying the reasons behind them."
+      },
+      {
+        "fieldId": 18,
+        "severity": "note",
+        "finding": "The sequence and examples are consistent with the original, justifying best practices for productive conversations without exceeding source evidence."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2329,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 556,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2885
+    },
+    "review": {
+      "input_tokens": 2101,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 326,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2427
+    }
+  },
+  "createdAt": "2026-11-15T13:37:04.108Z"
+}

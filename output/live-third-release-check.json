@@ -1,0 +1,271 @@
+{
+  "checkedAt": "2026-11-15T14:46:02.766Z",
+  "results": [
+    {
+      "target": "resource.pn-partnership-spine",
+      "url": "https://one-people-access-culture.up.railway.app/resources/pn-partnership-spine",
+      "status": 200,
+      "expectedFields": 3,
+      "matchedFields": 3,
+      "passed": true
+    },
+    {
+      "target": "resource.pn-embed-early",
+      "url": "https://one-people-access-culture.up.railway.app/resources/pn-embed-early",
+      "status": 200,
+      "expectedFields": 2,
+      "matchedFields": 2,
+      "passed": true
+    },
+    {
+      "target": "resource.ja-launch-embed-checklist",
+      "url": "https://one-people-access-culture.up.railway.app/resources/ja-launch-embed-checklist",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "passed": true
+    },
+    {
+      "target": "resource.ja-language-access-checklist",
+      "url": "https://one-people-access-culture.up.railway.app/resources/ja-language-access-checklist",
+      "status": 200,
+      "expectedFields": 2,
+      "matchedFields": 2,
+      "passed": true
+    },
+    {
+      "target": "resource.ja-plain-language",
+      "url": "https://one-people-access-culture.up.railway.app/resources/ja-plain-language",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "passed": true
+    },
+    {
+      "target": "resource.ja-access-checks",
+      "url": "https://one-people-access-culture.up.railway.app/resources/ja-access-checks",
+      "status": 200,
+      "expectedFields": 2,
+      "matchedFields": 2,
+      "passed": true
+    },
+    {
+      "target": "workforce.dhs",
+      "url": "https://one-people-access-culture.up.railway.app/consultant/workforce/dhs",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "passed": true,
+      "verificationNote": "Verified through authorized protected workspace session."
+    },
+    {
+      "target": "workforce.dsd",
+      "url": "https://one-people-access-culture.up.railway.app/consultant/workforce/dsd",
+      "status": 200,
+      "expectedFields": 2,
+      "matchedFields": 2,
+      "passed": true,
+      "verificationNote": "Verified through authorized protected workspace session."
+    },
+    {
+      "target": "amplify.mentoring",
+      "url": "https://one-people-access-culture.up.railway.app/one-dsd/amplify/mentoring",
+      "status": 200,
+      "expectedFields": 2,
+      "matchedFields": 2,
+      "passed": true
+    },
+    {
+      "target": "amplify.well-being",
+      "url": "https://one-people-access-culture.up.railway.app/one-dsd/amplify/well-being",
+      "status": 200,
+      "expectedFields": 2,
+      "matchedFields": 2,
+      "passed": true
+    },
+    {
+      "target": "amplify.ideas",
+      "url": "https://one-people-access-culture.up.railway.app/one-dsd/amplify/ideas",
+      "status": 200,
+      "expectedFields": 2,
+      "matchedFields": 2,
+      "passed": true
+    },
+    {
+      "target": "amplify.materials",
+      "url": "https://one-people-access-culture.up.railway.app/one-dsd/amplify/materials",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "passed": true
+    },
+    {
+      "target": "amplify.home",
+      "url": "https://one-people-access-culture.up.railway.app/one-dsd/amplify",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "passed": true
+    },
+    {
+      "target": "amplify.gatherings",
+      "url": "https://one-people-access-culture.up.railway.app/one-dsd/amplify/gatherings",
+      "status": 200,
+      "expectedFields": 2,
+      "matchedFields": 2,
+      "passed": true
+    },
+    {
+      "target": "amplify.co-leads",
+      "url": "https://one-people-access-culture.up.railway.app/one-dsd/amplify/co-leads",
+      "status": 200,
+      "expectedFields": 2,
+      "matchedFields": 2,
+      "passed": true
+    },
+    {
+      "target": "course.dc-t1-what-makes-a-dsd-team-inclusive",
+      "url": "https://one-people-access-culture.up.railway.app/courses/dc-t1-what-makes-a-dsd-team-inclusive",
+      "status": 200,
+      "expectedFields": 30,
+      "matchedFields": 30,
+      "passed": true
+    },
+    {
+      "target": "course.dc-t3-belonging-at-work-what-it-is-and-why-it-matters",
+      "url": "https://one-people-access-culture.up.railway.app/courses/dc-t3-belonging-at-work-what-it-is-and-why-it-matters",
+      "status": 200,
+      "expectedFields": 29,
+      "matchedFields": 29,
+      "passed": true
+    },
+    {
+      "target": "course.dc-t5-naming-your-team-s-unwritten-rules",
+      "url": "https://one-people-access-culture.up.railway.app/courses/dc-t5-naming-your-team-s-unwritten-rules",
+      "status": 200,
+      "expectedFields": 28,
+      "matchedFields": 28,
+      "passed": true
+    },
+    {
+      "target": "lib--content--hub--dsd-policies--policies-0",
+      "url": "https://one-people-access-culture.up.railway.app/community-outreach/policies/subminimum-wage-annual-reporting-requirement",
+      "status": 200,
+      "expectedFields": 4,
+      "matchedFields": 4,
+      "passed": true
+    },
+    {
+      "target": "lib--content--community-research--amharic--disability",
+      "url": "https://one-people-access-culture.up.railway.app/minnesota-communities/amharic/people",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "passed": true
+    },
+    {
+      "target": "lib--content--community-research--burmese--disability",
+      "url": "https://one-people-access-culture.up.railway.app/minnesota-communities/burmese/people",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "passed": true
+    },
+    {
+      "target": "lib--content--community-research--deaf-deafblind-hard-of-hearing--disability",
+      "url": "https://one-people-access-culture.up.railway.app/minnesota-communities/deaf-deafblind-hard-of-hearing/people",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "passed": true
+    },
+    {
+      "target": "lib--content--community-research--french--disability",
+      "url": "https://one-people-access-culture.up.railway.app/minnesota-communities/french/people",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "passed": true
+    },
+    {
+      "target": "lib--content--community-research--hmong--disability",
+      "url": "https://one-people-access-culture.up.railway.app/minnesota-communities/hmong/people",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "passed": true
+    },
+    {
+      "target": "lib--content--community-research--khmer--disability",
+      "url": "https://one-people-access-culture.up.railway.app/minnesota-communities/khmer/people",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "passed": true
+    },
+    {
+      "target": "lib--content--community-research--korean--disability",
+      "url": "https://one-people-access-culture.up.railway.app/minnesota-communities/korean/people",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "passed": true
+    },
+    {
+      "target": "lib--content--community-research--lebanese--disability",
+      "url": "https://one-people-access-culture.up.railway.app/minnesota-communities/lebanese/people",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "passed": true
+    },
+    {
+      "target": "lib--content--cultural-leadership-learning.ts--culturalLeadershipApproaches-6",
+      "url": "https://one-people-access-culture.up.railway.app/learn/cultural-intelligence",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "passed": true
+    },
+    {
+      "target": "lib--content--leadership-styles-pathway.ts--LIFECYCLE-0",
+      "url": "https://one-people-access-culture.up.railway.app/learn/leadership-styles/conflict-lifecycle",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "passed": true
+    },
+    {
+      "target": "lib--content--leadership-styles-pathway.ts--LIFECYCLE-1",
+      "url": "https://one-people-access-culture.up.railway.app/learn/leadership-styles/conflict-lifecycle",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "passed": true
+    },
+    {
+      "target": "lib--content--leadership-styles-pathway.ts--CAPSTONE-4",
+      "url": "https://one-people-access-culture.up.railway.app/learn/leadership-styles/capstone",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "passed": true
+    },
+    {
+      "target": "route.learn.paths",
+      "url": "https://one-people-access-culture.up.railway.app/learn/paths",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "passed": true
+    },
+    {
+      "target": "route.director.templates",
+      "url": "https://one-people-access-culture.up.railway.app/equity-review/director-toolkit/templates",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "passed": true
+    }
+  ]
+}

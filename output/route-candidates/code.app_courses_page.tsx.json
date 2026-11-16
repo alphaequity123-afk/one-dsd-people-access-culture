@@ -1,0 +1,67 @@
+{
+  "target": "code.app/courses/page.tsx",
+  "kind": "surface",
+  "route": "/courses",
+  "sourceSha256": "5fab2e7183d7e00432c8d97e8172fc827fc55ed2edfe3d20888cd89ffa53e36f",
+  "status": "needs_revision",
+  "reviewedFieldCount": 9,
+  "changes": [
+    {
+      "fieldId": 7,
+      "path": [
+        "field7"
+      ],
+      "before": "Levels describe the depth of a course, not the standing or development of the person taking it. Courses without a recorded level are included when you choose All levels.",
+      "after": "Course levels indicate the depth of the material covered, not the experience, position, or prior training of the person enrolling. If a course does not list a level, it will still appear when you select All levels. This lets staff and supervisors compare courses across different areas without making assumptions about a learner’s previous knowledge. Clarifying this distinction helps avoid misunderstandings about course selection and supports more accurate planning for training and development.",
+      "reason": "The revision expands on why level distinctions matter, explains the intent and outcome of the approach, and specifies the practical effect for staff and planning. It avoids implying any judgment about learners and clarifies the importance of the guidance."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 7,
+        "severity": "blocker",
+        "finding": "The source text is: 'Levels describe the depth of a course, not the standing or development of the person taking it. Courses without a recorded level are included when you choose All levels.'\n\nThe proposed change adds: 'Course levels indicate the depth of the material covered, not the experience, position, or prior training of the person enrolling. If a course does not list a level, it will still appear when you select All levels. This lets staff and supervisors compare courses across different areas without making assumptions about a learner’s previous knowledge. Clarifying this distinction helps avoid misunderstandings about course selection and supports more accurate planning for training and development.'\n\nBlocker: The expansion introduces new reasoning about intent and outcomes (\"This lets staff and supervisors compare courses across different areas without making assumptions...\" and \"Clarifying this distinction helps avoid misunderstandings...\") that is not supported by the source code. The source only states what the level means and what happens if a course has no level; it does not describe staff or supervisor actions, the avoidance of misunderstandings, or planning implications. This is generic padding and invents policy or rationale not grounded in the source evidence."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2687,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 191,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2878
+    },
+    "review": {
+      "input_tokens": 2258,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 262,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2520
+    }
+  },
+  "createdAt": "2026-11-15T13:48:19.726Z"
+}

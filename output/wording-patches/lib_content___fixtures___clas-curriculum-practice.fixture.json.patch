@@ -1,0 +1,13 @@
+diff --git a/lib/content/__fixtures__/clas-curriculum-practice.fixture.json b/lib/content/__fixtures__/clas-curriculum-practice.fixture.json
+index 3668d1c..e6a49f4 100644
+--- a/lib/content/__fixtures__/clas-curriculum-practice.fixture.json
++++ b/lib/content/__fixtures__/clas-curriculum-practice.fixture.json
+@@ -74,7 +74,7 @@
+           { "heading": "After", "items": ["Note what you can change and what needs coordination."] }
+         ],
+         "remember": ["Ask; do not assume needs from a name or appearance.", "Use your program's current procedure for changes."],
+-        "askWho": ["The responsible office for the notice.", "Your supervisor for approval routes."]
++        "askWho": ["The person or area responsible for the notice.", "Your supervisor for approval routes."]
+       }
+     },
+     {

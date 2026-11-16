@@ -1,0 +1,157 @@
+{
+  "target": "resource.ja-sm-facilitator-guide",
+  "kind": "resource",
+  "route": "/library/ja-sm-facilitator-guide",
+  "sourceSha256": "3da953107ff9de9a0de71ad96889331d274684a5902d71e2834469f9a112e544",
+  "status": "needs_revision",
+  "reviewedFieldCount": 7,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Help any host run a voluntary 90-minute practice session that respects people's privacy and gets them practicing out loud.",
+      "after": "Support any staff member in hosting a voluntary 90-minute practice session that protects privacy and encourages participants to practice speaking in realistic scenarios.",
+      "reason": "Clarified the purpose to specify 'staff member' and 'realistic scenarios,' and connected privacy and practice to the intended activities for professional context."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Remember. Voluntary. No attendance. No records. No identity-based breakouts. No required disclosure. Play job roles only. No disability simulations. Disagreement carries no consequence. Nobody speaks for a group. The reporting duty under Policies 1436 and 1329 still applies to supervisors and managers.",
+      "after": "Key points to remember: Participation is voluntary, and no attendance should be taken. Do not keep records of who attended or what was shared. Do not create breakout groups based on identity. Never require participants to disclose personal information. Limit practice to job-related scenarios; do not simulate disability. Disagreement should not affect job standing. Remind participants that no one is expected to represent the perspective of a group. Supervisors and managers must still follow the reporting obligations in DHS Policies 1436 and 1329 if relevant issues arise.",
+      "reason": "Converted from a list to connected sentences for clarity; made explicit why each instruction matters in a staff-facilitated context and tied reporting duty directly to supervisors and managers."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Before. Book CART and interpreters by default. Ask your ADA coordinator how. Send the invitation, specific about the content. No replies needed. Send materials ahead in accessible formats. Prepare your first sentences for a harmful comment and for a disclosure. Turn off recording, transcription and automated notetakers.",
+      "after": "Preparation steps: Arrange for CART and interpreters by default to ensure accessibility. Your ADA coordinator can explain how to do this. Draft your invitation to be clear about the session content; responses are not required. Send all materials ahead of time in accessible formats. Prepare brief, ready responses in case someone makes a harmful comment or shares personal information. Disable any recording, automated transcription tools, or notetaking software before starting the session.",
+      "reason": "Clarified roles and justified each preparatory step by linking to staff roles and the reason for advance access, made preparation for sensitive disclosures explicit, and maintained the instruction to turn off recording tools."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "During. Opening script. A poor example, a good example, and then \"What changed?\" Rehearse in threes, with random pairings. Swap roles. Try it twice. Feedback: what you heard, and one thing to try. Keep the clock. Take a break.",
+      "after": "During the session: Begin with an opening script. Provide a poor example and a good example, then ask, \"What changed?\" Participants should rehearse in groups of three, using random pairings, and alternate roles for variety. Each scenario should be practiced twice. Feedback should focus on what was heard and one suggestion for improvement. Keep to the schedule, and include a break as planned.",
+      "reason": "Expanded instructions for the flow of activities, explaining the use of rehearsal, random pairing, and feedback as intentional practices for skill-building, and the importance of structuring the session."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Hard moments. Generalization: \"Let's stay away from statements about what any group is like. What's the decision?\" Asked to speak for a group: \"Nobody here speaks for a group.\" Harassment described: \"I have a duty to report. Let's step out.\" Disagreement: \"Thank you. What have you seen? Whatever we think, what would you do?\"",
+      "after": "Managing challenging moments: If someone generalizes about a group, redirect the discussion by stating, \"Let’s avoid statements about what any group is like. Let’s focus on the decision at hand.\" If asked to speak for a group, remind, \"Nobody here speaks for a group.\" If someone describes harassment or harm, immediately state, \"I have a duty to report. Let’s step aside and address this privately.\" When disagreement arises, say, \"Thank you for your perspective. What examples have you observed? Regardless of opinions, what action would you take?\"",
+      "reason": "Reframed examples as scripts for facilitators, explicitly connecting each example to management of the respective challenge in accordance with professional and policy requirements."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "After. Private if-then plan. Nobody collects it. Clear walls, chat and shared documents. Delete access requests and any scheduling list. Don't report attendance or say \"trained\".",
+      "after": "After the session: Ask participants to create their own private if-then plans; make clear that nobody will collect these. Clear any whiteboards, chat logs, or shared documents used during the session. Delete all access requests and any attendance or scheduling lists. Do not document attendance or label participants as having completed training.",
+      "reason": "Clarified the reasons for privacy measures after the session; linked each action to practical privacy assurance and compliance with the voluntary nature of the activity."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "Do next. Choose one decision, book access, send the invitation.",
+      "after": "Next steps: Choose a decision point for follow-up, arrange necessary access supports, and send out the next invitation if needed.",
+      "reason": "Clarified that 'choose one decision' refers to a follow-up action, and connected booking access and sending invitations to ongoing practice sessions."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "Changed 'any host' to 'any staff member' is not supported by the source. The original is intentionally role-neutral and applies to anyone who might host. 'Realistic scenarios' and 'encourages participants to practice speaking in realistic scenarios' add a new specification that is not present in the source, which is focused only on 'practicing out loud' and 'play job roles only.' The new version narrows both audience and activity without explicit source support."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "Rewriting removes the concise, direct reminders (e.g., 'No attendance. No records. No identity-based breakouts.'), and changes phrasing from instructions to explanations, sometimes shifting meaning. The assertion 'Remind participants that no one is expected to represent the perspective of a group' is softer and more general than the source: 'Nobody speaks for a group.' 'Disagreement should not affect job standing' overstates source's simpler 'Disagreement carries no consequence.' Several rewordings introduce rationale or conditionality that the source intentionally avoids."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "Expands and sometimes invents explanations that are not present in the source, such as 'made preparation for sensitive disclosures explicit,' where the original says only 'Prepare your first sentences for a harmful comment and for a disclosure.' It also reframes 'Send materials ahead in accessible formats' with 'Send all materials ahead of time in accessible formats,' which is a minor shift but introduces a completeness that is not stated. 'Disable any recording, automated transcription tools, or notetaking software before starting the session' loses the specific instruction to 'Turn off recording, transcription and automated notetakers' which is shorter and covers all types."
+      },
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "Alters the direct instructional tone by explaining rather than listing; e.g., source: 'Opening script. A poor example, a good example, and then \"What changed?\"' is much more direct than the reworked version, which breaks specificity and overexplains, e.g., 'Participants should rehearse in groups of three, using random pairings, and alternate roles for variety.' Adds justification ('intentional practices for skill-building') not present in source."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "Rephrases the sample facilitator responses into more narrative sentences and adds slight explanation, but preserves the core content. Still, some of the narrative framing could be rolled back to match the tightly-quoted original scripts for clarity and for training integrity."
+      },
+      {
+        "fieldId": 5,
+        "severity": "blocker",
+        "finding": "Moves from concise action statements to full sentences that explain reasons ('Clarified the reasons for privacy measures after the session; linked each action to practical privacy assurance and compliance with the voluntary nature of the activity.'). This erases the original's strict simplicity and the lack of rationale, and introduces unsupported language—e.g., 'do not document attendance or label participants as having completed training,' which is broader than strictly 'Don't report attendance or say \"trained\".'"
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "Clarifies 'choose one decision' as a follow-up action and links to ongoing sessions, which is a minor shift. The essential instruction is preserved, but rewording could be stricter to original phrasing for clarity."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1932,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 817,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2749
+    },
+    "review": {
+      "input_tokens": 2314,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 800,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3114
+    }
+  },
+  "createdAt": "2026-11-15T13:44:30.783Z"
+}

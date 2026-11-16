@@ -1,0 +1,141 @@
+{
+  "target": "resource.ref-adsa-engagement-presentation",
+  "kind": "resource",
+  "route": "/library/ref-adsa-engagement-presentation",
+  "sourceSha256": "4ec70c01df1af0ecbc3f5e6ca966d0ad9041db88829f09dd0902c220ab71950e",
+  "status": "model_checked",
+  "reviewedFieldCount": 6,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "A 33-slide PDF introducing the ADSA engagement guide for team learning and discussion.",
+      "after": "PDF presentation (33 slides) introducing the ADSA engagement guide for team discussions and collaborative planning.",
+      "reason": "Clarified the summary to connect the presentation format with its function for group learning and collaborative planning. Kept wording concise and specific to internal team use."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Use the presentation to orient a team before applying the detailed guide and checklist to a real engagement plan.",
+      "after": "Use this presentation to provide a shared introduction before working through the detailed engagement guide and checklist with your team. Early orientation helps establish a common understanding of the process and supports consistent application to real engagement planning.",
+      "reason": "Expanded the explanation to clarify the importance of orientation and how early team understanding supports consistent use of the guide and checklist during planning."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "The presentation introduces the ADSA Equity Committee, the guide’s sources, when engagement is needed, planning considerations, and dissemination and reporting.",
+      "after": "The presentation covers the role of the ADSA Equity Committee, sources informing the guide, criteria for when engagement is necessary, key planning considerations, and approaches to sharing results and reporting outcomes.",
+      "reason": "Specified what each section of the presentation addresses to make the content and structure clearer for the user."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Engagement activators include decisions affecting people’s lives or access to services, differing impacts across groups, the need for sustained participation, and gaps in understanding lived experience.",
+      "after": "Factors prompting engagement include decisions that may change people’s lives or access to services, differences in how groups are affected by policies or processes, situations requiring sustained involvement, and cases where the team lacks insight into people’s lived experience.",
+      "reason": "Reframed and detailed the concept of engagement triggers to highlight how different conditions call for outreach. Used precise DHS-related terminology."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Discuss a real or fictional project: what can participants influence, who is missing, what participation barriers need attention, and how will the team report back?",
+      "after": "Apply the material by analyzing a hypothetical or current project: identify what aspects the group can influence, which participants or voices are missing, barriers that might limit participation, and strategies for reporting outcomes to all involved.",
+      "reason": "Made the instruction more specific to DHS practice and emphasized the steps taken in applying the concepts to projects, explaining the relevance of each consideration."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Use the guide for detail and the checklist for planning. The supplied file is a PDF presentation, not an editable PowerPoint. Its cover contains April and June 2026 session dates; the slide footers are dated June 22, 2026.",
+      "after": "For further guidance, refer to the detailed engagement guide and planning checklist. Note that the provided file is a non-editable PDF presentation, not a PowerPoint. The cover displays April and June 2026 session dates, and the slide footers are dated June 22, 2026.",
+      "reason": "Clarified where users should go for detailed application, stated the file’s non-editable nature in direct terms, and preserved critical date references for orientation."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The summary rewrite remains accurate: it clarifies that the presentation is a PDF, notes its 33 slides, and strengthens the link to intended team discussion and collaborative planning, which is supported by both the slides and intended use in the source. It avoids unsubstantiated claims or padding."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The expanded 'why it matters' correctly explains that an early orientation using the presentation supports a common team understanding before using the guide and checklist. This matches the presentation's introductory emphasis and clarifies the process without exceeding the source's intent or authority."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revised summary of slide content is precise: it reflects components seen in the slides (ADSA Equity Committee, origins of the guide, criteria for engagement, planning considerations, dissemination and reporting) and structures them in a manner consistent with their order in the presentation."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The reframed engagement triggers remain faithful to the explicit content of the presentation. The update rewords with slightly more DHS-oriented phrasing but does not add, remove, or misrepresent conditions or examples presented in the slides."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The instruction to analyze a project is expanded for clarity (identifying what the group can influence, gaps, barriers, reporting), but is grounded in slide prompts and discussion exercises. The wording does not overreach and clarifies the expected process as modelled by the original content."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The rewrite about further guidance, non-editable file format, and session/footer dates closely tracks the information shown on the cover and footers of the PDF. It transparently directs the user to the guide and checklist, per the original instructional slides, and accurately notes file characteristics and date references."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1641,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 483,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2124
+    },
+    "review": {
+      "input_tokens": 1697,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 398,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2095
+    }
+  },
+  "createdAt": "2026-11-15T13:43:26.336Z"
+}

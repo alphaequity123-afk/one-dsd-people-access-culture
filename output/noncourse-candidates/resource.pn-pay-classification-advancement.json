@@ -1,0 +1,141 @@
+{
+  "target": "resource.pn-pay-classification-advancement",
+  "kind": "resource",
+  "route": "/library/pn-pay-classification-advancement",
+  "sourceSha256": "80f5bf9e04bafaba4a75d8755a672d2cd3d004df0afee6c5eb8ed0db97fdffa5",
+  "status": "needs_revision",
+  "reviewedFieldCount": 6,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Many advancement barriers go unseen: unclear pathways, visible work handed out by habit, and classification questions no one owns. This note separates what a supervisor can change this month from what needs Human Resources, labor relations, or leadership.",
+      "after": "Many barriers to advancement are not immediately visible. These include unclear opportunities, patterns in how high-profile work is distributed, and ongoing uncertainty about who is responsible for resolving classification issues. This note clarifies what supervisors can address in the near term and what actions require coordination with Human Resources, labor relations, or agency leadership.",
+      "reason": "Clarifies the types of barriers and the division of responsibility; avoids idiomatic language and specifies action more clearly."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "DSD staff described inconsistent recognition of work and lived experience, classification and pay concerns, and unclear pathways. These are patterns, not individual failings, and they respond to practice.",
+      "after": "DSD staff report inconsistent recognition of both job performance and lived experience, ongoing concerns about classification and pay, and the absence of clear advancement pathways. These are systemic challenges rooted in practice, not individual shortfalls. Changes to supervisor behavior and unit process can address the pattern over time.",
+      "reason": "Explains why these problems persist and how supervisor action connects to long-term change; clarifies that these are broader practice issues."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "What you can change now. Say out loud what advancement requires in your unit and write it down. Rotate visible assignments deliberately instead of by who is closest. Hold a career conversation with every person, not only the ones who ask. Sponsor people into rooms where decisions are made, not only mentor them about how rooms work.",
+      "after": "What you can change now. Clearly state and document what is required for advancement in your unit. Intentionally rotate visible assignments to avoid defaulting to convenience or habit. Ensure every team member has a scheduled career conversation, regardless of whether they request one. Where possible, sponsor staff by creating opportunities for them to participate directly when decisions are made, rather than only explaining decision-making processes.",
+      "reason": "Makes each instruction more specific and explains how supervisory actions can increase transparency and opportunity."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "What needs a partner. Classification questions, reclassification requests, pay equity reviews, and anything governed by a labor agreement go to Human Resources and labor relations. Bring the pattern you noticed and the people affected in general terms, not a case for one person.",
+      "after": "What needs a partner. Bring questions about classification, requests for reclassification, pay equity reviews, and any matters covered by labor agreements to Human Resources or labor relations. When raising a concern, describe the pattern and which staff groups appear affected; avoid framing it as an individual exception unless there is a clear need for a specific case review.",
+      "reason": "Clarifies the appropriate escalation path and why describing patterns rather than individuals matters for systemic change."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "What to watch for. Reverse mentoring can be valuable, but it should not become unpaid equity labor for staff from underrepresented communities. Development plans should not be treated as proof of competence or as a hidden record.",
+      "after": "What to watch for. Reverse mentoring can give valuable insight and challenge norms, but supervisors should neither rely on underrepresented staff to provide unpaid equity work nor treat it as an informal solution to workplace inequity. Documented development plans can guide growth, but should not be treated as either certification of competence or as unofficial personnel records.",
+      "reason": "Clarifies the risks of misusing reverse mentoring and development plans, connecting supervision practice to practical consequences."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Questions to ask yourself. Who on the team has had a stretch assignment in the last year, and how did that come to be? Who has been told plainly what the next step requires? Whose work is visible to leadership, and whose is not?",
+      "after": "Questions to ask yourself. In the past year, which team members have been given stretch assignments, and how were those opportunities distributed? Who has received clear communication about advancement criteria? Whose work is highlighted to leadership, and whose contributions might be overlooked?",
+      "reason": "Makes the reflective questions more specific to supervisory decision-making, adding detail grounded in actual staff practice."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revised summary replaces the plain, specific source with generic executive vocabulary (\"ongoing uncertainty,\" \"opportunities\" instead of pathways). It erases the most critical nuance: that advancement barriers are hidden in everyday practice (\"handed out by habit\"), and restates 'classification questions no one owns' in bureaucratic terms that miss the point of the source. The rewording is less direct, loses the clarity of 'change this month', and makes a subtle scope shift from practical supervisor-level barrier to general organizational ambiguity."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The 'after' text for whyItMatters goes beyond the source. The claim that 'these are systemic challenges rooted in practice' erases the source's accessibly precise framing ('patterns, not individual failings, and they respond to practice') and introduces new cause language (systemic, rooted), exaggerating the policy interpretation. The last line—'Changes to supervisor behavior and unit process can address the pattern over time'—invents a prescriptive conclusion that is not present in the original."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revision to 'What you can change now' is mostly acceptable—the meaning is preserved and specificity added, without overstating the scope. The phrase 'participate directly when decisions are made' is a plausible clarification of 'sponsor people into rooms', but a literal transcript reference should be reviewed if strict interpretation is needed."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The change makes the escalation path slightly clearer and does not materially diverge from source intent. The addition ('unless there is a clear need for a specific case review') is not strictly sourced, but acknowledges the practical necessity of individual cases as an exception."
+      },
+      {
+        "fieldId": 4,
+        "severity": "blocker",
+        "finding": "The revised 'What to watch for' departs substantially from source. The original was highly specific: do not turn reverse mentoring into unpaid labor for underrepresented staff, and development plans should not be proofs of competence or hidden records. The edited version converts these into more bland HR cautions ('should neither rely on underrepresented staff ... nor treat it as an informal solution'), diluting the labor and equity language, and turning a concrete warning into abstract guidance."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "This revision stays close to intent and usefully clarifies the reflection questions, adding specificity without changing the underlying questions."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1876,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 669,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2545
+    },
+    "review": {
+      "input_tokens": 2033,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 522,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2555
+    }
+  },
+  "createdAt": "2026-11-15T13:41:46.463Z"
+}

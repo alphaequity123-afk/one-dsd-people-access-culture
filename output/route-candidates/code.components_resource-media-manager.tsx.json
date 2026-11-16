@@ -1,0 +1,137 @@
+{
+  "target": "code.components/resource-media-manager.tsx",
+  "kind": "surface",
+  "route": "components/resource-media-manager.tsx",
+  "sourceSha256": "c3e8ccbbda637cc756ebd36051442f58339f9ae8fc1804b08649e533d0d77874",
+  "status": "needs_revision",
+  "reviewedFieldCount": 6,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Add audio, an image, a video, or a document",
+      "after": "Add audio, an image, a video, or a document for this resource",
+      "reason": "Clarified the instruction to specify the materials are for this resource, giving immediate context and aligning with professional communication for DHS/DSD staff."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Audio: read-aloud in your voice",
+      "after": "Audio: a read-aloud in your voice",
+      "reason": "Clarified with an article for smoothness and precise description."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "Document (PDF, Word, PowerPoint, Excel)",
+      "after": "Document—PDF, Word, PowerPoint, or Excel file",
+      "reason": "Clarified that these are file types and made format explicit for staff who may need to check requirements."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": "A link (YouTube, Vimeo, SharePoint, or another site)",
+      "after": "A link (for example, YouTube, Vimeo, SharePoint, or another site)",
+      "reason": "Added \"for example\" to emphasize these are examples, not an exhaustive list, which removes any implication of exclusion and clarifies staff discretion."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field4"
+      ],
+      "before": "A file on this computer (up to 4 MB)",
+      "after": "A file from this computer (up to 4 MB)",
+      "reason": "Changed \"on\" to \"from\" to improve clarity and align with typical DHS technical communications about file upload criteria."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field6"
+      ],
+      "before": "Describe the image for people using screen readers",
+      "after": "Describe the image so people who use screen readers can understand it",
+      "reason": "Expanded explanation to specify the practical purpose and reasoning for the field, in line with DHS accessibility standards and the program writing guidance."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "Changed: 'Add audio, an image, a video, or a document' → 'Add audio, an image, a video, or a document for this resource' does not match the source. The source text is exactly 'Add audio, an image, a video, or a document' in the <h3> heading, which gives context through page layout and the operation's context (resource media manager panel). Adding 'for this resource' is not supported, changes official phrasing for a UI heading, and is not justified by the source. The field must remain exactly as the source."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "Changed: 'Audio: read-aloud in your voice' → 'Audio: a read-aloud in your voice' alters the label as written in the explicit source <option> text. While the phrasing may be smoother, the source is required to be preserved per policy for official option labels. Changing phrasing in a UI element label for subjective style is not permitted."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "Changed: 'Document (PDF, Word, PowerPoint, Excel)' → 'Document—PDF, Word, PowerPoint, or Excel file' changes both the punctuation and the explicit language of the official label. The original matches program UI and user documentation, and no evidence supports rewriting it."
+      },
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "Changed: 'A link (YouTube, Vimeo, SharePoint, or another site)' → 'A link (for example, YouTube, Vimeo, SharePoint, or another site)' adds text not in the source. The UI option uses plain parentheses and listing, and policy does not support adding 'for example' without a source update."
+      },
+      {
+        "fieldId": 4,
+        "severity": "blocker",
+        "finding": "Changed: 'A file on this computer (up to 4 MB)' → 'A file from this computer (up to 4 MB)' rewrites UI phrasing present in the official label in the source. Style change for prepositions is not allowed without policy or technical documentation supporting such a rewrite."
+      },
+      {
+        "fieldId": 5,
+        "severity": "blocker",
+        "finding": "Changed: 'Describe the image for people using screen readers' → 'Describe the image so people who use screen readers can understand it' expands the instruction beyond the original label provided in the source. While it gives more rationale, the label must match the exact official UI language. The program writing standard allows explanation elsewhere, not in system label text where an exact match is required."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2979,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 306,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3285
+    },
+    "review": {
+      "input_tokens": 2863,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 625,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3488
+    }
+  },
+  "createdAt": "2026-11-15T13:56:10.364Z"
+}

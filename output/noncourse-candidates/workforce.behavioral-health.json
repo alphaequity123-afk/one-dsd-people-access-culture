@@ -1,0 +1,82 @@
+{
+  "target": "workforce.behavioral-health",
+  "kind": "surface",
+  "route": "/consultant/workforce/behavioral-health",
+  "sourceSha256": "8798bcf09197ebccad6f617a329cc1478bd69ae715443036a60e00abb358d594",
+  "status": "model_checked",
+  "reviewedFieldCount": 3,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "relationship"
+      ],
+      "before": "Listed as an agency area or associated service. This does not establish a direct reporting line.",
+      "after": "Behavioral Health Administration is identified as an area within the agency or as a related service group. This listing does not define formal supervisory relationships or direct lines of accountability to Disability Services Division staff.",
+      "reason": "Clarified the distinction between agency area listings and reporting relationships. Specified implications for DSD staff as relevant to the audience."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "leadership",
+        0
+      ],
+      "before": "Assistant Commissioner, Deputy Assistant Commissioner, and Chief Administrative Officer appear in the public directory.",
+      "after": "The public directory includes the Assistant Commissioner, Deputy Assistant Commissioner, and Chief Administrative Officer for Behavioral Health Administration. Staff can reference this information to help identify leadership contacts, but should confirm current roles and responsibilities as these can change.",
+      "reason": "Added context on the usefulness of directory information for staff and the need for confirmation, connecting to practical staff tasks."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The edited statement more clearly distinguishes between an agency area listing and reporting relationships. This is a clarification, not a substantive change. The edited version appropriately warns that the listing does not imply supervisory or accountability relationships, which matches the limits in the source."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revised field extends the source's statement that these positions appear in the directory by explaining its practical use and the need to confirm details. This is appropriate elaboration for the intended staff audience and does not contradict the source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1163,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 169,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1332
+    },
+    "review": {
+      "input_tokens": 917,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 158,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1075
+    }
+  },
+  "createdAt": "2026-11-15T13:37:36.914Z"
+}

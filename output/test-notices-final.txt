@@ -1,0 +1,25 @@
+
+> one-dsd-people-access-culture-standalone@0.1.0 test
+> node scripts/testing/run-tests.mjs
+
+
+ RUN  v5.0.5 C:/Users/garyb/Projects/one-dsd-writing-standard-20261115
+
+Could not parse CSS stylesheet
+Could not parse CSS stylesheet
+Not implemented: navigation to another Document
+Not implemented: navigation to another Document
+(node:25456) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:34676) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+ Test Files  198 passed (198)
+      Tests  1557 passed | 1 skipped (1558)
+   Start at  16:19:24
+   Duration  479.32s (tests 47%, import 29%, transform 18%, environment 6%)
+
+Environment  |components| jsdom was created 46 times · 136.06s total, 44% of tracked time
+             create it once per worker with pool: 'vmThreads' (keeps per-file isolation) or isolate: false (shares it across files)
+             learn more: https://vitest.dev/guide/improving-performance#test-environments
+

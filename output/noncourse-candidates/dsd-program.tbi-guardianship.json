@@ -1,0 +1,97 @@
+{
+  "target": "dsd-program.tbi-guardianship",
+  "kind": "surface",
+  "route": "/one-dsd/programs/tbi-guardianship",
+  "sourceSha256": "6451f53aaca2923a43f781f86dcedda9924868a9a0c4f8ed9bb3772117e12490",
+  "status": "needs_revision",
+  "reviewedFieldCount": 4,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "intro"
+      ],
+      "before": "Programs for people with brain injury and work related to guardianship and supported decision-making.",
+      "after": "This page introduces services for people with brain injuries and explains how guardianship, supported decision-making, and related supports connect. It highlights program areas where staff may need to assess decision-making abilities and communicate about legal rights.",
+      "reason": "Expanded to clarify how programs relate to both brain injury and the decision-making supports including guardianship and supported decision-making; explains why program connection matters, especially the need for staff judgment regarding decision-making and rights."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "equityEntryPoints",
+        0
+      ],
+      "before": "Supported decision-making before guardianship",
+      "after": "Explore supported decision-making options before considering guardianship.",
+      "reason": "Rephrased to clarify that staff should examine supported decision-making as a first approach, to encourage preserving autonomy when possible."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "equityEntryPoints",
+        1
+      ],
+      "before": "Accessible communication about rights",
+      "after": "Use clear and accessible language to explain participants' legal rights.",
+      "reason": "Clarifies that accessible communication should specifically address legal rights and be understandable to people with brain injuries. Emphasizes practical staff work."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The proposed intro expands on the original by adding context about program purposes, assessment, and communication responsibilities. However, it introduces an unsupported claim that staff are expected to \"assess decision-making abilities\" as a general function, which is not stated in the source. The source only refers to programs for people with brain injury relating to guardianship and supported decision-making; it does not specify that staff must assess capacity or communicate legal rights as a common requirement, nor does it expand the page's focus to generic staff judgment or the programmatic connection in these terms."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revised equity entry point ('Explore supported decision-making options before considering guardianship') retains the original meaning and clarifies intent in line with best practices. The edit is supportable as it maintains the original emphasis and does not introduce unsupported requirements."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The edit specifying clear and accessible language to explain participants' legal rights expands on 'Accessible communication about rights.' While emphasizing clarity aligns with accessibility and supports the intended audience, the reference to 'legal rights' is a plausible clarification, but the addition that the language should be understandable 'to people with brain injuries'—while logical—introduces an unstated audience requirement. However, this is a minor expansion rather than a blocker and fits the context."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1157,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 253,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1410
+    },
+    "review": {
+      "input_tokens": 939,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 296,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1235
+    }
+  },
+  "createdAt": "2026-11-15T13:38:38.626Z"
+}

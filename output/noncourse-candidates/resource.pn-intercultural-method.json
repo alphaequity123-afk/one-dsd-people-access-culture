@@ -1,0 +1,156 @@
+{
+  "target": "resource.pn-intercultural-method",
+  "kind": "resource",
+  "route": "/library/pn-intercultural-method",
+  "sourceSha256": "43975b30db3431ced57aecf81ba5fcfabab1a0dbf4498811ee8a8844ddcac9c7",
+  "status": "model_checked",
+  "reviewedFieldCount": 7,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "A community brief can help you prepare for Minnesota work, but it cannot describe any one person. Use it to ask better questions, check access, and involve the right partners, remembering each person is the authority on their own life.",
+      "after": "A community brief can help you get ready for Minnesota work, but it will not describe any one person. Use the brief to shape your questions, check for access needs, and identify partners, while recognizing that each person speaks for themselves.",
+      "reason": "Clarified the distinction between preparing with a community brief and addressing individual needs. Simplified language to increase clarity and specificity for agency context."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Applying information about a group to an individual is profiling and can lead to worse service. A respectful approach is direct: ask the person, confirm what they need, and address the access barriers within your control.",
+      "after": "When you use information about a group to make decisions about an individual, that is profiling. This risks misunderstanding and can harm service quality. The more respectful and effective approach is direct: ask the person, check what they want, and address the barriers you can.",
+      "reason": "Specified the consequence of profiling and emphasized how a direct approach addresses both respect and service quality, providing more connected reasoning."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Use the brief to prepare: consider naming, language and dialect, decision-making, access needs, potential partners, and what not to assume.",
+      "after": "Use the community brief to prepare by thinking about naming conventions, language and dialect preferences, types of decision-making, likely access needs, possible partners, and common assumptions to avoid.",
+      "reason": "Specified each consideration to clarify what \"consider\" means in context, increasing practical usefulness for staff."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Ask the person: how they want to be addressed; which language and dialect; who should be in the room; what would make this work for them.",
+      "after": "Ask the person directly: how they want to be addressed, which language or dialect they prefer, who should participate in conversations, and what would make the process effective for them.",
+      "reason": "Improved clarity by aligning the format for direct questions to the person and specifying intent for each inquiry."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Check access first: consider language, disability and communication access, timing, transportation, trust, and the time and effort a process requires. Ask what a person needs instead of inferring it from their community.",
+      "after": "Start by checking access: look at potential barriers related to language, disability and communication needs, timing, transportation, trust, and the overall demands of the process. Ask people what they need, rather than assuming based on group background.",
+      "reason": "Clarified \"check access first\" by listing the core elements to review and emphasizing the importance of asking rather than assuming."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Involve partners through established channels, with a clear purpose, role, compensation, and plan to report back. Staff who share a background are colleagues; do not expect them to interpret or represent an entire community.",
+      "after": "Involve partners through existing channels and be clear about why they are involved, their roles, how they will be paid, and how you will report back. Staff with shared backgrounds are colleagues; do not expect them to interpret or speak for a whole community.",
+      "reason": "Clarified \"through established channels\" and emphasized the importance of transparency regarding purpose, roles, compensation, and follow-up, while retaining the distinction in colleague expectations."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "If the brief does not cover something, be clear about what you do not know. Ask the person or seek appropriate guidance rather than relying on assumptions.",
+      "after": "If the brief is missing information, acknowledge what you do not know. Reach out to the person or seek guidance from appropriate sources, rather than filling gaps with assumptions.",
+      "reason": "Improved specificity by clarifying what to do when information is missing and what to avoid, making the instruction more actionable."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revised summary accurately reflects the content and intent of the original, preserving its limitation that a community brief cannot describe an individual and that the person is the ultimate authority. The changes do not misrepresent the source or introduce unsupported claims."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revised 'whyItMatters' section maintains the original factual limits: profiling leads to worse service, and a direct approach is more respectful and effective. The added explanation of consequences and approach fits the source's evidence. No source conflict detected."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revised body text for this item remains faithful to the source, expanding on what to consider while using a community brief and reflecting the same factual anchors as the original. No change to legal or procedural scope."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The rewrite clarifies that the questions are directed to the person, which is consistent with the original's intent. The changes do not alter the practical instructions or their scope."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The updated 'check access first' instruction expands and clarifies the types of access issues to consider and persists with the core direction to ask the person rather than infer from group identity. This is supported by the source."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The revised text for involving partners is precise and does not change the underlying expectations about process or colleague roles. The instruction against expecting staff to represent whole communities is sustained as in the source."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The final instruction clarifies the process for gaps in information and keeps the factual advice: acknowledge limits and seek direct input or guidance instead of making assumptions. There is no expansion outside the source's evidence or legal scope."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1768,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 566,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2334
+    },
+    "review": {
+      "input_tokens": 1898,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 388,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2286
+    }
+  },
+  "createdAt": "2026-11-15T13:41:19.013Z"
+}

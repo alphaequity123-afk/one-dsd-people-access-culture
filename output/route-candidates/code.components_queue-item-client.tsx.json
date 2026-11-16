@@ -1,0 +1,81 @@
+{
+  "target": "code.components/queue-item-client.tsx",
+  "kind": "surface",
+  "route": "components/queue-item-client.tsx",
+  "sourceSha256": "434ea16f91d80dc8c449262ee5cb1bca91a38c70d4d717d5b07a3a1e9bbf3575",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "The requester attested that this concerns DSD work. Review the submitted work context before admitting it to the active queue.",
+      "after": "Review the information supplied by the requester about their DSD-related work before moving the request to the active queue. Confirming DSD eligibility ensures that only work within DSD scope advances for further action, which supports proper queue management and service alignment.",
+      "reason": "The revision improves specificity by explaining why it matters to review the work context before queue admission. It clarifies that the step is about maintaining queue integrity and aligning with DSD scope."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Choose a reason and next route",
+      "after": "Select a reason for declining and choose the next route for the requester.",
+      "reason": "The revision clarifies the instruction, emphasizing the need both to record the reason for the decline and to specify what happens next for the requester. This provides a direct explanation of the field's purpose."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The source text ('The requester attested that this concerns DSD work. Review the submitted work context before admitting it to the active queue.') is a neutral, short instruction. The proposed change ('Review the information supplied by the requester about their DSD-related work before moving the request to the active queue. Confirming DSD eligibility ensures that only work within DSD scope advances for further action, which supports proper queue management and service alignment.') expands with policy rationale and system intent not present in source, shifting legal/policy meaning. The source directs the reviewer only to check the work context; it does not mention queue management or service alignment as formal program purposes. This overinterprets the intent and is unsupported. Do not introduce justifications or descriptions of goal beyond what the source provides."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The change from 'Choose a reason and next route' to 'Select a reason for declining and choose the next route for the requester.' is a minor clarification and closely aligned with the source, but slightly narrows scope by introducing the action of 'declining' (which matches context in use, but is not explicit in label source). Acceptable as an explanatory improvement, but treat location and trigger context with care for future edits."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3197,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 176,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3373
+    },
+    "review": {
+      "input_tokens": 2978,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 279,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3257
+    }
+  },
+  "createdAt": "2026-11-15T13:55:49.229Z"
+}

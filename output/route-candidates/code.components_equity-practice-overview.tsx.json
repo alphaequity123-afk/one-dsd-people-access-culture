@@ -1,0 +1,81 @@
+{
+  "target": "code.components/equity-practice-overview.tsx",
+  "kind": "surface",
+  "route": "components/equity-practice-overview.tsx",
+  "sourceSha256": "62c72542739712f478fc55a17fc1ae501b9c113da3d5d3d414885d476654e5f7",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Connect learning to decisions, team practices, and public service. Explore relevant tools and plan changes you can use.",
+      "after": "Apply concepts from equity learning to your decisions, team processes, and services. This page introduces tools and examples to help you identify specific actions and plan changes that support equity in Disability Services Division work.",
+      "reason": "Clarified how learning connects to DHS and DSD job functions. Added reasoning about why acting on equity learning matters, and what staff can expect from the page. Increased specificity to DSD context as warranted by the writing standard."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Explore the Equity Analysis Toolkit",
+      "after": "Open the Equity Analysis Toolkit for practical tools and examples.",
+      "reason": "Specified that the toolkit offers practical tools and examples, clarifying its purpose and benefit to staff."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed rewrite makes substantial changes unsupported by the source. The original source states: \"Connect learning to decisions, team practices, and public service. Explore relevant tools and plan changes you can use.\" The rewrite introduces new ideas: 1) \"your decisions, team processes, and services,\" instead of the source's terms—'team practices' and 'public service'; 2) \"This page introduces tools and examples\" is not in the source; 3) \"help you identify specific actions and plan changes that support equity in Disability Services Division work\" interpolates \"DSD context\" and a rationale not present in source text. While these may reflect policy context or writing standard aspirations, the standard requires preservation of the source's scope and meaning. Unsupported specificity about \"DSD work,\" new promises about examples, and altered terminology are all out of scope. The rewrite does not merely clarify—it adds and shifts source intent, triggering a blocker."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The rewrite for this field changes the meaning of the original. The source label is: \"Explore the Equity Analysis Toolkit.\" The proposed label, \"Open the Equity Analysis Toolkit for practical tools and examples,\" claims the toolkit includes examples, which is not stated or evident in the source, and adds an imperative not reflected in the original. Any additions about the toolkit's content or expanded function are not supported in the current source context and represent a change of meaning. This is a blocker under the standard."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1252,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 152,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1404
+    },
+    "review": {
+      "input_tokens": 1009,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 326,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1335
+    }
+  },
+  "createdAt": "2026-11-15T13:53:33.127Z"
+}

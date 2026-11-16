@@ -53,11 +53,11 @@ export const EQUITY_FRAMEWORK = {
   lede:
     "This adapted planning framework connects six practice pillars, an improvement cycle, measures and practical resources. Use it alongside the proposed program charter. Neither document replaces applicable law, official DHS policy or the authority of the people responsible for a decision.",
   summary:
-    "The Equity Strategic Framework is intended to connect leadership, workforce practices, service delivery, community relationships and decisions with sustained equity work.¹ Its pillars and improvement cycle are optional planning aids. Confirm applicable policy, source authority and responsibility for each decision. A suggested activity or measure does not create a new agency requirement or demonstrate that an outcome has improved.",
+    "The Equity Strategic Framework is intended to connect leadership, workforce practices, service delivery, community relationships and decisions with sustained equity work.¹ Confirm applicable policy, source authority and responsibility for each decision. A suggested activity or measure does not create a new agency requirement or demonstrate that an outcome has improved.",
   howToRead: [
     "There are no years, phases by date or fixed cadences on this page. Stages are entered when readiness conditions are met, and review points are agreed with the people involved.",
-    "Measures describe program practice and organizational patterns. Nothing on this page measures an individual employee, and the program holds no personnel records.",
-    "Participation in the program is voluntary. Published DHS policy requirements are separate from choosing this program as support.",
+    "Measures describe program practice and organizational patterns.",
+    "Published DHS policy requirements are separate from choosing this program as support.",
   ],
 
   cycle: [

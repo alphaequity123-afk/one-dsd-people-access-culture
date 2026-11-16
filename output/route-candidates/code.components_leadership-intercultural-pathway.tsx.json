@@ -1,0 +1,95 @@
+{
+  "target": "code.components/leadership-intercultural-pathway.tsx",
+  "kind": "surface",
+  "route": "components/leadership-intercultural-pathway.tsx",
+  "sourceSha256": "204413951b08b23b89e0207aec8baa10ab0e141b218f9c866acd652c6312ad2c",
+  "status": "needs_revision",
+  "reviewedFieldCount": 8,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Grow your ability to understand cultural perspectives, adapt your leadership, and improve the practices that shape employee experience. Recruitment, onboarding, supervision, development, and retention connect the learning to decisions you make every day.",
+      "after": "Build your capacity to understand cultural perspectives, adapt your leadership decisions, and improve practices that shape employee experience. Learning connects directly to day-to-day work in recruitment, onboarding, supervision, staff development, and retention. These context areas allow you to identify specific workplace impacts of your approach.",
+      "reason": "Clarifies the link between intercultural leadership and specific employment practices at DHS and DSD, specifying that learning applies to everyday decisions. Explains why staff should see these areas as touchpoints for leadership impact rather than as a list of isolated activities."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "These three stages build from understanding to application across teams and systems. Each offers a different depth of practice. Choose what fits your current question, return to earlier learning when useful, and explore any course without a prerequisite or prior assessment.",
+      "after": "The pathway divides learning into three stages, moving from understanding to practical application at both team and system levels. Each stage introduces a different degree of complexity and practice depth. Select a stage aligned with your current question or context, revisit earlier material as needed, and begin any course—there are no prerequisites or required assessments for entry.",
+      "reason": "Specifies how stages build on each other and what choosing a stage means for learner engagement. Directly addresses why revisiting earlier material is practical and confirms that open exploration is intentional, not accidental."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field7"
+      ],
+      "before": "Intercultural development involves recognizing cultural differences, considering another perspective, and adapting behavior appropriately. The Intercultural Development Continuum describes Denial, Polarization, Minimization, Acceptance, and Adaptation. These ideas inform the learning; the three course stages do not assign you an orientation or measure your development. If you have an IDI development plan, you may use it to choose a focus. The same courses are available if you have not taken the IDI.",
+      "after": "Intercultural development means identifying cultural differences, considering multiple perspectives, and intentionally shifting behavior as situations require. The Intercultural Development Continuum describes the progression from Denial and Polarization through Minimization, Acceptance, and Adaptation. These concepts guide the course design, but the three course stages do not classify your orientation or measure developmental progress. If you have an IDI (Intercultural Development Inventory) plan, you can use it to help select topics or courses. All courses remain open to you even if you have not completed the IDI.",
+      "reason": "Clarifies that the Continuum guides content but does not serve as an assessment tool for learners, and that participation in IDI is optional for engaging with the pathway. This revision explains what is and is not measured, preventing confusion about learner categorization."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The rewrite, while clarifying context, adds interpretive and prescriptive meaning not present in the source. The source states: 'Recruitment, onboarding, supervision, development, and retention connect the learning to decisions you make every day.' The proposed text expands with 'These context areas allow you to identify specific workplace impacts of your approach.' This claim is not evidence-based from the source text, as the original does not assert that these are 'context areas' or that they allow for workplace impact identification. Remove added justification to preserve factual scope and keep to the directly supported link between practices and daily decisions."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The rewrite reorganizes and adds minor explanatory detail, but does not materially change the meaning or introduce unsupported claims. While slightly more verbose, it accurately represents the source's ideas (no prerequisites, three stages, freedom to revisit material or start anywhere). No action is required."
+      },
+      {
+        "fieldId": 6,
+        "severity": "blocker",
+        "finding": "The rewrite changes factual elements and adds clarifications not present in the source. The original says: 'These ideas inform the learning; the three course stages do not assign you an orientation or measure your development. If you have an IDI development plan, you may use it to choose a focus.' The proposal introduces: 'but the three course stages do not classify your orientation or measure developmental progress'; 'If you have an IDI (Intercultural Development Inventory) plan, you can use it to help select topics or courses.' This alters legal/assessment language ('classify your orientation'), and the guidance on topic selection is not directly evidenced. Critical terms ('classify,' 'developmental progress,' and more explicit IDI explanation) are not in the source, which must be preserved for official and legal accuracy."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2810,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 430,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3240
+    },
+    "review": {
+      "input_tokens": 2720,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 428,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3148
+    }
+  },
+  "createdAt": "2026-11-15T13:54:01.131Z"
+}

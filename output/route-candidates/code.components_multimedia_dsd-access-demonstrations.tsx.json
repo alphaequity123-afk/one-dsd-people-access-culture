@@ -1,0 +1,67 @@
+{
+  "target": "code.components/multimedia/dsd-access-demonstrations.tsx",
+  "kind": "surface",
+  "route": "components/multimedia/dsd-access-demonstrations.tsx",
+  "sourceSha256": "d96b4671a410fabfb1cd4eb8567810e52ad2d8eaf09cf9271cf7f76689bd2698",
+  "status": "needs_revision",
+  "reviewedFieldCount": 10,
+  "changes": [
+    {
+      "fieldId": 6,
+      "path": [
+        "field8"
+      ],
+      "before": "The label names the choice, the instructions explain it, the error names the correction, and confirmation describes what follows. A complete form also needs testing with the people and assistive technology that will use it.",
+      "after": "Check that the label identifies the choice field, the instructions clarify what is required, the error explains how to correct the input, and the confirmation outlines what will happen next. Testing a form with actual users and their assistive technology can reveal barriers that staff or designers may not anticipate. Addressing these details helps prevent common access problems and ensures the information collected supports follow-up actions.",
+      "reason": "Added explanation connecting each form feature to its purpose and clarified why user and assistive technology testing is required. Specified the practical implication for staff when these elements are missing."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 8,
+        "severity": "blocker",
+        "finding": "The revision changes the original sentence structure and introduces new justification—specifically, the claims that staff or designers 'may not anticipate' barriers, and that addressing details 'helps prevent common access problems and ensures the information collected supports follow-up actions.' The source states that a \"complete form also needs testing with the people and assistive technology that will use it,\" but does not elaborate on the reasons or practical implications as the revision does. These are unsupported expansions and introduce interpretations or implications not present in the original, violating source preservation and the standard's bar against inventing policy or procedure for specificity."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2725,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 153,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2878
+    },
+    "review": {
+      "input_tokens": 2185,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 142,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2327
+    }
+  },
+  "createdAt": "2026-11-15T13:54:12.935Z"
+}

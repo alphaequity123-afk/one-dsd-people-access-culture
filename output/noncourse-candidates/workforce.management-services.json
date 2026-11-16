@@ -1,0 +1,67 @@
+{
+  "target": "workforce.management-services",
+  "kind": "surface",
+  "route": "/consultant/workforce/management-services",
+  "sourceSha256": "39925c3218218e52f3e5ab443cd177e50a02954815a61aa4498e7c6934f84808",
+  "status": "model_checked",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "relationship"
+      ],
+      "before": "Listed as an agency area or associated service. This does not establish a direct reporting line.",
+      "after": "Designated as an agency area or a related service. This listing does not imply a formal reporting relationship or direct supervisory authority.",
+      "reason": "Clarifies the distinction between agency categorization and organizational reporting lines using more precise language, while retaining the original intent."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revised text for 'relationship'—'Designated as an agency area or a related service. This listing does not imply a formal reporting relationship or direct supervisory authority.'—remains supported by the cited DHS organizational information. The change uses more precise and clear language without altering the meaning or introducing unsupported claims. The qualification around reporting lines and formal authority is substantively the same as the source and the prior version."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1092,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 74,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1166
+    },
+    "review": {
+      "input_tokens": 778,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 124,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 902
+    }
+  },
+  "createdAt": "2026-11-15T13:37:44.434Z"
+}

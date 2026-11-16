@@ -1,0 +1,157 @@
+{
+  "target": "resource.pn-self-check",
+  "kind": "resource",
+  "route": "/library/pn-self-check",
+  "sourceSha256": "2da7dbedcdf67863fad25c0f658df9efbd91da4c12ef8ffa434abb10c509f08e",
+  "status": "needs_revision",
+  "reviewedFieldCount": 7,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Before you finish, check that your plan names who is responsible, when it will be reviewed, which access needs you considered, who you involved, and what you chose not to assume. Completed boxes matter only if follow-up is clear.",
+      "after": "Before finalizing your plan, confirm that you have clearly identified who is responsible for each action, when you will review the plan, what access needs you considered for this work, who you involved in planning, and which assumptions you avoided. Follow-up matters only when someone is accountable and next steps are explicit.",
+      "reason": "Clarified the need for specificity in responsibility, review, access, involvement, and assumptions. Emphasized that clarity is essential for effective follow-up instead of stating that checkboxes matter only if follow-up is clear."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Responsibilities: every follow-up has a named person.",
+      "after": "Responsibilities: Each follow-up action must have a specifically named person to ensure accountability and prevent tasks from being overlooked.",
+      "reason": "Added explanation about why assigning a named person is necessary to prevent missed tasks and ensure accountability."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Review date: choose a specific date within a reasonable window and place it on the calendar.",
+      "after": "Review date: Decide on a specific and reasonable review date, and enter it on the team's calendar. Setting an explicit review date helps ensure the plan remains active and relevant.",
+      "reason": "Added purpose for setting the review date: it keeps plans active and prevents them from becoming outdated or ignored."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Access: language and disability/communication access considered for this specific work, not in general.",
+      "after": "Access: Consider language and disability/communication access needs for the exact work being planned, not just as a general practice. Addressing these needs for each case supports equitable participation and reduces barriers.",
+      "reason": "Clarified that considering access for each piece of work supports equity and minimizes barriers. Explained why it must be tailored, not generalized."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Who was involved: who took part before the plan was final, what role they had, and how their input was used.",
+      "after": "Who was involved: List who participated in developing the plan, their roles, and describe how their input affected decisions. Tracking this clarifies the context for decisions and recognizes contributions.",
+      "reason": "Specified the importance of recording who participated and how input was used, showing how this contributes to transparency and acknowledgment."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Assumptions avoided: what you chose not to assume about the people affected.",
+      "after": "Assumptions avoided: Record any assumptions you deliberately avoided about the people affected. Identifying avoided assumptions helps reduce bias and supports better outcomes.",
+      "reason": "Added reasoning that tracking avoided assumptions reduces bias and improves the plan's effectiveness."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "Open questions: note what you still do not know and where you will take it next: Resources, a partner, the person responsible for the policy, or a consultation.",
+      "after": "Open questions: List what remains unknown and your plan for addressing each. Options could include consulting resources, involving a partner, seeking guidance from the policy lead, or scheduling further discussion. Noting open items supports continuous improvement and clear next steps.",
+      "reason": "Turned the last sentence into a clear explanation of why tracking open questions is important—supports progress and structured problem-solving."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revised summary introduces unsupported changes in meaning and elevates requirements beyond the source scope. The original summary directly lists required plan elements as a self-check, stating 'Completed boxes matter only if follow-up is clear.' The proposed text injects concepts of specificity ('clearly identified who is responsible for each action') and accountability ('Follow-up matters only when someone is accountable and next steps are explicit') not present in the source and subtly elevates the rigor by implying checklist items must meet a new standard of explicitness. This changes both the instruction and the threshold for what is sufficient, diverging from the source's instruction style and substance."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The minor clarification about why naming a follow-up person is important (preventing missed tasks and ensuring accountability) is supportable by inference and meets the program writing standard. Contextual explanation is allowed where it does not change requirements."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "Adding reasoning for setting a specific review date (keeping the plan active and preventing it from being ignored) provides clarifying context and is grounded in reasonable interpretation of scheduling and review expectations."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The additional rationale about equitable participation and reduced barriers is consistent with the intent of the access check and does not alter requirements. It is a permitted expansion."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "Elaborating on why tracking participants supports context and acknowledgment fits within the original focus on documenting involvement. The meaning is preserved."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The explanation about reducing bias and improving outcomes through tracking assumptions is consistent with the source. No change to requirements."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "Restating why noting open questions is useful (continuous improvement and clear next steps) stays within the scope of the original and adds helpful context, not new requirements."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1517,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 533,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2050
+    },
+    "review": {
+      "input_tokens": 1614,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 412,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2026
+    }
+  },
+  "createdAt": "2026-11-15T13:41:28.946Z"
+}

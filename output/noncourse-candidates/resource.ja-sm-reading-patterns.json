@@ -1,0 +1,171 @@
+{
+  "target": "resource.ja-sm-reading-patterns",
+  "kind": "resource",
+  "route": "/library/ja-sm-reading-patterns",
+  "sourceSha256": "6f5bfcd38b1675cb75d7f8d6dff185a9486748266d9d1fa3689208b1433c5333",
+  "status": "needs_revision",
+  "reviewedFieldCount": 8,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Help managers read workforce and service patterns accurately, protect people in small groups and act on process.",
+      "after": "Guide managers to interpret workforce and service patterns, maintain privacy in small groups, and focus on process changes rather than individual analysis.",
+      "reason": "Clarifies that the aim is to help managers interpret patterns while protecting privacy and shifting attention to process-level actions."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Where to look, and how to keep it away from individuals",
+      "after": "It is important to know where to focus attention in data and how to prevent identifying individuals when working with small groups.",
+      "reason": "Explains why these precautions and practices matter, specifying the risk of identifying individuals in small group analysis."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Remember. A pattern prompts a review of process. It is not a decision about an individual. The floor is 10 respondents for any staff-facing result, and higher for identity cross-tabs. Disparate impact is neither dead nor enforced as before, as of October 2026. The same rule applies in every direction.",
+      "after": "Remember: Identifying a pattern should lead you to review your process, not reach conclusions about any one individual. For staff-facing results, do not examine groups smaller than 10; use higher limits for identity-based comparisons. As of October 2026, rules on disparate impact have changed but are not eliminated. Apply group thresholds and privacy protections to all demographic directions.",
+      "reason": "Improves clarity, ties actions to privacy limits and policy context, and clarifies that thresholds apply in all directions."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Before you read it. How many people are in each group? Could anyone be recognized? Could a hidden number be found by subtraction, across filters, exports or time?",
+      "after": "Before reviewing data, check how many people are in each group. Consider whether anyone could be recognized in the results. Think about whether hidden details could be revealed through filters, exports, or comparing results over time.",
+      "reason": "Clarifies the importance of group size and the practical risk of reidentification through data operations."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "While you read it. Could this be noise? Who came in, and when? Which step in the process? At each step: criteria stated, record kept, who reviewed? If a name comes up, go back to the process.",
+      "after": "While reading the data, ask whether the pattern could be random variation. Note who entered the group and at what time. For each step in your process, check which criteria were used, whether a record was kept, and who reviewed it. If an individual's name appears, return your focus to examining the steps in the process instead of the person.",
+      "reason": "Makes the purpose of each question explicit and connects actions to process review rather than individuals."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Do not. Move an individual to fix a number. Hunt for who answered a survey. Lower the floor to get an answer. Ask someone to speak for a group. Report completion as progress.",
+      "after": "Do not: move someone just to adjust numbers; search for specific survey respondents; lower group thresholds to obtain results; ask individuals to represent an entire group; or consider survey completion as evidence of progress.",
+      "reason": "Clarifies the reasoning for each 'do not,' making it explicit why such actions are inappropriate or misleading."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "After. Change one step for everyone. Set a date to look again. Report what you committed to, including nulls. Route concerns about a person through Human Resources, the Affirmative Action Officer or labor relations.",
+      "after": "After examining the pattern, make process changes that apply to everyone. Schedule a future review date and report on any commitments, including when nothing changed. If you have concerns about a specific person, refer them to Human Resources, the Affirmative Action Officer, or labor relations as appropriate.",
+      "reason": "Specifies why to report on null results and clarifies appropriate avenues for individual concerns."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "Do next. Take one report you already receive. Check its group sizes and write three process questions before your next meeting.",
+      "after": "Next: Use a report you already receive. Check the sizes of its groups and draft three questions about the process before your next meeting.",
+      "reason": "Streamlines and clarifies the instruction for immediate application."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed summary introduces 'privacy' as a primary aim and reframes the purpose to 'focus on process changes rather than individual analysis.' The original only references protecting 'people in small groups' and acting 'on process.' The addition of 'privacy' shifts the focus and assigns a technical tone that is not explicit in the original, which simply emphasizes reviewing process and not making individual decisions. The original's intent is more general: ensuring patterns prompt a process review and not individual action. Do not pass."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The proposed change is a reasonable clarification. It restates and expands the original intent without changing meaning, reflecting the importance of protecting identities in small groups."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revision clarifies agency rules for group size and disparate impact, while making explicit that protections apply in all directions. This is supported by the content of the source text."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "This edit is a valid restatement and expansion, providing slightly more detail without adding unsupported limits or requirements."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The edit makes questions in the original more explicit but does not introduce unsupported content or reasoning."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "This change expresses the reasoning behind the 'do not' list, consistent with the original content."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "This is a clarifying expansion that specifies why to report on 'nulls' (no change), which can help reinforce complete accountability. The referral process for individual issues is unchanged."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "The rewrite streamlines the instruction and keeps the instructional intent and scope unchanged."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1836,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 720,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2556
+    },
+    "review": {
+      "input_tokens": 2009,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 381,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2390
+    }
+  },
+  "createdAt": "2026-11-15T13:44:19.734Z"
+}

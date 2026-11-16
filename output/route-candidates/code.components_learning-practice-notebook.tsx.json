@@ -1,0 +1,81 @@
+{
+  "target": "code.components/learning-practice-notebook.tsx",
+  "kind": "surface",
+  "route": "components/learning-practice-notebook.tsx",
+  "sourceSha256": "b4a5e24961784ac1bec3d39d38455ae4cd4df95b87e6569cd3ff5677e393dd4d",
+  "status": "model_checked",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field1"
+      ],
+      "before": "Read it here, then download it to use.",
+      "after": "Review each idea on this page and download the tool to use in your regular work.",
+      "reason": "Clarifies the intended sequence and ties the step directly to actual staff practice, connecting reading on the page with applying the learning after download."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field2"
+      ],
+      "before": "This page does not save anything you write. Work through the prompts below, then download the related tools from the Library and keep your notes in your own file.",
+      "after": "This page will not save your responses. Complete the prompts below, then download related tools from the Library. Keep your notes in your own work file so you can refer to them as needed.",
+      "reason": "Explains why the page does not save notes and why staff should keep their own records, making the practical reason explicit for DSD learning context."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The change clarifies that staff should review each idea and emphasizes applying the tool in routine work. This is an interpretation of both the source and intended use but does not misstate or overextend the source's instruction. The explicit sequencing (review, then download and use) is clearer but still grounded in the component's function. It is acceptable within the program writing standard as it does not introduce a new policy, obligation, or step."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revision gives a clearer reason for not saving notes and reinforces why private note-keeping matters, aligning this with the LearningPracticeNotebook's directive and DSD learning practice. The edit remains accurate and does not add unsupported claims or new policy, merely making the rationale more explicit."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1547,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 149,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1696
+    },
+    "review": {
+      "input_tokens": 1300,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 177,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1477
+    }
+  },
+  "createdAt": "2026-11-15T13:54:09.115Z"
+}

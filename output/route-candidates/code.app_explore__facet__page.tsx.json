@@ -1,0 +1,67 @@
+{
+  "target": "code.app/explore/[facet]/page.tsx",
+  "kind": "surface",
+  "route": "/explore/[facet]",
+  "sourceSha256": "babd4fe311613cb66b8e51d72d606db8905aec9c2b776523714bf3a527323310",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Choose one to see the practices, courses, tools and readings connected with it.",
+      "after": "Select a topic below to view related practices, courses, tools, and readings.\n\nThis list helps you find resources that address specific questions or areas of disability services work. Exploring these connections can clarify what supports are available and how they apply to your work or role.",
+      "reason": "Added a clear summary and a more detailed explanation that connects the list to its professional purpose. The revision explains why users would choose an item and how it supports their work, meeting the guidance's requirement for reasoning and clarity without unnecessary complexity."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The original field says: 'Choose one to see the practices, courses, tools and readings connected with it.' The proposed revision adds a new explanatory sentence: 'This list helps you find resources that address specific questions or areas of disability services work. Exploring these connections can clarify what supports are available and how they apply to your work or role.' This is unsupported by the source code: the original string appears verbatim in the source as a brief instruction, not as a two-paragraph explanation. The additional sentences extend purpose, context, and intended professional application without evidence in the source code or any referenced source text. This goes beyond permissible clarification, introducing synthesized reasoning and motivation. The program writing standard requires that a supporting explanation appear in the matching source for fields tied to user-facing instructions or explanations. The added context and purpose statements, while well-meant, are not grounded in the original document and represent significant content extension."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1427,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 127,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1554
+    },
+    "review": {
+      "input_tokens": 1166,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 225,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1391
+    }
+  },
+  "createdAt": "2026-11-15T13:48:59.687Z"
+}

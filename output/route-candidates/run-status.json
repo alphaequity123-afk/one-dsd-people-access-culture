@@ -1,0 +1,1535 @@
+{
+  "updatedAt": "2026-11-15T14:03:36.225Z",
+  "selected": 377,
+  "completed": 377,
+  "results": [
+    {
+      "target": "code.app/about/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/administrations/adsa/divisions/dsd/page.tsx",
+      "status": "needs_revision",
+      "changes": 1
+    },
+    {
+      "target": "code.app/administrations/page.tsx",
+      "status": "needs_revision",
+      "changes": 2
+    },
+    {
+      "target": "code.app/areas/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/administrations/[id]/page.tsx",
+      "status": "needs_revision",
+      "changes": 4
+    },
+    {
+      "target": "code.app/ask/ask-view.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/audio-library/audio-library-player.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/audio-library/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/collections/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/collections/[theme]/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/community-outreach/county-agencies/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/community-outreach/county-map/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/community-outreach/how-the-system-connects/page.tsx",
+      "status": "error",
+      "error": "Incomplete field review."
+    },
+    {
+      "target": "code.app/community-outreach/organizations/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/community-outreach/organizations/[slug]/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/community-outreach/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/community-outreach/plan/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/community-outreach/policies/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/community-outreach/policies/[id]/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/community-outreach/providers/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/community-outreach/sources/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/consultant/activation/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/consultant/analysis/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/consultant/audit/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/areas/[id]/page.tsx",
+      "status": "error",
+      "error": "Incomplete field review."
+    },
+    {
+      "target": "code.app/consultant/content-review/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/consultant/data/page.tsx",
+      "status": "error",
+      "error": "Incomplete field review."
+    },
+    {
+      "target": "code.app/consultant/layout.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/consultant/legacy-requests/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/consultant/library/page.tsx",
+      "status": "error",
+      "error": "Incomplete field review."
+    },
+    {
+      "target": "code.app/consultant/connectors/page.tsx",
+      "status": "error",
+      "error": "Incomplete field review."
+    },
+    {
+      "target": "code.app/consultant/not-found.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/consultant/orchestrator/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/consultant/program/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/consultant/queue/[id]/page.tsx",
+      "status": "error",
+      "error": "Incomplete field review."
+    },
+    {
+      "target": "code.app/consultant/registry/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/consultant/resources/new/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/consultant/resources/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/consultant/resources/[id]/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/consultant/review/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/consultant/toolkit/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/consultant/workforce/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/consultant/workforce/[areaId]/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/courses/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/courses/[courseId]/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/courses/[courseId]/[lessonId]/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/data/equity-baseline/glossary/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/data/equity-baseline/goal/[number]/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/data/equity-baseline/layout.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/data/equity-baseline/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/data/equity-baseline/review-count-section.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/employee-resource-groups/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/equity-framework/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/equity-policy/analysis/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/equity-policy/analysis/[id]/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/equity-policy/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/equity-policy/register/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/equity-review/analyze/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/equity-review/director-toolkit/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/equity-review/director-toolkit/templates/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/equity-review/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/equity-review/structural/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/equity-review/working-group-plan/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/equity-workspace/layout.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/equity-workspace/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/error.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/explore/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/explore/[facet]/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/explore/[facet]/[value]/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/global-error.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/growth/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/growth/[role]/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/home/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/leading/community-coverage/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/leading/how-this-works/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/leading/journey/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/leading/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/leading/paths/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/leading/paths/[path]/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/leading/[door]/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/clas/collection/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/clas/curriculum/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/clas/curriculum/[lesson]/job-aid/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/clas/curriculum/[lesson]/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/clas/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/collaboration/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/collections/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/collections/[collection]/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/community-connections/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/cultural-intelligence/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/diversity/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/emotions-and-values/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/engagement-resources/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/equity-in-practice/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/equity-in-practice/sequence-video.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/equity-toolkit/apply/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/equity-toolkit/curriculum/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/equity-toolkit/curriculum/[lesson]/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/equity-toolkit/goals/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/equity-toolkit/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/equity-toolkit/policy-review/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/equity-toolkit/practice/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/intercultural/curriculum/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/intercultural/curriculum/[lesson]/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/intercultural/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/leadership-styles/capstone/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/leadership-styles/conflict-lifecycle/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/leadership-styles/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/leadership-styles/race-and-leadership/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/leadership-styles/scenarios/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/leadership-styles/[style]/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/paths/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/paths/[journeyId]/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/readings/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/readings/pathways/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/readings/practice/service-notice/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/readings/[readingId]/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/sources/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/tribal-referral/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/consultant/library/[id]/page.tsx",
+      "status": "needs_revision",
+      "changes": 1
+    },
+    {
+      "target": "code.app/learn/water-we-swim-in/essay/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/water-we-swim-in/essay/whole/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/water-we-swim-in/essay/[part]/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/water-we-swim-in/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/water-we-swim-in/[module]/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/library/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/minnesota-agencies/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/minnesota-agencies/[id]/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/minnesota-communities/calendar/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/minnesota-communities/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/minnesota-communities/[id]/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/my-work/action-plan/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/my-work/decision-records/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/my-work/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/my-work/plan/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/my-work/reflections/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/one-dsd/amplify/ideas/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/one-dsd/amplify/mentoring/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/one-dsd/leadership/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/one-dsd/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/one-dsd/planning/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/one-dsd/programs/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/one-dsd/programs/[id]/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/one-dsd/scenarios/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/one-dsd/team/learning-lab/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/one-dsd/team/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/one-dsd/team/resource-selections/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/one-dsd/team/workspace/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/operationalizing-equity/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/paths/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/paths/[id]/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/podcasts/[id]/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/practice/clas/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/practice/measurement/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/practice/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/practice/requirements/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/practice-guides/[slug]/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/program/implementation/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/program/model/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/program/reflection/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/program/[stage]/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/program-foundation/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/resources/[id]/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/search/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/share/courses/[courseId]/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/share/courses/[courseId]/[lessonId]/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/share/equity-toolkit/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/share/equity-toolkit/practice/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/share/library/[id]/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/site-map/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/source-reading/[id]/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/start/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/support/directory/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/support/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/support/right-person/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/support/share-result/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/team-kits/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/team-space/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/toolkit-studio/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/toolkit-studio/[card]/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/understanding-dhs/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/user-guide/page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/amplify-page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/amplify-tools.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/analysis/analysis-result.tsx",
+      "status": "error",
+      "error": "Incomplete field review."
+    },
+    {
+      "target": "code.components/analysis/analyze-workspace.test.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/analysis/analyze-workspace.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/analyze-in-toolkit-link.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/ask-client.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/ask-records-client.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/ask-voice.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/clas-curriculum/job-aid.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/clas-curriculum/media-player.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/clas-curriculum/notes.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/clas-curriculum/practice.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/clas-curriculum/transcript.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/clas-curriculum/walkthrough-playlist.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/clas-curriculum.test.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/clas-curriculum.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/clas-planning-worksheet.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/collection-item-link.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/community-collection-addition.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/community-design-index.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/community-design-page.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/community-experience-controls.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/community-footer-frame.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/community-profile-sections.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/community-research-sections.test.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/community-research-sections.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/connected-minnesota.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/connected-with.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/consultant-analysis-workspace.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/consultant-sign-in.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/consultant-toolkit/analysis-view.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/consultant-toolkit/information-needed-panel.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/consultant-toolkit/outputs.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/consultant-toolkit/suggested-setup.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/consultant-toolkit-workspace.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/core-fifteen.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/course-audio-discussion.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/course-lesson.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/cultural-intelligence-explainer-draft.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/cultural-intelligence-work-journey.tsx",
+      "status": "error",
+      "error": "Incomplete field review."
+    },
+    {
+      "target": "code.components/cultural-leadership-curriculum.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/cultural-leadership-styles.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/culture-calendar.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/data-exploration-workspace.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/decision-workspace.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/development-focus.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/development-pathways.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/development-resource-guide.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/dhs-reference-link.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/director-toolkit-template.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/dsd-practice-planner-editor.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/dsd-practice-planner.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/dsd-program-footer.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/dsd-program-header.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/dsd-reflection-editor.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/dsd-saved-resources.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/dsd-workspace.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/editable-surface-editor.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/engagement-resource-links.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/equity-analysis/dashboard.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/equity-analysis/register.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/equity-analysis/walkthrough.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/equity-analysis-ladder.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/equity-chart.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.app/learn/water-we-swim-in/collection/page.tsx",
+      "status": "needs_revision",
+      "changes": 4
+    },
+    {
+      "target": "code.components/equity-goal-experience.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/equity-goal-overview.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/equity-practice-overview.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/equity-toolkit-worked-example.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/equity-video-feature.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/evals-client.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/focused-sections.test.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/geffen-course-read-aloud.test.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/geffen-course-read-aloud.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/guided-start-client.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/home-ask.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/home-task-finder.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/hub/analyze-policy-link.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/hub/community-hub-sections.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/equity-decisions-curriculum.tsx",
+      "status": "error",
+      "error": "Incomplete field review."
+    },
+    {
+      "target": "code.components/hub/statewide-services-chart.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/intake-client.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/intercultural-curriculum.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/intercultural-lesson-video.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/leaders-sign-in.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/leadership-development-studio.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/leadership-intercultural-pathway.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/leadership-lifecycle-tools.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/leadership-style-video.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/leadership-styles-pathway.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/leading-path-place.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/leading-start-chooser.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/learning-audio.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/learning-practice-notebook.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/measurement-worksheet.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/multimedia/critical-incident-scene.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/multimedia/dsd-access-demonstrations.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/multimedia/dsd-data-quality-example.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/multimedia/dsd-development-map-example.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/multimedia/dsd-first-contact-audio.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/multimedia/dsd-inventory-map.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/multimedia/dsd-leadership-media.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/multimedia/dsd-policy-burden-map.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/multimedia/dsd-work-examples.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/hub/county-map.tsx",
+      "status": "error",
+      "error": "Incomplete field review."
+    },
+    {
+      "target": "code.components/multimedia/engagement-learning-scenes.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/multimedia/engagement-reference-map.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/multimedia/engagement-route-map.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/multimedia/engagement-toolkit-route.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/multimedia/engagement-contribution-map.tsx",
+      "status": "needs_revision",
+      "changes": 3
+    },
+    {
+      "target": "code.components/multimedia/learning-dialogue.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/multimedia/learning-evidence-chart.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/multimedia/learning-history.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/multimedia/measurement-evidence-example.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/multimedia/opportunity-pathway.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/multimedia/plain-language-comparison.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/multimedia/resource-media-preview.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/multimedia/worked-practice-examples.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/multimedia/engagement-worked-examples.tsx",
+      "status": "error",
+      "error": "Incomplete field review."
+    },
+    {
+      "target": "code.components/my-view-client.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/new-resource-form.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/new-to-dsd.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/one-dsd-team-client.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/operationalizing-equity-preview.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/orchestrator-client.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/organization-navigation.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/packet-view.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/page-copy-editor.tsx",
+      "status": "error",
+      "error": "Incomplete field review."
+    },
+    {
+      "target": "code.components/page-edit-controls.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/participation-notice.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/path-browse.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/path-client.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/podcast-player.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/policy-analysis/analysis-view.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/policy-analysis/analyze-step.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/policy-analysis/case-library.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/policy-analysis/decisions-step.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/policy-analysis/equity-workspace-links.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/policy-analysis/formalize-step.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/policy-analysis/policy-analyzer.test.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/policy-analysis/policy-analyzer.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/policy-analysis/policy-picker.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/policy-analysis/recommendation-card.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/policy-analysis/recommendations-step.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/policy-analysis/sources-editor.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/policy-presentation-reader.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/practice-video.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/private-notes.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/program-connections.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/program-context.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/program-outcome-form.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/program-work-controls.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/program-work-summary.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/queue-item-client.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/reading-practice.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/record-workbench.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/related-readings.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/requirements-crosswalk.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/research-controls-client.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/research-markdown.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/resource-creation-panel.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/resource-creation-preview.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/resource-inline-editor.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/resource-media-gallery.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/resource-media-manager.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/resource-release-client.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/resource-starting-points.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/resource-theme-nav.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/resource-theme-pathway.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/review-client.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/self-directed-continue.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/site-footer.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/site-header.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/site-search.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/source-evidence.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/staff-ask-browse.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/staff-work-browse.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/structural-review-workspace.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/support-context-options.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/synced-audio.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/team-resource-selections.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/team-sign-in.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/track-client.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/tutor-panel.test.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/universal-editor.tsx",
+      "status": "error",
+      "error": "Incomplete field review."
+    },
+    {
+      "target": "code.components/visual-studio-panel.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/water-collection-feature.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/water-curriculum.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/water-foundation-course.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/water-foundation-feature.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/work-examples.tsx",
+      "status": "existing"
+    },
+    {
+      "target": "code.components/my-path.tsx",
+      "status": "needs_revision",
+      "changes": 5
+    }
+  ]
+}

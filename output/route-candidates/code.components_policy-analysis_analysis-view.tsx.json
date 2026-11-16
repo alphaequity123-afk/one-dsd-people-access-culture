@@ -1,0 +1,81 @@
+{
+  "target": "code.components/policy-analysis/analysis-view.tsx",
+  "kind": "surface",
+  "route": "components/policy-analysis/analysis-view.tsx",
+  "sourceSha256": "931a9cf0f427b2b4500f1de999aaeb1649cbfd1252ecfddac020679a38c829fa",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Attach more material in step 2, such as the full policy, data or notes from the people affected, and run the analysis again to fill these in.",
+      "after": "Add more source material in step 2—such as the complete policy, relevant data, or notes collected from people affected by the policy—then run the analysis again to address these gaps. Providing additional material supports a more thorough review and may help answer currently unresolved questions.",
+      "reason": "Clarified what constitutes useful material for addressing missing information, explained the practical outcome of collecting and attaching further evidence, and specified why this step is necessary for staff completing the review."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Answers to the policy review questions",
+      "after": "Responses to the policy review questions",
+      "reason": "Changed \"Answers\" to \"Responses\" for precision and to reflect that these may include findings, evidence, inferences, or identified gaps, not only direct answers. This terminology is less absolute and more accurately describes the range of information provided."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The source states: \"Attach more material in step 2, such as the full policy, data or notes from the people affected, and run the analysis again to fill these in.\" The proposed change adds new interpretive detail: it replaces \"Attach\" with \"Add...source material\" and introduces a much longer explanation including \"Providing additional material supports a more thorough review and may help answer currently unresolved questions.\" This shifts from the original concise instruction to an expanded justification and procedural consequence, which is not sourced. The original is a brief, direct instruction, not an explanatory passage, and the added rationale is not present in source."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The change from \"Answers\" to \"Responses\" is reasonable, as the section contextually includes more than direct answers (e.g., gaps), but the source does use \"Answers to the policy review questions\" as the heading. The change is less a blocker and more a minor editorial tone shift. However, for protected/official fields, retaining the original heading is usually necessary unless the scope meaningfully changes."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2655,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 182,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2837
+    },
+    "review": {
+      "input_tokens": 2442,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 244,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2686
+    }
+  },
+  "createdAt": "2026-11-15T13:55:14.271Z"
+}

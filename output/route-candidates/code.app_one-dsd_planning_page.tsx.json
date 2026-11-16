@@ -1,0 +1,165 @@
+{
+  "target": "code.app/one-dsd/planning/page.tsx",
+  "kind": "surface",
+  "route": "/one-dsd/planning",
+  "sourceSha256": "29d5228f73f9e1f0f65a1af12d926f143649da7f184012bc03dc7044d42588e5",
+  "status": "needs_revision",
+  "reviewedFieldCount": 9,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Led by the Equity and Inclusion Operations Consultant. Staff, units, and decision owners contribute evidence and carry out the improvements within their responsibility.",
+      "after": "The Equity and Inclusion Operations Consultant leads this work. Staff, teams, and decision owners each contribute evidence and are responsible for improvements within their roles. This collaborative approach helps ensure evidence is grounded in daily practices and that changes are owned by the people closest to the work.",
+      "reason": "Clarifies roles and why their engagement is necessary by connecting responsibility to practical outcomes. Uses more specific agency structure language and ties staff action to improvement."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field2"
+      ],
+      "before": "Use available evidence, name what is missing, and decide what to examine next. Examples help you learn the reporting approach; they are kept separate from real figures. Measures describe aggregate patterns and do not score individual staff.",
+      "after": "Use the evidence you have, identify where you lack information, and decide what you need to investigate further. Review sample reports to understand the required reporting structure; these examples are for training only and do not reflect actual data. Aggregate measures show group-level patterns—not individual performance.",
+      "reason": "Improves specificity regarding evidence and reporting, makes learning intent clearer, and confirms separation of example data versus real data."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field3"
+      ],
+      "before": "The reporting workspace is for preparing your own report; it does not display a shared official report or send figures anywhere. Keep confidential information out of your notes and share only a suitable summary.",
+      "after": "This reporting workspace allows you to draft your own progress report. It does not publish a shared or official report, nor does it transmit your figures automatically. When documenting, do not include confidential or private information; summarize findings in a manner appropriate to your audience.",
+      "reason": "Clarifies the workspace use, the importance of safeguarding confidential information, and why suitable summaries matter. Specifies the lack of transmission or publication, reducing ambiguity about data security."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field6"
+      ],
+      "before": "Equity work in a division tends to move through three stages. In the",
+      "after": "Division-level equity work usually develops in three broad phases.",
+      "reason": "Uses precise language and directly states the scope and sequence, increasing clarity about the stages and their organizational context."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field7"
+      ],
+      "before": "stage, people build a shared language and try first practices. In",
+      "after": "foundation phase, teams develop a shared language and begin initial practices. In the",
+      "reason": "Names the phase for greater specificity and connects it to knowledge-building and early implementation."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field8"
+      ],
+      "before": ", equity becomes part of routine decisions and processes rather than a separate effort. In",
+      "after": "integration phase, equity informs routine decisions and standard processes, rather than being treated as an isolated activity. During the",
+      "reason": "Labels the stage, clarifies the nature of the shift, and links equity to daily decisions instead of separate work."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field9"
+      ],
+      "before": ", it is simply how the division runs, and nobody has to argue for it. This describes the division as a whole. It is separate from the personal",
+      "after": "institutionalization phase, equity becomes embedded in how the division operates. At this point, staff no longer need to justify these practices—they are part of the division’s standard functioning. This assessment applies at the division level and does not reflect",
+      "reason": "Names and explains the phase, connects it to normalized behavior, and distinguishes division from individual assessment."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "field10"
+      ],
+      "before": "each person keeps for themselves, and it is never used to rate anyone.",
+      "after": "learning journey that each person documents individually. This maturity assessment is never used to evaluate or rate staff.",
+      "reason": "Clarifies the distinction between organizational and personal progress, and explains evaluation limits."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed 'after' text changes the source's meaning by introducing new reasoning ('helps ensure evidence is grounded... and that changes are owned by the people closest to the work') that is not present in the source. It also shifts 'staff, units, and decision owners' to 'staff, teams, and decision owners,' which is not a direct match. The source's wording must be preserved for program records and policy."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The rewritten text ('Review sample reports to understand the required reporting structure...') adds that sample reports are for 'training only,' and other editorial expansions that are not present in the source. The original statement about examples helping 'you learn the reporting approach' suffices, and further claims about their intent or the 'required reporting structure' alter the scope."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The 'after' version introduces new concepts ('it does not publish a shared or official report, nor does it transmit your figures automatically'), which is more expansive than the original's clear limit ('it does not display a shared official report or send figures anywhere'). The added instruction to 'summarize findings in a manner appropriate to your audience' introduces new requirements not specified in the source."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The change from 'tends to move through three stages. In the' to 'usually develops in three broad phases.' is a minor editorial adjustment. While more concise, it does not change legal or policy meaning; however, 'phase' vs. 'stage' is not functionally distinct here."
+      },
+      {
+        "fieldId": 4,
+        "severity": "blocker",
+        "finding": "The original: 'stage, people build a shared language and try first practices.' The revision replaces 'stage' with 'foundation phase' and expands to 'teams develop a shared language and begin initial practices.' The original is more neutral and does not claim 'teams.' It should preserve the official voice and wording as per standard."
+      },
+      {
+        "fieldId": 5,
+        "severity": "blocker",
+        "finding": "The new 'integration phase, equity informs routine decisions and standard processes, rather than being treated as an isolated activity' is an editorial expansion that introduces language like 'informs' and 'standard processes.' The original: 'equity becomes part of routine decisions and processes rather than a separate effort,' is more neutral. Edits must not add new analysis."
+      },
+      {
+        "fieldId": 6,
+        "severity": "blocker",
+        "finding": "'Institutionalization phase, equity becomes embedded in how the division operates. At this point, staff no longer need to justify these practices—they are part of the division’s standard functioning.' This introduces 'embedded,' 'staff no longer need to justify,' and other explanatory language not present in the source, which reads: 'it is simply how the division runs, and nobody has to argue for it.' The official record must be retained as written."
+      },
+      {
+        "fieldId": 7,
+        "severity": "blocker",
+        "finding": "'Learning journey that each person documents individually. This maturity assessment is never used to evaluate or rate staff.' This rephrasing adds new language and changes neutral 'each person keeps for themselves, and it is never used to rate anyone.' The meaning and neutrality of the original should be preserved."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2325,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 713,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3038
+    },
+    "review": {
+      "input_tokens": 2430,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 687,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3117
+    }
+  },
+  "createdAt": "2026-11-15T13:51:05.566Z"
+}

@@ -1,0 +1,127 @@
+{
+  "target": "resource.tool-lifecourse",
+  "kind": "resource",
+  "route": "https://www.lifecoursetools.com/",
+  "sourceSha256": "075c1ca6db35b6bf6eae380af0026ecb5465dc65f750da0c281acb67249cff47",
+  "status": "model_checked",
+  "reviewedFieldCount": 5,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "From the University of Missouri Kansas City Institute for Human Development, this framework helps people with disabilities and families plan a good life across the lifespan. Some materials are licensed; cite, link, and use published tools within their terms.",
+      "after": "Charting the LifeCourse is a planning framework from the University of Missouri Kansas City Institute for Human Development. It supports people with disabilities and their families to identify goals and plan for a meaningful life across all stages and settings. Some tools require attribution or have use restrictions—users should follow published terms when accessing or sharing materials.",
+      "reason": "Expanded the summary to specify the framework's purpose, clarify who it is for, and address the importance of use terms with greater specificity for agency staff."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Owner and publisher: LifeCourse Nexus, University of Missouri Kansas City Institute for Human Development. Status: published framework; some tools carry use terms.",
+      "after": "Owner and publisher: LifeCourse Nexus, University of Missouri Kansas City Institute for Human Development. This is a published and recognized framework. Note that some of the associated tools include specific use terms or licenses, which may limit reproduction or adaptation.",
+      "reason": "Clarified status as a recognized framework and explained why use terms or licenses affect how tools can be reproduced or adapted."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Purpose: person-centered planning across life domains using the person's vision, trajectory, and an integrated mix of supports.",
+      "after": "Purpose: The framework provides a person-centered approach to planning, guiding conversation and documentation across a person’s life domains. It emphasizes the individual’s vision for the future, considers their desired life trajectory, and integrates different types and sources of supports.",
+      "reason": "Added detail about how the framework is used and emphasized that it guides conversation and documentation, connecting the vision, trajectory, and supports."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Limits: one planning framework among several. Quality depends on the person leading the conversation.",
+      "after": "Limits: Charting the LifeCourse is one of several frameworks available for planning. Its effectiveness depends on how facilitators and teams use it to support the person’s preferences and needs, rather than relying only on the tool or templates.",
+      "reason": "Clarified that effectiveness depends on facilitation and that it should not replace individualized support or professional judgment."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Program use: referenced in service-delivery orientation and in DSD planning scenarios. Tools are linked, not reproduced.",
+      "after": "Program use: Charting the LifeCourse is cited in both service-delivery orientation and in DSD planning examples. Staff should access the tools through linked sources and not directly copy or distribute materials unless permitted by the original license.",
+      "reason": "Clarified how staff should interact with the tools, noting proper use under use terms and making the relevance for DSD scenarios explicit."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revised summary expands on the original by specifying the framework's purpose, its intended audience, and provides additional clarity on requirement to follow published terms. These expansions are accurate, maintain the original meaning, and stay within source-derived limits. No evidence of scope inflation, misrepresented authority, or unsupported legal claims."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revised body text adds clarity about the framework's published and recognized status and explains the relevance of use terms and licenses. These changes improve understanding for agency staff without introducing unsupported claims or inventing legal restrictions."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The expansion gives more depth to the framework's use in guiding both conversation and documentation, rooted in the source's portrayal of its intent (supporting person-centered planning using the individual's own vision and goals). No source evidence is contradicted or padded beyond the framework’s stated purpose."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The reframing of limits as relying on facilitation quality rather than the tool alone is consistent with the source's original wording. It also correctly avoids establishing new requirements, instead clarifying source intent. No misstatement detected."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The clarification added on program use and instructions for staff use aligns with the source’s direction to link to, not reproduce, tools unless allowed. This is a valid and accurate restatement for an agency context."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1499,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 449,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1948
+    },
+    "review": {
+      "input_tokens": 1528,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 313,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1841
+    }
+  },
+  "createdAt": "2026-11-15T13:42:46.827Z"
+}

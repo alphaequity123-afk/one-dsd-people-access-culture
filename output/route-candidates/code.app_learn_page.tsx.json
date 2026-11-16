@@ -1,0 +1,95 @@
+{
+  "target": "code.app/learn/page.tsx",
+  "kind": "surface",
+  "route": "/learn",
+  "sourceSha256": "6483f2536a78726a67d45464f37c504d97b731bef33dc1daada1f25ebc98d866",
+  "status": "needs_revision",
+  "reviewedFieldCount": 28,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field2"
+      ],
+      "before": "The recommended courses to begin with. Follow them in order or pick the one closest to your work.",
+      "after": "The initial recommended courses in this series support staff in building knowledge of key areas. You may follow them in sequence, or select the course that best aligns with your current work needs.",
+      "reason": "Clarified that these recommendations are based on relevance to staff work, explained sequencing as a suggestion rather than a rule, and provided a professional rationale for flexibility."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "field9"
+      ],
+      "before": "Choose the learning or tool that fits your question. You can use a practical resource directly and return to the learning when it helps.",
+      "after": "Select learning topics or tools based on the situation you need to address. Practical resources can be used immediately, with more in-depth learning available when you want additional context or support.",
+      "reason": "Added clear reasoning by connecting choice to actual staff needs and clarified how and when practical resources versus deeper learning are useful. Removed conversational repetition for directness and specificity."
+    },
+    {
+      "fieldId": 24,
+      "path": [
+        "field28"
+      ],
+      "before": "Build trust within your team, connect work across the Disability Services Division and the Aging and Disability Services Administration, and strengthen relationships with partners.",
+      "after": "Strengthen your team’s trust, coordinate activities across the Disability Services Division and the Aging and Disability Services Administration, and build working relationships with partner organizations. These connections support effective cross-division initiatives and stronger external partnerships.",
+      "reason": "Specified how team trust, cross-division coordination, and partner relationships contribute to practical improvements in DHS and DSD work. Added direct linkage to improved outcomes for context."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The revision changes the policy and source meaning. The original—“The recommended courses to begin with. Follow them in order or pick the one closest to your work.”—carefully maintains neutral guidance: a recommended sequence is available, without requiring any one path, and allows staff to choose based on what is most relevant to their work. The rewrite adds inappropriate specificity and professional rationale ('support staff in building knowledge of key areas') and frames the series as supporting 'staff' in a way not present or supported by the source wording. The phrase 'best aligns with your current work needs' invents a new basis for selection versus the supported 'closest to your work.' It introduces managerial intent and rationale not established by the source or code. This violates the evidence-based standard and changes the instruction's scope."
+      },
+      {
+        "fieldId": 9,
+        "severity": "blocker",
+        "finding": "The rewritten instruction alters both the reasoning and the clarity found in the source: 'Select learning topics or tools based on the situation you need to address. Practical resources can be used immediately, with more in-depth learning available when you want additional context or support.' The source directs: 'Choose the learning or tool that fits your question. You can use a practical resource directly and return to the learning when it helps.' The revised field replaces the concrete, user-centered framing of the 'question' that motivates exploration with an abstract 'situation you need to address,' weakening the directness and specificity. The new rationale about 'wanting additional context or support' is not present in the source and reframes the relative roles of resources. This alters the practical instruction's scope against the policy standard."
+      },
+      {
+        "fieldId": 28,
+        "severity": "note",
+        "finding": "The rewritten entry casts more specificity on team trust, cross-division coordination, and partnership, and it adds language: 'These connections support effective cross-division initiatives and stronger external partnerships.' This is a mild expansion: while it reasonably grounds the changes in likely DSD and DHS practice, the last sentence extrapolates rationale and broadens the role from the source, which ends at the practical summary of collaboration. If retained, it should remain close to intended site usage—not as formal policy justification."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 8103,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 310,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 8413
+    },
+    "review": {
+      "input_tokens": 7311,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 464,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 7775
+    }
+  },
+  "createdAt": "2026-11-15T13:50:21.224Z"
+}

@@ -1,0 +1,13 @@
+{
+  "target": "code.components/dsd-workspace.tsx",
+  "kind": "surface",
+  "route": "components/dsd-workspace.tsx",
+  "context": "\"use client\";\nimport dynamic from \"next/dynamic\";\nexport const DsdResourceActions = dynamic(() => import(\"./dsd-saved-resources\").then(module => module.ResourceActions), { ssr: false });\nexport const DsdSavedResourceShelf = dynamic(() => import(\"./dsd-saved-resources\").then(module => module.SavedResourceShelf), { ssr: false, loading: () => <p role=\"status\">Opening your saved resources…</p> });\n",
+  "protectedFields": [],
+  "values": {
+    "field0": "Opening your saved resources…"
+  },
+  "status": "no_editable_prose",
+  "changes": [],
+  "issues": []
+}

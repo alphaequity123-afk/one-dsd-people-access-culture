@@ -1,0 +1,67 @@
+{
+  "target": "code.app/equity-policy/analysis/page.tsx",
+  "kind": "surface",
+  "route": "/equity-policy/analysis",
+  "sourceSha256": "c325cef09fff0cbfb4212af0eee5a598e583a4a7ce9e663e17d6020f3ec846ff",
+  "status": "needs_revision",
+  "reviewedFieldCount": 3,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "This practice does not submit an official equity analysis. Use the Equity Analysis Toolkit to try the eight questions with a published example and download a copy.",
+      "after": "Use the Equity Analysis Toolkit to practice answering the eight equity analysis questions with a published example. This session does not count as an official equity analysis, but you can use it to become familiar with the toolkit's structure and download your responses for future reference. Practicing here helps staff understand the kinds of considerations expected in the official process.",
+      "reason": "Clarified that this is for practice, explained the benefit for staff, and specified that it is not an official submission. Included why using the practice toolkit is useful for understanding expectations."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The proposed text expands meaning and introduces new explanations not supported by the original source. The source states, \"This practice does not submit an official equity analysis. Use the Equity Analysis Toolkit to try the eight questions with a published example and download a copy.\" The revised text adds: (1) an explicit statement about becoming familiar with the toolkit's structure, (2) guidance on downloading responses for 'future reference,' and (3) rationale that practicing helps staff understand expected considerations. These are interpretive expansions and not evidence-backed by the source. The source text provides a neutral alert—the revision adds pedagogical reasoning and inferred benefits, which changes the intended message and scope."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1382,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 132,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1514
+    },
+    "review": {
+      "input_tokens": 1079,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 157,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1236
+    }
+  },
+  "createdAt": "2026-11-15T13:48:34.856Z"
+}

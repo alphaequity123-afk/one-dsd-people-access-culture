@@ -1,0 +1,250 @@
+
+> one-dsd-people-access-culture-standalone@0.1.0 test
+> node scripts/testing/run-tests.mjs
+
+
+ RUN  v5.0.5 C:/Users/garyb/Projects/one-dsd-writing-standard-20261115
+
+ ❯ |components| components/clas-curriculum.test.tsx (22 tests | 1 failed) 4389ms
+   ❯ working notes and the improvement plan (3)
+     × keeps each part's note on this device, shows it again and can clear every note 113ms
+Could not parse CSS stylesheet
+Could not parse CSS stylesheet
+Not implemented: navigation to another Document
+Not implemented: navigation to another Document
+ ❯ |node| lib/content/work-guidance.test.ts (3 tests | 1 failed) 20ms
+   ❯ guidance without statements about the system (3)
+     × keeps the guidance and drops sentences about saving, sending, recording and voluntary use 14ms
+(node:21816) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:7872) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |components| components/clas-curriculum.test.tsx > working notes and the improvement plan > keeps each part's note on this device, shows it again and can clear every note
+TestingLibraryElementError: Unable to find an element with the text: /Someone using the same profile may be able to read it/. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"clas-study"[39m
+    [36m>[39m
+      [36m<header>[39m
+        [36m<p[39m
+          [33mclass[39m=[32m"clas-study-eyebrow"[39m
+        [36m>[39m
+          [0mSELF-DIRECTED LEARNING[0m
+        [36m</p>[39m
+        [36m<h1>[39m
+          [0mMake language assistance usable[0m
+        [36m</h1>[39m
+        [36m<p[39m
+          [33mclass[39m=[32m"clas-study-lede"[39m
+        [36m>[39m
+          [0mTrace an assistance request from offer through follow-up[0m
+        [36m</p>[39m
+      [36m</header>[39m
+      [36m<p>[39m
+        [0mPart [0m
+        [0m3[0m
+        [0m of [0m
+        [0m9[0m
+        [0m · CLAS standards [0m
+        [0m5, 6, 7[0m
+      [36m</p>[39m
+      [36m<p[39m
+        [33mclass[39m=[32m"media-quick-links"[39m
+      [36m>[39m
+        [36m<a[39m
+          [33mclass[39m=[32m"media-quick-link media-quick-link--video text-white"[39m
+          [33mhref[39m=[32m"#watch"[39m
+          [33mstyle[39m=[32m"background: rgb(0, 56, 101); color: rgb(255, 255, 255);"[39m
+        [36m>[39m
+          [0mWatch the lesson[0m
+        [36m</a>[39m
+      [36m</p>[39m
+      [36m<div[39m
+        [33maria-label[39m=[32m"Video explainer"[39m
+        [33mclass[39m=[32m"featured-media-panel featured-media-panel--video"[39m
+        [33mdata-featured-media[39m=[32m"video"[39m
+        [33mrole[39m=[32m"group"[39m
+      [36m>[39m
+        [36m<section[39m
+          [33maria-labelledby[39m=[32m"watch"[39m
+        [36m>[39m
+          [36m<h2[39m
+            [33mid[39m=[32m"watch"[39m
+          [36m>[39m
+            [0mWatch the lesson[0m
+          [36m</h2>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"clas-player clas-player--video"[39m
+          [36m>[39m
+            [36m<video[39m
+              [33maria-label[39m=[32m"Make language assistance usable"[39m
+              [33mcontrols[39m=[32m""[39m
+              [33mplaysinline[39m=[32m""[39m
+              [33mposter[39m=[32m"/learning/clas-curriculum/03/poster.png"[39m
+              [33mpreload[39m=[32m"metadata"[39m
+            [36m>[39m
+              [36m<source[39m
+                [33msrc[39m=[32m"/learning/clas-curriculum/03/lesson.mp4"[39m
+                [33mtype[39m=[32m"video/mp4"[39m
+              [36m/>[39m
+              [36m<track[39m
+                [33mdefault[39m=[32m""[39m
+                [33mkind[39m=[32m"captions"[39m
+                [33mlabel[39m=[32m"English"[39m
+                [33msrc[39m=[32m"/learning/clas-curriculum/03/captions.vtt"[39m
+                [33msrclang[39m=[32m"en"[39m
+              [36m/>[39m
+              [0mYour browser cannot play this video. The transcript below has every sentence.[0m
+            [36m</video>[39m
+            [36m<p>[39m
+              [36m<a[39m
+                [33mhref[39m=[32m"/learning/clas-curriculum/03/lesson.mp4"[39m
+              [36m>[39m
+                [0mOpen the video[0m
+              [36m</a>[39m
+              [0m · [0m
+              [36m<a[39m
+                [33mhref[39m=[32m"/learning/clas-curriculum/03/captions.vtt"[39m
+              [36m>[39m
+                [0mDownload captions[0m
+              [36m</a>[39m
+            [36m</p>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"clas-player-controls"[39m
+            [36m>[39m
+              [36m<label[39m
+                [33mclass[39m=[32m"clas-speed"[39m
+                [33mfor[39m=[32m"_r_1n_"[39m
+              [36m>[39m
+                [0mSpeed[0m
+                [36m<select[39m
+                  [33mid[39m=[32m"_r_1n_"[39m
+                [36m>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"0.75"[39m
+                  [36m>[39m
+                    [0m0.75×[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"1"[39m
+                  [36m>[39m
+                    [0mNormal[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"1.25"[39m
+                  [36m>[39m
+                    [0m1.25×[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"1.5"[39m
+                  [36m>[39m
+                    [0m1.5×[0m
+                  [36m</option>[39m
+                [36m</select>[39m
+              [36m</label>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"clas-study-secondary"[39m
+                [33mdisabled[39m=[32m""[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mPrevious chapter[0m
+              [36m</button>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"clas-study-secondary"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mNext chapter[0m
+              [36m</button>[39m
+              [36m<p[39m
+                [33mclass[39m=[32m"clas-player-status"[39m
+                [33mrole[39m=[32m"status"[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<nav[39m
+              [33maria-label[39m=[32m"Chapters: Make language assistance usable"[39m
+              [33mclass[39m=[32m"clas-chapters"[39m
+            [36m>[39m
+              [36m<ol>[39m
+                [36m<li>[39m
+                  [36m<button[39m
+                    [33mtype[39m=[32m"button"[39m
+                  [36m>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"clas-chapter-time"[39m
+                    [36m>[39m
+                      [0m0:00[0m
+                    [36m</span>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"clas-chapter-title"[39m
+                    [36m>[39m
+                      [0mFollow the request through[0m
+                    [36m</span>[39m
+                  [36m</button>[39m
+                [36m</li>[39m
+                [36m<li>[39m
+                  [36m<button[39m
+                    [33mtype[39m=[32m"button"[39m
+                  [36m>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"clas-chapter-time"[39m
+                    [36m>[39m
+                      [0m0:54[0m
+                    [36m</span>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"clas-chapter-title"[39m
+                    [36m>[39m
+                      [0mBefore the encounter[0m
+                    [36m</span>[39m
+                  [36m</button>[39m
+                [36m</li>[39m
+                [36m<li>[39m
+                  [36m<button[39m
+ ...
+ ❯ Object.getElementError ../one-dsd-calm-rebuild-20261109/node_modules/@testing-library/dom/dist/config.js:37:19
+ ❯ ../one-dsd-calm-rebuild-20261109/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ ❯ ../one-dsd-calm-rebuild-20261109/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ ❯ ../one-dsd-calm-rebuild-20261109/node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ ❯ components/clas-curriculum.test.tsx:269:17
+    267|     expect(localStorage.getItem('one-dsd-clas-curriculum-note-v1:03'))…
+    268|     expect(view.getByText('Saved.')).toBeTruthy();
+    269|     expect(view.getByText(/Someone using the same profile may be able …
+       |                 ^
+    270|     view.unmount();
+    271|     const again = render(<ClasCurriculum lessonId="03" />);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  |node| lib/content/work-guidance.test.ts > guidance without statements about the system > keeps the guidance and drops sentences about saving, sending, recording and voluntary use
+AssertionError: expected 'The planning tool on these pages save…' to be '' // Object.is equality
+
+- Expected
++ Received
+
++ The planning tool on these pages saves nothing.
+
+ ❯ lib/content/work-guidance.test.ts:10:148
+      8|     expect(withoutSystemNotices("Do not include names. Progress is sav…
+      9|     expect(withoutSystemNotices("These notes are not saved. Copy or do…
+     10|     expect(withoutSystemNotices("This program does not record who you …
+       |                                                                                                                                                    ^
+     11|     expect(withoutSystemNotices("Ordinary learning and practice are vo…
+     12|     expect(withoutSystemNotices("Saved on this computer")).toBe("");
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  2 failed | 196 passed (198)
+      Tests  2 failed | 1555 passed | 1 skipped (1558)
+   Start at  16:05:52
+   Duration  501.52s (tests 55%, import 27%, environment 9%, transform 9%)
+
+Environment  |components| jsdom was created 46 times · 194.12s total, 49% of tracked time
+             create it once per worker with pool: 'vmThreads' (keeps per-file isolation) or isolate: false (shares it across files)
+             learn more: https://vitest.dev/guide/improving-performance#test-environments
+

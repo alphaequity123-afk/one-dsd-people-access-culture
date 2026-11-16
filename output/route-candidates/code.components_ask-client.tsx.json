@@ -1,0 +1,81 @@
+{
+  "target": "code.components/ask-client.tsx",
+  "kind": "surface",
+  "route": "components/ask-client.tsx",
+  "sourceSha256": "bbf30572cc6cea1437d7a2c93aad940e006bb599c5abec4a1df56f097950d0f6",
+  "status": "needs_revision",
+  "reviewedFieldCount": 4,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Attach or paste the draft and get each question answered as evidence, inference or gap, with next steps in this program.",
+      "after": "Add or paste your draft so the system can review each question as evidence, inferred reasoning, or identified gaps, with next steps that fit this program's available options. This helps clarify which points are directly supported, which are based on interpretation, and where more information is needed according to program criteria.",
+      "reason": "Clarifies how each answer type connects to program decisions, providing detail on why these distinctions matter for staff review and planning."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": "Leave out names and private details. Outside services help answer your question.",
+      "after": "Avoid including names or private details. The system uses outside tools to provide helpful responses to your question.",
+      "reason": "Clarifies the instruction to omit sensitive information and explains why—external tools are involved—grounding it in procedural reasoning."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The source text is: 'Attach or paste the draft and get each question answered as evidence, inference or gap, with next steps in this program.' The proposed rewrite adds significant elaboration not found in the source: it claims the system 'reviews each question as evidence, inferred reasoning, or identified gaps, with next steps that fit this program's available options,' and explains that it 'helps clarify which points are directly supported, which are based on interpretation, and where more information is needed according to program criteria.' These details and causal links are not specified in the original, which explains only that answers are provided as evidence, inference, or gap, with next steps in the program. The rewrite invents un-sourced explanations and reasoning. This violates the standard of preserving the full meaning, not inventing procedures or rationale not present in the code or authoritative source."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The change from 'Leave out names and private details. Outside services help answer your question.' to 'Avoid including names or private details. The system uses outside tools to provide helpful responses to your question.' is essentially a clarification and follows the source intent closely. The change from 'help answer your question' to 'provide helpful responses' is a minor wording shift that does not misrepresent function, as the code and its privacy instruction refer to the use of external services. This is acceptable as a clarified restatement with procedural reasoning for staff audiences."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 8802,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 205,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 9007
+    },
+    "review": {
+      "input_tokens": 8521,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 316,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 8837
+    }
+  },
+  "createdAt": "2026-11-15T13:52:12.598Z"
+}

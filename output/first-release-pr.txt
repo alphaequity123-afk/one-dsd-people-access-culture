@@ -1,0 +1,5 @@
+This applies the approved professional writing standard to 15 core page surfaces and three complete courses (302 reviewed field changes). The revised explanations connect staff actions to their purpose, preserve the limits of source evidence, and keep instructions clear. Course lessons and job aids share the same reviewed field revisions as the new DHS application.
+
+The publication adapter applies revisions only when original field values still match, preserving later owner edits. Narration transcripts, captions, media assets, source links, official wording and course structure remain unchanged. This is a bounded first release, not completion of the collection-wide rollout.
+
+Validation: TypeScript check, four adapter tests, the 18-surface/302-field publication check, changed-file lint and diff checks pass. The broader inherited test command still encounters unresolved aliases, missing DOM configuration and standalone test-file discovery; it is not reported as passing. Production build and live route checks follow deployment.

@@ -1,0 +1,67 @@
+{
+  "target": "code.components/engagement-resource-links.tsx",
+  "kind": "surface",
+  "route": "components/engagement-resource-links.tsx",
+  "sourceSha256": "634f74b1b60c56388cd5ed22759efc8995b847fbc5ed9cea05b142973837aa84",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Use the original resources alongside your working notes. Each overview explains when to use the resource and links to its PDF.",
+      "after": "Refer to the original resources as you develop your working notes. Each overview describes the intended use of the resource and provides a link to the PDF, so you can compare guidance directly and apply it in your planning. This helps ensure that decisions are grounded in the context and intent of the original materials.",
+      "reason": "The revision clarifies that the resources are used to support planning by allowing for direct comparison of guidance and intent. It explains why staff should connect overviews and original documents and specifies the practical value for decision making, addressing the prompt’s emphasis on connected reasoning and professional explanation."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revision inserts new reasoning about 'direct comparison' and 'grounded in context and intent' that is not in the source. The original source simply instructs to use the original resources alongside working notes and states that each overview explains use and links to a PDF. The added explanation about how or why to use the resources oversteps the source; it is not supported evidence, but an interpretation or justification added beyond the provided wording. The revision is not a faithful reflection of the original page as required by the standard."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1587,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 141,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1728
+    },
+    "review": {
+      "input_tokens": 1317,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 145,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1462
+    }
+  },
+  "createdAt": "2026-11-15T13:53:16.791Z"
+}

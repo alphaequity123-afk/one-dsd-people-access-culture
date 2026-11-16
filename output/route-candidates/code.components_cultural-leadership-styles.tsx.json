@@ -1,0 +1,67 @@
+{
+  "target": "code.components/cultural-leadership-styles.tsx",
+  "kind": "surface",
+  "route": "components/cultural-leadership-styles.tsx",
+  "sourceSha256": "4c74ed1ee5570acae9ba6976d943ac79dd60f96293c13173c9f375c0d583f54f",
+  "status": "needs_revision",
+  "reviewedFieldCount": 17,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Leadership is part of cultural understanding and organizational change. Leaders, supervisors, managers and directors can use these approaches to examine their own decisions and responsibilities. These approaches describe ways people may lead; they are not labels, scores or a complete list. A person can use different approaches in different situations. Consider what is needed, who has authority, who can influence the decision, and what happens for the people affected.",
+      "after": "Leadership influences how people understand culture and guide organizational change. Supervisors, managers, directors, and other leaders can use these approaches to reflect on their decisions and clarify responsibilities. The listed approaches describe common ways people may lead; they are not labels, measurements, or an exhaustive list. An individual might use different approaches as situations change. When reviewing a decision, consider what the situation requires, who holds authority, who can influence the outcome, and how the choices affect those involved.",
+      "reason": "Clarifies that leadership influences both cultural understanding and organizational change; specifies that leaders of all types can use these approaches for reflection; describes the list as common—not exhaustive—ways of leading; ties use of an approach to changing situations; connects each consideration to practical judgments staff must make."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The change shifts the framing from 'Leadership is part of cultural understanding and organizational change' to 'Leadership influences how people understand culture and guide organizational change,' altering the emphasis. While the original highlights leadership as inherently embedded in cultural and organizational context, the revision rephrases it as a separate influence upon those processes. This nuance is more than stylistic: it subtly changes the relationship described in the source.\n\nThe change from 'Leaders, supervisors, managers and directors can use these approaches to examine their own decisions and responsibilities' to 'Supervisors, managers, directors, and other leaders can use these approaches to reflect on their decisions and clarify responsibilities' shifts the agency and scope, and adds a slightly different meaning by emphasizing 'clarifying responsibilities,' which isn't present in the source.\n\nDescribing the approaches as 'common ways people may lead' (new) rather than 'ways people may lead' (source) introduces an unsupported qualifier. The phrase 'they are not labels, scores or a complete list' in the source is changed to 'they are not labels, measurements, or an exhaustive list,' which is an unnecessary synonym swap but not strictly incorrect.\n\nThe closing sentences also change meaning: the source states 'A person can use different approaches in different situations. Consider what is needed, who has authority, who can influence the decision, and what happens for the people affected.' The revised version shifts to: 'An individual might use different approaches as situations change. When reviewing a decision, consider what the situation requires, who holds authority, who can influence the outcome, and how the choices affect those involved.' The intent remains, but the language rewrite amplifies individual agency and adds the phrase 'When reviewing a decision,' which narrows scope compared to the original.\n\nThe sum of these changes is not just clarification; they alter the precise relationship described in the source, add interpretation about reflection and clarification of responsibilities, introduce unsupported language about 'common' approaches, and reframe the application from a general context to a review-specific context. These are blockers for the program writing standard, which requires exact preservation of source meaning for substantive official explanations."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3579,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 209,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3788
+    },
+    "review": {
+      "input_tokens": 2815,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 458,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3273
+    }
+  },
+  "createdAt": "2026-11-15T13:52:59.988Z"
+}

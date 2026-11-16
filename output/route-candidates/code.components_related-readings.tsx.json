@@ -1,0 +1,81 @@
+{
+  "target": "code.components/related-readings.tsx",
+  "kind": "surface",
+  "route": "components/related-readings.tsx",
+  "sourceSha256": "25555c39337ce6c6d480da295fda6749cf09181e9930aa5c2347289600dd73f7",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field2"
+      ],
+      "before": "These optional readings can deepen your reflection on this course. The connections and practice prompts below are suggestions for learning, not DHS policy.",
+      "after": "These readings relate to concepts in this course and offer opportunities to extend your understanding. The explanations of connection and practice guidance are intended for professional learning and should not be interpreted as official DHS policy.",
+      "reason": "The revised text clarifies the purpose of the readings, ties them more explicitly to the course context, and specifies that both the explanations of connection and practice guidance are for professional learning, not policy. This adds specificity and separates practical learning from formal procedure."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field3"
+      ],
+      "before": "After trying an idea, revisit your notes. What changed, what surprised you and what would you do differently?",
+      "after": "When you test an idea from these readings, review your notes to identify what has changed in your thinking, what was unexpected, and what adjustments you might make in your work as a result.",
+      "reason": "The revision directly links the reflection to professional practice and clarifies how note review can inform actual work. This replaces general prompts with targeted reasoning relevant to staff using the readings to guide their practice."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed replacement ('These readings relate to concepts in this course and offer opportunities to extend your understanding. The explanations of connection and practice guidance are intended for professional learning and should not be interpreted as official DHS policy.') changes both the scope and character of the supported claim. The source ('These optional readings can deepen your reflection on this course. The connections and practice prompts below are suggestions for learning, not DHS policy.') limits the readings to suggestions that 'can deepen your reflection,' not all 'opportunities to extend your understanding.' The original text is careful to distinguish suggestions for learning from policy, which is preserved. However, the revision introduces 'professional learning' as a formal category, and removes 'reflection,' a term that connects more strongly to the stated instructional purpose and tone used throughout DSD knowledge products. The sentence also uses broader, unsupported claims about the 'purpose' and 'opportunities' these readings provide, which exceeds the source's narrowly stated offer for optional reflection. The change to official status for 'explanations of connection and practice guidance' is not present in the source and could mislead staff about which parts are guidance versus mere suggestion. The original is plain, limits scope, and matches DSD's established phrasing for optional resources."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revised version ('When you test an idea from these readings, review your notes to identify what has changed in your thinking, what was unexpected, and what adjustments you might make in your work as a result.') rewords and makes slightly more explicit the professional application of reflection. It changes some wording ('after trying an idea' to 'when you test an idea from these readings') but keeps the broad meaning. It does subtly shift from open reflection to action (note 'adjustments you might make in your work as a result'), which is a minor interpretation rather than a source error. Not a blocker, but note that original phrasing leaves open the possibility that nothing is changed, while the revision nudges toward applied results, which could be considered a mild expansion of scope."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1485,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 202,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1687
+    },
+    "review": {
+      "input_tokens": 1292,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 467,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1759
+    }
+  },
+  "createdAt": "2026-11-15T13:55:57.896Z"
+}

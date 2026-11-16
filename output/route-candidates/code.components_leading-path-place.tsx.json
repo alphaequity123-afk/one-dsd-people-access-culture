@@ -1,0 +1,67 @@
+{
+  "target": "code.components/leading-path-place.tsx",
+  "kind": "surface",
+  "route": "components/leading-path-place.tsx",
+  "sourceSha256": "68a709770f0013a8064b0f557792e7afc9e760daa9eba00e03654e05d7ed9bd1",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "This course is not available right now.",
+      "after": "This course cannot be accessed at this time.",
+      "reason": "Revised the message to be more precise about access, removing indirect language. This version communicates clearly that the course is unavailable for use at the moment without implying a temporary technical problem or making unsupported promises about future availability."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The original source says: 'This course is not available right now.' The proposed change, 'This course cannot be accessed at this time,' alters the tone and implication. The original language is slightly more neutral and does not imply a specific cause (such as access restrictions). The change is not justified by evidence and makes a narrower claim about access, losing the flexibility of the source phrasing. The phrase 'not available right now' more accurately matches the intent of the source and does not over-interpret the reason for unavailability. Reject change; preserve source wording."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1753,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 78,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1831
+    },
+    "review": {
+      "input_tokens": 1443,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 143,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1586
+    }
+  },
+  "createdAt": "2026-11-15T13:54:03.839Z"
+}

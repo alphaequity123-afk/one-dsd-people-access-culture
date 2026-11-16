@@ -1,0 +1,109 @@
+{
+  "target": "code.components/practice-video.tsx",
+  "kind": "surface",
+  "route": "components/practice-video.tsx",
+  "sourceSha256": "c1cebca1addc34884ba2bb71729f0562acbdb4c640e61fa161113313a9b7e890",
+  "status": "needs_revision",
+  "reviewedFieldCount": 4,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "A person reads the North Crossing notice. “Your intake appointment is set for Tuesday at 10. Contact us if you need to change it.” She looks for a way to reschedule. The revised notice says, “Tuesday, May 18, at 10 a.m. Confirm, reschedule, or ask for language or access support. Call 651-555-0142.” She finds the number and picks up her phone.",
+      "after": "A person reads a North Crossing appointment notice: “Your intake appointment is set for Tuesday at 10. Contact us if you need to change it.” She looks for a way to reschedule. A new version of the notice says, “Tuesday, May 18, at 10 a.m. Confirm, reschedule, or ask for language or access support. Call 651-555-0142.” She locates the number and prepares to call. Adding options to the notice helps the recipient understand what they can do next and how to get support if needed.",
+      "reason": "Clarified sequence and explained why revised information helps recipients understand their next step. Removed redundant phrasing for clarity."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Make room for another way to participate",
+      "after": "Offer another way to take part",
+      "reason": "Made the heading concise and concrete about the action: providing an alternative means of participation. This improves clarity for staff reviewing options."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "A facilitator asks a question and gives everyone time to think. She invites people to speak or write their ideas on a card. A participant slides a card to her. She reads it and brings the written idea into the group discussion.",
+      "after": "A facilitator asks a question and allows time for everyone to consider their answers. She invites participants to speak or write responses on cards. One person quietly hands her a card. She reads the card and shares the written idea with the group. Offering multiple ways to respond ensures that people who may not wish to speak can still contribute. This practice supports fuller participation and can surface ideas that might be missed in a verbal-only discussion.",
+      "reason": "Connected the actions to their practical purpose in a DSD or DHS context—ensuring participation beyond spoken responses. Added explanation about the outcome and why it matters for inclusive group process."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": "A staff member returns to the people who gave input and shows them a written update. In this example, the team added a phone option after hearing from participants. The team is still deciding what hours to offer. The staff member points to the calendar and says when people will hear back: next Friday.",
+      "after": "A staff member follows up with people who gave input and shares a written update. In this example, the team added a phone participation option after hearing from participants, but decisions about meeting hours are still open. The staff member points to the calendar and informs the group when to expect a further update: next Friday. Returning to participants with details of what has changed, what remains undecided, and when more information will come builds trust and shows that input is considered in ongoing decisions.",
+      "reason": "Added clarity on the timing of follow-up and why returning to participants with updates supports trust and transparency in the process."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The rewrite adds a new explanatory sentence: 'Adding options to the notice helps the recipient understand what they can do next and how to get support if needed.' This is not present in the original source (the original is strictly a neutral description of what happens in the video). The added explanation changes the source's style and meaning, violating the requirement to preserve official narration or professional explanation without ungrounded commentary."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The original title 'Make room for another way to participate' refers to facilitating inclusiveness and room for different participation modes. The revision 'Offer another way to take part' narrows the general facilitation concept to a directive, changing both tone and nuance of the original. This is a substantial semantic change and not strictly supported by the evidence."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The revised field adds multiple sentences: 'Offering multiple ways to respond ensures that people who may not wish to speak can still contribute. This practice supports fuller participation and can surface ideas that might be missed in a verbal-only discussion.' The source is descriptive and does not provide an explicit rationale or outcome. Adding these lessons changes the meaning and introduces unsupported explanation in a field meant only to describe the video content."
+      },
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "The revision adds a rationale not present in the original: 'Returning to participants with details of what has changed, what remains undecided, and when more information will come builds trust and shows that input is considered in ongoing decisions.' The source is strictly a descriptive narrative of the exchange and does not explicitly discuss trust or process benefits. The new content introduces commentary not supported by the evidence."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2092,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 468,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2560
+    },
+    "review": {
+      "input_tokens": 2149,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 422,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2571
+    }
+  },
+  "createdAt": "2026-11-15T13:55:39.967Z"
+}

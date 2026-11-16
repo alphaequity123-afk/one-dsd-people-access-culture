@@ -1,0 +1,201 @@
+{
+  "target": "resource.ja-sm-leave-and-return",
+  "kind": "resource",
+  "route": "/library/ja-sm-leave-and-return",
+  "sourceSha256": "a7cdce7186f23c92e2d802b6040657139e4d7ba610daa54b74f4df85d35479f7",
+  "status": "model_checked",
+  "reviewedFieldCount": 10,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Help you respond well, keep the work running and bring people back to their own job, while Human Resources handles the rules.",
+      "after": "Support co-workers through leave and return by keeping work organized, protecting privacy, and relying on Human Resources to manage policy and eligibility.",
+      "reason": "Revised for clarifying practical actions expected of the staff role and to emphasize the division of responsibilities between supervision and HR. Gives a purpose-driven summary for a colleague to colleague context."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "For the first call and the first day back.",
+      "after": "You guide the team at key points: when someone first requests leave and when they return to their job. These are times when clear, consistent support matters most for both the employee and the team.",
+      "reason": "Expanded to directly connect the timing and impact of action on workplace stability and clarity; explains why the topic matters beyond just naming process steps."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Remember. You do not decide eligibility. Route it the same day. No special words are needed. You need dates and restrictions. You do not need the diagnosis. Time away does not count against someone.",
+      "after": "Remember: Do not decide if someone is eligible. Forward the request to Human Resources the same day, whether or not you have all the details. No specific language is required. Collect dates and any needed work restrictions, but not the medical diagnosis. Time taken for approved leave is not held against the person.",
+      "reason": "Clarified the division of responsibility, pointed out that forwarding is not contingent on having all details, and maintained that eligibility decisions rest with HR. Expanded instruction for practical clarity."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "When someone says they need time away. Thank them. Do not ask why. Offer to contact Human Resources today, or let them do it. Ask what dates they know, then let them go. Do not ask them to delay.",
+      "after": "When an employee requests time away, thank them for notifying you. Do not ask for their reason. Offer right away to connect them with Human Resources or let them make the contact if they prefer. Record any dates they can provide, then allow them to step away promptly—do not pressure them to delay their leave.",
+      "reason": "Clarified who takes action, prioritized employee agency and privacy, and explained why not to ask for reasons. Stated importance of immediacy and respect for their need."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Coverage. What must continue? What can wait? What stops? Who covers what, and for what stated reason? What comes off each person's plate? Hand off interpreter, format and access needs. Leave out the reason for absence. Tell your manager the real cost.",
+      "after": "Coverage: Identify work that must continue, work that can wait, and any tasks that should stop. Assign who will cover each duty and specify which duties shift temporarily. Delegate interpreter, accessible format, or similar support needs as required. Do not include the reason for the absence when assigning coverage. Explain the operational impact to your manager for workload planning.",
+      "reason": "Clarifies the operational logic in reassigning duties and why coverage plans should not reference medical or personal details. Details the steps for proper delegation."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Tell the team. What's changing and who covers. \"I keep individual arrangements private for everyone.\"",
+      "after": "Tell the team what responsibilities are changing and who will cover each one. Maintain privacy by stating: \"I keep individual arrangements private for everyone.\" This supports consistent respect for confidential information while ensuring team awareness of practical changes.",
+      "reason": "Explains the importance of the privacy statement and ties it to operational clarity."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Before they return. Confirm date and any restrictions with Human Resources. Check access, equipment and any accommodation. Write a short update. Decide openly what work goes back. Book a one-to-one for day one or two.",
+      "after": "Before the employee returns, confirm their return date and any work restrictions with Human Resources. Review any needed accommodations, access, or equipment to be ready for their return. Write a brief team update about changed responsibilities. Decide in a team-aware way which duties should go back to the returning employee. Schedule a one-on-one meeting for their first or second day to address any questions or needs.",
+      "reason": "Details the practical reasons for each step and ties preparations to both employee and team needs."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "After the return. Rate the work they did while there. Tie \"availability\" and \"presence\" to a work result, or remove them. Offer opportunities on the same criteria. Let them decide. Check their assignments at six months.",
+      "after": "After the individual's return, review the work that was performed during their absence and how the transition went. If you discuss \"availability\" or \"presence,\" relate these to specific job outcomes or remove them if no longer relevant. Use consistent criteria for new work opportunities, letting the returning employee decide if they wish to participate. Review their assignments again at six months to support workload balance and address unresolved issues.",
+      "reason": "Clarifies the intent behind the follow-up steps and ties terms like 'availability' and 'presence' to performance and fairness. Connects six-month review to sustained support."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "body",
+        6
+      ],
+      "before": "Always route to Human Resources. Repeated absences. Leave running out, or a request for more. Not returning when expected. A safety worry about someone's return. Any performance action.",
+      "after": "Always refer situations involving repeated absences, exhausted leave, requests for additional time, failure to return, safety concerns about someone’s return, or any performance management action to Human Resources without delay. Fast referral helps ensure legal and policy compliance and supports both the individual and the team.",
+      "reason": "Clarifies why and when to refer specific scenarios to HR, linking prompt action to compliance and team integrity."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "body",
+        7
+      ],
+      "before": "Do next. Ask Human Resources today for the current leave process for your team, and save it with this page.",
+      "after": "Next step: Ask Human Resources today for your team's current leave procedures, and keep the information with this guide. This ensures you have the correct process ready for future situations.",
+      "reason": "Clarifies why keeping current procedural information is necessary and gives concise action."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revised summary is accurate and maintains the essential guidance that supervision supports work and privacy while HR controls policy and eligibility. The new wording is more explicit but contains no material change to meaning or scope."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The expanded 'why it matters' adds clarity on timing and the importance of supervisor actions. This is supported by the original focus on first contact and first day back, so it is a supported clarification."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The edits clarify that forwarding the request is not contingent on complete information, which is consistent with the requirement to route 'the same day' in the original. There is no change in policy content."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The revision retains all necessary instructions, expands on employee agency, and is correct in instructing not to ask for the reason, in line with privacy principles stated in the original."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The operational strategy in 'Coverage' is made more explicit but fully supported. The original's 'hand off interpreter, format and access needs' is accurately rendered. The focus on not referencing the reason for absence is preserved."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The direction to state privacy ('I keep individual arrangements private for everyone') is explicit in both original and revision; the expanded explanation clarifies intent without altering guidance."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "All steps before return are supported; the source mentions confirming dates and restrictions, accommodations, updating the team, and the one-on-one meeting. The revision simply sequences and explains these more fully."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "The return-to-work steps are clarified by explicitly linking terms like 'availability' and 'presence' to job outcomes, consistent with the original's direction to relate these to a work result. Six-month assignment review is unchanged in intent."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "All referral scenarios to HR remain supported: repeat absence, leave running out, requests for more, not returning, safety, and performance. The additional explanation reinforces urgency and rationale."
+      },
+      {
+        "fieldId": 9,
+        "severity": "note",
+        "finding": "The 'do next' action is unchanged but clarified in explanation. The wording aligns with the original intent."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2006,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 941,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2947
+    },
+    "review": {
+      "input_tokens": 2488,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 500,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2988
+    }
+  },
+  "createdAt": "2026-11-15T13:43:52.050Z"
+}

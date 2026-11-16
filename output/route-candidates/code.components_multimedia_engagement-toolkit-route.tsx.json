@@ -1,0 +1,67 @@
+{
+  "target": "code.components/multimedia/engagement-toolkit-route.tsx",
+  "kind": "surface",
+  "route": "components/multimedia/engagement-toolkit-route.tsx",
+  "sourceSha256": "3a1a2286516af46aaee3b5bb17c39765bb8434bfd8970e5e62bd23a4d2e35df8",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Practice process comparison. A wording change and a review of the complete task answer different questions.",
+      "after": "Summarize the difference between editing the wording of a reminder and examining every step of a reminder task. Each method addresses different factors in whether people can understand and respond.",
+      "reason": "Expanded the explanation to clarify what specific questions each method addresses, offering more precise reasoning for comparing approaches without adding unsupported claims or unnecessary wording."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The revision replaces the original source's concise and accurate description with a more abstract and less readable instruction. The original: “Practice process comparison. A wording change and a review of the complete task answer different questions.” aligns with the code’s explicit framing of process comparison and the reason for differing approaches (wording vs. whole task). The proposed change shifts the tone from a direct process comparison exercise to a summary instruction, which lacks the source’s clear invitation to practice and omits the contrast between the questions answered by the different approaches. This changes the scope and dilutes the connection to the actual process described in the source. The change is not supported by the source evidence and introduces a less precise meaning."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1454,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 89,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1543
+    },
+    "review": {
+      "input_tokens": 1132,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 164,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1296
+    }
+  },
+  "createdAt": "2026-11-15T13:54:31.558Z"
+}

@@ -1,0 +1,67 @@
+{
+  "target": "code.app/one-dsd/team/workspace/page.tsx",
+  "kind": "surface",
+  "route": "/one-dsd/team/workspace",
+  "sourceSha256": "a40be355a53c50dc3fdec4d41ac79d6f5384af91b595970b3a78bb400aa78c83",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Browse published One DSD pages and downloads. The working space loads only for the Consultant Workspace owner.",
+      "after": "You can browse published One DSD documents and download available files. Only the owner of the Consultant Workspace can use this working space to write or save changes. This separation protects unpublished work and review drafts until they are ready for release.",
+      "reason": "Clarifies the separation between read-only access and editing authority. Explains why restricting write access to the Consultant Workspace owner matters: it protects drafts and unpublished changes. The revised text removes redundancy and uses connected sentences to show purpose."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The change expands and alters the original message's scope. The original states: 'Browse published One DSD pages and downloads. The working space loads only for the Consultant Workspace owner.' The rewrite: 'You can browse published One DSD documents and download available files. Only the owner of the Consultant Workspace can use this working space to write or save changes. This separation protects unpublished work and review drafts until they are ready for release.' This is not fully supported by the source. The original does not discuss documents versus pages, nor does it define a broader separation of edit authority with a specific explanation (protecting drafts and unpublished work). There is no evidence in the source text for the claim about the purpose of the separation ('protects unpublished work and review drafts'), nor does the source promise downloadability of 'available files.' The new version introduces explanations and terms not in the source, alters the meaning of edit restriction, and creates new privacy or protection commitments that aren't present in the code or any quoted copy. This is a blocker under the standard."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1953,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 117,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2070
+    },
+    "review": {
+      "input_tokens": 1682,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 251,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1933
+    }
+  },
+  "createdAt": "2026-11-15T13:51:15.565Z"
+}

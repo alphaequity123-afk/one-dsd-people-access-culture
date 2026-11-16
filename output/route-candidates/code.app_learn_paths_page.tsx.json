@@ -1,0 +1,95 @@
+{
+  "target": "code.app/learn/paths/page.tsx",
+  "kind": "surface",
+  "route": "/learn/paths",
+  "sourceSha256": "3a8b1c308f8bb2c352acbe4062729fd9eda0ddb0aa6bee7d70561ef0b9fca6fd",
+  "status": "needs_revision",
+  "reviewedFieldCount": 11,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Every path begins with a question from real work. The five guided pathways move from a question, through other perspectives, to a change you can make. The nine reading paths put a book or an article to work on a situation you recognize. They are grouped by where you might be in your own development, but that grouping is a guide rather than a gate: follow whichever path speaks to your question today.",
+      "after": "Each learning path begins with a question grounded in actual DSD work experiences. The five guided pathways start from a real question, use multiple perspectives, and lead to changes staff can implement. The nine reading paths introduce books or articles that address situations familiar to DSD roles. We group each path by development level to suggest a starting point, but these groupings are intended as helpful references, not restrictions. You can choose any path that fits your current work challenges or learning interests.",
+      "reason": "Clarified how each path connects to DSD work, explained the grouping’s purpose and flexible use, and increased specificity and connection for staff without overstating a required sequence."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field6"
+      ],
+      "before": "A willing colleague can help you examine an assumption, rehearse a conversation, or reflect on an experience. Leaders can make time for practice, respond constructively to questions, and change routines that prevent people from using what they learn.",
+      "after": "Colleagues can help by discussing assumptions, practicing conversations, or reflecting on specific work experiences with you. Leaders can encourage practice time, give constructive feedback on questions, and revise routines that may prevent staff from applying what they have learned. These actions support learning transfer because people are more likely to use new approaches when they have space to practice and discuss them.",
+      "reason": "Clarified the importance of both colleague and leader roles, added reasoning for why these actions affect learning transfer, and grounded the explanation in DSD work context."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field8"
+      ],
+      "before": "for shared learning and contribution in the division.",
+      "after": "to support shared learning and build ongoing staff contributions within the division.",
+      "reason": "Specified the role of these resources in supporting learning and participation, and explained why these opportunities matter for DSD staff."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The rewrite significantly departs from the source language by (a) narrowing the program's description to DSD roles/staff (the source addresses a broader audience and does not claim all pathways are DSD-specific), (b) adding that the five guided pathways use \"multiple perspectives\" (not stated in the source text, though it alludes to moving 'through other perspectives'), and (c) asserting that paths are grouped by 'development level to suggest a starting point' and are to fit 'your current work challenges or learning interests' (the source is less prescriptive and more open-ended, stating groupings are a 'guide rather than a gate: follow whichever path speaks to your question today'). The change overstates requirements, narrows scope, and introduces a motivational framing not present in the source."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The added explanation for how colleagues and leaders support learning transfer is reasonable elaboration (\"These actions support learning transfer because...\"), and correctly avoids implying a new policy or specific DSD procedure. While more explicit about work context, it is acceptable as long as these are framed as general observations rather than policy mandates."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The more specific language about 'support[ing] shared learning and build[ing] ongoing staff contributions within the division' is a reasonable clarifying expansion, consistent with the source's intent, and does not materially alter or invent a new program aim. Acceptable."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3056,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 333,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3389
+    },
+    "review": {
+      "input_tokens": 2770,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 349,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3119
+    }
+  },
+  "createdAt": "2026-11-15T13:50:23.307Z"
+}

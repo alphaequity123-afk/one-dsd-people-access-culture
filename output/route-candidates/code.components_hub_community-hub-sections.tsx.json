@@ -1,0 +1,123 @@
+{
+  "target": "code.components/hub/community-hub-sections.tsx",
+  "kind": "surface",
+  "route": "components/hub/community-hub-sections.tsx",
+  "sourceSha256": "4a0fd0509d037267559e9ced60bd73b39dd4c7471518ab34d11688d403e47cdb",
+  "status": "needs_revision",
+  "reviewedFieldCount": 11,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Figures describe groups and conditions, not any one person. Read how people differ within this community before you read the numbers.",
+      "after": "Figures represent group trends and characteristics, not individual people. Review factors that make people within this community distinct before interpreting these numbers.",
+      "reason": "Revised for explicit explanation of group versus individual distinction and the reason staff should consider within-group differences before interpreting data. Increases specificity and supports better use of community figures."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": "The map below shows the broader group that includes this community, county by county. It is a wider group than this page, so read it as context.",
+      "after": "This map displays a broader group, including this community, shown by county across Minnesota. It covers a wider population than this page, so use it for context, not as a direct comparison.",
+      "reason": "Clarified distinction between the page's defined group and the map's broader coverage. Added reasoning to avoid misinterpretation of the map as directly interchangeable with the community detailed on the page."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field6"
+      ],
+      "before": "These organizations have a published record of working with the Disability Services Division, and their records name work with",
+      "after": "These organizations have a documented history of collaborating with the Disability Services Division, and their records describe work with",
+      "reason": "Replaced \"published record\" with \"documented history\" and clarified \"describe work with\" for more precise description of what organizational records provide. This clarifies why these organizations are included."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "field7"
+      ],
+      "before": ". No organization speaks for a whole community.",
+      "after": ". No organization can represent a whole community.",
+      "reason": "Changed \"No organization speaks for a whole community\" to \"No organization can represent a whole community\" for more precise wording that avoids implying any group has exclusive authority."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "field8"
+      ],
+      "before": "No organization with a published record of working with the Disability Services Division names this community in its records. That is a finding about the records, not about the community.",
+      "after": "No organization with a documented history of collaboration with the Disability Services Division lists this community in its records. This reflects what is in the records, not a statement about the community itself.",
+      "reason": "Clarified that findings are based solely on available records, emphasizing that absence in records does not reflect on the community. Also mirrored improved wording from fieldId 6 for consistency."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The rewritten field changes both the meaning and scope of the source, moving from a caution about generalization ('Figures describe groups and conditions, not any one person. Read how people differ within this community before you read the numbers.') to an explicit instruction to review factors that make people distinct and using the word 'trends,' which is not present in the source or shown in the table. The added phrasing ('before interpreting these numbers') turns guidance into a directive and overstates the page's intended caution based on the actual section contents. This pushes past clarification to unsupported new instruction."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The revision provides a clearer distinction and caution, but does not introduce a new policy or legal meaning and remains within the intent to avoid reading the map as identical with the community group described. The clarification is appropriate."
+      },
+      {
+        "fieldId": 6,
+        "severity": "blocker",
+        "finding": "Changing 'published record of working with' to 'documented history of collaborating with' risks overstating the source. The original text is specific to official, published DHS division records, not any documentation or history of collaboration generally. The replacement erases the use of public record, and 'collaborating' is more vague and interpretive than 'working with.' This introduces potential misunderstanding about inclusion criteria."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "Substituting 'No organization speaks for a whole community' with 'No organization can represent a whole community' shifts from a caution about presuming authority to an absolute negative. This wording is slightly stronger but does not change a legal or policy meaning, nor does it introduce or erase qualification; consider reverting for neutrality, but not blocking."
+      },
+      {
+        "fieldId": 8,
+        "severity": "blocker",
+        "finding": "As with field 6, 'published record' is replaced with 'documented history of collaboration,' and 'names this community in its records' is swapped for 'lists this community.' The original field is more closely tied to source-driven DHS or DSD records, where 'published record' is precise. The revision makes the criteria for inclusion much broader than the official record, potentially misleading about the scope and authority of the data."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3211,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 392,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3603
+    },
+    "review": {
+      "input_tokens": 3044,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 531,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3575
+    }
+  },
+  "createdAt": "2026-11-15T13:53:50.263Z"
+}

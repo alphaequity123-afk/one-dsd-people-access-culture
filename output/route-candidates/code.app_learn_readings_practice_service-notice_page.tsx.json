@@ -1,0 +1,81 @@
+{
+  "target": "code.app/learn/readings/practice/service-notice/page.tsx",
+  "kind": "surface",
+  "route": "/learn/readings/practice/service-notice",
+  "sourceSha256": "f03412efa2e7af7218e515046f44440f5505895d8d5b431a975ff083c9253ff9",
+  "status": "needs_revision",
+  "reviewedFieldCount": 21,
+  "changes": [
+    {
+      "fieldId": 3,
+      "path": [
+        "field5"
+      ],
+      "before": "The notice is accurate, but the main action is buried in several paragraphs. It points to a website without explaining how to get help or respond another way.",
+      "after": "The notice presents accurate information, but the critical action required is hard to find because it is buried within multiple paragraphs. The notice directs people to a website, but does not explain other ways they might get help or respond if the website does not suit their needs.",
+      "reason": "Clarified that the core issue is both the placement of the key action and lack of explanation for alternate access, drawing a stronger connection to barriers in practical use."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field6"
+      ],
+      "before": "The team’s question is: “Can people understand what they need to do and complete it in a way that works for them?”",
+      "after": "The team’s guiding question is whether a person can understand what action is needed and follow through using options that actually work for them. This question helps focus efforts on not just clarity but practical usability.",
+      "reason": "Increased specificity about why this question matters and what practical challenges are at stake for the team and the people involved."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "The proposed change subtly changes the meaning and introduces specificity beyond the source, which simply states the action is 'buried in several paragraphs' and that the notice 'points to a website without explaining how to get help or respond another way.' The rewrite adds that the action is 'hard to find because it is buried within multiple paragraphs,' and specifies people might need alternatives if 'the website does not suit their needs.' This extrapolates from the neutral tone and does not directly match the original evidence. The clarification about practical barriers should be presented as interpretation or as a learning point, not as a change to the narrative description in the practice example."
+      },
+      {
+        "fieldId": 4,
+        "severity": "blocker",
+        "finding": "The proposed revision expands and rewords the team’s question from a direct quote in full evidence (\"Can people understand what they need to do and complete it in a way that works for them?\") to a narrative paraphrase with added reasoning ('guiding question,' 'helps focus efforts,' and more specificity about 'practical usability'). This changes the meaning and status of the team's question, which in the page source is intentionally presented as a direct quotation. The original should be preserved as-is to accurately reflect the team's core inquiry."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3015,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 255,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3270
+    },
+    "review": {
+      "input_tokens": 2276,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 271,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2547
+    }
+  },
+  "createdAt": "2026-11-15T13:50:27.523Z"
+}

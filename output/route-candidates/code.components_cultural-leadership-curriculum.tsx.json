@@ -1,0 +1,95 @@
+{
+  "target": "code.components/cultural-leadership-curriculum.tsx",
+  "kind": "surface",
+  "route": "components/cultural-leadership-curriculum.tsx",
+  "sourceSha256": "6f778a5ad4f007e793f5e1387b62bab8794c313248a46737d6ac89724f883d32",
+  "status": "needs_revision",
+  "reviewedFieldCount": 14,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "These four connected lessons are for leaders, supervisors, managers and directors. Explore them in any order. Each uses a fictional DSD example to consider leadership, power, access and organizational change. Take notes in your own preferred format; this page does not collect responses or score people. Do not include identifiable case, medical or personnel details in an informal exercise.",
+      "after": "This set of four lessons is intended for leaders, supervisors, managers, and directors in DSD. You may work through the lessons in any order. Each lesson presents a fictional example from DSD practice to examine aspects of leadership, power dynamics, access, and processes of organizational change. You are encouraged to take notes in a format that suits your work; this page does not store answers or assess users. Avoid recording identifiable information from real cases, medical records, or personnel situations when using these exercises informally.",
+      "reason": "Clarified that these lessons are tailored to DSD context and roles; provided direct professional instruction for note-taking and safeguarding sensitive information without unnecessary repetition or filler."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "This learning supports your judgment and responsibilities; it does not replace current policy, a person&apos;s choices, consultation with the responsible office, or required organizational processes.",
+      "after": "These materials are designed to support your professional judgment and responsibilities. They do not replace current policy, individual choices, consultation with the designated office, or required organizational procedures.",
+      "reason": "Reworded to clarify that the lessons are supplemental and do not override policy, personal decision-making, or required consultation. This recognizes the need for staff to distinguish learning tools from formal authority or obligation."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field4"
+      ],
+      "before": "Use a real decision only in an appropriate setting, involve the people affected and follow up on what changed. These lessons do not award training credit or evaluate an individual&apos;s performance.",
+      "after": "Apply outcomes of these lessons to real decisions only when appropriate to your role and context. When doing so, involve the relevant individuals and document any follow-up on resulting changes. Completion of these lessons does not qualify for training credit and is not used for individual performance evaluation.",
+      "reason": "Added specificity on application to real decisions, clarified role-related appropriateness, and made actions for follow-up explicit. Reinforced the limits on lesson recognition for evaluation and credit in professional terms."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The original wording is broad but accurate. The proposed changes introduce new statements (e.g., \"intended for ... in DSD,\" \"take notes in a format that suits your work\") which are not present in the source and make role ties more explicit than the source. The phrase \"when using these exercises informally\" could mislead as the original conveys that the entire sequence is informal and does not collect personal data. The rewording shifts emphasis, over-specifies the audience to DSD, and alters the caution about recording information, losing the direct and neutral tone of the original. This is not strictly supported by the component or context."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The proposed phrasing \"These materials are designed to support your professional judgment and responsibilities\" substitutes a phrasing not found in the component, changes tone, and disconnects from the source's approach. The rewording \"consultation with the designated office\" changes \"the responsible office\" without support. The new version also has a subtly different implication, hinting at 'design,' while the source makes a direct statement about present support versus limits. This is not a transparent rendering."
+      },
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "The rewrite expands the guarded application instruction (\"use a real decision only in an appropriate setting...\") to \"apply outcomes... only when appropriate to your role and context,\" introducing new conditions and language. The explicit expectation to \"document any follow-up\" is not found in the source, which only says to follow up, not necessarily to make a record. The note about \"completion of these lessons does not qualify for training credit and is not used for individual performance evaluation\" paraphrases rather than rendering the explicit, plain disclaimer of the source. This is a substantive change."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3075,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 368,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3443
+    },
+    "review": {
+      "input_tokens": 2766,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 390,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3156
+    }
+  },
+  "createdAt": "2026-11-15T13:52:58.861Z"
+}

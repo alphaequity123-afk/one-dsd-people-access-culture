@@ -1,0 +1,67 @@
+{
+  "target": "code.app/equity-policy/register/page.tsx",
+  "kind": "surface",
+  "route": "/equity-policy/register",
+  "sourceSha256": "0c0fa0823b45e884bc2911dafd1cab977df7db2706e42cc7ca1d96079c269042",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "This page does not provide completed analyses. The Equity Analysis Toolkit lets you practice with a published decision and download the example.",
+      "after": "This page does not list completed equity analyses. Staff cannot view or export actual analysis records here because the register is intentionally fail-closed. To work through an example, use the Equity Analysis Toolkit. The toolkit provides a sample published decision for practice and allows you to download the example analysis. This is intended to support staff learning while protecting sensitive or restricted analysis data.",
+      "reason": "Improved explanation by specifying that staff cannot access actual completed analyses here and clarified the reason for fail-closed status. Explained how the toolkit supports practice and why this design matters for data protection and staff learning, connecting decisions to intended outcomes."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revised text adds unsupported statements. The source states: 'This page does not provide completed analyses. The Equity Analysis Toolkit lets you practice with a published decision and download the example.' It does not mention that staff 'cannot view or export actual analysis records here because the register is intentionally fail-closed,' nor does it cite 'protecting sensitive or restricted analysis data' as a design reason or explain the fail-closed status in those terms on this page.\n\nThe phrase 'staff cannot view or export actual analysis records here because the register is intentionally fail-closed' overstates the documented reasons. The only reference to fail-closed is from the source code comment: 'F-01: staff register list/export is fail-closed. No analyses are loaded or downloaded here.' This is a code-level note, not user-facing policy or documentation. The expanded rationale and assurance that this is 'intended to support staff learning while protecting sensitive or restricted analysis data' extends beyond what is supported in the source.\n\nAny legal or policy reasoning about data protection, sensitivity, intent, or user restriction needs clear evidence from the source visible to users, not just developer comments.\n\nOriginal wording should be preserved unless explicit, user-facing content in the source supports the extra reasoning."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1357,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 147,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1504
+    },
+    "review": {
+      "input_tokens": 1095,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 298,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1393
+    }
+  },
+  "createdAt": "2026-11-15T13:48:41.592Z"
+}

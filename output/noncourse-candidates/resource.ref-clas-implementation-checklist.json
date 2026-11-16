@@ -1,0 +1,171 @@
+{
+  "target": "resource.ref-clas-implementation-checklist",
+  "kind": "resource",
+  "route": "/library/ref-clas-implementation-checklist",
+  "sourceSha256": "bf1b6b2b05f0345a5c5e848ed5f04927b49f2ee13828d193b32f943372159fc3",
+  "status": "needs_revision",
+  "reviewedFieldCount": 8,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "An HHS Office of Minority Health handout for reviewing culturally and linguistically appropriate services and choosing practical implementation actions.",
+      "after": "A handout from the HHS Office of Minority Health that helps organizations review their culturally and linguistically appropriate services and select realistic steps for implementation.",
+      "reason": "Clarified the specific function of the handout (review and planning for culturally and linguistically appropriate services) and omitted \"practical\" as redundant in context."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Connect cultural and language access goals to organizational practices, named responsibilities, and a realistic next set of actions.",
+      "after": "This checklist links organizational efforts in cultural and language access to concrete practices, clearly assigned responsibilities, and actionable next steps within defined timelines.",
+      "reason": "Clarified the connection between organizational goals and practical implementation by emphasizing timelines and assigned responsibilities."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "CLAS means culturally and linguistically appropriate services: services responsive to people’s cultural and communication needs, including preferred languages and health literacy.",
+      "after": "CLAS stands for culturally and linguistically appropriate services: services that meet people's cultural backgrounds and communication preferences, including primary language and health literacy needs.",
+      "reason": "Clarified that \"CLAS\" is an acronym and specified the types of needs addressed, using program-relevant language."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "The checklist organizes practices under governance, leadership and workforce; communication and language assistance; and engagement, continuous improvement and accountability.",
+      "after": "The checklist arranges standards and actions under three main areas: governance, leadership, and workforce; communication and language assistance; and engagement, continuous improvement, and accountability.",
+      "reason": "Clarified the organizational structure of the checklist by explicitly naming the areas and aligning with program language."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "For each practice, record whether it is currently implemented, planned, or not planned at this time. Use the assessment to identify practical gaps rather than treating it as certification.",
+      "after": "For each practice, check whether it is currently implemented, planned, or not planned. Use your assessment to identify specific gaps or needs. The checklist is not a certification tool and does not replace compliance reviews.",
+      "reason": "Specified the action required by the user, clarified that the tool's purpose is gap identification, and distinguished it from formal certification or compliance processes."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "The action worksheet asks the organization to choose three planned practices, set timeframes, and identify concrete steps, challenges, staff, and supporting resources.",
+      "after": "The action worksheet directs organizations to select three planned practices, set deadlines, and describe the steps, possible barriers, responsible staff, and needed resources for each.",
+      "reason": "Clarified that \"choose\" means to select from planned practices, specified \"deadlines\" instead of generic timeframes, and named each element to complete for clarity."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Use the supplied checklist alongside the program’s cultural and language access planning worksheet. Confirm which standards and separate policy, legal, or contract requirements apply to the service.",
+      "after": "Use this checklist together with your program’s cultural and language access planning worksheet. Before implementing new actions, check which CLAS standards, and which separate policy, legal, or contract requirements, apply to your particular service area.",
+      "reason": "Clarified sequence (use together), reminded to differentiate between CLAS standards and other requirements, and made explicit the need to check relevance before acting."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "This supplied copy contains eight PDF pages and ends with the action worksheet. Its contents page mentions testimonials beyond page eight, but those pages are not included in this copy.",
+      "after": "This resource is an eight-page PDF ending with the action worksheet. Although the contents page mentions testimonials after page eight, those additional materials are not included in this version.",
+      "reason": "Clarified the nature and scope of the resource to prevent confusion about missing content."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed change replaces 'practical implementation actions' with 'realistic steps for implementation'. The term 'practical' is sourced language and has a specific meaning in the HHS context (‘practical gaps’, ‘practical actions’), and the substitute 'realistic' does not fully retain this professional emphasis. The summary must track the official handout’s evident use and intent, which is oriented around practical steps rather than aspirational or ideal standards. Rewording also introduces 'select realistic steps', which implies a narrower function than the broader support the handout offers (review plus planning)."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The edit to whyItMatters correctly clarifies the link between goals and implementation, emphasizing timelines and assignments. This is supported in the source, which focuses on actionable responsibilities and planning. Acceptable."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The change to the CLAS definition shifts the language a bit but is still source-justified: it specifies the acronym and explains context without changing scope. Acceptable."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The revision to the checklist structure is reasonable and accurate. The division into three named areas matches both the handout and the source summary. Acceptable."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The revision here is accurate: it clarifies that the checklist is not a certification tool and stresses gap identification, consistent with both the source and the original field. Acceptable."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The edit is a clear restatement of the worksheet requirements; 'deadlines' for 'timeframes' is more specific but not incorrect, and all original responsibilities are listed. Acceptable."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The edit preserves and clarifies all instructions, matches the source, and elaborates sensibly on confirming requirements. Acceptable."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "This is a purely clarifying restatement with no scope change; it directly tracks the source statement about the incomplete testimonials. Acceptable."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1792,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 574,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2366
+    },
+    "review": {
+      "input_tokens": 1922,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 456,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2378
+    }
+  },
+  "createdAt": "2026-11-15T13:43:32.437Z"
+}

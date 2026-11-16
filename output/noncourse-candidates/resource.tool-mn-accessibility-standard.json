@@ -1,0 +1,127 @@
+{
+  "target": "resource.tool-mn-accessibility-standard",
+  "kind": "resource",
+  "route": "https://mn.gov/mnit/about-mnit/accessibility/",
+  "sourceSha256": "36b8a851e30725155d9fa383084eb1035c8f8f9803d3421b16096c184589ee21",
+  "status": "model_checked",
+  "reviewedFieldCount": 5,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "The State of Minnesota’s public digital accessibility standard is currently Section 508 plus WCAG 2.1 Level A and AA, with accompanying guidance on accessible documents. This program keeps WCAG 2.2 Level AA as its own stronger release target.",
+      "after": "Minnesota’s digital accessibility standard applies Section 508 and WCAG 2.1 Level A and AA, with additional State guidance on accessible documents. For this program, WCAG 2.2 Level AA is set as a higher standard for releases.",
+      "reason": "Clarified the distinction between the State baseline and the program's higher target. Rewrote the sentence for conciseness, specificity, and direct comparison relevant to staff."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Owner and publisher: Minnesota IT Services and Minnesota Management and Budget. Status: official State standard.",
+      "after": "Minnesota IT Services and Minnesota Management and Budget publish and maintain the official standard for the State. This is the recognized standard for digital accessibility across State agencies.",
+      "reason": "Specified the agencies’ continuing roles and clarified the authority of the standard for digital accessibility in State work."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Purpose: the accessibility floor for State digital content, systems, and documents.",
+      "after": "Purpose: Establishes the minimum required accessibility for State digital content, systems, and documents, serving as the baseline for compliance.",
+      "reason": "Expanded purpose to explicitly state that this is the compliance baseline, connecting it to legal and professional expectations."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Program posture: WCAG 2.2 Level AA is this program's release target, which is stronger than the current State floor.",
+      "after": "Program posture: This program uses WCAG 2.2 Level AA as its release target, which exceeds the current State minimum requirement. Adopting a higher standard reflects a proactive approach to accessibility.",
+      "reason": "Clarified the rationale for using a stricter standard and made clear the consequence for program-specific work."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Program use: accessible document and meeting guidance follow it. Check the current version with your accessibility lead.",
+      "after": "Program use: Follow this standard for accessible documents, content, and meetings. Refer to your accessibility lead for the current standard and its practical application in your work.",
+      "reason": "Clarified that guidance applies to all content types and specified that staff should refer to their lead for interpretation and updates to avoid confusion."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revised summary reorders and condenses the original, keeping fidelity to the source's meaning. The distinction between the State baseline (Section 508 plus WCAG 2.1 A/AA) and the program aim (WCAG 2.2 AA) is expressed without misstatement. The changes eliminate repetition and clarify the current State versus program target distinction for staff."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The wording change from 'Owner and publisher' to explicit mention that Minnesota IT Services and Minnesota Management and Budget 'publish and maintain' the standard does not change the legal attribution or owners. The clarification that this is the recognized State standard for all agencies remains source-faithful."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The change simply expands that the standard establishes the baseline for compliance, which is accurate for staff context. No hazard of overstating legal consequence or adding new compliance mechanisms."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "Restates program posture in more explicit terms: that the program target exceeds the State minimum and is adopted proactively. No unsupported requirements added and the higher voluntary standard is named for the program only."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "Extending the previous sentence to cover documents, content, and meetings matches practical guidance given in the source overview. The instruction to consult an accessibility lead for current requirements is consistent with agency best practice and the source’s direction to 'Check the current version with your accessibility lead.'"
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1510,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 446,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1956
+    },
+    "review": {
+      "input_tokens": 1463,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 326,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1789
+    }
+  },
+  "createdAt": "2026-11-15T13:42:51.961Z"
+}

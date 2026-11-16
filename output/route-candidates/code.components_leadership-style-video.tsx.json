@@ -1,0 +1,67 @@
+{
+  "target": "code.components/leadership-style-video.tsx",
+  "kind": "surface",
+  "route": "components/leadership-style-video.tsx",
+  "sourceSha256": "52cc2359422a526254b455951ec084f332345fc7166165b967aaecc6134eb834",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Your browser cannot play this video. You can read the transcript instead.",
+      "after": "This browser cannot play the video. The transcript is available below for reference.",
+      "reason": "Clarified the message to state that the specific browser is unable to play the video and indicated explicitly that the transcript is available below for reference, providing clear direction and professional tone. This revision avoids unnecessary repetition and provides a practical next step for the user."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "Do not change the wording of accessibility or fallback text hardcoded in the source without direct record-based rationale. The original text (“Your browser cannot play this video. You can read the transcript instead.”) is brief, accurate, and provides direct alternate access. The rewrite changes an established, widely recognized fallback message for video elements (“Your browser cannot play this video. You can read the transcript instead.” is industry standard and clearly explanatory within the limitations of the <video> element’s fallback.) The new text (“This browser cannot play the video. The transcript is available below for reference.”) is more ambiguous (\"this browser\" vs. \"your browser\"), drops the direct connection to user action (“you can…”), and introduces positional wording (“below”) that is not supported by the source code—it simply links the transcript, and rendering order is not guaranteed. This change erases the original’s precise, sourced meaning and could lower accessibility due to less specific user language and an unjustified directional cue. Reject."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1770,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 91,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1861
+    },
+    "review": {
+      "input_tokens": 1473,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 226,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1699
+    }
+  },
+  "createdAt": "2026-11-15T13:54:01.533Z"
+}

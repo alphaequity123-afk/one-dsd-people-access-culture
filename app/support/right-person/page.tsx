@@ -6,7 +6,6 @@ import { normalizeWorkOrigin, type WorkOriginInput } from "@/lib/product/work-or
 import { loadPublishedEditableSurfaces } from "@/lib/content/editable-surfaces";
 import { supportAreaFromQuery } from "@/lib/product/support-links";
 import type { Metadata } from "next";
-import { ParticipationNotice } from "@/components/participation-notice";
 import { ProgramContextNote } from "@/components/program-context";
 import { RightPersonClient } from "@/components/right-person-client";
 import { PageIntro } from "@/components/ui";
@@ -39,7 +38,6 @@ export default async function RightPersonPage({ searchParams }: { searchParams: 
         <noscript><p>This helper needs JavaScript. You can still <SourceLink href="/support/directory">use the support directory</SourceLink> or <Link prefetch={false} href="/library">browse the Library</Link>.</p></noscript>
         <RightPersonClient initialArea={supportAreaFromQuery(area, matter)} copy={copy} />
         <SupportQuestionMap />
-        <ParticipationNotice surface="support_routing" />
       </div>
     </EditableSurfaceRegion>
   );

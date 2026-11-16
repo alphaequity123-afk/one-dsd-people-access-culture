@@ -1,0 +1,81 @@
+{
+  "target": "code.app/learn/leadership-styles/[style]/page.tsx",
+  "kind": "surface",
+  "route": "/learn/leadership-styles/[style]",
+  "sourceSha256": "ad1975fb8635e995c3681d16aa7716aa450a78ec588a952727a77942a29923e0",
+  "status": "needs_revision",
+  "reviewedFieldCount": 11,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field2"
+      ],
+      "before": "Here is how this approach might respond. These responses illustrate tendencies and choices, not scripts that predict how anyone would act.",
+      "after": "This section gives examples of how someone using this approach might respond. The examples show common tendencies and decisions, not scripts or predictions for how a person will act.",
+      "reason": "Improved professional reasoning and specificity about the purpose and limits of example responses, clarifying why illustrative responses matter for staff learning and avoiding implying predictive certainty."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field8"
+      ],
+      "before": "This is a curriculum judgment about a pattern of behavior, not a rating of any person.",
+      "after": "This curriculum evaluation describes general patterns of behavior in a leadership style. It does not assess or rate any individual.",
+      "reason": "Clarified that the assessment focuses on observed patterns within the leadership style, not personal traits or capabilities, and avoided implying judgment about individuals as required by the writing standard."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The proposed rewrite for field2 ('This section gives examples of how someone using this approach might respond. ... not scripts or predictions for how a person will act.') introduces unsupported and less source-faithful language compared to the source. The source text ('Here is how this approach might respond. These responses illustrate tendencies and choices, not scripts that predict how anyone would act.') is already clearly worded, accurate, and fully matches the purpose and boundaries specified in the program writing standard. The rewrite adds generic commentary ('shows common tendencies and decisions'), and makes the examples seem more hypothetical ('someone using this approach') than the source. This change is neither necessary nor justified by the review standard or the evidence in source, and does not improve professional reasoning—it introduces unsupported nuance and redundant explanation.\n\nBlocker: Reject the rewrite and retain the original wording for field2."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "The rewrite for field8 clarifies that the curriculum does not judge individuals, but rather describes observed patterns in a leadership style. Both versions convey that the judgement is about behavior patterns, not personal qualities. The edited wording is acceptable, but minor; either retains compliance with the standard."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3507,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 173,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3680
+    },
+    "review": {
+      "input_tokens": 3070,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 265,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3335
+    }
+  },
+  "createdAt": "2026-11-15T13:50:18.529Z"
+}

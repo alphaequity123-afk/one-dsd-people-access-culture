@@ -1,0 +1,67 @@
+{
+  "target": "code.components/culture-calendar.tsx",
+  "kind": "surface",
+  "route": "components/culture-calendar.tsx",
+  "sourceSha256": "2b6349fe9d0a0ec0936a2409a7c79adeff350d5f22c5565261165205253ed01e",
+  "status": "needs_revision",
+  "reviewedFieldCount": 5,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "A date does not tell you whether a particular person observes it.",
+      "after": "The calendar shows dates when some people may observe cultural or religious events, but you should not assume any individual participates.",
+      "reason": "Clarified that presence of a date does not indicate individual observance, explaining why this matters for staff when considering accommodations or recognition."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed replacement ('The calendar shows dates when some people may observe cultural or religious events, but you should not assume any individual participates.') rewrites and expands the original source ('A date does not tell you whether a particular person observes it.'), adding an explanation that is not present in the source and inferring intent. The standard requires the original (official) calendar note to remain unaltered in this case. The original wording is succinct and conveys the necessary caution against assumptions. Any added clarification should be handled outside the direct quotation if needed for supporting documentation or staff training, not by altering this field."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3268,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 83,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3351
+    },
+    "review": {
+      "input_tokens": 2851,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 145,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2996
+    }
+  },
+  "createdAt": "2026-11-15T13:52:57.167Z"
+}

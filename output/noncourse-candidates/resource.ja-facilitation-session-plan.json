@@ -1,0 +1,142 @@
+{
+  "target": "resource.ja-facilitation-session-plan",
+  "kind": "resource",
+  "route": "/library/ja-facilitation-session-plan",
+  "sourceSha256": "ebd0f8ec9049e46280803b58ff22eab2486e687568f83be4e5297b21b80fcea7",
+  "status": "model_checked",
+  "reviewedFieldCount": 6,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Plan each session around what participants can use afterward: one clear learning goal, an activity based on their own work, something useful to take with them, and access arranged in advance.",
+      "after": "Plan each session so participants leave with something they can use: set one clear learning goal, design an activity connected to their own work, provide a practical takeaway, and arrange for accessibility ahead of time.",
+      "reason": "The revised summary uses plain language and connects each session component with its purpose. It states that the design is intentional toward practical application and includes why advanced accessibility matters for all participants."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Learning goal: write one sentence describing something participants will be able to do, such as drafting the access section of their own notice.",
+      "after": "Learning goal: State in one sentence what participants will be able to do as a result of the session. For example, they might draft the access section of a notice relevant to their program work. This helps focus session content and lets participants see the value of attending.",
+      "reason": "This revision clarifies why specifying a learning goal in plain language helps both session planning and participant engagement. It provides a concrete example relevant to staff and emphasizes the practical use of the goal."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Activity: give participants time to work with their own materials, in pairs or small groups, within a clear amount of time.",
+      "after": "Activity: Allow participants to work with their own materials—individually, in pairs, or in small groups—within a set amount of time. Working with real examples lets participants apply new concepts directly, share approaches, and compare results in context.",
+      "reason": "Added explanation of why using participants' own materials and working collaboratively helps direct application and offers peer learning benefits."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Practical use: name what each person will leave with and how they will use it next, such as a program checklist, notice plan, or team climate plan.",
+      "after": "Practical use: Specify what participants will take from the session and how it can be used in their ongoing work. Examples include a program checklist, an updated notice plan, or a team climate action plan. Stating the practical outcome ensures the session supports measurable progress in their work area.",
+      "reason": "Clarified the purpose of naming the takeaway and connected it to measurable progress in their actual roles, grounding the activity in real work product."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Access: arrange captions or real-time captioning, send materials in accessible formats ahead of time, and offer an alternative to activities that require dragging items or working under a time limit. Arrange language interpretation or translated materials when participants need them. Use plain-language slides with built-in headings. Do not rely on icons alone.",
+      "after": "Access: Plan for access needs in advance. Arrange captions or real-time captioning, and send materials in accessible formats before the session. Provide alternatives for activities that involve dragging items on screen or strict time limits. If participants use other languages, arrange interpretation or translated materials. Slides should use plain language with clear built-in headings, and information should not rely on icons alone. Proactively planning for access means everyone can participate fully and focus on content rather than navigating barriers.",
+      "reason": "Expanded each access instruction to clarify both the type of preparation and its purpose, emphasizing proactive planning so that barriers do not prevent participation."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Follow-up: choose a date and a way to learn whether participants were able to use what they completed.",
+      "after": "Follow-up: Set a date and method for checking if participants were able to use what they created in the session. This step helps you understand whether the session content led to practical changes and identifies any needed improvements.",
+      "reason": "Expanded to explain why following up matters—specifically, to assess impact and inform future session design."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revised summary reflects the intent of the original. It clarifies the rationale (intentional design and practical application) but does not add unsupported requirement or alter legal scope. The change supports agency clarity and stays true to source evidence."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "Adds detail on why specifying a learning goal is valuable and keeps the example close to the source's (drafting the access section). Clarifies reasoning for the instruction. No departure from the original's substance."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "Explains additional benefit (peer learning, contextual application) while keeping to the directive that activity be based on participants' own materials and done within a specified time. Reinforces, rather than alters, the instruction."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "Expands justification for naming the takeaway, linking it to measurable progress, but this is implicit in the source's intent (\"how they will use it next\"). No legal scope or factual overstatement introduced."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "Adds explanation of why and how to arrange access, reinforcing—without expanding—the required types of accommodations. 'Proactively planning' is interpretation but does not introduce policy; it is commentary aligning with the source's purpose."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "Gives a rationale for follow-up while remaining within the source's intent (to learn whether completed materials are used). Stays in the bounds of the guidance and does not add new requirements or policy."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1628,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 587,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2215
+    },
+    "review": {
+      "input_tokens": 1787,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 337,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2124
+    }
+  },
+  "createdAt": "2026-11-15T13:41:20.148Z"
+}

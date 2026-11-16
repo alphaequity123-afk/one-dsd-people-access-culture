@@ -10,6 +10,7 @@ import {
   directorTemplate, templateHref, type ToolkitItem, type ToolkitSection,
 } from "@/lib/content/director-toolkit";
 import { ResourceDownloads } from "@/components/resource-downloads";
+import { withoutSystemNotices } from "@/lib/content/work-guidance";
 
 export const metadata: Metadata = {
   title: "Equity Director toolkit",
@@ -84,7 +85,7 @@ export default function DirectorToolkitPage() {
         <section aria-labelledby="overview-title">
           <h2 id="overview-title" className="text-2xl font-bold">Overview</h2>
           {DIRECTOR_TOOLKIT_INTRO.summary.map(paragraph => <p key={paragraph}>{paragraph}</p>)}
-          <p className="notice">{DIRECTOR_TOOLKIT_INTRO.privacy}</p>
+          <p className="notice">{withoutSystemNotices(DIRECTOR_TOOLKIT_INTRO.privacy)}</p>
         </section>
         <section id="start-here" aria-labelledby="start-here-title" className={styles.highlight}>
           <h2 id="start-here-title" className="text-2xl font-bold">Start here</h2>
@@ -92,7 +93,7 @@ export default function DirectorToolkitPage() {
           <ul className="list-disc pl-6">
             <li><SourceLink href="#first-90-days">The first 90 days</SourceLink>: what to do in each 30-day period, and what each period should produce.</li>
             <li><SourceLink href="#starter-package">The 12-item priority starter package</SourceLink>: three foundational DHS resources and nine practical supports to build with the people responsible for each area.</li>
-            <li><Link href={DIRECTOR_TEMPLATES_HREF}>The printable templates</Link>: fill them in on screen, then print, copy or download a record. The app does not autosave or submit your entries.</li>
+            <li><Link href={DIRECTOR_TEMPLATES_HREF}>The printable templates</Link>: fill them in on screen, then print, copy or download a record.</li>
           </ul>
         </section>
         {DIRECTOR_TOOLKIT_SECTIONS.map(section => <Section key={section.id} section={section} />)}

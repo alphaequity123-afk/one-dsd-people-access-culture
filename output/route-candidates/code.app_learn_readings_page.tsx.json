@@ -1,0 +1,67 @@
+{
+  "target": "code.app/learn/readings/page.tsx",
+  "kind": "surface",
+  "route": "/learn/readings",
+  "sourceSha256": "09f764b74ee7e6c1ed2a3af34f90a663225766a882b8f411b8bac424f3b757e5",
+  "status": "needs_revision",
+  "reviewedFieldCount": 8,
+  "changes": [
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "Each reading brings together an introduction, key ideas, a fuller summary and questions for reflection or conversation. The authors offer different perspectives; use them alongside the evidence, guidance and people relevant to your work.",
+      "after": "Each reading includes an introduction, key ideas, a summary, and questions for reflection or discussion. Authors present different viewpoints—use these readings with the evidence, policies, and peers relevant to your DHS or DSD work. This combination helps you examine issues from multiple angles and identify approaches that fit your professional context.",
+      "reason": "Clarified the content and purpose of each reading, specified the intended use within DHS and DSD work, and explained why considering multiple viewpoints matters in professional decision-making."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The replacement text for field2 introduces unsupported claims not present in the source. The source states that authors offer different perspectives and that these should be used \"alongside the evidence, guidance and people relevant to your work.\" The proposed change rewrites this to \"use these readings with the evidence, policies, and peers relevant to your DHS or DSD work,\" which alters the meaning—specifically, 'guidance' is changed to 'policies,' and 'people relevant to your work' is narrowed to 'peers' within DHS or DSD. Additionally, the statement, \"This combination helps you examine issues from multiple angles and identify approaches that fit your professional context,\" is an inferred purpose and not present in the original source. The policy requires preservation of original meaning and scope, especially regarding the intended audience and use: the source does not restrict use to only DHS/DSD staff or to only policies and peers. This change introduces scope and intent not in the original and does not pass the standard."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2371,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 156,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2527
+    },
+    "review": {
+      "input_tokens": 1946,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 226,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2172
+    }
+  },
+  "createdAt": "2026-11-15T13:50:24.349Z"
+}

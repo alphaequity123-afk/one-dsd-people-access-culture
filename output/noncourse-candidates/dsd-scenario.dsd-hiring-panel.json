@@ -1,0 +1,172 @@
+{
+  "target": "dsd-scenario.dsd-hiring-panel",
+  "kind": "surface",
+  "route": "/one-dsd/scenarios/dsd-hiring-panel",
+  "sourceSha256": "0b9bf28900d3a8873b3360d5bb9023b3e59940dfa660bfb767fc374dcc7e1881",
+  "status": "model_checked",
+  "reviewedFieldCount": 13,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "situation"
+      ],
+      "before": "A DSD unit has filled three positions in a year. Each time, the panel chose the candidate who interviewed most fluently and had a graduate degree. Two strong internal candidates with years of direct-support and community experience did not advance past screening.",
+      "after": "In the past year, a DSD unit has filled three open positions. For each hire, the panel selected the candidate who appeared most fluent during the interview and who held a graduate degree. Meanwhile, two well-qualified internal applicants, each with several years of direct-support and community experience, did not make it past the initial screening stage.",
+      "reason": "Clarified the distinction between interview performance and relevant experience, and specified the process stages to show the pattern. This provides a clearer account of the situation and why it is significant."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "whatToNotice",
+        0
+      ],
+      "before": "The screening criteria may be proxies for the work rather than the work itself.",
+      "after": "Screening criteria, such as degree requirements and interview performance, may act as stand-ins for actual job skills or experience, rather than directly measuring them.",
+      "reason": "Made explicit how degree requirements and fluency can serve as indirect measures, which clarifies why this is an issue in selecting candidates."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "whatToNotice",
+        1
+      ],
+      "before": "Fluency and confidence in an interview are being rewarded without a rubric that ties them to the job.",
+      "after": "The panel appears to reward interview fluency and visible confidence, but there is no evidence of a standardized rubric connecting these traits to specific job tasks.",
+      "reason": "Clarified that a standardized rubric is necessary to reliably connect interview behavior to job requirements, helping explain the practical importance of that connection."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "whatToNotice",
+        2
+      ],
+      "before": "Internal candidates with lived experience are being screened out at the same stage each time.",
+      "after": "Internal candidates who have direct and lived experience consistently fail to proceed beyond the same screening step, indicating a possible pattern that merits further examination.",
+      "reason": "Explained that the repeated exclusion at the same stage suggests a systemic issue, clarifying why it is important to notice this pattern."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "questions",
+        0
+      ],
+      "before": "What does each requirement predict about the work?",
+      "after": "How well does each requirement, such as educational attainment or interview fluency, reflect the actual responsibilities or skills needed in this DSD role?",
+      "reason": "Specified what is meant by \"each requirement\" to tie the question more closely to the scenario and improve clarity."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "questions",
+        1
+      ],
+      "before": "Is there a written rubric, and was it applied the same way to everyone?",
+      "after": "Is there a written rubric for assessing candidates, and was it used consistently for all applicants during each stage of the selection process?",
+      "reason": "Added clarity on the kind of rubric in question and established the importance of consistent application throughout the process."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "questions",
+        2
+      ],
+      "before": "At which stage do people drop out, and does that differ by community or path into the work?",
+      "after": "At which specific stage in the hiring process do candidates tend to drop out, and does this pattern differ depending on their community background or career path prior to applying?",
+      "reason": "Specified the \"stage\" and clarified the meaning of \"community or path into the work,\" supporting more concrete review of the process."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "questions",
+        3
+      ],
+      "before": "How was accommodation offered?",
+      "after": "What steps were taken to offer accommodation to candidates during the process, and were these options clearly communicated to all applicants?",
+      "reason": "Elaborated on what it means to offer accommodation and emphasized the importance of communication, making the question more actionable for staff."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revised 'situation' field introduces minor clarifications but does not change the scenario or its meaning. It remains faithful to the source. It now more explicitly distinguishes between interview performance and prior experience and specifies that internal candidates did not advance past the initial screening. This is a legitimate clarification and does not add unsupported claims or invent qualifiers. The change strengthens clarity without departing from the source."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revision clarifies that degree requirements and interview performance may act as proxies, not direct measures, of job skills. This is a slightly more detailed explanation of the original point but does not misrepresent the issue or overstate the original claim. It is supported by the scenario and acceptable as a clarification."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The edit underscores the lack of evidence for a standardized rubric, whereas the original simply mentioned 'no rubric.' The change increases clarity about what is missing from the process, without changing the meaning or inventing a requirement. It is supported and accurate."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The change expands the original observation by explaining why excluding internal candidates at the same stage may reveal a systemic issue. This expands on the practical implication but does not change the underlying record or misinterpret the source. It is a reasonable clarification."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The reworded question clarifies what 'requirement' refers to by specifically mentioning 'educational attainment' and 'interview fluency.' This does not alter the core query and remains grounded in the scenario. The source expectation is preserved."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The edit clarifies what is meant by a written rubric (for assessing candidates) and highlights consistent use as key. While longer, this version simply spells out the same requirement for due process in evaluation; it is supported and improves explicitness."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "The revision specifies 'stage in the hiring process' and 'community background or career path prior to applying.' This clarification improves actionable specificity and does not add requirements or expand the source beyond its intent. The spirit and content of the original are preserved."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "The revision explains what it means to 'offer accommodation' and stresses communication. This clarifies practical meaning for DSD staff and does not change the core topic. No blocker or factual error is introduced."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1720,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 591,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2311
+    },
+    "review": {
+      "input_tokens": 1710,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 526,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2236
+    }
+  },
+  "createdAt": "2026-11-15T13:38:50.483Z"
+}

@@ -1,0 +1,127 @@
+{
+  "target": "resource.ja-stakeholder-map",
+  "kind": "resource",
+  "route": "/library/ja-stakeholder-map",
+  "sourceSha256": "ebc897ecd4bf7bedbc8c3c4965013205c281965a52f2d0d1a2c4e0feada41d58",
+  "status": "model_checked",
+  "reviewedFieldCount": 5,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Before the design is settled, plan who to involve and why, their role, whether they are paid, and when they will hear how input was used. Use trusted, reviewed lists and groups affected people name, not a web search alone.",
+      "after": "Before making design decisions, identify which partners to involve, clarify their reasons for participation, define their roles, state whether compensation applies, and plan when you will report how their input shaped the work. Use up-to-date, vetted lists and names provided by affected groups or individuals, rather than relying only on web searches, to ensure you reach the right people.",
+      "reason": "Clarifies that partner identification must happen before decisions are made, emphasizes deliberate selection and rationale, specifies timing for feedback, and underscores the value of using vetted sources and affected parties' input to avoid gaps or errors."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Inside DHS: begin with the Equity Director for the administration and the people responsible for accessibility and language access. Involve communications, the policy or rule owner, procurement, and county or provider partners when the work requires their knowledge or authority.",
+      "after": "Inside DHS: Start with the Equity Director for your administration, and include staff responsible for accessibility and language access to address equity and communication needs. Add communications staff, the policy or rule owner, and procurement when their subject matter knowledge or decision authority impacts the work. Engage relevant county or provider partners as needed when their involvement affects operations or outcomes.",
+      "reason": "Clarifies each group's role and why they should be included, and adds reasoning on the importance of matching partner expertise and authority to the project needs."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Community: begin with organizations named by the person or family and existing groups of people with lived experience. Be clear about what you are asking, how their input will be used, and whether they will be paid.",
+      "after": "Community: Start with organizations identified by the individual or family involved, as well as established groups of people with relevant lived experience. Clearly explain what you seek from their input, how feedback will be considered, and whether participants will receive compensation. This transparency helps build trust and ensures informed participation.",
+      "reason": "Further explains why input from these organizations is valuable, clarifies the need for transparency about purpose and compensation, and connects this practice to building trust and effectiveness in engagement."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Tribal Nations: if the work touches a Nation, Native children, Tribal data, services, or land, contact the Office of Indian Policy or follow the Tribal liaison process first. Consultation is government-to-government and is distinct from stakeholder engagement.",
+      "after": "Tribal Nations: If your work involves a Tribal Nation, Native children, Tribal-held data, Tribal services, or Tribal land, begin by consulting with the Office of Indian Policy or use the Tribal liaison process before moving forward. Government-to-government consultation is a distinct process from general stakeholder engagement and must take precedence where relevant authority or sovereignty applies.",
+      "reason": "Clarifies when and why Tribal consultation is required, distinguishes it clearly from other engagement, and explains the significance of honoring the consultation process due to government-to-government obligations."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "For each partner, record the purpose, how they will take part, whether they will be paid, who maintains the relationship, and when you will report back.",
+      "after": "For each partner, document the objective of their involvement, how they will contribute, whether they will be paid, who is responsible for maintaining the relationship, and the timeline for reporting outcomes back to them. This documentation supports accountability and consistent follow-through.",
+      "reason": "Explains why recording each element matters, linking it to program accountability and follow-through."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revised summary expresses the same underlying requirements as the source, with more explicit justification for each point. It maintains accurate limits: identification-before-decision, specifying roles and compensation, feedback timing, and prioritization of vetted lists and affected group input over search. The rewording is source-true and not materially different."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The rewritten guidance for 'Inside DHS' stays in scope, clarifies the roles, and adds reasoning that aligns with DHS practice. It does not invent or misstate any requirement from the source. Each group named remains present, and the expanded rationale matches the policy intent."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The new text for the Community section retains fidelity to the source, making explicit the reason for involving named organizations and clear explanation to participants, and ties transparency to trust-building. No unsupported claims or altered obligations are introduced."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The revision on Tribal Nations clarifies when and why Tribal consultation is necessary and further distinguishes it from stakeholder engagement without expanding requirements. The distinction, prioritization, and references to government-to-government consultation are source-accurate and grounded in the official process."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The update to record-keeping for partners merely explains the benefit (accountability, follow-through) of recording the same specific fields the source lists. There is no unsupported expansion or removal."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1636,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 541,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2177
+    },
+    "review": {
+      "input_tokens": 1757,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 383,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2140
+    }
+  },
+  "createdAt": "2026-11-15T13:41:07.465Z"
+}

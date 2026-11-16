@@ -1,0 +1,95 @@
+{
+  "target": "code.app/start/page.tsx",
+  "kind": "surface",
+  "route": "/start",
+  "sourceSha256": "008af612c9cc12dc053ce8cd64b84882aea86d19d43cb7a5aa51e8ccd4f2f88d",
+  "status": "needs_revision",
+  "reviewedFieldCount": 3,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Most people arrive here with a real question: a decision to make, a draft to review, a meeting to plan, or a process that is not working for someone. Start there. If you would like context first,",
+      "after": "Most users come here with a specific question or task, such as making a decision, reviewing a draft, planning a meeting, or addressing a process that is not working as intended. Begin with the issue at hand. If you need background or context first,",
+      "reason": "Clarified that visitors commonly have a particular task or challenge, used precise language, and connected why starting with the immediate issue is practical for staff. Avoided the implication that every arrival follows this pattern while giving a professional directive."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field2"
+      ],
+      "before": "shows the work the division does and the people it serves.",
+      "after": "explains the division’s work and the people it serves.",
+      "reason": "Replaced \"shows\" with \"explains,\" which better matches professional language for program descriptions. Clarified the sentence for precise reference to the division’s work and population served."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field3"
+      ],
+      "before": "This helper needs JavaScript. You can still",
+      "after": "JavaScript is required for this tool. You can still",
+      "reason": "Clarified that JavaScript is needed for the tool’s function, removing informal phrasing and directly stating the technical requirement to support user judgment."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The rewrite changes the tone and some of the meaning from the original. The original emphasizes 'most people' (retaining some exceptions) and gives examples worded as: 'a decision to make, a draft to review, a meeting to plan, or a process that is not working for someone.' The proposed revision introduces 'users' instead of 'people', removes the causal structure in 'a process that is not working for someone', and changes 'Start there' to 'Begin with the issue at hand.' That subtle but real narrowing of scope and shift from the original’s conversational and open-ended direction to a slightly more prescriptive and less inclusive instruction is not fully supported by the standard or evidence, and is not a trivial edit. Please retain the original sense and scope."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The change from 'shows' to 'explains' adjusts the register to slightly more formal professional language, but does not exceed the evidence or meaning of the source. This is acceptable and does not block."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The change clarifies that JavaScript is required, and switches from a more informal 'This helper needs JavaScript' to 'JavaScript is required for this tool.' This retains scope, intent, and meaning, with a more direct notice. This does not block."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1875,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 234,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2109
+    },
+    "review": {
+      "input_tokens": 1707,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 297,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2004
+    }
+  },
+  "createdAt": "2026-11-15T13:51:45.562Z"
+}

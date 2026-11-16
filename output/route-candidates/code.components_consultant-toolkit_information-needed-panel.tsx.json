@@ -1,0 +1,67 @@
+{
+  "target": "code.components/consultant-toolkit/information-needed-panel.tsx",
+  "kind": "surface",
+  "route": "components/consultant-toolkit/information-needed-panel.tsx",
+  "sourceSha256": "8dcc8a4088d1d4a1ddbe1b31373a90d3477cc7fbbbd00babfadde9040b13ec43",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field1"
+      ],
+      "before": "Already in the attached material (",
+      "after": "Found in the attached material (",
+      "reason": "Replace 'Already in the attached material' with 'Found in the attached material' to use more direct language. This clarifies that the listed information has been located in the attached material, while retaining the factual meaning and specific reference to attached resources. This version avoids the passive construction and more closely aligns with clear, professional prose."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The source explicitly uses the phrase 'Already in the attached material (' (see <details><summary>Already in the attached material ({found.length})</summary>...). The proposed change to 'Found in the attached material (' is not source-supported. The policy standard requires that official panel and UI wording that presents the outcome of analysis—such as this summary disclosure heading—retain the original unless the source changes. This is not a simple clarity improvement but a deviation from source wording that records a distinction between content already present and what may be newly found or confirmed."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1745,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 98,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1843
+    },
+    "review": {
+      "input_tokens": 1456,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 153,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1609
+    }
+  },
+  "createdAt": "2026-11-15T13:52:41.955Z"
+}

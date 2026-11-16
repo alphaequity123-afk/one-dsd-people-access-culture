@@ -1,0 +1,151 @@
+{
+  "target": "dsd-team.home",
+  "kind": "surface",
+  "route": "/one-dsd/team",
+  "sourceSha256": "b8ce1a71f0faab2bca2cd4850a18eb4964be393c9ac445fa1873c11f520b3811",
+  "status": "needs_revision",
+  "reviewedFieldCount": 15,
+  "changes": [
+    {
+      "fieldId": 2,
+      "path": [
+        "body0"
+      ],
+      "before": "The One DSD Team brings colleagues' knowledge of policy, programs, eligibility, and everyday operations into the division's equity work. Members work with the Equity and Inclusion Operations Consultant to identify barriers, examine practices, and develop useful improvements.",
+      "after": "The One DSD Team combines colleagues' experience in policy, programs, eligibility, and day-to-day operations to guide equity efforts across the division. Team members work in partnership with the Equity and Inclusion Operations Consultant to identify system-level or practical barriers, closely review existing practices, and propose changes that can lead to measurable improvements. This shared process helps tie equity initiatives to the real conditions and decisions that staff encounter in their roles.",
+      "reason": "Clarifies how experience is used and explains why reviewing and improving practices matters. Specifies the effect of practical team input on equity work and connects reasoning to the work context."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body2"
+      ],
+      "before": "Members can explain a process, review a resource, question an assumption, try an improvement, or connect the work with colleagues who need to be involved. Agree on a manageable contribution rather than expecting every member to do every task.",
+      "after": "Members contribute by explaining processes, reviewing resources, questioning assumptions, piloting improvements, or linking efforts with other colleagues as needed. Each member participates where their background or vantage point is most relevant. The team agrees on practical levels of contribution according to capacity, avoiding unreal expectations that everyone can engage equally in each task.",
+      "reason": "Replaces the repeated 'can' with more direct verbs and clarifies the reason for agreeing on contributions. Explains why matching contribution to experience is necessary and notes the importance of capacity."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "body3"
+      ],
+      "before": "Use relevant learning and evidence to examine the question. Develop a small improvement with the responsible people, agree what would indicate progress, and return to what happened. Keep useful changes and revise what did not work. A meeting is part of the work, not its final result.",
+      "after": "Apply new learning and supporting evidence to analyze the central question. Collaborate with those responsible for the area to adapt or test a modest improvement. Before implementation, discuss which results or observations would signal whether the change is effective. After trying the improvement, review findings together, retain changes that produce clear benefits, and adjust approaches that fall short. Meetings help coordinate efforts and check progress, but ongoing action—not the meeting itself—is the core work.",
+      "reason": "Clarifies each action's purpose, from analyzing evidence to reviewing results, and explains why both successful and unsuccessful changes must be examined. States why meetings are not an endpoint."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "body4"
+      ],
+      "before": "The team develops advice and practical contributions. The person responsible for a policy, budget, service, or staffing decision retains that authority. Agree who will receive a recommendation and who can authorize a trial before promising a change.",
+      "after": "The team formulates recommendations and develops practical strategies. However, the authority to make decisions regarding policy, budgets, services, or staffing stays with the designated individual. It is important to clarify who will consider the team's recommendation and who has the authority to approve tests or changes, so the team’s work aligns with division processes and decision rights.",
+      "reason": "Emphasizes the need for clarity about authority and process. Explains the impact of this separation for team function and outcomes."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "body5"
+      ],
+      "before": "A monthly rhythm is planned from January 2027, once the program is ready, alternating practical team work with open conversations and shared learning. The consultant or members can bring a topic. Participation is voluntary, with room to listen, ask questions, and explore more deeply when helpful. Confirmed arrangements belong in the team's collaboration space.",
+      "after": "A monthly meeting schedule will begin when the program is ready in January 2027, alternating between hands-on team work sessions and open discussions for shared learning. Any member or the consultant can propose a topic. Participation is voluntary and may involve listening, asking questions, or exploring topics more deeply based on interest and role. Documented meeting details should be stored in the team's collaboration platform for transparency and reference.",
+      "reason": "Streamlines the explanation and clarifies the reason for documenting arrangements. Avoids redundant language about participation and details what to do with confirmed plans."
+    },
+    {
+      "fieldId": 11,
+      "path": [
+        "body6"
+      ],
+      "before": "Amplify offers voluntary conversation, connection, and shared learning. Its co-leads can bring forward questions participants agree to share and return updates. The One DSD Team considers the work that needs further attention without directing Amplify's everyday conversations.",
+      "after": "Amplify offers a space for optional conversation, peer connection, and shared learning. Its co-leads may convey questions—with participant agreement—and return with updates relevant to the group. The One DSD Team reviews which issues require follow-up but does not direct or manage the day-to-day discussions in Amplify.",
+      "reason": "Increases specificity about how the groups interact and clarifies boundaries of responsibility."
+    },
+    {
+      "fieldId": 12,
+      "path": [
+        "body7"
+      ],
+      "before": "When reviewing a resource, ask whose work it supports, which task it helps with, what is missing, and whether the example reflects practice. A policy analyst, a supervisor, and an eligibility worker may need different ways into the same subject.",
+      "after": "When evaluating a resource, consider whose work the resource supports, which task it addresses, what information or examples are missing, and whether the content matches established practice. Different staff—such as policy analysts, supervisors, or eligibility workers—may each require different entry points or formats for the same information. Identifying these needs helps tailor resources to their intended audience and use.",
+      "reason": "Connects questions about a resource to the purpose of making materials effective for multiple staff audiences. Increases specificity about consideration process."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The rewrite adds claims not in evidence: it shifts from 'Members work with the Equity and Inclusion Operations Consultant to identify barriers, examine practices, and develop useful improvements' to stating that the team 'guides equity efforts across the division,' introduces 'system-level or practical barriers,' and asserts that changes lead to 'measurable improvements.' The original carefully confines the scope to working with the consultant and does not claim measurable outcomes, division-wide influence, or a process tying equity work to all staff decisions. The additional rationale and scope are not grounded in the source."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The revision remains accurate: changing \"Members can explain...\" to \"Members contribute by explaining...\" condenses style without changing function or scope. Expanding on why to tailor contributions is a reasonable clarification in professional style, and aligns with the original's instruction to agree on manageable contributions."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "The revision is more explicit about each step but stays faithful to the original instructions: 'Use relevant learning and evidence to examine...' maps to 'apply new learning and supporting evidence to analyze...'; 'develop a small improvement' is restated as 'adapt or test a modest improvement'; and the process of checking what works and retaining or revising accordingly is preserved. The added explanation that meetings help coordinate, not conclude, is consistent with 'A meeting is part of the work, not its final result.' This is neither a blocker nor a substantive departure."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "The rewritten field restates the policy/authority distinction using slightly different words. The expanded note that clarity is needed 'so the team’s work aligns with division processes and decision rights' is a reasonable explicit rationale for the original's 'Agree who will receive a recommendation and who can authorize a trial before promising a change.' No unsupported claim or scope increase present."
+      },
+      {
+        "fieldId": 9,
+        "severity": "note",
+        "finding": "Streamlining and reordering does not substantially alter requirements. The original's 'Confirmed arrangements belong in the team's collaboration space.' is reasonably paraphrased as 'Documented meeting details should be stored...' Slightly more formal language and omitted redundancy do not block the field."
+      },
+      {
+        "fieldId": 11,
+        "severity": "note",
+        "finding": "The explanation breaks out the original's meaning, specifying that co-leads 'may convey questions—with participant agreement—and return with updates.' This is clearer, preserves intent, and does not make unwarranted claims. 'Reviews which issues require follow-up' does not cross the original's limit: 'The One DSD Team considers the work that needs further attention without directing Amplify's everyday conversations.' No evidence issue."
+      },
+      {
+        "fieldId": 12,
+        "severity": "note",
+        "finding": "The suggested additions ground the review process in concrete action as in the source and clarify why different formats or entry points are needed. The field does not erase qualifications, broaden scope, or overstate the original."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2431,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 825,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3256
+    },
+    "review": {
+      "input_tokens": 2515,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 623,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3138
+    }
+  },
+  "createdAt": "2026-11-15T13:37:25.684Z"
+}

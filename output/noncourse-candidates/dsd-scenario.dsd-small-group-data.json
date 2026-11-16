@@ -1,0 +1,112 @@
+{
+  "target": "dsd-scenario.dsd-small-group-data",
+  "kind": "surface",
+  "route": "/one-dsd/scenarios/dsd-small-group-data",
+  "sourceSha256": "aec17b9c039437722d16edbf11f07411416c857d5646bb85c4b1002f91108db4",
+  "status": "needs_revision",
+  "reviewedFieldCount": 11,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "situation"
+      ],
+      "before": "A DSD analyst is asked to report service outcomes by race and language for a rural county. In several groups the count is below ten. Leadership wants the numbers next week.",
+      "after": "A DSD analyst receives a request to report service outcomes by race and language for a rural county. In several groups the number of participants is fewer than ten people, making individuals potentially identifiable in the data. Leadership requests these numbers for an upcoming decision.",
+      "reason": "Clarified the analytic context, specified risks to identifiability, and indicated the reason for the leadership request."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "whatToNotice",
+        0
+      ],
+      "before": "Small groups can be identified from aggregate tables.",
+      "after": "Small population groups are sometimes identifiable from summary tables, even when names or identifiers are not included.",
+      "reason": "Added clarity about identification risks from small cell sizes and emphasized how summary data can still lead to reidentification."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "whatToNotice",
+        1
+      ],
+      "before": "Suppression protects people and must be explained, not hidden.",
+      "after": "Suppressing small group results protects the privacy of individuals and must be communicated transparently in reporting. Suppression should not be hidden or left unexplained, as users of the data need to understand its limits.",
+      "reason": "Expanded with reasoning for transparent explanation of suppression and the importance to data users."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "whatToNotice",
+        2
+      ],
+      "before": "Qualitative evidence can carry what the numbers cannot.",
+      "after": "Where data are suppressed or not meaningful due to small numbers, drawing on qualitative accounts and context can provide insights that aggregate numbers cannot convey.",
+      "reason": "Clarified why and when qualitative evidence offers value, specifically in situations with suppressed or limited quantitative data."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The original source states: 'A DSD analyst is asked to report service outcomes by race and language for a rural county. In several groups the count is below ten. Leadership wants the numbers next week.' The proposed change adds: 'making individuals potentially identifiable in the data' and 'Leadership requests these numbers for an upcoming decision.' Neither of these additions is sourced from the original text. The identification risk is a valid point, but the guidelines require only referencing what is in the source, not expanding or inferring risks unless explicitly stated. The mention of an 'upcoming decision' is also an unwarranted expansion not present in the original. This change cannot be accepted."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revised phrasing ('Small population groups are sometimes identifiable from summary tables, even when names or identifiers are not included.') strengthens clarity and is justified as an elaboration on the meaning of 'can be identified' for DSD staff; however, it does not introduce policy or new facts and remains within source intent."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The expansion about suppression needing transparent communication and user understanding is consistent with the original line and helps clarify reasoning. It stays within the standard, as it does not invent or alter policy."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The revision adds clarity about why qualitative evidence is important without exceeding or distorting the source. This is an acceptable enhancement."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1533,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 349,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1882
+    },
+    "review": {
+      "input_tokens": 1220,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 372,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1592
+    }
+  },
+  "createdAt": "2026-11-15T13:39:14.341Z"
+}

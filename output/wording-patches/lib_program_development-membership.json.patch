@@ -1,0 +1,31 @@
+diff --git a/lib/program/development-membership.json b/lib/program/development-membership.json
+index 6d235f5..6957c44 100644
+--- a/lib/program/development-membership.json
++++ b/lib/program/development-membership.json
+@@ -133,7 +133,7 @@
+       "journeyIds": [
+         "decisions-and-systems"
+       ],
+-      "purpose": "Recognize Tribal Nations' sovereign, government-to-government relationship; defer content and practice decisions to the responsible DHS offices."
++      "purpose": "Recognize Tribal Nations' sovereign, government-to-government relationship; defer content and practice decisions to the people or areas responsible in DHS."
+     },
+     {
+       "id": "980110dd-1540-4149-8815-6406897626ce",
+@@ -1415,7 +1415,7 @@
+         "learning-and-leadership",
+         "workplace-culture"
+       ],
+-      "purpose": "Apply inclusive supervision basics to assignments, one-to-ones, accommodation requests, feedback, meetings and concerns, and know when to bring in the right office."
++      "purpose": "Apply inclusive supervision basics to assignments, one-to-ones, accommodation requests, feedback, meetings and concerns, and know when to bring in the person or area responsible."
+     },
+     {
+       "id": "course-gc-remote-hybrid-equity",
+@@ -1430,7 +1430,7 @@
+       "journeyIds": [
+         "workplace-culture"
+       ],
+-      "purpose": "Recognize harassment and disrespectful conduct, respond as a bystander, build psychologically safe team habits and route concerns to the right office."
++      "purpose": "Recognize harassment and disrespectful conduct, respond as a bystander, build psychologically safe team habits and route concerns to the person or area responsible."
+     },
+     {
+       "id": "course-gc-structural-racism",

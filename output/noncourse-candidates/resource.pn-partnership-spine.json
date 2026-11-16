@@ -1,0 +1,171 @@
+{
+  "target": "resource.pn-partnership-spine",
+  "kind": "resource",
+  "route": "/library/pn-partnership-spine",
+  "sourceSha256": "cb83fa718f7d4170ab24ca27974a06f472016f929b940e7d0bf73afd5f90c7e0",
+  "status": "model_checked",
+  "reviewedFieldCount": 8,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Six commitments guide this partnership work: equity is everyone’s work; build on the people, standards, and relationships already in place; center lived experience; follow the evidence; build trust over time; and work in partnership.",
+      "after": "Six commitments guide effective partnership work: make equity a shared responsibility; use the people, standards, and relationships already in place; involve people with lived experience; use evidence to inform decisions; build trust before scaling up; and engage all relevant partners as active contributors.",
+      "reason": "Clarifies each commitment for quick understanding, linking each to a clear action. Avoids generalities by substituting clear verbs and makes each principle's focus explicit."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "These six commitments help you see whether equity is meaningfully built into a plan. If one is missing, return to that part of the work before moving ahead.",
+      "after": "These commitments provide a way to check if equity considerations are built into a plan or process rather than added later. If one of the six commitments is missing from your work, review and address that gap before proceeding; missing a commitment can result in incomplete engagement, overlooked impacts, or ineffective implementation.",
+      "reason": "Explains the consequences and purpose of the commitments, specifying why reviewing for their presence matters beyond mere compliance."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Equity is everyone's work: the program or policy owner is responsible for building equity into the work, with support from equity staff.",
+      "after": "Equity is everyone's work: responsibility for building equity into programs or policies belongs to the owner or lead, who should ask for input and support from equity staff as needed. When no one takes responsibility, equity concerns are less likely to be addressed.",
+      "reason": "Specifies who is responsible, how to seek support, and explains the consequence if responsibility is not taken."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Build on what already exists: begin with the people, standards, and relationships already in place before creating something separate.",
+      "after": "Build on what already exists: first use the people, standards, and working relationships already in place, such as established policies or professional networks. Creating something separate before understanding existing assets can duplicate effort and miss relevant experience.",
+      "reason": "Expands on the practical content of \"what exists,\" adds a concrete example, and explains the risk of not following this approach."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Center lived experience: people affected by a decision should help shape it, with their role, authority, and compensation made clear.",
+      "after": "Center lived experience: people who are affected by a decision should have a meaningful role in shaping it. Their role, authority, and any compensation should be explained up front. Without this clarity, participation may be superficial or seen as tokenism.",
+      "reason": "Clarifies what \"center\" requires in practice and explains the consequence of omitting clear roles or compensation."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Follow the evidence: look at who receives services, who is denied or delayed, and who may be missing. Review patterns by community, language, disability, and place. Be clear about what the information shows and what it does not show.",
+      "after": "Follow the evidence: examine who receives services, who is denied or faces delays, and who may be left out. Review data by community, language, disability, and location. Clearly state both what your information can and cannot show, so decisions are informed by real patterns as well as known gaps.",
+      "reason": "Retains the instruction but stresses the practical use and limitations of evidence, with guidance to support sound decision making."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Move at the speed of trust: build relationships and explain how input was used before expanding the work. Rebuilding trust after a rushed launch takes time.",
+      "after": "Move at the speed of trust: prioritize building relationships and let participants know how their input shaped decisions before expanding. Launching too quickly without trust can harm credibility and require significant effort to rebuild relationships later.",
+      "reason": "Clarifies why building trust is necessary before scaling up and details the practical consequence of a rushed process."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "Work in partnership: counties, providers, community organizations, Tribal Nations (government-to-government), and Equity Directors bring knowledge and authority to the work. Involve them as partners, not simply as names on a contact list.",
+      "after": "Work in partnership: counties, providers, community organizations, Tribal Nations (government-to-government), and Equity Directors each bring specific knowledge and decision-making authority to partnership work. These entities should be treated as active partners, not simply listed as contacts. Failing to engage partners meaningfully can limit the relevance or acceptance of decisions.",
+      "reason": "Draws a distinction between passive and active partnership, and explains the practical consequence if this approach is neglected."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The rewrite clarifies each commitment with explicit actions and verbs but stays within the scope of the commitments described in the source. All six core ideas are preserved, though phrasing is more actionable and less general. No blocker: passes review."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revision adds detail about the consequences of missing a commitment, which is implicit in the source's guidance to 'return to that part of the work before moving ahead.' The expansion is attentive to the source's intent and adds professional context. No blocker: passes review."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The change makes implicit responsibilities and potential negative consequences of neglect explicit, which aligns with the intent of 'responsible for building equity into the work, with support from equity staff.' It neither erases qualifications nor overstates the policy. No blocker: passes review."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The edit expands on what is meant by 'the people, standards, and relationships,' providing concrete examples and risks. This is consistent with source content, improves clarity, and does not introduce unsupported claims. No blocker: passes review."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The expansion is within the bounds of the source: making compensation and roles clear is present, and the added explanation for why is professionally relevant. No blocker: passes review."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The revision remains faithful to the meaning and evidence-based requirements in the original, stressing both the strengths and limitations of data for decision making. No blocker: passes review."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The added practical consequence (harm to credibility) is an accurate extension of the source's 'rebuilding trust after a rushed launch takes time.' It stays within the scope of the page’s professional explanation. No blocker: passes review."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "Extending 'involve as partners' to clarify the need for active engagement and spelling out consequences if neglected is consistent with the source instruction and professional context. No blocker: passes review."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1790,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 707,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2497
+    },
+    "review": {
+      "input_tokens": 2053,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 455,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2508
+    }
+  },
+  "createdAt": "2026-11-15T13:40:46.960Z"
+}

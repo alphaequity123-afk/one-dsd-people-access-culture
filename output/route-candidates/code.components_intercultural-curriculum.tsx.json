@@ -1,0 +1,81 @@
+{
+  "target": "code.components/intercultural-curriculum.tsx",
+  "kind": "surface",
+  "route": "components/intercultural-curriculum.tsx",
+  "sourceSha256": "8bc449751a982c5d2f6dda047f0e8d3b5ec965160f17674f3277e2d8980b7fab",
+  "status": "needs_revision",
+  "reviewedFieldCount": 12,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Choose what is useful for your work. A brief can help you prepare questions; it cannot tell you what a person needs or prefers.",
+      "after": "Select briefs that address your current work. Each brief may inform your preparation and questions, but it will not determine an individual’s needs or preferences. Use briefs as reference points to guide your approach, not as definitive sources.",
+      "reason": "Clarified why and how community briefs might be useful. Added underlying reasoning about the role of briefs and limitations with respect to individual needs."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field6"
+      ],
+      "before": "This learning is voluntary and individual. You can pause, revisit a section, and keep reflections to yourself. Leave names, case details and other private information out of learning notes.",
+      "after": "Participation in this learning is voluntary and self-paced. You may pause, revisit sections, and keep personal reflections private. Do not record names, case information, or any private details in your notes; this maintains client privacy and complies with data policies.",
+      "reason": "Added explicit reasoning for omitting sensitive information. Clarified that keeping reflections private supports compliance and privacy. Reworded for clarity and connection to staff responsibilities."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The new text changes both the scope and the practical instruction. The source states: \"Choose what is useful for your work. A brief can help you prepare questions; it cannot tell you what a person needs or prefers.\" The rewrite changes 'choose what is useful' to 'select briefs that address your current work' (narrowing intended use), adds invented reasoning about 'each brief may inform your preparation', and introduces 'use briefs as reference points' and 'not as definitive sources'. This is extra interpretation beyond the source. The original is more direct and better reflects the source: briefs are for preparation, not authority on needs/preferences. The change also slightly misrepresents the intent, as the brief is one possible aid, not a requirement or a guide to approach. Source does not justify these additional claims or framing. Retain source-grounded wording and do not add policy interpretation without evidence."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The updated explanation is supportive but introduces more explicit privacy/data policy reasoning than the original source text, which stops at instructing: 'Leave names, case details and other private information out of learning notes.' The explanation that this 'maintains client privacy and complies with data policies' is reasonable for a professional audience, but it should not sound as if it makes a new policy or legal obligation. This is a minor style issue but not a blocker if clearly grounded in DSD/DHS practice."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 4023,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 209,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4232
+    },
+    "review": {
+      "input_tokens": 3534,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 314,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3848
+    }
+  },
+  "createdAt": "2026-11-15T13:53:55.419Z"
+}

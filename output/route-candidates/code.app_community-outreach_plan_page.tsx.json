@@ -1,0 +1,95 @@
+{
+  "target": "code.app/community-outreach/plan/page.tsx",
+  "kind": "surface",
+  "route": "/community-outreach/plan",
+  "sourceSha256": "08b902a28d77f98cf7e40a7ea50f9ae178bd55f0924d844b7428ce7b5bd6547b",
+  "status": "needs_revision",
+  "reviewedFieldCount": 6,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Questions to answer before you reach out to a community, and a fill-in engagement and report-back plan that saves nothing.",
+      "after": "Answer key questions before reaching out to a community. Use the fill-in engagement and report-back plan to prepare, knowing that nothing you enter is saved or shared.",
+      "reason": "Clarified the steps (answering questions and using plan), specified the action (preparing), and restated that information is not saved or shared. This supports staff understanding of the page’s functions and privacy."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "Prepare for a conversation and draft an engagement and report-back plan.",
+      "after": "Get ready to talk with a community. Use this page to draft a clear engagement plan and plan how to share back what you learn.",
+      "reason": "Added practical sequence and described the value of both engagement and report-back drafting. Specifies why and how staff would use the page, reflecting DHS and DSD outreach processes."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": "This page saves nothing. Your plan stays on this page until you print it or copy it. Nothing about what you plan is recorded or shared.",
+      "after": "Nothing entered on this page is saved or recorded. Your plan remains here until you choose to print or copy it.",
+      "reason": "Clarified that no data persistence occurs, reordering language for explicitness and to emphasize user discretion. This supports accurate staff expectations about privacy and tool behavior."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "Claiming users should \"Answer key questions before reaching out\" is a procedural instruction about correct use of the page. The source only describes available content: 'Questions to answer before you reach out to a community, and a fill-in engagement and report-back plan that saves nothing.' It does not instruct users on a sequence (answer, then use plan), nor direct them to take action before using the plan. The addition of 'knowing that nothing you enter is saved or shared' is not an improvement over the original source, which is already clear on this point, and unnecessarily shifts emphasis. This field must strictly describe page content, not prescribe use."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The rewrite adds new procedural instructions ('Get ready to talk', 'use this page', 'plan how to share back what you learn') that are not present in the original text. The source states: 'Prepare for a conversation and draft an engagement and report-back plan.' The original describes available support and content scope. Describing a 'clear engagement plan' and prescriptively stating users 'use this page' or how to do so misrepresents the neutral, descriptive tone of the source and invents purpose/steps not found in the source."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The rewrite is slightly less specific about when the user's plan is erased, but does not create a new privacy misunderstanding. Neither phrasing is misleading. The change is optional and not a blocker."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2109,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 244,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2353
+    },
+    "review": {
+      "input_tokens": 1877,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 327,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2204
+    }
+  },
+  "createdAt": "2026-11-15T13:47:45.021Z"
+}

@@ -1,0 +1,67 @@
+{
+  "target": "code.app/learn/equity-toolkit/practice/page.tsx",
+  "kind": "surface",
+  "route": "/learn/equity-toolkit/practice",
+  "sourceSha256": "2e993f1f12b8faf8876806c95272bce2775a95d2283a809f9de6074539c8d584",
+  "status": "needs_revision",
+  "reviewedFieldCount": 5,
+  "changes": [
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "Explore an example, or work through a question of your own. Keep your analysis, useful resources, and next steps together.",
+      "after": "You can review an example decision, or apply the toolkit to a specific question that matters for your own work. Your analysis, references, and next steps can be kept together for future use or discussion. This helps maintain clarity in your process and supports informed decision-making if you revisit the topic or share with others.",
+      "reason": "Clarifies the roles of the example and applying the toolkit to your own question. Specifies why keeping analysis and resources together is helpful, connecting recordkeeping to later use and informed decisions."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The revised field (field2) expands unsupported detail and makes unsubstantiated claims not present in the full source. The source says: 'Explore an example, or work through a question of your own. Keep your analysis, useful resources, and next steps together.' The revision introduces: 'review an example decision', 'apply the toolkit to a specific question that matters for your own work', and prescribes that 'this helps maintain clarity in your process and supports informed decision-making if you revisit the topic or share with others.' These claims about future use, clarity, and informed decision-making are not found in the source code or implied by it. The source does not discuss why keeping resources together is helpful, nor does it mention revisiting or sharing, decision clarity, or supporting future decisions. The language also shifts from simply encouraging users to try example and own-question modes, to instructing on their significance and benefits—a change in intent and scope. No source evidence supports this elaboration."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2216,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 132,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2348
+    },
+    "review": {
+      "input_tokens": 1871,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 239,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2110
+    }
+  },
+  "createdAt": "2026-11-15T13:50:00.702Z"
+}

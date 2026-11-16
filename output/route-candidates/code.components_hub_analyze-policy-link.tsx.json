@@ -1,0 +1,51 @@
+{
+  "target": "code.components/hub/analyze-policy-link.tsx",
+  "kind": "surface",
+  "route": "components/hub/analyze-policy-link.tsx",
+  "sourceSha256": "bd558e276d235883ba649db821cc1ffab8d781325be0da40bf3f402b706f9560",
+  "status": "model_checked",
+  "reviewedFieldCount": 1,
+  "changes": [],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1336,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 23,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1359
+    },
+    "review": {
+      "input_tokens": 950,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 12,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 962
+    }
+  },
+  "createdAt": "2026-11-15T13:53:43.982Z"
+}

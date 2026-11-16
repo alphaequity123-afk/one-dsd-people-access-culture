@@ -1,0 +1,67 @@
+{
+  "target": "code.components/self-directed-continue.tsx",
+  "kind": "surface",
+  "route": "components/self-directed-continue.tsx",
+  "sourceSha256": "87c97d525057c95664033815b494285d0bc972e9220ca6dd244edba51b2c9878",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Pick up a course where you left off. This is a bookmark for you, not a record of completion.",
+      "after": "Resume a course at the last page you saved. This bookmark is personal and does not show course completion.",
+      "reason": "The revised text clarifies that users return to their most recently saved page and explains that the bookmark is for individual use, not a formal completion record. This provides specific context for why the feature matters and explains its function without repeating the same phrase."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed text ('Resume a course at the last page you saved. This bookmark is personal and does not show course completion.') changes the source's meaning. The source ('Pick up a course where you left off. This is a bookmark for you, not a record of completion.') is simple and accurate—the user can continue where they left off, and the feature is clearly named a 'bookmark' and not a 'completion' tracker. The revision inserts 'last page you saved' (localStorage stores a page number, but the saved data might not exactly represent the last activity, just the most recent explicit save), subtly shifts from 'pick up where you left off' to 'resume... at... page', and rewords the explanation of the feature's status. The original is correct, matches the code's function, and does not need correction. The change adds new wording and specificity not in the source, which may mislead if the storage logic changes. The revision should be rejected to preserve the intended policy and technical wording."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1460,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 96,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1556
+    },
+    "review": {
+      "input_tokens": 1168,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 248,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1416
+    }
+  },
+  "createdAt": "2026-11-15T13:56:17.015Z"
+}

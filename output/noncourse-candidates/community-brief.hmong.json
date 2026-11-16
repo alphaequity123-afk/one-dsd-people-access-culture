@@ -1,0 +1,151 @@
+{
+  "target": "community-brief.hmong",
+  "kind": "surface",
+  "route": "/minnesota-communities/hmong",
+  "sourceSha256": "2f35d361b67b17709d805a1945d1a8e3089d425e81655364c54327066bab0943",
+  "status": "model_checked",
+  "reviewedFieldCount": 37,
+  "changes": [
+    {
+      "fieldId": 3,
+      "path": [
+        "whoAndWhere"
+      ],
+      "before": "The United States ran a Secret War in Laos; Hmong forces allied with the CIA. After 1975 came persecution, camps in Thailand, and refugee resettlement. St. Paul is a national hub. Most Hmong Minnesotans live in the Twin Cities; many are second and third generation.",
+      "after": "Most Hmong Minnesotans live in the Twin Cities, with St. Paul serving as a national hub for the community. Community history includes the United States’ Secret War in Laos, in which Hmong forces allied with the CIA, followed by post-1975 persecution, displacement, periods in refugee camps in Thailand, and eventual resettlement in the U.S. Today, many families are now second or third generation.",
+      "reason": "The revision leads with present demographics relevant for Minnesota program staff, followed by concise historical context. The sequence supports clarity on current community composition before referencing the historical pathway. The content is restructured for connected explanation and specificity, not lengthened redundantly or rewritten for style alone."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "A broad 'Asian' category does not provide enough information to meet a person's needs. White Hmong and Green Hmong are not always interchangeable when arranging an interpreter. Clan may shape who speaks and who helps, and Hmong naming practices may not fit forms built around first, middle, and last names.",
+      "after": "Recording Hmong identity only within a broad 'Asian' label does not provide enough information to address a person’s needs in services or communication. White Hmong and Green Hmong are distinct dialects and should be clearly differentiated when requesting interpreters, as speakers may not understand both. Clan relationships may influence whose voice is recognized within a family or group, and Hmong naming practices may not fit forms designed for standard U.S. first, middle, and last name patterns. Recognizing these differences helps staff check assumptions and avoid missing key information relevant to the individual or household.",
+      "reason": "This revision clarifies the significance of each example for DHS/DSD staff actions and expands the reasoning to show how terminology and structures affect practical tasks, such as interpretation and documentation, tying the explanation to real consequences if missed."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "withinGroupDiversity"
+      ],
+      "before": "Traditional healing and Christianity are both widespread. Elders and U.S.-born youth may differ sharply on language and family authority. Clan matters for some families and not for others.",
+      "after": "Both traditional healing practices and Christianity are common among Hmong Minnesotans. Not all families approach illness, disability, or decision making in the same way. Elders and U.S.-born youth may use different languages and have different views on family roles or authority. Clan remains important for some but not all families, and the degree of its influence varies widely.",
+      "reason": "The content is restated for greater specificity on the range and shades of intra-community difference, making clear the practical effect for staff without overgeneralization. Original meaning and scope are preserved."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "nameNote"
+      ],
+      "before": "Clan names are shared by many people; given names may change at marriage or with an honorific for men. Ask how the person wants to be addressed.",
+      "after": "Clan names are widely shared, and given names may change at marriage or when a man is granted an honorific. To avoid errors in communication, always ask each person how they wish to be addressed and confirm name spelling for official records.",
+      "reason": "This improves the connection between the naming practice and the step staff should take, providing the specific professional rationale for asking and clarifying usage."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "nameUncertainty"
+      ],
+      "before": "Spelling of the language name itself (Hmong, Mong) is contested among speakers; follow the person.",
+      "after": "The spelling of the language name (Hmong or Mong) is debated among community members and may tie closely to dialect identity. Use the spelling and terminology preferred by the person you are serving or partnering with.",
+      "reason": "Expanded to clarify why the spelling dispute matters, with practical guidance tethered to person-centered language without inventing broader obligations."
+    },
+    {
+      "fieldId": 29,
+      "path": [
+        "deeper0Body"
+      ],
+      "before": "Traditional healing and shamanism shape what illness means for many families; Christianity is also widespread. Hmong parents of children with autism have described late identification, unclear meaning of the word, stigma, and professionals who were not responsive. Under-identification in one community can exist alongside over-concern in another; both service systems and cultural understandings matter.",
+      "after": "Traditional healing practices, including shamanism, shape how many Hmong families understand illness and respond to disability. Christianity is also a widespread influence, and these frameworks can coexist. Hmong parents of children with autism have reported late identification, confusion over terminology, stigma, and experiences with service professionals who did not respond to their concerns. Systems built for other cultural groups may miss or misinterpret needs, resulting in both under-identification of disability in one community and over-concern in another. Service approaches and cultural meanings both matter for access and support.",
+      "reason": "The explanation is clarified and linked more directly to staff roles in identification and response. The interplay between system structures and cultural interpretation is strengthened to highlight why both areas should be checked when developing outreach or support."
+    },
+    {
+      "fieldId": 31,
+      "path": [
+        "deeper1Body"
+      ],
+      "before": "Ask who the person wants involved in a decision, and hear from the person directly. Treat resilience as lived history, not as a slogan.",
+      "after": "Ask each person which family members or others they want involved in decision making, and listen to their direction rather than making assumptions based on age or status. For many Hmong Minnesotans, respect and resilience reflect ongoing adaptation across generations and circumstances—treat these as aspects of lived history rather than as slogans or marketing points.",
+      "reason": "The paragraph is clarified to guide staff to concrete action (asking and listening), connect respect with context, and caution against superficial recognition of resilience. Original meaning preserved; professional focus sharpened."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The reordering foregrounds current demographics for the Minnesota audience and presents historical context in a connected, sourced manner. No unsupported claims were introduced, and all points are present in the original: St. Paul as a hub, Secret War history, refugee camps, and current generational details. The revised phrasing meets the standard."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The revised text offers more explicit practical implications for staff—expanding on why categories and dialect distinctions matter for service, interpreter selection, and naming. These derivations are justified by evidence and deepen rather than shift the intent. No legal or policy meaning is altered."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The rewrite increases specificity about intra-community diversity without introducing generalizations or unsourced claims. Each dimension (healing, decision making, language, clan) is supported and explained with practical relevance for staff."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "By linking the naming convention (shared clan names, name changes) directly to the instruction—always verify with the person and check spelling—the revision grounds the advice in professional need. All content stems directly from original notes."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "The elaboration on spelling (Hmong/Mong) and linkage to dialect identity are well-supported and clarify the source’s original intent. Guidance remains person-centered without implying an organizational obligation beyond that already present."
+      },
+      {
+        "fieldId": 29,
+        "severity": "note",
+        "finding": "The explanation expands the interplay of traditional healing and Christianity and makes the service gaps (late ID, response failures) more explicit, matching the original Minnesota Department of Health citation. The ‘under-identification/over-concern’ distinction is justified and the consequences for staff are clearly linked."
+      },
+      {
+        "fieldId": 31,
+        "severity": "note",
+        "finding": "This clarifies staff responsibilities by specifying 'ask and listen’ without assumption, and deepens (rather than simplifies) the treatment of resilience and respect as real attributes shaped by community experience, not slogans. Source meaning is preserved."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3364,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 958,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4322
+    },
+    "review": {
+      "input_tokens": 2891,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 527,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3418
+    }
+  },
+  "createdAt": "2026-11-15T13:40:10.913Z"
+}

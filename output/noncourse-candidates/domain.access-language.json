@@ -1,0 +1,81 @@
+{
+  "target": "domain.access-language",
+  "kind": "surface",
+  "route": "/areas/access-language",
+  "sourceSha256": "ff83e31e10dac9e779020fdb905720fe18e5ba4dfee761e26882d40aa7cd08e9",
+  "status": "model_checked",
+  "reviewedFieldCount": 24,
+  "changes": [
+    {
+      "fieldId": 2,
+      "path": [
+        "summary"
+      ],
+      "before": "Making documents, meetings, forms, systems, and contact points usable by people with disabilities and people who use languages other than English, as a matter of practice rather than exception.",
+      "after": "This area supports DSD and DHS staff in making documents, meetings, forms, digital systems, and service contact points useable for people with disabilities and people who use languages other than English. It treats accessibility and language access as core to our operations, not exceptions made only on request.",
+      "reason": "Improved sentence structure, clarified the intended audience, and explained the ongoing nature of the work—as practice, not mere exception. Factual meaning retained and the core idea made more explicit."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Inaccessible forms, unclear accessibility ownership, and translation gaps were among the most concrete barriers DSD staff named. Each one has a fix with an owner.",
+      "after": "DSD staff have pointed out that inaccessible forms, unclear ownership of accessibility, and gaps in translation are among the most significant barriers affecting people who use our services. Each of these barriers can be addressed through clear assignment of responsibility and practical improvement, making our work more effective and equitable.",
+      "reason": "Added detail about why these problems matter, named the connection to staff-identified barriers, and explained the impact of clarifying responsibility beyond stating that each issue has an owner."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revision to the summary keeps all supported substantive content. The new version clarifies the intended audience (DSD and DHS staff), which is compatible with the practical focus of the page. It retains the focus on accessibility and language access as a matter of ongoing practice rather than only as exceptions. The explicit statement about 'core to our operations, not exceptions made only on request' restates the original nuance with more detail; this does not introduce unsupported claims. No blockers."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The change reorders and expands the explanation from a plain list of known barriers to specify that these barriers—named by staff—affect people using services. It also expands on the original claim that each has 'a fix with an owner' by specifying the importance of clear responsibility and practical action, supporting effectiveness and equity. This is an elaboration, not a change in legal or factual scope. No blockers."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2221,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 266,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2487
+    },
+    "review": {
+      "input_tokens": 1436,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 241,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1677
+    }
+  },
+  "createdAt": "2026-11-15T13:39:20.851Z"
+}

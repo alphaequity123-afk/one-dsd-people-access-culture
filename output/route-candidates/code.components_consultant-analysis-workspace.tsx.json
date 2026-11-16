@@ -1,0 +1,95 @@
+{
+  "target": "code.components/consultant-analysis-workspace.tsx",
+  "kind": "surface",
+  "route": "components/consultant-analysis-workspace.tsx",
+  "sourceSha256": "b588af591ff425d1641a37789b1b8e8a4b9d00f54473a91156f552a8b57fa3e4",
+  "status": "needs_revision",
+  "reviewedFieldCount": 40,
+  "changes": [
+    {
+      "fieldId": 4,
+      "path": [
+        "field4"
+      ],
+      "before": "Use public material or remove private personal details first. Browser drafts and downloads are private working copies, not shared program records.",
+      "after": "Before you begin, use only public information or remove private personal details. Keeping drafts in your browser or download files provides a personal working copy. These are not part of the program's official records and remain local to your device unless you share them.",
+      "reason": "Increases clarity and specificity about where browser drafts or downloads are stored, and why review of personal details is needed. Explains the professional limit on record status."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field7"
+      ],
+      "before": "Practice analysis. These findings do not describe actual DHS people or programs.",
+      "after": "Practice analysis only. The findings shown here relate to a fictional scenario and do not use information from DHS programs or people.",
+      "reason": "Clarifies that findings are strictly based on fictional cases, spells out the non-applicability to DHS more explicitly, and ties to professional context."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "field9"
+      ],
+      "before": "These invented cases are not evidence about actual DHS staff, services or legislation. Loading a case replaces the open preparation and analysis. Download any work you want to keep first.",
+      "after": "These fictional cases do not include information about DHS staff, services, or legislation. Loading a new example will replace any open draft. Download your current work first if you want to keep it.",
+      "reason": "Removes repetition, gives precise explanation of impact and sequencing, maintains the note about fictional content, and clarifies download instruction rationale."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 4,
+        "severity": "blocker",
+        "finding": "The proposed replacement for field 4 significantly departs from the source: 'Use public material or remove private personal details first. Browser drafts and downloads are private working copies, not shared program records.' The original statement is concise and clear, emphasizing the need to use public or deidentified material and identifying the working-copy/private nature of browser/downloaded drafts. The revision adds unnecessary detail and creates interpretive risk by rephrasing established privacy assurances and altering tone. The instruction must not add legal disclaimers or alter the original privacy framing as written in the source."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The proposed edit to field 7 (Practice analysis) clarifies that findings relate solely to fictional scenario and do not use DHS program/person data. Both the original and revision respect the policy line between practice and real situations. The change is not required but is acceptable."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "Field 9's rewrite shifts from 'These invented cases are not evidence about actual DHS staff, services or legislation. Loading a case replaces the open preparation and analysis. Download any work you want to keep first.' to a more explicit and direct style while preserving source intent and critical warnings about overwritten work. This change is reasonable and consistent, though not strictly required by the evidence."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 14023,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 322,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 14345
+    },
+    "review": {
+      "input_tokens": 12669,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 287,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 12956
+    }
+  },
+  "createdAt": "2026-11-15T13:52:39.316Z"
+}

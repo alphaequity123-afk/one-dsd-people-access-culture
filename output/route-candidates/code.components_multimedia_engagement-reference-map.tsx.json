@@ -1,0 +1,221 @@
+{
+  "target": "code.components/multimedia/engagement-reference-map.tsx",
+  "kind": "surface",
+  "route": "components/multimedia/engagement-reference-map.tsx",
+  "sourceSha256": "8f9dd1f38200a964d2c39cf92613c4afa6660a104aff4a293460cbedbdf6b62d",
+  "status": "needs_revision",
+  "reviewedFieldCount": 12,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Different relationships, different purposes",
+      "after": "Distinguish the purpose of each relationship",
+      "reason": "Clarifies that DHS, counties, Tribal Nations, and communities interact for different reasons and staff should identify which applies to their question. This revision explains why awareness of distinct relationships matters."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Separate the handoffs in an assessment question",
+      "after": "Clarify each handoff in an assessment process",
+      "reason": "Rephrased for accuracy—assessment often involves distinct transitions between people and functions, each with their own questions. Specifying this supports targeted guidance to staff."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "Keep the person’s choice in the conversation",
+      "after": "Maintain the person’s stated choices throughout planning",
+      "reason": "Emphasizes the importance of carrying the person’s preferences across planning, not only acknowledging them in conversation. This addresses how staff should act to keep the person's perspective present."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": "Explore the employment question across partners",
+      "after": "Address employment support across all partners",
+      "reason": "Clarifies that employment-related questions commonly require inputs from multiple agencies. Emphasizes the need to connect roles explicitly."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field4"
+      ],
+      "before": "Additional expertise alongside the existing process",
+      "after": "Bring in additional expertise as part of the established process",
+      "reason": "Highlights that seeking technical assistance should supplement—not replace—the main workflow, and briefly signals when it is relevant."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field5"
+      ],
+      "before": "Follow the information through first contact",
+      "after": "Confirm communication needs at first contact and beyond",
+      "reason": "Shifts focus from information alone to the ongoing importance of directly checking how people want to communicate, explaining the purpose behind each step."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field6"
+      ],
+      "before": "Three questions, three starting points",
+      "after": "Start each operations question in the right area",
+      "reason": "Clarifies that each operational question must begin with the correct functional area, encouraging deliberate initial placement for staff efficiency."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "field7"
+      ],
+      "before": "Separate the coordination and requirement questions",
+      "after": "Separate coordination from regulatory requirements",
+      "reason": "Clarifies the distinction between aligning services for the person and meeting formal standards, leading staff to direct questions to their appropriate sources."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "field8"
+      ],
+      "before": "Separate the questions in a coverage journey",
+      "after": "Distinguish each step along the coverage path",
+      "reason": "Highlights that eligibility, enrollment, and delivery are separate steps and that each is supported by different resources or people. Aims to prevent conflation."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "field9"
+      ],
+      "before": "Several questions around a chosen community goal",
+      "after": "Connect multiple housing-related questions to a chosen goal",
+      "reason": "Clarifies that housing work requires keeping the person's community goal central when considering housing, services, and income, and that these are distinct but related queries."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "field10"
+      ],
+      "before": "Trace what a document can establish",
+      "after": "Show what each type of document can determine",
+      "reason": "Signals the need to evaluate which sources provide evidence or authority for a claim; helps staff trace what is actually established."
+    },
+    {
+      "fieldId": 11,
+      "path": [
+        "field11"
+      ],
+      "before": "Explore the relationships in a work question",
+      "after": "Identify the relationships involved in each work question",
+      "reason": "Clarifies for staff that understanding which relationships are at play is the starting point for most questions on the page. This aids navigation and precise inquiry."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The phrase \"Distinguish the purpose of each relationship\" is not supported by the source. The source title is \"Different relationships, different purposes\". The source says that different operational relationships (county, Tribal, community) serve different functions and must not be conflated. The change, while close, substitutes an explanatory imperative and erases the exact source wording, which is the official reference card title."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The proposed replacement, \"Clarify each handoff in an assessment process\", is not supported by the source. The source title is \"Separate the handoffs in an assessment question\". The edit invents an imperative and erases the official terminology. The source title must be preserved as the official DHS reference."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "\"Maintain the person’s stated choices throughout planning\" is not supported by the text. The card title source is \"Keep the person’s choice in the conversation\". The new wording changes the official card title and expands its meaning beyond conversation to all planning steps, which is not the intent or scope of the reference card."
+      },
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "The revised title \"Address employment support across all partners\" changes the meaning of the original \"Explore the employment question across partners\". The source’s wording focuses on collaborative examination, not directive support—this subtlety is significant for DHS staff and is the precise card title in the source."
+      },
+      {
+        "fieldId": 4,
+        "severity": "blocker",
+        "finding": "The change \"Bring in additional expertise as part of the established process\" replaces \"Additional expertise alongside the existing process.\" The edit substitutes an instruction and loses the careful balance in the source between supplementing (not replacing) the process and the nature of a technical assistance request. The official card title must be kept."
+      },
+      {
+        "fieldId": 5,
+        "severity": "blocker",
+        "finding": "Changing \"Follow the information through first contact\" to \"Confirm communication needs at first contact and beyond\" is not supported by the source. The reference card explicitly says to \"Follow the information through first contact,\" not just communication needs, and does not reference the idea of confirmation at every step."
+      },
+      {
+        "fieldId": 6,
+        "severity": "blocker",
+        "finding": "The edit from \"Three questions, three starting points\" to \"Start each operations question in the right area\" removes the structure and directness of the original, which is a reference card. The source must be used: \"Three questions, three starting points.\""
+      },
+      {
+        "fieldId": 7,
+        "severity": "blocker",
+        "finding": "The revision \"Separate coordination from regulatory requirements\" is not an accurate reflection of the source. The card title is \"Separate the coordination and requirement questions\". The edit reframes the guidance and erases the card’s operational logic, which must stay as official DHS guidance."
+      },
+      {
+        "fieldId": 8,
+        "severity": "blocker",
+        "finding": "\"Distinguish each step along the coverage path\" is not the same as the source: \"Separate the questions in a coverage journey\". This change both generalizes and changes the official reference card’s explicit focus on questions."
+      },
+      {
+        "fieldId": 9,
+        "severity": "blocker",
+        "finding": "Changing \"Several questions around a chosen community goal\" to \"Connect multiple housing-related questions to a chosen goal\" is not supported by the source. The edit erases the concise format and official title from the card and adds interpretation not present in the original."
+      },
+      {
+        "fieldId": 10,
+        "severity": "blocker",
+        "finding": "Switching \"Trace what a document can establish\" to \"Show what each type of document can determine\" alters the action from tracing to showing, which is not the source phrasing and loses the precision of the card title."
+      },
+      {
+        "fieldId": 11,
+        "severity": "blocker",
+        "finding": "Rewriting \"Explore the relationships in a work question\" as \"Identify the relationships involved in each work question\" changes the card title, making it more directive and less exploratory, which is a meaningful distinction in the original source and card context."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3314,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 595,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3909
+    },
+    "review": {
+      "input_tokens": 3445,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 847,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4292
+    }
+  },
+  "createdAt": "2026-11-15T13:54:39.182Z"
+}

@@ -1,0 +1,109 @@
+{
+  "target": "learn.intercultural",
+  "kind": "surface",
+  "route": "/learn/intercultural",
+  "sourceSha256": "60fbd04081766f35053114fb835a9c60037fb5227e1cb93fce7f2187edf1fe24",
+  "status": "needs_revision",
+  "reviewedFieldCount": 67,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "intro"
+      ],
+      "before": "Explore how culture, experience, and access shape everyday work—and how your learning can inform a conversation, a decision, or a change.",
+      "after": "Culture, life experience, and access shape what happens in the workplace every day. Learning about these differences can improve conversations, decisions, and changes in our work. Recognizing how you and others experience the same environment helps inform actions and policies that better meet everyone’s needs. Intercultural learning is not a separate process but something we apply in our day-to-day tasks and choices.",
+      "reason": "Expands on the purpose and relevance of intercultural learning in everyday work. Gives a clear, substantive explanation of why this matters for DSD staff, connecting learning directly to decisions and actions."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "choice"
+      ],
+      "before": "Begin with a question that matters to you. Follow the path from the foundations, choose a useful starting point, or return whenever you want another perspective.",
+      "after": "Start by identifying a question you want to answer about your work. You can follow the full learning path from foundational concepts, select a section relevant to your immediate interest, or return for new perspectives as your questions evolve.",
+      "reason": "Clarifies the options for engaging with this content and explicitly encourages staff to take ownership of their learning. Removes vague phrases and instead describes practical navigation for staff."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "connectionsIntro"
+      ],
+      "before": "A question may lead to reading, a practical tool, a conversation, or a change in your work. These spaces offer different kinds of support.",
+      "after": "Depending on your question, learning here might connect to reading, practical tools, conversation, or changes in your daily work. Each linked space offers a distinct form of support—review them to find what fits your need.",
+      "reason": "Clarifies the different resources and why a staff member might use each, showing practical connection between question and support type."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "foundationsPurpose"
+      ],
+      "before": "A useful place to begin when you want shared language for culture, equity, and access. Our experience shapes what feels normal; another person's experience can reveal something we have not noticed.",
+      "after": "Start here if you want a shared language for discussing culture, equity, and access. Each person's experiences influence what feels normal or expected at work, and understanding that others' perspectives may differ is essential for working together and identifying unnoticed barriers.",
+      "reason": "Emphasizes the reason this section matters for staff: shared language is the starting point for bridging differences. Expands on how experience influences perception in the workplace."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The revised intro ('after') adds significant unfounded extrapolations: 'Intercultural learning is not a separate process but something we apply in our day-to-day tasks and choices.' The original does not make this claim. The statement about 'actions and policies that better meet everyone’s needs' overstates the source, which focuses on informing conversations and decisions, not guaranteeing universally better policies. The expansion is not grounded in the original source and changes its scope."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revision clarifies navigation and offers practical advice in different words, but it does not introduce unsupported concepts or change the meaning from the original source."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "The change offers a clearer syntactic connection between the question and possible types of support, but does not alter intent or add new claims. The distinction among support types is implied in the original and explicit in the revision."
+      },
+      {
+        "fieldId": 10,
+        "severity": "note",
+        "finding": "The revised wording adds explanation of why shared language and awareness of differing experiences matter. The elaboration is specific, still grounded in the source concept, and does not add unsupported guarantees or claims."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 5080,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 521,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5601
+    },
+    "review": {
+      "input_tokens": 2923,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 262,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3185
+    }
+  },
+  "createdAt": "2026-11-15T13:37:01.093Z"
+}

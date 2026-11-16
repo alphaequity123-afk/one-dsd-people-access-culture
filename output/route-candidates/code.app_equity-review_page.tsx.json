@@ -1,0 +1,137 @@
+{
+  "target": "code.app/equity-review/page.tsx",
+  "kind": "surface",
+  "route": "/equity-review",
+  "sourceSha256": "69b5d969d149fa504600945c04bc17ca14b898b0e103f456924b11ea903d8d15",
+  "status": "needs_revision",
+  "reviewedFieldCount": 14,
+  "changes": [
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "Understand who is affected, bring missing perspectives into the discussion, and compare practical options before deciding.",
+      "after": "Describe who may be affected by a proposed policy, process, or service change. Identify perspectives that are missing from current discussions and consider practical alternatives before making a decision.",
+      "reason": "Clarifies the expectation for staff to actively identify affected groups and missing perspectives, and to compare options. Avoids the connotation of simply 'bringing' perspectives without explanation. Lays out specific steps, supporting the page's purpose for DSD and DHS staff."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "field8"
+      ],
+      "before": "Start with the decision, what can change, and who is affected. Record what people have shared, what remains uncertain, and how alternatives would distribute benefits and burdens. A completed form is a starting point for sound judgment, not proof that a decision is equitable.",
+      "after": "Begin by stating the decision to be made, what can change, and who could be affected. Document what people have shared so far, note areas of uncertainty, and consider how different options would affect the distribution of benefits and burdens. Treat a completed form as documentation to support good judgment, not as confirmation that a decision meets equity standards.",
+      "reason": "Clarifies that documentation is for record and reasoning, not as proof of equity. Specifies that staff should document input and uncertainty, supporting sound practice."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "field9"
+      ],
+      "before": "When inviting community perspectives, ask about experience, barriers, priorities, and possible improvements. Staff remain responsible for connecting those contributions with policy and service evidence.",
+      "after": "If you seek community input, ask about relevant experiences, barriers, priorities, and suggestions for improvement. Staff are responsible for connecting community input to evidence from policy and services, ensuring it informs decision-making.",
+      "reason": "Clarifies staff's responsibility is not merely to collect input but to relate it directly to policy and service evidence. Emphasizes that community feedback needs to be integrated thoughtfully."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "field10"
+      ],
+      "before": "Keep names, case details, personnel information, and other confidential material out of your notes. Drafts are saved on this device and are not submitted to the consultant. Download a copy when you need to keep or share your work.",
+      "after": "Do not include names, case details, personnel information, or other confidential material in your notes. Drafts are saved only to your device and are not sent to the consultant. Download a copy if you need to keep or share your work.",
+      "reason": "Clarifies which types of confidential information should be excluded. The revision maintains concise instructions and reinforces the reason for local draft storage."
+    },
+    {
+      "fieldId": 11,
+      "path": [
+        "field12"
+      ],
+      "before": "Staff anywhere in DHS can use the reviews independently. The Equity and Inclusion Operations Consultant offers guidance and feedback.",
+      "after": "Any staff member in DHS may complete a review independently. The Equity and Inclusion Operations Consultant is available to give guidance and feedback as needed.",
+      "reason": "Improves clarity about staff autonomy and the consultant’s role for both support and review."
+    },
+    {
+      "fieldId": 12,
+      "path": [
+        "field13"
+      ],
+      "before": "The consultant workspace brings supplied evidence, affected perspectives, alternatives, and practical actions together. Explore a practice situation, examine gaps, and connect the work to ADSA equity goals when relevant.",
+      "after": "The consultant workspace organizes available evidence, affected perspectives, possible alternatives, and connected actions. Use it to practice analysis on a sample situation, highlight information gaps, and relate findings to ADSA equity goals when they are relevant.",
+      "reason": "Clarifies the purpose of the consultant workspace and how staff should use it in practice."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The revision changes the meaning from the original source. The original summary ('Understand who is affected, bring missing perspectives into the discussion, and compare practical options before deciding.') accurately reflects the page's intent as shown in the source header and introduction: encouraging broad discussion and comparative review before making decisions. The proposed replacement inserts steps about 'describing,' 'identifying,' and 'considering' options, which, while logical, add expectations and alter the tone from facilitation to procedural direction, unsupported by the direct source. Retain the original to avoid introducing unsupported requirements."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "The revision maintains source meaning, expanding on 'Start with the decision, what can change, and who is affected' to 'Begin by stating the decision to be made, what can change, and who could be affected.' This reflects the original content. The expanded 'Document what people have shared so far' is equivalent to 'Record what people have shared,' and 'note areas of uncertainty' to 'what remains uncertain.' The clarification that a completed form is not proof of equity but supports good judgment is consistent with the sentence: 'A completed form is a starting point for sound judgment, not proof that a decision is equitable.' No conflict; detail is in scope."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "The change clarifies the responsibility for staff, specifying that community input must be integrated with policy and service evidence, which matches the intent of 'Staff remain responsible for connecting those contributions with policy and service evidence.' Language is modernized but not substantively altered."
+      },
+      {
+        "fieldId": 9,
+        "severity": "note",
+        "finding": "The rewrite ('Do not include names, ...') is equivalent in instruction to the source ('Keep names, ... out of your notes.'). Both emphasize excluding confidential information, and the rest of the statement matches the original's meaning and privacy explanation."
+      },
+      {
+        "fieldId": 11,
+        "severity": "note",
+        "finding": "The revised text ('Any staff member in DHS may complete a review independently...') matches the original message about independent use and consultant support, shifting sentence structure for clarity but without adding obligations or diluting official meaning."
+      },
+      {
+        "fieldId": 12,
+        "severity": "note",
+        "finding": "The edit clarifies the function of the consultant workspace, restating the original's intent using more explicit instructional language. The meaning is preserved and the guidance improved, consistent with the source context."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2786,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 535,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3321
+    },
+    "review": {
+      "input_tokens": 2696,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 510,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3206
+    }
+  },
+  "createdAt": "2026-11-15T13:48:48.893Z"
+}

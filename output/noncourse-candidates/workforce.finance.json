@@ -1,0 +1,67 @@
+{
+  "target": "workforce.finance",
+  "kind": "surface",
+  "route": "/consultant/workforce/finance",
+  "sourceSha256": "1f6d7d11d4dc448bfc3d913d69683ba416c962cbf5d3ab08a202ccfbba732219",
+  "status": "model_checked",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "relationship"
+      ],
+      "before": "Listed as an agency area or associated service. This does not establish a direct reporting line.",
+      "after": "Identified as an agency area or related service; not all listed groups report directly to this office. Confirm reporting lines as needed for specific workforce finance questions or collaboration.",
+      "reason": "Clarifies that the listing does not define reporting lines and adds why this distinction may matter for staff seeking information or collaboration."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The proposed revision to the 'relationship' field clarifies the distinction between being listed as an area and reporting structure, and helpfully adds reasoning relevant to staff seeking clarification or collaboration. This change is supported by the source, which presents organizational listings but does not describe all reporting lines. The update does not introduce unsupported claims or unnecessary complexity."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1091,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 104,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1195
+    },
+    "review": {
+      "input_tokens": 786,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 90,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 876
+    }
+  },
+  "createdAt": "2026-11-15T13:37:41.093Z"
+}

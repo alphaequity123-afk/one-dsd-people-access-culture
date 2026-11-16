@@ -32,7 +32,6 @@ export const GUIDANCE_COPY = {
   send: 'Send question',
   followUpDone: 'Thanks. That was your one question for this round.',
   readMore: 'Read more in the lesson',
-  notice: 'The guide sees the question and what you chose. Your progress stays on this device. Nothing is kept about who you are.',
   strategy: {
     'socratic-hint': 'A question to think about',
     nudge: 'A short pointer',
@@ -169,7 +168,6 @@ export default function TutorPanel({ lessonId, items }: Props) {
           <ul>{reply.grounding.map(link => <li key={link.href}><SourceLink href={link.href}>{link.title}</SourceLink></li>)}</ul>
         </div>}
       </div>
-      <p className="clas-guidance-notice">{GUIDANCE_COPY.notice}</p>
     </section>
   </div>;
 }

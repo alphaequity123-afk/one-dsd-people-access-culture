@@ -1,0 +1,67 @@
+{
+  "target": "workforce.community-relations",
+  "kind": "surface",
+  "route": "/consultant/workforce/community-relations",
+  "sourceSha256": "4c9e679409cb8f58a1816afee07a1f0476f7341c633d98ec1c4efd0cbb991ac7",
+  "status": "model_checked",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "relationship"
+      ],
+      "before": "Listed as an agency area or associated service. This does not establish a direct reporting line.",
+      "after": "Community Relations is recognized as an agency area or associated service within DHS. This reference indicates its functional connection to the broader organization but does not define supervisory or reporting relationships. Staff should confirm the specific responsibilities or reporting structure for individual roles related to Community Relations before making operational decisions or referrals.",
+      "reason": "Clarifies the implications and limitations of being listed as an agency area, and explains why verifying local responsibilities or reporting lines is important to avoid mistaken assumptions in practice."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revised 'relationship' text retains the factual scope of the source, which lists Community Relations as part of DHS's organizational structure without specifying reporting lines. The new explanation offers additional context, emphasizing the lack of direct supervisory definition and recommending confirmation of specific responsibilities before acting. This clarifies—not alters—the source. The standard of avoiding unsupported legal or reporting claims is upheld, and the clarification aligns with requirements for practical, source-grounded guidance."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1093,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 114,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1207
+    },
+    "review": {
+      "input_tokens": 819,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 110,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 929
+    }
+  },
+  "createdAt": "2026-11-15T13:37:50.491Z"
+}

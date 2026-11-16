@@ -39,7 +39,7 @@ export function changeSavedResource(resource: SavedResource, remove: boolean): {
   try {
     localStorage.setItem(SAVED_RESOURCES_KEY, JSON.stringify({ version: 1, items }));
     window.dispatchEvent(new Event(SAVED_RESOURCES_EVENT));
-    return { ok: true, message: remove ? "Removed from your saved resources." : "Saved to My work on this device." };
+    return { ok: true, message: remove ? "Removed from your saved resources." : "Saved to My work." };
   } catch {
     return { ok: false, message: remove ? "This device could not remove that resource. It is still in your saved list." : "This device could not save the resource. Keep the page open or copy its address to return to it." };
   }

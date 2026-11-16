@@ -1,0 +1,81 @@
+{
+  "target": "resource.ja-plain-language",
+  "kind": "resource",
+  "route": "/library/ja-plain-language",
+  "sourceSha256": "af247f1447100bd65829c91408a2acd8e7530b156d9877bad743ea39d21acecb",
+  "status": "model_checked",
+  "reviewedFieldCount": 10,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Write with short sentences, everyday words, one idea per paragraph, built-in heading styles, descriptive links, useful alternative text, and accessible tables. Before release, follow the current state guidance for accessible documents and ask someone outside the team to read it.",
+      "after": "Use short sentences and familiar words, presenting one idea per paragraph. Apply heading styles for structure, write clear descriptive links, include useful alternative text for images, and apply accessible table formatting. Before publishing, follow Minnesota’s current accessible document guidance and have someone outside your team review the text for clarity and usability.",
+      "reason": "Clarifies the actions for DHS and DSD staff, specifies Minnesota-specific guidance, and connects the purpose of the outside review to plain-language and accessibility standards. Avoids repeating wording and connects summary directly to actionable professional expectations."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "If a person cannot read or use a notice, they may not be able to understand or appeal the decision. Accessibility needs to be addressed before release.",
+      "after": "When documents are not accessible or clear, people may not understand the information or how to respond. This can result in missed rights to appeal or use agency programs. Addressing accessibility before release reduces these barriers and helps meet legal and ethical standards.",
+      "reason": "Expands reasoning for accessibility, links to appeal rights and program participation, and explains the professional consequence if the action is missed."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revised summary aligns with the checklist’s instructions: it still directs use of short sentences, familiar words, one idea per paragraph, headings, descriptive links, alt text for images, and accessible tables. It now refers to Minnesota-specific guidance, consistent with the original. The new language clarifies 'have someone outside your team review' as for 'clarity and usability,' which matches the source’s intent but is syntactically rewritten. No criteria or obligations have changed. Summary is faithful, slightly more practical, and source-supported."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The expanded 'Why it matters' is accurate and source-aligned. The original references inability to understand or appeal a decision and stresses the need to address accessibility before release. The revision makes explicit that inaccessible documents may cause people to miss information, appeal rights, or access to agency programs; it also names legal and ethical standards. These are valid extensions of the source intent; there is no exaggeration of what is required or at stake."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1853,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 232,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2085
+    },
+    "review": {
+      "input_tokens": 1358,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 228,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1586
+    }
+  },
+  "createdAt": "2026-11-15T13:40:56.967Z"
+}

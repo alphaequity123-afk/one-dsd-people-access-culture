@@ -1,0 +1,43 @@
+{
+  "revisions": [
+    {
+      "target": "practice.measurement",
+      "kind": "surface",
+      "route": "/practice/measurement",
+      "status": "draft",
+      "changes": [
+        {
+          "path": [
+            "intro"
+          ],
+          "before": "Develop an evaluation plan that connects an equity question with meaningful evidence and a practical next decision.",
+          "after": "Develop an evaluation plan that connects an equity question with evidence and a practical next decision. Define what would count as an improvement, whose experience can inform the judgment, and what the evidence can and cannot establish."
+        },
+        {
+          "path": [
+            "privacy"
+          ],
+          "before": "These notes are not saved. Copy or download what you want to keep before leaving. Use program-level examples and responsible roles; leave out names, private learning records, and confidential case details.",
+          "after": "The app does not autosave or submit these notes. Copy or download what you want to keep before leaving. Use program-level examples and responsible roles; leave out names, private learning records, and confidential case details."
+        }
+      ],
+      "reviewNote": "Full original page read. Measurement component useState/copy/download verified, no submission/storage handler. Community return clarifies unchanged decisions using existing planning question. Independent review pending."
+    },
+    {
+      "target": "community-connections.home",
+      "kind": "surface",
+      "route": "/learn/community-connections",
+      "status": "draft",
+      "changes": [
+        {
+          "path": [
+            "return"
+          ],
+          "before": "Participants receive an accessible summary of what changed, what remains unresolved, and who will follow up. They can correct the summary and explain whether it reflects their contributions.",
+          "after": "Participants receive an accessible summary of what changed, what did not change and why, what remains unresolved, and who will follow up. They can correct the summary and explain whether it reflects their contributions."
+        }
+      ],
+      "reviewNote": "Full original page read. Measurement component useState/copy/download verified, no submission/storage handler. Community return clarifies unchanged decisions using existing planning question. Independent review pending."
+    }
+  ]
+}

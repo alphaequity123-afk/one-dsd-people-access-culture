@@ -1,0 +1,95 @@
+{
+  "target": "code.components/policy-analysis/case-library.tsx",
+  "kind": "surface",
+  "route": "components/policy-analysis/case-library.tsx",
+  "sourceSha256": "dc81f24d098d6d1af818f2a8f06e707b8c2e0ab17afe4b99ca1c384b12f2ff5a",
+  "status": "needs_revision",
+  "reviewedFieldCount": 5,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Each analysis keeps its policy, the material you added, the recommended changes, every decision and the formal proposal.",
+      "after": "Each analysis includes the policy reviewed, supporting materials, all recommended changes, every decision made, and the resulting formal proposal. Keeping these details together helps you track the rationale and outcomes for each analysis and provides a clear record if you need to review or update the work later.",
+      "reason": "Expanded to clarify the intended professional purpose—tracking rationale, outcomes, and record-keeping. This supports user understanding of why these elements are retained together."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "The saved analyses could not be loaded.",
+      "after": "The system could not load the saved analyses. You can try loading them again.",
+      "reason": "Clarified that the problem is with system access and that users can retry. This addresses potential confusion about the cause and directs the next step."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": "No analyses are saved yet. Start a new analysis to choose a policy.",
+      "after": "There are no saved analyses. To begin, start a new analysis and select a policy to review.",
+      "reason": "Clarified the current state and next step as a professional instruction, connecting 'no analyses' to the practical action needed."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The rewritten field expands the original beyond 'keeps its policy, the material you added, the recommended changes, every decision and the formal proposal' by adding claims about tracking rationale, outcomes, and review/update use cases. These purposes are not stated or directly implied in the original page and constitute new, unsupported instructional claims regarding professional practice or record-keeping."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The proposed change is supportable: 'The system could not load the saved analyses. You can try loading them again.' simply clarifies the original field and adds explicit guidance on retrying, which is visually and functionally present on the page through a 'Try again' button."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The revision clarifies action, restating 'No analyses are saved yet. Start a new analysis to choose a policy.' as 'There are no saved analyses. To begin, start a new analysis and select a policy to review.' This is a stylistic change that does not invent new policy or expectation, and preserves the original intent and scope."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2780,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 226,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3006
+    },
+    "review": {
+      "input_tokens": 2542,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 244,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2786
+    }
+  },
+  "createdAt": "2026-11-15T13:55:17.531Z"
+}

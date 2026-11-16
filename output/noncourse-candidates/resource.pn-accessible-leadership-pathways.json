@@ -1,0 +1,276 @@
+{
+  "target": "resource.pn-accessible-leadership-pathways",
+  "kind": "resource",
+  "route": "/library/pn-accessible-leadership-pathways",
+  "sourceSha256": "15f49af3627249b238b47a2b61e89b86dc9db61ee799507fb113fef8c00f902e",
+  "status": "needs_revision",
+  "reviewedFieldCount": 15,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Advancement barriers for disabled staff are usually structural and often invisible to those running leadership pathways. Hear from disabled staff without forcing disclosure, examine each pipeline stage, and build sponsorship, transparent pathway maps, and accessible leadership programs by default.",
+      "after": "Most barriers to advancement for disabled staff are built into how leadership pathways are structured and may be invisible to those who design them. Effective programs listen to disabled staff without pressing for individual disclosure, examine each part of the leadership pipeline for access barriers, and intentionally develop sponsorship, clear pathway maps, and universally accessible leadership opportunities.",
+      "reason": "Clarifies that structural barriers are created by program decisions, not inherent. Specifies that listening does not mean revealing identities. Consolidates action items for a more coherent summary."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Disclosure is a cost. Many staff will not identify as disabled to a supervisor or a program, so pathway design cannot depend on knowing who is disabled. It has to be accessible to everyone and honest about what leadership roles actually require.",
+      "after": "Requiring disclosure of disability status can deter staff from participating or seeking advancement, especially when trust in confidentiality is low. Many staff will not identify as disabled to supervisors or programs, so leadership pathways must be accessible by default and accurately reflect what leadership roles require. Pathway criteria and process design cannot rely on knowing individual disability status.",
+      "reason": "Deepens explanation of the costs of forced disclosure and program design limits, and details why pathways must not rely on knowledge of individual disability status."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Engagement without forced disclosure. Work through anonymous aggregate listening, disability employee resource groups, and trusted intermediaries, with small-group suppression in any reporting. Ask about the pathway, not the person: what does it take to be seen as ready for a lead role here, who explains it, and what happens when someone asks for an accommodation during a stretch assignment or interview.",
+      "after": "Engage without requiring staff to disclose disability status. Use aggregate anonymous feedback, disability-focused employee resource groups, and trusted intermediaries, and suppress reporting on very small groups to prevent identification. Frame questions about the pathway itself: what attributes signal readiness for leadership, who describes these standards, and what happens if someone requests an accommodation during a stretch position or interview?",
+      "reason": "Clarifies mechanisms for anonymous engagement and reframes the focus away from individual attributes toward process steps. Adds specificity to the kinds of questions that preserve privacy and inform pathway improvement."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Close the loop publicly. Disabled staff in particular have watched accessibility promises go unfunded. Report what changed, what did not, and who owns the next step.",
+      "after": "Report publicly on actions taken in response to staff input, acknowledging gaps and specifying who is responsible for next steps. Disabled staff in particular may not trust changes unless they see a public record given longstanding patterns of unfunded accessibility promises.",
+      "reason": "Explains the practical impact of closing the feedback loop and why public accountability builds trust, especially with staff who have experienced unfulfilled promises."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Examine the pipeline stage by stage: nomination to leadership programs, selection for visible projects, acting assignments, interview formats, and promotion outcomes. Disability is often absent from disaggregated workforce data, so the first finding may be that the organization cannot see the pattern at all. Say so.",
+      "after": "Review each stage of the leadership pipeline—nominations, project assignments, acting roles, interviews, and promotions. Disability status may be missing from workforce data, making patterns hard to detect. If the organization cannot assess for disability-based disparities, state that limitation clearly so it is incorporated into improvement planning.",
+      "reason": "Makes explicit how to handle missing data on disability in workforce analyses and why acknowledging data gaps is necessary."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Test the job-relatedness of leadership criteria. Executive presence, quick verbal response, travel, long hours, and always-on availability screen out many disabled staff and are rarely tied to what leaders actually do.",
+      "after": "Evaluate whether leadership criteria actually relate to job requirements. Standards such as \"executive presence,\" rapid verbal response, willingness to travel, long hours, or 24/7 availability tend to exclude many disabled staff without strong justification. Criteria should be tied to demonstrable aspects of the leadership roles in question.",
+      "reason": "Expands reasoning for job-relatedness testing and gives concrete rationale for why some criteria may disadvantage disabled staff."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Look for the accommodation cliff. Accommodations that exist for the current role are often lost during a rotation, a leadership cohort, or an interview process because nobody owns them across the transition. Name an owner for accommodations across every transition.",
+      "after": "Identify and address the \"accommodation cliff.\" Accommodations in place for a current position can disappear during leadership rotations, cohort programs, or interviews, often because responsibility for them is unclear. Assign explicit ownership for carrying forward accommodations across transitions between roles or program stages.",
+      "reason": "Defines the accommodation cliff more precisely and explains the consequence of unclear ownership. Specifies the required staff action."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "Sponsorship, not just mentoring. Mentoring gives advice; sponsorship puts someone's name forward. Pair disabled staff who want it with sponsors who hold decision power, and track at the program level whether sponsorship leads to assignments.",
+      "after": "Distinguish sponsorship from mentoring. While mentoring provides advice, sponsorship means actively recommending someone for opportunities. Offer sponsorship to disabled staff who request it, with sponsors in positions to influence decisions, and track whether sponsorship increases access to assignments and advancement at the program level.",
+      "reason": "Clarifies the practical difference between mentoring and sponsorship, and why tracking sponsorship outcomes matters for assessing program effectiveness."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "body",
+        6
+      ],
+      "before": "Reverse mentoring, where disabled staff advise leaders on what accessible leadership looks like, with compensation or recognized time and never as a standing expectation.",
+      "after": "Enable reverse mentoring arrangements, where disabled staff share their expertise with leaders on making leadership accessible. These contributions should be compensated or recognized as legitimate work time and should not be treated as an open-ended expectation for disabled staff.",
+      "reason": "Reinforces compensation and limits expectations for reverse mentoring. Clarifies how this supports leadership learning."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "body",
+        7
+      ],
+      "before": "Accessible leadership programs by default: materials in advance, captioning, flexible participation formats, no timed or drag-based activities, and accommodations carried across every cohort event. The State of Minnesota Emerging Leaders Institute run by Minnesota Management and Budget is the verified public program; DHS-level pathways should be reviewed against the same standard.",
+      "after": "Leadership development opportunities must be accessible from the start. This includes sharing materials in advance, captioning all live and recorded sessions, offering flexible ways to participate, avoiding time-limited or drag-and-drop activities, and ensuring accommodations follow staff through every cohort event. The State of Minnesota Emerging Leaders Institute (Minnesota Management and Budget) is the validated public program model; review DHS-level pathways for the same standards.",
+      "reason": "Clarifies the scope of accessible practices and aligns local standards with a recognized public model."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "body",
+        8
+      ],
+      "before": "Transparent pathway maps that say what a lead or supervisor role requires, which experiences count, and how to get them, so advancement does not depend on informal networks.",
+      "after": "Provide transparent pathway maps. Document and publish what formal leadership or supervisory roles require, what experiences qualify, and how staff can obtain them. This reduces reliance on informal networks and helps all staff, including those with disabilities, navigate advancement.",
+      "reason": "Focuses on why transparency matters, particularly in reducing barriers created by informal processes."
+    },
+    {
+      "fieldId": 11,
+      "path": [
+        "body",
+        9
+      ],
+      "before": "Structured leadership interviews with rubrics tied to the work, accommodations offered without asking why, and panel preparation on disability bias.",
+      "after": "Use structured interviews for leadership selection, with criteria and rubrics directly tied to demonstrated work abilities. Offer accommodations proactively, without requiring a justification. Prepare interview panels to recognize and address disability bias in both process and evaluation.",
+      "reason": "Expands on \"structured interviews\" with rationale for accommodations and specific preparation against unconscious bias."
+    },
+    {
+      "fieldId": 12,
+      "path": [
+        "body",
+        10
+      ],
+      "before": "Stay conversations that ask about growth and access together, and exit patterns reviewed at an appropriate level.",
+      "after": "Conduct stay conversations that address both career growth and access needs, and review exit patterns for trends related to accessibility or advancement barriers at the appropriate organizational level.",
+      "reason": "Connects the review of exit patterns to accessible practice and clarifies the intended organizational learning."
+    },
+    {
+      "fieldId": 13,
+      "path": [
+        "body",
+        11
+      ],
+      "before": "Boundaries this program keeps. No guessing about disability: the program never guesses who is disabled from behavior, accommodation history, or participation. No individual tracking: private learning and reflection stay private, and program-level measures use aggregates with suppression. Accommodation requests, complaints, and personnel decisions go to the confidential channels, never into this program.",
+      "after": "Respect privacy and program boundaries. Do not infer or track disability status based on behavior, accommodation requests, or program participation. Confidential learning and reflection are not monitored at the individual level; only aggregate, suppressed data is used for program evaluation. Confidential channels for accommodation, complaints, or personnel decisions remain separate and outside this program.",
+      "reason": "Refines the privacy boundaries for clarity, ensuring staff know what is and is not monitored or reported."
+    },
+    {
+      "fieldId": 14,
+      "path": [
+        "body",
+        12
+      ],
+      "before": "Who owns what. ADA and accommodation decisions belong to Human Resources and the accommodation process. Pathway design belongs to leadership and the equity practice. Take each to its owner.",
+      "after": "Clarify roles and responsibilities. Human Resources and the established accommodation process own ADA and disability accommodation decisions. Program leaders and the equity practice are responsible for pathway design. Each function should be directed to its respective owner to maintain proper process and confidentiality.",
+      "reason": "Specifies which staff groups own specific decisions and why keeping functions separate is necessary for process integrity."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed summary adds 'universally accessible leadership opportunities' and reframes actions as 'intentionally develop sponsorship,' which is a stronger and broader claim than in the source. The original summary emphasizes transparency, stage-by-stage exam, and that disability-specific insight should inform design without requiring disclosure, but does not call for universal accessibility for all leadership opportunities as a standing design principle. This alters the source’s scope."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "Additional explanation on deterrence and trust is compatible with the source and keeps accurate meaning; the change is acceptable."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The change restates the original's mechanism, clarifies it, and preserves the privacy focus. The rewording is specific and matches the intent of the source."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The change adds detail on public accountability and makes the implied trust breakdown explicit, which aligns with the source’s rationale. Acceptable."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "Restates original meaning; explains what to do about missing data, fully supported by the original text."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "Expanded explanation about criteria is present in spirit and stated in the original. Enhanced, but does not distort the original guidance."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "Expands on the concept with precise ownership for accommodations; the reasoning is congruent with the original."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "Clarifies and expands on tracking, but stays within original intent."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "Adds positive framing of reverse mentoring and clarifies boundaries, compensatory expectations, all of which are strongly implied in the source."
+      },
+      {
+        "fieldId": 9,
+        "severity": "note",
+        "finding": "Specifies details about accessible practices and states \"must be accessible from the start,\" which is a slightly stronger framing but appropriate given the source direction and reference to standards from the Emerging Leaders Institute. Acceptable."
+      },
+      {
+        "fieldId": 10,
+        "severity": "note",
+        "finding": "Clarifies why pathway maps are helpful and aligns with source; acceptable expansion."
+      },
+      {
+        "fieldId": 11,
+        "severity": "note",
+        "finding": "Makes 'structured interviews' and disability bias explicit, drawing directly from the source’s requirements—acceptable and clarifying."
+      },
+      {
+        "fieldId": 12,
+        "severity": "note",
+        "finding": "Adds clarity on exit trends and organization level review; the change is in scope."
+      },
+      {
+        "fieldId": 13,
+        "severity": "note",
+        "finding": "Refined wording for privacy boundaries preserves source meaning. Acceptable."
+      },
+      {
+        "fieldId": 14,
+        "severity": "note",
+        "finding": "Specifics about process integrity and function separation are clarifying. Change is acceptable."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2765,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 1349,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4114
+    },
+    "review": {
+      "input_tokens": 3614,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 580,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4194
+    }
+  },
+  "createdAt": "2026-11-15T13:43:04.764Z"
+}

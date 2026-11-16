@@ -1,0 +1,67 @@
+{
+  "target": "code.components/home-ask.tsx",
+  "kind": "surface",
+  "route": "components/home-ask.tsx",
+  "sourceSha256": "94a96613f6b3397d790527aa1b9d7813126aec0b1f6fae4eae81174363f6f4a0",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Please leave out names, case details and anything private. Your question, and your recording when you speak, go to outside services to be answered. No audio is saved on this site.",
+      "after": "Do not include names, case details, or private information. When you ask a question or record your voice, the information goes to external services for a response. The site does not save any submitted audio. This protects personal and confidential details and limits the risk of sharing sensitive data beyond the intended question and answer process.",
+      "reason": "Clarifies the professional reasons for excluding specific information and explains both where the information goes and what is not retained. Provides relevant explanation connecting confidentiality and operational process for staff using or reviewing the Ask feature."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The rewrite introduces unsupported statements and changes meaning. The original is a prompt-level legal and privacy notification: 'Please leave out names, case details and anything private. Your question, and your recording when you speak, go to outside services to be answered. No audio is saved on this site.' The replacement—'Do not include names, case details, or private information...'—shifts to an imperative (from courteous request), adds explanations of user protection and operational intent ('This protects personal and confidential details...'), and specifies 'external services for a response' as opposed to the less committal 'outside services to be answered.' It also modifies the detail/assurance about audio and information handling. The source does not support this change in legal framing, the extra rationale or user assurance, or the change in pronoun style. Blocker: official disclosure and prompt text must be kept verbatim per standard."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2258,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 128,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2386
+    },
+    "review": {
+      "input_tokens": 1998,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 206,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2204
+    }
+  },
+  "createdAt": "2026-11-15T13:53:45.616Z"
+}

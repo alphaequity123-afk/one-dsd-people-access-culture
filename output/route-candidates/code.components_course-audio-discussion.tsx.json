@@ -1,0 +1,81 @@
+{
+  "target": "code.components/course-audio-discussion.tsx",
+  "kind": "surface",
+  "route": "components/course-audio-discussion.tsx",
+  "sourceSha256": "c3938e15a719e8554e402a78e8235cb6319a14db362a4855ce60699c906eda54",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "You can listen or read the conversation below, at your own pace.",
+      "after": "You may listen to the conversation or read the transcript below and review each part as needed. Listening or reading allows you to engage with the content in the way that works best for you.",
+      "reason": "The revision clarifies that both the audio and text serve the same professional purpose, and specifies that reviewing at your own pace supports deeper understanding. The explanation avoids casual phrasing in favor of direct acknowledgment of the alternatives and why staff might use them."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Read the complete conversation",
+      "after": "Full transcript of the conversation",
+      "reason": "The replacement gives a clear, specific heading for professionals who need the entire text version. This improves clarity and specificity for DHS or DSD staff locating the full dialogue."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revision introduces unsupported claims and unnecessarily expands the explanation. The source text provides: 'You can listen or read the conversation below, at your own pace.' The proposed: 'You may listen to the conversation or read the transcript below and review each part as needed. Listening or reading allows you to engage with the content in the way that works best for you.' The source does not mention reviewing 'each part as needed' nor that the modalities 'serve the same professional purpose,' nor does it say that choosing either supports 'deeper understanding.' This adds explanation and rationale not present in the official record, exceeding the standard for an introduction. The expanded wording is not grounded in policy or instructional evidence from the source."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "Changing 'Read the complete conversation' to 'Full transcript of the conversation' makes the summary slightly more direct without adding unsupported information or changing the source's meaning. The adjustment is a labeling preference and does not introduce or omit substantive information. This is acceptable."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1724,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 163,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1887
+    },
+    "review": {
+      "input_tokens": 1492,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 229,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1721
+    }
+  },
+  "createdAt": "2026-11-15T13:52:51.264Z"
+}

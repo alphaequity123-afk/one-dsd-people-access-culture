@@ -1,0 +1,67 @@
+{
+  "target": "code.components/source-evidence.tsx",
+  "kind": "surface",
+  "route": "components/source-evidence.tsx",
+  "sourceSha256": "29eddf51366260f76adb9cd408df1efc53ac376be478293c98dbb3518c2c49cd",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "All research and sources across the program",
+      "after": "View all research and evidence sources used in the program",
+      "reason": "This revision makes the heading more specific, clarifying that it refers to research and evidence sources actually used in the program. It avoids generic or vague terms and better supports transparency and professional review, aligning with the guidance to increase substantive reasoning and specificity."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revision ('View all research and evidence sources used in the program') does not accurately reflect the original source, which reads 'All research and sources across the program.' The proposed change adds the concepts of 'view' (implying an action or link label rather than a section or list description) and 'evidence sources used,' which are not explicitly supported in the code or original text. The original wording simply describes the content as all 'research and sources' available across the program, while the revision changes the meaning and scope by narrowing it to 'evidence sources used' and by shifting from a noun phrase to an imperative or instructional phrase. The code calls this within a <p> as a link associated with the section 'Further reading,' not as a button or heading. This change is not grounded in the actual code and is therefore overreaching and not permitted by the program writing standard."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1325,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 86,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1411
+    },
+    "review": {
+      "input_tokens": 1024,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 205,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1229
+    }
+  },
+  "createdAt": "2026-11-15T13:56:20.401Z"
+}

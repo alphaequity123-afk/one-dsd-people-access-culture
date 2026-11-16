@@ -1,0 +1,123 @@
+{
+  "target": "code.components/clas-curriculum/notes.tsx",
+  "kind": "surface",
+  "route": "components/clas-curriculum/notes.tsx",
+  "sourceSha256": "d0659f680495c8bac04fe981c78d7bbb714bbf0a96050936f8a469daea44b0a9",
+  "status": "needs_revision",
+  "reviewedFieldCount": 5,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Your working note for this part (optional, private)",
+      "after": "Your working note for this part (optional, stored only here)",
+      "reason": "Clarified that the note is stored only on the current device, reducing ambiguity about privacy and the word 'private.'"
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field2"
+      ],
+      "before": "Remove your notes for all nine parts from this device? This cannot be undone.",
+      "after": "Remove your notes for all nine parts from this device. This action cannot be undone.",
+      "reason": "Improved precision about what will be deleted and emphasized the consequence with more formal wording fitting professional DHS/DSD guidance."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field3"
+      ],
+      "before": "This plan is assembled from the working notes you kept on this device for the nine parts (",
+      "after": "This plan uses the working notes you kept for the nine parts on this device (",
+      "reason": "Clarified that the plan relies on notes stored on this device and aligns language with privacy explanation."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field4"
+      ],
+      "before": "parts have a note). Each heading is the lesson's prompt. Edit any part's note on its own page; the plan updates when you return.",
+      "after": "parts have a note). Each heading gives the lesson's prompt. To change a note, edit it on its lesson page; the plan updates when you return.",
+      "reason": "Clarified that each heading reiterates the corresponding lesson prompt and specified the update process for better usability."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field5"
+      ],
+      "before": "Voluntary follow-up date: ______. What changed? What evidence do I have? What remains?",
+      "after": "Voluntary follow-up date: ______. Describe what changed, what evidence supports this, and what issues remain.",
+      "reason": "Provided more specific instruction on the content to record for follow-up, explaining the purpose of each reflection."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed change from 'Your working note for this part (optional, private)' to 'Your working note for this part (optional, stored only here)' alters the intended privacy language in the source. The source uses both 'private' and an explanatory paragraph, already clarifying privacy scope and device-local storage. Replacing 'private' removes a supported claim with a less clear phrase and weakens alignment with the privacy explanation shown beneath the label ('private' is directly supported by the policy stated in NOTE_PRIVACY)."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "Changing 'Remove your notes for all nine parts from this device? This cannot be undone.' to 'Remove your notes for all nine parts from this device. This action cannot be undone.' is a minor style adjustment. The clarification is acceptable, does not change the meaning or scope, and remains accurate to the source."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "Changing 'This plan is assembled from the working notes you kept on this device for the nine parts (' to 'This plan uses the working notes you kept for the nine parts on this device (' is a stylistic change; the revised text maintains the source's meaning and privacy explanation. This change does not introduce a blocker."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "Changing 'parts have a note). Each heading is the lesson's prompt. Edit any part's note on its own page; the plan updates when you return.' to 'parts have a note). Each heading gives the lesson's prompt. To change a note, edit it on its lesson page; the plan updates when you return.' is stylistic and does not alter scope or meaning. The change is acceptable."
+      },
+      {
+        "fieldId": 4,
+        "severity": "blocker",
+        "finding": "Changing 'Voluntary follow-up date: ______. What changed? What evidence do I have? What remains?' to 'Voluntary follow-up date: ______. Describe what changed, what evidence supports this, and what issues remain.' adds instructional language and changes the source's succinct, open-ended prompts to more directive language. The source script is designed for journaling style and does not instruct or specify what to write. The proposed revision exceeds the source and alters the instructional approach."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2742,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 282,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3024
+    },
+    "review": {
+      "input_tokens": 2607,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 480,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3087
+    }
+  },
+  "createdAt": "2026-11-15T13:52:18.877Z"
+}

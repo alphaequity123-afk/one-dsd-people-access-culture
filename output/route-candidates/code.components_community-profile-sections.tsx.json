@@ -1,0 +1,81 @@
+{
+  "target": "code.components/community-profile-sections.tsx",
+  "kind": "surface",
+  "route": "components/community-profile-sections.tsx",
+  "sourceSha256": "332262c44b657d9bcccc184ae8e2f2560ae8d76bf6f73fc00f2406d51d2ebb90",
+  "status": "needs_revision",
+  "reviewedFieldCount": 5,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "This list is a starting point, not a recommendation, and it is not complete. Check hours and details with the business.",
+      "after": "This list presents businesses identified in public sources and is not a recommendation or comprehensive directory. Verify business hours and service details directly with each business, as information may change or be incomplete.",
+      "reason": "Clarifies the list's nature, the need to verify information, and why checking matters, improving professional specificity without implying endorsement or completeness."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "A fuller picture of community life in Minnesota, from public sources. It gives context for preparing questions and changing systems. It does not describe any individual.",
+      "after": "This profile summarizes aspects of community life in Minnesota using information from public sources. It helps staff understand broader context when forming questions or considering system changes. The profile does not describe any particular individual.",
+      "reason": "Improves explanation of how staff may use the context and makes the role of this information clearer for professional colleagues."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The proposed revision for field1 ('This list presents businesses identified in public sources and is not a recommendation or comprehensive directory. Verify business hours and service details directly with each business, as information may change or be incomplete.') introduces new information and inference not supported in the source. The code provides only: 'This list is a starting point, not a recommendation, and it is not complete. Check hours and details with the business.' The phrase 'presents businesses identified in public sources' is not explicit in the field, nor is the detail that 'information may change or be incomplete.' While the original implies the list may be incomplete, it does not explicitly warn about changing information. The added specificity, while reasonable, goes beyond clarifying the source and instead invents justification and characterization not found in the original surface."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The changes to field2 are generally clarifying without departing materially from the intent or scope of the surface. The modified wording for field2 ('This profile summarizes aspects of community life in Minnesota using information from public sources. It helps staff understand broader context when forming questions or considering system changes. The profile does not describe any particular individual.') stays substantively aligned with the source, clarifies use in professional context, and does not introduce new requirements or implications. This is acceptable."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1894,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 167,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2061
+    },
+    "review": {
+      "input_tokens": 1599,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 322,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1921
+    }
+  },
+  "createdAt": "2026-11-15T13:52:33.785Z"
+}

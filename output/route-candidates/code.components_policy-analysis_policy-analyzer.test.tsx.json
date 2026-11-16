@@ -1,0 +1,109 @@
+{
+  "target": "code.components/policy-analysis/policy-analyzer.test.tsx",
+  "kind": "surface",
+  "route": "components/policy-analysis/policy-analyzer.test.tsx",
+  "sourceSha256": "915681150080e7a0061a8bd1b38abf47f53c47fe633fb78e852191a85fc7b2de",
+  "status": "needs_revision",
+  "reviewedFieldCount": 5,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Assessments offer an interpreter at no cost.",
+      "after": "Assessments provide an interpreter at no cost to the person being assessed.",
+      "reason": "Clarified that the interpreter is for the person being assessed to provide context for staff. This links the policy statement to its practical purpose in assessment situations."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "Interpreters are offered at no cost.",
+      "after": "Interpreters are provided at no cost to people who are being assessed.",
+      "reason": "Specified the intended audience to clarify for staff whose access this statement refers to. This supports understanding of policy scope."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": "The policy offers interpreters but does not say how people learn about it.",
+      "after": "The policy states that interpreters are provided, but it does not explain how people being assessed will learn that an interpreter is available.",
+      "reason": "Added specificity about the audience and consequence to demonstrate the impact of missing communication details."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field4"
+      ],
+      "before": "The sources do not say who is excluded.",
+      "after": "The sources do not explain which people might be excluded from interpreter access or whether any criteria apply.",
+      "reason": "Clarified the potential scope of exclusion for a more substantive and specific gap description, aiding further analysis."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The change from \"Assessments offer an interpreter at no cost.\" to \"Assessments provide an interpreter at no cost to the person being assessed.\" is not supported by the source text or test. The source (CATALOG summary and source text) only states interpreters are offered at no cost, without specifying that it is only to the person being assessed or adding new context. Adding this restricts and reinterprets the policy scope without evidence."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "Changing \"Interpreters are offered at no cost.\" to \"Interpreters are provided at no cost to people who are being assessed.\" adds specificity about the audience that is not present in either the catalog summary or the direct policy text ('Interpreters are offered at no cost.'). The original wording must be preserved, as the source does not specify the offer is only to people being assessed."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The addition in field3 clarifies the consequence and specifies the audience, which is arguably an appropriate professional elaboration grounded in the source's focus on interpreter provision in assessments. However, extra care must be taken not to assert limitations not in evidence. This particular restatement is appropriate as it is a paraphrase of the original finding."
+      },
+      {
+        "fieldId": 4,
+        "severity": "blocker",
+        "finding": "Expanding \"The sources do not say who is excluded.\" to \"The sources do not explain which people might be excluded from interpreter access or whether any criteria apply.\" is not supported. The source does not contain any mention of possible exclusion criteria or explicit gaps about coverage—original text is a gap summary and should not speculate about types of exclusion without evidence."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3736,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 283,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4019
+    },
+    "review": {
+      "input_tokens": 3526,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 369,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3895
+    }
+  },
+  "createdAt": "2026-11-15T13:55:27.080Z"
+}

@@ -1,0 +1,165 @@
+{
+  "target": "code.components/consultant-toolkit/analysis-view.tsx",
+  "kind": "surface",
+  "route": "components/consultant-toolkit/analysis-view.tsx",
+  "sourceSha256": "733b3517c072dbfa0bba37b9b84370a290ad8cf4edf91c105cf673f0aedaedbb",
+  "status": "needs_revision",
+  "reviewedFieldCount": 9,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field2"
+      ],
+      "before": "These labels describe how the draft uses its sources. They are not a confidence score or a substitute for reviewing the quotations.",
+      "after": "These labels indicate how the draft references its supporting sources. Reviewing the original quotations remains necessary for sound analysis; do not use these labels as a substitute or rating.",
+      "reason": "Clarified that labels are a guide to source use but do not measure quality or serve as a proxy for source review, aligning with professional judgment expectations."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field3"
+      ],
+      "before": "Start with the evidence gaps and limitations below. Then examine the source quotations and the alternatives before finalizing.",
+      "after": "Address evidence gaps and limitations first. Then review the source quotations and examine the available alternatives before making a decision.",
+      "reason": "Clarified sequence and reason for reviewing each element, emphasizing the practical need to resolve evidence issues before proceeding with further review."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field4"
+      ],
+      "before": "Read these findings alongside the evidence gaps below. The complete responses, source quotations, alternatives, and actions remain available for your review.",
+      "after": "Review these findings alongside the identified gaps in evidence. All responses, source quotations, alternatives, and proposed actions are recorded in full and remain available for examination.",
+      "reason": "Specified that every response and its evidence is available, and made the connective instruction clearer—review findings with evidence gaps in mind."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field5"
+      ],
+      "before": "What needs attention before a decision",
+      "after": "Unresolved issues before a decision",
+      "reason": "Changed the heading to clarify the section identifies issues that must be addressed before final decision-making, using specific language."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field6"
+      ],
+      "before": "No limitations have been recorded. Check the evidence before relying on this analysis.",
+      "after": "No limitations are currently recorded. Check the available evidence for omissions or weaknesses before relying on this analysis.",
+      "reason": "Clarified the consequence of missing limitations—need to independently verify evidence completeness before relying on the analysis."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field8"
+      ],
+      "before": "No review questions have been recorded. Consider whose perspectives or evidence may still be missing.",
+      "after": "No review questions are currently recorded. Reflect on missing perspectives or unexamined evidence that could affect the analysis.",
+      "reason": "Specified that the reader should actively consider whose input or which evidence may be lacking, drawing attention to the diligence expected."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "field11"
+      ],
+      "before": "Every response is retained in full. Source quotations support examination of the findings; they do not replace your judgment about their accuracy or relevance.",
+      "after": "All responses and supporting quotations are preserved. Reviewing these quotations is necessary to judge the accuracy or relevance of each finding; do not rely on summaries alone.",
+      "reason": "Clarified that full responses and quotations are preserved for review, and why examining them matters—summaries do not replace professional judgment of source material."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "field12"
+      ],
+      "before": "Application references provide context. Their source status and review date still need to fit this decision.",
+      "after": "References from the application help explain the context. You must check that their status and review date are appropriate for the current analysis.",
+      "reason": "Clarified why the status and date matter and specified the need to verify that references match the current decision context."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed change to field2 adds wording ('do not use these labels as a substitute or rating') that is not found in or justified by the source. The source text is: 'These labels describe how the draft uses its sources. They are not a confidence score or a substitute for reviewing the quotations.' The existing language as written is correct and already instructs not to treat them as a score or substitute. The rewrite goes beyond the permitted clarification and alters the source's statement."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revised instruction for field3 improves clarity and sequence; it remains faithful to the source's intention. The difference is organizational and plain language, not substance."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "Field4's revision is a stylistic clarification adding specificity about what is preserved and the reason to review with gaps in mind. The meaning is retained, and no findings are erased or misrepresented."
+      },
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "Field5's proposed heading ('Unresolved issues before a decision') changes the sense of the section. The source heading ('What needs attention before a decision') is broader and intentionally open-ended. The rewrite implies all identified content is unresolved and narrows the heading's meaning."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "Field6's update clarifies the consequence ('verify evidence completeness'), but does not introduce new requirements or misstate the source. It is a legitimate and accurate clarification."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "Field8's new wording ('Reflect on missing perspectives or unexamined evidence...') is closer to an instruction than the original, but it accurately represents the original prompt to consider gaps. This is a minor clarification, not a substantive rewrite."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "Field11's revision clarifies intent and adds a plain-language instruction about reviewing quotations, not just summaries. This is aligned with the meaning of the source and does not introduce new obligations."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "Field12's new instruction ('You must check that their status and review date are appropriate...') is a reasonable clarification of the original, which already notes the need to ensure fit to the decision. The change clarifies, but does not extend, the requirement."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3925,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 528,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4453
+    },
+    "review": {
+      "input_tokens": 3957,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 499,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4456
+    }
+  },
+  "createdAt": "2026-11-15T13:52:44.861Z"
+}

@@ -1,0 +1,81 @@
+{
+  "target": "code.components/multimedia/measurement-evidence-example.tsx",
+  "kind": "surface",
+  "route": "components/multimedia/measurement-evidence-example.tsx",
+  "sourceSha256": "453e5e39136d85431aef870cb09fbdc5865f478818b3ee7472db7273d703d06d",
+  "status": "needs_revision",
+  "reviewedFieldCount": 23,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Holding more review sessions shows that the notice became easier to use.",
+      "after": "Holding more review sessions does not itself show that the notice became easier to use.",
+      "reason": "Clarifies that more sessions are an activity measure and do not demonstrate effectiveness, aligning with the professional need to distinguish between activity and outcome."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "The revised wording caused the entire improvement.",
+      "after": "The revised wording accounts for all of the improvement observed.",
+      "reason": "Clarifies the attribution claim, making it clear that a direct causal link is proposed by this interpretation, which should prompt critical evaluation."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "Field 0 changes the supplied practice interpretation from 'Holding more review sessions shows that the notice became easier to use.' to 'Holding more review sessions does not itself show that the notice became easier to use.' The source preserves the original interpretation to be critically evaluated by the participant, not corrected in the presentation; changing it alters the instructional function of the component, which is to present possible interpretations (including common misinterpretations) for review and discussion. This is a blocker: the source requires presenting the interpretation as written, not as corrected in advance."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "Field 1 substitutes 'The revised wording caused the entire improvement.' with 'The revised wording accounts for all of the improvement observed.' While this preserves much of the meaning, it introduces interpretive nuance and moves away from the clear-cut causal overclaim that the exercise is designed to help the participant recognize and critique. The source must be preserved verbatim for this field, as it models a reasoning error. This is a blocker."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 4473,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 160,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4633
+    },
+    "review": {
+      "input_tokens": 3532,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 231,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3763
+    }
+  },
+  "createdAt": "2026-11-15T13:54:43.017Z"
+}

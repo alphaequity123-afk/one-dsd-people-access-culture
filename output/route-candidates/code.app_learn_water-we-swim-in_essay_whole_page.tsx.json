@@ -1,0 +1,67 @@
+{
+  "target": "code.app/learn/water-we-swim-in/essay/whole/page.tsx",
+  "kind": "surface",
+  "route": "/learn/water-we-swim-in/essay/whole",
+  "sourceSha256": "ecf7c71b7c8ae6cad485609c06f19e43955b8c77d3c602fe29b7cd85140acc7a",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Minnesota culture: the water we swim in",
+      "after": "Minnesota culture: understanding the water we swim in",
+      "reason": "Added the word \"understanding\" to clarify the page's purpose for DHS and DSD staff—that is, to engage readers in examining and interpreting how Minnesota culture shapes their work, rather than only describing culture in a general sense. This improved specificity aligns with the standard's emphasis on professional prose that connects ideas and explains practical purpose."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The change from \"Minnesota culture: the water we swim in\" to \"Minnesota culture: understanding the water we swim in\" is not supported by the source. The original heading is also the course section's consistent title and is referenced in multiple places as-is. Adding \"understanding\" alters the official wording and changes the interpretive focus, moving away from the exact phrase used throughout the essay and navigation. This breaks the standard requiring preservation of headings, course titles, and official labels, and is not merely a 'clarification.' No source evidence supports this expansion."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1424,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 103,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1527
+    },
+    "review": {
+      "input_tokens": 1140,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 139,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1279
+    }
+  },
+  "createdAt": "2026-11-15T13:50:34.549Z"
+}

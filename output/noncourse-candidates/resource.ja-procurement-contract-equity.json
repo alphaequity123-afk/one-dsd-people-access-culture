@@ -1,0 +1,171 @@
+{
+  "target": "resource.ja-procurement-contract-equity",
+  "kind": "resource",
+  "route": "/library/ja-procurement-contract-equity",
+  "sourceSha256": "69074461649098e53fbf758d55529f929083776526969d70b40d63e659205036",
+  "status": "needs_revision",
+  "reviewedFieldCount": 8,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Equity belongs at every stage: the solicitation, the evaluation criteria, the contract terms, and the monitoring. This aid names the questions to ask at each stage and the partners who own the rules.",
+      "after": "Equity should be considered at each phase of the contracting process—solicitation, evaluation, contract terms, and monitoring. This guide identifies practical questions to ask at each stage and clarifies which partners are responsible for key decisions.",
+      "reason": "Rewrote for precision and clarity, tying equity to DHS/DSD practices, and clarified the purpose as a guide listing questions and roles."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Contracts decide who delivers services and how. Adding equity language after award changes little. Procurement and grants offices own the rules; equity professionals help shape the questions in time.",
+      "after": "Contract decisions determine who provides services and under what conditions. If equity concerns are raised only after contracts are awarded, the impact is limited. Procurement and grants offices are responsible for setting rules, while equity professionals contribute by shaping relevant questions early in the process.",
+      "reason": "Improved clarity by specifying how late-stage equity efforts have limited effect, and clearly defined respective responsibilities for procurement offices and equity professionals."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Before the solicitation. Who will the service reach, and in which languages and formats? Which communities have providers that could deliver it but rarely win awards, and why? What accessibility requirements apply to the deliverables?",
+      "after": "Before the solicitation: Determine who the service is intended to reach and in which languages and formats it must be available. Identify communities with providers who could deliver the service but rarely secure awards, and examine the reasons. Clarify which accessibility standards or requirements apply to all deliverables.",
+      "reason": "Clarified the need to specify both target service recipients and access needs, and explicitly tie this analysis to agency contracting."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "In the solicitation. State accessibility, language access, and community-engagement expectations as requirements, not preferences. Make the application process itself accessible and plain, with a human contact.",
+      "after": "During the solicitation: Clearly define expectations for accessibility, language access, and community engagement as requirements. Avoid framing them as preferences. Ensure the application process is straightforward and accessible, and identify a specific staff contact for provider questions.",
+      "reason": "Expanded explanation for the importance of requirement language and directly mentioned a human contact as a practical support during application."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "In evaluation. Score demonstrated experience with the communities served, accessibility practice, and workforce practice, using written criteria applied the same way to every proposal.",
+      "after": "During evaluation: Use written, consistent criteria to score each proposal’s demonstrated experience with the target communities, accessibility practices, and workforce equity practices. Apply these standards equally to all proposals.",
+      "reason": "Clarified what to score and the necessity of using consistent, objective written criteria for all proposals."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "In the contract. Include reporting that lets you see who is served, disaggregated with small-group protection, and a way to raise and fix access problems during the term.",
+      "after": "In the contract: Include provisions for reporting that break down who receives services, using methods that protect the privacy of small groups. Establish a process for identifying and addressing access problems during the contract period.",
+      "reason": "Specified the need for contract provisions and privacy-protective disaggregation, explaining the reason for detailed reporting and problem resolution."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "In monitoring. Look at outcomes by community, language, disability, and place with the data owner, and bring what you learn to the next solicitation.",
+      "after": "During monitoring: Analyze outcomes by community, language, disability status, and geographic area together with the person responsible for the data. Use findings from this review to inform the planning of future solicitations.",
+      "reason": "Clarified that monitoring is a shared responsibility and the importance of using data analysis to improve subsequent processes."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "Who owns what. Procurement rules, vendor diversity programs, and contract language have their own owners. Bring these questions to your contracts office and Equity Director before the solicitation is final.",
+      "after": "Ownership of decisions: Procurement rules, vendor diversity requirements, and contract terms are managed by specific teams. Bring your stage-specific equity questions to both your contracts office and the Equity Director before you finalize a solicitation.",
+      "reason": "Clarified who manages different parts of the process and restated the importance of consulting both offices before finalizing decisions."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The rewrite replaces 'Equity belongs at every stage: the solicitation, the evaluation criteria, the contract terms, and the monitoring' with 'Equity should be considered at each phase of the contracting process—solicitation, evaluation, contract terms, and monitoring.' The source is unequivocal that equity is not merely a consideration, but a requisite through all stages. Softening this to 'should be considered' undercuts a foundational claim of the source. The summary must preserve the strong, stage-spanning imperative supported by the source."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The rewrite correctly clarifies responsibilities and expands on how late-stage equity efforts are limited. The meaning is preserved, providing more context on timing and roles and does not create legal or factual misstatements."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The new version provides clearer instructions that remain within the substantive intent of the source, making the implicit processes explicit. It does not change underlying meaning or legal effect."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The rewritten instruction expands on and clarifies the practical expectations from the source, aligning with its meaning. The source called for making expectations requirements, not preferences, and for a human contact; the new version makes these explicit and actionable."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The meaning is preserved by emphasizing written, consistent criteria and equal application. The rewrite maintains the score-and-criteria focus from the source."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The revised version specifies privacy protections and processes for addressing issues, consistent with and expanding detail in the source rather than altering its meaning."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The rewrite keeps the core meaning and process intact, clarifying monitoring as collaborative and future-oriented. No misrepresentation."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "The rewrite clarifies ownership and reinforces the source's guidance to consult both contracts and equity offices pre-solicitation. No inappropriate change or speculation."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1859,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 750,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2609
+    },
+    "review": {
+      "input_tokens": 2061,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 438,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2499
+    }
+  },
+  "createdAt": "2026-11-15T13:42:02.004Z"
+}

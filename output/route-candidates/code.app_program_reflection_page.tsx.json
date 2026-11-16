@@ -1,0 +1,67 @@
+{
+  "target": "code.app/program/reflection/page.tsx",
+  "kind": "surface",
+  "route": "/program/reflection",
+  "sourceSha256": "6eb17b1a8790755cd3db8c6c2d98f332572c61addc6cd3a0815d007a2dcc0084",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Use a concrete observation to examine the relationship between an action and its effects. Consider the perspectives that informed your conclusion, acknowledge what remains uncertain, and identify a reasonable next step.",
+      "after": "Reflect on a specific observation to analyze how a particular action influenced its outcome. Identify which viewpoints contributed to your understanding, note what questions remain or what information is incomplete, and determine a logical next action. This process helps clarify cause and effect in DHS and DSD work, supports informed decision-making, and highlights areas where further review or adjustment may be needed.",
+      "reason": "The revision clarifies each step as part of an intentional, professional process relevant to DHS and DSD staff. It explains the practical value of reflection, especially in understanding actions and improving practice, increasing specificity and professional grounding."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed revision alters the meaning and scope of the original field. The original text instructs users to use a concrete observation to examine the relationship between action and effect, consider informing perspectives, acknowledge uncertainty, and identify a reasonable next step. The revision reframes these as an analytical process, introduces new elements (analyzing 'how an action influenced its outcome,' 'which viewpoints contributed,' 'questions remain'), and adds generic justification about clarifying cause and effect and supporting decision-making in DHS and DSD work that is not present or implied in the source. This expands both scope and claims of application beyond what the source states, violating the requirement to preserve instructional and professional limits. The additional text is generic padding not grounded in the given source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1248,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 141,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1389
+    },
+    "review": {
+      "input_tokens": 1001,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 172,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1173
+    }
+  },
+  "createdAt": "2026-11-15T13:51:31.361Z"
+}

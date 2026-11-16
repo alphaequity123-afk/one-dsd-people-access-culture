@@ -1,0 +1,186 @@
+{
+  "target": "resource.ja-sm-first-week",
+  "kind": "resource",
+  "route": "/library/ja-sm-first-week",
+  "sourceSha256": "e6103051490a5794f707c0ea032a9dce6ae94c95c024c67bb0e6b650f7d67139",
+  "status": "needs_revision",
+  "reviewedFieldCount": 9,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "To tell you what to do in the first minutes of a moment you cannot handle alone, and whom to call.",
+      "after": "This card tells you what actions to take in urgent situations you cannot manage alone, and whom you need to notify right away.",
+      "reason": "Clarifies the immediate focus and emphasizes practical guidance. The revision uses specific language to describe the urgency and required action, improving clarity for new supervisors."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Fill in the contacts for your division. Keep this page out of the app.",
+      "after": "Fill in your division’s contacts. Do not store this page in any electronic system or app.",
+      "reason": "More direct and explicit about not storing the page electronically. This serves a practical reminder while removing unnecessary repetition of previous framing."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Remember. Report possible harassment or discrimination immediately. No threshold, no written complaint needed. A request needs no special words. Move it forward promptly. Check the contract before you change someone's work. Pause decisions affecting someone who has just made a report or a request. Then check them.",
+      "after": "Report possible harassment or discrimination immediately. Do not wait for a complaint in writing or for a certain seriousness; any concern can be reported. A request related to these issues does not need special wording. Advance it without delay. Review the relevant contract before you alter someone’s work assignment. If someone has just reported a concern or made a request, do not make work decisions affecting them until you have checked with the appropriate authority.",
+      "reason": "Adds clarity on reporting thresholds and the reason for pausing decisions. The revision makes explicit the steps for both legal compliance and staff protection, connecting actions to practical consequences."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Someone tells you about harassment or discrimination. Listen, take notes, and do not promise secrecy. Say: \"I have to take this to Human Resources today, and I'll tell you what happens next.\" Report the same day to Human Resources or the Affirmative Action Officer: ____________ Do not investigate or confront anyone yourself.",
+      "after": "If someone tells you about harassment or discrimination, listen and take notes, but do not promise secrecy. You must say: \"I have to take this to Human Resources today, and I'll tell you what happens next.\" Report the same day to Human Resources or the Affirmative Action Officer: ____________. Do not begin your own investigation or confront any party involved. These steps protect both the individual and the agency from mishandling the report and preserve due process.",
+      "reason": "Adds the purpose of each clause—protecting individuals and the agency, and clarifies that boundaries exist around follow-up actions to prevent procedural errors."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Someone mentions a medical or access need. Ask: \"What would help?\" Do not ask for a diagnosis or a note. Write down an oral request. Forward it promptly, and tell the person who decides. ADA coordinator: ____________ Consult the ADA coordinator before any denial, or when questions arise.",
+      "after": "If someone mentions a medical or access need, respond with: \"What would help?\" Do not ask for a diagnosis or documentation. Write down any oral request and forward it without delay to the decision-maker. ADA coordinator: ____________. Consult the ADA coordinator before denying a request or if you have questions. This is required because initial responses affect legal rights and prompt handling supports access.",
+      "reason": "Clarifies the reason for prompt forwarding and consultation, connecting actions to legal rights and effective accommodation support."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "You plan to change hours, duties or rules. Which agreement covers each person? MAPE, AFSCME, MMA, Managerial Plan, or other: ____________ MAPE: 14 calendar days for permanent hour changes, unless mutually waived. Article 28 for work rules. Check other agreements directly. Call labor relations before you announce: ____________",
+      "after": "If you plan to change hours, job duties, or workplace rules, first identify which labor agreement covers the person: MAPE, AFSCME, MMA, Managerial Plan, or other: ____________. For MAPE, provide at least 14 calendar days’ notice for permanent schedule changes unless both sides agree to a different timeline. Use Article 28 to review rules about workplace changes. For other agreements, check the original documents. Call labor relations before making any announcements: ____________. This ensures compliance with labor agreements and prevents avoidable disputes.",
+      "reason": "Adds the rationale for checking labor agreements and consulting labor relations, directly linking to legal compliance and risk mitigation."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Someone asks for sign-off on a long-term action. Ask: \"Where is the equity analysis?\" Ask which people are affected and what changes for them, including language and disability access.",
+      "after": "When asked to approve a long-term or significant action, request an equity analysis. Find out who will be affected, and what will change for them, including how language and disability access will be addressed. This ensures changes are examined for fairness and compliance.",
+      "reason": "Specifies why to request this information (fairness and compliance), making the expectation tangible and linked to agency requirements."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "Other contacts. Human Resources partner: ____________ Tribal liaison, and ADSA for Tribal learning: ____________ Where my required training is tracked: ____________",
+      "after": "Other essential contacts: Human Resources partner: ____________ Tribal liaison, and ADSA for Tribal learning: ____________ Where my required training is tracked: ____________",
+      "reason": "Minor rewording for clarity. Maintains practical intent and supports quick reference."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "body",
+        6
+      ],
+      "before": "Do next. Hold the first round of one-to-ones, using the same core questions for everyone.",
+      "after": "Next steps: Hold initial one-to-one meetings with each team member, using the same core set of questions to ensure consistency and fairness.",
+      "reason": "Clarifies the immediate action and its purpose, helping ensure a standardized and equitable onboarding process."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The new summary, \"This card tells you what actions to take in urgent situations you cannot manage alone, and whom you need to notify right away,\" substantively alters the original, \"To tell you what to do in the first minutes of a moment you cannot handle alone, and whom to call.\" The original focuses on the very beginning of a scenario and emphasizes calling (contact), not 'notifying' more broadly or acting in all urgent situations. 'Urgent situations' is a wider claim not present in the source, and 'actions to take' is more generic than the source's practical instructions. This is a blocker as it introduces unsupported scope."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The change to 'division’s contacts' instead of 'division' is minor and retains the intent. Specifying 'Do not store this page in any electronic system or app' is more explicit but consistent with the source’s instruction to 'Keep this page out of the app.' This is not a blocker."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The rewrite, \"Do not wait for a complaint in writing or for a certain seriousness; any concern can be reported. A request related to these issues does not need special wording,\" misrepresents the original meaning. The source says: \"Report possible harassment or discrimination immediately. No threshold, no written complaint needed. A request needs no special words.\" The proposed text changes 'no threshold' (which is a clear legal standard) to \"do not wait for ... a certain seriousness; any concern can be reported,\" which is softer than the legal expectation. Also, \"A request related to these issues\" is more specific than the source, which just says \"A request.\" The new explanation adds details about 'staff protection' and 'legal compliance' that are not part of the original instruction, and rewords 'pause decisions' as 'do not make work decisions affecting them until you have checked'—which is less direct than 'pause.' Blocker for legal and policy precision changes."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "This edit adds some rationale about protecting individuals and due process but preserves the original script and does not introduce errors. The summary remains intact and the compliance boundary is preserved. Not a blocker."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The revision is faithful to the original instructions, with only clarified reasoning added. 'Documentation' for 'note' is a reasonable synonym. Not a blocker."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The change rearranges and makes the legal and labor compliance requirement explicit; these additions do not misrepresent the rules or change their application. Not a blocker."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The addition of a rationale for requesting an equity analysis (\"fairness and compliance\") aligns with the source's intent and does not misrepresent any policy. Not a blocker."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "Wording changed from 'Other contacts' to 'Other essential contacts.' This has no substantive effect. Not a blocker."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "Expanding the instruction for one-to-ones clarifies but does not alter the requirement. Consistent with the source. Not a blocker."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2059,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 848,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2907
+    },
+    "review": {
+      "input_tokens": 2457,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 697,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3154
+    }
+  },
+  "createdAt": "2026-11-15T13:43:34.905Z"
+}

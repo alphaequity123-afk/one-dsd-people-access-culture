@@ -1,0 +1,81 @@
+{
+  "target": "sources.page",
+  "kind": "surface",
+  "route": "/learn/sources",
+  "sourceSha256": "237f7e7c604eba3872a27ce157b9e0445649f5d58bf20bffd0fe75b8ee6f1bbf",
+  "status": "model_checked",
+  "reviewedFieldCount": 3,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "introLede"
+      ],
+      "before": "Explore outside sources used across the learning and resources in this program.",
+      "after": "This page lists external sources referenced throughout the learning and resources provided in this program. Use it to see where information originated and to support your decisions with evidence.",
+      "reason": "Expands the lede to explain the purpose of listing sources and guides staff to check sources for evidence-based decision making. This aligns with expectations for connected professional prose, not merely lengthening but clarifying the role of this page."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "readBody"
+      ],
+      "before": "Government sources, standards, research, and community organizations can each help answer different questions. Check the original source for the information relevant to your work.",
+      "after": "Different types of sources—such as government publications, standards, academic research, or materials from community organizations—address different types of questions you may encounter in your work. Reviewing the original source allows you to verify details, place information in the right context, and cite evidence as needed.",
+      "reason": "This revision connects the kinds of sources to the reason for checking them and clarifies why referencing the original is important in staff decision-making. This helps staff understand the practical value of each source type and the importance of context and verification."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The lede revision adds detail and guidance about the purpose of listing external sources, advising staff to use them for evidence-based decisions. This expands but does not distort the original intent or invent policy; it supports clarity and aligns with the program writing standard."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revised explanation connects source types to the rationale for consulting them and adds context about citation and verification. This is a supported, substantive clarification. No unsupported or inaccurate claims are introduced."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1173,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 219,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1392
+    },
+    "review": {
+      "input_tokens": 973,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 151,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1124
+    }
+  },
+  "createdAt": "2026-11-15T13:36:58.489Z"
+}

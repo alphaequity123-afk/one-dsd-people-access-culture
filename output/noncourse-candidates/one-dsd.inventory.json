@@ -1,0 +1,81 @@
+{
+  "target": "one-dsd.inventory",
+  "kind": "surface",
+  "route": "/one-dsd",
+  "sourceSha256": "84745aff48c34b02260c4b793aa06d2dd15214eeb9b50b3a719dee534a17ca5f",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "programsTitle"
+      ],
+      "before": "Where equity shows up in DSD work",
+      "after": "How equity guides DSD work",
+      "reason": "Changed the title to clarify that equity is an organizing principle or guide, not just an observed outcome, in DSD work. This revision uses more precise language that reflects how equity influences actions and decisions within DSD."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "scenariosTitle"
+      ],
+      "before": "Situations DSD staff actually face",
+      "after": "Real-life decisions DSD staff encounter",
+      "reason": "Updated the title to specify that these are practical situations requiring decisions, making clear that the content is grounded in actual DSD staff experiences. This wording centers the relevance to staff judgment and clarifies the connection to daily work."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed change from 'Where equity shows up in DSD work' to 'How equity guides DSD work' shifts the source meaning. The source title neutrally points to observable instances of equity in DSD work ('shows up'), while the revision claims that equity is a guiding principle for DSD, which introduces a policy claim not supported in the source. This changes the asserted role of equity from observed outcome to prescriptive guide, which is not in evidence."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The proposed change from 'Situations DSD staff actually face' to 'Real-life decisions DSD staff encounter' introduces a subtle shift in meaning. The source refers broadly to situations, which may not always require a decision, while the revision narrows to decisions, implying active choice or judgment. This potentially misrepresents the breadth of scenarios encountered by staff as described in the source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1027,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 140,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1167
+    },
+    "review": {
+      "input_tokens": 773,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 237,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1010
+    }
+  },
+  "createdAt": "2026-11-15T13:38:23.310Z"
+}

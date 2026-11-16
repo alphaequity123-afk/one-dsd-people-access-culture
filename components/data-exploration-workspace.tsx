@@ -70,7 +70,7 @@ export function DataExplorationWorkspace() {
       if (!savingAllowed.current) return;
       try {
         localStorage.setItem(DATA_EXPLORATION_DRAFT_KEY, workingCopy(datasetNow.current));
-        setNotice("Working copy saved on this device.");
+        setNotice("Working copy saved.");
       } catch {
         setError("This device could not save your work. Your data is still open. Download a working copy to keep it.");
       }
@@ -137,12 +137,12 @@ export function DataExplorationWorkspace() {
     if (next) {
       try {
         localStorage.setItem(DATA_EXPLORATION_DRAFT_KEY, workingCopy(datasetNow.current));
-        savingAllowed.current = true; setKeep(true); setError(""); setNotice("Working copy saved on this device.");
+        savingAllowed.current = true; setKeep(true); setError(""); setNotice("Working copy saved.");
       } catch { setError("This device could not save your work. Download a working copy to keep it."); }
     } else {
       try {
         localStorage.removeItem(DATA_EXPLORATION_DRAFT_KEY); savingAllowed.current = false; setKeep(false);
-        setNotice("The saved copy was removed from this device. Your open work is unchanged."); setError("");
+        setNotice("The saved copy was removed. Your open work is unchanged."); setError("");
       } catch { setError("The saved copy could not be removed. Saving remains on; try again before leaving this device."); }
     }
   }
@@ -180,7 +180,7 @@ export function DataExplorationWorkspace() {
         <button type="button" disabled={busy} onClick={() => setReplaceChoice("practice")}>Open practice examples</button>
         <button type="button" disabled={busy} onClick={() => setReplaceChoice("empty")}>Start with your own data</button>
       </div>
-      <p className={styles.help}>Use group totals with no names, identifying details, or individual employee records. Files are examined on this device; opening a file does not publish it.</p>
+      <p className={styles.help}>Use group totals with no names, identifying details, or individual employee records.</p>
       <label className={styles.checkbox}><input type="checkbox" checked={keep} disabled={!ready} onChange={event => changeSaving(event.target.checked)} />Keep a working copy on this device</label>
       <p className={styles.help}>Use this only on a device you trust. A downloaded working copy includes the original group totals, including small groups; keep it private.</p>
       <button type="button" onClick={() => exportFile("working")}>Download working copy</button>

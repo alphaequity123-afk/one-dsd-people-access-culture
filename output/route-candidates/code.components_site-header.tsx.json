@@ -1,0 +1,67 @@
+{
+  "target": "code.components/site-header.tsx",
+  "kind": "surface",
+  "route": "components/site-header.tsx",
+  "sourceSha256": "68cb8fe018e84cd38fd6d0ca1724d26a21d9390dd73a763238af525c314d8be1",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Minnesota Department of Human Services",
+      "after": "Minnesota Department of Human Services (DHS)",
+      "reason": "Provides the full agency name and adds the established abbreviation in parentheses to reflect professional usage for internal and external audiences. This allows readers to reference the abbreviation clearly in further communication, matching common agency practice and improving clarity, while retaining the precise name as required for formal identification."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The source establishes the text 'Minnesota Department of Human Services' as the agency name adjacent to the official logo, and does not include '(DHS)' or any abbreviation in this header. Adding '(DHS)' changes the established agency branding and header wording presented in the design. Official records and agency headers must retain their established form unless specific standards or sources direct otherwise. The proposed change is unsupported by evidence and would invalidate the preservation of exact agency identification as provided in the source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2287,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 90,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2377
+    },
+    "review": {
+      "input_tokens": 1990,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 126,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2116
+    }
+  },
+  "createdAt": "2026-11-15T13:56:17.111Z"
+}

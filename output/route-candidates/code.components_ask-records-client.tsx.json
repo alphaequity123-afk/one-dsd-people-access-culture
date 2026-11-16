@@ -1,0 +1,81 @@
+{
+  "target": "code.components/ask-records-client.tsx",
+  "kind": "surface",
+  "route": "components/ask-records-client.tsx",
+  "sourceSha256": "af4891d0ac822abfe624bed30c24eb59c0fdcfe859b75f151dc30f83cc10848b",
+  "status": "model_checked",
+  "reviewedFieldCount": 4,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field1"
+      ],
+      "before": "Current Ask does not add questions or answers to this collection.",
+      "after": "Current Ask does not save new questions or responses to this collection.",
+      "reason": "Clarified that the current version of Ask does not store additional questions or answers in the visible record set, making explicit what 'does not add' means for staff reviewing the system's limits."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field2"
+      ],
+      "before": "Each existing record keeps its own scheduled removal date, if one was set. A record without a removal date remains until you delete it.",
+      "after": "Each saved record retains its scheduled removal date if one was assigned. A record without a removal date stays in the collection until you choose to delete it.",
+      "reason": "Clarified that records persist, explained the staff action required to remove undated records, and specified what determines a record's retention."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The proposed clarification for field1 ('Current Ask does not save new questions or responses to this collection.') aligns with the original intent. The original source ('Current Ask does not add questions or answers to this collection.') is a brief description. The edit is more explicit about what 'add' means in this context—namely, that the Ask feature does not store new entries in the historical record set. This is a valid, source-grounded clarification for staff readers."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The proposed rewrite for field2 ('Each saved record retains its scheduled removal date if one was assigned. A record without a removal date stays in the collection until you choose to delete it.') remains source-faithful. The source ('Each existing record keeps its own scheduled removal date, if one was set. A record without a removal date remains until you delete it.') is concise but clear; the revised version uses more natural staff-facing language ('you choose to delete it') and does not change the meaning or introduce unsupported procedures."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3983,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 149,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4132
+    },
+    "review": {
+      "input_tokens": 3687,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 233,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3920
+    }
+  },
+  "createdAt": "2026-11-15T13:52:12.946Z"
+}

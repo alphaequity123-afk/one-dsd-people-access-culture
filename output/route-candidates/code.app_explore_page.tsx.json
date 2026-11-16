@@ -1,0 +1,81 @@
+{
+  "target": "code.app/explore/page.tsx",
+  "kind": "surface",
+  "route": "/explore",
+  "sourceSha256": "81257e8a1b3f47d31c385bcd31f9964aae999af54c2109159fb870c6820097d0",
+  "status": "needs_revision",
+  "reviewedFieldCount": 3,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Every course, practice, tool, reading, community brief, organization and policy is connected five ways. Start from whichever fits the moment you are in.",
+      "after": "Each course, practice, tool, reading, community brief, organization, and policy is linked in five distinct ways. You can start your search from whichever type or topic matches your current need. This approach helps you see how materials interconnect and supports finding resources that are relevant from different points of entry.",
+      "reason": "Revised for clarity, specificity, and explicit explanation of why starting from different points is useful. The prior wording was somewhat vague ('fits the moment you are in') and did not explain the rationale for five connections or their purpose in the work context."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field3"
+      ],
+      "before": "These connections come from the published content itself. Nothing here records what you open.",
+      "after": "These connections rely on published material. The system does not record which pages, links, or materials you choose to view.",
+      "reason": "Clarified that only published content determines connections and expanded to note that user navigation and specific choices are not tracked or recorded, providing clarity on privacy and system function."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The revision introduces unsupported content. The original states: 'Every course, practice, tool, reading, community brief, organization and policy is connected five ways. Start from whichever fits the moment you are in.' The revision says: 'Each course, practice, tool, reading, community brief, organization, and policy is linked in five distinct ways. You can start your search from whichever type or topic matches your current need. This approach helps you see how materials interconnect and supports finding resources that are relevant from different points of entry.' The original does not reference 'type or topic,' nor does it make any claim about 'helping you see how materials interconnect' or 'supports finding resources ... from different points of entry.' The rationale and clarity added are reasonable in abstract, but not present in the source and introduce both claims of the system's help function and possible scope interpretation changes. The increased specificity about 'search' and what one starts from departs from the more open-ended, inclusive original ('whichever fits the moment you are in')."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The revision modifies and overstates the privacy and technical disclosure in the source. The source says: 'These connections come from the published content itself. Nothing here records what you open.' The revision says: 'These connections rely on published material. The system does not record which pages, links, or materials you choose to view.' The original does not make specific assurances about 'pages, links, or materials,' just the general statement. The revision uses 'the system' which attributes intentional privacy design not present in source and expands the original user assurance. Both meaning and precision move beyond the intent and established text."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1558,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 206,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1764
+    },
+    "review": {
+      "input_tokens": 1346,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 367,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1713
+    }
+  },
+  "createdAt": "2026-11-15T13:48:59.430Z"
+}

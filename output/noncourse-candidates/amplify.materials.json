@@ -1,0 +1,169 @@
+{
+  "target": "amplify.materials",
+  "kind": "surface",
+  "route": "/one-dsd/amplify/materials",
+  "sourceSha256": "e88ba235347e022071711e89d42b5e2ece4afa964aa15e64832f0917326ed088",
+  "status": "model_checked",
+  "reviewedFieldCount": 26,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "intro"
+      ],
+      "before": "Starting points for a welcome, a conversation, and staying in touch. Adapt them to the people gathering with you.",
+      "after": "These are starting points for inviting, gathering, and keeping in touch. Adapt each to fit your group and context.",
+      "reason": "Clarified that staff should adjust these examples based on their actual participants and needs. Specified the practical use and context for staff."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "section0Body"
+      ],
+      "before": "You are welcome to join an Amplify Equity conversation. We will explore [topic] on [date and time], at [joining details]. Come to share, listen, or ask a question. Participation is voluntary, and no preparation is needed. Contact [co-lead] with questions or to discuss what would help you participate.",
+      "after": "You are invited to join an Amplify Equity conversation. We will focus on [topic] on [date and time], at [joining details]. You may share, listen, or ask questions. Participation is voluntary. No preparation is required. If you have questions, or if there is something that would support your participation, contact [co-lead].",
+      "reason": "Streamlined language for clarity, clarified consent and the open role of the co-lead for staff. Explained voluntary nature without repetition. Emphasized adaptation to participant needs."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "section1Body"
+      ],
+      "before": "Welcome. There is room to speak, listen, or pass. Please speak from your own experience and leave room for others. We can question ideas without making assumptions about one another. Please keep names and private stories about other people out of the conversation. Today we are exploring [question].",
+      "after": "Welcome. You may speak, listen, or pass during the conversation. Share from your own experience and allow space for others. Question ideas, but avoid assumptions about others. Do not bring in names or private stories about others. Today’s conversation is about: [question].",
+      "reason": "Clarified participation expectations, reinforced the importance of confidentiality, and integrated purpose and ground rules in more explicit, connected prose."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "section2Body",
+        0
+      ],
+      "before": "First 5 minutes: welcome, ways to participate, and the opening question.",
+      "after": "First 5 minutes: introduce the group, explain participation options, and state the opening question.",
+      "reason": "Specified the importance of orientation at the start and clarified the structure for consistency and utility in staff use."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "section2Body",
+        1
+      ],
+      "before": "Next 10 minutes: a quiet reflection, short reading, or everyday example. No personal disclosure is required.",
+      "after": "Next 10 minutes: include a period for quiet reflection, a short reading, or discussion of an everyday example. Personal disclosure is not expected.",
+      "reason": "Clarified intention and distinguished reflection and disclosure. Reminds staff not to expect personal sharing."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "section2Body",
+        2
+      ],
+      "before": "Next 20 minutes: explore what people notice and what they wonder about. Leave room for different interpretations.",
+      "after": "Next 20 minutes: discuss observations and questions. Allow for different views and interpretations.",
+      "reason": "Focused on purpose—sharing observations and questions—while allowing varied perspectives without requiring a specific outcome."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "section2Body",
+        3
+      ],
+      "before": "Last 10 minutes: share a takeaway and decide together whether anything needs follow-up. Ending with connection alone is welcome.",
+      "after": "Final 10 minutes: each person can share a takeaway. Decide together if follow-up is needed. Simply ending with connection is also an option.",
+      "reason": "Made roles clear, emphasized group responsibility for any next steps, and explained that connection can be a sufficient outcome."
+    },
+    {
+      "fieldId": 15,
+      "path": [
+        "section4Body"
+      ],
+      "before": "Last time, we agreed to share [question]. [Person or group] has [responded / agreed to consider it / not yet responded]. What we know so far is [update]. The next agreed step is [step, if any]. We will check back [time]. There is no new assignment for participants unless someone chooses to help.",
+      "after": "Previously, we agreed to share [question]. [Person or group] has [responded / agreed to consider it / not yet responded]. Our current understanding is [update]. The next step, if any, is [step]. We will check again at [scheduled time]. There are no new assignments unless someone offers to take action.",
+      "reason": "Clarified sequence and responsibility, specified timing, and maintained voluntary participation."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The wording shift to \"inviting, gathering, and keeping in touch\" is a legitimate clarification that aligns with the source intent to provide adaptable starting points. The edit does not introduce unsupported claims or erase necessary context."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The language is streamlined but maintains all original promises and qualifications about voluntary participation and support needs. No policy or consent condition is altered."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "This rewrite retains source meaning: confidentiality, non-assumption, and participation options are preserved. Simplification does not change any core instruction."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The adjustment provides greater detail about group orientation and mirrors the existing intent. It is a practical restatement with no added or lost requirements."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "Intent and meaning from the source are preserved. The rewrite ensures clarity that personal disclosure is not required, tracking with the existing boundary."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "Explicit reference to 'discuss observations and questions' improves clarity and remains faithful to the open-ended format of the source."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "Wording is made explicit about group decisions and sufficiency of connection-only closure; this does not change or overextend the original terms."
+      },
+      {
+        "fieldId": 15,
+        "severity": "note",
+        "finding": "Sequence, actor responsibility, and timing are clarified. No required steps are added or omitted; voluntary participation is preserved."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2828,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 633,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3461
+    },
+    "review": {
+      "input_tokens": 2442,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 330,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2772
+    }
+  },
+  "createdAt": "2026-11-15T13:37:11.059Z"
+}

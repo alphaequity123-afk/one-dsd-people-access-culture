@@ -1,0 +1,109 @@
+{
+  "target": "code.app/administrations/[id]/page.tsx",
+  "kind": "surface",
+  "route": "/administrations/[id]",
+  "sourceSha256": "04cd1c6d0fcde04e4ae955846ebb790041e89c5ada1f69edca86dbc1bc34a2e4",
+  "status": "needs_revision",
+  "reviewedFieldCount": 4,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field1"
+      ],
+      "before": "Explore the DSD program, its service context and its practical learning resources in One DSD.",
+      "after": "Learn about DSD: what the Disability Services Division does, how it fits within service programs, and where to find guidance and training materials.",
+      "reason": "Clarifies the scope and purpose by specifying the intended learning topics and providing context, while avoiding vague references. Connects the DSD program's function to its service environment and available resources."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field2"
+      ],
+      "before": "Open the Disability Services branch",
+      "after": "Go to the Disability Services Division page",
+      "reason": "Improves clarity and actionability of the navigation instruction without using phrasing that could imply a mandated action or add a promotional tone."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field3"
+      ],
+      "before": "ADSA&apos;s six equity goals and implementation connections",
+      "after": "Review ADSA's six equity goals and related implementation resources",
+      "reason": "Makes the purpose clearer and notes the availability of additional context or resources, which explains value to colleagues using the page."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field4"
+      ],
+      "before": "Services and working relationships",
+      "after": "Service details and connections with other divisions",
+      "reason": "Specifies that the section involves both details about the services and how working relationships are structured, adding specificity about the relevance for staff."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed replacement for field1, 'Learn about DSD: what the Disability Services Division does, how it fits within service programs, and where to find guidance and training materials.', introduces specific learning topics ('what the Disability Services Division does', 'how it fits within service programs', 'where to find guidance and training materials') that are not evidenced or supported anywhere in the source. The original source text is: 'Explore the DSD program, its service context and its practical learning resources in One DSD.' This is more general. The rewrite exceeds the source by specifying the page's learning outcomes, which are not declared or described in the code or visible UI. This is a blocked change because it invents unsupported detail about the DSD program content, scope, and resources."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "Field2's proposed revision ('Go to the Disability Services Division page') is a neutral and slightly clearer phrasing for a navigation link than the source term ('Open the Disability Services branch'). This is acceptably supported. No legal, functional, or factual error."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "Field3's change ('Review ADSA's six equity goals and related implementation resources') is a mild rewording and reasonable clarification; the original is 'ADSA's six equity goals and implementation connections.' While it assumes the linked page does include resources, this seems to follow the site's navigational pattern, and does not introduce unsupported content. This is supported."
+      },
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "The proposed change for field4 replaces 'Services and working relationships' with 'Service details and connections with other divisions.' However, from the source code, the section header is simply 'Services and working relationships.' The new wording specifics ('Service details' and 'connections with other divisions') are not present in the source, nor is there detail given in the UI or referenced components. This introduces a new claim that may not always be accurate and is not supported by the actual content on the page, especially since the section is implemented generically using <OrganizationTopicCards>. This is a blocker as it over-specifies and potentially misrepresents the section scope."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1762,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 1536
+      },
+      "output_tokens": 290,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2052
+    },
+    "review": {
+      "input_tokens": 1583,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 471,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2054
+    }
+  },
+  "createdAt": "2026-11-15T14:03:01.865Z"
+}

@@ -1,0 +1,67 @@
+{
+  "target": "code.components/community-footer-frame.tsx",
+  "kind": "surface",
+  "route": "components/community-footer-frame.tsx",
+  "sourceSha256": "172c10eb6d6088de1f74f07a916ed0222f488906936f0e1947c27163f3cbb52b",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "One DSD People, Access and Culture",
+      "after": "DSD People, Access, and Culture—community guidance",
+      "reason": "Clarified the footer label to specifically reference community guidance. This helps users understand the purpose of the section, connecting it more directly to the page focus and the intended professional audience, per the writing standard."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The original source text is: 'One DSD People, Access and Culture'. The change to 'DSD People, Access, and Culture—community guidance' is not supported by the source. Clarifying the phrase or adding context is an editorial choice, but per the standard, the exact wording from the official record or title must be preserved. The reasoning to 'connect it to the community guidance' does not permit the addition or alteration of official program or team names in this context."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1220,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 78,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1298
+    },
+    "review": {
+      "input_tokens": 911,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 139,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1050
+    }
+  },
+  "createdAt": "2026-11-15T13:52:29.582Z"
+}

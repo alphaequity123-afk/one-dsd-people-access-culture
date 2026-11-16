@@ -1,0 +1,67 @@
+{
+  "target": "community-brief.somali",
+  "kind": "surface",
+  "route": "/minnesota-communities/somali",
+  "sourceSha256": "c0bdf7a980e4c3367380763ae8de1a98cf5149955f70eda72425bdaf0a813353",
+  "status": "needs_revision",
+  "reviewedFieldCount": 44,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "A Somali interpreter who does not speak Maay, a form that cannot accept a three-part name, or an exception process offered only in English can prevent meaningful access. This community's history with public systems also includes times when seeking help led to a child-protection report.",
+      "after": "If interpreter services do not match the family's specific dialect, or if forms and exceptions cannot be accessed due to language or naming mismatches, people may not be able to use programs they qualify for. Barriers can arise when Somali naming patterns do not fit form fields, or when exception processes are unavailable in the person's home language. Prior experience of seeking help resulting in a child-protection report may also affect willingness to engage, as this history can cause understandable distrust or fear of negative consequences.",
+      "reason": "Increased specificity by detailing how mismatches in language, form requirements, and access processes can affect participation, and explained why prior negative experiences matter."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The revised text combines supported factual barriers (dialect mismatch, naming mismatch, English-only processes) with stretching into subjective and potentially editorialized interpretation of 'understandable distrust' and 'fear of negative consequences' without direct source support. The original is concise and source-grounded: it names specific procedural barriers and historic context of child protection reports. The revision risks generic expansion ('people may not be able to use programs they qualify for') and adds interpretive commentary on 'willingness to engage' and 'understandable distrust or fear', which are not directly cited or quoted. Do not add extended causality or interpretation without explicit source evidence; preserve the exact meaning and scope given in the cited materials."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 4214,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 238,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4452
+    },
+    "review": {
+      "input_tokens": 2264,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 166,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2430
+    }
+  },
+  "createdAt": "2026-11-15T13:40:04.437Z"
+}

@@ -1,0 +1,156 @@
+{
+  "target": "resource.ja-sm-backing-your-supervisors",
+  "kind": "resource",
+  "route": "/library/ja-sm-backing-your-supervisors",
+  "sourceSha256": "dee6cd3700560a076bc3a33d7aa367988c53bdb141338ede41ad9ef50eff2de9",
+  "status": "needs_revision",
+  "reviewedFieldCount": 7,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Help a manager support a supervisor before a decision, using one good question and a clear route for anything that is a duty.",
+      "after": "Support a manager as they guide a supervisor before a decision. Use a focused question to clarify the supervisor’s thinking, and identify when a situation requires immediate action due to a defined responsibility.",
+      "reason": "Clarifies the actions expected from the manager, highlights the deliberate use of questioning, and specifies when the route changes due to agency duty."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "One opening question for each everyday decision",
+      "after": "Focused opening questions help prompt clear reasoning for each routine supervisory decision.",
+      "reason": "Connects the use of questions to its purpose—prompting clear reasoning—and defines how this supports daily supervisory practice."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Remember. Ask about the decision. Never ask about a course. Stop coaching and route when a duty starts. Nothing goes into a review, a tracking sheet or this app. Remove one obstacle only you can remove.",
+      "after": "Ask about the decision rather than the training or process. Avoid shifting into coaching if a policy duty is triggered; instead, initiate the required action or refer according to procedure. Do not record these conversations in reviews, tracking systems, or this application. Only intervene in obstacles that fall within your unique authority to remove.",
+      "reason": "Explains why each instruction matters, such as protecting boundaries between guidance and policy-driven response and avoiding unnecessary documentation."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Duties: act the same day. Accommodation: \"Tell me what they asked for, without the medical details. Have you called the ADA coordinator or Human Resources?\" Report of harm: \"Have you reported it to Human Resources or the Affirmative Action Officer? If not, let's do that now.\"",
+      "after": "When you identify a duty, respond the same day. For accommodations, ask: \"Tell me what they requested, without including medical details. Have you contacted the ADA coordinator or Human Resources?\" For potential harm, ask: \"Have you reported this to Human Resources or the Affirmative Action Officer? If not, we should do that now.\" Immediate action or proper referral ensures compliance with policy and protects both staff and agency.",
+      "reason": "Clarifies expectations for timely action and links questions directly to supported action, with practical implications for DHS/DSD managers."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Before the decision: opening questions. First week: \"Do you know who to call before you need them?\" Assignments: \"Before you decide who, tell me how you'll decide.\" One-to-ones and feedback: \"What did you actually see, and what did it mean for the work?\" Meetings and access: \"How will everyone get what they need and be able to contribute?\" Hiring: \"What must this person be able to do in the first year? Let's write it down before anyone sees a name.\" Onboarding: \"Walk me through the first two weeks. Who's their person?\" Reviews: \"What's the evidence, from the whole year? What will this rating lead to?\" Corrective action: \"What's the expectation, what have you seen, and have you called labor relations?\" Equity analysis: \"Who's affected, who did you hear from, and what changed because of it?\" Advancement and retention: \"Have you asked everyone what they want next?\" Own load: \"What's on your plate that isn't in anyone's picture of your job?\"",
+      "after": "Before a decision, use targeted questions tailored to the scenario:\n- First week: \"Who would you contact if an issue arose—do you know before you need them?\"\n- Assignment: \"How will you determine who is assigned—can you explain your reasoning before deciding?\"\n- One-to-ones and feedback: \"What did you observe directly, and how does it relate to job performance?\"\n- Meetings and access: \"How will everyone get what they need to participate and contribute?\"\n- Hiring: \"What are the essential duties for the first year? Document these before considering candidates.\"\n- Onboarding: \"Describe the first two weeks for this person. Who will support them?\"\n- Reviews: \"What evidence do you have from the full year? What consequences will this rating create?\"\n- Corrective action: \"What is the stated expectation, what have you observed, and have you checked with labor relations?\"\n- Equity analysis: \"Who is affected by this decision, whose perspectives have you gathered, and what changes resulted?\"\n- Advancement and retention: \"Have you directly asked each person what they hope for next?\"\n- Own workload: \"What tasks are you handling that others might not recognize as part of your job?\"\nQuestions are intended to clarify thinking and expose any factors needing attention before a final decision.",
+      "reason": "Expands on each question’s rationale and ensures that the purpose behind asking is clear, supporting deeper supervisory development."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Whom to ask. Accommodation: the ADA coordinator or Human Resources. Harassment, discrimination, retaliation: Human Resources or the Affirmative Action Officer. Contracts, discipline, grievances: labor relations and the contract itself. Hiring justification, classification, pay: Human Resources.",
+      "after": "Refer to the appropriate resource:\n- For accommodations: ADA coordinator or Human Resources\n- For harassment, discrimination, or retaliation: Human Resources or Affirmative Action Officer\n- For contracts, discipline, and grievances: labor relations and the applicable contract\n- For hiring justification, classification, or pay: Human Resources\nIdentify the correct contact to ensure prompt and informed action according to agency procedures.",
+      "reason": "Lists each scenario with its correct resource for clarity, and links the referral to practical steps in agency protocol."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Do next. Choose one decision coming up in the next two weeks. Use its question at your next regular meeting. Come back to it later.",
+      "after": "Next steps: Identify one upcoming decision within the next two weeks. Use the relevant opening question during your next scheduled supervisory meeting, and revisit the decision process when appropriate.",
+      "reason": "Clarifies the intention behind the instruction and explicitly ties it to upcoming supervisory practice."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revised summary adds a layer (support a manager as they guide a supervisor) that is not in the original. The source's intent is for a manager directly supporting a supervisor. The new version describes an extra, unsupported role and changes the focus from supporting the supervisor to guiding the manager's approach. The phrase 'using one good question and a clear route for anything that is a duty' is collapsed into a more interpretive rendering that doesn't preserve the focus on 'one good question' as the distinctive practice."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "Acceptable. The paraphrase explains how opening questions help prompt clear reasoning, which aligns with the intent of the original ('One opening question for each everyday decision')."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The rewrite adds interpretive explanations (e.g., 'protecting boundaries between guidance and policy-driven response', 'avoiding unnecessary documentation') that may be helpful clarifications, but the original instruction is direct and specific: 'Never ask about a course. Stop coaching and route when a duty starts. Nothing goes into a review, a tracking sheet or this app. Remove one obstacle only you can remove.' The rewrite changes the tone from direct instruction to explanation and changes 'Never ask about a course' (a concrete limit) to a vaguer 'rather than the training or process'."
+      },
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "The rewrite makes several unsupported interpretive changes: 'When you identify a duty, respond the same day' omits 'act the same day', which is the source language. There is a shift in the accommodation wording from 'what they asked for' to 'what they requested', which is less direct. For reporting harm, the rewrite softens from 'let's do that now' to 'we should do that now.' It also adds commentary on 'compliance with policy' and 'protects both staff and agency' which are not stated in the source, and presents the referral as an option rather than a requirement in the same direct tone as the source."
+      },
+      {
+        "fieldId": 4,
+        "severity": "blocker",
+        "finding": "The rewrite makes several alterations that do not preserve exact meanings or professional context. For instance, it moves from 'Before you decide who, tell me how you'll decide' to 'How will you determine who is assigned—can you explain your reasoning before deciding?' which encourages more elaboration than the original, possibly shifting the supervisor's focus. Also, 'let's write it down before anyone sees a name' is changed to a procedural command ('Document these before considering candidates'), which could be read as creating a new policy. The line-by-line expansion removes the source's short, memorable, and action-focused consistency, replacing it with a more elaborate explanation that, while clarifying, does not preserve the exact professional intent and character of the original."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "Acceptable. The rewording is clearer and does not add or remove any specific agency resource or procedure."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "Acceptable. The instruction keeps the substance of the original and is more explicit, but does not add or remove any decision or requirement."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2159,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 844,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3003
+    },
+    "review": {
+      "input_tokens": 2570,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 771,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3341
+    }
+  },
+  "createdAt": "2026-11-15T13:44:18.932Z"
+}

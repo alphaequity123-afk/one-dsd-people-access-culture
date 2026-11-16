@@ -1,0 +1,113 @@
+{
+  "target": "code.components/research-controls-client.tsx",
+  "kind": "surface",
+  "route": "components/research-controls-client.tsx",
+  "sourceSha256": "cfa4c97cc2aa687c44e8254fa09fbb23c75e07faefae4bf8450bc81e8d314d87",
+  "status": "needs_revision",
+  "reviewedFieldCount": 9,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field2"
+      ],
+      "before": "Costs use the amount reported by the research service when available. Otherwise, the program shows an estimate. The question itself is not stored in this record.",
+      "after": "When available, use the research service's reported cost for each request; otherwise, show an estimated amount. Records in this summary do not store the questions submitted.",
+      "reason": "Clarified the use of reported versus estimated costs and specified that the summary does not include submitted questions, providing clearer reasoning for how and why costs are shown."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field4"
+      ],
+      "before": "Browse published resources and see their review status.",
+      "after": "View published program resources, including the review status for each item.",
+      "reason": "Clarified that the program resources are tied to a review status and specified their connection to the program, giving more context about what users can do with the resource library."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field6"
+      ],
+      "before": "These services support public searches and more detailed research. Private connection keys are managed in the secure hosting settings for the program.",
+      "after": "These listed services allow public web searches and in-depth research. Connection keys, which control access to each service, are managed through secure hosting settings for the program and are not handled or shown on this page.",
+      "reason": "Clarified what the services do and explained the practical significance and proper management of connection keys, aligning with privacy and security practices."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field8"
+      ],
+      "before": "Add a private connection key in the secure hosting settings for the research service before turning on research. This page never displays or saves the key.",
+      "after": "Enter a private connection key in secure hosting settings before enabling research. The key must be in place for research to work, and this page does not display or retain keys.",
+      "reason": "Clarified the actual prerequisite for enabling research, the location for entry, and reiterated that this page intentionally does not handle or expose sensitive key information, increasing operational clarity."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "field14"
+      ],
+      "before": "External research remains off until its private connection is ready and the privacy checks have passed.",
+      "after": "External research cannot be enabled until a private connection is configured and privacy checks have passed. This requirement ensures that no information is sent outside the program before safeguards are met.",
+      "reason": "Specified that configuration and privacy checks are prerequisites and explained the operational reason, improving the connection between prerequisites and program privacy requirements."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The proposed rewrite ('When available, use the research service's reported cost for each request; otherwise, show an estimated amount. Records in this summary do not store the questions submitted.') reorders and modifies the meaning of the source text. The original states: 'Costs use the amount reported by the research service when available. Otherwise, the program shows an estimate. The question itself is not stored in this record.' The rewrite removes that 'costs use the amount reported [...] when available' is a statement of current behavior and replaces it with an instruction ('When available, use [...]'). The original's passive description ('the program shows an estimate') is altered. The original's statement 'The question itself is not stored in this record' is changed to 'Records in this summary do not store the questions submitted,' which is more generic and could misread the privacy or technical statement. These changes are not supported by the source and alter the meaning."
+      },
+      {
+        "fieldId": 4,
+        "severity": "blocker",
+        "finding": "The new text ('Enter a private connection key in secure hosting settings before enabling research. The key must be in place for research to work, and this page does not display or retain keys.') alters the meaning of the original ('Add a private connection key in the secure hosting settings for the research service before turning on research. This page never displays or saves the key.') by introducing a new sequence ('before enabling research'), updates phrasing ('Enter' and 'for research to work'), and adds language about keys not being retained, which goes beyond the original assurance of display/saving. The legal/privacy assurance should match the source."
+      },
+      {
+        "fieldId": 8,
+        "severity": "blocker",
+        "finding": "The rewritten message ('External research cannot be enabled until a private connection is configured and privacy checks have passed. This requirement ensures that no information is sent outside the program before safeguards are met.') goes beyond the original ('External research remains off until its private connection is ready and the privacy checks have passed.'). The rewrite introduces a new claim about ensuring 'no information is sent outside' which is not stated or implied in source. The source is a status label, not a legal assurance or privacy guarantee."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 5192,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 381,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5573
+    },
+    "review": {
+      "input_tokens": 5062,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 462,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5524
+    }
+  },
+  "createdAt": "2026-11-15T13:56:03.807Z"
+}

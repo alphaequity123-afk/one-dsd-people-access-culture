@@ -1,0 +1,67 @@
+{
+  "target": "code.components/analysis/analyze-workspace.test.tsx",
+  "kind": "surface",
+  "route": "components/analysis/analyze-workspace.test.tsx",
+  "sourceSha256": "711722d3c1fa88f2d1831e35d0da13d9933dc1fb2aa573d698d10e0496ce5899",
+  "status": "needs_revision",
+  "reviewedFieldCount": 3,
+  "changes": [
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "The material does not say who follows up.",
+      "after": "The material does not specify who is responsible for following up after this step. This leaves unclear which staff or role will ensure the next action happens.",
+      "reason": "Clarifies what is missing in the material and why it matters: if the responsible party is not identified, follow-up may not occur or may be inconsistent. This improves the reasoning and specificity, making the consequence of the information gap explicit for DHS/DSD colleagues."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The original source text is: 'The material does not say who follows up.' The proposed revision makes two unsupported changes: it adds, 'who is responsible for following up after this step,' and introduces interpretation about roles, staff, and the consequence ('leaves unclear which staff or role will ensure the next action happens'). The source does not specify responsibility, role, staff, or consequences—just the absence of information. This changes the meaning from an observation about a content gap to an analysis of potential effects, which goes beyond what is supported by the quoted source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 4766,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 112,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4878
+    },
+    "review": {
+      "input_tokens": 4438,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 143,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4581
+    }
+  },
+  "createdAt": "2026-11-15T13:52:08.176Z"
+}

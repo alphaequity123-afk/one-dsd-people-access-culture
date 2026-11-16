@@ -1,0 +1,81 @@
+{
+  "target": "code.app/growth/[role]/page.tsx",
+  "kind": "surface",
+  "route": "/growth/[role]",
+  "sourceSha256": "6064b530c7c72818dab8ec019b1858053ea71adf9e9f506fc67075472905d793",
+  "status": "needs_revision",
+  "reviewedFieldCount": 10,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Three steps, each a few weeks long if you like. After each step, write one action plan so the learning shows up in your work.",
+      "after": "The growth path involves three stages. Each takes several weeks, depending on your pace. After every stage, create an action plan to apply what you have learned in your daily work. This step helps connect learning to actual changes in practice.",
+      "reason": "Clarified the purpose and reasoning for writing an action plan after each stage. The new version connects the creation of an action plan to improving real job performance, explaining why the step matters."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field4"
+      ],
+      "before": "Pick a decision, meeting or document that is in front of you now and work through one guided practice.",
+      "after": "Identify a current decision, meeting, or document relevant to your work and complete one guided practice with it. This approach grounds the learning in an immediate, practical example, making it easier to apply new skills.",
+      "reason": "Added reasoning to show why selecting an active work item supports learning. Connecting guidance to a real work example shows why the practice serves the learner's context."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revision expands the explanation around \"three steps\" by specifying that each 'takes several weeks, depending on your pace' and asserts that writing an action plan 'helps connect learning to actual changes in practice.' The original only stated: 'Three steps, each a few weeks long if you like. After each step, write one action plan so the learning shows up in your work.' The added explanation about the timeframe and rationale is not present or implied in the source. Introducing new reasoning ('helps connect learning to actual changes in practice') is an unsupported extension rather than clarification."
+      },
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "The new version says: 'This approach grounds the learning in an immediate, practical example, making it easier to apply new skills.' The source only gives the instruction to 'Pick a decision, meeting or document that is in front of you now and work through one guided practice.' The added rationale and claims about 'making it easier to apply new skills' are not supported or implied by the source; adding new ungrounded explanation changes its meaning."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2330,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 209,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2539
+    },
+    "review": {
+      "input_tokens": 1951,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 240,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2191
+    }
+  },
+  "createdAt": "2026-11-15T13:49:04.481Z"
+}

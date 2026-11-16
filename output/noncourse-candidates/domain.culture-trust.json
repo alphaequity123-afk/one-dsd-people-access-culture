@@ -1,0 +1,81 @@
+{
+  "target": "domain.culture-trust",
+  "kind": "surface",
+  "route": "/areas/culture-trust",
+  "sourceSha256": "7bac0aff32795e8b9a835106ee4ff8a3c69af765935c61dece9659563b503931",
+  "status": "needs_revision",
+  "reviewedFieldCount": 21,
+  "changes": [
+    {
+      "fieldId": 2,
+      "path": [
+        "summary"
+      ],
+      "before": "Everyday practices that let people speak, disagree, learn across difference, and repair harm, without shame, scoring, or hidden judgment.",
+      "after": "Everyday workplace practices shape whether people feel able to speak up, disagree, learn from one another, and address harm. These practices matter when they allow for open discussion without shame, unspoken criticism, or hidden scoring. When teams address difficult topics directly and visibly, trust builds over time and people can learn across differences, including cultural backgrounds and organizational roles. Staff must be able to recognize and respond to mistakes or harm in a way that supports learning and repair, instead of making individuals feel isolated or defensive. Keeping these practices clear helps avoid ambiguous expectations or unspoken power dynamics.",
+      "reason": "Expand on the summary to clarify why visible practices, not just stated values, support participation and repair. Emphasizes that connected ideas include how practices support learning and repair without hidden judgments, making the purpose of each idea explicit for professional context."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "DSD staff described dominant-culture defaults, limited psychological safety, and doubt that input changes decisions. Culture changes through observable practices with owners, not slogans.",
+      "after": "DSD staff have reported that default cultural norms, a lack of psychological safety, and skepticism about whether input is heard can erode trust within teams. Observable, shared practices—such as predictable follow-up to concerns, clear ownership for addressing issues, and transparency about how input is used—are essential to demonstrate culture change. Stated values and slogans alone do not shift daily experiences unless accompanied by specific actions. Team members benefit when they see that input leads to discussion and possible changes, rather than being ignored or dismissed. This clarity allows people to understand the limits and opportunities in their roles, and helps make culture more inclusive and responsive to actual concerns.",
+      "reason": "Improve specificity by grounding the explanation in identified staff concerns and describing how observable, owned practices impact participation, safety, and trust. Clarifies why actions matter and connects culture work to decision-making."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The revised summary introduces new explanations, extended scope, and qualifying criteria not explicitly present in the original. The original summary is: \"Everyday practices that let people speak, disagree, learn across difference, and repair harm, without shame, scoring, or hidden judgment.\" The revision expands to: (1) specify 'workplace practices,' (2) relate these to feelings of safety and the ability to speak up, (3) assert that 'addressing difficult topics directly builds trust,' (4) claim that staff must recognize/respond to mistakes as part of learning, (5) assert that clear practices avoid ambiguous expectations, and (6) add organizational role difference alongside cultural difference. These claims and framing go beyond the source's focused, neutral summary and add a more interpretive and advisory voice. This fails the standard to preserve professional scope, not insert additional rationale or instructional material into a descriptive summary field, and not invent further connectedness or steps beyond the plain source."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The change to 'whyItMatters' mostly grounds the concerns noted in the source (dominant-culture defaults, limited psychological safety, doubt that input changes decisions), and expands on observable practices and their owners. It gives improved context by connecting follow-up and transparency, which are implied in the importance of observable practices and ownership—not slogans. The additional statement that clarity 'helps make culture more inclusive and responsive' extends the implication but is not clearly beyond the source's direct concerns; it does not assert a novel benefit. Minor extension, but not a blocker for this field."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2156,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 406,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2562
+    },
+    "review": {
+      "input_tokens": 1572,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 345,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1917
+    }
+  },
+  "createdAt": "2026-11-15T13:39:26.760Z"
+}

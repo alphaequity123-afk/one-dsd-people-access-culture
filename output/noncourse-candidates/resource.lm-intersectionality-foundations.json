@@ -1,0 +1,156 @@
+{
+  "target": "resource.lm-intersectionality-foundations",
+  "kind": "resource",
+  "route": "/library/lm-intersectionality-foundations",
+  "sourceSha256": "59f9e1ad741bb80798815a6ad26e1464fcdc98d86c713e17118aafb8d32f7486",
+  "status": "model_checked",
+  "reviewedFieldCount": 7,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Race, disability, language, gender, age, class, and immigration status shape experience together rather than one at a time. Reviewing outcomes by a single category can make a program look equitable while it fails people at the intersections.",
+      "after": "People’s lived experience is shaped by race, disability, language, gender, age, class, and immigration status together—not separately. Reviewing outcomes by only one category at a time can create the appearance of fairness, but leaves out people who experience multiple kinds of exclusion at once.",
+      "reason": "Clarified that multiple aspects of identity interact in shaping experience, connected to DHS/DSD review context, and specified why single-category analysis can hide inequities."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Legacy data and program rules were built around single categories. Intersectional thinking changes what you disaggregate, who you engage, and which burdens you notice.",
+      "after": "Many agency data systems and rules were created to address one category at a time, like race or disability alone. Applying intersectional thinking changes what data you break apart, which groups you engage, and which burdens you detect or address. Programs risk missing unmet needs if they do not look at overlapping identities.",
+      "reason": "Connected legacy practice with current implications for DHS/DSD program work and clarified practical impact of intersectional approach for program review and design."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "The idea. Coined in legal scholarship to describe how discrimination against Black women was invisible to claims that looked at race or sex alone. The same pattern appears in services: a deaf Somali elder's experience is not the sum of three separate briefs.",
+      "after": "Origins. The term intersectionality was introduced in legal scholarship to highlight how discrimination against Black women was hidden by frameworks that considered only race or sex on their own. This dynamic also appears in human services: for example, the specific experience of a deaf Somali elder cannot be understood by treating each identity separately, because the combination creates new and different barriers.",
+      "reason": "Expanded on the origin of intersectionality and connected it directly to DSD contexts, illustrating how treating identities separately misses actual barriers."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "In data. Ask the data owner what can be disaggregated by more than one category with small-group protection. Where numbers are too small, use qualitative evidence and say so.",
+      "after": "For data. Ask the system owner if data can be broken down by more than one category at a time, while still protecting confidentiality for small groups. If group sizes are too small for quantitative analysis, use qualitative evidence—such as interviews or community feedback—and be transparent about data limits.",
+      "reason": "Clarified the practical reason for disaggregating data by multiple categories and the importance of confidentiality, gave explicit methods for addressing small group sizes, and connected to DHS data practices."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "In engagement. Ask who is missing at the intersections, and plan access for people who face more than one barrier at once, such as interpretation and captioning together.",
+      "after": "For engagement. Identify who may be missing from your work when considering intersections of identity, and plan accessibility for people facing more than one barrier at the same time. For instance, think about providing both interpretation and captioning, not just one or the other, when appropriate.",
+      "reason": "Specified why and how engagement must address overlapping barriers, with clear application to DHS/DSD stakeholder engagement situations."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "In design. Test a process against the person with the least margin: the person who needs an interpreter, an accessible format, transportation, and a daytime alternative all at once.",
+      "after": "For design. Test your program design or process by considering people with overlapping needs—such as someone who requires an interpreter, accessible formats, transportation, and alternative meeting times. If your process only works for those with fewer barriers, you risk leaving out those who are most likely to be excluded.",
+      "reason": "Clarified the reasoning behind testing designs with the person with the least margin and why failure to do so increases exclusion; framed this within standard DHS program evaluation practice."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "In the workplace. Advancement barriers and climate problems land differently on people who hold more than one marginalized identity. Ask, do not assume.",
+      "after": "In the workplace. Barriers to advancement and workplace climate challenges often accumulate for people with more than one marginalized identity. Because these experiences differ widely—even among colleagues with similar roles—ask about the impact directly instead of making assumptions based on a single category.",
+      "reason": "Increased specificity about how multiple marginalized identities affect staff and why checking assumptions is necessary, supporting equity efforts in DSD/DHS workplaces."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The summary restates the interaction of multiple identity factors using more conversational language and clarifies the risk of missing people via single-category review. It stays fully grounded in the source's intent and meaning."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The 'whyItMatters' change breaks out the original sentence and explains legacy agency practices in plainer language, still accurately representing the original idea and elaborating on the implications for current program work."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The 'body[0]' (The idea/Origins) field restructures the legal scholarship context and makes the Minnesota human services application explicit. The example is retained; the statement is now more thorough but remains within the source's range and does not lose meaning or introduce unsupported claims."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The 'body[1]' (In data/For data) revision expands on confidentiality and qualitative data issues without overstating what data can show. Instruction to consult data/system owner and use qualitative methods is explicit in the source."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "'body[2]' (In engagement/For engagement) is slightly more explanatory but faithfully represents the original: both highlight overlap of access barriers and provide a DHS-relevant example. No new processes or requirements are invented."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "'body[3]' (In design/For design) rewords the scenario of testing process inclusivity using the same essence and list of barriers, adding explicit rationale for why the practice matters. No meaning is lost or changed."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "'body[4]' (In the workplace/In the workplace) provides more detail about the need for inquiry and context of marginalization, fully consistent with the source’s intent and not extending beyond it."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1778,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 701,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2479
+    },
+    "review": {
+      "input_tokens": 2043,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 405,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2448
+    }
+  },
+  "createdAt": "2026-11-15T13:42:27.854Z"
+}

@@ -1,0 +1,67 @@
+{
+  "target": "practice.measurement",
+  "kind": "surface",
+  "route": "/practice/measurement",
+  "sourceSha256": "80916d494757d80d845b5f3299e03a76f5bcef8b5d3b3771c3c3bf4560e2389d",
+  "status": "needs_revision",
+  "reviewedFieldCount": 29,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "intro"
+      ],
+      "before": "Develop an evaluation plan that connects an equity question with meaningful evidence and a practical next decision.",
+      "after": "Begin your evaluation by linking a specific equity question to evidence that can guide the next practical steps. An effective plan clarifies why you are measuring, what information you will rely on, and how those results will inform future decisions. This approach ensures that measurement activities stay tied to priorities—such as advancing service equity or addressing disparities—and that findings are used to make adjustments or recommendations for your division or project. Carefully define connections between the evidence you gather and the actions you will consider, keeping in mind which staff, partners, or communities might use or be affected by what you learn.",
+      "reason": "Expanded and clarified the introduction to specify why connected planning is important for evaluation, emphasizing alignment with division priorities and intended action informed by evidence. Adds depth on the relevance of such a plan for DHS/DSD work."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The revised introduction departs from the source by adding new framing and operational context not found in the original. The original source is a concise instruction: 'Develop an evaluation plan that connects an equity question with meaningful evidence and a practical next decision.' The rewritten version introduces several unsupported elements: (1) It specifies DHS/DSD divisions and projects, (2) claims measurement activities must 'stay tied to priorities' such as 'advancing service equity or addressing disparities,' (3) asserts the plan should account for 'which staff, partners, or communities might use or be affected,' and (4) adds procedural direction on clarifying information sources and intended actions. These do not appear in the source text—such context, procedural focus, and scope expansion (to include specific stakeholders or organizational priorities) add both content and interpretations that exceed the source. This is not a mere clarification or depth, but a substantive change to scope and meaning not grounded in the provided source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2758,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 240,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2998
+    },
+    "review": {
+      "input_tokens": 1651,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 235,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1886
+    }
+  },
+  "createdAt": "2026-11-15T13:35:28.744Z"
+}

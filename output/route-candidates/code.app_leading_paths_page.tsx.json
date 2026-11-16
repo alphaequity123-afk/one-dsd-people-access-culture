@@ -1,0 +1,109 @@
+{
+  "target": "code.app/leading/paths/page.tsx",
+  "kind": "surface",
+  "route": "/leading/paths",
+  "sourceSha256": "0db63db7c63901341d9e41468fbfa83f2342d8f9afe8fdd0fd60ef94c1291c1c",
+  "status": "needs_revision",
+  "reviewedFieldCount": 7,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Six optional paths, from exploring leadership to senior leaders. Nobody is enrolled, and progress stays in your browser.",
+      "after": "You can choose from six suggested paths, each ranging from early leadership topics to senior leader material. Nobody is automatically registered, and any progress you make is stored only in your browser.",
+      "reason": "Clarified that selection and participation are voluntary, highlighted the range, and explained local progress storage."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Six suggested orders through the material. All of them are optional.",
+      "after": "Each path is a recommended sequence through leadership learning. Choosing a path is optional, and you can adapt the order to fit your needs.",
+      "reason": "Added specificity that the order is recommended and may be adapted; emphasized optional participation and relevance to user judgment."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field4"
+      ],
+      "before": "Nobody is enrolled, and you can start anywhere or skip anything. If you keep your place, it stays in your browser and nobody else can see it. The one exception to voluntary use is the Equity Analysis Toolkit, marked &ldquo;",
+      "after": "You are not enrolled in these paths, and you may begin wherever you choose or skip any topic. If you leave your browser open, your progress remains available to you and is not visible to anyone else. The only exception is the Equity Analysis Toolkit, marked “",
+      "reason": "Clarified the enrollment status, flexibility of sequence, and local nature of tracking; retained explanation regarding privacy and exception."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field5"
+      ],
+      "before": "&rdquo;, which appears on every path for that reason.",
+      "after": "”, which is included on all paths because it is required.",
+      "reason": "Rephrased for clarity and to directly state why the toolkit is always listed."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The source describes \"Six optional paths, from exploring leadership to senior leaders. Nobody is enrolled, and progress stays in your browser.\" The revision changes \"optional\" to \"you can choose\" and adds \"each ranging from early leadership topics to senior leader material,\" which is an expansion not substantiated by the source, which only says paths go from exploring leadership to senior leaders. The phrase \"Nobody is automatically registered\" is less clear than the original \"Nobody is enrolled\" and adds ambiguity not present in the source. The source does not support the new wording's implication of an automatic registration mechanism or further explanation of material range beyond the original."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The new text, \"Each path is a recommended sequence through leadership learning. Choosing a path is optional, and you can adapt the order to fit your needs,\" is a reasonable clarification. It retains the original meaning: \"suggested orders\" and \"all... are optional,\" while making the adaptiveness explicit. This does not misrepresent source meaning."
+      },
+      {
+        "fieldId": 4,
+        "severity": "blocker",
+        "finding": "The rewrite rewords 'Nobody is enrolled, and you can start anywhere or skip anything. If you keep your place, it stays in your browser and nobody else can see it. The one exception to voluntary use is the Equity Analysis Toolkit, marked...'\n\nThe rewrite clarifies enrollment and sequence flexibility, but it introduces \"If you leave your browser open, your progress remains available to you,\" which is not from the source. The source says progress 'stays in your browser,' not only while the browser is open, and is silent on browser sessions or closure. The source does not specify 'open'—its point is that the data stays locally, not that it's session-persistent. The change could cause misunderstanding about privacy and functionality."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "This change—rewriting '&rdquo;, which appears on every path for that reason.' as '”, which is included on all paths because it is required.'—clarifies that it's always listed due to being required. This is a plain-language restatement and does not materially shift or misrepresent the source statement."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1930,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 275,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2205
+    },
+    "review": {
+      "input_tokens": 1695,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 471,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2166
+    }
+  },
+  "createdAt": "2026-11-15T13:49:18.073Z"
+}

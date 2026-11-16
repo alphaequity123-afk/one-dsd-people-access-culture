@@ -1,0 +1,165 @@
+{
+  "target": "code.app/employee-resource-groups/page.tsx",
+  "kind": "surface",
+  "route": "/employee-resource-groups",
+  "sourceSha256": "37c98f723242b6936c65c2950690b524507a9083ab95b8b137df51714fa6809f",
+  "status": "needs_revision",
+  "reviewedFieldCount": 11,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Find connection through shared experiences and interests. Employee resource groups offer another way to build relationships, learn from colleagues, and explore opportunities to grow.",
+      "after": "Employee resource groups (ERGs) offer a way to connect with colleagues who share professional or personal interests, identities, or experiences. Participating in a group can help you form relationships, learn with others, and identify new opportunities in your role.",
+      "reason": "Revision clarifies how ERGs relate to work connections and learning, grounding the summary in program objectives rather than abstract community-building language."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "Every employee resource group is open to all employees, including allies who support its purpose. You do not need to share a group&apos;s identity, or tell anyone about your own, to join. Minnesota Management and Budget&apos;s Enterprise ERG Guidelines say participation must be open to all, including allies who support the group&apos;s mission.",
+      "after": "All employee resource groups are open to any DHS employee, whether or not you share the group’s focus or identity. You may join as an ally or simply to learn more. As outlined in Minnesota Management and Budget’s Enterprise ERG Guidelines, participation must be inclusive of all employees who support the group’s purpose. There is no requirement to identify yourself or discuss your background to take part.",
+      "reason": "The rewrite directly states inclusivity, clarifies terms (such as 'ally'), and references the relevant guideline. The explanation removes repetition about 'sharing identity' and succinctly links inclusivity to the cited policy."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": "These groups appear in public DHS materials. The references below help you explore; DHS&apos;s own internal information is the place to check current membership and meeting arrangements.",
+      "after": "The following groups are listed in public DHS materials. The references can help you learn more about each group. For up-to-date information on group membership or meeting times, use internal DHS sources.",
+      "reason": "This revision clarifies the relationship between public references and the internal resources needed for participation, specifying the kind of information each will provide."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field5"
+      ],
+      "before": "DHS network access may be needed. This internal destination is linked from DHS public material; its current contents could not be checked here.",
+      "after": "DHS network access may be required. While this site is linked in public DHS materials, its current content could not be verified here.",
+      "reason": "Minor edit for clarity and formality. 'Required' is more precise than 'may be needed,' and 'verified' replaces 'checked' for a professional tone."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field6"
+      ],
+      "before": "Every DHS group named in public DHS sources is listed here, alphabetically. Groups form and grow over time, so DHS InfoLink holds the current roster and meeting arrangements. If your group is not listed, tell the program and it will be added.",
+      "after": "This page lists every DHS group named in publicly available DHS sources, organized alphabetically. Groups are created, updated, or ended over time. The DHS InfoLink holds the current roster and meeting information. If you notice a group is missing, let the program know so the list can be updated.",
+      "reason": "Expanded to clarify why groups may change and to explain the importance of reporting missing groups, maintaining the accuracy of information for staff."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field7"
+      ],
+      "before": "Minnesota Management and Budget lists a separate statewide ERG network. These groups connect employees across agencies through community, career development, and workplace culture. Every group is open to all employees, including allies.",
+      "after": "Minnesota Management and Budget maintains a separate network of statewide employee resource groups. These groups are open to all state employees and support connection across agencies, career development, and fostering workplace community. Each group welcomes all employees, including those who identify as allies.",
+      "reason": "Clarifies that the network is statewide, specifies agency span, and groups the main purposes more directly."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "field9"
+      ],
+      "before": "Visit each group&apos;s own page for participation information.",
+      "after": "Each group’s own webpage includes information about how to participate.",
+      "reason": "Specifies the relevance of visiting a group’s page for practical details, supporting staff in understanding what action the instruction supports."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "field11"
+      ],
+      "before": "These are possibilities for collaboration. ERGs shape their own participation and priorities; a group or member is not expected to speak for an entire community.",
+      "after": "These are examples of how ERGs might collaborate with program teams or each other. ERGs set their own direction and priorities. No group or member is expected to represent everyone who shares a particular background or identity.",
+      "reason": "Clarification added to reinforce that collaborative opportunities are illustrative and ERG participation should not be construed as representative of all community members."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The proposed rewrite for field1 omits the broader intent of ERGs as a source of community and mutual support, focusing only on professional/personal interests. The source text intentionally begins with 'Find connection through shared experiences and interests. Employee resource groups offer another way to build relationships, learn from colleagues, and explore opportunities to grow.' The rewrite narrows 'shared experiences and interests' to an emphasis on identities or interests without explicit mention of community. This erases a key source-grounded rationale for ERGs in agency objectives as written."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The rewrite of field2 is mostly accurate. It emphasizes inclusivity, clarifies the meaning of ally, and ties the statement to the MMB guidelines. There is a subtle difference—in the rewrite, 'as an ally or simply to learn more' could imply an additional category of membership not explicit in the source, but it does not introduce a policy error. The removal of 'tell anyone about your own' is an acceptable clarification, as 'no requirement to identify yourself' directly addresses this. This clarification is acceptable."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The rewrite for field3 is very close in meaning to the source, providing more explicit direction on how to use public vs. internal information. The condensation of the instruction retains the original scope."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The edit to field5 (network access may be 'required' vs. 'needed', and 'verified' vs. 'checked') is stylistic. Both forms are compatible with the source intent."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "Expanded explanation in field6 improves clarity and remains within the meaning of the source text."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "Language changes in field7 improve specificity about MMB's network and are consistent with the original source. No new concepts or requirements introduced."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "Field9 wording change is stylistic. It remains accurate to the source."
+      },
+      {
+        "fieldId": 10,
+        "severity": "note",
+        "finding": "The rewrite for field11 slightly expands on the original but does not introduce a policy or legal change. Acceptable clarification."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3815,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 691,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4506
+    },
+    "review": {
+      "input_tokens": 3991,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 582,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4573
+    }
+  },
+  "createdAt": "2026-11-15T13:48:31.852Z"
+}

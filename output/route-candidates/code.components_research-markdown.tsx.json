@@ -1,0 +1,81 @@
+{
+  "target": "code.components/research-markdown.tsx",
+  "kind": "surface",
+  "route": "components/research-markdown.tsx",
+  "sourceSha256": "62e179465b4464f28c683d5d5a124072d3bfc19a70e7f9cfa5f970ca0a9c57b0",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "For your own reflection. Nothing here is collected.",
+      "after": "Reflection prompts are for your personal consideration only. Responses entered here are not saved or reviewed.",
+      "reason": "Clarified that staff should use these prompts for self-assessment and made it clear why nothing is collected, adding professional context relevant to DHS and DSD practices."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Open any answer to see what it might lead to. You can open all of them.",
+      "after": "You may open any answer to review possible outcomes. All answers are available for comparison.",
+      "reason": "Specified that reviewing multiple answers helps staff compare outcomes, providing a practical reason and making instructions more precise."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed replacement ('Reflection prompts are for your personal consideration only. Responses entered here are not saved or reviewed.') does not retain the original wording ('For your own reflection. Nothing here is collected.') from the source, which in this case is official language in an instructional or privacy context per the code definition. The new wording changes the privacy assurance, adds new explanation ('not saved or reviewed') that is not equivalent to 'nothing here is collected,' and removes the simple official phrasing. The policy standard requires exact retention of such assurances where the original is clear, plain, and not misleading, especially since this language appears on a label for reflection sections."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The proposal ('You may open any answer to review possible outcomes. All answers are available for comparison.') replaces 'Open any answer to see what it might lead to. You can open all of them.' The change adds new justifications ('review possible outcomes,' 'available for comparison') and shifts instructional intent, which may be unnecessary and possibly editorializes beyond the source. The original phrase is direct and covers the affordance fully within the UI context."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2312,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 125,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2437
+    },
+    "review": {
+      "input_tokens": 2041,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 256,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2297
+    }
+  },
+  "createdAt": "2026-11-15T13:56:04.954Z"
+}

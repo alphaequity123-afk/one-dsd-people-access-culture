@@ -1,0 +1,109 @@
+{
+  "target": "code.components/cultural-intelligence-explainer-draft.tsx",
+  "kind": "surface",
+  "route": "components/cultural-intelligence-explainer-draft.tsx",
+  "sourceSha256": "710a1893b273754cea4f30bad04717c783c9b87ae657d3dca9796a7ab31e608b",
+  "status": "needs_revision",
+  "reviewedFieldCount": 4,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Explore these topics in any order. Your practice choices stay on this page and are not saved when you leave or reload it.",
+      "after": "You may review these topics in any order. Any practice selections made here remain only during your visit to this page and will not be stored if you leave or reload it.",
+      "reason": "Clarified that choices remain only temporarily and reworded for precision and neutrality. The explanation supports staff in understanding the purpose and scope of saving choices."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Your browser cannot play this video. You can read the lesson below.",
+      "after": "If your browser cannot play this video, refer to the lesson text below.",
+      "reason": "Improved specificity by describing what action to take if the video cannot be played. This clarifies what staff should do if video playback fails."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "You can read the lesson below.",
+      "after": "Read the lesson below if video is unavailable.",
+      "reason": "Provided a more direct instruction, ensuring staff understand the alternative to video."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": "If you’re reading, take a moment to choose your response before continuing.",
+      "after": "As you read, please consider your response before continuing to help reinforce the lesson.",
+      "reason": "Expanded the reasoning by explaining that pausing to choose a response supports learning, which is relevant for staff using the materials."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The source text ('Explore these topics in any order. Your practice choices stay on this page and are not saved when you leave or reload it.') is fully accurate, clear, and matches the implementation. The proposed change alters the tone ('You may review'), adds unnecessary length and abstraction ('Any practice selections made here remain only during your visit'), and does not increase clarity for DSD/DHS staff. The source is concise and precise; the change is not warranted and removes the directness of the original."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revision to 'If your browser cannot play this video, refer to the lesson text below.' is a reasonable clarification and does not materially change meaning. The source is already clear, but the new wording is permissible as a style improvement."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The source ('You can read the lesson below.') is triggered only when video is unavailable, and the original is succinct. The change to 'Read the lesson below if video is unavailable.' introduces redundancy by stating the conditional that is managed by program logic. The original is a plain statement; rewriting adds unnecessary conditional instruction."
+      },
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "The original ('If you’re reading, take a moment to choose your response before continuing.') is a concise prompt that fits both the literal and instructional context. The rewrite ('As you read, please consider your response before continuing to help reinforce the lesson.') speculates about learning reinforcement not present or implied in the source, and introduces instruction creep. The policy standard is to retain the scope and reason exactly as given. The change is not source-supported and adds a rationale where none was present."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2091,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 292,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2383
+    },
+    "review": {
+      "input_tokens": 1911,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 370,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2281
+    }
+  },
+  "createdAt": "2026-11-15T13:52:54.139Z"
+}

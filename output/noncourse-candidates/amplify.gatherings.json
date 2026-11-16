@@ -1,0 +1,137 @@
+{
+  "target": "amplify.gatherings",
+  "kind": "surface",
+  "route": "/one-dsd/amplify/gatherings",
+  "sourceSha256": "14180fd10f1c383051d046fb40563f2988a12ddb76e43e00f80eb823021ab8c2",
+  "status": "needs_revision",
+  "reviewedFieldCount": 15,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "intro"
+      ],
+      "before": "Choose a starting point that fits the people and the moment. Leave room for the conversation to take its own shape.",
+      "after": "Start with a topic or approach that matches both the group and the current context. Allow flexibility so the conversation can develop in response to participants’ ideas and interests.",
+      "reason": "Clarifies that selection should reflect group and context, and restates the value of adaptability for substantive group engagement."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "section0Body"
+      ],
+      "before": "Begin with a question people can answer from their own experience. Allow a quiet moment before inviting responses. People may speak, listen, or pass.",
+      "after": "Start by asking a question that draws on each person’s own experience. Allow a pause to give people time to consider their responses before inviting anyone to speak. Participants may choose to share, listen, or decline to answer.",
+      "reason": "Expands on the steps of questioning and recognizes the value of a pause. Specifies that participation is voluntary and includes listening as active engagement."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "section1Body"
+      ],
+      "before": "A short reading, a video, or a question can open a conversation. Let people know the topic in advance. No one needs to have completed the reading to belong in the discussion.",
+      "after": "Use a brief reading, short video, or open-ended question to introduce the topic. Give participants advance notice of the topic, so they can consider their perspective. Participation does not require completing any reading or preparation; everyone can contribute to the conversation.",
+      "reason": "Clarifies use of materials, importance of advance notice, and that contribution is not contingent on preparation, thus reducing pressure and clarifying expectations."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "section2Body"
+      ],
+      "before": "A shared interest, cultural observance, creative activity, or story can bring colleagues together. Invite contributions without expecting someone to represent a community or provide personal history.",
+      "after": "Shared interests, cultural events, creative activities, or collective storytelling can help colleagues connect and celebrate together. Invite input and participation, but do not expect anyone to represent an entire community or share personal background information.",
+      "reason": "Provides specific examples, restates boundaries on expectations, and clarifies intention to foster inclusion without placing burdens on individual identity representation."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "section4Body"
+      ],
+      "before": "Consider a familiar meeting, message, or form. What makes it easy to use? What might someone experience differently? Discuss an example without including private information about a colleague or a person receiving services.",
+      "after": "Identify a meeting, message, or form that you encounter often. Discuss what aspects support ease of use and consider how these might differ for others. Use hypothetical or anonymized examples—do not share private details about colleagues or people served.",
+      "reason": "Clarifies direction to choose familiar examples, analyzes both usability and potential differences in experience, and reinforces privacy by emphasizing use of hypothetical or anonymized scenarios."
+    },
+    {
+      "fieldId": 11,
+      "path": [
+        "section5Body"
+      ],
+      "before": "Think about a practice that was meant to help but worked differently for someone else. What can we learn from both the intention and the experience? There is room to examine a practice without assuming someone’s motives.",
+      "after": "Reflect on a process or practice that was intended to support someone but resulted in an unexpected or less helpful outcome for another. Consider what can be learned by comparing the intended purpose with the actual experience. This discussion can explore the effects of a practice without making assumptions about anyone’s intentions.",
+      "reason": "Clarifies guidance to compare intent and impact, explicitly outlines value of learning from both, and emphasizes not making assumptions about motivations."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed change adds conditions—\"matches both the group and the current context\"—that are not stated or implied in the source. The original wording, \"fits the people and the moment,\" is more open and practical. The addition of \"Allow flexibility so the conversation can develop in response to participants’ ideas and interests\" restates but complicates the original message without clear improvement. The revised statement drifts from the plain sense of the original without clear evidence."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The expansion is mostly faithful to the original meaning, making explicit the voluntariness of participation and the value of a pause. However, the clarification that 'listening is active engagement' and the restatement of participation are not departures from the source. No material change or unsupported claim detected."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The revision clarifies the source statements without introducing unsupported requirements. Stating that participation does not require preparation is aligned with the source: 'No one needs to have completed the reading to belong in the discussion.' No legal or instructional overstatement found."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The changes are mostly clarificatory. While the new version elaborates ('collective storytelling,' specifying 'do not expect anyone to...'), it maintains the original protection against expecting someone to represent a community or reveal personal history. No misrepresentation detected."
+      },
+      {
+        "fieldId": 10,
+        "severity": "note",
+        "finding": "The revision clarifies that hypothetical or anonymized examples are expected to avoid privacy risks, which is implicit in 'without including private information.' The rewritten direction is more explicit but aligns with the original scope and privacy protection."
+      },
+      {
+        "fieldId": 11,
+        "severity": "note",
+        "finding": "This revision clarifies the idea of comparing intent and actual experience, and restates not assuming motives per the original. The increased specificity is within the bounds of the source content."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2089,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 530,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2619
+    },
+    "review": {
+      "input_tokens": 1944,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 412,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2356
+    }
+  },
+  "createdAt": "2026-11-15T13:37:17.656Z"
+}

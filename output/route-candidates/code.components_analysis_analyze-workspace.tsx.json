@@ -1,0 +1,95 @@
+{
+  "target": "code.components/analysis/analyze-workspace.tsx",
+  "kind": "surface",
+  "route": "components/analysis/analyze-workspace.tsx",
+  "sourceSha256": "00925965f0f99227b689932f5804656f9654a8fea198691efc36c4cff07fc359",
+  "status": "needs_revision",
+  "reviewedFieldCount": 3,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "What do you want to know or decide? (optional)",
+      "after": "What is your question or decision point? (optional)",
+      "reason": "The revised question clarifies that staff may use this space to identify either a question or a decision that needs analysis, matching the intended guidance for focused input. This helps staff understand the specific use of this field."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "One or two sentences about the decision in front of you help the analysis focus. Leave out names and personal details.",
+      "after": "Summarize the key question or decision in one or two sentences. This helps the analysis target relevant information from the material. Avoid including names or personal identifiers.",
+      "reason": "The revision explains why a concise summary is important and how it aids the analysis process by focusing attention. It also restates the instruction to avoid personal details in a way that ties this caution to agency privacy practices for de-identification."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "Community this work concerns (optional)",
+      "after": "Which community does this work concern? (optional)",
+      "reason": "The revised wording clarifies that the question is asking staff to identify a relevant community, not simply state that a community is involved. This framing encourages more precise responses when appropriate."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The original wording, \"What do you want to know or decide? (optional)\", exactly matches the label used in the component for the \"context\" field, and is directly referenced in the rendered JSX. The proposed change, \"What is your question or decision point? (optional)\", shifts from the source’s neutral language and may limit or alter user perception of the field’s flexibility. Rejecting unless a source change is present."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revision preserves the sense of the original hint and remains consistent with privacy guidance (\"leave out names and personal details\"), while giving slightly more detail about the why. This is a reasonable rewording, but not strictly necessary."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The rewording from \"Community this work concerns (optional)\" to \"Which community does this work concern? (optional)\" is a minor change to question form and does not materially alter scope or accuracy."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 4378,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 228,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4606
+    },
+    "review": {
+      "input_tokens": 4204,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 226,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4430
+    }
+  },
+  "createdAt": "2026-11-15T13:52:09.517Z"
+}

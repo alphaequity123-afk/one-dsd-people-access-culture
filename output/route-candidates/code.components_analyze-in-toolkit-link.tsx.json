@@ -1,0 +1,67 @@
+{
+  "target": "code.components/analyze-in-toolkit-link.tsx",
+  "kind": "surface",
+  "route": "components/analyze-in-toolkit-link.tsx",
+  "sourceSha256": "bda20464e7c3622846c33497fc442d820b6f5f2620f0b4cb2f50041239119aa9",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Analyze in the Equity Analysis Toolkit",
+      "after": "Analyze using the Equity Analysis Toolkit",
+      "reason": "This revision uses more precise language by replacing \"in\" with \"using\" to clarify the action being taken. The update maintains the familiar terminology and short phrasing, directly guiding the user's attention to the intended purpose: analyzing a source with the Equity Analysis Toolkit. This avoids ambiguity about the location of the analysis, focusing instead on the process."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed change from 'Analyze in the Equity Analysis Toolkit' to 'Analyze using the Equity Analysis Toolkit' is not supported by the source. The source code and the comment specifically use the phrase 'Analyze in the Equity Analysis Toolkit', indicating that this is the intentionally chosen language for both the label and the function. There is no evidence in the source for the proposed rewording, and changing 'in' to 'using' could alter the familiar terminology and introduce an unintended nuance. Policy requires preserving official or intentional labels unless the original contains an error or the change is clearly justified."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1397,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 101,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1498
+    },
+    "review": {
+      "input_tokens": 1111,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 158,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1269
+    }
+  },
+  "createdAt": "2026-11-15T13:52:09.090Z"
+}

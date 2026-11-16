@@ -1,0 +1,186 @@
+{
+  "target": "resource.lm-disability-rights-and-service-delivery",
+  "kind": "resource",
+  "route": "/library/lm-disability-rights-and-service-delivery",
+  "sourceSha256": "ffd3b6b82a3bd3d5214ed15e179574f6be727f6a2a95ee978f564e21d97d9c4e",
+  "status": "model_checked",
+  "reviewedFieldCount": 9,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "This orientation covers person-centered planning, supported decision-making, LifeCourse, the ADA and Olmstead, home and community-based services, employment-first practice, and positive supports, and explains what each asks of a service design.",
+      "after": "This orientation reviews key frameworks DSD uses in service design: person-centered planning, supported decision-making, LifeCourse, the Americans with Disabilities Act (ADA) and Olmstead, home and community-based services, employment-first practice, and positive supports. Each section describes what the framework requires and how it affects service development.",
+      "reason": "Clarifies what is being covered and specifies that the explanation focuses on how each framework informs service design. Avoids the implication that this is an exhaustive policy source."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Equity in disability services is inseparable from disability rights. A redesign that adds steps, removes choice, or assumes incapacity can be inaccessible and inequitable at once.",
+      "after": "Equitable disability services depend on upholding disability rights. A system redesign can become inaccessible and inequitable if it introduces unnecessary steps, limits choice, or presumes people lack capacity. Each of these risks contradicts the intent of disability rights frameworks and can reduce access for the people DSD serves.",
+      "reason": "Explicitly connects potential redesign outcomes to disability rights, clarifies the consequences, and explains how they undermine both access and equity."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Person-centered planning. The person directs the plan; the system organizes around their goals, relationships, and preferences. Ask how a process lets the person lead rather than respond.",
+      "after": "Person-centered planning. The person guides their own service plan, and the system arranges supports based on their stated goals, relationships, and preferences. When evaluating a process, consider whether it allows the person to direct decisions or positions them to simply react to service choices made by others. This distinction affects autonomy and satisfaction with services.",
+      "reason": "Expands on why the process distinction matters and connects it to outcomes for autonomy and satisfaction, as relevant for staff designing or evaluating services."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Supported decision-making. People have the right to make their own decisions with support they choose. Ask whether a process assumes incapacity or offers support.",
+      "after": "Supported decision-making. People retain the right to make their own decisions and may choose supports to help them do so. Staff should examine whether any part of a process presumes incapacity or instead actively offers support for decision-making. How support is offered can influence whether people experience true self-direction or are subject to unnecessary limits.",
+      "reason": "Clarifies who is responsible for examining assumptions and outcomes, explaining the importance of how support is structured and its direct impact on self-determination."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "LifeCourse. A framework for thinking about a good life across a lifetime, using the person's vision and a mix of supports. Useful for planning conversations; it is one framework among several.",
+      "after": "LifeCourse. LifeCourse is a planning framework for exploring what a good life means across a person’s lifetime, focusing on their vision and a broad set of supports. It can help structure planning conversations but is not the only approach available. Choose frameworks based on fit with a person’s goals and planning needs.",
+      "reason": "Clarifies the purpose of LifeCourse, differentiates it from other options, and encourages consideration of appropriateness rather than default use."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "ADA and Olmstead. The Americans with Disabilities Act and the Olmstead decision require services in the most integrated setting appropriate. Ask whether a design steers people toward segregated settings by default.",
+      "after": "ADA and Olmstead. The Americans with Disabilities Act and the Olmstead decision require that services support people in the most integrated setting suitable for their needs. Review service designs for aspects that might push people toward more restrictive, segregated environments by default. Segregated settings often reduce access to community participation and choice.",
+      "reason": "Clarifies the connection between integrated settings and access, and spells out the consequence of default segregation beyond compliance."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Home and community-based services and employment-first practice. Services in the community and competitive, integrated employment as the first option. Ask whether eligibility, assessment, and authorization steps make the community option harder than the institutional one.",
+      "after": "Home and community-based services and employment-first practice. Community-based services and competitive, integrated employment should be considered the first options for all. Consider whether eligibility, assessment, and authorization steps unintentionally create barriers to choosing community or employment options, making institutional placements or non-work settings easier to access. Such barriers can shift service use away from preferred environments.",
+      "reason": "Clarifies why process details matter, and highlights unintentional effects of administrative processes on actual service use."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "Positive supports. Approaches that build skills and quality of life rather than relying on restriction. Ask whether a process responds to behavior with support or with control.",
+      "after": "Positive supports. Positive support strategies prioritize building skills and improving quality of life instead of relying on restriction, punishment, or other forms of control. Assess process steps to determine if they respond to behavior with support or rely on restrictive practices, as this directly affects dignity, development, and long-term outcomes.",
+      "reason": "Expands on the implications of choosing restrictive vs. supportive responses, making clear the lasting consequences for people served."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "body",
+        6
+      ],
+      "before": "Each legal or policy claim above needs the current source. Use the external references in the Library and the policy owner for anything that affects a person's eligibility, rights, or services.",
+      "after": "For every legal or policy statement above, rely on the current official source. Use the Library’s external references and check with the designated policy owner for any matter affecting eligibility, rights, or available services. This ensures accuracy and protects both staff and people served from acting on outdated or incomplete information.",
+      "reason": "Clarifies that referencing authoritative sources is essential for accuracy, and specifies the protective value of checked, current references for both staff and people served."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revised summary clarifies that these frameworks are DSD's focus for service design and accurately avoids implying the module is an exhaustive source for policy. The information remains supported."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The 'whyItMatters' revision draws an explicit link between system redesign and disability rights consequences, providing warranted clarity without overstepping the original claim or inventing policy. No unsupported changes are introduced."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "Expanded explanation for person-centered planning keeps the requirement for person-led plans, clarifies the systems' organizational role, and adds reasoning about autonomy and satisfaction. This is a supported and appropriate elaboration for the target audience."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "For supported decision-making, the added detail on examining processes for assumptions or active support is both accurate and relevant to staff. No change is made to the right or process implied in the source."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "Expanded LifeCourse language is an accurate clarification and does not misstate its role or require default use. The instruction to match frameworks to the person's goals is supported by best practice and not an invented policy."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The ADA and Olmstead revision preserves the correct legal requirement and provides warranted details on segregation's effects. It does not add legal claims nor erase qualifications present in the source."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "Details added for home and community-based services/employment-first more fully explain why administrative details affect real access, consistent with the source message."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "The elaboration on positive supports is factually accurate, properly explains why restrictive practices are discouraged, and stays within the scope and meaning of the source."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "The restated instruction to rely on official sources and policy owners preserves the original intent, expands on why this protects both staff and people, and does not introduce inaccuracies or erase legal safeguards."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1977,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 916,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2893
+    },
+    "review": {
+      "input_tokens": 2441,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 444,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2885
+    }
+  },
+  "createdAt": "2026-11-15T13:42:04.964Z"
+}

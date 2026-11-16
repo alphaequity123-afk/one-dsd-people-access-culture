@@ -1,0 +1,112 @@
+{
+  "target": "dsd-program.leadership-strategy",
+  "kind": "surface",
+  "route": "/one-dsd/programs/leadership-strategy",
+  "sourceSha256": "68a039950c3a15dc87ee76f8762082a74353ff4d052e9298ace32b8d329b3d91",
+  "status": "needs_revision",
+  "reviewedFieldCount": 5,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "intro"
+      ],
+      "before": "Division direction, legislative coordination, and the DSD equity implementation plan.",
+      "after": "Division leadership sets direction and oversees legislative work. The DSD equity implementation plan guides how changes are made and tracked in practice.",
+      "reason": "Provides a clear summary for staff, names specific actions, and explains the purpose of the equity implementation plan within the context of ongoing leadership and legislative work."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "equityEntryPoints",
+        0
+      ],
+      "before": "Decision rights and bottlenecks",
+      "after": "Clarify who can make decisions, identify process delays, and address authority bottlenecks.",
+      "reason": "Explains why specifying decision rights and bottlenecks is important and how it connects to equity work and program operations."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "equityEntryPoints",
+        1
+      ],
+      "before": "Funded and staffed equity commitments",
+      "after": "Make equity commitments concrete by allocating funding and staff to specific initiatives.",
+      "reason": "Clarifies the significance of funding and staffing equity commitments as a practical step to move from plans to action."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "equityEntryPoints",
+        2
+      ],
+      "before": "Reporting back to staff on what changed",
+      "after": "Share with staff what decisions were made and what changed as a result of their input, including reasoning when available.",
+      "reason": "Expands explanation to specify why and how reporting back to staff matters, supporting informed engagement and transparency."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The revision to the intro field introduces unsupported claims about division leadership setting direction and overseeing legislative work. The original was a summary list of areas (direction, legislative coordination, equity plan); the new version asserts new actions and roles ('sets direction,' 'oversees legislative work,' 'guides how changes are made and tracked in practice') that are not substantiated by the original wording or, by extension, its underlying official records. Retain list structure unless a source explicitly describes these leadership roles and the practical function of the equity implementation plan as described."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "Revision is a clarifying expansion and remains grounded in the likely intent of the original ('Decision rights and bottlenecks'). 'Clarify who can make decisions, identify process delays, and address authority bottlenecks' states existing internal priorities without overstating legal or procedural change. If published records limit this meaning, reverse to the original."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "Expanded explanation ('Make equity commitments concrete by allocating funding and staff to specific initiatives') accurately elaborates on 'Funded and staffed equity commitments.' The revision aligns with the general staff understanding of what is required for equity commitments to be actionable and is not overstated. Acceptable unless a source restricts this meaning."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The change ('Share with staff what decisions were made and what changed as a result of their input, including reasoning when available') adds context that supports transparency and describes good practice grounded in the intent of 'Reporting back to staff on what changed.' Acceptable, and superior for staff understanding, assuming no official restriction against this level of detail."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1178,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 236,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1414
+    },
+    "review": {
+      "input_tokens": 982,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 366,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1348
+    }
+  },
+  "createdAt": "2026-11-15T13:38:45.391Z"
+}

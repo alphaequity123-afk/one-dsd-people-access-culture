@@ -1,0 +1,81 @@
+{
+  "target": "code.components/policy-analysis/sources-editor.tsx",
+  "kind": "surface",
+  "route": "components/policy-analysis/sources-editor.tsx",
+  "sourceSha256": "48a3f0a165b121d5996320f6e9daaebed6a0d68427236012d874dc82182b1078",
+  "status": "needs_revision",
+  "reviewedFieldCount": 5,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Attach the policy itself and anything that shows how it works in practice: data, complaints, meeting notes, letters or forms people receive. The analysis quotes only what is in these sources.",
+      "after": "Attach the policy document and any supporting records that show how it is applied, such as data files, complaints, meeting notes, or official communications like letters or forms. The analysis uses only the information provided in these sources when interpreting the policy or describing its effects. If a relevant document is missing, interpretations may be incomplete or miss context that affects the outcome or implementation.",
+      "reason": "Clarifies which additional materials help show practical application and why including them matters for the completeness and accuracy of analysis."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": "No sources yet. Without the policy text, the analysis can only work from the catalog summary.",
+      "after": "No sources have been added. Without the policy text, the analysis will use only the catalog summary, which may not include more specific requirements or guidance from the full policy.",
+      "reason": "Specifies that relying on the summary may omit important details, emphasizing the consequence of not adding source material."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The revised text changes the meaning and scope beyond what the source provides. The original says: 'Attach the policy itself and anything that shows how it works in practice: data, complaints, meeting notes, letters or forms people receive. The analysis quotes only what is in these sources.' The revision turns this into a stronger caution about interpretation, introduces new procedural qualifiers ('interpreting the policy or describing its effects'), and adds commentary about missing documents leading to incomplete or context-missing interpretations, which is absent from the source and could change user expectations and legal interpretations. This goes beyond a plain-language clarification."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The change improves specificity without changing the core meaning: it clarifies that relying on the catalog summary might exclude specific requirements or guidance. This matches intent and does not introduce unsupported content."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3662,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 194,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3856
+    },
+    "review": {
+      "input_tokens": 3356,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 191,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3547
+    }
+  },
+  "createdAt": "2026-11-15T13:55:36.171Z"
+}

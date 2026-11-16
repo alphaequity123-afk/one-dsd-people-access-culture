@@ -1,0 +1,112 @@
+{
+  "target": "dsd-program.data-quality",
+  "kind": "surface",
+  "route": "/one-dsd/programs/data-quality",
+  "sourceSha256": "0bd0580c9c38e4d54a6e5f17d5d8f1d43cb8db853bf94eda74bc8fa8aaa65530",
+  "status": "model_checked",
+  "reviewedFieldCount": 4,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "intro"
+      ],
+      "before": "Division data, quality assurance, and evaluation of services and outcomes.",
+      "after": "We collect, review, and analyze data to assess service and outcome quality across the division. Evaluation results support changes in policy and practice. Careful data quality and evaluation practices help us explain what is working and identify where improvement is needed.",
+      "reason": "Expanded to connect the data, quality assurance, and evaluation activities directly with their purpose in supporting policy, practice, and improvement. Restated for clarity and substantive explanation."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "equityEntryPoints",
+        0
+      ],
+      "before": "Disaggregation with small-group protection",
+      "after": "Disaggregating data while protecting small group identities",
+      "reason": "Rewritten for plain language clarity and to make the activity more explicit for staff. Original was short and used technical phrasing; this revision clarifies what the work involves."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "equityEntryPoints",
+        1
+      ],
+      "before": "Systems built for billing rather than equity analysis",
+      "after": "Data systems designed for billing may not support equity analysis",
+      "reason": "Clarified how system design for billing affects the ability to analyze equity. This helps staff understand why the system's structure can be a limitation."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "equityEntryPoints",
+        2
+      ],
+      "before": "Qualitative evidence alongside numbers",
+      "after": "Pairing qualitative evidence with quantitative data",
+      "reason": "Clarified that qualitative and quantitative evidence are used together, and made the language more precise for staff discussion."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revised intro expands the original, linking data, quality assurance, and evaluation more explicitly to improvement, policy, and practice. This is grounded in the recognized function of a data quality and evaluation program. The added content clarifies (not alters) the source meaning. No blocker."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "Rewording of the equity entry point (from 'Disaggregation with small-group protection' to 'Disaggregating data while protecting small group identities') preserves the intended meaning and purpose. No substantive change—just clarification for staff unfamiliar with 'disaggregation.'"
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "Rephrasing (from 'Systems built for billing rather than equity analysis' to 'Data systems designed for billing may not support equity analysis') explains why system purpose matters for equity. This stays true to the source intent and adds clarity."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The switch from 'Qualitative evidence alongside numbers' to 'Pairing qualitative evidence with quantitative data' does not change substance or meaning. It clarifies the original for readers. No blocker."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1147,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 254,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1401
+    },
+    "review": {
+      "input_tokens": 992,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 251,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1243
+    }
+  },
+  "createdAt": "2026-11-15T13:38:42.950Z"
+}

@@ -1,0 +1,67 @@
+{
+  "target": "code.app/global-error.tsx",
+  "kind": "surface",
+  "route": "app/global-error.tsx",
+  "sourceSha256": "d9daa12eede570e39c7635d50363a6f0b5b403f93d0429f992cf85e13b040cae",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "The site could not load this page right now. This is usually temporary. Try again in a moment.",
+      "after": "We could not load this page. This error is usually temporary and may resolve if you try again shortly. Refresh to retry, or return to the home page if you need to reach a different section.",
+      "reason": "Revised to clarify the immediate steps available to the user and explain the practical actions that follow. Made connections between retrying and alternatives tangible. Avoided filler and increased specificity without introducing unsupported claims."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revised message departs from the source in several significant ways: (1) The original preserves the neutral tone: 'The site could not load this page right now. This is usually temporary. Try again in a moment.' The revision switches the subject to 'We,' which is unsupported anthropomorphism not present in the source; (2) The revision instructs to 'refresh to retry,' which is not explained or supported by the source code—instead, the source describes a 'Try again' button that triggers the Next.js error boundary reset, not a browser page refresh. The new instruction may confuse the user about what action is possible; (3) The suggestion that the user can 'return to the home page if you need to reach a different section,' while related to the presence of a home page button, is more directive than the neutral option provided in the source. The source avoids editorializing or presuming the user’s goal; (4) The new text lengthens and editorializes rather than clarifies. No ambiguity or barrier in the original required such expansion. The original text is plain and accurately reflects the available actions and intent per standard. The proposed revision weakens source fidelity and adds unsupported instructional content."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1396,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 105,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1501
+    },
+    "review": {
+      "input_tokens": 1113,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 269,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1382
+    }
+  },
+  "createdAt": "2026-11-15T13:49:04.235Z"
+}

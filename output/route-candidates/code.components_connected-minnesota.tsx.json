@@ -1,0 +1,13 @@
+{
+  "target": "code.components/connected-minnesota.tsx",
+  "kind": "surface",
+  "route": "components/connected-minnesota.tsx",
+  "context": "\"use client\";\n\nimport { useEffect, useState } from \"react\";\nimport Link from \"@/components/app-link\";\nimport { usePathname } from \"next/navigation\";\n\n/** \"Connected across Minnesota\": the state agencies the knowledge graph links to this page. Hidden when there are none. */\nexport function ConnectedMinnesota() {\n  const pathname = usePathname();\n  // Kept with the path they belong to, so a page never shows the previous page's agencies.\n  const [found, setFound] = useState<{ path: string; agencies: { title: string; href: string }[] }>({ path: \"\", agencies: [] });\n  useEffect(() => {\n    if (!pathname || pathname === \"/\" || pathname === \"/home\" || pathname.startsWith(\"/minnesota-agencies\")) return;\n    const controller = new AbortController();\n    fetch(`/api/connected?path=${encodeURIComponent(pathname)}`, { signal: controller.signal })\n      .then(response => response.ok ? response.json() : { agencies: [] })\n      .then(data => setFound({ path: pathname, agencies: data.agencies ?? [] }))\n      .catch(() => undefined);\n    return () => controller.abort();\n  }, [pathname]);\n  const agencies = found.path === pathname ? found.agencies : [];\n  if (!agencies.length) return null;\n  return <aside className=\"connected-mn dsd-shell\" aria-labelledby=\"connected-mn-title\">\n    <h2 id=\"connected-mn-title\">Connected across Minnesota</h2>\n    <ul>{agencies.map(agency => <li key={agency.href}><Link href={agency.href}>{agency.title}</Link></li>)}</ul>\n    <style>{`\n      .connected-mn { margin: 2.5rem auto 1.5rem; padding: 18px 22px; background: #f1f5f9; border-top: 4px solid #475569; border-radius: 10px; }\n      .connected-mn h2 { margin: 0 0 .6rem; font-size: 1.1rem; color: #1e293b; }\n      .connected-mn ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 10px; }\n      .connected-mn a { display: inline-block; padding: 6px 12px; background: #fff; border: 1px solid #cbd5e1; border-radius: 999px; font-weight: 600; font-size: .92rem; text-decoration: none; color: #1e3a8a; }\n      .connected-mn a:hover { border-color: #1e3a8a; text-decoration: underline; }\n    `}</style>\n  </aside>;\n}\n",
+  "protectedFields": [],
+  "values": {
+    "field0": "Connected across Minnesota"
+  },
+  "status": "no_editable_prose",
+  "changes": [],
+  "issues": []
+}

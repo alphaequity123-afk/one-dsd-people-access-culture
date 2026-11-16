@@ -1,0 +1,170 @@
+{
+  "target": "dsd-scenario.dsd-engagement-late",
+  "kind": "surface",
+  "route": "/one-dsd/scenarios/dsd-engagement-late",
+  "sourceSha256": "cc07e452c57a9d4e52b5f58503bb4beb3da782cac48a16607ad46f58b37ea964",
+  "status": "needs_revision",
+  "reviewedFieldCount": 12,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "situation"
+      ],
+      "before": "A program change has been approved and funded. A manager asks for listening sessions with affected communities before rollout. Two of those communities were asked similar questions last year by another DHS unit and never heard what happened.",
+      "after": "A program change received final approval and funding. Before the rollout, a manager requests listening sessions with the communities affected by the change. Two of these communities participated in similar discussions last year with a different DHS unit, but have not been informed of the outcomes or use of their input.",
+      "reason": "Clarified timeline and detail, showing the distinction between last year’s similar engagement and current outreach, as well as the lack of follow-up."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "whatToNotice",
+        0
+      ],
+      "before": "The level of influence is inform, not consult, and saying otherwise would damage trust.",
+      "after": "The appropriate level of influence in this process is to inform, not consult. Presenting the opportunity as one for genuine input, when the core decisions are already made, risks undermining trust. Being clear about participants’ ability to affect outcomes is necessary.",
+      "reason": "Added explanation for why clarity about influence matters in maintaining trust."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "whatToNotice",
+        1
+      ],
+      "before": "Prior contacts exist; repeating requests extracts labor.",
+      "after": "Previous engagement with these communities should be acknowledged. Asking for additional participation without addressing past requests or outcomes imposes a burden and may contribute to fatigue or reduced willingness to participate.",
+      "reason": "Expanded on the consequences and importance of recognizing prior contacts and the labor required from communities."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "whatToNotice",
+        2
+      ],
+      "before": "A report-back on last year's input is still owed.",
+      "after": "A response to last year’s community input is still owed. Reporting back on how feedback was used—or explaining why it was not—demonstrates respect for participants’ time and supports ongoing relationships.",
+      "reason": "Clarified why following up on prior community input is necessary and what it demonstrates."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "questions",
+        0
+      ],
+      "before": "What can this engagement still change? If nothing, how will you say so honestly?",
+      "after": "What, if anything, about this program rollout can still be influenced by engagement? If the opportunity for change is limited or nonexistent, how will this be communicated transparently to the community?",
+      "reason": "Made the connection between actual influence and honest communication more explicit."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "questions",
+        2
+      ],
+      "before": "What will people receive for their time, and who owns the relationship afterward?",
+      "after": "What are the expectations regarding recognition or compensation for participants’ time? After the engagement, which part of DHS maintains responsibility for these relationships and any future communication?",
+      "reason": "Clarified the questions regarding participant compensation and organizational responsibility."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "handoff"
+      ],
+      "before": "Connect with your community relations lead so this engagement builds on existing relationships rather than repeating requests. Tribal Nations are a separate government-to-government route.",
+      "after": "Work with your community relations lead to ensure this engagement acknowledges earlier requests and avoids redundant outreach. This can help maintain existing relationships. When working with Tribal Nations, use the established government-to-government process rather than standard outreach.",
+      "reason": "Clarified why working with community relations matters and stated the specific reason to use the government-to-government process with Tribal Nations rather than standard engagement."
+    },
+    {
+      "fieldId": 11,
+      "path": [
+        "questionsTitle"
+      ],
+      "before": "Questions to ask before acting",
+      "after": "Questions to consider before responding",
+      "reason": "Reworded for brevity and precision without losing the focus on advance consideration."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The rewrite changes the meaning and sequence of events in a way not supported by the source. The original says the change has been \"approved and funded\" and that the manager asks for sessions before rollout. The source only documents that previously, similar questions were asked and no response was given; it does not say these were 'discussions' or specify a 'lack of follow-up' in terms other than people not hearing back. The rewrite invents distinctions (\"received final approval,\" \"participated in similar discussions,\" \"not been informed of ... use of their input\") and alters the source's practical summary, which is critical for scenario fidelity."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The expansion is generally accurate but adds interpretation ('risks undermining trust,' 'being clear...is necessary') that, while reasonable, goes beyond the source, which just directly states 'saying otherwise would damage trust.' The elaboration is useful, but should remain closer to the original for a scenario overview."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The expansion is generally reasonable but interprets and expands the implications of the brief source point. It risks overexplaining a scenario notice field that is designed for quick reference."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "Acceptable expansion; clarifies the importance of reporting back as a sign of respect, which is implicit in the original. Still, the original wording suffices for the purpose."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "Acceptable as an expansion. It maintains the intent of the original question while making the link between influence and communication more explicit."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "This expansion is reasonable and matches the source questions, but adds specificity not present in the original. It does not introduce error, but is more detailed than required."
+      },
+      {
+        "fieldId": 10,
+        "severity": "note",
+        "finding": "The rewrite maintains the core guidance, with a clarifying rationale and more explicit instruction. The additional explanation is not harmful and slightly expands understanding."
+      },
+      {
+        "fieldId": 11,
+        "severity": "note",
+        "finding": "Wording change is minor and within acceptable bounds."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1627,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 615,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2242
+    },
+    "review": {
+      "input_tokens": 1637,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 463,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2100
+    }
+  },
+  "createdAt": "2026-11-15T13:39:01.649Z"
+}

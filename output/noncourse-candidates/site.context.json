@@ -1,0 +1,137 @@
+{
+  "target": "site.context",
+  "kind": "surface",
+  "route": "/",
+  "sourceSha256": "d17bb1d2aadec928c7a5bf2f0ca15782f236fb309fc305d0acc962ad86b88343",
+  "status": "needs_revision",
+  "reviewedFieldCount": 6,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "oneDhsDescription"
+      ],
+      "before": "Start with shared knowledge, tools, and ways to reach the right person for work across DHS.",
+      "after": "Begin with resources that provide shared knowledge, tools, and contact pathways to help connect with the appropriate people for DHS-wide responsibilities.",
+      "reason": "Clarified that these resources are aimed at facilitating work across the department, specifically by helping staff identify the right contacts and supports, not just 'ways to reach the right person.' Specified the work context supported by these tools."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "oneDsdDescription"
+      ],
+      "before": "Use the complete One DSD program: connected learning, evidence, tools, implementation and review for Disability Services Division work.",
+      "after": "Access the full One DSD program, which offers connected learning modules, supporting evidence, task tools, and processes for implementation and review specific to Disability Services Division practice.",
+      "reason": "Specified how users engage with the program and that the focus is on supporting DSD work through these resources. Clarified the professional purpose of the program components."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "oneDhsViewNote"
+      ],
+      "before": "The unified library includes shared resources and labelled DSD examples. Confirm which division or program requirements apply to your work.",
+      "after": "This unified library provides access to shared resources as well as marked DSD-specific examples. Always verify which division or program requirements are relevant to your current assignment, since requirements may differ across DHS divisions.",
+      "reason": "Added reasoning for confirming which requirements apply to a given task, grounded in the potential for variation across DHS divisions or programs. Provided a more precise explanation of labeling and relevance."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "oneDsdViewNote"
+      ],
+      "before": "DSD resources and applicable shared DHS guidance are available together. Access to protected work and editing requires separate authorization.",
+      "after": "You will find DSD-specific resources alongside applicable DHS-wide guidance in this combined view. Access to protected materials or editing privileges is managed separately through an authorization process.",
+      "reason": "Clarified which resources are present and delineated that access controls for protected content and editing are handled through specific authorization rather than more general language. Explained why access is restricted."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "oneDsdActiveNote"
+      ],
+      "before": "The standalone One DSD program includes DSD resources and applicable department-wide learning and tools.",
+      "after": "The One DSD standalone program offers DSD-focused resources together with any relevant department-wide learning and tools. This approach supports practice that aligns both with DSD standards and broader DHS expectations.",
+      "reason": "Clarified the integration of DSD and department-wide resources and explained the relevance for aligning daily work with both sets of expectations."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "optionalViewBody"
+      ],
+      "before": "Use the DSD resource context to explore Disability Services Division examples and scenarios alongside shared One DHS learning and tools. Your resource preference does not change access to protected work.",
+      "after": "Leverage DSD context resources to examine Disability Services Division examples and scenarios along with shared One DHS tools and learning opportunities. Selecting a view based on resource needs does not affect your access to protected or confidential work.",
+      "reason": "Refined explanation of how the view supports side-by-side learning, and clarified that choosing a particular view is distinct from permissions to access restricted content. Used more precise language."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revision ('Begin with resources that provide shared knowledge, tools, and contact pathways to help connect with the appropriate people for DHS-wide responsibilities.') introduces 'contact pathways' and narrows the description to 'DHS-wide responsibilities', which is not stated in the original ('ways to reach the right person for work across DHS'). The original is already clear and does not restrict the use to 'responsibilities', avoiding unjustified narrowing and unsupported interpretation of the resource purpose."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "'Access the full One DSD program, which offers connected learning modules, supporting evidence, task tools, and processes for implementation and review specific to Disability Services Division practice' breaks the directive form ('Use') and re-characterizes the program as a set of modules and professional practice context. The original ('Use the complete One DSD program: connected learning, evidence, tools, implementation and review for Disability Services Division work.') is a direct invitation and avoids assumptions about engagement method or interpretation of 'practice', which is not supported by source."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The changes clarify reasoning and labeling and align with the original message. The explanation about requirements varying by division is a reasonable clarification and supports user understanding."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "Refers to 'authorization process' instead of 'separate authorization'; this adds detail but does not substantively change access terms or misrepresent controls."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The edit elaborates on alignment with DSD standards and DHS expectations, which is consistent with the source content and its purpose. The change explains the relevance for users without rewriting program scope or policy."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The language clarifies that viewing options do not affect permissions and strengthens the explanation about learning context. No unsupported claims introduced."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1371,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 497,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1868
+    },
+    "review": {
+      "input_tokens": 1522,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 406,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1928
+    }
+  },
+  "createdAt": "2026-11-15T13:35:31.753Z"
+}

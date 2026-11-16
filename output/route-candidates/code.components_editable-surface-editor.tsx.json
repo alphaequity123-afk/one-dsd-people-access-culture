@@ -1,0 +1,109 @@
+{
+  "target": "code.components/editable-surface-editor.tsx",
+  "kind": "surface",
+  "route": "components/editable-surface-editor.tsx",
+  "sourceSha256": "3a8192bd38fa316d75fae95d453c9b4f4691f27fd8457c5c560f811dfa19afd3",
+  "status": "needs_revision",
+  "reviewedFieldCount": 4,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Save to update what staff see. Earlier wording stays available below.",
+      "after": "When you save changes here, you update the wording displayed to staff. The previous wording remains accessible below for reference and version control.",
+      "reason": "Expanded to clarify that saving changes specifically affects what staff see, and the prior wording is retained for tracking and context. This connects actions with their operational reasoning."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Right now this DSD view shows the One DHS wording. Saving here creates DSD wording of its own without changing One DHS.",
+      "after": "This DSD page currently displays the wording from One DHS. Saving here will create a DSD-specific version, which does not affect the One DHS wording.",
+      "reason": "Clarified that the DSD-specific version is distinct from the One DHS version, and saving does not alter One DHS content. The explanation preserves factual separation and helps staff understand the scope of their edits."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field3"
+      ],
+      "before": "Closing this editor will discard them. The saved wording is not affected.",
+      "after": "If you close this editor now, any unsaved changes you made will be lost. The last saved version will remain available and unchanged.",
+      "reason": "Added detail to explain why closing the editor matters—unsaved changes are lost, but the most recently saved content is still available. Reinforces the consequence of discarding edits."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field7"
+      ],
+      "before": "Save this section first; then each link in this group can be edited on its own.",
+      "after": "You need to save this section first. Once it is saved, you can edit each link in this group separately.",
+      "reason": "Clarified the sequence: saving enables further editing of links, making the procedural dependency explicit."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The change expands on the original: 'Save to update what staff see. Earlier wording stays available below.' to a longer explanation about 'version control' and 'reference'. The added explanation about tracking and context is not present in the source and overstates the functionality visible to the user. The source statement is concise and directly instructive, and does not reference 'version control' as a concept. Do not broaden the scope or inferred documentation value."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "This rewrite clarifies wording, without material scope change. The meaning is preserved: the DSD page initially inherits from One DHS, and editing here creates a DSD-specific version without changing the inherited One DHS template. This is a supported clarification."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The change turns the original: 'Closing this editor will discard them. The saved wording is not affected.' into a longer conditional statement. While the clarification about 'the last saved version will remain' is a true description, the source's direct, succinct warning is required as this is part of the UI's confirmed instructional tone. Do not expand or restate simple, official warnings."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "This revision is substantively aligned with the source. It simply re-words the editing note for clarity and sequence, which is permissible and does not change the source's meaning or legal requirements."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 7014,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 293,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 7307
+    },
+    "review": {
+      "input_tokens": 6895,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 367,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 7262
+    }
+  },
+  "createdAt": "2026-11-15T13:53:19.061Z"
+}

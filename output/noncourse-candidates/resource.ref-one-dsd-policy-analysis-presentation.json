@@ -1,0 +1,141 @@
+{
+  "target": "resource.ref-one-dsd-policy-analysis-presentation",
+  "kind": "resource",
+  "route": "/library/ref-one-dsd-policy-analysis-presentation",
+  "sourceSha256": "95b56c3875906848e9c3de8c9fceb6fdf4031b8a6eba0e32067b614f74d3841a",
+  "status": "model_checked",
+  "reviewedFieldCount": 6,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "This 23-slide presentation covers equity analysis in policy development, the responsibilities of drafting groups, and leadership review. You can read the slides or download an editable copy.",
+      "after": "This 23-slide presentation explains how to apply equity analysis within policy development. It outlines the roles of drafting groups and the stages of leadership review. Slides can be read online or downloaded for editing.",
+      "reason": "Clarified the summary by specifying the presentation's focus, restating the link between equity analysis and policy work, and distinguishing between reading and editing options without unnecessary repetition."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Use it to prepare a policy discussion and identify the questions, participants, and evidence a review needs.",
+      "after": "Refer to this presentation when preparing for a policy review to clarify which questions should be addressed, who should be included, and what evidence the process should consider. Using this resource helps you align your work with current program expectations for policy analysis.",
+      "reason": "Expanded and clarified why the resource matters. Explained how it helps staff select appropriate questions, participants, and evidence, and frames its relevance to program practice rather than relying on \"use it\" phrasing."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "The One DSD edition adapts Equity Analysis for Policy Refresh 11-20-24 to the program’s visual style. The original training content, editable diagrams, and speaker notes are retained in the PowerPoint.",
+      "after": "This edition of the presentation adapts the content from Equity Analysis for Policy Refresh 11-20-24 to fit One DSD’s established format. It maintains the original training materials, including editable diagrams and speaker notes, in the downloadable PowerPoint version.",
+      "reason": "Clarified ownership and the continuity of original training materials. Specified where editable content is retained, improving the explanation for staff who may need to distinguish between formats."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "The presentation explores an equity mindset, intent and impact, definitions, an eight-part analysis framework, convening a drafting group, and preparing for leadership review.",
+      "after": "The presentation covers how to approach policy with an equity mindset, defines key concepts, explains the difference between intent and impact, describes the eight-step analysis framework, details the assembly and collaboration of drafting groups, and outlines preparation for leadership review.",
+      "reason": "Improved the structure and specificity by listing what is included in the presentation in a logical order and clarifying the progression from definitions through framework and group work to leadership review."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Contacts and submission steps reflect the November 20, 2024 training. Confirm current arrangements with the responsible office before acting; visual restyling does not make historical steps current policy.",
+      "after": "Contact information and submission instructions in the slides reflect what was current for the November 20, 2024 training. Procedures may change. Always verify current expectations with the responsible office before starting a policy review process. Visual changes in the slides do not update official steps.",
+      "reason": "Clarified that the contacts and submission steps are as of the training date, and explained the need to verify to avoid acting on outdated instructions. Avoided implying that design changes affect policy authority."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "The presentation page offers each slide and its readable text. Download the PowerPoint for editing or presenting, or the PDF for reading and sharing.",
+      "after": "You can review each slide and its text on the presentation page. To modify or present the materials, download the PowerPoint file. For easy viewing or sharing, download the PDF version.",
+      "reason": "Improved clarity about how staff can access, use, and share the materials, with explicit mention of purpose for each format. Removed repetitive language."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revised summary clarifies that the presentation explains equity analysis within policy development, specifying the connection to drafting groups and leadership review, and accurately reflects the options for reading and editing the material. This restatement matches the source's scope and intent, without adding or changing any substantive claims."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revised 'why it matters' section maintains the essential points of the source and expands on how to use the resource, aligning it more closely to staff needs and expectations. The added explanation that using the resource helps alignment with program expectations is justified as a practical outcome of following prescribed equity analysis frameworks."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "This change clarifies the adaptation's purpose and specifies what is included in the PowerPoint version, which matches the detail in the source about content (diagrams, speaker notes) and does not introduce unsupported claims."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The reworded list expands slightly on the logic and progression of the presentation content, remaining faithful to the source while making the structure clearer for staff. All included topics are found in the source presentation."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The clarified language about contact and procedures appropriately reflects the advisory notes in the source, warning that visual adaptation does not update policy or steps and that users need to verify with the responsible office. No unsupported policy or procedure is introduced."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The update improves user guidance by linking each file format to its appropriate use—editing/presenting or viewing/sharing—and is fully supported by the source text, which describes both formats and the slide-by-slide access."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1724,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 566,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2290
+    },
+    "review": {
+      "input_tokens": 1862,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 368,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2230
+    }
+  },
+  "createdAt": "2026-11-15T13:43:06.763Z"
+}

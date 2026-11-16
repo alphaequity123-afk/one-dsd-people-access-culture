@@ -1,0 +1,151 @@
+{
+  "target": "code.app/one-dsd/programs/page.tsx",
+  "kind": "surface",
+  "route": "/one-dsd/programs",
+  "sourceSha256": "91e85503634ff09d557e7ef6afea070873eb61f67f8add28ef228a369bc32f82",
+  "status": "needs_revision",
+  "reviewedFieldCount": 7,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field3"
+      ],
+      "before": "Watch the map and DSD practice videos",
+      "after": "View the service map and DSD practice video series",
+      "reason": "Clarified that the videos refer to a series and that the map provides an overview of services and practices, explaining what users will find upon following the link."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field4"
+      ],
+      "before": "Explore the six Aging and Disability Services Administration goals",
+      "after": "Review the six primary goals of the Aging and Disability Services Administration",
+      "reason": "Made the purpose more explicit by stating that users will be reviewing the goals, providing context for why one might follow this link."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field5"
+      ],
+      "before": "Use the Equity Analysis Toolkit",
+      "after": "Refer to the Equity Analysis Toolkit for structured guidance",
+      "reason": "Clarified the action and benefit: the toolkit offers structured guidance, making the value of this action more specific."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field6"
+      ],
+      "before": "Apply culturally and linguistically appropriate practice",
+      "after": "Apply culturally and linguistically appropriate standards in your practice",
+      "reason": "Specified that 'practice' refers to professional standards and that application of these standards is a professional responsibility."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field8"
+      ],
+      "before": "Find the responsible person or office",
+      "after": "Identify the responsible staff member or office for your issue",
+      "reason": "Clarified that the purpose is to help the user identify the specific person or office responsible for a particular issue, making the benefit of this action explicit."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field9"
+      ],
+      "before": "For service navigation and public program questions, use the official",
+      "after": "For help with service navigation or public program questions, use the official DHS contact directory or Disability Hub MN.",
+      "reason": "Combined the guidance, clarified the purpose, and removed ambiguity by specifying what assistance these resources provide."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field11"
+      ],
+      "before": "Connect priorities to planning and reviewing progress",
+      "after": "See how to use priorities when planning and reviewing your work",
+      "reason": "Clarified that the link shows how priorities relate to planning and evaluation, making the relevance of the action explicit."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "Field 3 change from 'Watch the map and DSD practice videos' to 'View the service map and DSD practice video series' is not supported by the code. The source link is simply '/learn/equity-in-practice', which textually reads 'Watch the map and DSD practice videos' and does not specify a 'video series' or explicitly define 'service map' as separate. The proposal infers structure and content not present in the label or source; this is not a clarification but an unsupported embellishment."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "Field 4 change from 'Explore the six Aging and Disability Services Administration goals' to 'Review the six primary goals of the Aging and Disability Services Administration' is not grounded in evidence. The code's link label says 'Explore', which is more open-ended and matches the toolkit navigation. The rewrite introduces 'primary' (not in the source label or target) and shifts 'explore' to 'review', narrowing the scope without reference."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "Field 5 change from 'Use the Equity Analysis Toolkit' to 'Refer to the Equity Analysis Toolkit for structured guidance' adds interpretation ('structured guidance') and softens the action. The source is a straightforward call to use a named toolkit, not an implicit reference. The original label matches the link intent and directs users to an official resource."
+      },
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "Field 6 change from 'Apply culturally and linguistically appropriate practice' to 'Apply culturally and linguistically appropriate standards in your practice' is not supported by the code labeling or source. The official phrase is 'practice', not 'standards', and the rewrite introduces unnecessary qualification and user direction."
+      },
+      {
+        "fieldId": 4,
+        "severity": "blocker",
+        "finding": "Field 8 change from 'Find the responsible person or office' to 'Identify the responsible staff member or office for your issue' adds language ('for your issue') and specificity unsupported in the source. The rewritten version implies functionality (issue-based lookup, staff-level assignment) that is not present in the link text or its target."
+      },
+      {
+        "fieldId": 5,
+        "severity": "blocker",
+        "finding": "Field 9 change from 'For service navigation and public program questions, use the official' to 'For help with service navigation or public program questions, use the official DHS contact directory or Disability Hub MN.' introduces wording not present in the underlying code and eliminates the natural split in the record between label and citation of sources. The original explicitly refers to the separate SourceLink elements and preserves DHS's preferred construction."
+      },
+      {
+        "fieldId": 6,
+        "severity": "blocker",
+        "finding": "Field 11 change from 'Connect priorities to planning and reviewing progress' to 'See how to use priorities when planning and reviewing your work' is not supported by the code. The rewrite introduces user-centric framing ('your work') and claims the link explains 'how to use priorities', which the source does not state or imply. The original matches the official record and retains neutral scope."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2916,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 356,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3272
+    },
+    "review": {
+      "input_tokens": 2843,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 648,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3491
+    }
+  },
+  "createdAt": "2026-11-15T13:51:05.779Z"
+}

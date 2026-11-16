@@ -1,0 +1,95 @@
+{
+  "target": "graduation-path.gp-11",
+  "kind": "surface",
+  "route": "/practice/gp-11",
+  "sourceSha256": "61b82ef3364472603d641947eb7eab05ad72063a97e4f8d57b0a682b5a1951c8",
+  "status": "needs_revision",
+  "reviewedFieldCount": 61,
+  "changes": [
+    {
+      "fieldId": 5,
+      "path": [
+        "startingCompetence"
+      ],
+      "before": "You shape how people move into lead and leadership roles and want the pathway to work for staff with disabilities without asking anyone to disclose.",
+      "after": "You guide how people move into lead and leadership roles and want a pathway that functions for staff with disabilities—without requiring anyone to disclose disability status. You influence criteria, transitions, and supports that affect advancement.",
+      "reason": "Shifted from second person ('You shape') to a more precise explanation of the role, clarified influence on process, and highlighted that the pathway should not require individuals to disclose disability status. This adds specificity and aligns with professional standards."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "graduatedLooksLike"
+      ],
+      "before": "By the end, you will have a leadership pathway or sponsorship plan: a transparent pathway map, leadership criteria tested for job-relatedness, sponsors with decision power, an owner for accommodations across every transition, cohort events that are accessible every time, program-level measures with suppression, and a review date. No one is identified as disabled anywhere in it.",
+      "after": "At completion, you will have a leadership pathway or sponsorship plan built to promote equity and transparency. The plan includes: a clear pathway map, leadership criteria demonstrated to relate directly to essential job duties, sponsors who can make advancement recommendations, a designated owner for accommodations at each transition, accessible cohort activities, and program-level evaluation with data suppression to avoid identifying individuals. No staff member is identified as disabled in the plan or its supporting documentation.",
+      "reason": "Expanded on each component to clarify what each part covers and why it matters—clearer about data suppression and its purpose, and why criteria and sponsorship are structured this way. Avoids stock summary by linking each point to equity, transparency, or confidentiality reasons."
+    },
+    {
+      "fieldId": 17,
+      "path": [
+        "privacy"
+      ],
+      "before": "Never record who is disabled or any accommodation history. Describe the pathway, not people. Your progress is saved only on this computer and is not used to rank anyone.",
+      "after": "You must not record who is disabled or details of any accommodation history. Describe processes and pathways only; never document personal or identifiable information. Progress is stored on this computer only and is not visible to others or used for performance evaluation. This protects privacy and complies with confidentiality policy.",
+      "reason": "Clarified that the prohibition is not optional, and added the rationale for privacy. Grounded prohibition in confidentiality policy and explained why individual data must not be stored."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 5,
+        "severity": "blocker",
+        "finding": "The revised starting competence text adds, \"You guide how people move into...and want a pathway that functions for staff with disabilities—without requiring anyone to disclose disability status. You influence criteria, transitions, and supports that affect advancement.\" The original was: \"You shape how people move into lead and leadership roles and want the pathway to work for staff with disabilities without asking anyone to disclose.\" The edit changes the meaning in two ways not supported by the source: (1) The source establishes that the page is for staff shaping formal or informal leadership advancement in their workplace (\"You shape...\"). The shift to \"guide\" is less precise and could admit less deliberate or indirect involvement, contrary to the page’s scenario. (2) \"...influence criteria, transitions, and supports...\" is more expansive and could mislead as to the authority or scope of the reader’s role; the source narrowly points to the pathway and not every transition.\""
+      },
+      {
+        "fieldId": 6,
+        "severity": "blocker",
+        "finding": "For the 'graduatedLooksLike' outcome, the revision over-elaborates and changes the direct, checklist-based nature of the source. The original itemizes: pathway map, job-related criteria, sponsors with decision power, owner for accommodations across transitions, accessible cohort events, program-level measures with suppression, and a review date, with explicit assurance that 'No one is identified as disabled anywhere in it.' The replacement text rephrases and adds new concepts ('promote equity,' 'demonstrated to relate directly to essential job duties,' 'advancement recommendations,' 'designated owner,' 'program-level evaluation with data suppression to avoid identifying individuals,' 'supporting documentation'), which move away from the practical, user-facing guidance and checklist model in the source. This is not justified by the evidence."
+      },
+      {
+        "fieldId": 17,
+        "severity": "blocker",
+        "finding": "The edit to the privacy statement changes 'Never record who is disabled or any accommodation history. Describe the pathway, not people. Your progress is saved only on this computer and is not used to rank anyone.' to a longer statement: 'You must not record who is disabled or details of any accommodation history. Describe processes and pathways only; never document personal or identifiable information. Progress is stored on this computer only and is not visible to others or used for performance evaluation. This protects privacy and complies with confidentiality policy.' The new text adds a legal rationale ('complies with confidentiality policy') and replaces the source's direct imperative ('Never record...') with a more formal prohibition and rationale, plus adds 'never document personal or identifiable information.' The source only prohibits recording disability status and accommodation history—broadening to 'personal or identifiable information' exceeds the source. Stating an official policy is not justified unless a citation or official DHS/DSD policy is quoted or referenced. The change to 'must not' is slightly more formal but undercuts the crisp source prohibition 'Never record' which is strong and clear."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 4415,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 477,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4892
+    },
+    "review": {
+      "input_tokens": 2608,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 621,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3229
+    }
+  },
+  "createdAt": "2026-11-15T13:40:01.248Z"
+}

@@ -1,0 +1,161 @@
+{
+  "target": "resource.ja-sm-corrective-action",
+  "kind": "resource",
+  "route": "/library/ja-sm-corrective-action",
+  "sourceSha256": "6cd8c1db48af36502da61570d45f53dbb8f254170030ee8a0bc815123ee158d7",
+  "status": "needs_revision",
+  "reviewedFieldCount": 10,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "To help you prepare fair corrective action, follow the steps and know when to call.",
+      "after": "Follow these steps to prepare corrective action and recognize when to ask for advice or support.",
+      "reason": "Improved clarity by specifying the purpose and emphasizing when to seek assistance, reflecting the workflow needs of supervisors and managers."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Contract terms here come from MAPE 2025-2027. For AFSCME, MMA, the Managerial Plan or any other agreement, read that document and ask labor relations.",
+      "after": "This checklist is based on MAPE 2025-2027 contract terms. For any other agreement—including AFSCME, MMA, or the Managerial Plan—review the specific contract and consult labor relations to confirm procedural details or differences.",
+      "reason": "Clarified the source of requirements, explained why consulting labor relations matters, and noted that terms differ by agreement to avoid misapplication."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Remember. Discipline is only for just cause, and corrective where appropriate. Call early, before you speak to the employee about consequences. Report harassment and discrimination immediately. Do not investigate them yourself. Same conduct, same response. Ask how similar situations were handled.",
+      "after": "Key principles: Discipline must have just cause and focus on correcting behavior where possible. Consult labor relations early, before discussing any consequences with the employee, to ensure consistent and lawful action. If harassment or discrimination is alleged, report it right away and do not attempt your own investigation. Respond to similar situations with the same approach to avoid inconsistency. Check how comparable matters have been handled in the past. This helps maintain fairness, comply with policy, and reduce risk of procedural errors.",
+      "reason": "Expanded and clarified the reasons behind each instruction, emphasizing fairness, consistency, risk management, and the importance of process."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "First check. Was the expectation clear and known? Is it applied to everyone? Has anyone raised it privately? Initial minor issues come first, and if corrected they stay out of the file. Ask: \"What's getting in the way?\" Anything medical goes to the ADA coordinator.",
+      "after": "Start by confirming expectations: Was the standard clear and communicated to all employees? Is it enforced consistently? Has anyone flagged the issue in a prior private conversation? Initially, address minor problems informally; if resolved, these should not be added to the personnel file. Ask the employee what might be causing the problem—barriers may include medical or disability-related issues, which must be referred to the ADA coordinator for appropriate handling. This approach ensures due process and protects against unnecessary escalation.",
+      "reason": "Provided clearer explanation for each checkpoint and explained why referral to the ADA coordinator is important."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Pause and call if. The person has recently made a report, requested an accommodation, been a witness, filed a grievance or taken leave. A conversation is turning into questioning that may lead to discipline. You feel pressure to act fast to make a point.",
+      "after": "Pause and seek guidance if any of the following apply: The employee recently made a report, requested an accommodation, served as a witness, filed a grievance, or taken leave. The discussion is becoming investigatory with potential disciplinary consequences, or you feel pressure to act quickly to set an example. Consulting at these points helps prevent missteps that could create legal or contractual risk.",
+      "reason": "Clarified circumstances that require pausing, explained their legal and procedural significance, and tied the instruction to risk mitigation."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Questioning that may lead to discipline. Advise the employee of the nature of the investigation. Offer union representation. Any waiver must be in writing, before questioning. Arrange any interpreter or accommodation first. State no conclusions or consequences. Pause sentence: \"I want to stop here so that we do this properly. I'll get back to you by ____.\"",
+      "after": "When a conversation may lead to discipline: Inform the employee of the investigation’s purpose. Offer union representation; any waiver of this right must be documented in writing before questioning begins. Arrange necessary interpreters or accommodations in advance. Do not suggest conclusions or possible discipline at this stage. If uncertain, use this sentence to pause: \"I want to stop here so that we do this properly. I'll get back to you by ____.\" This helps protect due process and preserves the integrity of the investigation.",
+      "reason": "Made the process steps specific, explained the consequences for missing steps, and made the protective rationale explicit."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "MAPE discipline, Article 8. Oral reprimand (identify it as such), written reprimand, suspension, demotion, discharge. Not necessarily in this order. Do not embarrass anyone. Give written notice of specific reasons to the employee and union for anything above an oral reprimand. For suspension or discharge: a chance to hear the evidence and respond, with representation. Each disciplinary entry states the corrective action expected, except discharge.",
+      "after": "MAPE discipline process (Article 8): Steps may include oral reprimand (identify it as such), written reprimand, suspension, demotion, and discharge, though not always in sequence. Avoid embarrassing the employee at any stage. For discipline more serious than an oral reprimand, provide written notice stating specific reasons to both the employee and their union. Before suspension or discharge, the employee and their representative must have a chance to review the evidence and respond. Each record of discipline (except discharge) must identify the corrective action expected. These steps are required to meet contractual and due process obligations.",
+      "reason": "Clarified why each procedural step is necessary, detailed documentation requirements, and explained consequences for compliance."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "Records. Out of the file: corrected minor issues, oral reprimands, investigations without discipline. Removal on written request: letter of expectation at 6 months; written reprimand at 18 months; suspension record of 10 days or less at 3 years, with no further discipline. Notes: date, facts, no guesses, no labels. Ask Human Resources where they belong, and how long to keep them.",
+      "after": "Records: Do not retain documentation for corrected initial minor issues, oral reprimands, or investigations that result in no discipline. Employees may request removal of certain documents: letters of expectation after six months, written reprimands after 18 months, and suspension records (10 days or less) after three years—provided there are no additional disciplinary actions. In any notes, include only the date and factual information; avoid speculation or labeling. Consult with Human Resources about where to store documentation and required retention periods. Proper records management protects employee rights and departmental integrity.",
+      "reason": "Improved specificity of records instructions, explained rationale, and reinforced consistency with policy."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "body",
+        6
+      ],
+      "before": "Contacts. Labor relations: ____________ Human Resources: ____________ ADA coordinator: ____________ Affirmative Action Officer: ____________",
+      "after": "Contacts (add names and numbers):\n• Labor relations: ____________\n• Human Resources: ____________\n• ADA coordinator: ____________\n• Affirmative Action Officer: ____________\nList current contacts in advance, so you do not have to search when a situation arises. Quick access to the right support prevents delays and confusion.",
+      "reason": "Clarified why contact information is needed up front and listed purpose for each field."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "body",
+        7
+      ],
+      "before": "Do next. Call labor relations this week to introduce yourself, and ask who holds the authority for each step at DHS.",
+      "after": "Next step: This week, introduce yourself to labor relations and ask who has authority at each corrective action step within DHS. Building these relationships early helps ensure you follow the correct process and know whom to involve if issues arise.",
+      "reason": "Strengthened the rationale for early outreach, emphasizing the benefits of knowing who makes key decisions."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The original summary states: \"To help you prepare fair corrective action, follow the steps and know when to call.\" The proposed text, \"Follow these steps to prepare corrective action and recognize when to ask for advice or support,\" omits 'fair' and rephrases 'know when to call' as a softer 'recognize when to ask for advice or support.' This is a subtle, but material change to the moral and procedural emphasis of the original, which highlighted not only the procedural steps but also the fundamental requirement of fairness and the expectation that one should know when to reach out (for help/guidance). The rewrite is more generic and does not fully preserve the source's substance."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "The added instruction ('List current contacts in advance, so you do not have to search when a situation arises. Quick access to the right support prevents delays and confusion.') is supported by practice, but is not explicit in the source. While it provides a useful extension, it should be clear that this is advice based on workflow practicality, not a direct restatement of the original checklist."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2317,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 1107,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3424
+    },
+    "review": {
+      "input_tokens": 2966,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 251,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3217
+    }
+  },
+  "createdAt": "2026-11-15T13:43:47.564Z"
+}

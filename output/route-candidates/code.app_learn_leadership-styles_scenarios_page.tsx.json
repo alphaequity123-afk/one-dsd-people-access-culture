@@ -1,0 +1,109 @@
+{
+  "target": "code.app/learn/leadership-styles/scenarios/page.tsx",
+  "kind": "surface",
+  "route": "/learn/leadership-styles/scenarios",
+  "sourceSha256": "ed6043ee9a0809ccc1221fbd2ccb3c2d875344ba625c2e2bfd6d08dafdde63d0",
+  "status": "needs_revision",
+  "reviewedFieldCount": 8,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Fictional leadership scenarios about advancement, accessible meetings, community input, service access, scarce resources, organizational change and repairing a leader's own mistake.",
+      "after": "Scenarios using fictional situations about advancement, accessible meetings, community input, service access, limited resources, organizational change, and a leader correcting their own mistake.",
+      "reason": "Clarified topics in concise terms and removed unnecessary repetition. The revision maintains a professional tone and covers the same areas using more precise wording."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Each situation below is fictional, and every line of dialogue is original. For each one, several leadership approaches respond, some in a stronger way and some in a harmful way. Then comes a combined response and questions to discuss.",
+      "after": "The scenarios on this page describe made-up situations, and each line of dialogue is original. For each, you will see how several leadership styles might respond—some with a more effective approach and some with a harmful result. Each scenario ends with a combined response and questions to prompt discussion.",
+      "reason": "Clarified the fictional nature and sequence. Specified that responses display different leadership styles, and made clear the difference between 'stronger' and 'harmful' responses. Streamlined wording while maintaining all critical information."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": "Responses illustrate tendencies and choices. They are not scripts that predict how anyone who uses a style would act, and no response is a judgment about a real person. Check your own response against the",
+      "after": "Each response highlights a pattern or choice. These examples are not scripts or predictions, and do not judge any real person. Use the eight-point practice rubric to review your own reasoning and responses in these situations.",
+      "reason": "Increased clarity by separating elements: responses show patterns or choices and are not predictive or prescriptive. Connected the rubric to staff's own review, giving a clear purpose for referring to it. Removed unnecessary repeated warnings."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "field8"
+      ],
+      "before": "Choose the response you think is strongest for each situation. Each choice is checked against the practice rubric, not against you. After you answer, you can ask Guidance for a hint or an example.",
+      "after": "For each scenario, select the response you consider strongest. Choices are evaluated with the practice rubric, not as a test of you personally. After you choose, you can ask Guidance for a hint or an example response.",
+      "reason": "Clarified instructions and emphasized that feedback is based on the rubric, not personal evaluation. Made language more direct and professional."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revision for field0 is not supported by the source. The original is the official metadata.description and specifically states: \"scarce resources\" and \"repairing a leader's own mistake.\" The proposed text changes \"scarce resources\" to \"limited resources\" and changes \"repairing a leader's own mistake\" to \"a leader correcting their own mistake\". These are not equivalent terms and represent a change in official record. Furthermore, the original is concise and lists all topics. The phrase \"removed unnecessary repetition\" is not accurate; the revision omits, modifies, and generalizes the official wording."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revision for field1 mostly preserves the meaning, with slight modernization of style (\"made-up\" for \"fictional\" and \"display different leadership styles\" for \"several leadership approaches respond\"). The structural change is minor; the intent of explaining scenario sequence and sources of responses remains intact. This is not a blocker, but is a slight move away from official phraseology."
+      },
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "The revision to field3 recasts the purpose and removes the link connection to the practice rubric. The source connects a specific phrase, \"Check your own response against the eight-point practice rubric\", right before the rubric link. The suggested rewrite paraphrases rather than retains this and introduces informal instructions (\"Use the eight-point practice rubric to review your own reasoning and responses in these situations\") which is not the precise source meaning. As an official instructions area preceding the rubric, it must be retained with high fidelity."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "The rewritten field8 is acceptable: it clarifies instructions while retaining the intended meaning and practical outcome, i.e., that the rubric—not the user—is being evaluated, and guidance is available after a response. There is no loss of scope. This clarification is minor and not a blocker."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2698,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 379,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3077
+    },
+    "review": {
+      "input_tokens": 2580,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 418,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2998
+    }
+  },
+  "createdAt": "2026-11-15T13:50:18.482Z"
+}

@@ -20,7 +20,7 @@ export function CulturalIntelligenceExplainerDraft({ media = {} }: { media?: Rec
   const [selected, setSelected] = useState<Record<string, number>>({});
 
   return <div className="space-y-10">
-    <p>Explore these topics in any order. Your practice choices stay on this page and are not saved when you leave or reload it.</p>
+    <p>Explore these topics in any order.</p>
     {content.lessons.map(lesson => <section key={lesson.id} aria-labelledby={`explainer-${lesson.id}`} className="space-y-5 border-t border-line pt-6">
       <h4 id={`explainer-${lesson.id}`} className="text-2xl font-semibold">{lesson.title}</h4>
       {availableMedia(lesson.id, media[lesson.id]) ? <FeaturedMediaPanel kind="video"><div className="space-y-3">

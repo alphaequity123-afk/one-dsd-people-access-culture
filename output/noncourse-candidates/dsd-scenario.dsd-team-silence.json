@@ -1,0 +1,126 @@
+{
+  "target": "dsd-scenario.dsd-team-silence",
+  "kind": "surface",
+  "route": "/one-dsd/scenarios/dsd-team-silence",
+  "sourceSha256": "4e9f30b15137e81d1f7c30a1185a561847363b0a51808a84087ebd2a2c810faf",
+  "status": "needs_revision",
+  "reviewedFieldCount": 13,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "situation"
+      ],
+      "before": "A DSD supervisor notices that the same three people speak in meetings while newer staff and staff from other backgrounds stay quiet. One person told the supervisor privately that speaking up once got them nowhere.",
+      "after": "A DSD supervisor observes that during team meetings, the same three people consistently contribute while newer staff and staff from other backgrounds tend to remain silent. The supervisor learns privately that at least one staff member felt discouraged after offering input that was not acknowledged or acted on.",
+      "reason": "Clarified and connected the pattern of participation to both tenure and background. Explicitly stated the effect of unacknowledged input, as indicated in the private comment, to emphasize the link between meeting participation and staff engagement."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "whatToNotice",
+        0
+      ],
+      "before": "Quiet is being read as agreement.",
+      "after": "Silence in meetings is often interpreted as agreement, even when it may signal something else, such as discomfort or disengagement.",
+      "reason": "Expanded to clarify what is meant by \"quiet\" and explain why misreading silence can be problematic for team decision-making."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "whatToNotice",
+        1
+      ],
+      "before": "Input that changed nothing teaches people to stop offering it.",
+      "after": "When staff see their input make no difference, they may be less likely to contribute in the future. This can limit the diversity of perspectives in team decisions.",
+      "reason": "Extended to connect the lesson about input with the practical consequence for team learning and improvement."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "whatToNotice",
+        2
+      ],
+      "before": "Positional power and meeting format are shaping who speaks.",
+      "after": "Who participates is influenced by both positional authority and meeting structure. These factors shape whether contributions are sought and valued equitably.",
+      "reason": "Clarified what is meant by \"positional power and meeting format\" and tied it directly to participation and equity."
+    },
+    {
+      "fieldId": 12,
+      "path": [
+        "questionsTitle"
+      ],
+      "before": "Questions to ask before acting",
+      "after": "Key questions to consider before acting",
+      "reason": "Revised for conciseness and clarity, while preserving the intent to prompt reflection before action."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The revision adds a statement—'The supervisor learns privately that at least one staff member felt discouraged after offering input that was not acknowledged or acted on.' The source only states, 'One person told the supervisor privately that speaking up once got them nowhere.' The edit introduces 'acknowledged or acted on' and claims a broader conclusion ('discouraged') that goes beyond the specific, more ambiguous report in the source. The original phrasing preserves ambiguity and should be retained for accuracy."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The clarification uses expanded language for clarity but retains the core meaning that silence is being misread. The expansion does not contradict the source and serves the intended audience, so this is acceptable."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The extension reasonably interprets the consequence of input leading to disengagement and is supported by the source phrase 'teaches people to stop offering it.' Adding the impact on team perspective is supportable and maintains the meaning."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The rewording for clarity ('positional authority and meeting structure') is supported by the original source, and the explanatory addition directly aligns with the source's intent."
+      },
+      {
+        "fieldId": 12,
+        "severity": "note",
+        "finding": "The rephrasing for clarity ('Key questions to consider before acting') is a stylistic improvement and retains intent."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1641,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 357,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1998
+    },
+    "review": {
+      "input_tokens": 1339,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 371,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1710
+    }
+  },
+  "createdAt": "2026-11-15T13:39:08.658Z"
+}

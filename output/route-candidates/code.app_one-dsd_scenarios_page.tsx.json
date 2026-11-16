@@ -1,0 +1,81 @@
+{
+  "target": "code.app/one-dsd/scenarios/page.tsx",
+  "kind": "surface",
+  "route": "/one-dsd/scenarios",
+  "sourceSha256": "4131900f02118bf2c0bb8aea63cd56fdd81cf5368e16a3ccef194bafd905ce0e",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Choose a situation from everyday DSD work.",
+      "after": "Select a work situation that reflects a common task or challenge in DSD. Each scenario is designed to support learning and discussion based on real agency experience.",
+      "reason": "Provides a brief summary with a connected explanation of purpose and relevance, clarifying that scenarios are rooted in agency work and intended for professional development."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "No work situations are available right now.",
+      "after": "There are currently no DSD work situations available for review. Check back later as scenarios are updated to reflect current practice.",
+      "reason": "Clarifies that absence is temporary and connected to ongoing updates, and maintains a professional, informative tone for colleagues."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revision ('Select a work situation that reflects a common task or challenge in DSD...') introduces additional explanation of purpose ('designed to support learning and discussion', 'based on real agency experience') not present in the source. The original source is brief and simply instructional ('Choose a situation from everyday DSD work.'). The revised text extrapolates intent and scope, exceeding the evidence provided by the source code and page context. This is a materially unsupported expansion."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revision maintains meaning and tone, clarifying the temporary nature of unavailability. This addition ('Check back later as scenarios are updated...') is a reasonable, non-misleading elaboration for a professional audience and does not misrepresent any policy, record, or legal status in the absence of a published scenario list."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1358,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 142,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1500
+    },
+    "review": {
+      "input_tokens": 1104,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 194,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1298
+    }
+  },
+  "createdAt": "2026-11-15T13:51:09.613Z"
+}

@@ -1,0 +1,95 @@
+{
+  "target": "code.components/review-client.tsx",
+  "kind": "surface",
+  "route": "components/review-client.tsx",
+  "sourceSha256": "f36b37e789cbbc6903a82dc5f8b69be75caba3d1d87ec44e95d78cf707959125",
+  "status": "needs_revision",
+  "reviewedFieldCount": 6,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Review content before publishing",
+      "after": "Check content before you publish it",
+      "reason": "The new summary is shorter and uses familiar, precise language, supporting professional communication and clarity for staff."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "This review checks the text and page structure you provided. It cannot measure color contrast or test with assistive technology or a keyboard. Complete those checks before publishing. This is not an accessibility certification.",
+      "after": "This review examines the text and page structure you enter. It does not check color contrast, keyboard navigation, or compatibility with assistive technology. Make sure to complete those tests before publishing. This review does not replace an accessibility certification.",
+      "reason": "The revision clarifies each limitation, uses direct language, and explains the need for further manual checks, improving reasoning and professional specificity."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": "Suggest how to describe and organize a resource",
+      "after": "Review the best way to describe and organize a resource",
+      "reason": "The revision improves clarity by explaining that the purpose is to check how the resource should be described and organized, rather than simply suggesting it, which adds practical reasoning."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The proposed replacement 'Check content before you publish it' does not match the intent or official guidance of the source text 'Review content before publishing'. The source is a professional prompt for a review workflow, not a generic instruction. The shorter, imperative form changes the workflow's implied audience and softens the professional standard. The original intent is to prompt an explicit review, not just a quick check, and should not be made less formal or actionable by this edit."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revised limitation text is clearer, more direct, and covers the original intended meaning. It does not erase required warnings or add unsupported claims. The revision is acceptable."
+      },
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "The edit 'Review the best way to describe and organize a resource' changes the meaning and introduces ungrounded judgment ('the best way'), which is not authorized by the source. The original states: 'Suggest how to describe and organize a resource', reflecting the tool's actual function. The revised version overstates both the confidence and scope of the feature."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3650,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 198,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3848
+    },
+    "review": {
+      "input_tokens": 3371,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 245,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3616
+    }
+  },
+  "createdAt": "2026-11-15T13:56:17.711Z"
+}

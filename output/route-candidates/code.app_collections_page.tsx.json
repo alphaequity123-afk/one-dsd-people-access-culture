@@ -1,0 +1,95 @@
+{
+  "target": "code.app/collections/page.tsx",
+  "kind": "surface",
+  "route": "/collections",
+  "sourceSha256": "4e4009ef774ede2ce3d1432fcbe0bae09b966d2afbd596fb127695532da79375",
+  "status": "needs_revision",
+  "reviewedFieldCount": 5,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Choose a subject to find related learning, practical resources, reading, research and listening together.",
+      "after": "Select a theme to find related learning resources, guides, research, readings, and audio discussions for DSD staff work.",
+      "reason": "Clarified 'subject' to 'theme,' specified the audience as DSD staff, and listed resource types for precision."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "Topics overlap. A resource may appear under more than one theme when it helps with different kinds of work; each link opens the same resource.",
+      "after": "Many topics connect across roles and work areas. A resource may appear under more than one theme if it supports different kinds of work, but each link brings you to the same content regardless of where you find it.",
+      "reason": "Expanded to explain why overlap occurs, clarified that links are to the same content, and specified its practical consequence for users."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field4"
+      ],
+      "before": "Nine connected lessons, with videos, discussion audio, practice and planning resources in one shareable collection.",
+      "after": "This curated set brings together nine lessons, each with a video, discussion audio, and practical planning materials, organized for easier review or sharing as one collection.",
+      "reason": "Restructured for clarity and explained how connected resources make review or sharing easier, tying explanation to staff purpose."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The revision changes 'Choose a subject' to 'Select a theme,' which is justified, but alters 'practical resources, reading, research and listening together' to 'learning resources, guides, research, readings, and audio discussions for DSD staff work.' The addition of 'guides' and 'audio discussions' is not specifically supported by the source; the original says only 'practical resources, reading, research and listening together.' The specification 'for DSD staff work' adds unsupported audience narrowing—the source page does not state the resource is exclusive to DSD staff (it is under One DSD People, Access and Culture, but the instruction is not explicitly limited). The change also loses the original's inclusive phrasing and intent; do not add or exclude audiences unless the source does. For these reasons, this change is a blocker."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revision explains the reason for topic overlap more fully and clarifies the practical consequence. The expansion is source-aligned and maintains the meaning. This is acceptable."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The rewrite maintains the number of lessons and their types (videos, discussion audio, planning resources) and adds explanation about sharing/review in a way that is consistent with the source's intent to present a 'shareable collection.' This is acceptable."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1723,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 221,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1944
+    },
+    "review": {
+      "input_tokens": 1495,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 341,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1836
+    }
+  },
+  "createdAt": "2026-11-15T13:47:28.560Z"
+}

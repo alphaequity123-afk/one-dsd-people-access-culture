@@ -1,0 +1,13 @@
+diff --git a/lib/content/measurement-practice.ts b/lib/content/measurement-practice.ts
+index 1b9325a..32f32b1 100644
+--- a/lib/content/measurement-practice.ts
++++ b/lib/content/measurement-practice.ts
+@@ -25,7 +25,7 @@ const copy = {
+  evidenceSourceLabel: 'Evidence source and permission', evidenceSourceHelp: 'Identify the proposed source, the role responsible for it and whether access and use are authorized, pending or unknown. Do not paste the data into this worksheet.',
+  periodLabel: 'Period and comparison', periodHelp: 'Specify the observation period, comparison or baseline and proposed review frequency. Record unknown when timing has not been agreed.',
+  differencesLabel: 'Differences worth examining', differencesHelp: 'Identify relevant group or service comparisons and why they matter. Plan with the data owner; do not infer an individual’s identity or treat small-group figures as anonymous.',
+- reportingLabel: 'Privacy and reporting rules', reportingHelp: 'Identify the review needed for minimum group sizes, suppression, access, retention and reporting. Mark these pending unless the responsible office has approved them.',
++ reportingLabel: 'Privacy and reporting rules', reportingHelp: 'Identify the review needed for minimum group sizes, suppression, access, retention and reporting. Mark these pending unless the person or area responsible has approved them.',
+  actionLabel: 'Who would act on the findings', actionHelp: 'Name responsible roles and a proposed response or further question. Describe how people affected would hear what was learned. Do not invent a target or a commitment.',
+  approvalLabel: 'Review and approval still needed', approvalHelp: 'Record proposed, awaiting review or approved with the actual approving role and reference. A completed worksheet does not approve a measure or authorize collection.'
+ };

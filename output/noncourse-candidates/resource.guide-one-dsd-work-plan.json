@@ -1,0 +1,112 @@
+{
+  "target": "resource.guide-one-dsd-work-plan",
+  "kind": "resource",
+  "route": "/library/guide-one-dsd-work-plan",
+  "sourceSha256": "e81e51ba38ade6f275beeefa17403d2c7c49242b4aaaa57dea77d5740ef2a33c",
+  "status": "needs_revision",
+  "reviewedFieldCount": 4,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Connect priorities to practical actions, responsible owners, evidence, and review points.",
+      "after": "Show how specific equity priorities translate into actionable steps, responsible roles, evidence sources, and periodic reviews.",
+      "reason": "Clarifies that the plan clarifies how equity priorities become concrete tasks and oversight steps, explaining the intended connection rather than only listing elements."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Connect priorities to practical actions, responsible owners, evidence, and review points.",
+      "after": "Show how specific equity priorities translate into actionable steps, define responsible roles, specify relevant evidence, and identify review points. This organizes high-level goals into structured, trackable plans.",
+      "reason": "Expands on and justifies the key functions of the work plan, explaining why each listed component matters for effective planning and accountability."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Staff throughout DHS can use these resources independently. The Equity and Inclusion Operations Consultant leads the program and offers guidance and feedback; staff and decision owners carry out their own work.",
+      "after": "Staff across DHS can use these materials to inform their own equity-related planning or project work. The Equity and Inclusion Operations Consultant provides direction, coordination, and feedback, but ultimately, staff and decision-makers are responsible for carrying out and documenting their own actions.",
+      "reason": "Clarifies staff roles and emphasizes that leadership coordinates and supports, but operational responsibility stays with those doing the work. Provides concrete explanation of the relationship between guidance and ownership."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "These program resources support analysis and planning. They do not replace official policy, required consultation, or the authority of the responsible office.",
+      "after": "These resources help staff analyze equity-related needs and organize planning, but they do not override official policy, required consultation with subject matter experts, or decisions by the designated office of authority. Staff should use these materials as a supplement, not a substitute, for agency requirements.",
+      "reason": "Spells out the limits of the work plan, emphasizing the importance of following policy and consultation requirements, and clarifies the intended role of the resource."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed rewrite introduces explicit language ('how...translate into actionable steps') and adds specificity about 'periodic reviews' that is not in the original. The source summary is a neutral listing of plan elements, while the rewrite constructs an intention not directly stated (how priorities become actions), which isn't strictly supported. This adds editorial interpretation not present in the source."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The expansion restates the original's content while giving added rationale ('why each listed component matters'). The conceptual intent is present, though the language is more explicit – this is acceptable so long as it does not imply broader intent than in the source."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The rewrite's clarification on staff using materials and the consultant's role makes implicit content more explicit about responsibility. This is faithful to the source's terms and appropriate."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The rewrite increases specificity about policy and consultation requirements and the supplementary function of the resources. This is a stronger—but logical—rephrasing and accurately preserves the source's scope and intent."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1395,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 396,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1791
+    },
+    "review": {
+      "input_tokens": 1319,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 303,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1622
+    }
+  },
+  "createdAt": "2026-11-15T13:43:17.909Z"
+}

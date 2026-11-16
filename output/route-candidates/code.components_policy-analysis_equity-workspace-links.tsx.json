@@ -1,0 +1,81 @@
+{
+  "target": "code.components/policy-analysis/equity-workspace-links.tsx",
+  "kind": "surface",
+  "route": "components/policy-analysis/equity-workspace-links.tsx",
+  "sourceSha256": "ee58b20b1ded70060eec8ce452deda4aa1be415c8915c6fa354f973f75f033a2",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": ": attach a document and get the report, worksheet, action plan, leadership brief and information request.",
+      "after": ": upload a document and generate an equity analysis report, worksheet, action plan, leadership brief, and information request. Using these tools helps you identify equity considerations and organize findings for further review.",
+      "reason": "Clarified the actions taken (upload versus attach), listed the outputs more clearly, and explained how staff use these materials—grounding the explanation in workflow and practical utility for analysis and documentation."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": ": analyze a policy, decide on changes and formalize the approved ones.",
+      "after": ": review a policy, evaluate possible changes for equity, and document approved changes. This helps ensure policy recommendations are well documented and can be referenced during decision-making.",
+      "reason": "Clarified that the step involves both review and evaluation, specified that documentation pertains to approved changes, and added the practical reason for documenting—supporting transparent decision-making."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed edit changes the action from 'attach a document and get' to 'upload a document and generate.' The code's actual UI action is unclear due to this surface review: the policy tool could use either term (attach/upload), but the code only uses 'attach.' If DSD documentation or workflow consistently uses 'attach,' switching to 'upload' is not source-supported and alters the user's expectation. The addition 'Using these tools helps you identify equity considerations and organize findings for further review' is not present in the source. The original is a list of outputs, not described process or workflow utility. 'Intro'/Body text should not introduce new claims or reasoning not attributed in the source."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The original source text is ': analyze a policy, decide on changes and formalize the approved ones.' The revision paraphrases with 'review a policy, evaluate possible changes for equity, and document approved changes,' and then adds 'This helps ensure policy recommendations are well documented and can be referenced during decision-making.' The reasoning and expanded description are not sourced and go beyond the summary nature of the original, introducing additional claims and workflow implications not appearing or implied in the excerpted code."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1357,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 211,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1568
+    },
+    "review": {
+      "input_tokens": 1140,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 302,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1442
+    }
+  },
+  "createdAt": "2026-11-15T13:55:21.959Z"
+}

@@ -1,0 +1,67 @@
+{
+  "target": "workforce.mnit",
+  "kind": "surface",
+  "route": "/consultant/workforce/mnit",
+  "sourceSha256": "1c0495d1f86827e83977b25a027e0a74cb6e3a50759e7a28ffea9fb53faf00d8",
+  "status": "model_checked",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "relationship"
+      ],
+      "before": "Listed as an agency area or associated service. This does not establish a direct reporting line.",
+      "after": "MNIT Services appears in agency information as an area or related service. This listing does not specify direct supervision or reporting authority between MNIT Services and Disability Services Division staff.",
+      "reason": "Clarifies that the agency relationship reflects organizational structure and does not imply direct authority or reporting lines. States more directly which roles may be involved and what is not determined."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revised language clarifies and makes explicit the nature of the relationship, specifying that no direct supervision or reporting authority is established by the listing of MNIT Services. It does not introduce unsupported claims or change the underlying meaning from the source, which presents MNIT Services as an agency-wide organizational element without specifying reporting relationships."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1092,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 114,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1206
+    },
+    "review": {
+      "input_tokens": 797,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 104,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 901
+    }
+  },
+  "createdAt": "2026-11-15T13:37:57.661Z"
+}

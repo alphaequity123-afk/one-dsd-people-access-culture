@@ -1,0 +1,67 @@
+{
+  "target": "code.components/team-resource-selections.tsx",
+  "kind": "surface",
+  "route": "components/team-resource-selections.tsx",
+  "sourceSha256": "f5d371b194ad2cb490861defa997cfe2ef5430952f3e7098d8ab19d6d9b90472",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Use this list to prepare and record the team’s shared choices. Notes stay on this device. Download a copy to bring to a team discussion or share the decisions you have agreed together.",
+      "after": "Use this list to record the team's shared resource selections and decisions. Your notes are saved in your browser and not shared automatically. Download or print a copy to bring to your team discussion, or to share agreed decisions after your meeting.\n\nRecording your choices here helps ensure that everyone on the team works from the same reference point. Keeping notes in one place makes it easier to compare options, track reasons for decisions, and return to any resources that need further discussion. Downloading or printing your notes is important because they are stored only on your device and will not transfer to other team members unless you share them manually.",
+      "reason": "Clarifies how notes are stored and why downloading or printing is necessary. Explains how recording choices supports clear team decisions and future reference. Avoids the assumption that saving alone supports team use without manual sharing."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revised field0 text introduces reasoning and instructions not supported or stated in the code source. The source text is: \"Use this list to prepare and record the team’s shared choices. Notes stay on this device. Download a copy to bring to a team discussion or share the decisions you have agreed together.\" The proposed change adds: \n\n- \"record the team's shared resource selections and decisions\" — changes the focus from 'choices' to 'resource selections and decisions' (narrowing scope not in code).\n- \"not shared automatically\" — clarifies behavior but is not stated in these terms in the source. \n- \"after your meeting\" — changes the scope by suggesting decisions are always shared after meetings, which is not required or implied.\n- Additional guidance: \"Recording your choices here helps ensure... reference point. [...] easier to compare options, track reasons, return... further discussion. Downloading or printing your notes is important because... stored only on your device... will not transfer... unless you share manually.\"—adds instructional narrative and justification, which, while reasonable, goes beyond the code's neutral functional description. \n\nPer the program writing standard, this embellishes instructions, extends legal/practical advice on sharing, and adds a rationale not in the original source. All new claims must be specifically supported. (A short clarifying line may be justified, but the block as proposed goes beyond synthesis/summary into unsupported advice.)"
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2393,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 190,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2583
+    },
+    "review": {
+      "input_tokens": 2195,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 318,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2513
+    }
+  },
+  "createdAt": "2026-11-15T13:56:32.848Z"
+}

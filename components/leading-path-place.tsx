@@ -27,7 +27,7 @@ export function LeadingPathPlace({ pathId, rows }: { pathId: string; rows: reado
     try {
       if (next.length) window.localStorage.setItem(key, JSON.stringify({ version: 1, done: next }));
       else window.localStorage.removeItem(key);
-      setMessage("Saved in this browser.");
+      setMessage("Saved.");
     } catch { setMessage("Your place could not be saved in this browser."); }
   }
   return <>

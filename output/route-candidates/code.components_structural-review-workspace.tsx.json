@@ -1,0 +1,207 @@
+{
+  "target": "code.components/structural-review-workspace.tsx",
+  "kind": "surface",
+  "route": "components/structural-review-workspace.tsx",
+  "sourceSha256": "59bf101cd637f43d15b64908909d1afb5cde6e611cbef9e59c4386cb7f504ee5",
+  "status": "needs_revision",
+  "reviewedFieldCount": 15,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field1"
+      ],
+      "before": "Choose this only on a device you trust. Your answers are not sent for analysis or shared by this tool. Downloaded reports contain the answers you enter; check them before sharing.",
+      "after": "Use this only on a device you trust. This tool does not send your answers for analysis or sharing. Each downloaded report contains what you entered; check the content before you share a file.",
+      "reason": "Clarifies staff responsibility for device choice, specifies tool behavior, and explains why reviewing the downloaded file is necessary before sharing."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field2"
+      ],
+      "before": "Progress shows answers entered, not the strength or approval of your analysis.",
+      "after": "Progress reflects only whether questions are answered. The display does not rate the strength of your analysis or signal any approval.",
+      "reason": "Clarifies distinction between progress tracking and substantive evaluation, addressing possible staff confusion about the review status."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field5"
+      ],
+      "before": "rows. Continue a separate review if you need more.",
+      "after": "rows. If you need to record more, finish this review and start a separate one for the additional entries.",
+      "reason": "Clarifies the action needed when the table limit is reached, connects 'review' to workflow, and avoids repetition."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field6"
+      ],
+      "before": "Read the full record, check what remains unanswered, and decide what to share. An answered checklist is a preparation aid, not an approval or a finding that inequity has been established.",
+      "after": "Review the record, identify any unanswered sections, and consider what to share. Completing this checklist helps you prepare, but it does not approve your findings or determine whether inequity exists.",
+      "reason": "Clarifies the record-checking process and distinguishes checklist completion from an authoritative approval or determination."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field7"
+      ],
+      "before": "I have checked this record for personal, client, complaint, and confidential information before sharing.",
+      "after": "I have reviewed this record for personal, client, complaint, and confidential information before sharing.",
+      "reason": "Uses 'reviewed' for consistency with standard documentation practice and to clarify timing before sharing."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field8"
+      ],
+      "before": "The process owner has confirmed the proposed next steps.",
+      "after": "The process owner has reviewed and confirmed the proposed next steps.",
+      "reason": "Specifies 'reviewed and confirmed' for clarity, strengthening the connection between owner involvement and confirmation."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "field10"
+      ],
+      "before": "Your choices here are added to the count. They are not saved with your answers.",
+      "after": "Selections here increase the anonymous count for reporting only. These choices are not stored with your answers.",
+      "reason": "Clarifies the function of the goal selections and how the data is handled, which helps staff understand why to make selections."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "field12"
+      ],
+      "before": "Downloading, sharing or printing the report finishes the review.",
+      "after": "Downloading, sharing, or printing this report records completion of this review.",
+      "reason": "Clarifies that these actions mark the review as finished for tracking, connecting staff action to administrative consequences."
+    },
+    {
+      "fieldId": 11,
+      "path": [
+        "field13"
+      ],
+      "before": "A working copy keeps your answers editable. Word and readable reports can be attached to a message. Consultant support is optional; preparing a report does not send it to the consultant.",
+      "after": "A working copy lets you continue editing your answers. Word and readable reports can be attached to a message. Consultant support is optional and not triggered by preparing a report.",
+      "reason": "Clarifies the distinction between working copies and report formats, and ensures that consultant engagement is described as optional."
+    },
+    {
+      "fieldId": 13,
+      "path": [
+        "field15"
+      ],
+      "before": "Download your analysis notes and upload them as supporting material in the",
+      "after": "Download your analysis notes and upload the file as supporting material in the",
+      "reason": "Clarifies that the file should be uploaded, connecting the download/upload workflow between workspaces."
+    },
+    {
+      "fieldId": 14,
+      "path": [
+        "field16"
+      ],
+      "before": ". Check the supporting evidence separately. This does not submit your draft or make recommendations on its own.",
+      "after": ". Verify the supporting evidence separately. This action does not submit your draft or create recommendations automatically.",
+      "reason": "Emphasizes the need to check supporting evidence and clarifies that uploading does not submit or generate recommendations."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed text for field1 loses precise source meaning. Source: 'Choose this only on a device you trust. Your answers are not sent for analysis or shared by this tool. Downloaded reports contain the answers you enter; check them before sharing.' Revision: 'Use this only on a device you trust. This tool does not send your answers for analysis or sharing. Each downloaded report contains what you entered; check the content before you share a file.' The original states 'not sent for analysis or shared by this tool'—a scope critical to privacy assurances, and it is clear and idiomatic. The rewrite adds unnecessary rewording without substantive improvement, and 'does not send ... for analysis or sharing' is slightly ambiguous (could mean 'might send for another purpose'), while the original is explicit. Reject unnecessary paraphrase and retain the precise privacy claim in the source."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revision for field2 is acceptable; it restates the source's intent more explicitly. Source: 'Progress shows answers entered, not the strength or approval of your analysis.' Revision: 'Progress reflects only whether questions are answered. The display does not rate the strength of your analysis or signal any approval.' This disambiguates for readers and maintains factual constraints."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "Field5's revision clarifies workflow steps without altering the instruction's meaning. Source: 'rows. Continue a separate review if you need more.' Revision: 'rows. If you need to record more, finish this review and start a separate one for the additional entries.' Both meanings are equivalent; revision is clearer."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "Field6's rewording is permissible and improves specificity. Source: 'Read the full record, check what remains unanswered, and decide what to share. An answered checklist is a preparation aid, not an approval or a finding that inequity has been established.' Revision: 'Review the record, identify any unanswered sections, and consider what to share. Completing this checklist helps you prepare, but it does not approve your findings or determine whether inequity exists.' No loss of critical meaning and, if anything, clarification."
+      },
+      {
+        "fieldId": 5,
+        "severity": "blocker",
+        "finding": "In field7: Replacing 'I have checked this record for personal, client, complaint, and confidential information before sharing.' with 'I have reviewed this record for personal, client, complaint, and confidential information before sharing.' is not suitable. The legal or policy standard for privacy checks may depend on the recognized term 'checked,' which the UI and source use. Changing 'checked' to 'reviewed' in a consent statement can have legal impact or introduce ambiguity. Retain the term used in the current official workflow."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "Field8: Replacing 'The process owner has confirmed the proposed next steps.' with 'The process owner has reviewed and confirmed the proposed next steps.' is not a blocker—'reviewed and confirmed' offers clarification that may reduce assumptions."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "Field10: The expansion from 'Your choices here are added to the count. They are not saved with your answers.' to 'Selections here increase the anonymous count for reporting only. These choices are not stored with your answers.' preserves intent, adds clarity regarding anonymity."
+      },
+      {
+        "fieldId": 10,
+        "severity": "note",
+        "finding": "Field12: Source says 'Downloading, sharing or printing the report finishes the review.' and revision presents: 'Downloading, sharing, or printing this report records completion of this review.' The change is not a blocker, and the administrative action is clearer."
+      },
+      {
+        "fieldId": 11,
+        "severity": "note",
+        "finding": "Field13: The clarification is non-blocking and accurate—no source constraints broken."
+      },
+      {
+        "fieldId": 13,
+        "severity": "note",
+        "finding": "Field15: Source 'Download your analysis notes and upload them as supporting material in the' becomes 'Download your analysis notes and upload the file as supporting material in the.' The singular/plural tweak clarifies steps; not a blocker."
+      },
+      {
+        "fieldId": 14,
+        "severity": "note",
+        "finding": "Field16 clarifies consequences and the file/record separation; no loss of source meaning."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 7957,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 768,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 8725
+    },
+    "review": {
+      "input_tokens": 8021,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 897,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 8918
+    }
+  },
+  "createdAt": "2026-11-15T13:56:29.318Z"
+}

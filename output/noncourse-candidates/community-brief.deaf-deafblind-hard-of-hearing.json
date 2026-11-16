@@ -1,0 +1,109 @@
+{
+  "target": "community-brief.deaf-deafblind-hard-of-hearing",
+  "kind": "surface",
+  "route": "/minnesota-communities/deaf-deafblind-hard-of-hearing",
+  "sourceSha256": "610ef64e00a61a3b354273ae131df40fe0d69bf9a95785f7bfcc3e608f0e392c",
+  "status": "model_checked",
+  "reviewedFieldCount": 25,
+  "changes": [
+    {
+      "fieldId": 2,
+      "path": [
+        "whoAndWhere"
+      ],
+      "before": "Deaf people who use American Sign Language are a cultural and linguistic community, not only a disability category. Hard of hearing and late-deafened people may prefer captioning and assistive listening. DeafBlind people may use tactile or Protactile communication.",
+      "after": "Deaf people who use American Sign Language form a distinct cultural and linguistic community, not solely a category of disability. Hard of hearing and late-deafened individuals may prefer to use captioning or assistive listening devices, depending on their communication needs and preferences. DeafBlind people often use tactile or Protactile forms of communication, which require distinct approaches to access.",
+      "reason": "Clarified the diversity of communication preferences and linked these preferences to practical access needs. Added detail to strengthen understanding of how each group communicates."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Effective communication is a legal obligation. Exchanging written notes is not equally effective for a Deaf person who uses sign language, and a family member is not an interpreter. Your process must work with video relay and captioned phone calls.",
+      "after": "State and federal law require effective communication with Deaf, DeafBlind, and hard of hearing people. Writing notes back and forth does not provide equal access for those who use sign language, and a family member cannot substitute for a qualified interpreter. When your process works with video relay and captioned phone calls, you remove barriers to participation and fulfill your obligations.",
+      "reason": "Expanded on the legal basis for effective communication and explained why improper methods can fail to provide access. Linked accessible process design to compliance and participation."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "withinGroupDiversity"
+      ],
+      "before": "ASL users, oral communicators, cochlear implant users, late-deafened elders, DeafBlind people, and Deaf people from immigrant communities who use other sign languages.",
+      "after": "This community includes ASL users, people who communicate orally, those with cochlear implants, late-deafened elders, DeafBlind people, and Deaf individuals from immigrant backgrounds who use other sign languages. Communication preferences and cultural experiences vary greatly within these groups.",
+      "reason": "Expanded the explanation to specify that language and experience diversity has practical implications for service design."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "nameNote"
+      ],
+      "before": "Do not use 'hearing impaired'. The National Association of the Deaf says most in the community no longer accept the term. Ask each person how they identify and what they prefer.",
+      "after": "Avoid the term 'hearing impaired.' According to the National Association of the Deaf, most people in these communities do not accept this term. Instead, ask each person how they identify and what language they prefer. This helps show respect and avoid assumptions.",
+      "reason": "Clarified both the authority for the guidance and the practical reason for checking preferences, avoiding assumptions."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revision expands on the diversity of communication preferences and articulates the distinct needs of subgroups within the community, but this is consistent with professional knowledge and does not conflict with either cited source. While some additional reasoning is inferred (such as distinct approaches required for tactile communication for DeafBlind individuals), this is appropriate clarification, not invention."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The updated field clarifies the legal basis for communication access and links practice to compliance, drawing directly from the ADA Title II effective communication guidance and the spirit of the cited NAD FAQ. The expansion that a family member cannot substitute as a qualified interpreter is directly supported by both sources. Stating that process improvements remove barriers aligns with best practices and does not introduce unsupported claims."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The rewrite organizes and elaborates on the diversity already present in the original, adding the implication that these differences have practical effects on service design. This logical step is grounded in the cited NAD FAQ and is not a change in meaning or standard."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The revision makes the NAD's position explicit and clarifies why checking individual preferences matters. The notation of practical respect aligns with the cited source and professional standards, without overreaching or misrepresenting the source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2488,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 496,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2984
+    },
+    "review": {
+      "input_tokens": 1870,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 288,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2158
+    }
+  },
+  "createdAt": "2026-11-15T13:40:39.762Z"
+}

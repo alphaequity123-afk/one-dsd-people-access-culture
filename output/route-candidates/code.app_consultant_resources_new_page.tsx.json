@@ -1,0 +1,67 @@
+{
+  "target": "code.app/consultant/resources/new/page.tsx",
+  "kind": "surface",
+  "route": "/consultant/resources/new",
+  "sourceSha256": "6ff8a031743c0d079b55ee9e486fee39de2e7147cf8434ba882f790054d0fb95",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Adding resources is not connected in this copy of the program.",
+      "after": "You cannot add new resources in this version of the program, as the connection for adding is not active.",
+      "reason": "Clarified that resource addition is unavailable due to an inactive connection. This makes the implication more explicit for staff reviewing system status or troubleshooting, providing a clear reason rather than stating only disconnection."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed change alters the source meaning. The original source says: 'Adding resources is not connected in this copy of the program.' This is a factual, concise notice, using current software wording ('copy of the program') rather than 'version.' The rewrite ('You cannot add new resources in this version of the program, as the connection for adding is not active.') introduces the term 'cannot,' and refers to 'this version of the program' instead of 'this copy.' It adds a claim of capability ('you cannot') not literally present in the original source, and invents extra rationale ('as the connection for adding is not active') where the source merely states connection status. The original wording must be preserved exactly, as per program writing standard for system status and notices."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1316,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 85,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1401
+    },
+    "review": {
+      "input_tokens": 1013,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 189,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1202
+    }
+  },
+  "createdAt": "2026-11-15T13:48:09.998Z"
+}

@@ -4,7 +4,6 @@ import Link from "@/components/app-link";
 import styles from "@/components/workspace-presentation.module.css";
 import { useMemo, useState } from "react";
 import { readPracticeNotes } from "@/lib/content/learning-practice";
-import { PROGRAM } from "@/lib/constants";
 import { GRADUATION_PATHS } from "@/lib/content/paths";
 import { useHydrated, useStoredAll, writeStored } from "@/lib/client/storage";
 import {
@@ -25,7 +24,7 @@ function copyText(copy: EditableSurfaceValues, key: string): string {
   return typeof value === "string" ? value : "";
 }
 
-export function MyViewClient({ intakeEnabled, copy, courses = NO_COURSES, learningFoci = NO_FOCI }: { intakeEnabled: boolean; copy: EditableSurfaceValues; courses?: MyWorkCourse[]; learningFoci?: MyWorkLearningFocus[] }) {
+export function MyViewClient({ copy, courses = NO_COURSES, learningFoci = NO_FOCI }: { intakeEnabled: boolean; copy: EditableSurfaceValues; courses?: MyWorkCourse[]; learningFoci?: MyWorkLearningFocus[] }) {
   const hydrated = useHydrated();
   const all = useStoredAll();
   const [clearNotice, setClearNotice] = useState("");
@@ -110,7 +109,7 @@ export function MyViewClient({ intakeEnabled, copy, courses = NO_COURSES, learni
       const sourceRemoved = !path || writeStored("local", BROWSER_STORAGE_KEYS.pathArtifactSource(path.id), null);
       removed = sourceRemoved && writeStored("local", key, null);
     }
-    setClearNotice(removed ? "The selected saved item has been removed from this browser profile." : "The selected item could not be fully removed. Saved information may remain in this browser profile. Please try again.");
+    setClearNotice(removed ? "The selected saved item has been removed." : "The selected item could not be fully removed. Please try again.");
   }
 
   function clearAsk() {
@@ -119,16 +118,16 @@ export function MyViewClient({ intakeEnabled, copy, courses = NO_COURSES, learni
   }
 
   function clearEverything() {
-    if (!confirm(`${copyText(copy, "deleteAllConfirmation")} This also removes the practice plans, structural-review draft, practice reflection, saved resources and course places managed by My work from this browser profile. Other features may have separate notes or records to clear. Downloaded files and operational records are not deleted.`)) return;
+    if (!confirm(`${copyText(copy, "deleteAllConfirmation")} This also removes the practice plans, structural-review draft, practice reflection, saved resources and course places managed by My work.`)) return;
     const result = clearRegisteredPrivateBrowserData(writeStored);
-    setClearNotice(result.ok ? "The saved items managed by My work have been removed from this browser profile. Other features may retain separate notes. Downloaded files and operational records are unchanged." : "Some saved items could not be deleted and may remain in this browser profile. Downloaded files and operational records are unchanged. Please try again.");
+    setClearNotice(result.ok ? "The saved items managed by My work have been removed." : "Some saved items could not be deleted. Please try again.");
   }
 
   if (!hydrated) return <p className="text-muted">{copyText(copy, "openingLabel")}</p>;
 
   return (
     <div className={styles.notebook}>
-      {data.unreadable ? <p role="status">Some saved information could not be opened. It remains in this browser profile. Try the related page again or use the available removal controls.</p> : null}
+      {data.unreadable ? <p role="status">Some saved information could not be opened. Try the related page again or use the available removal controls.</p> : null}
       <Section title={copyText(copy, "notesTitle")} entries={data.artifacts} empty={copyText(copy, "notesEmpty")} onRemove={remove} deleteLabel={copyText(copy, "deleteItemLabel")} />
       <Section title={copyText(copy, "progressTitle")} entries={data.progress} empty={copyText(copy, "progressEmpty")} onRemove={remove} deleteLabel={copyText(copy, "deleteItemLabel")} />
       <Section title={copyText(copy, "requestsTitle")} entries={data.requests} empty={copyText(copy, "requestsEmpty")} onRemove={remove} deleteLabel={copyText(copy, "deleteItemLabel")} />
@@ -142,12 +141,6 @@ export function MyViewClient({ intakeEnabled, copy, courses = NO_COURSES, learni
         ) : null}
       </section>
       <section className={styles.deleteNote}>
-        <p className="kicker">{copyText(copy, "deletingKicker")}</p>
-        <ul className="list-disc pl-6 text-sm">
-          <li>{intakeEnabled ? `${copyText(copy, "intakeOpenBeforeRole")} ${PROGRAM.practiceOwnerRole} ${copyText(copy, "intakeOpenAfterRole")}` : `${copyText(copy, "intakePreviewBeforeRole")} ${PROGRAM.practiceOwnerRole}${copyText(copy, "intakePreviewAfterRole")}`}</li>
-          <li>{copyText(copy, "deleteReferenceBody")}</li>
-          <li>This control removes the saved learning and practice items managed by My work from this browser profile. Some features, including CLAS working notes, have their own clearing controls. Downloaded, printed and shared copies are unchanged.</li>
-        </ul>
         <button type="button" className="btn btn--light mt-2" onClick={clearEverything}>
           {copyText(copy, "deleteAllLabel")}
         </button>

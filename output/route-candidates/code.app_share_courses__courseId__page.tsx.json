@@ -1,0 +1,95 @@
+{
+  "target": "code.app/share/courses/[courseId]/page.tsx",
+  "kind": "surface",
+  "route": "/share/courses/[courseId]",
+  "sourceSha256": "28f206305820f8ad47ea13bef71acf857c5b261a817b092dd3a81da35d9d5010",
+  "status": "needs_revision",
+  "reviewedFieldCount": 3,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field1"
+      ],
+      "before": "This shared link opens this course only.",
+      "after": "This shared link gives access to this course alone, without connecting to other courses in the program.",
+      "reason": "Clarifies that only this course is accessible and explains the practical purpose for staff—keeping the course isolated from the rest of the DHS or DSD offerings."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field3"
+      ],
+      "before": "This recording cannot play here. Use the transcript below.",
+      "after": "This recording cannot play here. Use the transcript provided below to review the introduction content.",
+      "reason": "Clarifies that the transcript contains the full content of the introduction, explaining the alternative for staff when audio is unavailable."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field6"
+      ],
+      "before": "What you can take into your work",
+      "after": "How this applies to your work",
+      "reason": "Improves specificity and uses familiar language for DHS and DSD staff, better reflecting the intended focus on practical application."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "Field 1 ('This shared link opens this course only.') is directly supported by the code: <p className=\"text-sm text-muted mt-2\">This shared link opens this course only.</p>. The proposed change adds an interpretation ('gives access ... without connecting to other courses in the program.') and intent for staff, but the original wording is a plain, factual notice. The source text is precise and does not warrant explanatory expansion or a change in meaning. The proposed rewrite exceeds evidence and alters the notification's scope."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "Field 3 ('This recording cannot play here. Use the transcript below.') is supported by the source: <audio controls ...>This recording cannot play here. Use the transcript below.</audio>. The added clarification about the transcript containing the 'full content' and its use does not harm, but it is not present in source. However, it does not break accuracy severely if context needs clarity for accessibility. This is not a blocker, but should be reviewed with caution about exceeding source."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "Field 6 ('What you can take into your work') is used as a heading in the outcomes accordion. The source code is: <h3>What you can take into your work</h3>. The replacement ('How this applies to your work') adds an interpretive layer, changing both tone and focus from 'what you take' (output, explicit) to 'how this applies' (process, implicit). This is a substantive change to the intended message and not supported by the source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3072,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 170,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3242
+    },
+    "review": {
+      "input_tokens": 2839,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 354,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3193
+    }
+  },
+  "createdAt": "2026-11-15T13:51:37.545Z"
+}

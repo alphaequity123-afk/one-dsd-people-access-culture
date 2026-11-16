@@ -1,0 +1,112 @@
+{
+  "target": "resource.tool-one-dsd-quarterly-report",
+  "kind": "resource",
+  "route": "/library/tool-one-dsd-quarterly-report",
+  "sourceSha256": "e6954ae868160611771f9d8882910d846ef12e4c9f7d63367b611d404c2c5bb3",
+  "status": "needs_revision",
+  "reviewedFieldCount": 4,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Bring together aggregate evidence, unanswered questions, and follow-through. Missing figures remain unknown.",
+      "after": "This quarterly reporting tool compiles aggregated evidence, identifies ongoing questions, and tracks follow-up actions. If data is missing, those gaps remain noted until addressed.",
+      "reason": "Clarifies the intent of bringing data together and highlights the practical outcome of missing figures—gaps persist unless actions are taken."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Bring together aggregate evidence, unanswered questions, and follow-through. Missing figures remain unknown.",
+      "after": "This quarterly report brings together aggregated findings, documents questions that have not been resolved, and tracks progress on assigned tasks. Data gaps are recorded as unknown until new information is available.",
+      "reason": "Expands and clarifies the original purpose statement by specifying that the report documents unresolved questions and tracks progress, and it explains the implication of missing figures."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Staff throughout DHS can use these resources independently. The Equity and Inclusion Operations Consultant leads the program and offers guidance and feedback; staff and decision owners carry out their own work.",
+      "after": "DHS staff may use these resources on their own to inform their analysis and reporting. The Equity and Inclusion Operations Consultant coordinates the program, provides guidance, and offers feedback, while staff and decision owners remain responsible for carrying out their assigned work.",
+      "reason": "Shifts to clearer, more specific explanation of who uses the resource, the consultant's coordinating role, and the division of responsibility for practical decisions and follow-up."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "These program resources support analysis and planning. They do not replace official policy, required consultation, or the authority of the responsible office.",
+      "after": "The purpose of these resources is to support staff in analyzing data and planning next steps. They do not replace official policies, formal consultation requirements, or decision-making authority held by the responsible office.",
+      "reason": "Refines the distinction between supporting resources and formal requirements, and clarifies the proper boundaries of staff and office authority."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed summary embellishes unsupported meanings. The source says: 'Bring together aggregate evidence, unanswered questions, and follow-through. Missing figures remain unknown.' The rewrite adds 'tracks follow-up actions' and 'gaps persist unless actions are taken.' There is no evidence in the source that the tool explicitly 'tracks follow-up actions' nor that missing data are tracked 'until addressed.' The phrase 'Missing figures remain unknown' does not establish future tracking or a process for closing gaps; it states a limitation."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The rewrite claims that the quarterly report 'tracks progress on assigned tasks' and 'documents questions that have not been resolved.' The source only refers to 'bring together aggregate evidence, unanswered questions, and follow-through.' It does not mention 'progress on assigned tasks' or formally documenting unresolved questions, nor an ongoing recording of gaps. The rewrite overstates both the procedural detail and the guarantee of tracking or documentation."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The rewrite is clearer in dividing roles, but both the original and revised text align: the consultant leads, guides, and gives feedback; staff and decision owners carry out their work. The change is accurate but not strictly necessary."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The intent is preserved: these resources support analysis and planning and do not replace policy or required consultation. The rewrite is clearer but does not meaningfully depart from the source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1397,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 324,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1721
+    },
+    "review": {
+      "input_tokens": 1309,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 322,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1631
+    }
+  },
+  "createdAt": "2026-11-15T13:43:11.563Z"
+}

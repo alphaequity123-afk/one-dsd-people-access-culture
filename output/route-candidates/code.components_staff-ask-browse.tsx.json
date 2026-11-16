@@ -1,0 +1,81 @@
+{
+  "target": "code.components/staff-ask-browse.tsx",
+  "kind": "surface",
+  "route": "components/staff-ask-browse.tsx",
+  "sourceSha256": "fdd3be6b334e94bbba2dfa54ce972842f13060669edff65f8f9dec87c11d1206",
+  "status": "needs_revision",
+  "reviewedFieldCount": 9,
+  "changes": [
+    {
+      "fieldId": 6,
+      "path": [
+        "field7"
+      ],
+      "before": "If the topic is not listed, browse the Library or Areas of work.",
+      "after": "If you do not see your question, check the Library or the Areas of work sections for related topics.",
+      "reason": "Clarified the instruction to check the Library or Areas of work sections, making it more specific, and explained what to do if a question is not found."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "field9"
+      ],
+      "before": "Use Find the right person to match the work with its responsible supervisor, Equity Director or Specialist, policy owner, or office.",
+      "after": "If you need to match a question with the responsible supervisor, Equity Director or Specialist, policy owner, or office, use Find the right person for guidance.",
+      "reason": "Clarified how to use the Find the right person tool and gave a reason to refer to it if unsure who is responsible for a work topic."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 6,
+        "severity": "blocker",
+        "finding": "The change adds instructions and explanation ('If you do not see your question, check... for related topics') not grounded in the source. The source wording: 'If the topic is not listed, browse the Library or Areas of work.' It is already clear and concise; the new version invents the notion of 'related topics' and a new phrase 'sections,' which is not tied to navigational labels or document structure in the source. The original statement should be preserved as it matches the intent and official direction."
+      },
+      {
+        "fieldId": 8,
+        "severity": "blocker",
+        "finding": "The proposed rewrite shifts the action ('If you need to... use Find the right person for guidance') and changes the meaning. The source says: 'Use Find the right person to match the work with its responsible supervisor, Equity Director or Specialist, policy owner, or office.' The original text gives direct instruction and purpose; the rewrite introduces a hypothetical ('If you need to match...') and recasts the tool as guidance, losing the task-oriented specificity of the official record."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2870,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 164,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3034
+    },
+    "review": {
+      "input_tokens": 2433,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 265,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2698
+    }
+  },
+  "createdAt": "2026-11-15T13:56:22.426Z"
+}

@@ -1,0 +1,24 @@
+diff --git a/lib/content/practice-path-clarifications.ts b/lib/content/practice-path-clarifications.ts
+index 9307a58..995356d 100644
+--- a/lib/content/practice-path-clarifications.ts
++++ b/lib/content/practice-path-clarifications.ts
+@@ -47,8 +47,8 @@ export function clarifyPracticePath(input: GraduationPath): GraduationPath {
+   return { ...path,
+     artifactFields: path.artifactFields.map(field => {
+       if (field.id === "transitions") return { ...field,
+-        label: replace(field.label, "Transitions and the owner of accommodations at each", "Transitions and the responsible role or office at each"),
+-        help: replace(field.help, "Nomination, interview, acting assignment, cohort, new team, return from leave. A named person for each.", "Nomination, interview, acting assignment, cohort, new team, return from leave. Identify the responsible role or office at each; keep individual accommodation details in the confidential process.") };
++        label: replace(field.label, "Transitions and the owner of accommodations at each", "Transitions and the person or area responsible at each"),
++        help: replace(field.help, "Nomination, interview, acting assignment, cohort, new team, return from leave. A named person for each.", "Nomination, interview, acting assignment, cohort, new team, return from leave. Identify the person or area responsible at each; keep individual accommodation details in the confidential process.") };
+       if (field.id === "owners") return { ...field,
+         label: replace(field.label, "Who owns each follow-up", "Role or office responsible for each follow-up"),
+         help: replace(field.help, "", "Use roles or offices, without names or personal accommodation details.") };
+@@ -59,7 +59,7 @@ export function clarifyPracticePath(input: GraduationPath): GraduationPath {
+     }),
+     rubric: path.rubric.map(rule => {
+       if (rule.key === "owners") return { ...rule,
+-        label: replace(rule.label, "Every follow-up has a named owner", "Every follow-up has a responsible role or office"),
++        label: replace(rule.label, "Every follow-up has a named owner", "Every follow-up has a person or area responsible"),
+         failMessage: replace(rule.failMessage, "Please name the person responsible for each follow-up.", "Identify the role or office responsible for each follow-up.") };
+       if (rule.key === "involved") return { ...rule,
+         label: replace(rule.label, "You named who was involved and the role they had", "You identified the reviewing roles or offices and their authority"),

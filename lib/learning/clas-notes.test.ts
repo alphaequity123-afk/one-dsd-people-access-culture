@@ -38,7 +38,7 @@ describe('assemblePlan', () => {
     expect(text).toContain('MY IMPROVEMENT PLAN');
     expect(text).toContain(`Part 2: ${curriculum.modules[1].title}\n${curriculum.modules[1].practice.reflection}\n\nPlain wording.`);
     expect(text).toContain(`Part 1: ${curriculum.modules[0].title}\n${curriculum.modules[0].practice.reflection}\n\n(No note yet.)`);
-    expect(text).toContain('Voluntary follow-up date:');
+    expect(text).toContain('Follow-up date:');
   });
 });
 

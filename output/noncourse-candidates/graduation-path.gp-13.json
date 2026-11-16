@@ -1,0 +1,81 @@
+{
+  "target": "graduation-path.gp-13",
+  "kind": "surface",
+  "route": "/practice/gp-13",
+  "sourceSha256": "5651853bf29ca057bdefdaf6dd99ace0160699520f1e3eedcf0962807c546f27",
+  "status": "model_checked",
+  "reviewedFieldCount": 54,
+  "changes": [
+    {
+      "fieldId": 5,
+      "path": [
+        "startingCompetence"
+      ],
+      "before": "You wrote something and want to check it yourself in three passes before it goes out: whether people can read and reach it, whether it assumes knowledge or norms people may not share, and whether it invites rather than warns.",
+      "after": "You have written material and want to check it before sharing. In three passes, consider if people can use or understand it, if you have assumed knowledge or expectations others may not have, and whether the tone encourages participation rather than discouraging or warning.",
+      "reason": "Clarifies the types of assumptions and the focus of each pass. Connects to professional standards for effective communication. Retains all program-relevant concepts without extra cautionary language."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "graduatedLooksLike"
+      ],
+      "before": "By the end, you will have a three-part check of your material: what you found and changed for access and plain language, for assumed knowledge and representation, and for tone, along with what remains and when you will look again. You can run this check on your own writing routinely, and you know when to ask a colleague to review a draft instead.",
+      "after": "By the end, you will have recorded specific changes you made to your material in three areas: (1) access and plain language, (2) knowledge or representation you assumed, and (3) tone. You will also note what you did not change, who else should review it if needed, and when you plan to send or revisit your material. You will know how to check your own writing and when to ask a colleague for review.",
+      "reason": "Splits and clarifies each check and outcome. Explains why noting remaining issues and review timing matters. Removes repetition by condensing how to use the check."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The revision to 'startingCompetence' rewords for slightly increased clarity and links each check to the explicit action (use, assumption, tone). This does not change scope, add cautionary language, or remove source-grounded requirements. It is supportable and does not conflict with the standard."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The revision to 'graduatedLooksLike' reorganizes and clarifies the outcomes of the three-part check and adds why noting what's left and scheduling review matter. It condenses points about knowing when to delegate reviewing, but still covers all actions and connections to routine process. This change is aligned with source intent and specification."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 4156,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 379,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4535
+    },
+    "review": {
+      "input_tokens": 2382,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 188,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2570
+    }
+  },
+  "createdAt": "2026-11-15T13:40:04.785Z"
+}

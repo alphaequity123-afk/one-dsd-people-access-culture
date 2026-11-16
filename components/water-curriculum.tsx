@@ -64,7 +64,7 @@ export function WaterLessonOpening({ practice, recall, previousTitle, previousNu
     {practice?.outcome && <p className="water-outcome"><strong>What you will be able to do: </strong>{practice.outcome.replace(/^After this module you can\s*/i, "")}</p>}
     {previousTitle && previousNumber && recall.length > 0 && <section aria-labelledby="water-recall-title">
       <h2 id="water-recall-title">Before you start: a quick recall from module {previousNumber}</h2>
-      <p>Recall the main ideas from “{previousTitle}”, then compare your reasoning with the feedback. These practice responses are not saved or submitted by the exercise.</p>
+      <p>Recall the main ideas from “{previousTitle}”, then compare your reasoning with the feedback.</p>
       {recall.map(q => <ChoiceQuestion key={q.id} id={`recall-${q.id}`} question={q.question} options={q.options} />)}
     </section>}
     {practice?.keyPoints.length ? <KeyPointsPanel keyPoints={practice.keyPoints} chapters={[]} title="Key points from this module" headingLevel={2} /> : null}
@@ -104,7 +104,7 @@ export function WaterLessonPractice({ practice, moduleTitle, moduleNumber }: { p
       </article>
       <JobAidActions fileName={`water-we-swim-in-module-${moduleNumber}-job-aid.txt`} text={jobAidText(aid, moduleTitle)} />
     </details>}
-    <p className="water-practice-note">These exercises provide feedback without saving or submitting your responses. <Link href="#top">Back to the top of the module</Link></p>
+    <p className="water-practice-note"><Link href="#top">Back to the top of the module</Link></p>
   </section>;
 }
 

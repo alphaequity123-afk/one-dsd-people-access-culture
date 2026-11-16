@@ -1,0 +1,193 @@
+{
+  "target": "code.components/equity-analysis/walkthrough.tsx",
+  "kind": "surface",
+  "route": "components/equity-analysis/walkthrough.tsx",
+  "sourceSha256": "7d300f7285219f25babf6995a347b856daa31d05e613717425a0aaa47415e768",
+  "status": "needs_revision",
+  "reviewedFieldCount": 12,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "This walkthrough teaches each step of the DHS Equity Analysis Toolkit and asks you to write that step for a real piece of work: a policy, a budget line, a hire, a technology change, a service path. When you add it to the record, the Equity Policy page counts it and the register lists it.",
+      "after": "Start here to use each step of the DHS Equity Analysis Toolkit to document a real piece of work—such as a policy, budget line, hiring process, technology update, or service design. When you submit it, your entry appears in the Equity Policy page counts and register. This helps track decisions and inform ongoing equity work.",
+      "reason": "Clarified the purpose and connection to DHS and DSD work, explained reason for submitting and what happens when added to the record. Removed list repetition and connected the task to a professional outcome."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "Each step opens with what the toolkit means by it and the mistake teams usually make.",
+      "after": "Each step begins by explaining the toolkit’s intent for that step and highlights common errors teams may encounter.",
+      "reason": "Clarified that the material explains both the intent and common pitfalls, improving specificity and professional clarity."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": "You answer for your own work. Roles and dates, never names. Your draft stays on this device until you add it.",
+      "after": "Respond for the work you are analyzing. Enter roles and dates, but do not use personal names. Your draft remains only on this device until you choose to add it to the record.",
+      "reason": "Clarified that responses pertain to the analyzed work, specified which details are appropriate, and explained that the draft's location is temporary until submitted."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field4"
+      ],
+      "before": "When you add it, you get a page to bring to your equity director, and the Equity Policy page counts it.",
+      "after": "When you submit your analysis, a page is created that you can review with your equity director. Your submission is included in the Equity Policy record and counted in the overall register.",
+      "reason": "Clarified the outcomes—review with equity director and record inclusion. Made the connection between completing the process and how it affects records more explicit."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field5"
+      ],
+      "before": "If the toolkit is new to you, start with the companion’s five steps and a practice example. Every step here points back to what it teaches.",
+      "after": "If you are not familiar with the toolkit, review the companion’s five steps and practice scenario before starting. Each step in this walkthrough will refer back to what the companion introduces.",
+      "reason": "Clarified the purpose for unfamiliar users and how the companion is connected to learning each step."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "field7"
+      ],
+      "before": "Not the official form you file, and not a substitute for civil rights, Tribal consultation, or labor relations. Bring the page to your administration’s equity director; file the official toolkit as required. Participation is voluntary.",
+      "after": "This is not the official submission form and does not replace other required processes such as civil rights review, Tribal consultation, or labor relations. Bring the completed page to your administration’s equity director, and ensure you submit the official toolkit when required. Participation is optional.",
+      "reason": "Clarified limits and required actions, separated what this walkthrough does not do, noted the need to follow formal procedures, and specified that participation remains voluntary."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "field8"
+      ],
+      "before": "Fill in the required answers marked below before continuing.",
+      "after": "Complete all required fields marked below before continuing to the next step. Missing required responses may limit analysis or delay the review process.",
+      "reason": "Added the consequence and why this action matters—missing information affects the analysis or review, per the writing standard."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "field10"
+      ],
+      "before": "Read it once as the person who will carry the burden. If a line could fit any other project, go back and rewrite it.",
+      "after": "Read it over as though you are the person who will be most affected by the decision. Revise any statement that could apply to other projects without meaningful changes.",
+      "reason": "Connected to the reasoning: read as the affected person for clarity, then explained why generic responses are a problem and revision is needed."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "field11"
+      ],
+      "before": "still blank. Use Edit above to fill",
+      "after": "remain blank. Use Edit above to complete",
+      "reason": "Clarified instruction with an action verb and specified continued action. Avoided casual repetition in an alert context for access purposes."
+    },
+    {
+      "fieldId": 11,
+      "path": [
+        "field12"
+      ],
+      "before": "to the program’s open record. It names work, groups, roles, and dates, and it does not include names, case details, or confidential information. DHS staff can read it on the Equity Policy page and the register.",
+      "after": "for the program’s open record. The entry includes the name of the work, relevant groups, roles, and dates. It does not collect personal names, case-specific details, or confidential data. DHS staff can view it through the Equity Policy page and the analysis register.",
+      "reason": "Specified what information is and is not included; clarified staff access and where the information is used, supporting transparency and compliance with standards."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The rewrite for field0 generalizes the purpose and adds the claim: 'This helps track decisions and inform ongoing equity work.' The source says: 'When you add it to the record, the Equity Policy page counts it and the register lists it.' It does not support that the data is for tracking 'decisions' or that it directly informs ongoing equity work; those are inferred benefits, not source-grounded outcomes. The original is clear about where it appears (page counts, register), matching system function."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The change to field2 is an acceptably clarified interpretation. Both intent and common errors are described in the source: 'Each step opens with what the toolkit means by it and the mistake teams usually make.'"
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The change for field3 is faithful to the source—'Roles and dates, never names. Your draft stays on this device until you add it.' Both the instruction to not use personal names and where the draft is stored are clear and preserved."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "Field4’s change clarifies the outcome but preserves the source meaning ('When you add it, you get a page to bring to your equity director, and the Equity Policy page counts it.'). No legal condition or consent boundary changes."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "Field5 slightly clarifies sequencing and reference to the companion. It is true to the source material."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "The change to field7 clarifies source wording, restates required actions, and matches the original intent and legal limitations."
+      },
+      {
+        "fieldId": 8,
+        "severity": "blocker",
+        "finding": "Field8’s change adds: 'Missing required responses may limit analysis or delay the review process.' The source only states 'Fill in the required answers marked below before continuing.' The consequence ('limit analysis or delay review') is neither stated nor implied in the code or text. This constitutes unsupported padding and invents a consequence."
+      },
+      {
+        "fieldId": 9,
+        "severity": "note",
+        "finding": "The changes for field10 clarify intent ('Read as the person who will carry the burden...') and provide an explanation, which is allowed under the standard. The meaning does not change."
+      },
+      {
+        "fieldId": 10,
+        "severity": "note",
+        "finding": "Field11’s edit ('remain blank. Use Edit above to complete') is a mild clarity improvement but does not alter instructions or legal meaning."
+      },
+      {
+        "fieldId": 11,
+        "severity": "note",
+        "finding": "Field12’s edit clarifies what is and is not collected and makes view-access more explicit; these reflect the source message and do not introduce new assurances or restrictions."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 7683,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 762,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 8445
+    },
+    "review": {
+      "input_tokens": 7940,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 705,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 8645
+    }
+  },
+  "createdAt": "2026-11-15T13:53:30.507Z"
+}

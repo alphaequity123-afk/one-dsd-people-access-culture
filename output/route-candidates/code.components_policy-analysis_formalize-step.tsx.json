@@ -1,0 +1,137 @@
+{
+  "target": "code.components/policy-analysis/formalize-step.tsx",
+  "kind": "surface",
+  "route": "components/policy-analysis/formalize-step.tsx",
+  "sourceSha256": "2913ed9463b01b6d8f53ee3e600852f96a43d6dc68b2bd8bc103cbb9398ad654",
+  "status": "needs_revision",
+  "reviewedFieldCount": 6,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "When every change has a decision and at least one is approved, formalize the approved changes into one document. Deferred changes are listed as deferred.",
+      "after": "Formalize approved changes into a single document when each proposed change has a clear decision and at least one change is approved. Deferred changes remain listed but are marked as deferred, so it is clear which updates are still pending.",
+      "reason": "Clarified sequence and the importance of documenting all change decisions; specified how deferred changes are treated."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Send the recommended changes for decisions first.",
+      "after": "Send the recommended changes for decisions before formalizing, so each change has a recorded outcome that supports the policy record.",
+      "reason": "Added reasoning about why decisions are needed on each change before formalization."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": ". Change who is deciding in step 5.",
+      "after": " To change the deciding authority, update the decision maker in step 5 before proceeding.",
+      "reason": "Clarified the process and importance of explicitly updating the deciding authority, instead of leaving the sentence as an isolated note."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": "These are available at any point and show the analysis as it stands.",
+      "after": "You can download these documents at any stage; each reflects the most current analysis details for the case.",
+      "reason": "Clarified that documents are always downloadable and that they represent the current state of the analysis, connecting the document to its practical use."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field4"
+      ],
+      "before": "Run the analysis or add a change to make documents available.",
+      "after": "Documents become available after you either complete an analysis or add a change to the policy case.",
+      "reason": "Clarified the condition required to enable document downloads, making the reasoning explicit."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field5"
+      ],
+      "before": "Reopening lets you edit changes and record new decisions, then formalize again. Earlier decisions stay in each change&apos;s history.",
+      "after": "If you reopen a finalized case, you can continue editing changes and record new decisions. All previous decisions remain documented in each change’s history to maintain a clear record.",
+      "reason": "Added explanation for why previous decisions are preserved, so staff understand the importance for audit and process tracking."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revised text changes the meaning and fails the official record retention requirement. The original: 'When every change has a decision and at least one is approved, formalize the approved changes into one document. Deferred changes are listed as deferred.' This is direct, specific, and neutral. The rewrite reorders main ideas, changes phrase weight, and especially adds: 'so it is clear which updates are still pending'—this is a factual assertion about clarity not found in the source. The sentence also shifts to an imperative ('Formalize...') instead of the neutral process explanation required. The original meets DSD discourse and grade range guidance."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The addition—reasoning about record support—isnot precisely in the source. However, it reflects the intent and does not contradict or reinterpret the process. Acceptable, but source wording is preferred unless the rationale is program-distinct or not self-evident in context."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The new wording creates procedural complexity. The original was a completion to a prior phrase: '. Change who is deciding in step 5.' It is an explicit reference to a UI label and a step in the process, not to a generic authority. The rewrite ('update the decision maker in step 5 before proceeding') risks referencing procedural detail not in source or UI, and leans administrative. This is not supported for such a short instructional phrase and slightly shifts the focus."
+      },
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "The original is: 'These are available at any point and show the analysis as it stands.' The rewrite: 'You can download these documents at any stage; each reflects the most current analysis details for the case.' The rewrite adds an instruction where the original only offers a fact, and introduces 'for the case' which is not in the source. It also interprets 'as it stands' as 'most current analysis details,' which is a reasonable inference but makes a general claim not in the text or DSD pattern. The source is clearer and preserves tone."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "This is a restatement that is somewhat more explicit about what enables availability, but both the original and rewrite are acceptable in this context."
+      },
+      {
+        "fieldId": 5,
+        "severity": "blocker",
+        "finding": "The original: 'Reopening lets you edit changes and record new decisions, then formalize again. Earlier decisions stay in each change's history.' The rewrite: 'If you reopen a finalized case, you can continue editing changes and record new decisions. All previous decisions remain documented in each change’s history to maintain a clear record.' Adding justification ('to maintain a clear record') changes the official record and interpretation. The paraphrase leans toward making a rationale where the source does not supply it; official process writing does not add motives unless directly supported."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3111,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 358,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3469
+    },
+    "review": {
+      "input_tokens": 3041,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 612,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3653
+    }
+  },
+  "createdAt": "2026-11-15T13:55:25.641Z"
+}

@@ -1,0 +1,67 @@
+{
+  "target": "code.app/learn/water-we-swim-in/essay/[part]/page.tsx",
+  "kind": "surface",
+  "route": "/learn/water-we-swim-in/essay/[part]",
+  "sourceSha256": "a0ecd33caa6d76816d399b4790393956c915995e9f5fb45ad700bc356a5a0edd",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Minnesota culture: the water we swim in",
+      "after": "Minnesota culture: the water we swim in\n\nSummary: This essay examines how Minnesota's cultural expectations influence what people notice, discuss, and assume in day-to-day life. It encourages DHS and DSD staff to reflect on their own views and to consider how local norms shape services and interactions.\n\nProfessional explanation: Minnesota’s culture, like water to a fish, often escapes notice until you compare it with other contexts. Shared local habits and social rules affect how people understand one another, identify problems, and respond to the needs of those they serve. By examining examples and questions drawn from the daily work of DHS and DSD, the essay invites staff to recognize both the benefits and the limitations of the culture they are part of. This perspective helps build practical judgment, avoid unexamined assumptions, and adapt services to fit the needs of a diverse community. Discussing these cultural patterns improves how staff provide services and how they work with peers, clients, and partners across Minnesota.",
+      "reason": "The previous heading lacked a plain-language summary and a connected explanation with professional relevance. The revision introduces a summary and explains why understanding Minnesota’s culture matters for DHS and DSD staff, connecting the essay’s focus to practical reflection and service adaptation."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The change replaces an official heading (\"Minnesota culture: the water we swim in\") with an expanded block that includes a plain-language summary and a professional explanation. The source only provides the heading as the content of this field. All summaries and explanations are actually injected on the rendered page via <WaterEssayPartBody part={part} /> or other components, and not directly written in this field at the source level. The change invents text not found in the official source and alters the role of the heading (which is to provide a succinct topic title as published). The program writing standard specifically requires preservation of official records and prohibits adding invented explanations to a heading field."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1719,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 273,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1992
+    },
+    "review": {
+      "input_tokens": 1582,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 158,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1740
+    }
+  },
+  "createdAt": "2026-11-15T13:50:36.935Z"
+}

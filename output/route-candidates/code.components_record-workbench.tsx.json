@@ -1,0 +1,109 @@
+{
+  "target": "code.components/record-workbench.tsx",
+  "kind": "surface",
+  "route": "components/record-workbench.tsx",
+  "sourceSha256": "f2b4f239925862910228a6334598f59aa6d0dc7e6b2f1bb2d3a21c9ec9b81cec",
+  "status": "model_checked",
+  "reviewedFieldCount": 4,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field2"
+      ],
+      "before": ". Open it and write what you notice now.",
+      "after": ". Open it now and note what you observe or think has changed since your last entry.",
+      "reason": "Added clarity about what to record during a look-back and why, aligning with the guidance to reflect on developments and support practice accountability."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field3"
+      ],
+      "before": "Nothing saved yet. Start one when you are ready.",
+      "after": "No saved records found. Start a new one when ready to document your work.",
+      "reason": "Clarifies that there is not yet a saved work record, provides a professional context, and focuses on the action without condescension."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field4"
+      ],
+      "before": "Leave out client, case, health and personnel details. This stays on this computer unless you choose otherwise.",
+      "after": "Leave out details that identify clients, cases, health information, or personnel. Your entries stay on this computer unless you choose to export or share them.",
+      "reason": "Improves specificity by listing types of information that must be excluded and clarifies how data is stored or shared. This guides appropriate information management."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field5"
+      ],
+      "before": "Saving to the team space is your choice. It shares this one record with the One DSD Team and the Equity and Inclusion Operations Consultant, so leadership can follow the reasoning. Nothing else you do here is shared.",
+      "after": "You decide whether to save a record to the team space. When you do, this record becomes visible to the One DSD Team and the Equity and Inclusion Operations Consultant, so leadership can see the reasoning behind decisions. No other data from your computer is shared.",
+      "reason": "Provides a more precise explanation of what is shared, who has access, and why it matters. It clarifies user control and purpose without implying guarantees."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "Field 2: The revision (\"Open it now and note what you observe or think has changed since your last entry.\") adds clarity about the purpose and action for a look-back. The code context and workflow support and even encourage such reflection. This addition is supported, more helpful, and accurately scoped."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "Field 3: The update (\"No saved records found. Start a new one when ready to document your work.\") is a slightly more formal, explicit version. It fits the audience and provides accurate context. There is no reduction in accuracy."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "Field 4: The revision specifically lists \"details that identify clients, cases, health information, or personnel\" and clarifies that records stay local unless exported or shared by the user. This matches the functional privacy and data management described in the code and provides guidance to users about protected information, staying accurate and useful."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "Field 5: The new wording (“You decide whether to save a record to the team space. When you do...”) is more precise about user control, access rights, and what is transferred, all consistent with the record-sharing features and audience described in code. It does not misrepresent privacy or scope and preserves the core intent."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3693,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 345,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4038
+    },
+    "review": {
+      "input_tokens": 3570,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 301,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3871
+    }
+  },
+  "createdAt": "2026-11-15T13:55:53.876Z"
+}

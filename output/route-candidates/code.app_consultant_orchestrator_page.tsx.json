@@ -1,0 +1,109 @@
+{
+  "target": "code.app/consultant/orchestrator/page.tsx",
+  "kind": "surface",
+  "route": "/consultant/orchestrator",
+  "sourceSha256": "484f8c52b608730ea2932382a2a62c7be22b5573b29c1ede10082ffcdd0ea3f8",
+  "status": "needs_revision",
+  "reviewedFieldCount": 8,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Jev supports routing and answer boundary review. Specialists handle resources, public research, learning, equity drafts, accessibility, and development practice. Content changes remain proposals for your review.",
+      "after": "Jev directs initial question routing and checks that answers align with recognized boundaries for content. Specialists are responsible for reviewing resources, conducting public research, ensuring learning material meets standards, drafting equity materials, supporting accessibility, and maintaining development practices. Any proposed content changes are held for your review and decision.",
+      "reason": "Clarifies the division of responsibilities between Jev and specialists, specifies that content changes require review, and uses precise language to tie each role to a substantive task."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field3"
+      ],
+      "before": "Ask carries no allowance and no permission ceiling: every question is answered in full, with public research when the question calls for it. Each request is still recorded here so you can see what ran. These records are counts of requests, not verified billed-dollar totals.",
+      "after": "Ask does not restrict the number or type of requests and does not impose a permission ceiling. All questions receive a full answer, including public research if necessary. Each request is recorded so staff can review what has occurred. The system counts each request, but these counts do not reflect verified billing or dollar amounts.",
+      "reason": "Adds clarity on the absence of limits and permission ceilings, and more precisely explains why recording requests matters and limits of the recorded data."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field5"
+      ],
+      "before": ". Review findings and proposed changes below. Stop program reviews also stops Ask and the daily agent review.",
+      "after": "Review findings and proposed changes are listed below. Using Stop program reviews also halts Ask and the daily agent review.",
+      "reason": "Removes unnecessary filler and clarifies the outcome of using the 'Stop program reviews' option."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "field8"
+      ],
+      "before": "The target is 95% of eligible routine work completed correctly without intervention. These counts measure operational completion only. They do not establish correctness, developmental change, or achievement of the 95% target. Review a sample of answers with staff before expanding the pilot.",
+      "after": "The goal is to complete 95% of eligible routine work correctly without additional staff intervention. These operational counts indicate completed work, but do not confirm accuracy, developmental progress, or whether the 95% goal was reached. Staff should review a sample of responses to assess quality before the pilot is expanded.",
+      "reason": "Clarifies that the 95% figure is a target, not a measure of quality, and underscores the importance of sampling for evaluation. Replaces generic language with specific DHS program processes."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The rewrite alters the responsibilities and framing assigned to Jev and the specialists beyond what is supported by the source. The source: 'Jev supports routing and answer boundary review. Specialists handle resources, public research, learning, equity drafts, accessibility, and development practice. Content changes remain proposals for your review.' The rewrite substantially rewords and narrows scope. For example, it describes Jev as 'direct[ing] initial question routing and checks that answers align with recognized boundaries for content'—but the source uses 'supports routing,' which is a broader and less directive role. It also replaces the parallel structure with individualized tasks, shifting implied responsibility distribution and over-specifying 'ensuring learning material meets standards,' which the source does not state. This unintentionally distorts the official delegation and process. Retain the parallelism and scope of role delineation."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The rewrite is improved in clarity and fidelity. It does not alter the meaning: absence of limits, permission ceilings, and the distinction that counts do not equate to billing. Acceptable."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The change is editorial; it simplifies, clarifies, and shortens without affecting meaning. Acceptable."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "The edit does not introduce unsupported claims or overstate the source. The 95% target remains a target, and the clarification about sampling is faithful to the source's instruction. Acceptable."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2606,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 386,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2992
+    },
+    "review": {
+      "input_tokens": 2484,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 329,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2813
+    }
+  },
+  "createdAt": "2026-11-15T13:48:07.871Z"
+}

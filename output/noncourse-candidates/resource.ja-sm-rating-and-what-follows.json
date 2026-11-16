@@ -1,0 +1,171 @@
+{
+  "target": "resource.ja-sm-rating-and-what-follows",
+  "kind": "resource",
+  "route": "/library/ja-sm-rating-and-what-follows",
+  "sourceSha256": "0cc124540baf1ccebead8ef48cd49b54b0da188c35010937376e77ca804e4c27",
+  "status": "needs_revision",
+  "reviewedFieldCount": 8,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "To help you write a rating from evidence and follow it through to the decisions it affects.",
+      "after": "A guide for documenting and rating performance based on evidence, and understanding the next steps and decisions affected by your ratings.",
+      "reason": "Clarified the summary by restating the main purpose—supporting documentation and decisions—using more precise and connected language."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Use before, during and after a review cycle.",
+      "after": "Refer to this resource both during routine supervisory work and at each stage of the annual review cycle to ensure consistent and informed ratings.",
+      "reason": "Expanded the timing and reasoning to show when and why the resource is used, connecting it to the larger process."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Remember. Equal ratings do not guarantee equal results. Watch the handoff. Same headings and same amount of evidence for everyone. Keep the ADA, FMLA, the Employee Assistance Program and health details off the form. A response or an appeal is a right. It is not a mark against anyone. These contract terms come from MAPE 2025-2027. Check other agreements directly.",
+      "after": "Keep in mind: Equal ratings do not always lead to equal outcomes, as subsequent decisions may depend on context. Carefully manage information as you transition from rating to action. Use consistent headings and provide the same level of evidence for all staff. Do not record ADA, FMLA, Employee Assistance Program, or specific health information on review forms. Every employee has the right to respond or appeal; exercising this right does not negatively affect them. The processes and terms described follow the MAPE 2025-2027 agreement; check other bargaining agreements directly for their exact terms.",
+      "reason": "Clarified why equal ratings may not result in equal outcomes, and gave more direct instruction on consistency and information management. Kept contractual grounding and emphasized checking applicable agreements."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "All year. One or two lines per person after each one-to-one. Include invisible work, good news and problems. Raise problems when they happen, so the rating is no surprise.",
+      "after": "Throughout the year: After each one-to-one meeting, add one or two summary lines per employee. Record invisible work, positive developments, and problems. Address issues as they arise so nothing in the annual rating comes as a surprise.",
+      "reason": "Clarified timing and purpose; explained why ongoing documentation prevents rating surprises."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Before you submit. Swap check: same words for the same behavior? Seen-it check: can you name a date or piece of work? Recency check: does your evidence cover the whole period? Lower than last year? Check what changed, what happened in between and whether the person has heard this before. Any leave, late accommodation, report or grievance in the period? Call Human Resources or the ADA coordinator.",
+      "after": "Before submitting ratings: Use a swap check to confirm identical behaviors are described with consistent language. Conduct a seen-it check to confirm you can point to specific dates or examples for each statement. Run a recency check to ensure your documentation covers the whole review period, not just recent events. If a rating is lower than the previous year, identify the reasons for the change, what happened during the interval, and whether the employee was informed earlier. If there was any leave, accommodation, report, or grievance, consult with Human Resources or the ADA coordinator.",
+      "reason": "Added specific reasoning for each check, clarified who to consult and why, and provided detail on the purpose of these review steps."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "At the handoff. Name the decision, and state its criteria. Start from the roster of everyone eligible. Compare evidence side by side. Check against the ratings, write the reason and get a second look. MAPE step increases: written notice before the anniversary date, or the increase shall be granted.",
+      "after": "At the decision point: State the specific decision being made and the criteria used. Begin with the complete roster of eligible employees. Review the evidence for each individual side by side, reference the assigned ratings, write explicit reasons, and seek a peer review or second check to ensure fairness. For MAPE step increases, written notice must be provided before the employee's anniversary date; otherwise, the increase will be automatically applied.",
+      "reason": "Clarified steps in reaching and documenting decisions, explained why comparisons and second checks matter, and tied notification timing to outcome."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "The meeting and after. Ask for their view first. Share evidence and next steps. Signing does not mean agreeing. Written response: 30 calendar days from receipt. Appeal: 30 days from the official date of rating. Representative may attend the appeal if they ask. Report any discrimination or retaliation claim immediately to Human Resources or the Affirmative Action Officer. Keep their assignments and your note-taking the same as for everyone else.",
+      "after": "During and after the review meeting: Begin by asking for the employee's perspective. Share the collected evidence and outline any next steps. Clarify that signing the review form acknowledges receipt, not agreement. Employees may submit a written response within 30 calendar days of receiving the rating or file an appeal within 30 days of the official rating date. If requested, a representative may attend the appeal meeting. Report any claims of discrimination or retaliation immediately to Human Resources or the Affirmative Action Officer. Maintain consistency in assignments and your note-taking practices for all employees.",
+      "reason": "Clarified how each meeting step protects rights and ensures process transparency, with rationale for equal treatment documented."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "Do next. Start an evidence file with the same headings for each person this week.",
+      "after": "Next actions: Begin a structured evidence file for each employee this week, using the same headings for everyone to support fairness and thorough records.",
+      "reason": "Explained why using common headings supports consistency and reliability in documentation."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revised summary ('A guide for documenting and rating...') introduces language—'documenting,' 'understanding the next steps,' and a focus on 'decisions affected by your ratings'—that alters the intent and scope of the original summary. The source's summary is specific: the resource is meant to help you write a rating based on evidence and follow through to the decisions it affects. The revision moves from assisting the action (writing and following through) to a general guide for documentation and understanding decisions, which introduces imprecision and shifts the focus away from explicit action to a more passive 'understanding.' The source's practical, action-oriented scope must be preserved."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revised 'whyItMatters' expands on the timing but does not contradict the source. It is acceptable, though the increased detail restates an implication rather than being directly present in the source. Clarity is maintained."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The restatement adds clarity and introduces context for why equal ratings may not lead to equal outcomes, which matches the implication of 'Equal ratings do not guarantee equal results.' While more explicit, it retains fidelity to the source, and the block on medical/ADA info is preserved."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The change clarifies but is fully supported by the source. It accurately reflects both the method and reasoning for keeping real-time notes."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The changes provide explicit reasoning for each review step and clarify instructions. They align closely with the original field and do not change scope or meaning."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The clarification and restructuring accurately reflect the source steps and preserve the rationale. The notification/step increase note remains precise."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The change simply clarifies rights and process outlined in the source, with no substantive alteration."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "The new version adds reasoning behind the uniform headings and maintains the required action from the source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2067,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 823,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2890
+    },
+    "review": {
+      "input_tokens": 2446,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 455,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2901
+    }
+  },
+  "createdAt": "2026-11-15T13:43:41.593Z"
+}

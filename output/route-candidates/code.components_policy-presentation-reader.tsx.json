@@ -1,0 +1,67 @@
+{
+  "target": "code.components/policy-presentation-reader.tsx",
+  "kind": "surface",
+  "route": "components/policy-presentation-reader.tsx",
+  "sourceSha256": "e33d0c611aa7cf3f377471b675c210afd29213f9ab6dc73159517ef7490e1254",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "The presentation is available through the downloads above.",
+      "after": "You can view this presentation by downloading the files linked above. If slides do not appear here, check those downloads for the full content.",
+      "reason": "Clarifies the presentation's unavailability in context, explains the next step, and connects the staff action to an outcome. This approach more clearly communicates why the user is seeing this message and what action they should take, enhancing specificity and guidance for DHS and DSD staff."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The original source text is: \"The presentation is available through the downloads above.\" The proposed change adds new information and instructions: \"You can view this presentation by downloading the files linked above. If slides do not appear here, check those downloads for the full content.\" This introduces practical instructions that are not present in the original wording, changes the communication focus from a basic status notification to a user instruction, and adds context about why the presentation might not be visible. The program writing standard requires that such status/policy wording remain unchanged from the source; it does not authorize rewriting status notifications as instructions or adding context unless the source provides it. This is a blocker for program display fidelity."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1630,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 107,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1737
+    },
+    "review": {
+      "input_tokens": 1349,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 160,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1509
+    }
+  },
+  "createdAt": "2026-11-15T13:55:34.488Z"
+}

@@ -56,7 +56,7 @@ export default function EquityDecisionsCurriculum({ lessonId, downloads }: { les
     setCompleted(next);
     try {
       localStorage.setItem(progressKey, JSON.stringify(next));
-      setStorageMessage('Marked complete on this browser.');
+      setStorageMessage('Marked complete.');
     } catch {
       setStorageMessage('Marked complete for this visit. This browser could not remember your progress.');
     }
@@ -77,7 +77,7 @@ export default function EquityDecisionsCurriculum({ lessonId, downloads }: { les
       <section aria-labelledby="start">
         <h2 id="start">A connected path at your own pace</h2>
         <p>Use a work example that matters to you, or follow the example in the lessons. Each part offers guidance, a visible transcript, an individual decision to practice, and a prompt for your own work.</p>
-        <p>Participation in this learning is voluntary. You do not need a group or need to share personal experiences. Leave names, case details, and other confidential information out of learning notes.</p>
+        <p>You do not need a group or need to share personal experiences. Leave names, case details, and other confidential information out of learning notes.</p>
         <p>The learning supports your work. Follow applicable policy and review requirements, and consult the people or areas responsible when a decision needs their approval. A quick check does not replace a full analysis when one is required.</p>
         <SourceLink className="equity-decisions-primary text-white" href={`${base}/01`}>Start the learning</SourceLink>{' '}
         <button type="button" onClick={downloadCompanion}>Download the companion working notes</button>
@@ -86,7 +86,7 @@ export default function EquityDecisionsCurriculum({ lessonId, downloads }: { les
         <SourceLink href={`${base}/${module.id}`}><span>Part {Number(module.id)}</span><h2>{module.title}</h2></SourceLink>
         <p>{module.deliverable}</p>
         {hasReadyMedia(module) && <p>Video: about {Math.ceil(module.durationSeconds! / 60)} minutes, plus time for your own practice.</p>}
-        {completed.includes(module.id) && <p>Marked complete on this browser.</p>}
+        {completed.includes(module.id) && <p>Marked complete.</p>}
       </li>)}</ol>
       <section><h2>Use this learning with the tools</h2>
         <p>Start with the decision and use the resources that fit your work. Check current requirements and carry open questions to the person or area responsible.</p>
@@ -124,7 +124,7 @@ export default function EquityDecisionsCurriculum({ lessonId, downloads }: { les
         <p>{lesson.practice.reflection}</p>
         <label htmlFor="reflection">Optional working note</label>
         <textarea id="reflection" rows={6} value={notes} onChange={event => setNotes(event.target.value)} aria-describedby="note-privacy"/>
-        <p id="note-privacy">This note is not sent or automatically saved. Download it if you want to keep a copy. Do not include names, case details, health or personnel information, or other confidential information.</p>
+        <p id="note-privacy">Download it if you want to keep a copy. Do not include names, case details, health or personnel information, or other confidential information.</p>
         <button type="button" onClick={() => download(`equity-decisions-part-${lesson.id}-notes.txt`, `${lesson.title}\n\n${lesson.practice.reflection}\n\n${notes}`)}>Download my note</button>{' '}
         <button type="button" onClick={downloadCompanion}>Download the full working-notes companion</button>
       </section>

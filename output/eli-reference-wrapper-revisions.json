@@ -1,0 +1,40 @@
+{
+  "revisions": [
+    {
+      "target": "resource.ext-emerging-leaders-institute",
+      "kind": "resource",
+      "route": "/library/ext-emerging-leaders-institute",
+      "status": "draft",
+      "changes": [
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "Minnesota Management and Budget administers the State of Minnesota Emerging Leaders Institute, the verified public leadership program; public evidence does not document a DHS-owned program by that name. Check eligibility and the current cycle at the source.",
+          "after": "Minnesota Management and Budget offers the Emerging Leaders Institute for Minnesota state employees preparing for future leadership responsibilities. Check the current eligibility, application cycle, and agency process before planning to apply."
+        },
+        {
+          "path": [
+            "body",
+            1
+          ],
+          "before": "Why it is here: leadership pathways should connect to programs that exist. Correcting the record matters; an earlier draft described a DHS-owned Emerging Leaders program that public evidence does not support.",
+          "after": "Why it is here: this state program provides a leadership-development option to consider alongside learning and practice in People, Access and Culture."
+        },
+        {
+          "path": [
+            "body",
+            2
+          ],
+          "before": "How to use it: check eligibility, timing, and the nomination process at the source. Supervisors can use sponsorship to make sure people from underrepresented communities know about it and are nominated.",
+          "after": "How to use it: review the current program information and ask your agency Human Resources or learning and development team about the application process. Supervisors can help staff learn about the opportunity and discuss support for an application; nomination and selection follow the published process."
+        }
+      ],
+      "sources": [
+        "https://mn.gov/mmb/etd/skills-development-courses/open-enrollment-courses/?id=1059-202968",
+        "https://mn.gov/mmb/etd/enrollment/apply-for-program.jsp"
+      ],
+      "reviewNote": "Full card read. These are authored reference wrappers, not official quotation text. MMB primary listing and application process checked. Removes abandoned-draft provenance and avoids broadening eligibility beyond Minnesota state employees or promising nomination. Original external URL retained."
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+
+ RUN  v5.0.5 C:/Users/garyb/Projects/one-dsd-writing-standard-20261115
+
+ ❯ |components| components/home-ask.test.tsx (4 tests | 1 failed) 245ms
+   × opens the panel for a spoken conversation and closes it with Close or Escape 51ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |components| components/home-ask.test.tsx > opens the panel for a spoken conversation and closes it with Close or Escape
+AssertionError: expected <dialog …(3)>…(2)</dialog> to be null
+
+- Expected:
+null
+
++ Received:
+<dialog
+  aria-labelledby="_r_1_-panel-title"
+  class="ask-panel-layer"
+  open=""
+>
+  <div
+    aria-hidden="true"
+    class="ask-panel-shade"
+  />
+  <div
+    class="ask-panel"
+  >
+    <div
+      class="ask-panel-head"
+    >
+      <h2
+        class="ask-panel-title"
+        id="_r_1_-panel-title"
+      >
+        Ask
+      </h2>
+      <button
+        class="ask-panel-close"
+        type="button"
+      >
+        Close
+      </button>
+    </div>
+    <div
+      class="ask-panel-body"
+    >
+      <div
+        data-compact="true"
+        data-testid="conversation"
+      >
+        <textarea
+          aria-label="Follow-up"
+        />
+      </div>
+    </div>
+  </div>
+</dialog>
+
+ ❯ components/home-ask.test.tsx:36:40
+     34|   fireEvent.click(screen.getByRole("button", { name: "Talk with Ask" }…
+     35|   fireEvent.keyDown(screen.getByRole("dialog"), { key: "Escape" });
+     36|   expect(screen.queryByRole("dialog")).toBeNull();
+       |                                        ^
+     37| });
+     38|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  1 failed | 14 passed (15)
+   Start at  15:01:58
+   Duration  2.74s (environment 63%, tests 17%, import 14%, transform 5%)
+

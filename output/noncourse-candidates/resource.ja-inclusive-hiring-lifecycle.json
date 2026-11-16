@@ -1,0 +1,216 @@
+{
+  "target": "resource.ja-inclusive-hiring-lifecycle",
+  "kind": "resource",
+  "route": "/library/ja-inclusive-hiring-lifecycle",
+  "sourceSha256": "82d728d611667baec8e7959af09531f75f9df7d096eb35bd2aef71d3aa4bc74b",
+  "status": "model_checked",
+  "reviewedFieldCount": 11,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "This eight-stage hiring structure tests what the work truly requires, opens outreach, uses structured review and interviews, and normalizes accommodation. It also builds bias reflection into deliberation, makes the offer transparent, and examines outcomes stage by stage.",
+      "after": "This eight-stage hiring guidance clarifies what each job actually requires, expands outreach beyond usual networks, applies consistent review and interviewing, and makes access to accommodation routine. It incorporates explicit reflection on bias, sets clear expectations in the offer, and tracks each stage for improvement.",
+      "reason": "The revision improves clarity and specificity, connecting each stage to its operational purpose and removing redundant or abstract terms while maintaining the scope."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Credential gatekeeping and vague culture-fit judgments were among the clearest advancement barriers DSD staff described. Each stage of hiring is a decision with an owner, so each can be changed.",
+      "after": "Barrier examples such as unnecessary degree requirements and unclear standards for \"culture fit\" were significant obstacles identified by DSD staff. Because each hiring stage is an explicit decision with a clear responsibility, teams can adjust practices at any stage where exclusion occurs.",
+      "reason": "The revision adds clarity about why these barriers matter and specifies how ownership of decisions enables course correction."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Stage 1. Test essential duties and remove excessive credential barriers. Write down what the job actually requires people to do. For each degree, years-of-experience, or licensure requirement, ask whether it predicts that work or stands in for it. Name credible alternatives such as lived experience, community work, or demonstrated skill.",
+      "after": "Stage 1. Clarify essential duties and limit credential requirements. Document what the job actually involves day-to-day. For each degree, years-of-experience, or licensure listed as required, ask whether it directly predicts the person's ability to perform the work or merely serves as a proxy. Identify alternatives such as demonstrated skills, community experience, or relevant lived experience.",
+      "reason": "Revised to specify the process for questioning requirements and to clarify the connection between criteria and actual job functions."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Stage 2. Expand accessible outreach beyond familiar networks. Post where people outside your usual circles will see it, in plain language, with the salary range and the accommodation statement visible. Ask community partners to share it and tell them how to reach a human.",
+      "after": "Stage 2. Broaden accessible outreach beyond familiar networks. Post job announcements where people beyond usual contacts will find them. Use clear language, include the salary range and accommodation statement up front, and ensure community partners know how to connect with a staff member if they have questions or want to share the posting.",
+      "reason": "Expanded to clarify why and how outreach should be broadened, and to make concrete the instruction about helping partners connect to real staff."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Stage 3. Use structured review and job-relevant rubrics. Screen every application against the same written criteria tied to the work. Record the reason for each decision so the process can be checked later.",
+      "after": "Stage 3. Apply structured review with job-linked rubrics. Evaluate every application using the same written, job-relevant criteria. Record the rationale for each decision so the process can be later reviewed and audited if needed.",
+      "reason": "Improved specificity by clarifying the connection between the rubric and job tasks, and by explaining why recording decision rationale is important."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Stage 4. Normalize accommodations without forcing disclosure. Offer accommodation for every stage in the same sentence you use for scheduling. Make the offer to everyone so no one has to identify as disabled to receive it.",
+      "after": "Stage 4. Offer accommodations routinely, not just on request. Include an offer of accommodation at each stage, as part of scheduling communications. Offer it to all candidates so no one is singled out or forced to disclose a disability to access support.",
+      "reason": "Clarified that routine offering of accommodations helps reduce the burden on individuals and avoids requiring disclosure, and explained the communication practice more concretely."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Stage 5. Use structured interviews and avoid vague culture fit. Ask every candidate the same core questions tied to the rubric. Replace culture fit with the specific behaviors the team needs, such as working across difference or explaining a decision to a family.",
+      "after": "Stage 5. Use structured interviews that avoid vague culture-fit judgments. Ask all candidates the same set of core questions aligned with job needs. If teamwork or communication is important, specify and measure those behaviors directly rather than defaulting to \"fit.\" For example, ask how a candidate handles disagreements or explains decisions to stakeholders.",
+      "reason": "Clarified the reasoning for replacing \"culture fit,\" provided a concrete example, and specified alignment with job needs."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "Stage 6. Make bias reflection part of deliberation. Before deciding, have the panel name what impressed them and check it against the rubric. Ask what the panel might be rewarding that is not job related, such as fluency, confidence, or familiarity.",
+      "after": "Stage 6. Build bias reflection into panel deliberations. Before final decisions, ask the panel to state what stood out in each candidate and explicitly check that feedback against job criteria. Address whether the panel is unconsciously prioritizing traits not required for the role, such as fluency with agency jargon or presentation style.",
+      "reason": "Expanded on the \"bias reflection\" process, clarified expectations for the panel, and gave examples of non-job-related traits."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "body",
+        6
+      ],
+      "before": "Stage 7. Provide a transparent offer and onboarding. Explain how the salary was set and what advancement requires. Plan the first weeks so a new person knows who to ask and how decisions get made.",
+      "after": "Stage 7. Make the offer process and onboarding expectations clear. Explain how salary and advancement opportunities are determined. Plan and communicate a structured onboarding so new staff know who to approach for help and understand decision-making channels in their first weeks.",
+      "reason": "Spelled out specifics about what transparency and good onboarding entail, with a focus on early clarity for new hires."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "body",
+        7
+      ],
+      "before": "Stage 8. Examine stage-by-stage outcomes and improve the process. With your HR partner, look at who applied, who advanced at each stage, and who was hired, at a level that protects small groups. Change the stage where people drop out.",
+      "after": "Stage 8. Review each hiring stage for adverse impact and make active adjustments. With your HR partner, analyze data on applicants and progression at each stage. Maintain privacy for small groups. When groups consistently drop out at a particular stage, work with relevant partners to revise that part of the process.",
+      "reason": "Added specificity on reviewing data, the need for privacy, and the importance of revising processes where exclusion is found."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "body",
+        8
+      ],
+      "before": "What this is not. This is practice guidance. Selection procedures, classification, labor agreements, and civil-rights obligations are governed by Human Resources, labor relations, and law. Bring this plan to those partners rather than around them.",
+      "after": "What this is not. This is practice guidance for improving inclusion. Actual selection methods, job classification, union agreements, and legal requirements are set by Human Resources, labor relations, and law. Bring these recommended changes to those partners for authorization and alignment, not as unilateral action.",
+      "reason": "Clarified the advisory status of this guidance and emphasized the importance of proper channels for policy or process change."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revised summary maintains the eight-stage structure and its sequence. The edit is acceptable: it preserves all the original concepts—clarity on job requirements, outreach, structured review, normalization of accommodation, bias reflection, transparency in offers, and staged process evaluation—while adding minor clarifications. There are no unsupported claims or scope changes."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The new version reframes and slightly expands upon the idea that each hiring stage can be changed because it has an owner, still supported directly by the source. The added specificity of what counts as a barrier and how decision ownership enables changes is an acceptable clarification and still faithful to source intent."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The rewrite maintains the same scope: clarifying essential duties, reviewing credential requirements, and naming alternatives. The clarification of questioning whether credentials are proxies versus needed is already implied in the original text. The edit does not introduce new obligations or reinterpret qualifications."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "This is a reword for clarity and does not change the factual guidance. The specifics about clear language, visible salary/accommodation statement, and helping community partners remain intact. The revised guidance aligns with the source's core content and intent."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "No evidence of blocking issues: the revision explains the importance of recording rationale for later audit or review and preserves the central practice of using job-linked rubrics. Intent and official practice match the original."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The revision spell out the normalization of accommodations, tying it more clearly to the desire not to force disclosure. It is still precise and does not add or omit any material qualification from the original stage."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The edit reiterates the avoidance of culture-fit judgments and specifies measuring job-related behaviors, fully respecting the source's instruction to replace vague fit with visible, needed behaviors. The provided example is rooted in the original's mention of explaining decisions to families."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "This expands specificity regarding bias reflection in panel deliberations, but does not alter the requirement or introduce any unsupported expectation. Examples remain representative of the original text."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "Stage 7's revision is consistent with the source, offering more concrete onboarding elements and explanations but not departing from the prescribed practice or overreaching beyond it."
+      },
+      {
+        "fieldId": 9,
+        "severity": "note",
+        "finding": "The rewrite tightens focus on analysis and process improvement, keeps privacy practice, and instructs active revision when impact is adverse. It does not remove any limitation or add new obligations."
+      },
+      {
+        "fieldId": 10,
+        "severity": "note",
+        "finding": "The restatement of the 'what this is not' section is an acceptable clarification. The authority and advisory status are retained, with no invention of obligations or procedural changes."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2396,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 1017,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3413
+    },
+    "review": {
+      "input_tokens": 2945,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 622,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3567
+    }
+  },
+  "createdAt": "2026-11-15T13:41:49.382Z"
+}

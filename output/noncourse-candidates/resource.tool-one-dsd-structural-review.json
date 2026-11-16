@@ -1,0 +1,127 @@
+{
+  "target": "resource.tool-one-dsd-structural-review",
+  "kind": "resource",
+  "route": "/library/tool-one-dsd-structural-review",
+  "sourceSha256": "4888fe79c9036a352b11d1d24f6bbfa047a7fe30340ff278910b9e528df38648",
+  "status": "model_checked",
+  "reviewedFieldCount": 5,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Trace barriers through a process, examine decision rights and evidence, and plan a change with a responsible role and a review date.",
+      "after": "Identify process barriers, clarify who decides and based on what evidence, and plan a change with clear responsibility and a deadline for review.",
+      "reason": "Clarified steps and consequences, specified responsibility, and reorganized for conciseness and direct connection to practical staff action."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Examine a policy, service, or workplace process anywhere in DHS. Start with the pattern, map decision points, question requirements, identify decision rights, and consider how different experiences combine.",
+      "after": "Analyze any DHS policy, service, or workplace process. Begin by identifying recurring patterns, mapping key decisions, examining requirements, and clarifying who has the authority to decide at each step. Consider how different groups or individuals experience the process, and how these experiences interact or differ.",
+      "reason": "Revised to provide more explicit instructions, clarify the importance of decision authority, and make reasoning and outcomes of this analysis clearer while retaining the original scope."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Review the process history and evidence, including missing information. Plan a change with a responsible role, a review date, a measure, and a way to report back to affected people.",
+      "after": "Examine the history of the process and review the available evidence, noting where data or perspectives may be missing. When proposing a change, specify who is responsible for implementation, set a review date, establish a measure of progress, and explain how updates or outcomes will be shared with those affected.",
+      "reason": "Made the steps more specific, explained why each is necessary, and clarified the importance of sharing results."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Work independently or with colleagues. The Equity and Inclusion Operations Consultant leads the program and offers guidance and feedback. The role responsible for a process carries its decisions and follow-through.",
+      "after": "You may complete this analysis alone or with others. The Equity and Inclusion Operations Consultant directs the program, providing support and feedback. The person or team who owns the process is responsible for making decisions and ensuring any agreed changes are followed up.",
+      "reason": "Clarified roles and accountability without adding unnecessary formality, and rephrased for better flow and specificity."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "This interactive workspace provides optional saving on your device, downloadable reports, and a working copy you can reopen. Keep personal and confidential records out of the review. A completed record does not verify an equitable result.",
+      "after": "This workspace lets you save your work locally, download reports, and return to a working draft if needed. Do not enter personal or confidential data into the review. Completing the analysis does not confirm that the process is equitable; further evaluation or action may still be needed.",
+      "reason": "Clarified features, added an explicit caution about confidentiality, and articulated that completion is not a guarantee, but part of an ongoing process."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revised summary reflects the same core elements as the original: process barriers, decision rights, evidence, responsibility, and review. The rewording improves clarity and directness without altering scope or omitting source content."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "This revision expands the original by adding detail (e.g., recurring patterns), but the new language stays within the original instruction to examine, map, question, identify, and consider intersectionality. The added clarification of decision authority is faithful to the source's intent of mapping 'decision points' and 'decision rights.'"
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The change makes steps explicit (noting missing data and the importance of sharing with those affected), which is anchored in the original's instructions: reviewing evidence (including missing information), planning a change (with responsible role, review date, measure), and reporting back. The expansion is justified and precise."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The restatement of collaboration and responsibility clarifies but does not alter meaning: it retains assignment of program leadership and operational accountability to the process owner, matching the original meaning and consequences."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The revision usefully clarifies features and explicitly cautions on confidentiality, a direct restatement of 'keep personal and confidential records out of the review.' It accurately qualifies that completing the form does not itself assure equity, aligning precisely with the source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1574,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 435,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2009
+    },
+    "review": {
+      "input_tokens": 1589,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 320,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1909
+    }
+  },
+  "createdAt": "2026-11-15T13:43:20.254Z"
+}

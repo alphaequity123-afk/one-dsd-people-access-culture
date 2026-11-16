@@ -1,0 +1,193 @@
+{
+  "target": "code.components/equity-toolkit-worked-example.tsx",
+  "kind": "surface",
+  "route": "components/equity-toolkit-worked-example.tsx",
+  "sourceSha256": "1a906a25d2335e95bec5c50ba8a97d0e9b6bd1020620c2aedb830365e652b53e",
+  "status": "needs_revision",
+  "reviewedFieldCount": 10,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field1"
+      ],
+      "before": "See how a useful analysis takes shape",
+      "after": "See how a thorough analysis develops in practice",
+      "reason": "Clarified that the analysis is thorough and practical, emphasizing the process of development to give staff a clearer expectation for what they will observe. \"Takes shape\" can be vague; \"develops in practice\" is more specific to applied work."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field2"
+      ],
+      "before": "See how a team could review a Community First Services and Supports (CFSS) notice, then try the approach with a different decision.",
+      "after": "This page demonstrates how a team might review a Community First Services and Supports (CFSS) notice, and then use the same method to analyze a different decision.",
+      "reason": "Clarified that this is a demonstration rather than speculation. \"Shows how a team might\" emphasizes that the page models an approach, not a directive or strict process. Split the actions for clarity: review and apply to a new decision."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field4"
+      ],
+      "before": "Use these five questions to build confidence alongside the Equity Analysis Toolkit training. For an actual review, follow the official toolkit and the approval steps that apply to your work.",
+      "after": "Use these five questions to build understanding as you complete the Equity Analysis Toolkit training. For actual decisions, use the official toolkit and required approval steps for your review.",
+      "reason": "Replaced \"build confidence\" with \"build understanding,\" which better reflects the intent of increasing analytic skill. Clarified application to \"actual decisions\" rather than an abstract review."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field6"
+      ],
+      "before": "This example shows how a notice review could begin. The notes raise questions for the team to explore; they are not findings about CFSS participants or an approved decision.",
+      "after": "This example illustrates how a notice review may begin. The notes identify questions that the team should explore further; they do not represent conclusions about CFSS participants or an approved decision.",
+      "reason": "Reworded for precision: \"illustrates\" is more specific than \"shows,\" and \"may begin\" clarifies that this is one possible approach. Replaced \"raise questions\" with \"identify questions\" and clarified that these are for further exploration by the team."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field7"
+      ],
+      "before": "Together, these notes can inform an equity impact statement. Evidence and engagement are still needed. Check alignment with current guidance, assign responsibility, and plan the resources needed to sustain the change.",
+      "after": "Combined, these notes can help shape an equity impact statement. Evidence and engagement with stakeholders are still needed. Staff should check that their analysis aligns with current guidance, clarify who is responsible for next steps, and consider what resources will be required to support lasting changes.",
+      "reason": "Clarified steps and their purpose: \"Combined\" for a collective sense, specified \"with stakeholders\" to underscore engagement, and assigned actions to staff. Added specificity to following guidance, assigning responsibility, and planning resources."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field9"
+      ],
+      "before": "Consider a service team that wants to replace mailed appointment reminders with texts. What might become easier, and who might need another way to respond? Explore the choices below, using the CFSS review as a guide rather than copying its answers.",
+      "after": "Suppose a service team wants to switch from mailing appointment reminders to sending them by text message. What barriers or improvements might this create, and who could need an alternative method to respond? Use the choices below to explore this, using the CFSS review as a reference rather than copying its answers.",
+      "reason": "Specified \"switch from mailing...to sending...by text\" for clarity. \"Barriers or improvements\" states possible impacts, and \"alternative method\" clarifies practical options. Directed users to use the prior review as a reference, avoiding verbatim copying."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field10"
+      ],
+      "before": "Try the appointment-reminder example",
+      "after": "Explore the appointment-reminder scenario",
+      "reason": "Clarified that this is a scenario to explore, not merely an \"example.\" More active instruction."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "field11"
+      ],
+      "before": "starts empty. Keep practice separate from actual work, and leave out identifying or confidential details.",
+      "after": "The working draft starts empty. Keep practice work separate from your actual analysis, and do not include identifying or confidential information.",
+      "reason": "Added \"The working draft\" for clarity and specified \"practice work\" vs \"actual analysis\" to reinforce the distinction. Used \"do not include identifying or confidential information\" for clear legal and ethical instruction."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "field12"
+      ],
+      "before": "official toolkit and access details",
+      "after": "the official toolkit and instructions for access",
+      "reason": "Added \"instructions\" to clarify that both the toolkit and guidance for gaining access are covered."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "field13"
+      ],
+      "before": "for the broader framework and the review your work requires. For communication choices, use the",
+      "after": "for broader context and to meet the review requirements for your work. If you are evaluating communication methods, also refer to the",
+      "reason": "Clarified that the resources provide \"broader context\" and help staff \"meet the review requirements for your work.\" Separated communication methods as a specific use case for the additional resources."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revision changes the phrase 'See how a useful analysis takes shape' to 'See how a thorough analysis develops in practice.' The source specifically uses 'useful,' which is a direct value-judgment (utility, not necessarily thoroughness), and 'takes shape,' which is plain and open-ended, matching the source's intent of demonstrating an example in progress. The revision's phrase 'thorough analysis' introduces a new, unsupported standard (thoroughness) and 'in practice' changes the intention to process demonstration, over-specifying beyond the source's scope. This does not conform to the policy standard to keep headings true to the supplied content and not over-promise."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The change from 'See how a team could review...' to 'This page demonstrates how a team might review...' does not introduce substantial new meaning, but the new language makes it explicit that this is a demonstration, which is a reasonable clarification; however, it is not required and either is acceptable under the standard."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The revision changes 'build confidence' to 'build understanding,' and changes 'alongside the Equity Toolkit training' to 'as you complete...' The source intent is to support confidence-building in practice, which is distinct—'build understanding' is more abstract and somewhat weaker. Confidence-building is the term used in the source and should be retained. 'Alongside' is clearer than 'as you complete.' The change also changes 'for an actual review' to 'for actual decisions,' slightly narrowing the instruction. Follow the source for scope per standard."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The rewording from 'shows how a notice review could begin' to 'illustrates how a notice review may begin' is an acceptable synonym change and does not violate the meaning, but it does not increase precision as claimed. The main idea and caution remain intact."
+      },
+      {
+        "fieldId": 4,
+        "severity": "blocker",
+        "finding": "The revision changes 'Together, these notes can inform an equity impact statement...' to 'Combined, these notes can help shape an equity impact statement. Evidence and engagement with stakeholders are still needed. Staff should check that their analysis aligns with current guidance, clarify who is responsible for next steps, and consider what resources will be required to support lasting changes.' This introduces 'with stakeholders' and instructs staff directly, departing from the source's neutral voice and open-ended suggestion. The source intentionally keeps the instructions general ('assign responsibility,' 'plan resources') and does not assign tasks to staff in this section. The change over-specifies and adds interpretation."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The rewording is more explicit ('switch from mailing...to sending...by text') and adds 'barriers or improvements' in place of 'what might become easier,' but does not materially alter policy or introduce inaccurate guidance. Slight stylistic difference."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The change from 'Try the appointment-reminder example' to 'Explore the appointment-reminder scenario' is a non-blocking preference. Both are reasonable, though 'try' is more action-oriented as in the source."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "Clarifying 'The working draft starts empty' is a minor edit and does not introduce or erase legal or practical direction. It is not required, but not harmful."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "The addition of 'instructions for access' is minor and does not introduce new guidance or legal change. It is acceptable as supplemental wording."
+      },
+      {
+        "fieldId": 9,
+        "severity": "note",
+        "finding": "Wording is clarified but not changed in intent or scope. The revised language gives no new requirements and remains true to the source's direction."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2586,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 812,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3398
+    },
+    "review": {
+      "input_tokens": 2942,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 806,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3748
+    }
+  },
+  "createdAt": "2026-11-15T13:53:41.939Z"
+}

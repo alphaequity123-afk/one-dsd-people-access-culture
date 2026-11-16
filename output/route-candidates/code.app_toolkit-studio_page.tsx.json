@@ -1,0 +1,95 @@
+{
+  "target": "code.app/toolkit-studio/page.tsx",
+  "kind": "surface",
+  "route": "/toolkit-studio",
+  "sourceSha256": "dcd4f1262da6296fb1fe804720814c0b1c7131cb8e151161862c0cbf092e198e",
+  "status": "needs_revision",
+  "reviewedFieldCount": 5,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Ready to apply this to your work? Open the complete equity review tools",
+      "after": "If you are ready to apply this approach, use the full set of equity review tools linked here.",
+      "reason": "Clarifies that users should use the full equity review tools when they are prepared to take action, specifying the purpose for accessing these tools."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field3"
+      ],
+      "before": "Choose a published example to try the questions. More work situations are available below.",
+      "after": "Select a published example to respond to the practice questions. Additional work situations appear below.",
+      "reason": "The revision increases specificity by stating that the examples are for responding to practice questions and clarifies that more examples follow below, improving clarity for colleagues using the page."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field4"
+      ],
+      "before": "Download these materials to use with your own work. This page does not save your notes.",
+      "after": "You can download these materials to support your work. This page will not retain any notes you enter.",
+      "reason": "Clarifies that materials are intended to support work, and specifies that the page does not store any user-entered notes, emphasizing why users should save their own work elsewhere."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The source text ('Ready to apply this to your work? Open the complete equity review tools') is a direct call to action linking the equity review tools. The proposed change ('If you are ready to apply this approach, use the full set of equity review tools linked here.') is more directive and explains purpose, but it introduces new language ('use the full set' and 'when they are prepared to take action, specifying the purpose') not present in the source, and is less direct in the call to action. The source simply offers a clear link. The explanation and instructional shift are not supported by the source; per standard, calls to action and button text should not be needlessly generalized or explain intent beyond the evidence."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revised wording for field 3 ('Select a published example to respond to the practice questions. Additional work situations appear below.') increases specificity by referencing 'practice questions' and clarifies that more situations follow. This improves clarity, is accurate, and matches the source's intent."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The change to field 4 ('You can download these materials to support your work. This page will not retain any notes you enter.') retains the meaning of the original. The additional phrase 'will not retain any notes you enter' is equivalent to 'This page does not save your notes' from the source, and specifying that the materials 'support your work' is reasonable and does not add unsupported claims."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2325,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 204,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2529
+    },
+    "review": {
+      "input_tokens": 2078,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 371,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2449
+    }
+  },
+  "createdAt": "2026-11-15T13:51:58.081Z"
+}

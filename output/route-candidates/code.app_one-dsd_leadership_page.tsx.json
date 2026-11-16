@@ -1,0 +1,81 @@
+{
+  "target": "code.app/one-dsd/leadership/page.tsx",
+  "kind": "surface",
+  "route": "/one-dsd/leadership",
+  "sourceSha256": "1858c7a3aacc8f9c6ef501b35fb2c8d0c53c59ad97b4f79150619255de4c57be",
+  "status": "needs_revision",
+  "reviewedFieldCount": 47,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "For decisions that reach people through a rule, a form, a budget or a service.",
+      "after": "Applies to decisions that affect people through policies, forms, budgets, or direct services.",
+      "reason": "Clarifies that the statement covers decisions implemented through organizational mechanisms, using more precise terms and connecting to the context of DSD practice."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "field8"
+      ],
+      "before": "For how people are brought in, supported, heard and kept.",
+      "after": "Applies to the ways people are recruited, supported, heard, and retained in the organization.",
+      "reason": "Clarifies the scope of this section and connects it to DSD workforce processes, using specific organizational terms."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The proposed 'Applies to decisions that affect people through policies, forms, budgets, or direct services.' changes the original meaning and scope. The source says 'For decisions that reach people through a rule, a form, a budget or a service.' The new language changes 'a rule' to 'policies,' which is broader and less specific than the operational and regulatory focus in the source. Additionally, 'direct services' is not in the source text and introduces an unsupported qualification. The phrase 'implemented through organizational mechanisms' is not in the source and suggests a wider scope. The original needs to be preserved for accuracy and regulatory relevance."
+      },
+      {
+        "fieldId": 8,
+        "severity": "blocker",
+        "finding": "The proposed 'Applies to the ways people are recruited, supported, heard, and retained in the organization.' does not match the source, which is 'For how people are brought in, supported, heard and kept.' The new version uses standard HR terms ('recruited,' 'retained'), which alters the original's broader description and removes the intentionally plain language ('brought in,' 'kept'). The change adds 'in the organization,' which is not in the source and could restrict interpretation. Retain the original to preserve scope and intent."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 8096,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 212,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 8308
+    },
+    "review": {
+      "input_tokens": 6209,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 306,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 6515
+    }
+  },
+  "createdAt": "2026-11-15T13:50:58.168Z"
+}

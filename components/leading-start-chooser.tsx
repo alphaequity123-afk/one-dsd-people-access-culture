@@ -45,6 +45,5 @@ export function LeadingStartChooser({ paths }: { paths: readonly Path[] }) {
     <div role="status" aria-live="polite" className="mt-4">
       {suggestion ? <p className={styles.plain}>A good place to start: <Link href={`/leading/paths/${suggestion.slug}`}>{suggestion.title}</Link>. {suggestion.description} It is only a suggestion. Every path is open to you.</p> : null}
     </div>
-    <p className={`${styles.plain} mt-2`}>Your answers stay on this page. They are not saved or sent anywhere.</p>
   </form>;
 }

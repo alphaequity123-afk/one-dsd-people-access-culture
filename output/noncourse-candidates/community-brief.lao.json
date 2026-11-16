@@ -1,0 +1,228 @@
+{
+  "target": "community-brief.lao",
+  "kind": "surface",
+  "route": "/minnesota-communities/lao",
+  "sourceSha256": "f6212b4a754a300fea0444ab011b85f154713ce6a5c64e29d0f29b23249b8b60",
+  "status": "model_checked",
+  "reviewedFieldCount": 15,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "whoAndWhere"
+      ],
+      "before": "Lao Minnesotans arrived as refugees after 1975 and through later family reunification; Lao and Hmong are distinct peoples from the same country.",
+      "after": "Lao Minnesotans began arriving as refugees following 1975, with additional families coming later through reunification processes. While both Lao and Hmong communities share origins in Laos, they are distinct in language, cultural history, and group identity.",
+      "reason": "Clarified the timeline and process of migration for greater precision; expanded on the distinction between Lao and Hmong to make clear that shared national origin does not indicate the same group, which aids staff in culturally appropriate engagement."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "'Laotian' on a form can mean Lao, Hmong, or other groups; book the actual language.",
+      "after": "'Laotian' as noted on forms may refer to Lao, Hmong, or other ethnic groups from Laos. Always confirm and request the specific language to provide accurate services.",
+      "reason": "Clarified that the label 'Laotian' is ambiguous and instructs staff to confirm the precise language, ensuring meaningful and practical guidance for service delivery."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "withinGroupDiversity"
+      ],
+      "before": "Buddhist and Christian households; generations differ on language.",
+      "after": "Within Lao communities, households may practice Buddhism or Christianity. Language use often varies by generation, with elders more likely to prefer Lao and younger members sometimes favoring English.",
+      "reason": "Specified the religious diversity and generational language differences to help staff anticipate potential diversity in practice and communication needs."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "nameNote"
+      ],
+      "before": "Ask which language and how names appear on documents.",
+      "after": "Ask which language the person prefers and confirm how their name appears on official documents, as this affects both interpretation and accurate records.",
+      "reason": "Expanded on the importance of confirming both language and name spelling or format, ensuring accurate case handling and interpretation."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "whatToAsk",
+        0
+      ],
+      "before": "Lao interpreter, or a different language?",
+      "after": "Is a Lao interpreter needed, or does the person use another language?",
+      "reason": "Rephrased for clarity and specificity, focusing on determining the actual language required, not just the presence of an interpreter."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "accessChecks",
+        0
+      ],
+      "before": "Language, not nationality, on the request.",
+      "after": "Record the requested language, not only the person's nationality.",
+      "reason": "Clarified that requests must specify language use, since nationality does not reliably indicate communication needs."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "accessChecks",
+        1
+      ],
+      "before": "Translated vital notices reviewed by a Lao speaker.",
+      "after": "Have a Lao speaker review translated vital notices for accuracy before distribution.",
+      "reason": "Clarified necessary staff action: translation review by a qualified Lao speaker is needed, which reduces risk of errors in essential communications."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "whoToInvolve",
+        0
+      ],
+      "before": "Language access lead or interpreter services, with the dialect written on the request.",
+      "after": "Request involvement from language access staff or interpreter services, and specify the needed dialect on all service requests.",
+      "reason": "Specified who to involve and the importance of documenting dialect needs to ensure effective interpretation."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "whoToInvolve",
+        1
+      ],
+      "before": "Equity Director for the administration or the person responsible for the program.",
+      "after": "Involve the Equity Director for the administration or the appropriate program lead.",
+      "reason": "Clarified that staff should engage either the Equity Director or the lead responsible, providing flexibility depending on structure."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "whoToInvolve",
+        2
+      ],
+      "before": "Community partner organizations identified in this brief, with a clear purpose, role, compensation, and plan to report back.",
+      "after": "Engage community partner organizations named in this brief for roles that are clearly defined, including purpose, responsibilities, compensation, and reporting plan.",
+      "reason": "Clarified the need for clear definition of roles and expectations for community partners, supporting transparent collaboration."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "whatNotToAssume",
+        0
+      ],
+      "before": "Do not assume Hmong and Lao are the same brief.",
+      "after": "Do not treat Hmong and Lao guidance or briefs as interchangeable. Each group has unique language and cultural needs.",
+      "reason": "Clarified the distinction and why it matters, helping reduce assumptions and misapplication of guidance."
+    },
+    {
+      "fieldId": 11,
+      "path": [
+        "spotlightBody"
+      ],
+      "before": "The Lao Assistance Center of Minnesota says it launched a Lao culture camp in 2017. Cultural knowledge grows through participation as well as through reading about it.",
+      "after": "According to the Lao Assistance Center of Minnesota, a Lao culture camp was launched in 2017. Learning about Lao culture often happens through direct participation as well as written materials.",
+      "reason": "Clarified attribution and linked the idea of learning through participation to practical approaches in cultural understanding."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The rewritten text expands, but does not contradict the source. It clarifies the distinctiveness of Lao and Hmong, which is factual and supports professional engagement. The arrival history is reframed but fits the intended meaning."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The edit maintains the original meaning and clarifies practical needs for confirming language, in line with the brief’s guidance."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "This addition is supported. It deepens the explanation of generational and religious diversity in ways consistent with commonly observed demographics. No unsupported claims."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "Clarifies practical casework without stretching or undermining the source. Adding examples of accuracy and documentation is appropriate for the audience."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "Retains the inquiry intent; improved clarity for practice. No issue."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "Edit does not invent requirements, only clarifies the recommended practice. Supported by the source."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "Instruction for Lao speaker review aligns with best practice and makes explicit a prudent check on translation. No overstatement."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "Expanded, but specifies actions and documentation that fit the audience and do not overstate obligations. Supported."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "The edit provides flexibility in responsible staff without constraining authority or inventing new processes."
+      },
+      {
+        "fieldId": 9,
+        "severity": "note",
+        "finding": "Clarifies that collaboration should have defined structure. Consistent with equity and partnership best practices."
+      },
+      {
+        "fieldId": 10,
+        "severity": "note",
+        "finding": "Restatement provides additional rationale. Does not introduce unsupported policies."
+      },
+      {
+        "fieldId": 11,
+        "severity": "note",
+        "finding": "Rewording closely tracks the original and clarifies the method of learning. No change in factual meaning."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1852,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 739,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2591
+    },
+    "review": {
+      "input_tokens": 2031,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 417,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2448
+    }
+  },
+  "createdAt": "2026-11-15T13:40:34.237Z"
+}

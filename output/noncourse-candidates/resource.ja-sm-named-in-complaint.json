@@ -1,0 +1,172 @@
+{
+  "target": "resource.ja-sm-named-in-complaint",
+  "kind": "resource",
+  "route": "/library/ja-sm-named-in-complaint",
+  "sourceSha256": "395d076d566304c37b100e7650bd3c19fbbfa225336b6c89eeabb902eb02f77b",
+  "status": "needs_revision",
+  "reviewedFieldCount": 8,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Help you take the right steps in the right order when you learn a complaint names you, and keep your team out of it.",
+      "after": "A guide to your first actions if you are named in a complaint—and to keeping your team members appropriately uninvolved in the initial response.",
+      "reason": "Clarifies that the page provides structured guidance for personal and team conduct, names the purpose in more specific terms, and avoids implication that team exclusion is the user's only goal."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Remember. A complaint is not a finding. It is also not nothing. Call before you talk. Delete nothing. Everyone keeps their rights, including you.",
+      "after": "Remember: A complaint is an allegation, not a finding, but it also requires immediate attention. Do not respond or share information until you have checked with the right people. Keep all records intact. Rights and protections stay in place for everyone, including you.",
+      "reason": "Explains that a complaint triggers obligations and attention, not just uncertainty. States why staff should not act before seeking guidance, and why maintaining records and rights matters."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "First day. Stop. Say nothing to the team about it. Write a private note: what, who told you, when. Call Human Resources. Ask who is handling it, what you may say, and who reviews your decisions for now. If an employee tells you directly: thank them, say you must pass it on, and report it that day to Human Resources or the Affirmative Action Officer. Find your own contract or plan, and your representative or adviser.",
+      "after": "First steps on day one: Pause, and do not discuss the complaint with your team. Immediately record privately what you learned, who informed you, and the time. Contact Human Resources for direction: ask who is managing the process, what information you may disclose, and who should review your staff decisions until the matter is resolved. If an employee reports a complaint to you, acknowledge the report, say that you are required to escalate it, and notify Human Resources or the Affirmative Action Officer the same day. Locate your own contract or personnel plan, and identify your union representative, attorney, or other adviser.",
+      "reason": "Provides specific reasoning for each step—including why to record details, ask about decision review, and identify support—even if multiple types of representatives are possible."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Never. Try to find out who filed. Ask the team what they have heard. Reach out to \"clear the air.\" Start a new file on anyone. Delete, edit or tidy any record. Talk to possible witnesses about the matter.",
+      "after": "Never: Attempt to determine who filed the complaint. Gather rumors or ask your team for information about the complaint. Communicate individually with staff to manage perceptions or \"clear the air.\" Create new personnel files or make notes about staff related to the incident. Delete, edit, or reorganize any records. Discuss the matter with potential witnesses before being directed to do so.",
+      "reason": "Clarifies forbidden actions with examples of how some common missteps can affect fairness, process integrity, and retaliation risk."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Before any decision about staff. Would I decide this with no complaint on the table? Is it the way I treat others in the same spot? Did I write the work reason first? Could it discourage someone from raising a concern? Who else looked at it?",
+      "after": "Before you make any decision about staff: Ask yourself if you would make the same choice if there were no complaint pending. Consider whether you are applying the same standard you would use for anyone in a comparable situation. Record the business reason for the decision first. Think about whether your action could deter staff from raising concerns. Identify who else has reviewed or will review your decision.",
+      "reason": "Expands the reflective questions into complete considerations with the specific consequence of staff discouragement and the procedural importance of having others review high-stakes decisions."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Taking part. Tell the truth. Say what you do not remember. Hand over what is asked for. Ask for the access you need. Ask what you may discuss afterward.",
+      "after": "When participating in the process: State what you know honestly, including information you cannot recall. Provide all documentation or information requested. Request any access or support you need, such as accessing systems, documents, or representation. Clarify what you may discuss with others and when, especially after formal proceedings have ended.",
+      "reason": "Links each instruction to process clarity, your right to representation or information, and professional handling when the record is incomplete."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "After it closes. No victory lap and no public penance. Keep protecting everyone who took part. Check your decisions at three months. Choose one change in practice.",
+      "after": "After the matter closes: Do not celebrate or publicize outcomes, and do not criticize yourself or others in public. Continue to protect the privacy and standing of anyone involved or affected. Review your key decisions about staff three months later to check for unintended consequences. Identify and carry forward at least one constructive adjustment to your professional practice.",
+      "reason": "Clarifies the personal and organizational value in privacy, post-resolution reflection, and making learnings explicit for future situations."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "body",
+        6
+      ],
+      "before": "Do next. Save your Human Resources contact and your own contract today. Do it now, when it costs you nothing.",
+      "after": "Preparation: Save the contact information for Human Resources and a copy of your employment contract now, before any issue arises. Preparing these resources ahead of time helps you respond correctly if a complaint is ever made.",
+      "reason": "Explains why advance preparation is helpful, spelling out the practical purpose of immediate action."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The new summary introduces an unsupported claim by stating the guide is about 'keeping your team members appropriately uninvolved in the initial response.' The original text only says to keep your team out of it, emphasizing non-involvement but not 'appropriate' procedures or standards. The revision changes the scope from specific instruction (keeping team out) to a broader claim about appropriateness and structure not stated in the source."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The rewrite clarifies the meaning (complaint as an allegation, need for care, rights and records), which is a supported paraphrase of the original intent and does not introduce policy or legal shifts."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revision retains all substantive actions from the original, explaining their reasoning within the page’s scope. It covers both contacting HR and identifying one’s representation, consistent with the source."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The rewrite uses slightly more explicit examples but does not change the intent, legality, or scope; it remains aligned with the original guidance."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The explanation expands on each question as a consideration rather than listing prompts, and reasonably covers consequences (like discouragement) and procedural checks (who else reviewed), all grounded in the original's reflective approach."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The revision spells out the rights and process for cooperation in an investigation, closely following the original instructions, without inventing requirements."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The revision clarifies privacy (not celebrating or shaming), review at three months, and continuous improvement—an acceptable paraphrase that fits the instruction’s intent."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "The rewrite explains why advance preparation matters without introducing new policy; this supports understanding and is not a blocker."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1981,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 937,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2918
+    },
+    "review": {
+      "input_tokens": 2370,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 409,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2779
+    }
+  },
+  "createdAt": "2026-11-15T13:43:50.839Z"
+}

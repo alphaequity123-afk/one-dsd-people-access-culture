@@ -1,0 +1,67 @@
+{
+  "target": "workforce.complex-projects",
+  "kind": "surface",
+  "route": "/consultant/workforce/complex-projects",
+  "sourceSha256": "d9547eefb4a46147158f578516334fedd90daf8a0c9a3b42ee4699655af22fe7",
+  "status": "model_checked",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "relationship"
+      ],
+      "before": "Listed as an agency area or associated service. This does not establish a direct reporting line.",
+      "after": "Identified as an agency area or related service within DHS. This listing does not imply a supervisory or direct reporting relationship.",
+      "reason": "Clarified that the listing reflects identification within DHS, and specified that no supervisory or direct reporting relationship is implied, providing clearer context for staff."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The changed language for the 'relationship' field rephrases but does not alter the meaning from the source: it continues to clarify that the listing indicates connection within DHS and does not imply a reporting or supervisory chain. The new wording improves clarity and retains fidelity to the source's intent. There is no invented policy or unsupported claim, and the update is supported by public DHS organizational information."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1095,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 78,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1173
+    },
+    "review": {
+      "input_tokens": 785,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 100,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 885
+    }
+  },
+  "createdAt": "2026-11-15T13:37:56.485Z"
+}

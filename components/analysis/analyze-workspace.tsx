@@ -13,7 +13,7 @@ export type CommunityOption = { id: string; title: string };
 /** Native community pages get no added content, so they are never offered here. */
 const EXCLUDED_COMMUNITY_IDS = new Set(["native-american", "tribal-nations", "alaska-native"]);
 const KEEP_KEY = "one-dsd-analyze-document-v1";
-export const PRIVACY_LINE = "Use only public or appropriately de-identified material approved for this purpose. Attaching a file sends it for text extraction; Analyze sends the supplied text and question for processing and may use an outside answer service. Leave out names, case details and other confidential information.";
+export const PRIVACY_LINE = "Use only public or appropriately de-identified material approved for this purpose. Leave out names, case details and other confidential information.";
 export const BUSY_LINE = "Reading the material and preparing the analysis. This can take up to a minute.";
 /** Shown over the worksheet when the answer service cannot run on this site. */
 export const UNAVAILABLE_REASON = "The analysis service is not available on this site right now. You can still work through the questions below yourself.";
@@ -231,7 +231,6 @@ export function AnalyzeWorkspace({ communities, analyzeUrl = "/api/analyze", upl
           {kept ? <button type="button" className={styles.secondary} onClick={forget}>Forget</button> : <button type="button" className={styles.secondary} onClick={keep}>Keep in this browser</button>}
           <button type="button" className={styles.secondary} onClick={clear}>Clear</button>
         </div>
-        <p className={styles.kept}>{kept ? "This analysis and the supplied text are saved in this browser profile. Others using the same profile may see them. Forget removes this saved copy; printed, copied or downloaded versions remain separate." : "Keep in this browser saves the analysis and supplied text in this browser profile. It does not submit them again for analysis. Others using the same profile may see the saved copy. Printing or copying creates a separate version."}</p>
       </section>
     </div> : null}
   </div>;

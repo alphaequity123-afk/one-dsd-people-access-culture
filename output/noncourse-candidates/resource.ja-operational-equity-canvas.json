@@ -1,0 +1,82 @@
+{
+  "target": "resource.ja-operational-equity-canvas",
+  "kind": "resource",
+  "route": "/library/ja-operational-equity-canvas",
+  "sourceSha256": "58420221a42441bfdf70eb141c7f1afadf0ed70d95ac4e4b576304b210c9cba3",
+  "status": "needs_revision",
+  "reviewedFieldCount": 11,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Equity cannot be confined to awareness content. This canvas turns it into the working steps of an actual decision while the decision can still change.",
+      "after": "Equity must be part of how decisions are made, not just discussed as a goal or limited to staff training. This eight-step canvas gives practical structure to equity review, making it part of each step in the process, while there is still a real opportunity to adjust the proposed action.",
+      "reason": "Clarified the purpose of integrating equity into the decision-making process rather than discussing it separately. Added specificity on embedding equity steps while the decision is open, which resolves a potential gap in reasoning for practical application."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "body",
+        8
+      ],
+      "before": "Any figures used as examples in training materials are illustrations, not DSD evidence. Use the real data owners for real numbers.",
+      "after": "If training materials use figures or examples, treat them as illustrations only; do not use them as DSD evidence. For actual data, work directly with the official data owners.",
+      "reason": "Clarified the separation between illustrative training figures and actual DSD evidence, specifying required use of official data owners for real numbers. This supports proper data use and responsibility."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The proposed change alters the meaning of the source by expanding 'awareness content' to also include 'goal' and 'staff training' as things from which equity must be distinguished. The original is clear that equity should not be confined only to awareness content, but does not list other forms to distance from, nor does it frame staff training as insufficient. The revision also introduces structure and meta-explanation ('making it part of each step in the process'), which is an interpretation rather than a restatement of the original. The original's concise contrast between awareness and operational steps is lost."
+      },
+      {
+        "fieldId": 10,
+        "severity": "note",
+        "finding": "The revision for this field substantially matches the source's intention and clarifies that examples in training cannot be used as real data, and that direct work with official data owners is required for actual data. The intent and boundaries are sound, though the language is a bit more elaborate. This is not a blocker."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2137,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 222,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2359
+    },
+    "review": {
+      "input_tokens": 1492,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 213,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1705
+    }
+  },
+  "createdAt": "2026-11-15T13:41:52.895Z"
+}

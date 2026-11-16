@@ -1,0 +1,67 @@
+{
+  "target": "code.components/collection-item-link.tsx",
+  "kind": "surface",
+  "route": "components/collection-item-link.tsx",
+  "sourceSha256": "c6839e43742bff15037791978f3eafca50adc92ca36d37ca6aed7c9172dbaf75",
+  "status": "needs_revision",
+  "reviewedFieldCount": 3,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field2"
+      ],
+      "before": "This course is not available right now.",
+      "after": "This course is not currently available. If you need access or have questions about this requirement, check with your supervisor or program contact. The link below can help you identify who to ask.",
+      "reason": "The revised sentence clarifies both the status ('not currently available') and gives practical next steps (checking with a supervisor or program contact), making the consequence of missing availability clear and connecting staff to action. This avoids empty repetition and meets the standard to explain why an unserved course matters for staff."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The new text ('This course is not currently available. If you need access or have questions about this requirement, check with your supervisor or program contact. The link below can help you identify who to ask.') expands the original meaning. In source, the message simply states unavailability and links to a help page ('This course is not available right now. Find the right person or office.'). The addition of checking with your supervisor or program contact, while practical, is not supported by the source. The standard requires strict fidelity to source in system-facing and navigational contexts. This is not just an editorial change but adds advice and instructions outside what the published code and content provide."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1422,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 126,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1548
+    },
+    "review": {
+      "input_tokens": 1116,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 159,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1275
+    }
+  },
+  "createdAt": "2026-11-15T13:52:26.987Z"
+}

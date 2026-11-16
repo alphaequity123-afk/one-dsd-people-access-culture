@@ -1,0 +1,81 @@
+{
+  "target": "code.components/staff-work-browse.tsx",
+  "kind": "surface",
+  "route": "components/staff-work-browse.tsx",
+  "sourceSha256": "14d086c42897ca0424fc537b542175b7b8730daf030078ce48ed80cf30cfbaa9",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Four pieces of guidance worth keeping close: the strategic framework, the page on operationalizing equity, the measurement worksheet, and the DHS directory. Read them here or download a copy.",
+      "after": "This section highlights four essential guidance documents: the Equity Strategic Framework, the page on operationalizing equity, the measurement worksheet, and the DHS offices and guidance directory. You can read them online or download each resource as needed. These documents support staff in understanding broad equity goals, translating those goals into practical steps, tracking equity measures, and navigating relevant DHS contacts and policies.",
+      "reason": "Added specificity and professional context explaining why each resource is included and how staff can use them. Clarified the connection to staff work and avoided a slogan-like tone."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Looking for a checklist? Each of the thirteen guided practices on the",
+      "after": "Need a checklist? Each of the thirteen guided practices found on the Practice page includes a checklist designed to support your work and decision-making with specific actionable steps.",
+      "reason": "Expanded the explanation to clarify where to find checklists and how they assist DHS and DSD staff. Connected the checklists to their practical purpose without overstating their function."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The suggested rewrite adds unsubstantiated explanation beyond what the source supplies. The source text directly lists the four guidance items and states: 'Four pieces of guidance worth keeping close: the strategic framework, the page on operationalizing equity, the measurement worksheet, and the DHS directory. Read them here or download a copy.' The proposed version introduces unsupported claims: it labels the items as 'essential,' invents rationales for their inclusion ('support staff in understanding broad equity goals,' etc.), and elaborates on staff uses not present in the source. These attributions, while professionally plausible, are not grounded in the actual code or presented evidence. The edit is a blocker for inventing rationale and scope and for changing the meaning from the source."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The rewrite for field1 clarifies where to find the checklists and gives unobjectionable context for their use without inventing new policy or attributes; it remains within the evidence provided in the accompanying UI and source context. While it adds minor explanation, it is consistent with the original's intent."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1665,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 241,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1906
+    },
+    "review": {
+      "input_tokens": 1478,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 242,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1720
+    }
+  },
+  "createdAt": "2026-11-15T13:56:31.585Z"
+}

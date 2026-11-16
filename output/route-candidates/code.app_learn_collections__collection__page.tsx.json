@@ -1,0 +1,67 @@
+{
+  "target": "code.app/learn/collections/[collection]/page.tsx",
+  "kind": "surface",
+  "route": "/learn/collections/[collection]",
+  "sourceSha256": "e3211e020c7027d8772577e9dedc063eb4158c18f90ab58ac4565b168d4cfd01",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Start with any course below. &ldquo;Go deeper&rdquo; holds more on the same subjects. Those courses are not worse; they are just not the first thing to open.",
+      "after": "Start with any of the courses below. The \"Go deeper\" section offers additional courses on the same subjects for more detail or context. These are not less important; they are simply intended for when you want to expand on the initial material. For the Minnesota communities collection, each community's page can be a starting point, and the order does not reflect priority.",
+      "reason": "Clarified the distinction and value of the \"Go deeper\" section, explained why the order does not imply importance, and specified the reasoning for the structure, based on the code logic for the communities collection. This improves context for staff without altering the instructional substance."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed text for field0 rewrites and expands on the original, but in doing so it subtly changes the meaning and adds new unsupported claims. The original reads: 'Start with any course below. “Go deeper” holds more on the same subjects. Those courses are not worse; they are just not the first thing to open.' The new version says, 'Start with any of the courses below. The \"Go deeper\" section offers additional courses on the same subjects for more detail or context. These are not less important; they are simply intended for when you want to expand on the initial material. For the Minnesota communities collection, each community's page can be a starting point, and the order does not reflect priority.'\n\nIssues:\n1. The phrase 'for more detail or context' and 'intended for when you want to expand on the initial material' are interpretations not present in the code or original text and imply a designed curricular sequencing, which is not stated in the source.\n2. 'These are not less important; they are simply intended ...' is a subtle shift from the neutral 'not worse; they are just not the first thing to open.'\n3. The proposed version includes the communities collection caveat generically, rather than appending it conditionally (the code only includes this phrase for the 'minnesota-communities' collection).\n\nThe original text is clearer, neutral, and strictly source-aligned, while the revision introduces additional nuance and reasoning that is not presented in either the source data or its logic. The change is unsupported."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1899,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 152,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2051
+    },
+    "review": {
+      "input_tokens": 1641,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 365,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2006
+    }
+  },
+  "createdAt": "2026-11-15T13:49:37.752Z"
+}

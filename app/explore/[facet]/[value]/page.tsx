@@ -29,7 +29,7 @@ export default async function FacetValuePage({ params, searchParams }: Props) {
     <div className="calm-panel">
       <h2 style={{ marginTop: 0 }}>A good place to start</h2>
       <p><Link href={start.href}><strong>{start.title}</strong></Link></p>
-      <p className="calm-muted calm-small">{KIND_LABEL[start.kind].replace(/s$/, "")}. When you are done, you can turn what you learned into an action plan that stays on your computer.</p>
+      <p className="calm-muted calm-small">{KIND_LABEL[start.kind].replace(/s$/, "")}. When you are done, you can turn what you learned into an action plan.</p>
       <div className="calm-actions"><Link className="calm-button" href={start.href}>Open it</Link><Link className="calm-button calm-button--quiet" href={`/my-work/action-plan?from=${encodeURIComponent(entry.title)}`}>Start an action plan</Link></div>
     </div>
     {byKind.map(group => {

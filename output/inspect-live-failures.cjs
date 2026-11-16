@@ -1,0 +1,2 @@
+const {chromium}=require('C:/Program Files/WindowsApps/OpenAI.CodexPrimaryRuntime.v26-1112-611-0_26.1112.611.0_x64__3k8sg7r9htsxt/dependencies/node/node_modules/playwright');
+(async()=>{const b=await chromium.launch({headless:true,channel:'msedge'});const p=await b.newPage();for(const path of ['/learn','/paths']){await p.goto('https://one-people-access-culture.up.railway.app'+path);await p.locator('details').evaluateAll(a=>a.forEach(e=>e.open=true));console.log(path,await p.locator('main').innerText());}await b.close();})();

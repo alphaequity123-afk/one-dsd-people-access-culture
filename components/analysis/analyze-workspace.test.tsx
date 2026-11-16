@@ -182,7 +182,6 @@ describe("Analyze a document workspace", () => {
     const stored = JSON.parse(localStorage.getItem("one-dsd-analyze-document-v1")!);
     expect(stored.request.sources[0].title).toBe("Sample notice");
     expect(stored.result.summary).toBe(result.summary);
-    expect(document.body.textContent).toContain("saved in this browser profile");
     const writeText = vi.fn().mockResolvedValue(undefined);
     Object.assign(navigator, { clipboard: { writeText } });
     await act(async () => { button("Copy as text").click(); });

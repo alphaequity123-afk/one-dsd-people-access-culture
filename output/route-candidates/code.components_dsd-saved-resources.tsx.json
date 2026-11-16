@@ -1,0 +1,95 @@
+{
+  "target": "code.components/dsd-saved-resources.tsx",
+  "kind": "surface",
+  "route": "components/dsd-saved-resources.tsx",
+  "sourceSha256": "9f9e70da928c7d8fad9b71c1f01433486a69b5b6338471a066edcf4893d01f56",
+  "status": "needs_revision",
+  "reviewedFieldCount": 3,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field1"
+      ],
+      "before": "Try opening saved resources again",
+      "after": "Try to load your saved resources again",
+      "reason": "Clarified the action by specifying 'load' rather than the more conversational 'opening.' This makes the instruction more precise in describing what will happen. It supports a clearer understanding for staff troubleshooting access issues."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field2"
+      ],
+      "before": "Keep useful learning and tools close to your work.",
+      "after": "Keep your most useful resources available as you work.",
+      "reason": "Clarified that the resources are for the user's work, directly describing their practical value, and avoided general phrasing. This serves the professional focus and encourages staff to actively save items relevant to their tasks."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field3"
+      ],
+      "before": "on a course, community brief, tool, or practice guide. Your collection stays on this device.",
+      "after": "Select Save resource on a course, community brief, tool, or practice guide. Saved resources remain on this device.",
+      "reason": "Changed 'Choose' to 'Select' for precision, directly tied the instruction to the interface label, and clarified device-specific storage to prevent misunderstanding about synchronization or sharing across devices."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The rewritten version \"Try to load your saved resources again\" substitutes 'load' for 'opening.' The source (field1) uses 'Try opening saved resources again,' which more accurately matches the UI action—re-attempting to access or display the saved resources as before. The interface does not specifically 'load' in the technical sense visible to the user, and 'opening' is the explicit design choice in the source. The change is not supported by the source and alters the intended casual and accessible tone for troubleshooting access issues."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The proposed change ('Keep your most useful resources available as you work.') clarifies the professional work context, but does not introduce unsupported policy or technical claims. The meaning remains within the intent of source (field2). The rephrasing is permitted though not required."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The change from 'Choose' to 'Select' is reasonable for instruction, but the edited sentence ('Saved resources remain on this device.') overspecifies behavior not present verbatim in the source ('Your collection stays on this device.'). The source's construction ties the device statement specifically to the user's collection/interface, while the rewritten text generically asserts how 'saved resources' behave, which could be misunderstood as a formal technical guarantee. The source's phrasing should be preserved for clarity and scope."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2434,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 206,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2640
+    },
+    "review": {
+      "input_tokens": 2237,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 308,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2545
+    }
+  },
+  "createdAt": "2026-11-15T13:53:16.150Z"
+}

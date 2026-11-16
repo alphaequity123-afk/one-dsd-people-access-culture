@@ -1,0 +1,81 @@
+{
+  "target": "code.app/page.tsx",
+  "kind": "surface",
+  "route": "/page.tsx",
+  "sourceSha256": "bc5f32189d2dc5b28bbc1a528bf44a14666a3ab6572c05e301a52ca0657d74dd",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "One DSD People, Access and Culture",
+      "after": "DSD People, Access, and Culture",
+      "reason": "Removed 'One' for clarity and conciseness. This heading should be brief and specific, directly reflecting the content focus without unnecessary introductory wording."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "One DSD People, Access and Culture. Colleagues work together above the Minnesota Department of Human Services logo.",
+      "after": "DSD People, Access, and Culture. The illustration shows colleagues collaborating above the Minnesota Department of Human Services logo, emphasizing teamwork within DSD.",
+      "reason": "Revised for specificity and clarity. Explains the visual's content and connects it to its purpose—highlighting collaboration. This assists colleagues in understanding why the image represents the theme."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The source uses the full title 'One DSD People, Access and Culture' as both the page title and the heading (h1), and as part of the core visual/branding. Removing 'One' changes the page's programmatic and thematic branding and is not supported by the source. The instruction for conciseness does not override the requirement to preserve established program names or headings in this context."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revision of the alt text (field 1) is mostly accurate, as it explains the visual and connects it programmatically. However, the first sentence ('DSD People, Access, and Culture.') omits 'One,' which, per the source, is part of the program's name and branding in this context. The rest of the clarification about the image's significance is not directly supported by the source text but is reasonable as an alt description, as long as the name is corrected."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1416,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 141,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1557
+    },
+    "review": {
+      "input_tokens": 1162,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 246,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1408
+    }
+  },
+  "createdAt": "2026-11-15T13:51:16.933Z"
+}

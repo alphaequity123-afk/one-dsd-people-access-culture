@@ -1,0 +1,95 @@
+{
+  "target": "code.components/amplify-tools.tsx",
+  "kind": "surface",
+  "route": "components/amplify-tools.tsx",
+  "sourceSha256": "7a4eb3320f82a845ec47f425cec9265b7352c1e27f510d2622cc695d86e50668",
+  "status": "needs_revision",
+  "reviewedFieldCount": 6,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Choose an idea that fits the people and the moment. These are starting points you can adapt.",
+      "after": "Pick an idea that fits the people involved and the situation. These are sample activities you can adjust as needed.",
+      "reason": "Clarifies that adaptation is possible and specifies that ideas relate to both people and situation, which better connects to DHS staff tasks."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field4"
+      ],
+      "before": "Your draft stays on this page until you copy or download it. Nothing is sent.",
+      "after": "Drafts remain only on this page until you choose to copy or download them. No text is shared or sent automatically.",
+      "reason": "Explains what happens with the draft and why. Specifies that no information is sent automatically, increasing practical precision."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field6"
+      ],
+      "before": "Your draft stays on this page until you copy or download it. Nothing is sent. Leave out private case or personnel details.",
+      "after": "Drafts remain only on this page until you choose to copy or download them. Do not include private case or personnel information. No draft text is sent or stored elsewhere.",
+      "reason": "Specifies why to exclude private information and clarifies that drafts are not shared or stored, addressing professional use and privacy concerns for DHS/DSD staff."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The proposed revision changes the wording from \"Choose an idea that fits the people and the moment. These are starting points you can adapt.\" to \"Pick an idea that fits the people involved and the situation. These are sample activities you can adjust as needed.\" This introduces new phrases (\"people involved and the situation,\" \"sample activities you can adjust as needed\") and eliminates the original language (\"the moment,\" \"starting points you can adapt\"). The original text is fully supported by the code (see the <p> element string) and matches the program writing standard: concise, clear, and context-fitting. The new version, while professionally reasonable, is not a precise reflection of the evidence and invents new expressions beyond mere clarification."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The proposed revision unpacks what \"Your draft stays on this page until you copy or download it. Nothing is sent.\" means, specifying that \"No text is shared or sent automatically.\" This is broadly accurate and could add minor precision, but the original already conveys the essential privacy instruction with suitable clarity. Acceptable as an enhancement, but not required."
+      },
+      {
+        "fieldId": 5,
+        "severity": "blocker",
+        "finding": "The change to \"Drafts remain only on this page until you choose to copy or download them. Do not include private case or personnel information. No draft text is sent or stored elsewhere.\" departs from the source. The original source text is: \"Your draft stays on this page until you copy or download it. Nothing is sent. Leave out private case or personnel details.\" The proposal replaces \"details\" with \"information\" (minor), but more critically, it recasts \"Leave out private case or personnel details\" as \"Do not include private case or personnel information,\" introducing a new direct instruction that was not so categorical in the original; more importantly, it adds \"No draft text is sent or stored elsewhere,\" which is an extra statement about data storage not present in the source. This is a legal/privacy claim that requires specific evidence from the source file."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 4041,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 214,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4255
+    },
+    "review": {
+      "input_tokens": 3781,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 441,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4222
+    }
+  },
+  "createdAt": "2026-11-15T13:52:05.075Z"
+}

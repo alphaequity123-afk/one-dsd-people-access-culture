@@ -1,0 +1,121 @@
+{
+  "target": "graduation-path.gp-7",
+  "kind": "surface",
+  "route": "/practice/gp-7",
+  "sourceSha256": "257e980be1b0a3e1cd6555acbc04a0cbf1b7bba169a816b32e7cfb2c05688b5c",
+  "status": "needs_revision",
+  "reviewedFieldCount": 60,
+  "changes": [
+    {
+      "fieldId": 16,
+      "path": [
+        "privacy"
+      ],
+      "before": "Do not include names or case details. This record supports a required DHS process but is not the official record; keep the official copy where your division keeps decision records. Your progress here is saved only on this computer.",
+      "after": "Exclude all personal names and case-specific information. This record is meant to support the required DHS equity analysis process but is not itself the official agency record. Keep the official record according to your division’s requirements. Notes you enter here are only stored locally on your computer and do not transfer to DHS records or systems.",
+      "reason": "Clarified which information to leave out, distinguished the purpose of this record versus the official record, and explained where information is stored, to increase specificity and reduce repetition."
+    },
+    {
+      "fieldId": 18,
+      "path": [
+        "step0Guidance"
+      ],
+      "before": "Browse published policy guidance. Identify the decision, what evidence is needed, and whether the applicable requirements call for a scan or fuller analysis. Record your reasoning below; the policy owner confirms what is required.",
+      "after": "Review published policy guidance related to the decision. Identify what is being decided, what kind of evidence is necessary, and whether the circumstances require an equity scan or a more complete analysis under DHS policy. Document your rationale; the policy owner is responsible for final confirmation of what analysis level is required.",
+      "reason": "Added clarity on the need for direct relation to the policy, the process for determining which type of analysis applies, and the authority of the policy owner."
+    },
+    {
+      "fieldId": 19,
+      "path": [
+        "step1Guidance"
+      ],
+      "before": "If the decision affects particular Minnesota communities, read the relevant briefs and plan engagement while the decision is open.",
+      "after": "Consider whether the decision has a significant impact on specific Minnesota communities. If so, examine relevant community briefs and plan for engagement or consultation while changes are still possible.",
+      "reason": "Increased specificity by directing staff to consider actual impact and timing of engagement; clarified that engagement should occur while the decision can be influenced."
+    },
+    {
+      "fieldId": 20,
+      "path": [
+        "step2Guidance"
+      ],
+      "before": "Use the scan-or-full-analysis aid, the equity review canvas, the Minnesota Equity Analysis Toolkit, and the equity impact questions.",
+      "after": "Refer to the scan-or-full-analysis aid, equity review canvas, Minnesota Equity Analysis Toolkit, and equity impact questions to guide your analysis. Select resources based on the complexity and context of your decision.",
+      "reason": "Clarified the action (refer to, select, guide) and explained why to use multiple resources: to fit complexity and context."
+    },
+    {
+      "fieldId": 25,
+      "path": [
+        "step3Guidance"
+      ],
+      "before": "Complete the record for this decision. Your notes are saved only on this computer. Leave out names and case details.",
+      "after": "Fill out the equity analysis record using details specific to your decision. Do not include names or sensitive case details. Note that your notes are saved on this local computer only, and are not submitted to DHS for recordkeeping purposes.",
+      "reason": "Clarified instructions about the type of content to include/exclude, and restated where information is stored for transparency."
+    },
+    {
+      "fieldId": 26,
+      "path": [
+        "step4Guidance"
+      ],
+      "before": "Confirm the decision is stated, affected people and who is missing are named, evidence and limits are recorded, at least two alternatives are compared, owners are named, and follow-up is dated.",
+      "after": "Check that the analysis record clearly states the decision, specifies who is affected and who may be missing, documents both evidence and its limits, compares at least two options, names who owns different steps, and sets dates for follow-up.",
+      "reason": "Reworded for precision and to clarify what must be evident in a review."
+    },
+    {
+      "fieldId": 27,
+      "path": [
+        "step5Guidance"
+      ],
+      "before": "Bring the record to the policy owner and your Equity Director. Identify any remaining question that needs their professional judgment.",
+      "after": "Present the completed analysis to the policy owner and your Equity Director. Bring forward any remaining questions requiring their judgment or clarification, especially where roles or impacts are uncertain.",
+      "reason": "Clarified the need to raise unresolved issues and the rationale for involving the policy owner and Equity Director."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 16,
+        "severity": "blocker",
+        "finding": "The revised privacy statement (fieldId 16) removes the instruction to omit only names and case details and replaces it with 'Exclude all personal names and case-specific information,' which is synonymous, but then recasts the final line. The critical blocker is the new phrase: 'Notes you enter here are only stored locally on your computer and do not transfer to DHS records or systems.' This introduces an absolute assurance that is not in the source, and may not be technically verifiable depending on platform implementation; the original states only, 'Your progress here is saved only on this computer.' The revision also says, 'this record is meant to support the required DHS equity analysis process but is not itself the official agency record,' which is a rewording of the original; this rewording is accurate, but the new specificity about non-transfer is not established in the source and may overpromise privacy. The source does not make such an explicit non-transfer assurance—such statements should only appear if grounded in system documentation."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 4260,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 693,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4953
+    },
+    "review": {
+      "input_tokens": 2880,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 226,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3106
+    }
+  },
+  "createdAt": "2026-11-15T13:39:51.394Z"
+}

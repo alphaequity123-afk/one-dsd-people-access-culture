@@ -1,0 +1,764 @@
+{
+  "status": "independent_review_pending",
+  "records": [
+    {
+      "target": "workforce.dhs",
+      "route": "/consultant/workforce/dhs",
+      "sourceSha256": "f8b2624b18eb8edcee1c880a218c96be3f5e02b31c4767bbb9451123ccb67a5f",
+      "values": {
+        "name": "Department of Human Services",
+        "relationship": "Agency-level reference.",
+        "status": "Public directory reference. Detailed positions and local responsibilities still need confirmation.",
+        "leadership": [],
+        "roles": [
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "Human Services Program Specialist 1 — classification 2458"
+          },
+          {
+            "type": "paragraph",
+            "text": "The specification describes professional support for program implementation, including analysis, research, fiscal review, and administrative work. Suggested learning connection: examine a process, interpret evidence, and communicate findings. Actual duties require position-level confirmation."
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "Human Services Program Consultant — classification 3322"
+          },
+          {
+            "type": "paragraph",
+            "text": "The specification describes complex work across programs involving policy, legislation, services, or compliance. Suggested learning connection: examine cross-program effects, compare policy options, and plan an improvement with responsible partners. This does not identify the owner's classification."
+          },
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "Human Services Manager 1 — classification 3916"
+          },
+          {
+            "type": "paragraph",
+            "text": "The specification describes program management involving priorities, people, resources, and evaluation. Suggested learning connection: examine resource decisions, clarify responsibility, and assess an improvement. A general classification description does not establish an individual's delegated authority."
+          }
+        ],
+        "changes": [],
+        "sources": [
+          {
+            "label": "DHS organizational information",
+            "href": "https://mn.gov/dhs/about-us/contact-us/agencywide-organization/"
+          },
+          {
+            "label": "Program Specialist 1 specification",
+            "href": "https://mn.gov/mmb-stat/hr-toolbox/002-class-and-compensation/001-classification/class-specs/h/2458-hum-serv-prog-spec-1.pdf"
+          },
+          {
+            "label": "Program Consultant specification",
+            "href": "https://mn.gov/mmb-stat/hr-toolbox/002-class-and-compensation/001-classification/class-specs/h/3322-hum-serv-prog-consultant.pdf"
+          },
+          {
+            "label": "Manager 1 specification",
+            "href": "https://mn.gov/mmb-stat/hr-toolbox/002-class-and-compensation/001-classification/class-specs/h/3916-hum-serv-mgr-1.pdf"
+          }
+        ],
+        "resources": [
+          {
+            "label": "Learning for your work",
+            "href": "/my-work/explore"
+          }
+        ]
+      },
+      "changes": [],
+      "proposedDisposition": "retain_existing_language",
+      "reason": "Full mini-page read. These are concise directory and role-reference fields, not instructional body prose. Current wording is clear, preserves the distinction between directory roles and actual delegated authority, and labels learning connections as suggestions. Expanding sparse directory entries would invent responsibilities. Classification descriptions, organizational facts and source links are retained, not newly verified."
+    },
+    {
+      "target": "workforce.adsa",
+      "route": "/consultant/workforce/adsa",
+      "sourceSha256": "9112aef7620171a81c9506428bcc8004a318eabeff81227abfd136571f8ceecc",
+      "values": {
+        "name": "Aging and Disability Services Administration",
+        "relationship": "Listed as an agency area or associated service. This does not establish a direct reporting line.",
+        "status": "Public directory reference. Detailed positions and local responsibilities still need confirmation.",
+        "leadership": [
+          "Assistant Commissioner and Deputy Assistant Commissioner: directory-listed leadership roles; individual decision responsibilities need confirmation.",
+          "Disability Services Director and Deputy Director: directory-listed roles within this administration.",
+          "Equity Director: administration-level role, distinct from the division consultant."
+        ],
+        "roles": [],
+        "changes": [],
+        "sources": [
+          {
+            "label": "DHS organizational information",
+            "href": "https://mn.gov/dhs/about-us/contact-us/agencywide-organization/"
+          }
+        ],
+        "resources": [
+          {
+            "label": "Learning for your work",
+            "href": "/my-work/explore"
+          }
+        ]
+      },
+      "changes": [],
+      "proposedDisposition": "retain_existing_language",
+      "reason": "Full mini-page read. These are concise directory and role-reference fields, not instructional body prose. Current wording is clear, preserves the distinction between directory roles and actual delegated authority, and labels learning connections as suggestions. Expanding sparse directory entries would invent responsibilities. Classification descriptions, organizational facts and source links are retained, not newly verified."
+    },
+    {
+      "target": "workforce.health-care",
+      "route": "/consultant/workforce/health-care",
+      "sourceSha256": "f7fa6d47de12ef6797b92f07b57717cefec3dccbe4aa1a38559306d26639ae68",
+      "values": {
+        "name": "Health Care Administration",
+        "relationship": "Listed as an agency area or associated service. This does not establish a direct reporting line.",
+        "status": "Public directory reference. Detailed positions and local responsibilities still need confirmation.",
+        "leadership": [
+          "Assistant Commissioner and deputy leadership roles appear in the public directory.",
+          "Eligibility, research and quality, finance, and provider services leadership are listed; detailed reporting and delegated authority need confirmation."
+        ],
+        "roles": [],
+        "changes": [],
+        "sources": [
+          {
+            "label": "DHS organizational information",
+            "href": "https://mn.gov/dhs/about-us/contact-us/agencywide-organization/"
+          }
+        ],
+        "resources": [
+          {
+            "label": "Learning for your work",
+            "href": "/my-work/explore"
+          }
+        ]
+      },
+      "changes": [],
+      "proposedDisposition": "retain_existing_language",
+      "reason": "Full mini-page read. These are concise directory and role-reference fields, not instructional body prose. Current wording is clear, preserves the distinction between directory roles and actual delegated authority, and labels learning connections as suggestions. Expanding sparse directory entries would invent responsibilities. Classification descriptions, organizational facts and source links are retained, not newly verified."
+    },
+    {
+      "target": "workforce.behavioral-health",
+      "route": "/consultant/workforce/behavioral-health",
+      "sourceSha256": "001ba0ae8cdf59865ec1259aef007c767e0e8086f8d8f4e7f972b43d194e2d21",
+      "values": {
+        "name": "Behavioral Health Administration",
+        "relationship": "Listed as an agency area or associated service. This does not establish a direct reporting line.",
+        "status": "Public directory reference. Detailed positions and local responsibilities still need confirmation.",
+        "leadership": [
+          "Assistant Commissioner, Deputy Assistant Commissioner, and Chief Administrative Officer appear in the public directory."
+        ],
+        "roles": [],
+        "changes": [],
+        "sources": [
+          {
+            "label": "DHS organizational information",
+            "href": "https://mn.gov/dhs/about-us/contact-us/agencywide-organization/"
+          }
+        ],
+        "resources": [
+          {
+            "label": "Learning for your work",
+            "href": "/my-work/explore"
+          }
+        ]
+      },
+      "changes": [],
+      "proposedDisposition": "retain_existing_language",
+      "reason": "Full mini-page read. These are concise directory and role-reference fields, not instructional body prose. Current wording is clear, preserves the distinction between directory roles and actual delegated authority, and labels learning connections as suggestions. Expanding sparse directory entries would invent responsibilities. Classification descriptions, organizational facts and source links are retained, not newly verified."
+    },
+    {
+      "target": "workforce.housing",
+      "route": "/consultant/workforce/housing",
+      "sourceSha256": "eba21a059c7aa599b4776aca088f2cbc8f9285ca46059ffd2995ad6271b66573",
+      "values": {
+        "name": "Homelessness, Housing and Support Services Administration",
+        "relationship": "Listed as an agency area or associated service. This does not establish a direct reporting line.",
+        "status": "Public directory reference. Detailed positions and local responsibilities still need confirmation.",
+        "leadership": [
+          "Assistant Commissioner and Equity Director appear in the public directory."
+        ],
+        "roles": [],
+        "changes": [],
+        "sources": [
+          {
+            "label": "DHS organizational information",
+            "href": "https://mn.gov/dhs/about-us/contact-us/agencywide-organization/"
+          }
+        ],
+        "resources": [
+          {
+            "label": "Learning for your work",
+            "href": "/my-work/explore"
+          }
+        ]
+      },
+      "changes": [],
+      "proposedDisposition": "retain_existing_language",
+      "reason": "Full mini-page read. These are concise directory and role-reference fields, not instructional body prose. Current wording is clear, preserves the distinction between directory roles and actual delegated authority, and labels learning connections as suggestions. Expanding sparse directory entries would invent responsibilities. Classification descriptions, organizational facts and source links are retained, not newly verified."
+    },
+    {
+      "target": "workforce.dsd",
+      "route": "/consultant/workforce/dsd",
+      "sourceSha256": "21da6db7229cd13efa8907ce448c109e3b9769ef2b874208f6fce0e567463443",
+      "values": {
+        "name": "Disability Services Division",
+        "relationship": "Within the Aging and Disability Services Administration.",
+        "status": "Public directory reference. Detailed positions and local responsibilities still need confirmation.",
+        "leadership": [
+          "Division Director and Deputy Director appear in the public directory.",
+          "The owner describes the Equity and Inclusion Operations Consultant as responsible for operationalizing division equity work. The specific position classification has not been confirmed."
+        ],
+        "roles": [
+          {
+            "type": "heading",
+            "level": 3,
+            "text": "Policy, program, and eligibility experience"
+          },
+          {
+            "type": "paragraph",
+            "text": "The owner identifies these areas of experience within the One DSD Team. This is not a complete divisional roster or a confirmed classification assignment."
+          },
+          {
+            "type": "bullet-list",
+            "items": [
+              "Confirm recurring decisions and tasks with members before assigning learning.",
+              "Keep participation in the team separate from a person's formal decision authority.",
+              "Record responsibilities that continue when a position becomes vacant or moves."
+            ]
+          },
+          {
+            "type": "link-list",
+            "items": [
+              {
+                "label": "Policy and program learning",
+                "href": "/my-work/explore?role=policy"
+              },
+              {
+                "label": "Eligibility and service learning",
+                "href": "/my-work/explore?role=service"
+              }
+            ]
+          }
+        ],
+        "changes": [],
+        "sources": [
+          {
+            "label": "DHS organizational information",
+            "href": "https://mn.gov/dhs/about-us/contact-us/agencywide-organization/"
+          }
+        ],
+        "resources": [
+          {
+            "label": "Learning for your work",
+            "href": "/my-work/explore"
+          }
+        ]
+      },
+      "changes": [],
+      "proposedDisposition": "retain_existing_language",
+      "reason": "Full mini-page read. These are concise directory and role-reference fields, not instructional body prose. Current wording is clear, preserves the distinction between directory roles and actual delegated authority, and labels learning connections as suggestions. Expanding sparse directory entries would invent responsibilities. Classification descriptions, organizational facts and source links are retained, not newly verified."
+    },
+    {
+      "target": "workforce.commissioner",
+      "route": "/consultant/workforce/commissioner",
+      "sourceSha256": "87257b6018106d9f5aa1666e188bcf861f5b014425dd8e6dc7557edc74c3351c",
+      "values": {
+        "name": "Office of the Commissioner",
+        "relationship": "Listed as an agency area or associated service. This does not establish a direct reporting line.",
+        "status": "Public directory reference. Detailed positions and local responsibilities still need confirmation.",
+        "leadership": [],
+        "roles": [],
+        "changes": [],
+        "sources": [
+          {
+            "label": "DHS organizational information",
+            "href": "https://mn.gov/dhs/about-us/contact-us/agencywide-organization/"
+          }
+        ],
+        "resources": [
+          {
+            "label": "Learning for your work",
+            "href": "/my-work/explore"
+          }
+        ]
+      },
+      "changes": [],
+      "proposedDisposition": "retain_existing_language",
+      "reason": "Full mini-page read. These are concise directory and role-reference fields, not instructional body prose. Current wording is clear, preserves the distinction between directory roles and actual delegated authority, and labels learning connections as suggestions. Expanding sparse directory entries would invent responsibilities. Classification descriptions, organizational facts and source links are retained, not newly verified."
+    },
+    {
+      "target": "workforce.finance",
+      "route": "/consultant/workforce/finance",
+      "sourceSha256": "5d7700bd9c29e7be53fed4b48403dbc094bbb36275befc77b4d1517ea2e5cc08",
+      "values": {
+        "name": "Chief Financial Office",
+        "relationship": "Listed as an agency area or associated service. This does not establish a direct reporting line.",
+        "status": "Public directory reference. Detailed positions and local responsibilities still need confirmation.",
+        "leadership": [],
+        "roles": [],
+        "changes": [],
+        "sources": [
+          {
+            "label": "DHS organizational information",
+            "href": "https://mn.gov/dhs/about-us/contact-us/agencywide-organization/"
+          }
+        ],
+        "resources": [
+          {
+            "label": "Learning for your work",
+            "href": "/my-work/explore"
+          }
+        ]
+      },
+      "changes": [],
+      "proposedDisposition": "retain_existing_language",
+      "reason": "Full mini-page read. These are concise directory and role-reference fields, not instructional body prose. Current wording is clear, preserves the distinction between directory roles and actual delegated authority, and labels learning connections as suggestions. Expanding sparse directory entries would invent responsibilities. Classification descriptions, organizational facts and source links are retained, not newly verified."
+    },
+    {
+      "target": "workforce.compliance",
+      "route": "/consultant/workforce/compliance",
+      "sourceSha256": "5ade7ce191ce60c71a31bd427de85c54ec9a895bbc2e351f0b586968360a70e1",
+      "values": {
+        "name": "Compliance Office",
+        "relationship": "Listed as an agency area or associated service. This does not establish a direct reporting line.",
+        "status": "Public directory reference. Detailed positions and local responsibilities still need confirmation.",
+        "leadership": [],
+        "roles": [],
+        "changes": [],
+        "sources": [
+          {
+            "label": "DHS organizational information",
+            "href": "https://mn.gov/dhs/about-us/contact-us/agencywide-organization/"
+          }
+        ],
+        "resources": [
+          {
+            "label": "Learning for your work",
+            "href": "/my-work/explore"
+          }
+        ]
+      },
+      "changes": [],
+      "proposedDisposition": "retain_existing_language",
+      "reason": "Full mini-page read. These are concise directory and role-reference fields, not instructional body prose. Current wording is clear, preserves the distinction between directory roles and actual delegated authority, and labels learning connections as suggestions. Expanding sparse directory entries would invent responsibilities. Classification descriptions, organizational facts and source links are retained, not newly verified."
+    },
+    {
+      "target": "workforce.general-counsel",
+      "route": "/consultant/workforce/general-counsel",
+      "sourceSha256": "4b4b7e1986a70c71408849aa1fde318c3bc27ef1cb21cada0e51b0128f702727",
+      "values": {
+        "name": "General Counsel’s Office",
+        "relationship": "Listed as an agency area or associated service. This does not establish a direct reporting line.",
+        "status": "Public directory reference. Detailed positions and local responsibilities still need confirmation.",
+        "leadership": [],
+        "roles": [],
+        "changes": [],
+        "sources": [
+          {
+            "label": "DHS organizational information",
+            "href": "https://mn.gov/dhs/about-us/contact-us/agencywide-organization/"
+          }
+        ],
+        "resources": [
+          {
+            "label": "Learning for your work",
+            "href": "/my-work/explore"
+          }
+        ]
+      },
+      "changes": [],
+      "proposedDisposition": "retain_existing_language",
+      "reason": "Full mini-page read. These are concise directory and role-reference fields, not instructional body prose. Current wording is clear, preserves the distinction between directory roles and actual delegated authority, and labels learning connections as suggestions. Expanding sparse directory entries would invent responsibilities. Classification descriptions, organizational facts and source links are retained, not newly verified."
+    },
+    {
+      "target": "workforce.management-services",
+      "route": "/consultant/workforce/management-services",
+      "sourceSha256": "1ee30fefab43dc28860cfe1a4100976e08b48330109db71d73fc88e532d41583",
+      "values": {
+        "name": "Management Services",
+        "relationship": "Listed as an agency area or associated service. This does not establish a direct reporting line.",
+        "status": "Public directory reference. Detailed positions and local responsibilities still need confirmation.",
+        "leadership": [],
+        "roles": [],
+        "changes": [],
+        "sources": [
+          {
+            "label": "DHS organizational information",
+            "href": "https://mn.gov/dhs/about-us/contact-us/agencywide-organization/"
+          }
+        ],
+        "resources": [
+          {
+            "label": "Learning for your work",
+            "href": "/my-work/explore"
+          }
+        ]
+      },
+      "changes": [],
+      "proposedDisposition": "retain_existing_language",
+      "reason": "Full mini-page read. These are concise directory and role-reference fields, not instructional body prose. Current wording is clear, preserves the distinction between directory roles and actual delegated authority, and labels learning connections as suggestions. Expanding sparse directory entries would invent responsibilities. Classification descriptions, organizational facts and source links are retained, not newly verified."
+    },
+    {
+      "target": "workforce.inspector-general",
+      "route": "/consultant/workforce/inspector-general",
+      "sourceSha256": "0335b2d83c10117104328ad7ce7c64bc1bc30b8c8e7de0b617ee486fb5c48c26",
+      "values": {
+        "name": "Office of Inspector General",
+        "relationship": "Listed as an agency area or associated service. This does not establish a direct reporting line.",
+        "status": "Public directory reference. Detailed positions and local responsibilities still need confirmation.",
+        "leadership": [],
+        "roles": [],
+        "changes": [],
+        "sources": [
+          {
+            "label": "DHS organizational information",
+            "href": "https://mn.gov/dhs/about-us/contact-us/agencywide-organization/"
+          }
+        ],
+        "resources": [
+          {
+            "label": "Learning for your work",
+            "href": "/my-work/explore"
+          }
+        ]
+      },
+      "changes": [],
+      "proposedDisposition": "retain_existing_language",
+      "reason": "Full mini-page read. These are concise directory and role-reference fields, not instructional body prose. Current wording is clear, preserves the distinction between directory roles and actual delegated authority, and labels learning connections as suggestions. Expanding sparse directory entries would invent responsibilities. Classification descriptions, organizational facts and source links are retained, not newly verified."
+    },
+    {
+      "target": "workforce.strategy-performance",
+      "route": "/consultant/workforce/strategy-performance",
+      "sourceSha256": "fc725e5de6b855658c54dd59460194ad60ad5116e4d012404233ed5ab601d8da",
+      "values": {
+        "name": "Office of Strategy and Performance",
+        "relationship": "Listed as an agency area or associated service. This does not establish a direct reporting line.",
+        "status": "Public directory reference. Detailed positions and local responsibilities still need confirmation.",
+        "leadership": [],
+        "roles": [],
+        "changes": [],
+        "sources": [
+          {
+            "label": "DHS organizational information",
+            "href": "https://mn.gov/dhs/about-us/contact-us/agencywide-organization/"
+          }
+        ],
+        "resources": [
+          {
+            "label": "Learning for your work",
+            "href": "/my-work/explore"
+          }
+        ]
+      },
+      "changes": [],
+      "proposedDisposition": "retain_existing_language",
+      "reason": "Full mini-page read. These are concise directory and role-reference fields, not instructional body prose. Current wording is clear, preserves the distinction between directory roles and actual delegated authority, and labels learning connections as suggestions. Expanding sparse directory entries would invent responsibilities. Classification descriptions, organizational facts and source links are retained, not newly verified."
+    },
+    {
+      "target": "workforce.employee-culture",
+      "route": "/consultant/workforce/employee-culture",
+      "sourceSha256": "36db1ed4c7cda48b5b46a53f6396e77502c81c006bb0e6ef6a68300ae1730ce5",
+      "values": {
+        "name": "Office of Employee Culture",
+        "relationship": "Listed as an agency area or associated service. This does not establish a direct reporting line.",
+        "status": "Public directory reference. Detailed positions and local responsibilities still need confirmation.",
+        "leadership": [
+          "Assistant Commissioner and leadership for human resources, workforce planning, recruitment, and learning appear in the public directory."
+        ],
+        "roles": [],
+        "changes": [],
+        "sources": [
+          {
+            "label": "DHS organizational information",
+            "href": "https://mn.gov/dhs/about-us/contact-us/agencywide-organization/"
+          }
+        ],
+        "resources": [
+          {
+            "label": "Learning for your work",
+            "href": "/my-work/explore"
+          }
+        ]
+      },
+      "changes": [],
+      "proposedDisposition": "retain_existing_language",
+      "reason": "Full mini-page read. These are concise directory and role-reference fields, not instructional body prose. Current wording is clear, preserves the distinction between directory roles and actual delegated authority, and labels learning connections as suggestions. Expanding sparse directory entries would invent responsibilities. Classification descriptions, organizational facts and source links are retained, not newly verified."
+    },
+    {
+      "target": "workforce.communications",
+      "route": "/consultant/workforce/communications",
+      "sourceSha256": "ee78bfdb967c2313c91cbf8a781501203826d8dc55cbdd21c5f01dba0cd5c197",
+      "values": {
+        "name": "Communications",
+        "relationship": "Listed as an agency area or associated service. This does not establish a direct reporting line.",
+        "status": "Public directory reference. Detailed positions and local responsibilities still need confirmation.",
+        "leadership": [],
+        "roles": [],
+        "changes": [],
+        "sources": [
+          {
+            "label": "DHS organizational information",
+            "href": "https://mn.gov/dhs/about-us/contact-us/agencywide-organization/"
+          }
+        ],
+        "resources": [
+          {
+            "label": "Learning for your work",
+            "href": "/my-work/explore"
+          }
+        ]
+      },
+      "changes": [],
+      "proposedDisposition": "retain_existing_language",
+      "reason": "Full mini-page read. These are concise directory and role-reference fields, not instructional body prose. Current wording is clear, preserves the distinction between directory roles and actual delegated authority, and labels learning connections as suggestions. Expanding sparse directory entries would invent responsibilities. Classification descriptions, organizational facts and source links are retained, not newly verified."
+    },
+    {
+      "target": "workforce.community-relations",
+      "route": "/consultant/workforce/community-relations",
+      "sourceSha256": "9fc6ff63ed2224f643b13519ef964345fd489b1d77ecac169e2675f3319125ec",
+      "values": {
+        "name": "Community Relations",
+        "relationship": "Listed as an agency area or associated service. This does not establish a direct reporting line.",
+        "status": "Public directory reference. Detailed positions and local responsibilities still need confirmation.",
+        "leadership": [],
+        "roles": [],
+        "changes": [],
+        "sources": [
+          {
+            "label": "DHS organizational information",
+            "href": "https://mn.gov/dhs/about-us/contact-us/agencywide-organization/"
+          }
+        ],
+        "resources": [
+          {
+            "label": "Learning for your work",
+            "href": "/my-work/explore"
+          }
+        ]
+      },
+      "changes": [],
+      "proposedDisposition": "retain_existing_language",
+      "reason": "Full mini-page read. These are concise directory and role-reference fields, not instructional body prose. Current wording is clear, preserves the distinction between directory roles and actual delegated authority, and labels learning connections as suggestions. Expanding sparse directory entries would invent responsibilities. Classification descriptions, organizational facts and source links are retained, not newly verified."
+    },
+    {
+      "target": "workforce.county-relations",
+      "route": "/consultant/workforce/county-relations",
+      "sourceSha256": "6c288eff0331ea4960f8940cbf4415d13f7502f7d364c8fff4972999dda2671a",
+      "values": {
+        "name": "County Relations",
+        "relationship": "Listed as an agency area or associated service. This does not establish a direct reporting line.",
+        "status": "Public directory reference. Detailed positions and local responsibilities still need confirmation.",
+        "leadership": [],
+        "roles": [],
+        "changes": [],
+        "sources": [
+          {
+            "label": "DHS organizational information",
+            "href": "https://mn.gov/dhs/about-us/contact-us/agencywide-organization/"
+          }
+        ],
+        "resources": [
+          {
+            "label": "Learning for your work",
+            "href": "/my-work/explore"
+          }
+        ]
+      },
+      "changes": [],
+      "proposedDisposition": "retain_existing_language",
+      "reason": "Full mini-page read. These are concise directory and role-reference fields, not instructional body prose. Current wording is clear, preserves the distinction between directory roles and actual delegated authority, and labels learning connections as suggestions. Expanding sparse directory entries would invent responsibilities. Classification descriptions, organizational facts and source links are retained, not newly verified."
+    },
+    {
+      "target": "workforce.equity-inclusion",
+      "route": "/consultant/workforce/equity-inclusion",
+      "sourceSha256": "ca7d0f31a61632edfd44f009f79399ec7b0c4c95f1de955f89ed55024bf0541d",
+      "values": {
+        "name": "Equity and Inclusion",
+        "relationship": "Listed as an agency area or associated service. This does not establish a direct reporting line.",
+        "status": "Public directory reference. Detailed positions and local responsibilities still need confirmation.",
+        "leadership": [],
+        "roles": [],
+        "changes": [],
+        "sources": [
+          {
+            "label": "DHS organizational information",
+            "href": "https://mn.gov/dhs/about-us/contact-us/agencywide-organization/"
+          }
+        ],
+        "resources": [
+          {
+            "label": "Learning for your work",
+            "href": "/my-work/explore"
+          }
+        ]
+      },
+      "changes": [],
+      "proposedDisposition": "retain_existing_language",
+      "reason": "Full mini-page read. These are concise directory and role-reference fields, not instructional body prose. Current wording is clear, preserves the distinction between directory roles and actual delegated authority, and labels learning connections as suggestions. Expanding sparse directory entries would invent responsibilities. Classification descriptions, organizational facts and source links are retained, not newly verified."
+    },
+    {
+      "target": "workforce.federal-relations",
+      "route": "/consultant/workforce/federal-relations",
+      "sourceSha256": "6bf1de934fd27a0a0bbdfa9eb6d1abb7446efca0bc360427641aefc387e78dfe",
+      "values": {
+        "name": "Federal Relations",
+        "relationship": "Listed as an agency area or associated service. This does not establish a direct reporting line.",
+        "status": "Public directory reference. Detailed positions and local responsibilities still need confirmation.",
+        "leadership": [],
+        "roles": [],
+        "changes": [],
+        "sources": [
+          {
+            "label": "DHS organizational information",
+            "href": "https://mn.gov/dhs/about-us/contact-us/agencywide-organization/"
+          }
+        ],
+        "resources": [
+          {
+            "label": "Learning for your work",
+            "href": "/my-work/explore"
+          }
+        ]
+      },
+      "changes": [],
+      "proposedDisposition": "retain_existing_language",
+      "reason": "Full mini-page read. These are concise directory and role-reference fields, not instructional body prose. Current wording is clear, preserves the distinction between directory roles and actual delegated authority, and labels learning connections as suggestions. Expanding sparse directory entries would invent responsibilities. Classification descriptions, organizational facts and source links are retained, not newly verified."
+    },
+    {
+      "target": "workforce.legislative-relations",
+      "route": "/consultant/workforce/legislative-relations",
+      "sourceSha256": "1e7ae5b393f3fe0f250981fe612962b9b91805ee0beaa9e5db97e6fe39e08168",
+      "values": {
+        "name": "Legislative Relations",
+        "relationship": "Listed as an agency area or associated service. This does not establish a direct reporting line.",
+        "status": "Public directory reference. Detailed positions and local responsibilities still need confirmation.",
+        "leadership": [],
+        "roles": [],
+        "changes": [],
+        "sources": [
+          {
+            "label": "DHS organizational information",
+            "href": "https://mn.gov/dhs/about-us/contact-us/agencywide-organization/"
+          }
+        ],
+        "resources": [
+          {
+            "label": "Learning for your work",
+            "href": "/my-work/explore"
+          }
+        ]
+      },
+      "changes": [],
+      "proposedDisposition": "retain_existing_language",
+      "reason": "Full mini-page read. These are concise directory and role-reference fields, not instructional body prose. Current wording is clear, preserves the distinction between directory roles and actual delegated authority, and labels learning connections as suggestions. Expanding sparse directory entries would invent responsibilities. Classification descriptions, organizational facts and source links are retained, not newly verified."
+    },
+    {
+      "target": "workforce.indian-policy",
+      "route": "/consultant/workforce/indian-policy",
+      "sourceSha256": "cd268592effb13e0df9860bcb3661bb9314de8c46c6e25a412132c1007323767",
+      "values": {
+        "name": "Office of Indian Policy",
+        "relationship": "Listed as an agency area or associated service. This does not establish a direct reporting line.",
+        "status": "Public directory reference. Detailed positions and local responsibilities still need confirmation.",
+        "leadership": [],
+        "roles": [],
+        "changes": [],
+        "sources": [
+          {
+            "label": "DHS organizational information",
+            "href": "https://mn.gov/dhs/about-us/contact-us/agencywide-organization/"
+          }
+        ],
+        "resources": [
+          {
+            "label": "Learning for your work",
+            "href": "/my-work/explore"
+          }
+        ]
+      },
+      "changes": [],
+      "proposedDisposition": "retain_existing_language",
+      "reason": "Full mini-page read. These are concise directory and role-reference fields, not instructional body prose. Current wording is clear, preserves the distinction between directory roles and actual delegated authority, and labels learning connections as suggestions. Expanding sparse directory entries would invent responsibilities. Classification descriptions, organizational facts and source links are retained, not newly verified."
+    },
+    {
+      "target": "workforce.business-solutions",
+      "route": "/consultant/workforce/business-solutions",
+      "sourceSha256": "65173e5ce7c5cfd63dec7ee3aa4c2616bf354ff25466f6078962da269700115a",
+      "values": {
+        "name": "Business Solutions Office",
+        "relationship": "Listed as an agency area or associated service. This does not establish a direct reporting line.",
+        "status": "Public directory reference. Detailed positions and local responsibilities still need confirmation.",
+        "leadership": [],
+        "roles": [],
+        "changes": [],
+        "sources": [
+          {
+            "label": "DHS organizational information",
+            "href": "https://mn.gov/dhs/about-us/contact-us/agencywide-organization/"
+          }
+        ],
+        "resources": [
+          {
+            "label": "Learning for your work",
+            "href": "/my-work/explore"
+          }
+        ]
+      },
+      "changes": [],
+      "proposedDisposition": "retain_existing_language",
+      "reason": "Full mini-page read. These are concise directory and role-reference fields, not instructional body prose. Current wording is clear, preserves the distinction between directory roles and actual delegated authority, and labels learning connections as suggestions. Expanding sparse directory entries would invent responsibilities. Classification descriptions, organizational facts and source links are retained, not newly verified."
+    },
+    {
+      "target": "workforce.complex-projects",
+      "route": "/consultant/workforce/complex-projects",
+      "sourceSha256": "981295dcab4c3854deab86393cea0da7e7596b1d17895eb06c791812a9b2b9a2",
+      "values": {
+        "name": "Complex Projects",
+        "relationship": "Listed as an agency area or associated service. This does not establish a direct reporting line.",
+        "status": "Public directory reference. Detailed positions and local responsibilities still need confirmation.",
+        "leadership": [],
+        "roles": [],
+        "changes": [],
+        "sources": [
+          {
+            "label": "DHS organizational information",
+            "href": "https://mn.gov/dhs/about-us/contact-us/agencywide-organization/"
+          }
+        ],
+        "resources": [
+          {
+            "label": "Learning for your work",
+            "href": "/my-work/explore"
+          }
+        ]
+      },
+      "changes": [],
+      "proposedDisposition": "retain_existing_language",
+      "reason": "Full mini-page read. These are concise directory and role-reference fields, not instructional body prose. Current wording is clear, preserves the distinction between directory roles and actual delegated authority, and labels learning connections as suggestions. Expanding sparse directory entries would invent responsibilities. Classification descriptions, organizational facts and source links are retained, not newly verified."
+    },
+    {
+      "target": "workforce.mnit",
+      "route": "/consultant/workforce/mnit",
+      "sourceSha256": "4f699f2075de8f668f4b68c03cc8f64a295bf62e58869b322e44ecb6e59fa74d",
+      "values": {
+        "name": "MNIT Services",
+        "relationship": "Listed as an agency area or associated service. This does not establish a direct reporting line.",
+        "status": "Public directory reference. Detailed positions and local responsibilities still need confirmation.",
+        "leadership": [],
+        "roles": [],
+        "changes": [],
+        "sources": [
+          {
+            "label": "DHS organizational information",
+            "href": "https://mn.gov/dhs/about-us/contact-us/agencywide-organization/"
+          }
+        ],
+        "resources": [
+          {
+            "label": "Learning for your work",
+            "href": "/my-work/explore"
+          }
+        ]
+      },
+      "changes": [],
+      "proposedDisposition": "retain_existing_language",
+      "reason": "Full mini-page read. These are concise directory and role-reference fields, not instructional body prose. Current wording is clear, preserves the distinction between directory roles and actual delegated authority, and labels learning connections as suggestions. Expanding sparse directory entries would invent responsibilities. Classification descriptions, organizational facts and source links are retained, not newly verified."
+    }
+  ]
+}

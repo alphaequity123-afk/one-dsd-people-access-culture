@@ -1,0 +1,98 @@
+{
+  "target": "workforce.adsa",
+  "kind": "surface",
+  "route": "/consultant/workforce/adsa",
+  "sourceSha256": "fe0c33e19b97de5a6e675fd3f1e2f40939ae8fc776d0d985be85d1a23d141ab8",
+  "status": "model_checked",
+  "reviewedFieldCount": 5,
+  "changes": [
+    {
+      "fieldId": 2,
+      "path": [
+        "leadership",
+        0
+      ],
+      "before": "Assistant Commissioner and Deputy Assistant Commissioner: directory-listed leadership roles; individual decision responsibilities need confirmation.",
+      "after": "Assistant Commissioner and Deputy Assistant Commissioner: These roles are identified in the directory as senior leaders. Their specific decision-making responsibilities for DSD activities require verification, as public listings do not detail the division of duties.",
+      "reason": "Clarifies that directory listing alone does not specify the scope of authority or involvement with DSD, aligning with expectations for professional specificity and grounded explanation."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "leadership",
+        1
+      ],
+      "before": "Disability Services Director and Deputy Director: directory-listed roles within this administration.",
+      "after": "Disability Services Director and Deputy Director: Titles confirmed by directory as part of the administration. Specific program and oversight duties should be checked with administrative documentation or through internal confirmation, as directory information is limited.",
+      "reason": "Adds context that job titles do not describe the full scope of responsibilities and reminds staff to verify with authoritative internal sources."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "leadership",
+        2
+      ],
+      "before": "Equity Director: administration-level role, distinct from the division consultant.",
+      "after": "Equity Director: The directory lists this as an administration-wide role, separate from the DSD division consultant. Responsibilities for equity initiatives and decisions in DSD-supported work should be confirmed by consulting appropriate internal sources or the office directly.",
+      "reason": "Clarifies distinction between administration-wide and division-level roles. Provides guidance on confirming how this role impacts DSD and why confirmation matters."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "This edit improves clarity by explicitly stating that directory listings identify senior leaders without specifying decision-making responsibilities for DSD. The change remains within the evidence provided by the public directory and aligns with the standard for source-based, professional communication."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The revised text adds warranted context that job titles alone are not definitive for program or oversight duties, and it correctly advises staff to check authoritative sources. This is justified by the public directory's limitations and professional best practice."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "This change clarifies the difference between administration-wide and division-specific roles, and appropriately suggests verifying the impact and scope of the Equity Director with vetted sources. The revised text respects the directory information and supports informed judgment."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1253,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 259,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1512
+    },
+    "review": {
+      "input_tokens": 1054,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 177,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1231
+    }
+  },
+  "createdAt": "2026-11-15T13:37:31.532Z"
+}

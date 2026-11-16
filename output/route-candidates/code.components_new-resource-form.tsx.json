@@ -1,0 +1,123 @@
+{
+  "target": "code.components/new-resource-form.tsx",
+  "kind": "surface",
+  "route": "components/new-resource-form.tsx",
+  "sourceSha256": "ef72553d56d9073d6e6ed9fde793e982bfcf2e42c2c68f6dc236f6383f3904fc",
+  "status": "needs_revision",
+  "reviewedFieldCount": 5,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Short summary (one or two sentences)",
+      "after": "Summarize the resource in one or two sentences. This allows others to quickly understand its main use and relevance.",
+      "reason": "Expanded to clarify why a short summary is requested and its purpose for readers, connecting instruction to practical use."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Plain text. Leave a blank line between paragraphs.",
+      "after": "Use plain text. Separate each paragraph with a blank line to keep your points clear.",
+      "reason": "Reworded for specificity and clarity, directly connecting formatting instructions to readability for colleagues."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field3"
+      ],
+      "before": "Shared DHS resources, including DSD",
+      "after": "Viewable by all DHS staff, including those in Disability Services Division (DSD).",
+      "reason": "Clarified who can access the resource and referenced the specific staff audience, making the sharing scope explicit and relevant."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field5"
+      ],
+      "before": "Tags, separated by commas (optional)",
+      "after": "Add tags, separated by commas, if this will help others find and use the resource.",
+      "reason": "Expanded to state the practical purpose of tagging the resource, making the instruction more substantive and grounded in use."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field6"
+      ],
+      "before": "After it is added, open the resource to attach images, video, or documents.",
+      "after": "Once you add the resource, you can also attach images, video, or documents if needed.",
+      "reason": "Made clear that attaching additional materials is optional and possible after the resource is published, specifying both the step sequence and user choice."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The rewritten summary instruction ('Summarize the resource in one or two sentences. This allows others to quickly understand its main use and relevance.') adds ungrounded rationale and alters the format emphasis. The original form's instruction ('Short summary (one or two sentences)') limits strictly to format, offering no justification or audience purpose. The added statement about use and relevance is not present or implied in the source and should not be presented as agency or program reasoning or policy."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The restatement for paragraph separation ('Use plain text. Separate each paragraph with a blank line to keep your points clear.') is a substantive rewording but does not contradict or add unsupported policy. The addition of clarity as a goal is implied by the original's formatting help. This is acceptable."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The change of the view description from 'Shared DHS resources, including DSD' to 'Viewable by all DHS staff, including those in Disability Services Division (DSD).' introduces a scope claim ('all DHS staff') not supported by the source. The source names the resource pool as 'Shared DHS resources, including DSD,' but does not explicitly state that all DHS staff can access. Widening to 'all' is unsupported."
+      },
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "The rewritten tags field ('Add tags, separated by commas, if this will help others find and use the resource.') introduces an unsupported rationale and use-case statement. The source only instructs on format ('Tags, separated by commas (optional)'). Motivation or effect ('help others find and use') is not present in the original form or on the page."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The adjustment for post-submission attachment ('Once you add the resource, you can also attach images, video, or documents if needed.') does not contradict or expand scope; it clarifies sequence and option already inherent in the original ('After it is added, open the resource to attach images, video, or documents.'). Acceptable as a help tip."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2713,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 275,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2988
+    },
+    "review": {
+      "input_tokens": 2571,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 522,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3093
+    }
+  },
+  "createdAt": "2026-11-15T13:54:57.143Z"
+}

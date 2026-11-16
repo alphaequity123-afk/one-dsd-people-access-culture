@@ -56,7 +56,7 @@ export function RecordWorkbench({ kind, prefill = {}, teamSpace = false }: { kin
   function update(change: Partial<LocalRecord> & { fields?: Record<string, string> }) {
     if (!active) return;
     const record = { ...active, ...change, fields: { ...active.fields, ...(change.fields ?? {}) }, updatedAt: new Date().toISOString() };
-    commit({ version: 1, records: book.records.map(item => item.id === record.id ? record : item) }, "Saved in this browser profile.");
+    commit({ version: 1, records: book.records.map(item => item.id === record.id ? record : item) }, "Saved.");
   }
   function startNew() {
     const record = emptyRecord(kind, newId(), new Date());
@@ -64,9 +64,9 @@ export function RecordWorkbench({ kind, prefill = {}, teamSpace = false }: { kin
     setActiveId(record.id);
   }
   function remove() {
-    if (!active || !window.confirm(`Remove "${active.title}" from this browser profile? Exported or shared copies will remain.`)) return;
+    if (!active || !window.confirm(`Remove "${active.title}"?`)) return;
     const records = book.records.filter(item => item.id !== active.id);
-    commit({ version: 1, records }, "Removed from this browser profile.");
+    commit({ version: 1, records }, "Removed.");
     setActiveId(records[0]?.id ?? null);
   }
   async function saveToTeam() {
@@ -96,7 +96,7 @@ export function RecordWorkbench({ kind, prefill = {}, teamSpace = false }: { kin
       <ul>{due.slice(0, 6).map(record => <li key={record.id}><button type="button" className="calm-button calm-button--quiet" onClick={() => setActiveId(record.id)}>{record.title}</button></li>)}</ul>
     </div> : null}
     {!active ? <p className="calm-muted">Nothing saved yet. Start one when you are ready.</p> : <form className="calm-form" onSubmit={event => event.preventDefault()}>
-      <p className="calm-note">Leave out client, case, health and personnel details. Entries save automatically in this browser profile, where others using the profile may see them. Downloaded, printed or shared copies are separate.</p>
+      <p className="calm-note">Leave out client, case, health and personnel details.</p>
       <div className="calm-field"><label htmlFor="record-title">Title</label><input id="record-title" value={active.title} maxLength={160} onChange={event => update({ title: event.target.value })} /></div>
       {fields.map(field => <div className="calm-field" key={field.key}>
         <label htmlFor={`field-${field.key}`}>{field.label}</label>

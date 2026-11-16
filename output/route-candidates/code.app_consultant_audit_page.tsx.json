@@ -1,0 +1,67 @@
+{
+  "target": "code.app/consultant/audit/page.tsx",
+  "kind": "surface",
+  "route": "/consultant/audit",
+  "sourceSha256": "2ee42ac24dd8a1884ba45f7c092d8398ff9b65f4959011a3b04865b598c42ae5",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field1"
+      ],
+      "before": "No activity has been recorded here yet.",
+      "after": "This page has no recorded program activity yet. When actions occur, details will appear here for review. Keeping an activity record allows you to see past decisions, identify issues, and understand why a specific result occurred.",
+      "reason": "The revision clarifies that the absence of records means no activity has taken place and explains the professional purpose for tracking activity. It specifies that activity records support understanding decisions and issue resolution, which helps staff interpret missing information."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The new text for field1 (\"This page has no recorded program activity yet. When actions occur, details will appear here for review. Keeping an activity record allows you to see past decisions, identify issues, and understand why a specific result occurred.\") expands beyond the source's original purpose. The source text (\"No activity has been recorded here yet.\") is strictly a status note. There is no source evidence presented for the added explanations about the purposes or professional uses of keeping an activity record on this particular page. The additional content is unsupported and creates a substantive change in meaning and intent per the program writing standard."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2414,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 111,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2525
+    },
+    "review": {
+      "input_tokens": 2137,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 149,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2286
+    }
+  },
+  "createdAt": "2026-11-15T13:47:53.829Z"
+}

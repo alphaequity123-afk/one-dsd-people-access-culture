@@ -1,0 +1,95 @@
+{
+  "target": "domain.policy-program-service",
+  "kind": "surface",
+  "route": "/areas/policy-program-service",
+  "sourceSha256": "92aa78bba3a54382f408e0c31142546a2345c984c0564ea66f69acff183485d7",
+  "status": "model_checked",
+  "reviewedFieldCount": 25,
+  "changes": [
+    {
+      "fieldId": 2,
+      "path": [
+        "summary"
+      ],
+      "before": "Building equity into the decisions that shape who gets what, how, and with what burden: policies, program design, budgets, forms and notices, technology, and service delivery.",
+      "after": "This page addresses how equity considerations shape DHS and DSD decisions—such as who receives resources, what requirements people must meet, and how services or information are delivered. Decisions in policy, program design, budgeting, forms, notices, technology, and service delivery can each create barriers or opportunities. By addressing equity as these choices are being made, staff can identify and reduce potential disparities or burdens on specific groups.",
+      "reason": "Clarified the scope of decisions affected and connected equity work directly to DSD responsibilities. Explained why considering equity at each step matters, improving specificity for staff applying these principles."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Engagement that arrives after a decision is final cannot change it. The DHS equity policy makes an equity scan or full analysis part of some decisions, and good practice makes it part of all of them.",
+      "after": "If staff only engage communities after a decision is finalized, they cannot address the impacts or blind spots of that decision. Under the DHS equity policy, certain decisions require an equity scan or full analysis before they are finalized. Expanding this practice to all decisions allows staff to identify inequities and create meaningful adjustments early, rather than attempting to reverse outcomes after implementation.",
+      "reason": "Added detail about the limitation of late engagement, explained the policy requirement for an analysis, and highlighted how early application leads to more effective adjustments. This supports staff understanding of timing and consequence."
+    },
+    {
+      "fieldId": 11,
+      "path": [
+        "dsdNote"
+      ],
+      "before": "One DSD adds division programs and service-delivery frameworks, scenarios from DSD work, and the consultation pathway for a real decision.",
+      "after": "In DSD, equity work often connects directly to division programs, service-delivery frameworks, and specific scenarios based on real decisions. Staff also use established consultation pathways to review potential impacts before committing to a course of action. Being able to cite or involve these DSD-specific practices helps ensure equity is more than a procedural step.",
+      "reason": "Improved explanation of how DSD applies equity principles in practice, clarifying the division’s role and the importance of using real examples and consultation."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revised summary explicitly connects equity work to practical decision points in DSD and DHS (such as policy, budgeting, technology, and forms), clarifying the scope and making the principle more actionable for staff. It also explains implications for burden and access, all consistent with and grounded in the original source. No blocker."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The new wording expands on why timing matters—late engagement cannot prevent inequities, and early analysis is both required for certain DHS decisions and considered good practice for all. The explanation remains faithful to the original while adding helpful detail about practice and outcome. No blocker."
+      },
+      {
+        "fieldId": 11,
+        "severity": "note",
+        "finding": "The edit clarifies how DSD operationalizes equity principles: specifying real examples, service-delivery frameworks, and consultation pathways. This makes the note more relevant for DSD staff without inventing new requirements or procedures. No blocker."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2435,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 411,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2846
+    },
+    "review": {
+      "input_tokens": 1739,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 250,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1989
+    }
+  },
+  "createdAt": "2026-11-15T13:39:20.003Z"
+}

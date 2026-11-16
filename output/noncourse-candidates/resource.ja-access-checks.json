@@ -1,0 +1,172 @@
+{
+  "target": "resource.ja-access-checks",
+  "kind": "resource",
+  "route": "/library/ja-access-checks",
+  "sourceSha256": "41f3a0ee12fb960621ad5debf548ad3801801b067d7305894978ed7cf310716b",
+  "status": "model_checked",
+  "reviewedFieldCount": 8,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Before meeting with people, confirm the language and dialect and arrange captioning, interpreting, and alternate formats. Check physical and online spaces, timing, transportation, child care, and trust, and remove any process burden you can.",
+      "after": "Before meeting with people, check languages and dialects, and arrange captioning, interpreters, and alternate formats as needed. Review the physical and online setting, timing, transit, and trust, and remove unnecessary steps to make participation practical and effective.",
+      "reason": "Clarified structure, tightened language, and clarified the staff action's purpose. Replaced process burden with a clearer description of removing unnecessary steps, emphasizing practical participation. Retained all substantive elements."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Language: which languages and dialects; interpreter booked with specifics; translated materials reviewed.",
+      "after": "Language: Identify which languages and dialects people use. Book interpreters with clear details and review all translated materials for accuracy and fit.",
+      "reason": "Specified core actions and clarified responsibility to ensure detail in language access. Replaced \"with specifics\" with more explicit directions."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Disability and communication access: arrange captions or real-time captioning, sometimes called CART. Provide a qualified sign-language interpreter when requested, send accessible materials in advance, and make sure both the room and online meeting are usable.",
+      "after": "Disability and communication access: Arrange for captions or real-time captioning (such as CART). Provide a qualified sign-language interpreter when needed. Send accessible documents in advance, and confirm that both the meeting room and online platform can be used by people with disabilities.",
+      "reason": "Clarified the process and added that the online platform should be accessible, not just the meeting room, for staff awareness and usability."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Timing: evening or weekend options for working people; religious observance and school calendars checked; enough notice.",
+      "after": "Timing: Consider whether evening or weekend times work better for participants who have jobs. Check religious observances and school calendars to avoid conflicts. Give enough notice for people to plan.",
+      "reason": "Added context for why timing matters and spelled out the effects for specific groups; provided clear cause for checking calendars and giving notice."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Place: consider transit, parking, an accessible entrance and restrooms, and an online option that does not require an unfamiliar account.",
+      "after": "Place: Consider access to transit, parking options, and whether entrances and restrooms are accessible. Offer an online option that does not require participants to set up an unfamiliar account.",
+      "reason": "Clarified the rationale behind each check: accessibility and ease of use. Changed \"an accessible entrance\" to \"entrances\" for completeness. Clarified the intent behind an online option."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Trust: consider who sends the invitation and who will be present. Explain each person's role, what will happen with the information shared, and what participants will receive in return for their time. Do not assume that contact from a public agency feels reassuring to everyone.",
+      "after": "Trust: Review who sends invitations and who will be present. Explain all participants' roles, what will be done with shared information, and what participants will get in return for their time. Recognize that agency contact may not feel reassuring to everyone.",
+      "reason": "Refined language for clarity and directness. Emphasized that the agency must acknowledge that contact may not always be welcomed or feel safe to every participant."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "Time and effort: avoid unnecessary registration, forms that ask for more information than you need, or identity-document requirements for a listening session.",
+      "after": "Time and effort: Remove extra steps such as registration that is not needed, or forms that ask for more information than you require. Do not require identity documents to join a listening session, as these create barriers for some participants.",
+      "reason": "Clarified the specific impact of unnecessary requirements, with concrete examples linking the action to reduced barriers. Specified why identity documents might be a problem."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "body",
+        6
+      ],
+      "before": "Payment and follow-up: explain whether people will be paid and when they will hear what changed.",
+      "after": "Payment and follow-up: Clearly state whether people will be paid for participating and when they will receive follow-up on any changes resulting from their input.",
+      "reason": "Added explicit instruction to communicate both payment and the timing and content of follow-up, emphasizing the staff's responsibility to close the loop."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revised summary maintains every substantive component of the source: language, captioning/interpreting/alternate formats, checking settings, timing, transportation, trust, and removing participation barriers. The clarified language and structural tightening improve clarity without omitting or distorting the original intent."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The change adds clarity and explicitness about what staff should do regarding language and dialects, interpreter booking, and material review. There is no loss or misstatement of requirements from the source."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The adjustment maintains accuracy, adds explicit reference to accessible online platforms (which is implied in 'room and online meeting are usable'), and enhances staff awareness. No blocker introduced."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The reasoning behind each consideration is further explained. The changes do not omit or misrepresent any requirement."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The reformulation covers all original elements and increases specificity. \"Entrances\" is an appropriate expansion, and the online option requirement is maintained."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "Clarifications and restructuring are accurate, and the adjustment towards recognizing potential distrust aligns with the source. No element is omitted or overstated."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The rewritten guidance continues to warn against unnecessary process requirements and accurately names forms and identity documentation as potential barriers. The reason given is consistent with the source intent."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "The revised field provides a clearer directive for staff to explicitly communicate payment and follow-up, which is entirely consistent with and clarifying of the original instruction."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1752,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 668,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2420
+    },
+    "review": {
+      "input_tokens": 1976,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 369,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2345
+    }
+  },
+  "createdAt": "2026-11-15T13:41:01.335Z"
+}

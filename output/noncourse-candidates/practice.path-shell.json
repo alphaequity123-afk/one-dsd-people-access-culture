@@ -1,0 +1,137 @@
+{
+  "target": "practice.path-shell",
+  "kind": "surface",
+  "route": "/practice/[id]",
+  "sourceSha256": "80d3fd82e577c49f1179112c2bfb4bf13385f1f012541d671c1f13fd76248d93",
+  "status": "needs_revision",
+  "reviewedFieldCount": 20,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "handoffBody"
+      ],
+      "before": "You can review and edit it here. Notes you have already changed stay yours.",
+      "after": "You can review and update your draft here. Any notes or edits you have already made remain part of your own work.",
+      "reason": "Clarified that previous changes persist and combined 'review and edit' for clearer staff understanding."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "stepsTitle"
+      ],
+      "before": "Six steps to work through in order",
+      "after": "Six steps to complete in sequence",
+      "reason": "Changed \"to work through in order\" to \"to complete in sequence\" for improved clarity and specificity about the expected order."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "meaningTitle"
+      ],
+      "before": "What a useful result looks like",
+      "after": "What a meaningful and practical result looks like",
+      "reason": "Added \"practical\" to reinforce that results should be useful and applicable to DHS and DSD work."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "artifactPrivacy"
+      ],
+      "before": "Your practice notes are saved in this browser on this computer. Someone else using this computer may be able to see them. Please leave out client names, case numbers, and medical details.",
+      "after": "Your practice notes are saved by this browser on this device. If someone else uses this computer, they may have access to these notes. To protect privacy, do not include client names, case numbers, or medical details.",
+      "reason": "Clarified device/browser storage wording and combined privacy cautions for greater specificity and plain language."
+    },
+    {
+      "fieldId": 11,
+      "path": [
+        "readyOpenBody"
+      ],
+      "before": "You can return to this approach next time and request a consultation only if the stakes are high or another perspective would help.",
+      "after": "You can use this approach again in the future. Request a consultation if the decision is high-stakes or you need another perspective.",
+      "reason": "Shortened and clarified scenario when a consultation should be considered to better explain purpose for staff."
+    },
+    {
+      "fieldId": 12,
+      "path": [
+        "readyPreviewBody"
+      ],
+      "before": "You can return to this approach next time. If another perspective would help, Support shows other ways to get help, including what a consultation request would look like.",
+      "after": "You can use this approach again in the future. If you want additional input, Support describes other ways to get help and shows what a consultation request would include.",
+      "reason": "Clarified language and provided reasoning about Support, focusing on additional input and practical next steps."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The change adds 'Any notes or edits you have already made remain part of your own work.' The source already clearly states: 'Notes you have already changed stay yours.' This original line is plainer and does not confuse the issue with broader references to 'work' that may not map to what is actually being saved. Expanding to 'edits' and 'part of your own work' introduces ambiguity and takes liberties not grounded in the original. The explanation does not point to a gap in the original that requires rewriting."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The change from 'work through in order' to 'complete in sequence' is acceptably specific and clear. Both phrases correctly reflect the ordered steps; the difference is stylistic, not substantive."
+      },
+      {
+        "fieldId": 6,
+        "severity": "blocker",
+        "finding": "The proposed change alters the claim from 'useful' to 'meaningful and practical.' While aiming for clarity, the new wording risks overstating the practicality required and inserts language ('meaningful') that the original had only as a label ('meaning' kicker) not in the title. The source is explicit: 'What a useful result looks like.' 'Practical' and 'meaningful' are not justified substitutions without a source update; this is not merely clarification but a change of substance."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "The change clarifies the privacy notice by specifying 'device' and rephrases for improved plain language. This is accurate; the intent and caution are unchanged."
+      },
+      {
+        "fieldId": 11,
+        "severity": "blocker",
+        "finding": "The change removes the phrase 'request a consultation only if the stakes are high or another perspective would help' and changes the meaning to a more open ('if you need another perspective'), losing the specific threshold ('only if the stakes are high or another perspective would help'). This lowers the bar for requesting consultation and alters official guidance about when a consultation is appropriate. The original wording's clarity about when to escalate is necessary."
+      },
+      {
+        "fieldId": 12,
+        "severity": "note",
+        "finding": "The revised text for Support is slightly clearer, but remains accurate to intent, as 'If another perspective would help' is replaced with 'If you want additional input.' This is a plain-language change that doesn't alter meaning or practical instruction."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2289,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 374,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2663
+    },
+    "review": {
+      "input_tokens": 1759,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 491,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2250
+    }
+  },
+  "createdAt": "2026-11-15T13:38:03.433Z"
+}

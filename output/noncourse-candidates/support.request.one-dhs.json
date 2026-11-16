@@ -1,0 +1,81 @@
+{
+  "target": "support.request.one-dhs",
+  "kind": "surface",
+  "route": "/support/request",
+  "sourceSha256": "2a069fc9966101f131b9b9a339b2ccbc7efad88dfc1da7ede9fa76ff8526b309",
+  "status": "needs_revision",
+  "reviewedFieldCount": 5,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "introLede"
+      ],
+      "before": "The consultation form is available in the One DSD view for work within the Disability Services Division. Choosing that view lets you see how a consultation works. It does not confirm eligibility or submit anything.",
+      "after": "You can access the consultation form in the One DSD view when addressing work within the Disability Services Division. This view allows you to understand how consultations are processed for DSD activities. The form does not verify eligibility or submit requests; it is a tool for reviewing and preparing DSD-related questions before any formal submission or decision.",
+      "reason": "Clarified the purpose and scope of the consultation form, explained why using the One DSD view matters, and distinguished between reviewing a consultation and making a formal submission. This addresses the importance of the process and avoids confusion about what the form accomplishes."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "supportBody"
+      ],
+      "before": "If the work is outside DSD, use Find the right person to identify the supervisor, Equity Director or Specialist, policy owner, or office responsible for it.",
+      "after": "For work that does not fall under DSD, use the 'Find the right person' tool to identify the appropriate supervisor, Equity Director or Specialist, policy owner, or responsible office. This helps ensure your request or question reaches the correct authority for non-DSD matters.",
+      "reason": "Added the reason for using the tool and clarified that its purpose is to direct questions and requests appropriately outside of DSD."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The revision adds several unsupported statements. The original says the form is 'available in the One DSD view for work within the Disability Services Division,' and 'lets you see how a consultation works. It does not confirm eligibility or submit anything.' The proposed text changes this to: 'allows you to understand how consultations are processed for DSD activities,' and 'it is a tool for reviewing and preparing DSD-related questions before any formal submission or decision.'\n\nThis invents a consultation 'process' and implies the form is primarily an internal preparatory tool for reviewing and preparing questions—claims not present in the source. The source is clear that the form is available for work within DSD, lets users see how a consultation works, and does not confirm eligibility or submit anything. There is no mention of preparation, review, or process steps, so these inferred purposes overstate the form's function and scope. This could confuse users about how and when to use the form."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The clarification (explaining the purpose of the tool) aligns with standard writing expectations, as long as it does not add unsupported policy. The phrase 'helps ensure your request or question reaches the correct authority for non-DSD matters' is a reasonable summary of the tool's declared function and does not conflict with the source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1244,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 238,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1482
+    },
+    "review": {
+      "input_tokens": 1019,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 297,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1316
+    }
+  },
+  "createdAt": "2026-11-15T13:38:05.936Z"
+}

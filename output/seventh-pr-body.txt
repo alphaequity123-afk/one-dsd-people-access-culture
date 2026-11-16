@@ -1,0 +1,5 @@
+This release applies the independently reviewed Disability and Language course, three supervisor job aids, written Water essay corrections, and shared page guidance. It also updates two assessment cards against their exact published revisions so the approved wording can render without overwriting later owner edits.
+
+Analyze and My Work now report failed storage operations accurately, preserve visible records for retry, and clear stale errors after a successful retry. Page notices distinguish browser copies, explicit exports, file extraction and outside processing. Approved recordings, captions and transcripts are unchanged.
+
+Validation: 150 registry objects / 2,437 exact field guards; 36 partial courses / 108 fields separately guarded; 66 UI/storage tests, seven overlay tests, four reference/transport tests, and TypeScript passed. Changed-file lint passed with the pre-existing Analyze hydration set-state-in-effect finding excluded; that unchanged finding is documented. The sixth release's ten downloadable artifacts were verified against approved hashes in production. This remains an incremental rollout, not a claim that every page has been reviewed.

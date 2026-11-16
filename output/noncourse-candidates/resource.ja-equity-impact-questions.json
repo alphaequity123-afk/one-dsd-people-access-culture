@@ -1,0 +1,81 @@
+{
+  "target": "resource.ja-equity-impact-questions",
+  "kind": "resource",
+  "route": "/library/ja-equity-impact-questions",
+  "sourceSha256": "1170d06966b8c2c499140890b86993689478c7ebe834b4ad0102f15af5e2a321",
+  "status": "model_checked",
+  "reviewedFieldCount": 6,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "For high-stakes decisions, this short question set asks which authority and rights apply, who benefits, who carries the burden, which assumptions shape the outcome, what can change, and what must stay with the responsible official.",
+      "after": "For high-stakes decisions, use this question set to clarify which authority and rights apply, who benefits or carries the burden, which assumptions affect the outcome, what your team can change, and which issues must go to the person with official responsibility.",
+      "reason": "Improved specificity, integrated reasoning, and clarified who acts and why the questions are relevant to decision-making in Minnesota DHS or DSD context."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "These questions can help frame a decision, but they are not legal advice and do not make the decision for you. After working through them, seek guidance from the appropriate person if a high-stakes procurement, budget, or policy decision has a significant equity impact and no official guidance.",
+      "after": "These questions support your decision process but do not replace legal advice or formal decision-making authority. Use them to identify where equity concerns or gaps exist. If a significant equity impact remains after applying these questions, and there is no existing official guidance, seek help from the relevant person before proceeding.",
+      "reason": "Clarified the role of the tool, specified when to escalate, and connected the reasoning to both risk and official authority without overstating the purpose."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revised summary retains the original meaning and evidentiary content of the source, specifying that the question set serves to clarify authority, rights, benefits, burdens, assumptions, team flexibility, and decision-maker escalation. The edits substitute equally supported wording (\"clarify\" for \"ask\"), unpack \"who carries the burden\" to include teams and responsible officials, and explain the link to Minnesota DHS/DSD context. The revision does not overstate or remove a qualification or change the legal scope implied by the source."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The updated 'whyItMatters' field maintains the purpose and limit set by the original source. It preserves the caution that these questions are not legal advice or a substitute for formal decision authority, specifies their supporting role in decision processes, and clarifies escalation when a significant equity concern persists and there's no current guidance. No overpromising or unsupported legal change is introduced."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1770,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 242,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2012
+    },
+    "review": {
+      "input_tokens": 1353,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 213,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1566
+    }
+  },
+  "createdAt": "2026-11-15T13:41:02.618Z"
+}

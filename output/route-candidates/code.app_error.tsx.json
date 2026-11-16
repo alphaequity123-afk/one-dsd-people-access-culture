@@ -1,0 +1,67 @@
+{
+  "target": "code.app/error.tsx",
+  "kind": "surface",
+  "route": "app/error.tsx",
+  "sourceSha256": "256ed9e61bc77bc24a6c79ef594f7abd81ac8e47dab85f7bfd760e772f0f106c",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "This page could not be loaded right now. This is usually temporary. Try again in a moment, browse Resources, or visit Support.",
+      "after": "This page is not loading at this time. This problem is typically temporary and may resolve if you try again shortly. You can also search Resources for program documentation or visit Support to check for reported issues or get help.",
+      "reason": "Clarified the temporary nature of the problem and specified that Resources contains program documentation. Added context for the Support option—explaining that it is for checking reported issues or getting help. This helps staff understand the practical reasons to use each linked action in the context of Minnesota DHS and DSD work."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The rewrite adds context for \"Support\" by stating that it is for checking reported issues or getting help and specifies that \"Resources\" contains program documentation. The source error message does not indicate that Support is specifically for checking reported issues or that Resources refers to program documentation. While these additions may be helpful, they are not grounded in the evidence of the present source, which simply treats Resources and Support as navigational alternatives. The rewrite therefore introduces unsupported detail about the content and purpose of these links beyond the source text. This changes the intended scope and could mislead staff about the current use and function of Support or Resources. The revision does not meet the standard for evidence-based edits."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1317,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 128,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1445
+    },
+    "review": {
+      "input_tokens": 1057,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 159,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1216
+    }
+  },
+  "createdAt": "2026-11-15T13:48:58.345Z"
+}

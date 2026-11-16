@@ -1,0 +1,137 @@
+{
+  "target": "code.components/clas-curriculum/practice.tsx",
+  "kind": "surface",
+  "route": "components/clas-curriculum/practice.tsx",
+  "sourceSha256": "9648b0288acfc04628c4698d21e73c9752c9dddba915432c00c7d1773f2bcfa1",
+  "status": "needs_revision",
+  "reviewedFieldCount": 6,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Choose one option, then check your answer.",
+      "after": "Select one response before checking. This helps you compare your choice with the reasoning provided for each option.",
+      "reason": "Clarifies the purpose of requiring a selection before checking, connecting it to review of reasoning."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Before you watch: a quick recall from Part",
+      "after": "Before viewing: a brief review from Part",
+      "reason": "Replaces \"watch\" with \"viewing\" for broader applicability and clarifies the prompt as a review."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field3"
+      ],
+      "before": "”. Answer from memory; the feedback explains the reasoning. Nothing is scored or recorded.",
+      "after": "”. Answer from memory; feedback explains the reasoning for each question. No responses are scored or recorded.",
+      "reason": "Clarifies that the feedback explains reasoning for each question and restates that no responses are scored or kept, using slightly more specific language."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field5"
+      ],
+      "before": "Each scenario is fictional and about your next decision. Check an answer to read why it is stronger or weaker; you can try again as often as you like.",
+      "after": "Each scenario is a constructed example about an upcoming decision. After checking your answer, read the explanation for why certain responses are seen as stronger or weaker. Trying again lets you compare reasoning across options as often as needed.",
+      "reason": "Clarifies what makes a scenario fictional and explains why reviewing the reasoning after selecting answers is useful."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field6"
+      ],
+      "before": "Choose the step you would do first, then the next. Use the numbered buttons; nothing needs to be dragged. You can remove the last step or start over at any time.",
+      "after": "Decide which step comes first, then continue in order. Use the numbered buttons—no dragging is needed. You may remove your last step or restart your sequence at any point to compare different approaches.",
+      "reason": "Clarifies why steps are chosen one at a time and that the ability to remove a step or start over allows comparison of different approaches."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field7"
+      ],
+      "before": "Choose “Try again” to build the order once more.",
+      "after": "Select “Try again” to build a new order and compare your reasoning with the suggested sequence.",
+      "reason": "Clarifies the instructional purpose for rebuilding the order—comparing user reasoning with the suggested sequence."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed replacement (\"Select one response before checking. This helps you compare your choice with the reasoning provided for each option.\") goes beyond the source. The source only prompts the user to choose one option and check the answer—no rationale is given. Adding a purpose/benefit is unsupported in this field and wrongly assumes a teaching goal not present in the prompt. This field is a user-facing message tied to logic that simply demands a choice."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "Changing \"Before you watch: a quick recall from Part\" to \"Before viewing: a brief review from Part\" departs from the source context. The source is about video lessons (“watch” is accurate in this context), and \"quick recall\" is replaced by the less precise \"brief review\"—this is not supported by the code, which uses \"recall\" for short knowledge checks. This weakens source specificity."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "Expanding \"feedback explains the reasoning\" to \"feedback explains the reasoning for each question\" is a minor clarification and is accurate. However, changing \"Nothing is scored or recorded\" to \"No responses are scored or recorded\" is minor and does not block, since the feedback is correct, though the change is arguably unnecessary."
+      },
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "The revised text interprets and amplifies: \"Each scenario is fictional and about your next decision. Check an answer to read why it is stronger or weaker; you can try again as often as you like.\" The proposed text (\"Each scenario is a constructed example about an upcoming decision. After checking your answer, read the explanation for why certain responses are seen as stronger or weaker. Trying again lets you compare reasoning across options as often as needed.\") adds the idea that scenarios are \"constructed examples\" and that re-trying is specifically for \"comparing reasoning across options.\" The code and prompt do not state these instructional explanations; the purpose has been introduced by the editor, exceeding the source evidence."
+      },
+      {
+        "fieldId": 4,
+        "severity": "blocker",
+        "finding": "The proposed replacement adds \"to compare different approaches\" to the end and changes \"Choose the step you would do first, then the next\" to \"Decide which step comes first, then continue in order\". This is an unsupported instructional framing. The source only gives direct, user-facing usage instructions. It does not introduce or justify comparison as a key purpose. This changes the meaning and over-interprets."
+      },
+      {
+        "fieldId": 5,
+        "severity": "blocker",
+        "finding": "Expanding \"Choose 'Try again' to build the order once more\" to \"Select 'Try again' to build a new order and compare your reasoning with the suggested sequence\" adds an unsupported instructional rationale. The source only instructs the user to try again. The rationale about \"comparing your reasoning\" overlays an additional teaching goal not in the prompt text—exceeding the source evidence."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2978,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 369,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3347
+    },
+    "review": {
+      "input_tokens": 2920,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 633,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3553
+    }
+  },
+  "createdAt": "2026-11-15T13:52:21.568Z"
+}

@@ -1,0 +1,62 @@
+{
+  "revisions": [
+    {
+      "target": "resource.ja-equity-impact-questions",
+      "kind": "resource",
+      "route": "/library/ja-equity-impact-questions",
+      "status": "draft",
+      "changes": [
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "These questions can help frame a decision, but they are not legal advice and do not make the decision for you. After working through them, seek guidance from the appropriate person if a high-stakes procurement, budget, or policy decision has a significant equity impact and no official guidance.",
+          "after": "Use these questions to identify the evidence, affected interests, and authority needed for a decision. They do not provide legal advice or replace the responsible official. If a procurement, budget, or policy decision has significant equity implications that the available guidance does not resolve, seek advice from the appropriate policy, legal, or operational role."
+        }
+      ],
+      "reviewNote": "Full original resource read. Clarifies evidence/individual preference and appropriate role boundaries. Consultation closure verified in current request/track redirects and actual practice path text. Original official references, dates, metadata and URLs unchanged. Independent review pending."
+    },
+    {
+      "target": "resource.pn-intercultural-method",
+      "kind": "resource",
+      "route": "/library/pn-intercultural-method",
+      "status": "draft",
+      "changes": [
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "Applying information about a group to an individual is profiling and can lead to worse service. A respectful approach is direct: ask the person, confirm what they need, and address the access barriers within your control.",
+          "after": "Treating group-level information as evidence of an individual's preferences can lead to inaccurate judgments and poorer service. Use community context to prepare questions, then ask the person what matters to them and address access barriers within your control."
+        }
+      ],
+      "reviewNote": "Full original resource read. Clarifies evidence/individual preference and appropriate role boundaries. Consultation closure verified in current request/track redirects and actual practice path text. Original official references, dates, metadata and URLs unchanged. Independent review pending."
+    },
+    {
+      "target": "resource.pn-when-to-escalate",
+      "kind": "resource",
+      "route": "/library/pn-when-to-escalate",
+      "status": "draft",
+      "changes": [
+        {
+          "path": [
+            "body",
+            5
+          ],
+          "before": "Equity and Inclusion Operations Consultant: consider a consultation when an early program idea or high-stakes decision needs another perspective. A consultation may also help when available guidance does not fully address community-specific work. Go to Support to request a consultation or first review what information you would share. A meeting is optional.",
+          "after": "Equity and Inclusion Operations Consultant: another perspective may help with an early program idea, a high-stakes decision, or community-specific work that the available guidance does not fully address. Use Support to identify the responsible person or office and the appropriate contact route. Staff consultation request forms are currently closed."
+        },
+        {
+          "path": [
+            "nextActions",
+            0,
+            "label"
+          ],
+          "before": "Request a consultation",
+          "after": "Find the responsible person or office"
+        }
+      ],
+      "reviewNote": "Full original resource read. Clarifies evidence/individual preference and appropriate role boundaries. Consultation closure verified in current request/track redirects and actual practice path text. Original official references, dates, metadata and URLs unchanged. Independent review pending."
+    }
+  ]
+}

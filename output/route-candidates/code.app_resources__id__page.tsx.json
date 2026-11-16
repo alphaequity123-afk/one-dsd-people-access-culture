@@ -1,0 +1,109 @@
+{
+  "target": "code.app/resources/[id]/page.tsx",
+  "kind": "surface",
+  "route": "/resources/[id]",
+  "sourceSha256": "b691e7b43ddbfaeda1658ccc0e92c4160f3ad5e07baa1bd048d87546fd09219a",
+  "status": "needs_revision",
+  "reviewedFieldCount": 6,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Next steps and related reading",
+      "after": "Next steps and additional guidance",
+      "reason": "The revised heading more specifically indicates that this section includes both actions to take and resources for further understanding, in line with the professional purpose of supporting staff in making informed next choices."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field3"
+      ],
+      "before": "Reading notes from the program&apos;s collection, for a deeper look at the ideas behind this resource.",
+      "after": "These reading notes from our collection can help you examine the ideas and background that inform this resource.",
+      "reason": "This revision connects the notes directly to the user’s work, clarifies their role in supporting understanding of resource context, and uses plain language over a somewhat rhetorical 'for a deeper look…'."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field4"
+      ],
+      "before": "Related reading is temporarily unavailable. You can continue exploring the Library.",
+      "after": "Related reading is not available at this time. You can still use the Library for your work.",
+      "reason": "The revised sentence removes 'temporarily,' which could introduce unnecessary uncertainty without a staff-side status. 'Continue exploring' was made more direct by specifying 'you can still use the Library for your work,' clarifying ongoing utility."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field6"
+      ],
+      "before": "Check the original source for the decision in front of you.",
+      "after": "Compare with the original source when you need to check details for the decision in front of you.",
+      "reason": "The revision more specifically guides staff to use the original source for verification related to their current decision, clarifying when and why source-checking matters in context."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The original heading ('Next steps and related reading') directly matches the section's content: it contains, in sequence, next actions and related reading. The revised version ('Next steps and additional guidance') breaks that precise alignment: the section does not provide general 'guidance' beyond next actions and reading. The original heading remains accurate, source-aligned, and clearer for navigation. The change is not source-supported nor is it a warranted improvement."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revision ('These reading notes from our collection can help you examine the ideas and background that inform this resource.') is a fine interpretation of the original ('Reading notes from the program's collection, for a deeper look at the ideas behind this resource.'). The revision clarifies the value and role of the notes. Plain language is retained, and the meaning is not misrepresented. Both versions are equally valid and evidence-consistent."
+      },
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "The field ('Related reading is temporarily unavailable. You can continue exploring the Library.') is an exact copy of the running code. The proposed removal of 'temporarily' and addition of 'for your work' are not source-supported. 'Temporarily' is deliberately used in the code to convey a service interruption. The change alters the situation's characterization without source evidence."
+      },
+      {
+        "fieldId": 4,
+        "severity": "blocker",
+        "finding": "The original instruction ('Check the original source for the decision in front of you.') is short, plain, and exactly quoted in the source. The proposed expansion ('Compare with the original source when you need to check details for the decision in front of you.') adds conditionality and slightly shifts meaning, which is not warranted absent a source directive. The original must be preserved as a quoted record."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 4540,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 279,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4819
+    },
+    "review": {
+      "input_tokens": 4345,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 387,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4732
+    }
+  },
+  "createdAt": "2026-11-15T13:51:37.560Z"
+}

@@ -7,7 +7,7 @@ export function PathBrowse({ path }: { path: GraduationPath }) {
     <div className="card mt-4">
       <p className="notice" role="note">
         <strong>Read it here, then download it to use. </strong>
-        This page does not save anything you write, so keep your notes in your own working file.
+        Keep your notes in your own working file.
       </p>
       <ol className="mt-4 list-decimal space-y-4 pl-6">
         {path.artifactFields.map((field) => (

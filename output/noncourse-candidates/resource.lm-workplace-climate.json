@@ -1,0 +1,171 @@
+{
+  "target": "resource.lm-workplace-climate",
+  "kind": "resource",
+  "route": "/library/lm-workplace-climate",
+  "sourceSha256": "fa2995a0f1ce623a91102e2d42e728943ab56a38d0edd1e800bceadf7e4658c5",
+  "status": "needs_revision",
+  "reviewedFieldCount": 8,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Team climate is what people experience in everyday meetings, supervision, and decisions, including whether they can speak openly, disagree, get credit, and have fair access to opportunities. Supervisors can improve it with specific practices and regular follow-up.",
+      "after": "Team climate is what staff and supervisors experience in daily meetings, supervision, and decision-making—such as whether people feel comfortable speaking up, disagreeing, receiving recognition, and having a fair chance at assignments. Supervisors can support a healthy climate through practical steps and regular attention to team norms.",
+      "reason": "Clarifies that climate affects both staff and supervisors, specifies areas of experience, and connects supervisor action to practical steps."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "This resource supports everyday team-climate work. For a complaint, investigation, accommodation, or discipline matter, use the appropriate Employee Culture, Human Resources, civil rights, or accommodation process.",
+      "after": "This resource addresses routine team climate and participation. If concerns involve complaints, formal investigations, requested accommodations, or discipline about a specific person, refer to Employee Culture, Human Resources, Civil Rights, or accommodation procedures. Those established processes handle individual cases and legal obligations; team climate work does not replace them.",
+      "reason": "Makes clear which issues require formal response, explains the scope of the resource, and clarifies that team climate work is not a substitute for formal procedures."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Participation: who speaks first and most; whether agendas go out in advance; whether written input counts as much as spoken input.",
+      "after": "Participation: who contributes first and most; whether meeting agendas are shared in advance; whether written feedback is given equal consideration to spoken comments.",
+      "reason": "Clarifies what participation looks like and specifies the difference between written and spoken feedback."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Speaking honestly: can people disagree with a supervisor without being punished or losing opportunities? Are mistakes discussed as problems in the work rather than flaws in a person?",
+      "after": "Honest conversation: Can staff voice disagreement with a supervisor or peer without risk of reprisal or lost opportunities? Are mistakes treated as issues to solve in the work, or are they seen as shortcomings of the person?",
+      "reason": "Uses clearer language about honest communication and reframes the focus from merely 'speaking honestly' to the culture around disagreement and how mistakes are addressed."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Credit and chances: who gets stretch assignments, visible work, and development time; whether that pattern tracks race, disability, language, or tenure.",
+      "after": "Credit and opportunities: Who is offered complex assignments, public tasks, or development time? Pay attention to whether these opportunities follow patterns tied to race, disability, language proficiency, or tenure.",
+      "reason": "Clarifies the kinds of opportunities being referenced and encourages examination of patterns, connecting the idea to equity concerns."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Norms: a few written team agreements about meetings, interruptions, and follow-through, revisited on a date.",
+      "after": "Norms: Document a short set of team agreements on meetings, interruptions, and follow-through. Review these norms together on a set date to reinforce shared expectations.",
+      "reason": "Adds clarity about the purpose and practice of creating and revisiting team norms."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Access at work: captions on by default, materials in advance, flexible formats for participation, no reliance on informal networks for information.",
+      "after": "Access at work: For meetings and information, enable captions by default, share preparation materials early, allow flexible ways to participate, and avoid relying on informal networks to distribute information.",
+      "reason": "Clarifies concrete accessibility practices that support fair participation."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "If the situation involves a complaint, investigation, discipline, or accommodation decision about a named person, follow the established Employee Culture, Human Resources, civil-rights, or accommodation process. A team climate plan cannot replace it.",
+      "after": "If you are addressing a situation involving a complaint, investigation, disciplinary decision, or an accommodation for a named individual, use the established processes through Employee Culture, Human Resources, Civil Rights, or accommodations. Team climate planning is not an alternative to these required procedures.",
+      "reason": "Clarifies the instruction and why established procedures must be followed in individual matters."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed summary substitutes 'staff and supervisors' for 'people,' which is not present in the source and may unintentionally shift the implication from inclusivity (which includes others such as contractors or partners) to a subset. \"Decision-making\" for \"decisions\" introduces a process focus not in the source. The phrase 'such as whether people feel comfortable speaking up...' changes the meaning from observable, concrete experiences in the source ('whether they can speak openly, disagree, get credit...') to subjective feelings. The original explicitly focuses on whether people can act, not whether they feel comfortable. The closing sentence is acceptably clarified but the earlier changes materially alter meaning. Do not change source-anchored examples of scope or turn statements about observable conditions into statements about feelings."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revised 'whyItMatters' accurately matches the intent, content, and scope of the original. It remains clear about cases that require formal processes and does not add or subtract qualifiers. The changes are not a blocker."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The edits are close to the original meaning. Replacing 'who speaks first and most' with 'who contributes first and most' is acceptable, and clarifying that written input is given equal consideration is a defensible improvement. Not a blocker."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The language change from 'speaking honestly' to 'honest conversation' is sound. It broadens the discussion while keeping the intent and focus of whether disagreement is safe and how mistakes are handled. Not a blocker."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The edit clarifies without material change. The focus on who gets opportunities, and examining bias in those patterns, is retained and grounded in the source. Not a blocker."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The added instruction on how to document and revisit norms does not contradict or deviate from the original. It supports the intended purpose and keeps the meaning intact. Not a blocker."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The changes clarify concrete actions and requirements tied to accessibility and information access. It remains tightly grounded in the source text. Not a blocker."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "The slightly reworded explanation remains accurate to the original scope and reasoning. No blocker."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1784,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 614,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2398
+    },
+    "review": {
+      "input_tokens": 1955,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 514,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2469
+    }
+  },
+  "createdAt": "2026-11-15T13:41:12.429Z"
+}

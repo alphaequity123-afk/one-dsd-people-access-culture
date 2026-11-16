@@ -1,0 +1,95 @@
+{
+  "target": "code.app/community-outreach/organizations/[slug]/page.tsx",
+  "kind": "surface",
+  "route": "/community-outreach/organizations/[slug]",
+  "sourceSha256": "b262dc52e779254d27b5f8181d0cbcdbdb596d25dfbb4f0e1628d2744034944d",
+  "status": "needs_revision",
+  "reviewedFieldCount": 8,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "This organization has closed, according to its own website. It is listed for the record of its work with the Disability Services Division, not as a place to refer people.",
+      "after": "This organization has closed, as reported on its own website. It remains listed here to document its past work with the Disability Services Division. Please do not refer people to this organization for services.",
+      "reason": "Clarified that the closure is based on the organization's own reporting, specified the purpose for listing as documentation, and gave explicit practical direction about referrals to prevent confusion."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field3"
+      ],
+      "before": "Not confirmed in the public records.",
+      "after": "No confirmation available in the public records.",
+      "reason": "Used alternative wording to clearly state that information was not found or confirmed from public sources, providing a slight increase in precision and readability."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field4"
+      ],
+      "before": "Plan an engagement before you reach out",
+      "after": "Plan your engagement before you reach out.",
+      "reason": "Clarified as a direct instruction, specifying the action and sequence, while maintaining the original purpose and tone."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "Change from 'It is listed for the record of its work with the Disability Services Division, not as a place to refer people.' to 'It remains listed here to document its past work ... Please do not refer people to this organization for services.' is not source-faithful. The source is carefully neutral and records the listing 'for the record' as part of an official archive; the introduced wording shifts to an explicit direction not present in the official record and recasts the purpose as 'documentation.' Adding 'Please do not refer people...' turns a contextual note into an explicit instruction, which is not authorized by the source and is likely a policy-level decision the page cannot impose. Rewording 'according to its own website' as 'as reported on its own website' is a weaker ground than the original claim, but not a blocker alone. The change collectively alters the scope, purpose, and authoritative stance established in the official record."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revised version 'No confirmation available in the public records.' is a minor stylistic alternative to 'Not confirmed in the public records.' Both plainly express the absence of confirmation, and the change does not affect legal substance, accuracy, or instructional value. It is not a blocker, though the shift adds no necessary precision."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "'Plan your engagement before you reach out.' directly rephrases 'Plan an engagement before you reach out,' converting a noun to a possessive and clarifying agency, though both serve the same instructional function. This is not a blocker as the instruction and scope are unchanged."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2871,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 193,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3064
+    },
+    "review": {
+      "input_tokens": 2532,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 355,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2887
+    }
+  },
+  "createdAt": "2026-11-15T13:47:39.641Z"
+}

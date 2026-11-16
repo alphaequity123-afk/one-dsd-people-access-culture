@@ -1,0 +1,76 @@
+{
+  "target": "code.app/learn/intercultural/page.tsx",
+  "kind": "surface",
+  "route": "/learn/intercultural",
+  "sourceSha256": "35feaeb64567fa40e0d172449940bef936cfa94642b74ef2a33a8327933461a4",
+  "status": "needs_revision",
+  "reviewedFieldCount": 10,
+  "changes": [
+    {
+      "fieldId": 3,
+      "path": [
+        "field5"
+      ],
+      "before": "Explore seven parts that bring intercultural learning into everyday work, with individual practice and optional community context.",
+      "after": "This learning path covers seven parts designed to build intercultural skills directly connected to daily work. Each part includes chances for individual practice, as well as options to consider broader organizational or community context. Completing these sections can help you recognize patterns in your approach and apply what you learn to real DSD situations.",
+      "reason": "The revision clarifies the purpose of the seven parts in supporting everyday work and practice, gives explicit reasoning for including both individual and community context, and connects actions to staff responsibilities at DHS and DSD."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field7"
+      ],
+      "before": "Learn, explore community context, and practice decisions for everyday work.",
+      "after": "Use these resources to gain background understanding, examine examples from the community, and practice making work-related decisions shaped by cultural context. The examples and activities help build skills that can affect your day-to-day responsibilities.",
+      "reason": "This provides concrete action and consequence, emphasizing how resources, examples, and activities are intended to shape actual staff decisions and practice, rather than simply learning or exploring in the abstract."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 5,
+        "severity": "blocker",
+        "finding": "The revised version ('after') adds several claims not supported by the coded surface source. The original: 'Learn, explore community context, and practice decisions for everyday work.' The revision: 'Use these resources to gain background understanding, examine examples from the community, and practice making work-related decisions shaped by cultural context. The examples and activities help build skills that can affect your day-to-day responsibilities.'\n\n- The source does not guarantee that examples are always from 'the community' or that all activities 'build skills that can affect your day-to-day responsibilities' across staff roles, nor does it specify the degree to which 'resources to gain background understanding' are included. The original is neutral and general, while the revision asserts outcome and intent well beyond the source's factual description. \n- The revision substitutes a set of promises and explicit consequences, thereby creating unsupported user expectations and a more directive tone than warranted by the surface source content.\n- The connection to 'actual staff decisions and practice' is a program-author gloss, not a surface fact in the code or source-protected text.\n\nPer the writing standard, do not invent consequences or staff relevance at a level not explicit in the supported surface. This is a content change exceeding the source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3767,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 230,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3997
+    },
+    "review": {
+      "input_tokens": 3428,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 277,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3705
+    }
+  },
+  "createdAt": "2026-11-15T13:50:06.286Z"
+}

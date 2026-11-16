@@ -1,0 +1,109 @@
+{
+  "target": "code.components/multimedia/resource-media-preview.tsx",
+  "kind": "surface",
+  "route": "components/multimedia/resource-media-preview.tsx",
+  "sourceSha256": "5669bf010384ef8dd93e8fd9126cdb726b57e7c5b9b229ccf917b29a89f6361e",
+  "status": "needs_revision",
+  "reviewedFieldCount": 9,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Recording and reading companion",
+      "after": "Provides access to both audio and text versions for this recording",
+      "reason": "Clarifies the purpose of the companion format—staff and participants can use both listening and reading to understand, reference, or revisit material. This specificity helps illustrate why the resource format matters in DHS and DSD work contexts."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field4"
+      ],
+      "before": "Observe what happened before interpreting it",
+      "after": "Check observable actions in the meeting before making inferences or conclusions",
+      "reason": "Explains the importance of describing what happened in a meeting before interpreting it, connecting the action to practices in critical incident review and why the step helps clarify what led to outcomes or misunderstandings."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field5"
+      ],
+      "before": "Writing moves in the notice example",
+      "after": "Key elements in the notice for the example: Action first, reply date, and where to get help",
+      "reason": "Explains the content labeled in the example, specifying what moves are being demonstrated and why staff should notice them when reviewing client communication."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field7"
+      ],
+      "before": "See how a reader finds the next step",
+      "after": "Check how a reader can identify their next required step",
+      "reason": "Clarifies that the purpose of reviewing the notice example is to see if the intended next action for a reader is clear—this directly relates to plain language testing in DHS and DSD materials."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "Field 1 ('Recording and reading companion' -> 'Provides access to both audio and text versions for this recording') is a blocker. The original wording ('Recording and reading companion') is the canonical caption used for both podcasts in the code. The new version adds an explanatory sentence that is not present in the source. Per standard, labels, captions, and official records must retain their original wording. No explicit clarification can be injected unless it is present in the source code or official record."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "Field 4 ('Observe what happened before interpreting it' -> 'Check observable actions in the meeting before making inferences or conclusions'): This rewrites the action as an explanatory procedure, but the underlying meaning is consistent and directly grounded in the source action, with clarity around established meeting review practices. Not a blocker, though not required."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "Field 5 ('Writing moves in the notice example' -> 'Key elements in the notice for the example: Action first, reply date, and where to get help') is not a blocker; although it is an expansion, it reflects the specific contents visually presented in the code. Acceptable as a clarifying parallel to the listed elements, but not required."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "Field 7 ('See how a reader finds the next step' -> 'Check how a reader can identify their next required step') is not a blocker; it retains the original instruction's intent, slightly increased in specificity related to plain language principles."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2435,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 275,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2710
+    },
+    "review": {
+      "input_tokens": 2179,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 345,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2524
+    }
+  },
+  "createdAt": "2026-11-15T13:54:48.518Z"
+}

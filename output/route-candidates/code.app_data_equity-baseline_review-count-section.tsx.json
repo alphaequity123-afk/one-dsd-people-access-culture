@@ -1,0 +1,137 @@
+{
+  "target": "code.app/data/equity-baseline/review-count-section.tsx",
+  "kind": "surface",
+  "route": "app/data/equity-baseline/review-count-section.tsx",
+  "sourceSha256": "4371ad744bb2bb0a819f044d974810c5477dec8c9b9685a99e344f06ab9092a7",
+  "status": "needs_revision",
+  "reviewedFieldCount": 6,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "When staff finish an equity review on this site, one is added to an anonymous count. The count does not record who did the review, where they work, or what they wrote. These are totals only.",
+      "after": "When staff complete an equity review on this site, the system adds one anonymous count. The count does not include any information about the reviewer, their work location, or their review comments. Only summary totals are stored. This protects individual privacy and keeps results focused on overall review activity.",
+      "reason": "Clarified that only the completion is recorded and explained the privacy and analytic purpose for not collecting identities or content."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Right now the count comes from this review:",
+      "after": "Currently, totals are based on this review:",
+      "reason": "Reworded for clarity and consistency with a professional tone."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "The count could not be loaded right now. Try again later.",
+      "after": "The system could not load the total at this time. Please try again later.",
+      "reason": "Specified that the issue comes from the system and used precise language to instruct to try reloading."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": "No reviews have been counted yet.",
+      "after": "No reviews have been recorded yet.",
+      "reason": "Used \"recorded\" for clarity and consistency, and clarified the status."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field4"
+      ],
+      "before": "in the last three months, including this month.",
+      "after": "during the last three months, including the current month.",
+      "reason": "Clarified timing to avoid ambiguity between \"this month\" and \"the last three months\" and used explicit reference to the present."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field5"
+      ],
+      "before": "A review can connect to more than one goal, so the goal numbers can add up to more than the total. Choosing goals and a kind of decision is optional, so those numbers can also add up to less.",
+      "after": "A single review can address multiple goals, so the sum of goal counts may be higher than the total review count. Identifying goals or the type of decision is optional, so the subtotals for these categories may also be lower than the total.",
+      "reason": "Increased clarity and specificity about how the counts can differ, avoiding possible confusion for staff interpreting the totals."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed rewrite changes the meaning and introduces new claims. The phrase 'the system adds one anonymous count' risks confusion about what is being counted and by what mechanism, where the original 'one is added to an anonymous count' is simpler and matches the code. The new sentences claim, 'This protects individual privacy and keeps results focused on overall review activity,' which is not present in the source. The original only says 'These are totals only.' Do not add or infer rationales on a data recording statement unless authorized by official documentation or the policy itself."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The change from 'Right now the count comes from this review:' to 'Currently, totals are based on this review:' is a minor stylistic shift and does not change the meaning. Either is supported, but the edit is optional rather than required by any source change."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The change from 'The count could not be loaded right now. Try again later.' to 'The system could not load the total at this time. Please try again later.' is acceptably equivalent for user instructions. The difference is not material to evidence or function."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The change from 'No reviews have been counted yet.' to 'No reviews have been recorded yet.' is minor and does not affect accuracy. Both phrases refer to the absence of completed reviews in the data."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The change from 'in the last three months, including this month.' to 'during the last three months, including the current month.' is an acceptable clarification. The new wording reflects the same timespan described in the code ('lastThreeMonths') and the running month."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The edited wording for field 5 improves clarity about why goal totals or decision-type subtotals may diverge from the overall review number. The edit remains faithful to the source logic and intent."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2306,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 351,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2657
+    },
+    "review": {
+      "input_tokens": 2230,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 436,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2666
+    }
+  },
+  "createdAt": "2026-11-15T13:48:30.366Z"
+}

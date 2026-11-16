@@ -1,0 +1,123 @@
+{
+  "target": "code.components/multimedia/dsd-leadership-media.tsx",
+  "kind": "surface",
+  "route": "components/multimedia/dsd-leadership-media.tsx",
+  "sourceSha256": "2b97a20f4a08d2bb50cb405b68c2595a18ee2e7d33e51c199d61e0a15fa2bebe",
+  "status": "needs_revision",
+  "reviewedFieldCount": 12,
+  "changes": [
+    {
+      "fieldId": 2,
+      "path": [
+        "field6"
+      ],
+      "before": "An observed behavior. It does not establish confidence, ability or a cultural explanation.",
+      "after": "This is an observed behavior. It does not provide evidence about the applicant’s confidence, ability, or explain any cultural factors.",
+      "reason": "Clarified the nature of observed behavior and specified what it does not tell, to improve professional specificity and reasoning."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field8"
+      ],
+      "before": "Compare the substance of the answer with the same job-related criterion used for other applicants.",
+      "after": "Consider how the answer addresses the same job-related criterion applied to all applicants.",
+      "reason": "Shifted language from generic comparability to an explicit explanation that review should use the consistent job-related standard for fairness."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field10"
+      ],
+      "before": "Pause the rating until the panel can explain its evidence. Ask consistent, permitted follow-up questions.",
+      "after": "Pause assigning a rating until the panel has evidence from the discussion. Use only consistent and allowed follow-up questions to clarify.",
+      "reason": "Clarified what it means to pause and what constitutes evidence, adding why consistent and permitted questions are needed for equity and compliance."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "field13"
+      ],
+      "before": "Explain the actual duties and permitted evidence of capability. Check whether a person outside the usual network can understand the invitation.",
+      "after": "Describe the essential duties and what kinds of evidence of capability are permitted. Then check whether people who are not part of the usual network can clearly understand the invitation and requirements.",
+      "reason": "Specified the reasoning for each step and clarified what is meant by evidence of capability and effective communication."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "field14"
+      ],
+      "before": "Check the application route, access assistance and contact for questions. More views alone do not show that people could apply.",
+      "after": "Verify the application process, what assistance is available, and who applicants can contact with questions. A higher number of viewers does not guarantee that people will apply or understand how to do so.",
+      "reason": "Clarified the need for verifying steps and why simply measuring views does not establish accessibility or response."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The rewrite ('This is an observed behavior...') substitutes more interpretive language than the original ('An observed behavior. It does not establish confidence, ability or a cultural explanation.'). The new text ('does not provide evidence about...') adds 'explain any cultural factors', which is close but changes 'does not establish confidence, ability or a cultural explanation' to refer to both lack of evidence and non-explanation, slightly shifting the original factual neutrality and brevity. The original concisely states the limits without expanding on 'evidence' or inserting 'about the applicant’s...', so this change is not fully source-conscious per the standard."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The change provides a valid clarification of the original intent. It does not introduce unsupported claims or errors, but the difference between 'compare the substance of the answer with the same job-related criterion used for other applicants' and 'consider how the answer addresses the same job-related criterion applied to all applicants' is minor and stylistic."
+      },
+      {
+        "fieldId": 6,
+        "severity": "blocker",
+        "finding": "The rewritten guidance ('Pause assigning a rating until the panel has evidence from the discussion. Use only consistent and allowed follow-up questions to clarify.') introduces a process dimension not in the original. The original only says 'Pause the rating until the panel can explain its evidence. Ask consistent, permitted follow-up questions.' The rewrite infers additional steps ('has evidence from the discussion') and uses 'allowed' vs 'permitted.' The original's language should be retained since the rewrite adds procedural nuance not present in the source."
+      },
+      {
+        "fieldId": 9,
+        "severity": "note",
+        "finding": "The expansion ('Describe the essential duties...') is more explicit but retains the core meaning of the need to communicate real requirements and permitted evidence, and to check external understanding. This does not constitute a blocker, but some professional judgment is being exercised in expanding 'person outside the usual network' to 'people who are not part of the usual network' and making requirements more explicit."
+      },
+      {
+        "fieldId": 10,
+        "severity": "note",
+        "finding": "The explanatory rewrite ('Verify the application process, what assistance is available, and who applicants can contact with questions. A higher number of viewers does not guarantee that people will apply or understand how to do so.') retains source intent and just elaborates for clarity. This is not a blocker."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2347,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 331,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2678
+    },
+    "review": {
+      "input_tokens": 2062,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 502,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2564
+    }
+  },
+  "createdAt": "2026-11-15T13:54:23.237Z"
+}

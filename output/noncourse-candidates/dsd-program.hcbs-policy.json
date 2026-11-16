@@ -1,0 +1,67 @@
+{
+  "target": "dsd-program.hcbs-policy",
+  "kind": "surface",
+  "route": "/one-dsd/programs/hcbs-policy",
+  "sourceSha256": "98bb9a4a24cbee0fe65efcab9376a0cb990176234c5ab8cf47293f7f1fafde00",
+  "status": "model_checked",
+  "reviewedFieldCount": 6,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "intro"
+      ],
+      "before": "Sets policy for waiver and community-based services, including eligibility, service menus, rates, and provider standards.",
+      "after": "This work defines and maintains policy for Minnesota’s home and community-based services (HCBS) programs. DSD staff develop eligibility rules, eligible service options, payment rate structures, and minimum provider standards. Statewide consistency in these areas supports fair access, meets federal waiver requirements, and guides case managers and providers in applying complex waiver policies. When staff do not update or clarify HCBS policies, it can lead to inconsistent access, administrative errors, or noncompliance findings in audits. Regular policy review helps ensure services reflect current needs, legal requirements, and resource limits.",
+      "reason": "Expanded to give connected detail about the division’s responsibilities, connect policy topics to operational reasons, and explain why DSD staff actions in setting or updating policy matter for fair access, compliance, and service quality. This provides context and professional reasoning for the listed policy areas while retaining the substance of the prior summary."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The expanded introduction is fully supported by the source and adds clear context for professional readers. It accurately represents DSD’s responsibilities for HCBS waiver policy, elaborates on why the scope of work matters for access, compliance, and service quality, and ties back to the operational effects. No legal or factual distortions were introduced, and the expansion improves understanding for internal DHS/DSD staff."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1220,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 210,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1430
+    },
+    "review": {
+      "input_tokens": 918,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 119,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1037
+    }
+  },
+  "createdAt": "2026-11-15T13:38:27.186Z"
+}

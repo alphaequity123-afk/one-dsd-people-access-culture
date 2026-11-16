@@ -1,0 +1,151 @@
+{
+  "target": "code.app/consultant/content-review/page.tsx",
+  "kind": "surface",
+  "route": "/consultant/content-review",
+  "sourceSha256": "a3363ab933d6dff53d16d0dfb3e8edde3bb56ef980e463c0be7ff970527964c9",
+  "status": "needs_revision",
+  "reviewedFieldCount": 12,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Review the current collection for clear responsibility, source dates, accessibility, and useful next steps. These signals help prioritize a review; they do not establish that a resource is inaccurate or no longer needed.",
+      "after": "Review the current collection to check who is responsible, when sources were last updated, whether resources are accessible, and if they offer clear next steps. These factors help identify which items need further review. They do not mean that a resource is wrong or outdated, but they highlight where closer attention may be useful.",
+      "reason": "Clarified for staff audience, retained factual frame, and made the practical review signals and limitations more explicit. Avoided implying assessment outcome and explained purpose."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field5"
+      ],
+      "before": "Compare purpose, audience, sources, and formats before consolidating anything. A transcript, recording, and worksheet may be useful companions. For courses, this check uses the catalog description, not every lesson. Nothing is archived automatically.",
+      "after": "Before combining or removing overlapping resources, compare their intended purpose, target audience, cited sources, and formats. Resources with similar text or type may serve different needs; for example, a transcript, recording, or worksheet often support each other. For courses, this check uses only the catalog description, not individual lessons. No resource is archived automatically without review.",
+      "reason": "Increased specificity about reviewing overlap, emphasized practical review steps, clarified that catalog descriptions do not reflect all content, and avoided casual language about archiving."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field7"
+      ],
+      "before": "Confirm its current source and who maintains it.",
+      "after": "Verify the current source and the person or team who is responsible for maintaining the resource. You need this information to assess whether updates are possible or if a replacement should be considered.",
+      "reason": "Clarified the need to check both the source and responsible party, and stated why this step matters for future updates or replacement decisions."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field8"
+      ],
+      "before": "Compare its purpose with the proposed replacement, including accessibility and alternative formats.",
+      "after": "Compare the purpose of the current resource and the proposed replacement, including accessibility considerations and any available alternative formats. This helps prevent lost capabilities, especially for people using assistive technology or preferring a particular format.",
+      "reason": "Increased specificity around accessibility and alternative formats, and explained the consequence of missing this comparison for user needs."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "field9"
+      ],
+      "before": "Identify links and learning activities that still depend on it.",
+      "after": "Identify any links, learning activities, or referenced workflows that depend on the current resource. Removing or replacing a resource without this check may disrupt existing processes or training.",
+      "reason": "Clarified why identifying dependencies is necessary, focusing on potential disruption if overlooked."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "field10"
+      ],
+      "before": "Record the reason and replacement before changing availability, then check the affected journeys.",
+      "after": "Document the reason for replacement, the resource you will substitute, and any relevant context before you change the resource's availability. Afterwards, check how the change affects user journeys or learning processes.",
+      "reason": "Explained what to record and why documenting and reviewing effects supports continuity and accountability."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "field12"
+      ],
+      "before": "Invite someone to try a familiar task: find a resource, prepare a decision, improve a notice, plan participation, or review a result. Notice where they hesitate, what they expected, and whether they reach a useful next step. Summarize themes without recording personal work or sensitive search text.",
+      "after": "Ask a colleague to complete a familiar task, such as finding a resource, preparing a decision, drafting a notice, planning a meeting, or reviewing a result. Observe where they hesitate, what they expected, and whether they could reach a meaningful next step. Summarize observed themes, but avoid recording personal work or sensitive search terms.",
+      "reason": "Clarified approach as peer learning, made task context and needs more concrete, and specified what not to record."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revision rephrases 'review the current collection for clear responsibility, source dates, accessibility, and useful next steps' to 'check who is responsible, when sources were last updated, whether resources are accessible, and if they offer clear next steps.' The original language is clear and fits the review's scope; the rewrite is not clearly warranted, adds generic review steps, and risks making unsupported implications about 'when sources were last updated' (the source says 'source dates'). 'Accessibility' in the original was unqualified; the rewrite's shift to 'whether resources are accessible' keeps intent but drifts toward assessment. The rewrite also reframes the original's limits by indicating these signals 'highlight where closer attention may be useful'—a change from the source that could imply a stronger judgment than the original frame, which explicitly separated review signals from assessment outcomes. This is a significant enough change to block."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The change increases practical context but does not alter the source's meaning or invent requirements. It is more explicit regarding catalog descriptions and review, which aligns with staff clarity."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The revision expands on the importance of confirming responsibility, which is implicit in the original. It does not invent policy or change the meaning."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The adjusted text is more explicit about accessibility and alternative formats, explaining consequences, but does not misrepresent source scope."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "This revision expands on the rationale for checking dependencies and is consistent with source scope."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "The clarification around documentation and impact review adds practical rationale but stays close to source instructions."
+      },
+      {
+        "fieldId": 10,
+        "severity": "note",
+        "finding": "The change remains specific, clarifies staff-peer learning, and remains within the intent and scope of the original instructions."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2651,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 611,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3262
+    },
+    "review": {
+      "input_tokens": 2706,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 416,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3122
+    }
+  },
+  "createdAt": "2026-11-15T13:48:01.538Z"
+}

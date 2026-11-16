@@ -1,0 +1,67 @@
+{
+  "target": "workforce.strategy-performance",
+  "kind": "surface",
+  "route": "/consultant/workforce/strategy-performance",
+  "sourceSha256": "dba19b4f33f6beb3beb39ee9ff0551ad4688aae048dbcebf1c6b25aab5ceb058",
+  "status": "model_checked",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "relationship"
+      ],
+      "before": "Listed as an agency area or associated service. This does not establish a direct reporting line.",
+      "after": "The Office of Strategy and Performance appears as an agency area or associated service. Its listing in the directory does not indicate formal reporting authority or supervisory relationships with other divisions or staff. To understand specific responsibilities or organizational connections, staff should check current internal communications or official role documentation.",
+      "reason": "Expanded on the meaning of the listing and specified what it does and does not indicate, clarifying the practical implications for staff. Added guidance on how to identify actual responsibilities or connections."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The expanded explanation correctly clarifies that directory listings do not imply formal reporting lines or supervisory authority, which matches the source’s presentation of organizational areas. The instruction for staff to check internal communications or documentation for further details is pragmatic. The additional details do not misstate the source, introduce a false legal or policy claim, or alter the meaning of the original directory listing. No blocker issues identified."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1113,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 118,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1231
+    },
+    "review": {
+      "input_tokens": 823,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 101,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 924
+    }
+  },
+  "createdAt": "2026-11-15T13:37:49.501Z"
+}

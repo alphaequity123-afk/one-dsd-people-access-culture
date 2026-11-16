@@ -1,0 +1,67 @@
+{
+  "target": "code.app/paths/page.tsx",
+  "kind": "surface",
+  "route": "/paths",
+  "sourceSha256": "a221ac7f0a147ef0668009db05c04de604cf854bdf1f4c7fb8d6802c2abd14d2",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "For example, if a team is revising a service process, choose the path that helps you examine who can use it, practice a change, and review what happened.",
+      "after": "For example, when a team reviews a service process, selecting a path that clarifies who is eligible, guides practical trial of changes, and supports later evaluation helps ensure that each step is intentional and substantiated. By matching the path to the team’s current questions, staff can focus their discussion, identify overlooked factors, and better document their reasoning. This approach supports both immediate learning and recordkeeping needs.",
+      "reason": "The revision clarifies the purpose and context for using a path, connecting specific team actions (eligibility checking, practicing, and evaluation) to larger goals of substantiated decision-making, focused discussion, and thorough recordkeeping. It specifies why thoughtfully choosing a path matters beyond the immediate activity."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed replacement for field0 is substantially more elaborate and makes claims and promises not present in the supplied source. The original reads: 'For example, if a team is revising a service process, choose the path that helps you examine who can use it, practice a change, and review what happened.' The revision introduces new justifications and outcomes ('ensures each step is intentional and substantiated,' 'identify overlooked factors,' 'better document their reasoning,' 'supports immediate learning and recordkeeping needs') that do not appear in the source code, which simply illustrates process selection using the 3 named actions. The new text overreaches the original’s scope and inserts new policy meaning and benefits not evidenced in the source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1892,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 163,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2055
+    },
+    "review": {
+      "input_tokens": 1667,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 168,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1835
+    }
+  },
+  "createdAt": "2026-11-15T13:51:18.404Z"
+}

@@ -1,0 +1,201 @@
+{
+  "target": "resource.ja-language-cultural-access-planning",
+  "kind": "resource",
+  "route": "/library/ja-language-cultural-access-planning",
+  "sourceSha256": "9630f8c820722805d6a6e172d9353120be1c196b0a68007778b128ac2ae2c67d",
+  "status": "model_checked",
+  "reviewedFieldCount": 10,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Plan language, format, messenger, communication mode, and program design together, framed by the CLAS standards. Consider who the program reaches, the languages and formats they need, interpreter access at first contact, vital documents, and who reviews translations.",
+      "after": "Plan language, format, messenger, communication methods, and program content together, guided by the CLAS standards. Identify who the program serves, what languages and formats are needed, how interpreters are reached at first contact, which documents require translation, and how translations are reviewed.",
+      "reason": "Clarified that planning should address all communication points as a whole, restated the components for specificity, and used more direct language to improve professional clarity."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Language access decided one document at a time produces gaps at the first phone call. Planning at the program level puts interpreter availability, translation, and trusted messengers where people actually arrive.",
+      "after": "Deciding language access needs case-by-case often leaves barriers at initial contact points, such as the first phone call. Program-level planning places interpreters, translations, and trusted messengers where people are most likely to seek help.",
+      "reason": "Explained how planning at the program level addresses actual points of service and avoids common failures without overstating certainty."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Who the program reaches. Use the data owner's information and community partners to name the languages and communities, and note what the data does not show.",
+      "after": "Who the program reaches. Use information from data owners and community partners to identify the languages and communities engaged, and record what the data does not capture. This helps address gaps that quantitative data alone may miss.",
+      "reason": "Clarified the method for identifying communities and the importance of recording data limitations to address potential gaps."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "First contact. How does a person who does not use English reach a human, in their language, on the first try? Phone, front desk, web, and mail each need an answer.",
+      "after": "First contact. For anyone who does not use English, consider how they reach a staff person in their language on the first attempt. Prepare clear procedures for phone, front desk, web, and mail so each route offers direct language support.",
+      "reason": "Added expectation for staff preparation and emphasized equal attention to each contact route."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Vital documents. Identify documents that affect eligibility, rights, benefits, or safety. These need translation and human review before release. Machine translation alone is not enough for vital documents.",
+      "after": "Vital documents. Identify documents that influence eligibility, rights, benefits, or safety. These must be translated and reviewed by a qualified person before release. Relying only on machine translation does not meet the standard for vital documents because accuracy and clarity must be checked by humans.",
+      "reason": "Stated why machine translation is insufficient and underscored the need for human review as a matter of accuracy and responsibility."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Formats. Plain language, large print, accessible electronic documents, audio, and in-person explanation. Ask which formats people use, not which are easiest to produce.",
+      "after": "Formats. Identify whether people use plain language, large print, accessible electronic formats, audio, or in-person explanation. Ask individuals or communities about their preferred formats, rather than choosing what is most convenient to produce. This supports access for a wider range of users.",
+      "reason": "Clarified expectation to ask users directly and explained why this approach supports access."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Trusted messengers. Who do people in each community already trust for information? Partner with them and compensate the work.",
+      "after": "Trusted messengers. Determine who already provides reliable information within each community. Where possible, work in partnership with them and recognize the value of their contributions with appropriate compensation.",
+      "reason": "Made the expectation to compensate clearer and specified recognition for partnership."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "Cultural responsiveness. Use community material as questions. Check assumptions about family roles, health beliefs, and literacy with the community, not from a guide.",
+      "after": "Cultural responsiveness. Use questions based on community-specific materials. Validate assumptions about family roles, health beliefs, and literacy through direct conversation with the community, not solely through generalized guides. This increases relevance and accuracy of communication.",
+      "reason": "Clarified the need to engage directly with communities to check assumptions and explained why this method is preferred."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "body",
+        6
+      ],
+      "before": "Review and owners. Name who owns the plan, who reviews translations, and when the plan is checked again.",
+      "after": "Review and owners. Specify who is responsible for maintaining the plan, who oversees translation review, and how often the plan is re-evaluated. Clear ownership and review cycles help keep the plan current and effective.",
+      "reason": "Explained why naming owners and review cycles is important for ongoing quality and accountability."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "body",
+        7
+      ],
+      "before": "The CLAS standards and DHS language access practice are the authority for these decisions. Check current guidance with your language access coordinator.",
+      "after": "The CLAS standards and DHS language access practice guide these decisions. Confirm the most current procedures with your language access coordinator.",
+      "reason": "Simplified wording while maintaining reference to the standards and clarified the purpose of checking current guidance."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revision for the summary is supported. 'Communication mode' is restated as 'communication methods,' and 'program design' as 'program content,' both remain within the reasonable interpretation of planning scope. Steps about identifying who the program serves, languages and formats, interpreter access, document translation, and review are correctly reflected from the source list. The more direct language is consistent with intent and content."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The change to 'Why it matters' clarifies how case-by-case access leaves barriers and how program-level planning places resources at service points. This is supported by the source's intent and meaning, with no new or removed legal conditions."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "This change at field 2 clarifies using both data owner input and community partners to fill data gaps, and cites the rationale for noting what data leaves out, which is supported by the source guidance."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The update sets a clear expectation for staff to prepare each access route (phone, front desk, web, mail) for first-contact language access. It remains within the source's intent and does not add requirements."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The revision specifies the need for qualified human review and why machine translation is insufficient for vital documents. This expands on the given rationale in the source ('Machine translation alone is not enough') and is supported by standard best practices referenced in the context (CLAS standards)."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The revision clarifies that formats should be selected with user input rather than convenience and adds explanation about expanding access, consistent with the source's 'Ask which formats people use, not which are easiest to produce.'"
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The more explicit expectation to compensate community partners and describe them as 'trusted messengers' is supported by the original's emphasis ('Partner with them and compensate the work'). Rewording remains consistent with source guidance."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "This change clarifies using questions based on actual community materials and emphasizes verifying assumptions directly with the community, which is consistent with the source's advice not to rely solely on generalized guides. The explanation of increased relevance and accuracy is a supported justification."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "The revision clarifies responsibility for overseeing the plan and specifies review cycles, which is a reasonable expansion from 'Name who owns the plan, who reviews translations, and when the plan is checked again.' It provides rationale for the original directive."
+      },
+      {
+        "fieldId": 9,
+        "severity": "note",
+        "finding": "This wording preserves the message that the CLAS standards and DHS language access practice are authoritative and that checks with the language access coordinator are necessary. The minor changes in phrasing do not affect substance."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1979,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 761,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2740
+    },
+    "review": {
+      "input_tokens": 2280,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 608,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2888
+    }
+  },
+  "createdAt": "2026-11-15T13:42:20.115Z"
+}

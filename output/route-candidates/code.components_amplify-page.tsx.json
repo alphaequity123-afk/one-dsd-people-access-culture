@@ -1,0 +1,123 @@
+{
+  "target": "code.components/amplify-page.tsx",
+  "kind": "surface",
+  "route": "components/amplify-page.tsx",
+  "sourceSha256": "a2df874f24ad3c58fe8d97908a636f0ec0fd4921a1f4bfd3c15d0eaa3ad9306c",
+  "status": "needs_revision",
+  "reviewedFieldCount": 27,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Trade a useful idea, find another perspective, or explore what you want to do next.",
+      "after": "Share a practical idea, seek another viewpoint, or consider your next steps for learning or practice.",
+      "reason": "Improved specificity and eliminated vague or slogan-like language. Clarifies that colleagues may use the space to exchange ideas, gain perspective, or plan their ongoing learning or work, rather than simply exploring as a general aim."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "Bring a question or possibility for better work. You do not need a finished solution.",
+      "after": "Bring a specific question or possibility for improving your work. You do not need a complete proposal or solution.",
+      "reason": "Specifies that the page invites concrete questions or initial possibilities for bettering work, and clarifies that participants are not expected to bring a finished solution."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field6"
+      ],
+      "before": "Start small and shape it together. A single conversation can be enough; you decide whether to continue.",
+      "after": "Begin with a small step and develop the conversation together. Even a single meeting can be helpful; you decide whether to continue.",
+      "reason": "Clarifies the process of shaping a mentoring conversation collaboratively and notes that a single exchange can have value. This replaces less precise language ('shape it together') with a professional explanation."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "field8"
+      ],
+      "before": "Invite someone to exchange perspectives. Agree on a time and a way to connect that works for both of you.",
+      "after": "Invite a colleague to share perspectives. Agree on a meeting time and method that suits both of you.",
+      "reason": "Clarifies that the aim is to share perspectives rather than just to 'exchange.' Replaces 'way to connect that works for both of you' with more concrete language about agreeing on meeting time and method."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "field10"
+      ],
+      "before": "Try one useful idea, reflect on the conversation, or agree to meet again.",
+      "after": "Test one practical idea, reflect on your discussion, or choose to meet again as needed.",
+      "reason": "Improved specificity: 'try' replaced with 'test,' and 'reflect on the conversation' clarified by referring to the previous discussion. 'Agree to meet again' is now conditional and practical."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "Field 1 changes the original intent from 'Trade a useful idea, find another perspective, or explore what you want to do next.' to 'Share a practical idea, seek another viewpoint, or consider your next steps for learning or practice.' The original ('explore what you want to do next') is broader and less tied to formal learning/practice than the change ('your next steps for learning or practice'), which imports unnecessary specificity and excludes broader exploration that is textually supported in source."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "Field 2 is a minor wording change ('Bring a question or possibility for better work. You do not need a finished solution.' to 'Bring a specific question or possibility for improving your work. You do not need a complete proposal or solution.'). This adds some specificity, but remains reasonably faithful to the source and does not introduce a policy or constraint unsupported by the code. Given the surface context, it is not a blocker."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "Field 6 rephrases ('Start small and shape it together. A single conversation can be enough; you decide whether to continue.' => 'Begin with a small step and develop the conversation together. Even a single meeting can be helpful; you decide whether to continue.'). This preserves meaning and instructional scope: 'even a single meeting can be helpful' is in spirit with 'can be enough,' and 'develop the conversation' tracks with 'shape it together.' Not a blocker."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "Field 8 changes 'Invite someone to exchange perspectives. Agree on a time and a way to connect that works for both of you.' to 'Invite a colleague to share perspectives. Agree on a meeting time and method that suits both of you.' This simplifies but does not restrict source meaning; 'way to connect' and 'method' are functionally near-equivalent. Not a blocker."
+      },
+      {
+        "fieldId": 9,
+        "severity": "blocker",
+        "finding": "Field 10 (id 9 in system, but matches code as field10) changes 'Try one useful idea, reflect on the conversation, or agree to meet again.' to 'Test one practical idea, reflect on your discussion, or choose to meet again as needed.' This change shifts 'try' (open-ended) to 'test' (which can have evaluative/binary connotation), 'your discussion' instead of 'the conversation' (arguably neutral but unnecessary), and adds 'as needed' which is not source-supported. Most critically, 'test' can imply a more formal or measured action than simply 'try', subtly narrowing scope. Though minor, compounded with the broadened conclusion ('choose to meet again as needed'), this adds meaning not present in the original. The source should be preserved for official instructional steps."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 5306,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 482,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5788
+    },
+    "review": {
+      "input_tokens": 4702,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 601,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5303
+    }
+  },
+  "createdAt": "2026-11-15T13:52:05.282Z"
+}

@@ -1,0 +1,165 @@
+{
+  "target": "code.app/learn/leadership-styles/capstone/page.tsx",
+  "kind": "surface",
+  "route": "/learn/leadership-styles/capstone",
+  "sourceSha256": "1c3f19771830b0331bfa62b3714fbeb24d94c0aea287192c84b24a7dce6bebe4",
+  "status": "needs_revision",
+  "reviewedFieldCount": 8,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Rewrite a weak leadership response, check it against an eight-point rubric, and practice with Guidance. Responses are scored, never people.",
+      "after": "Practice improving a weak leadership response by rewriting it, applying an eight-point rubric, and using Guidance as needed. The focus is on evaluating the response, not the individual.",
+      "reason": "Clarified the task sequence for practical clarity and emphasized the purpose that only the response is being evaluated, not the person. Replaced the less specific 'practice with Guidance' with a description more grounded in the activity's purpose."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Bring the pathway together by rewriting one weak response into a strong one. Then check your rewrite against the practice rubric.",
+      "after": "Summarize what you have learned by turning a weak response into a stronger one. Then use the practice rubric to check whether your revised response addresses key leadership criteria.",
+      "reason": "Connected the rewriting and rubric use steps, specifying that the rubric is intended to support self-checking for key criteria. Directly linked the summary task to the pathway context."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field3"
+      ],
+      "before": "A supervisor says this to the employee in the common scenario,",
+      "after": "In the common scenario, a supervisor tells the employee:",
+      "reason": "Clarified the speaker and context to avoid ambiguity and support later analysis. 'Tells the employee' is more direct than 'says this to the employee.'"
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field5"
+      ],
+      "before": "Write your answers in your own notes. This page does not collect or save what you write.",
+      "after": "Record your answers in your own notes. The page does not collect or save your writing.",
+      "reason": "Used 'record' for specificity. Kept the explanation about non-collection, but updated phrasing for clarity and formality in line with the writing standard."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field6"
+      ],
+      "before": "Try the tasks first. Then compare your thinking with this analysis.",
+      "after": "Complete the tasks first before reviewing this analysis. Comparing your reasoning with the explanation supports learning from both your process and the worked example.",
+      "reason": "Explained why trying the tasks before reading the analysis matters—supporting active learning principles. Made the connection between self-attempt and worked example explicit."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field7"
+      ],
+      "before": "It uses ethical behavior (a fair response and protected reporting), inclusive behavior (naming both concerns and access), directive behavior (the supervisor commits to act), and participative behavior (clarifying requirements and support together).",
+      "after": "The stronger response demonstrates ethical behavior (offering a fair response with protected reporting), inclusive behavior (addressing both concerns and access), directive behavior (the supervisor makes a clear commitment to act), and participative behavior (requirements and support are clarified together).",
+      "reason": "Clarified how each leadership behavior appears in the response and specified the supervisor's commitment in directive behavior. Used more precise linking for each element to practice-grounded behaviors."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field8"
+      ],
+      "before": "Does the response do each of these things?",
+      "after": "Does the response meet each of these leadership criteria?",
+      "reason": "Added specificity by referencing 'leadership criteria,' making it clear what the items in the rubric evaluate."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "field9"
+      ],
+      "before": "Work through the capstone one step at a time. Each choice is checked against the rubric, not against you. After you answer, you can ask Guidance for a hint or an example. Your progress stays on this device.",
+      "after": "Work through each step of the capstone activity in order. For each decision, your choice is compared to the rubric criteria, not to your personal attributes. After responding, you can ask Guidance for a hint or example. Progress is saved on your device only.",
+      "reason": "Clarified that choices are assessed by the rubric, not personal qualities. Made reference to sequence ('in order') for clarity. Specified local storage of progress to avoid privacy confusion."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The after text adds 'using Guidance as needed' and describes the activity as 'focusing on evaluating the response, not the individual.' However, the original states: 'practice with Guidance. Responses are scored, never people.' The change weakens the direct privacy assurance ('never people') and introduces a more circumlocutory phrase that is less grounded in the source's privacy commitment. The instruction to 'Practice improving' also reframes the task from a sequence of explicit actions as stated in the source ('Rewrite... check... practice...') to a more general intent, which is less directly supported by the wording of the official description and could mislead about the structure (which is stepwise, not blended). Blocker for erasing the direct privacy assurance and changing the instructional sequence."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The after text expands to clarify use of the rubric for leadership criteria and links summarization to learning. This is consistent in substance with the source, though it is more explicit in intent and slightly re-structures the summary. No policy text or direct legal statement is changed. Acceptable."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "Changing 'says this to the employee' to 'tells the employee:' is neutral in meaning regarding the scenario context. No source loss."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "'Record your answers' is a stylistic change from 'Write your answers.' The privacy assurance ('does not collect or save') is preserved exactly. No source loss."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "Addition of rationale ('supports learning...') is supplemental and correctly reflects the pedagogical principle applied elsewhere in the curriculum, with no policy or official record changes."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "More explicit description of the behaviors and clearer connection to practice; all elements from the original are retained with clarified matching. Acceptable as clarification."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "'Does the response meet each of these leadership criteria?' clarifies that the items refer to leadership; original meaning and rubric's intent are preserved."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "Expanded for clarity; the phrase 'your choice is compared to the rubric criteria, not to your personal attributes' is consistent with the source's privacy and evaluation assurance ('checked against the rubric, not against you'). The storage note is consistent in meaning. Acceptable."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2953,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 609,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3562
+    },
+    "review": {
+      "input_tokens": 3121,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 583,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3704
+    }
+  },
+  "createdAt": "2026-11-15T13:50:13.354Z"
+}

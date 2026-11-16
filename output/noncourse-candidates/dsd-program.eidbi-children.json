@@ -1,0 +1,126 @@
+{
+  "target": "dsd-program.eidbi-children",
+  "kind": "surface",
+  "route": "/one-dsd/programs/eidbi-children",
+  "sourceSha256": "62a2e046ebf383aa7360d07c31fdafc542a298824433bcd7a00cdd5674f454d2",
+  "status": "needs_revision",
+  "reviewedFieldCount": 5,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "title"
+      ],
+      "before": "Early Intensive Developmental and Behavioral Intervention and children's services",
+      "after": "EIDBI and Related Children's Services",
+      "reason": "Shortened and clarified the title for easier navigation while retaining the focus on EIDBI and other relevant services for children."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "intro"
+      ],
+      "before": "Services for children with autism and related conditions and their families.",
+      "after": "EIDBI and related children’s services support children diagnosed with autism spectrum disorder or related conditions. The services are designed to meet both the child’s clinical needs and family circumstances.",
+      "reason": "Expanded summary to clarify the scope of services, specifying the EIDBI focus and mentioning the intended outcomes for children and their families."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "equityEntryPoints",
+        0
+      ],
+      "before": "Family language and cultural context in diagnosis and planning",
+      "after": "Consider family language and cultural background during diagnosis and service planning.",
+      "reason": "Clarified the purpose of considering family language and culture, connecting it directly to the diagnosis and planning process."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "equityEntryPoints",
+        1
+      ],
+      "before": "Provider availability by community",
+      "after": "Map provider locations and qualifications to community needs.",
+      "reason": "Specified what is involved in checking provider availability, focusing on geographic and community access."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "equityEntryPoints",
+        2
+      ],
+      "before": "Trust with families who have experienced the system badly",
+      "after": "Build trust with families, especially those who have faced barriers or negative experiences in the service system.",
+      "reason": "Added detail about why trust matters, noting the impact of previous negative experiences and the need to address barriers."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed title 'EIDBI and Related Children's Services' omits the explicit mention of 'Early Intensive Developmental and Behavioral Intervention.' While brevity is improved, the full original title specifies both the EIDBI acronym and its meaning, which is key for users not already familiar with the program. The change loses clarity and specificity for navigation, especially for first-time or external users."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The expanded introduction accurately represents the scope of EIDBI and related children's services. It remains faithful to the original, clarifies that services are for those diagnosed with autism spectrum disorder or related conditions, and adds the intended outcome for both children and families. This does not overstep the original and is adequately grounded."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The reworded equity entry point for family language and culture clarifies the operational reason for considering language and culture in diagnosis and planning and correctly connects to policies around culturally responsive service delivery."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "Changing 'Provider availability by community' to 'Map provider locations and qualifications to community needs' makes the intent clearer and is justifiable based on common approaches to analyzing provider equity. Acceptable based on source direction."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "Enhancing the point about trust with additional detail—focusing on past barriers or negative experiences—is consistent with known challenges in equity and access. This is a justified, supportive clarification."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1184,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 265,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1449
+    },
+    "review": {
+      "input_tokens": 1033,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 392,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1425
+    }
+  },
+  "createdAt": "2026-11-15T13:38:39.568Z"
+}

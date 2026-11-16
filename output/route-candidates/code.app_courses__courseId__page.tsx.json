@@ -1,0 +1,81 @@
+{
+  "target": "code.app/courses/[courseId]/page.tsx",
+  "kind": "surface",
+  "route": "/courses/[courseId]",
+  "sourceSha256": "9e8c17af5ea77cd1b505a41cbfb4931971f76b0ac3afece906adfae7671ce59b",
+  "status": "needs_revision",
+  "reviewedFieldCount": 4,
+  "changes": [
+    {
+      "fieldId": 2,
+      "path": [
+        "field4"
+      ],
+      "before": "What you’ll practice and prepare",
+      "after": "What you’ll work on and develop",
+      "reason": "Clarifies the intent of the section by connecting practice with development, increasing specificity about the professional outcomes rather than just the process."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field7"
+      ],
+      "before": "All research and sources across the program",
+      "after": "All sources and research used in this program",
+      "reason": "Increases specificity and ties the sources directly to program use, clarifying that the list includes both sources and research supporting the program material."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 4,
+        "severity": "blocker",
+        "finding": "The source uses the phrase 'What you’ll practice and prepare' as a section heading. The proposed change to 'What you’ll work on and develop' is not directly supported by the source language. The source does not use the phrase 'work on and develop' nor does it provide a rationale for substituting 'practice' and 'prepare' with these terms. This is a material change to the intended meaning as set in the original content."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "The change from 'All research and sources across the program' to 'All sources and research used in this program' is minor and increases specificity, but there is no program-authored language requiring the exact ordering or phraseology. This is not a blocker, but editors should note that the original is slightly broader in scope while the proposed version narrows it to those 'used' in the program."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3686,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 111,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3797
+    },
+    "review": {
+      "input_tokens": 3348,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 234,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3582
+    }
+  },
+  "createdAt": "2026-11-15T13:48:19.588Z"
+}

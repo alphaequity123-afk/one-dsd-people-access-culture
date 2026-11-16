@@ -1,0 +1,171 @@
+{
+  "target": "resource.ref-adsa-engagement-guide",
+  "kind": "resource",
+  "route": "/library/ref-adsa-engagement-guide",
+  "sourceSha256": "71c954b9fe5e29658159ed15a7978feccddc4d209efa487269aa369a48d2d13b",
+  "status": "needs_revision",
+  "reviewedFieldCount": 8,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "The ADSA Equity Committee’s April 2026 guide connects community relationships with planning, accessible participation, outreach, engagement activities, and reporting.",
+      "after": "The ADSA Equity Committee’s April 2026 guide describes how to connect community relationships with planning efforts, support accessible participation, and structure outreach, engagement activities, and reporting.",
+      "reason": "Clarified the summary to specify how the guide functions and the direct elements it addresses, focusing on connections between community relationships and planning."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Use the guide to plan who can influence a decision, what participation requires, and how you will report back.",
+      "after": "Use this guide to decide who should be involved in a decision, determine what is needed for meaningful participation, and plan how to report outcomes and next steps to stakeholders.",
+      "reason": "Clarified the intended use of the guide by specifying the actions staff are expected to take—identifying stakeholders, participation needs, and reporting processes."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Start with the decision, the people affected, and what can change through their participation. The guide describes engagement as a shared responsibility and an approach that may need to change as relationships and circumstances develop.",
+      "after": "Begin by identifying the decision at hand, the people affected by it, and what outcomes could change through their involvement. The guide frames engagement as a shared responsibility that may need to adapt as relationships and circumstances evolve.",
+      "reason": "Reworded to align with established planning practices—define the decision, stakeholders, and potential changes. Clarified the dynamic nature of engagement and its implications for staff."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Its six planning considerations address trust, relationships and accountability; purpose, roles and resources; multiple perspectives; accessibility and inclusion; outreach and recruitment; and engagement activities.",
+      "after": "The guide outlines six planning considerations: building trust, fostering relationships and accountability; defining purpose, roles, and resources; seeking multiple perspectives; ensuring accessibility and inclusion; supporting outreach and recruitment; and designing engagement activities.",
+      "reason": "Rephrased for clarity and to aid staff in connecting each consideration directly to their planning process."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Plan for communication access, accessible content, accommodations, compensation, flexible participation, and the resources people need to take part. Ask communities about the approaches that work for them.",
+      "after": "Consider communication access, accessible materials, accommodations, compensation for participation, flexible ways to take part, and the resources required for full participation. Consult with community members about effective engagement methods from their perspective.",
+      "reason": "Specified key planning areas and emphasized the importance of consulting stakeholders, making it clear why these steps matter for effective participation."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "The guide discusses Tribal Nations and American Indian communities, consultation partners, the IAP2 participation spectrum, and the need to clarify how participants can influence decisions. Follow the applicable government-to-government consultation process.",
+      "after": "The guide addresses working with Tribal Nations and American Indian communities, consultation with key partners, use of the IAP2 participation spectrum, and the need to clarify how participant input can affect decisions. Staff should follow established government-to-government consultation procedures when relevant.",
+      "reason": "Clarified that staff must recognize defined consultation processes and what the guide covers regarding different forms of engagement and influence."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Complete the engagement cycle by sharing what was learned, explaining how input affected the work, identifying audiences and communication channels, and documenting follow-through.",
+      "after": "To complete the engagement process, share what was learned, explain how input influenced the work, identify the audiences and the best ways to reach them, and document follow-through actions to maintain transparency and accountability.",
+      "reason": "Strengthened the explanation of why each element—reporting, documentation, and communication—matters to the engagement cycle and agency transparency."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "This 60-page supplied PDF was written for ADSA staff and retains its original internal-document label. The program owner authorized its inclusion for internal and public audiences on October 24, 2026. Internal contacts and procedures are context for ADSA; public readers should use their established agency contact. Inclusion does not turn every example into an agencywide requirement.",
+      "after": "This 60-page PDF was developed for ADSA staff and marked as an internal document. Inclusion here was authorized for both internal and public audiences on October 24, 2026. ADSA-specific contacts and procedures reflect their internal context; readers from other agencies should rely on their standard contact paths. Including the guide does not create agencywide requirements beyond its intended scope.",
+      "reason": "Clarified the scope and intended audience, preserved context regarding agency contacts, and explained that not all examples set uniform agency requirements."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revised summary is generally clear and does not contradict the source. It moderately shifts tone (\"describes how to connect\" vs. \"connects\") and adds \"structure outreach\" and \"support accessible participation,\" which are inferable from the guide's purpose but not explicit in the introduction. No blocker."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "Changes clarify staff decisions and add 'meaningful' to participation and 'outcomes and next steps.' The original only says 'plan who can influence a decision, what participation requires, and how you will report back,' so the rewrite is more prescriptive and slightly interpretive but not misleading. No blocker."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "Both versions correctly reflect and paraphrase the guide's opening framing. The rewrite is compatible with source intent."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The rewrite rephrases the original list for clarity; these are valid paraphrases of the six source considerations and preserve their meaning. No blocker."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The revision substitutes 'consider' for 'plan for' and clarifies compensation and resources. It interprets “Ask communities about the approaches that work for them” as “Consult with… about engagement methods.” This remains source-aligned with the intent to emphasize community input; no inaccuracies. No blocker."
+      },
+      {
+        "fieldId": 5,
+        "severity": "blocker",
+        "finding": "Original: 'The guide discusses Tribal Nations and American Indian communities, consultation partners, the IAP2 participation spectrum, and the need to clarify how participants can influence decisions. Follow the applicable government-to-government consultation process.' Rewrite: '...addresses working with Tribal Nations and American Indian communities, consultation with key partners, use of the IAP2 participation spectrum, and the need to clarify how participant input can affect decisions. Staff should follow established government-to-government consultation procedures when relevant.' Blocker: The original language clearly asserts there is a required ('applicable') consultation process; the rewrite weakens this to an optional ('when relevant') and less legalistic 'procedures.' Changing a required instruction regarding consultation to a conditional or optional statement changes the legal obligation, which is a prohibited change. The rewrite must preserve 'Follow the applicable government-to-government consultation process.'"
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The reworded sentence maintains the steps described in the source and adds transparency/accountability context, which is reasonable and grounded in engagement best practices, which are also supported by the guide. No blocker."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "The rewrite is a slightly more concise restatement of the source, clarifying scope and agency-specific procedures. Factual limits are retained. No blocker."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1928,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 669,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2597
+    },
+    "review": {
+      "input_tokens": 2153,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 582,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2735
+    }
+  },
+  "createdAt": "2026-11-15T13:43:25.758Z"
+}

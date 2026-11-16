@@ -1,0 +1,165 @@
+{
+  "target": "support.right-person",
+  "kind": "surface",
+  "route": "/support/right-person",
+  "sourceSha256": "4eef4c8854b5701a47962a4465a578d762378acc06c3322c4f0dafe03f35592f",
+  "status": "needs_revision",
+  "reviewedFieldCount": 60,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "introLede"
+      ],
+      "before": "Tell us what kind of work it is. You will get material to begin with on your own, and the roles or offices most likely to own the decision.",
+      "after": "Describe the type of work involved. You will receive material to help you get started independently, followed by information about the roles or offices most likely responsible for the decision.",
+      "reason": "Clarified that users receive both self-start resources and a list of offices/roles with likely decision authority. Replaced dismissive tone with an explicit explanation."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "formIntro"
+      ],
+      "before": "Describe the work in general terms. Leave out names, complaints and private case details.",
+      "after": "Briefly describe the work. Avoid personal names, specific complaints, or private case details. This helps identify the right help while protecting privacy and focusing on the work need.",
+      "reason": "Added the purpose for omitting names and specifics; clarifies connection to identifying appropriate help while protecting privacy, meeting the guidance to explain why the instruction matters."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "oneDhsRouteNote"
+      ],
+      "before": "This points you to the person or office responsible for the work. Consultation requests are not collected on the public learning pages.",
+      "after": "This page guides you to the person or office responsible for your work area. Public learning pages do not collect formal consultation requests; they are for reference and guidance only.",
+      "reason": "Clarified the purpose of the page and explained why formal requests are not collected. Removed ambiguity and stated the function as a reference rather than a request platform."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "emptyResultBody"
+      ],
+      "before": "Answer the three questions and you will see a place to start on your own, plus the roles or offices most likely to hold the authority you need.",
+      "after": "Once you answer all three questions, this section will display a recommended starting point and indicate the roles or offices most likely to hold the relevant authority. This supports your ability to act without delay or confusion about where to begin.",
+      "reason": "Made the connection between answering and the results explicit and explained how this step supports action and reduces confusion."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "directoryNote"
+      ],
+      "before": "Use the current DHS staff directory, intranet, or your supervisor to confirm the named contact. Contact details appear here once the responsible office has confirmed them.",
+      "after": "Check the DHS staff directory, intranet, or ask your supervisor to confirm the appropriate contact. Contact details are posted here once they are confirmed by the responsible office. Confirming the right contact helps avoid delays or errors in communication.",
+      "reason": "Clarified the process and explained the practical need to confirm contacts to avoid misdirected requests and delays."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "dsdOptionBody"
+      ],
+      "before": "Talk the work through within your existing, authorized workplace arrangements. Learning on this site informs a decision; it does not make one.",
+      "after": "Discuss your work within your usual, authorized workplace channels before escalating. Using guidance from this site can inform your decision-making, but final decisions remain with the responsible roles—not the site material.",
+      "reason": "Specifies why internal arrangements matter—acts as a practical preliminary step. Makes it explicit that site learning is advisory, not decisive."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "oneDhsDecisionBody"
+      ],
+      "before": "Start with program guidance, then contact the responsible person or office when a person needs to decide.",
+      "after": "Start by reviewing program guidance, then reach out to the person or office responsible when you or another person needs to make a decision. This helps ensure that actions align with established authority and reduces the risk of uncoordinated decisions.",
+      "reason": "Explains the practical connection between available guidance and reaching appropriate decision makers. Adds reasoning about maintaining coordinated and authorized actions."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "oneDsdDecisionBody"
+      ],
+      "before": "After using the support that fits your work, share a general request so it can be confirmed as DSD work.",
+      "after": "After you use the available support for your work, you may submit a general request. This lets the appropriate office confirm if the task falls within DSD and identify next steps. Using support first helps focus requests and minimizes unnecessary consultation.",
+      "reason": "Clarified process to emphasize why support should be used first, and stated why confirmation of DSD is a needed step. Connects practical reasoning to efficient consultations."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revised 'introLede' changes the source's meaning. The original states 'You will get material to begin with on your own, and the roles or offices most likely to own the decision.' The rewritten version says 'You will receive material to help you get started independently, followed by information about the roles or offices most likely responsible for the decision.' The phrase 'followed by' implies both a change in order and a separation, not directly present in the original. The change from 'most likely to own the decision' to 'most likely responsible' is substantively similar, but the rephrasing introduces unnecessary narrative changes and slight drift. The source does not provide evidence for the sequence or for splitting the original material into separate phases."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The description in 'formIntro' remains accurate. It adds a brief purpose for omission ('This helps identify the right help while protecting privacy and focusing on the work need'), which aligns with agency privacy and practical review standards. This addition meets the standard for explaining 'why.'"
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The update to 'oneDhsRouteNote' clarifies existing meaning without legal or procedural drift. It correctly reframes public learning pages as reference, not request channels, matching intent."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The changes to 'emptyResultBody' add clarification about the function and outcome of the form. The added explanation does not misrepresent the provided service."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The rewording for 'directoryNote' clarifies why contacts are to be confirmed and gives details on avoiding errors, which does not alter legal or factual conditions."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "The 'dsdOptionBody' rewrite preserves the source meaning and clarifies that internal workflows precede reference site information. It correctly grounds final decisions with the responsible roles rather than attributing authority to the website."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "This change to 'oneDhsDecisionBody' clarifies the workflow and importance; it explains why to start with guidance and preserves the original instruction. The additional explanation improves user understanding."
+      },
+      {
+        "fieldId": 10,
+        "severity": "note",
+        "finding": "Expanding 'oneDsdDecisionBody' to clarify the order and purpose of support versus submitting requests is warranted; it does not invent new procedure and is consistent with the guidance standard."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 4259,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 748,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5007
+    },
+    "review": {
+      "input_tokens": 2977,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 527,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3504
+    }
+  },
+  "createdAt": "2026-11-15T13:38:23.447Z"
+}

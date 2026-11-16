@@ -1,0 +1,81 @@
+{
+  "target": "code.app/learn/clas/page.tsx",
+  "kind": "surface",
+  "route": "/learn/clas",
+  "sourceSha256": "566ea7bd411cdd263a7e469eb39dccc964dca8444f0747d193338411af5e39b3",
+  "status": "needs_revision",
+  "reviewedFieldCount": 38,
+  "changes": [
+    {
+      "fieldId": 5,
+      "path": [
+        "field5"
+      ],
+      "before": "A shared reference for thoughtful practice.",
+      "after": "Shared reference for effective practice.",
+      "reason": "Briefly clarifies purpose and reduces wording repetition. The header already introduces the idea of considering practice standards; \"thoughtful\" is redundant and less precise here."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field6"
+      ],
+      "before": "Culturally and Linguistically Appropriate Services connects respectful communication with workforce preparation, leadership, community participation and improvement. Confirm which standards and separate legal, policy or contract requirements apply to your work.",
+      "after": "Culturally and Linguistically Appropriate Services (CLAS) connects respectful communication with workforce preparation, leadership, community participation, and ongoing improvement. To apply CLAS correctly, check which standards and which separate legal, policy, or contract requirements apply to your work. Keep in mind each requirement may set different parameters for service delivery or communication, and not all standards apply to every activity. Confirming these distinctions helps staff align actions with current obligations and program goals.",
+      "reason": "Improved specificity about why staff must confirm which standards and requirements apply, with clear explanation of connected consequences and reasoning. Reduced unnecessary repetition and clarified for professional audience."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 5,
+        "severity": "blocker",
+        "finding": "The original ('A shared reference for thoughtful practice.') is verbatim from the surface source and appears as a stylized sidebar heading ('clas-note') that intentionally highlights 'thoughtful practice' as a value connected with CLAS. The replacement 'Shared reference for effective practice.' both alters the wording and changes the meaning from 'thoughtful'—emphasizing deliberation, respect, and intentionality—to 'effective,' which emphasizes practical impact rather than the reflective, values-based quality that the CLAS framework is known for. The program standard requires exact preservation of such source-provided values language."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The proposed change maintains the source meaning and expands on the reasoning, offering more specific guidance on why to confirm applicable standards and how different requirements may set varying limits or expectations. This is an acceptable extension for a professional audience, as it does not contradict or inaccurately reinterpret the source and connects with the line 'Confirm which standards and separate legal, policy or contract requirements apply to your work.'"
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 4898,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 271,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5169
+    },
+    "review": {
+      "input_tokens": 3768,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 262,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4030
+    }
+  },
+  "createdAt": "2026-11-15T13:49:33.081Z"
+}

@@ -1,0 +1,77 @@
+{
+  "target": "code.components/clas-planning-worksheet.tsx",
+  "kind": "surface",
+  "route": "components/clas-planning-worksheet.tsx",
+  "sourceSha256": "2ed317766a96b07c2c2b76290951ffedacc9e53847530f2e94a7470b89ff53b6",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field1"
+      ],
+      "before": "These notes are not saved or submitted. Download or copy what you want to keep before leaving. Use general service information and responsible roles; leave out names, health, case, personnel and confidential records.",
+      "after": "You are preparing private working notes as you plan for culturally and linguistically appropriate services. These notes are not saved or submitted by this worksheet. Download or copy your notes before leaving this page, as you will not be able to access them later. Include only general service details and responsible roles. Do not include names, health information, individual case details, personnel matters, or confidential records, as these do not belong in this planning worksheet.",
+      "reason": "Clarified the purpose and privacy of the notes and explained why not to include specific types of information. Improved specificity to fit Minnesota DHS and DSD work, provided a clear explanation of what to do and why, and avoided unnecessary repetition while retaining key instructions."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The rewritten field changes the original warning from a brief privacy caution (plain reminder) to an invented procedural/legal policy and rationale not present in the source. It moves from a plain statement of action/consequences ('not saved or submitted', 'download or copy', 'leave out X') to extended explanations and rationales ('as you plan for culturally and linguistically appropriate services', 'as these do not belong in this planning worksheet'), which are not present or supported by the code, nor tied to any cited Minnesota DHS/DSD record or standard. This qualifies as an unsupported explanation in an official information context."
+      },
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revision invents a new privacy assurance about 'private working notes' that overstates the technical privacy of the worksheet. The source states only that 'these notes are not saved or submitted', but does not declare them 'private' or make detailed security assurances. This change introduces new legal/technical implications unsupported by the design."
+      },
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "Some restructuring for clarity (splitting instructions, clarifying some categories of excluded info) may improve understanding, but these changes are not sufficient to overcome the unsupported extensions and assurances described above."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1755,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 164,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1919
+    },
+    "review": {
+      "input_tokens": 1531,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 273,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1804
+    }
+  },
+  "createdAt": "2026-11-15T13:52:25.078Z"
+}

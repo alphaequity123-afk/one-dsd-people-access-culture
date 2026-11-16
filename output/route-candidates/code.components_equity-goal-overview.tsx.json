@@ -1,0 +1,67 @@
+{
+  "target": "code.components/equity-goal-overview.tsx",
+  "kind": "surface",
+  "route": "components/equity-goal-overview.tsx",
+  "sourceSha256": "18ac4611b72f7944e7ee36c2de13fe79238dcbc4e470eea0db985400f325b4f0",
+  "status": "needs_revision",
+  "reviewedFieldCount": 3,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "The Aging and Disability Services Administration goals connect learning to decisions, team practices, and public service. Explore all six, find relevant tools, and plan a change you can review.",
+      "after": "These six goals from the Aging and Disability Services Administration show how staff can use equity commitments in daily decisions, team approaches, and work with the public. Reviewing these goals helps staff see where equity applies, compare available tools, and consider steps for practical change. Planning and tracking changes based on these goals supports shared improvement and clarity about next steps.",
+      "reason": "The revision clarifies why the six equity goals matter for DHS and DSD staff by explicitly linking the goals to staff actions and the process of planning and reviewing changes. It connects the goals to specific work contexts and explains the practical reason for reviewing and using them—improving equity in work and tracking progress. The new text deepens program-grounded specificity and substantive reasoning without inventing policy or overstating outcomes."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The revision alters the page's core meaning and policy record. The original ties the goals to 'connecting learning to decisions, team practices, and public service,' which is a summary of their stated scope. The replacement adds interpretation regarding how staff 'can use equity commitments,' introduces new concepts about 'tracking changes,' and asserts that this process 'supports shared improvement and clarity.' These points are not substantiated by the source code or its referenced model: the page as written invites participants to explore and use the goals, but does not present an explicit agency obligation or the process of tracking or shared improvement. The edit extrapolates intent and outcomes beyond what the source states, therefore materially changing official meaning and scope."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1476,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 181,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1657
+    },
+    "review": {
+      "input_tokens": 1225,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 164,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1389
+    }
+  },
+  "createdAt": "2026-11-15T13:53:29.887Z"
+}

@@ -1,0 +1,97 @@
+{
+  "target": "workforce.health-care",
+  "kind": "surface",
+  "route": "/consultant/workforce/health-care",
+  "sourceSha256": "9a0cdbaad66cc58ba155832778a9271a587d92396cbe65db1af8c57d02f81e0a",
+  "status": "model_checked",
+  "reviewedFieldCount": 3,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "relationship"
+      ],
+      "before": "Listed as an agency area or associated service. This does not establish a direct reporting line.",
+      "after": "Health Care Administration is identified as an agency area or associated service within Minnesota DHS. This listing does not define organizational reporting lines or supervision; staff should confirm reporting relationships through official channels as needed.",
+      "reason": "Clarifies what 'listed as an agency area or associated service' means in the DHS context, and explains why it matters for staff to confirm actual reporting lines."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "leadership",
+        0
+      ],
+      "before": "Assistant Commissioner and deputy leadership roles appear in the public directory.",
+      "after": "The public directory identifies Assistant Commissioner and deputy leadership roles for Health Care Administration. These listings help staff understand who occupies senior positions, but do not clarify specific responsibilities or oversight without additional confirmation.",
+      "reason": "Expands on the directory's function and limitations, connecting use to staff needs for clarity about who holds key roles."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "leadership",
+        1
+      ],
+      "before": "Eligibility, research and quality, finance, and provider services leadership are listed; detailed reporting and delegated authority need confirmation.",
+      "after": "Leadership teams for eligibility, research and quality, finance, and provider services are listed in the public directory. However, the directory does not provide full details about each leader’s reporting structure, scope of delegated authority, or operational responsibilities. Staff should review formal announcements or organizational charts when precise information is necessary for their work.",
+      "reason": "Elaborates on the gap in directory detail and describes practical next steps for staff who need to understand leadership responsibilities."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revised explanation gives additional clarity to the phrase 'listed as an agency area or associated service,' situating Health Care Administration within DHS in a way that matches source directory practices. It is clear to note that listing does not define reporting lines, which is accurate and helps contextualize the public directory's information. The suggestion for staff to confirm reporting relationships is reasonable and does not add unsupported requirements."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The update accurately elaborates on the effect of the public directory and does not misrepresent the source. It notes the function of the directory in identifying senior roles, which is consistent with directory content, and appropriately mentions the need for further confirmation to understand responsibilities or oversight."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The change aligns with the reality of the DHS directory: it names areas of leadership but does not spell out chains of authority or operational detail. Recommending that staff check announcements or org charts when more precision is needed is sound and within the bounds of the agency's internal practices."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1193,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 266,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1459
+    },
+    "review": {
+      "input_tokens": 1055,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 276,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1331
+    }
+  },
+  "createdAt": "2026-11-15T13:37:35.576Z"
+}

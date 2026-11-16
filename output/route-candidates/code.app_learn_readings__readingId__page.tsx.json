@@ -1,0 +1,118 @@
+{
+  "target": "code.app/learn/readings/[readingId]/page.tsx",
+  "kind": "surface",
+  "route": "/learn/readings/[readingId]",
+  "sourceSha256": "59a2a56358aa4bafb5655cdfb6a1558d87f640a03cea13dea9d70261f4a1734e",
+  "status": "needs_revision",
+  "reviewedFieldCount": 17,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field2"
+      ],
+      "before": "These reading notes present the author&apos;s arguments for reflection and discussion. They are not statements of DHS policy.",
+      "after": "These reading notes summarize arguments and perspectives from the author for your reflection and staff discussions. They are not Minnesota DHS policy and should not be read as agency direction.",
+      "reason": "Clarifies that the notes are a summary of the author’s ideas, emphasizes intended use by staff, and directly states these notes are not agency direction, which meets standards for audience and purpose."
+    },
+    {
+      "fieldId": 11,
+      "path": [
+        "field13"
+      ],
+      "before": "This activity is a learning suggestion inspired by the reading.",
+      "after": "This activity offers an example for learning, based on the main ideas in the book. It is intended to prompt discussion and practice, rather than provide required procedures.",
+      "reason": "Specifies the kind of learning (example-based, discussion-oriented) and clarifies that this does not establish requirements, in line with the professional use case."
+    },
+    {
+      "fieldId": 13,
+      "path": [
+        "field15"
+      ],
+      "before": "Return to your reflection after trying the idea. What evidence would help you judge whether it made a difference?",
+      "after": "After you try the idea, revisit your earlier reflection. Identify what evidence or outcomes you would check to determine whether your approach made a difference in your work.",
+      "reason": "Makes the reasoning process explicit: why it matters to reflect after trying a suggested idea and how to use evidence to inform practice improvements."
+    },
+    {
+      "fieldId": 14,
+      "path": [
+        "field16"
+      ],
+      "before": "Explore how a service notice can create work for the person receiving it, then consider a more accessible approach.",
+      "after": "The example shows how a service notice can unintentionally create confusion or additional work for the person who receives it. Use this scenario to examine options for writing or delivering service information in a clearer and more accessible way.",
+      "reason": "Adds clarity about why the staff member is analyzing the notice, what to look for, and the practical purpose of considering alternate approaches."
+    },
+    {
+      "fieldId": 15,
+      "path": [
+        "field18"
+      ],
+      "before": "These notes summarize and discuss the book; they do not reproduce the full text. Ideas attributed to the author are perspectives for consideration, not statements of DHS policy. Consult the book for its complete argument and the applicable guidance for decisions in your work.",
+      "after": "These notes provide a summary and discussion of the book. They do not include the entire book text. When an idea is attributed to the author, treat it as a viewpoint to consider—not as Minnesota DHS policy. Use the original book to review the author's full reasoning and refer to state or agency guidance for policy decisions related to your work.",
+      "reason": "Clarifies the purpose of the page, what is and is not included, how attributions should be interpreted, and directs readers to the original and to policy guidance for decisions. Increases professional clarity about source, scope, and limitations."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The proposed replacement for field2 – 'These reading notes summarize arguments and perspectives from the author for your reflection and staff discussions. They are not Minnesota DHS policy and should not be read as agency direction.' – introduces claims and specificity not supported by the source. The original wording is: 'These reading notes present the author's arguments for reflection and discussion. They are not statements of DHS policy.' The original simply frames the notes as for 'reflection and discussion' and a disclaimer about policy. The change ('...should not be read as agency direction', 'for your reflection and staff discussions', 'Minnesota DHS policy') is more directive, adds location/state reference, intent, and restates agency purpose beyond the source. This over-specifies the audience/use and alters the meaning."
+      },
+      {
+        "fieldId": 13,
+        "severity": "note",
+        "finding": "Field15's revision better explains the reasoning process and expands on evidence use, aligning with source intent. The added specificity is reasonable and the change is supported."
+      },
+      {
+        "fieldId": 14,
+        "severity": "note",
+        "finding": "Field16's revision expands on the scenario and clarifies intended analysis and outcomes. While more detailed, it stays within the scope and intent of the original activity suggestion."
+      },
+      {
+        "fieldId": 15,
+        "severity": "note",
+        "finding": "Field18's revision improves clarity without introducing unsupported claims, keeping to the outlined purpose and policy boundaries. It remains faithful to the meaning of the source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 4048,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 470,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4518
+    },
+    "review": {
+      "input_tokens": 3768,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 308,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4076
+    }
+  },
+  "createdAt": "2026-11-15T13:50:30.883Z"
+}

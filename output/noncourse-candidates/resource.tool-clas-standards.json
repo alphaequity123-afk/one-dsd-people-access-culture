@@ -1,0 +1,127 @@
+{
+  "target": "resource.tool-clas-standards",
+  "kind": "resource",
+  "route": "https://thinkculturalhealth.hhs.gov/clas",
+  "sourceSha256": "0b66144ddf62917b05dcf650f8aa9dddf3eb66f6677e887e8cb50ccb18febc88",
+  "status": "model_checked",
+  "reviewedFieldCount": 5,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "The U.S. Department of Health and Human Services Office of Minority Health publishes the National Standards for Culturally and Linguistically Appropriate Services. These public standards may be cited, linked, and followed as a frame for language and cultural access planning.",
+      "after": "The U.S. Department of Health and Human Services (HHS) Office of Minority Health issues the National Standards for Culturally and Linguistically Appropriate Services (CLAS). These public federal standards offer a structured reference to support language and cultural access planning. DSD and other DHS teams can cite, link, or use these standards to guide decisions and frame improvement efforts.",
+      "reason": "Clarifies the federal authority and intended use for DHS and DSD colleagues, while specifying that the standards can support concrete planning and decision-making."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Owner and publisher: U.S. Department of Health and Human Services, Office of Minority Health. Status: public federal standards. Current HHS text, dated June 2025 by its file name; it no longer uses the 2013 wording on equitable care and a diverse workforce.",
+      "after": "Owner and publisher: U.S. Department of Health and Human Services, Office of Minority Health. Status: public federal standards. The current standards are presented in the June 2025 HHS release and no longer use the former 2013 language on equitable care and workforce diversity.",
+      "reason": "Clarifies the transition from earlier wording and specifies the 2025 release to support accurate reference."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Purpose: fifteen standards for governance, workforce, communication and language assistance, and engagement, continuous improvement, and accountability.",
+      "after": "Purpose: The standards consist of fifteen elements addressing governance, workforce practices, communication and language assistance, and engagement in continuous improvement and accountability. They are meant to guide organizations as they review and strengthen access and responsiveness for culturally and linguistically diverse communities.",
+      "reason": "Expands on the role of the standards to clarify for staff why each area is named, beyond only listing topics."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Limits: standards, not a plan. Fidelity depends on local implementation and ongoing work with the communities served. Cultural material still needs sourcing and humility.",
+      "after": "Limits: The CLAS standards provide guidance but are not a prescriptive plan. Their effectiveness relies on local implementation, the judgment of service teams, and continuing engagement with the communities served. Cultural materials and approaches still require source validation and ongoing critical review, recognizing the need for humility when applying standards across varied contexts.",
+      "reason": "Connects the importance of staff and local context to the ongoing process of using standards, reinforcing why fidelity depends on team and community interaction."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Program use: the language and cultural access planning aid uses the standards as its frame.",
+      "after": "Program use: DSD's language and cultural access planning aid adopts the CLAS standards as its foundation. Staff can refer to these standards as a common framework when evaluating or developing practices to improve equitable access to services.",
+      "reason": "Details how the standards are used within DSD and specifies value for staff linking practice evaluation and development to this framework."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revised summary more directly names HHS and CLAS, expands on practical use as a guide for DSD and DHS teams, and maintains alignment with the original source's intent. It does not invent policy or claim obligations, instead clarifying use as a frame for access planning, which the source supports."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The clarification about the June 2025 release and transition from 2013 language reflects the source's file information and alert about no longer using the prior wording. The change is a precise edit within source scope."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The expanded wording introduces explanatory intent (\"guide organizations as they review and strengthen access and responsiveness...\"), which is consistent with the standards' described purpose and does not exceed source claims. It remains true to the official description."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The revised text still states the standards are not a plan, but elaborates on the role of local teams and the need for humility and ongoing engagement. This aligns with the original limiter and does not add unsupported requirements."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The revision specifies that DSD's planning aid uses the CLAS standards as a foundation and makes clear for staff that they serve as a framework for evaluation and development, which is presented in the original and adds helpful specificity for the audience."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1593,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 478,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2071
+    },
+    "review": {
+      "input_tokens": 1651,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 309,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1960
+    }
+  },
+  "createdAt": "2026-11-15T13:42:46.818Z"
+}

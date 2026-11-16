@@ -1,0 +1,81 @@
+{
+  "target": "code.app/about/page.tsx",
+  "kind": "surface",
+  "route": "/about",
+  "sourceSha256": "a0aa1b4ce705a4feb2c3571c61d2daf4e418df1f7ec2ba3a579a54eb9a395e13",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field1"
+      ],
+      "before": "One DSD People, Access and Culture supports the Disability Services Division within the Aging and Disability Services Administration at Minnesota DHS. Understanding our programs, partners and shared responsibilities helps connect equity, accessibility and inclusion with service delivery and workplace decisions.",
+      "after": "One DSD People, Access and Culture provides dedicated support for the Disability Services Division (DSD), which is part of the Aging and Disability Services Administration at Minnesota DHS. By understanding how our programs, partners, and shared responsibilities intersect, staff are better equipped to integrate equity, accessibility, and inclusion into direct services and internal workplace decisions. Clear links between our division and the broader agency help staff make informed choices and reinforce consistent practices across DSD.",
+      "reason": "Clarifies that One DSD People, Access and Culture supports DSD specifically; details that DSD is part of the Aging and Disability Services Administration; and explains the practical value of understanding these connections—enabling staff to integrate equity, accessibility, and inclusion in their work. Expands on how this understanding guides service and operational decisions, strengthening practical relevance for staff without resorting to slogans."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field3"
+      ],
+      "before": "The program connects learning, practice and review in a deliberate sequence, rests on three pillars of equity practice, and makes specific commitments to the people who use it. Those are set out on their own page, alongside the charter that governs the whole program.",
+      "after": "The program uses a structured approach, deliberately connecting learning, practical application, and regular review. Its foundation rests on three defined pillars of equity practice. The program also outlines specific commitments to staff and community members who participate. Detailed explanations of these elements, along with the charter that sets program governance and authority, are available on dedicated pages. Reviewing these documents helps staff understand expectations and the reasoning behind program processes.",
+      "reason": "Clarifies what the structured sequence means by naming \"learning, practical application, and regular review.\" Specifies that the three equity pillars are defined, and that there are explicit commitments to participants. States where to find more detail, and explains that understanding these documents informs staff actions and accountability. Removes ambiguous reference to 'the people who use it' and instead names staff and community members."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed 'after' text alters the scope and meaning of the source. The source says: \"One DSD People, Access and Culture supports the Disability Services Division within the Aging and Disability Services Administration at Minnesota DHS. Understanding our programs, partners and shared responsibilities helps connect equity, accessibility and inclusion with service delivery and workplace decisions.\" \n\nThe replacement adds qualifications ('provides dedicated support'), parenthetically calls out the DSD acronym, adds new text about how understanding these connections 'equips staff,' and invents an assertion that 'clear links between our division and the broader agency help staff make informed choices and reinforce consistent practices.' This last point is not in the source. The rewritten prose changes the tone from a factual description to one that asserts effects and rationale not directly stated in the source. The change is not fully grounded in or limited by the source evidence."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The revision to the program description changes both structure and meaning. The original source says: \"The program connects learning, practice and review in a deliberate sequence, rests on three pillars of equity practice, and makes specific commitments to the people who use it. Those are set out on their own page, alongside the charter that governs the whole program.\"  \n\nThe revision creates a more detailed structure (\"learning, practical application, and regular review\"), calls the three pillars \"defined\" when the source does not specify that, claims commitments are to 'staff and community members' rather than the original 'people who use it,' and adds editorial advice about 'reviewing these documents helps staff understand expectations,' which is not sourced from the provided evidence. The changes introduce both unsourced specificity (audience) and guidance (how and why to use these documents) beyond the original. This goes beyond standard clarification and into changed meaning."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2909,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 360,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3269
+    },
+    "review": {
+      "input_tokens": 2873,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 397,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3270
+    }
+  },
+  "createdAt": "2026-11-15T13:47:22.625Z"
+}

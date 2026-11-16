@@ -47,7 +47,7 @@ export function ResourceLearningAssistant({ resourcePath, prompts, embedded = fa
       ? prompts ? "Ask a question about the case or readings."
         : "Ask about the selected resource or try one of the starting questions."
       : "Ask across the program’s published resources or try one of the starting questions."}
-    privacyNotice="Use fictional examples or remove identifying details. Your question and relevant passages are shared with an outside service to prepare the answer."
+    privacyNotice="Use fictional examples or remove identifying details."
     workingMessage="Checking the readings…"
     modes={modes.map(({ value, label, library, scoped }) => ({ value, label, prompt: prompts?.[value] ?? (resourcePath ? scoped : library) }))}
     citationAllowed={localStudyHref}

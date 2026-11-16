@@ -1,0 +1,95 @@
+{
+  "target": "code.components/resource-release-client.tsx",
+  "kind": "surface",
+  "route": "components/resource-release-client.tsx",
+  "sourceSha256": "3d7aa473ab292d7816e52ab45dff96cdf5bc90cda419bb4c4a2761bf693b242c",
+  "status": "needs_revision",
+  "reviewedFieldCount": 15,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Choose the reviewed classification and record why this resource may be shown at the program&apos;s staff-facing web address without sign-in.",
+      "after": "Select the content classification and explain why this resource should be available at the staff-facing web address without requiring sign-in. This decision documents the rationale for making resource content widely accessible to staff.",
+      "reason": "Expands on the purpose of the classification and decision process, clarifying the requirement for both a selection and justification. Explains the reasoning behind documenting this information for staff access management."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Why access without sign-in is appropriate",
+      "after": "Reason access without sign-in is appropriate",
+      "reason": "Clarifies the intent by specifying that a reason is required, and aligns with professional language standards by converting the sentence to a title-style label."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "I approve showing this reviewed resource without sign-in at the program&apos;s staff-facing web address.",
+      "after": "I confirm this reviewed resource is appropriate for display without staff sign-in at the program's staff-facing web address.",
+      "reason": "Clarifies the reviewer’s responsibility and uses more direct language to specify the action being approved. Removes passive phrasing in favor of affirming the staff role in the decision."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The expansion from 'Choose the reviewed classification and record why this resource may be shown at the program's staff-facing web address without sign-in.' to the longer wording invents policy intent and adds procedural expectations not found in the source. The original field is a concise instruction located above a set of input fields; it does not discuss documenting rationale for broad access or staff access management generally. The rewrite creates legal-sounding obligations and explanations that are unsupported, violating the standard to preserve scope and grounds in the full source."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The change from 'Why access without sign-in is appropriate' to 'Reason access without sign-in is appropriate' is a minor rewording. While the latter is more title-like, both are supported by the source and suit the context—a label for a required text input. The new version is not a material deviation."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The change from 'I approve showing this reviewed resource without sign-in at the program's staff-facing web address.' to 'I confirm this reviewed resource is appropriate for display without staff sign-in at the program's staff-facing web address.' alters both the authority of the statement ('approve' vs 'confirm') and its meaning. The original checkbox explicitly records approval, which is a specific, actionable decision required by the process. 'Confirm' conveys a different, more passive meaning. The rewrite also makes the sentence more awkward and less natural for a staff attestation. The program writing standard requires preserving the decision’s scope and meaning."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 5900,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 239,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 6139
+    },
+    "review": {
+      "input_tokens": 5395,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 381,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5776
+    }
+  },
+  "createdAt": "2026-11-15T13:56:11.075Z"
+}

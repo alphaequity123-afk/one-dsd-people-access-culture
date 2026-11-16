@@ -1,0 +1,81 @@
+{
+  "target": "code.components/consultant-toolkit/suggested-setup.tsx",
+  "kind": "surface",
+  "route": "components/consultant-toolkit/suggested-setup.tsx",
+  "sourceSha256": "f1ccda3e959568274540747c8554a4e50728c4db6211e12f33d94621c2dc235e",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "The suggestion comes from reading the attached material. Use all of it, use one field at a time, or change any field in your setup below.",
+      "after": "This suggestion is based on a review of the attached material. You can apply all suggested fields at once, update fields individually, or adjust the setup to better fit your current needs.",
+      "reason": "Replaced the ambiguous phrasing with a more precise explanation of how the suggestion was formed and clarified the practical options staff have for applying the suggested fields."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "What the suggestion is based on",
+      "after": "Sources and reasoning for this suggestion",
+      "reason": "Clarified the heading to specify that it lists not just a basis, but both the sources reviewed and the reasoning behind the suggestion, making the purpose more explicit for staff."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "Changed from: 'The suggestion comes from reading the attached material. Use all of it, use one field at a time, or change any field in your setup below.'\nTo: 'This suggestion is based on a review of the attached material. You can apply all suggested fields at once, update fields individually, or adjust the setup to better fit your current needs.'\n\nBlocker: The proposed change misrepresents the source: (1) The source says the suggestion comes from 'reading the attached material.' The new wording removes 'reading' as the method, and uses 'review,' which might include other types of assessment. (2) The new text adds 'adjust the setup to better fit your current needs,' which is not stated or implied in the source and shifts the tone from usable options (\"change any field\") to tailoring the whole setup. This introduces unsupported latitude and interprets the intent beyond the evidence. (3) The original language is already clear on field-level and global options.\n\nRecommendation: Retain the original source wording. If clarity is required, a brief phrase may clarify without altering stated limits or intent, e.g., \"The suggestion comes from reading the attached material. You can use all of it, use one field at a time, or change any field in your setup below.\""
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The change from 'What the suggestion is based on' to 'Sources and reasoning for this suggestion' is a modest clarification and does not misrepresent the function or content. This is supported as a minor rewording for clarity."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2040,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 145,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2185
+    },
+    "review": {
+      "input_tokens": 1790,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 351,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2141
+    }
+  },
+  "createdAt": "2026-11-15T13:52:45.426Z"
+}

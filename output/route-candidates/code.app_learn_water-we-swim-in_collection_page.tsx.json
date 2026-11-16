@@ -1,0 +1,109 @@
+{
+  "target": "code.app/learn/water-we-swim-in/collection/page.tsx",
+  "kind": "surface",
+  "route": "/learn/water-we-swim-in/collection",
+  "sourceSha256": "b779e5a7dfcd32a9f7b75f3c32c3f6fbf3f0460e19c9eddc2c8fa959a8c050a3",
+  "status": "needs_revision",
+  "reviewedFieldCount": 13,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "A self-paced collection connecting The Water We Swim In, two culture briefs and the Equity Analysis Toolkit through a public-service practice case.",
+      "after": "This self-guided set links The Water We Swim In, two culture briefs, and the Equity Analysis Toolkit through a case example based on public program work.",
+      "reason": "Clarifying the summary for DHS/DSD staff by specifying the purpose and nature of the connections. The change avoids jargon and explains that these resources come together through a case example relevant to public service."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field2"
+      ],
+      "before": "Explore how culture shapes everyday work and affects access to services.",
+      "after": "See how cultural context shapes daily work and influences service access.",
+      "reason": "Refined the lede to more directly describe the collection's purpose and connection to DHS/DSD practice. This version removes unnecessary abstraction and clearly states what is being observed and why it matters professionally."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field4"
+      ],
+      "before": "One or more sources are unavailable right now. You can continue with the readings and activities listed below.",
+      "after": "Some sources are not available at this time. You can still use the readings and activities on this page.",
+      "reason": "Clarifies the temporary unavailability and reassures users they can continue. The adjustment sets appropriate expectations for DHS/DSD staff without suggesting there is a problem with their process."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "field9"
+      ],
+      "before": "Share your decision brief with the person responsible for the routine. Ask what a small trial could look like.",
+      "after": "Share your decision brief with the person responsible for that routine. Ask how you could try a small change.",
+      "reason": "Clarifies the pronoun reference and emphasizes that the aim is to discuss a possible trial change, keeping the focus on process improvement. The change also aligns with workplace communication norms for DHS/DSD."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revised summary in field0 adds 'case example based on public program work' which is not present in the original source description: '...through a public-service practice case.' The original focusing on 'practice case' preserves the collection's actual form (a simulated case or exercise), not necessarily a 'case example' which could imply an actual, de-identified instance. This alters the specificity and legal connotation of the source. The rest of the change is acceptable, but 'case example based on public program work' misrepresents the source."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revision on field2 shifts from 'Explore how culture shapes everyday work and affects access to services.' to 'See how cultural context shapes daily work and influences service access.' This is a stylistic rewrite. It preserves the intent and scope, with only minor shifts in word choice from 'everyday work' to 'daily work', and 'affects' to 'influences.' Acceptable as it does not introduce unsupported claims or delete necessary nuance."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The proposed revision for field4 is a faithful rewrite. Changing 'One or more sources are unavailable right now. You can continue with the readings and activities listed below.' to 'Some sources are not available at this time. You can still use the readings and activities on this page.' is accurate—both make clear the resources are temporarily unavailable and reassure the reader about continuing. Scope and meaning are preserved."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "The change for field9 is justified, clarifying the pronoun and the process intent. 'Share your decision brief with the person responsible for the routine. Ask what a small trial could look like.' to 'Share your decision brief with the person responsible for that routine. Ask how you could try a small change.' retains original meaning and instruction, while improving clarity for the intended audience."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 4773,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 320,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5093
+    },
+    "review": {
+      "input_tokens": 4473,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 472,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4945
+    }
+  },
+  "createdAt": "2026-11-15T14:03:20.582Z"
+}

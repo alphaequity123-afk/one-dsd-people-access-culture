@@ -11,7 +11,6 @@ import { loadStaffContentSnapshot } from '@/lib/content/staff-publications';
 import { MEASUREMENT_RESOURCE_ID, measurementText } from '@/lib/content/measurement-practice';
 import { requestedContentScope } from '@/lib/product/request-context';
 import { normalizeWorkOrigin, withWorkOrigin, type WorkOriginInput } from '@/lib/product/work-origin';
-import { TRAINING_CREDIT_NOTICE } from '@/lib/program/learning-credit';
 
 export const metadata: Metadata = { title: 'Evaluation plan' };
 
@@ -40,7 +39,6 @@ export default async function MeasurementPage({ searchParams }: { searchParams?:
           <h2 className="text-xl font-semibold">Reference and downloads</h2>
           <p><Link href={href}>{measurementText(surface.values, 'sourceLabel')}: {source.title}</Link></p>
           <details className="print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold">Download this evaluation plan</summary><ResourceDownloads kind="measurement" id="worksheet" noun="evaluation plan" scope={scope} /></details>
-          <p className="text-sm text-muted">{TRAINING_CREDIT_NOTICE}</p>
         </section>
       </PageContents>
     </div>

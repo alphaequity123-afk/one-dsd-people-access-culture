@@ -1,0 +1,202 @@
+{
+  "target": "dsd-scenario.dsd-repair-after-harm",
+  "kind": "surface",
+  "route": "/one-dsd/scenarios/dsd-repair-after-harm",
+  "sourceSha256": "f43b5556459751c7b53b75231a3418d39b56c2bfa6c920fe1d4e251713a1c12e",
+  "status": "needs_revision",
+  "reviewedFieldCount": 11,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "situation"
+      ],
+      "before": "During a planning meeting, a comment about a community's habits went unchallenged. Afterward, two staff members said they felt the room had endorsed it. The person who made the comment did not realize it caused harm.",
+      "after": "During a planning meeting, someone made a comment about a community’s habits. No one addressed the remark during the meeting. Afterwards, two staff said the lack of response made it seem as though the group accepted or supported the comment. The person who made the comment did not realize it was harmful or that it affected others in the room.",
+      "reason": "Clarified details for more specificity and linked the reaction (silence) to a sense of endorsement."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "whatToNotice",
+        1
+      ],
+      "before": "Unfamiliarity, not intent, is the likely cause, and it still needs repair.",
+      "after": "It is more likely that unfamiliarity or lack of awareness, rather than intent to harm, explains the comment. Harm can occur even if the intent was not negative, and it still must be addressed.",
+      "reason": "Improved clarity on probable cause and explained that impact, not just intent, requires attention."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "whatToNotice",
+        2
+      ],
+      "before": "Repair belongs to the person with more power in the room, not to the staff who were harmed.",
+      "after": "The responsibility for repair falls to the person with greater authority or positional power in the room. Staff who experience harm are not expected to lead the repair process.",
+      "reason": "Specified the type of power, provided reasoning, and clarified expectations for staff."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "questions",
+        0
+      ],
+      "before": "Who will name what happened and take responsibility for repair?",
+      "after": "Who will acknowledge what happened and accept responsibility for initiating repair?",
+      "reason": "Reworded for clarity and specificity; \"responsibility for initiating repair\" avoids ambiguity."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "questions",
+        1
+      ],
+      "before": "What does the person who made the comment need in order to change, and who will offer it?",
+      "after": "What information or support does the person who made the comment need in order to make a change, and who on the team is positioned to provide it?",
+      "reason": "Added specificity about the nature of need and who provides support."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "questions",
+        2
+      ],
+      "before": "How will the team learn that this is not the norm?",
+      "after": "How will the team clearly communicate that such comments are not acceptable and do not reflect team norms?",
+      "reason": "Clarified \"not the norm\" to specify the desired team standard and addressed explicit communication."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "moves",
+        0,
+        "label"
+      ],
+      "before": "Psychological safety and repair",
+      "after": "Repairing psychological safety after harm",
+      "reason": "Clarified the label to highlight the focus on repair following a breach in psychological safety."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "moves",
+        1,
+        "label"
+      ],
+      "before": "Using community material as questions, not descriptions",
+      "after": "Using community materials as questions to check assumptions",
+      "reason": "Refined the label to clarify purposeful use of materials and focus on checking assumptions rather than making descriptions."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "handoff"
+      ],
+      "before": "The meeting leader owns the repair. If the behavior continues or is intentional, use the confidential channel.",
+      "after": "The meeting leader is responsible for repairing the harm and restoring expectations. If similar behavior continues or appears intentional, report it through the confidential channel for review and follow-up.",
+      "reason": "Clarified the meeting leader’s responsibility, specified repair includes restoring expectations, and explained why to use the confidential channel."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "questionsTitle"
+      ],
+      "before": "Questions to ask before acting",
+      "after": "Questions to consider before acting",
+      "reason": "Improved specificity and professional tone."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The rewrite adds interpretive detail—explicitly attributing the effect ('the lack of response made it seem as though the group accepted or supported the comment')—and shifts from the original's neutral recounting ('a comment...went unchallenged...said they felt the room had endorsed it'). The phrase 'made it seem as though the group accepted or supported' is not stated in the source and reframes the staff's report, introducing an assumption not in evidence. This changes the original meaning and underlying evidence."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revision expands accurately without adding unsupported claims: it restates unfamiliarity as likely cause and preserves the call to repair regardless of intent. Sufficiently supported."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "Restates the original meaning with clarifying language. The source gives, 'Repair belongs to the person with more power in the room, not to the staff who were harmed.' The change is well-supported."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "Language changes from 'name what happened' to 'acknowledge what happened' and clarifies 'responsibility for initiating repair.' This preserves the original's direction and intent. Not a blocker."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "Adds detail ('information or support') and specifies 'who on the team.' This elaboration matches the intent of the original, without blocking issues."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "Specifies what is meant by 'not the norm.' Expands for clarity but does not contradict the source's meaning. Supported."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "Changes label to highlight 'repair after harm,' which aligns with the content of the linked resource. Acceptable; not a blocker."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "More precisely focuses the label on 'checking assumptions.' The resource's content supports this. Not a blocker."
+      },
+      {
+        "fieldId": 9,
+        "severity": "note",
+        "finding": "Expands rationale and detail for using the confidential channel. This aligns with the intent and does not introduce new requirements. Not a blocker."
+      },
+      {
+        "fieldId": 10,
+        "severity": "note",
+        "finding": "Minor wording change; preserves original meaning and scope."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1609,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 561,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2170
+    },
+    "review": {
+      "input_tokens": 1690,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 486,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2176
+    }
+  },
+  "createdAt": "2026-11-15T13:39:11.417Z"
+}

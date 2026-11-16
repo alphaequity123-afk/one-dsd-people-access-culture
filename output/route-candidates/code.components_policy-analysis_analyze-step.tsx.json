@@ -1,0 +1,165 @@
+{
+  "target": "code.components/policy-analysis/analyze-step.tsx",
+  "kind": "surface",
+  "route": "components/policy-analysis/analyze-step.tsx",
+  "sourceSha256": "6bc7c9781abcc1b2e939773c37f3da444ec685ec22c883543589f4e742ba4509",
+  "status": "needs_revision",
+  "reviewedFieldCount": 8,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "The analysis service is not available right now.",
+      "after": "The automated analysis service is currently unavailable.",
+      "reason": "Clarified that the issue is with the automated analysis service and used more precise wording."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "You can still finish this work by hand: write the recommended changes yourself in step 4, then send them for decisions.",
+      "after": "You can still complete this step manually. In step 4, draft recommended changes based on your review, and then submit them for decision-making.",
+      "reason": "Clarified the task for staff by specifying manual completion, referencing the review, and giving accurate follow-through instructions."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "The analysis reads the sources against the policy review questions and the equity principles, quotes the passages it relies on, says plainly where information is missing, and drafts recommended changes.",
+      "after": "The analysis reviews the sources using the policy review questions and equity principles. It provides quotations from relevant sections, clearly identifies gaps in available information, and drafts recommended changes for further consideration.",
+      "reason": "Increased the specificity and sequencing of how the analysis works. Clarified the value of quotations and stating information gaps."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": "Save the analysis in step 2 first.",
+      "after": "First save your work in step 2 before running the analysis.",
+      "reason": "Clarified that saving in step 2 is a prerequisite and explained its ordering."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field4"
+      ],
+      "before": "No sources are attached. The analysis will be far more exact with the policy text added in step 2.",
+      "after": "There are no sources attached. Adding the policy text in step 2 will result in a more precise analysis.",
+      "reason": "Clarified the outcome of adding sources and directly addressed the user."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field5"
+      ],
+      "before": "Your unsaved changes in step 2 are saved first.",
+      "after": "Any unsaved changes from step 2 will be saved before the analysis runs.",
+      "reason": "Revised to explain the sequence of saving and analysis, making it clear why the step occurs."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field6"
+      ],
+      "before": "Running it again drafts a new set of recommended changes from the current sources.",
+      "after": "Running the analysis again will create a new set of recommended changes based on the current sources attached.",
+      "reason": "Clarified that recommendations update to reflect attached sources each run, emphasizing the connection."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "field7"
+      ],
+      "before": "Analyzing the policy. This can take up to two minutes. Keep this page open.",
+      "after": "The policy is being analyzed. This process may take up to two minutes. Please keep this page open so the results display when finished.",
+      "reason": "Explained why the user should keep the page open, connecting it to receiving the analysis results."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "Substituting 'The automated analysis service is currently unavailable.' for 'The analysis service is not available right now.' changes the quoted status message. The source references 'the analysis service', not specifically 'the automated analysis service'. The field may be read live by staff or users and is not merely a summary, so the source wording must be preserved."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "Changing to 'You can still complete this step manually. In step 4, draft recommended changes based on your review, and then submit them for decision-making.' rewrites both the tone and specificity of the instructions. The official message is: 'You can still finish this work by hand: write the recommended changes yourself in step 4, then send them for decisions.' This introduces ambiguous new elements ('based on your review', 'submit them for decision-making') and removes the plain-language style of the original, which matches DHS program standards for instruction clarity."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The change gives a superficial summary rather than using the specific process phrases: 'reads the sources against the policy review questions...' and so forth. Source phrasing ('quotes the passages it relies on, says plainly where information is missing') is grounded in the software's actual behavior and is not generic documentation."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "'First save your work in step 2 before running the analysis.' clarifies intent but adds a more formal tone without distorting the requirement. This adjustment is minor and while it may be permitted for clarity in guidance, source exactness is preferred per editorial standards."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "'There are no sources attached. Adding the policy text in step 2 will result in a more precise analysis.' accurately clarifies the effect of adding sources and keeps meaning and scope. This is a permissible simplification given program standards."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The rewording, 'Any unsaved changes from step 2 will be saved before the analysis runs,' does not substantially change scope or meaning, and offers a clearer process explanation. Acceptable under program standards."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "'Running the analysis again will create a new set of recommended changes based on the current sources attached.' cleanly restates the original intent without adding or removing obligations."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "The expanded explanation, 'The policy is being analyzed. This process may take up to two minutes. Please keep this page open so the results display when finished.' is accurate, preserves instructions, and adds helpful reasoning appropriate for user clarity. No policy risks."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2291,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 425,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2716
+    },
+    "review": {
+      "input_tokens": 2272,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 577,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2849
+    }
+  },
+  "createdAt": "2026-11-15T13:55:20.787Z"
+}

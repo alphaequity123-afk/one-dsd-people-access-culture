@@ -1,0 +1,95 @@
+{
+  "target": "code.components/work-examples.tsx",
+  "kind": "surface",
+  "route": "components/work-examples.tsx",
+  "sourceSha256": "c6f6534d3a3459f7f48c3b64e210d6adeeac2104ee9a28c4c84073b0629bfeb7",
+  "status": "needs_revision",
+  "reviewedFieldCount": 3,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field1"
+      ],
+      "before": "Start with a situation that feels familiar",
+      "after": "Begin with a situation you recognize",
+      "reason": "Use concise, plain language and avoid unnecessary filler. 'Begin with a situation you recognize' is shorter, maintains meaning, and better fits program writing guidance for staff and leaders."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field2"
+      ],
+      "before": "These practice examples connect useful resources with everyday decisions. Choose one to see what you could do and how you might learn from it.",
+      "after": "These practice examples connect relevant resources to decisions you make each day. Select one to explore possible actions and what you might learn from the experience.",
+      "reason": "Simplifies language and connects examples directly to daily staff decisions, clarifying practical use. Specifies that selection leads to clearer ideas about actions and learning outcomes."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field3"
+      ],
+      "before": "Use the resources that fit your responsibility. Confirm applicable requirements and the appropriate review before changing a service or policy.",
+      "after": "Use the resources that fit your role and responsibilities. Before changing a service or policy, check relevant requirements and ensure the appropriate review takes place. This supports correct service delivery and compliance with program standards.",
+      "reason": "Clarifies that staff should use resources appropriate to their specific role and responsibilities. Adds explicit rationale for confirming requirements and review, connecting staff actions to correct service delivery and program compliance."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed change from \"Start with a situation that feels familiar\" to \"Begin with a situation you recognize\" is not fully supported by the evidence standard. While both are plain language, the original wording combines a gentle action ('start') with an emotional or professional cue ('feels familiar'), which fits the intended audience and official tone per program writing standard. The proposed version loses this nuance and shifts subtly from emotional resonance to familiarity based only on recognition. There is no evidence in the source to suggest that brevity is required over a slight increase in engagement or to indicate that 'recognize' is categorically plainer or superior for staff and leaders. Therefore, this change limits the original meaning without sufficient justification from actual source or policy."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The change to field 2 simplifies language and clarifies the connection to daily decisions and outcomes. The original intent is maintained and the new version avoids unnecessary complexity. This revision is source-faithful and improves clarity without changing meaning."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The proposed change expands the scope from 'responsibility' to 'role and responsibilities' and adds further instruction ('ensure the appropriate review takes place... supports correct service delivery and compliance with program standards'). The original instruction is deliberately concise and directs staff to stay within their responsibilities, verifying requirements and the need for review before making changes. The proposed version implies both expanded authority ('role') and a requirement to 'ensure' review, and introduces a rationale ('supports correct service delivery...'), none of which is present in or directly supported by the source. This risks misrepresenting what staff are required or permitted to do and how responsibility is determined or documented. Such a change violates the program writing standard regarding unsupported expansion and the introduction of new guidance without source evidence."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1530,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 224,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1754
+    },
+    "review": {
+      "input_tokens": 1351,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 392,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1743
+    }
+  },
+  "createdAt": "2026-11-15T13:56:51.673Z"
+}

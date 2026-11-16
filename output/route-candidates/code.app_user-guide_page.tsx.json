@@ -1,0 +1,13 @@
+{
+  "target": "code.app/user-guide/page.tsx",
+  "kind": "surface",
+  "route": "/user-guide",
+  "context": "\nimport { SourceLink } from \"@/components/app-link\";\nimport Link from \"@/components/app-link\";\nimport SequenceVideo from \"@/app/learn/equity-in-practice/sequence-video\";\nimport { PageIntro } from \"@/components/ui\";\nimport { Hub2Choices, Hub2More } from \"@/components/hub2-choices\";\nimport { PrintOpenPanels } from \"@/components/rp-print-open-panels\";\nimport guideMedia from \"@/lib/program/end-user-guide-media.json\";\nimport { USER_GUIDE } from \"@/lib/program/user-guide\";\n\nexport const metadata = { title: USER_GUIDE.title };\n\n/** The end-user guide: three ways in, then one closed panel per topic. Its words match the download. */\nexport default function UserGuide() {\n  return <>\n    <PageIntro kicker=\"Help when you need it\" title={USER_GUIDE.title} lede={USER_GUIDE.lede}>\n      <p className=\"mt-4\"><SourceLink href={USER_GUIDE.download} download>Download this guide as text</SourceLink></p>\n    </PageIntro>\n    <div className=\"wrap space-y-6 py-8\">\n      <Hub2Choices label=\"Where to go\" className=\"lg:grid-cols-3\" choices={USER_GUIDE.choices.map(choice => ({ ...choice }))} />\n      {guideMedia.ready ? <Hub2More id=\"welcome-video\" title={guideMedia.title}>\n        <p className=\"my-3\">{guideMedia.runtime}</p>\n        <SequenceVideo className=\"block aspect-video w-full rounded-lg bg-white\" src={guideMedia.src} poster={guideMedia.poster} title={guideMedia.title} />\n        <p className=\"mt-4\"><SourceLink href={guideMedia.transcript}>Read the transcript</SourceLink> · <SourceLink href={guideMedia.captions}>Download the captions</SourceLink></p>\n      </Hub2More> : null}\n      <div>\n        {USER_GUIDE.sections.map(section => <Hub2More key={section.id} id={section.id} title={section.title}>\n          {section.paras.map(text => <p key={text} className=\"max-w-3xl leading-7\">{text}</p>)}\n          {section.links.length ? <p className=\"flex flex-wrap gap-x-6 gap-y-2\">{section.links.map(([href, label]) => <Link key={href} href={href}>{label}</Link>)}</p> : null}\n        </Hub2More>)}\n      </div>\n    </div>\n    <PrintOpenPanels />\n  </>;\n}\n",
+  "protectedFields": [],
+  "values": {
+    "field0": "Download this guide as text"
+  },
+  "status": "no_editable_prose",
+  "changes": [],
+  "issues": []
+}

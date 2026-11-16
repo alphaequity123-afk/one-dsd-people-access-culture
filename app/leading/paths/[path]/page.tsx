@@ -32,7 +32,7 @@ export default async function LeadingPathPage({ params }: { params: Promise<{ pa
       <p className={base.eyebrow}>{LEADING_LABEL} · optional</p>
       <h1>{path.title}</h1>
       <p className={base.lede}>{path.description}</p>
-      <p>{path.courseIds.length} courses, about {pathHours(path)} hours in all, at your own pace. This sequence is a suggestion; it does not replace assigned training or applicable equity-analysis duties. Choose a starting point that fits your work. Saved completion marks remain in this browser profile and may be visible to anyone using it. This feature does not submit those marks to a supervisor or employer. <Link href="/leading/how-this-works">How this works</Link>.</p>
+      <p>{path.courseIds.length} courses, about {pathHours(path)} hours in all, at your own pace. This sequence is a suggestion. Choose a starting point that fits your work.</p>
     </header>
     {journey ? <section className={styles.section} aria-labelledby="path-question-title">
       <h2 id="path-question-title">The question this path keeps asking</h2>

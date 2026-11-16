@@ -1,0 +1,123 @@
+{
+  "target": "code.app/consultant/layout.tsx",
+  "kind": "surface",
+  "route": "app/consultant/layout.tsx",
+  "sourceSha256": "40774d1b436e9d5d8af71187c29b639b60d46f99dc2edd4ad4dc9cd4cf25bb13",
+  "status": "needs_revision",
+  "reviewedFieldCount": 5,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "This private workspace is locked because an access key has not been added.",
+      "after": "This private workspace is currently inaccessible because an access key has not been configured.",
+      "reason": "Revised for clearer explanation that the access key must be configured before access, specifying the current status."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Add a private value for PAC_OWNER_KEY in the hosting settings, then publish the update. A stronger sign-in method is still planned.",
+      "after": "To enable access, set a private value for PAC_OWNER_KEY in the hosting configuration, then publish the update. The agency is planning a stronger sign-in method in the future.",
+      "reason": "Clarified the steps for enabling access in more precise terms and noted that alternative sign-in methods are under consideration, showing ongoing planning."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field3"
+      ],
+      "before": "Page editing is on for this browser.",
+      "after": "Editing is currently enabled for this browser session.",
+      "reason": "Clarified and specified the context for editing, providing information relevant to the browser session."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field4"
+      ],
+      "before": "Turn on page editing and open the site",
+      "after": "Enable page editing and open the site",
+      "reason": "Reworded the instruction as a direct action for clarity and conciseness within navigation."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field6"
+      ],
+      "before": ". Individual tools explain where they save your work. The answer service is",
+      "after": "Each tool explains its storage approach for your work. The answer service is",
+      "reason": "Combined substance and clarity, making it clear that each tool separately communicates about storage rather than implying privacy or adding unnecessary caution."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revised wording, \"This private workspace is currently inaccessible because an access key has not been configured,\" omits the specific phrase, \"has not been added,\" switching to \"configured.\" The original states the workspace is locked because an access key has not been added, which is specific about the condition. The term 'configured' shifts meaning; some deployment scenarios may interpret 'configured' as broader than 'added.' The original intent is to alert the user that the workspace is locked due to missing key addition, not just configuration in general. This is not a strict clarification but a material change that could lead to confusion regarding the required action. Do not generalize or reinterpret the rationale beyond the source wording."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The edit to field 1 mostly rephrases for readability and adds passive voice, but does not substantively change the directive. The clarification about a future, stronger sign-in method matches the existing, \"A stronger sign-in method is still planned.\" This change is acceptable."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The original \"Page editing is on for this browser\" is a clear and sufficient announcement. Changing this to \"Editing is currently enabled for this browser session\" is unnecessary: the added word 'session' and added form make the meaning more technical but add no clarifying value based on the context. The site’s pattern (including, elsewhere, \"Turn it off/on for this browser\") supports the original plain instruction. Changed wording is not supported by evidence in the component or wider codebase."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The change from 'Turn on page editing and open the site' to 'Enable page editing and open the site' is neutral and does not introduce or erase necessary instructions. Either form is consistent with standard UI action language."
+      },
+      {
+        "fieldId": 4,
+        "severity": "blocker",
+        "finding": "The change \"Individual tools explain where they save your work\" to \"Each tool explains its storage approach for your work\" shifts the focus from direct location statement (\"where they save your work\") to general process (\"explains its storage approach\"). The original is more concrete, explaining that the tool tells you where your content is stored. The revision blurs a practical instruction about where the work is stored, potentially reducing clarity for users needing to know exactly where their content is located. The change is not supported by the source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3250,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 261,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3511
+    },
+    "review": {
+      "input_tokens": 3093,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 518,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3611
+    }
+  },
+  "createdAt": "2026-11-15T13:48:02.420Z"
+}

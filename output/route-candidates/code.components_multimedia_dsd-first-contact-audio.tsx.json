@@ -1,0 +1,95 @@
+{
+  "target": "code.components/multimedia/dsd-first-contact-audio.tsx",
+  "kind": "surface",
+  "route": "components/multimedia/dsd-first-contact-audio.tsx",
+  "sourceSha256": "e8272a6c0d4c48d23fef595b60944ca75abcea242e54a33b5f1914af6b47809c",
+  "status": "needs_revision",
+  "reviewedFieldCount": 5,
+  "changes": [
+    {
+      "fieldId": 2,
+      "path": [
+        "field3"
+      ],
+      "before": "Listen for where the route breaks down",
+      "after": "Identify where the first contact process does not work as intended",
+      "reason": "Clarified the instructional focus by specifying the action required—identifying breakdowns in the process—rather than using the more figurative 'where the route breaks down.' This improves substantive reasoning and professional clarity for DHS/DSD staff."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field4"
+      ],
+      "before": "Two practice examples you can read or listen to. Both describe language-access arrangements in English; neither performs translation or interpretation.",
+      "after": "These are two practice examples you can read or listen to. Both show English language-access arrangements and do not use translation or interpretation services.",
+      "reason": "Reworded for greater specificity and clarity about the scenarios. This revision removes rhetorical filler and explains more precisely what is present and absent in the examples."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field5"
+      ],
+      "before": "Which arrangement must exist before a caller can use the first contact? Identify who would verify it and own the follow-up.",
+      "after": "What arrangement must be in place before a caller can use the first contact? Name who verifies this and who is responsible for follow-up.",
+      "reason": "Improved precision by asking directly about necessary arrangements and chain of responsibility, supporting clear analysis and understanding for the intended staff audience."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "Changed source meaning. The original ('Listen for where the route breaks down') is a direct, figurative phrasing inviting the learner to notice points of failure, matching the spoken and instructional style in DSD training. The revision ('Identify where the first contact process does not work as intended') loses metaphorical nuance, changes the register, and substitutes 'process' for 'route,' which is the deliberate metaphor in the material. Per writing standard, do not change quoted, narrated, or official instructional language unless an error exists or clarification is explicitly required by DHS/DSD documentation. No such evidence is provided."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The revised wording for field4 ('These are two practice examples you can read or listen to. Both show English language-access arrangements and do not use translation or interpretation services.') preserves the information in the original and adds only minor specificity in restating 'describe' as 'show' and 'in English' as 'English language-access arrangements.' This is a stylistic change, not a blocker, but the plain, short original is already in policy style. Modification is not needed unless you have evidence of misunderstanding or a requirement for longer text."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "Revision of field5 replaces 'must exist before' with 'must be in place before' and splits the follow-up responsibility into two questions. This clarifies agency but is not required by the original, and the policy emphasizes retaining official inquiry phrasings unless a documented ambiguity is present. Not a blocker, but stylistic changes are discouraged without observed confusion."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1718,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 222,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1940
+    },
+    "review": {
+      "input_tokens": 1485,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 348,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1833
+    }
+  },
+  "createdAt": "2026-11-15T13:54:19.864Z"
+}

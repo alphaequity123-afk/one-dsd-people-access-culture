@@ -1,0 +1,81 @@
+{
+  "target": "code.app/understanding-dhs/page.tsx",
+  "kind": "surface",
+  "route": "/understanding-dhs",
+  "sourceSha256": "d9737531cf5e035b0aab91abaca70c7b15e4a59a33d0f8d48e602b2e466d0455",
+  "status": "needs_revision",
+  "reviewedFieldCount": 11,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Good work connects people across teams and organizations. This reference brings together their responsibilities, services and relationships so it is easier to see how your work fits into the wider picture.",
+      "after": "Collaboration across teams and organizations is central to DHS work. This reference collects key responsibilities, services, and working relationships so you can understand how your role connects to broader DHS, county, and Tribal efforts.",
+      "reason": "Improved professional reasoning and specificity by clarifying the practical benefit for staff (understanding connections and context) and grounding the statement in actual DHS, county, and Tribal collaboration. Avoided abstract or vague explanations."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field3"
+      ],
+      "before": "These are real DHS buildings in St. Paul. The Lafayette photograph is an archival view from 1998; the buildings are shown here for orientation and connection to the department, not as a current visitor guide.",
+      "after": "The photographs show two DHS buildings in St. Paul as they appeared when these images were taken. The Lafayette image is from 1998. These views are provided to support staff orientation and illustrate departmental history, not to serve as current visitor guidance.",
+      "reason": "Clarified the intended use of the images (orientation and historical context for staff), explicitly stated the date of the archival image, and explained why these images are included. Avoided potential confusion about their use for visitors."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The proposed revision substantively changes the scope and intent of the original. The original is neutral and general: \"Good work connects people across teams and organizations. This reference brings together their responsibilities, services and relationships so it is easier to see how your work fits into the wider picture.\" The revision invents specificity—explicit mention of DHS, county, and Tribal collaboration—not supported by source text, and inserts an unsubstantiated directive about a reader's \"role\" and \"broader DHS, county, and Tribal efforts.\" The original does not discuss staff roles or focus on particular collaborative arrangements; it is more inclusive and avoids assuming the reader's perspective."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The proposed change for field3 is acceptable. The new text clarifies that the images serve as a historic and orienting aid for staff, states the date of the archival photo more clearly, and retains the original's purpose without introducing unsupported information. The meaning and scope are unchanged and closely reflect the original qualifier."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2877,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 231,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3108
+    },
+    "review": {
+      "input_tokens": 2441,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 258,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2699
+    }
+  },
+  "createdAt": "2026-11-15T13:52:00.661Z"
+}

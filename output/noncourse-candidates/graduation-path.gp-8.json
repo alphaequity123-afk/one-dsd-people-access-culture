@@ -1,0 +1,165 @@
+{
+  "target": "graduation-path.gp-8",
+  "kind": "surface",
+  "route": "/practice/gp-8",
+  "sourceSha256": "34285888bd571f67ec7b694ae8a37470b5802bdf258db783f0631aed517786b2",
+  "status": "model_checked",
+  "reviewedFieldCount": 49,
+  "changes": [
+    {
+      "fieldId": 5,
+      "path": [
+        "startingCompetence"
+      ],
+      "before": "You are running a meeting and want everyone to be able to take part, contribute, and know what was decided.",
+      "after": "You are leading a meeting and want all participants to have meaningful opportunities to take part, contribute, and understand the outcomes. This includes planning for different communication needs, providing materials in advance, and ensuring everyone understands what was decided and what happens next.",
+      "reason": "Clarified that meaningful participation and informed outcomes depend on practical planning steps, added specificity about providing materials and follow-up to connect the idea to typical DSD meeting practices."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "graduatedLooksLike"
+      ],
+      "before": "By the end, you will have a reusable meeting plan: purpose and materials sent ahead, accommodation offered without disclosure, several ways to contribute, attention to positional power, a plan for repair if harm occurs, decisions with owners, and accessible follow-up.",
+      "after": "By the end, you will have a meeting plan you can use again. This plan includes: sending the purpose and materials beforehand; offering accommodations without requiring people to disclose needs; allowing multiple ways to participate and provide input; recognizing the impact of positional power; specifying steps for addressing harm if it occurs; assigning clear owners for decisions; and ensuring follow-up is accessible and reaches all participants.",
+      "reason": "Made the components of an effective accessible meeting plan explicit and linked to practical considerations in DHS/DSD work, to help staff understand what each element entails and why it matters to outcomes and accountability."
+    },
+    {
+      "fieldId": 16,
+      "path": [
+        "privacy"
+      ],
+      "before": "Do not include names. Your progress is saved only on this computer and is not used to rank anyone.",
+      "after": "Do not include names. Your notes stay only on this computer and are not linked to your DHS work record or used to evaluate staff.",
+      "reason": "Clarified that the privacy assurance means individual notes remain local and are not part of any performance system, addressing real-world staff concerns about data use within an agency context."
+    },
+    {
+      "fieldId": 17,
+      "path": [
+        "step0Guidance"
+      ],
+      "before": "Ask about planning an accessible meeting. Use the meeting plan below to identify the purpose, participation formats, and access arrangements people will need.",
+      "after": "Discuss with the group or within planning who will attend and what they will need for full participation. Use the meeting plan below to note the purpose of your meeting, how people can participate, and what access arrangements are required for inclusion. Documenting these steps helps make needs visible, guides resource use, and reduces the chance someone is left out.",
+      "reason": "Connected planning to practical reasons—visibility of access needs, allocation of resources, and preventing exclusion. Encouraged active discussion and documentation rather than passive checklist use."
+    },
+    {
+      "fieldId": 18,
+      "path": [
+        "step1Guidance"
+      ],
+      "before": "If the meeting includes community partners, read the relevant brief for access, timing, and what not to assume.",
+      "after": "If you are meeting with community partners, read the relevant community brief to check for specific access needs, appropriate timing, and common assumptions that should be avoided. This ensures the meeting format respects the context of your participants and minimizes unintentional barriers.",
+      "reason": "Clarified why reading the brief supports better planning—understanding participant context, timing, and implicit assumptions, and linked this back to the goal of meaningful participation for community partners."
+    },
+    {
+      "fieldId": 19,
+      "path": [
+        "step2Guidance"
+      ],
+      "before": "Use the accessible meeting guidance and the access checks.",
+      "after": "Refer to the accessible meeting guidance and use the access checklists provided. These resources help you anticipate and address barriers related to communication, mobility, technology, and participant roles, rather than relying on requests during or after the meeting.",
+      "reason": "Elaborated on the kinds of barriers and the benefit of proactive checks, making explicit how these resources serve the work of staff in planning and running meetings."
+    },
+    {
+      "fieldId": 22,
+      "path": [
+        "step3Guidance"
+      ],
+      "before": "Complete the plan. Your notes are saved only on this computer. Leave out names.",
+      "after": "Complete your meeting plan, focusing on practical arrangements for access and participation. Do not include individual names in your notes. Your plan remains local to your device and is designed to help you prepare for inclusive and responsive meetings.",
+      "reason": "Clarified what should be included and excluded in the meeting plan, and reaffirmed the purpose—making a reusable and practical tool for accessible meetings, not for broader data collection."
+    },
+    {
+      "fieldId": 23,
+      "path": [
+        "step4Guidance"
+      ],
+      "before": "Confirm materials go out ahead, accommodation is offered to everyone, there are several ways to contribute, decisions will have owners, and follow-up is accessible.",
+      "after": "Review that you are sending materials in advance, offering accommodations to everyone, providing several ways to take part, assigning clear responsibility for decisions, and ensuring that follow-up information is accessible to all involved. This step helps you confirm that your meeting plan addresses both access and accountability.",
+      "reason": "Linked the review step to both the specific access and role clarity elements, explaining why each is checked and how it affects meeting effectiveness."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The rewritten field improves clarity and specificity based on the source. The new text expands on what 'taking part' means and connects it explicitly to practical steps supported by DSD meeting practices, which is supported by the broader structure and intent of the source page."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The expansion adds specificity by breaking out the list from the original and making each element clearer while retaining all original source elements. The practical scope and intent are unchanged and remain grounded in the original page."
+      },
+      {
+        "fieldId": 16,
+        "severity": "note",
+        "finding": "The privacy assurance is clarified. The added language about not linking notes to staff records or evaluations is consistent with the original assurance and addresses a real-world interpretation within DHS/DSD, without overextending the promise beyond what the local saving mechanism actually does."
+      },
+      {
+        "fieldId": 17,
+        "severity": "note",
+        "finding": "The added reasoning for documentation and resource use, and encouragement of active planning, is firmly supported by the page’s intent and guidance model. No scope or meaning is changed, and supporting detail improves usefulness."
+      },
+      {
+        "fieldId": 18,
+        "severity": "note",
+        "finding": "This edit provides explicit reasoning for consulting the community brief and aligns with the original intent to connect meeting planning to participant context and avoid unhelpful assumptions."
+      },
+      {
+        "fieldId": 19,
+        "severity": "note",
+        "finding": "The new content expands on what the original ‘access checks’ are for and makes explicit which types of barriers are addressed. This is supported by the source’s linked resources and is an accurate expansion."
+      },
+      {
+        "fieldId": 22,
+        "severity": "note",
+        "finding": "The new guidance clarifies what content should and should not be included in the meeting plan, emphasizing its use as a tool for practice not surveillance, which reflects the privacy statements throughout the page."
+      },
+      {
+        "fieldId": 23,
+        "severity": "note",
+        "finding": "The edit preserves all original review items and explains their practical value. No legal or meaning change is introduced, and the guidance is supported by the structure and objectives of the page."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3602,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 867,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4469
+    },
+    "review": {
+      "input_tokens": 2793,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 532,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3325
+    }
+  },
+  "createdAt": "2026-11-15T13:39:55.146Z"
+}

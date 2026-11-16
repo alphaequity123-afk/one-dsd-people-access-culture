@@ -1,0 +1,417 @@
+{
+  "revisions": [
+    {
+      "target": "dsd-scenario.dsd-accessible-form",
+      "kind": "surface",
+      "route": "/one-dsd/scenarios/dsd-accessible-form",
+      "changes": [
+        {
+          "path": [
+            "whatToNotice",
+            0
+          ],
+          "before": "Unclear accessibility ownership was one of the clearest barriers DSD staff named.",
+          "after": "The team has an immediate access problem and an unresolved responsibility. Finding the form owner matters because someone must provide an accessible option now and maintain the corrected form."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            2
+          ],
+          "before": "The fix is at the source, and it needs an owner today.",
+          "after": "An accessible alternative addresses the immediate need, but the inaccessible source form still needs correction. Agree who will make that correction and when it will be available."
+        }
+      ],
+      "status": "draft",
+      "reviewNote": "Full original read. Clarifies practical reasoning and separates case evidence from inference. Retains situation, source links, questions and existing authority routing; independent review pending."
+    },
+    {
+      "target": "dsd-scenario.dsd-accommodation-cliff",
+      "kind": "surface",
+      "route": "/one-dsd/scenarios/dsd-accommodation-cliff",
+      "changes": [
+        {
+          "path": [
+            "whatToNotice",
+            0
+          ],
+          "before": "Nobody owned the accommodation across the transition.",
+          "after": "The established accommodation did not carry across the assignment change. Review how responsibility for continuity was handled, using the confidential accommodation process for individual details."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            1
+          ],
+          "before": "The cohort was not accessible by default, so participation depended on disclosure.",
+          "after": "The kickoff activities created an additional access problem. Designing the cohort for accessible participation reduces the need for people to seek exceptions before they can take part."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            2
+          ],
+          "before": "The withdrawal will look like a personal choice in the data, if it appears at all.",
+          "after": "A record of withdrawal alone would not explain the access barrier in this situation. Examine how the pathway can identify problems with participation without recording the person’s identity here."
+        }
+      ],
+      "status": "draft",
+      "reviewNote": "Full original read. Clarifies practical reasoning and separates case evidence from inference. Retains situation, source links, questions and existing authority routing; independent review pending."
+    },
+    {
+      "target": "dsd-scenario.dsd-advancement-conversation",
+      "kind": "surface",
+      "route": "/one-dsd/scenarios/dsd-advancement-conversation",
+      "changes": [
+        {
+          "path": [
+            "whatToNotice",
+            0
+          ],
+          "before": "Advancement requirements are unwritten and therefore unequal.",
+          "after": "The employee reports not knowing the requirements for advancement. Check whether those requirements are documented and communicated before concluding that they are unwritten or equally understood."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            1
+          ],
+          "before": "Visible work is assigned by habit.",
+          "after": "Repeated assignment of visible projects to the same people warrants review. Ask how those assignments were decided and whether other staff had a clear opportunity to be considered."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            2
+          ],
+          "before": "This is a pattern with an owner, not a personal failing.",
+          "after": "The concern involves communication and allocation of work, both of which can be examined. Separate changes within the supervisor’s role from classification and pay questions that need HR or labor relations."
+        }
+      ],
+      "status": "draft",
+      "reviewNote": "Full original read. Clarifies practical reasoning and separates case evidence from inference. Retains situation, source links, questions and existing authority routing; independent review pending."
+    },
+    {
+      "target": "dsd-scenario.dsd-hiring-panel",
+      "kind": "surface",
+      "route": "/one-dsd/scenarios/dsd-hiring-panel",
+      "changes": [
+        {
+          "path": [
+            "whatToNotice",
+            0
+          ],
+          "before": "The screening criteria may be proxies for the work rather than the work itself.",
+          "after": "Check whether each screening requirement provides evidence of the work the role requires. A degree or interview performance may be relevant, but its relevance needs to be explained rather than assumed."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            1
+          ],
+          "before": "Fluency and confidence in an interview are being rewarded without a rubric that ties them to the job.",
+          "after": "The selections suggest that fluency and confidence may be carrying considerable weight. Examine the actual rubric and how it was used before deciding whether those qualities displaced job-related evidence."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            2
+          ],
+          "before": "Internal candidates with lived experience are being screened out at the same stage each time.",
+          "after": "The internal candidates did not advance beyond screening. Review that stage and the experience it recognizes; the scenario alone does not establish why either candidate was screened out."
+        }
+      ],
+      "status": "draft",
+      "reviewNote": "Full original read. Clarifies practical reasoning and separates case evidence from inference. Retains situation, source links, questions and existing authority routing; independent review pending."
+    },
+    {
+      "target": "dsd-scenario.dsd-policy-change",
+      "kind": "surface",
+      "route": "/one-dsd/scenarios/dsd-policy-change",
+      "changes": [
+        {
+          "path": [
+            "whatToNotice",
+            0
+          ],
+          "before": "The decision has a real deadline and is still changeable.",
+          "after": "The four-week approval timeline leaves a defined opportunity to examine the proposal. Clarify when the design can still change so engagement and analysis can inform the decision."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            1
+          ],
+          "before": "The design goal is legitimate; the burden analysis has not been done.",
+          "after": "Reducing fraud risk is the stated design goal, while the added burden on families has not been examined. Compare alternatives against both concerns instead of assuming that one cancels the other."
+        }
+      ],
+      "status": "draft",
+      "reviewNote": "Full original read. Clarifies practical reasoning and separates case evidence from inference. Retains situation, source links, questions and existing authority routing; independent review pending."
+    },
+    {
+      "target": "dsd-scenario.dsd-service-redesign",
+      "kind": "surface",
+      "route": "/one-dsd/scenarios/dsd-service-redesign",
+      "changes": [
+        {
+          "path": [
+            "whatToNotice",
+            0
+          ],
+          "before": "Efficiency for staff can become burden for the people with the least margin.",
+          "after": "Saving staff time does not establish that the new process is easier for the person seeking services. Examine what the online step requires of people who face language, internet, or decision-support barriers."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            1
+          ],
+          "before": "Person-centered practice and supported decision-making are design requirements, not add-ons.",
+          "after": "Person-centered practice and supported decision-making need a place in the design itself. Identify where people can express their goals, ask questions, and receive the support needed to participate."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            2
+          ],
+          "before": "The human alternative must be real, not a fallback nobody staffs.",
+          "after": "A human alternative needs identified staff and a workable route to reach them. Listing an alternative without planning its delivery can leave the original barrier in place."
+        }
+      ],
+      "status": "draft",
+      "reviewNote": "Full original read. Clarifies practical reasoning and separates case evidence from inference. Retains situation, source links, questions and existing authority routing; independent review pending."
+    },
+    {
+      "target": "dsd-scenario.dsd-engagement-late",
+      "kind": "surface",
+      "route": "/one-dsd/scenarios/dsd-engagement-late",
+      "changes": [
+        {
+          "path": [
+            "whatToNotice",
+            0
+          ],
+          "before": "The level of influence is inform, not consult, and saying otherwise would damage trust.",
+          "after": "Approval and funding limit the influence participants may have. Establish what remains open to change, including implementation, and describe that scope accurately before calling the sessions consultation."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            1
+          ],
+          "before": "Prior contacts exist; repeating requests extracts labor.",
+          "after": "Similar questions were asked last year. Review that material and contact the earlier team before asking communities to repeat work whose use has not been explained."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            2
+          ],
+          "before": "A report-back on last year's input is still owed.",
+          "after": "The missing report-back is part of the current relationship. Explain what happened with earlier input, including what did not change and why, rather than treating these sessions as a fresh start."
+        }
+      ],
+      "status": "draft",
+      "reviewNote": "Full original read. Clarifies practical reasoning and separates case evidence from inference. Retains situation, source links, questions and existing authority routing; independent review pending."
+    },
+    {
+      "target": "dsd-scenario.dsd-report-back",
+      "kind": "surface",
+      "route": "/one-dsd/scenarios/dsd-report-back",
+      "changes": [
+        {
+          "path": [
+            "whatToNotice",
+            0
+          ],
+          "before": "The report-back is the part most often skipped, and the part that builds trust.",
+          "after": "Participants need to understand how the team used what they shared. Connect the report-back to specific decisions and next steps so people can judge the value of their participation."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            1
+          ],
+          "before": "Honesty about what could not change is more valuable than vague promises.",
+          "after": "Separate changes the team can make from requests it cannot take forward. Explain the relevant constraint instead of replacing an uncertain outcome with a general promise."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            2
+          ],
+          "before": "Participants' words carry more weight than a summary, with permission and no identification.",
+          "after": "Participants’ own words can preserve meaning that a summary loses. Use them only with permission and without identifying the speaker; a quotation can still reveal identity through its details."
+        }
+      ],
+      "status": "draft",
+      "reviewNote": "Full original read. Clarifies practical reasoning and separates case evidence from inference. Retains situation, source links, questions and existing authority routing; independent review pending."
+    },
+    {
+      "target": "dsd-scenario.dsd-interpreter-first-contact",
+      "kind": "surface",
+      "route": "/one-dsd/scenarios/dsd-interpreter-first-contact",
+      "changes": [
+        {
+          "path": [
+            "whatToNotice",
+            0
+          ],
+          "before": "Language access planned per document misses the first phone call.",
+          "after": "Interpretation later in the process does not resolve an English-only first contact. Review the greeting, voicemail, and route to assistance as parts of the same service experience."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            1
+          ],
+          "before": "Delay is a burden that falls on people who already carry more.",
+          "after": "The wait for a callback adds a barrier for people who need interpretation. Examine the delay and what families must do during it rather than treating interpretation availability alone as sufficient access."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            2
+          ],
+          "before": "This is a program-level planning question, not a translation request.",
+          "after": "Changing the wording of a greeting may not resolve staffing or callback arrangements. The intake owner and language access coordinator need to examine the process together."
+        }
+      ],
+      "status": "draft",
+      "reviewNote": "Full original read. Clarifies practical reasoning and separates case evidence from inference. Retains situation, source links, questions and existing authority routing; independent review pending."
+    },
+    {
+      "target": "dsd-scenario.dsd-team-silence",
+      "kind": "surface",
+      "route": "/one-dsd/scenarios/dsd-team-silence",
+      "changes": [
+        {
+          "path": [
+            "whatToNotice",
+            0
+          ],
+          "before": "Quiet is being read as agreement.",
+          "after": "Silence does not establish agreement, understanding, or a lack of ideas. Ask how people would prefer to contribute without assigning a communication style based on their background."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            1
+          ],
+          "before": "Input that changed nothing teaches people to stop offering it.",
+          "after": "One colleague has linked a previous attempt to speak with a lack of visible response. Find out what happened and explain how input is considered, including when it does not change a decision."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            2
+          ],
+          "before": "Positional power and meeting format are shaping who speaks.",
+          "after": "The meeting format and differences in authority may affect participation. Compare speaking opportunities, other ways to contribute, and how the supervisor responds before deciding what the quiet means."
+        }
+      ],
+      "status": "draft",
+      "reviewNote": "Full original read. Clarifies practical reasoning and separates case evidence from inference. Retains situation, source links, questions and existing authority routing; independent review pending."
+    },
+    {
+      "target": "dsd-scenario.dsd-repair-after-harm",
+      "kind": "surface",
+      "route": "/one-dsd/scenarios/dsd-repair-after-harm",
+      "changes": [
+        {
+          "path": [
+            "whatToNotice",
+            0
+          ],
+          "before": "Silence read as endorsement.",
+          "after": "Two colleagues experienced the lack of response as endorsement. Address that reported impact rather than assuming that an unchallenged comment was accepted by everyone."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            1
+          ],
+          "before": "Unfamiliarity, not intent, is the likely cause, and it still needs repair.",
+          "after": "The speaker’s lack of awareness does not establish their intent or remove the impact. Clarify what happened and what needs to change without guessing why the comment was made."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            2
+          ],
+          "before": "Repair belongs to the person with more power in the room, not to the staff who were harmed.",
+          "after": "The meeting leader has a role in addressing the incident and setting expectations. The staff who reported harm should not have to carry the explanation or organize the response themselves."
+        }
+      ],
+      "status": "draft",
+      "reviewNote": "Full original read. Clarifies practical reasoning and separates case evidence from inference. Retains situation, source links, questions and existing authority routing; independent review pending."
+    },
+    {
+      "target": "dsd-scenario.dsd-leadership-bottleneck",
+      "kind": "surface",
+      "route": "/one-dsd/scenarios/dsd-leadership-bottleneck",
+      "changes": [
+        {
+          "path": [
+            "whatToNotice",
+            0
+          ],
+          "before": "Diffuse responsibility and approval bottlenecks were named repeatedly in DSD listening.",
+          "after": "DSD listening identified unclear responsibility and approval bottlenecks. In this situation, examine the shared approval step and its effect across teams rather than treating each delay as an isolated problem."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            1
+          ],
+          "before": "The step is a choice someone made, which means it can be changed.",
+          "after": "The purpose of the step is currently unclear. Establish why it was introduced and who can authorize a change before deciding whether it can be removed or replaced."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            2
+          ],
+          "before": "Decision rights are unclear, so nothing moves.",
+          "after": "Teams need to know who can decide and what information that person needs. A proposed decision record can connect the original purpose, the cost of delay, and possible alternatives."
+        }
+      ],
+      "status": "draft",
+      "reviewNote": "Full original read. Clarifies practical reasoning and separates case evidence from inference. Retains situation, source links, questions and existing authority routing; independent review pending."
+    },
+    {
+      "target": "dsd-scenario.dsd-small-group-data",
+      "kind": "surface",
+      "route": "/one-dsd/scenarios/dsd-small-group-data",
+      "changes": [
+        {
+          "path": [
+            "whatToNotice",
+            0
+          ],
+          "before": "Small groups can be identified from aggregate tables.",
+          "after": "An aggregate table can still identify people when counts are small or other details narrow the possibilities. The fact that names are absent does not by itself establish that a report is safe to share."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            1
+          ],
+          "before": "Suppression protects people and must be explained, not hidden.",
+          "after": "Ask the data owner and privacy lead which suppression rules apply, and explain resulting gaps in the report. The count below ten in this scenario is a reason to check, not a universal reporting threshold."
+        },
+        {
+          "path": [
+            "whatToNotice",
+            2
+          ],
+          "before": "Qualitative evidence can carry what the numbers cannot.",
+          "after": "People’s accounts may help explain experiences that suppressed figures cannot show. Qualitative material also needs privacy review; a detailed account can identify someone even when a table does not."
+        }
+      ],
+      "status": "draft",
+      "reviewNote": "Full original read. Clarifies practical reasoning and separates case evidence from inference. Retains situation, source links, questions and existing authority routing; independent review pending."
+    }
+  ]
+}

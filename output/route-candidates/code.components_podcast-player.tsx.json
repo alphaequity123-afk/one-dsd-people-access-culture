@@ -1,0 +1,95 @@
+{
+  "target": "code.components/podcast-player.tsx",
+  "kind": "surface",
+  "route": "components/podcast-player.tsx",
+  "sourceSha256": "22b04e4f0cfe2976cec5c87df6b3cd1447549f3307088af808d1be7ea1e66b2f",
+  "status": "needs_revision",
+  "reviewedFieldCount": 3,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field1"
+      ],
+      "before": "Read at your own pace. Each time stamp starts the recording at that passage. The text stays here even if the recording will not play.",
+      "after": "You can read the transcript as needed. Selecting a time stamp will start playback at that part of the recording if possible. The text is always available, even if the audio does not play.",
+      "reason": "Clarifies the function of time stamps and why the text is provided, connecting transcript reading to playback and availability."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field2"
+      ],
+      "before": "The transcript could not be loaded. The recording remains available above.",
+      "after": "The transcript could not be loaded. You can still listen to the recording above.",
+      "reason": "Shifts emphasis to the continued availability of the recording, clearly informing staff why this matters in service delivery."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field3"
+      ],
+      "before": "Try loading the transcript again",
+      "after": "Attempt to load the transcript again",
+      "reason": "Uses more specific language reflecting the user action and intent, supporting clarity for staff using the tool."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revised text ('You can read the transcript as needed. Selecting a time stamp will start playback at that part of the recording if possible. The text is always available, even if the audio does not play.') meaningfully changes and expands the information provided in the original source. Source: 'Read at your own pace. Each time stamp starts the recording at that passage. The text stays here even if the recording will not play.' The rewrite adds new conditional wording ('if possible'), reframes the purpose with new context, and omits the concise, grade-level phrasing of 'Read at your own pace.' This is not a direct clarification but rather a substantive change, which is not allowed by the standard."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The change from 'The transcript could not be loaded. The recording remains available above.' to 'The transcript could not be loaded. You can still listen to the recording above.' is a minor rewording that does not alter the underlying meaning or introduce new claims. The intent and user outcome remain the same. This is acceptable, but unnecessary."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The change from 'Try loading the transcript again' to 'Attempt to load the transcript again' is a stylistic edit only. Both are supported; the change neither introduces nor erases qualifications, legal statements, or functional instructions."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3865,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 173,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4038
+    },
+    "review": {
+      "input_tokens": 3635,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 305,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3940
+    }
+  },
+  "createdAt": "2026-11-15T13:55:15.337Z"
+}

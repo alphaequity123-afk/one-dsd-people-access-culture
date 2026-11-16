@@ -1,0 +1,81 @@
+{
+  "target": "support.track.available",
+  "kind": "surface",
+  "route": "/support/track",
+  "sourceSha256": "c1d74fa984d6dae1747f98ec57135f321709a13c3071be9a63f12c0b66a79f53",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "introLede"
+      ],
+      "before": "Enter the reference number and access key from your confirmation to see the latest update. You can withdraw a request while its status is Received or “We have your request.”",
+      "after": "Use the reference number and access key from your confirmation to review the current status of your request. You may withdraw your request if its status is \"Received\" or \"We have your request.\" This restriction prevents changes once processing begins.",
+      "reason": "Clarified the process for checking and withdrawing a request, and explained why withdrawal is limited to certain statuses in line with program writing standards."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "privacyNote"
+      ],
+      "before": "Your reference number and access key work together to protect the request. Only you and the people authorized to support the consultation service can see it.",
+      "after": "The combination of your reference number and access key secures access to your request details. Only you and designated consultation service staff can view or update the request. This helps protect sensitive information and ensures privacy throughout the process.",
+      "reason": "Expanded on how the reference number and access key function together for privacy and why only authorized staff have access, adding practical reasoning as required by the standard."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The added sentence, 'This restriction prevents changes once processing begins,' goes beyond the provided source. The original text explains that you can withdraw a request while its status is Received or 'We have your request,' but does not attribute this ability to a policy reason about processing. No source evidence supports adding the rationale about processing beginning as the reason for the restriction."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The more elaborate privacy rationale in the revision ('This helps protect sensitive information and ensures privacy throughout the process') is broadly consistent with the source and does not introduce errors or misleading assurances, though editors should watch for accuracy if privacy roles change later."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1140,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 184,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1324
+    },
+    "review": {
+      "input_tokens": 929,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 185,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1114
+    }
+  },
+  "createdAt": "2026-11-15T13:38:10.529Z"
+}

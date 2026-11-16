@@ -1,0 +1,112 @@
+{
+  "target": "dsd-scenario.dsd-interpreter-first-contact",
+  "kind": "surface",
+  "route": "/one-dsd/scenarios/dsd-interpreter-first-contact",
+  "sourceSha256": "4f3f772cb1e9ab3355eb8c40a1949156114468e9c7b8f227237eb00fa8cb8669",
+  "status": "needs_revision",
+  "reviewedFieldCount": 11,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "situation"
+      ],
+      "before": "Families calling a DSD intake line reach an English-only greeting and a voicemail. Interpretation is available once a staff member calls back, often days later.",
+      "after": "When a family calls a DSD intake line, they hear an English-only greeting and can only leave a voicemail in English. If the caller needs interpretation, this is arranged after a staff member reviews the message and calls back, which may not happen for several days.",
+      "reason": "Clarified the call process and explained that interpretation is delayed until after a staff review, adding more detail about the gap in immediate language access."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "whatToNotice",
+        0
+      ],
+      "before": "Language access planned per document misses the first phone call.",
+      "after": "Language access plans may not address initial phone contact, resulting in people not understanding greetings or instructions at the first call.",
+      "reason": "Specifies how language access planning often does not cover greetings or initial instructions, clarifying the practical impact."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "whatToNotice",
+        1
+      ],
+      "before": "Delay is a burden that falls on people who already carry more.",
+      "after": "Waiting for staff to arrange interpretation places additional stress on non-English-speaking families, who already face more barriers accessing support.",
+      "reason": "Added context about the existing barriers these families face, emphasizing why timely access matters."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "whatToNotice",
+        2
+      ],
+      "before": "This is a program-level planning question, not a translation request.",
+      "after": "Program-level planning is needed to address service gaps at intake lines. This is not simply a matter of translating documents; it involves systemic decisions about equitable phone access.",
+      "reason": "Clarified that program-level planning must address phone access and is different from document translation requests."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The revised text adds an unsupported claim: 'can only leave a voicemail in English.' The source only specifies that the greeting and voicemail are in English, not that callers are prevented from leaving a message in another language. The added clause is not strictly supported by the evidence, and changes the condition described in the scenario."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revision adds helpful explanation about language access planning but introduces a less precise statement—'may not address'—while the source directly and actively states 'misses the first phone call.' Both communicate similar meaning, but the rewording softens the certainty of the gap."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The expansion is reasonable and correct in context. It does not add unsupported detail, just elaborates on what 'carry more' means."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The rewrite clarifies the original without introducing inaccuracies. It maintains the intent that this is about program design, not just document translation."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1560,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 290,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1850
+    },
+    "review": {
+      "input_tokens": 1232,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 231,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1463
+    }
+  },
+  "createdAt": "2026-11-15T13:39:05.888Z"
+}

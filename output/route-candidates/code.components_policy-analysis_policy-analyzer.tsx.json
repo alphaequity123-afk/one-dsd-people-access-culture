@@ -1,0 +1,95 @@
+{
+  "target": "code.components/policy-analysis/policy-analyzer.tsx",
+  "kind": "surface",
+  "route": "components/policy-analysis/policy-analyzer.tsx",
+  "sourceSha256": "e620f57731aaf22e8e5a6e2068e9b73c33652f9362077a619acdb31c90297405",
+  "status": "needs_revision",
+  "reviewedFieldCount": 10,
+  "changes": [
+    {
+      "fieldId": 4,
+      "path": [
+        "field5"
+      ],
+      "before": "This analysis is formalized. Reopen it in step 6 to change the material.",
+      "after": "This analysis is formalized. To edit the material or make changes, reopen it in step 6. Reopening ensures that any updates are tracked and included in the analysis history.",
+      "reason": "Clarified the action required to make changes, explained why reopening matters in the process, and connected the step to documentation needs."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field7"
+      ],
+      "before": "Saving keeps this analysis so you and the One DSD Team can come back to it.",
+      "after": "Saving preserves your work so you and the One DSD Team can return to this analysis later. This helps maintain continuity and ensures others can review or contribute to the work as needed.",
+      "reason": "Added reasoning to explain why saving matters for team continuity and future access."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field8"
+      ],
+      "before": "When the recommended changes read correctly, send them for decisions. You can still correct a change while decisions are being recorded.",
+      "after": "When the recommended changes read as intended, send them for decisions. If you notice an error or need to clarify something, you can revise a change even while decisions are being recorded. This flexibility can prevent issues from carrying forward into final approval.",
+      "reason": "Clarified that corrections can still be made, and explained why the ability to revise at this stage affects the decision process."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 4,
+        "severity": "blocker",
+        "finding": "The proposed rewrite of field5 (\"This analysis is formalized. To edit the material or make changes, reopen it in step 6. Reopening ensures that any updates are tracked and included in the analysis history.\") does not accurately reflect the source's original statement, which simply informs the user of the prerequisite action: \"This analysis is formalized. Reopen it in step 6 to change the material.\" The added explanation about tracking updates and maintaining analysis history is not supported by the page source and improperly introduces an extra rationale that the source does not provide. The original intent—to notify the user of the correct procedural step—is preserved in the original and should not be overwritten with unsupported operational or policy implications."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "For field7, the expanded explanation aligns with the underlying intent of supporting user and team continuity, even if the source is short. However, the added sentence about reviewing or contributing is not strictly present in the rendered message. This change, while well-motivated and minor, should be flagged for exceeding the explicit source, although not a blocker for utility."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "For field8, the clarification and reasoning are consistent with the actual application flow as described by source code and with what is implied by \"You can still correct a change while decisions are being recorded.\" The messaging gives helpful context and does not change the instruction; no blocker, but note that the explicit consequence statement is not present in the original."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 6917,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 247,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 7164
+    },
+    "review": {
+      "input_tokens": 6549,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 330,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 6879
+    }
+  },
+  "createdAt": "2026-11-15T13:55:38.751Z"
+}

@@ -1,0 +1,67 @@
+{
+  "target": "workforce.indian-policy",
+  "kind": "surface",
+  "route": "/consultant/workforce/indian-policy",
+  "sourceSha256": "f574a694b24a63676723f3521a567d69c4c77d7626964762a4073b65948b2a70",
+  "status": "model_checked",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "relationship"
+      ],
+      "before": "Listed as an agency area or associated service. This does not establish a direct reporting line.",
+      "after": "The Office of Indian Policy is identified as an agency area or associated service within Minnesota DHS. This listing acknowledges a formal function but does not indicate a direct reporting relationship.",
+      "reason": "Improves clarity by restating that the designation recognizes the office's role within DHS without assuming reporting lines. Adds specificity to avoid inferring structure not supported by the source."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revised wording maintains the original meaning and factual limits. It acknowledges the Office of Indian Policy as an agency area or associated service within Minnesota DHS without introducing a direct reporting relationship not found in the source. The restatement increases clarity and formality without altering source intent or content. No unsupported claims or changes to legal or organizational status are introduced."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1096,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 93,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1189
+    },
+    "review": {
+      "input_tokens": 801,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 91,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 892
+    }
+  },
+  "createdAt": "2026-11-15T13:37:54.801Z"
+}

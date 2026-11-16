@@ -1,0 +1,109 @@
+{
+  "target": "code.app/program/implementation/page.tsx",
+  "kind": "surface",
+  "route": "/program/implementation",
+  "sourceSha256": "812fbc58ef51450c6da3a89f9860cf045e50941e03ba2f0d8c9e3c8034108446",
+  "status": "model_checked",
+  "reviewedFieldCount": 16,
+  "changes": [
+    {
+      "fieldId": 2,
+      "path": [
+        "field4"
+      ],
+      "before": "The constitution guides how the program operates. The ADSA Equity and Inclusion Implementation Plan sets out six goals and twenty-eight action steps for administration and division work. The supporting tools help people prepare, review, implement and learn from that work.",
+      "after": "The Minnesota Constitution sets basic direction for program operations. The ADSA Equity and Inclusion Implementation Plan identifies six goals and twenty-eight actions meant to guide administration and division work. The tools on this page are provided to help staff and partners prepare, check, carry out, and learn from these activities.",
+      "reason": "Clarifies the constitutional context and specificity of program guidance, and grounds the purpose of the tools in daily work. The revision uses more precise wording regarding source authority and reduces abstraction."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field5"
+      ],
+      "before": "Begin with an actual question, responsibility or desired outcome. Where an ADSA action step applies, connect it to that work. Choose a useful work product, involve the people whose knowledge is needed, and seek the responsible decision. Revisit the work to examine implementation, barriers and results.",
+      "after": "Start by identifying a real question, obligation, or intended result. If an ADSA action step is relevant, tie it directly to the work at hand. Select a practical output, include the people whose experience or formal knowledge is important, and make sure to clarify who has responsibility for any necessary decisions. Review the work again as it moves forward, paying attention to how the implementation proceeds, any barriers encountered, and evidence of outcomes.",
+      "reason": "Improves specificity by naming types of involvement, clarifies the process as iterative, and links actions directly with responsibilities and outcomes, explaining the reason for each step."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "field9"
+      ],
+      "before": "The action steps below retain the supplied ADSA plan&apos;s wording. Divisions have discretion to choose approaches suited to their work while maintaining alignment with the plan and applicable requirements. The suggested work products, questions and resource connections can be adapted; they are not a prescribed sequence or an additional set of mandates. The program also supports equity work beyond these six goals. ADSA goals retain their administration and division context; they are not presented as newly adopted goals for every DHS office.",
+      "after": "The action steps below use the original language from the ADSA plan. Each division determines the methods that best fit their work, while keeping to the plan and following any required standards. Suggested outputs, questions, and resource links may be adapted to match the local context; they are examples, not a required sequence or set of new rules. The program’s support for equity work extends beyond these six goals, recognizing differences across divisions. The ADSA goals should be understood as guidance for administration and division work, not as mandatory for every office in DHS.",
+      "reason": "Increases precision about the source and scope of requirements, clarifies the role of division-level adaptation, and avoids misrepresenting the goals as universal mandates."
+    },
+    {
+      "fieldId": 13,
+      "path": [
+        "field15"
+      ],
+      "before": "Keep the selected action step with the analysis or plan, its source references, open questions, responsible roles and agreed next action. A completed worksheet records preparation. An implementation record describes what was actually done. Evidence of results explains what changed, for whom, and what remains uncertain.",
+      "after": "Keep the selected action step together with the related analysis or plan, its references, unresolved questions, identified responsible roles, and next steps. Completion of a worksheet documents planning. An implementation record describes steps taken. Clear evidence of results should specify what changed, who was affected, and what questions remain.",
+      "reason": "Improves detail on what to record and why for each product, and adds clarity that documenting changes and uncertainties helps track actual impact."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The revised field improves precision about the constitutional role and avoids overgeneralizing. It extends the source but does not invent conditions or remove existing limits. Acceptable clarification."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The revision increases specificity and practical guidance, in line with the original intent. It clarifies reasoning for each step. The edit maintains factual scope."
+      },
+      {
+        "fieldId": 9,
+        "severity": "note",
+        "finding": "This change clarifies that divisions control how to meet the plan and that these are not new mandates. It does not create new policy or lessen current requirements. The adaptation is accurate."
+      },
+      {
+        "fieldId": 15,
+        "severity": "note",
+        "finding": "The changes provide more detail about documentation without adding requirements or misrepresenting the process. The explanation remains faithfully rooted in the source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3604,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 579,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4183
+    },
+    "review": {
+      "input_tokens": 3425,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 183,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3608
+    }
+  },
+  "createdAt": "2026-11-15T13:51:27.820Z"
+}

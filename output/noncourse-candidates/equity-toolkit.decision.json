@@ -1,0 +1,123 @@
+{
+  "target": "equity-toolkit.decision",
+  "kind": "surface",
+  "route": "/learn/equity-toolkit/practice",
+  "sourceSha256": "c9755d5d16926f0d2fc2520bb48125e3c874940412c8576d66e0692c3226fe9e",
+  "status": "model_checked",
+  "reviewedFieldCount": 100,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "intro"
+      ],
+      "before": "Begin with a piece of work, explore the choices, and prepare a useful next step. You can move between the five stages in any order.",
+      "after": "Start with the work you are addressing. Explore the choices and plan your next practical step. You can use the five stages in whichever order fits the work.",
+      "reason": "Clarified the initial instruction, specifying that users start with their own work and emphasizing the flexibility of using stages. This provides clearer practical guidance."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "boundary"
+      ],
+      "before": "These are working notes alongside the Equity Analysis Toolkit. They do not replace the official toolkit, engagement with people affected, or the review and decisions your work requires.",
+      "after": "These are working notes to use with the Equity Analysis Toolkit. They do not replace the official toolkit, the need to engage people affected by your work, or the review and decisions required for your project.",
+      "reason": "Made explicit the need for engagement and clarified these notes support, but do not replace, standard reviews and decisions. This preserves source limits and clarifies intent."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "privacy"
+      ],
+      "before": "Use general notes. Leave out names, case details, personnel information, and other confidential information.",
+      "after": "Use general summaries. Do not record names, detailed cases, personnel information, or other confidential data.",
+      "reason": "Specified what should and should not be included, clarifying the practical approach to privacy in line with DHS expectations."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "saveNote"
+      ],
+      "before": "Nothing is saved until you choose Save to My Work. Saved notes stay in this browser on this device.",
+      "after": "Your notes are not stored until you select Save to My Work. Once saved, they remain only in this browser on this device.",
+      "reason": "Clarified where notes are saved and when, emphasizing the user's control and the privacy boundary for saved information."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "retention"
+      ],
+      "before": "Notes stay on this page until you choose Save to My Work. A saved copy stays in this browser on this device; it is not sent to anyone. Download a copy if you need to keep it elsewhere, following your work’s information rules.",
+      "after": "Notes will stay on this page until you select Save to My Work. Once saved, they remain only in this browser on your device and are not sent elsewhere. If you need to store them outside this browser, download a copy and follow your work’s data management requirements.",
+      "reason": "Clarified saving and downloading, and connected the action to applicable information management expectations."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revised 'intro' field offers a slightly clearer lead-in, but remains fully supported by source. No substantive policy or instruction is changed; the flexibility and purpose are unchanged."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The 'boundary' field’s revision is fully source-aligned. It rearranges and clarifies without erasing or altering any original boundary conditions."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The 'privacy' field change is a supported paraphrase. Both original and revision tell users not to include confidential or identifying information; 'general summaries' versus 'general notes' is a neutral shift."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The revision to 'saveNote' is supported and not substantively changed. Wording is rearranged for active voice and user clarity, but all limits stated in the source are preserved."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The 'retention' field’s revision spells out the device/browser scope and the download option, matching the source and adding specificity to the last sentence about following rules. No unsupported claims."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 7016,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 725,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 7741
+    },
+    "review": {
+      "input_tokens": 3966,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 315,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4281
+    }
+  },
+  "createdAt": "2026-11-15T13:37:37.244Z"
+}

@@ -1,0 +1,171 @@
+{
+  "revisions": [
+    {
+      "target": "resource.pn-measurement-without-surveillance",
+      "kind": "resource",
+      "route": "/library/pn-measurement-without-surveillance",
+      "status": "draft",
+      "changes": [
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "Invented targets, composite scores without validation, and individualized learning surveillance destroy trust and prove nothing. Good measurement is possible and protects people.",
+          "after": "Useful measurement connects a clear question with appropriate evidence and an explanation of its limits. Unjustified targets, unvalidated combined scores, or monitoring individual learning can mislead decisions and undermine trust. Plan the review with the data owner and people affected."
+        },
+        {
+          "path": [
+            "body",
+            2
+          ],
+          "before": "Baselines first. No causal claim without a baseline. If there is no baseline, say so and start one.",
+          "after": "Baselines. Describe the starting conditions and observation period so readers can interpret change. If a baseline is missing, say so and plan how to establish an appropriate comparison. A baseline alone does not establish that an intervention caused a result."
+        },
+        {
+          "path": [
+            "body",
+            3
+          ],
+          "before": "Mixed methods. Numbers show patterns; people's accounts show why. Use both, and give qualitative evidence equal standing.",
+          "after": "Mixed methods. Quantitative data can show patterns, and people's accounts can help explain experiences and possible reasons. Interpret both in context, including whose experience is missing and whether other explanations remain plausible."
+        },
+        {
+          "path": [
+            "body",
+            5
+          ],
+          "before": "Protect private learning. Learning, reflection, Ask, and practice paths are private. Report only combined totals that cannot identify anyone, and never use them for supervision or evaluation.",
+          "after": "Protect personal learning. Do not use individual learning, reflection, Ask, or practice records for supervision or evaluation. If reporting program-level participation, work with the data owner to assess whether combined information could identify someone. Some activities save notes on the user's device; follow the privacy guidance for the activity."
+        },
+        {
+          "path": [
+            "body",
+            7
+          ],
+          "before": "State the limits. Every report says what the evidence does not show. That sentence is what makes the rest trustworthy.",
+          "after": "State the limits. Explain what each report can support, what it cannot establish, and which questions need further evidence. Acknowledging a limit helps readers judge the findings; it does not by itself validate the rest of the analysis."
+        }
+      ],
+      "reviewNote": "Full original resource read. Replaces unsupported prevalence or outcome assurances; separates evidence/causality, individual access from identity and universal invitation from authorized accommodation review. EEOC Job Applicants and ADA Q7/Q11 supports request-information distinction. Preserves official source text and URLs; independent review pending."
+    },
+    {
+      "target": "resource.pn-accessible-leadership-pathways",
+      "kind": "resource",
+      "route": "/library/pn-accessible-leadership-pathways",
+      "status": "draft",
+      "changes": [
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "Advancement barriers for disabled staff are usually structural and often invisible to those running leadership pathways. Hear from disabled staff without forcing disclosure, examine each pipeline stage, and build sponsorship, transparent pathway maps, and accessible leadership programs by default.",
+          "after": "Leadership pathways can create barriers through nomination rules, interview formats, access arrangements, and informal judgments of readiness. Invite disabled staff to describe those processes without requiring personal disclosure in a learning discussion. Examine each stage and plan accessible development, sponsorship, and clear information about requirements."
+        },
+        {
+          "path": [
+            "body",
+            1
+          ],
+          "before": "Close the loop publicly. Disabled staff in particular have watched accessibility promises go unfunded. Report what changed, what did not, and who owns the next step.",
+          "after": "Report back on access commitments. Explain what changed, what did not, why, and who is responsible for the next decision. This lets people examine the response to their concerns rather than having to rely on a general promise."
+        },
+        {
+          "path": [
+            "body",
+            3
+          ],
+          "before": "Test the job-relatedness of leadership criteria. Executive presence, quick verbal response, travel, long hours, and always-on availability screen out many disabled staff and are rarely tied to what leaders actually do.",
+          "after": "Test leadership criteria against the work. Ask what executive presence, quick verbal response, travel, long hours, or constant availability are intended to demonstrate. Examine whether each requirement is necessary and what other ways could demonstrate the relevant capability."
+        },
+        {
+          "path": [
+            "body",
+            9
+          ],
+          "before": "Structured leadership interviews with rubrics tied to the work, accommodations offered without asking why, and panel preparation on disability bias.",
+          "after": "Use structured leadership interviews with criteria tied to the work. Tell candidates how to request accommodation through the designated process, and prepare the panel to assess relevant evidence without making assumptions about disability."
+        },
+        {
+          "path": [
+            "body",
+            11
+          ],
+          "before": "Boundaries this program keeps. No guessing about disability: the program never guesses who is disabled from behavior, accommodation history, or participation. No individual tracking: private learning and reflection stay private, and program-level measures use aggregates with suppression. Accommodation requests, complaints, and personnel decisions go to the confidential channels, never into this program.",
+          "after": "Boundaries this program keeps. Do not infer disability from behavior, accommodation history, or participation. Do not track individual learning for personnel decisions. Review any program-level reporting for identification risk, including small groups. Use the authorized processes for accommodation requests, complaints, and personnel matters; keep those records out of this program."
+        }
+      ],
+      "reviewNote": "Full original resource read. Replaces unsupported prevalence or outcome assurances; separates evidence/causality, individual access from identity and universal invitation from authorized accommodation review. EEOC Job Applicants and ADA Q7/Q11 supports request-information distinction. Preserves official source text and URLs; independent review pending."
+    },
+    {
+      "target": "resource.ja-leadership-criteria-job-relatedness",
+      "kind": "resource",
+      "route": "/library/ja-leadership-criteria-job-relatedness",
+      "status": "draft",
+      "changes": [
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "Leadership criteria are rarely written down and rarely tested. The ones that live in people's heads tend to reward a narrow style of presence and stamina rather than the work of leading.",
+          "after": "Unwritten or loosely defined criteria can reward a familiar style of speaking or working rather than the capability a role requires. Make the criteria explicit, examine their relationship to the work, and review alternatives with the responsible hiring partners."
+        },
+        {
+          "path": [
+            "body",
+            2
+          ],
+          "before": "Ask who each criterion screens out. Quick verbal response screens out people who process or communicate differently. Travel and long hours screen out people with energy, mobility, or care constraints. Always-on availability screens out most people with a disability and many without one.",
+          "after": "Ask whom a criterion could exclude and why. Speed of verbal response, travel, long hours, or constant availability can create barriers related to communication, energy, mobility, or caring responsibilities. Examine the actual role and candidate evidence rather than assuming capability from disability or another identity."
+        },
+        {
+          "path": [
+            "body",
+            4
+          ],
+          "before": "Offer accommodation for every stage in the same sentence you use for scheduling, to everyone, without asking why.",
+          "after": "Explain the process and how to request accommodation to every candidate when scheduling. Route individual requests to the designated accommodation office rather than asking the panel to gather medical details."
+        }
+      ],
+      "reviewNote": "Full original resource read. Replaces unsupported prevalence or outcome assurances; separates evidence/causality, individual access from identity and universal invitation from authorized accommodation review. EEOC Job Applicants and ADA Q7/Q11 supports request-information distinction. Preserves official source text and URLs; independent review pending."
+    },
+    {
+      "target": "resource.ja-accommodation-across-transitions",
+      "kind": "resource",
+      "route": "/library/ja-accommodation-across-transitions",
+      "status": "draft",
+      "changes": [
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "Accommodations that work in a current role are often lost in a rotation, acting assignment, leadership cohort, or interview process because no one owns them across the transition. This aid names each transition, its owner, and what to carry forward.",
+          "after": "A change in role, supervisor, assignment, or learning program can disrupt access arrangements if responsibilities are unclear. Identify who will coordinate the transition and check with the person and the authorized accommodation process about what is needed in the new setting."
+        },
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "The cliff is invisible to the people who design pathways and very visible to the people who fall off it. Naming an owner for accommodations across each transition is a small change that removes a structural barrier.",
+          "after": "Planning responsibilities before a transition can prevent gaps in access. The arrangements that worked in one setting may need review in another, so confirm what will continue, what needs adjustment, and who can decide."
+        },
+        {
+          "path": [
+            "body",
+            1
+          ],
+          "before": "For each transition, name one owner responsible for carrying existing accommodations forward and for offering accommodation to everyone entering it. The owner is a person, not a process.",
+          "after": "For each transition, identify the person responsible for coordinating access arrangements with the individual and the designated accommodation office. Confirm what can continue and what requires review before the new activity begins."
+        },
+        {
+          "path": [
+            "body",
+            3
+          ],
+          "before": "Offer accommodation to everyone at every transition, in the same sentence used for logistics, so no one has to disclose to receive it.",
+          "after": "Tell everyone entering the activity how to request accommodation. Keep requests within the authorized process. The designated office may need supporting information to assess an individual request."
+        }
+      ],
+      "reviewNote": "Full original resource read. Replaces unsupported prevalence or outcome assurances; separates evidence/causality, individual access from identity and universal invitation from authorized accommodation review. EEOC Job Applicants and ADA Q7/Q11 supports request-information distinction. Preserves official source text and URLs; independent review pending."
+    }
+  ]
+}

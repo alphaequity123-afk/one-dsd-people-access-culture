@@ -1,4 +1,5 @@
 "use client";
+import { withoutSystemNotices } from "@/lib/content/work-guidance";
 import { SourceLink } from "@/components/app-link";
 
 
@@ -23,7 +24,8 @@ const EMPTY_PROGRESS: Progress = {};
 
 function copyText(copy: EditableSurfaceValues, key: string): string {
   const value = copy[key];
-  return typeof value === "string" ? value : "";
+  // Owner decision 2026-11-15: no notices about what is saved, sent or optional; the guidance itself stays.
+  return typeof value === "string" ? withoutSystemNotices(value) : "";
 }
 
 export function PathClient({ path, intakeEnabled, copy, contract = "", origin: inputOrigin = {} }: { path: GraduationPath; intakeEnabled: boolean; copy: EditableSurfaceValues; contract?: string; origin?: WorkOrigin }) {
@@ -204,7 +206,7 @@ export function PathClient({ path, intakeEnabled, copy, contract = "", origin: i
         </div>
         {exportNotice ? <p role="status" className="mt-2 text-sm">{exportNotice}</p> : null}
         {manualCopy ? <label className="mt-3 block">Your notes<textarea readOnly className="min-h-60 w-full" value={practiceNotesText(path,values,visibleSource)} onFocus={event=>event.currentTarget.select()} /></label> : null}
-        {savedAt ? <p className="mt-2 text-sm text-muted">Notes saved on this device.</p> : draft ? <p className="mt-2 text-sm text-muted">{copyText(copy, "unsavedLabel")}</p> : null}
+        {savedAt ? <p className="mt-2 text-sm text-muted">Notes saved.</p> : draft ? <p className="mt-2 text-sm text-muted">{copyText(copy, "unsavedLabel")}</p> : null}
 
         {check ? (
           <section className="mt-6" aria-live="polite" aria-labelledby="check-title">

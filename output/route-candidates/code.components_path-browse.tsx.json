@@ -1,0 +1,81 @@
+{
+  "target": "code.components/path-browse.tsx",
+  "kind": "surface",
+  "route": "components/path-browse.tsx",
+  "sourceSha256": "311dbf9dfacf6242dd0838641b90edb452b4e8afecc2e82a1114a8f7ec3267eb",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Read it here, then download it to use.",
+      "after": "Review this checklist here. Download it before use.",
+      "reason": "This revision streamlines the summary, focusing on the action and removing less precise phrasing. It uses more direct wording to clarify the steps, supporting professional clarity."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "This page does not save anything you write, so keep your notes in your own working file.",
+      "after": "Entries made on this page will not be saved. Keep any practice notes or answers in your own work file.",
+      "reason": "This revision states more precisely that entries are not saved, and clarifies what staff should do with their own notes, connecting the instruction to practical work."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revision changes the meaning and omits an important instruction. The original: 'Read it here, then download it to use.' The proposed: 'Review this checklist here. Download it before use.' By removing 'to use', the revision loses the direction that downloading is a necessary precondition to use. Also, 'download it before use' could be interpreted as requiring the download before viewing at all, which may not be the system's intent. The phrase 'Read it here' matches the page's actual function (display for reading), while 'review' is less specific. The original clearer supports the workflow, based on system source context."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revision for field 1 is acceptable and clarifies the data privacy/user responsibility, keeping source intent intact while improving specificity."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1382,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 166,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1548
+    },
+    "review": {
+      "input_tokens": 1118,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 220,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1338
+    }
+  },
+  "createdAt": "2026-11-15T13:55:09.718Z"
+}

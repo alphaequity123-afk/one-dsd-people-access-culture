@@ -1,0 +1,151 @@
+{
+  "target": "amplify.home",
+  "kind": "surface",
+  "route": "/one-dsd/amplify",
+  "sourceSha256": "6f6d599d36ed199b9f7cdf7707b7c24bad0e8f86a2b375b9aa18256dc14c1772",
+  "status": "needs_revision",
+  "reviewedFieldCount": 14,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "intro"
+      ],
+      "before": "Connect with colleagues, explore something new, or bring an idea that could make everyday work better. Find what interests you and take part in a way that fits.",
+      "after": "Amplify connects colleagues across DSD who want to share ideas, ask questions, and support each other’s work. You can join, participate in ways that suit you, and raise topics that matter in your day-to-day role.",
+      "reason": "Clarified the professional purpose for DSD staff and emphasized connection, choice, and relevance to work, supporting the guidance standard."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "section0Body"
+      ],
+      "before": "You do not need an equity title or prior experience to take part. Bring a question, an idea, or simply your attention. Conversation, cultural celebration, and learning from one another all belong here.",
+      "after": "No formal equity role or prior participation is required to join Amplify. Bring a question, idea, or simply listen and observe. Staff can join for a conversation, share in cultural recognition, or learn directly from colleagues’ experiences. Every contribution is welcome.",
+      "reason": "Clarified that participation does not depend on formal role or experience, addressed multiple participation styles, and specified the inclusion of learning from peers."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "section1Title"
+      ],
+      "before": "Room for different conversations",
+      "after": "Different ways conversations begin",
+      "reason": "Made the section title refer directly to the range of starting points in conversations, increasing specificity."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "section1Body"
+      ],
+      "before": "Some gatherings begin with a workplace question. Others grow from a reading, a shared interest, or a cultural observance. Staff shape the conversation. There is no required sequence and no expectation that every gathering produces an assignment.",
+      "after": "Gatherings can grow from a work challenge, a reading, a shared interest, or a cultural event. Staff who join help shape the direction of the conversation each time. There is no fixed schedule or obligation to produce an outcome—participation is voluntary and flexible.",
+      "reason": "Improved clarity by explicitly mentioning the range of gathering origins and the flexible structure, and explaining the purpose of not requiring an outcome."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "section3Body"
+      ],
+      "before": "One or two co-leads organize Amplify with staff input. Their connection with the One DSD Team provides a way to share agreed questions and bring back updates. Amplify remains a voluntary engagement space; the One DSD Team has a separate role in the division’s equity work.",
+      "after": "Amplify is coordinated by one or two co-leads based on staff interest and input. Their link to the One DSD Team lets the group share questions or updates as needed, while keeping Amplify distinct from formal equity duties. Participation is voluntary; the One DSD Team supports division-wide equity activities separately.",
+      "reason": "Clarified the organizational structure and the distinction between Amplify and formal equity roles, supporting understanding of staff responsibilities."
+    },
+    {
+      "fieldId": 11,
+      "path": [
+        "section4Body"
+      ],
+      "before": "Sometimes connection is the outcome. Sometimes a conversation leads to a useful resource or a question that deserves attention elsewhere. Participants and co-leads can agree on what, if anything, to carry forward.",
+      "after": "Connecting with others may be an end in itself. Some conversations might lead to shared resources or questions carried to other teams. Staff and co-leads decide together if there is anything to follow up after a discussion, but there is no expectation to do so.",
+      "reason": "Clarified the options following an Amplify gathering and explained the voluntary nature of follow-up, connecting outcome explanations with staff action."
+    },
+    {
+      "fieldId": 12,
+      "path": [
+        "section5Body"
+      ],
+      "before": "Facilitation ideas and practical resources are available here. The Equity and Inclusion Operations Consultant can be invited to weigh in on a question or offer specialized support.",
+      "after": "Templates, facilitation tips, and practical resources are available through this page. If a complex question or situation would benefit from deeper input, the Equity and Inclusion Operations Consultant can join to support or advise staff.",
+      "reason": "Increased specificity regarding types of available support and situations warranting consultant involvement."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The new intro adds a section-defining organizational description ('Amplify connects colleagues across DSD who want to share ideas...'), asserts broader relevance ('support each other's work'), and claims that you can 'raise topics that matter in your day-to-day role'. The source welcomes broad participation and choice in involvement, but does not define Amplify as a DSD-wide cross-organizational space, nor directly tie the discussions to daily work in this explicit form. 'Connect with colleagues, explore something new, or bring an idea...' is neutral as to scope and doesn't suggest every conversation is tied to job tasks. The proposed text goes beyond clarifying audience or distinguishing DSD's structure; it creates a more concrete claimed relationship and scope not directly in the source. This is a misrepresentation of the group and its function."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The revision better clarifies that no formal role or experience is needed and accurately lists allowed participation styles based on the source. Wording changes specify welcome forms of presence, without adding unsupported requirements or removing meaningful nuance."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The retitled section ('Different ways conversations begin') aims for increased specificity and accurately describes the range of starting points for Amplify conversations, as outlined in the source."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The update clarifies the flexibility and variety of gathering origins and is source-consistent. It properly explains voluntary nature and lack of required outcomes, in line with the source's intent."
+      },
+      {
+        "fieldId": 10,
+        "severity": "note",
+        "finding": "The update to section3Body clarifies Amplify's organizational structure and keeps the distinction from formal equity duties, consistent with the source text."
+      },
+      {
+        "fieldId": 11,
+        "severity": "note",
+        "finding": "The revision accurately captures the described range of outcomes and voluntary nature of follow-up, consistent with the source."
+      },
+      {
+        "fieldId": 12,
+        "severity": "note",
+        "finding": "The revision adds specificity (templates, tips, resources) consistent with 'facilitation ideas and practical resources' and clearly describes when the consultant might be involved, matching the intent and scope of the source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2129,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 579,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2708
+    },
+    "review": {
+      "input_tokens": 2080,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 460,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2540
+    }
+  },
+  "createdAt": "2026-11-15T13:37:14.109Z"
+}

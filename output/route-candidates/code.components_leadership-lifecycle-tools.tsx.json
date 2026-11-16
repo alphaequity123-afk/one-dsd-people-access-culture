@@ -1,0 +1,95 @@
+{
+  "target": "code.components/leadership-lifecycle-tools.tsx",
+  "kind": "surface",
+  "route": "components/leadership-lifecycle-tools.tsx",
+  "sourceSha256": "d32e67d3f862435fb3b5de24569caf9bc5db29084a53cd8c9d9d967079009aab",
+  "status": "needs_revision",
+  "reviewedFieldCount": 9,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Choose a stage that connects with your work. Each offers a leadership question, a DSD practice situation, and room to reflect.",
+      "after": "Select the life cycle stage that aligns with your current work. Each stage includes a leadership question, a practical DSD scenario, and space for you to reflect. This helps connect learning to real tasks and supports targeted development within our division.",
+      "reason": "The revision clarifies why staff are choosing a stage and explains how it relates to work, following the guideline to explain reasons for a step and make the benefit explicit. It also provides context specific to DSD work."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field5"
+      ],
+      "before": "Use a practice example without names or private personnel details. Copy or download anything you want to keep before changing stages or leaving this page.",
+      "after": "Write about a practice example using general terms—do not include names or private personnel details. If you want to save your reflection, be sure to copy or download it before navigating away or picking a different stage. This prevents accidental loss of your notes.",
+      "reason": "The revision improves clarity by stating why staff should avoid names (privacy and data protection) and why they need to copy or download before leaving the page (to prevent losing unsaved work). This adds practical, grounded reasoning rather than repeating instructions."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "field8"
+      ],
+      "before": "Describe functions and roles, without naming or ranking employees. This draft stays on this page until you copy or download it.",
+      "after": "Define key functions and roles in general terms, not by listing or ranking staff. This protects privacy and keeps planning focused on the work itself. The draft is only stored on this page; copy or download if you need to keep it for future use.",
+      "reason": "The revision explains why to avoid naming or ranking individuals (privacy, work-focused planning) and why copies must be kept (the draft is not saved elsewhere). This brings out the implications for staff practice and planning security."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The revised text states, \"This helps connect learning to real tasks and supports targeted development within our division.\" The original source does not express that selecting a stage has this purpose, nor does it claim a direct connection to \"targeted development within our division.\" The original is more neutral: \"Choose a stage that connects with your work. Each offers a leadership question, a DSD practice situation, and room to reflect.\" The added claims are extrapolation and not supported by the source."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "Revision restates original instructions about privacy and unsaved work, but adds explicit reasoning ('to prevent losing unsaved work', 'privacy and data protection'). This is a defensible clarification of the practical reasoning behind the instructions, not a policy or legal change, and does not introduce unsupported claims."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "Revision explains privacy and the focus on work as reasons for avoiding names or ranking staff, which are implied in DSD practice. However, it does not introduce new policy or change legal conditions, and warning users about local-only storage is accurate and helpful. This clarification aligns with professional communication standards."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3307,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 343,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3650
+    },
+    "review": {
+      "input_tokens": 3088,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 261,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3349
+    }
+  },
+  "createdAt": "2026-11-15T13:54:00.034Z"
+}

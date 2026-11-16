@@ -1,0 +1,151 @@
+{
+  "target": "code.components/multimedia/dsd-policy-burden-map.tsx",
+  "kind": "surface",
+  "route": "components/multimedia/dsd-policy-burden-map.tsx",
+  "sourceSha256": "00718550e9112c7efc4558314723f963ec83d5e408d4c75ad9e59afc14652a90",
+  "status": "needs_revision",
+  "reviewedFieldCount": 21,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Find the new request, its purpose, the reply date and a way to ask for help.",
+      "after": "Read the updated request, its stated purpose, the response deadline, and the way for the person or family to request assistance.",
+      "reason": "Clarified the instruction by specifying the process sequence. Introduced a more precise description of the purpose and response deadline, and clarified the means to request help, enhancing specificity and connection to staff review."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Locate a document and send another copy, even if the agency may already hold relevant information.",
+      "after": "Find the relevant document and send a new copy, regardless of whether the agency may already possess this information.",
+      "reason": "Clarified the expectation and highlighted the potential redundancy, which matters for staff considering burden or system efficiency. Avoided assumption about agency processes while making the duplication risk clearer."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "Check the evidence and explain what remains missing or what happens next.",
+      "after": "Review the submitted evidence and determine what, if anything, is still missing. Communicate what remains outstanding or explain the next step in the process.",
+      "reason": "Explained the review decision in more detail, connecting why missing information must be addressed and giving a clear staff action."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": "Identify the verification gap and ask the policy owner which existing information can be reused.",
+      "after": "Determine the verification gap, then consult with the policy owner to see which documents or data already held can be reused.",
+      "reason": "Clarified the identification of the gap as the first step, and made the policy owner consultation explicit to reinforce the authority and review."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field4"
+      ],
+      "before": "Explain the specific missing information and offer a usable way to respond or get help.",
+      "after": "Describe precisely what information remains needed, and offer clear ways for the person or family to respond or seek support.",
+      "reason": "Specified \"missing information,\" made response pathways explicit, and reminded staff of the need to offer accessible options."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field5"
+      ],
+      "before": "Check both verification quality and the burden of responding, then explain the next step.",
+      "after": "Review both the completeness and accuracy of the evidence, and assess the effort required to respond. Explain what action or decision follows from the findings.",
+      "reason": "Clarified the dual criteria—evidence quality and participant burden—then connected the review outcome to explaining the next step, addressing why both are assessed."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "field8"
+      ],
+      "before": "To examine the scenario, imagine the new requirement asks for another document copy. Follow where the work falls, then compare an option that first checks information already held. Both still need review against the actual verification purpose.",
+      "after": "In this scenario, the new requirement asks the person or family to provide another copy of a document. Map each step to identify where the work falls—on the person, family, or staff. Next, compare an alternative where staff check for existing documents first. Each approach still requires review against the underlying verification purpose to ensure the process meets policy goals and does not introduce unnecessary effort.",
+      "reason": "Rewrote the introductory explanation to specify sequential analysis, clarify the professional audience, and emphasize why both scenarios need to be checked against verification intent."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed change replaces the original: 'Find the new request, its purpose, the reply date and a way to ask for help.' with 'Read the updated request, its stated purpose, the response deadline, and the way for the person or family to request assistance.' The source is a practice scenario focusing on the person or family's perspective; the change shifts it to an instruction (\"read the updated request\") and introduces wording ('response deadline', 'request assistance') that departs from the casual, concise summary in the source. The source respects a general plain description; the revision risks introducing new process assumptions about what the family reads (the 'updated request') or formal language not supported by the original or scenario context. This introduction of new specificity is not supported by the source text."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The changes in field 1 are permissible. While 'Find the relevant document and send a new copy, regardless of whether the agency may already possess this information.' shifts some word order, it tracks the meaning and clarifies redundancy. No unsupported claims are introduced."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The proposed expanded version fits the underlying source intent and does not contradict the policy scenario. While it adds some detail, it stays within the source boundaries."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The change is not substantive: 'consult with the policy owner' is a clarification, not an alteration of the practice example. Acceptable."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The expanded version is acceptable; it spells out requirements in accessible terms. It does not introduce unsupported obligations or change the scenario's meaning."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The change clarifies and slightly expands on the explanation, but remains faithful to the scenario and does not create inaccuracies."
+      },
+      {
+        "fieldId": 8,
+        "severity": "blocker",
+        "finding": "The new text for field 8 introduces unwarranted process mapping ('map each step to identify where the work falls—on the person, family, or staff'), switches the framing to a staff or professional audience, and asserts that the process 'meets policy goals and does not introduce unnecessary effort.' The source states only, 'imagine the new requirement asks for another document copy. Follow where the work falls, then compare an option that first checks information already held. Both still need review against the actual verification purpose.' The revision invents justification about meeting policy goals and describes the mapping as if it is the focus, which overstates the original explanatory purpose. This change is not fully supported by the source context or phrasing."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3272,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 551,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3823
+    },
+    "review": {
+      "input_tokens": 2958,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 560,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3518
+    }
+  },
+  "createdAt": "2026-11-15T13:54:27.043Z"
+}

@@ -1,0 +1,81 @@
+{
+  "target": "code.app/learn/collections/page.tsx",
+  "kind": "surface",
+  "route": "/learn/collections",
+  "sourceSha256": "c11eff0934710f9dc83576cd494dc1063d2720b9f1a2003ec27399db409f6d86",
+  "status": "needs_revision",
+  "reviewedFieldCount": 8,
+  "changes": [
+    {
+      "fieldId": 2,
+      "path": [
+        "field3"
+      ],
+      "before": "Find related learning, tools, sources, readings and available listening together, then return to the course shelves below whenever you need them.",
+      "after": "Find related courses, tools, references, readings, and available audio together by theme. You can revisit the course shelves below when needed. Grouping these resources by theme helps you see connections across topics and locate materials for different learning needs or context.",
+      "reason": "Clarifies the purpose for grouping resources by theme and connects the instruction to practical staff needs. Explains why staff might return to the course shelves."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field8"
+      ],
+      "before": "The Equity Analysis Toolkit is required of all staff of the Minnesota Department of Human Services, regardless of status. Everything else here is voluntary.",
+      "after": "The Equity Analysis Toolkit is required for all Minnesota Department of Human Services staff, regardless of their employment status. This toolkit supports consistent use of equity concepts in your work. All other learning in this collection is optional and can be used based on interest or need.",
+      "reason": "Adds specific reasoning for why the required course matters, emphasizing consistency in equity practice. Clarifies that everything else is optional for practical decision-making."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The proposed new text expands on the original by specifying that collections are grouped by theme for the purposes of seeing connections across topics and locating materials for different learning needs or context. The source only states: \"Find related learning, tools, sources, readings and available listening together, then return to the course shelves below whenever you need them.\" It does not support the additional claims about 'grouping by theme' as a reason or the practical effects described. Introducing unstated rationale or intended outcomes not present in the code's source text goes beyond clarification into unsupported addition. The change should be blocked as it invents justification not warranted by the evidence."
+      },
+      {
+        "fieldId": 6,
+        "severity": "blocker",
+        "finding": "The new wording introduces an explanation—\"This toolkit supports consistent use of equity concepts in your work\"—and evaluation—\"optional and can be used based on interest or need\"—that are not in the official page source. The source strictly states the requirement and that all else is voluntary. Adding purpose statements and new criteria for use extends beyond the provided source evidence. This change must be blocked as it adds new policy explanation and implied guidance not supported by the page's source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2294,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 207,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2501
+    },
+    "review": {
+      "input_tokens": 1932,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 260,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2192
+    }
+  },
+  "createdAt": "2026-11-15T13:49:36.463Z"
+}

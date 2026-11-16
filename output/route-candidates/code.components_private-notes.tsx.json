@@ -1,0 +1,67 @@
+{
+  "target": "code.components/private-notes.tsx",
+  "kind": "surface",
+  "route": "components/private-notes.tsx",
+  "sourceSha256": "f7789d9799e3e11b8745e40141d77a46f06d9087ef5a6761556ec1a32a3888cf",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Private notes, saved only in this browser",
+      "after": "These notes are stored in this browser and are not sent to the application.",
+      "reason": "Clarified that the notes are stored locally and never transmitted, providing a plain-language summary and connecting the storage explanation to privacy. The revision explains the consequence and increases specificity without adding unnecessary caution."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed change alters the official privacy and storage notice. The source label is: 'Private notes, saved only in this browser.' The new wording ('These notes are stored in this browser and are not sent to the application.') is not exactly from the source and introduces a privacy explanation. However, the official privacy assurance in the source code's comment (Reflection notes stay in this browser. They are never sent to the application.) is not reflected in the on-page source label, only as an internal comment. Program writing standard requires exact preservation unless an official public statement exists. Additionally, changing a privacy statement requires careful coordination and approval; the existing label, as shown, preserves the intended commitment without unauthorized expansion."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1263,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 79,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1342
+    },
+    "review": {
+      "input_tokens": 955,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 183,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1138
+    }
+  },
+  "createdAt": "2026-11-15T13:55:38.641Z"
+}

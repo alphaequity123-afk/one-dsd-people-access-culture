@@ -1,0 +1,95 @@
+{
+  "target": "code.components/packet-view.tsx",
+  "kind": "surface",
+  "route": "components/packet-view.tsx",
+  "sourceSha256": "d6e37689986bbf618c9f0c18a9c36ffda1fb3c77825f28dd7da79c02f390315b",
+  "status": "needs_revision",
+  "reviewedFieldCount": 3,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field2"
+      ],
+      "before": "No program resource closely matches this request yet.",
+      "after": "No current program resource directly addresses this request. Review available resources for partial guidance or consider whether this gap should be flagged for future reference. Noting missing resources can help identify areas for resource development or clarify when additional expertise or escalation may be needed.",
+      "reason": "Added reasoning to clarify the practical consequences of missing program resources and why staff should note this gap, aligning with the writing standard's requirements for connected explanation."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field3"
+      ],
+      "before": "can adapt it for the conversation)",
+      "after": "may modify this agenda as needed for the discussion)",
+      "reason": "Revised to clearly state that the practice owner may modify the agenda, explaining that adaptation is based on the needs of the discussion. This supports clear understanding of staff authority and purpose in adjusting meeting structure."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field4"
+      ],
+      "before": "7. Meeting details to copy into a calendar invitation",
+      "after": "7. Copy these meeting details into a calendar invitation",
+      "reason": "Clarified instruction for staff, making the purpose more actionable and explicit according to the writing standard."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed replacement text for field2 goes well beyond the source by introducing new staff instructions: 'Review available resources for partial guidance or consider whether this gap should be flagged for future reference. Noting missing resources can help identify areas for resource development or clarify when additional expertise or escalation may be needed.' The source only provides the message: 'No program resource closely matches this request yet.' Adding new action steps, policy implications, or instructions about escalation or resource development is not supported by the code's source, and may misrepresent official process or staff expectations."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The proposed wording for field3 ('may modify this agenda as needed for the discussion)') clarifies the intent of the original text ('can adapt it for the conversation)'), which is justified, clear, and in line with the code's contextual use of 'can adapt'. This is a valid clarification for staff-focused communication and does not alter the underlying meaning."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The change to field4 ('7. Copy these meeting details into a calendar invitation') is a plain-language clarification of the instruction given in the source, aligning with DSD/DHS writing standards. This does not expand scope or authority and is supported."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2613,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 210,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2823
+    },
+    "review": {
+      "input_tokens": 2421,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 279,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2700
+    }
+  },
+  "createdAt": "2026-11-15T13:55:06.784Z"
+}

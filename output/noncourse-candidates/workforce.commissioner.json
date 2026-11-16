@@ -1,0 +1,67 @@
+{
+  "target": "workforce.commissioner",
+  "kind": "surface",
+  "route": "/consultant/workforce/commissioner",
+  "sourceSha256": "069f51fe2a92320f49756f60b91dc66cf9cd9c7b07979146b02bf09ed9eb7cc2",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "relationship"
+      ],
+      "before": "Listed as an agency area or associated service. This does not establish a direct reporting line.",
+      "after": "Identified as an agency leadership area or key service. This listing is informational and does not indicate an employment, supervisory, or formal reporting relationship.",
+      "reason": "Clarifies that the entry serves as informational context only, specifying that no employment or supervisory link is implied and addressing the possible assumption of structure based on listing."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revised wording (\"Identified as an agency leadership area or key service. This listing is informational and does not indicate an employment, supervisory, or formal reporting relationship.\") introduces new language by calling it a 'leadership area or key service,' which is not explicitly supported by the cited source. The original language ('agency area or associated service') is closer in meaning to the actual organizational chart reference. Adding concepts like 'leadership area' or 'key' and distinguishing 'employment, supervisory, or formal reporting relationship' over-interprets what is presented in the DHS directory and organizational chart, which are just agency listings. The clarification in the original is sufficient and better tied to the source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1095,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 86,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1181
+    },
+    "review": {
+      "input_tokens": 793,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 164,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 957
+    }
+  },
+  "createdAt": "2026-11-15T13:37:39.588Z"
+}

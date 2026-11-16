@@ -1,0 +1,95 @@
+{
+  "target": "code.app/equity-policy/analysis/[id]/page.tsx",
+  "kind": "surface",
+  "route": "/equity-policy/analysis/[id]",
+  "sourceSha256": "563a192a3c51b4d7ef1051640409f11467b5b0d964e0deed6d2749de9be6f6f8",
+  "status": "needs_revision",
+  "reviewedFieldCount": 4,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Analysis records are not shown here",
+      "after": "Stored analysis records unavailable on this page",
+      "reason": "Clarified that this page does not display stored records, using more direct language relevant to staff navigation."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Staff cannot open stored analysis records.",
+      "after": "Staff cannot view or export analysis records from this page.",
+      "reason": "Added that staff also cannot export, which clarifies the scope of inaccessibility per the referenced comment (get/export is fail-closed)."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "Walk through a published example in the Equity Analysis Toolkit instead.",
+      "after": "To review an analysis process, use the published example in the Equity Analysis Toolkit.",
+      "reason": "Specifies that staff should use the example for process review and matches the professional tone."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed change ('Stored analysis records unavailable on this page') is less precise than the source. The source text ('Analysis records are not shown here') clearly matches the page function and avoids implying records exist and are just 'unavailable' (which could be misleading for staff). The replacement edits away the neutral and factual characterization. The original must be kept for accuracy."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "Expanding the prohibition to include 'export' ('Staff cannot view or export analysis records from this page') reasonably matches the intent of the in-code comment (get/export is fail-closed). However, the source only says 'Staff cannot open stored analysis records.' including only opening/reading, so this addition is accurate in practical scope, but goes beyond the page's exact source text. Acceptable if the in-code comment is part of the approved official surface."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The edit rephrases but does not materially change the meaning: both versions direct staff to the example in the Toolkit for process review. No loss of source intent or accuracy."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1338,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 152,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1490
+    },
+    "review": {
+      "input_tokens": 1066,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 290,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1356
+    }
+  },
+  "createdAt": "2026-11-15T13:48:38.026Z"
+}

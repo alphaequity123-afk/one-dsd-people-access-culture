@@ -1,0 +1,67 @@
+{
+  "target": "code.app/minnesota-agencies/page.tsx",
+  "kind": "surface",
+  "route": "/minnesota-agencies",
+  "sourceSha256": "a4102199a18900a871543c9facb32f3c19ef31026f1932495c8aabc9205d1e54",
+  "status": "needs_revision",
+  "reviewedFieldCount": 3,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Find a county lead agency by county",
+      "after": "Search by county for lead agencies",
+      "reason": "Clarifies the user action and purpose. The phrase 'Search by county for lead agencies' explicitly tells the user that they can locate lead agencies using the county name, connecting more directly to the directory's function and staff task."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The source says: 'Find a county lead agency by county.' The proposed change ('Search by county for lead agencies') subtly alters the content and tone: 'Find' restates the goal concisely, matching DHS and DSD's established plain-language directory style. 'Search by county for lead agencies' shifts to a command with slightly different emphasis, which is neither more clear nor more accurate for this context, and is not supported or required by the source. Adhering to official source wording is required for link and directory titles per program writing standard."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2085,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 105,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2190
+    },
+    "review": {
+      "input_tokens": 1735,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 136,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1871
+    }
+  },
+  "createdAt": "2026-11-15T13:50:39.722Z"
+}

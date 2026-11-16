@@ -1,0 +1,109 @@
+{
+  "target": "code.app/consultant/analysis/page.tsx",
+  "kind": "surface",
+  "route": "/consultant/analysis",
+  "sourceSha256": "2ce59c0741b611ae81d6f1e217d4dce306184bd0f7efd3424d645951b53f0b2a",
+  "status": "needs_revision",
+  "reviewedFieldCount": 4,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "For a closer look at a process,",
+      "after": "To examine how a specific process works,",
+      "reason": "Clarified the purpose by specifying the action and making the instruction more direct and specific about what staff are expected to do."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "use structural equity analysis",
+      "after": "use the structural equity analysis tool",
+      "reason": "Specified that staff should use the designated tool for structural equity analysis, clarifying the resource's role and reducing ambiguity."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": ". To compare aggregate figures,",
+      "after": "For aggregate comparisons,",
+      "reason": "Simplified and clarified the phrase to state the distinct purpose: comparing aggregate data, improving readability and precision."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field4"
+      ],
+      "before": ". Download analysis notes from either workspace and add them here as supporting material, together with the evidence behind the review.",
+      "after": "You can download analysis notes from either workspace and add them here as supporting documentation, along with the evidence that supports your review.",
+      "reason": "Clarified why downloading and adding notes is useful—providing supporting documentation and evidence for the review—and improved specificity and sentence structure for professional clarity."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The source is: 'For a closer look at a process,'. The change to 'To examine how a specific process works,' is not supported. The original phrase is a standard internal linking sentence and does not specify 'how a process works.' The edit changes the meaning by introducing a focus on internal mechanisms rather than inviting closer examination per the link’s purpose. This introduces an unsupported explanatory addition."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The source is: 'use structural equity analysis.' The change to 'use the structural equity analysis tool' increases specificity, but the source simply says 'analysis,' not denoting a particular tool. If the linked page is a named tool, this could be harmless, but it slightly exceeds the supported claim."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The source is: '. To compare aggregate figures,'. Changing this to 'For aggregate comparisons,' erases the clear action ('To compare'), and makes the sentence fragment less direct. The original lines correspond to navigational and instructional cues."
+      },
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "The source is: '. Download analysis notes from either workspace and add them here as supporting material, together with the evidence behind the review.' The proposed rewrite 'You can download analysis notes from either workspace and add them here as supporting documentation, along with the evidence that supports your review.' improperly alters the organizational tone and invites interpretation that is not in the source ('You can...'), and introduces a modifier ('the evidence that supports your review') that is not in the record. The original treats this as an instruction, not merely a possibility."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1443,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 205,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1648
+    },
+    "review": {
+      "input_tokens": 1239,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 408,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1647
+    }
+  },
+  "createdAt": "2026-11-15T13:47:56.068Z"
+}

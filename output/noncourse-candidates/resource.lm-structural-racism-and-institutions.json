@@ -1,0 +1,171 @@
+{
+  "target": "resource.lm-structural-racism-and-institutions",
+  "kind": "resource",
+  "route": "/library/lm-structural-racism-and-institutions",
+  "sourceSha256": "ca7a395aa673814760def8a1591c2ab93b0639210532532e9d1e320838c83deb",
+  "status": "needs_revision",
+  "reviewedFieldCount": 8,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Structural racism describes how policies, practices, and norms across institutions produce and maintain racial inequity without anyone needing to intend it. Recognizing it means examining rules, defaults, and histories rather than searching for villains.",
+      "after": "Structural racism refers to the ways that seemingly neutral policies, practices, and norms across institutions contribute to and reinforce racial inequity, even when no individual intends harm. Identifying structural racism requires us to analyze the rules, defaults, and histories shaping outcomes, rather than focus only on individual actions or motives.",
+      "reason": "Clarified how structural racism operates across institutions and emphasized the need for systems-level analysis rather than focusing only on individual intent. Provided explicit guidance about what recognizing structural racism involves and maintained a direct summary for staff in context."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "A program rule can be written without bias and still produce disparities because of the history and conditions it lands on. Equity work that stops at intent cannot change that.",
+      "after": "Even if a program rule is free from explicit bias, it can generate unequal outcomes because of the history, conditions, and systems it interacts with. Limiting an equity review to the question of intent will not address which groups are disadvantaged or how existing disparities persist.",
+      "reason": "Explained more fully that focusing on intent alone does not reveal or address the structural factors that result in disparities. Provided practical context for why a broader review is needed."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "History matters. Housing, employment, education, disability services, and public benefits carry histories of exclusion that shape who arrives at your program, with what resources, and with what trust.",
+      "after": "Historical patterns matter. In areas like housing, employment, education, disability services, and public benefits, earlier policies of exclusion or unequal access continue to shape who can participate in programs, what resources they bring, and what level of trust they have in these systems.",
+      "reason": "Linked histories of exclusion to present-day participation, resources, and trust in programs. Made the implication of historical policies for specific sectors more explicit."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Neutral rules are not neutral results. A documentation requirement, a daytime appointment, an English-only phone line, or a degree requirement each lands differently depending on that history.",
+      "after": "A rule or policy stated in neutral terms does not ensure neutral results. Requirements such as proof of documentation, scheduled appointments during traditional work hours, use of English-only phone lines, or particular educational credentials each affect different groups differently because of the history and context in which they operate.",
+      "reason": "Expanded to clarify how current-day requirements may create different impacts for different groups, grounding the point in practical examples relevant to DHS and DSD operations."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Institutions reproduce what they do not examine. Defaults persist because they work for the people who set them. Examination is a practice: who benefits, who is burdened, what would change if we chose differently.",
+      "after": "Institutions often repeat familiar patterns unless those patterns are examined. Defaults survive when they serve the needs or assumptions of those who created them. Analyzing these patterns involves asking: who gains from this policy, who is placed at a disadvantage, and what outcomes might shift if we reconsider or adjust established practices.",
+      "reason": "Clarified the mechanism by which institutional defaults persist and why regular examination is necessary. Made the analysis steps more explicit and actionable."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Whiteness as a default. Norms about professionalism, communication, time, and expertise often reflect one culture's habits presented as standards. Naming that is not an accusation; it is a design observation.",
+      "after": "Whiteness as the unmarked standard. Expectations about professionalism, appropriate communication, time management, and expertise are often rooted in the practices of a dominant culture but are presented as universal standards. Recognizing this dynamic is a step toward understanding whose norms shape program operations and who may be excluded as a result. This is an observation about design, not about individual motives.",
+      "reason": "Clarified why and how dominant culture norms become default standards in policies and environments, explaining the implications for inclusion and program design."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "What to do. Connect the analysis to a decision with an owner. Use the equity review canvas, the data owner, and the community's own account. Change the rule, the default, or the resource, and look again.",
+      "after": "What action to take. Link the analysis of rules and patterns to a specific decision point and identify who is responsible for it. Draw on tools like the equity review canvas, involve the data owner for relevant quantitative evidence, and consider the perspectives and experiences reported by the community. Adjust rules, defaults, or available resources, then reassess the outcomes to see whether disparities have changed.",
+      "reason": "Clarified that action requires connecting analysis to specific decisions, responsibilities, and iterative review. Highlighted key tools and sources for evidence-based program adjustments."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "This module is an orientation. Deeper research and frameworks are in the Library's external references, each labeled as a public source to check before use.",
+      "after": "This module provides an overview. More detailed research, approaches, and equity frameworks are available in the Library's external reference section. Each external source is labeled for public use and should be reviewed directly to support further work.",
+      "reason": "Clarified the scope and purpose of the module, making explicit that users should refer to labeled external sources for deeper guidance."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed summary introduces statements not supported by the source: 'Identifying structural racism requires us to analyze the rules, defaults, and histories shaping outcomes, rather than focus only on individual actions or motives.' The original says 'Recognizing it means examining rules, defaults, and histories rather than searching for villains,' which is less prescriptive and does not introduce the contrast with 'individual actions or motives.' The phrase 'requires us to analyze' is not present and creates a new directive. The change shifts from a concise, directly source-grounded definition to added guidance/interpretation not present in the approved summary. Blocker for unsupported claim and altered intent."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The 'whyItMatters' change is generally source-supported, with the expansion ('will not address which groups are disadvantaged or how existing disparities persist') being consistent with the body. While the sentence adds detail, it does not cross into unsupported claims."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revised explanation in body[0] is source-anchored and does not overreach, merely clarifying the implications of historical exclusion. The change is supported."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "Field 3 (body[1]) offers a slightly longer explanation and restates examples, but does not introduce new unsupported policy or claims. The main point—neutral rules having differential impact—remains source-aligned."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "Field 4 (body[2]) rephrases but retains the source meaning. It adds some elaboration but stays within the intent of institutional defaults persisting unless examined, and the practical analysis questions. Supported."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "Field 5 (body[3]) clarifies the meaning of \"whiteness as default\" without introducing new stereotypes or altering the intended explanation in the original. Supported."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "Field 6 (body[4]) expands instructional clarity regarding the process but does not add unsupported content. Supported."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "Field 7 (body[5])'s clarification of the module's scope and next steps is reasonable and supported by the original, with no new claims added."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1923,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 922,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2845
+    },
+    "review": {
+      "input_tokens": 2296,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 499,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2795
+    }
+  },
+  "createdAt": "2026-11-15T13:42:29.317Z"
+}

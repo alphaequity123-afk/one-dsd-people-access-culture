@@ -100,7 +100,7 @@ describe("self-directed course downloads", () => {
       expect(document.subtitle).toBe("Foundation · All staff");
       expect(document.meta.find((row) => row.label === "Curriculum")?.value).toBe("Equity in Policy and Legislative Practice");
       expect(document.meta.find((row) => row.label === "Pages")?.value).toBe("3");
-      expect(document.sections.map((entry) => entry.heading)).toEqual(["What you can practice in this course", "Page 1: Opening page", "Page 2: A choice", "Page 3: Closing page", undefined]);
+      expect(document.sections.map((entry) => entry.heading)).toEqual(["What you can practice in this course", "Page 1: Opening page", "Page 2: A choice", "Page 3: Closing page"]);
       expect(document.sources).toEqual([{ title: "A program course", note: "program page /courses/example" }, { title: "A public source", href: "https://example.org/source" }]);
       const plain = text.renderText(document).toString("utf8");
       const order = ["Opening explanation.", "What would you do?", "Think it through.", "Responses to consider", "Explanation for A. Wait.", "Waiting leaves the question open.", "Waiting explanation.", "Explanation for B. Ask.", "Asking explanation.", "Closing explanation."].map((part) => plain.indexOf(part));

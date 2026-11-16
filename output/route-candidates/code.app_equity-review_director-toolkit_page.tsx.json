@@ -1,0 +1,207 @@
+{
+  "target": "code.app/equity-review/director-toolkit/page.tsx",
+  "kind": "surface",
+  "route": "/equity-review/director-toolkit",
+  "sourceSha256": "6849fc24a14b1c23b80c526b6f4812c4e36c055d0e631ab17fced9281e96be59",
+  "status": "needs_revision",
+  "reviewedFieldCount": 11,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Tools Equity Directors at the Minnesota Department of Human Services can use for equity work across the agency, with a first 90-day plan, a 12-item starter package and printable templates.",
+      "after": "Equity Directors at the Minnesota Department of Human Services can use these tools to guide equity efforts throughout the agency. This toolkit includes a prioritized plan for the first 90 days, a starter package of 12 key resources, and printable templates to support planning and implementation.",
+      "reason": "Clarified that the toolkit's resources are intended to support planning and ongoing work, specifying their role in guiding equity efforts throughout DHS. This revision improves specificity and connects each element to its practical use."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "How an Equity Director uses it",
+      "after": "How Equity Directors apply this tool",
+      "reason": "Updated to specify the action—apply—performed by Equity Directors, providing a more precise and active description of how the resource is used."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field3"
+      ],
+      "before": "First 90 days: priority actions and deliverables for each period",
+      "after": "First 90 days: key actions and expected results for each period",
+      "reason": "Revised to pair actions with their expected results, clarifying the connection between what staff do and what should result, which supports focused implementation."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field4"
+      ],
+      "before": "Open the 14 printable templates",
+      "after": "Access the 14 printable templates",
+      "reason": "Changed 'Open' to 'Access' for clarity, and removed ambiguity. This better signals that the templates are available for immediate use."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field6"
+      ],
+      "before": "New to the role, or starting a new equity effort? Begin with two things.",
+      "after": "If you are new to this role or beginning a new equity initiative, start with these two core resources.",
+      "reason": "Specified who the message addresses and clarified the recommended starting point. The revision connects newcomers’ needs to the resources provided and avoids vague language."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field7"
+      ],
+      "before": ": what to do in each 30-day period, and what each period should produce.",
+      "after": ": outlines key actions to take in each 30-day period, as well as the main outputs expected for each timeframe.",
+      "reason": "Expanded to state not only what happens each period but also why this matters: identifying expected outputs helps guide planning and track progress."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field8"
+      ],
+      "before": "The 12-item priority starter package",
+      "after": "The 12-item starter package",
+      "reason": "No substantive change needed; this heading is already precise and functional."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "field9"
+      ],
+      "before": ": three foundational DHS resources and nine practical supports to build with the people responsible for each area.",
+      "after": ": includes three core DHS resources and nine practical tools to coordinate with the responsible staff in each area.",
+      "reason": "Clarified the meaning of 'practical supports' as tools and made explicit the need to coordinate with relevant staff to implement them."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "field10"
+      ],
+      "before": ": fill them in on screen, then print, copy or download. Nothing is saved or sent.",
+      "after": ": you can fill out these templates on your screen, then print, copy, or download them. The system does not store or transmit your information.",
+      "reason": "Improved the explanation of how templates are used and reassured users about privacy, connecting the usage with a reason staff may care: confidentiality of their draft materials."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "field11"
+      ],
+      "before": "Equity Analysis Toolkit companion",
+      "after": "Equity Analysis Toolkit: companion resource",
+      "reason": "Added 'resource' for specificity and clarified that this toolkit serves as a companion to the main guide."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "field12"
+      ],
+      "before": "Find the person or area responsible",
+      "after": "Identify the person or area responsible",
+      "reason": "Changed 'Find' to 'Identify' to reflect a professional investigative process and to clarify the action staff take."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revised field changes the meaning in two respects. First, it introduces 'guide equity efforts throughout the agency' whereas the source is neutral: it says 'can use for equity work' and does not claim a particular method or scope of 'guiding.' Second, 'support planning and implementation' adds intended uses not present in the original, which simply lists what is included. This risks overstating the function and reach of the toolkit, and removes the neutral inventory tone of the source."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "Minor stylistic shift. 'How Equity Directors apply this tool' is a plausible alternative to 'How an Equity Director uses it' and does not substantially change meaning, but default to source phrasing where possible."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "Changing 'priority actions and deliverables' to 'key actions and expected results' risks changing the specificity of what is meant by 'deliverables' (which indicates concrete, required outputs) versus 'expected results' (which can be interpreted less strictly). This lessens the operational clarity."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "'Access the 14 printable templates' is a reasonable minor update for usability, but changing 'Open' to 'Access' is not strictly justified by the source. Both are sufficiently clear."
+      },
+      {
+        "fieldId": 4,
+        "severity": "blocker",
+        "finding": "The original says 'Begin with two things,' but the list has three items in the code. The proposed change says 'start with these two core resources,' which both miscounts and introduces new language. The page in fact gives three starting options, not two."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "Expanding ': what to do in each 30-day period, and what each period should produce.' to a more detailed explanatory sentence is not strictly necessary and no evidence justifies extending the explanation. The original is concise and accurate as a caption."
+      },
+      {
+        "fieldId": 6,
+        "severity": "blocker",
+        "finding": "Reviewer note: The original heading is 'The 12-item priority starter package,' but the rewrite eliminates 'priority.' There is a shift in meaning here: the source emphasizes priority, but the proposal removes it, which alters the intent. The reason for no substantive change is incorrect; changing this heading reduces the emphasis the source intends."
+      },
+      {
+        "fieldId": 7,
+        "severity": "blocker",
+        "finding": "Changing 'practical supports to build with the people responsible for each area' to 'practical tools to coordinate with the responsible staff in each area' removes the explicitly collaborative nature ('to build with') and changes 'supports' to 'tools,' which may narrow the implication. The original expression is broader and closer to the source intent."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "Expanded privacy reassurance is clear and not misleading, but adding 'The system does not store or transmit your information' restates 'Nothing is saved or sent' in more technical terms. This is a neutral clarification but not fully necessary unless official privacy wording changes."
+      },
+      {
+        "fieldId": 9,
+        "severity": "note",
+        "finding": "Adding ': companion resource' is clarifying, though not essential. It does not misrepresent the source."
+      },
+      {
+        "fieldId": 10,
+        "severity": "note",
+        "finding": "'Identify' for 'Find' is a minor stylistic revision, not a substantive change, and is justifiable."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3394,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 778,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4172
+    },
+    "review": {
+      "input_tokens": 3562,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 712,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4274
+    }
+  },
+  "createdAt": "2026-11-15T13:48:49.273Z"
+}

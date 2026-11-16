@@ -1,0 +1,109 @@
+{
+  "target": "code.components/requirements-crosswalk.tsx",
+  "kind": "surface",
+  "route": "components/requirements-crosswalk.tsx",
+  "sourceSha256": "fc418ca75dea618cb6441a82060ec6627f150ae0139ae8a8de3acfa76133fb94",
+  "status": "needs_revision",
+  "reviewedFieldCount": 7,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Your entries stay on this page while it is open. They are not saved in the browser or submitted. Download a working file before leaving or reloading. Use general descriptions, roles and references; keep confidential case, health and personnel information in approved systems. Downloaded files remain on your device until you remove them.",
+      "after": "Entries you add here remain available only while the page is open. They are not stored in your browser or sent to another system. Before closing or refreshing this page, download your working file to keep a copy of your notes. Use descriptions, roles, and references that avoid identifiable case, health, or personnel information; store sensitive details only in approved systems. Downloaded files stay on your device until you choose to remove them.",
+      "reason": "Clarifies purpose, retention limits, agency privacy standards, and the effect of staff actions if omitted. Instructions are explicit, avoiding repetition and condescending language."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field4"
+      ],
+      "before": "entries. Opening replaces the notes currently on this page.",
+      "after": "entries. Opening will replace all current notes on this page.",
+      "reason": "Clarifies that all current notes are replaced, providing explicit reasoning on the consequence of the action."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field5"
+      ],
+      "before": "Replace current notes with this file",
+      "after": "Replace all current notes with this file",
+      "reason": "Aligns action wording with explicit scope to reduce possible confusion when staff restore work."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field6"
+      ],
+      "before": "This records the preparer&apos;s account. It does not establish compliance or verify a review. If work or sources change, revisit the affected requirement and update its position.",
+      "after": "This describes the preparer's current assessment. It does not confirm compliance or represent a finalized review. If requirements, activities, or referenced sources change, review and update the entry as needed to keep your account accurate.",
+      "reason": "Clarifies the role of the recorded status, why ongoing updates matter, and how changes prompt action. Avoids suggesting a review's outcome is determined solely by this entry."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The revised field expands beyond the source evidence. The original: 'Your entries stay on this page while it is open. They are not saved in the browser or submitted. Download a working file before leaving or reloading. Use general descriptions, roles and references; keep confidential case, health and personnel information in approved systems. Downloaded files remain on your device until you remove them.' The revision ('Entries you add here remain available only while the page is open...') repeats, re-organizes, and restates most practical information, but changes the pattern with: 'They are not stored in your browser or sent to another system.' While this is implied, the source specifically notes they're not 'saved in the browser' (not using localStorage or cookies), but the added phrase could be read to over-assert technical implementation. Also, 'Before closing or refreshing this page, download your working file to keep a copy of your notes' slightly increases the directive and changes the source's softer 'Download a working file before leaving or reloading.' 'Use descriptions, roles, and references that avoid identifiable case, health, or personnel information; store sensitive details only in approved systems' makes the privacy caution slightly more explicit and directive, where the source says: 'Use general descriptions, roles and references; keep confidential case, health and personnel information in approved systems.' The change is mostly stylistic but subtly changes obligation level and prescriptiveness. Final line adds 'until you choose,' but the source is neutral that user action is needed. The changes collectively introduce a higher degree of explicitness and prescriptiveness that is not strictly supported by the source and could be read as shifting policy instructor's role and technical assurances. Recommend keeping original for policy accuracy and fidelity to privacy/scoping language."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The change to 'Opening will replace all current notes on this page.' from 'Opening replaces the notes currently on this page.' mostly clarifies, without introducing new scope, but the addition of 'all' is a minor but justifiable clarification. No material departure."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "Change to 'Replace all current notes with this file' is consistent with the above note—clarifies by emphasizing 'all,' but doesn't materially alter the action or instruction."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The revised field expands the explanation but is reasonable: from 'This records the preparer's account. It does not establish compliance or verify a review. If work or sources change, revisit the affected requirement and update its position.' to the longer explanation. It adds detail about why changes matter and clarifies the status as not a compliance guarantee. This is a justified, professional clarification that does not contradict or exceed the source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3204,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 315,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3519
+    },
+    "review": {
+      "input_tokens": 3043,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 640,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3683
+    }
+  },
+  "createdAt": "2026-11-15T13:56:01.959Z"
+}

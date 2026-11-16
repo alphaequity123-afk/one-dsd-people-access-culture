@@ -1,0 +1,67 @@
+{
+  "target": "code.components/clas-curriculum/transcript.tsx",
+  "kind": "surface",
+  "route": "components/clas-curriculum/transcript.tsx",
+  "sourceSha256": "c21cec520c07a2254b89352be2dba3a2857c735eb22266447570c4372c9d5335",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "The sentence being spoken is highlighted. Choose a sentence or a chapter title to play from there.",
+      "after": "The transcript highlights the sentence currently being spoken. You can select any sentence or chapter title to play the recording from that point. This allows you to review specific material as needed during your work or study.",
+      "reason": "Revised to explain the interactive function and its practical use in reviewing material, giving a clear reason for choosing a particular sentence or chapter. This deepens the connection to staff tasks and addresses why the action matters."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revision adds explanatory context and rationale that are not present in the original source. The revised text claims, \"This allows you to review specific material as needed during your work or study,\" which is not stated or implied in the source code. The source only describes the visual cue (highlighting) and the ability to \"choose a sentence or chapter title to play from there.\" The added justification shifts from a factual tool description to a broader instructional context and implied professional benefit, creating unsupported meaning and reasons not authorized by the source. As a result, the revision does not meet the standard to anchor explanations in evidence and to preserve the original scope and meaning."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2105,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 108,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2213
+    },
+    "review": {
+      "input_tokens": 1825,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 154,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1979
+    }
+  },
+  "createdAt": "2026-11-15T13:52:20.355Z"
+}

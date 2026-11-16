@@ -1,0 +1,67 @@
+{
+  "target": "code.app/share/equity-toolkit/practice/page.tsx",
+  "kind": "surface",
+  "route": "/share/equity-toolkit/practice",
+  "sourceSha256": "beda6e7ed3b407a42cb02b2e9ae41fa529af202595c7c50b8ac2c0fa997c40ba",
+  "status": "needs_revision",
+  "reviewedFieldCount": 5,
+  "changes": [
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": "Explore a decision and prepare notes for a conversation with the people responsible.",
+      "after": "Select a decision point and document your observations or questions. Your notes will help guide a conversation with the staff leading or supporting the decision process. This preparation makes it easier to clarify concerns, compare perspectives, and explain the reasons behind your recommendations or further questions.",
+      "reason": "Expanded to explain how preparing notes before a discussion helps clarify issues, compare perspectives, and support specific recommendations, as well as why this preparation matters for colleagues engaged in equity analysis work."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "The proposed replacement removes the concise, source-supported guidance: 'Explore a decision and prepare notes for a conversation with the people responsible.' The new version shifts from simply preparing notes for a conversation with the responsible people to an extended, less direct and more generalized instruction. It introduces unexplained concepts ('decision point'), shifts focus from the specific context ('people responsible') to 'the staff leading or supporting the decision process,' and adds claims about clarifying concerns, comparing perspectives, and explaining recommendations that aren't grounded in the actual source text. This goes beyond expansion for clarity: it changes the scope and meaning. The original wording aligns with the surface's immediate purpose and evidence."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1793,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 146,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1939
+    },
+    "review": {
+      "input_tokens": 1431,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 174,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1605
+    }
+  },
+  "createdAt": "2026-11-15T13:51:40.200Z"
+}

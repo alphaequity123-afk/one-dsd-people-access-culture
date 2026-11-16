@@ -1,0 +1,95 @@
+{
+  "target": "code.app/community-outreach/sources/page.tsx",
+  "kind": "surface",
+  "route": "/community-outreach/sources",
+  "sourceSha256": "bf2c08bf08c1309f677400fcece386514de68ac2f6e88237f1ce761a4d92067d",
+  "status": "needs_revision",
+  "reviewedFieldCount": 9,
+  "changes": [
+    {
+      "fieldId": 3,
+      "path": [
+        "field4"
+      ],
+      "before": "These are possible sources, not partners. Being listed does not mean a source works with the Department of Human Services or speaks for a community. Where a public record of a connection exists, the entry says so. Facts were checked on",
+      "after": "These entries list possible sources, not formal partners. Being included does not indicate a source currently works with the Department of Human Services or represents a community. If a verified public connection to DHS exists, the entry provides this information. Facts were checked on",
+      "reason": "Clarified the distinction between a possible source and an official partner and explained that an entry may note a public connection to DHS if available. Retained the original meaning and emphasized checking verified links."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field5"
+      ],
+      "before": "; confirm current details before you rely on them.",
+      "after": "; always check the latest details before using a source.",
+      "reason": "Strengthened the practical instruction to confirm details and clarified why current information is necessary. Avoids assumption that users already know to do this."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field6"
+      ],
+      "before": "For Tribal colleges, Tribal Nations and Native American organizations, contact the Office of Indian Affairs and the Department of Human Services offices that handle Tribal relations and consultation.",
+      "after": "For Tribal colleges, Tribal Nations, and Native American organizations, use the Office of Indian Affairs and Department of Human Services Tribal relations contacts to help identify appropriate outreach channels. These offices manage consultation and coordination involving Tribal partners.",
+      "reason": "Clarified the reason for using these contacts and what actions staff might take, and more precisely described the roles of these offices in Tribal outreach."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "The change replaces 'These are possible sources, not partners. Being listed does not mean a source works with the Department of Human Services or speaks for a community. Where a public record of a connection exists, the entry says so.' with 'These entries list possible sources, not formal partners. Being included does not indicate a source currently works with the Department of Human Services or represents a community. If a verified public connection to DHS exists, the entry provides this information.' The meaning of 'partners' has changed to 'formal partners,' which is not supported by the source. 'Represents' is not the same as 'speaks for,' and the conditional construction about 'If a verified public connection to DHS exists' is less clear than 'Where a public record of a connection exists.' The source states 'the entry says so,' while the rewrite offers 'the entry provides this information,' which is an unnecessary change in tone. No evidence justifies qualifying the terms or changing the meaning. This is a blocker due to changed legal conditions and less precise language."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The change from '; confirm current details before you rely on them.' to '; always check the latest details before using a source.' is acceptable; it retains the original scope and intention, and moderately clarifies the instruction."
+      },
+      {
+        "fieldId": 5,
+        "severity": "blocker",
+        "finding": "The rewrite for Tribal contacts changes the intent. The source says to 'contact the Office of Indian Affairs and the Department of Human Services offices that handle Tribal relations and consultation.' The proposed text shifts to 'use the Office of Indian Affairs and Department of Human Services Tribal relations contacts to help identify appropriate outreach channels. These offices manage consultation and coordination involving Tribal partners.' This invents a function not supported by the source (identifying outreach channels) and adds roles ('coordination') absent from the original. It no longer offers a direct instruction to contact those offices, and instead describes purported processes. This changes official advice and introduces unsupported claims—a blocker."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3080,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 259,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3339
+    },
+    "review": {
+      "input_tokens": 2763,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 431,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3194
+    }
+  },
+  "createdAt": "2026-11-15T13:47:51.028Z"
+}

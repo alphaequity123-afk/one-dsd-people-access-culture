@@ -1,0 +1,67 @@
+{
+  "target": "code.components/water-foundation-feature.tsx",
+  "kind": "surface",
+  "route": "components/water-foundation-feature.tsx",
+  "sourceSha256": "068cf9feff8a8ccff7fb89aa9c4fb17146be6d799ea7c603a7762ae66973940d",
+  "status": "needs_revision",
+  "reviewedFieldCount": 4,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Examine how familiar cultural assumptions shape public services, workplace decisions and whose experience counts. Connect that understanding to culturally responsive action.",
+      "after": "Learn how underlying cultural assumptions can affect how public services are designed, delivered, and experienced. This course helps staff recognize how these assumptions may influence workplace decisions and whose perspectives are valued. Building this awareness supports more responsive and inclusive service decisions.",
+      "reason": "Improved clarity, specificity, and explanation of why recognizing cultural assumptions matters for DHS and DSD staff. Connected ideas more clearly, explained practical value, and avoided abstract generalities."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The proposed replacement changes both voice and scope. The original source text—'Examine how familiar cultural assumptions shape public services, workplace decisions and whose experience counts. Connect that understanding to culturally responsive action.'—is concise, abstract, and leads with an objective, not instruction. The rewrite ('Learn how underlying cultural assumptions...') adds interpretations and expands to 'recognize' and 'build awareness' as the course's focus, which are not present in the source. The explanatory additions, such as 'helps staff recognize,' alter the source's intent and audience. Specific claims like 'more responsive and inclusive' are more prescriptive than the original's caution not to overstate course outcomes. The change erases the direct 'examine' and 'connect' actions in the source in favor of an assumed practical instruction and blocks fidelity to the intended framing."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1473,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 115,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1588
+    },
+    "review": {
+      "input_tokens": 1134,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 212,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1346
+    }
+  },
+  "createdAt": "2026-11-15T13:56:44.970Z"
+}

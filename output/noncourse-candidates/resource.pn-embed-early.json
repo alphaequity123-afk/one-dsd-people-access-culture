@@ -1,0 +1,186 @@
+{
+  "target": "resource.pn-embed-early",
+  "kind": "resource",
+  "route": "/library/pn-embed-early",
+  "sourceSha256": "9aa096fe3ac8d59eea97ed44b151d7dc96838ab88a793dd4ae24444375f34a33",
+  "status": "needs_revision",
+  "reviewedFieldCount": 9,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Shape equity while an idea is still forming: before the design is settled, name who it serves, who may carry the burden, which access needs may be assumed, who should be involved, who decides, and when it will be reviewed.",
+      "after": "When shaping an idea, address equity before design decisions are finalized. Identify who benefits, who could be excluded or face extra burdens, which access needs are assumed, who must participate, who will have decision-making authority, and when the plan will be reviewed.",
+      "reason": "Improved specificity by highlighting the timing of equity considerations and clarifying each of the planning prompts. Avoided the implication that these steps are checklist items rather than essential planning actions."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Adding an equity section after the design is complete may leave the original barriers in place. Asking these questions early can change the design itself.",
+      "after": "If equity is considered only after a design is finalized, original barriers often remain unchallenged. Raising key questions early allows staff to identify and address inequities as the idea develops, which can result in more inclusive service design.",
+      "reason": "Clarified the consequence of late-stage equity discussions and explained the direct connection between early questioning and inclusive design."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Start with people: who is this for, who may be missing from the design process, and who carries the burden when the service does not work.",
+      "after": "Begin by identifying the people the idea is for. Consider who has not been included in the planning, and who experiences difficulties or extra effort when services fail to meet their needs. Clarifying these groups makes it possible to address potential inequities during development.",
+      "reason": "Expanded on steps for staff to take and clarified the importance of explicit identification and the implications for service users."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Name access assumptions early: broadband, a printer, English literacy, a car, daytime availability, or a phone that takes calls. Each assumption can keep someone from taking part.",
+      "after": "State any access assumptions at the outset. Requirements such as reliable internet, a printer, English proficiency, access to a car, availability during work hours, or a working phone may exclude some people. Each assumption potentially limits participation and should be scrutinized early.",
+      "reason": "Specified that staff should not merely list but critically examine assumptions, and detailed why overlooking these can restrict access."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Before creating an online option, decide how people can get help by phone, on paper, or in person. Make sure staff are available to support those options.",
+      "after": "Before introducing an online service, determine how people who cannot use that option can receive help—by phone, on paper, or in person. Assign staff to support each alternate method. Without this, some participants may be left without a way to engage with the service.",
+      "reason": "Clarified the connection between specific staff actions and their consequences for service access. Specified the need for assigned support, not just available options."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Identify vital documents and the languages people will need. Plan and budget for translation with human review early rather than waiting until after launch.",
+      "after": "List which documents are essential and which languages are needed for full access. Budget for translation and plan for human review before rollout, rather than retrofitting language access after launch. Early action prevents delays and miscommunication for people with limited English proficiency.",
+      "reason": "Clarified the practical consequences of early planning for translation and human review, and directly connected this to participant experience."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Involve the right partners before the design is fixed: an Equity Director, accessibility and language access leads, and community partners with purpose, authority, and compensation agreed.",
+      "after": "Include partners such as the Equity Director, accessibility and language access leads, and community representatives before plans are finalized. Confirm each partner’s role, level of authority, and compensation. Early collaboration can improve both process and outcomes.",
+      "reason": "Clarified specific partners and importance of agreed roles, authority, and compensation. Explained early involvement's impact on process and results."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "If the work touches a Tribal Nation, Native children, Tribal data, services, or land, government-to-government consultation comes first. Do not place a Nation in a generic stakeholder list.",
+      "after": "If your work involves Tribal Nations, Native children, Tribal data, services, or land, begin with government-to-government consultation. Recognize these relationships as distinct; do not list a Nation as just another stakeholder. Proper consultation is required to respect sovereignty and fulfill policy obligations.",
+      "reason": "Clarified why Tribal consultation differs from general stakeholder engagement and emphasized the requirement, not just preference."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "body",
+        6
+      ],
+      "before": "Write down who is responsible for the decision and each follow-up, along with the next review date. That clarity turns the checklist into accountable work.",
+      "after": "Record who is responsible for each decision and for each follow-up step, and schedule the next planned review. Clear responsibility and deadlines are necessary to move from planning to accountable action.",
+      "reason": "Explained why specifying responsible parties and review dates matters for implementation and accountability."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revision to the summary, while clarifying some points, subtly changes the meaning in the source. The source opens with an imperative: 'Shape equity while an idea is still forming' and presents the prompts as components of embedding equity into the process. The proposed summary recasts these as discrete items to 'identify' or 'address,' implying a checklist rather than a deeply embedded approach, which the source specifically warns against. The summary also omits the direct instruction to name 'who it serves,' which is present in the source, and instead uses 'who benefits,' which is not language from the source and shifts the focus from service to outcome. Removing the urgency of integrating equity during the formative stage, as present in the original, weakens the intended guidance."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revision to 'whyItMatters' is accurate and matches the substance and meaning of the source. It does not introduce policy, legal, or procedural distortion."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revision expands on the meaning but accurately reflects the source: it is a legitimate elaboration of what it means to start with identifying people involved and affected by service gaps."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The revision appropriately deepens the rationale for articulating access assumptions and remains aligned with the source. It is a supported expansion and not a misrepresentation."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The change adds specificity about staff assignment and participation odds without distorting the instruction's meaning or policy. Supported by the source's intent and content."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The revised field expands the practical implications of early language planning, accurately tethering its rationale (delays and miscommunication) to the original note about not waiting until post-launch. Supported by the source."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The revision clarifies the need for defining roles and compensation and offers reasoning for early involvement. It remains consistent with the source (\"with purpose, authority, and compensation agreed\") and does not misstate policy."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "This change directly supports and clarifies the source meaning regarding Tribal consultation, making the reason for distinct handling explicit. It does not misrepresent requirements or conditions."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "The expanded explanation of why responsibility and review matter is well grounded in the original source's intent and does not introduce unsupported claims."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1881,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 761,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2642
+    },
+    "review": {
+      "input_tokens": 2190,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 536,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2726
+    }
+  },
+  "createdAt": "2026-11-15T13:40:52.673Z"
+}

@@ -1,0 +1,67 @@
+{
+  "target": "code.components/dhs-reference-link.tsx",
+  "kind": "surface",
+  "route": "components/dhs-reference-link.tsx",
+  "sourceSha256": "b694e4d89e2c76c0c9321c1608d0d773e2b3c23defb8739a6408527c45645c65",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "People, programs and partnerships across Minnesota DHS, with a closer look at Disability Services and the work we share.",
+      "after": "This page highlights the people, programs, and relationships that make up Minnesota DHS, with particular attention to Disability Services and how our collective work connects.",
+      "reason": "The revision improves clarity and precision. It states the page's focus more directly and specifies the attention given to Disability Services and the way our work is interconnected, aligning with the writing standards for clear professional communication."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed change rewrites the original source summary with unnecessary interpretation and expanded description. The original source: 'People, programs and partnerships across Minnesota DHS, with a closer look at Disability Services and the work we share.' is shorter, neutral, and matches the program writing standard's requirement to preserve the source meaning and not introduce additional claims (such as 'how our collective work connects'). By adding 'how our collective work connects' and stating 'with particular attention to Disability Services', the revision becomes less specific and interprets the scope beyond the neutral listing in the source. The standard requires close adherence to the source for page explanations and summaries unless there is a pressing clarity issue, which is not present here."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1160,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 96,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1256
+    },
+    "review": {
+      "input_tokens": 868,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 182,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1050
+    }
+  },
+  "createdAt": "2026-11-15T13:53:06.606Z"
+}

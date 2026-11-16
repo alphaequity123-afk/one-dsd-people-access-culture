@@ -1,0 +1,81 @@
+{
+  "target": "code.app/consultant/legacy-requests/page.tsx",
+  "kind": "surface",
+  "route": "/consultant/legacy-requests",
+  "sourceSha256": "6aeb920b891a3cb4d921fb4430d0ccc2eab69c6d8da56f6a7db4a42608662bdb",
+  "status": "needs_revision",
+  "reviewedFieldCount": 5,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "These voluntary requests are held outside the active consultation queue until you confirm that they concern Disability Services Division work. Do not rank or begin consultation work from this list.",
+      "after": "These requests are set aside from the active consultation queue until you confirm they relate specifically to Disability Services Division responsibilities. Do not prioritize, rank, or begin any consultation work from this list. This step helps ensure that only appropriate requests use DSD resources and prevents action on topics outside division scope.",
+      "reason": "Clarifies the purpose for holding the requests, specifies the DSD scope, and explains why consultation action should not begin until confirmation. Adds context about resource use and division authority."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field4"
+      ],
+      "before": "Consultation requests are retired. Staff can use the learning, resources and practice tools directly. Any historical records remain protected and subject to their applicable correction, withdrawal and retention arrangements.",
+      "after": "Consultation requests are no longer accepted. Staff should use available learning materials, resources, and practice tools for current work. Historical consultation records are retained where required and remain protected. Staff may review, correct, withdraw, or retain these records according to established policies. Preserving the integrity of these records supports accountability and compliance with record keeping standards.",
+      "reason": "Clarifies that requests are not only retired but no longer accepted, details the continued use of resources, and explains the importance and procedures for record review, correction, withdrawal, and retention for staff responsibility and accountability."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revision adds unsupported claims and shifts legal and operational scope. The original: 'These voluntary requests are held outside the active consultation queue until you confirm that they concern Disability Services Division work. Do not rank or begin consultation work from this list.' The proposed: 'These requests are set aside from the active consultation queue until you confirm they relate specifically to Disability Services Division responsibilities. Do not prioritize, rank, or begin any consultation work from this list. This step helps ensure that only appropriate requests use DSD resources and prevents action on topics outside division scope.' Issues: (1) The word 'voluntary' is removed, erasing an explicit source-supplied qualification. (2) The explanation about 'resource use' and 'division authority' is not stated or implied in source, and invents new justification that could alter meaning. (3) Adding 'prioritize' extends source instruction ('do not rank') without source support. Overall, it changes the scope and rationale attached to the guidance, which must be preserved exactly on this type of administrative boundary and eligibility step."
+      },
+      {
+        "fieldId": 4,
+        "severity": "blocker",
+        "finding": "The revision introduces new language and changes legal and procedural scope. The source: 'Consultation requests are retired. Staff can use the learning, resources and practice tools directly. Any historical records remain protected and subject to their applicable correction, withdrawal and retention arrangements.' The revision: 'Consultation requests are no longer accepted. Staff should use available learning materials, resources, and practice tools for current work. Historical consultation records are retained where required and remain protected. Staff may review, correct, withdraw, or retain these records according to established policies. Preserving the integrity of these records supports accountability and compliance with record keeping standards.' Issues: (1) 'No longer accepted' is not stated in the original, which only says 'retired.' (2) Expansion on record retention requirements ('where required'), the verbs ('may review, correct, withdraw, or retain'), and the general compliance/accountability language invent new obligations or procedures not present in the source. (3) Original language precisely lists possible actions ('correction, withdrawal and retention arrangements') without directing specific duties. The rewrite substitutes general compliance language and alters the underlying obligations, which is not supported for an official or protected records panel."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2772,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 247,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3019
+    },
+    "review": {
+      "input_tokens": 2550,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 489,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3039
+    }
+  },
+  "createdAt": "2026-11-15T13:48:02.785Z"
+}

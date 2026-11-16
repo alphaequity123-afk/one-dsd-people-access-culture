@@ -1,0 +1,67 @@
+{
+  "target": "code.app/learn/equity-toolkit/curriculum/page.tsx",
+  "kind": "surface",
+  "route": "/learn/equity-toolkit/curriculum",
+  "sourceSha256": "baa5fb90b1776f155cafffc2d0687adf63f9b6b29142c91bb5e307a62f5a6963",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Download or share this curriculum",
+      "after": "Download or share resources for this curriculum",
+      "reason": "The revised heading clarifies that users may download or share a variety of resources, not the entire curriculum, which can prevent confusion about what is available. This maintains brevity while improving specificity for staff users."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The source heading is 'Download or share this curriculum'. The proposed change to 'Download or share resources for this curriculum' is not supported by the source, which refers to the curriculum itself, not a broader or different set of resources. No evidence in the source supports that the curriculum download section is about \"resources for\" the curriculum versus the curriculum itself. This is a blocker: the field must preserve the original meaning and scope, which the source supplies as the curriculum, not resources associated with it."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1382,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 75,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1457
+    },
+    "review": {
+      "input_tokens": 1070,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 124,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1194
+    }
+  },
+  "createdAt": "2026-11-15T13:49:52.432Z"
+}

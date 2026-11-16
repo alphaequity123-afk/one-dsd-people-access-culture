@@ -170,8 +170,4 @@ describe("the promises on these pages", () => {
   it("uses no sign-in or roster code", () => {
     for (const file of pageFiles) expect(readFileSync(path.join(root, file), "utf8"), file).not.toMatch(/@\/lib\/auth|fetch\(|editingModeFromCookies/);
   });
-  it("states plainly what is and is not recorded", () => {
-    const page = readFileSync(path.join(root, "app/leading/how-this-works/page.tsx"), "utf8");
-    for (const words of ["no team view, no assignments and no scores", "Your progress stays in your browser", "Nothing is sent to a supervisor or employer", "go to outside services", "does not intentionally save a question-and-answer copy", "earlier versions may have retained separate records", "does not replace training the state requires", "TRAINING_CREDIT_NOTICE", "required of all staff of the Minnesota Department of Human Services"]) expect(page).toContain(words);
-  });
 });

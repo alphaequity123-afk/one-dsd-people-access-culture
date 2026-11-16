@@ -1,0 +1,81 @@
+{
+  "target": "code.components/multimedia/opportunity-pathway.tsx",
+  "kind": "surface",
+  "route": "components/multimedia/opportunity-pathway.tsx",
+  "sourceSha256": "a53d6f6ea10afa3849ff29bb75c14a7cbd8331c9e35833601561222138045866",
+  "status": "needs_revision",
+  "reviewedFieldCount": 5,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "In this practice example, colleagues examine access to a stretch assignment. Each step offers a different opportunity to make participation more workable.",
+      "after": "This practice example outlines how colleagues can review access to a stretch assignment at each stage—from invitation through decision. For each step, the process highlights a potential point where participation may be easier or harder. Identifying these spots helps teams address barriers, clarify expectations, and explain their choices. This approach supports fair access even when the situation does not create a formal selection process, and encourages reflection on how organizational practices shape who participates.",
+      "reason": "Expanded the explanation to clarify the purpose and professional reasoning behind examining each step, emphasizing the practical impact on fairness and transparency."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field4"
+      ],
+      "before": "Did the invitation reach people? What made participation possible or difficult? Could people see how their questions influenced the process? Use those experiences to decide what to keep or change.",
+      "after": "Consider whether the invitation actually reached the intended colleagues. Identify what enabled or prevented participation and whether participants could recognize how their input or questions factored into decisions. Evaluating these details helps teams decide what aspects of the process to repeat, revise, or discontinue—and supports ongoing improvement.",
+      "reason": "Increased specificity regarding why each reflection matters—connecting observation, process transparency, and the practical goal of improving access and participation."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The rewritten explanation changes the scope and intent of the original: the source text neutrally frames the content as a practice example where 'Each step offers a different opportunity to make participation more workable.' The proposed text adds: (1) implication of a formal review or analysis ('outlines how colleagues can review access'), (2) extra steps such as 'address barriers, clarify expectations, and explain their choices' not present in the source nor in the listed steps; (3) new claims about informal vs. formal selection, and an emphasis on organizational practice. These extend the intent and message in ways not covered by the original, violating the instruction to preserve the original meaning and not invent new policy, obligations, or broader interpretations."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "This rewrite increases specificity and interpretive commentary, but remains grounded in the source's original questions and focus. The changes clarify (rather than alter) the meaning and keep a similar scope; this is an acceptable expansion."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1937,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 232,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2169
+    },
+    "review": {
+      "input_tokens": 1702,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 254,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1956
+    }
+  },
+  "createdAt": "2026-11-15T13:54:46.345Z"
+}

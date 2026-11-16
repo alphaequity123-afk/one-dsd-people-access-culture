@@ -1,0 +1,81 @@
+{
+  "target": "code.components/multimedia/learning-evidence-chart.tsx",
+  "kind": "surface",
+  "route": "components/multimedia/learning-evidence-chart.tsx",
+  "sourceSha256": "840b4bc8cfa57007aac93f6cdafdd765ba8b188f566dd64f903bb4787763e96e",
+  "status": "needs_revision",
+  "reviewedFieldCount": 7,
+  "changes": [
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "Each group has 100 sample respondents. Ninety in the first group and 50 in the second gave the favorable response. The zero-to-100% chart and the complete table show a difference in these responses, not its cause.",
+      "after": "Each group includes 100 sample respondents. Ninety respondents in the first group and 50 in the second gave the favorable response. This chart and table show the breakdown in responses but do not identify the underlying reasons for the difference.",
+      "reason": "Clarifies subject-verb agreement and connects that the breakdown is descriptive of a pattern, not an explanation. Maintains source-grounded specificity."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field4"
+      ],
+      "before": "Each row is one practice application. The dashed line marks the 10-day average. The complete individual values are in the table below.",
+      "after": "Each row represents one practice application. The dashed line indicates the 10-day average wait. The table below shows all individual wait times for context.",
+      "reason": "Improves parallel structure and clarifies that the visualizations support the context for review."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The proposed change silently changes meaning and lowers source fidelity. The original says: 'Each group has 100 sample respondents. Ninety in the first group and 50 in the second gave the favorable response. The zero-to-100% chart and the complete table show a difference in these responses, not its cause.' The rewrite says: 'Each group includes 100 sample respondents. Ninety respondents in the first group and 50 in the second gave the favorable response. This chart and table show the breakdown in responses but do not identify the underlying reasons for the difference.'\n\nProblems: (1) 'Includes' instead of 'has' is a minor style swap, not better for accuracy. (2) 'This chart and table show the breakdown in responses but do not identify the underlying reasons for the difference' silently introduces new conceptual language ('underlying reasons'), making it sound like causal analysis is expected, where the original simply says it's a descriptive result and does not state its cause. (3) The change modifies the intended level of interpretation and shifts from \"shows a difference in these responses, not its cause\" to \"do not identify the underlying reasons for the difference,\" which is not a faithful restatement. Retain the original wording."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The adjustment here from 'Each row is one practice application. The dashed line marks the 10-day average. The complete individual values are in the table below.' to 'Each row represents one practice application. The dashed line indicates the 10-day average wait. The table below shows all individual wait times for context.' does not substantially alter meaning, and the added 'for context' does not introduce or erase any data, nor does it shift responsibility or implication. Stylistic changes here can be accepted, but are not necessary for accuracy."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3596,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 168,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3764
+    },
+    "review": {
+      "input_tokens": 3227,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 396,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3623
+    }
+  },
+  "createdAt": "2026-11-15T13:54:39.671Z"
+}

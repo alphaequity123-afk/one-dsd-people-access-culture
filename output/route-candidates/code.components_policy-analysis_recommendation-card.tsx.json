@@ -1,0 +1,81 @@
+{
+  "target": "code.components/policy-analysis/recommendation-card.tsx",
+  "kind": "surface",
+  "route": "components/policy-analysis/recommendation-card.tsx",
+  "sourceSha256": "71e77dc396254fb1f09855abf5170c6404865441cba4f8dc0c82eb8fff508fdf",
+  "status": "needs_revision",
+  "reviewedFieldCount": 4,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "What is done differently, by whom, and from when.",
+      "after": "Describe what will be done differently, who will take each specific action, and when the changes are expected to begin. Being specific about these details helps clarify the intended outcomes and allows responsible areas to plan and track implementation.",
+      "reason": "Expanded to clarify staff need: listing who makes each change and when it begins helps colleagues understand, coordinate, and evaluate next steps."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field4"
+      ],
+      "before": "Who this change is for, what barrier it removes, and who could still be left out.",
+      "after": "State who this change is intended to benefit, what specific barrier or barriers it seeks to address, and which groups or individuals might still experience limitations after the change. This reasoning helps identify remaining gaps, inform additional actions, and ensures that the equity impact is considered in a practical context.",
+      "reason": "Clarifies why each detail is requested, and connects how equity considerations inform further action."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The source field states: 'What is done differently, by whom, and from when.' The proposed revision adds details not present in the source, including instructions to list 'who will take each specific action,' to indicate 'when the changes are expected to begin,' and to explain how being specific 'helps clarify the intended outcomes and allows responsible areas to plan and track implementation.' While these may be good practice, the source does not warrant this expanded detail or rationale. The addition goes beyond surface-level rewording and turns a concise input prompt into a mini-explanation, which is not supported in the source."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The source field is: 'Who this change is for, what barrier it removes, and who could still be left out.' The rewrite expands this to request the intended beneficiaries, 'specific barrier or barriers,' and 'groups or individuals who might still experience limitations,' plus an explanation: 'This reasoning helps identify remaining gaps, inform additional actions, and ensures that the equity impact is considered in a practical context.' This is not present in the source, which is a focused and concise prompt, not an explanation. The added guidance and rationale are not source-grounded and cannot be accepted without explicit support present in the given source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3574,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 184,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3758
+    },
+    "review": {
+      "input_tokens": 3320,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 282,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3602
+    }
+  },
+  "createdAt": "2026-11-15T13:55:31.488Z"
+}

@@ -1,0 +1,81 @@
+{
+  "target": "code.app/podcasts/[id]/page.tsx",
+  "kind": "surface",
+  "route": "/podcasts/[id]",
+  "sourceSha256": "8bf453e255b62fd5397abd6db85c43fb0c76e526e7cdd73e0eac5bda8aa4c29a",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field1"
+      ],
+      "before": "All podcasts on Learning and resources",
+      "after": "Browse all Learning podcasts and related resources",
+      "reason": "Clarifies that users can browse and compare both podcasts and related resources in one place. Uses more precise language based on how Learning organizes content."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field2"
+      ],
+      "before": "Equity analysis for your work, the companion to this recording",
+      "after": "Review equity analysis guidance for this recording",
+      "reason": "Shifts to a more explicit, actionable description of what the companion offers, indicating its use as guidance. Clarifies that the content is related to analysis rather than the user supplying their own analysis."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The source 'All podcasts on Learning and resources' is a direct label for a link to '/learn?type=podcast'. The proposed 'Browse all Learning podcasts and related resources' adds 'browse', subtly shifts the action to comparison, and asserts resources are included alongside podcasts—an implication not found in the source. The source confines the link to podcasts (filtered by type=podcast) and a general mention of 'resources'; it does not evidence a scope expansion or reframe as a browsing/comparative action. This is a connotative shift not grounded in the official label or route."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The original 'Equity analysis for your work, the companion to this recording' describes the linked content as a companion tool for applying equity analysis to the user's own work, connected to the podcast. The rewrite, 'Review equity analysis guidance for this recording,' narrows the scope: it frames the guidance as applying only to the recording (not to user work), erases the 'companion' notion, and changes the usage sense from a companion resource to a guidance review. This is not supported by the source label or its intended connection between the equity toolkit and user application."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1938,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 155,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2093
+    },
+    "review": {
+      "input_tokens": 1665,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 303,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1968
+    }
+  },
+  "createdAt": "2026-11-15T13:51:22.170Z"
+}

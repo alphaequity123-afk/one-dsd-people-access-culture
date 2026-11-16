@@ -1,0 +1,67 @@
+{
+  "target": "code.components/dsd-practice-planner-editor.tsx",
+  "kind": "surface",
+  "route": "components/dsd-practice-planner-editor.tsx",
+  "sourceSha256": "0f59548bb536643ea80dcab0d3b6173108f59cdd114dcd278edc8366ccab2c66",
+  "status": "needs_revision",
+  "reviewedFieldCount": 12,
+  "changes": [
+    {
+      "fieldId": 2,
+      "path": [
+        "field3"
+      ],
+      "before": "Plans are private working drafts saved on this device. They are not submitted to the program or shared with supervisors. Anyone using this device may be able to open them. Use role descriptions and general work information; leave out names and private client, case, health, or personnel information.",
+      "after": "Plans are private drafts that save on this device only. They are not sent to the program and are not visible to supervisors. Anyone with access to this device could read or edit them, so do not include client, personnel, or confidential case details—use general descriptions and roles instead. This protects sensitive information while allowing useful collaboration on practice decisions.",
+      "reason": "Clarified privacy expectations, explained why omitting private details matters for data protection, and rephrased to emphasize professional reasoning for exclusions."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The proposed change for field3 rewrites meaning beyond what is supported by the source. The original establishes factual boundaries: plans are 'private working drafts saved on this device,' are 'not submitted to the program or shared with supervisors,' and 'anyone using this device may be able to open them.' It instructs to 'use role descriptions and general work information; leave out names and private client, case, health, or personnel information.' The rewrite asserts edits not in the source: claiming plans 'are not sent to the program and are not visible to supervisors' (removes mention of submission and 'shared with'), softens the surveillance risk from 'anyone using this device may be able to open them' to 'anyone with access ... could read or edit them,' omits direct instruction to leave out identifiers in favor of 'do not include ... or confidential case details.' The rationale explaining 'protects sensitive information while allowing useful collaboration' is not in the source. Per standard, privacy and legal boundaries, as well as practical instructions, must retain their original, unembellished specificity. The edit adds unsupported explanations and weakens specific cautions; pass=false."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 5948,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 144,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 6092
+    },
+    "review": {
+      "input_tokens": 5353,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 260,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5613
+    }
+  },
+  "createdAt": "2026-11-15T13:53:10.419Z"
+}

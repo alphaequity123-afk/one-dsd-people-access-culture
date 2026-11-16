@@ -1,0 +1,67 @@
+{
+  "target": "code.components/site-search.tsx",
+  "kind": "surface",
+  "route": "components/site-search.tsx",
+  "sourceSha256": "d856ede9acafc08d43d452ee12ed4db2c958d2c072c281dc8b1486a7b0e6d018",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Search the whole program and State of Minnesota agencies",
+      "after": "Search this program and other Minnesota state agency resources",
+      "reason": "Clarified that the search covers both this program and other Minnesota state agency resources. This gives users a clearer understanding of the scope, avoids suggesting internal ownership of all agency results, and replaces \"whole program\" with \"this program\" for specificity."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed change ('Search this program and other Minnesota state agency resources') modifies the source wording, which is: 'Search the whole program and State of Minnesota agencies'.\n\nThe source label does not claim ownership of all results but instead describes the searchable scope: the whole program and (other) State of Minnesota agencies, as designed for the system-wide search input. The suggested change substitutes 'other Minnesota state agency resources,' which: (a) introduces unnecessary ambiguity ('resources' rather than 'agencies'), (b) removes the phrase 'whole program', (c) significantly alters the user expectation set by the original source. No source evidence is given that the revised phrase is required for accuracy or clarity, and the original is direct about its scope.\n\nPer the program writing standard, the official label must be preserved unless there is a clear error, contradiction, or required accessibility change tied to external law or DHS/DSD policy. None is shown. Therefore, this is a blocker."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2088,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 85,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2173
+    },
+    "review": {
+      "input_tokens": 1786,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 224,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2010
+    }
+  },
+  "createdAt": "2026-11-15T13:56:20.166Z"
+}

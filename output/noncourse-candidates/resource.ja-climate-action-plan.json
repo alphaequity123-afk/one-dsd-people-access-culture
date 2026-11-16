@@ -1,0 +1,142 @@
+{
+  "target": "resource.ja-climate-action-plan",
+  "kind": "resource",
+  "route": "/library/ja-climate-action-plan",
+  "sourceSha256": "ef20d05454a81d56a26893fe9f540caf0c5e6fc6da1f225f6c22b8dc44ed8376",
+  "status": "model_checked",
+  "reviewedFieldCount": 6,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Choose three to five actions team members can see and experience, naming for each an owner, a start date, a revisit date, and a way to tell whether it helps. Omit names tied to complaints, and never score individual employees.",
+      "after": "Choose three to five actions that team members can directly observe or experience in their daily work. For each action, identify a responsible owner, a start date, a follow-up date, and a specific way to check if the action is helpful. Do not tie actions to individual complaints or evaluate individual employees in this plan.",
+      "reason": "Clarified the need for observable actions and specified that the plan is not for addressing complaints or evaluating individuals, while keeping the summary direct and connected to its professional purpose."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Practice: describe something a team member could see happening, such as sharing the agenda 48 hours ahead, rotating who opens the meeting, reading written input aloud, or turning captions on.",
+      "after": "Practice: Describe a concrete, observable behavior or routine in the team's work. Examples include sharing agendas 48 hours before meetings, rotating the meeting leader, reading written feedback aloud, or enabling meeting captions. The goal is to use actions people can clearly see happening or not happening.",
+      "reason": "Expanded the explanation for why practices need to be observable and related to team function, making the connection to the template's underlying purpose."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Responsibility: name the supervisor or volunteer responsible for the action. The supervisor remains accountable for the team's practices.",
+      "after": "Responsibility: Assign each action to a supervisor or team volunteer. The assigned person monitors progress, but the supervisor stays accountable for how the team carries out its practices.",
+      "reason": "Clarified the practical role of responsibility and accountability."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Dates: choose a start date and a follow-up conversation within three months.",
+      "after": "Dates: For each action, set a clear start date and schedule a follow-up discussion within three months to check progress and address challenges.",
+      "reason": "Expanded to clarify the reason for both dates—starting and checking—focusing on tracking progress and responding to issues."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Evidence: describe what the team would notice, without ranking people. This might include a short anonymous check-in or a review of who received assignments.",
+      "after": "Evidence: Identify what the team would notice if the action is happening as intended, such as results from a short anonymous check-in or a review of who receives assignments. Avoid comparing or ranking individual staff in these observations.",
+      "reason": "Clarified the purpose of evidence—supporting team understanding—while explicitly cautioning against individual evaluation."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Use this plan to improve team practices. Follow the established process for complaints, investigations, discipline, and accommodation decisions.",
+      "after": "Use this action plan to strengthen team routines and norms. If you need to address a complaint, conduct an investigation, consider discipline, or make a workplace accommodation decision, use the department’s established procedures rather than this planning tool.",
+      "reason": "Connected the action plan to its role in team improvement and clarified that formal HR concerns require separate, established processes."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revision increases wordiness but sustains all core requirements: observable actions, naming an owner, start and follow-up dates, and evaluation. It combines existing cautions against linking to complaints or scoring individuals with clearer explanation. No blocker detected."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The edited field retains the requirement for observable actions and lists substantially the same examples. It adds explanation of 'concrete, observable behavior' and mentions the goal—clear visibility. This deepens the reason without straying from source limits."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "Responsibility is restated with a minor shift: supervisors oversee the plan even if a volunteer tracks actions. The edit gives slightly more concrete monitoring language but doesn't introduce new policy or remove the supervisor’s accountability."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The expanded explanation ('check progress and address challenges') clarifies the intent behind the follow-up date, which the original implies but does not spell out. The source supports this deeper rationale."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The edit frames evidence as 'actions happening as intended' and reuses source examples. It strengthens the caution to avoid 'comparing or ranking' (original: 'without ranking people'). This preserves source limitations while clarifying the policy against individual assessment."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The revision appropriately elaborates: the plan is for team norms, not HR actions, and sends users to established processes for those. This adds clarity rather than altering scope."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1555,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 486,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2041
+    },
+    "review": {
+      "input_tokens": 1613,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 418,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2031
+    }
+  },
+  "createdAt": "2026-11-15T13:41:13.890Z"
+}

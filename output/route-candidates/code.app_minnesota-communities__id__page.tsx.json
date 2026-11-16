@@ -1,0 +1,67 @@
+{
+  "target": "code.app/minnesota-communities/[id]/page.tsx",
+  "kind": "surface",
+  "route": "/minnesota-communities/[id]",
+  "sourceSha256": "a58d420c12fe12906bf5bdb4f985fb4da19ddbbd0d8d3d789eeacad555b1ee58",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Practice applying culture readings in",
+      "after": "Use the water resource collection to practice applying culture readings in your DHS or DSD work. This exercise can help clarify how cultural context influences decisions and everyday practices relevant to Minnesota communities.",
+      "reason": "Revised to explain the practical purpose of the suggested activity for DHS and DSD staff, specify which work it supports, and clarify why practice matters in this context."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revised field (field0) changes the source meaning by adding instructional content, references to 'DHS or DSD work', and context ('This exercise can help clarify...') which are not in the original. The source field is simply: 'Practice applying culture readings in'. The rewrite invents ungrounded guidance and purpose not evident in the source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 4871,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 95,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4966
+    },
+    "review": {
+      "input_tokens": 4579,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 102,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4681
+    }
+  },
+  "createdAt": "2026-11-15T13:50:44.233Z"
+}

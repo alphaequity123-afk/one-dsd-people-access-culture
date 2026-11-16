@@ -1,0 +1,81 @@
+{
+  "target": "code.components/development-focus.tsx",
+  "kind": "surface",
+  "route": "components/development-focus.tsx",
+  "sourceSha256": "4f14d19ddfc1e768c6de35922de6a4a5aa2a638045bac5b49731693dd89c76e4",
+  "status": "needs_revision",
+  "reviewedFieldCount": 4,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Choose what you want to work on",
+      "after": "Select a skill or topic to develop",
+      "reason": "Provides slightly more specific instruction on focusing development while retaining the concise heading. Clarifies 'what you want to work on' refers to skill or topic."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Connect a question or learning interest with a practical pathway. Your selection stays on this page; it is not saved as a personal profile.",
+      "after": "Identify a current question or area of interest and connect it with a practical development pathway. The option you choose remains visible only on this page; the program does not save individual selections or create personal profiles.",
+      "reason": "Clarifies that only the page state holds this information and no user-specific data is saved. Adds precision by expanding 'question or learning interest' and explicitly stating that there is no user profile."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The original heading \"Choose what you want to work on\" exactly matches the source heading <h2 id=\"development-focus-title\" className=\"text-2xl font-semibold\">Choose what you want to work on</h2>. The proposed change, \"Select a skill or topic to develop,\" narrows and reframes the invitation. The source deliberately uses open language ('what you want to work on'), which can refer to any focus, not limited to skills or topics. Changing this heading constrains the intent and does not hold to the instruction to preserve record material exactly."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The proposed refinement to field1 closely tracks the substance of the source. It adds clarity by clearly stating both that the choice is not saved and that there is no personal profile, which the source also implies. The meaning does not change and matches the privacy assurance ('not saved as a personal profile'). This is reasonable for increased clarity."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1886,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 191,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2077
+    },
+    "review": {
+      "input_tokens": 1603,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 218,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1821
+    }
+  },
+  "createdAt": "2026-11-15T13:53:03.598Z"
+}

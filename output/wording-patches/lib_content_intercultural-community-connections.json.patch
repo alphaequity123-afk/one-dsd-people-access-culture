@@ -1,0 +1,27 @@
+diff --git a/lib/content/intercultural-community-connections.json b/lib/content/intercultural-community-connections.json
+index cc1634f..1c54266 100644
+--- a/lib/content/intercultural-community-connections.json
++++ b/lib/content/intercultural-community-connections.json
+@@ -29,11 +29,11 @@
+   },
+   "tribal-nations": {
+     "lesson": 6,
+-    "prompt": "For a proposed action with possible Tribal implications, follow the standing deference and contact the designated Tribal-relations office; distinguish consultation from a general listening event."
++    "prompt": "For a proposed action with possible Tribal implications, follow the standing deference and contact the person or area responsible for Tribal relations; distinguish consultation from a general listening event."
+   },
+   "alaska-native": {
+     "lesson": 6,
+-    "prompt": "For substantive questions concerning Native people or communities, follow the existing standing deference and seek guidance from the designated offices rather than inferring a Nation’s position."
++    "prompt": "For substantive questions concerning Native people or communities, follow the existing standing deference and seek guidance from the people or areas responsible rather than inferring a Nation’s position."
+   },
+   "european-american": {
+     "lesson": 1,
+@@ -161,7 +161,7 @@
+   },
+   "native-american": {
+     "lesson": 6,
+-    "prompt": "Follow the standing deference for substantive questions and contact the responsible offices; a community reading does not replace a Nation’s own authority or consultation."
++    "prompt": "Follow the standing deference for substantive questions and contact the people or areas responsible; a community reading does not replace a Nation’s own authority or consultation."
+   },
+   "deaf-deafblind-hard-of-hearing": {
+     "lesson": 3,

@@ -1,0 +1,123 @@
+{
+  "target": "code.components/my-path.tsx",
+  "kind": "surface",
+  "route": "components/my-path.tsx",
+  "sourceSha256": "44c83b28eba57ef26b81a9e65bb9a95c8ba2d77dbfe0f1b6e69771aaeb056885",
+  "status": "needs_revision",
+  "reviewedFieldCount": 12,
+  "changes": [
+    {
+      "fieldId": 7,
+      "path": [
+        "field7"
+      ],
+      "before": "A place to notice how far you have come and to choose where to go next. It is private to you, nothing here is graded, and you are always welcome to explore anything on the site that catches your interest. The levels describe common stages in equity practice, not a ladder you are required to climb.",
+      "after": "Summary: This section gives you a way to reflect on your learning journey at your own pace and decide your next steps. Your entries here stay on your device—they are never scored or reported. The stages describe common patterns in equity work, not requirements for advancement.\n\nExplanation: This part of the page is meant to help you take stock of your current skills and interests as you develop in your role at DSD. You can use it to record your own progress and revisit previous milestones as your confidence grows or your work changes. Staff at different experience levels may enter at any stage. The purpose is not to assign grades or create comparisons, but to support your decisions about what learning or practice feels most relevant right now. Nothing recorded here affects your official standing, and you may explore other resources at any time. Seeing your own choices and history in one place can make it easier to identify helpful resources and set goals that fit your situation.",
+      "reason": "Added a short summary followed by a professional explanation, connecting the purpose of the section to staff experience and the practical benefit of tracking and reviewing one's learning for self-guided development. Clarified that the stages are patterns, not strict levels, and stated the privacy and flexibility of participation. Explained why reflection and tracking matter without suggesting requirements."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "field8"
+      ],
+      "before": "Pick the one that feels closest. You can change it whenever you like, and experienced staff often start at the third or fourth.",
+      "after": "Select the description that best matches your current practice. You may change your selection at any time, especially as your experience or focus shifts. Many experienced staff find that starting at the third or fourth stage best describes their work.",
+      "reason": "Clarified that selection is a personal judgment and normalizes entry at later stages for experienced staff. Removed unnecessary repetition while preserving the course-wide invitation to change the selection."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "field9"
+      ],
+      "before": "Check these off when they feel true for you. Your own judgment is the only measure.",
+      "after": "Mark these items when you feel they accurately describe your abilities. Only your own assessment matters here and you are not evaluated by others based on these selections.",
+      "reason": "Clarified that the check-off is for self-assessment and that no external evaluation is performed. Made explicit that these markers are for the staff member's use, supporting the privacy and judgment explanations found elsewhere on the page."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "field10"
+      ],
+      "before": "Once you choose where you are, a few good next steps will appear here.",
+      "after": "After you select your current stage, suggested next steps will appear here based on your choice.",
+      "reason": "Provided slightly more specific guidance and connected the appearance of next steps to the staff member's prior selection, helping them understand the dependency and purpose."
+    },
+    {
+      "fieldId": 11,
+      "path": [
+        "field14"
+      ],
+      "before": "If it would help, download a one-page summary to share with a supervisor or mentor in a development conversation. That is always your choice, and the summary says so. Moving to a new computer? Save a copy here and open it there.",
+      "after": "You can download a one-page summary of your learning journey if you want to use it in a development conversation with a supervisor or mentor. This is entirely your decision. The summary notes that sharing is voluntary. If you change computers, you can save your records here and reopen them elsewhere.",
+      "reason": "Clarified the purpose and voluntary nature of the summary download, specified intended uses, and removed repetitive wording while maintaining all procedural and privacy points."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 7,
+        "severity": "blocker",
+        "finding": "The rewritten text for field7 omits the essential statement from the source that 'nothing here is graded,' and adds the phrase 'they are never scored or reported,' which is not present in the full source string. The restatement moves from the neutral, welcoming tone and source-provided scope to a potentially narrower framing ('develop in your role at DSD'), which is not exactly present in the source. The rewrite removes the source statement that 'you are always welcome to explore anything on the site that catches your interest.' These are not editorial clarifications but substantive omissions and changes, especially concerning grading and the right to explore material.'"
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "The rewrite for field8 preserves the intent and adds helpful clarification. There is no policy or programmatic change. This is acceptable."
+      },
+      {
+        "fieldId": 9,
+        "severity": "note",
+        "finding": "For field9, the rewrite clarifies intent and makes the privacy statement less ambiguous, but closely tracks the meaning of the source and does not impose requirements not present in the code. Acceptable as-is."
+      },
+      {
+        "fieldId": 10,
+        "severity": "note",
+        "finding": "For field10, the modification simply clarifies the mechanism by which next steps are shown; there is no practical difference from the source. Acceptable."
+      },
+      {
+        "fieldId": 11,
+        "severity": "note",
+        "finding": "For field14, the rewrite retains the voluntary and privacy points while making the language slightly more formal. All essential meaning and instructions remain faithful to the source. Acceptable."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 4755,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 4608
+      },
+      "output_tokens": 623,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5378
+    },
+    "review": {
+      "input_tokens": 4787,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 329,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5116
+    }
+  },
+  "createdAt": "2026-11-15T14:03:36.218Z"
+}

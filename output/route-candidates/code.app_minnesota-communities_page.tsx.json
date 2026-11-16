@@ -1,0 +1,67 @@
+{
+  "target": "code.app/minnesota-communities/page.tsx",
+  "kind": "surface",
+  "route": "/minnesota-communities",
+  "sourceSha256": "7285e02dca46b01c8282a13bd806d4a592bb87de809daa29ccb482f754df5b70",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "You can still browse the available briefs below.",
+      "after": "Available community briefs remain accessible for review and use.",
+      "reason": "This revision maintains clear professional language and clarifies that staff can review and use the available briefs. It removes conversational wording and focuses on the practical purpose of the staff action, aligning with the program writing standard."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed replacement ('Available community briefs remain accessible for review and use.') alters the meaning and tone of the original source text ('You can still browse the available briefs below.'). The source focuses directly and simply on the user's ability to 'browse' the briefs, consistent with the interface's function during a paused state. The rewrite introduces 'review and use', which goes beyond the plain navigation/browsing permission and implies specific actions not stated in the source. The source is also more direct, user-focused, and preserves an official record of how access is described when a pause is in effect. The change erases this original record, adding unnecessary reinterpretation and slightly shifting practical scope, which is not permitted by the standard."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3277,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 77,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3354
+    },
+    "review": {
+      "input_tokens": 2966,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 174,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3140
+    }
+  },
+  "createdAt": "2026-11-15T13:50:43.015Z"
+}

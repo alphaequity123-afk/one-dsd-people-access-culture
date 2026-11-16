@@ -1,0 +1,95 @@
+{
+  "target": "community-brief.rural",
+  "kind": "surface",
+  "route": "/minnesota-communities/rural",
+  "sourceSha256": "d497bd9c5a99e7250639ed909a87d1f1cc87f2a185d4075adfc2b2d9d6166028",
+  "status": "needs_revision",
+  "reviewedFieldCount": 25,
+  "changes": [
+    {
+      "fieldId": 2,
+      "path": [
+        "whoAndWhere"
+      ],
+      "before": "Rural experience is shaped by geography and infrastructure, including broadband, distance, hospital closures, and county capacity. Farming and mining communities are not the same. Somali families in Worthington, Mexican families in dairy counties, and the eleven Tribal Nations must be considered from the beginning.",
+      "after": "Rural experiences differ based on geography and local infrastructure, including broadband availability, distance to services, hospital closures, and the capacity of each county. Farming, mining, forestry, and tourism communities each confront distinct challenges. The needs of Somali families in Worthington, Mexican families in dairy regions, and members of the eleven Tribal Nations must be included in planning from the start, rather than added later. Local context shapes how supports are accessed and who provides help.",
+      "reason": "Clarified the distinct rural contexts and expanded on how local factors impact support access, while providing concrete evidence-based examples."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "A service that depends on reliable broadband can exclude people. County human services is often where people actually receive help. A missed visit may reflect fuel costs or winter roads rather than refusal.",
+      "after": "When access to services depends on reliable broadband or regional offices, people can be excluded if infrastructure is limited or distant. Most community members receive help from their county human services office, not directly from the state. Staff should interpret a missed visit in context—high fuel costs, long travel distances, and hazardous winter roads may prevent attendance rather than an intent to refuse services. Recognizing these factors helps avoid misinterpretation and ensures that barriers to access are addressed.",
+      "reason": "Expanded the reasoning behind service access challenges and clarified the need for contextual consideration when interpreting missed appointments."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "withinGroupDiversity"
+      ],
+      "before": "Iron Range, prairie, forest, and border towns are not one region. Name the town.",
+      "after": "Iron Range, prairie, forests, and border towns have distinct histories, economies, and populations. Do not treat 'rural Minnesota' as a single type; always identify the specific town or county to understand local needs.",
+      "reason": "Added detail about economic and demographic differences to reinforce the need for specificity."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The revised version partially expands and reorganizes content, but it introduces new phrases not grounded by the existing source. The source explicitly lists Somali families in Worthington, Mexican families in dairy counties, and the eleven Tribal Nations as examples to \"be considered from the beginning.\" The rewrite subtly shifts the emphasis, using 'included in planning from the start, rather than added later,' while also naming forestry and tourism which are not in the source. The phrase 'Local context shapes how supports are accessed and who provides help' summarizes without a direct source phrase. All examples must match the source, and no sector should be added without source evidence."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The expanded rationale fits with the source's list of relevant service barriers (broadband, distance, county services, fuel costs, and winter roads). The rewording is accurate and adds clarifying details without changing the intent or meaning. This is acceptable."
+      },
+      {
+        "fieldId": 4,
+        "severity": "blocker",
+        "finding": "The rewrite adds 'distinct histories, economies, and populations' and 'always identify the specific town or county to understand local needs.' The original sentence is much simpler: 'Iron Range, prairie, forest, and border towns are not one region. Name the town.' Additional description is not grounded in the source and changes the emphasis from naming the specific place to broader analysis. The rewording exceeds the source and does not preserve its brevity or exact meaning."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2276,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 449,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2725
+    },
+    "review": {
+      "input_tokens": 1595,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 319,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1914
+    }
+  },
+  "createdAt": "2026-11-15T13:40:42.499Z"
+}

@@ -1,0 +1,157 @@
+{
+  "target": "resource.ja-sm-rules-fall-2026",
+  "kind": "resource",
+  "route": "/library/ja-sm-rules-fall-2026",
+  "sourceSha256": "88568ca9679a22546c6294d98cd25e90c0b96d11c90ffc651142e0cfc8ccde32",
+  "status": "needs_revision",
+  "reviewedFieldCount": 7,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "A one-page reminder of what binds you, what is an enforcement position, and what to do while the rules move. Dated October 2026. Check before relying on it.",
+      "after": "A one-page summary explaining rules that apply to your supervisory role, what counts as an enforcement position, and recommended steps while legal or policy guidance is in flux. Dated October 2026. Review each time before making key decisions.",
+      "reason": "Clarifies what the reminder covers and why periodic review is recommended, so supervisors understand its relevance to their actions."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Remember. General information, not legal advice. This app is voluntary and does not satisfy Minn. Stat. 43A.21. The state's own training does. \"Reported\" means the source was secondary. Verify it before you repeat it as fact.",
+      "after": "Note: This is general guidance, not legal advice. Use of this app is voluntary and does not meet the statutory training requirement under Minn. Stat. 43A.21; only the state's official training does. If a source is described as 'reported,' it is secondary information—confirm accuracy before sharing it as fact.",
+      "reason": "Removes repetition and explains why to verify secondary sources, the difference between this resource and official requirements, and the limits of the app's authority."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Binding on you now. Immediately report harassment and discrimination concerns to Human Resources or the Affirmative Action Officer (Policies 1436 and 1329). Promptly forward accommodation requests and tell the person who decides. Never ask for medical information (Policy 1433). One Title VII standard for all employees (Ames). \"Some harm\" is enough (Muldrow). The Human Rights Act covers harassment under \"discriminate\" (2024 c. 105). Complete the state's required training (43A.21, Supervisor Core or Manager Core). Ask Human Resources what applies.",
+      "after": "Immediate expectations. Report any concerns related to harassment or discrimination directly to Human Resources or the Affirmative Action Officer, following Policies 1436 and 1329. Forward accommodation requests without delay and inform the designated decision maker. Do not ask for medical details from employees, per Policy 1433. All employees are covered by a single Title VII standard (Ames decision). As clarified in Muldrow, \"some harm\" is sufficient to trigger review. The Human Rights Act now addresses harassment as part of what it means to \"discriminate\" (2024 c. 105). You must complete the required state training (Minn. Stat. 43A.21; Supervisor Core or Manager Core). When unclear, ask Human Resources which policies or law apply. Acting on these steps meets your duty as a supervisor and helps protect both employees and the agency from legal and procedural errors.",
+      "reason": "Explains how each expectation connects to supervisory duties, the importance of forwarding requests, and why checking policy helps prevent errors or omissions."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Enforcement positions to know. EEOC technical assistance, March 19, 2025: training, mentoring and access can be terms of employment. No identity-sorted programs. Client preference is no defense to race or color discrimination. DOJ guidance, July 29, 2025: non-binding, with practical force through OMB M-25-33. No required affirmation or confession. No penalties for dissent. Federal agencies have stepped back from disparate impact and an integration mandate. Courts, states and private plaintiffs are not bound by those opinions.",
+      "after": "Key enforcement positions. The EEOC's March 19, 2025 technical guidance notes that training, mentoring, and access are employment terms subject to anti-discrimination laws. Supervisors may not set up identity-based program tracks, and client preferences do not justify race or color discrimination. The July 29, 2025 DOJ guidance is not legally binding, but OMB M-25-33 can make its recommendations influential in federal oversight. Staff are not required to affirm or confess beliefs, and dissent should not lead to penalty. Federal agencies have reduced emphasis on disparate impact claims and integration mandates; this retreat does not constrain court, state, or private actions. Recognizing which positions are binding versus advisory helps direct compliance and communication with staff.",
+      "reason": "Adds explanation regarding the practical effects of enforcement guidance, the advisory status of federal positions, and distinction between agency and legal requirements for staff actions."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Say it this way. Disparate impact: \"Federal enforcement has largely moved away from it. The Title VII provision and Minnesota law still exist. We use data to review our process, not to decide about an individual.\" Olmstead: \"The decision and the statutes remain. The federal enforcement position has changed. Minnesota's commitments continue.\" United States v. Minnesota: \"It is pending. No court has ruled. I will share what Human Resources tells me.\"",
+      "after": "Recommended language for common issues:\n- Disparate impact: \"Federal enforcement has reduced focus here. However, Title VII and Minnesota law still apply. We use outcome data to evaluate our processes, but never to judge an individual.\"\n- Olmstead: \"The Supreme Court decision and relevant statutes are unchanged, but federal enforcement priorities have shifted. Minnesota maintains its commitments under Olmstead.\"\n- United States v. Minnesota: \"This case remains undecided. No ruling has been issued. I will follow guidance from Human Resources if more information becomes available.\"\n\nUsing consistent and accurate language clarifies your position and helps avoid misstatements while issues are unsettled.",
+      "reason": "Provides context on why this phrasing matters—avoiding misstatements—and clarifies the ongoing relevance of each issue for supervisory communication."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Dates to hold. April 26, 2027: DOJ Title II web rule, entities of 50,000 or more. May 11, 2027: HHS Section 504 web rule, recipients with 15 or more employees (reported). March 1, 2027 and July 15, 2027: discovery and dispositive motion dates in United States v. Minnesota (reported). Accessibility under state standards applies now.",
+      "after": "Key dates and deadlines:\n- April 26, 2027: DOJ Title II web accessibility rule applies to entities with 50,000 or more people.\n- May 11, 2027: HHS Section 504 web rule takes effect for recipients with 15 or more employees (as reported—verify final applicability).\n- March 1, 2027 and July 15, 2027: Deadlines for discovery and dispositive motions in United States v. Minnesota (as reported).\n- Note: Apply current state accessibility standards now, regardless of federal timelines.\n\nTracking these dates helps ensure your team stays in compliance and anticipates upcoming legal obligations.",
+      "reason": "Explains why tracking these dates matters for supervisors: to prepare for compliance and avoid missing deadlines that affect operations."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "Do next. Write your reason before your next assignment, schedule change or hire. Save your Human Resources, Affirmative Action Officer, ADA coordinator and labor relations contacts. Set calendar reminders to ask what has changed in January, April and July 2027.",
+      "after": "Recommended next steps:\n- Document your reasoning before making assignments, schedule changes, or hires. This supports accountability and shows your decisions were thoughtful.\n- Save up-to-date contact information for Human Resources, the Affirmative Action Officer, ADA coordinator, and labor relations representative, so you can act quickly as issues arise.\n- Set reminders for January, April, and July 2027 to check for updated rules or agency guidance. Regularly confirming changes reduces the risk of outdated practices.",
+      "reason": "Connects each recommendation to its practical benefit for supervisory effectiveness and risk management."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed summary changes the original's neutral reminder into an 'explanation' and introduces new wording ('supervisory role', 'recommended steps') and rationale ('while legal or policy guidance is in flux'). The original does not specify the summary is for a supervisory role (could apply more broadly in the chain), and adds the recommendation to review before making 'key decisions' rather than the original's call to check before relying on it. This reframes the scope and audience: the official job aid does not claim it is exclusive to any supervisory role, nor suggest periodic review tied to actions. This exceeds mere clarification and risks excluding situations or staff not identified as supervisors. Reject."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The rewrite maintains the correct substantive points and clarifies secondary source verification, though it mildly recasts the instruction style ('Note:' versus 'Remember.'). The original's explanation that 'this app is voluntary and does not satisfy Minn. Stat. 43A.21' is correctly restated. No blocker: acceptable editorial adjustment in clarity and condensation."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The after text adds new rationale ('helps protect both employees and the agency from legal and procedural errors') and prescribes the action as meeting a supervisor's 'duty,' exceeding the direct, referential language of the official job aid. The original restricts itself to requirements and referring to policy or HR. By expanding to reasons and outcomes, the edit risks introducing interpretation about legal effect and the impact on liability, which is outside a non-official, guidance summary. The after version also omits the explicit distinction: 'Promptly forward accommodation requests and tell the person who decides'—the source requires both forward and inform, whereas the rewrite says 'forward ... and inform the designated decision maker,' which could change the action taken. Reject."
+      },
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "The after text paraphrases and adds explanation about the 'practical effects' and 'distinction between agency and legal requirements,' where the original strictly lists positions and what is or is not binding. It introduces new language regarding influence ('recommendations influential in federal oversight'), not present in the source, and softens the force of enforcement positions as simply helping with 'compliance and communication.' This risks blurring the clarity of what is strictly policy, law, or non-binding guidance; these are precise distinctions in the original. Reject."
+      },
+      {
+        "fieldId": 4,
+        "severity": "blocker",
+        "finding": "The proposed 'Recommended language...' reframes the original's direct, quotable suggested statements. The official job aid says 'Say it this way.' The rewrite substitutes summaries and editorial clarifications instead of preserving the quoted language, and changes details (for instance, '...to judge an individual' is not the same as the original's 'not to decide about an individual'). There is also inserted rationale ('Using consistent and accurate language...') that goes beyond the source's purpose, which is to ground supervisors verbatim. Reject."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "This change editorializes the source's concise date listing, but accurately preserves the information and maintains the caveat about 'reported' sources and current state standards. The new reasoning is valid for supervisors (to anticipate compliance), but as a summary does not contradict the factual dates or obligations. Not a blocker."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "Elaborates the original by connecting recommendations explicitly to accountability and risk management. The steps themselves are unchanged in scope or requirement. The added intent clarifies why the action is beneficial. As recommendations in a job aid, this does not introduce legal attribution or obligation, so it is not a blocker."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2389,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 1082,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3471
+    },
+    "review": {
+      "input_tokens": 3036,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 872,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3908
+    }
+  },
+  "createdAt": "2026-11-15T13:44:11.979Z"
+}

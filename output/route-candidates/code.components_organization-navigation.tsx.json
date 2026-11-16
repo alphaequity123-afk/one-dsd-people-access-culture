@@ -1,0 +1,67 @@
+{
+  "target": "code.components/organization-navigation.tsx",
+  "kind": "surface",
+  "route": "components/organization-navigation.tsx",
+  "sourceSha256": "c4560e6083db15a1386e968732c4db481151f4af5c402a1f2d60940d4e2bce9d",
+  "status": "needs_revision",
+  "reviewedFieldCount": 3,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field2"
+      ],
+      "before": "Use the same learning, practical tools and community knowledge across organizational boundaries, while keeping the responsibilities and circumstances of your work in view.",
+      "after": "Access shared learning materials, practice guides, and community knowledge that are available to everyone across DHS. Remember to apply these resources appropriately by considering the specific duties and constraints of your role. This helps ensure that the tools and information you use are relevant to your particular responsibilities while supporting consistent practices across divisions.",
+      "reason": "Expanded to explain how sharing resources can benefit DHS staff while clarifying the importance of using judgment to match resources to specific work situations. The revision raises reasoning clarity and practical specificity per the standard."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The original text ('Use the same learning, practical tools and community knowledge across organizational boundaries, while keeping the responsibilities and circumstances of your work in view.') is fully supported by the source and is brief, accurate, and anchored in the source's actual wording. The proposed replacement adds references to 'practice guides,' 'available to everyone,' and guidance about 'apply these resources appropriately' and 'supporting consistent practices across divisions,' none of which appear or are implied in the source. The revision introduces new concepts, expands application beyond the text, and changes the intended concise tone. This exceeds the source and violates the standard's requirements to preserve reason, scope, and not invent new policy or detailed guidance. The change is a blocker for this field."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1832,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 150,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1982
+    },
+    "review": {
+      "input_tokens": 1530,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 172,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1702
+    }
+  },
+  "createdAt": "2026-11-15T13:55:03.755Z"
+}

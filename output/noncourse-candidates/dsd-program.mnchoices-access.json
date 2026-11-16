@@ -1,0 +1,127 @@
+{
+  "target": "dsd-program.mnchoices-access",
+  "kind": "surface",
+  "route": "/one-dsd/programs/mnchoices-access",
+  "sourceSha256": "1d817ee1d3f84ad67f0d6d1b4b83a4de568d11b8e67014ed4632f5ba534e775a",
+  "status": "model_checked",
+  "reviewedFieldCount": 6,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "intro"
+      ],
+      "before": "Governs how people are assessed for and connected to long-term services and supports.",
+      "after": "Describes how individuals are evaluated for eligibility and initially connected with long-term services and supports through the MnCHOICES process. The assessment determines what types and levels of support a person may need, guiding service planning and resource allocation. Reliable access to assessment ensures timely support and helps match individuals with appropriate services within their community.",
+      "reason": "Expanded explanation to clarify the purpose of the MnCHOICES assessment, its role in eligibility and service planning, and why reliable access matters to both staff and people seeking support."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "equityEntryPoints",
+        0
+      ],
+      "before": "First contact in the person's language",
+      "after": "Ensuring the initial contact with the person uses their preferred language helps improve understanding, trust, and equity in the assessment process. This reduces misunderstandings and improves engagement from the beginning.",
+      "reason": "Revised to specify why using the person's language at first contact is important for equity and practical communication."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "equityEntryPoints",
+        1
+      ],
+      "before": "Accessibility of the assessment process",
+      "after": "Making the assessment process accessible addresses diverse needs related to language, hearing, mobility, and technology. Ensuring accessibility helps remove barriers that might otherwise prevent full participation or accurate assessment outcomes.",
+      "reason": "Clarified that accessibility involves multiple dimensions and directly affects participation and assessment accuracy."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "equityEntryPoints",
+        2
+      ],
+      "before": "Person-centered practice and supported decision-making",
+      "after": "Applying person-centered practices and supporting the individual's decision-making authority ensures that assessment results and service recommendations respect each person's goals, preferences, and circumstances.",
+      "reason": "Added specificity about what person-centered practice looks like in assessment and its effect on outcomes."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "equityEntryPoints",
+        3
+      ],
+      "before": "Wait times and follow-up by community",
+      "after": "Clear communication about wait times and consistent follow-up by lead agencies or case managers is critical. Timely updates prevent uncertainty and support accountability, helping people know what to expect as they move through the assessment and eligibility process.",
+      "reason": "Clarified whose actions matter and why managing wait times and follow-up contributes to equitable, predictable access."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The expanded intro adds detail but does not contradict or misinterpret the original source. The explanation about eligibility, service planning, matching, and timely support aligns with how MnCHOICES is used: it determines eligibility and connects people to supports based on assessed needs."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revision clarifies the importance of first contact in the person's language without introducing unsupported claims. It is consistent with the equity intent referenced in the original."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "Elaborating on accessibility across different domains (language, hearing, mobility, technology) is accurate and in keeping with both legal requirements and best practice for accessibility in assessments. It does not create policy or procedural overreach."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The change further explains person-centered practice and supported decision-making in the context of assessments, specifying that these approaches lead to recommendations that reflect individuals' circumstances. No overstatement or material inaccuracy."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "Making explicit that 'lead agencies or case managers' are responsible for follow-up clarifies, but does not overstep, the original source. Emphasis on communication and predictability is accurate to both the process and the equity goal."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1207,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 457,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1664
+    },
+    "review": {
+      "input_tokens": 1158,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 346,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1504
+    }
+  },
+  "createdAt": "2026-11-15T13:38:29.245Z"
+}

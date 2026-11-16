@@ -1,0 +1,165 @@
+{
+  "target": "code.app/leading/how-this-works/page.tsx",
+  "kind": "surface",
+  "route": "/leading/how-this-works",
+  "sourceSha256": "31e4856c15ac9f9f2847d85c4640a41d617e92f10e085210cfb9aeb864432941",
+  "status": "needs_revision",
+  "reviewedFieldCount": 24,
+  "changes": [
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "There is no sign-in for this space. All of it is public, and staff can read every page.",
+      "after": "There is no account or sign-in required for this space. All pages are visible, and any Minnesota DHS or DSD staff member can read them.",
+      "reason": "Clarifies that there is neither account creation nor sign-in; specifies staff roles for context and clarifies access."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field4"
+      ],
+      "before": "A supervisor cannot see who opened a course, how far they got or what they answered. Neither can you.",
+      "after": "A supervisor cannot check who started a course, how much of it someone completed, or any responses given. You also cannot see this information for others.",
+      "reason": "Improves specificity and clarity by using concrete verbs and describes the privacy limit in more detail."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field6"
+      ],
+      "before": "Your progress stays in your browser. That includes your place on a suggested path, your lesson progress and your practice answers.",
+      "after": "Your progress is only stored within your current browser. This includes your location on a suggested path, what lessons you have visited, and any practice responses you provide.",
+      "reason": "Clarifies that storage is browser-specific and lists examples for accuracy and practical reference."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "field8"
+      ],
+      "before": "Anyone using the same computer and browser could see it. You can clear it at any time.",
+      "after": "If someone else uses the same browser and computer, they could view your stored progress. You may clear this data whenever you choose.",
+      "reason": "Combines the warning and clearing instruction for precision and practical action."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "field10"
+      ],
+      "before": "Questions typed into Ask go to outside services so that it can answer.",
+      "after": "How Ask handles your typed question",
+      "reason": "Changes the heading to clarify that it covers Ask’s question handling, matching with professional standards and current language elsewhere on the page."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "field11"
+      ],
+      "before": "The current service does not intentionally save a question-and-answer copy in the owner workspace. Operational activity may be recorded, and earlier versions may have retained separate records. Supervisors do not receive your browser conversation from Ask.",
+      "after": "Questions you enter in Ask are sent to external services to generate a response. These services process your input to return an answer.",
+      "reason": "Clarifies the nature of Ask’s operation and grounds the explanation in how the process works rather than a high-level statement."
+    },
+    {
+      "fieldId": 11,
+      "path": [
+        "field12"
+      ],
+      "before": "Please do not type anyone&apos;s name, case, health or personnel details. Ask general questions.",
+      "after": "The current service is not designed to retain question-and-answer exchanges in the owner organization’s workspace. Service records of technical activity may exist, and some prior versions may have kept additional logs. Supervisors do not receive a copy of your Ask conversations from this browser.",
+      "reason": "Revises for clarity, accuracy, and specificity regarding service operation and handling of communications."
+    },
+    {
+      "fieldId": 12,
+      "path": [
+        "field14"
+      ],
+      "before": "This app does not replace training the state requires. It does not count as the training Minn. Stat. 43A.21 requires of supervisors and managers. The state&apos;s own training does that.",
+      "after": "Do not enter names, case numbers, health details, or personnel information in Ask. Limit your questions to general topics.",
+      "reason": "Uses direct language and specific examples to match the program's privacy standards and reduce ambiguity."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The proposed change adds: 'There is no account or sign-in required for this space. All pages are visible, and any Minnesota DHS or DSD staff member can read them.' The source: 'There is no sign-in for this space. All of it is public, and staff can read every page.' Source does not restrict access to 'Minnesota DHS or DSD staff'; it explicitly states 'all of it is public', broadening access beyond staff. The change improperly narrows access and may confuse the intended open nature."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "Rewording clarifies the privacy limitation and uses more specific language ('cannot check who started a course...'). This reflects, but does not substantively alter, the meaning in source. Acceptable clarification."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The rewrite specifies storage is 'within your current browser' instead of simply 'in your browser.' Lists equivalent examples and does not change the underlying technical assurance. Acceptable refinement."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "The update maintains meaning ('anyone using the same computer and browser could see it') and clarifies clearing option. Acceptable improvement."
+      },
+      {
+        "fieldId": 9,
+        "severity": "blocker",
+        "finding": "The change proposes rewriting a content heading from 'Questions typed into Ask go to outside services so that it can answer.' to 'How Ask handles your typed question.' The original is not a label but an explicit program statement; the rewrite is a generic, process-oriented label. The rewrite removes specificity and a direct program statement already grounded in source."
+      },
+      {
+        "fieldId": 10,
+        "severity": "blocker",
+        "finding": "The rewritten text erases crucial details from the source sentence: 'The current service does not intentionally save a question-and-answer copy in the owner workspace. Operational activity may be recorded, and earlier versions may have retained separate records. Supervisors do not receive your browser conversation from Ask.' Instead, it injects only a broad process explanation. The source contains privacy assurances and traceability statements that are required to be presented exactly."
+      },
+      {
+        "fieldId": 11,
+        "severity": "note",
+        "finding": "The change is an acceptable clarification. It adds detail and preserves qualifications found in the original statement."
+      },
+      {
+        "fieldId": 12,
+        "severity": "blocker",
+        "finding": "The proposed change takes the policy heading about legal and training boundaries ('This app does not replace training the state requires...') and replaces it with a privacy warning about what not to type into Ask. This erases an essential legal disclaimer and program limit—replacing it with unrelated privacy requirements. These two topics are not substitutable; loss of the legal/training context cannot be accepted."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3380,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 521,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3901
+    },
+    "review": {
+      "input_tokens": 2963,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 671,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3634
+    }
+  },
+  "createdAt": "2026-11-15T13:49:12.880Z"
+}

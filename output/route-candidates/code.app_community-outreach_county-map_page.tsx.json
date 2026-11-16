@@ -1,0 +1,81 @@
+{
+  "target": "code.app/community-outreach/county-map/page.tsx",
+  "kind": "surface",
+  "route": "/community-outreach/county-map",
+  "sourceSha256": "8663e1fe511d5df39f83186a847905e73a203d078923d33278b42cff8bbc3cf9",
+  "status": "needs_revision",
+  "reviewedFieldCount": 4,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Compare each Minnesota county's population with the people receiving home and community-based services, and earned income, by race and ethnicity.",
+      "after": "This page lets you compare the population of each Minnesota county with the number of people receiving home and community-based services, as well as their earned income. Data are shown by race and ethnicity.",
+      "reason": "Clarified that the comparison includes both service participation and earned income, and specified that figures are segmented by race and ethnicity. Removed unnecessary repetition and made the summary more direct for DHS and DSD colleagues."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "Compare each county&apos;s population with the people receiving home and community-based services, by race and ethnicity. A difference is a question to look into, not an explanation.",
+      "after": "This map compares each county’s population and the number of people receiving home and community-based services, separated by race and ethnicity. If there is a difference between the county’s general population and the people served, it signals a need for review or further questions. The data do not explain the reasons behind these differences.",
+      "reason": "Clarified that observed differences suggest areas for further review rather than providing causal explanations. Maintained the focus on professional use and decision support, relevant for staff who use the data for outreach and service planning."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed change introduces a claim about earned income that is not supported by the immediate source for this field (the metadata description and overall page focus). While the source page does import and pass 'earned income' as a possible measure in the interactive map, the original summary made no separate claim about presenting earned income breakdown by race and ethnicity across every county. The original text precisely follows the source file's 'description' metadata. This level of detail and the summary's scoping must be preserved, as description fields are often reused in search, metadata, and sharing contexts. The suggestion to rephrase for clarity is acceptable when source meaning and scope are preserved, but introducing new elements or removing the tight alignment with the official description is a blocker in this context."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The proposed change extends and alters the meaning of the original field. The original text states: 'A difference is a question to look into, not an explanation.' This assigns a specific epistemic status to observed county-level differences: they prompt inquiry, not conjecture. The rewrite, 'If there is a difference between the county’s general population and the people served, it signals a need for review or further questions. The data do not explain the reasons behind these differences,' is a substantive shift—it adds a direct call for review, refines how to interpret differences, and recasts the nature of what to do about them. The original wording must be preserved exactly, as it comes from an official program writing standard and provides explicit instructions not to treat differences as explanations. Recasting weakens this directive and could mislead on the nature of required action. No change from the source is justified or permitted here."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1752,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 222,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1974
+    },
+    "review": {
+      "input_tokens": 1532,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 368,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1900
+    }
+  },
+  "createdAt": "2026-11-15T13:47:35.510Z"
+}

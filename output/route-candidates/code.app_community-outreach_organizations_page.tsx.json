@@ -1,0 +1,123 @@
+{
+  "target": "code.app/community-outreach/organizations/page.tsx",
+  "kind": "surface",
+  "route": "/community-outreach/organizations",
+  "sourceSha256": "3d44a0ff89c74487521d92d6d6aa2948983782d8fe5c719488f9dff41ebe1092",
+  "status": "needs_revision",
+  "reviewedFieldCount": 10,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Grantees, contractors, partners and advisory members of the Disability Services Division, each with the public records behind the connection.",
+      "after": "This directory lists organizations that have an official record of working with the Disability Services Division. Types of documented connections include grantees, contractors, partners, and advisory group members, with direct public records available for each relationship.",
+      "reason": "Improved specificity by naming connection types, clarifying the basis is official records, and explaining that public documentation underpins every listing, connecting purpose directly to source-backed evidence."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field4"
+      ],
+      "before": "Each organization here has a published record of working with the Disability Services Division as a grantee, contractor, partner or advisory member. Each page lists the records it rests on.",
+      "after": "Every organization in this directory has publicly documented involvement with the Disability Services Division, either as a grantee, contractor, partner, or member of an advisory group. Each organization's page provides the records that document its connection.",
+      "reason": "Clarified the inclusion criteria and that documentation supports each listing, linking professional purpose and procedural transparency."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field5"
+      ],
+      "before": "Being listed here does not mean the organization speaks for a whole community, and it is not a ranking. Some connections ended years ago. Confirm current details with the organization before you rely on them. Facts were checked on",
+      "after": "An organization’s presence in this directory does not mean it represents an entire community, nor does listing imply endorsement or ranking. Some relationships may have ended years ago. Before relying on details about an organization, confirm current status with them directly. The factual base was last checked on",
+      "reason": "Explained the practical significance of a listing—addressing representative scope, endorsement, and the time-sensitivity of information. Clearer on why users need to check with the organization and what the verification date means."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "field9"
+      ],
+      "before": "These grants are recorded with the Department of Human Services, but the records do not name the Disability Services Division. They are listed so the record is complete.",
+      "after": "The grants listed here were recorded at the Department of Human Services level, but do not specifically name the Disability Services Division. Including them helps maintain a complete and accurate public record.",
+      "reason": "Clarified why these grants appear, emphasizing organizational record completeness and the importance of public documentation."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "field11"
+      ],
+      "before": "Most connections come from the Disability Services Division&apos;s 2023 report to the Legislature, the list of Innovation Grant awards, Department of Human Services news releases, and the Minnesota law that sets up the Waiver Reimagine advisory task force. Where a record names the Department of Human Services but not the Disability Services Division, the organization&apos;s page says so.",
+      "after": "Most of the organizational connections in this directory are based on the Disability Services Division’s 2023 Legislative report, the Innovation Grant award lists, official DHS news releases, and the law creating the Waiver Reimagine advisory task force. If a record is associated with the Department of Human Services but does not specifically mention the Disability Services Division, this is noted on the relevant organization's page.",
+      "reason": "Improved clarity and precision around data sources and how distinctions between department- and division-level records are communicated."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The source's language ('Grantees, contractors, partners and advisory members of the Disability Services Division, each with the public records behind the connection.') is already specific, names all official connection types, and states that public records document each relationship. The rewrite replaces the concise, neutral source text with an interpretation ('official record of working', 'direct public records available for each relationship') and adds 'official' and 'direct' as qualifiers not present in the source. The source does not use 'official' or 'direct public records,' nor does it say the connection is 'with direct public records.' The meaning and scope are unchanged, the new version is wordier, not clearer, and partly drifts from the original (e.g., 'directly to source-backed evidence'). This is a blocker because the rewrite introduces qualifiers that are not found in the evidence and subtly changes the claim."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The rewrite is an acceptable paraphrase of the original, maintaining meaning, scope, and procedural clarity. Both source and rewrite make clear that inclusion requires a published record; the rest is reworded for clarity and format, not substance."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The rewritten text adds minor clarity but is still rooted in the source, keeping all disclaimers and practical instructions. It does not introduce new requirements or erase limitations: the underlying instruction about verifying current details remains."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "The rewrite restates and clarifies the original explanation. Both correctly communicate that these grants lack a direct DSD record and that inclusion is for record completeness."
+      },
+      {
+        "fieldId": 9,
+        "severity": "note",
+        "finding": "The change accurately paraphrases and is faithful to the source's attribution and explanatory scope. No policy or factual overreach is introduced."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3273,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 472,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3745
+    },
+    "review": {
+      "input_tokens": 3211,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 395,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3606
+    }
+  },
+  "createdAt": "2026-11-15T13:47:39.213Z"
+}

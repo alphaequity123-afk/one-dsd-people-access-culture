@@ -1,0 +1,109 @@
+{
+  "target": "code.components/multimedia/dsd-data-quality-example.tsx",
+  "kind": "surface",
+  "route": "components/multimedia/dsd-data-quality-example.tsx",
+  "sourceSha256": "99eb14797470fde945d3b06fefcfdd426ebe32eac48dc3e00efddbfc5ccda20f",
+  "status": "needs_revision",
+  "reviewedFieldCount": 8,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Treat a completed record as evidence that the person received useful support.",
+      "after": "Use a completed record as evidence of the system’s activity, but recognize that it does not confirm the person received meaningful support or achieved their goal.",
+      "reason": "Clarifies that a completed record only shows activity, not actual benefit to the individual, and adds specificity about what the evidence represents."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Publish every small group so the differences are visible.",
+      "after": "Report the results for every small group to reveal differences, while also considering what information could identify individuals.",
+      "reason": "Adds the practical consequence of reporting every small group—both increased visibility of differences and the risk of disclosing identifiable data."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "Compare the record pattern with people's accounts, while checking what can be reported safely.",
+      "after": "Compare the administrative records with people’s descriptions of their experiences, considering both what can be reported and what additional perspectives might be missing.",
+      "reason": "Clarifies that comparing patterns involves assessing multiple sources, highlights the limitation of administrative data alone, and points to gaps when certain accounts are not included."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field4"
+      ],
+      "before": "A made-up service follow-up has 120 records. Explore what the overall count shows, what a grouped view adds, and what a safer reporting view must consider. Groups A, B and C are invented labels.",
+      "after": "This example uses 120 fictional follow-up records. See how the overall rate, group breakdowns, and privacy protections each affect what the data can show. The group labels A, B, and C do not reflect real communities.",
+      "reason": "Clarifies that data are invented, specifies what each view demonstrates, and grounds the invented group labels in standard practice of data de-identification."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed edit alters both meaning and intent. The original, 'Treat a completed record as evidence that the person received useful support,' is supported by the source text ('Treat a completed record as evidence that the person received useful support'), but the UI immediately follows with guidance: 'A completed record describes the system's activity. Ask what the person could do next, what remained difficult, and whether the record captures that experience.' The proposal ('Use a completed record as evidence of the system’s activity, but recognize that it does not confirm the person received meaningful support or achieved their goal.') overwrites the instructional scenario by (a) dismissing the scenario outlined in the exercise and (b) asserting lack of confirmation as the primary message, rather than a point for critical questioning as directed in the feedback text. The field must preserve the scenario-based reflection rather than declare an instructional judgment."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The revised field ('Report the results for every small group to reveal differences, while also considering what information could identify individuals.') introduces the consideration of identifiability in the field, which is not congruent with its use. The original item ('Publish every small group so the differences are visible.') serves as an instructional radio option and is supported directly by the reasoning/feedback: 'Greater detail can reveal people, including through subtraction or another table. Work with the data owner and privacy lead on what can be reported and what other evidence can answer the question.' This consideration is already handled in the feedback and reporting scenario, not in the action/option label. Including identifiability here conflicts with the structure of the exercise and shifts the intent from exploring consequences to suggesting caution at the selection step rather than in the review/feedback."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The source option is 'Compare the record pattern with people's accounts, while checking what can be reported safely.' The revision ('Compare the administrative records with people’s descriptions of their experiences, considering both what can be reported and what additional perspectives might be missing.') reduces the emphasis on 'pattern' and adds 'what additional perspectives might be missing,' which is neither stated nor implied in the instructional label; instead, this aspect is part of the feedback text for this radio option: 'Ask whose accounts are missing, how they can contribute safely, and what decision this information can help change.' Edits to the option should not import content from the feedback or expand on the administrative vs. experiential distinction. The original label accurately cues the feedback; expanding here erases this structure."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The edit ('This example uses 120 fictional follow-up records. See how the overall rate, group breakdowns, and privacy protections each affect what the data can show. The group labels A, B, and C do not reflect real communities.') is acceptably close to the original meaning. The source says: 'A made-up service follow-up has 120 records. Explore what the overall count shows, what a grouped view adds, and what a safer reporting view must consider. Groups A, B and C are invented labels.' The expanded explanation about privacy view and group role is covered elsewhere and could be included or not; this is not a blocker."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3453,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 298,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3751
+    },
+    "review": {
+      "input_tokens": 3192,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 738,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3930
+    }
+  },
+  "createdAt": "2026-11-15T13:54:16.757Z"
+}

@@ -1,0 +1,151 @@
+{
+  "target": "communities.brief-shell",
+  "kind": "surface",
+  "route": "/minnesota-communities/[id]",
+  "sourceSha256": "0d58be81809b553694f3203dd9be5506f10498e2bd43892d24019f407ed502bf",
+  "status": "needs_revision",
+  "reviewedFieldCount": 10,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "tribalTitle"
+      ],
+      "before": "Begin with the designated Tribal relations contact",
+      "after": "Start with the designated Tribal relations contact",
+      "reason": "Replaced 'Begin' with 'Start' for consistent and plain language instruction tone as used elsewhere for initial staff actions."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "tribalActionHeading"
+      ],
+      "before": "If your work may affect a Tribal Nation",
+      "after": "If your work could affect a Tribal Nation",
+      "reason": "Changed 'may' to 'could' for increased clarity about the threshold for considering Tribal implications. This encourages careful evaluation without presuming certainty."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "whyKicker"
+      ],
+      "before": "Why it matters for Department of Human Services work",
+      "after": "Why this matters in Department of Human Services work",
+      "reason": "Revised to clarify connection: 'this' makes the relationship to DHS work explicit and improves grammatical precision."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "workTitle"
+      ],
+      "before": "What to ask, access checks, who to involve, what not to assume",
+      "after": "Questions, access checks, involving others, and assumptions to avoid",
+      "reason": "Clarifies that the section covers specific staff actions: asking questions, checking access, who to involve, and what not to assume, using concrete nouns for increased precision."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "antiProfileNote"
+      ],
+      "before": "Use this guidance to prepare, never to label a person. Ask what each person needs, check access, and be clear with partners about why and how they are being involved.",
+      "after": "Use this guidance to prepare for interactions, not to label or categorize people. Ask what each person needs, check access, and explain to partners why and how they are involved.",
+      "reason": "Clarifies purpose and removes 'never,' which can be unnecessary if the guidance is clearly stated. Instructs staff to explain involvement to partners for transparency."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "noDeeperBody"
+      ],
+      "before": "More context is not available yet. Confirm important details with the appropriate people before using this brief in a decision.",
+      "after": "Additional context is not yet available. Verify key details with the appropriate people before making decisions using this brief.",
+      "reason": "Clarifies action for staff—verify key details. 'Additional' reinforces that this refers to more information beyond what is present."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "showDeeperNote"
+      ],
+      "before": "Open this when history or important qualifications would help you prepare.",
+      "after": "Use this when history or specific background would improve your preparation.",
+      "reason": "'Open this' replaced with 'Use this' for clarity. Specifies how history or qualifications are relevant: to improve preparation for work."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The change from 'Begin with the designated Tribal relations contact' to 'Start with the designated Tribal relations contact' is not source-driven. The original term 'Begin' is functionally identical to 'Start' here and meets the program writing standard. No source evidence justifies a replacement solely for 'tone,' especially as both are plain, grade-appropriate verbs."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "'May' and 'could' have overlapping, but not identical, usage concerning possibility. The existing source ('may affect a Tribal Nation') follows established DHS wording for engagement triggers and legal assessments. 'Could' shifts nuance toward hypothetical or broader possibilities, which may expand or dilute official thresholds. No evidence supports changing this DHS engagement signal."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "Changing 'Why it matters for Department of Human Services work' to 'Why this matters in Department of Human Services work' remains accurate and clarifies the referent. This is an acceptable, non-blocking clarification."
+      },
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "The original ('What to ask, access checks, who to involve, what not to assume') is source-driven summary language, matching the intent and recognizable format of similar DHS briefs. The revision makes a subtle but unsupported shift from listing 'what to ask' to labeling as 'Questions,' potentially changing instructional scope. Changes to official summary/section headings are only justified with evidence of confusion or required update."
+      },
+      {
+        "fieldId": 4,
+        "severity": "blocker",
+        "finding": "Replacing 'never to label a person' with 'not to label or categorize people' and removing 'never' weakens an established and specific DHS anti-profiling warning. The original directness ('never') is program-mandated in this context. The edit is not source-supported and risks making the instruction less forceful."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The adjustment—from 'More context is not available yet. Confirm important details...' to 'Additional context is not yet available. Verify key details...'—improves clarity without changing scope or practical guidance."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "Changing from 'Open this when history or important qualifications would help you prepare.' to 'Use this when history or specific background would improve your preparation.' is an acceptable clarification. It preserves the intent and does not alter instructional or legal significance."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1630,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 494,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2124
+    },
+    "review": {
+      "input_tokens": 1528,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 603,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2131
+    }
+  },
+  "createdAt": "2026-11-15T13:38:07.559Z"
+}

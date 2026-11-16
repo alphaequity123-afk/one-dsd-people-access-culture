@@ -1,0 +1,81 @@
+{
+  "target": "dsd-scenario.dsd-service-redesign",
+  "kind": "surface",
+  "route": "/one-dsd/scenarios/dsd-service-redesign",
+  "sourceSha256": "ddb34ee8a56d60603ee9b97f185bb82d1f74d0ad18615124871423e5b7e30840",
+  "status": "needs_revision",
+  "reviewedFieldCount": 14,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "situation"
+      ],
+      "before": "A DSD team is redesigning how people are assessed for services. Early drafts add a self-service online step that would save staff time. Some of the people assessed do not use English, do not have reliable internet, or need supported decision-making.",
+      "after": "A DSD team is reorganizing the process for assessing people for services. The initial proposal includes a self-service online step intended to reduce staff workload. However, some people being assessed cannot use English, do not have reliable internet access, or need assistance making decisions. These differences affect whether the new process supports equitable access to services.",
+      "reason": "Clarified the limitations affecting people assessed and explained that equitable access is the substantive concern when changing process steps. Focused on assessment consequences and precision."
+    },
+    {
+      "fieldId": 12,
+      "path": [
+        "handoff"
+      ],
+      "before": "Bring the design to your accessibility lead, language access coordinator, and Equity Director while it is still open. DSD staff can request a consultation.",
+      "after": "Before finalizing your redesign, share it with your accessibility lead, language access coordinator, and Equity Director. Seek their feedback while you can still revise the process. DSD staff may also ask for a consultation to address practical access needs early.",
+      "reason": "Clarified the reason for early involvement: to ensure that feedback may still change the process. Emphasized practical consequences of consultation."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The revision adds a consequential shift and substantial padding not present in the source. The original states: 'A DSD team is redesigning how people are assessed for services. Early drafts add a self-service online step that would save staff time. Some of the people assessed do not use English, do not have reliable internet, or need supported decision-making.' The proposed revision introduces 'These differences affect whether the new process supports equitable access to services,' which frames the scenario as an equitable access issue—a conclusion/interpretation beyond the surface facts provided by the source. The original limits itself to direct, observable challenges. The added wording also breaks the program writing standard’s restriction on inventing broader consequences or interpreting motives (here, focusing on 'equitable access' as the main theme). Padding such as 'reorganizing the process' instead of 'redesigning' and presuming motives ('intended to reduce staff workload') are also interpretive, not surface-level restatements."
+      },
+      {
+        "fieldId": 12,
+        "severity": "note",
+        "finding": "The revision clarifies that the reason for contacting the accessibility lead, language access coordinator, and Equity Director is to allow enough time for their feedback to influence the process ('while you can still revise the process'), and brings out a practical consequence ('address practical access needs early'). This remains compatible with the substance of the source, which already says to bring the design 'while it is still open' and that DSD staff can request a consultation. This change does not introduce unsupported claims or policy shifts, and it better grounds the practical reason for early engagement."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1712,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 231,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1943
+    },
+    "review": {
+      "input_tokens": 1215,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 372,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1587
+    }
+  },
+  "createdAt": "2026-11-15T13:38:57.001Z"
+}

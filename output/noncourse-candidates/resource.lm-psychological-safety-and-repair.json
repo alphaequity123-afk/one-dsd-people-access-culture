@@ -1,0 +1,171 @@
+{
+  "target": "resource.lm-psychological-safety-and-repair",
+  "kind": "resource",
+  "route": "/library/lm-psychological-safety-and-repair",
+  "sourceSha256": "88d12f822ca92a6dedaba70107ccfc63538989bc7c9958ff79ce6c32edd65bc7",
+  "status": "needs_revision",
+  "reviewedFieldCount": 8,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "People speak up when doing so is safe and useful. That safety comes from practices others can see: how disagreement is handled, how mistakes are treated, who carries repair, and whether input changes anything.",
+      "after": "People tend to speak up when they believe it is both safe and worthwhile. Psychological safety does not depend on personalities, but on visible practices: how disagreement is invited and addressed, how mistakes are handled, who is expected to repair harm, and whether staff input results in real change.",
+      "reason": "Clarified that psychological safety arises from observable team practices, not individual personalities. Expanded on what constitutes visible practices and made the causal statements more precise for professional colleagues."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "DSD staff described limited psychological safety, performance pressure, and doubt that their input changes decisions. Those are practice problems with practice answers.",
+      "after": "DSD staff have reported experiencing performance pressure, limited opportunities for psychological safety, and skepticism about whether their feedback influences decisions. These are issues related to workplace practices, not individual shortcomings, and practice-based changes can address them.",
+      "reason": "Specified that the issues arise from workplace practices rather than individual characteristics and clarified that changes to practices can effectively address them. This focuses attention on where action is needed and frames the problem with reasoning for staff."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Make disagreement normal. Ask for the strongest case against your own idea before deciding. Thank the person who raised the concern, in front of others.",
+      "after": "Treat disagreement as a regular part of decision-making. Before making a final decision, invite colleagues to present the strongest argument against your own idea. Publicly thank those who voice concerns, as this demonstrates to the group that such input is valued.",
+      "reason": "Explained the purpose of normalizing disagreement and provided reasoning for public acknowledgment of concerns. Connected the guidance to team practices relevant for DSD staff."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Separate unfamiliarity from intentional harm. Most harm at work comes from not knowing. Respond to unfamiliarity with information and a chance to change. Respond to intentional harm through the confidential channel.",
+      "after": "Distinguish between unfamiliarity and intentional harm. Many workplace problems stem from gaps in knowledge rather than malicious intent. When someone acts out of unfamiliarity, respond with information and offer another chance. If behavior appears intentional, respond through the appropriate confidential channel.",
+      "reason": "Elaborated on why it is important to distinguish between unfamiliarity and intentional harm, and made the process for each response more explicit. This helps staff apply the principle to real workplace situations."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Put repair on the person with more power. When a comment or decision lands badly, the leader names it and takes responsibility for repair. The person harmed should not have to explain, educate, or forgive on a schedule.",
+      "after": "Assign responsibility for repairing harm to those with more power in the situation. When harm results from a comment or decision, leaders should identify the issue, take responsibility, and initiate repair steps. The person affected should not be expected to explain, educate, or forgive according to anyone else's timeline.",
+      "reason": "Specified that responsibility falls to those with greater power and clarified the leader's role. Explained why the person harmed is not expected to manage the repair, focusing on power dynamics and emotional burden."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Show that input changed something. Every month, say what changed because someone spoke up. If nothing did, say why.",
+      "after": "Make it clear that staff input leads to meaningful outcomes. Each month, communicate what changes resulted from someone raising a concern. If there were no changes, explain the reasons. This transparency shows that voices are heard and clarifies decision-making.",
+      "reason": "Expanded on the rationale for reporting changes (or a lack thereof) to staff, reinforcing the connection between input and agency action. Added context about why this disclosure is important for psychological safety."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Watch the grind. Constant urgency silences people. Protect time for thinking and for saying no.",
+      "after": "Monitor the pace and volume of work. Persistent urgency discourages people from speaking up and may lead to burnout. Protect periods for staff to reflect, ask questions, and decline additional tasks when needed.",
+      "reason": "Provided explicit reasoning for reducing constant urgency and clarified the consequences of ongoing pressure, connecting it to staff well-being and open communication."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "None of this replaces the confidential channel. Complaints, harassment, and discrimination go to Employee Culture, Human Resources, or the civil-rights channel.",
+      "after": "These practices do not replace the need for confidential channels. If issues involve complaints, harassment, or discrimination, direct them to Employee Culture, Human Resources, or the civil rights channel, following agency protocols.",
+      "reason": "Clarified that these guidance points are not substitutes for formal complaint processes and specified where staff should direct issues that require confidentiality, upholding both agency protocol and staff protection."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The change expands the summary with unsupported claims and a tone change. The original text states psychological safety comes from visible practices, but the rewrite introduces an unsupported assertion ('does not depend on personalities') and elaborates the description of practices without direct source; it also changes 'safe and useful' to 'safe and worthwhile' and replaces a neutral summary with more causal claims. The source does not mention personality or make such explicit contrasts, so these are overreaches."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "This edit is supported. The rewrite grounds the same facts in the original (staff concerns arose from workplace practices not individual flaws) and retains the reason ('practice-based changes can address them'), preserving the meaning."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "This edit is close to the source: the emphasis on disagreement as normal, inviting the strongest counter-case, and public thanks are all in the original. Expanding on the reasoning is acceptable as it fits standard, but further expansion should not add ungrounded rationale."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The revision remains faithful to the source, clarifying distinctions and elaborating on reasoning without extending beyond source scope."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "Acceptable. The role of power and leader responsibility is made explicit but does not go beyond the original claim, which states that leaders or those with more power initiate repair."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The change expands on the rationale for transparency and does not materially alter the meaning or scope of the instruction."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "This is supported: the blame on urgency and protection of time for reflection matches the original instruction, adding only context for consequences."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "Acceptable. The new version accurately restates and clarifies the original boundary that confidential channels remain necessary for certain types of issues, without introducing unsupported policy or claims."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1815,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 763,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2578
+    },
+    "review": {
+      "input_tokens": 2134,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 429,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2563
+    }
+  },
+  "createdAt": "2026-11-15T13:42:20.956Z"
+}

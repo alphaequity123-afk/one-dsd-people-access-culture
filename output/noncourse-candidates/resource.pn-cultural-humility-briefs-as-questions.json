@@ -1,0 +1,156 @@
+{
+  "target": "resource.pn-cultural-humility-briefs-as-questions",
+  "kind": "resource",
+  "route": "/library/pn-cultural-humility-briefs-as-questions",
+  "sourceSha256": "95079ebf71e07ef8cfa18fe7c0c1792404221479bffbd8d3ddb50eea97478e6e",
+  "status": "needs_revision",
+  "reviewedFieldCount": 7,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Treat a community brief or cultural guide as a starting point for respectful inquiry that helps you ask better questions and plan access. It cannot tell you what any one person wants, believes, or needs.",
+      "after": "Use a community brief or cultural guide to inform the questions you ask when working with a person or planning access—not as a checklist of what any individual thinks or needs. These materials suggest areas to explore, but do not define anyone’s identity, preferences, or experience.",
+      "reason": "Clarifies that the purpose is to guide inquiry, not form assumptions, and emphasizes individual variability more specifically."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Generalizations about literacy, oral traditions, health beliefs, or family roles become stereotypes the moment they are applied to a person. The safeguard is a habit: ask, then plan.",
+      "after": "Applying generalized statements about a community—such as common approaches to literacy, traditions, health, or family—leads to stereotyping individuals. The best safeguard is to routinely ask questions and base your next steps on each person's responses.",
+      "reason": "Further specifies the risk of stereotyping and connects the safeguard directly to practice."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Read a brief for what to ask, not what to conclude. Turn every statement into a question you could ask the person or the community partner.",
+      "after": "Approach a brief as a resource for forming thoughtful questions, rather than as a source of conclusions. Reframe each statement in the brief into a question you might ask the individual or a community partner to better understand their perspective.",
+      "reason": "Makes explicit that the brief generates questions rather than answers, and clarifies who should be asked."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Notice the diversity inside every community. Immigration history, faith, language, disability, age, and class differ within a community as much as between communities.",
+      "after": "Recognize the range of experiences and identities within every community. Factors such as immigration history, religion, language, disability status, age, and socioeconomic class all vary greatly among individuals in the same community.",
+      "reason": "Provides more precise examples for staff to consider and emphasizes the internal diversity within communities."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Plan access from what people tell you. Language, interpreter, format, timing, setting, technology, and trusted messenger are decisions to make with people, not for them.",
+      "after": "Build plans for access and support based on what people tell you in conversation. Choices about language, interpreters, communication formats, schedules, settings, technology, and who communicates should be discussed and made with each person, not unilaterally decided.",
+      "reason": "Clarifies whose input matters in planning and why collaborative decision-making is necessary."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Say what you do not know. A brief that leaves a self-description pending is telling you to go ask.",
+      "after": "Acknowledge and communicate when information is missing or uncertain. If a brief does not answer a specific question or includes incomplete self-descriptions, treat this as a prompt to seek clarification from people directly.",
+      "reason": "Explains why noting uncertainty is important and what staff should do in response."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Check the source. Community material needs authoritative sources before it becomes a program fact, and no brief is a description of anyone.",
+      "after": "Verify the authority and origin of any community material before treating it as factual. Information from a brief becomes a program fact only with a reliable source, and no brief alone can accurately describe a particular individual.",
+      "reason": "Clarifies the need to check sourcing and the limits of briefs as individual descriptions."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revised summary changes the meaning from cautions and boundaries around the use of briefs to a broader advisory tone. The source is explicit: 'It cannot tell you what any one person wants, believes, or needs.' The rewrite adds, 'These materials suggest areas to explore, but do not define anyone's identity, preferences, or experience.' This is looser, and the addition of 'not as a checklist of what any individual thinks or needs' is an unsupported broadening—the source does not mention checklists or frame as a warning against checklist thinking, but rather puts a categorical limit on what guides/briefs can do. The new wording dilutes the original's direct prohibition and particular focus."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "This change is mostly accurate; the new text further specifies the risk of stereotyping and does connect the safeguard (asking questions) more tightly to practice, consistent with the source: 'The safeguard is a habit: ask, then plan.' Minor stylistic, not substantive, shift."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revision refines and clarifies intent, making explicit who should be asked, which is supported by the source: 'Turn every statement into a question you could ask the person or the community partner.'"
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "Expands on the diversity point with rephrased or additional specificity, but retains all key concepts and examples drawn from the source. This is acceptable and aligns with the original intent."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "This restatement is true to the source, clarifying collaborative planning: 'decisions to make with people, not for them.' The update is stylistic and matches the meaning."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "Adds detail to the original point, but the essential instruction—acknowledging uncertainty and treating incomplete information as a prompt for inquiry—is present in the source ('go ask')."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The rewrite clarifies and adds a little structure to the reasoning, but it does not change the meaning or introduce unsupported claims."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1720,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 622,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2342
+    },
+    "review": {
+      "input_tokens": 1813,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 556,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2369
+    }
+  },
+  "createdAt": "2026-11-15T13:42:11.844Z"
+}

@@ -1,0 +1,109 @@
+{
+  "target": "code.app/equity-review/working-group-plan/page.tsx",
+  "kind": "surface",
+  "route": "/equity-review/working-group-plan",
+  "sourceSha256": "b09385f71d2f654e85da206bb34c673137b60d9fbbe576d6918f9c6678245ad4",
+  "status": "needs_revision",
+  "reviewedFieldCount": 18,
+  "changes": [
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": "When the Legislature creates a working group or task force, the law sets its purpose, members, meetings, duties and report date. This page turns that charge into a month-by-month plan, using the Waiver Case Management Advisory Working Group as the worked example, and shows how to reuse the plan for another group.",
+      "after": "When the Legislature establishes a working group or task force, the enabling law defines its purpose, required members, meeting schedule, duties, and deadline for delivering a report. This page converts that statutory charge into a step-by-step plan distributed across months. The Waiver Case Management Advisory Working Group (2026–2027) provides the example throughout. Guidance also explains how to adapt and use this plan for other legally established groups to meet legislative and departmental expectations.",
+      "reason": "Clarifies how the law functions as the foundation for group operations, connects the plan’s structure to the legislative requirements, names the example more explicitly, and explains the purpose behind reusing and adapting the plan for other statutory working groups."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field7"
+      ],
+      "before": "For Tribal Nations, membership on a working group is not consultation: contact the Office of Indian Affairs and the Department of Human Services offices that handle Tribal relations and consultation.",
+      "after": "Membership in a working group does not count as government-to-government consultation with Tribal Nations. To initiate consultation, staff must contact the Office of Indian Affairs and DHS offices responsible for Tribal relations and formal consultation processes. This distinction helps ensure Tribal engagement is appropriately recognized and conducted in accordance with state and federal requirements.",
+      "reason": "Clarifies that participation and formal consultation are legally and procedurally distinct, and explains why proper consultation matters. Specifies the action (contact) and DH S offices' roles, and connects to requirements for recognizing Tribal engagement appropriately."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "field11"
+      ],
+      "before": "Staff organize the evidence and the discussion. Members shape the recommendations.",
+      "after": "Staff are responsible for gathering and presenting relevant evidence, structuring the discussion, and supporting the group’s review of each topic. Members have the primary role in forming, debating, and amending recommendations. This division clarifies expectations and preserves group authority throughout the process.",
+      "reason": "Provides a more explicit rationale for the staff and member roles, addresses why staff organizing evidence is important, and specifies that members make the substantive decisions, supporting good process management and transparency."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "field14"
+      ],
+      "before": "Keep one record per proposed change from the first topic onward.",
+      "after": "Document every proposed change or recommendation from the beginning of the group’s work on each topic. Maintaining a single, cumulative record of recommendations provides continuity, helps track the status and source of each change, and supports the group’s review and final report preparation.",
+      "reason": "Expands on the importance of continuous, clear documentation for recommendations to avoid loss of information and ensure the group can track all proposed changes over time."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "The rewrite for field3 alters the meaning by introducing the idea of a 'step-by-step plan distributed across months' and asserts that 'guidance also explains how to adapt and use this plan for other legally established groups to meet legislative and departmental expectations.' The source does not specify that the plan is laid out step by step or distributed across months as a main structure, nor does it tie the page's guidance to meeting legislative and departmental expectations as an obligation—only that the plan shows how to reuse for other groups. The original framing remains closer to the evidence."
+      },
+      {
+        "fieldId": 5,
+        "severity": "blocker",
+        "finding": "The rewritten field7 overstates legal distinctions and obligations not present in the source. The source plainly states: 'membership on a working group is not consultation: contact the Office of Indian Affairs and the Department of Human Services offices that handle Tribal relations and consultation.' The rewrite asserts requirements for government-to-government consultation and procedural rules from state and federal law, which the source does not cite. It also replaces previously neutral language with directive text and legal justification not present in the record."
+      },
+      {
+        "fieldId": 9,
+        "severity": "note",
+        "finding": "The rewrite of field11 adds specificity and rationale around staff and member roles, which aligns with the intent and does not distort the original meaning. However, it is somewhat more prescriptive and interprets 'supporting the group’s review' and 'preserves group authority,' which, while reasonable, extends beyond the minimal description in the source. It is not a blocker, but flags a possible need for source review if further revisions are made."
+      },
+      {
+        "fieldId": 10,
+        "severity": "note",
+        "finding": "The rewritten field14 expands on the reasoning for a cumulative recommendation record and clarifies process continuity, aligning with the source's implied aims. This is in scope for program writing standards, as it provides practical justification. It is more explanatory but supported by good practice; no blocker."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 4685,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 500,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5185
+    },
+    "review": {
+      "input_tokens": 4366,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 410,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4776
+    }
+  },
+  "createdAt": "2026-11-15T13:48:55.620Z"
+}

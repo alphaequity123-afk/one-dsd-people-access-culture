@@ -1,0 +1,81 @@
+{
+  "target": "code.app/learn/diversity/page.tsx",
+  "kind": "surface",
+  "route": "/learn/diversity",
+  "sourceSha256": "59ebdfa07b91515e1a6e0433d6aa8a931ed619f1caba3ae308b502ecd4eedd27",
+  "status": "needs_revision",
+  "reviewedFieldCount": 5,
+  "changes": [
+    {
+      "fieldId": 2,
+      "path": [
+        "field3"
+      ],
+      "before": "Explore identity, culture, privilege, bias, and belonging through explanation, realistic situations, reflection, and practice.",
+      "after": "This series examines identity, culture, privilege, bias, and belonging. Each course provides explanations, realistic scenarios, opportunities for structured reflection, and practical application.",
+      "reason": "Clarifies the topics covered and how each is addressed in the course, using more specific language about the educational approach without overgeneralizing or implying outcomes."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field5"
+      ],
+      "before": "Choose a course that speaks to a question or experience you want to explore. Foundation, Intermediate, and Advanced describe the depth of the material. They do not label you or restrict where you can begin. Each course includes four lessons, activities with feedback, a practical job aid, and sources for further reading.",
+      "after": "Select a course that addresses a question or experience you want to examine. The Foundation, Intermediate, and Advanced levels indicate the scope and complexity of each course. These levels are intended to describe the material, not to assign a skill level or restrict your starting point. Each course contains four lessons, activities with feedback, a job aid, and recommended sources for further reading. This structure allows you to build practical understanding and reflect on your work as you progress.",
+      "reason": "Rewrites for clarity, specifies the meaning of course levels, and adds explanation about the practical structure and instructional purpose of the lessons, making the purpose and choices more explicit."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The revised field (field3) changes the form and meaning of the original source sentence. The original explicitly lists the five dimensions (identity, culture, privilege, bias, and belonging) as what users will \"explore\" by means of \"explanation, realistic situations, reflection, and practice.\" The revision splits the sentence and shifts from \"explore\" to \"examines,\" then recasts the educational methods as \"provides explanations, realistic scenarios, opportunities for structured reflection, and practical application.\" The rewording is not strictly supported by the source: it changes structure ('series examines... Each course provides...'), modifies the instructional methods into nouns (\"opportunities for structured reflection, and practical application\"), subtly overstates intentional design across all courses, and no longer presents these approaches as parallel methods for exploring the dimensions. The edit does not respect the exact meaning or structure imposed by the official program writing standard. This is a blocker."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The revised field (field5) clarifies instructional structure, makes implicit purposes explicit, and generally increases specificity. While it adds detail and minor explanation (such as 'recommended' sources and the purpose of the structure), these additions are consistent with the program writing standard's guidance to 'explain the reason for an instruction at least once' and to 'increase the depth' via explanation, not just wording. The core enumerated components (four lessons, activities with feedback, a job aid, and sources) are preserved accurately, and the new language does not invent policy or change legal conditions. No blocker found for this field."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2171,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 266,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2437
+    },
+    "review": {
+      "input_tokens": 1932,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 351,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2283
+    }
+  },
+  "createdAt": "2026-11-15T13:49:44.904Z"
+}

@@ -1,0 +1,142 @@
+{
+  "target": "resource.tool-mn-equity-toolkit",
+  "kind": "resource",
+  "route": "https://mn.gov/mmb/",
+  "sourceSha256": "4367e1fcd8364eb70b09a01c811bf68047afb8719a6a7604f6929a1c16b13ec4",
+  "status": "model_checked",
+  "reviewedFieldCount": 6,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Minnesota Management and Budget publishes the State of Minnesota’s official equity analysis toolkit, which is used with the DHS Equity Policy. This public tool may be cited, linked, and followed; the policy owner determines when it is required.",
+      "after": "Minnesota Management and Budget maintains the official State of Minnesota equity analysis toolkit. DHS staff use it to support the Equity Policy as directed by the policy owner. This toolkit is public, and you may cite, link, or use it when analysis is required.",
+      "reason": "Clarified who maintains the toolkit and that its use is determined by the DHS policy owner. Streamlined phrasing and made explicit that staff use it in alignment with the Equity Policy, supporting professional understanding without repetition or unsupported statements."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Owner and publisher: Minnesota Management and Budget. Status: official State resource.",
+      "after": "The Minnesota Management and Budget office owns and publishes the toolkit. It is recognized as an official resource for state agencies.",
+      "reason": "Clarified MMB’s role by repeating the full office name, and stated its status as an official state-level agency resource rather than using a less precise label."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Purpose: a structured process for state agencies to analyze the equity effects of decisions, engage affected communities, compare alternatives, and plan implementation and evaluation.",
+      "after": "The toolkit provides a structured process for analyzing how agency decisions affect equity. It guides staff through engaging affected communities, comparing alternative actions, and planning for implementation and later evaluation.",
+      "reason": "Rewrote for clarity by breaking the process into component activities, aligning with program-writing standards and advancing detail on each step involved in equity analysis."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Relationship to DHS: the DHS Equity Policy requires equity analysis for named decisions and uses this toolkit. The policy owner and your Equity Director confirm which version and process applies.",
+      "after": "Within DHS, the Equity Policy specifies when equity analysis is required and references this toolkit for its method. The policy owner and your Equity Director determine which toolkit version and steps to use for a given decision.",
+      "reason": "Specified the relationship to DHS by clarifying that the Equity Policy both triggers analysis and directs which methodology to use. Retained decision authority details and aligned with agency practice language."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Limits: a process. It does not supply data or community relationships; those come from the data owner and engagement.",
+      "after": "This toolkit provides a process and framework only. It does not include data or working relationships with communities; those must be provided by the responsible data owner and through engagement efforts.",
+      "reason": "Clarified what the toolkit does and does not offer. Added detail on responsible parties for necessary inputs, preventing misinterpretation that the toolkit is a comprehensive resource."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Program use: the equity analysis path and the scan-or-full-analysis aid follow it. This program is not the official record.",
+      "after": "DHS programs follow this toolkit in their equity analysis process, using the scan or full analysis as appropriate. The toolkit itself and its outputs are not considered the official record of policy or outcomes.",
+      "reason": "Clarified how the toolkit integrates with DHS program activities and reworded for specific connection to scan/full analysis support. Explicitly states that the toolkit and its materials do not constitute an official program record."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revised summary remains grounded in the source and does not introduce unsupported statements. It clarifies, rather than alters, the requirements and maintains the relationship between DHS, the toolkit, and policy owner oversight."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The clarification of 'Minnesota Management and Budget office' and explicit acknowledgement as an official agency resource aligns with the original intent. The change does not affect factual accuracy."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The expanded breakdown of the toolkit's process steps corresponds directly to the listed purposes in the original. Enhanced explanation remains source-faithful and improves reader understanding."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "Restating the DHS-Toolkit relationship with more specificity reflects the original's emphasis on the policy owner/Equity Director as authorities. The language is faithful to intent and does not misstate policy or authorization."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "This edit maintains the source's focus on the toolkit as process-only, neither overstating scope nor obscuring needed contributors (e.g., data owners, engagement actors)."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The rewording clarifies the program's reliance on the toolkit for scan/full analysis, makes program-process linkage explicit, and accurately notes that the toolkit and its tools are not the official record—consistent with the original field and no change in legal standing."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1606,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 518,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2124
+    },
+    "review": {
+      "input_tokens": 1696,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 312,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2008
+    }
+  },
+  "createdAt": "2026-11-15T13:42:45.987Z"
+}

@@ -1,0 +1,95 @@
+{
+  "target": "code.components/equity-analysis/dashboard.tsx",
+  "kind": "surface",
+  "route": "components/equity-analysis/dashboard.tsx",
+  "sourceSha256": "f09f9f08f0772c67995d026ab0bb75a5705c94264d5fb18cb8c77d4e9a70ea7b",
+  "status": "needs_revision",
+  "reviewedFieldCount": 16,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field1"
+      ],
+      "before": "Two measures the policy asks for: whether the Equity Analysis Tool is run before decisions are final, and whether staff report belonging, inclusion, and engagement. Analysis figures are computed from what staff have added through the walkthrough each time this page loads.",
+      "after": "The dashboard summarizes two core measures: (1) whether staff use the Equity Analysis Tool before final decisions, and (2) whether staff report a sense of belonging, inclusion, and engagement. The statistics reflect all entries added via the walkthrough, so the dashboard updates on each page load as new data is entered.",
+      "reason": "Clarifies that the dashboard directly summarizes these two measures and that the statistics shown are current with staff input. This connects purpose and method more directly for DHS/DSD colleagues."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field6"
+      ],
+      "before": "The figures below fill in as staff add analyses through the guided walkthrough. The first one takes about fifteen minutes for a scan or forty-five for a full analysis, with your data at hand.",
+      "after": "The table and charts below will show results once staff start entering analyses using the guided walkthrough. Contributing takes about fifteen minutes for a scan or forty-five minutes for a full analysis, provided you have the necessary data.",
+      "reason": "Clarifies how the figures update and gives practical timing that connects to staff experience, using more precise agency-relevant language."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field9"
+      ],
+      "before": "Added analyses will be listed here.",
+      "after": "Analyses entered most recently will appear here as soon as they are added.",
+      "reason": "Explains why the section may be blank and makes clear it is dynamic and reflects staff input."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The rewrite claims: \"The statistics reflect all entries added via the walkthrough, so the dashboard updates on each page load as new data is entered.\" This subtly shifts the emphasis: the source plainly states \"Analysis figures are computed from what staff have added through the walkthrough each time this page loads.\" The revised version overstates immediacy and omits the description that the dashboard operates off actual staff entries without introducing a summary-judgment or extra clarity that the original does not warrant. The original wording correctly limits the scope to 'Analysis figures' rather than the entire dashboard, so the rewrite is not fully supported by source."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The change from \"Added analyses will be listed here.\" to \"Analyses entered most recently will appear here as soon as they are added.\" is reasonable and matches intent, but the addition of \"as soon as they are added\" could suggest live updating, while the source only guarantees they show when the page is loaded. This is minor and does not change meaning for staff, but the original is slightly more neutral."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The adjusted field is more specific about how the dashboard populates, with timing and activity retention similar in both. This is a permissible change, as it aligns closely with the source intent and precise description provided in the source code and comments."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 5298,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 274,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5572
+    },
+    "review": {
+      "input_tokens": 4735,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 302,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5037
+    }
+  },
+  "createdAt": "2026-11-15T13:53:21.770Z"
+}

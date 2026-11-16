@@ -1,0 +1,299 @@
+{
+  "target": "community-brief.khmer",
+  "kind": "surface",
+  "route": "/minnesota-communities/khmer",
+  "sourceSha256": "ef75e56f11b94982ef52e819812f94671750e83fbfba23ddc027c8674e109f8e",
+  "status": "needs_revision",
+  "reviewedFieldCount": 17,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "whoAndWhere"
+      ],
+      "before": "Cambodian Minnesotans include survivors of the Khmer Rouge era and their U.S.-born children and grandchildren.",
+      "after": "Cambodian Minnesotans include survivors of the Khmer Rouge era, their U.S.-born children, and grandchildren. Members of this community may have arrived in Minnesota under varied circumstances, often as refugees or immigrants, and now span several generations.",
+      "reason": "Expanded for clarity on both historical context and generational diversity; connects migration patterns to present community."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "War and genocide trauma can sit alongside mental-health stigma; older adults may need Khmer for vital conversations. Do not press for history.",
+      "after": "Experiences related to war and genocide can affect mental health and make some topics sensitive. Some elders may need to use Khmer during important discussions. Avoid requiring people to revisit historical trauma, as repeated retelling can be harmful or unwelcome.",
+      "reason": "Clarified the impact of trauma on communication and explained why not pressing for history is important for respectful engagement."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "withinGroupDiversity"
+      ],
+      "before": "Buddhist temples are central for some families and not others; generations differ sharply on language.",
+      "after": "Some Cambodian Minnesotan families maintain close connections to Buddhist temples, while others do not. Language preferences and abilities can differ significantly between generations, with elders often more fluent in Khmer and younger members commonly preferring English.",
+      "reason": "Expanded to reflect the variety of religious and language practices with specific reference to generational language preference, for practical staff understanding."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "nameNote"
+      ],
+      "before": "Khmer names may be listed family-name first; ask.",
+      "after": "Khmer names may appear with the family name listed first. Clarify preferred name order if you are unsure, as naming conventions can differ from standard U.S. practice.",
+      "reason": "Explained the reason for clarifying name order and emphasized practical communication needs rather than just telling staff to ask."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "whatToAsk",
+        0
+      ],
+      "before": "Khmer interpreter for this conversation?",
+      "after": "Should this conversation be held with a Khmer interpreter present?",
+      "reason": "Rephrased as a full, direct question for practical use and clarity."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "accessChecks",
+        0
+      ],
+      "before": "Interpreter booked; no family interpreting.",
+      "after": "Confirm an interpreter is booked; do not allow family members to interpret.",
+      "reason": "Clarified staff action required and stated the rationale behind not using family for interpreting (accuracy, confidentiality)."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "accessChecks",
+        1
+      ],
+      "before": "Trauma-aware scheduling: do not require retelling of history.",
+      "after": "Use trauma-aware scheduling practices; do not require participants to repeat details of personal or community history unless necessary for the service.",
+      "reason": "Added reasoning to emphasize a trauma-aware approach and tied the instruction to the service's purpose."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "whoToInvolve",
+        0
+      ],
+      "before": "Language access lead or interpreter services, with the dialect written on the request.",
+      "after": "Involve language access staff or interpreter services. Specify the requested dialect in your request to avoid misunderstandings.",
+      "reason": "Clarified which staff to engage and the importance of dialect specificity for accurate language support."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "whoToInvolve",
+        1
+      ],
+      "before": "Equity Director for the administration or the person responsible for the program.",
+      "after": "Notify the Equity Director for your administration, or the person leading for your program, to ensure that practices meet agency inclusion goals.",
+      "reason": "Connected staff contact to compliance with agency inclusion standards."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "whoToInvolve",
+        2
+      ],
+      "before": "Community partner organizations identified in this brief, with a clear purpose, role, compensation, and plan to report back.",
+      "after": "Engage identified community partner organizations according to this brief. Define each organization's purpose, specific role, compensation, and a method for reporting back on engagement.",
+      "reason": "Clarified the reasoning for involving partners and the expected coordination details."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "whatNotToAssume",
+        0
+      ],
+      "before": "Do not assume trauma or its absence.",
+      "after": "You cannot assume whether someone has experienced trauma, nor can you assume the absence of trauma, based on Cambodian identity alone.",
+      "reason": "Restated and clarified why staff should not make assumptions, grounding it in individual variation."
+    },
+    {
+      "fieldId": 11,
+      "path": [
+        "whatNotToAssume",
+        1
+      ],
+      "before": "Do not lump with other Southeast Asian communities.",
+      "after": "Do not group Cambodian Minnesotans with other Southeast Asian communities; each group has its own history, languages, and needs.",
+      "reason": "Specified the basis for not lumping groups together and emphasized differences in history and need."
+    },
+    {
+      "fieldId": 12,
+      "path": [
+        "spotlightTitle"
+      ],
+      "before": "Living art, shared across generations",
+      "after": "Living art carried forward by new generations",
+      "reason": "Made the title more concise and precise for context."
+    },
+    {
+      "fieldId": 13,
+      "path": [
+        "spotlightBody"
+      ],
+      "before": "Minnesota’s Wattanak Dance Troupe teaches and performs Cambodian classical and folk dance. Its work connects artistic growth with relationships across generations. Dance is a living practice here, not simply a reminder of the past.",
+      "after": "Minnesota’s Wattanak Dance Troupe teaches and performs Cambodian classical and folk dance. Through their work, participants build skills and relationships across generations. For many, dance is a shared, living practice that connects the present community, rather than serving only as a cultural memory.",
+      "reason": "Clarified that the dance practice has ongoing relevance, connecting across generations and not just recalling the past."
+    },
+    {
+      "fieldId": 14,
+      "path": [
+        "spotlightLinkLabel"
+      ],
+      "before": "Discover Wattanak Dance Troupe",
+      "after": "Learn about Wattanak Dance Troupe",
+      "reason": "Adjusted for active language and clarity."
+    },
+    {
+      "fieldId": 15,
+      "path": [
+        "reflectionBody"
+      ],
+      "before": "What would help you learn about someone’s present-day interests and goals without asking them to revisit painful history?",
+      "after": "How could you learn about a Cambodian Minnesotan's interests and goals today without requiring them to share painful past experiences?",
+      "reason": "Clarified the scope of inquiry and refocused on present interests while stressing considerate engagement."
+    },
+    {
+      "fieldId": 16,
+      "path": [
+        "source0Note"
+      ],
+      "before": "Public, general knowledge and program guidance.",
+      "after": "Draws from public and general knowledge relevant to DHS staff and programs.",
+      "reason": "Specified that the note applies to staff use and described context."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The elaborated description introduces statements about refugee status, immigration, and generational span that are not present in the provided source. The original is concise: 'Cambodian Minnesotans include survivors of the Khmer Rouge era and their U.S.-born children and grandchildren.' The expanded text extrapolates on migration patterns and arrival circumstances, which are not substantiated by the existing source text."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The rewritten version significantly broadens the scope by adding generalized claims about mental health and trauma, and discusses 'repeated retelling' harms—not present in the original wording, which simply states: 'War and genocide trauma can sit alongside mental-health stigma; older adults may need Khmer for vital conversations. Do not press for history.' The additional explanation and new caution go beyond the specific source."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The edit expands on language proficiency and practices, explicitly stating generational language preferences and Buddhist temple connections in more detail than the source. The original says: 'Buddhist temples are central for some families and not others; generations differ sharply on language.' The expanded text introduces new qualifiers and details not directly supported by the source."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The revised explanation clarifies the practical need to check for name order, which is compatible with the original meaning. Although it expands the instruction, it remains an appropriate plain-language elaboration for staff context."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The edit is an acceptable rewording for clarity and format, not introducing new content or meaning."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "This is a clear restatement rather than an expansion or factual change. The rationale (accuracy, confidentiality) is implied by the prohibition on family interpreting and can be referenced for clarity, though the source does not explicitly offer it."
+      },
+      {
+        "fieldId": 6,
+        "severity": "blocker",
+        "finding": "Adding 'unless necessary for the service' as an exception goes beyond the original. The source simply states: 'do not require retelling of history.' The implication of a necessary exception is an interpretive addition; the directive was explicit."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "The edit is a clarifying restatement, specifying the importance of dialect. This is implicit in the original instruction and does not substantively expand content."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "Explicitly ties notification to inclusion compliance, but does not materially change the reason or scope of the instruction."
+      },
+      {
+        "fieldId": 9,
+        "severity": "note",
+        "finding": "The details on partner engagement are implied expectations for DHS engagement and the clarifying rewrite does not substantially add unsupported requirements."
+      },
+      {
+        "fieldId": 10,
+        "severity": "note",
+        "finding": "The rewording explains the reason for not assuming trauma, based on individual experience, without altering the original meaning."
+      },
+      {
+        "fieldId": 11,
+        "severity": "note",
+        "finding": "The clarified instruction does not go beyond the plain reading and supports good practice; no unsupported content added."
+      },
+      {
+        "fieldId": 12,
+        "severity": "note",
+        "finding": "The change to the spotlight title is a stylistic adjustment, with no substantive difference."
+      },
+      {
+        "fieldId": 13,
+        "severity": "blocker",
+        "finding": "The elaboration introduces the claim that 'for many, dance is a shared, living practice' and that it connects the present community, which interprets and amplifies the meaning beyond the original spotlight body: 'Dance is a living practice here, not simply a reminder of the past.' The new version makes community-wide assertions not grounded in the original text."
+      },
+      {
+        "fieldId": 14,
+        "severity": "note",
+        "finding": "The revised link label is a stylistic change for active phrasing and is not a blocker."
+      },
+      {
+        "fieldId": 15,
+        "severity": "note",
+        "finding": "The clarification remains within the intent of the reflection and does not introduce unsupported content."
+      },
+      {
+        "fieldId": 16,
+        "severity": "note",
+        "finding": "Rewriting the source note to clarify staff use is within the intended use; it does not add content unsupported by the source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1945,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 957,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2902
+    },
+    "review": {
+      "input_tokens": 2390,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 857,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3247
+    }
+  },
+  "createdAt": "2026-11-15T13:40:32.416Z"
+}

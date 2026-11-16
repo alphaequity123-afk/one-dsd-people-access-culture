@@ -1,0 +1,67 @@
+{
+  "target": "my-view.page",
+  "kind": "surface",
+  "route": "/my-view",
+  "sourceSha256": "c5f5f6cc8da6deaa95d1606c714dbc32b1fc907d1fa829eca3c48660dea00916",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "introLede"
+      ],
+      "before": "Return to your practice notes, learning progress, recent Ask history, and saved consultation references. Someone else using this computer may be able to see them. You can remove them at any time.",
+      "after": "Return here to see your practice notes, tracked learning progress, recent Ask history, and references you have saved for consultation. Keep in mind that anyone using this computer may have access to these records. You can delete them whenever needed to protect privacy.",
+      "reason": "Improved specificity by clarifying what users will find on the page and why removal matters. Emphasized the practical consequence of leaving records accessible, providing clearer reasoning for the option to delete."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revised wording changes the privacy assurance and strength of the warning. The original states: 'Someone else using this computer may be able to see them. You can remove them at any time.' This is direct and neutrally warns that others may see saved content. The new version uses 'Keep in mind that anyone using this computer may have access to these records. You can delete them whenever needed to protect privacy.' It generalizes the risk ('anyone'), and adds purpose ('to protect privacy') not found in the source. The phrase 'whenever needed' may suggest more flexible removal than 'at any time,' but is less plain. These are unsupported changes to legal or privacy meaning, and reframe the risk and action implications beyond the source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1066,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 113,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1179
+    },
+    "review": {
+      "input_tokens": 791,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 192,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 983
+    }
+  },
+  "createdAt": "2026-11-15T13:38:13.535Z"
+}

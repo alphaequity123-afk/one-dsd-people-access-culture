@@ -1,0 +1,81 @@
+{
+  "target": "code.app/learn/equity-toolkit/apply/page.tsx",
+  "kind": "surface",
+  "route": "/learn/equity-toolkit/apply",
+  "sourceSha256": "162713cd243c119c79cd69446c8341dd276c031b90d17dfe277f0222400d1e40",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Apply the toolkit to your work",
+      "after": "Use the toolkit in your DSD work",
+      "reason": "Changed 'Apply' to 'Use' for clarity and directness. This aligns with the guidance to use familiar, precise verbs and to avoid inflated or less direct phrasing."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Choose a DSD program area or the kind of work you do. Each example helps you use the DHS Equity Analysis Toolkit in a real decision.",
+      "after": "Select a DSD program area or a work focus that matches your responsibilities. Each linked example shows how to use the DHS Equity Analysis Toolkit within a real decision relevant to that area, helping you gauge which steps and considerations fit your context.",
+      "reason": "Added specificity to clarify that the user should select the area that aligns with their responsibilities, and expanded on how the examples illustrate use in actual decisions. This resolves a minor gap by directly connecting the purpose of the links and how the toolkit's application varies with context, serving program staff who may need guidance selecting an appropriate starting point."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "Headline change from 'Apply the toolkit to your work' to 'Use the toolkit in your DSD work' is not fully supported. The source heading is an imperative ('Apply'), matching the source text ('Apply the toolkit to your work'), while 'Use' is less directive and subtly alters the intent. The toolkit is described throughout DSD materials as a structured process to 'apply,' not just 'use' as a reference. The original wording stays closer to source intent and program language."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "Expanding the subheading to specify 'area that matches your responsibilities' and explaining that links show use in 'real decisions relevant to that area' is mostly supported but introduces a subtle interpretation. The source does say 'Choose a DSD program area or the kind of work you do. Each example helps you use the DHS Equity Analysis Toolkit in a real decision,' which already implies relevance to one's responsibilities and the connection to real decisions. The rewrite makes this explicit and clarifies the decision context; this is no more than a minor reframing and is not a blocker."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2389,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 228,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2617
+    },
+    "review": {
+      "input_tokens": 2188,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 247,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2435
+    }
+  },
+  "createdAt": "2026-11-15T13:49:52.771Z"
+}

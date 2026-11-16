@@ -1,0 +1,123 @@
+{
+  "target": "code.app/equity-policy/page.tsx",
+  "kind": "surface",
+  "route": "/equity-policy",
+  "sourceSha256": "cfe2c9cb78b27b033aef1795e0bcdb9e2184a731392e1e9687f5545e6c70f2bc",
+  "status": "needs_revision",
+  "reviewedFieldCount": 9,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "The DHS equity policy, what it asks of staff, and how it is being used across the department.",
+      "after": "Overview of the DHS equity policy, including staff expectations and its application across Minnesota DHS and DSD. Explains how the policy informs decisions, why it matters for access and outcomes, and where to find related tools and guidance.",
+      "reason": "Clarifies the substantive focus for staff, connects the purpose (policy, expectations, usage), and highlights practical relevance for DHS and DSD. Gives a more professional summary that guides staff to see both context and utility."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field7"
+      ],
+      "before": "connects this policy to everyday decisions and follow-through.",
+      "after": "links this policy to decisions and follow-through in daily DHS and DSD work.",
+      "reason": "Makes the connection explicit between the policy and regular staff practice. Specifies its relevance for everyday work and both agencies."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field8"
+      ],
+      "before": "Build your understanding step by step with a worked example, the official toolkit, and resources for your work.",
+      "after": "Work through a step-by-step example using the official toolkit. Access additional resources to deepen your understanding and apply this approach in DHS or DSD settings.",
+      "reason": "Improves specificity on what the example delivers, clarifies the connection to using the toolkit, and identifies the application to staff work rather than referencing general resource use."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field9"
+      ],
+      "before": "Try the eight practice questions with a published example, then download a copy for your own work.",
+      "after": "Use the eight practice questions with a provided example. Then download the toolkit to apply these questions directly in your DHS or DSD project.",
+      "reason": "Clarifies action and audience. Stresses practical steps (using, then downloading), describes purpose (supporting staff projects), and references agency context."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "field11"
+      ],
+      "before": "Use the official policy and Equity Analysis Tool when you need to check the requirements or method.",
+      "after": "Refer to the official policy and Equity Analysis Tool to review the requirements or the approved method when planning policy or service work.",
+      "reason": "Specifies when and why to use these documents—not just that you can, but to support planning or review activities. Gives a practical context for use."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revised summary in field0 adds explanations about staff expectations, policy application, and decision-making relevance, but the source only describes the page as 'The DHS equity policy, what it asks of staff, and how it is being used across the department.' The additional rationale ('why it matters for access and outcomes', 'guides staff to both context and utility', 'where to find related tools and guidance') is not supported in the original text. This is an unsupported change in both the scope and explicit claims about purpose and use."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The new text in field7 ('links this policy to decisions and follow-through in daily DHS and DSD work') is slightly more specific than the original but does not introduce new legal conditions or misrepresent the original. This is a minor and supportable clarification."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "Rewording in field8 clarifies the audience and context by specifying step-by-step examples with the toolkit and its application in DHS/DSD settings. This is an acceptable clarification."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The edited field9 text maintains the meaning that staff use the eight practice questions and then apply them to their work. The wording more directly addresses agency users and sequence, which is supportable."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "The revision in field11 gives a more explicit situation when to refer to the policy and tool (planning or review activities). This is a practical framing and does not conflict with the original scope."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2691,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 380,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3071
+    },
+    "review": {
+      "input_tokens": 2565,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 343,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2908
+    }
+  },
+  "createdAt": "2026-11-15T13:48:40.565Z"
+}

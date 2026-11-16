@@ -1,0 +1,81 @@
+{
+  "target": "graduation-path.gp-9",
+  "kind": "surface",
+  "route": "/practice/gp-9",
+  "sourceSha256": "7be7ae0f6257a2f72dee7be852a32dec0b9ccf9a59892597e1fd358c802c55a3",
+  "status": "model_checked",
+  "reviewedFieldCount": 48,
+  "changes": [
+    {
+      "fieldId": 5,
+      "path": [
+        "startingCompetence"
+      ],
+      "before": "You have a draft and want a structured way to check it for equity, access, plain language, sources, and burden before release.",
+      "after": "You have a draft in hand and want a focused approach to check it for equity, access, plain language, sources, and the burdens it may impose before release. This process helps identify who may face challenges with the draft and what specific improvements are warranted.",
+      "reason": "Expanded the explanation to clarify the connection between the review process and its practical results, giving a clearer link to intended staff practice."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "graduatedLooksLike"
+      ],
+      "before": "By the end, you will have a review record for a specific draft: what it asks of people, who may be excluded, access and language findings, source labels, changes made, and what remains for the owner.",
+      "after": "By the end, you will have a documented review for a specific draft. The record will show what actions the draft asks of people, who could be excluded or burdened, findings about access and language, labeling of sources, changes suggested or made, and what issues remain for the draft owner to resolve. This documentation helps the owner make informed, specific revisions.",
+      "reason": "Clarified that the review record aids the draft owner in making targeted changes and explained the practical use of the information collected."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The updated explanation for 'startingCompetence' accurately preserves the source's purpose and adds detail about the review's practical outcomes, clarifying staff benefit without changing requirements or introducing unsupported claims."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The revised 'graduatedLooksLike' field restates all key components from the source, makes the end result and intended use clearer, and does not introduce new obligations or erase required elements."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3596,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 302,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3898
+    },
+    "review": {
+      "input_tokens": 2084,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 110,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2194
+    }
+  },
+  "createdAt": "2026-11-15T13:39:54.597Z"
+}

@@ -1,0 +1,157 @@
+{
+  "target": "resource.ja-sm-why-this-is-supervisor-work",
+  "kind": "resource",
+  "route": "/library/ja-sm-why-this-is-supervisor-work",
+  "sourceSha256": "9aab0d41a8ca31daa0f4252f34c5119e5597c573d4d191a949981df6a92d5633",
+  "status": "needs_revision",
+  "reviewedFieldCount": 7,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "A one-page reminder of why this is a supervisor's work, what evidence supports, and what to do next.",
+      "after": "A brief guide explaining why equity is part of a supervisor’s responsibilities, what research and evidence support, and practical next steps to take.",
+      "reason": "Rewrote for directness, plain language, and clarity. Clarifies scope and focus in the summary rather than listing multiple segments."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Remember. Training teaches. Your decisions decide. Apart from the Equity Analysis Toolkit, which is required of all DHS staff, this app is voluntary. It keeps no scores, sends nothing to your supervisor or employer, and does not satisfy Minn. Stat. 43A.21. Nothing here promises to reduce disparities. Check what happens in your own unit.",
+      "after": "Training can raise awareness, but supervisors shape unit outcomes through their decisions. The Equity Analysis Toolkit is required for all DHS staff, but this resource is voluntary—it does not track scores, send reports to supervisors, or meet the requirements of Minn. Stat. 43A.21. This tool does not guarantee reduced disparities. Instead, its purpose is to prompt you to notice what actually changes in your own unit.",
+      "reason": "Clarified function and limits of the tool, including its voluntary nature and relation to official requirements. Explained why what supervisors do matters beyond awareness or training."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "What the evidence supports. Knowledge and near-term attitudes can move. Lasting behavior and outcomes are harder. Awareness alone has a poor record. Better support: structured decisions, visible criteria, named responsibility, and feedback from your own team. Mandatory versus voluntary is unsettled. Formal tools can backfire without review.",
+      "after": "What research shows: Knowledge and short-term attitudes can be influenced with training or information. However, lasting changes in behavior and outcomes are much more challenging to achieve. Awareness alone has little measurable effect. Supervisors have more impact when they use structured decision processes, define visible criteria, assign clear responsibility, and ask for feedback from their teams. There is no clear evidence that making participation mandatory or voluntary is always better. Be aware that formal equity tools may have unintended effects if not regularly reviewed.",
+      "reason": "Clarified the connection to research, explained the difficulty of behavioral and outcome change, and provided specific supervisor actions supported by evidence."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Where equity gets decided. Who gets your time. Who gets visible and routine work. What you write, and what follows from a rating. How you hire. How fast you move requests and reports. Whether everyone can take part in the meeting.",
+      "after": "Supervisory decisions shape equity in daily work. This includes how you allocate your time, which tasks are assigned as visible or routine, how you document performance, how ratings inform future opportunities, hiring choices, response times to requests and reports, and whether everyone has a realistic chance to participate in meetings. These actions set the tone for fairness and inclusion in your unit.",
+      "reason": "Expanded to show why each listed area is affected by supervisory decisions and how these influence equity."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Four habits. Write the criteria first. Keep a simple record. Ask your team the same questions, about the work. Look at the result and change the process.",
+      "after": "Develop four habits to improve equity in your supervision: Set clear criteria before making decisions. Keep a simple but consistent record of key decisions. Ask your team similar questions, focusing on the work and its impact. After acting, check the results and adjust your process if needed. These habits provide transparency and help address unintentional bias.",
+      "reason": "Clarified each habit's intent and how these habits contribute to supervising for equity."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Watch for. \"We handle that here\" after a course or a program. An average that hides who was harmed. Paperwork filled in after you have decided. Asking one person to speak for a group.",
+      "after": "Be observant for the following issues: Claiming equity concerns are addressed simply because of a past training or program. Using averages that mask individual harm or disparate effects. Completing paperwork only after a decision is already made, rather than at the time of decision. Requesting that one person in a group serve as the spokesperson does not replace broader input.",
+      "reason": "Clarified each item’s specific risk and why it undermines equity decisions."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "Do next. Write your four lines: decision, tool, date, check. Use the tool once this week. Look at it again in 90 days.",
+      "after": "Next steps: Clearly document each decision by naming the decision itself, what tool you used, the date, and how you will check for impact. Use this tool for one decision this week, then review the outcomes again after 90 days to assess changes or need for adjustment.",
+      "reason": "Added explanation on documentation and follow-up, connecting these to the purpose of improving and evaluating supervisory equity decisions."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The rewritten summary changes the meaning and scope. The original source states this is a 'one-page reminder' of why equity is supervisor's work, the supporting evidence, and next steps. The change introduces unexplained claims ('what research and evidence support') and omits that it's a reminder, not a guide. This shifts both the tool's position and its implied authority, which is misleading about its function and origin."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The new paragraph alters the source meaning. The source separates training, required tools, and voluntary use, and highlights that 'nothing here promises to reduce disparities.' The rewrite generalizes training, asserts the tool 'prompts you to notice' (adding unauthored intent), and introduces new content ('its purpose is to prompt you'). It also omits the direct statement that nothing here guarantees reduced disparities, replacing it with 'does not guarantee'—this slightly softens the limit. Changing 'check what happens in your own unit' to 'notice what actually changes' adds an implied expectation of change, which the source explicitly avoids."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The rewrite introduces generalized claims about research and moves from the neutral 'evidence' of the original to 'what research shows.' The source makes measured observations ('Better support') and caveats ('Mandatory versus voluntary is unsettled'). The rewrite adds direct advice and explanatory language that are not source-supported, such as 'supervisors have more impact' and 'assign clear responsibility.' The new language overreaches the conservative, evidence-grounded statements of the original."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "This rewrite interprets and expands on the list in the source, clarifying implications without distorting the underlying meaning. While slightly more explicit, it retains the elements and context and does not insert unsupported expectations. This edit is acceptable under the standard, though less concise than the original."
+      },
+      {
+        "fieldId": 4,
+        "severity": "blocker",
+        "finding": "The rewrite changes the phrasing and adds explanations not present in the source (e.g., 'provide transparency and help address unintentional bias'). The source simply lists habits without extended rationale, preserving personal interpretation. The new version instructs ('develop four habits,' 'to improve equity') and interprets outcomes, which goes beyond the source's factual, tool-oriented wording."
+      },
+      {
+        "fieldId": 5,
+        "severity": "blocker",
+        "finding": "The rewritten 'watch for' section enlarges the scope of each warning and introduces evaluative judgments not in the source (e.g., 'that mask individual harm,' 'does not replace broader input'). The original lists red flags concisely. The rewrite adds rationale for each, which, although plausible, constitutes unofficial advice rather than the checklist provided by the source."
+      },
+      {
+        "fieldId": 6,
+        "severity": "blocker",
+        "finding": "The rewrite interprets the action steps. The source gives four-item instructions ('decision, tool, date, check') and suggests specific simple uses. The rewrite spells out 'how you will check for impact,' and provides a rationale about improving and evaluating supervisory equity decisions that is absent from the original. This changes the scope to a more process-oriented and expectation-laden instruction, not just a practical nudge."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1896,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 719,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2615
+    },
+    "review": {
+      "input_tokens": 2179,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 686,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2865
+    }
+  },
+  "createdAt": "2026-11-15T13:44:10.463Z"
+}

@@ -1,0 +1,109 @@
+{
+  "target": "code.app/team-space/page.tsx",
+  "kind": "surface",
+  "route": "/team-space",
+  "sourceSha256": "a9b84d8ebd26e0a90dfcecafc7449d382b97fb4f2422a7cb629a484a5dea7d64",
+  "status": "needs_revision",
+  "reviewedFieldCount": 5,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "One DSD Team and the consultant",
+      "after": "Shared by the DSD team and consultant",
+      "reason": "Clarified that participation includes both the DSD team and consultant, using direct language. The revision specifies who is sharing, for professional clarity."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field2"
+      ],
+      "before": "Decision records that people chose to share for leadership review. Each one stays on its author&apos;s computer too. Nothing else from anyone&apos;s learning is kept here.",
+      "after": "These are decision records that team members chose to share for leadership review. Each record is also saved on its author's computer. The team space does not store personal learning or other work products.",
+      "reason": "Made explicit that sharing is voluntary and clarified the scope of what is made available in the team space. The additional detail helps explain why nothing except shared decision records is kept here."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field3"
+      ],
+      "before": "Sign in to the Equity workspace to read shared records.",
+      "after": "Sign in to the Equity workspace to view team decision records people have chosen to share.",
+      "reason": "Clarified that a sign-in is required in order to view the shared records and restated the intended content for precision."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field4"
+      ],
+      "before": "The team space is not available right now. Records on people&apos;s own computers are unaffected.",
+      "after": "The team space is currently unavailable. Your decision records saved on individual computers are not affected.",
+      "reason": "Simplified for clarity, emphasizing that the unavailability affects only this shared space and not individual access."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "Change erases the source's clear description of who participates. The source ('One DSD Team and the consultant') accurately preserves that this is a team of one DSD Team and a consultant—it's not jointly \"shared by\" those groups, but describes who is involved. Rewording alters nuance and precise identification from source."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "Change retains accuracy; elaboration is consistent with the source. It clarifies that sharing is voluntary and specifies scope. Acceptable."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The original (source) is: 'Sign in to the Equity workspace to read shared records.' The revision adds 'team decision records people have chosen to share,' which overstates what is reliably available—per the source, the records are just ones that were shared, not always team records or always chosen by any particular method. This slightly generalizes and risks going beyond source evidence."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "Change simplifies but does not erase or misrepresent meaning; remains accurate."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1790,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 252,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2042
+    },
+    "review": {
+      "input_tokens": 1607,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 243,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1850
+    }
+  },
+  "createdAt": "2026-11-15T13:51:56.088Z"
+}

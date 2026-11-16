@@ -1,0 +1,97 @@
+{
+  "target": "site.header",
+  "kind": "surface",
+  "route": "/",
+  "sourceSha256": "90baa3c538b53394d1437fe5174dfe7133581c4f4c708ad96203de358c1567a3",
+  "status": "needs_revision",
+  "reviewedFieldCount": 4,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "programSubtitle"
+      ],
+      "before": "Staff learning and practical support",
+      "after": "Learning and support for staff practice",
+      "reason": "Adjusted phrase for clarity and to specify its purpose in supporting staff practice, as per the standard's call for connected ideas and practical explanation while preserving the factual meaning."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "programDescriptor"
+      ],
+      "before": "an independently managed resource for Disability Services Division staff",
+      "after": "A resource managed independently for Disability Services Division staff",
+      "reason": "Clarified the independence and who the resource serves, aligning with program-author guidance to specify professional function and user."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "primaryNavigation",
+        6,
+        "label"
+      ],
+      "before": "Community Outreach and Engagement",
+      "after": "Community Outreach",
+      "reason": "Shortened the navigation label for clarity and consistency with other navigation headings, improving conciseness without losing substantive meaning."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The proposed change ('Learning and support for staff practice') revises 'Staff learning and practical support.' The change slightly departs from the original scope by omitting 'practical,' introducing 'practice,' and changing the order. The original wording specifically refers to both learning and practical support that the resource offers to staff. The updated phrase could be interpreted as only learning and support for 'staff practice' (potentially a narrower focus) rather than general 'staff learning' and 'practical support.' No evidence in the source justifies this rewording or a shift in scope. Editorial preference does not warrant a shift in factual meaning or scope."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "Minor editorial clarification ('an independently managed resource for Disability Services Division staff' to 'A resource managed independently for Disability Services Division staff') preserves factual content and is supported by the source. Lowercasing the 'A' is more typical within a sentence, but this does not warrant a blocker."
+      },
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "The source navigation label is 'Community Outreach and Engagement.' The proposed change to 'Community Outreach' omits 'Engagement,' which is an element of the program's scope according to the source. Removing this term narrows the meaning and support for the changed label is not present in the source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1219,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 149,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1368
+    },
+    "review": {
+      "input_tokens": 943,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 295,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1238
+    }
+  },
+  "createdAt": "2026-11-15T13:36:59.743Z"
+}

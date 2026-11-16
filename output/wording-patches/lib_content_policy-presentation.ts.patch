@@ -1,0 +1,13 @@
+diff --git a/lib/content/policy-presentation.ts b/lib/content/policy-presentation.ts
+index 95cb5de..10b25b2 100644
+--- a/lib/content/policy-presentation.ts
++++ b/lib/content/policy-presentation.ts
+@@ -9,7 +9,7 @@ export const POLICY_PRESENTATION_RESOURCE: ContentItem = {
+   body: [
+     "The One DSD edition adapts Equity Analysis for Policy Refresh 11-20-24 to the program’s visual style. The original training content, editable diagrams, and speaker notes are retained in the PowerPoint.",
+     "The presentation explores an equity mindset, intent and impact, definitions, an eight-part analysis framework, convening a drafting group, and preparing for leadership review.",
+-    "Contacts and submission steps reflect the November 20, 2024 training. Confirm current arrangements with the responsible office before acting; visual restyling does not make historical steps current policy.",
++    "Contacts and submission steps reflect the November 20, 2024 training. Confirm current arrangements with the person or area responsible before acting; visual restyling does not make historical steps current policy.",
+     "The presentation page offers each slide and its readable text. Download the PowerPoint for editing or presenting, or the PDF for reading and sharing.",
+   ],
+   nextActions: [

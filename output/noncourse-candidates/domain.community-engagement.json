@@ -1,0 +1,81 @@
+{
+  "target": "domain.community-engagement",
+  "kind": "surface",
+  "route": "/areas/community-engagement",
+  "sourceSha256": "8ef1f5d114288867c24aa12f2cb4befab752ed9e8dea1fdd798fd40bc30abdfc",
+  "status": "needs_revision",
+  "reviewedFieldCount": 22,
+  "changes": [
+    {
+      "fieldId": 2,
+      "path": [
+        "summary"
+      ],
+      "before": "Engaging communities while a decision can still change, being honest about how much influence people have, and closing the loop on what happened with their input.",
+      "after": "Engage communities early while decisions are still open to change. Clearly state how much influence people will have, and report back to the community to show what was done with their input.",
+      "reason": "Clarified sequence and focus: acting while decisions remain changeable, specifically stating the scope of influence, and closing the feedback loop. Removed less precise phrases and avoided repeating the professional explanation."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "DSD's own engagement review found work that was fragmented, event-based, and repeated without coordination, and found that people rarely heard what changed. Trust is built by fixing those patterns.",
+      "after": "DSD’s engagement review found that many activities were uncoordinated, focused on single events, and repeated without learning from previous efforts. People often did not know if or how their input made a difference. Improving coordination and communication builds trust and prevents wasted time for both staff and community members.",
+      "reason": "This version clarifies what the review found and why coordination and feedback matter, connecting the findings to concrete consequences."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The revised summary changes essential meaning and omits key details from the original. The original ('Engaging communities while a decision can still change, being honest about how much influence people have, and closing the loop on what happened with their input.') succinctly lists three elements: timing, honesty about influence, and closing the loop. The revision ('Engage communities early while decisions are still open to change. Clearly state how much influence people will have, and report back to the community to show what was done with their input.') changes 'while a decision can still change' to 'early while decisions are still open to change', which may not always be 'early'—some decisions change late in a process. The phrase 'report back to the community to show what was done with their input' is more procedural, and less neutral (possibly interpreted as promising a 'change' versus closing the loop even if nothing changes). Removing 'closing the loop' (a field-specific concept) and rephrasing as 'reporting back' suppresses a meaningful distinction important for DSD work. The revision also increases the risk of overpromising influence ('what was done with their input' vs. a neutral change/no change outcome)."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The revised 'why it matters' matches the source findings and adds clarity. It validly expands why trust is important, matching the original's intent and detail, and grounds the need for improvement. No unsupported claim found."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2249,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 232,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2481
+    },
+    "review": {
+      "input_tokens": 1440,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 355,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1795
+    }
+  },
+  "createdAt": "2026-11-15T13:39:19.314Z"
+}

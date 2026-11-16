@@ -1,0 +1,13 @@
+diff --git a/lib/content/source-register.ts b/lib/content/source-register.ts
+index 135d067..24aea53 100644
+--- a/lib/content/source-register.ts
++++ b/lib/content/source-register.ts
+@@ -70,7 +70,7 @@ const RESOURCE_BY_KEY = new Map(SOURCE_REGISTER.resources.map(resource => [`${re
+ export function verificationFor(source: RegisterSource): Verification {
+   if (source.kind === "program_route") return { state: "program_page", label: "Program page", detail: "Points to another page inside this program." };
+   if (source.kind === "program_document") return { state: "program_document", label: "Program document", detail: "A program-authored or internal document." };
+-  if (source.kind === "legal_citation") return { state: "legal_citation", label: "Legal citation", detail: "A statute cited by name. Check the current text with the responsible office." };
++  if (source.kind === "legal_citation") return { state: "legal_citation", label: "Legal citation", detail: "A statute cited by name. Check the current text with the person or area responsible." };
+   if (source.kind === "placeholder") return { state: "named_only", label: "Named without an address", detail: "The source is named but no address is on record yet." };
+   const receipt = RECEIPT_BY_ID.get(source.sourceId);
+   if (receipt) {

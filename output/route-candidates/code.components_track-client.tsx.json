@@ -1,0 +1,123 @@
+{
+  "target": "code.components/track-client.tsx",
+  "kind": "surface",
+  "route": "components/track-client.tsx",
+  "sourceSha256": "bc0bf21d17a10a260041b284c0235fb6fb435c6640e1cffd339b510b902d4b97",
+  "status": "needs_revision",
+  "reviewedFieldCount": 6,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "The time this request could be kept has ended. The details you submitted have been removed; only a note that it expired remains.",
+      "after": "This request expired because its retention period ended. Your submitted details are no longer kept; only a record that the request expired remains for tracking purposes.",
+      "reason": "Added a more precise explanation for why the details were removed and clarified that only a minimal record is kept. This informs staff about retention and data handling, and it specifies the practical consequence for users and staff."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "Corrections are temporarily unavailable. You can still check this request and withdraw it while withdrawal is available.",
+      "after": "Corrections to this request are temporarily unavailable. You can still view the status and withdraw the request if withdrawal is currently allowed. This ensures you are aware that other actions remain possible during correction downtime.",
+      "reason": "Clarified that correction is unavailable temporarily and explained what actions remain available, making it more specific for DSD staff functions. This also makes it clear that withdrawal may not be allowed in all cases, aligning with the need to state limits where present."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": "You can correct general information while the status is Eligibility review, Received, or “We have your request.” The same privacy checks apply before anything is saved.",
+      "after": "You may update general information while the request status is Eligibility review, Received, or “We have your request.” Any correction is subject to existing privacy checks before changes are saved, protecting sensitive information and ensuring compliance with privacy procedures.",
+      "reason": "Restated the instruction for clarity and provided a brief explanation of why privacy checks are in place, connecting the instruction to its practical and compliance rationale."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field4"
+      ],
+      "before": "Checking a request does not add your learning or Ask activity to it. Deleting a saved reference from this computer does not withdraw or delete the request.",
+      "after": "Viewing a request does not add to the request's activity history, nor does it record your learning or Ask activity. Removing a saved reference from this device does not withdraw or delete the actual request from the system; it only removes your local access to the saved reference.",
+      "reason": "Clarified the separation between local actions and system actions, detailing what happens when a staff member deletes a local reference. This addresses potential misunderstandings about system records and local interfaces."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field5"
+      ],
+      "before": "No saved requests in this tab or on this computer.",
+      "after": "No saved requests have been stored in this browser tab or on this computer. To quickly access requests in the future, use the save feature after looking up a request.",
+      "reason": "Expanded to explain where saved requests are stored (tab and device) and how to add one for future convenience, connecting the instruction to practical staff workflow."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The rewritten text \"This request expired because its retention period ended. Your submitted details are no longer kept; only a record that the request expired remains for tracking purposes.\" introduces explanations not present in the code source. The original message does not specify 'retention period', 'tracking purposes', or clarify exactly why the request expired—only that the time it could be kept has ended, and the details have been removed. The code only states: \"The time this request could be kept has ended. The details you submitted have been removed; only a note that it expired remains.\" The rewrite, while plausible, adds unsupported legal and practical explanations and is therefore blocked by the standard."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The change to clarify other actions are possible and to state withdrawal may not always be available is supported by the logic in the code. The notice is shown when correction is unavailable but withdrawal may or may not be allowed (based on view.can_withdraw). The rewritten field is valid."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The addition of an explanation for privacy checks—\"protecting sensitive information and ensuring compliance with privacy procedures\"—remains within the scope of the Program writing standard, which allows for giving reasons, and reflects the comment in the source: \"The same privacy checks apply before anything is saved.\" The rewrite does not add new obligations or unsupported mechanisms."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The clarification that removing a saved reference affects only local storage and does not withdraw or delete the system record is supported by both the original value and the logic of how 'saved' items are handled in the code. The explanation that local deletion affects only access, not the backend, is accurate. The change is permissible and maintains intent."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The change expands to clarify how saved requests work, but does not assert new program rules or change the underlying option. It connects the availability of saved items to local and session storage, consistent with the implementation and original text. This is allowed under the guidance to connect instructions to practical staff workflow."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 5268,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 521,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5789
+    },
+    "review": {
+      "input_tokens": 5281,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 456,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5737
+    }
+  },
+  "createdAt": "2026-11-15T13:56:41.693Z"
+}

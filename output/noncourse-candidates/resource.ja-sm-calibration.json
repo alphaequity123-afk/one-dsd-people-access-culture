@@ -1,0 +1,171 @@
+{
+  "target": "resource.ja-sm-calibration",
+  "kind": "resource",
+  "route": "/library/ja-sm-calibration",
+  "sourceSha256": "3291c79ed711c0e107c9abf75a02006d0fc52ea49ddf696d75d411a8be840dcb",
+  "status": "needs_revision",
+  "reviewedFieldCount": 8,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Help managers check that ratings, discipline and pay-related decisions apply the same standards across supervisors, before they become final.",
+      "after": "Help managers confirm that ratings, discipline, and pay-related decisions use consistent standards across supervisors before these decisions become final.",
+      "reason": "Clarified that the action is to confirm consistency, not just to check, and emphasized the timing relative to final decisions. This focuses on the practical purpose and aligns with professional language guidance."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Compare reasons, not people's groups",
+      "after": "Focus on comparing the reasons for decisions, not on group characteristics of individuals. This supports fair and evidence-based management.",
+      "reason": "Expanded to link the reasoning to fair management practices, clarifying the implication of the guidance for staff."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Remember. Calibration compares evidence against criteria. It is not a curve or a quota. Supervisors keep their own decisions. They can change them for work reasons. Keep private data to those whose work requires it. A pattern prompts a process review. Do not move individuals to fix numbers.",
+      "after": "Key points. Calibration reviews evidence against established criteria, not against quotas or forced distributions. Each supervisor retains authority over their own decisions and may revise them based on work-related factors. Private or sensitive data should remain accessible only to staff whose duties require it. If recurring patterns emerge, review the relevant processes rather than adjusting individual outcomes to meet numbers.",
+      "reason": "Connected the ideas more clearly, provided rationale for privacy of data, and explained why process review is the appropriate response to patterns. This improves specificity and depth for professional staff."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Before the session. Ask Human Resources who may take part and what can be shared. Choose the criterion and define what each level looks like. Have supervisors bring two or three pieces of evidence for each rating.",
+      "after": "Before the session. Consult Human Resources to confirm who should participate and what information can be shared. Identify the relevant criterion and describe observable indicators for each level. Ask supervisors to bring two or three pieces of documented evidence that support each rating.",
+      "reason": "Clarified steps for preparing calibration sessions and reinforced the importance of documented evidence. This helps ensure participants understand their responsibilities."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Questions in the room. What did you see, and when? Would we use this word for anyone who did the same thing? Did this person have the same chance to show this? If two cases differ, what real fact explains it?",
+      "after": "Questions in the session. What specific actions or outcomes did you observe, and when? Would the same descriptive term apply to anyone exhibiting the same behavior or result? Did each person have a comparable opportunity to demonstrate this? If there are differences between cases, what objective facts account for them?",
+      "reason": "Clarified and expanded the intent behind each question, making the rationale explicit. Improved the specificity of what kind of facts should be considered."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Discipline. Call labor relations before starting. Check the contract that applies. Compare conduct, prior notice, seriousness and role. Check that timing has nothing to do with a report, an accommodation or a leave.",
+      "after": "Discipline. Consult labor relations before initiating any action. Verify the applicable contract. Compare the nature of conduct, whether prior notice was provided, the seriousness of the incident, and the individual's role. Ensure that the timing of discipline does not relate to a report, request for accommodation, or leave of absence.",
+      "reason": "Expanded the explanation to clarify why each element should be checked. Explicitly addressed the risk of unintended connections to protected activities."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Pay and advancement. Ask where your area has discretion. For each recommendation or acting role, ask: what's the standard, what's the evidence, and who else meets it? Tell all eligible people about openings.",
+      "after": "Pay and advancement. Determine where your team or division has discretion in recommending pay changes or acting roles. For each recommendation, ask: What is the established standard? What evidence supports meeting it? Who else meets these criteria? Ensure that all eligible staff are notified of opportunities.",
+      "reason": "Clarified the need to determine the scope of discretion and the requirement to treat all eligible staff equally. This encourages a more transparent and equitable process."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "Do next. Book one 60-minute joint review before your next cycle becomes final. Speak last.",
+      "after": "Next steps. Schedule at least one 60-minute joint review session before making ratings, discipline or pay-related decisions final. Allow others to share input first; speak last as the facilitator or lead.",
+      "reason": "Clarified the timing and scope of the review, and explained why the manager or facilitator should wait to speak. This supports more open and unbiased discussion."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed change from 'check that ratings, discipline and pay-related decisions apply the same standards' to 'confirm that ratings, discipline, and pay-related decisions use consistent standards across supervisors' shifts the source from a check or review to a formal act of confirmation and rewrites 'apply the same standards' to 'use consistent standards,' a subtle change that drifts from the source's wording. The timing clause 'before these decisions become final' also recasts the source's intent; the source simply notes 'before they become final.' The rewrite is not source-faithful and does not exactly preserve the guidance's meaning."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The more detailed explanation ('Focus on comparing the reasons...') reasonably expands the original 'Compare reasons, not people's groups.' It clarifies the implication and remains consistent with the professional intent of the source."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The restructuring and explicatory statements in the rewrite accurately represent the original. The addition of rationale and fuller connection of steps strengthen but do not change the meaning or introduce new requirements."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The rewrite for calibration session preparation remains faithful to the source, offering additional detail without adding unsupported steps or legal requirements."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The rewrite expands but aligns with the original questions and context. The intent and focus remain source-accurate."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The revised discipline guidance paraphrases but does not substantively alter source requirements. It remains within the source's scope and preserves contract and protected activity cautions."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The rewrite for pay and advancement expands the reasoning and steps but preserves the essential meaning: check discretion, standards, evidence, comparators, and notice."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "This rewrite clarifies the 'Do next' actions, expanding but not exceeding the original's instructions. The scope and sequence are intact."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1826,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 811,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2637
+    },
+    "review": {
+      "input_tokens": 2091,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 440,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2531
+    }
+  },
+  "createdAt": "2026-11-15T13:44:19.534Z"
+}

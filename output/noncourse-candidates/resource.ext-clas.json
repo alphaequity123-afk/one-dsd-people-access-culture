@@ -1,0 +1,57 @@
+{
+  "target": "resource.ext-clas",
+  "kind": "resource",
+  "route": "https://thinkculturalhealth.hhs.gov/clas/standards",
+  "sourceSha256": "11d0bdef3fa1f30eb3bfeca2a2531858ea7da6eab4079cc293fe6806886a3864",
+  "status": "model_checked",
+  "reviewedFieldCount": 3,
+  "changes": [],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "All content in this resource faithfully describes the external CLAS standards and accurately references the official source. No paraphrasing or unsourced claims about policy occur. The summary, body, and metadata do not alter or misrepresent official requirements. The note about using the current HHS text, as well as the context about old policies, is correctly evidence-aligned. No blockers found; page meets the program writing standard."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1422,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 19,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1441
+    },
+    "review": {
+      "input_tokens": 894,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 106,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1000
+    }
+  },
+  "createdAt": "2026-11-15T13:41:30.779Z"
+}

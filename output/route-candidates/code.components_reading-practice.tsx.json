@@ -1,0 +1,81 @@
+{
+  "target": "code.components/reading-practice.tsx",
+  "kind": "surface",
+  "route": "components/reading-practice.tsx",
+  "sourceSha256": "49dc94172722e06cd4d583f7dbee41c1205fe61e5eea68b482374b4649392dde",
+  "status": "needs_revision",
+  "reviewedFieldCount": 9,
+  "changes": [
+    {
+      "fieldId": 3,
+      "path": [
+        "field4"
+      ],
+      "before": "In this example, a team sends an appointment reminder that asks everyone to confirm through a website. Several people miss the confirmation. The team does not yet know why.",
+      "after": "A team sends an appointment reminder asking everyone to confirm through a website. Several people do not respond, and the team does not know the reasons yet. This gap shows that not all intended recipients are following the process as expected.",
+      "reason": "Clarified the workplace context with a clear link between the missed confirmations and the problem to be solved, connecting the summary to staff roles and the need for further inquiry."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "field9"
+      ],
+      "before": "Your writing stays on this page until you leave. Download it if you want to keep it.",
+      "after": "Your entry will stay on this page until you close or refresh it. Download a copy if you want to keep your work.",
+      "reason": "Restated to focus on the functional consequence of site persistence, using direct language to clarify what happens if the user leaves the page."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "The revised text adds substantive new content that is not found in the code source. The original source says: 'In this example, a team sends an appointment reminder that asks everyone to confirm through a website. Several people miss the confirmation. The team does not yet know why.' The proposal changes this to: 'A team sends an appointment reminder asking everyone to confirm through a website. Several people do not respond, and the team does not know the reasons yet. This gap shows that not all intended recipients are following the process as expected.' The last sentence, 'This gap shows that not all intended recipients are following the process as expected,' inserts an interpretation and suggests a specific consequence or lesson not present in the given source. This overstates the direct evidence and adds coaching language that reinterprets the scenario. Source fidelity requires that the summary and explanation remain in scope with what was originally presented; no additional implication or lesson is stated in the code."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "The edit ('Your writing stays on this page until you leave. Download it if you want to keep it.' to 'Your entry will stay on this page until you close or refresh it. Download a copy if you want to keep your work.') is a minor clarification consistent with the source code behavior. This is not a blocker, but the update is not strictly necessary—either version is supportable based on the code's logic."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2376,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 181,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2557
+    },
+    "review": {
+      "input_tokens": 1917,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 311,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2228
+    }
+  },
+  "createdAt": "2026-11-15T13:55:52.141Z"
+}

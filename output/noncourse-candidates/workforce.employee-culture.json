@@ -1,0 +1,82 @@
+{
+  "target": "workforce.employee-culture",
+  "kind": "surface",
+  "route": "/consultant/workforce/employee-culture",
+  "sourceSha256": "b9043f8a8add5d1e89abbf8d6c0597ff29da24483755ff34dd1abcdf1cfbcf5e",
+  "status": "model_checked",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "relationship"
+      ],
+      "before": "Listed as an agency area or associated service. This does not establish a direct reporting line.",
+      "after": "Identified as an agency area or related service in DHS documentation. This does not indicate a formal reporting relationship or supervisory chain.",
+      "reason": "Clarifies the meaning of 'listed as an agency area' and distinguishes what is—and is not—implied for reporting or authority, using more precise language for colleagues referencing this source."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "leadership",
+        0
+      ],
+      "before": "Assistant Commissioner and leadership for human resources, workforce planning, recruitment, and learning appear in the public directory.",
+      "after": "Assistant Commissioner and staff responsible for human resources, workforce planning, recruitment, and learning are named in the public directory. Check this directory for up-to-date information on assigned leaders.",
+      "reason": "Adds actionable guidance to check the directory for current assignments, recognizes the staff beyond the head official, and clarifies that roles may change, given the operational context."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revised 'relationship' field uses slightly more precise wording ('identified as...' rather than 'listed as...'), but the substantive meaning is unchanged. The clarification that this reference does not establish a direct/formal reporting line is still valid. The change is consistent with the DHS source link, which provides organizational information but does not establish formal reporting chains. No source contradiction or unsupported claim was found."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The updated leadership field now directs users to check the directory for current information and refers to both the Assistant Commissioner and staff. This is a small but useful change, reflecting the reality that public directories provide current assignments and that leadership may include a team, not just a single individual. This aligns with common DHS directory practices and does not introduce new policy or unsupported claims."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1153,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 201,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1354
+    },
+    "review": {
+      "input_tokens": 924,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 185,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1109
+    }
+  },
+  "createdAt": "2026-11-15T13:37:47.875Z"
+}

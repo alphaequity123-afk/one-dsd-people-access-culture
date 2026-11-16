@@ -1,0 +1,67 @@
+{
+  "target": "code.components/water-collection-feature.tsx",
+  "kind": "surface",
+  "route": "components/water-collection-feature.tsx",
+  "sourceSha256": "5c7ba23952403ad4082a3a77035b2f505fa3764a75f3f5d3b497e73c7d791fa1",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Explore culture at work through the American and Minnesota briefs and the Equity Analysis Toolkit.",
+      "after": "Read about how cultural context influences our work using the American and Minnesota briefs and the Equity Analysis Toolkit. These resources provide evidence and examples relevant to Minnesota DHS and DSD practice.",
+      "reason": "Clarified the purpose of the resources and specified how they support DHS and DSD staff, improving the substantive explanation and connecting the resources to their use in professional work. Added why the action matters and avoided vague terms."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The original source states: 'Explore culture at work through the American and Minnesota briefs and the Equity Analysis Toolkit.' The proposed rewrite changes the meaning and scope by asserting that these resources 'provide evidence and examples relevant to Minnesota DHS and DSD practice,' which is not substantiated by the actual content or description in the source. Additionally, the statement 'how cultural context influences our work' is an interpretive expansion. The original simply invites exploration; it does not specify 'how' nor make claims about 'evidence,' 'examples,' or unique relevance to DHS or DSD. This introduces unsupported claims and narrows the meaning beyond the source, violating the program writing standard."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1374,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 106,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1480
+    },
+    "review": {
+      "input_tokens": 1061,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 158,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1219
+    }
+  },
+  "createdAt": "2026-11-15T13:56:38.083Z"
+}

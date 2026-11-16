@@ -1,0 +1,81 @@
+{
+  "target": "code.components/policy-analysis/decisions-step.tsx",
+  "kind": "surface",
+  "route": "components/policy-analysis/decisions-step.tsx",
+  "sourceSha256": "905a1fe410c0b2a72639371b4c0ca61ca6a7b8329534f92f008cfe1712d7464e",
+  "status": "needs_revision",
+  "reviewedFieldCount": 3,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Approve, reject or defer each change and give the reason. Each decision is recorded with the role of the person who made it, never a name.",
+      "after": "Approve, reject, or defer each change and explain your reasoning. Record each decision with your assigned role—not your name. This maintains clarity about the perspective behind decisions and supports accountability for approvals. Tracking by role also allows analysis of how different responsibilities influence final policy outcomes.",
+      "reason": "Expanded on why recording the role rather than a name is important for accountability and outcome analysis, providing clear reasoning behind this approach. Improved professional connection and specificity for DHS/DSD staff."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "Choose your role before you record a decision. It applies to each decision you record and to formalizing in step 6.",
+      "after": "Select your current role before you record a decision. The role applies to each decision you make in this step and will also be used when formalizing changes in step 6. Using the correct role ensures that decisions are documented from the proper organizational perspective, which is necessary for accurate policy implementation and review.",
+      "reason": "Clarified the operational impact of selecting the correct role—ensuring actions are consistently attributed for organizational accuracy and policy tracking."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The added explanation about maintaining clarity, supporting accountability, and enabling outcome analysis is not supported by the source. The source only states: \"Each decision is recorded with the role of the person who made it, never a name.\" It does not assert accountability or analysis outcomes, and does not explicitly frame role recording as a means of tracking perspectives or influencing outcomes. Adding these justifications introduces interpretations not evidenced in the provided code or comments."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The revision introduces new rationale: 'Using the correct role ensures that decisions are documented from the proper organizational perspective, which is necessary for accurate policy implementation and review.' This explanation is not present in the source, which simply advises that the role applies to each decision and is used in the next step. The specific assertions about implementation and review consequences are not found in the code or comments."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3376,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 214,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3590
+    },
+    "review": {
+      "input_tokens": 3162,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 199,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3361
+    }
+  },
+  "createdAt": "2026-11-15T13:55:18.365Z"
+}

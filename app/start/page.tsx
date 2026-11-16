@@ -5,7 +5,6 @@ import Link from "@/components/app-link";
 import { NewToDsd } from "@/components/new-to-dsd";
 import { Hub2More } from "@/components/hub2-choices";
 import type { Metadata } from "next";
-import { ParticipationNotice } from "@/components/participation-notice";
 import { ProgramContextNote } from "@/components/program-context";
 import { StartClient } from "@/components/start-client";
 import { PageIntro } from "@/components/ui";
@@ -40,7 +39,6 @@ export default async function StartPage() {
           <Hub2More title="Guided pathways into practice"><DevelopmentPathways compact /></Hub2More>
           <Hub2More title="Getting to know the program"><NewToDsd /></Hub2More>
         </div>
-        <ParticipationNotice surface="start_routing" />
       </div>
       </div>
     </EditableSurfaceRegion>

@@ -1,0 +1,81 @@
+{
+  "target": "graduation-path.gp-12",
+  "kind": "surface",
+  "route": "/practice/gp-12",
+  "sourceSha256": "b5ed120be6153b06ce243358e112094781f266ebe72d9eddda2bd8b4f7666364",
+  "status": "model_checked",
+  "reviewedFieldCount": 54,
+  "changes": [
+    {
+      "fieldId": 5,
+      "path": [
+        "startingCompetence"
+      ],
+      "before": "You are about to make a routine decision and want a short, honest check of who it affects and what you might change before it goes out.",
+      "after": "Before you make a routine decision, pause for a concise equity check. This means stopping to consider who may be affected, whose experience might differ, and whether you can make an adjustment. Briefly note the potential impact, any access concerns, your available evidence, an alternative you considered, and your next planned action. This step helps you catch unintended barriers and see if a more detailed analysis is needed.",
+      "reason": "Adds practical reasoning for pausing, clarifies the purpose and expected process, and connects the action directly to staff work. Explains why an equity check matters and what to record."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "graduatedLooksLike"
+      ],
+      "before": "By the end, you will have a short record of the decision: who is affected differently, who can change it, the access needs you checked, what you know and do not know yet, one alternative you considered, and your next step with a review date. You can complete routine decisions on your own and recognize when a fuller analysis applies.",
+      "after": "By finishing this process, you keep a focused record: who is affected and how, who can revise the decision, the access needs you reviewed, information you do and do not have, one alternative you considered, and the next step with a date for review. You can apply this independently for routine matters and will know how to spot when the potential impact or complexity calls for a more in-depth equity analysis.",
+      "reason": "Clarifies what the outcome of the process looks like and relates it to the staff's ability to proceed autonomously or escalate when needed. Improves specificity regarding when a fuller analysis may apply."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The revised text for 'startingCompetence' adds specific practical reasons for pausing (to catch unintended barriers and determine if a fuller analysis is needed), makes the stage-by-stage process more explicit (noting impacts, access, evidence, alternatives, and actions), and clarifies the link to staff work. All these elements are consistent with the source's described function of the step, which is an equity check before finalizing a routine decision. The edit does not invent policy or overstate requirements—it provides a fuller explanation and retains the intended scope."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "For 'graduatedLooksLike,' the revision maintains the core list of required record elements (who is affected, who can change the decision, access needs, knowns and unknowns, alternatives, next steps, and review date) and correctly emphasizes the ability to complete routine decisions and recognize when further analysis is needed. The new text is specific, clear, and source-grounded, slightly improving readability and connecting outcomes to intended staff autonomy and to triggers for escalation. No unsupported claims or altered legal conditions are introduced."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 4127,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 377,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4504
+    },
+    "review": {
+      "input_tokens": 2383,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 246,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2629
+    }
+  },
+  "createdAt": "2026-11-15T13:40:00.130Z"
+}

@@ -1,0 +1,95 @@
+{
+  "target": "code.app/share/equity-toolkit/page.tsx",
+  "kind": "surface",
+  "route": "/share/equity-toolkit",
+  "sourceSha256": "453c364adad98a89f38fdd7cc22cac855a43d004b99063128a902af4a087bea5",
+  "status": "needs_revision",
+  "reviewedFieldCount": 4,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Continue to practice and resources",
+      "after": "Go to practice and resources",
+      "reason": "\"Go to practice and resources\" gives a more direct instruction using familiar precise verbs, which fits standard page navigation for staff readers. It omits unnecessary conjunctions and clarifies the action, aligning with the program's writing standard by focusing on practical next steps."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "You&rsquo;re viewing a shared link to this toolkit only. It doesn&rsquo;t include the rest of the program.",
+      "after": "This link gives access only to the Equity Analysis Toolkit. It does not include program features beyond this toolkit.",
+      "reason": "The revision uses plain language and clear explanation, specifying what is available and what is not, according to the surface description. It avoids unnecessary repetition and makes the limitation explicit for staff clarity, matching the program guidance to explain connected ideas and preserve factual meaning."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": "Continue to practice with the toolkit",
+      "after": "Go to practice with the toolkit",
+      "reason": "\"Go to practice with the toolkit\" uses a more direct instruction and precise verb, matching the program's writing standard for concise, actionable heading and navigation phrasing. It clarifies that the next action is to practice using the toolkit, consistent with the page's purpose."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The revised text \"Go to practice and resources\" is not supported by the page source. The source uses \"Continue to practice and resources\" for both the body paragraph link and the navigation button. The meaning of \"Continue\" is consistent with the user having started the toolkit via this share page and proceeding forward. Replacing \"Continue\" with \"Go\" changes the user instruction, subtly altering implied workflow. This is not consistent with the standard to preserve practical instruction scope and purpose."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revised wording for field2 is a reasonable rewrite: it clarifies the limitation using accurate information about the share link, stays within the source meaning, and expands on it slightly, which is justified by the explanatory purpose described in the source and program writing standard. Not a blocker."
+      },
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "The revised text \"Go to practice with the toolkit\" is not supported. The source uses \"Continue to practice with the toolkit\" for the CTA button. Changing to \"Go\" alters the implied workflow and doesn't match the continuity the toolkit page establishes (user follows toolkit steps). Instructional phrasing should remain as originally scoped in the source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1893,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 242,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2135
+    },
+    "review": {
+      "input_tokens": 1707,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 269,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1976
+    }
+  },
+  "createdAt": "2026-11-15T13:51:43.294Z"
+}

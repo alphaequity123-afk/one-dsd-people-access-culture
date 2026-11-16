@@ -1,0 +1,299 @@
+{
+  "target": "amplify.co-leads",
+  "kind": "surface",
+  "route": "/one-dsd/amplify/co-leads",
+  "sourceSha256": "29533e158b61729da06acccd8a6548d441258a75ae1b0d915e5197b4ce5c6e13",
+  "status": "needs_revision",
+  "reviewedFieldCount": 17,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "intro"
+      ],
+      "before": "A little preparation gives people room to participate. You do not have to be the expert on every topic.",
+      "after": "Preparing in advance gives people the chance to engage more fully. You do not need to have expert knowledge of every topic to co-lead effectively.",
+      "reason": "Clarifies why preparation matters, connects it to participation, and specifies that expertise is not required, supporting staff understanding of the co-lead role."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "resources",
+        1,
+        "label"
+      ],
+      "before": "Facilitation and learning together",
+      "after": "Facilitation and shared learning",
+      "reason": "Specifies that learning happens together with facilitation, more clearly linking the resource to the intended collaborative method."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "resources",
+        2,
+        "label"
+      ],
+      "before": "Workplace culture and well-being",
+      "after": "Culture at work and well-being",
+      "reason": "Uses more direct, specific language about the workplace setting to clarify the subject area for this resource."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "section0Body"
+      ],
+      "before": "One or two co-leads organize the group with staff input. Share preparation, invite help, and make stepping back possible. The connection with the One DSD Team supports communication; it does not make co-leads responsible for solving every issue.",
+      "after": "Co-leads organize the group with input from other staff members. Share preparation and invite others to assist, making it possible for co-leads to step back when needed. The One DSD Team helps maintain communication, but co-leads are not required to resolve every issue themselves.",
+      "reason": "Clarifies the collaborative role of co-leads and the importance of sharing responsibility; specifies that co-leads coordinate but are not accountable for all outcomes."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "section1Body",
+        0
+      ],
+      "before": "Choose a topic with participants rather than preparing a full lesson.",
+      "after": "Work with participants to select a topic rather than planning a complete lesson yourself.",
+      "reason": "Directs focus to collaborative topic selection and avoids the expectation of formal lesson planning, clarifying the role for co-leads."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "section1Body",
+        1
+      ],
+      "before": "Share the time, joining details, and an optional opening question.",
+      "after": "Share the meeting time, how to join, and an optional opening question in advance.",
+      "reason": "Clarifies what information should be shared before the gathering and why it matters, supporting accessibility and preparedness."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "section1Body",
+        2
+      ],
+      "before": "Consider access needs and offer more than one way to contribute.",
+      "after": "Consider access needs and provide more than one way for people to participate.",
+      "reason": "Uses more precise language to explain that accommodating diverse needs is about participation rather than just contribution."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "section1Body",
+        3
+      ],
+      "before": "Agree who will welcome people and help the conversation stay respectful.",
+      "after": "Agree on who will welcome attendees and support a respectful conversation.",
+      "reason": "Clarifies the practical responsibilities for group leadership and group culture management."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "section2Body"
+      ],
+      "before": "Invite different perspectives without requiring personal disclosure. Allow people to listen, pass, or step away. No one is expected to speak for an entire community. Questions and disagreement can belong alongside care for one another.",
+      "after": "Encourage multiple perspectives without requiring anyone to share personal details. Allow people to listen quietly, opt out of sharing, or step away at any time. No participant is responsible for representing a whole community. Questions and disagreements can be part of a caring conversation.",
+      "reason": "Expands on why these options matter, makes instructions clearer, and ties practices to psychological safety and respect."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "section3Title"
+      ],
+      "before": "When a conversation becomes difficult",
+      "after": "If a conversation is difficult",
+      "reason": "Simplifies and clarifies the section heading, making it easier for staff to locate relevant guidance."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "section3Body"
+      ],
+      "before": "Pause if people are being targeted or the conversation needs care. Name the specific concern without judging a person’s character. Give people room to clarify or repair. Seek additional support when needed; hosting does not make you an investigator.",
+      "after": "Pause the discussion if you notice someone is being targeted or if the topic needs additional care. Describe the specific concern without labeling individuals. Provide time for clarification or repair. Get further support if needed; your role as host does not require you to investigate events.",
+      "reason": "Spells out the importance of pausing and naming concerns carefully, connects to practical limits of co-lead responsibility, and emphasizes the distinction between hosting and investigating."
+    },
+    {
+      "fieldId": 11,
+      "path": [
+        "section4Body"
+      ],
+      "before": "A framework can help people notice something, and it can also be questioned. Ask what practice is being discussed, what supports an interpretation, and what other explanation deserves consideration. Agreement with a particular framework is not a condition of participation.",
+      "after": "Frameworks can highlight certain issues but should be open to questions. Ask what practice or situation is being discussed, what evidence supports an interpretation, and what other explanations should be considered. Agreeing with a framework is not required to participate.",
+      "reason": "Clarifies why questioning frameworks is valuable and what questions help keep discussions grounded in practice."
+    },
+    {
+      "fieldId": 12,
+      "path": [
+        "section5Body"
+      ],
+      "before": "Ask whether participants want a question shared beyond the gathering. Agree on the wording and destination. Share only what is needed, without identifiable personal stories. A concern does not have to affect a majority to deserve attention.",
+      "after": "Ask participants whether a particular question should be shared outside the group. Agree together on the words and where to send it. Share only what is needed, keeping out personal details. Concerns do not need to affect a majority to be valid and worth sharing.",
+      "reason": "Gives specific process for carrying forward questions and reinforces the importance of limiting personal details, explaining that even one concern is worth attention."
+    },
+    {
+      "fieldId": 13,
+      "path": [
+        "section6Body"
+      ],
+      "before": "Bring back an update when a question has been carried forward, including when a response is still pending. The appropriate person or group takes responsibility for any further work. Raising a concern does not make a participant responsible for resolving it.",
+      "after": "After a concern or question is brought forward, return with an update for the group—even when the response is still in progress. The responsible person or group is tasked with any follow-up action. Point out that raising a concern does not make the participant responsible for its resolution.",
+      "reason": "Clarifies the follow-up process, assigns responsibility appropriately, and ensures group members are not overburdened after raising issues."
+    },
+    {
+      "fieldId": 14,
+      "path": [
+        "section7Body"
+      ],
+      "before": "Do not promise absolute confidentiality or anonymity. In a small gathering, details can identify someone even when names are removed. Avoid recording or transcribing gatherings as a routine practice. Explain any relevant limits before sensitive discussion. Keep identifiable workplace concerns and personal assessment results out of shared materials.",
+      "after": "Do not guarantee complete confidentiality or anonymity. In small groups, even de-identified details may reveal someone's identity. Do not routinely record or transcribe gatherings. Always explain any relevant information limits before discussing sensitive topics. Exclude identifiable workplace matters and individual assessment results from group materials.",
+      "reason": "Clarifies the real risks of identification, specifies the importance of up-front explanation, and connects privacy practices directly to group materials."
+    },
+    {
+      "fieldId": 15,
+      "path": [
+        "section8Body"
+      ],
+      "before": "Occasionally ask what people want more of, what feels unnecessary, and what would make participation easier. Change the format when it no longer fits. Attendance and agreement are not measures of someone’s commitment to equity.",
+      "after": "Periodically ask what is working, what feels unnecessary, and how participation could be easier. Change the group format if it no longer meets the group’s needs. Neither attendance nor agreement should be used to judge someone’s commitment to equity.",
+      "reason": "Explains the purpose of checking in and clarifies that changing format is about group fit, not just flexibility. Emphasizes that participation metrics do not define commitment."
+    },
+    {
+      "fieldId": 16,
+      "path": [
+        "section9Body"
+      ],
+      "before": "Use the program’s resources and colleagues’ expertise. Invite the Equity and Inclusion Operations Consultant when a particular question needs that support. Routine planning and hosting remain with the co-leads.",
+      "after": "Draw on available program resources and the expertise of colleagues. Involve the Equity and Inclusion Operations Consultant for specific questions that require their input. Routine event planning and group facilitation remain the responsibility of co-leads.",
+      "reason": "Clarifies what to use consultants for, frames co-lead roles in practical terms, and highlights available support while keeping regular tasks with co-leads."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "Change to introductory wording is not adequately supported by the source. The source uses \"A little preparation gives people room to participate. You do not have to be the expert on every topic.\" The rewrite expands and interprets beyond intent ('engage more fully'), shifts from 'expert' to 'expert knowledge', and changes the phrase 'you do not have to be the expert' to 'you do not need to have expert knowledge... to co-lead effectively.' The source does not establish expertise as tied to effectiveness, nor does it link preparation to 'more full engagement'—this is added rationale not in the record."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "Minor label simplification from 'Facilitation and learning together' to 'Facilitation and shared learning.' While this changes form, not meaning, it is not a blocker."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "Change from 'Workplace culture and well-being' to 'Culture at work and well-being' does not substantively affect meaning or accuracy, so not a blocker."
+      },
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "Rewrite on collaborative coordination substantially changes source meaning. The source: 'Share preparation, invite help, and make stepping back possible. The connection with the One DSD Team supports communication; it does not make co-leads responsible for solving every issue.' The rewrite adds 'making it possible for co-leads to step back when needed' and frames responsibilities ('are not required to resolve every issue themselves') as absolution of accountability rather than the stated limit ('supports communication'). It alters the nuance that the One DSD team is not an escalation path for problem-solving, just communication support."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "Change clarifies intent in plain language without altering scope: collaborative topic selection is consistent with original."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "Expansion of what to share is not a blocker, as clarifying details ('meeting time, how to join') is implicit in the original 'time, joining details'."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "Changing 'contribute' to 'participate' makes the option more inclusive without eliminating intended meaning."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "Rewording of welcome and respectful atmosphere clarifies but does not restrict or add new obligations."
+      },
+      {
+        "fieldId": 8,
+        "severity": "blocker",
+        "finding": "Rewrite inappropriately expands and interprets ('ties practices to psychological safety and respect'), adding rationale not in source. 'Encourage multiple perspectives... psychological safety' is an added programmatic justification. The original is careful not to presume motivations or frame practices as fundamentally about safety, instead simply stating no one must speak for a community."
+      },
+      {
+        "fieldId": 9,
+        "severity": "note",
+        "finding": "Title change is a label simplification, not a substantive change."
+      },
+      {
+        "fieldId": 10,
+        "severity": "blocker",
+        "finding": "Rewording adds instructions and justification not present in the source: 'describe the specific concern without labeling individuals' and 'your role does not require you to investigate events' slightly shift the scope and authority of co-leads, introducing new process language. The source says: 'Name the specific concern without judging a person’s character... hosting does not make you an investigator.' The rewrite distances the host even further from investigative responsibility and introduces practical language not found in the record."
+      },
+      {
+        "fieldId": 11,
+        "severity": "note",
+        "finding": "Clarifies questioning frameworks while retaining the allowance for dissent; not a blocker."
+      },
+      {
+        "fieldId": 12,
+        "severity": "note",
+        "finding": "Clarifies process and privacy—does not add factual requirements, so not a blocker."
+      },
+      {
+        "fieldId": 13,
+        "severity": "blocker",
+        "finding": "The rewrite, especially 'Point out that raising a concern does not make the participant responsible for its resolution,' introduces a requirement for the co-lead to point out this fact rather than simply stating it to staff. The source is guidance for organizers; the change makes it an explicit task during session facilitation instead of a professional expectation between colleagues."
+      },
+      {
+        "fieldId": 14,
+        "severity": "blocker",
+        "finding": "Alters privacy language and obligations: 'Do not guarantee complete confidentiality or anonymity...' to 'Always explain any relevant information limits before discussing sensitive topics' and 'Exclude identifiable workplace matters and individual assessment results from group materials.' These impose stronger categorical instructions and move from 'explain any relevant limits' to 'always explain any relevant limits,' which is not a faithful reproduction of the moderate and conditional emphasis in the source."
+      },
+      {
+        "fieldId": 15,
+        "severity": "note",
+        "finding": "Expansion clarifies but retains the original's limits and guidance."
+      },
+      {
+        "fieldId": 16,
+        "severity": "note",
+        "finding": "Expanded role explanation for consultants and co-leads is not a blocker as it does not contradict nor go beyond the factual scope set by the source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2557,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 1182,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3739
+    },
+    "review": {
+      "input_tokens": 3226,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 1018,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4244
+    }
+  },
+  "createdAt": "2026-11-15T13:37:27.786Z"
+}

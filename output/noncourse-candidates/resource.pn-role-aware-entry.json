@@ -1,0 +1,216 @@
+{
+  "target": "resource.pn-role-aware-entry",
+  "kind": "resource",
+  "route": "/library/pn-role-aware-entry",
+  "sourceSha256": "0b9e9beb5100dd6c4052e98b51f52a3a9c16bfa133812e9ad0f9dd5f2d461469",
+  "status": "needs_revision",
+  "reviewedFieldCount": 11,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Policy analysts, hiring managers, fiscal analysts, and supervisors need different doors into the same equity knowledge. This program organizes by task and role, so you can do the next piece well without learning the whole subject first.",
+      "after": "Policy, program, HR, fiscal, and supervisory staff each approach equity work with different responsibilities and starting points. This program is organized so you can find relevant support based on your current task or role, allowing you to focus on the next step without needing to master the entire topic up front.",
+      "reason": "Revised to clarify the main message, specifying the groups more precisely, emphasizing role and task-based entry, and explaining how the structure connects to practical needs."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Generic awareness training rarely changes a decision. Support that recognizes what you are trying to do can.",
+      "after": "Most awareness training does not lead directly to better decisions. Resources that are tailored to the specific actions and context of your role offer support where it is most likely to change outcomes.",
+      "reason": "Clarified why generic training is less effective and made the benefit of tailored, context-aware support more explicit. Removed rhetorical style."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Program and policy staff usually start with the equity review canvas, the equity analysis path, or the new-program checklist.",
+      "after": "Program and policy staff often begin with the equity review canvas, the equity analysis path, or the checklist for new programs. These tools help identify potential equity impacts early in the planning and implementation stages.",
+      "reason": "Added clarity about the purpose of these entry points and why they matter for program and policy work."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Supervisors and managers usually start with team climate, stay conversations, accessible meetings, or advancement practice.",
+      "after": "Supervisors and managers tend to start with tools for team climate, holding stay conversations, running accessible meetings, or reviewing advancement practice. These approaches help shape the everyday environment and opportunities their teams experience.",
+      "reason": "Added a brief explanation of the purpose of these entry points, showing how they relate to the supervisory role."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Hiring managers and HR partners usually start with the inclusive hiring lifecycle and the job-relatedness check.",
+      "after": "Hiring managers and HR partners usually engage first with the inclusive hiring lifecycle and job-relatedness checks. These resources support fair recruitment and ensure selection focuses on actual job needs.",
+      "reason": "Clarifies what these tools are used for and what organizational interests they advance."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Fiscal, contracts, and procurement staff usually start with procurement equity and the review canvas.",
+      "after": "Fiscal, contracts, and procurement staff typically begin with procurement equity resources and the review canvas. These help ensure spending decisions consider equity and comply with relevant standards.",
+      "reason": "Explains the purpose of these resources for fiscal and procurement staff, connecting to statutory requirements and fairness."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Communications and language access staff usually start with plain language, accessible documents, and the language and cultural access planning aid.",
+      "after": "Communications and language access staff typically begin with plain language guides, accessible document practices, and the language and cultural access planning aid. These tools support clear communication and equitable access for people with diverse needs.",
+      "reason": "Clarifies the outcome these tools are supporting for communications and language access work."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "Data, research, and quality staff usually start with measuring without surveillance and the disaggregation guidance.",
+      "after": "Staff working in data, research, or quality assurance often start with guidance for measuring without surveillance and disaggregation. These materials offer ways to analyze data meaningfully while respecting privacy and minimizing harm.",
+      "reason": "Highlights the connection between these tools, data ethics, and the purposes of research staff."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "body",
+        6
+      ],
+      "before": "Service delivery and support planning staff usually start with disability rights and service delivery, community material as questions, and access checks.",
+      "after": "Staff focused on service delivery and support planning commonly begin with guidance on disability rights, incorporating community perspectives as questions, and performing access checks. These steps help align services with legal requirements and real-world needs.",
+      "reason": "Explains the link between these entry points, rights compliance, and meeting client needs in service planning."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "body",
+        7
+      ],
+      "before": "Equity Directors and Specialists use all of it and, in the One DSD area, can contribute and review material for their scope.",
+      "after": "Equity Directors and Specialists use resources from all areas and, in the One DSD area, may contribute, update, or review material within their scope. Their broader role often involves both oversight and development of equity practices.",
+      "reason": "Clarified their dual responsibilities—as users and contributors—and the reason for that breadth."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "body",
+        8
+      ],
+      "before": "Role names, responsibilities, and reporting relationships change. If a door does not fit your work, use Ask and describe what you are doing.",
+      "after": "Job titles and reporting relationships change over time. If you do not see a resource that matches your needs, use the Ask feature and describe your current task or challenge to receive tailored support.",
+      "reason": "Clarified why role-based entry points may not fit every situation and what to do when a match is not apparent."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed change alters the specific groups listed in the original summary and substitutes more generic category names ('Policy, program, HR, fiscal, and supervisory staff') for the original list ('Policy analysts, hiring managers, fiscal analysts, and supervisors'). This loses the specificity and some roles (notably 'hiring managers'), and introduces new unsourced terms like 'program' and 'HR'. The added portion about 'focus on the next step...' restates but does not represent a shift in practical meaning. Overall, this makes the summary less precise than the source and introduces unsupported role groupings."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The clarification in whyItMatters is supported by the source; it restates the basic argument, just with slightly more explanation. No policy or factual limits are introduced or changed."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "This edit slightly expands on the original (explaining the intent of the entry points for program and policy staff) without introducing new content or requirements. It is supported as clarifying."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "This explanation appropriately expands on how the entry points support the supervisory and managerial roles, matching the source intent and scope."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The restatement for hiring managers and HR partners matches the source and simply clarifies the function of the listed tools."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The change for fiscal/procurement adds a brief purpose without altering practical scope or obligations, and is supported by the source context."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The edit in the communications and access entry reflects the same set of resources and accurately expands the intended outcome (clear, equitable communication). This matches source coverage."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "The new explanation for data/research/quality aligns with the tools listed in the source, clarifying (but not altering) the intent for data privacy and utility."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "The expansion on service delivery/support planning correctly amplifies the scope and work described in the original, while not overstepping its policy reach."
+      },
+      {
+        "fieldId": 9,
+        "severity": "note",
+        "finding": "The clarification about Equity Directors and Specialists is supported, simply making explicit the two roles these specialists play per the source."
+      },
+      {
+        "fieldId": 10,
+        "severity": "note",
+        "finding": "This change clarifies the action suggested when someone does not see their situation reflected—restating only what the source already prescribes."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1820,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 803,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2623
+    },
+    "review": {
+      "input_tokens": 2155,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 547,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2702
+    }
+  },
+  "createdAt": "2026-11-15T13:42:38.071Z"
+}

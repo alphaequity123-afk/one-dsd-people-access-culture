@@ -1,0 +1,67 @@
+{
+  "target": "code.app/consultant/registry/page.tsx",
+  "kind": "surface",
+  "route": "/consultant/registry",
+  "sourceSha256": "df355d1ee7201833e58009133519aa55afb1226bf72d378e36f6adc6ff71ae2d",
+  "status": "needs_revision",
+  "reviewedFieldCount": 29,
+  "changes": [
+    {
+      "fieldId": 5,
+      "path": [
+        "field5"
+      ],
+      "before": "Helps prepare requests, organize the queue, and direct people to the right help.",
+      "after": "Supports staff in preparing consultation requests, organizing the request queue, and matching people to the appropriate help. This coordination speeds review for high-priority or complex cases and reduces incomplete or misrouted requests.",
+      "reason": "Expands on how organizing and queuing requests directly supports program processes by helping ensure that consultation requests are complete and assigned efficiently. Clarifies practical impact for program staff and why this support matters beyond merely 'helping'."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 5,
+        "severity": "blocker",
+        "finding": "The proposed rewrite for field 5 ('Supports staff in preparing consultation requests, organizing the request queue, and matching people to the appropriate help. This coordination speeds review for high-priority or complex cases and reduces incomplete or misrouted requests.') introduces new explanations regarding the purpose and effect—such as prioritization, reduction of incomplete/misrouted requests, and speed of review—that are not found in the source text ('Helps prepare requests, organize the queue, and direct people to the right help.'). The original wording is strictly limited to organizing, directing, and helping with requests, without specifying benefits, workflow impacts, or specific outcomes. The expansion changes both the factual scope and the nature of the support, which is not supported by documented source evidence."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 6570,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 166,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 6736
+    },
+    "review": {
+      "input_tokens": 5488,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 194,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5682
+    }
+  },
+  "createdAt": "2026-11-15T13:48:09.016Z"
+}

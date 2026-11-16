@@ -1,0 +1,193 @@
+{
+  "target": "code.app/learn/equity-in-practice/page.tsx",
+  "kind": "surface",
+  "route": "/learn/equity-in-practice",
+  "sourceSha256": "2ef4359bb52f3d2765bf8b35e6f3f1ef232c075a507aada070e8dfe6c96e3ad5",
+  "status": "needs_revision",
+  "reviewedFieldCount": 21,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Understand the Equity Outcome Map and explore DSD examples connecting ADSA goals with practical learning and resources.",
+      "after": "This page explains the Equity Outcome Map and applies it through Disability Services Division (DSD) examples that connect Aging and Disability Services Administration (ADSA) goals with specific learning and resources.",
+      "reason": "Increased precision by clarifying the page explains and applies the map, specifies the type of examples, and explicitly names the source of goals and resources. Uses clear professional language for staff."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field4"
+      ],
+      "before": "Begin with the Equity Outcome Map. Then follow examples from disability services to see how people, decisions, and practical resources connect.",
+      "after": "Start with the Equity Outcome Map to understand the department’s direction. Then review examples from disability services to see how people, daily decisions, and available resources interact.",
+      "reason": "Clarifies the order of steps, links the rationale for understanding direction, and describes how examples reflect real-world connection among people, decisions, and resources."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field5"
+      ],
+      "before": "Use the DSD examples to connect the six Aging and Disability Services Administration goals with your responsibilities, relevant learning, and the resources already available in One DSD.",
+      "after": "Apply the DSD examples to relate the six ADSA goals to your responsibilities. Identify relevant learning and resources already in One DSD that can support your work.",
+      "reason": "Makes explicit the expected application, encourages direct action, separates learning and resources for practical clarity."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field7"
+      ],
+      "before": "Explore the shared direction for equity work across the Department of Human Services, the intended outcomes, and why everyday decisions matter.",
+      "after": "This video outlines the department's shared approach to equity, describes intended outcomes, and explains how decisions in everyday work can affect people and progress.",
+      "reason": "Clarifies the focus on approach, intended outcomes, and actual impact of everyday decisions, showing why the video is relevant."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "field11"
+      ],
+      "before": "Follow four situations in Disability Services Division work. See how the six Aging and Disability Services Administration goals, policy, learning, and practical tools can help a team examine a decision and its effects.",
+      "after": "Review four scenarios from Disability Services Division work. Each scenario shows how the six ADSA goals, policy considerations, available learning, and practical tools can guide a team's review of a decision and its impacts.",
+      "reason": "Breaks down the workflow, identifies elements guiding team review, and states how each scenario is a learning tool."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "field14"
+      ],
+      "before": "The Outcome Map describes intended outcomes. The six implementation goals belong to the Aging and Disability Services Administration. The Disability Services Division situations are illustrative examples that other teams can adapt to their responsibilities and applicable goals.",
+      "after": "The Outcome Map outlines intended results. The six implementation goals come from the Aging and Disability Services Administration. Disability Services Division scenarios serve as examples other teams may adapt, depending on their responsibilities and which goals apply.",
+      "reason": "Clarifies relationship between map, goals, and examples, and points to adaptability to each team’s context."
+    },
+    {
+      "fieldId": 13,
+      "path": [
+        "field17"
+      ],
+      "before": "The links below open existing guidance, learning, and practical tools. Begin with a real question, use the resources that fit, and involve the people whose experience can help.",
+      "after": "The resources below offer pre-existing guidance, training, and practical tools. Begin by identifying a real question in your work, apply resources as appropriate, and consult with people whose experience can contribute to a better result.",
+      "reason": "Clarifies the practical use of resources, ties them directly to work questions, and grounds the value of other people’s experience."
+    },
+    {
+      "fieldId": 15,
+      "path": [
+        "field19"
+      ],
+      "before": "Distinguish a proposed change, enacted law, and current program guidance. Clarify who could be affected and which choices remain open. Separate the source policy or legislation from analysis, learning, and recommendations.",
+      "after": "Clearly separate a proposed change, an enacted law, and current program guidance. Identify who the change could affect and what decisions remain open. Policy or legislation cited as sources should not be confused with analysis, staff learning, or recommendations.",
+      "reason": "Expands on process of distinguishing change types and why it matters, links the importance to decision impact, and expressly avoids conflating source material with secondary discussion."
+    },
+    {
+      "fieldId": 17,
+      "path": [
+        "field21"
+      ],
+      "before": "Choose a decision or piece of work. Name a barrier worth examining, involve relevant perspectives, and use one resource to develop a possible improvement. Ask what would tell you whether it helped, for whom, and what still needs attention.",
+      "after": "Select a work decision or activity to review. Identify a barrier worth attention, include perspectives from those involved, and use one resource to start making a specific improvement. Ask what evidence would indicate an impact, who experiences it, and what further steps might be necessary.",
+      "reason": "Improves clarity by sequencing steps, frames resource use as purposeful, and ties assessment explicitly to evidence and experience."
+    },
+    {
+      "fieldId": 18,
+      "path": [
+        "field22"
+      ],
+      "before": "Directors, managers, supervisors, and staff contribute through their responsibilities, knowledge, and relationships. These resources support preparation and learning; decisions remain with the responsible people and offices.",
+      "after": "Directors, managers, supervisors, and staff each contribute based on their responsibilities, expertise, and working relationships. These resources are for preparation and learning; final decisions are made by those with designated authority.",
+      "reason": "Clarifies the basis of contribution, makes explicit where decision authority resides, and separates learning from decision-making responsibility."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The proposed change adds content claiming that the page 'explains' and 'applies' the Equity Outcome Map, and explicitly claims goals and resources are from ADSA, which is mostly accurate, but the original is strictly plain and does not state that the page 'explains' the map. The original (source/title/description and header content) consistently only introduces or names the map, whereas the proposed version frames the page as an 'explanation' or application. The policy's stylistic and scope standard requires that we do not add claims about a page doing something not actually supported by the source or existing page structure. The introduction is meant to be an overview, not a controlled-learning module or an editorialization of the content's intent."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The proposed rewrite clarifies the rationale behind the order of engagement, but 'understand the department’s direction' is not present in the current copy, which strictly invites the reader to 'begin with' the map, then follow disability services examples. The main risk is shifting purpose from introduction to justification."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The rewording emphasizes application and separates 'learning' and 'resources,' which is acceptable for practical clarity. However, the implicit suggestion to 'apply' could be considered a stretch compared to the original, which invites use but does not assert the step of application."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "While the change reworks the explanation as a video summary, it does not create legal, policy, or factual risk and reasonably interprets the source's summary."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "The revised text maintains the original's meaning and adds stepwise process language, which is editorially acceptable."
+      },
+      {
+        "fieldId": 10,
+        "severity": "note",
+        "finding": "The proposed wording clarifies the relation between the map, goals, and examples. The use of 'scenarios' vs 'situations' is a minor change, but does not introduce a policy problem."
+      },
+      {
+        "fieldId": 13,
+        "severity": "note",
+        "finding": "The rewrite clarifies process but implies a higher bar for consulting others and initiating action. This is acceptable, though slightly more prescriptive than the original."
+      },
+      {
+        "fieldId": 15,
+        "severity": "note",
+        "finding": "Change retains the practical sense of the instruction, with greater clarity on separating types of authority and analysis."
+      },
+      {
+        "fieldId": 17,
+        "severity": "note",
+        "finding": "The revision provides stepwise framing and calls for explicit evidence, which aligns with the page's intent."
+      },
+      {
+        "fieldId": 18,
+        "severity": "note",
+        "finding": "Increases precision on how contribution and decision authority function; the change is acceptable."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3744,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 931,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4675
+    },
+    "review": {
+      "input_tokens": 3817,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 700,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4517
+    }
+  },
+  "createdAt": "2026-11-15T13:49:55.535Z"
+}

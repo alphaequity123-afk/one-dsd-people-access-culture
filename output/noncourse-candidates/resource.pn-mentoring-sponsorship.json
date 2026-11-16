@@ -1,0 +1,141 @@
+{
+  "target": "resource.pn-mentoring-sponsorship",
+  "kind": "resource",
+  "route": "/library/pn-mentoring-sponsorship",
+  "sourceSha256": "a3e00eb9947337c9da5d134badd8b109a9a8de3e071fd0845d48d5ce111cc567",
+  "status": "needs_revision",
+  "reviewedFieldCount": 6,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Mentoring explains how things work, while sponsorship puts your credibility behind someone in rooms they are not in. Reverse mentoring lets leaders learn from staff with different experience, as long as it is voluntary and not extra unpaid work.",
+      "after": "Mentoring helps someone understand how your workplace operates. Sponsorship means you support another person's development or advancement by recommending them or advocating for them in settings where they are not present. Reverse mentoring allows staff with different backgrounds or perspectives to help leaders learn, but only when participation is voluntary and the staff’s time is recognized as work.",
+      "reason": "Clarifies distinctions, grounds the explanation in workplace actions, and specifies why voluntary and compensated participation matters for reverse mentoring."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "People who are new to an organization's informal rules often get plenty of advice and very little sponsorship. Advancement usually depends on the second.",
+      "after": "New staff or anyone unfamiliar with informal organizational expectations often receive advice but rarely benefit from sponsorship. Advancement typically depends on having someone proactively advocate for your growth and visibility.",
+      "reason": "Explains why sponsorship is more influential than advice by connecting advocacy to advancement outcomes and specifying the typical pattern."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Mentoring. Regular conversations about how decisions are made, what the next role requires, and how to prepare. Useful, and usually not enough on its own.",
+      "after": "Mentoring means ongoing discussions about how decisions are made, what is expected in a next role, and how to build necessary skills or experience. Mentoring helps with orientation and learning but rarely provides direct access to career advancement opportunities.",
+      "reason": "Specifies what mentoring commonly covers and why it is important, while clarifying that it may not address advancement."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Sponsorship. A leader names a person for a stretch assignment, a panel, a project lead role, or a promotion conversation, and stands behind that recommendation. Sponsorship is where advancement actually happens. Track, at a level that protects individuals, who gets sponsored.",
+      "after": "Sponsorship occurs when a leader recommends an individual for a challenging assignment, visible panel, project leadership, or promotion, and directly supports that recommendation. Advancement most often happens as a result of sponsorship. Leadership teams should track who receives sponsorship in ways that respect confidentiality, to identify patterns and address gaps.",
+      "reason": "Clarifies the leader's active role in sponsorship, stresses its impact on advancement, and specifies tracking for accountability while protecting privacy."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Reverse mentoring. A leader learns from a staff member whose experience differs from theirs. It works when the leader asks for it, the staff member chooses it, the time is recognized as work, and the leader acts on what they learn. It fails when it becomes a standing expectation placed on staff from underrepresented communities.",
+      "after": "Reverse mentoring happens when a leader learns directly from staff with a different background, experience, or perspective. This approach works when initiated by the leader, freely chosen by the staff member, recognized as work time, and the leader applies what they learn to their decisions or practices. Problems arise if reverse mentoring becomes an assumed unpaid responsibility for staff from underrepresented groups rather than a collaborative learning choice.",
+      "reason": "Clarifies conditions for effective reverse mentoring and consequences if it is misapplied, emphasizing that staff participation should not be pressured or uncompensated."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "A practical start. Ask each leader in your unit to name one person they will sponsor this quarter and for what. Review the list for who is missing.",
+      "after": "To put these concepts into practice, ask each leader in your team to name one person they will sponsor this quarter, along with the context or opportunity. Reviewing the proposed sponsorships can show whose growth is being supported and reveal who might be overlooked.",
+      "reason": "Connects the action to its practical purpose—identifying gaps in sponsorship and supporting development for all staff."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revised summary expands unsupported detail and changes meaning. The source restricts reverse mentoring to situations where it is 'voluntary and not extra unpaid work,' but the rewrite adds 'the staff’s time is recognized as work,' which shifts the requirement and omits 'not extra unpaid work.' The new summary also erases the focus on backing someone 'in rooms they are not in' for sponsorship, which is an important source distinction between advice and actual high-level advocacy. Return to the original concise, differentiated elements, and preserve the explicit work/compensation condition from the source."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The new wording is accurate and connects the reasoning to sponsorship's impact. Both versions are consistent with the source."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The expansion is accurate, giving detail on mentoring without changing the source meaning. The clarification that it may not lead to advancement aligns with the original intent."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The changes add detail about tracking sponsorship while correctly noting confidentiality. The essence and scope are preserved."
+      },
+      {
+        "fieldId": 4,
+        "severity": "blocker",
+        "finding": "The revision changes the requirement from 'the time is recognized as work' and 'the leader acts on what they learn,' to less precise wording. It also recasts the risk from 'a standing expectation placed on staff from underrepresented communities' to just being 'an assumed unpaid responsibility,' which loses the specific concern about burdening underrepresented groups. Do not generalize or erase this equity-focused condition."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The new version clarifies the purpose of the action and remains evidence-based."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1756,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 641,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2397
+    },
+    "review": {
+      "input_tokens": 1883,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 366,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2249
+    }
+  },
+  "createdAt": "2026-11-15T13:41:52.735Z"
+}

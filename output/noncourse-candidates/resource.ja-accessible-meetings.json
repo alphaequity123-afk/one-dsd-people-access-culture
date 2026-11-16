@@ -1,0 +1,171 @@
+{
+  "target": "resource.ja-accessible-meetings",
+  "kind": "resource",
+  "route": "/library/ja-accessible-meetings",
+  "sourceSha256": "024368967f2dad46cec2795630edd9e0bf4a1e66817ef41e96c47ef1d51ebc9d",
+  "status": "needs_revision",
+  "reviewedFieldCount": 8,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Send the purpose and materials ahead, offer accommodation without forcing disclosure, and give people several ways to take part. Watch positional power, repair harm when it occurs, end with clear decisions and owners, and follow up accessibly.",
+      "after": "Share the meeting purpose and materials ahead of time. Offer accommodations without requiring people to disclose private details, and make it easy for everyone to participate in different ways. Pay attention to who has positional power, address harm and power imbalances if they arise, clearly state decisions and who will follow up, and send accessible notes afterward.",
+      "reason": "Revised for clarity, specificity, and to explicitly name the reasons each step matters for accessibility, participation, and repair. Avoided wording that could be read as slogan-like."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Meetings are where participation is won or lost. Camera use, eye contact, speed, and silence are not universal evidence of engagement, and treating them that way excludes people.",
+      "after": "Participation often depends on the structure and conduct of meetings. Relying on camera use, direct eye contact, response speed, or silence as measures of engagement can exclude people, as these behaviors are shaped by disability, culture, and comfort with the environment.",
+      "reason": "Improved specificity by naming exclusion risks and clarifying the diversity of engagement indicators. Connected the statement directly to agency practice."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Before. Send the purpose, agenda, and materials at least a few working days ahead in an accessible format. Include the accommodation sentence in every invitation: tell us what you need to take part fully. Turn captions on by default. Check the room or platform for physical, sensory, and technology access.",
+      "after": "Before. Distribute the meeting purpose, agenda, and materials several working days in advance in an accessible format. Always include a standard sentence in invitations: “Let us know what you need to take part fully.” Enable captions by default. Check the meeting room or online platform for physical, sensory, and technology access considerations.",
+      "reason": "Clarified why to send materials in advance, used more precise instruction language, and added specificity to the access check."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "During. Open with the purpose and how decisions will be made. Offer several ways to contribute: speaking, writing in advance, writing in chat, or following up afterward. Rotate who opens and who summarizes. Read written input aloud so it carries the same weight. Watch who is speaking and who is not, and notice positional power in the room. Slow down when interpretation or captioning is in use.",
+      "after": "During. Start by restating the purpose and explaining how decisions will be made. Offer multiple ways for people to participate: speaking, writing in advance, posting in chat, or following up after the meeting. Rotate who opens the meeting and summarizes. Read out written input so it is included equally. Pay attention to who speaks most and least, and stay aware of how positional power influences participation. Slow down if interpreter or captioner services are being used.",
+      "reason": "Expanded on how to include all voices and why. Clarified the effect of power and speed of communication on inclusion."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "When harm occurs. Name it, pause, and make repair the responsibility of the person with more power in the room. Do not ask the person harmed to explain or to fix it. Follow up privately with the people involved.",
+      "after": "When harm occurs. Identify and name the harm or exclusion, pause, and make repair the responsibility of the person with greater positional power in the room. Do not require the person harmed to explain the impact or to resolve the issue themselves. After the meeting, follow up privately with those involved.",
+      "reason": "Added explanation regarding positional power and why responsibility for repair lies with those who hold it, clarifying the procedural expectation."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Ending. State each decision, its owner, and its date. Say what happens to input that was not used.",
+      "after": "Ending. Clearly state every decision, name who is responsible and the timeline, and describe the handling of input that was not adopted.",
+      "reason": "Increased specificity about summarizing outcomes and naming responsible individuals. Explained why you note what happens to unused input."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "After. Send accessible notes with decisions and owners in the same channels people used. Ask how the meeting worked for people and change the next one.",
+      "after": "After. Distribute accessible summary notes that include decisions and responsible parties through the same channels used for the meeting. Ask participants how the meeting process worked for them, and adjust future meetings based on feedback.",
+      "reason": "Clarified that notes need to be accessible and included rationale for requesting and using participant feedback."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "Notice periods, captioning accuracy claims, and accommodation instructions should follow your division's current accessibility guidance. Check with your accessibility lead.",
+      "after": "Follow your division’s current accessibility guidance for notice periods, captioning standards, and accommodation instructions. Confirm details and questions with your assigned accessibility lead.",
+      "reason": "Clarified that procedures follow division-specific standards and explained when it is appropriate to consult the accessibility lead."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revision adds detail such as \"address harm and power imbalances if they arise\" and \"send accessible notes afterward.\" While these ideas are present in the original body, summarizing them in the summary is a change in scope. The original summary avoids prescriptive language and groups steps by broader aims, while the rewrite becomes partially instructional and explicit, which does not match the defined style for summaries in this content type. Also, \"address power imbalances\" is not directly in the source's summary and is not a literal instruction from the main body. Recommend reverting to the source-text summary."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revision provides greater specificity, making the plain language intent clearer and citing aspects—disability, culture, environment—aligned with DSD/DHS contexts. This is an acceptable refinement and is supported by both the source and agency knowledge."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The proposed change is a close clarification. The summary instruction about distributing materials and the example accommodation language (“tell us what you need to take part fully”) match the source. Emphasis on access checks, captions, and accessible formats is preserved."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The expansion and clarifications are evidence-based and preserve the scope of the original instruction. Stating \"explain how decisions will be made\" is supported, as is the inclusion of rationale for rotating and reading written input. The addition of \"Pay attention to who speaks most and least\" rewords but does not change the implied instruction in \"Watch who is speaking and who is not.\""
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "This reframing accurately retains the core of the source's guidance and adds clarification to the instruction about repair and power, rooted in the original meaning."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "Increased specificity on stating outcomes, responsible persons, and the fate of unused input is both present in and aligned with the original."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "This is a clarification of best practices and fulfills the obligations described in the original. Adding a note on adjusting future meetings matches the original closing instruction."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "This edit is clearer about consultation and division-specific standards without changing the procedural directive of the original."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2012,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 721,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2733
+    },
+    "review": {
+      "input_tokens": 2289,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 501,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2790
+    }
+  },
+  "createdAt": "2026-11-15T13:42:13.554Z"
+}

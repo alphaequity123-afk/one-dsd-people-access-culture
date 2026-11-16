@@ -1,0 +1,81 @@
+{
+  "target": "code.components/multimedia/worked-practice-examples.tsx",
+  "kind": "surface",
+  "route": "components/multimedia/worked-practice-examples.tsx",
+  "sourceSha256": "c8935bb6a0992929507512c9467a60bf49ca02db40879ed22d94c16138269693",
+  "status": "needs_revision",
+  "reviewedFieldCount": 33,
+  "changes": [
+    {
+      "fieldId": 3,
+      "path": [
+        "field4"
+      ],
+      "before": "The agenda used to arrive with the invitation to decide. This time, the team shares the question and materials while alternatives are still open, with a way to contribute before the meeting.",
+      "after": "The agenda was previously sent with the invitation to make a decision. In this revised approach, the team shares the central question and background materials early, while alternatives remain open, and offers a way for colleagues to contribute before the meeting is held.",
+      "reason": "Clarifies the sequence and addresses how early sharing of information expands opportunities for input. Avoids ambiguous references to timing and better explains why the team shares materials before the meeting."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field7"
+      ],
+      "before": "The team shares the decision, the input that shaped it and questions still open. Colleagues can check whether the account reflects what they contributed.",
+      "after": "The team shares the decision, the input that influenced it, and questions that are still unresolved. Colleagues can review whether the summary accurately reflects their contributions.",
+      "reason": "Breaks out that not all questions may be resolved, clarifies the act of checking for accurate representation of input, and avoids the implication that all feedback is necessarily visible in the final outcome."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "The changed field expands and partly changes the source's meaning. The revision adds a claim about improved opportunity for input and formally structures the early sharing ('central question and background materials early'), which is not directly present in the simple source statement: 'The agenda used to arrive with the invitation to decide. This time, the team shares the question and materials while alternatives are still open, with a way to contribute before the meeting.' The original is intentionally open and avoids specifying reason or motive for early sharing and does not attribute 'central' or 'background' to the materials. The claim about 'expands opportunities for input' and the restructured explanation both extend past the scope of evidence. This type of expansion could mislead about the practical limit evidenced by the worked example."
+      },
+      {
+        "fieldId": 6,
+        "severity": "blocker",
+        "finding": "The revision misrepresents the source by suggesting not all questions may be resolved and adds an assurance that the summary is intended to be accurate. The source text ('The team shares the decision, the input that shaped it and questions still open. Colleagues can check whether the account reflects what they contributed.') neutrally lists 'questions still open,' not 'questions that are still unresolved,' and leaves the assessment of accuracy open to the colleague rather than offering the statement, 'whether the summary accurately reflects their contributions.' The edit implies process obligations and a completeness not stated in the source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 4601,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 252,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4853
+    },
+    "review": {
+      "input_tokens": 3515,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 306,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3821
+    }
+  },
+  "createdAt": "2026-11-15T13:54:51.184Z"
+}

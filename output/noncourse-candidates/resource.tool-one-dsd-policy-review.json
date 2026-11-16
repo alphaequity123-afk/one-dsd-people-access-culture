@@ -1,0 +1,112 @@
+{
+  "target": "resource.tool-one-dsd-policy-review",
+  "kind": "resource",
+  "route": "/library/tool-one-dsd-policy-review",
+  "sourceSha256": "d73d9fe479556ab4eb38efe7f0c681757130321f1289fe3fb3609a5ff6e2bde2",
+  "status": "needs_revision",
+  "reviewedFieldCount": 4,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Examine who is affected, compare alternatives, and record responsibilities and follow-through.",
+      "after": "Review who is affected by a policy or process, compare available alternatives, and document assigned responsibilities and planned steps.",
+      "reason": "Clarified the actions suggested, specified the points of comparison, and emphasized documentation as part of the process."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Examine who is affected, compare alternatives, and record responsibilities and follow-through.",
+      "after": "Review who is affected by a policy or process, compare available alternatives, and document assigned responsibilities and planned steps.",
+      "reason": "Aligned this statement with the summary, clarifying that the review covers affected groups, alternatives, and recording next actions."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Staff throughout DHS can use these resources independently. The Equity and Inclusion Operations Consultant leads the program and offers guidance and feedback; staff and decision owners carry out their own work.",
+      "after": "DHS staff may use these resources on their own. The Equity and Inclusion Operations Consultant is available to lead the program, provide guidance, and offer feedback. Staff and decision owners remain responsible for their own analysis and decisions.",
+      "reason": "Clarified that staff autonomy is supported while the consultant provides oversight and advice. Specified that staff and decision owners have responsibility for carrying out their work."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "These program resources support analysis and planning. They do not replace official policy, required consultation, or the authority of the responsible office.",
+      "after": "These resources are designed to support analysis and planning. They do not replace official policy, required consultation, or the decision-making authority assigned to responsible offices.",
+      "reason": "Clarified that resources are intended for support, and restated limits regarding replacement of policy, required consultation, and responsibility for decisions."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The original summary uses the wording 'Examine who is affected, compare alternatives, and record responsibilities and follow-through.' The proposed rewrite ('Review who is affected by a policy or process, compare available alternatives, and document assigned responsibilities and planned steps.') adds 'by a policy or process,' 'available' as a qualifier for alternatives, and 'planned steps' in documentation. These insertions are not directly supported by the source, which is general. Phrasing changes alter the scope, making implications about policy or process and about specific steps that go beyond the source text."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The original body text is identical to the summary and carries the same issues. The rewrite applies unsupported clarifications from the new summary, specifically specifying 'policy or process' as the subject, introducing 'available alternatives,' and referencing 'planned steps.' These qualifications are not in the source and could change the meaning."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The rewrite clarifies that staff can use resources independently and that the consultant leads, provides guidance, and offers feedback, while reiterating responsibility for analysis and decision-making. These changes do not misrepresent the original and are supportable."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The revision rewords that resources support analysis and planning and restates the limits. It does not substantively change the meaning or omit qualifications. This is supportable."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1385,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 340,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1725
+    },
+    "review": {
+      "input_tokens": 1253,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 369,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1622
+    }
+  },
+  "createdAt": "2026-11-15T13:43:09.853Z"
+}

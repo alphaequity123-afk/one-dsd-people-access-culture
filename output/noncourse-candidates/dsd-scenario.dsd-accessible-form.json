@@ -1,0 +1,126 @@
+{
+  "target": "dsd-scenario.dsd-accessible-form",
+  "kind": "surface",
+  "route": "/one-dsd/scenarios/dsd-accessible-form",
+  "sourceSha256": "778091c3d785a6617ee7300d4465dff07f3af1d39720d5459862d1c5cc99598d",
+  "status": "model_checked",
+  "reviewedFieldCount": 12,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "situation"
+      ],
+      "before": "A provider reports that a DSD form required for authorization cannot be completed with a screen reader and is only available as a scanned image. No one on the team knows who owns the form.",
+      "after": "A provider reports that a required DSD authorization form cannot be completed with a screen reader. The current version is a scanned image, not an accessible document. The DSD team using the form cannot identify who is responsible for the form’s maintenance or accessibility.",
+      "reason": "Clarified the type of barrier (scanned image, inaccessible to screen readers), named the DSD context, and explicitly stated the relevance of lacking form ownership for practical problem-solving."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "whatToNotice",
+        0
+      ],
+      "before": "Unclear accessibility ownership was one of the clearest barriers DSD staff named.",
+      "after": "DSD staff have repeatedly identified unclear form ownership as a major barrier to resolving accessibility problems. When no one can identify a form’s owner, the team cannot address the root issue or assign responsibility for providing accessible materials.",
+      "reason": "Connected the lack of ownership to both short- and long-term impact on accessibility work, increasing specificity and reasoning about why this is a substantive barrier."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "whatToNotice",
+        1
+      ],
+      "before": "A scanned image fails the State accessibility standard and excludes people by default.",
+      "after": "Scanned image forms do not meet the State accessibility standard because assistive technology like screen readers cannot interpret them. These forms exclude people with disabilities from required processes unless an alternative is provided.",
+      "reason": "Stated the practical reason scanned images violate standards, named the specific impact on individuals, and clarified the default exclusion."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "whatToNotice",
+        2
+      ],
+      "before": "The fix is at the source, and it needs an owner today.",
+      "after": "The underlying issue must be corrected at the source document. Assigning a responsible owner is necessary right away so that both immediate and ongoing accessibility obligations can be met.",
+      "reason": "Clarified why finding an owner matters—both for immediate fixes and future prevention of accessibility gaps."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "handoff"
+      ],
+      "before": "Route to the form owner and your division's accessibility lead. Ask for an accessible alternative immediately and a fixed form with a date.",
+      "after": "Identify and notify the form owner and your division’s accessibility lead. Request an accessible alternative for immediate use and set a timeline for correcting the inaccessible source form. Make sure responsibilities are clear so ongoing issues can be addressed more efficiently.",
+      "reason": "Specified both the practical steps (identify, notify, request) and why setting responsibility supports future problem-solving."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The rewrite increases specificity and plain language focus, clarifying both type of barrier (scanned image, DSD authorization form) and the problem of unclear ownership, without changing meaning or scope. The tone and targeted implications remain accurate, appropriate, and supported by source."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The expanded explanation ties lack of ownership to practical consequences for accessibility and does not introduce unsupported information. It directly supports the reasoning already present in the source."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The new language accurately exposes why scanned images are noncompliant with accessibility standards (screen readers), preserving the meaning and adding source-grounded detail."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "Clarification on the importance of assigning a form owner remains within the original meaning and aligns with accessibility accountability standards."
+      },
+      {
+        "fieldId": 10,
+        "severity": "note",
+        "finding": "The revision gives greater stepwise clarity (identify, notify, set timeline), but does not add obligations or expectations unsupported in the scenario. The explanation about making responsibilities clear is justified by the page’s context and intent."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1609,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 424,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2033
+    },
+    "review": {
+      "input_tokens": 1436,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 314,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1750
+    }
+  },
+  "createdAt": "2026-11-15T13:39:03.213Z"
+}

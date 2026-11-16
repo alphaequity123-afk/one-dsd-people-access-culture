@@ -1,0 +1,123 @@
+{
+  "target": "graduation-path.gp-10",
+  "kind": "surface",
+  "route": "/practice/gp-10",
+  "sourceSha256": "152ed6e2414001e486eb62588a72d95b0ced74f954ff3fcf2c70e4ce83c063fe",
+  "status": "model_checked",
+  "reviewedFieldCount": 56,
+  "changes": [
+    {
+      "fieldId": 5,
+      "path": [
+        "startingCompetence"
+      ],
+      "before": "You are shaping a contract, grant, or procurement and want equity, accessibility, and language access built into the solicitation, evaluation, terms, and monitoring.",
+      "after": "As you design a contract, grant, or procurement, this guide helps you include equity, accessibility, and language access throughout the process: from drafting the solicitation and setting evaluation criteria, to writing contract terms and planning for ongoing monitoring. This ensures expectations are practical and built in from the start, rather than as afterthoughts. The contracts office confirms that all procurement rules are followed.",
+      "reason": "Clarifies practical purpose in process order and explains why timing matters for embedding equity and compliance."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "graduatedLooksLike"
+      ],
+      "before": "By the end, you will have a procurement equity record: who the service reaches, requirements in the solicitation, evaluation criteria, contract reporting and access terms, monitoring by community, and the partners who own the rules.",
+      "after": "By the end, you will have documented who the service reaches, which requirements appear in the solicitation, the evaluation criteria for equity and access, the reporting and monitoring terms in the contract, how community partners are involved, and who is responsible for each rule and follow-up step.",
+      "reason": "Adds specificity about what a procurement equity record covers and why each area is included."
+    },
+    {
+      "fieldId": 19,
+      "path": [
+        "step1Guidance"
+      ],
+      "before": "If the service reaches particular Minnesota communities, read the relevant briefs for access and trusted partners.",
+      "after": "When the service targets specific Minnesota communities, check the relevant briefs. This helps clarify which access barriers exist, who community partners are, and how service design or monitoring can be informed by local context.",
+      "reason": "Explains why reading briefs on Minnesota communities supports relevant equity analysis for contracts."
+    },
+    {
+      "fieldId": 20,
+      "path": [
+        "step2Guidance"
+      ],
+      "before": "Use the procurement equity aid and the equity review canvas.",
+      "after": "Gather the main procurement equity aid and the operational equity review canvas. These resources outline required equity checks and support practical application during drafting and review.",
+      "reason": "Explains purpose and value of the recommended resources in helping apply equity principles to contracts."
+    },
+    {
+      "fieldId": 24,
+      "path": [
+        "step3Guidance"
+      ],
+      "before": "Complete the record. Your notes are saved only on this computer. Leave out vendor-identifying and confidential procurement details.",
+      "after": "Fill in each section of the record as you work through the process. Notes are stored only on this computer for privacy. Leave out any information that could identify a vendor or reveals confidential procurement details, since such details could compromise fairness or break rules.",
+      "reason": "Connects record completion to project stages and specifies why omitting identifying information is necessary."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The rewritten guidance for 'startingCompetence' more explicitly outlines the stages (solicitation, evaluation, contract terms, monitoring) and emphasizes the importance of early integration, aligned with the structure and intent of the source. It retains original meaning and scope, and the additional rationale is accurate. By noting that the contracts office confirms procurement rules, it ties to the source’s repeated instruction that contracts staff must confirm applicable rules (see 'step0Guidance' and elsewhere)."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "Expanded detail under 'graduatedLooksLike' is directly traceable to the original ('who the service reaches, requirements in the solicitation, evaluation criteria, contract reporting and access terms, monitoring by community, and the partners who own the rules'), with further breakdown for clarity. Each item is supported by field labels or process in the source."
+      },
+      {
+        "fieldId": 19,
+        "severity": "note",
+        "finding": "The elaboration for 'step1Guidance' faithfully explains why reading community briefs matters (to understand barriers, partners, and how local context affects design and monitoring). This is supported by both the original step label and by the equity aims echoed in artifact fields for community reached and access."
+      },
+      {
+        "fieldId": 20,
+        "severity": "note",
+        "finding": "'step2Guidance' expands on the use of the cited resources (procurement equity aid and canvas), accurately describing their function as mapped to artifact fields 2–3 and review criteria. The explanation does not misstate their use."
+      },
+      {
+        "fieldId": 24,
+        "severity": "note",
+        "finding": "'step3Guidance' adds the reason for omitting identifying/confidential information, closely matching the privacy note and the underlying procurement privacy requirements. Record completion is logically tied to stage progression as structured in the page."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3921,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 506,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4427
+    },
+    "review": {
+      "input_tokens": 2450,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 445,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2895
+    }
+  },
+  "createdAt": "2026-11-15T13:40:00.380Z"
+}

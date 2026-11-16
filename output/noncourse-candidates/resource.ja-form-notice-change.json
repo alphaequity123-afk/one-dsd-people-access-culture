@@ -1,0 +1,157 @@
+{
+  "target": "resource.ja-form-notice-change",
+  "kind": "resource",
+  "route": "/library/ja-form-notice-change",
+  "sourceSha256": "33a65b2292d943c14ffc4f0c7a51d6a995cc7de003e0233b0cbfb12a0111f79a",
+  "status": "model_checked",
+  "reviewedFieldCount": 7,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "When changing staff- or public-facing text or a process, note who is affected; language, disability, and communication access; effort required; each rule’s current source; who owns each barrier; and review timing. Never cite a law, rule, or policy from memory.",
+      "after": "When updating text or processes that reach staff or the public, identify who is affected, how language and access needs are met, which burdens fall on those involved, the rules or policies you are following, who is responsible for each barrier, and how the review will proceed. Do not rely on your recollection when citing a law, rule, or policy; always verify the source.",
+      "reason": "Clarified purpose for each checklist item and emphasized the importance of verified citations after identifying several distinct factors."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Impact: who receives this; what they must do; what happens if they cannot; which communities, languages, disabilities, and places are most affected.",
+      "after": "Impact: Identify who will receive the form, notice, or letter; what actions they are expected to take; possible outcomes if they are unable to comply; and which communities, languages, disabilities, or geographic areas might be most affected.",
+      "reason": "Expanded to specify each item’s significance and added detail on considering non-compliance and affected populations."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Language: is it a vital document; which languages; translation with human review scheduled.",
+      "after": "Language: Determine whether the document is vital for access, which languages need to be included, and ensure that all translations are scheduled for human review before use.",
+      "reason": "Clarified the process and highlighted the importance of human-reviewed translations, specifying steps for vital documents."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Access: complete a plain-language review, follow the current accessible-document standard, provide requested formats, and offer help by phone or in person.",
+      "after": "Access: Conduct a plain-language review, ensure the document meets current accessibility standards, provide alternative formats upon request, and arrange for assistance by phone or in person as needed.",
+      "reason": "Reframed to direct action with clear sequence and provided context for offering help in multiple ways."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Burden: deadlines, required documents, and return methods examined; what can be removed or done by the agency.",
+      "after": "Burden: Review all deadlines, required documentation, and return methods. Identify whether each requirement is necessary, what can be simplified or handled by the agency, and any changes that could reduce unnecessary effort for recipients.",
+      "reason": "Expanded for specificity and to explain why reviewing and simplifying burdens matters."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Sources: link to the current rule or policy whenever possible. If you cannot confirm it, say so and ask the person responsible for that policy. Do not cite a law, rule, or policy from memory.",
+      "after": "Sources: Whenever possible, link directly to the current relevant rule or policy. If you cannot verify the authority, state this directly and ask the responsible person for clarification. Never cite a law, rule, or policy from memory; you must confirm the correct source.",
+      "reason": "Clarified the required process for citing authority and described the importance of source verification in agency work."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "Responsibilities and review: who will address each barrier, by when, and the next date the team will review the work.",
+      "after": "Responsibilities and review: Assign responsibility for addressing each barrier, specify a timeframe for completing each action, and set the next date for team review. Ongoing follow-up ensures changes are maintained and effective.",
+      "reason": "Explained why assigning responsibility and setting review times are critical to sustained improvements and accountability."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revised summary accurately covers the original content (audience, language/access, burden, authority, roles, review timing) and clarifies expectations around verification of policy citation. Emphasizing verification is consistent with the original instruction not to cite from memory. The tone is slightly more formal but retains both content and original limits."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The expanded version restates all the specifics (recipient, actions required, consequences if not possible, and affected subpopulations). The phrase 'possible outcomes if they are unable to comply' shifts 'what happens if they cannot' to a more formal register without changing meaning or scope."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "This clarifies the three points: vital status, languages required, and scheduling of human review. It does not overstate the obligations or introduce requirements not present in the original (such as the specific process for review), and it retains the sequence and emphasis."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The revised version keeps all checklist elements from the original—plain language, accessible standard, alternate formats, and offer of help. 'Arrange for assistance... as needed' remains within the original intent, giving clear direction."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The change expands on 'examined' by introducing 'review,' 'simplified,' and 'handled by the agency.' However, nothing unsubstantiated is introduced; the specificity about unnecessary effort and simplification is already implied in the original's call to examine what can be removed or handled by the agency."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "This expands on the original: restates the need to verify sources and not cite from memory, adds that clarification must be actively sought if a source is uncertain, and directs that the correct source must be confirmed. These clarifications are consistent with the call not to reference policy by memory and to seek confirmation as needed."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The improved explanation specifies action assignment and review, as in the original, and adds a rationale for these steps. It does not go beyond the original checklist's requirements but provides the reason for each action, which is a best practice per the writing standard."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1675,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 545,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2220
+    },
+    "review": {
+      "input_tokens": 1784,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 483,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2267
+    }
+  },
+  "createdAt": "2026-11-15T13:41:32.504Z"
+}

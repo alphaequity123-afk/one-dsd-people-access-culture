@@ -1,0 +1,699 @@
+{
+  "status": "pending_independent_review",
+  "sources": [
+    {
+      "url": "https://mn.gov/admin/data-practices/data/rules/records-management/",
+      "review": "Read complete official page: official records require preservation and disposal under approved retention schedules. A learning-session preference does not override those requirements."
+    },
+    {
+      "url": "https://mn.gov/dhs/assets/reasonable-accommodation-policy_tcm1053-646974.pdf",
+      "review": "Read complete seven-page published policy, especially supervisor responsibilities and confidentiality. Supporting information may be required through the authorized process; supervisors do not receive medical documentation."
+    }
+  ],
+  "records": [
+    {
+      "kind": "resource",
+      "target": "resource.ja-sm-your-own-load",
+      "route": "/library/ja-sm-your-own-load",
+      "original": {
+        "id": "ja-sm-your-own-load",
+        "title": "Your own load: a one-page check",
+        "type": "job_aid",
+        "authority": "guidance",
+        "layer": "L2",
+        "summary": "Help you see what you carry, turn it into something your manager can act on, and use support before you need it badly.",
+        "whyItMatters": "Use it monthly, or whenever you notice you have stopped noticing.",
+        "body": [
+          "Remember. You are someone's staff too. \"I'm overwhelmed\" describes you. \"Here are three things, and I can do two\" describes the work. Delegating is fair only if something comes off their plate. You have the same rights you tell staff to use.",
+          "Check the five kinds of load. My own work. My people. Things I can't talk about. Other people's hardest moments. Being the middle. What's circled that no one above me knows about?",
+          "Bring it to your manager. What's happening. What it costs. The choices. What I recommend. What I need, and by when. Keep out staff names and medical details. Write down what was agreed.",
+          "Check your habits. Am I doing someone's work with no end date? Am I the only channel for something that doesn't need me? Who got the last three things I handed off? Am I sending email at night? When did I last take leave?",
+          "My support plan. One peer: no names, and clear rules. One confidential option: the Employee Assistance Program, or my own provider. One place for my rights: Human Resources, the ADA coordinator or my representative. In danger: call or text 988, or follow emergency procedures.",
+          "Do next. Choose one thing to drop, move or make visible this month. Put a date on it."
+        ],
+        "nextActions": [
+          {
+            "label": "Take the course: Your Own Load",
+            "href": "/courses/sm-your-own-load"
+          },
+          {
+            "label": "For leaders, supervisors, managers, and directors",
+            "href": "/leading"
+          }
+        ],
+        "tags": [
+          "supervision",
+          "workload",
+          "well-being",
+          "support",
+          "your manager"
+        ],
+        "intents": [
+          "workplace_culture",
+          "practice_method"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2026-10-31",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "provenance": "Built from the course's job aid in the supervisor and manager curriculum; the owner approved all 19 courses on October 31, 2026.",
+        "version": "1.0.0"
+      },
+      "changes": [
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "Use it monthly, or whenever you notice you have stopped noticing.",
+          "after": "Use this review when the work exceeds the time or support available. Describe the competing demands and their consequences so your manager can decide what to change.",
+          "reason": "Clarify practical reasoning, authorized action and privacy without blanket guarantees, automatic deletion or assumptions about identity."
+        },
+        {
+          "path": [
+            "body",
+            0
+          ],
+          "before": "Remember. You are someone's staff too. \"I'm overwhelmed\" describes you. \"Here are three things, and I can do two\" describes the work. Delegating is fair only if something comes off their plate. You have the same rights you tell staff to use.",
+          "after": "Your workload also needs supervision. Explain which responsibilities compete for time, what cannot be completed to the expected standard and which choices require your manager’s decision. Before delegating, review the receiving employee’s existing responsibilities and agree on what can move, decrease or stop.",
+          "reason": "Clarify practical reasoning, authorized action and privacy without blanket guarantees, automatic deletion or assumptions about identity."
+        }
+      ]
+    },
+    {
+      "kind": "resource",
+      "target": "resource.ja-sm-who-carries-equity-work",
+      "route": "/library/ja-sm-who-carries-equity-work",
+      "original": {
+        "id": "ja-sm-who-carries-equity-work",
+        "title": "Who carries the equity work: a supervisor's check",
+        "type": "job_aid",
+        "authority": "guidance",
+        "layer": "L2",
+        "summary": "Help you see who is carrying this work, ask for it fairly, make it count and carry your own share.",
+        "whyItMatters": "Before you ask, assign or say yes.",
+        "body": [
+          "Remember. The work matters, and it shouldn't run on unpaid effort. Ask for the skill. Don't ask someone to stand in for a group. No one's identity tells you their time, skill or interest. A free no is the test of a real ask.",
+          "Check your team every quarter. What equity, access, language and community tasks got done? Who did them? Assigned, requested or picked up? Was it in their work plan? Did something come off their plate? Did it count? Use task records only. No identity data.",
+          "A fair ask. What's the task, and how long does it take? What skill is needed? What moves to make room? Who decides? How is it credited? Open to anyone. Fine to say no.",
+          "Never. Use a coworker as an interpreter. Ask someone to speak for a group or share their story. Send someone to a community because of their background. Send Tribal questions to a Native colleague. Go to the Tribal liaison and ADSA. Hold a no against anyone.",
+          "Your share. Fair assignments, consistent ratings, accommodation responses. Reporting immediately under Policies 1436 and 1329. Booking access for your own meetings. Responding when something goes wrong in the room.",
+          "If it lands on you. Scope it. Trade it. Redirect it. Decline it. Or say yes on terms. Tell people up front what you have to report. You speak for yourself. You have the same routes as anyone if you're harmed.",
+          "Do next. Run the quarterly check this week, then choose one task to re-scope, share or take back."
+        ],
+        "nextActions": [
+          {
+            "label": "Take the course: Who Carries the Equity Work",
+            "href": "/courses/sm-who-carries-equity-work"
+          },
+          {
+            "label": "For leaders, supervisors, managers, and directors",
+            "href": "/leading"
+          }
+        ],
+        "tags": [
+          "supervision",
+          "equity work",
+          "hidden work",
+          "fair ask",
+          "recognition"
+        ],
+        "intents": [
+          "workplace_culture",
+          "practice_method"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2026-10-31",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "provenance": "Built from the course's job aid in the supervisor and manager curriculum; the owner approved all 19 courses on October 31, 2026.",
+        "version": "1.0.0"
+      },
+      "changes": [
+        {
+          "path": [
+            "body",
+            0
+          ],
+          "before": "Remember. The work matters, and it shouldn't run on unpaid effort. Ask for the skill. Don't ask someone to stand in for a group. No one's identity tells you their time, skill or interest. A free no is the test of a real ask.",
+          "after": "Equity and access work need defined responsibilities, time and recognition. Do not infer someone’s skill, availability or interest from their identity. Distinguish an optional invitation from an assigned responsibility: an invitation allows a genuine choice, while an assignment needs clear expectations and workable resources.",
+          "reason": "Clarify practical reasoning, authorized action and privacy without blanket guarantees, automatic deletion or assumptions about identity."
+        },
+        {
+          "path": [
+            "body",
+            2
+          ],
+          "before": "A fair ask. What's the task, and how long does it take? What skill is needed? What moves to make room? Who decides? How is it credited? Open to anyone. Fine to say no.",
+          "after": "Before asking someone to contribute, define the task, relevant skills, expected time, decision authority and how the work will be recognized. Review what must change in the person’s current workload. Explain whether this is an optional opportunity or an assigned responsibility, and discuss barriers to carrying it out.",
+          "reason": "Clarify practical reasoning, authorized action and privacy without blanket guarantees, automatic deletion or assumptions about identity."
+        }
+      ]
+    },
+    {
+      "kind": "resource",
+      "target": "resource.ja-sm-backing-your-supervisors",
+      "route": "/library/ja-sm-backing-your-supervisors",
+      "original": {
+        "id": "ja-sm-backing-your-supervisors",
+        "title": "Thirteen conversations before the decision",
+        "type": "job_aid",
+        "authority": "guidance",
+        "layer": "L2",
+        "summary": "Help a manager support a supervisor before a decision, using one good question and a clear route for anything that is a duty.",
+        "whyItMatters": "One opening question for each everyday decision",
+        "body": [
+          "Remember. Ask about the decision. Never ask about a course. Stop coaching and route when a duty starts. Nothing goes into a review, a tracking sheet or this app. Remove one obstacle only you can remove.",
+          "Duties: act the same day. Accommodation: \"Tell me what they asked for, without the medical details. Have you called the ADA coordinator or Human Resources?\" Report of harm: \"Have you reported it to Human Resources or the Affirmative Action Officer? If not, let's do that now.\"",
+          "Before the decision: opening questions. First week: \"Do you know who to call before you need them?\" Assignments: \"Before you decide who, tell me how you'll decide.\" One-to-ones and feedback: \"What did you actually see, and what did it mean for the work?\" Meetings and access: \"How will everyone get what they need and be able to contribute?\" Hiring: \"What must this person be able to do in the first year? Let's write it down before anyone sees a name.\" Onboarding: \"Walk me through the first two weeks. Who's their person?\" Reviews: \"What's the evidence, from the whole year? What will this rating lead to?\" Corrective action: \"What's the expectation, what have you seen, and have you called labor relations?\" Equity analysis: \"Who's affected, who did you hear from, and what changed because of it?\" Advancement and retention: \"Have you asked everyone what they want next?\" Own load: \"What's on your plate that isn't in anyone's picture of your job?\"",
+          "Whom to ask. Accommodation: the ADA coordinator or Human Resources. Harassment, discrimination, retaliation: Human Resources or the Affirmative Action Officer. Contracts, discipline, grievances: labor relations and the contract itself. Hiring justification, classification, pay: Human Resources.",
+          "Do next. Choose one decision coming up in the next two weeks. Use its question at your next regular meeting. Come back to it later."
+        ],
+        "nextActions": [
+          {
+            "label": "Take the course: Backing Your Supervisors: Conversation Guides",
+            "href": "/courses/sm-backing-your-supervisors"
+          },
+          {
+            "label": "For leaders, supervisors, managers, and directors",
+            "href": "/leading"
+          }
+        ],
+        "tags": [
+          "supervision",
+          "managers of managers",
+          "conversation guides",
+          "coaching",
+          "backing supervisors"
+        ],
+        "intents": [
+          "practice_method",
+          "workplace_culture"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2026-10-31",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "provenance": "Built from the course's job aid in the supervisor and manager curriculum; the owner approved all 19 courses on October 31, 2026.",
+        "version": "1.0.0"
+      },
+      "changes": [
+        {
+          "path": [
+            "body",
+            0
+          ],
+          "before": "Remember. Ask about the decision. Never ask about a course. Stop coaching and route when a duty starts. Nothing goes into a review, a tracking sheet or this app. Remove one obstacle only you can remove.",
+          "after": "Focus the conversation on a work decision and the evidence behind it. Do not use participation in this voluntary learning program as a performance measure. When the discussion raises a reporting, accommodation or other formal responsibility, involve the responsible office and follow its documentation requirements. Identify an obstacle you can help the supervisor address.",
+          "reason": "Clarify practical reasoning, authorized action and privacy without blanket guarantees, automatic deletion or assumptions about identity."
+        }
+      ]
+    },
+    {
+      "kind": "resource",
+      "target": "resource.ja-sm-calibration",
+      "route": "/library/ja-sm-calibration",
+      "original": {
+        "id": "ja-sm-calibration",
+        "title": "Calibration on one page",
+        "type": "job_aid",
+        "authority": "guidance",
+        "layer": "L2",
+        "summary": "Help managers check that ratings, discipline and pay-related decisions apply the same standards across supervisors, before they become final.",
+        "whyItMatters": "Compare reasons, not people's groups",
+        "body": [
+          "Remember. Calibration compares evidence against criteria. It is not a curve or a quota. Supervisors keep their own decisions. They can change them for work reasons. Keep private data to those whose work requires it. A pattern prompts a process review. Do not move individuals to fix numbers.",
+          "Before the session. Ask Human Resources who may take part and what can be shared. Choose the criterion and define what each level looks like. Have supervisors bring two or three pieces of evidence for each rating.",
+          "Questions in the room. What did you see, and when? Would we use this word for anyone who did the same thing? Did this person have the same chance to show this? If two cases differ, what real fact explains it?",
+          "Discipline. Call labor relations before starting. Check the contract that applies. Compare conduct, prior notice, seriousness and role. Check that timing has nothing to do with a report, an accommodation or a leave.",
+          "Pay and advancement. Ask where your area has discretion. For each recommendation or acting role, ask: what's the standard, what's the evidence, and who else meets it? Tell all eligible people about openings.",
+          "Do next. Book one 60-minute joint review before your next cycle becomes final. Speak last."
+        ],
+        "nextActions": [
+          {
+            "label": "Take the course: Consistency Across Ratings, Discipline and Pay",
+            "href": "/courses/sm-calibration"
+          },
+          {
+            "label": "For leaders, supervisors, managers, and directors",
+            "href": "/leading"
+          }
+        ],
+        "tags": [
+          "supervision",
+          "calibration",
+          "ratings",
+          "discipline",
+          "pay",
+          "consistency"
+        ],
+        "intents": [
+          "practice_method",
+          "workplace_culture"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2026-10-31",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "provenance": "Built from the course's job aid in the supervisor and manager curriculum; the owner approved all 19 courses on October 31, 2026.",
+        "version": "1.0.0"
+      },
+      "changes": [
+        {
+          "path": [
+            "body",
+            0
+          ],
+          "before": "Remember. Calibration compares evidence against criteria. It is not a curve or a quota. Supervisors keep their own decisions. They can change them for work reasons. Keep private data to those whose work requires it. A pattern prompts a process review. Do not move individuals to fix numbers.",
+          "after": "Calibration compares evidence against shared criteria; it does not impose a rating curve or quota. Confirm who has authority to recommend, review and approve the decisions being discussed. Share private information only with people whose responsibilities require it. A group pattern calls for examination of the process, not an unsupported change to an individual rating.",
+          "reason": "Clarify practical reasoning, authorized action and privacy without blanket guarantees, automatic deletion or assumptions about identity."
+        },
+        {
+          "path": [
+            "body",
+            5
+          ],
+          "before": "Do next. Book one 60-minute joint review before your next cycle becomes final. Speak last.",
+          "after": "Before the next review cycle is finalized, arrange a joint review with the appropriate participants and decision authority. Give supervisors time to explain their evidence before offering your own assessment, so your position does not determine the discussion prematurely.",
+          "reason": "Clarify practical reasoning, authorized action and privacy without blanket guarantees, automatic deletion or assumptions about identity."
+        }
+      ]
+    },
+    {
+      "kind": "resource",
+      "target": "resource.ja-sm-reading-patterns",
+      "route": "/library/ja-sm-reading-patterns",
+      "original": {
+        "id": "ja-sm-reading-patterns",
+        "title": "Reading a pattern",
+        "type": "job_aid",
+        "authority": "guidance",
+        "layer": "L2",
+        "summary": "Help managers read workforce and service patterns accurately, protect people in small groups and act on process.",
+        "whyItMatters": "Where to look, and how to keep it away from individuals",
+        "body": [
+          "Remember. A pattern prompts a review of process. It is not a decision about an individual. The floor is 10 respondents for any staff-facing result, and higher for identity cross-tabs. Disparate impact is neither dead nor enforced as before, as of October 2026. The same rule applies in every direction.",
+          "Before you read it. How many people are in each group? Could anyone be recognized? Could a hidden number be found by subtraction, across filters, exports or time?",
+          "While you read it. Could this be noise? Who came in, and when? Which step in the process? At each step: criteria stated, record kept, who reviewed? If a name comes up, go back to the process.",
+          "Do not. Move an individual to fix a number. Hunt for who answered a survey. Lower the floor to get an answer. Ask someone to speak for a group. Report completion as progress.",
+          "After. Change one step for everyone. Set a date to look again. Report what you committed to, including nulls. Route concerns about a person through Human Resources, the Affirmative Action Officer or labor relations.",
+          "Do next. Take one report you already receive. Check its group sizes and write three process questions before your next meeting."
+        ],
+        "nextActions": [
+          {
+            "label": "Take the course: Reading Patterns and Reviewing Process",
+            "href": "/courses/sm-reading-patterns"
+          },
+          {
+            "label": "For leaders, supervisors, managers, and directors",
+            "href": "/leading"
+          }
+        ],
+        "tags": [
+          "supervision",
+          "patterns",
+          "workforce data",
+          "small groups",
+          "process review"
+        ],
+        "intents": [
+          "practice_method",
+          "uncertainty_authority"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2026-10-31",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "provenance": "Built from the course's job aid in the supervisor and manager curriculum; the owner approved all 19 courses on October 31, 2026.",
+        "version": "1.0.0"
+      },
+      "changes": [
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "Where to look, and how to keep it away from individuals",
+          "after": "Use group patterns to investigate how a process works while protecting people from identification. Individual concerns still belong with the responsible office.",
+          "reason": "Clarify practical reasoning, authorized action and privacy without blanket guarantees, automatic deletion or assumptions about identity."
+        },
+        {
+          "path": [
+            "body",
+            4
+          ],
+          "before": "After. Change one step for everyone. Set a date to look again. Report what you committed to, including nulls. Route concerns about a person through Human Resources, the Affirmative Action Officer or labor relations.",
+          "after": "After reviewing the evidence, decide whether a process change is warranted. Explain what the evidence supports and what remains uncertain. Take any proposed change through the appropriate authority, and agree when to review its effects, including unintended consequences and results that did not improve. Route concerns about an individual through Human Resources, the Affirmative Action Officer or labor relations.",
+          "reason": "Clarify practical reasoning, authorized action and privacy without blanket guarantees, automatic deletion or assumptions about identity."
+        }
+      ]
+    },
+    {
+      "kind": "resource",
+      "target": "resource.ja-sm-fair-oversight",
+      "route": "/library/ja-sm-fair-oversight",
+      "original": {
+        "id": "ja-sm-fair-oversight",
+        "title": "Fair oversight checklist for supervisors",
+        "type": "job_aid",
+        "authority": "guidance",
+        "layer": "L2",
+        "summary": "Help supervisors of review and program staff keep oversight firm and fair, using habits they control.",
+        "whyItMatters": "Accurate, consistent, explainable",
+        "body": [
+          "Remember. Fraud harms people. Careless oversight harms people. A flag is a lead. A gap is not fraud. Criteria describe conduct, not community. Decisions on suspensions, sanctions, referrals and appeals belong to the responsible offices.",
+          "Criteria. What conduct does this catch? Where did it come from, and what did past reviewers look at? How many of its flags were confirmed? Whom does it fall on, by provider size and region, and where sound, by communities served?",
+          "Records. Why picked, what checked, what innocent explanations were considered, what concluded, what next, who reviewed. Second reader on hard calls and on a sample. Note who interpreted, and any access problems.",
+          "Access. Qualified interpreter, not family or provider staff, for anything that matters. Plain requests with a date, a reason and a named contact. Ask the ADA coordinator about disability access, and your legal staff about language-access duties.",
+          "Words. Describe conduct and process, never communities. Use \"fraud\" only where the responsible office has reason to. Tell people what's happening, whether services are affected, and whom to call.",
+          "Patterns. Track confirmed cases as well as flags. Report fraud results and access effects together. No quotas. No claims about communities.",
+          "Do next. Choose one rule your team uses. Ask what conduct it catches and how many flags were confirmed. Take the answer to your manager."
+        ],
+        "nextActions": [
+          {
+            "label": "Take the course: Fair Oversight in Program Integrity",
+            "href": "/courses/sm-fair-oversight"
+          },
+          {
+            "label": "For leaders, supervisors, managers, and directors",
+            "href": "/leading"
+          }
+        ],
+        "tags": [
+          "supervision",
+          "program integrity",
+          "oversight",
+          "review criteria",
+          "language access",
+          "records"
+        ],
+        "intents": [
+          "practice_method",
+          "policy_orientation"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2026-10-31",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "provenance": "Built from the course's job aid in the supervisor and manager curriculum; the owner approved all 19 courses on October 31, 2026.",
+        "version": "1.0.0"
+      },
+      "changes": [
+        {
+          "path": [
+            "body",
+            2
+          ],
+          "before": "Records. Why picked, what checked, what innocent explanations were considered, what concluded, what next, who reviewed. Second reader on hard calls and on a sample. Note who interpreted, and any access problems.",
+          "after": "Document why a case was selected, what was checked, plausible alternative explanations, the conclusion and the next step. Identify who reviewed the reasoning. Arrange a second review for difficult judgments and a sample of other cases, within your office’s procedures. Record interpretation or access problems that may affect the evidence.",
+          "reason": "Clarify practical reasoning, authorized action and privacy without blanket guarantees, automatic deletion or assumptions about identity."
+        },
+        {
+          "path": [
+            "body",
+            5
+          ],
+          "before": "Patterns. Track confirmed cases as well as flags. Report fraud results and access effects together. No quotas. No claims about communities.",
+          "after": "Compare the number of review flags with confirmed findings and examine access effects alongside program-integrity results. A flag does not establish wrongdoing, and findings about particular conduct do not justify claims about an entire community.",
+          "reason": "Clarify practical reasoning, authorized action and privacy without blanket guarantees, automatic deletion or assumptions about identity."
+        }
+      ]
+    },
+    {
+      "kind": "resource",
+      "target": "resource.ja-sm-senior-leader-sessions",
+      "route": "/library/ja-sm-senior-leader-sessions",
+      "original": {
+        "id": "ja-sm-senior-leader-sessions",
+        "title": "Hosting a senior leader decision session",
+        "type": "job_aid",
+        "authority": "guidance",
+        "layer": "L2",
+        "summary": "Give senior leaders a ready way to think through decisions together, voluntarily and without records.",
+        "whyItMatters": "Four sessions, one set of ground rules",
+        "body": [
+          "Remember. Voluntary. No attendance, no records of the discussion. No identity-based breakouts. No required disclosure. Disagreement carries no consequence. Reporting duties under Policies 1436 and 1329 still apply. The session decides nothing for the organization. Leaders act afterward through normal channels.",
+          "Every session. Say the opening script. Form small groups at random or by interest. Plan access first. Take down anything on the walls. Collect nothing. End with each person's own next step, kept by them.",
+          "The four sessions. Owner, budget, outcome: Who could stop a process? What's actually paid for? What result might we be wrong about? Measures: What would we report even if it didn't move? What can't we prove at our size? Shifting guidance: What's law, what's an agency position and what's our choice? What stays steady? Program integrity: Do we see confirmed results and access effects together? What do appeals teach us? What's our rule for public words?",
+          "Refer out. Tribal learning: ADSA and the Tribal liaison. Required training: the state's own training under Minn. Stat. 43A.21. Legal questions, including document retention: your legal staff.",
+          "Do next. Pick one session topic, invite two or three peers and read the opening script aloud when you begin."
+        ],
+        "nextActions": [
+          {
+            "label": "Take the course: Senior Leader Decision Sessions",
+            "href": "/courses/sm-senior-leader-sessions"
+          },
+          {
+            "label": "For leaders, supervisors, managers, and directors",
+            "href": "/leading"
+          }
+        ],
+        "tags": [
+          "supervision",
+          "senior leaders",
+          "decision sessions",
+          "ground rules",
+          "ownership and measures"
+        ],
+        "intents": [
+          "facilitation",
+          "practice_method"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2026-10-31",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "provenance": "Built from the course's job aid in the supervisor and manager curriculum; the owner approved all 19 courses on October 31, 2026.",
+        "version": "1.0.0"
+      },
+      "changes": [
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "Give senior leaders a ready way to think through decisions together, voluntarily and without records.",
+          "after": "Help senior leaders examine decisions together in a voluntary learning discussion, then take any proposed action through the responsible organizational channels.",
+          "reason": "Clarify practical reasoning, authorized action and privacy without blanket guarantees, automatic deletion or assumptions about identity."
+        },
+        {
+          "path": [
+            "body",
+            0
+          ],
+          "before": "Remember. Voluntary. No attendance, no records of the discussion. No identity-based breakouts. No required disclosure. Disagreement carries no consequence. Reporting duties under Policies 1436 and 1329 still apply. The session decides nothing for the organization. Leaders act afterward through normal channels.",
+          "after": "Keep the learning session voluntary, with no required personal disclosure or identity-based breakouts. Do not use attendance or contributions to evaluate participants. Invite disagreement about the case and address harmful conduct through the appropriate process; do not promise that every statement is exempt from consequences. Reporting duties under Policies 1436 and 1329 still apply. The session does not authorize organizational decisions.",
+          "reason": "Clarify practical reasoning, authorized action and privacy without blanket guarantees, automatic deletion or assumptions about identity."
+        },
+        {
+          "path": [
+            "body",
+            1
+          ],
+          "before": "Every session. Say the opening script. Form small groups at random or by interest. Plan access first. Take down anything on the walls. Collect nothing. End with each person's own next step, kept by them.",
+          "after": "Explain the purpose and participation expectations at the start. Form groups by interest or another approach that does not assign roles by identity. Plan communication access before the session. Do not collect personal reflections as learning evidence. Handle any necessary administrative, access or official decision records under the applicable records procedures.",
+          "reason": "Clarify practical reasoning, authorized action and privacy without blanket guarantees, automatic deletion or assumptions about identity."
+        }
+      ]
+    },
+    {
+      "kind": "resource",
+      "target": "resource.ja-sm-facilitator-guide",
+      "route": "/library/ja-sm-facilitator-guide",
+      "original": {
+        "id": "ja-sm-facilitator-guide",
+        "title": "Hosting an optional practice session",
+        "type": "job_aid",
+        "authority": "guidance",
+        "layer": "L2",
+        "summary": "Help any host run a voluntary 90-minute practice session that respects people's privacy and gets them practicing out loud.",
+        "whyItMatters": "One page for the day",
+        "body": [
+          "Remember. Voluntary. No attendance. No records. No identity-based breakouts. No required disclosure. Play job roles only. No disability simulations. Disagreement carries no consequence. Nobody speaks for a group. The reporting duty under Policies 1436 and 1329 still applies to supervisors and managers.",
+          "Before. Book CART and interpreters by default. Ask your ADA coordinator how. Send the invitation, specific about the content. No replies needed. Send materials ahead in accessible formats. Prepare your first sentences for a harmful comment and for a disclosure. Turn off recording, transcription and automated notetakers.",
+          "During. Opening script. A poor example, a good example, and then \"What changed?\" Rehearse in threes, with random pairings. Swap roles. Try it twice. Feedback: what you heard, and one thing to try. Keep the clock. Take a break.",
+          "Hard moments. Generalization: \"Let's stay away from statements about what any group is like. What's the decision?\" Asked to speak for a group: \"Nobody here speaks for a group.\" Harassment described: \"I have a duty to report. Let's step out.\" Disagreement: \"Thank you. What have you seen? Whatever we think, what would you do?\"",
+          "After. Private if-then plan. Nobody collects it. Clear walls, chat and shared documents. Delete access requests and any scheduling list. Don't report attendance or say \"trained\".",
+          "Do next. Choose one decision, book access, send the invitation."
+        ],
+        "nextActions": [
+          {
+            "label": "Take the course: Running an Optional Live Practice Session",
+            "href": "/courses/sm-facilitator-guide"
+          },
+          {
+            "label": "For leaders, supervisors, managers, and directors",
+            "href": "/leading"
+          }
+        ],
+        "tags": [
+          "supervision",
+          "practice session",
+          "facilitation",
+          "access planning",
+          "rehearsal"
+        ],
+        "intents": [
+          "facilitation",
+          "access_barriers"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2026-10-31",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "provenance": "Built from the course's job aid in the supervisor and manager curriculum; the owner approved all 19 courses on October 31, 2026.",
+        "version": "1.0.0"
+      },
+      "changes": [
+        {
+          "path": [
+            "body",
+            0
+          ],
+          "before": "Remember. Voluntary. No attendance. No records. No identity-based breakouts. No required disclosure. Play job roles only. No disability simulations. Disagreement carries no consequence. Nobody speaks for a group. The reporting duty under Policies 1436 and 1329 still applies to supervisors and managers.",
+          "after": "Keep participation voluntary and do not require personal disclosure. Use job roles in practice rather than asking people to perform an identity or simulate a disability. No participant represents an entire community. Invite respectful disagreement without treating learning contributions as a performance assessment. Supervisors’ and managers’ reporting duties under Policies 1436 and 1329 still apply.",
+          "reason": "Clarify practical reasoning, authorized action and privacy without blanket guarantees, automatic deletion or assumptions about identity."
+        },
+        {
+          "path": [
+            "body",
+            4
+          ],
+          "before": "After. Private if-then plan. Nobody collects it. Clear walls, chat and shared documents. Delete access requests and any scheduling list. Don't report attendance or say \"trained\".",
+          "after": "Let participants keep their own action plans; do not collect them for evaluation. Before removing shared material or administrative records, confirm the applicable retention requirements with the responsible office. Accommodation requests and scheduling records may have obligations separate from the optional learning activity. Do not present attendance as proof of competence.",
+          "reason": "Clarify practical reasoning, authorized action and privacy without blanket guarantees, automatic deletion or assumptions about identity."
+        }
+      ]
+    },
+    {
+      "kind": "resource",
+      "target": "resource.ja-sm-first-week",
+      "route": "/library/ja-sm-first-week",
+      "original": {
+        "id": "ja-sm-first-week",
+        "title": "First-week card: moments you do not handle alone",
+        "type": "job_aid",
+        "authority": "guidance",
+        "layer": "L2",
+        "summary": "To tell you what to do in the first minutes of a moment you cannot handle alone, and whom to call.",
+        "whyItMatters": "Fill in the contacts for your division. Keep this page out of the app.",
+        "body": [
+          "Remember. Report possible harassment or discrimination immediately. No threshold, no written complaint needed. A request needs no special words. Move it forward promptly. Check the contract before you change someone's work. Pause decisions affecting someone who has just made a report or a request. Then check them.",
+          "Someone tells you about harassment or discrimination. Listen, take notes, and do not promise secrecy. Say: \"I have to take this to Human Resources today, and I'll tell you what happens next.\" Report the same day to Human Resources or the Affirmative Action Officer: ____________ Do not investigate or confront anyone yourself.",
+          "Someone mentions a medical or access need. Ask: \"What would help?\" Do not ask for a diagnosis or a note. Write down an oral request. Forward it promptly, and tell the person who decides. ADA coordinator: ____________ Consult the ADA coordinator before any denial, or when questions arise.",
+          "You plan to change hours, duties or rules. Which agreement covers each person? MAPE, AFSCME, MMA, Managerial Plan, or other: ____________ MAPE: 14 calendar days for permanent hour changes, unless mutually waived. Article 28 for work rules. Check other agreements directly. Call labor relations before you announce: ____________",
+          "Someone asks for sign-off on a long-term action. Ask: \"Where is the equity analysis?\" Ask which people are affected and what changes for them, including language and disability access.",
+          "Other contacts. Human Resources partner: ____________ Tribal liaison, and ADSA for Tribal learning: ____________ Where my required training is tracked: ____________",
+          "Do next. Hold the first round of one-to-ones, using the same core questions for everyone."
+        ],
+        "nextActions": [
+          {
+            "label": "Take the course: Your First Week as a Supervisor: What You Now Answer For",
+            "href": "/courses/sm-first-week"
+          },
+          {
+            "label": "For leaders, supervisors, managers, and directors",
+            "href": "/leading"
+          }
+        ],
+        "tags": [
+          "supervision",
+          "first week",
+          "harassment report",
+          "accommodation request",
+          "labor agreement"
+        ],
+        "intents": [
+          "workplace_culture",
+          "escalation",
+          "next_actions"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2026-10-31",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "provenance": "Built from the course's job aid in the supervisor and manager curriculum; the owner approved all 19 courses on October 31, 2026.",
+        "version": "1.0.0"
+      },
+      "changes": [
+        {
+          "path": [
+            "body",
+            2
+          ],
+          "before": "Someone mentions a medical or access need. Ask: \"What would help?\" Do not ask for a diagnosis or a note. Write down an oral request. Forward it promptly, and tell the person who decides. ADA coordinator: ____________ Consult the ADA coordinator before any denial, or when questions arise.",
+          "after": "When someone raises an access or accommodation need, ask what would help with the work and contact the ADA coordinator about the appropriate process. Document an oral request and forward it promptly. Any supporting medical documentation belongs with the authorized accommodation process, not an informal request for a diagnosis. ADA coordinator: ____________",
+          "reason": "Clarify practical reasoning, authorized action and privacy without blanket guarantees, automatic deletion or assumptions about identity."
+        }
+      ]
+    },
+    {
+      "kind": "resource",
+      "target": "resource.ja-sm-deaf-deafblind-hoh",
+      "route": "/library/ja-sm-deaf-deafblind-hoh",
+      "original": {
+        "id": "ja-sm-deaf-deafblind-hoh",
+        "title": "Supervising With Deaf, DeafBlind and Hard of Hearing Colleagues: job aid",
+        "type": "job_aid",
+        "authority": "guidance",
+        "layer": "L2",
+        "summary": "A one-page reminder for working with Deaf, DeafBlind and hard of hearing staff, peers and managers.",
+        "body": [
+          "Remember. General information as of October 2026. Local steps come from your ADA coordinator and Human Resources. Draft, written without Deaf, DeafBlind or hard of hearing reviewers. Your colleague's own account comes first. No one speaks for a whole community. Ask the person in front of you.",
+          "Ask. \"How do you prefer to communicate in this setting? What makes it harder?\" Use the term they use for themselves. Skip questions about how much they hear or why. Record the answer so that they do not have to repeat it.",
+          "Route (Policy 1433). No special words are needed. Document oral requests. Forward promptly. Tell them who decides. Do not ask for medical information. Regular meetings get a standing arrangement, with no new request each time. The ADA coordinator is consulted before any denial. Budget is not your call to make. Keep the accommodation confidential.",
+          "Run the meeting. Talk to your colleague, not to the interpreter. Send agenda, names and acronyms ahead of time. Book about two weeks out where you can. State your name. One at a time. Pause. CART and automatic captions are different. Do not swap them without asking. Notes afterward are not participation. Do not hold a review or discipline talk without working access.",
+          "DeafBlind colleagues. Ask, and plan early. Methods vary. SSP and interpreter are different roles. Assign a communication facilitator. Change how votes work. No touch or technique without agreement and skill.",
+          "Keep it fair. Put hallway decisions in writing. Same criteria for stretch work. Do not decide for them. Do not make them the unit's Deaf expert, and do not make signing coworkers the interpreter. Safety questions get an individualized review, not an assumption. Mockery goes to Human Resources or the Affirmative Action Officer immediately.",
+          "Do next. Ask all your direct reports the same communication question. Find out who books and how the agency pays. Check your recurring meetings for standing access. Check alarms and emergency plans with your colleague and safety lead. Save your ADA coordinator's contact, and find DHS State Services' regional office for your area."
+        ],
+        "nextActions": [
+          {
+            "label": "Take the course: Supervising With Deaf, DeafBlind and Hard of Hearing Colleagues",
+            "href": "/courses/sm-deaf-deafblind-hoh"
+          },
+          {
+            "label": "For leaders, supervisors, managers, and directors",
+            "href": "/leading"
+          }
+        ],
+        "tags": [
+          "supervision",
+          "Deaf",
+          "DeafBlind",
+          "hard of hearing",
+          "communication access",
+          "interpreter"
+        ],
+        "intents": [
+          "access_barriers",
+          "workplace_culture"
+        ],
+        "owner": "Equity and Inclusion Operations Consultant",
+        "reviewDate": "2026-10-31",
+        "status": "approved",
+        "scope": "agencywide",
+        "accessibility": "pending",
+        "provenance": "Built from the course's job aid in the supervisor and manager curriculum; the owner approved all 19 courses on October 31, 2026.",
+        "version": "1.0.0"
+      },
+      "changes": [
+        {
+          "path": [
+            "body",
+            2
+          ],
+          "before": "Route (Policy 1433). No special words are needed. Document oral requests. Forward promptly. Tell them who decides. Do not ask for medical information. Regular meetings get a standing arrangement, with no new request each time. The ADA coordinator is consulted before any denial. Budget is not your call to make. Keep the accommodation confidential.",
+          "after": "For an accommodation request, document what was requested and contact the ADA coordinator promptly. Confirm responsibilities for the decision, any supporting information and recurring arrangements. Discuss how the work can be made accessible without collecting medical documentation yourself. Share accommodation information only with those who need it to carry out their responsibilities.",
+          "reason": "Clarify practical reasoning, authorized action and privacy without blanket guarantees, automatic deletion or assumptions about identity."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,157 @@
+{
+  "target": "resource.ja-sm-hiring-decisions",
+  "kind": "resource",
+  "route": "/library/ja-sm-hiring-decisions",
+  "sourceSha256": "aaa391e25ecdf272d5761889bd09f56b04e20a2b48a2af1a7de843a650730736",
+  "status": "needs_revision",
+  "reviewedFieldCount": 8,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "To help you run a selection you can explain to anyone who asks.",
+      "after": "Use this guide to carry out and explain a legally compliant hiring process, including what you may be asked about or required to show.",
+      "reason": "Clarifies that the guide supports both action and accountability, and indicates legal compliance as a core purpose."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Remember. Decide on job-related criteria set before you see candidates. Do not weigh race, sex, disability or any other protected trait in an individual selection. Reach widely. Keep every door open to anyone. Same answer to pressure in any direction. Write what is true, and keep it.",
+      "after": "Set clear, job-related criteria before reviewing any candidates. Do not factor in race, sex, disability, or any other legally protected characteristic when assessing applicants. Make every effort to reach a broad pool, so all qualified individuals have a fair chance. Respond consistently to any external or internal pressure. Accurately document your reasoning and preserve these records.",
+      "reason": "Expands the reasoning behind each action and underscores the importance of legal compliance, transparency, and documentation."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Before posting. Ask Human Resources about the required order: under MAPE Article 16, posting, interest bids, layoff lists, claims, then other means. Check other agreements. Get the position description. Write four to six criteria from the duties, with anchors. Date them. Test each requirement: who does it exclude, and does the job need it? State language needs as skills. State cultural competence as behaviors. Do not use cultural intelligence, IDI or results from this app. Ask how justification works today.",
+      "after": "Before posting a vacancy, talk with Human Resources about the required order for selection steps. For example: under MAPE Article 16, follow the sequence of posting, interest bids, layoff lists, claims, and then open methods. Check for other applicable agreements. Review the position description, and extract four to six selection criteria directly from the essential duties, specifying observable indicators for each. Date and retain these criteria. Check each requirement for necessity—who it excludes and whether it directly supports job needs. Express language needs as specific skills. Define cultural competence through observable behaviors rather than abstract measures. Do not use cultural intelligence, IDI, or the results of this app as criteria. Confirm with Human Resources how justification for requirements and criteria is currently documented.",
+      "reason": "Clarifies steps, adds precise reasoning for each, and improves specificity on what documentation and checks are needed."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Reaching people. Share widely, including disability and community networks and greater Minnesota. Keep events and messages open to anyone. Include the accommodation notice. Forward any request promptly. Give the same information to everyone.",
+      "after": "Publicize openings to broad and varied groups, including disability networks, community partners, and regions outside the Twin Cities. Keep events and application processes genuinely open to any interested person. Always include required accommodation notices in outreach. Forward any requests for accommodation without delay and give everyone the same information to maintain fairness.",
+      "reason": "Clarifies the purpose and necessity of each action, ties outreach to practical fairness and legal requirements."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "The interview. Same questions, same order, same time. Neutral follow-ups. Nothing about health, family, faith, national origin or age. Arrange access early. Score the answer, not the delivery. Score independently first. Then discuss. When someone says \"fit\": \"Which criterion? What did they say?\"",
+      "after": "Ask each candidate the same interview questions, in the same order, allowing the same amount of time. Use neutral follow-up questions to clarify answers without introducing bias. Do not discuss or inquire about an applicant’s health, family situation, faith, national origin, or age. Arrange needed access early based on individual needs. Assess and score candidate responses based on content, not delivery, and record scores independently before group discussion. When someone mentions 'fit,' ask them to specify the criterion and evidence they are referencing.",
+      "reason": "Expands on why neutrality, access, and consistent scoring procedures are necessary for fair and equitable hiring decisions."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "The decision. Compare side by side, and write a reason tied to the criteria. If directed to weigh a trait: decide on criteria, ask for any written basis, and report to Human Resources or the Affirmative Action Officer. If justification is required: write the truth, from your dated records. Keep criteria, scores and reasons unchanged. Ask about retention and preservation.",
+      "after": "When making a decision, evaluate candidates side by side, and document your reasons with direct reference to your established criteria. If you are asked to consider a protected trait, stick to established criteria. Request any directive in writing and forward it to Human Resources or the Affirmative Action Officer. If you must justify a decision, use your previously documented, dated criteria and scores as the sole basis. Do not change selection criteria or scores after the fact. Verify current requirements for retaining and preserving these records with Human Resources.",
+      "reason": "Clarifies the importance of written rationale, adherence to documented criteria, and the protocol for responding to improper directives."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "Do next. Call Human Resources before your next vacancy opens, and ask what they already provide.",
+      "after": "Before your next vacancy arises, check with Human Resources about current standard tools and processes for selection so you are prepared.",
+      "reason": "Rephrased for clarity and to specify the value of early coordination with Human Resources."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed summary changes the intention and legal scope of the original. The original summary ('To help you run a selection you can explain to anyone who asks.') reflects transparency about process, not 'legal compliance' or requirements to 'show' anything. The addition of 'including what you may be asked about or required to show' invents obligations not stated or supported by the source, and 'legally compliant hiring process' overstates the source's role as guidance rather than legal fireproofing. The original intent is simplicity and shareability, not formal legal defense. This is a material change in function and meaning."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The edit provides more explanation but remains consistent with the meaning in the source. It elaborates rationale and expected practice without overstepping the guidance or requirements stated in the original. Acceptable expansion."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "This elaboration is acceptable. It clarifies and breaks down the list but does not add new requirements or change the meaning of the original steps."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The rewrite clarifies and expands reasoning, without introducing unsupported requirements. It stays true to intent and detail."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The changes provide context for best practices explained in the original and do not shift meaning or requirements. Expand without overstepping."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The revision restates and clarifies the source's instructions and their rationale. No unsupported claims or requirements are introduced."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "This adds clarity and remains within scope. No unsupported claim introduced."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2078,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 863,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2941
+    },
+    "review": {
+      "input_tokens": 2369,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 369,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2738
+    }
+  },
+  "createdAt": "2026-11-15T13:43:43.261Z"
+}

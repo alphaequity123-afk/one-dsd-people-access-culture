@@ -1,0 +1,329 @@
+{
+  "target": "community-brief.russian-speaking",
+  "kind": "surface",
+  "route": "/minnesota-communities/russian-speaking",
+  "sourceSha256": "4e3edf17cf516a006524c2a323bca3c7ee9972480c3d360895d0a0b4e137f173",
+  "status": "model_checked",
+  "reviewedFieldCount": 19,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "whoAndWhere"
+      ],
+      "before": "Russian-speaking Minnesotans come from many countries of the former Soviet Union, including refugees of earlier decades, recent Ukrainian arrivals, and Russian asylum seekers who have arrived since 2022.",
+      "after": "Russian-speaking Minnesotans include individuals and families who have migrated from a range of countries in the former Soviet Union. This group covers earlier generations of refugees, more recent arrivals from Ukraine, and people from Russia seeking asylum since 2022.",
+      "reason": "Clarified the diversity of migration backgrounds and time frames. Broke up a compound idea for clarity without losing specificity."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Russian is a shared language across people with very different national identities; for Ukrainian households, assuming Russian identity can be a harm. Book the language the person asks for.",
+      "after": "Individuals who use Russian in Minnesota may have very different national identities. For Ukrainian households, being identified as Russian can cause distress or harm. Offering the preferred language respects the individual’s identity and avoids assumptions. Always confirm the language the person wants to use.",
+      "reason": "Clarified the potential impact of assumption on Ukrainian households and emphasized the practical importance of confirming a language request. Gave more explicit reasoning about why matching the requested language matters."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "withinGroupDiversity"
+      ],
+      "before": "Jewish, Orthodox Christian, evangelical, and secular households; national identities that may be in conflict.",
+      "after": "Within Russian-speaking Minnesotans, there are differences in religion—including Jewish, Orthodox Christian, evangelical, and secular backgrounds—and in national identity, which may sometimes be in conflict.",
+      "reason": "Revised to explain that diversity includes both religious and national identities, and that conflicts may arise. Connected to the real-world program context."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "preferredNames",
+        0
+      ],
+      "before": "Russian-speaking (as a language group)",
+      "after": "Russian-speaking (refers to the language group, not a specific nationality)",
+      "reason": "Clarified that this preferred name refers to a language group rather than a shared nationality to reduce misunderstanding."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "preferredNames",
+        1
+      ],
+      "before": "national-origin terms (Ukrainian, Belarusian, and others)",
+      "after": "National-origin terms such as Ukrainian, Belarusian, and others",
+      "reason": "Gave explicit examples of national-origin terms for clarity and consistency with other edits."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "nameNote"
+      ],
+      "before": "Patronymics are common; ask how the person wants to be addressed.",
+      "after": "Patronymics—a naming practice involving a parent’s name—are often used. Ask each person how they want to be addressed to ensure respect and avoid error.",
+      "reason": "Expanded to briefly define patronymics and reinforced the reason for asking about address preferences, clarifying the significance of the action."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "nameUncertainty"
+      ],
+      "before": "National identity is sensitive; ask rather than infer from language.",
+      "after": "National identity can be a sensitive topic. Do not rely on language alone to determine how a person identifies; ask directly rather than inferring.",
+      "reason": "Clarified the sensitivity by connecting it directly to the importance of asking rather than making assumptions."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "whatToAsk",
+        0
+      ],
+      "before": "Which language should we book: Russian or Ukrainian?",
+      "after": "Which language do you prefer for interpretation or communication—Russian, Ukrainian, or another?",
+      "reason": "Broadened to include \"another\" to acknowledge additional language possibilities, and phrased as a question to guide staff in addressing preference."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "whatToAsk",
+        1
+      ],
+      "before": "How would you like to be addressed?",
+      "after": "What name and form of address do you prefer?",
+      "reason": "Focused the question on preference for name and form of address. This makes it clear and actionable for staff."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "accessChecks",
+        0
+      ],
+      "before": "Interpreter language matches the request.",
+      "after": "Check that the interpreter’s language and dialect match what the person requested.",
+      "reason": "Made explicit that dialect should also be considered and that staff must check this detail."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "accessChecks",
+        1
+      ],
+      "before": "Notices in the requested language, reviewed.",
+      "after": "Ensure written notices are available in the requested language and have been reviewed for accuracy.",
+      "reason": "Made the instruction more specific and explicit, connecting review to purpose."
+    },
+    {
+      "fieldId": 11,
+      "path": [
+        "whoToInvolve",
+        0
+      ],
+      "before": "Language access lead or interpreter services, with the dialect written on the request.",
+      "after": "Involve language access leads or interpreter services. Clearly indicate which dialect should be provided on the request.",
+      "reason": "Separated core actions into two sentences for clarity and emphasized recording dialect for accuracy."
+    },
+    {
+      "fieldId": 12,
+      "path": [
+        "whoToInvolve",
+        1
+      ],
+      "before": "Equity Director for the administration or the person responsible for the program.",
+      "after": "Engage the Equity Director or another designated program leader responsible for equity and inclusion.",
+      "reason": "Clarified the roles and responsibility for program leaders who should be engaged."
+    },
+    {
+      "fieldId": 13,
+      "path": [
+        "whoToInvolve",
+        2
+      ],
+      "before": "Community partner organizations identified in this brief, with a clear purpose, role, compensation, and plan to report back.",
+      "after": "Partner with identified community organizations for consultation. Define each organization’s purpose, role, compensation, and expectations for reporting outcomes.",
+      "reason": "Specified steps and outcomes expected when involving community partners."
+    },
+    {
+      "fieldId": 14,
+      "path": [
+        "whatNotToAssume",
+        0
+      ],
+      "before": "Do not infer nationality or politics from language.",
+      "after": "Do not make assumptions about a person’s nationality or political viewpoints based on the language they use.",
+      "reason": "Expanded to clarify that language is not predictive of political views as well as national identity."
+    },
+    {
+      "fieldId": 15,
+      "path": [
+        "spotlightBody"
+      ],
+      "before": "The Museum of Russian Art offers a Minnesota starting point for exploring art and history. For this language-based brief, it is one doorway, not a portrait of everyone who speaks Russian. A shared language does not settle a person’s nationality, cultural ties, or political views.",
+      "after": "The Museum of Russian Art in Minnesota provides an opportunity to engage with aspects of Russian-language community art and history. While it serves as one entry point, it does not represent the full spectrum of experiences of all Russian speakers in the state. Sharing a language does not determine a person's nationality, cultural perspective, or political beliefs.",
+      "reason": "Clarified the example’s limits and restated that shared language does not equate with shared identity in specific terms."
+    },
+    {
+      "fieldId": 16,
+      "path": [
+        "spotlightLinkLabel"
+      ],
+      "before": "Explore the Museum of Russian Art",
+      "after": "Visit the Museum of Russian Art",
+      "reason": "Reworded for a neutral, direct invitation without changing substantive meaning."
+    },
+    {
+      "fieldId": 17,
+      "path": [
+        "reflectionBody"
+      ],
+      "before": "How would you leave room for a person to name their own identity and preferred language without having to correct your assumptions?",
+      "after": "How can your approach help people identify and state their own preferred language and identity, without making them correct inaccurate assumptions?",
+      "reason": "Reframed for clarity and to prompt more active reflection about avoiding assumptions in agency practice."
+    },
+    {
+      "fieldId": 18,
+      "path": [
+        "source0Note"
+      ],
+      "before": "Public, general knowledge and program guidance.",
+      "after": "General knowledge and program guidance available to the public.",
+      "reason": "Clarified that the guidance is both general knowledge and intended for public access."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The edit clarifies migration backgrounds without significant factual change or loss of specificity. It maintains the original's intent and content, just restructuring for clarity."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revision increases clarity about the impact of misidentifying a household's identity and explicitly ties language selection to respect. It does not introduce unsupported claims or overstate harm."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revised sentence still accurately reflects religious and national diversity, and highlights possible conflict. The explanation is more explicit but not inconsistent with the source."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "Expanded clarification about the meaning of 'Russian-speaking' accurately prevents misunderstanding without adding unsupported info."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The edit spells out examples of national-origin terms, consistent with the original's intention and context."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The definition of patronymics is accurate and helps clarify the reason for respectful address. The emphasis on reason is supported by program standards."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "Expanded explanation is aligned with the original and program expectations that practices not infer sensitive national identity from language alone."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "Broadening the language question is supported by the context, which notes multiple (not just Russian/Ukrainian) language backgrounds. The edit is proper and evidence-based."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "This change preserves the original intent, making the request about names and forms of address explicit."
+      },
+      {
+        "fieldId": 9,
+        "severity": "note",
+        "finding": "More specific instruction to check dialect is justified and fits the source's concern for matching requests closely."
+      },
+      {
+        "fieldId": 10,
+        "severity": "note",
+        "finding": "Adding 'reviewed for accuracy' is a reasonable clarification, reflecting standard agency practice and the source's intent."
+      },
+      {
+        "fieldId": 11,
+        "severity": "note",
+        "finding": "The revision breaks up the instruction for clarity and maintains original content."
+      },
+      {
+        "fieldId": 12,
+        "severity": "note",
+        "finding": "Clarifies the responsible party in line with existing guidance—no added obligations or unsupported claims."
+      },
+      {
+        "fieldId": 13,
+        "severity": "note",
+        "finding": "The revision makes explicit pre-existing expectations of clarity regarding partnership roles and compensation. The intent and required steps are unchanged."
+      },
+      {
+        "fieldId": 14,
+        "severity": "note",
+        "finding": "Making explicit the link between language, nationality, and political viewpoint fits the source's not-to-assume theme. No overreach."
+      },
+      {
+        "fieldId": 15,
+        "severity": "note",
+        "finding": "Restates the limits of the spotlight example and preserves the source's overall meaning."
+      },
+      {
+        "fieldId": 16,
+        "severity": "note",
+        "finding": "The change is stylistic and does not alter meaning."
+      },
+      {
+        "fieldId": 17,
+        "severity": "note",
+        "finding": "This is a stylistic rewording with a clear, program-aligned improvement in clarity and reflection prompt."
+      },
+      {
+        "fieldId": 18,
+        "severity": "note",
+        "finding": "The note is consistent with the actual source, making explicit (rather than changing) public access."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2102,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 1076,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3178
+    },
+    "review": {
+      "input_tokens": 2652,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 656,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3308
+    }
+  },
+  "createdAt": "2026-11-15T13:40:37.068Z"
+}

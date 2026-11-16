@@ -1,0 +1,165 @@
+{
+  "target": "graduation-path.gp-2",
+  "kind": "surface",
+  "route": "/practice/gp-2",
+  "sourceSha256": "1050a569d2ac8cd66ad1c7d32fb9f39533267b2653c0cc7793a7b6a16dc3422b",
+  "status": "model_checked",
+  "reviewedFieldCount": 49,
+  "changes": [
+    {
+      "fieldId": 5,
+      "path": [
+        "startingCompetence"
+      ],
+      "before": "You are preparing a policy, form, notice, or letter and want to make sure it is clear, accessible, and workable for the people who will use it.",
+      "after": "You are developing or updating a policy, form, notice, or letter and want to confirm that it is clear, accessible, and practical for the people who must use or respond to it. Your goal is to prevent confusion or barriers by considering access, language, and service process from the start.",
+      "reason": "Clarifies intent, adds the reasoning behind considering these factors, and ties the instruction to program work."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "graduatedLooksLike"
+      ],
+      "before": "By the end, you will have a clear record of the change, its effect on people, access needs, sources, follow-up responsibilities, and a review date. You can usually complete routine changes with these resources and ask the policy owner or your Equity Director about high-stakes questions or conflicting Official sources.",
+      "after": "By completing this process, you will maintain a detailed record of the change, who is affected, relevant access needs, the sources used, any follow-up responsibilities, and a date to review whether the change is still needed or working. Most routine changes can be handled directly with these resources. For questions about complex impacts or conflicting Official sources, seek out the policy owner or your Equity Director for resolution.",
+      "reason": "Improves specificity about what is recorded, clarifies who to ask for help, and recognizes the need to revisit changes."
+    },
+    {
+      "fieldId": 15,
+      "path": [
+        "step0Guidance"
+      ],
+      "before": "Ask about plain language, access, and service processes. Compare it with the policy or rule you are changing, and record questions that need an official source or the policy owner’s judgment.",
+      "after": "Check for clear language, identify access issues, and understand how the service process may be affected. Compare the change with the existing policy or rule so you can note specific questions that need to be answered by an official source or the policy owner. This helps ensure both compliance and workability before the change is finalized.",
+      "reason": "Connects each check with a purpose—clarity, access, and compliance. Explains why reflecting and recording questions at this step matters."
+    },
+    {
+      "fieldId": 16,
+      "path": [
+        "step1Guidance"
+      ],
+      "before": "If the change may affect particular Minnesota communities more heavily, read the relevant brief for language, naming, and access considerations.",
+      "after": "If the change is likely to affect certain Minnesota communities more than others, review relevant background briefs for guidance on respectful language, naming, and access considerations. This is necessary for informed and equitable decision-making, especially where specific community needs may differ.",
+      "reason": "Adds substantive explanation about why this review matters for program work, not just that it should be done."
+    },
+    {
+      "fieldId": 17,
+      "path": [
+        "step2Guidance"
+      ],
+      "before": "Use the change-planning guide, plain-language checklist, language access checklist, and equity impact questions as needed.",
+      "after": "Select the practical resources that fit your situation: the planning guide for forms or notices, the plain-language checklist, the language access checklist, and sample equity questions. Using these tools helps identify barriers and guides concrete planning.",
+      "reason": "Connects each resource with its practical value, going beyond a list to explain the reason for use."
+    },
+    {
+      "fieldId": 21,
+      "path": [
+        "step3Guidance"
+      ],
+      "before": "Record who will be affected, access needs, the effort the process asks of people, source labels, follow-up responsibilities, and a review date.",
+      "after": "Document who will be affected by the change, identify access needs, explain what effort the process requires from people, label your sources, and list responsibilities for any needed follow-up, along with a future review date. Detailed notes in these areas help address barriers before implementation and share key information with reviewers.",
+      "reason": "Emphasizes the role of recording these details in preventing implementation issues and supporting the review process."
+    },
+    {
+      "fieldId": 22,
+      "path": [
+        "step4Guidance"
+      ],
+      "before": "Confirm that every source is clearly labeled, access needs and process barriers are specific, and the next steps have responsible people and dates.",
+      "after": "Check that every source is labeled with its authority and relevant details, that you have named and described specific access needs and process barriers, and that responsibilities and dates are clearly assigned for next steps. Thorough review reduces risk of oversight and helps with accountability.",
+      "reason": "Clarifies the importance of each review item and the consequence of not completing them."
+    },
+    {
+      "fieldId": 24,
+      "path": [
+        "step5Guidance"
+      ],
+      "before": "If the stakes are high or official sources conflict, find the person or office responsible for the decision. Most day-to-day access questions can be worked through with these resources.",
+      "after": "If questions arise with significant impact or if Official sources conflict, identify and consult the person or office responsible for making the determination. For most routine access or clarity questions, the resources here provide a sufficient basis to move forward.",
+      "reason": "Elaborates why consulting the decision-maker is necessary and clarifies when to use what resource."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The revision for startingCompetence clarifies the purpose and adds the program work reasoning without changing scope or inventing requirements. The update strengthens the explanation without altering intent."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The changed graduatedLooksLike field is more explicit but does not remove or distort any requirements. The text remains faithful to the source and reframes for clarity and practical application."
+      },
+      {
+        "fieldId": 15,
+        "severity": "note",
+        "finding": "The new step0Guidance increases clarity by connecting checks to their reasons (compliance, workability, access). No unsupported claims are introduced. Statement scope is consistent with the original and page purpose."
+      },
+      {
+        "fieldId": 16,
+        "severity": "note",
+        "finding": "step1Guidance now spells out the importance of reviewing community briefs for language, naming, and access, connecting this explicitly to program equity. This strengthens—not alters—the practical intent."
+      },
+      {
+        "fieldId": 17,
+        "severity": "note",
+        "finding": "step2Guidance describes which resource fits which purpose, matching source links, and explaining their value. No new legal or procedural requirements are introduced."
+      },
+      {
+        "fieldId": 21,
+        "severity": "note",
+        "finding": "step3Guidance clarifies the use of documentation, emphasizing review and implementation purposes. The intent and requirements mirror the original field."
+      },
+      {
+        "fieldId": 22,
+        "severity": "note",
+        "finding": "step4Guidance explains checking source labels and naming responsibilities for accountability. Clarity is improved without introducing unsupported material."
+      },
+      {
+        "fieldId": 24,
+        "severity": "note",
+        "finding": "step5Guidance is reformulated for clarity; it explains the division of responsibility rather than simply stating the resource. The change is substantiated and does not introduce new scope."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3849,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 801,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4650
+    },
+    "review": {
+      "input_tokens": 2945,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 465,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3410
+    }
+  },
+  "createdAt": "2026-11-15T13:39:36.220Z"
+}

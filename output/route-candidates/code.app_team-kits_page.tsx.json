@@ -1,0 +1,67 @@
+{
+  "target": "code.app/team-kits/page.tsx",
+  "kind": "surface",
+  "route": "/team-kits",
+  "sourceSha256": "f41883c3bbd2ec2de507c3130d964dd30809f2bae7ff5847a99044f2731660ec",
+  "status": "needs_revision",
+  "reviewedFieldCount": 3,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Ready-to-run sessions for a regular staff meeting. Each one has a time, an agenda, the material to open and what the team keeps afterward. Nothing about who attends is recorded.",
+      "after": "Each session gives you a ready-to-run template for a staff meeting. The format includes the allotted time, step-by-step agenda, linked materials, and a description of what the team should document once finished. Attendance is not tracked for these sessions, so participation can focus on learning and discussion without concern for recording individual involvement.",
+      "reason": "The rewrite clarifies the structure and intention of the team kits, connecting the design (agenda, time, materials) with the outcome (the record kept). It explains why attendance is not recorded, placing emphasis on supporting candid participation. Avoids condescension and plain repetition, and adds a line connecting non-recording to its consequence."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The rewrite adds multiple new explanations and implications not present in the source. The source text reads: 'Ready-to-run sessions for a regular staff meeting. Each one has a time, an agenda, the material to open and what the team keeps afterward. Nothing about who attends is recorded.' The proposed text invents a rationale ('so participation can focus on learning and discussion without concern for recording individual involvement'), reframes the purpose ('gives you a ready-to-run template'), and introduces words such as 'template' and 'step-by-step' not found in the source. These changes alter the meaning, exceed simple clarification, and reinterpret the consequence of not tracking attendance. The rewrite is not a faithful reflection of the source per the writing standard."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2492,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 161,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2653
+    },
+    "review": {
+      "input_tokens": 2211,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 172,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2383
+    }
+  },
+  "createdAt": "2026-11-15T13:51:54.079Z"
+}

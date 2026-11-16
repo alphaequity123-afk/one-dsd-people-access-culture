@@ -19,7 +19,7 @@ export default async function JourneyPage({ params }: { params: Promise<{ journe
   const resources = records.filter(record => record.journeyIds.includes(journey.id));
   return <div className="development-page">
     <Link href="/learn/paths">All guided pathways</Link>
-    <header><p className="development-eyebrow">From engagement to action</p><h1>{journey.title}</h1><p>{journey.summary}</p><p>Use the steps that help with your question. There is no enrollment or required completion order.</p></header>
+    <header><p className="development-eyebrow">From engagement to action</p><h1>{journey.title}</h1><p>{journey.summary}</p><p>Use the steps that help with your question.</p></header>
     <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this page</summary><ResourceDownloads kind="learn-page" id={`paths-${journey.id}`} noun="pathway" scope={scope} /></details>
     <nav aria-label="Pathway steps"><ol className="development-stages">{developmentModel.stages.map((stage, index) => <li key={stage.id}><SourceLink href={`#${stage.id}`}>{index + 1}. {stage.title}</SourceLink></li>)}</ol></nav>
     {developmentModel.stages.map((stage, index) => <section id={stage.id} className="development-step" aria-labelledby={`title-${stage.id}`} key={stage.id}>

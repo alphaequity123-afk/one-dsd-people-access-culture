@@ -1,0 +1,67 @@
+{
+  "target": "code.app/one-dsd/team/resource-selections/page.tsx",
+  "kind": "surface",
+  "route": "/one-dsd/team/resource-selections",
+  "sourceSha256": "3a789b989a0a20e66fafdec709d36b6d86a29cdc19d417b01a36708e603eb75d",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field2"
+      ],
+      "before": "The consultant and the One DSD Team explore the application together and decide which resources belong in SharePoint, Learning Labs, or full Articulate 360 courses for DHS Pathlore.",
+      "after": "The consultant and the One DSD Team review the application together and compare which resources fit best in SharePoint, Learning Labs, or as full Articulate 360 courses for DHS Pathlore. Deliberating together clarifies where each resource will be easiest to find and use for ongoing reference, training, or structured learning. The team’s choices affect how colleagues locate current material and participate in new learning opportunities.",
+      "reason": "Expanded the explanation to clarify why reviewing resources as a group matters, specifying how placement decisions affect accessibility and use for staff. Connected resource locations to their practical function and staff experience."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The source says: 'The consultant and the One DSD Team explore the application together and decide which resources belong in SharePoint, Learning Labs, or full Articulate 360 courses for DHS Pathlore.' The proposed change shifts this to 'review ... and compare which resources fit best,' and adds: 'Deliberating together clarifies where each resource will be easiest to find and use for ongoing reference, training, or structured learning. The team’s choices affect how colleagues locate current material and participate in new learning opportunities.' These new sentences are well intentioned but constitute policy and evaluative claims—about the impact of deliberation and effects on colleagues—not grounded in the source. The explanation changes scope and adds consequences not explicit or implied in the source, which is strictly neutral and procedural, not reflective or analytical. This is a blocker for source support."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1284,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 165,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1449
+    },
+    "review": {
+      "input_tokens": 1040,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 214,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1254
+    }
+  },
+  "createdAt": "2026-11-15T13:51:13.398Z"
+}

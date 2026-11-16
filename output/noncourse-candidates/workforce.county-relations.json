@@ -1,0 +1,67 @@
+{
+  "target": "workforce.county-relations",
+  "kind": "surface",
+  "route": "/consultant/workforce/county-relations",
+  "sourceSha256": "4d400595b490d1f03a49825107bb3f295a7b770f210c2185987c6dfe864e64fe",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "relationship"
+      ],
+      "before": "Listed as an agency area or associated service. This does not establish a direct reporting line.",
+      "after": "Counties are listed here as agency areas or associated services. This label does not imply a direct reporting relationship between county staff and state divisions. Always confirm actual oversight or supervisory roles before making partnership or workflow decisions.",
+      "reason": "Clarified that listing refers to organizational association and does not specify authority, and explained why confirmation is necessary for staff collaboration or decision-making."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed expansion changes the meaning by adding, \"Always confirm actual oversight or supervisory roles before making partnership or workflow decisions.\" This practical instruction is not supported by the cited source, which only presents a directory listing and does not make recommendations about confirming supervision or process. The policy implication and practical instruction are not grounded in the provided evidence."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1095,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 95,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1190
+    },
+    "review": {
+      "input_tokens": 802,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 90,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 892
+    }
+  },
+  "createdAt": "2026-11-15T13:37:51.598Z"
+}

@@ -1,0 +1,67 @@
+{
+  "target": "code.components/multimedia/engagement-learning-scenes.tsx",
+  "kind": "surface",
+  "route": "components/multimedia/engagement-learning-scenes.tsx",
+  "sourceSha256": "8b508a1842879f33433322cd51f01263bfc016ff1354702223cbf7f0743ba72c",
+  "status": "needs_revision",
+  "reviewedFieldCount": 10,
+  "changes": [
+    {
+      "fieldId": 6,
+      "path": [
+        "field6"
+      ],
+      "before": "Two ways to contribute: conversation and time to write. Neither photograph shows whether an idea influenced the decision. The facilitator still needs to bring the contributions into the discussion and explain what changed.",
+      "after": "Colleagues may contribute by joining the conversation or by writing. The photographs do not show whether—or how—any idea affected the group’s decision. The facilitator needs to bring ideas from all sources into the shared discussion, then explain both what changed and why that matters for the decision record.",
+      "reason": "Clarified the instructional and professional significance of the image, connecting modes of contribution to the facilitator's actions and their impact on the decision process. Added explanation about why it is necessary for the facilitator to integrate and document these contributions."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 6,
+        "severity": "blocker",
+        "finding": "The proposed version changes the substance and meaning of the source caption. The original states: 'Neither photograph shows whether an idea influenced the decision. The facilitator still needs to bring the contributions into the discussion and explain what changed.' The revised version adds new claims about the professional significance, why integration and explanation are necessary, and what should go in the decision record. The source caption intentionally only says what the images do and do not show, and what the facilitator needs to do ('bring the contributions into the discussion and explain what changed'). It does not attribute professional/record-keeping significance or introduce instructional rationales. Policy and program documentation require captions and source records to remain accurate and free from additional interpretation unless justified by official source text. This is a blocker."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2972,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 147,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3119
+    },
+    "review": {
+      "input_tokens": 2488,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 182,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2670
+    }
+  },
+  "createdAt": "2026-11-15T13:54:27.908Z"
+}

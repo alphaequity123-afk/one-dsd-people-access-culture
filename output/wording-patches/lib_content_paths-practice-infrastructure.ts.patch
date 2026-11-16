@@ -1,0 +1,22 @@
+diff --git a/lib/content/paths-practice-infrastructure.ts b/lib/content/paths-practice-infrastructure.ts
+index 323f4e3..f47ed56 100644
+--- a/lib/content/paths-practice-infrastructure.ts
++++ b/lib/content/paths-practice-infrastructure.ts
+@@ -38,7 +38,7 @@ export const PRACTICE_INFRASTRUCTURE_PATHS: GraduationPath[] = [
+       { key: "resources", title: "Choose practical resources", guidance: "Use the plain-language and language access checklists for anything people will read. If the decision turns out to have real reach, the toolkit companion shows what a scan or full analysis asks.", links: [{ label: "Plain language and accessible documents", href: "/resources/ja-plain-language" }, { label: "Language access checklist", href: "/resources/ja-language-access-checklist" }, { label: "Equity Analysis Toolkit companion", href: "/learn/equity-toolkit" }, { label: "Record this pause in the open register (optional)", href: "/equity-policy/analysis?kind=pause" }] },
+       { key: "artifact", title: "Write your pause", guidance: "Answer the questions for this decision. Your notes are saved only on this computer, so please leave out names and case details.", links: [] },
+       { key: "selfcheck", title: "Review your pause", guidance: "Confirm the decision is specific, you checked access, you know who can change it, you noted what you did not assume, and you have a next step with a date. If the reach or the stakes are larger than you first thought, move to the Equity Analysis Toolkit.", links: [{ label: "Equity analysis for a decision", href: "/practice/gp-7" }] },
+-      { key: "consult", title: "Talk it through (optional)", guidance: "Most routine decisions do not need a conversation. If a question remains, or the decision affects people more than you expected, a consultation or the right office can help.", links: [{ label: "Find the right person", href: "/support/right-person" }] },
++      { key: "consult", title: "Talk it through (optional)", guidance: "Most routine decisions do not need a conversation. If a question remains, or the decision affects people more than you expected, a consultation or the person or area responsible can help.", links: [{ label: "Find the right person", href: "/support/right-person" }] },
+     ],
+     artifactTitle: "Equity Pause",
+     artifactFields: [
+@@ -80,7 +80,7 @@ export const PRACTICE_INFRASTRUCTURE_PATHS: GraduationPath[] = [
+       { key: "resources", title: "Choose practical resources", guidance: "Use the plain-language and language access checklists, and the two short courses on accessible content and inclusive communication.", links: [{ label: "Plain language and accessible documents", href: "/resources/ja-plain-language" }, { label: "Language access checklist", href: "/resources/ja-language-access-checklist" }, { label: "Accessible content and digital learning", href: "/courses/di-accessible-content-and-digital-learning" }, { label: "Inclusive communication", href: "/courses/di-inclusive-communication" }] },
+       { key: "artifact", title: "Run the three passes", guidance: "Record what you found and changed in each pass. Your notes are saved only on this computer. Do not paste confidential material.", links: [] },
+       { key: "selfcheck", title: "Review your check", guidance: "Confirm each pass names specific changes, you noted what you assumed, you know who else should look, and you have a date to send or revisit it.", links: [] },
+-      { key: "consult", title: "Ask a colleague to review it (optional)", guidance: "A second reader catches what the writer cannot. If you would like someone to review your draft, the draft review path gives them a structure, and the right office can help with language access or accessibility questions.", links: [{ label: "Reviewing a draft for equity, access, and plain language", href: "/practice/gp-9" }, { label: "Find the right person", href: "/support/right-person?matter=accessibility_barrier" }] },
++      { key: "consult", title: "Ask a colleague to review it (optional)", guidance: "A second reader catches what the writer cannot. If you would like someone to review your draft, the draft review path gives them a structure, and the person or area responsible can help with language access or accessibility questions.", links: [{ label: "Reviewing a draft for equity, access, and plain language", href: "/practice/gp-9" }, { label: "Find the right person", href: "/support/right-person?matter=accessibility_barrier" }] },
+     ],
+     artifactTitle: "Three-pass check of your material",
+     artifactFields: [

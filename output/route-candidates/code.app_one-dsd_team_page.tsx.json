@@ -1,0 +1,67 @@
+{
+  "target": "code.app/one-dsd/team/page.tsx",
+  "kind": "surface",
+  "route": "/one-dsd/team",
+  "sourceSha256": "9fc5aa444e8ee24fa9870c183c6a2d14afbcb1e25eed81a60fdc7c36ddba1c78",
+  "status": "needs_revision",
+  "reviewedFieldCount": 12,
+  "changes": [
+    {
+      "fieldId": 6,
+      "path": [
+        "field6"
+      ],
+      "before": "Together, the One DSD Team and the consultant choose the subjects worth exploring and who will facilitate each conversation. The team also reviews the program’s resources and agrees on what belongs in the reduced SharePoint version, and which e-learning resources should become full Articulate 360 courses for DHS Pathlore.",
+      "after": "The One DSD Team and the consultant jointly select discussion topics and identify facilitators for each session. The team also reviews available program resources to decide which content should be included in the streamlined SharePoint version and which e-learning resources should be developed into full Articulate 360 courses for DHS Pathlore. Involving both the team and consultant in these decisions ensures that topics and resources reflect current needs and priorities. Reviewing resources together helps prevent duplication and supports the production of training materials that are relevant and accessible to staff.",
+      "reason": "Improved specificity and reasoning by clarifying the decision-making process, detailing roles, and explaining why joint review and selection are important. Connects decisions to outcomes for staff."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 6,
+        "severity": "blocker",
+        "finding": "The revision of field6 introduces several unsupported changes and elaborations not present in the source. Specifically: (1) Changing 'Together, the One DSD Team and the consultant choose the subjects worth exploring and who will facilitate each conversation.' to 'The One DSD Team and the consultant jointly select discussion topics and identify facilitators for each session.' substitutes plain language with organizational jargon and adds an unnecessarily formal process description. (2) The phrase 'reviews available program resources to decide which content should be included in the streamlined SharePoint version' changes 'reduced SharePoint version' to 'streamlined', which is an interpretive rewrite. (3) The explanatory additions—'Involving both the team and consultant in these decisions ensures...', and 'Reviewing resources together helps prevent duplication...'—add reasoning and intent that are not directly supported by the source. The standard requires retention of the professional explanation as-is when it reflects the official record, without the addition of inferred motives, policies, or justifications. This is a blocker."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3187,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 186,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3373
+    },
+    "review": {
+      "input_tokens": 2689,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 230,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2919
+    }
+  },
+  "createdAt": "2026-11-15T13:51:12.498Z"
+}

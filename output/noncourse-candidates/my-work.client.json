@@ -1,0 +1,151 @@
+{
+  "target": "my-work.client",
+  "kind": "surface",
+  "route": "*",
+  "sourceSha256": "1833e753cfafdf6c259a49888e0328683b56dd37326db5b1f91644e931b0aae5",
+  "status": "needs_revision",
+  "reviewedFieldCount": 7,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "deleteAllConfirmation"
+      ],
+      "before": "Delete all practice notes, path progress, saved consultation references, and recent Ask questions from this computer? This does not delete submitted requests or any separately retained records from earlier versions.",
+      "after": "Delete all practice notes, path progress, saved consultation references, and recent Ask questions from this computer? This will not remove submitted requests or records kept separately from earlier versions.",
+      "reason": "Clarified that only locally stored data is deleted, not submissions or externally retained records. Used \"will not\" to avoid ambiguity. Removed redundancy in explanation."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "notesEmpty"
+      ],
+      "before": "No working notes yet. Start a learning path when you are ready.",
+      "after": "No working notes are saved yet. Begin a learning path to add notes when needed.",
+      "reason": "Clarified the absence of notes and connected starting a learning path directly with the opportunity to create notes. Retained the open-ended invitation with improved clarity."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "requestsEmpty"
+      ],
+      "before": "No consultation references are saved on this computer.",
+      "after": "No consultation references have been saved on this computer.",
+      "reason": "Adjusted tense for accuracy, clarified that \"saved\" means stored on this device, and avoided possible confusion over what counts as a reference."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "intakeOpenBeforeRole"
+      ],
+      "before": "A submitted consultation request is separate from the reference saved here. The",
+      "after": "A submitted consultation request is not linked to the reference saved here. The",
+      "reason": "Clarified that the submitted request and the saved reference are separate, emphasizing that actions on one do not affect the other."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "intakeOpenAfterRole"
+      ],
+      "before": "can see the submitted request so they can prepare and respond.",
+      "after": "can view the submitted request to prepare and respond appropriately.",
+      "reason": "Clarified the role's ability and the practical reason for seeing the request, emphasizing preparation and response."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "intakePreviewBeforeRole"
+      ],
+      "before": "Consultation requests are not open yet. Nothing you enter is sent or saved for the",
+      "after": "Consultation requests are not yet open. Nothing you enter will be sent to or saved for the",
+      "reason": "Clarified \"not open yet\" as referring to availability, and specified that input is neither sent nor saved. Improved precision."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "deleteReferenceBody"
+      ],
+      "before": "Removing a saved reference clears its reference number and access key from this computer. It does not withdraw a request that was already submitted.",
+      "after": "Deleting a saved reference removes its reference number and access key from this computer, but does not withdraw any previously submitted request.",
+      "reason": "Clarified the distinction between deleting a local reference and withdrawing a submitted request. Streamlined language for focus."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The original ('This does not delete submitted requests or any separately retained records from earlier versions.') is clear and accurate for staff and the public: it draws a necessary privacy distinction. The proposed ('This will not remove submitted requests or records kept separately from earlier versions.') slightly shifts meaning: 'remove' is less direct and may imply functionality beyond deletion, and 'records kept separately' is vaguer than 'separately retained records' and omits the implication of responsibility or policy about retention. The word 'clarified' is not accurate—this is a lateral rephrasing that introduces uncertainty. Must retain the original."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "Proposed ('No working notes are saved yet. Begin a learning path to add notes when needed.') is slightly more explicit in linking note creation to starting a path, but the change is not required. Both old and new are correct and within standard."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "Proposed version ('No consultation references have been saved on this computer.') is stylistically more formal. The slight tense change has no practical effect, but neither version is inaccurate or misleading."
+      },
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "Original states 'A submitted consultation request is separate from the reference saved here.' Proposed changes this to 'is not linked to the reference saved here.' This is a meaning shift: 'not linked' is more technical, could imply technical linkage or data relations, and is less grounded for users than 'separate,' which unambiguously describes independent handling. This shift introduces possible confusion and does not improve clarity for the staff or public. Retain the original."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "Both original ('can see the submitted request so they can prepare and respond.') and proposed ('can view the submitted request to prepare and respond appropriately.') are equivalent in meaning, with a slight formality increase in the rewrite. No blocker."
+      },
+      {
+        "fieldId": 5,
+        "severity": "blocker",
+        "finding": "The proposed ('Consultation requests are not yet open. Nothing you enter will be sent to or saved for the...') risks ambiguity: 'not open yet' can be a scheduling issue or a technical one, but removing 'are' and shifting word order does not improve clarity. The original better signals that the system is not currently accepting entries and anchors 'saved for' to the recipient. Retain the original phrasing."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "Both old and new are correct; the change from 'Removing' to 'Deleting' and from 'does not withdraw a request that was already submitted' to 'does not withdraw any previously submitted request' clarifies without substantive legal/policy shift."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1507,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 407,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1914
+    },
+    "review": {
+      "input_tokens": 1480,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 581,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2061
+    }
+  },
+  "createdAt": "2026-11-15T13:38:23.292Z"
+}

@@ -1,0 +1,67 @@
+{
+  "target": "code.app/learn/leadership-styles/race-and-leadership/page.tsx",
+  "kind": "surface",
+  "route": "/learn/leadership-styles/race-and-leadership",
+  "sourceSha256": "0f7c84f2f3e575bcb563381597c170f871251820968f644a91bb145587e2643e",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "How race shapes the way leadership is recognized, limited, evaluated and experienced, without using race to predict anyone's style or competence.",
+      "after": "Summary: This page explains how race can affect the ways in which leadership is seen, constrained, assessed, and experienced within organizations. It gives practical examples without suggesting that race determines a person’s approach to leadership or their abilities.\n\nRace can influence how leadership potential and actions are interpreted in professional settings. These effects may arise through organizational culture, historical patterns, and biases—whether explicit or implicit—but do not dictate individual behavior or competence. Understanding these influences helps staff recognize both barriers and opportunities that may otherwise go unexamined. The following material uses fictional scenarios to highlight how race can play a role in leadership experiences and perceptions. This approach encourages careful reflection without reinforcing stereotypes.",
+      "reason": "Expanded explanation for staff by making the summary explicit and situating the discussion in the context of DSD or DHS work. Clarifies that the intent is to increase awareness of organizational and cultural influences rather than define individual abilities by race. Retains plain language while connecting the explanation to practical consequences for how leadership is perceived and developed."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The change replaces the original short description (from the Metadata description) with a much longer summary that extends and reinterprets the scope and content. The original source text for this field is: 'How race shapes the way leadership is recognized, limited, evaluated and experienced, without using race to predict anyone's style or competence.'\n\nThe proposed text is not simply an expanded summary; it introduces interpretive language not present in the approved source—such as references to 'organizational culture, historical patterns, and biases,' and states that 'understanding these influences helps staff recognize both barriers and opportunities that may otherwise go unexamined.' This is new conceptual material not present in the source and adds implications and justifications beyond what the original metadata field provides.\n\nThe standard requires that summaries anchored to formal fields like Metadata.description reflect the source closely and not add new policy or conceptual claims unless the source itself supports that context. Expanding from a descriptor to a professional summary for a lesson page should happen in a distinct body field, not by altering the source Metadata description.\n\nTherefore, this proposed rewrite of field0 is not supported by the evidence in the source and constitutes a blocker."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1746,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 226,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1972
+    },
+    "review": {
+      "input_tokens": 1584,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 263,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1847
+    }
+  },
+  "createdAt": "2026-11-15T13:50:15.217Z"
+}

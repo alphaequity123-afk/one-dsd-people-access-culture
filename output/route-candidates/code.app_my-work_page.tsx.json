@@ -1,0 +1,258 @@
+{
+  "target": "code.app/my-work/page.tsx",
+  "kind": "surface",
+  "route": "/my-work",
+  "sourceSha256": "30133f4fa652c31b893d96a62cc5841c016cb2e32445665d0ea88fb63b1e4058",
+  "status": "needs_revision",
+  "reviewedFieldCount": 17,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Return to a plan, a reflection, or learning you want to continue.",
+      "after": "Return to the plan, reflection, or specific learning you want to continue.",
+      "reason": "Clarified phrasing to specify which items the user can return to. This reduces ambiguity while maintaining brevity."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Choose a change to try and a time to look back.",
+      "after": "Select a change to try and set a time to revisit your progress.",
+      "reason": "Revised to use more precise verbs and clarify the instruction's intent."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "Keep a plan for each piece of work.",
+      "after": "Keep a separate plan for each piece of ongoing work.",
+      "reason": "Added 'separate' to clarify that distinct plans help track multiple projects and support workload management."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": "Record what happened and what you learned.",
+      "after": "Document what happened in your work and what you learned from it.",
+      "reason": "Changed 'Record' to 'Document' and specified the context to clarify the purpose for professional practice."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field4"
+      ],
+      "before": "Record why a decision was made.",
+      "after": "Document the reasoning behind each decision.",
+      "reason": "Clarified that the focus is on recording the reasoning, which aids future review and team understanding."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field6"
+      ],
+      "before": "Open saved resources, course progress, and other workspace tools.",
+      "after": "Access saved resources, your course progress, and workspace records.",
+      "reason": "Revised for specificity and clarity about what is available within the workspace."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field7"
+      ],
+      "before": "One change you will try, a first step and a thirty-day look back.",
+      "after": "Identify one change to implement, define your first step, and set a thirty-day review date.",
+      "reason": "Increased clarity by outlining the process steps and their sequence."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "field8"
+      ],
+      "before": "A few lines on what happened, why it matters and what you will do next, with a date to look back.",
+      "after": "Summarize what happened, explain its significance, and outline your next steps, setting a date for follow-up.",
+      "reason": "Clarified what 'why it matters' means and made the process sequence more explicit."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "field9"
+      ],
+      "before": "Write down why a consequential decision was made. Share one with the team space if you choose.",
+      "after": "Record the rationale for any consequential decision. Optionally, share with the team workspace to inform others.",
+      "reason": "Clarified 'why' as rationale and specifically tied team sharing to informing others."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "field10"
+      ],
+      "before": "Start, apply and lead, suggested by role.",
+      "after": "Explore development paths starting, applying, or leading, as suggested for your role.",
+      "reason": "Clarified the action and context for following development paths, using familiar verbs and connecting to the staff role."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "field11"
+      ],
+      "before": "Ready-to-run sessions for a staff meeting.",
+      "after": "Session plans ready to use for staff meetings.",
+      "reason": "Focused on direct explanation without unnecessary wording, clarifying 'ready-to-run' by specifying use."
+    },
+    {
+      "fieldId": 11,
+      "path": [
+        "field12"
+      ],
+      "before": "A practice plan turns a decision into something you can act on and review: who is affected, what the evidence shows, which options are on the table, and what you will do next. Keep a separate plan for each piece of work. Any analysis you save from the Toolkit is kept alongside it.",
+      "after": "A practice plan translates a decision into concrete steps you can act on and later review. It should specify who is affected, relevant evidence, options you considered, and planned next actions. Maintain a separate plan for each piece of work. Each saved analysis from the Toolkit is stored with its corresponding plan.",
+      "reason": "Expanded to clarify the sequence and connections among decisions, plans, and toolkit analysis; explains why maintaining separate plans matters."
+    },
+    {
+      "fieldId": 12,
+      "path": [
+        "field13"
+      ],
+      "before": "The most useful learning often comes after the fact. Return to the change you tried, note what you observed, and decide what you would keep or do differently next time. You can download it whenever you like.",
+      "after": "Often, the most valuable learning occurs after completing an action. Revisit the change you made, note your observations, and decide what you would continue or adjust in future situations. You may download your notes at any time.",
+      "reason": "Clarified the value of post-action reflection and specified the timing and capability to download."
+    },
+    {
+      "fieldId": 13,
+      "path": [
+        "field14"
+      ],
+      "before": "Connect your work to the six equity goals",
+      "after": "Align your work with the six identified equity goals.",
+      "reason": "Clarification to specify that these are the established six goals and that the purpose is alignment."
+    },
+    {
+      "fieldId": 14,
+      "path": [
+        "field15"
+      ],
+      "before": "If you supervise or manage, you can choose three of the six ADSA equity goals as planning priorities, name the actions and support each one needs, and download a work plan for review. All six goals stay in view; choosing priorities does not set aside any policy responsibility.",
+      "after": "Supervisors and managers may select three of the six ADSA equity goals as planning priorities, identify supporting actions, and generate a work plan for review. All six goals remain important and are not deprioritized by choosing three.",
+      "reason": "Clarified that all goals remain relevant and explained the rationale behind selecting priorities."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The source text is: \"Return to a plan, a reflection, or learning you want to continue.\" The proposed edit, \"Return to the plan, reflection, or specific learning you want to continue,\" introduces 'the' and 'specific,' which implies only previously-identified or narrowly-defined items can be returned to. The original is more open. The edit is not source-supported and changes the legal meaning."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The proposal changes 'Keep a plan for each piece of work' to 'Keep a separate plan for each piece of ongoing work.' The word 'separate' is not present in the source, nor does the source specify that it must be 'ongoing work.' These changes go beyond the evidence."
+      },
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "The source is 'Record what happened and what you learned.' The proposed 'Document what happened in your work and what you learned from it' replaces 'Record' with 'Document' and inserts 'in your work' and 'from it,' narrowing scope. The source is more general."
+      },
+      {
+        "fieldId": 4,
+        "severity": "blocker",
+        "finding": "The source is 'Record why a decision was made.' The edit, 'Document the reasoning behind each decision,' introduces 'reasoning' rather than simply noting the 'why,' and 'each decision' instead of 'a decision.' The scope is changed and legal meaning is shifted."
+      },
+      {
+        "fieldId": 5,
+        "severity": "blocker",
+        "finding": "The source for field6 is 'Open saved resources, course progress, and other workspace tools.' The proposed 'Access saved resources, your course progress, and workspace records' replaces 'Open' with 'Access,' and introduces 'records,' which is not supported by the original."
+      },
+      {
+        "fieldId": 6,
+        "severity": "blocker",
+        "finding": "The source is 'One change you will try, a first step and a thirty-day look back.' The proposed text breaks this brevity, adding explicit steps and 'review date,' altering format and content beyond what the source supports."
+      },
+      {
+        "fieldId": 7,
+        "severity": "blocker",
+        "finding": "The source is 'A few lines on what happened, why it matters and what you will do next, with a date to look back.' The edit expands and interprets - replacing 'why it matters' ('explain its significance') and reorganizing the sequence, which is more than clarity and diverges from the original compound list."
+      },
+      {
+        "fieldId": 8,
+        "severity": "blocker",
+        "finding": "Source: 'Write down why a consequential decision was made. Share one with the team space if you choose.' The edit changes this to 'Record the rationale for any consequential decision. Optionally, share with the team workspace to inform others.' This introduces 'rationale,' 'any,' and a purpose ('to inform others'), expanding from available evidence and intent."
+      },
+      {
+        "fieldId": 9,
+        "severity": "blocker",
+        "finding": "Source: 'Start, apply and lead, suggested by role.' Proposal: 'Explore development paths starting, applying, or leading, as suggested for your role.' This is an unsupported expansion and specificity; the original does not state 'development paths' or a sequence of verbs."
+      },
+      {
+        "fieldId": 10,
+        "severity": "blocker",
+        "finding": "The source is 'Ready-to-run sessions for a staff meeting.' Proposed: 'Session plans ready to use for staff meetings.' 'Plans' is not in the source; it's a direct and source-strong phrase that should not be changed."
+      },
+      {
+        "fieldId": 11,
+        "severity": "blocker",
+        "finding": "The source is a detailed description: 'A practice plan turns a decision into something you can act on and review: who is affected, what the evidence shows, which options are on the table, and what you will do next. Keep a separate plan for each piece of work. Any analysis you save from the Toolkit is kept alongside it.' The edit serializes and interprets, changes 'turns a decision into something you can act on and review' to 'translates...into concrete steps,' and restructures into multiple instructions, introducing terms and relations not in the original. This is an unsupported rewrite."
+      },
+      {
+        "fieldId": 12,
+        "severity": "blocker",
+        "finding": "Source: 'The most useful learning often comes after the fact. Return to the change you tried, note what you observed, and decide what you would keep or do differently next time. You can download it whenever you like.' The edit extends with 'in future situations,' 'valuable,' etc., which are not in the source."
+      },
+      {
+        "fieldId": 13,
+        "severity": "blocker",
+        "finding": "Source: 'Connect your work to the six equity goals.' The edit is 'Align your work with the six identified equity goals.' Alignment is stronger than a connection and is not used in the source. Also, the source does not say 'identified.'"
+      },
+      {
+        "fieldId": 14,
+        "severity": "blocker",
+        "finding": "Source: 'If you supervise or manage, you can choose three of the six ADSA equity goals as planning priorities, name the actions and support each one needs, and download a work plan for review. All six goals stay in view; choosing priorities does not set aside any policy responsibility.' The edit misrepresents: 'Supervisors and managers may select three of the six ADSA equity goals as planning priorities, identify supporting actions, and generate a work plan for review. All six goals remain important and are not deprioritized by choosing three.' The note about not setting aside policy responsibility is softened to 'are not deprioritized' – a shift in legal affirmation."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3648,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 971,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4619
+    },
+    "review": {
+      "input_tokens": 3883,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 1165,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5048
+    }
+  },
+  "createdAt": "2026-11-15T13:50:56.868Z"
+}

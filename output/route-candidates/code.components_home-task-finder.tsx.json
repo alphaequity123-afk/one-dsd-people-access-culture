@@ -1,0 +1,13 @@
+{
+  "target": "code.components/home-task-finder.tsx",
+  "kind": "surface",
+  "route": "components/home-task-finder.tsx",
+  "context": "\"use client\";\n\nimport { useRouter } from \"next/navigation\";\nimport Link from \"@/components/app-link\";\n\nconst tasks = [\n  [\"/learn/equity-toolkit\", \"Make a policy or service decision\"],\n  [\"/practice-guides/inclusive-meetings\", \"Plan a meeting\"],\n  [\"/practice-guides/clearer-processes\", \"Improve a form or process\"],\n  [\"/practice/gp-3\", \"Plan community engagement\"],\n  [\"/practice-guides/review-a-change\", \"Review a change\"],\n  [\"/learn\", \"Build my understanding\"],\n  [\"/support/right-person\", \"Find who decides\"],\n  [\"/equity-review/director-toolkit\", \"Lead equity work across DHS\"],\n] as const;\n\nexport function HomeTaskFinder() {\n  const router = useRouter();\n  return <form className=\"pilot-task\" onSubmit={event => {\n    event.preventDefault();\n    const data = new FormData(event.currentTarget);\n    const task = String(data.get(\"task\"));\n    if (!tasks.some(([href]) => href === task)) return;\n    router.push(task);\n  }}>\n    <label htmlFor=\"home-task\">What are you working on?</label>\n    <div className=\"pilot-task-fields\">\n      <select id=\"home-task\" name=\"task\" defaultValue={tasks[0][0]}>\n        {tasks.map(([href, label]) => <option key={href} value={href}>{label}</option>)}\n      </select>\n      <button type=\"submit\" className=\"pilot-primary\">Show resources</button>\n    </div>\n    <Link href=\"/start#new-to-dsd\">New to DSD? Get started here</Link>\n  </form>;\n}\n",
+  "protectedFields": [],
+  "values": {
+    "field0": "New to DSD? Get started here"
+  },
+  "status": "no_editable_prose",
+  "changes": [],
+  "issues": []
+}

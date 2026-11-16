@@ -1,0 +1,67 @@
+{
+  "target": "resource.ext-ada",
+  "kind": "resource",
+  "route": "https://www.ada.gov/law-and-regs/regulations/title-ii-2010-regulations/",
+  "sourceSha256": "ad683d24b319ac31474c406bd83beea1dd4e4e3faff6f2b9c714c43898d2e6a8",
+  "status": "model_checked",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Title II of the Americans with Disabilities Act covers state and local government services, including rules on effective communication and web accessibility. Confirm the current rule and its dates at the source.",
+      "after": "Title II of the Americans with Disabilities Act (ADA) applies to state and local government services. It sets requirements for effective communication, reasonable modifications, and web accessibility. Always check the referenced Department of Justice site for the most current regulatory language and effective dates.",
+      "reason": "Expanded the summary to clarify the scope of Title II and specify key requirements. Provided a practical instruction to check the official source for updates, grounded in the professional need to confirm the current rule."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revised summary expands on the original by specifying that Title II 'sets requirements for effective communication, reasonable modifications, and web accessibility.' This is accurate and consistent with the source (https://www.ada.gov/law-and-regs/regulations/title-ii-2010-regulations/), which distinguishes these three key requirements in the regulation text. The added advice to check the Department of Justice site for current regulatory language and dates is grounded in the referenced need for up-to-date rules. The change is justified and does not introduce unsupported claims or alter the legal content."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1288,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 139,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1427
+    },
+    "review": {
+      "input_tokens": 979,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 136,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1115
+    }
+  },
+  "createdAt": "2026-11-15T13:41:35.505Z"
+}

@@ -1,0 +1,13 @@
+{
+  "target": "code.app/learn/equity-toolkit/curriculum/[lesson]/page.tsx",
+  "kind": "surface",
+  "route": "/learn/equity-toolkit/curriculum/[lesson]",
+  "context": "import { notFound } from 'next/navigation';\nimport { ResourceDownloads } from '@/components/resource-downloads';\nimport EquityDecisionsCurriculum from '@/components/equity-decisions-curriculum';\nimport data from '@/lib/content/equity-everyday-decisions.json';\nimport type { Curriculum } from '@/lib/content/equity-decisions-model';\nimport { prepareEditableSurface } from '@/lib/content/prepare-editable-surface';\nimport { requestedContentScope } from '@/lib/product/request-context';\n\nexport const dynamic = 'force-dynamic';\nexport const revalidate = 0;\nconst curriculum = data as unknown as Curriculum;\n\nasync function toolkitAvailable(): Promise<boolean> {\n  try {\n    const scope = await requestedContentScope();\n    if (scope !== 'dsd' && scope !== 'one-dhs') return false;\n    const surface = await prepareEditableSurface('equity-toolkit.home', { scope, includeOwner: false });\n    return surface.available === true;\n  } catch {\n    return false;\n  }\n}\n\nexport function generateStaticParams() {\n  return curriculum.modules.map(module => ({ lesson: module.id }));\n}\n\nexport async function generateMetadata({ params }: { params: Promise<{ lesson: string }> }) {\n  if (!(await toolkitAvailable())) return { title: 'Learning' };\n  const { lesson } = await params;\n  return { title: curriculum.modules.find(module => module.id === lesson)?.title || 'Learning' };\n}\n\nexport default async function Page({ params }: { params: Promise<{ lesson: string }> }) {\n  if (!(await toolkitAvailable())) notFound();\n  const { lesson } = await params;\n  if (!curriculum.modules.some(module => module.id === lesson)) notFound();\n  const scope = await requestedContentScope();\n  return <EquityDecisionsCurriculum key={lesson} lessonId={lesson} downloads={<details className=\"border-b border-line pb-3 print:hidden\"><summary className=\"min-h-11 cursor-pointer py-2 font-semibold text-[#183247]\">Download or share this lesson</summary><ResourceDownloads kind=\"toolkit-lesson\" id={lesson} noun=\"lesson\" scope={scope} /></details>}/>;\n}\n",
+  "protectedFields": [],
+  "values": {
+    "field0": "Download or share this lesson"
+  },
+  "status": "no_editable_prose",
+  "changes": [],
+  "issues": []
+}

@@ -1,0 +1,165 @@
+{
+  "target": "code.app/practice-guides/[slug]/page.tsx",
+  "kind": "surface",
+  "route": "/practice-guides/[slug]",
+  "sourceSha256": "c3eb8e119f60de4cc0d51559f0d4ed1ca875cb804088963cee15f9c5b6aceb80",
+  "status": "needs_revision",
+  "reviewedFieldCount": 8,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Make the next step clear when work moves from one person or team to another.",
+      "after": "Give specific instructions so each person or team knows what must happen next when responsibility for work changes hands.",
+      "reason": "Clarifies the action expected and why it matters, linking clarity of the next step to maintaining workflow and accountability during hand-offs."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Clarify who contributes, who follows through, and how teams stay connected.",
+      "after": "Identify who is responsible for each part of the work, who ensures completion, and how ongoing communication will keep everyone aligned.",
+      "reason": "Improves specificity and explains the need for role clarity and follow-through in cross-team work, supporting better coordination."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "Carry the discussion into clear follow-up and communication across teams.",
+      "after": "Document agreed actions and next steps, and establish a routine to keep everyone informed as work crosses between teams.",
+      "reason": "Clarifies how cross-team discussions are carried into follow-up and why maintaining communication is essential for multi-team projects."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field6"
+      ],
+      "before": "After the appropriate decision and use of an approach,",
+      "after": "Once you have made the appropriate decision and applied a selected approach,",
+      "reason": "Clarifies that the step follows a specific decision and action, making the sequence of work clearer."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field7"
+      ],
+      "before": "record an observation and its limits",
+      "after": "record what you observed in practice, along with any limits to your observation",
+      "reason": "Specifies the content to record, emphasizing documenting both what was seen and its limitations to support learning and review."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field8"
+      ],
+      "before": ". Bring what you learn back to the people who contributed and to the next review.",
+      "after": ". Share what you learn with those who participated and include it in future reviews.",
+      "reason": "Clarifies that sharing findings with contributors and using them in ongoing review strengthens continuous improvement."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field9"
+      ],
+      "before": "Use these resources to prepare for the task in front of you. It supports preparation and reflection; it does not replace policy or required approval.",
+      "after": "Refer to these resources as you prepare for the task ahead. They help guide your planning and reflection but are not a substitute for official policy or required approvals.",
+      "reason": "Clarifies the preparatory and reflective purpose of the resources without minimizing the need to follow policy."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "field11"
+      ],
+      "before": "Explore more cross-unit learning",
+      "after": "See more options for learning and collaboration across teams",
+      "reason": "Clarifies that the link offers additional opportunities for cross-unit learning, not just exploration in the abstract."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "Field 0 replaces the specific official summary 'Make the next step clear when work moves from one person or team to another.' with a paraphrase that generalizes the instruction and introduces new elements ('give specific instructions,' 'each person or team knows,' 'workflow and accountability during hand-offs'). The original is a precise, direct prompt as a short-purpose statement, which must be preserved. The source does not require justification or elaborated explanation in this list item; expansion changes the purpose and tone. Source evidence supports the original wording only."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "Field 1 alters the official purpose line 'Clarify who contributes, who follows through, and how teams stay connected.' by breaking it into new requirements not stated in the source ('identify who is responsible for each part,' 'ensures completion,' 'ongoing communication will keep everyone aligned'). The change introduces new procedural expectations and shifts the focus from high-level prompts to task-level details, which is unsupported by the cited source in this context."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "Field 2 transforms 'Carry the discussion into clear follow-up and communication across teams.' into 'Document agreed actions and next steps, and establish a routine...' which is a material change. The source does not instruct explicit documentation, nor does it mandate a routine; it describes an outcome (clear follow-up/communication). The shift to new practical requirements is unsupported."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "Field 6: The edit ('Once you have made the appropriate decision and applied a selected approach,') is a clarification of sequencing and similar in meaning to the source, but it could be considered needlessly wordy. However, this is not a blocker, as meaning is fully preserved."
+      },
+      {
+        "fieldId": 4,
+        "severity": "blocker",
+        "finding": "Field 7 adds 'what you observed in practice, along with any limits to your observation' where the source simply says 'record an observation and its limits.' The paraphrase makes explicit what is implicit, but the original wording is already precise and comes from policy/program usage; over-explaining alters tone and usage."
+      },
+      {
+        "fieldId": 5,
+        "severity": "blocker",
+        "finding": "Field 8 changes 'Bring what you learn back to the people who contributed and to the next review.' into 'Share what you learn with those who participated and include it in future reviews.' This change inserts new requirements (sharing, inclusion in reviews), changes the connotation of 'contributed' to 'participated,' and drifts from the original language and sequence. The source's exact, programmatic statement should be preserved."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "Field 9: The change ('Refer to these resources as you prepare for the task ahead...') is a minor editorial variant that closely follows the source's meaning, although it is not strictly necessary. Not a blocker."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "Field 11: The modification clarifies the link's intent but does not introduce new requirements. Not a blocker."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2934,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 538,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3472
+    },
+    "review": {
+      "input_tokens": 2920,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 654,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3574
+    }
+  },
+  "createdAt": "2026-11-15T13:51:30.566Z"
+}

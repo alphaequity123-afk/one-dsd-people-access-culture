@@ -1,0 +1,67 @@
+{
+  "target": "workforce.equity-inclusion",
+  "kind": "surface",
+  "route": "/consultant/workforce/equity-inclusion",
+  "sourceSha256": "1747dc0c8d8f30e10721c452c213dcb7d530a923682c36d9edc1ea489c349a31",
+  "status": "model_checked",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "relationship"
+      ],
+      "before": "Listed as an agency area or associated service. This does not establish a direct reporting line.",
+      "after": "Identified as an agency area or associated service. There is no implied direct reporting relationship from this listing; specific managerial connections should be confirmed as needed.",
+      "reason": "Clarified that listing indicates identification rather than formal structure, and explained the importance of confirming managerial connections to avoid incorrect assumptions about reporting lines."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revised wording for 'relationship' clarifies the distinction between being listed as an agency area or associated service and having a formal reporting structure. This clarification is appropriate and remains faithful to the intent and evidence provided by the source. It reinforces the need to verify managerial connections and avoids suggesting unsupported organizational relationships. The edit increases clarity and does not introduce new claims. No blockers identified."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1099,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 83,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1182
+    },
+    "review": {
+      "input_tokens": 794,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 98,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 892
+    }
+  },
+  "createdAt": "2026-11-15T13:37:52.357Z"
+}

@@ -1,0 +1,81 @@
+{
+  "target": "code.components/multimedia/learning-history.tsx",
+  "kind": "surface",
+  "route": "components/multimedia/learning-history.tsx",
+  "sourceSha256": "8de5fd2ee865a26362c01ee8c5b150bf683189ba24d09c229a4ca6ad20127f44",
+  "status": "needs_revision",
+  "reviewedFieldCount": 32,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Read the dates without assigning a life story",
+      "after": "Timeline dates give context, not a personal narrative",
+      "reason": "Clarifies that the timeline provides historical context, not assumptions about any individual's story or experience, making the limitation explicit at the summary level."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field5"
+      ],
+      "before": "Keep the historical sequence and the present person distinct",
+      "after": "Consider the history, but ask about the person in front of you",
+      "reason": "Makes clear that historical events and an individual's experience should be considered separately, emphasizing professional judgment and individualized inquiry."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed replacement ('Timeline dates give context, not a personal narrative') removes the instructional and cautionary nuance of the original ('Read the dates without assigning a life story'). The source expressly warns against using timeline dates to presume or construct someone's personal story. The new phrasing, while accurate in saying timeline dates provide context, omits the 'assigning a life story' guidance and weakens the cautionary instruction, which is a directive present in both the file’s intent and DHS editorial standards."
+      },
+      {
+        "fieldId": 5,
+        "severity": "blocker",
+        "finding": "The proposed text ('Consider the history, but ask about the person in front of you') eliminates the distinction between 'historical sequence' and 'present person' present in the original ('Keep the historical sequence and the present person distinct'). The original field directly instructs the reader not to conflate population-level or historical events with the person’s own experience. The rewrite is less precise and omits a key warning found in the component source and the program writing standard: not to assume or merge an individual's experience with group or historical narrative."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 6477,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 170,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 6647
+    },
+    "review": {
+      "input_tokens": 5138,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 255,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5393
+    }
+  },
+  "createdAt": "2026-11-15T13:54:40.089Z"
+}

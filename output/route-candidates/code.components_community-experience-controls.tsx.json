@@ -1,0 +1,13 @@
+{
+  "target": "code.components/community-experience-controls.tsx",
+  "kind": "surface",
+  "route": "components/community-experience-controls.tsx",
+  "context": "\"use client\";\n\nimport { useId, useRef, useState, type ReactNode } from \"react\";\n\nexport function CommunityExperience({ brief, learning, title }: { brief: ReactNode; learning: ReactNode; title: string }) {\n  const [mode, setMode] = useState<\"brief\" | \"learning\">(\"brief\");\n  const key = useId();\n  const briefButton = useRef<HTMLButtonElement>(null);\n  return <>\n    <div className=\"community-experience-nav\" role=\"group\" aria-label={`Explore ${title}`}>\n      <button ref={briefButton} type=\"button\" aria-pressed={mode === \"brief\"} aria-controls={`${key}-brief`} onClick={() => setMode(\"brief\")}>Community brief</button>\n      <button type=\"button\" aria-pressed={mode === \"learning\"} aria-controls={`${key}-learning`} onClick={() => setMode(\"learning\")}>Learning and reflection</button>\n    </div>\n    <div id={`${key}-brief`} hidden={mode !== \"brief\"}>{brief}</div>\n    <div id={`${key}-learning`} hidden={mode !== \"learning\"}>\n      {learning}\n      <button type=\"button\" onClick={() => { setMode(\"brief\"); briefButton.current?.focus(); }}>Return to the community brief</button>\n    </div>\n  </>;\n}\n\nexport function CommunityPractice({ question, response }: { question: string; response: string }) {\n  const [open, setOpen] = useState(false);\n  const key = useId();\n  return <div className=\"community-practice\">\n    <h3>Consider this situation</h3>\n    <p>{question}</p>\n    <button type=\"button\" aria-expanded={open} aria-controls={key} onClick={() => setOpen(value => !value)}>{open ? \"Close the reflection\" : \"Explore the reasoning\"}</button>\n    <div id={key} hidden={!open}><p>{response}</p></div>\n  </div>;\n}\n",
+  "protectedFields": [],
+  "values": {
+    "field0": "Return to the community brief"
+  },
+  "status": "no_editable_prose",
+  "changes": [],
+  "issues": []
+}

@@ -1,0 +1,67 @@
+{
+  "target": "code.components/resource-theme-pathway.tsx",
+  "kind": "surface",
+  "route": "components/resource-theme-pathway.tsx",
+  "sourceSha256": "503a49b892a52062dc1d38e8aef14ad42e08796afd1ba10bf10311fb473dd465",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "What you can take back to your work",
+      "after": "How this supports your DHS or DSD work",
+      "reason": "Revised the heading to clarify its purpose: to connect the resource content directly to how staff can apply the material in their DHS or DSD roles. This aligns with the guidance to use precise, familiar language and to explain the connection to professional work, rather than using a more generic or abstract phrase."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "\"What you can take back to your work\" is part of the official page layout and is directly used as a section heading in the rendered output. Revising it to \"How this supports your DHS or DSD work\" is not supported by the source. The original phrase is not vague or generic; it is a clear and direct lead-in to the accompanying content, matching the format of other headings (<h3>) on the page. Policy also requires retaining official and course vocabulary in headings unless there is explicit source support for change. This alteration would substitute a staff-authored reinterpretation for the official field, which is not allowed."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1373,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 96,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1469
+    },
+    "review": {
+      "input_tokens": 1082,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 151,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1233
+    }
+  },
+  "createdAt": "2026-11-15T13:56:14.447Z"
+}

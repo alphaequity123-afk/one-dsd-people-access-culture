@@ -1,0 +1,156 @@
+{
+  "target": "resource.pn-idi-and-tool-registry",
+  "kind": "resource",
+  "route": "/library/pn-idi-and-tool-registry",
+  "sourceSha256": "6f346cd85b23484a58be3b952e817630bc60a368ddeaf4482a32faa3babeb652",
+  "status": "needs_revision",
+  "reviewedFieldCount": 7,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "The Intercultural Development Inventory is one proprietary assessment among many that can inform qualified professional practice. It does not define this program, its results are never personnel data, and its protected content is not reproduced here.",
+      "after": "The Intercultural Development Inventory (IDI) is a proprietary assessment that can inform professional practice when used correctly. The IDI does not set the standards or functions of this program. Its results are never classified as personnel data, and its copyrighted content is not shared here.",
+      "reason": "Clarifies which claims refer to the IDI, specifies what is and is not included in this program, and uses more precise language to distinguish program definition from inputs."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "A single instrument can quietly become the program's definition of competence. That is a governance risk. A registry of tools with owners, evidence, limits, and permitted uses keeps every tool in its place.",
+      "after": "If one assessment is treated as defining competence, it can distort program decisions and governance. Keeping a registry that identifies each tool's owner, supporting evidence, limitations, and permitted uses allows staff to compare tools appropriately and limits misuse.",
+      "reason": "Explains the consequences of misusing a single instrument and adds clarity on the purpose and benefits of maintaining a tool registry."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "What the IDI is. A licensed intercultural assessment administered by qualified administrators. It describes a developmental orientation toward cultural difference and is used for individual and group development.",
+      "after": "The IDI is a licensed assessment tool that requires administration by approved professionals. It offers a description of an individual or group's developmental orientation toward cultural difference. Staff may use the information to support targeted learning and reflection, not to define individuals or set policy.",
+      "reason": "Clarifies the nature and intended use of the IDI, connects its interpretation directly to practice, and avoids ambiguous terms by specifying purpose and users."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "What it is not. It is not a measure of competence for selection, promotion, or performance. A result or an inferred orientation must never become an employee record, an access gate, or a hidden label in this program.",
+      "after": "The IDI is not a standard for hiring, promotion, or performance evaluation in this program. Neither results nor inferred developmental orientations may be used as employee records, selection criteria, or unofficial descriptors. Such uses risk mischaracterizing individuals and create compliance and ethical issues.",
+      "reason": "More explicitly outlines what misuses are prohibited, states possible consequences, and grounds the explanation in program context."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "What this program does with it. Describes it, names its owner and license, and routes people to qualified administration if their division offers it. Protected content is not reproduced.",
+      "after": "This program documents the IDI, records its owner and license terms, and directs interested parties to qualified administrators if the assessment is offered in their division. We do not display protected IDI content or use outputs in personnel processes.",
+      "reason": "Improves specificity regarding what actions the program takes and reinforces protected boundaries and absence of use in HR processes."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "The same discipline applies to every tool. The Minnesota Equity Analysis Toolkit, the GARE Racial Equity Toolkit, CLAS, LifeCourse, implicit-association resources, accessibility methods, and engagement frameworks each have an owner, an evidence base, a license or public status, required qualifications, limits, and permitted uses. The tool cards in the Library record them.",
+      "after": "The program applies consistent criteria to all assessment and reflection tools. This includes the Minnesota Equity Analysis Toolkit, GARE Racial Equity Toolkit, CLAS, LifeCourse tools, implicit-association assessments, accessibility methods, and community engagement frameworks. Each tool is recorded in the Library with its owner, evidence basis, licensing or public domain status, qualification requirements, limitations, and approved applications.",
+      "reason": "Clarifies the scope of the policy, highlights the consistency of application, and provides clearer labeling and explanation for how tools are documented."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Practical application is decided through the consultant-led, equity-professional-informed practice, in collaboration with Equity Directors, Specialists, and committee members. No tool decides it.",
+      "after": "Decisions about how or whether to use a tool in practice rest with equity professionals, working with consultants, Equity Directors, Specialists, and committee members. Tools inform discussion and analysis, but they do not determine policy or outcomes on their own. Professional judgment and program guidance remain essential.",
+      "reason": "Clarifies decision-making authority, reinforces the advisory role of tools, and specifies why human interpretation is critical."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed revision asserts that the 'IDI does not set the standards or functions of this program,' which subtly shifts tone and priority from the source's original statement: 'It does not define this program.' The source makes a categorical boundary that the IDI 'does not define this program,' without reference to standards or functions. Adding references to 'standards or functions' introduces distinctions that are not articulated in or supported by the source language. Also, saying 'used correctly' is extraneous; the source only says it 'can inform qualified professional practice,' not making proper-use compliance a highlighted program claim."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The change accurately clarifies the risk of one tool becoming a program definition and explains why the registry matters. It is consistent with the source's intent and provides more practical detail without overstating or undercutting the original limitation."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "This revision adds examples of how staff might use IDI results ('targeted learning and reflection'), which is implied but not directly stated in the source. The edit does not materially mischaracterize the source limits—it reinforces the message that use is for learning and not for evaluation. Risk: Adding concrete uses should not be interpreted as expanding the program's permissions, and remains within allowable interpretation."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The prohibition on using the IDI for personnel decisions is preserved and made explicit in the revision—no material misrepresentation. Specifying compliance and ethical issues is an interpretation of the risks, not a change in policy, which is justified and appropriate."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The expansion on the program's action (routing and documentation) and its explicit denial of HR use are consistent with and clarify the source requirements—acceptable."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "This edit streamlines the listing of tool characteristics and does not misrepresent the governance structure. The clarification is accurate and within scope."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "Specifying who makes decisions and reinforcing that tools are only advisory is consistent with the source. The edit supports clarity and does not introduce unsupported policy."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1906,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 652,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2558
+    },
+    "review": {
+      "input_tokens": 2122,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 472,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2594
+    }
+  },
+  "createdAt": "2026-11-15T13:42:36.053Z"
+}

@@ -1,0 +1,81 @@
+{
+  "target": "code.components/intercultural-lesson-video.tsx",
+  "kind": "surface",
+  "route": "components/intercultural-lesson-video.tsx",
+  "sourceSha256": "5297d84c894313c1e745063455052a37d644edf461701e97db4b3be456e8c235",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Watch and work through the lesson",
+      "after": "Watch the lesson and apply its guidance",
+      "reason": "Revised to clearly state both the action (watching) and the intended professional outcome (applying guidance), supporting staff understanding of the video's practical purpose in a work context."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Your browser cannot play this video. The full transcript is below.",
+      "after": "Your browser cannot play this video. The written transcript is available below for reference and review.",
+      "reason": "Added clarity that the transcript serves as an accessible resource for review, explicitly tying its purpose to staff work processes."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revision changes the original field from 'Watch and work through the lesson' to 'Watch the lesson and apply its guidance.' This alteration goes beyond clarifying the action: it moves from a neutral instructional header to an outcome-oriented statement. The source strictly states 'Watch and work through the lesson,' which addresses both observation and active engagement without imposing that the viewer must 'apply its guidance.' The revision invents a professional outcome not supported by the component's source, changing the scope and purpose of the original label, and could misrepresent the course's expectations or requirements for viewers"
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "While the revised text ('The written transcript is available below for reference and review') expands on the transcript's availability and purpose, it does not misrepresent the source or alter its meaning—this adjustment is minor and permissible. However, the added wording is not clearly mandated by the program writing standard, as the original ('The full transcript is below') is already appropriately clear for accessibility and legal record-keeping."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1801,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 121,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1922
+    },
+    "review": {
+      "input_tokens": 1527,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 231,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1758
+    }
+  },
+  "createdAt": "2026-11-15T13:53:53.849Z"
+}

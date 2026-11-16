@@ -1,0 +1,67 @@
+{
+  "target": "code.app/share/library/[id]/page.tsx",
+  "kind": "surface",
+  "route": "/share/library/[id]",
+  "sourceSha256": "e5be69cdd63b38d68496079bf59908ac99c69b6a49f5f50f374d116522026724",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "You&rsquo;re viewing a shared link to this resource only. It doesn&rsquo;t include the rest of the program.",
+      "after": "You are viewing just this individual resource as shared through a link. This page does not give access to the rest of the program materials or navigation.",
+      "reason": "Clarified that only this specific resource is accessible by link and specified that broader program materials and navigation are not included. This revision meets the writing standard by stating what is present and what is missing, and by explaining the scope in professional terms without unnecessary emphasis or repetition."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The rewrite changes both tone and direct meaning without source evidence. The original sentence ('You’re viewing a shared link to this resource only. It doesn’t include the rest of the program.') is direct, uses the word 'only' clearly, and specifies the nature of the link. The proposed revision ('You are viewing just this individual resource as shared through a link. This page does not give access to the rest of the program materials or navigation.') not only alters the sentence style but introduces wording ('does not give access to... navigation') not present or required by the source. The original text is already clear, concise, and meets the program writing standard's requirement for plain language in notices. The added detail about 'navigation' could be inferred but is not explicitly specified in the source and thus cannot be invented or expanded upon. As per the standard, official records and instructions should retain their original wording unless there is a clear, source-driven need for change."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2335,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 108,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2443
+    },
+    "review": {
+      "input_tokens": 2055,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 215,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2270
+    }
+  },
+  "createdAt": "2026-11-15T13:51:41.535Z"
+}

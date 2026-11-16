@@ -1,0 +1,186 @@
+{
+  "target": "resource.ja-language-access-checklist",
+  "kind": "resource",
+  "route": "/library/ja-language-access-checklist",
+  "sourceSha256": "24609e81cd57f3cd5b658770ee5f7f657fa4e9375de3158a6b6f83bffbdab87b",
+  "status": "needs_revision",
+  "reviewedFieldCount": 9,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Begin by identifying the languages people need and the vital documents that require translation and human review. Have a qualified interpreter available at first contact, and make each request specific about language, dialect, requested gender match, and meeting format.",
+      "after": "Start by determining which languages and dialects the people you serve need, and identify any vital documents that require both translation and human review. Arrange for a qualified interpreter to be available at the first point of contact. When making a request, clearly specify the language, dialect, preferred interpreter gender if relevant, and whether the meeting will happen in person, by phone, or by video.",
+      "reason": "Clarifies the need to assess language and dialect needs using precise terms, and explains how to make interpreter requests more specific for practical coordination."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "The wrong dialect, an unreviewed translation, or an English-only exception process can keep people from receiving meaningful access.",
+      "after": "If staff use the wrong dialect, release an unreviewed translation, or rely on an English-only process for exceptions, people may not receive information or access to services in a way they can use. This can cause misunderstandings, delays, or unintentional exclusion from needed services.",
+      "reason": "Expands on the possible outcomes when language access standards are missed and links specific staff actions to practical service consequences."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Languages: use current contact data for the people your program serves. Record the language and dialect each person requests rather than relying on an agencywide list.",
+      "after": "Languages: Base your list on the current contact data for each person your program serves, not a general agencywide language list. Record the specific language and dialect that each person requests to make sure their needs are accurately met.",
+      "reason": "Clarifies the practical reason to use individual data over generalized lists and connects the instruction to person-centered practice."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Vital documents: notices of action, applications, consent forms, appeal rights, and anything a person must understand to get or keep a service. Follow the current language-access requirements for translation and qualified human review before release.",
+      "after": "Vital documents: These include notices of action, applications, consent forms, appeal rights, and any document someone must understand to obtain, maintain, or appeal services. Meet all current language-access requirements, including both professional translation and review by a qualified person, before releasing these documents.",
+      "reason": "Clarifies why documents are labeled 'vital' and specifies the sequential requirement for translation and review."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Interpreters: use qualified professional interpreters rather than family members, children, or bilingual staff pulled away from their own work. Bilingual colleagues should not be expected to serve as on-demand interpreters.",
+      "after": "Interpreters: Use qualified professional interpreters instead of family members, children, or staff who are not hired as interpreters. Do not assign bilingual staff to interpret if it disrupts their own regular responsibilities. Bilingual employees should not be relied on as default or on-call interpreters.",
+      "reason": "Explains the rationale for using professional interpreters and clarifies the limits of relying on bilingual staff in other roles."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Requests: write the language and dialect, such as Standard Somali or Maay, White Hmong or Green Hmong, or S'gaw or Pwo Karen. Also note any requested interpreter gender and whether the meeting is in person, by phone, or by video.",
+      "after": "Requests: Write down the language and dialect—for example, Standard Somali or Maay, White Hmong or Green Hmong, or S'gaw Karen or Pwo Karen. Include any request for the interpreter's gender and specify the format of the meeting (in person, telephone, or video).",
+      "reason": "Clarifies why specificity matters in interpreter requests and offers concrete examples for documentation."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Point of contact: a person should reach an interpreter at the first contact, not after a failed attempt in English.",
+      "after": "Point of contact: Ensure that a person can connect with an interpreter during the initial contact, rather than only after a failed conversation in English. Early access reduces miscommunication and frustration.",
+      "reason": "Explains the purpose and practical impact of interpreter access at the initial contact."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "Written material: plain language first; then translation. A dense English notice becomes a dense translated notice.",
+      "after": "Written material: Use plain language when writing original documents. A document written in complicated English will not be easier to understand after translation. Translate only after the content is clear and concise.",
+      "reason": "Clarifies the relationship between plain language and translation, emphasizing when to apply each step and why it matters."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "body",
+        6
+      ],
+      "before": "Follow current DHS policy before using machine translation. Treat any permitted use as a draft, and have a qualified person review every vital document before it is released.",
+      "after": "Before using machine translation, check current DHS policy. Consider any machine translation as a preliminary version, not a final product. Have a qualified person review and approve every vital document before releasing it, regardless of translation method.",
+      "reason": "Clarifies that staff must follow agency policy on machine translation and that human review is required for all vital documents."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revision adds 'preferred interpreter gender if relevant' and states 'clearly specify' for meeting format, introducing requirements not specifically present in the source. The source states to 'make each request specific about language, dialect, requested gender match, and meeting format,' which differs from 'preferred interpreter gender if relevant.' The edit also loses the initial guiding instruction to 'identify the languages people need and the vital documents,' which is more than just determining which documents 'require both translation and human review.' The rewrite erases the action to 'begin by identifying' and changes directive structure."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The expansion is plausible and aligns with the source's intent by illustrating service barriers, but the field is a plain-language summary, not guidance or policy, and reflects a linked consequence. No blocker."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The edit expands person-centered rationale and is accurate to the source, which instructs to use current contact data and record individual language/dialect. No blocker."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The rewrite improves clarity and sequential logic for compliance with translation and review. It does not restrict or expand the policy and remains faithful to the source. No blocker."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The edit keeps the scope and rationale of the original—using professional interpreters and not defaulting to bilingual staff—without legal or policy overreach. No blocker."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The changes are largely editorial, preserve requirements for specifying details, and provide helpful examples. No blocker."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "Expanding on the rationale for first-contact interpreter access is consistent with source requirements and purpose. No blocker."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "The description of plain language before translation clarifies the guidance present in the source without loss or contradiction. No blocker."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "The rewrite reinforces existing policy on machine translation and maintains the human review requirement, as in the source. No blocker."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1922,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 773,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2695
+    },
+    "review": {
+      "input_tokens": 2243,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 457,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2700
+    }
+  },
+  "createdAt": "2026-11-15T13:40:58.757Z"
+}

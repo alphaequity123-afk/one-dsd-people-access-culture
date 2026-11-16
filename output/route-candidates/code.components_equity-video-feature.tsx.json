@@ -1,0 +1,67 @@
+{
+  "target": "code.components/equity-video-feature.tsx",
+  "kind": "surface",
+  "route": "components/equity-video-feature.tsx",
+  "sourceSha256": "3d4538b4bbdcf52354347106cf114d279ffe98a27910ff673696c328156072e7",
+  "status": "needs_revision",
+  "reviewedFieldCount": 3,
+  "changes": [
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "Understand the Equity Outcome Map, then follow DSD examples that connect the six goals of the Aging and Disability Services Administration with useful tools and learning.",
+      "after": "This feature introduces the Equity Outcome Map and explains how it supports Minnesota DHS and DSD work. The included examples show how the six goals of the Aging and Disability Services Administration guide staff in making decisions, improving access, and fostering cultural responsiveness across programs. These examples are paired with practical tools and learning opportunities relevant to colleagues working in disability and aging services.",
+      "reason": "Provides a clearer summary with improved explanation of how the Equity Outcome Map and administration goals connect to daily DHS and DSD work. This wording clarifies why these examples and tools are important and anchors the guidance to actual Minnesota practice."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The proposed replacement has added unsupported claims and specificity that are not present in the source. The source states: 'Understand the Equity Outcome Map, then follow DSD examples that connect the six goals of the Aging and Disability Services Administration with useful tools and learning.' The replacement asserts the feature 'explains how it supports Minnesota DHS and DSD work,' that the examples 'guide staff in making decisions, improving access, and fostering cultural responsiveness across programs,' and that these are specifically 'paired with practical tools and learning opportunities relevant to colleagues working in disability and aging services.' These are all elaborations and interpretations not substantiated by the source text. The rewrite goes beyond clarifying the existing summary and instead makes new policy and scope claims."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1288,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 168,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1456
+    },
+    "review": {
+      "input_tokens": 1000,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 187,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1187
+    }
+  },
+  "createdAt": "2026-11-15T13:53:34.326Z"
+}

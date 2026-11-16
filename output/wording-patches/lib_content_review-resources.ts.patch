@@ -1,0 +1,13 @@
+diff --git a/lib/content/review-resources.ts b/lib/content/review-resources.ts
+index 497e466..fe60632 100644
+--- a/lib/content/review-resources.ts
++++ b/lib/content/review-resources.ts
+@@ -24,7 +24,7 @@ export const REVIEW_RESOURCES: ContentItem[] = reviewResources.filter(resource =
+ ].includes(resource.id)).map<ContentItem>(resource => ({
+   id: resource.id, title: resource.title, summary: resource.summary,
+   type: resource.kind, authority: "guidance", layer: resource.kind === "tool" ? "L2" : "L3",
+-  body: [resource.summary, "Staff throughout DHS can use these resources independently. The Equity and Inclusion Operations Consultant leads the program and offers guidance and feedback; staff and decision owners carry out their own work.", "These program resources support analysis and planning. They do not replace official policy, required consultation, or the authority of the responsible office."],
++  body: [resource.summary, "Staff throughout DHS can use these resources independently. The Equity and Inclusion Operations Consultant leads the program and offers guidance and feedback; staff and decision owners carry out their own work.", "These program resources support analysis and planning. They do not replace official policy, required consultation, or the authority of the person or area responsible."],
+   nextActions: [{ label: resource.kind === "tool" ? "Open the workspace" : "Read the guide", href: resource.href }, { label: resource.kind === "tool" ? "Open the full-page tool" : "Download Word document", href: resource.file }],
+   tags: ["equity analysis", "policy", "review", "planning", ...(resource.id.includes("hcbs") ? ["HCBS", "home and community-based services"] : []), ...(resource.id.includes("quarterly") || resource.id.includes("measures") ? ["reporting", "progress", "measures"] : [])],
+   intents: ["practice_method", "policy_orientation", "next_actions"],

@@ -1,0 +1,81 @@
+{
+  "target": "domain.workforce",
+  "kind": "surface",
+  "route": "/areas/workforce",
+  "sourceSha256": "2d8815a999298ecafbc0b39204d37c945186512970505fbd34a310260200359c",
+  "status": "needs_revision",
+  "reviewedFieldCount": 27,
+  "changes": [
+    {
+      "fieldId": 2,
+      "path": [
+        "summary"
+      ],
+      "before": "Equity in how people are recruited, screened, selected, welcomed, reviewed, paid, promoted, supported, and retained. It covers the whole lifecycle, not a single inclusive-hiring page.",
+      "after": "This area addresses equity at every stage of the employee lifecycle, from recruitment through retention. It covers not only how people are hired but also how they are screened, selected, welcomed, evaluated, paid, promoted, supported, and retained. Attention to the full lifecycle helps identify where disparities arise and supports fairer workplace practices. The focus is broader than a single hiring intervention; it requires continuous review of norms, processes, and decision points that affect staff experience and opportunity.",
+      "reason": "Expanded the summary to clarify that workforce equity involves ongoing work across all employment phases, and explained why covering the lifecycle matters beyond hiring alone."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Credential gatekeeping, vague culture-fit judgments, and unclear pathways are among the most consistent barriers DSD staff described. They are also decisions with owners, which means they can change.",
+      "after": "DSD staff have identified credential requirements that are not directly tied to job tasks, ambiguous criteria like 'culture fit,' and unclear advancement or retention pathways as persistent barriers for diverse applicants and employees. These practices reflect specific decisions, made by individuals or panels, rather than fixed constraints. When owners of these decisions review and revise them, barriers can be lowered and more equitable outcomes can result.",
+      "reason": "Clarified and specified how described barriers function in context, and explained why decision ownership makes equity work feasible and relevant."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The proposed expanded summary shifts from the original, which neutrally listed recruitment, screening, selection, welcoming, reviewing, pay, promotion, support, and retention as areas for equity, to a more assertive tone and explanation. It asserts outcomes and benefits ('helps identify where disparities arise,' 'supports fairer workplace practices,' 'requires continuous review') not stated in the source summary or source reasoning. The original summary intentionally avoids framing the scope as 'addressing' issues at each stage—instead, it neutrally says equity is present in all stages, and that this breadth is the reason it is more than a single page on inclusive hiring. The rewrite introduces ungrounded claims about impact and changes the tone from descriptive to programmatic guidance without supporting evidence."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The rewritten 'why it matters' field is generally supported: it specifies that barriers reflect decision points controlled by individuals or panels, and clarifies that these are revisable rather than fixed. This is a defensible clarification and expansion of the meaning in the original field, which stated that credential gatekeeping, vague 'culture fit,' and unclear pathways are barriers, and that these decisions can be changed because they have owners. It remains true to the source as a paraphrase that does not erase or misrepresent the reasons offered."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2608,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 307,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2915
+    },
+    "review": {
+      "input_tokens": 1670,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 291,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1961
+    }
+  },
+  "createdAt": "2026-11-15T13:39:16.435Z"
+}

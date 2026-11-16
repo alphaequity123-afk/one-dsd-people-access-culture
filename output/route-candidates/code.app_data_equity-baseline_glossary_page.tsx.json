@@ -1,0 +1,81 @@
+{
+  "target": "code.app/data/equity-baseline/glossary/page.tsx",
+  "kind": "surface",
+  "route": "/data/equity-baseline/glossary",
+  "sourceSha256": "ff57b4b5e948be31c7eef64161ee1c19463c3bb345fdebffde7b8a65e1bd94cb",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Full names used in the dashboard, with the short form found in state documents.",
+      "after": "This table lists the full names used on the dashboard and matches each to its short form from relevant state documents. Staff can use it to compare terminology in reports or data extracts and confirm wording when referencing official sources. Accurate terminology ensures clarity across teams.",
+      "reason": "Expanded to clarify the table's purpose, explain how staff may use it, and note why matching terms supports accuracy and clarity in collaborative work."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Short form used in state documents",
+      "after": "Short form from state documents",
+      "reason": "Revised heading for conciseness and to match professional style without altering meaning."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed replacement for the table caption ('This table lists the full names used on the dashboard...') does not preserve the original wording or scope. The original source caption is: 'Full names used in the dashboard, with the short form found in state documents.' The new text introduces new instructional and reasoning content ('Staff can use it...', 'confirm wording...', 'ensures clarity...'), which extends beyond the descriptive function of a table caption, and is not present in the source. Captions in data tables should be concise and factual; adding use scenarios and rationales exceeds the source's intent and constitutes unsupported expansion."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The heading change from 'Short form used in state documents' to 'Short form from state documents' is minor and maintains the meaning. It does not introduce policy changes or inappropriate complexity."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1500,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 137,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1637
+    },
+    "review": {
+      "input_tokens": 1242,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 226,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1468
+    }
+  },
+  "createdAt": "2026-11-15T13:48:22.060Z"
+}

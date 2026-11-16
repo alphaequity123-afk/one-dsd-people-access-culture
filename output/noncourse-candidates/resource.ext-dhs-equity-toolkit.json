@@ -1,0 +1,82 @@
+{
+  "target": "resource.ext-dhs-equity-toolkit",
+  "kind": "resource",
+  "route": "/library/ext-dhs-equity-toolkit",
+  "sourceSha256": "be49c3411fd0914bd41d71c6956bcaf1adf15fda2f454c0e761e7ceec734b4e6",
+  "status": "model_checked",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Use the DHS Equity Analysis Toolkit to consider who is affected, what evidence is available, which barriers and alternatives matter, and how access, responsibility, and review are handled, working from the current DHS version.",
+      "after": "Use the DHS Equity Analysis Toolkit to identify which individuals and groups are affected by a given decision or process, examine available evidence, and assess relevant barriers or alternative strategies. The toolkit also guides review of access, responsibility, and oversight in alignment with the current DHS framework.",
+      "reason": "Clarified the actions the toolkit supports and grounded the purpose in standard DHS work, improving specificity and connected explanation as directed by the standard."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "The checklist and impact questions in this program can help you prepare, but they do not replace the DHS Equity Analysis Toolkit. Confirm the current toolkit and any required process with the appropriate DHS contact.",
+      "after": "The program's checklist and impact questions can help you think through equity considerations as you plan your work, but they are not a substitute for the DHS Equity Analysis Toolkit. Always verify you are using the most recent toolkit and check with your DHS contact for any required process steps.",
+      "reason": "Explained why the checklist and questions may be useful, stressed their preparatory role, and clarified the importance of using the current toolkit and confirming agency process for professional clarity and alignment with the writing standard."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revision to the summary maintains fidelity to the source while modestly increasing specificity by rephrasing the actions supported by the toolkit. It does not introduce unsupported claims or erase qualifications: the core elements of considering who is affected, evidence, barriers/alternatives, and the review of access and responsibility are all retained and tied back to the current DHS framework. There is no blocker."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The body text rephrasing preserves the original's meaning: the checklist and impact questions are preparatory and do not replace use of the toolkit. The updated version clarifies their role in planning, and continues to instruct readers to use the most recent official toolkit and confirm process requirements. No unsupported claims, erased qualifications, or incorrect representations are present."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1325,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 212,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1537
+    },
+    "review": {
+      "input_tokens": 1141,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 210,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1351
+    }
+  },
+  "createdAt": "2026-11-15T13:41:38.962Z"
+}

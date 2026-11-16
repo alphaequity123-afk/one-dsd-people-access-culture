@@ -1,0 +1,342 @@
+{
+  "checkedAt": "2026-11-15T14:24:42.974Z",
+  "results": [
+    {
+      "target": "learn.page",
+      "url": "https://one-people-access-culture.up.railway.app/learn",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "passed": true
+    },
+    {
+      "target": "domain.access-language",
+      "url": "https://one-people-access-culture.up.railway.app/areas/access-language",
+      "status": 200,
+      "expectedFields": 2,
+      "matchedFields": 2,
+      "passed": true
+    },
+    {
+      "target": "domain.community-engagement",
+      "url": "https://one-people-access-culture.up.railway.app/areas/community-engagement",
+      "status": 200,
+      "expectedFields": 2,
+      "matchedFields": 2,
+      "passed": true
+    },
+    {
+      "target": "domain.culture-trust",
+      "url": "https://one-people-access-culture.up.railway.app/areas/culture-trust",
+      "status": 200,
+      "expectedFields": 2,
+      "matchedFields": 2,
+      "passed": true
+    },
+    {
+      "target": "domain.leadership-systems",
+      "url": "https://one-people-access-culture.up.railway.app/areas/leadership-systems",
+      "status": 200,
+      "expectedFields": 2,
+      "matchedFields": 2,
+      "passed": true
+    },
+    {
+      "target": "domain.measurement",
+      "url": "https://one-people-access-culture.up.railway.app/areas/measurement",
+      "status": 200,
+      "expectedFields": 4,
+      "matchedFields": 4,
+      "passed": true
+    },
+    {
+      "target": "domain.policy-program-service",
+      "url": "https://one-people-access-culture.up.railway.app/areas/policy-program-service",
+      "status": 200,
+      "expectedFields": 2,
+      "matchedFields": 2,
+      "passed": true
+    },
+    {
+      "target": "domain.workforce",
+      "url": "https://one-people-access-culture.up.railway.app/areas/workforce",
+      "status": 200,
+      "expectedFields": 2,
+      "matchedFields": 2,
+      "passed": true
+    },
+    {
+      "target": "dsd-program.communications-training",
+      "url": "https://one-people-access-culture.up.railway.app/one-dsd/programs/communications-training",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "passed": true
+    },
+    {
+      "target": "dsd-program.contracts-fiscal",
+      "url": "https://one-people-access-culture.up.railway.app/one-dsd/programs/contracts-fiscal",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "passed": true
+    },
+    {
+      "target": "dsd-program.data-quality",
+      "url": "https://one-people-access-culture.up.railway.app/one-dsd/programs/data-quality",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "passed": true
+    },
+    {
+      "target": "dsd-program.eidbi-children",
+      "url": "https://one-people-access-culture.up.railway.app/one-dsd/programs/eidbi-children",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "passed": true
+    },
+    {
+      "target": "dsd-program.employment",
+      "url": "https://one-people-access-culture.up.railway.app/one-dsd/programs/employment",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "passed": true
+    },
+    {
+      "target": "dsd-program.hcbs-policy",
+      "url": "https://one-people-access-culture.up.railway.app/one-dsd/programs/hcbs-policy",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "passed": true
+    },
+    {
+      "target": "dsd-program.leadership-strategy",
+      "url": "https://one-people-access-culture.up.railway.app/one-dsd/programs/leadership-strategy",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "passed": true
+    },
+    {
+      "target": "dsd-program.mnchoices-access",
+      "url": "https://one-people-access-culture.up.railway.app/one-dsd/programs/mnchoices-access",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "passed": true
+    },
+    {
+      "target": "dsd-program.olmstead",
+      "url": "https://one-people-access-culture.up.railway.app/one-dsd/programs/olmstead",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "passed": true
+    },
+    {
+      "target": "dsd-program.positive-supports",
+      "url": "https://one-people-access-culture.up.railway.app/one-dsd/programs/positive-supports",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "passed": true
+    },
+    {
+      "target": "dsd-program.support-planning",
+      "url": "https://one-people-access-culture.up.railway.app/one-dsd/programs/support-planning",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "passed": true
+    },
+    {
+      "target": "dsd-program.tbi-guardianship",
+      "url": "https://one-people-access-culture.up.railway.app/one-dsd/programs/tbi-guardianship",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "passed": true
+    },
+    {
+      "target": "dsd-scenario.dsd-accessible-form",
+      "url": "https://one-people-access-culture.up.railway.app/one-dsd/scenarios/dsd-accessible-form",
+      "status": 200,
+      "expectedFields": 2,
+      "matchedFields": 2,
+      "passed": true
+    },
+    {
+      "target": "dsd-scenario.dsd-accommodation-cliff",
+      "url": "https://one-people-access-culture.up.railway.app/one-dsd/scenarios/dsd-accommodation-cliff",
+      "status": 200,
+      "expectedFields": 3,
+      "matchedFields": 3,
+      "passed": true
+    },
+    {
+      "target": "dsd-scenario.dsd-advancement-conversation",
+      "url": "https://one-people-access-culture.up.railway.app/one-dsd/scenarios/dsd-advancement-conversation",
+      "status": 200,
+      "expectedFields": 3,
+      "matchedFields": 3,
+      "passed": true
+    },
+    {
+      "target": "dsd-scenario.dsd-hiring-panel",
+      "url": "https://one-people-access-culture.up.railway.app/one-dsd/scenarios/dsd-hiring-panel",
+      "status": 200,
+      "expectedFields": 3,
+      "matchedFields": 3,
+      "passed": true
+    },
+    {
+      "target": "dsd-scenario.dsd-policy-change",
+      "url": "https://one-people-access-culture.up.railway.app/one-dsd/scenarios/dsd-policy-change",
+      "status": 200,
+      "expectedFields": 2,
+      "matchedFields": 2,
+      "passed": true
+    },
+    {
+      "target": "dsd-scenario.dsd-service-redesign",
+      "url": "https://one-people-access-culture.up.railway.app/one-dsd/scenarios/dsd-service-redesign",
+      "status": 200,
+      "expectedFields": 3,
+      "matchedFields": 3,
+      "passed": true
+    },
+    {
+      "target": "dsd-scenario.dsd-engagement-late",
+      "url": "https://one-people-access-culture.up.railway.app/one-dsd/scenarios/dsd-engagement-late",
+      "status": 200,
+      "expectedFields": 3,
+      "matchedFields": 3,
+      "passed": true
+    },
+    {
+      "target": "dsd-scenario.dsd-report-back",
+      "url": "https://one-people-access-culture.up.railway.app/one-dsd/scenarios/dsd-report-back",
+      "status": 200,
+      "expectedFields": 3,
+      "matchedFields": 3,
+      "passed": true
+    },
+    {
+      "target": "dsd-scenario.dsd-interpreter-first-contact",
+      "url": "https://one-people-access-culture.up.railway.app/one-dsd/scenarios/dsd-interpreter-first-contact",
+      "status": 200,
+      "expectedFields": 3,
+      "matchedFields": 3,
+      "passed": true
+    },
+    {
+      "target": "dsd-scenario.dsd-team-silence",
+      "url": "https://one-people-access-culture.up.railway.app/one-dsd/scenarios/dsd-team-silence",
+      "status": 200,
+      "expectedFields": 3,
+      "matchedFields": 3,
+      "passed": true
+    },
+    {
+      "target": "dsd-scenario.dsd-repair-after-harm",
+      "url": "https://one-people-access-culture.up.railway.app/one-dsd/scenarios/dsd-repair-after-harm",
+      "status": 200,
+      "expectedFields": 3,
+      "matchedFields": 3,
+      "passed": true
+    },
+    {
+      "target": "dsd-scenario.dsd-leadership-bottleneck",
+      "url": "https://one-people-access-culture.up.railway.app/one-dsd/scenarios/dsd-leadership-bottleneck",
+      "status": 200,
+      "expectedFields": 3,
+      "matchedFields": 3,
+      "passed": true
+    },
+    {
+      "target": "dsd-scenario.dsd-small-group-data",
+      "url": "https://one-people-access-culture.up.railway.app/one-dsd/scenarios/dsd-small-group-data",
+      "status": 200,
+      "expectedFields": 3,
+      "matchedFields": 3,
+      "passed": true
+    },
+    {
+      "target": "lib/content/community-360/american.json",
+      "url": "https://one-people-access-culture.up.railway.app/minnesota-communities/american/profile",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "passed": true
+    },
+    {
+      "target": "lib/content/community-360/minnesota.json",
+      "url": "https://one-people-access-culture.up.railway.app/minnesota-communities/minnesota/profile",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "passed": true,
+      "verificationNote": "Full text matched after removing Markdown list markers; live HTML renders native list bullets. All words and source labels retained."
+    },
+    {
+      "target": "lib/content/community-research/somali.json",
+      "url": "https://one-people-access-culture.up.railway.app/minnesota-communities/somali/people",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "passed": true
+    },
+    {
+      "target": "lib/content/hub/organizations.json",
+      "url": "https://one-people-access-culture.up.railway.app/community-outreach/organizations/adaptive-wilderness-within-reach",
+      "status": 200,
+      "expectedFields": 3,
+      "matchedFields": 3,
+      "passed": true
+    },
+    {
+      "target": "lib/content/hub/system-connections.json",
+      "url": "https://one-people-access-culture.up.railway.app/community-outreach/how-the-system-connects",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "passed": true
+    },
+    {
+      "target": "lib/content/reading-collection.json",
+      "url": "https://one-people-access-culture.up.railway.app/learn/readings/reading-001",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "passed": true
+    },
+    {
+      "target": "lib/content/community-research/american.json",
+      "url": "https://one-people-access-culture.up.railway.app/minnesota-communities/american/people",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "passed": true
+    },
+    {
+      "target": "lib/content/community-research/african-american.json",
+      "url": "https://one-people-access-culture.up.railway.app/minnesota-communities/african-american/people",
+      "status": 200,
+      "expectedFields": 9,
+      "matchedFields": 9,
+      "passed": true
+    },
+    {
+      "target": "lib/content/community-research/amharic.json",
+      "url": "https://one-people-access-culture.up.railway.app/minnesota-communities/amharic/people",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "passed": true
+    }
+  ]
+}

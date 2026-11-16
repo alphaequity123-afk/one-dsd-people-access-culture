@@ -1,0 +1,109 @@
+{
+  "target": "code.components/clas-curriculum/walkthrough-playlist.tsx",
+  "kind": "surface",
+  "route": "components/clas-curriculum/walkthrough-playlist.tsx",
+  "sourceSha256": "baec6a975472341936aaeb57ad543b1a725145b27ef8d37e79372c0712b9cb77",
+  "status": "needs_revision",
+  "reviewedFieldCount": 5,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Your browser cannot play this audio. Each lesson page offers the same chapter with a transcript.",
+      "after": "Your browser cannot play this audio. The same chapter, along with its transcript, is available on each lesson page.",
+      "reason": "Raised register, clarified the resource access, and connected the chapter and transcript availability as program-authored guidance."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "When a chapter ends, the next one follows",
+      "after": "When a chapter ends, playback automatically moves to the next one.",
+      "reason": "Specified how the next chapter follows and emphasized the continued playback to clarify the reasoning for staff."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": ". You can pause at any time and return later.",
+      "after": "You can pause playback at any time and return later; your progress will be saved on this device.",
+      "reason": "Added an explanation of saved progress and clarified the pause function in line with the program's practical use."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": ", where you left off on this device.",
+      "after": ", using the saved position on this device.",
+      "reason": "Clarified reference to saved progress and device-restricted resume location for explicit reasoning."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The source text is: 'Your browser cannot play this audio. Each lesson page offers the same chapter with a transcript.' The proposed change ('The same chapter, along with its transcript, is available on each lesson page.') is a paraphrase that alters register ('offers' vs. 'is available'), adds a connector ('along with') not in the source, and uses a more formal construction. The program writing standard requires source-grounded, plain colleague-to-colleague language and explicitly says that label or fallback messages retain their original wording. This is not a technical or clarity-driven edit and cannot be justified as a correction or clarification. Edit introduces unnecessary changes."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The source text is: 'When a chapter ends, the next one follows.' The proposed: 'When a chapter ends, playback automatically moves to the next one.' Changes register and speculativeness by adding 'automatically' and 'playback... moves.' The original is clear and colloquial; the revision is less direct and introduces implications about automation that, while true in most cases, are already explained elsewhere (in source comments and program guidance). Not supported per standard."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The source: '. You can pause at any time and return later.' The proposed: 'You can pause playback at any time and return later; your progress will be saved on this device.' While supported by implementation, this field intentionally splits its mention of playback controls from storage details—progress saving is referenced elsewhere (e.g., resumedFrom and status messages). The standard does not support adding explanations to a brief, purpose-built reassurance unless ambiguity or user error is observed. The change is unnecessary extra verbiage and moves an implementation explanation into every occurrence, which is discouraged."
+      },
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "The source: ', where you left off on this device.' Proposed: ', using the saved position on this device.' This edit rephrases but does not clarify, and removes the colloquial 'where you left off' for more technical language. The source is already specific, and the edit is not supported by the standard, which preserves the voice and directness of original program-authored strings."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3037,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 204,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3241
+    },
+    "review": {
+      "input_tokens": 2808,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 482,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3290
+    }
+  },
+  "createdAt": "2026-11-15T13:52:23.733Z"
+}

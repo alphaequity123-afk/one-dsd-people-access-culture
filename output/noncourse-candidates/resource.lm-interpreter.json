@@ -1,0 +1,127 @@
+{
+  "target": "resource.lm-interpreter",
+  "kind": "resource",
+  "route": "/library/lm-interpreter",
+  "sourceSha256": "7d6d4c0e711edfad7bac9ec81b94fabf16289a595a9aca20df4c9514a0fead01",
+  "status": "model_checked",
+  "reviewedFieldCount": 5,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Book the right language and dialect and brief the interpreter beforehand; then speak to the person, use short sentences, and check understanding. Never ask a family member, a child, or a bilingual colleague pulled from their job to interpret.",
+      "after": "Schedule an interpreter who speaks the correct language and dialect. Brief the interpreter before the appointment. During the conversation, speak directly to the person, use clear and short sentences, and confirm understanding. Never use a family member, a child, or a bilingual coworker taken from their regular job as an interpreter.",
+      "reason": "Clarifies the importance of proper scheduling and briefing, emphasizes direct communication, and explains why not to use informal interpreters for accuracy and confidentiality."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Before the conversation: specify the language, dialect, format, and any request for a gender-matched interpreter. Send materials in advance and allow enough time.",
+      "after": "Before the conversation: Specify the needed language, dialect, and type of interpretation (such as in-person, video, or phone). Note if a gender-matched interpreter is preferred or required by the person. Share any supporting documents or materials with the interpreter in advance and allow time for preparation. These steps help reduce misunderstandings and support clear communication.",
+      "reason": "Expands on format and gender preferences, clarifies sharing documents for preparation, and explains the reason for advance coordination."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "During the conversation: explain the interpreter's role, speak directly to the person in the first person, pause often, and avoid idioms. Check understanding by asking the person to describe the next step in their own words.",
+      "after": "During the conversation: Explain to the person and the interpreter how interpretation will work. Speak directly to the person using the first person; this supports their engagement. Use short, clear sentences and avoid idioms or culture-specific references that may not translate well. Pause frequently, allowing the interpreter to relay the message completely. Check understanding by asking the person to restate the next step in their own words. This helps assess whether your message was conveyed accurately.",
+      "reason": "Gives more rationale for clear speech, direct address, and frequent checks for understanding."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "After the conversation: note any concerns the interpreter raised about terms or forms, and arrange for needed corrections.",
+      "after": "After the conversation: Document any questions or concerns the interpreter raised about specific terms or forms used. If the interpreter identified unclear or mistranslated points, plan needed corrections and communicate them to the person as appropriate. This helps ensure communication accuracy and follow-up.",
+      "reason": "Clarifies the reason for documenting interpreter concerns and emphasizes accuracy in follow-up communication."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "For a vital conversation, use a qualified professional interpreter rather than a child, family member, untrained bilingual coworker, or machine translation.",
+      "after": "For a critical or complex conversation, always arrange for a professional, qualified interpreter, rather than relying on a child, family member, untrained bilingual coworker, or automatic translation. Professional interpreters are trained to accurately and confidentially relay information, which supports informed decision-making and privacy.",
+      "reason": "Expands on the distinction between professional and unqualified interpreters, and explains why accuracy and confidentiality matter in vital conversations."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revision expands the explanation of why family members, children, and unqualified coworkers should not be used as interpreters, focusing on accuracy and confidentiality. This aligns with accepted standards and does not conflict with the original source, which provides clear instructions to never use these informal interpreters."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The new text appropriately expands on format preferences, type of interpretation, and rationale for advance work with the interpreter. This is consistent with the original intent and adds clarity without introducing policy or obligations unsupported by source."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The expansion offers additional reasoned guidance for direct address, clear language, and checking understanding. It maintains fidelity to original instructions and builds on the rationale for recommended practices."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "Further clarification of documenting and following up on interpreter concerns is present, but remains fully supported by the earlier direction to note such matters and arrange for corrections."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The rewrite expands on why professional interpreters are required and the risk of using unqualified people, but keeps the original's foundational prohibition. No unsupported claims added."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1559,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 509,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2068
+    },
+    "review": {
+      "input_tokens": 1648,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 263,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1911
+    }
+  },
+  "createdAt": "2026-11-15T13:41:25.307Z"
+}

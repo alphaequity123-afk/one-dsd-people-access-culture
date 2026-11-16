@@ -1,0 +1,123 @@
+{
+  "target": "code.components/participation-notice.tsx",
+  "kind": "surface",
+  "route": "components/participation-notice.tsx",
+  "sourceSha256": "fcb16643530638d5b086dbe88e4d6a3648b55bd1a4e50460730ce36ff7d20bb6",
+  "status": "needs_revision",
+  "reviewedFieldCount": 5,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Read how participation and privacy work.",
+      "after": "See details about privacy and participation.",
+      "reason": "The revised text is brief, direct, and maintains a professional tone. It avoids unnecessary repetition and clearly indicates that further information is available. The original meaning and purpose of linking to more information are preserved."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Your submitted details are retained for",
+      "after": "The program retains your submitted details for",
+      "reason": "Clarified that the program is the actor and specified that it retains the information, improving specificity and professional clarity."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "from submission, even if you withdraw the request. After that, only an expired status remains for",
+      "after": "after submission, even if you withdraw your request. Only an expired status is kept for",
+      "reason": "This version clarifies the timeline and continues to explain what is retained. The language specifies whose request is affected and what happens next, improving precision."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": "more days before it is deleted.",
+      "after": "additional days before permanent deletion.",
+      "reason": "Added 'additional' and 'permanent' to clarify what happens to the data and reduce possible ambiguity about the process and its conclusion."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field4"
+      ],
+      "before": "Corrections are temporarily unavailable. You can still check status and withdraw when that option is available.",
+      "after": "You cannot make corrections at this time, but you can still check status and withdraw your request when those options are available.",
+      "reason": "Clarified the temporary limitation, specifically mentioned the user's request, and improved precision about current options. The revision explains what staff can and cannot do clearly."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The original line (\"Read how participation and privacy work.\") is a direct call to read further information linked by the phrase. The revision (\"See details about privacy and participation.\") dulls the call to action and loses the explicit invitation to \"read\" (i.e., to follow for further content), reducing clarity and slightly shifting the user's expected engagement with the linked content. Under the standard, precise phrasing and intent of UI links must be preserved when tied to specific program records and guidance."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "Changing \"Your submitted details are retained for\" to \"The program retains your submitted details for\" improves actor clarity, but does not shift meaning or policy. This clarification is reasonable and can be accepted if all other blockers are addressed."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "Re-ordering to \"after submission, even if you withdraw your request. Only an expired status is kept for\" clarifies timeline and maintains the operational meaning. The change in pronoun from \"the request\" to \"your request\" matches site tone and is within source scope."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "\"additional days before permanent deletion\" slightly increases clarity about the process. The addition of \"permanent\" is not present in the original, but reflects a reasonable operational reading (i.e., after deletion, nothing retained). This is a minor improvement."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "Expanding to \"You cannot make corrections at this time, but you can still check status and withdraw your request when those options are available.\" more explicitly ties actions to the user's role/request. This is a nuance that aligns with the original meaning."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3145,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 285,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3430
+    },
+    "review": {
+      "input_tokens": 3012,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 374,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3386
+    }
+  },
+  "createdAt": "2026-11-15T13:55:10.498Z"
+}

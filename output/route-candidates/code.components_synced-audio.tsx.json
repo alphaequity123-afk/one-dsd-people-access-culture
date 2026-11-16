@@ -1,0 +1,67 @@
+{
+  "target": "code.components/synced-audio.tsx",
+  "kind": "surface",
+  "route": "components/synced-audio.tsx",
+  "sourceSha256": "8d0c5044fb20d08c11e7bfb4b567e32a6d2c5733f6253116c7c6f67741ba58ee",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Click any sentence to hear it.",
+      "after": "Select a sentence to play the recording from that point.",
+      "reason": "The new text removes unnecessary repetition and gives a clearer instruction, clearly stating the action (selecting a sentence) and its effect (starting playback from that point). It addresses colleagues professionally by directly connecting the interface action with its consequence, avoiding slogans or filler."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed change ('Select a sentence to play the recording from that point.') does not match the original source text ('Click any sentence to hear it.'). The component explicitly uses the word 'Click' to match the user action (mouse or tap), while the replacement introduces 'Select' (more generic), which could refer to keyboard or mouse, but the component only supports 'click', 'Enter', or 'Space' (keyboard activation on span with role='button'). The original text is concise, accurate, and does not include filler or slogans; it directly instructs what happens. The change is not justified by the source or the review standard. Use the exact source wording."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2020,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 88,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2108
+    },
+    "review": {
+      "input_tokens": 1720,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 160,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1880
+    }
+  },
+  "createdAt": "2026-11-15T13:56:28.919Z"
+}

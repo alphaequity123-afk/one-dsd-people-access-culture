@@ -18,9 +18,7 @@ export function AskHistoryNote() {
       <p className="dsd-eyebrow">Your conversation</p>
       <h2 id="ask-history-title">Your Ask questions</h2>
       <p role="status">
-        {count
-          ? `This browser tab is keeping ${count} Ask ${count === 1 ? "question" : "questions"} and ${count === 1 ? "its answer" : "their answers"}. They stay in this tab only and are gone when you close it.`
-          : "This browser tab is not keeping any Ask questions."}
+        {count ? `${count} Ask ${count === 1 ? "question" : "questions"} and ${count === 1 ? "its answer" : "their answers"}.` : null}
       </p>
       <p className="flex flex-wrap gap-3">
         <Link className="btn btn--light" href="/ask">{count ? "Review your conversation in Ask" : "Open Ask"}</Link>

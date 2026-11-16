@@ -1,0 +1,109 @@
+{
+  "target": "code.app/operationalizing-equity/page.tsx",
+  "kind": "surface",
+  "route": "/operationalizing-equity",
+  "sourceSha256": "73460d2061181aec66be1beee9a6aeab332f2125ee32242d8b349cf758abba93",
+  "status": "needs_revision",
+  "reviewedFieldCount": 25,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Connect equity to everyday decisions, workplace practices, policies and services through shared inquiry, practical examples and useful resources.",
+      "after": "Connect equity to everyday decisions, workplace practices, policies, and services. This page offers practical examples, inquiry prompts, and resources for informed action.",
+      "reason": "Clarifies the plain-language summary and states the practical value for DHS and DSD staff. Increased specificity and focus per program writing standard."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "field8"
+      ],
+      "before": "These examples offer starting points for discussion. Consider how the questions might apply in your own setting.",
+      "after": "The following examples introduce starting points for group or individual reflection. Consider whether these questions help clarify barriers, decision points, or needed support in your work context.",
+      "reason": "Expanded to specify how examples are relevant for professional review, avoiding repetition of generic advice and clarifying the role of examples for DHS/DSD staff."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "field10"
+      ],
+      "before": "Use the questions that fit your work. They can support individual reflection, a conversation with colleagues or a shared examination of a decision.",
+      "after": "Choose the questions that support the task at hand. They work for individual reflection, peer discussion, or group review, depending on your context and decision-making process.",
+      "reason": "Clarified the instruction by connecting it to real work choices, elaborating when and why to use questions."
+    },
+    {
+      "fieldId": 11,
+      "path": [
+        "field11"
+      ],
+      "before": "Explore at your own pace and choose what is useful. Participation in People, Access and Culture is voluntary.",
+      "after": "Choose resources and activities that fit your needs and responsibilities. Participation in People, Access and Culture is voluntary within program offerings.",
+      "reason": "Added reasoning about varied staff needs and responsibilities, clarifying why selection is user-driven, without introducing unsupported obligations."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed change removes the phrase \"through shared inquiry, practical examples and useful resources\" from the original and replaces it with a more abstract statement, \"This page offers practical examples, inquiry prompts, and resources for informed action.\" The source metadata description specifically states: \"Connect equity to everyday decisions, workplace practices, policies and services through shared inquiry, practical examples and useful resources.\" The core wording needs to remain as the official program description. The change is not supported by the source, as it rewrites rather than clarifies the program summary."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "The proposed edit expands on the meaning, tying the examples more tightly to professional review and providing clarification. While it introduces some elaboration, it does not distort or remove any core meaning, and the change aligns with the program writing standard for role-specific clarity. This is not a blocker, but be sure expanded text does not imply obligations not found in the source."
+      },
+      {
+        "fieldId": 10,
+        "severity": "note",
+        "finding": "The revised instruction maintains the intent—advising staff to pick appropriate questions—but adds clarification and connects the use to real-work decisions, reflecting good practice per the writing standard. This is acceptable."
+      },
+      {
+        "fieldId": 11,
+        "severity": "note",
+        "finding": "The edit clarifies that staff select activities fitting their needs and responsibilities and preserves the sentence on voluntary participation. The change does not contradict source meaning."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 4745,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 320,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5065
+    },
+    "review": {
+      "input_tokens": 3934,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 308,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4242
+    }
+  },
+  "createdAt": "2026-11-15T13:51:17.863Z"
+}

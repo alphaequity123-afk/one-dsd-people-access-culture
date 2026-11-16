@@ -1,0 +1,67 @@
+{
+  "target": "code.components/evals-client.tsx",
+  "kind": "surface",
+  "route": "components/evals-client.tsx",
+  "sourceSha256": "46bc4d2f647bfab7e2c62f4f70a08bb66c0e06d60e81579594d3928789b94ea1",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "No checks have been run here yet.",
+      "after": "This page does not show any previous checks.",
+      "reason": "The revised sentence more specifically states that there is no record of earlier checks on this page, clarifying the context for DHS and DSD staff. It avoids informal wording and supports clear professional communication without altering factual meaning."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The supplied source text ('No checks have been run here yet.') is clear, matching the intent, meaning, and level of detail required for this indicator message when no checks have occurred. The proposed revision ('This page does not show any previous checks.') subtly changes both scope and meaning. The original only states that none have been run here yet (could mean ever, or not at this location), while the revision suggests a persistent absence or possible concealment of records ('does not show any previous checks'). This may allow an inference that checks could have been run but are simply not displayed, which is a different claim than the source. The original is also more direct and concise, which aligns with the standard for such indicator messages. The source does not support the change."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2028,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 78,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2106
+    },
+    "review": {
+      "input_tokens": 1718,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 177,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1895
+    }
+  },
+  "createdAt": "2026-11-15T13:53:35.724Z"
+}

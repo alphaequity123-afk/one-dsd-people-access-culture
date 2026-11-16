@@ -1,0 +1,67 @@
+{
+  "target": "code.components/connected-with.tsx",
+  "kind": "surface",
+  "route": "components/connected-with.tsx",
+  "sourceSha256": "571402d4cc0de865481a3daf6b8b049c0e1846bcd445355be96dece0ae056e92",
+  "status": "model_checked",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Connected with: tasks, roles, standards and communities",
+      "after": "Connected with: tasks, roles, standards, and communities",
+      "reason": "Added a comma after 'standards' to clarify that the items in the list are separate, following standard English punctuation (serial/Oxford comma) for clarity and professional consistency."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The addition of the Oxford comma ('standards, and communities') provides slightly increased clarity in the list. The change does not alter the meaning or function, and is consistent with professional writing standards. The update is fully supported by the source context, which is a label summarizing a set of linked items."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1361,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 74,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1435
+    },
+    "review": {
+      "input_tokens": 1048,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 102,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1150
+    }
+  },
+  "createdAt": "2026-11-15T13:52:36.008Z"
+}

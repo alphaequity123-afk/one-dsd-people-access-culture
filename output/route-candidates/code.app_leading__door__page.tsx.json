@@ -1,0 +1,95 @@
+{
+  "target": "code.app/leading/[door]/page.tsx",
+  "kind": "surface",
+  "route": "/leading/[door]",
+  "sourceSha256": "550077e650511472d76c052df93a333219054b8acb31042554fd0fd40a8cbf05",
+  "status": "needs_revision",
+  "reviewedFieldCount": 5,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Find your question, and start with the one course named under it.",
+      "after": "Review the available questions, then begin with the listed course for that topic. This helps ensure a consistent and well-supported approach to the decision you are making.",
+      "reason": "This revision connects the action to its practical effect and explains why starting with the named course matters. It clarifies to staff that this process supports accuracy and consistency."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field2"
+      ],
+      "before": "Also related to this decision:",
+      "after": "Related to this decision:",
+      "reason": "Removes filler wording and presents the section label with direct relevance. The count of related items is already clearly displayed following the summary label in the interface and does not need to repeat the framing for each scenario."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field3"
+      ],
+      "before": "Names change, so these are roles. Keep the contacts for your own division where you can reach them.",
+      "after": "Specific staff names and contact details may change, so these entries identify roles instead. Maintain updated contact information for your division to ensure you can reach the necessary people when needed.",
+      "reason": "This revised statement clarifies that role-based contacts are used because individual staff may change, and explains the practical reason for keeping contact information current. This addresses why the staff's own division contacts matter."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revision ('Review the available questions, then begin with the listed course for that topic. This helps ensure a consistent and well-supported approach to the decision you are making.') adds an unsupported explanation that is not present in the source. The source simply states to start with the one course named under the question, with no elaboration on the reason or promises about consistency or support. This changes the meaning and adds rationale not in evidence."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The revised label removes 'Also' ('Related to this decision:') instead of the source's 'Also related to this decision:'. The original wording signals an additional category and a relationship to the current topic. Removing 'Also' subtly changes the navigational meaning established by the source, which is especially important for users navigating multiple linked decisions."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revision reasonably expands the explanation: the original ('Names change, so these are roles. Keep the contacts for your own division where you can reach them.') becomes a clearer, slightly longer rationale which remains true to the source's meaning and does not invent new conditions. This is a supportive and accurate clarification."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2623,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 281,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2904
+    },
+    "review": {
+      "input_tokens": 2413,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 306,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2719
+    }
+  },
+  "createdAt": "2026-11-15T13:49:27.026Z"
+}

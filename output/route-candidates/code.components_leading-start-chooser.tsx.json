@@ -1,0 +1,81 @@
+{
+  "target": "code.components/leading-start-chooser.tsx",
+  "kind": "surface",
+  "route": "components/leading-start-chooser.tsx",
+  "sourceSha256": "29e9bd9d90fdfe0179f94fee9bb3831057fffbded4cd05a0b26329867fc670e1",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "It is only a suggestion. Every path is open to you.",
+      "after": "This is a suggestion based on your answers. You can review any starting path that fits your interests or needs.",
+      "reason": "Improved specificity by clarifying that the suggestion is driven by the user's input and making clear that other options remain available, providing a more collegial and purposeful explanation."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Your answers stay on this page. They are not saved or sent anywhere.",
+      "after": "Your responses remain on this page and are not stored or shared.",
+      "reason": "Clarified that responses are neither saved nor transmitted elsewhere, and streamlined wording for professional clarity."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed replacement ('This is a suggestion based on your answers. You can review any starting path that fits your interests or needs.') departs from the program's writing standard for this field. The source text is: 'It is only a suggestion. Every path is open to you.' The source is intentionally succinct to emphasize openness and discourage exclusivity. The edit adds that the suggestion is 'based on your answers' and invites reviewing 'any starting path that fits your interests or needs'. The first claim is already implied by context and the code's behavior, but not stated in the source message. The second sentence adds an appropriative element ('fits your interests or needs'), which is not in the source and interprets user motivation, introducing unnecessary personalization and editorializing. This undermines preservation of the source's intent and does not align with review requirements (see: 'Preserve factual limits; do not invent a policy, legal obligation, agency procedure, or community preference to make a lesson more specific.'). The plain, generalized wording in source is deliberate and must remain, unless there is official source evidence supporting the change."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The reworded field ('Your responses remain on this page and are not stored or shared.') is a close paraphrase of the source ('Your answers stay on this page. They are not saved or sent anywhere.'). It preserves the substance and privacy assurance and is justified for greater clarity and professional tone. Either version is supportable, though the original is already specific and clear."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2074,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 124,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2198
+    },
+    "review": {
+      "input_tokens": 1802,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 336,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2138
+    }
+  },
+  "createdAt": "2026-11-15T13:54:05.465Z"
+}

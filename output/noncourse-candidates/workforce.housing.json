@@ -1,0 +1,82 @@
+{
+  "target": "workforce.housing",
+  "kind": "surface",
+  "route": "/consultant/workforce/housing",
+  "sourceSha256": "bf38de415234d416977a0138b8a0275004e6b2123ec0c0b8de2d32c93f815c0b",
+  "status": "model_checked",
+  "reviewedFieldCount": 3,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "relationship"
+      ],
+      "before": "Listed as an agency area or associated service. This does not establish a direct reporting line.",
+      "after": "This area is recognized in the agency directory as an associated service. The listing indicates relevance to workforce and housing support but does not define oversight or program authority.",
+      "reason": "Clarified that the agency area is connected to workforce and housing but does not specify formal authority or direct oversight. This helps colleagues understand the practical use and limitations of directory listings."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "leadership",
+        0
+      ],
+      "before": "Assistant Commissioner and Equity Director appear in the public directory.",
+      "after": "The public directory names an Assistant Commissioner and an Equity Director, but it does not specify their direct responsibilities for this service area. Confirming actual program leadership or local points of contact is necessary for work that requires coordination or approval.",
+      "reason": "Added context about the limitations of the public directory. This tells staff that further confirmation is needed when they require specific leadership contacts or decisions."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revised relationship field is accurate and helpful. It clarifies the implications of a directory listing without inventing new policy or changing established fact. The explanation aligns with public DHS organizational information and uses cautious language about oversight and program authority, which is appropriate given the source limitations."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revised leadership field accurately reflects the limitations of the public directory. It preserves the original information about the Assistant Commissioner and Equity Director but adds needed clarification: users should not assume these positions are directly responsible for this area. This is supported by the DHS organizational page, which does not always list specific program leaders. The note about the need to confirm leadership for coordination or approval is justified and does not misrepresent the source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1157,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 178,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1335
+    },
+    "review": {
+      "input_tokens": 915,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 172,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1087
+    }
+  },
+  "createdAt": "2026-11-15T13:37:38.694Z"
+}

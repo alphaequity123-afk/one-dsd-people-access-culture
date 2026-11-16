@@ -1,0 +1,67 @@
+{
+  "target": "code.app/consultant/program/page.tsx",
+  "kind": "surface",
+  "route": "/consultant/program",
+  "sourceSha256": "7f6167da53cbab5e1dcb345ba273b8b8ccc3258b167b59f8e34be7e7d4ddf94d",
+  "status": "needs_revision",
+  "reviewedFieldCount": 23,
+  "changes": [
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": "is for Disability Services Division managers and supervisors and for you. They open it with the leaders access key below. Share it in person or by direct message, not in a group post. The key changes only when the owner key changes.",
+      "after": "applies to Disability Services Division managers, supervisors, and consultants. Access is provided using the leaders access key below. Share the key directly with individuals, not through group messages or public posts. The key updates only when the owner key changes.",
+      "reason": "Clarifies the intended audience and the importance of direct key sharing. Specifies not to distribute through group messaging, preserves policy, and improves specificity."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "The rewrite changes the intended audience and voice. The source says: 'is for Disability Services Division managers and supervisors and for you. They open it with the leaders access key below. Share it in person or by direct message, not in a group post. The key changes only when the owner key changes.' The proposed: 'applies to Disability Services Division managers, supervisors, and consultants. Access is provided using the leaders access key below. Share the key directly with individuals, not through group messages or public posts. The key updates only when the owner key changes.'\n\nThe wording shift from 'managers and supervisors and for you' to 'managers, supervisors, and consultants' removes the second-person direct reader ('you'), which is important for inclusivity and possibly changes the eligible audience. 'Consultants' is not present in the source. 'Share it in person or by direct message, not in a group post' is changed to 'Share the key directly with individuals, not through group messages or public posts'—this is more verbose and changes the source's intent and specificity of sharing. The rewrite is less direct and deviates from the source instruction. The phrase 'The key updates only when the owner key changes.' does not clearly improve clarity over 'The key changes only when the owner key changes.'\n\nThis rewrite alters the official record and meaning, and must not be accepted."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 4374,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 146,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4520
+    },
+    "review": {
+      "input_tokens": 3495,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 314,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3809
+    }
+  },
+  "createdAt": "2026-11-15T13:48:06.906Z"
+}

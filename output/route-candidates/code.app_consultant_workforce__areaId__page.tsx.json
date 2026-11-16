@@ -1,0 +1,67 @@
+{
+  "target": "code.app/consultant/workforce/[areaId]/page.tsx",
+  "kind": "surface",
+  "route": "/consultant/workforce/[areaId]",
+  "sourceSha256": "ce1d23cf78b801610311810a63ba0251ee54568ed5762bd9955784fd72cbbe88",
+  "status": "needs_revision",
+  "reviewedFieldCount": 3,
+  "changes": [
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "Keep official classifications separate from working titles. Add a heading for each working role, followed by its responsibilities, tasks, and what still needs confirmation. Retain changes rather than silently replacing the past.",
+      "after": "Separate official job classifications from working titles to clarify each staff member's formal responsibilities and actual assigned duties. For each working role, add a heading and then describe its responsibilities, related tasks, and identify areas that still require confirmation or clarification. Keeping a record of changes supports transparency and allows colleagues to track how and why responsibilities shift over time, avoiding silent removal or loss of detail.",
+      "reason": "Revised to provide a clearer explanation of why separating classifications from working titles matters, why detailing responsibilities and pending confirmations is important, and to specify the value of explicitly retaining changes as part of organizational memory."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The revision expands the original instruction, adding new explanation and rationale that is not present in the source code. The original text is a terse instruction: 'Keep official classifications separate from working titles. Add a heading for each working role, followed by its responsibilities, tasks, and what still needs confirmation. Retain changes rather than silently replacing the past.' The revision generalizes and interprets the instruction, providing justifications ('to clarify each staff member's formal responsibilities and actual assigned duties'), proposes benefits ('supports transparency and allows colleagues to track how and why responsibilities shift'), and introduces concepts like 'organizational memory'—none of which appear in the source. The program writing standard only allows preservation of source-grounded specificity and prohibits adding policy, legal obligations, or organizational rationale absent from source evidence. The original concise instruction must be preserved."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2263,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 145,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2408
+    },
+    "review": {
+      "input_tokens": 1931,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 190,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2121
+    }
+  },
+  "createdAt": "2026-11-15T13:48:18.682Z"
+}

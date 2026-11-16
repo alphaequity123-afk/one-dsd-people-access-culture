@@ -1,0 +1,95 @@
+{
+  "target": "code.app/learn/leadership-styles/conflict-lifecycle/page.tsx",
+  "kind": "surface",
+  "route": "/learn/leadership-styles/conflict-lifecycle",
+  "sourceSha256": "28adbdeabb83e4696f36ad71942a98600898646c72945473d5affe64b5d86bb6",
+  "status": "needs_revision",
+  "reviewedFieldCount": 3,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "A worked example that combines leadership approaches in sequence, from the first response to lasting change.",
+      "after": "This example shows how to apply different leadership approaches during each stage of a conflict, from the initial response through to lasting change.",
+      "reason": "Clarifies that the example demonstrates the application of leadership styles at each stage, and specifies the context is managing conflict. This provides clearer purpose and relevance to DHS/DSD staff by connecting steps to leadership action in practice."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field2"
+      ],
+      "before": "Each stage needs a different behavior. The useful contribution names approaches that help at that stage.",
+      "after": "Each stage of conflict calls for a distinct supervisor behavior. The 'useful contribution' column lists leadership approaches that support staff and progress at that stage.",
+      "reason": "Clarifies who performs each behavior, and explains the practical use of the 'useful contribution' column to help supervisors decide which leadership styles to use."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field5"
+      ],
+      "before": "Notice what stays the same at every stage: the employee is treated with dignity, access is protected, the process is fair, and someone is accountable for each step.",
+      "after": "Throughout every stage, key values remain: supervisors treat employees with dignity, ensure access is maintained, keep the process fair, and assign responsibility for each step.",
+      "reason": "Rewrites to specify that these are responsibilities of supervisors, connects the actions to upholding key values, and describes why these aspects matter in ensuring ethical and accountable conflict management."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revised text expands the purpose: 'shows how to apply different leadership approaches during each stage of a conflict, from the initial response through to lasting change.' The source says only: 'A worked example that combines leadership approaches in sequence, from the first response to lasting change.' The edit adds 'shows how to apply' (instructional emphasis) and specifies 'during each stage of a conflict,' which is implied context as the table is about 'the eight stages' of conflict, but the added detail and instructional framing are not directly supported by the original wording. The new text implies the page is expressly about 'managing conflict' and using leadership 'in practice.' The original is more neutral and does not promise practical application. This is a blocker for changing the intent, specificity, and instructional promise beyond what the source states."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The rewrite ('Each stage of conflict calls for a distinct supervisor behavior...') adds clarification about 'supervisor behavior' and the practical use of the column, but the original non-attributed line is: 'Each stage needs a different behavior. The useful contribution names approaches that help at that stage.' The rewrite makes explicit that supervisors are the actors and frames the use as helping 'supervisors decide which leadership styles to use.' That specificity is not in the original and could narrow interpretation, which risks misrepresenting the table's intended audience or usage per the source. The edit also interprets 'useful contribution' as directly about 'progress,' which is not in the source. This is a blocker due to introducing role specificity and new instructional purposes."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The revision says: 'key values remain: supervisors treat employees with dignity, ensure access is maintained, keep the process fair, and assign responsibility for each step.' The source is: 'the employee is treated with dignity, access is protected, the process is fair, and someone is accountable for each step.' The rewrite assigns all these actions specifically to 'supervisors,' which the original does not. Original is broader ('someone' for accountability; 'is protected' for access), avoiding direct assignment to an individual or role. The changed version over-assigns responsibilities and recasts values as 'supervisor' actions, which changes both attribution and nuance. This is a blocker."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2230,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 244,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2474
+    },
+    "review": {
+      "input_tokens": 2070,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 501,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2571
+    }
+  },
+  "createdAt": "2026-11-15T13:50:11.883Z"
+}

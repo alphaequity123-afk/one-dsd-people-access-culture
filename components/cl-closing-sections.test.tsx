@@ -29,7 +29,6 @@ describe('closing sections sit in closed panels, with nothing removed', () => {
     expect(closed(view.container)).toEqual([{ heading: 'Continue learning', open: false }, { heading: 'Your next step', open: false }]);
     expect(view.getByText('A related reading')).toBeTruthy();
     expect(view.getByText(`Previous: ${intercultural.modules[0].title}`)).toBeTruthy();
-    expect(view.getByText(/Progress is kept in this browser/)).toBeTruthy();
     expect(view.getByRole('heading', { name: 'Read and reflect' })).toBeTruthy();
   });
 });

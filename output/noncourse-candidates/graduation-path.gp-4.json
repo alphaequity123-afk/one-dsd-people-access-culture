@@ -1,0 +1,95 @@
+{
+  "target": "graduation-path.gp-4",
+  "kind": "surface",
+  "route": "/practice/gp-4",
+  "sourceSha256": "2112d15769a58dc742c42b3e71c667468771edda81da5780f24e0de41c8085c5",
+  "status": "model_checked",
+  "reviewedFieldCount": 56,
+  "changes": [
+    {
+      "fieldId": 15,
+      "path": [
+        "step0Guidance"
+      ],
+      "before": "Ask about participation and team climate. Consider which everyday practices your team can change. Complaints and concerns about a named person’s conduct belong in the appropriate formal channel.",
+      "after": "Ask how people participate and interact within the team. Identify which everyday practices your team could adjust to improve climate or inclusion. Addressing concerns about a specific person's conduct, or handling complaints, must proceed through the designated formal channel instead of this planning process. This approach protects privacy and ensures that appropriate procedures are followed for individual conduct issues.",
+      "reason": "Clarifies why changing everyday practices belongs in this planning process while named conduct concerns require formal handling, connecting the instruction to privacy and process."
+    },
+    {
+      "fieldId": 21,
+      "path": [
+        "step3Guidance"
+      ],
+      "before": "Describe the practices, participation agreements, responsible people, and a follow-up date. Please leave out names and complaint details.",
+      "after": "List clear practices, specific participation agreements, who is responsible for each, and a planned follow-up date. Do not include names or detailed complaints. Leaving out personal detail protects individuals' privacy and separates climate planning from investigative procedures.",
+      "reason": "Strengthens the explanation of why to leave out names and complaint details, connecting this practice to privacy and appropriate process separation."
+    },
+    {
+      "fieldId": 22,
+      "path": [
+        "step4Guidance"
+      ],
+      "before": "Confirm that the practices are observable, each one has a responsible person and date, and the plan contains no complaint details.",
+      "after": "Check that all practices are stated as observable actions. Confirm that each action or practice lists a responsible person and a date for follow-up. Make sure the plan does not mention names or complaint details. Omitting this sensitive information keeps the climate plan focused on team practice and avoids misuse for investigations.",
+      "reason": "Clarifies the importance of each review point, especially the need to avoid including personal or complaint information, and links to the consequence if missing."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 15,
+        "severity": "note",
+        "finding": "The revised guidance expands on the reason to separate everyday team practice planning from handling named conduct concerns, clarifying that such concerns are addressed via a formal process to protect privacy and ensure proper procedure. This is consistent with the source requirement to direct complaints and conduct concerns about named persons to the formal channel. The added explanation does not contradict or add unsupported obligations, and it helps staff understand why this boundary exists."
+      },
+      {
+        "fieldId": 21,
+        "severity": "note",
+        "finding": "The update extends the source's instruction to leave out names and complaint details by adding a rationale that relates this omission to privacy protection and procedural clarity. The clarity aligns with the original field's intent; the reasoning is accurate and helpful for Minnesota DHS/DSD context."
+      },
+      {
+        "fieldId": 22,
+        "severity": "note",
+        "finding": "The revised field parses the review steps and adds why omitting names and complaints is necessary—maintaining the plan's scope and preventing misapplication as an investigative tool. The explanation does not invent policy or process, but provides helpful context. The original source forbids including complaint details and names, so the elaboration stays within those parameters."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 4277,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 404,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4681
+    },
+    "review": {
+      "input_tokens": 2459,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 247,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2706
+    }
+  },
+  "createdAt": "2026-11-15T13:39:41.266Z"
+}

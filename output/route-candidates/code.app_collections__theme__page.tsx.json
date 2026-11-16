@@ -1,0 +1,76 @@
+{
+  "target": "code.app/collections/[theme]/page.tsx",
+  "kind": "surface",
+  "route": "/collections/[theme]",
+  "sourceSha256": "ec27c94cacb561ae41c36dde02e3482a7183d746966e91ccf3160587dc5a91c0",
+  "status": "needs_revision",
+  "reviewedFieldCount": 9,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Choose a way to learn or begin with a practical question. This is a selection from available material, not a claim that every relevant resource appears here.",
+      "after": "Start with a topic or question that matches your current work. This page lists selected materials related to the theme. Not every relevant resource is shown here; check other collections if you need further examples or more detail.",
+      "reason": "Provides clearer practical orientation and clarifies that the list is selective by design, referring to the broader context and supporting directed searching."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "field9"
+      ],
+      "before": "Connect with DSD and community work",
+      "after": "See how this theme connects with current work in DSD and community efforts.",
+      "reason": "Makes the connection more explicit by naming current DSD and community work, reflecting how staff may apply information in practical settings."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The provided revision for field0 changes both meaning and scope relative to the source. The original field ('Choose a way to learn or begin with a practical question. This is a selection from available material, not a claim that every relevant resource appears here.') accurately captures the source's sentence: 'Choose a way to learn or begin with a practical question. This is a selection from available material, not a claim that every relevant resource appears here.' The proposed change ('Start with a topic or question that matches your current work. This page lists selected materials related to the theme. Not every relevant resource is shown here; check other collections if you need further examples or more detail.') introduces: (1) instructional advice and practical orientation not stated in the source, (2) new language about 'check other collections' and seeking 'further examples or more detail,' which are not present or supported in the source text, and (3) alters the tone from neutral to directive. These additions go beyond clarification and introduce unsupported guidance."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3402,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 158,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3560
+    },
+    "review": {
+      "input_tokens": 2987,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 234,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3221
+    }
+  },
+  "createdAt": "2026-11-15T13:47:30.775Z"
+}

@@ -1,0 +1,186 @@
+{
+  "target": "dsd-scenario.dsd-accommodation-cliff",
+  "kind": "surface",
+  "route": "/one-dsd/scenarios/dsd-accommodation-cliff",
+  "sourceSha256": "40ebacd6c2efe4db8a1f1034f03850ac68f12a656959ae66060791e59d79422a",
+  "status": "model_checked",
+  "reviewedFieldCount": 14,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "situation"
+      ],
+      "before": "A DSD staff member with an established accommodation is selected for an acting lead assignment in another unit. The new unit does not know about the arrangement, the cohort kickoff uses timed small-group activities with no captions, and the person quietly withdraws from the rotation.",
+      "after": "A DSD staff member who uses an established accommodation accepts a temporary leadership assignment in another unit. The receiving unit is unaware of their accommodation needs, and the cohort kickoff includes timed small-group activities that provide no captions or accessible features. Without accommodations in place and without clear avenues to request support, the staff member disengages and quietly withdraws from the rotation.",
+      "reason": "Clarifies the sequence of events and makes explicit the missing accessible features and the absence of a clear process for requesting support, in line with the standard to explain connected ideas and reasoning."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "whatToNotice",
+        0
+      ],
+      "before": "Nobody owned the accommodation across the transition.",
+      "after": "No one had responsibility for maintaining accommodations during the staff member's transition to the new assignment.",
+      "reason": "Restates the issue using clear reasoning and identifies the missing responsibility, explaining why it matters for continuity."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "whatToNotice",
+        1
+      ],
+      "before": "The cohort was not accessible by default, so participation depended on disclosure.",
+      "after": "Because the cohort’s activities were not structured to be accessible from the outset, staff needed to disclose a disability or request help in order to participate fully.",
+      "reason": "Specifies the implication of non-accessible design and clarifies that disclosure or requests become necessary in this environment."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "whatToNotice",
+        2
+      ],
+      "before": "The withdrawal will look like a personal choice in the data, if it appears at all.",
+      "after": "The staff member’s withdrawal may be interpreted as a personal decision rather than a response to unmet accessibility needs, and is unlikely to be recognized as a programmatic barrier in reported data.",
+      "reason": "Elaborates why the withdrawal is misleading in workforce data, tying it to implications for tracking and resolving accessibility barriers."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "questions",
+        0
+      ],
+      "before": "Who owns accommodations across each transition in this pathway, by name?",
+      "after": "Who takes explicit responsibility for carrying over or updating accommodation arrangements when staff move between roles or units, and how is this responsibility communicated?",
+      "reason": "Clarifies the need for explicit ownership and communication of responsibilities, specifying the importance of naming responsibility in transitions."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "questions",
+        1
+      ],
+      "before": "Was accommodation offered to everyone entering the rotation, in the same sentence as the logistics?",
+      "after": "When people begin a leadership rotation, are accommodations proactively offered and described along with the other logistics, so no one must ask separately?",
+      "reason": "Highlights the proactive offer of accommodations and the timing of information, focusing on inclusion in standard communications."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "questions",
+        2
+      ],
+      "before": "Which cohort activities depend on speed or drag-and-drop, and what would replace them?",
+      "after": "Which activities in the cohort require fast responses, timed actions, or drag-and-drop tasks, and what accessible alternatives are available or should be developed?",
+      "reason": "Clarifies the focus on identifying specific barriers and planning for accessible alternatives."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "questions",
+        3
+      ],
+      "before": "How would the division ever see this pattern in its workforce data?",
+      "after": "What data sources or review processes would alert the division to patterns where disability-related withdrawals go unaddressed or undocumented?",
+      "reason": "Focuses the question on the division's ability to detect and learn from patterns of unaddressed accessibility needs."
+    },
+    {
+      "fieldId": 12,
+      "path": [
+        "handoff"
+      ],
+      "before": "Pathway design goes to division leadership and the Equity Director. The individual accommodation goes through the confidential accommodation process with HR. Do not record who the person is here.",
+      "after": "Division leadership and the Equity Director are responsible for designing pathways that anticipate accommodation needs. Individual accommodation requests continue through the confidential HR process. Do not document the person’s identity here to protect confidentiality.",
+      "reason": "Clarifies division-level and HR responsibilities and explicitly states the confidentiality rationale."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revision to the situation field clarifies the sequence of events, highlights the absence of accessibility features, and improves explanation of the missing accommodation process without introducing unsupported claims or altering core facts. The change supports program writing standards for clarity and connection."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revised noticing point more explicitly describes the lack of responsibility, preserving the original meaning while enhancing clarity in line with standards."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The update to the observation expands on the impact of inaccessible design, maintaining source intent while offering greater specificity about the consequence of non-accessibility. This aligns with the standard for connected explanation."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "Elaborates on the data issue by explaining that the withdrawal may not be recognized as a systemic barrier, preserving the original intent and offering additional reasoning."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The revised question clarifies the request for explicit, communicated responsibility and does not stray from the intent of the original question, supporting clarity and accountability."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The change reframes the question for proactive practice and timing, improving clarity and relevance without altering the policy or process described."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "The revision expands on the nature of the activities and emphasizes accessible alternatives, which aligns with the scenario’s policy focus and accessibility context."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "The revised question asks about processes to detect systemic accessibility issues, which matches the scenario’s workforce data perspective and requirements for actionable insight."
+      },
+      {
+        "fieldId": 12,
+        "severity": "note",
+        "finding": "The update explains the rationale behind confidentiality and clarifies which roles are responsible for different parts of the process. This improves clarity without adding unsupported content."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1740,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 624,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2364
+    },
+    "review": {
+      "input_tokens": 1795,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 392,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2187
+    }
+  },
+  "createdAt": "2026-11-15T13:38:52.412Z"
+}

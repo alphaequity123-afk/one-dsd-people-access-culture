@@ -1,0 +1,137 @@
+{
+  "target": "graduation-path.gp-5",
+  "kind": "surface",
+  "route": "/practice/gp-5",
+  "sourceSha256": "bf42025a63f1199e189acd9c5beb71a59f65bf9c09fae4ea01f746627af516dd",
+  "status": "model_checked",
+  "reviewedFieldCount": 48,
+  "changes": [
+    {
+      "fieldId": 3,
+      "path": [
+        "startingCompetence"
+      ],
+      "before": "You have a session to lead and want participants to leave with something they can use in their work.",
+      "after": "You are preparing to lead a session and want to make sure participants leave with something they can directly use in their work. This involves designing the experience so it connects to actual workplace needs, and verifying that what people gain from the session will make a measurable difference afterwards.",
+      "reason": "Clarifies that preparation should connect the session outcome to practical workplace needs. Adds the resulting importance of measurable application."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "graduatedLooksLike"
+      ],
+      "before": "By the end, you will have a reusable session plan with a clear objective, an activity based on real work, something useful participants can take with them, and access arrangements made in advance.",
+      "after": "At the end, you will have a session plan that clearly states its objective, includes an activity drawn from real DHS or DSD work, specifies a concrete product for participants to use after the session, and documents all necessary access arrangements ahead of time. This plan prepares you to deliver a session where people leave ready to apply what they learned.",
+      "reason": "Clarifies each included element, shows grounding in agency context, and explains why each part is required for staff outcome and participant application."
+    },
+    {
+      "fieldId": 12,
+      "path": [
+        "privacy"
+      ],
+      "before": "Do not record or score individual participants' beliefs. If you gather feedback, report only combined results that cannot identify anyone.",
+      "after": "Do not record or score individual participants' beliefs. If you collect feedback, report only combined results that cannot identify specific individuals. This protects privacy and helps maintain trust, especially when discussing personal perspectives or sensitive workplace topics.",
+      "reason": "Adds reasoning about the importance of protecting participant privacy and trust, especially for sensitive or belief-based content."
+    },
+    {
+      "fieldId": 14,
+      "path": [
+        "step0Guidance"
+      ],
+      "before": "Ask about learning and facilitation. Identify what participants should understand or practice, then record how the session will help them use it.",
+      "after": "To start, ask what participants need to understand or practice, focusing on how it relates to their actual work. Record how the session will help them use what they learn in their daily responsibilities. Clarifying this purpose makes it easier to build the session so that learning is directly applicable.",
+      "reason": "Connects the guidance to practical workplace application and clarifies how this approach shapes a better session design."
+    },
+    {
+      "fieldId": 15,
+      "path": [
+        "step1Guidance"
+      ],
+      "before": "If the session centers Minnesota communities, use the relevant brief with care and stay within its stated limits.",
+      "after": "If your session focuses on Minnesota communities, refer to the appropriate community brief. Apply it as instructed, being careful not to go beyond its defined conditions or use cases. This helps ensure your session respects documented boundaries and supports responsible use of sensitive material.",
+      "reason": "Explains the reason for staying within stated community brief limits and the importance of respecting community-specific guidelines."
+    },
+    {
+      "fieldId": 20,
+      "path": [
+        "step4Guidance"
+      ],
+      "before": "Confirm that participants will leave with something useful, the access arrangements are specific, and the follow-up has a date.",
+      "after": "Review your plan to check that every participant will leave with something practical they can use. Make sure access arrangements address specific needs and are documented, and that your plan includes a clear date for follow-up. Careful review ensures the session is both effective and accessible.",
+      "reason": "Clarifies why each aspect must be checked, emphasizing practical use, inclusion, and accountability for follow-up."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The revision clarifies that preparation should tie the session outcome to practical workplace needs and stresses the importance of measurable application. This draws on and extends the original intent without altering legal or policy limits. The added explanation is appropriate for the intended professional audience and fits the writing standard."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The update specifies the need for a plan relevant to DHS/DSD work, lists each needed component in more detail, and explains the purpose behind these requirements. These clarifications are factual, directly grounded in the agency context, and do not invent new policy or overstate obligations."
+      },
+      {
+        "fieldId": 12,
+        "severity": "note",
+        "finding": "The addition of reasoning for privacy protections—particularly for sessions involving sensitive or belief-based content—is factually appropriate and does not change the underlying privacy expectation from the source. The explanation is justified per the writing standard and professional context."
+      },
+      {
+        "fieldId": 14,
+        "severity": "note",
+        "finding": "The revised guidance better links learning objectives to practical workplace applications, explaining the benefit of clarifying this during session planning. This aligns with the standard to ground advice in real DHS/DSD work and does not expand policy obligations."
+      },
+      {
+        "fieldId": 15,
+        "severity": "note",
+        "finding": "The new version expands on why practitioners should remain within the bounds of community briefs, emphasizing responsible and respectful use. This maintains the source’s original intent, does not alter instructions, and is suitable for professional judgment."
+      },
+      {
+        "fieldId": 20,
+        "severity": "note",
+        "finding": "The revision adds rationale for confirming practical takeaways, specific access accommodations, and follow-up timing. It reinforces the agency’s aims of accessibility, effective learning, and accountability. No evidence requirements, legal status, or procedural details have been changed."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3617,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 620,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4237
+    },
+    "review": {
+      "input_tokens": 2513,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 373,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2886
+    }
+  },
+  "createdAt": "2026-11-15T13:39:45.083Z"
+}

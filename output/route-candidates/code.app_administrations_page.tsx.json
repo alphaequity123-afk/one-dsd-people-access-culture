@@ -1,0 +1,81 @@
+{
+  "target": "code.app/administrations/page.tsx",
+  "kind": "surface",
+  "route": "/administrations",
+  "sourceSha256": "87d20115bc68777686f7435f2f594010916a76fd365741e04a1b87b2036d083f",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Explore DHS organizational context and the Disability Services Division within Aging and Disability Services.",
+      "after": "Learn how the Disability Services Division (DSD) fits within the broader DHS structure. This page provides an overview of DSD’s placement under Aging and Disability Services and explains how different DHS administrations relate to DSD’s work. Understanding these relationships helps clarify program responsibilities and available resources.",
+      "reason": "The revision adds a short plain-language summary upfront, clarifies DSD’s organizational context under Aging and Disability Services, and explains the practical purpose for staff—understanding relationships, program responsibilities, and resource connections. It applies the program writing standard to explain why navigating this context matters in DHS and DSD work."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field2"
+      ],
+      "before": "Includes the Disability Services Division branch of this program.",
+      "after": "This administration includes Disability Services Division as one of its branches.",
+      "reason": "The revision clarifies the connection by specifying that the administration contains DSD as a branch. It uses direct wording to state the relationship and explains its organizational relevance."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revision for field0 significantly exceeds the original source. The source lede states: \"Explore the organizational setting of DSD and its relationships with other DHS administrations. This directory supports context; the standalone One DSD program remains your starting point.\" The rewrite introduces new explanations about 'placement under Aging and Disability Services,' 'explains how different DHS administrations relate to DSD’s work,' and adds an instruction about clarification, responsibility, and resources—none of which are specifically supported by the source. It also omits the important note that 'the standalone One DSD program remains your starting point.' This constitutes added detail, speculative purpose, and missing official records."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revision for field2 is an arguably clearer rephrasing ('branch of this program' to 'as one of its branches'), but this does not substantively change scope or introduce unsupported claims. No blocker here."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1439,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 200,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1639
+    },
+    "review": {
+      "input_tokens": 1243,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 211,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1454
+    }
+  },
+  "createdAt": "2026-11-15T14:02:57.050Z"
+}

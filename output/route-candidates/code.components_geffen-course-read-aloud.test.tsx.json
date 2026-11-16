@@ -1,0 +1,51 @@
+{
+  "target": "code.components/geffen-course-read-aloud.test.tsx",
+  "kind": "surface",
+  "route": "components/geffen-course-read-aloud.test.tsx",
+  "sourceSha256": "c92be9bf51a6f90052b66072cc88ec01c85865b40d07b74ba93cc10c9a3432c8",
+  "status": "model_checked",
+  "reviewedFieldCount": 1,
+  "changes": [],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3241,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 15,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3256
+    },
+    "review": {
+      "input_tokens": 2852,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 12,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2864
+    }
+  },
+  "createdAt": "2026-11-15T13:53:37.311Z"
+}

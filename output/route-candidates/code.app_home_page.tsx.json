@@ -1,0 +1,193 @@
+{
+  "target": "code.app/home/page.tsx",
+  "kind": "surface",
+  "route": "/home",
+  "sourceSha256": "ecae0c90c6de1e7ae7612ffd3ebf1a8b2db44a3624c638a2ab48be5b9f56baed",
+  "status": "needs_revision",
+  "reviewedFieldCount": 10,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Courses, readings and collections to build your understanding.",
+      "after": "Courses, readings, and materials to deepen your understanding.",
+      "reason": "Clarified that collections refer to study materials, not just subject groups, and used 'deepen' to indicate growth in professional knowledge."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Work through a real decision, meeting, process or review.",
+      "after": "Carry out a real decision, meeting, process, or review step by step.",
+      "reason": "Changed 'work through' to 'carry out' for stronger action, and clarified that this includes step-by-step practical activities."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "Minnesota communities, their history and how to connect well.",
+      "after": "Minnesota communities—their histories and practical ways to connect.",
+      "reason": "Made the time frame plural to recognize diverse histories, and specified 'practical ways' to guide the type of connection encouraged."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": "Eight colleagues sharing perspectives around a conference table.",
+      "after": "Colleagues from different roles share perspectives around a conference table.",
+      "reason": "Clarified that the group includes different roles (not just backgrounds), to more directly reflect workplace diversity relevant to DHS and DSD."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field5"
+      ],
+      "before": "Learning, guidance and tools for equity in the work and workplace of the Disability Services Division.",
+      "after": "Learning, guidance, and tools to support equity in Disability Services Division work and workplace.",
+      "reason": "Slightly revised to strengthen connection to ongoing support and phrasing consistent with DSD reference style (use 'support' in preference to 'for')."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field6"
+      ],
+      "before": "People, programs and partnerships across the Department of Human Services.",
+      "after": "People, programs, and relationships throughout the Department of Human Services.",
+      "reason": "Replaced 'partnerships' with 'relationships' to broaden beyond formal partnerships and reflect the interconnectedness relevant to DHS."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field7"
+      ],
+      "before": "See the full calendar for observances across Minnesota communities.",
+      "after": "Open the calendar to find observances and events across Minnesota communities.",
+      "reason": "Directed staff to use the calendar for both observances and events, clarifying the practical action and scope."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "field9"
+      ],
+      "before": "Decisions, paths and tools for leading equity work.",
+      "after": "Approaches, decisions, and tools for leading equity work in practice.",
+      "reason": "Clarified that it covers both how to lead (approaches) and the resulting actions (decisions, tools), tying 'in practice' to support real-world application."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "field10"
+      ],
+      "before": "The program, the division’s work and the people behind it.",
+      "after": "The program’s goals, the division’s work, and the staff involved.",
+      "reason": "Clarified 'people behind it' as 'staff involved' to be more explicit and professional, and specified 'goals' to clarify program scope."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "field11"
+      ],
+      "before": "Ready-to-run sessions for a staff meeting.",
+      "after": "Prepared sessions for team meetings, ready to use.",
+      "reason": "Clarified that these are prepared sessions and moved 'ready to use' for clarity; this eliminates ambiguity around 'ready-to-run.'"
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The wording 'readings and collections to build your understanding.' is directly from the source (see the pathways array: description for 'Learn'). The proposed revision ('Courses, readings, and materials to deepen your understanding.') adds 'materials,' which is unsupported, and changes 'build' to 'deepen,' breaking the standard to preserve scope and exactness for key navigation content. Reject."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The source text is: 'Work through a real decision, meeting, process or review.' The revision ('Carry out a real decision, meeting, process, or review step by step.') alters both tone and meaning by making the step-by-step aspect explicit, which is not present in source language, and changes 'work through' (which implies experiencing the process, possibly in a learning or simulation context) to 'carry out' (which implies actually executing), a clear change of instructional scope. Not allowed."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The proposal ('Minnesota communities—their histories and practical ways to connect.') changes 'history' to 'histories' and adds 'practical ways to connect.' The original ('Minnesota communities, their history and how to connect well.') uses 'how to connect well,' which is more open-ended and doesn't limit to 'practical.' The switch to 'histories' and the change to 'practical ways' aren't supported by the source. Blocked."
+      },
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "The source image alt: 'Eight colleagues sharing perspectives around a conference table.' The revised alt ('Colleagues from different roles share perspectives around a conference table.') introduces 'different roles,' which the source context or image alt does not specify. The source text gives an explicit number. Wording must follow the official image description. Blocked."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The revision to field5 ('Learning, guidance, and tools to support equity...') is a minor style change and reasonably preserves the original meaning. Not a blocker."
+      },
+      {
+        "fieldId": 5,
+        "severity": "blocker",
+        "finding": "The source: 'People, programs and partnerships across the Department of Human Services.' Revision to 'relationships' broadens the term from 'partnerships,' which is not source-supported and could change the legal or practical scope implied in an official descriptor, especially for a program navigation header. Blocked."
+      },
+      {
+        "fieldId": 6,
+        "severity": "blocker",
+        "finding": "The original text: 'See the full calendar for observances across Minnesota communities.' The revision adds 'events' ('find observances and events'), which the source does not specify—the calendar preview is for 'observances.' Legal and cultural calendars frequently distinguish between observances and events, so this is not an allowed editorial addition. Blocked."
+      },
+      {
+        "fieldId": 7,
+        "severity": "blocker",
+        "finding": "The source: 'Decisions, paths and tools for leading equity work.' The revision changes 'paths' to 'approaches' and adds 'in practice.' This alters both specificity and tone. Key navigational text for official guidance on equity work must retain the official descriptors. Blocked."
+      },
+      {
+        "fieldId": 8,
+        "severity": "blocker",
+        "finding": "The original: 'The program, the division’s work and the people behind it.' The revised ('The program’s goals, the division’s work, and the staff involved.') removes the broader phrase 'people behind it' and introduces 'goals,' which is not explicit in the source and narrows the meaning. These are not simply clarifications but alterations of intended meaning. Blocked."
+      },
+      {
+        "fieldId": 9,
+        "severity": "blocker",
+        "finding": "The original: 'Ready-to-run sessions for a staff meeting.' The revision ('Prepared sessions for team meetings, ready to use.') changes 'staff meeting' to 'team meetings' and modifies the phrase structure. 'Ready-to-run' is source language and must be preserved for legal and practical clarity. Blocked."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2780,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 537,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3317
+    },
+    "review": {
+      "input_tokens": 2857,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 839,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3696
+    }
+  },
+  "createdAt": "2026-11-15T13:49:12.154Z"
+}

@@ -1,0 +1,67 @@
+{
+  "target": "code.app/learn/clas/curriculum/[lesson]/job-aid/page.tsx",
+  "kind": "surface",
+  "route": "/learn/clas/curriculum/[lesson]/job-aid",
+  "sourceSha256": "9f049f98e8edcab1ea758f3bc3160c942378816652d8d3a083c295c17e75988b",
+  "status": "needs_revision",
+  "reviewedFieldCount": 3,
+  "changes": [
+    {
+      "fieldId": 2,
+      "path": [
+        "field3"
+      ],
+      "before": "” has not been published. The lesson page has the full text, the practice decisions and your working note.",
+      "after": "” has not been published. Refer to the lesson page for the complete content, practical decision points, and your editable notes. Using the full lesson text helps staff understand the context and rationale behind each step when a summarized job aid is unavailable.",
+      "reason": "Clarifies why staff should use the lesson page and what they gain from referring to full content, connecting to the professional reasoning standard."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The proposed rewrite changes both the style and meaning of the original field, going beyond clarification. It adds new instructions—\"Using the full lesson text helps staff understand the context and rationale behind each step\"—which are not grounded in the provided source. The original line, \"The lesson page has the full text, the practice decisions and your working note,\" simply states what is available. Adding statements about context, rationale, and the benefits of using the lesson page introduces unsupported claims and modifies the official record of what is on the page. This is not allowed by the standard, which prohibits inventing policy or reasoning and requires preserving the precise wording of official notices."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1895,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 104,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1999
+    },
+    "review": {
+      "input_tokens": 1559,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 156,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1715
+    }
+  },
+  "createdAt": "2026-11-15T13:49:29.487Z"
+}

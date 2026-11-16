@@ -1,0 +1,109 @@
+{
+  "target": "code.app/learn/emotions-and-values/page.tsx",
+  "kind": "surface",
+  "route": "/learn/emotions-and-values",
+  "sourceSha256": "260b48165ea57c758124896f86cca3b319ec13ab904c4ac174050e196cc25a10",
+  "status": "needs_revision",
+  "reviewedFieldCount": 17,
+  "changes": [
+    {
+      "fieldId": 2,
+      "path": [
+        "field3"
+      ],
+      "before": "Begin with emotional awareness or your own cultural-value lens, then move into conversations and practical decisions. Each course stands on its own. Directors, managers, supervisors, and staff can use the same cases from the perspective of their responsibilities.",
+      "after": "You can begin with building emotional awareness or by examining your own cultural-value lens, then progress to conversations and making practical decisions. Each course is self-contained. Directors, managers, supervisors, and front-line staff can use the same case materials, approaching them from their own responsibilities.",
+      "reason": "Clarified the sequence options and explained that each role can apply the same cases differently based on their job responsibilities, supporting cross-role application."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field4"
+      ],
+      "before": "Each course offers seven lessons, situations you may recognize, choices with helpful feedback, and a guide to take into your work. Listen to the two-person conversation or read it, then try an activity at your own pace. Allow about 75–90 minutes per course, including practice, or return for one lesson at a time.",
+      "after": "Each course includes seven distinct lessons, grounded in situations you may encounter, and presents choices with targeted feedback. A practice guide supports application in your work. Each lesson features a recorded or transcribed two-person conversation and a related activity. Plan for about 75–90 minutes per course, including time to practice, but you may complete one lesson at a time as your schedule allows.",
+      "reason": "Increased specificity about lesson structure and clarified the learning options, supporting planning and realistic workload management."
+    },
+    {
+      "fieldId": 13,
+      "path": [
+        "field14"
+      ],
+      "before": "Start with one change and see what you learn. You can use the examples provided for every exercise, and choose what you want to reflect on privately. There is no personal assessment to complete.",
+      "after": "Start by making one change in your approach and review the results in your day-to-day work. You are free to use the provided examples for each exercise and to decide which aspects you wish to reflect on individually. No personal assessment is required to finish the course.",
+      "reason": "Clarified the practical importance of experimenting with a small change, and emphasized participant choice without overstating privacy or creating unsupported statements."
+    },
+    {
+      "fieldId": 14,
+      "path": [
+        "field15"
+      ],
+      "before": "The emotional-intelligence courses draw on research about emotional abilities, regulation, and the limits of assessment. The cultural-values courses combine values research with cultural humility and original public-service examples. Each course includes its sources and explains what those sources can support.",
+      "after": "Emotional-intelligence courses in this series are informed by research on emotional abilities, emotion regulation, and recognized limits of emotional assessment. Cultural-values courses use research on values, approaches to cultural humility, and examples taken from public service. Each course names its reference sources and explains what those materials support within the course content.",
+      "reason": "Increased clarity regarding the research foundation, and specified the kind of examples used, strengthening the rationale for the structure and attribution of each course."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The rewrite for field3 changes the source's carefully sequenced, neutral opening into a more directive and explanatory form that both inserts additional claims (\"progress to conversations\" and phrase changes suggesting a more linear or methodological progression) and reinterprets the scope. The original says, \"Begin with emotional awareness or your own cultural-value lens, then move into conversations and practical decisions. Each course stands on its own. Directors, managers, supervisors, and staff can use the same cases from the perspective of their responsibilities.\" The rewrite adjusts role language and explicates differentiation that isn't textual in the source (\"approaching them from their own responsibilities\") and changes \"staff\" to \"front-line staff\" (an added qualifier). These alterations go beyond clarification and add new implications, not supported in the code's evidence. This is a content change and not narrowed to the grounds the Program writing standard allows."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "For field4, the rewrite increases detail but accurately reflects the underlying prose, organizing the points slightly differently and increasing clarity about lesson structure. The new phrasing is acceptable as it consolidates facts from the source, doesn't add new policy, and simply clarifies 'recorded or transcribed conversations' and workload. No blocker."
+      },
+      {
+        "fieldId": 13,
+        "severity": "note",
+        "finding": "For field14, the rewrite recasts instructions in clearer terms and doesn't add unsupported privacy guarantees or erase meaningful qualifications. It remains within the scope—no blocker."
+      },
+      {
+        "fieldId": 14,
+        "severity": "note",
+        "finding": "For field15, the edit explains language such as 'draw on research' by restating the research areas and calling out the reference sources. This clarifies attribution and doesn't invent new research or claims—a permissible rewrite."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3064,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 433,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3497
+    },
+    "review": {
+      "input_tokens": 2753,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 378,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3131
+    }
+  },
+  "createdAt": "2026-11-15T13:49:45.756Z"
+}

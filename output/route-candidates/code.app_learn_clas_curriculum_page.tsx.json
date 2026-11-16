@@ -1,0 +1,67 @@
+{
+  "target": "code.app/learn/clas/curriculum/page.tsx",
+  "kind": "surface",
+  "route": "/learn/clas/curriculum",
+  "sourceSha256": "e640e23d4ba3fdf9f50aebae98ae1b518aad0f60ebb24807ea1f180663b2695c",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Download or share this curriculum",
+      "after": "Use these options to download or share the CLAS curriculum. Sharing the materials helps staff and partners access guidance on culturally and linguistically appropriate services, which supports equity in our work.",
+      "reason": "Replaced the brief prompt with a fuller explanation of the purpose and significance of downloading or sharing the CLAS curriculum, as required by the writing standard. Connected the action to staff and partner needs, and clarified how it supports equity and service standards."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The proposed revision extends well beyond the original source and adds rationale, audience, and outcome language ('Sharing the materials helps staff and partners access guidance... which supports equity in our work.') that is not present in the provided source. The original is a plain label: 'Download or share this curriculum.' The writing standard preserves brevity for labels and prohibits unsupported additions and generic rationale. The new text improperly expands on intent and instructional context without source evidence. This fails the review standard for program writing, which specifies not to invent justification, audience, or policy context where there is none in source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1242,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 113,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1355
+    },
+    "review": {
+      "input_tokens": 936,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 141,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1077
+    }
+  },
+  "createdAt": "2026-11-15T13:49:28.225Z"
+}

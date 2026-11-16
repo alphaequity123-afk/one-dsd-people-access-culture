@@ -1,0 +1,179 @@
+{
+  "target": "code.app/learn/cultural-intelligence/page.tsx",
+  "kind": "surface",
+  "route": "/learn/cultural-intelligence",
+  "sourceSha256": "d9abdb4d21c61d6fca94d36d8b77a0e783a5c7444727c272ef06b0e72ff92572",
+  "status": "needs_revision",
+  "reviewedFieldCount": 22,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field1"
+      ],
+      "before": "Begin with your own culture, then read about the communities you serve.",
+      "after": "Start with your own cultural perspective and then learn about the communities you serve to recognize assumptions and address specific needs.",
+      "reason": "Clarifies the progression from examining one's own culture to understanding others, and names the purpose of this order—recognizing assumptions and addressing needs."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field2"
+      ],
+      "before": "Bring the learning to a notice, meeting, hiring step or team decision.",
+      "after": "Apply your learning when developing a notice, preparing for a meeting, making a hiring decision, or leading a team process.",
+      "reason": "Makes clear that learning is relevant to key agency processes and clarifies examples; uses precise language for the relevant actions in DSD work."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field3"
+      ],
+      "before": "Leadership approaches, a leadership curriculum and questions to ask of the organization.",
+      "after": "Review different leadership approaches, use the leadership curriculum, and consider essential questions for evaluating organizational practices.",
+      "reason": "Specifies the actions—review, use, consider—and ties questions to evaluating practices. Removes vague phrasing and ties leadership learning to tangible outcomes."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field8"
+      ],
+      "before": "Use a brief to prepare questions about what matters to people and what support works for them.",
+      "after": "Use a brief to develop relevant questions about what matters to community members and what types of support are effective for them in practice.",
+      "reason": "Adds specificity—clarifies that questions should focus on both priorities and support effectiveness; grounds the purpose in practice."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "field9"
+      ],
+      "before": "For Tribal consultation, follow the applicable Tribal processes and contact the Office of Indian Affairs or the DHS office responsible for Tribal relations.",
+      "after": "For Tribal consultation, follow applicable Tribal processes and check with the Office of Indian Affairs or the DHS Tribal affairs office to confirm current requirements.",
+      "reason": "Clarifies the staff action needed (check for current requirements), and specifies roles within DHS for practical contact; emphasizes the need for up-to-date processes."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "field12"
+      ],
+      "before": "Plan an engagement, find the organizations connected with the division, and see where to reach people.",
+      "after": "Plan community engagement by mapping out which organizations work with the division and determining effective ways to reach relevant groups.",
+      "reason": "Connects the planning step with practical actions: mapping organizations and channels. Makes explicit how the information supports engagement."
+    },
+    {
+      "fieldId": 12,
+      "path": [
+        "field14"
+      ],
+      "before": "Think about an upcoming notice, meeting, hiring step or team decision. Ask what language, format, and support the person wants; check who can make the decision; and make a plan to follow up.",
+      "after": "For an upcoming notice, meeting, hiring process, or team decision, ask what language, format, and supports the person prefers. Identify who has authority, and document follow-up steps to ensure the plan is effective.",
+      "reason": "Clarifies the progression of steps, connects each to practical choices, and adds the purpose of documenting follow-up to check effectiveness."
+    },
+    {
+      "fieldId": 14,
+      "path": [
+        "field17"
+      ],
+      "before": "Courses alone are not the work. These bring people together around a real decision.",
+      "after": "Course materials support learning, but sustained change happens when people meet to address real decisions together.",
+      "reason": "Clarifies the difference between individual learning and group practice, and explains why in-person application matters for actual outcomes."
+    },
+    {
+      "fieldId": 17,
+      "path": [
+        "field20"
+      ],
+      "before": "Leaders begin with the same questions about their own culture, then ask them of the institution. What does this organization treat as normal? Who designed the default? Whose experience is missing, including disabled colleagues and people served, and people at the point where disability, language, race and income meet? Bring these to policy, program and resource decisions and, with equal weight, to workforce decisions and workplace culture.",
+      "after": "Leaders should examine their own cultural assumptions first, then ask similar questions of their organization. Identify what is treated as standard, who influenced those standards, and whose perspectives—including those of disabled colleagues and people served—may be missing, especially at intersections of disability, language, race, and income. Bring these considerations into policy, program, and resource decisions, as well as workforce practices and organizational culture.",
+      "reason": "Adds clarity to instructions for leaders, ensuring each point connects with a relevant decision area and includes reasons for each reflective question. Maintains specificity for DSD context."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed edit to field1 changes: 'Begin with your own culture, then read about the communities you serve.' to 'Start with your own cultural perspective and then learn about the communities you serve to recognize assumptions and address specific needs.' The addition of 'to recognize assumptions and address specific needs' introduces new rationales and outcomes not present in the original text or its surface context. The page presents each navigation step as labeled choices without explicit reasoning or outcomes in button/label text, so adding new purposes or interpreted objectives is an unsupported change. This is a blocker because it alters instructional or policy scope."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The proposed edit for field2 ('Bring the learning to a notice, meeting, hiring step or team decision.' → 'Apply your learning when developing a notice, preparing for a meeting, making a hiring decision, or leading a team process.') mostly preserves meaning and clarifies scope. Change is acceptable and does not misrepresent the source."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "Field3's edit adds detail but does not distort the source ('Leadership approaches, a leadership curriculum and questions to ask of the organization.' → 'Review different leadership approaches, use the leadership curriculum, and consider essential questions for evaluating organizational practices.'). Acceptable."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The revision for field8 focuses and clarifies the practice purpose. Acceptable."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "Field9's change ('For Tribal consultation, follow the applicable Tribal processes and contact the Office of Indian Affairs or the DHS office responsible for Tribal relations.' → clarified staff steps, 'check with...to confirm current requirements.') is within practical intent and does not overstate requirements. Acceptable."
+      },
+      {
+        "fieldId": 10,
+        "severity": "note",
+        "finding": "Field12's edit ('Plan an engagement, find the organizations connected with the division, and see where to reach people.' → 'Plan community engagement by mapping out which organizations work with the division and determining effective ways to reach relevant groups.') is clearer and matches the instructional context. Acceptable."
+      },
+      {
+        "fieldId": 12,
+        "severity": "note",
+        "finding": "Adds specificity to the process in field14 but stays within source ('Think about an upcoming notice, meeting, hiring step or team decision. Ask what language, format, and support the person wants; check who can make the decision; and make a plan to follow up.' → clarified sequence, adds 'document follow-up'). Acceptable, but added 'document' is an inferred step, not present in the current text; since this is practical clarification, it may be allowable for guidance but should not be represented as a universal requirement."
+      },
+      {
+        "fieldId": 14,
+        "severity": "note",
+        "finding": "Field17's edit ('Courses alone are not the work. These bring people together around a real decision.' → 'Course materials support learning, but sustained change happens when people meet to address real decisions together.') reasonably clarifies intent for application. Acceptable."
+      },
+      {
+        "fieldId": 17,
+        "severity": "note",
+        "finding": "Field20 rewords reflections for leaders but keeps original content and specificity. No misrepresentation."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 5989,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 664,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 6653
+    },
+    "review": {
+      "input_tokens": 5842,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 666,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 6508
+    }
+  },
+  "createdAt": "2026-11-15T13:49:46.399Z"
+}

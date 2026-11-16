@@ -1,0 +1,74 @@
+{
+  "revisions": [
+    {
+      "target": "resource.ja-inclusive-hiring-lifecycle",
+      "kind": "resource",
+      "route": "/library/ja-inclusive-hiring-lifecycle",
+      "status": "draft",
+      "changes": [
+        {
+          "path": [
+            "whyItMatters"
+          ],
+          "before": "Credential gatekeeping and vague culture-fit judgments were among the clearest advancement barriers DSD staff described. Each stage of hiring is a decision with an owner, so each can be changed.",
+          "after": "Credential gatekeeping and vague culture-fit judgments were among the clearest advancement barriers DSD staff described. Examine the decisions at each stage with the responsible hiring and Human Resources partners to identify which requirements are necessary and where the process could change."
+        },
+        {
+          "path": [
+            "body",
+            3
+          ],
+          "before": "Stage 4. Normalize accommodations without forcing disclosure. Offer accommodation for every stage in the same sentence you use for scheduling. Make the offer to everyone so no one has to identify as disabled to receive it.",
+          "after": "Stage 4. Explain how to request an accommodation for the hiring process. Tell every applicant what each stage involves and how to contact the designated accommodation office. Route individual requests through the authorized process rather than asking the interview panel to gather medical details. Providing the information to everyone does not mean that a request will never require supporting information."
+        },
+        {
+          "path": [
+            "body",
+            7
+          ],
+          "before": "Stage 8. Examine stage-by-stage outcomes and improve the process. With your HR partner, look at who applied, who advanced at each stage, and who was hired, at a level that protects small groups. Change the stage where people drop out.",
+          "after": "Stage 8. Examine stage-by-stage outcomes and improve the process. With your HR partner, look at who applied, who advanced at each stage, and who was hired, at a level that protects small groups. Investigate where people leave the process and what might explain the pattern before proposing a change."
+        }
+      ],
+      "reviewNote": "Full resource read. Hiring stage4 independently checked against EEOC Job Applicants and the ADA Q7,Q11,Q14; no full legal recertification. Share behavior read in components/share-page.tsx and lib/product/share-link.ts (keeps q/filter values on learn/library/resources, excludes Ask and private context).",
+      "sources": [
+        "https://www.eeoc.gov/laws/guidance/job-applicants-and-ada"
+      ]
+    },
+    {
+      "target": "resource.lm-facilitation-application",
+      "kind": "resource",
+      "route": "/library/lm-facilitation-application",
+      "status": "draft",
+      "changes": [
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "The best sessions leave participants ready to make a meaningful change in their own work. Begin with what they should be able to do, keep presentations focused, and leave substantial time to practice with real materials.",
+          "after": "Design sessions so participants can apply a specific skill to their own work. Begin with what they should be able to do, keep presentations focused, and leave substantial time to practice with real materials."
+        }
+      ],
+      "reviewNote": "Full resource read. Hiring stage4 independently checked against EEOC Job Applicants and the ADA Q7,Q11,Q14; no full legal recertification. Share behavior read in components/share-page.tsx and lib/product/share-link.ts (keeps q/filter values on learn/library/resources, excludes Ask and private context).",
+      "sources": []
+    },
+    {
+      "target": "resource.lm-how-this-program-works",
+      "kind": "resource",
+      "route": "/library/lm-how-this-program-works",
+      "status": "draft",
+      "changes": [
+        {
+          "path": [
+            "body",
+            4
+          ],
+          "before": "Sharing: the Share control at the top of every page copies a link that opens that page or resource only, in the program view you are using. If you share from the One DSD view, the person who opens the link sees the One DSD view. Nothing from My Work or from your own questions travels with the link.",
+          "after": "Sharing: the Share control copies a link to a page or resource in the program view you are using. On learning and resource search pages, the link can include search terms and filters. Private working notes and Ask questions are not included. Check the link before sharing it."
+        }
+      ],
+      "reviewNote": "Full resource read. Hiring stage4 independently checked against EEOC Job Applicants and the ADA Q7,Q11,Q14; no full legal recertification. Share behavior read in components/share-page.tsx and lib/product/share-link.ts (keeps q/filter values on learn/library/resources, excludes Ask and private context).",
+      "sources": []
+    }
+  ]
+}

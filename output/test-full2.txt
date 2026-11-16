@@ -1,0 +1,1753 @@
+
+> one-dsd-people-access-culture-standalone@0.1.0 test
+> node scripts/testing/run-tests.mjs
+
+
+ RUN  v5.0.5 C:/Users/garyb/Projects/one-dsd-writing-standard-20261115
+
+ ❯ |components| components/director-toolkit-template.test.tsx (2 tests | 1 failed) 142ms
+   ❯ Equity Director toolkit template (2)
+     × renders labeled fields, keeps everything in the page and copies the filled text 51ms
+ ❯ |components| components/home-ask.test.tsx (4 tests | 2 failed) 267ms
+   × answers a typed question in a side panel, handing it over through session storage and never the page address 211ms
+   × opens the panel for a spoken conversation and closes it with Close or Escape 20ms
+ ❯ |components| app/learn/leadership-styles/leadership-styles-pages.test.tsx (3 tests | 2 failed) 183ms
+   ❯ leadership styles pathway pages (3)
+     × renders a full lesson for every style, with every anchored section 69ms
+     × renders the scenarios, race, lifecycle and capstone pages, with Guidance on practice pages 82ms
+ ❯ |components| components/cl-water.test.tsx (11 tests | 6 failed) 1429ms
+   ❯ module contents (6)
+     × module-1 keeps every word and adds an anchored contents list 206ms
+     × module-2 keeps every word and adds an anchored contents list 237ms
+     × module-3 keeps every word and adds an anchored contents list 81ms
+     × module-4 keeps every word and adds an anchored contents list 129ms
+     × module-5 keeps every word and adds an anchored contents list 114ms
+     × module-6 keeps every word and adds an anchored contents list 96ms
+ ❯ |components| components/hub2-pages.test.tsx (7 tests | 2 failed) 9714ms
+   ❯ hub pages keep their content in closed panels (7)
+     × learn 25ms
+     × library 604ms
+ ❯ |components| app/leading/leading-pages.test.tsx (9 tests | 1 failed) 18077ms
+   ❯ supervisor and manager pages render with their data (4)
+     × states the promises 38ms
+ ❯ |node| lib/analysis/instruments.test.ts (40 tests | 6 failed) 231ms
+   ❯ INSTRUMENTS (34)
+     × equity-analysis guidance links are allowed, exist under app/, and carry lowercase keywords 9ms
+     × policy-review guidance links are allowed, exist under app/, and carry lowercase keywords 1ms
+     × program-analysis guidance links are allowed, exist under app/, and carry lowercase keywords 1ms
+     × engagement-plan guidance links are allowed, exist under app/, and carry lowercase keywords 1ms
+     × plain-language guidance links are allowed, exist under app/, and carry lowercase keywords 1ms
+     × working-group-plan guidance links are allowed, exist under app/, and carry lowercase keywords 1ms
+ ❯ |node| lib/content/leadership-journey.test.ts (11 tests | 2 failed) 31ms
+   ❯ the promises the journey keeps (5)
+     × offers no badge, certificate, score, rating or ranking 7ms
+     × says plainly that it is optional, with nothing to submit and nothing counted 9ms
+ ❯ |node| lib/analysis/service.test.ts (19 tests | 2 failed) 85ms
+   ❯ privacy gate (4)
+     × refuses a context holding a personal email address 6ms
+     × refuses a source whose only private detail is in its reading note, with no model call 6ms
+ ❯ |node| lib/content/leadership-styles-pathway.test.ts (4 tests | 1 failed) 103ms
+   ❯ leadership styles pathway content (4)
+     × follows the owner's wording rules 50ms
+ ❯ |node| lib/program/page-purpose.test.ts (3 tests | 1 failed) 11ms
+   × orders the landing page: cards, then the finder, then the Ask window, and does not speak as 'us' 4ms
+ ❯ |node| lib/learning/resource-media-renderer.test.ts (4 tests | 1 failed) 3763ms
+   × encodes a GEFen narrated video with accessible caption and audio tracks 895ms
+ ❯ |node| lib/content/collections.test.ts (18 tests | 1 failed) 1349ms
+   ❯ the promises on these pages (2)
+     × states plainly what is and is not recorded 41ms
+ ❯ |node| lib/downloads/adapters/hub.test.ts (42 tests | 1 failed) 49834ms
+   ❯ hub downloads (42)
+     × resolves and renders every community page 21021ms
+Could not parse CSS stylesheet
+Could not parse CSS stylesheet
+Not implemented: navigation to another Document
+Not implemented: navigation to another Document
+(node:36052) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:23912) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+⎯⎯⎯⎯⎯⎯ Failed Tests 29 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |components| components/cl-water.test.tsx > module contents > module-1 keeps every word and adds an anchored contents list
+TestingLibraryElementError: Unable to find an accessible element with the role "link"
+
+Here are the accessible roles:
+
+  list:
+
+  Name "":
+  [36m<ol />[39m
+
+  --------------------------------------------------
+  listitem:
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  --------------------------------------------------
+  button:
+
+  Name "Opening":
+  [36m<button[39m
+    [33maria-current[39m=[32m"page"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "What the fish cannot see":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Who Minnesotans are now":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Who works in state government":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "A mirror, not a label":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Try it":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Reflect":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Take away":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Go deeper":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+[36m<nav[39m
+  [33maria-label[39m=[32m"In this module"[39m
+  [33mclass[39m=[32m"pilot-supporting-body"[39m
+[36m>[39m
+  [36m<ol>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33maria-current[39m=[32m"page"[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mOpening[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mWhat the fish cannot see[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mWho Minnesotans are now[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mWho works in state government[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mA mirror, not a label[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mTry it[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mReflect[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mTake away[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mGo deeper[0m
+      [36m</button>[39m
+    [36m</li>[39m
+  [36m</ol>[39m
+[36m</nav>[39m
+ ❯ Object.getElementError ../one-dsd-calm-rebuild-20261109/node_modules/@testing-library/dom/dist/config.js:37:19
+ ❯ ../one-dsd-calm-rebuild-20261109/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ ❯ ../one-dsd-calm-rebuild-20261109/node_modules/@testing-library/dom/dist/query-helpers.js:109:15
+ ❯ components/cl-water.test.tsx:56:31
+     54|     const headings = [...module.body.matchAll(/^##\s+(.+)$/gm)].map(ma…
+     55|     const nav = view.getByRole('navigation', { name: 'In this module' …
+     56|     const links = within(nav).getAllByRole('link');
+       |                               ^
+     57|     expect(links.map(link => link.textContent)).toEqual(headings.map(h…
+     58|     for (const link of links) expect(document.getElementById(link.getA…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/29]⎯
+
+ FAIL  |components| components/cl-water.test.tsx > module contents > module-2 keeps every word and adds an anchored contents list
+TestingLibraryElementError: Unable to find an accessible element with the role "link"
+
+Here are the accessible roles:
+
+  list:
+
+  Name "":
+  [36m<ol />[39m
+
+  --------------------------------------------------
+  listitem:
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  --------------------------------------------------
+  button:
+
+  Name "Opening":
+  [36m<button[39m
+    [33maria-current[39m=[32m"page"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "The warm side is real":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Reading the code":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "When nice avoids conflict":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Friendly, but hard to befriend":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "What research shows, and a question":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Try it":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Reflect":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Take away":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Go deeper":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+[36m<nav[39m
+  [33maria-label[39m=[32m"In this module"[39m
+  [33mclass[39m=[32m"pilot-supporting-body"[39m
+[36m>[39m
+  [36m<ol>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33maria-current[39m=[32m"page"[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mOpening[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mThe warm side is real[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mReading the code[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mWhen nice avoids conflict[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mFriendly, but hard to befriend[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mWhat research shows, and a question[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mTry it[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mReflect[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mTake away[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mGo deeper[0m
+      [36m</button>[39m
+    [36m</li>[39m
+  [36m</ol>[39m
+[36m</nav>[39m
+ ❯ Object.getElementError ../one-dsd-calm-rebuild-20261109/node_modules/@testing-library/dom/dist/config.js:37:19
+ ❯ ../one-dsd-calm-rebuild-20261109/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ ❯ ../one-dsd-calm-rebuild-20261109/node_modules/@testing-library/dom/dist/query-helpers.js:109:15
+ ❯ components/cl-water.test.tsx:56:31
+     54|     const headings = [...module.body.matchAll(/^##\s+(.+)$/gm)].map(ma…
+     55|     const nav = view.getByRole('navigation', { name: 'In this module' …
+     56|     const links = within(nav).getAllByRole('link');
+       |                               ^
+     57|     expect(links.map(link => link.textContent)).toEqual(headings.map(h…
+     58|     for (const link of links) expect(document.getElementById(link.getA…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/29]⎯
+
+ FAIL  |components| components/cl-water.test.tsx > module contents > module-3 keeps every word and adds an anchored contents list
+TestingLibraryElementError: Unable to find an accessible element with the role "link"
+
+Here are the accessible roles:
+
+  list:
+
+  Name "":
+  [36m<ol />[39m
+
+  --------------------------------------------------
+  listitem:
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  --------------------------------------------------
+  button:
+
+  Name "Opening":
+  [36m<button[39m
+    [33maria-current[39m=[32m"page"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Settlers, churches and keeping your head down":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Farms, winters and cooperatives":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Government as a shared moral project":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Values under the surface":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Try it":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Reflect":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Take away":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Go deeper":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+[36m<nav[39m
+  [33maria-label[39m=[32m"In this module"[39m
+  [33mclass[39m=[32m"pilot-supporting-body"[39m
+[36m>[39m
+  [36m<ol>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33maria-current[39m=[32m"page"[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mOpening[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mSettlers, churches and keeping your head down[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mFarms, winters and cooperatives[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mGovernment as a shared moral project[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mValues under the surface[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mTry it[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mReflect[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mTake away[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mGo deeper[0m
+      [36m</button>[39m
+    [36m</li>[39m
+  [36m</ol>[39m
+[36m</nav>[39m
+ ❯ Object.getElementError ../one-dsd-calm-rebuild-20261109/node_modules/@testing-library/dom/dist/config.js:37:19
+ ❯ ../one-dsd-calm-rebuild-20261109/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ ❯ ../one-dsd-calm-rebuild-20261109/node_modules/@testing-library/dom/dist/query-helpers.js:109:15
+ ❯ components/cl-water.test.tsx:56:31
+     54|     const headings = [...module.body.matchAll(/^##\s+(.+)$/gm)].map(ma…
+     55|     const nav = view.getByRole('navigation', { name: 'In this module' …
+     56|     const links = within(nav).getAllByRole('link');
+       |                               ^
+     57|     expect(links.map(link => link.textContent)).toEqual(headings.map(h…
+     58|     for (const link of links) expect(document.getElementById(link.getA…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/29]⎯
+
+ FAIL  |components| components/cl-water.test.tsx > module contents > module-4 keeps every word and adds an anchored contents list
+TestingLibraryElementError: Unable to find an accessible element with the role "link"
+
+Here are the accessible roles:
+
+  list:
+
+  Name "":
+  [36m<ol />[39m
+
+  --------------------------------------------------
+  listitem:
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  --------------------------------------------------
+  button:
+
+  Name "Opening":
+  [36m<button[39m
+    [33maria-current[39m=[32m"page"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Voices from outside the majority":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "The Minnesota paradox":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "A history kept out of view":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "2020: a hard look at culture":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Repair, equity work and an honest debate":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Try it":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Reflect":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Take away":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Go deeper":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+[36m<nav[39m
+  [33maria-label[39m=[32m"In this module"[39m
+  [33mclass[39m=[32m"pilot-supporting-body"[39m
+[36m>[39m
+  [36m<ol>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33maria-current[39m=[32m"page"[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mOpening[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mVoices from outside the majority[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mThe Minnesota paradox[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mA history kept out of view[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0m2020: a hard look at culture[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mRepair, equity work and an honest debate[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mTry it[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mReflect[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mTake away[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mGo deeper[0m
+      [36m</button>[39m
+    [36m</li>[39m
+  [36m</ol>[39m
+[36m</nav>[39m
+ ❯ Object.getElementError ../one-dsd-calm-rebuild-20261109/node_modules/@testing-library/dom/dist/config.js:37:19
+ ❯ ../one-dsd-calm-rebuild-20261109/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ ❯ ../one-dsd-calm-rebuild-20261109/node_modules/@testing-library/dom/dist/query-helpers.js:109:15
+ ❯ components/cl-water.test.tsx:56:31
+     54|     const headings = [...module.body.matchAll(/^##\s+(.+)$/gm)].map(ma…
+     55|     const nav = view.getByRole('navigation', { name: 'In this module' …
+     56|     const links = within(nav).getAllByRole('link');
+       |                               ^
+     57|     expect(links.map(link => link.textContent)).toEqual(headings.map(h…
+     58|     for (const link of links) expect(document.getElementById(link.getA…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/29]⎯
+
+ FAIL  |components| components/cl-water.test.tsx > module contents > module-5 keeps every word and adds an anchored contents list
+TestingLibraryElementError: Unable to find an accessible element with the role "link"
+
+Here are the accessible roles:
+
+  list:
+
+  Name "":
+  [36m<ol />[39m
+
+  --------------------------------------------------
+  listitem:
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  --------------------------------------------------
+  button:
+
+  Name "Opening":
+  [36m<button[39m
+    [33maria-current[39m=[32m"page"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "A history we inherited":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Values written into law":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "The same values, seen from other homes":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Inside the agency":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Try it":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Reflect":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Take away":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Go deeper":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+[36m<nav[39m
+  [33maria-label[39m=[32m"In this module"[39m
+  [33mclass[39m=[32m"pilot-supporting-body"[39m
+[36m>[39m
+  [36m<ol>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33maria-current[39m=[32m"page"[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mOpening[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mA history we inherited[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mValues written into law[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mThe same values, seen from other homes[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mInside the agency[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mTry it[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mReflect[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mTake away[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mGo deeper[0m
+      [36m</button>[39m
+    [36m</li>[39m
+  [36m</ol>[39m
+[36m</nav>[39m
+ ❯ Object.getElementError ../one-dsd-calm-rebuild-20261109/node_modules/@testing-library/dom/dist/config.js:37:19
+ ❯ ../one-dsd-calm-rebuild-20261109/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ ❯ ../one-dsd-calm-rebuild-20261109/node_modules/@testing-library/dom/dist/query-helpers.js:109:15
+ ❯ components/cl-water.test.tsx:56:31
+     54|     const headings = [...module.body.matchAll(/^##\s+(.+)$/gm)].map(ma…
+     55|     const nav = view.getByRole('navigation', { name: 'In this module' …
+     56|     const links = within(nav).getAllByRole('link');
+       |                               ^
+     57|     expect(links.map(link => link.textContent)).toEqual(headings.map(h…
+     58|     for (const link of links) expect(document.getElementById(link.getA…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/29]⎯
+
+ FAIL  |components| components/cl-water.test.tsx > module contents > module-6 keeps every word and adds an anchored contents list
+TestingLibraryElementError: Unable to find an accessible element with the role "link"
+
+Here are the accessible roles:
+
+  list:
+
+  Name "":
+  [36m<ol />[39m
+
+  --------------------------------------------------
+  listitem:
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  Name "":
+  [36m<li />[39m
+
+  --------------------------------------------------
+  button:
+
+  Name "Opening":
+  [36m<button[39m
+    [33maria-current[39m=[32m"page"[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Six ways of meeting difference":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Whose "same"?":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Different frameworks, different limits":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Strengths worth keeping":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Try it":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Reflect":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Take away":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  Name "Go deeper":
+  [36m<button[39m
+    [33mtype[39m=[32m"button"[39m
+  [36m/>[39m
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+[36m<nav[39m
+  [33maria-label[39m=[32m"In this module"[39m
+  [33mclass[39m=[32m"pilot-supporting-body"[39m
+[36m>[39m
+  [36m<ol>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33maria-current[39m=[32m"page"[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mOpening[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mSix ways of meeting difference[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mWhose "same"?[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mDifferent frameworks, different limits[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mStrengths worth keeping[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mTry it[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mReflect[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mTake away[0m
+      [36m</button>[39m
+    [36m</li>[39m
+    [36m<li>[39m
+      [36m<button[39m
+        [33mtype[39m=[32m"button"[39m
+      [36m>[39m
+        [0mGo deeper[0m
+      [36m</button>[39m
+    [36m</li>[39m
+  [36m</ol>[39m
+[36m</nav>[39m
+ ❯ Object.getElementError ../one-dsd-calm-rebuild-20261109/node_modules/@testing-library/dom/dist/config.js:37:19
+ ❯ ../one-dsd-calm-rebuild-20261109/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ ❯ ../one-dsd-calm-rebuild-20261109/node_modules/@testing-library/dom/dist/query-helpers.js:109:15
+ ❯ components/cl-water.test.tsx:56:31
+     54|     const headings = [...module.body.matchAll(/^##\s+(.+)$/gm)].map(ma…
+     55|     const nav = view.getByRole('navigation', { name: 'In this module' …
+     56|     const links = within(nav).getAllByRole('link');
+       |                               ^
+     57|     expect(links.map(link => link.textContent)).toEqual(headings.map(h…
+     58|     for (const link of links) expect(document.getElementById(link.getA…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/29]⎯
+
+ FAIL  |components| components/director-toolkit-template.test.tsx > Equity Director toolkit template > renders labeled fields, keeps everything in the page and copies the filled text
+AssertionError: expected 'Decision and mitigation logKeep findi…' to contain 'Nothing you type here is saved or sent'
+
+Expected: "Nothing you type here is saved or sent"
+Received: "Decision and mitigation logKeep findings, changes to make, decisions, reasons, owners and open risks in one place.Add a row each time a finding leads to a decision. It also serves as the decision and risk register in governance.Part of Area in the toolkit.Decision or review this log coversLogRowFindingChange to makeDecision madeReasonAccountable owner (role)Open risksDate123Add a rowUse roles, not names. Leave out client information, case details, personnel matters and any sensitive employee concern. Formal concerns go to authorized processes, not to this form. The app does not autosave or submit your entries. Copy, download or print if you need a record before leaving this page.Print this templateCopy as textDownload as textClear"
+
+ ❯ components/director-toolkit-template.test.tsx:28:39
+     26|     expect(document.querySelector("#template-decision-log")).not.toBeN…
+     27|     expect(document.body.textContent).not.toContain("Project recommend…
+     28|     expect(document.body.textContent).toContain("Nothing you type here…
+       |                                       ^
+     29|     const subject = document.querySelector<HTMLInputElement>("#templat…
+     30|     await act(async () => { type(subject, "Notice redesign"); });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/29]⎯
+
+ FAIL  |components| components/home-ask.test.tsx > answers a typed question in a side panel, handing it over through session storage and never the page address
+ FAIL  |components| components/home-ask.test.tsx > opens the panel for a spoken conversation and closes it with Close or Escape
+TypeError: dialog.showModal is not a function
+ ❯ components/home-ask.tsx:53:30
+     51|     const previous = document.body.style.overflow;
+     52|     document.body.style.overflow = "hidden";
+     53|     if (!dialog.open) dialog.showModal();
+       |                              ^
+     54|     dialog.querySelector("textarea")?.focus();
+     55|     return () => { document.body.style.overflow = previous; };
+ ❯ Object.react_stack_bottom_frame ../one-dsd-calm-rebuild-20261109/node_modules/react-dom/cjs/react-dom-client.development.js:25989:20
+ ❯ runWithFiberInDEV ../one-dsd-calm-rebuild-20261109/node_modules/react-dom/cjs/react-dom-client.development.js:874:13
+ ❯ commitHookEffectListMount ../one-dsd-calm-rebuild-20261109/node_modules/react-dom/cjs/react-dom-client.development.js:13249:29
+ ❯ commitHookPassiveMountEffects ../one-dsd-calm-rebuild-20261109/node_modules/react-dom/cjs/react-dom-client.development.js:13336:11
+ ❯ commitPassiveMountOnFiber ../one-dsd-calm-rebuild-20261109/node_modules/react-dom/cjs/react-dom-client.development.js:15484:13
+ ❯ recursivelyTraversePassiveMountEffects ../one-dsd-calm-rebuild-20261109/node_modules/react-dom/cjs/react-dom-client.development.js:15439:11
+ ❯ commitPassiveMountOnFiber ../one-dsd-calm-rebuild-20261109/node_modules/react-dom/cjs/react-dom-client.development.js:15519:11
+ ❯ flushPassiveEffects ../one-dsd-calm-rebuild-20261109/node_modules/react-dom/cjs/react-dom-client.development.js:18432:9
+ ❯ flushPendingEffects ../one-dsd-calm-rebuild-20261109/node_modules/react-dom/cjs/react-dom-client.development.js:18358:14
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/29]⎯
+
+ FAIL  |components| components/hub2-pages.test.tsx > hub pages keep their content in closed panels > learn
+AssertionError: The Core 15: expected '<div class="pilot-topic"><header><h1>…' to contain 'The Core 15'
+
+Expected: "The Core 15"
+Received: "<div class="pilot-topic"><header><h1>Learn</h1><p>Develop the judgment behind accessible services, equitable decisions, and inclusive workplaces. Courses, readings, and recordings connect concepts with Minnesota human services practice, including the evidence and trade-offs involved in applying them.</p></header><form class="pilot-topic-search" role="search" action="/learn" method="get"><label for="pilot-learning-search">Search learning and resources</label><div><input id="pilot-learning-search" type="search" name="q"/><button type="submit">Search</button></div></form><section class="pilot-topic-feature" aria-labelledby="pilot-core"><h2 id="pilot-core">Start with the Core 15</h2><p>The recommended courses to begin with. Follow them in order or pick the one closest to your work.</p><a class="pilot-topic-button" href="/learn/core-15">See the Core 15</a></section><section aria-labelledby="pilot-collections"><h2 id="pilot-collections">Collections</h2><ul class="pilot-topic-rows"><li><a href="/learn/cultural-intelligence"><strong>Cultural Intelligence</strong><span>Explore your own perspective and learn with people and communities.</span></a></li><li><a href="/learn/water-we-swim-in/collection"><strong>The Water We Swim In</strong><span>How culture shapes everyday work and affects access to services.</span></a></li></ul></section><section class="pilot-topic-themes" aria-labelledby="resource-themes-title"><h2 id="resource-themes-title">Explore by theme</h2><p>Find related learning, useful tools, and ways to apply them in your work.</p><ul class="_themeGrid_b6f09a"><li><h3><a href="/learn?theme=identity">Culture, identity and intercultural practice</a></h3><p>Explore identity, racial equity, cultural understanding and the assumptions we bring to our work.</p></li><li><h3><a href="/learn?theme=access">Accessibility, language and communication</a></h3><p>Make information, conversations and participation easier to access and use.</p></li><li><h3><a href="/learn?theme=disability">Disability rights and person-centered services</a></h3><p>Support choice, belonging and meaningful access through disability-informed practice.</p></li><li><h3><a href="/learn?theme=policy">Policy, programs and public decisions</a></h3><p>Examine policies, legislation, budgets, contracts and the decisions that shape services.</p></li><li><h3><a href="/learn?theme=workforce">Workplace culture and staff development</a></h3><p>Strengthen hiring, supervision, collaboration, opportunity and everyday work experience.</p></li><li><h3><a href="/learn?theme=partnership">Community partnership and shared influence</a></h3><p>Learn with communities, involve people in decisions and explain what their contributions changed.</p></li><li><h3><a href="/learn?theme=leadership">Leadership and organizational change</a></h3><p>Connect direction, responsibility and support with lasting improvements in practice.</p></li><li><h3><a href="/learn?theme=evidence">Evidence, learning and improvement</a></h3><p>Use evidence, reflection and evaluation to understand what changed and what to improve.</p></li></ul></section><p><a href="/learn?browse=all#catalog">Browse all learning and resources</a></p></div>"
+
+ ❯ components/hub2-pages.test.tsx:35:143
+     33|   it("learn", async () => {
+     34|     const page = html(await LearnPage({ searchParams: Promise.resolve(…
+     35|     for (const t of ["The Core 15", "Course series", "Search the colle…
+       |                                                                                                                                               ^
+     36|     expect(page.indexOf("Search the collection")).toBeLessThan(page.in…
+     37|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/29]⎯
+
+ FAIL  |components| components/hub2-pages.test.tsx > hub pages keep their content in closed panels > library
+AssertionError: expected 613 to be less than -1
+ ❯ components/hub2-pages.test.tsx:46:48
+     44|     const page = html(await LibraryPage({ searchParams: Promise.resolv…
+     45|     for (const t of ["More ways to explore", "Understanding DHS", 'id=…
+     46|     expect(page.indexOf('id="find-resource"')).toBeLessThan(page.index…
+       |                                                ^
+     47|     const search = html(await LibraryPage({ searchParams: Promise.reso…
+     48|     expect(search).toContain("results-title");
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[10/29]⎯
+
+ FAIL  |components| app/leading/leading-pages.test.tsx > supervisor and manager pages render with their data > states the promises
+AssertionError: expected '<div class="_page_919532"><div class=…' to contain 'The one exception is the Equity Analy…'
+
+Expected: "The one exception is the Equity Analysis Toolkit, which is required."
+Received: "<div class="_page_919532"><div class="_content_919532"><p class="_back_919532"><a href="/leading">For leaders, supervisors, managers, and directors</a></p><header class="_intro_919532"><p class="_eyebrow_919532">For leaders, supervisors, managers, and directors</p><h1>How this works</h1><p class="_lede_919532">What is recorded, what is not, and what this space does not do.</p></header><div class="_plain_809a7d"><h2>There is no team view</h2><p>This area shows you no information about your team's learning.</p><ul><li>There is no sign-in for this space. All of it is public, and staff can read every page.</li><li>This leadership area does not give supervisors a learner scoreboard or assign these optional courses.</li><li>This area does not provide supervisors with individual course visits, progress or answers. Anyone using the same browser profile may still see information saved there.</li></ul><h2>What stays in your browser</h2><ul><li>Features that save a place on a suggested path, lesson progress or practice answers keep those items in this browser profile when storage is available.</li><li>The learning-progress feature does not send those saved items to supervisors or program staff. Exporting or sharing a copy is a separate action.</li><li>Anyone using the same browser profile may see saved items. Use the relevant feature to clear them; downloaded, printed or shared copies remain separate.</li></ul><h2>What happens to a question in Ask</h2><ul><li>Questions typed into Ask go to outside services so that it can answer.</li><li>The current service does not intentionally save a question-and-answer copy in the owner workspace. Operational activity may be recorded, and earlier versions may have retained separate records. Supervisors do not receive your browser conversation from Ask.</li><li>Please do not type anyone's name, case, health or personnel details. Ask general questions.</li></ul><h2>What this does not replace</h2><ul><li>This app does not replace training the state requires. It does not count as the training Minn. Stat. 43A.21 requires of supervisors and managers. The state's own training does that.</li><li>It is general information, not legal advice. For a real situation, ask Human Resources, labor relations or your ADA coordinator.</li><li>It does not make or record any personnel, accommodation or complaint decision.</li></ul><h2>Required responsibilities and optional learning</h2><p>This program does not offer training credits. Optional learning here supports DHS responsibilities under the Equity Policy, including applicable equity-analysis requirements and assigned agency training. Complete required training through the agency's designated process.</p><p>The label “Required of all DHS staff” refers to the agency responsibility associated with the Equity Analysis Toolkit. This local companion course does not assign or certify required agency training. Follow the designated agency process for training and the applicable policy requirements for equity analysis. <a href="/courses/dhs-equity-analysis-toolkit">Open the Equity Analysis Toolkit course</a>.</p><h2>Using the learning</h2><p>Use these courses as guidance for your work, alongside current policy and the people and offices responsible for a decision.</p><h2>Tribal and Native American learning</h2><p>This space does not offer Tribal curriculum. One DSD refers Native American and Tribal-specific learning, questions and engagement to ADSA and the responsible Tribal liaison. <a href="/learn/tribal-referral">Native American and Tribal-specific guidance</a>.</p></div><aside class="_continue_919532"><h2>Keep exploring</h2><p><a href="/leading">What are you deciding?</a><a href="/about#participation-title">How participation and privacy work across the program</a></p></aside></div></div>"
+
+ ❯ app/leading/leading-pages.test.tsx:71:18
+     69|     const page = html(LeadingHowThisWorksPage());
+     70|     expect(page).toContain("This area shows you no information about y…
+     71|     expect(page).toContain("The one exception is the Equity Analysis T…
+       |                  ^
+     72|   });
+     73| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[11/29]⎯
+
+ FAIL  |components| app/learn/leadership-styles/leadership-styles-pages.test.tsx > leadership styles pathway pages > renders a full lesson for every style, with every anchored section
+AssertionError: transformative: expected '     Leadership styles, conflict and …' not to match /\bAI\b|artificial intelligence|\btut…/i
+
+- Expected:
+/\bAI\b|artificial intelligence|\btutor|\boffices?\b/i
+
++ Received:
+"     Leadership styles, conflict and equity : lesson 7 of 16  Transformative or equity-centered leadership   Changing structures.  Strongest foundation .         Download or share this lesson   Download this lesson:  Word  Excel  PowerPoint  PDF  Web page  Plain text   Copy link  Email link      How it works  The common scenario  Another conflict  Equity and inclusion  Strengths and risks  When to use it  Complements and safeguards  Practice and review    Working definition and boundaries   In this pathway, transformative leadership explicitly examines power, inequitable assumptions, institutional arrangements and the distribution of benefits and burdens.  It does not presume the answer. It investigates criteria, history, authority and effects, and then changes the rules and resources that create barriers.   What it is not   It is not the same as transformational leadership.  It is not treating a structural explanation as already proven.  It is not strong language without workable change.     The common scenario: “Who gets the visible work?”   Read the fictional scenario  A supervisor repeatedly gives high-visibility assignments to employees they describe as “polished,” “confident” and “ready to represent the team.”  A Black employee points out that they receive a lot of technical and behind-the-scenes work but fewer chances to present to leadership. In a team discussion, a colleague interrupts and says, “Everything doesn&#x27;t have to be about race.”  Later, the employee tells the supervisor, “I want the assignments reviewed, and I&#x27;m concerned that raising this will hurt my opportunities.”   Here is how this approach might respond. These responses illustrate tendencies and choices, not scripts that predict how anyone would act.    A stronger version  “We need to examine how ‘polished’ became a selection criterion, who has benefited from that definition, and whether access to preparation and sponsorship has been equitable.”  The leader turns the conflict into an inquiry into structure. Possible actions include replacing vague judgments with job-related criteria, making opportunities visible, providing equitable preparation and support, clarifying who decides and how decisions are reviewed, and handling the reported conduct through the appropriate channels.    A harmful version  “This is obviously systemic racism, and anyone who questions that is part of the problem.”  It may name a real concern, but it treats a finding as proven before inquiry, shuts out people who could help, and offers no workable change. The failure mode of this approach is substituting strong rhetoric for careful inquiry and follow-through.      How it resolves another conflict: Incomplete documentation  A data review shows that Black and American Indian applicants to a support program are denied more often for “incomplete documentation.” Two managers argue. One says staff just follow the rules. The other says the rule is biased.  How this approach tends to handle it  A transformative leader treats the rule itself as a legitimate subject of review, instead of choosing between “the rule is fine” and “the rule is racist.”  A stronger resolution  The leader asks: Where did this documentation rule come from? Which documents are hardest to get, and for whom? What help do applicants get, and when? Who can change the rule? The leader involves applicants and community partners and checks with the responsible Tribal-relations office about any consultation or coordination obligations. With the required approval, the team tests an allowed change, such as accepting other permitted documents or providing help earlier, and checks the results.    How it can promote or undermine equity and inclusion  Where it can promote equity and inclusion   Makes racism and institutional power legitimate subjects of analysis, not optional side topics.  Targets durable rules and resource decisions, not only individual behavior.  Connects concerns from individuals to patterns across the organization.   Where it can undermine them   Can provoke backlash if it moves faster than the evidence.  Can stall when there is no authority or budget to change anything.  Can become rhetoric without operational follow-through.   Racial equity  This approach names race and institutional power directly. That is its strength. It also needs discipline: findings require careful inquiry, and actions need authority and resources. Alignment with equity goals is not evidence of effectiveness.  Read more about race as a cross-cutting factor .  Equity assessment  High alignment with equity goals  But alignment is not evidence of effectiveness. Findings still need careful inquiry, and actions need authority and resources. This is a curriculum judgment about a pattern of behavior, not a rating of any person.    Strengths, weaknesses, opportunities and threats    Strengths   Directly addresses systems and power.     Weaknesses   Demands analysis, coalition-building and implementation work.     Opportunities   Change durable rules and resource allocation.     Threats   Backlash.  Unsupported claims.  Weak operational follow-through.       When to use it, and when not to  Conditions where it helps   A pattern of unequal results keeps returning.  A “neutral” rule may be producing unequal burdens.  Individual fixes have not changed outcomes.   Conditions where it should not be used   It would replace an urgent, immediate response to harm. Do both.  The conclusion is being announced before the inquiry.     Complementary approaches and safeguards    Bureaucratic or procedural leadership : Embeds changes so they outlast turnover.   Democratic or participative leadership : Brings affected people into the diagnosis and redesign.   Transactional leadership : Assigns owners, resources and deadlines to the changes.   Safeguards   Investigate before concluding.  Pair analysis with someone who has authority to change the rule.  Involve the people affected in the diagnosis.  Plan the operational steps and resources, not only the message.     Practice exercise and review  Your unit uses the phrase “strong communicator” when choosing who represents the team to partners.   Write down what the phrase means in practice. What behaviors count?  Ask who has historically been described this way and who has not.  Draft a job-related criterion to replace it, and a way for everyone to prepare to meet it.  Name who has authority to adopt the change.   Review prompts   What does it mean to investigate a structure without presuming the answer?  Why is “the rule is fine” versus “the rule is racist” a false choice?  What turns analysis into durable change?   Check a written response against the  eight-point practice rubric . The rubric looks at responses, never at people.  Practice with the fictional scenarios and with responses that contain nothing sensitive. Do not enter real complaints, personnel decisions or stories that could identify anyone.    Previous: Transformational leadership  Next: Laissez-faire leadership    "
+
+ ❯ app/learn/leadership-styles/leadership-styles-pages.test.tsx:31:44
+     29|       for (const section of STYLE_SECTIONS) expect(html, `${style}#${s…
+     30|       for (const word of ["Strengths", "Weaknesses", "Opportunities", …
+     31|       expect(visibleText(html), style).not.toMatch(BANNED);
+       |                                            ^
+     32|     }
+     33|     await expect(StylePage({ params: Promise.resolve({ style: "not-a-s…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[12/29]⎯
+
+ FAIL  |components| app/learn/leadership-styles/leadership-styles-pages.test.tsx > leadership styles pathway pages > renders the scenarios, race, lifecycle and capstone pages, with Guidance on practice pages
+AssertionError: expected '     Leadership styles, conflict and …' not to match /\bAI\b|artificial intelligence|\btut…/i
+
+- Expected:
+/\bAI\b|artificial intelligence|\btutor|\boffices?\b/i
+
++ Received:
+"     Leadership styles, conflict and equity : scenarios  Seven more scenarios, many responses   Each situation below is fictional, and every line of dialogue is original. For each one, several leadership approaches respond, some in a stronger way and some in a harmful way. Then comes a combined response and questions to discuss.        Download or share these scenarios   Download this lesson:  Word  Excel  PowerPoint  PDF  Web page  Plain text   Copy link  Email link      The acting lead  The all-staff meeting  The listening sessions  The online intake form  One budget, two needs  The new case model  Credit and names  Practice with Guidance   Responses illustrate tendencies and choices. They are not scripts that predict how anyone who uses a style would act, and no response is a judgment about a real person. Check your own response against the  eight-point practice rubric .   Explore this page     The acting lead    The all-staff meeting    The listening sessions    The online intake form    One budget, two needs    The new case model    Credit and names        Assignment and advancement opportunities  The acting lead   A unit needs someone to serve as acting lead for three months while the regular lead is on leave. The manager mentions the opening in a hallway conversation and offers it to a staff member they describe as “a natural fit.”  Staff who work an evening schedule, a staff member who works fully remote, and a staff member returning from medical leave never hear about it. One of them, a Hmong American employee with eight years in the unit, asks the manager how the choice was made. The employee adds that acting roles have often led to permanent promotions in this unit.   Separate matters the leader must address   How the opportunity was announced, and who could not have known about it.  What criteria were used, and whether they were job-related.  The history of who has received acting roles and later promotions.  Whether the selection followed the applicable human resources and selection process.  Support for people who want to prepare for future acting roles.   What goes through an authorized process  Acting assignments and promotions may be covered by human resources rules, bargaining agreements and selection procedures. The manager should check with the person or area responsible for human resources before changing or defending the decision. A team conversation can improve future practice, but it cannot replace that process.  How different approaches might respond    A harmful response:  Autocratic or directive leadership   “I needed someone fast and I picked the person I knew could do it. That&#x27;s my call.”  The manager owns the decision but uses authority to close the question. “Someone I knew” is the very pattern being asked about.    A stronger response:  Bureaucratic or procedural leadership   “You&#x27;re right to ask. I&#x27;m going to check with human resources about what process applies to acting roles. Going forward, I&#x27;ll post every acting opportunity in one place, with the criteria and a deadline everyone can meet.”  The manager uses process to make the opportunity visible and reviewable. Checking the applicable process protects both the employee and the person selected.    A harmful response:  Servant leadership   “I&#x27;m sorry you missed this one. Let&#x27;s make a development plan so you&#x27;re ready next time.”  Support is offered before anyone checks whether the employee was ever given a fair chance. Readiness was not the problem; awareness and access were.    A stronger response:  Transformative or equity-centered leadership   “Let&#x27;s look at the last five years of acting roles: who got them, how they were offered, and who was later promoted. If informal offers have shaped who advances, we need to change that.”  The leader looks at the pattern behind one decision. The review uses records the unit already has and does not presume the answer.    A stronger response:  Transactional leadership   “Every acting role will be posted for at least five working days, with criteria. We will track who applies and who is selected, and review it every six months.”  This makes the commitment concrete and measurable. It works best together with the review of past patterns.    A combined response   Thank the employee and confirm there will be no adverse treatment for asking.  Check the applicable human resources process before deciding anything about the current assignment.  Review the history of acting roles and promotions with the authorized partners.  Post future opportunities in one place, with job-related criteria and a deadline that works for every schedule.  Offer preparation to anyone who wants it, without assuming who needs it.  Report back to the team on what changed, and follow up with the employee by an agreed date.   To discuss   What does “a natural fit” mean, and who has historically been seen that way?  Which staff schedules or circumstances make hallway announcements a barrier?  What would tell you, a year from now, that access to acting roles has improved?       Accessible meetings and accommodation routing  The all-staff meeting   A division holds a hybrid all-staff meeting. A Deaf staff member requested American Sign Language interpreting two weeks earlier. The interpreters were not booked. Live captions are turned off because “they slow down the platform.” A manager suggests sending meeting notes afterward.  In the same week, a different staff member tells their supervisor they are having trouble with long video meetings because of a disability and asks whether they could join some meetings by phone or get materials in writing. The supervisor is unsure what to do and asks the team what they think.   Separate matters the leader must address   The missed interpreting request, which is an access failure for a request already made.  Captions, which are a basic access feature for many people.  The accommodation conversation, which belongs in the reasonable accommodation process, not a team discussion.  The privacy of the staff member who disclosed a disability.  Meeting practices that create the same barriers again and again.   What goes through an authorized process  Reasonable accommodation requests follow the agency&#x27;s established process. A supervisor should not put the request to coworkers or make assumptions about whether a disability is real. Connect the person promptly with the designated decision-maker, explain who needs the information to handle the request, and protect it from unnecessary disclosure. Supporting information belongs in the authorized process. Meanwhile, address access barriers within your authority; a team vote does not decide an individual request.  How different approaches might respond    A harmful response:  Democratic or participative leadership   “Let&#x27;s ask the team whether we should allow phone-in options for meetings.”  The supervisor turns one person&#x27;s accommodation request into a group decision and exposes a private disclosure. Participation is the wrong tool here.    A stronger response:  Bureaucratic or procedural leadership   “Thank you for telling me. I&#x27;ll connect you with the accommodation process today and keep what you&#x27;ve shared private. In the meantime, I&#x27;ll send written materials ahead of our meetings for everyone.”  The supervisor routes the request correctly, protects privacy and makes an immediate change that helps everyone without singling anyone out.    A stronger response:  Autocratic or directive leadership   “From now on, captions are on for every meeting we host, and interpreter requests are confirmed in writing within two working days. If they can&#x27;t be confirmed, the meeting moves.”  Directive authority is used well: it sets a clear access floor and makes the consequence of a missed request fall on the meeting, not on the Deaf staff member.    A harmful response:  Laissez-faire leadership   “The notes will go out after. Let me know if anything else comes up.”  The leader leaves the barrier in place and puts the work of following up on the person who was excluded.    A stronger response:  Inclusive leadership   “You should have had full access to this meeting, and you didn&#x27;t. I&#x27;m sorry. Before the next meeting, I&#x27;ll confirm interpreting with you, and we&#x27;ll make sure the recording is captioned and interpreted.”  The leader names the exclusion plainly, apologizes without excuses and commits to a specific fix with a date.    A combined response   Acknowledge the missed interpreting request directly to the Deaf staff member and fix it for the next meeting.  Turn on captions as the default for every meeting.  Route the second staff member&#x27;s request to the accommodation process the same day, and keep it private.  Share materials ahead of time and in accessible formats for everyone.  Assign one person or area responsible for confirming access requests, with a deadline.  Check back with both staff members on whether the changes worked.   To discuss   Why is a team vote the wrong way to handle an accommodation request?  Which access features could become the default so fewer people need to ask?  Who is responsible for confirming interpreting in your work, and by when?       Community input that conflicts with leadership preferences  The listening sessions   A program is redesigning how families learn about a new support option. Leadership prefers a short online survey and the original launch date. In listening sessions, Somali and Latino families, and several disability advocates, ask for in-person sessions in the evening, with interpreters, and for the notice to be rewritten in plain language before launch.  Meeting their requests would delay the launch by six weeks. A senior leader says, “We heard them, but we can&#x27;t let a few voices hold up the whole program.”   Separate matters the leader must address   Whether the community input can still change the decision, or whether the decision was already made.  The cost of the delay compared with the cost of launching a notice families cannot use.  Who decides, and how the decision will be explained to the people who gave input.  Whether the people who gave input were offered compensation or support for their time.   What goes through an authorized process  The Aging and Disability Services Administration (ADSA) Outreach and Engagement Guide helps staff plan engagement, access and reporting back. The Department of Human Services (DHS) Equity Policy and the Equity Analysis Toolkit are existing agency requirements for examining how a decision affects people. Any Tribal consultation or coordination process that applies must also be followed.  How different approaches might respond    A harmful response:  Charismatic leadership   “I know these families. I&#x27;ve worked with them for years. Trust me, they&#x27;ll be glad we launched on time.”  The leader&#x27;s personal relationship replaces what families actually said. Their input is overruled by the leader&#x27;s confidence.    A stronger response:  Democratic or participative leadership   “Here is what we heard, and here is what we can change. We can rewrite the notice in plain language and add two evening sessions with interpreters. The launch date can move three weeks, not six. We will come back to you in a month with what happened.”  The leader is honest about limits, shows how input changed the decision and commits to reporting back.    A harmful response:  Transactional leadership   “We held the required number of listening sessions. That box is checked.”  Completion is measured, not influence. The sessions happened, but nothing changed because of them.    A stronger response:  Transformative or equity-centered leadership   “If our process only works for families who can fill out an online survey in English, the process is the barrier. Let&#x27;s ask what it would take for these families to shape the next phase from the start.”  The leader turns one conflict into a change in how the program engages from now on.    A stronger response:  Shared or distributed leadership   “Let&#x27;s invite two of the community members to join the design group, with pay for their time, and give the group authority over the notice wording.”  Community members get real authority, not only a listening session. Paying for their expertise recognizes it as work.    A combined response   Tell participants plainly what can and cannot change before asking for input.  Use the Equity Analysis Toolkit to compare the effects of launching now with the effects of a short delay.  Make the changes that are possible, and explain the ones that are not.  Offer accessible, interpreted options and compensation for community expertise where appropriate.  Report back to participants on what their input changed, by an agreed date.   To discuss   When is a delay the more equitable choice?  How do you tell people honestly what their input can change?  What does “a few voices” mean when those voices represent the families most affected?       Provider or service-access barriers  The online intake form   A contracted provider changes its intake process. Families must now complete an English-only online form and upload a photo ID before anyone will talk with them. Within two months, referrals from families in Greater Minnesota and from immigrant families drop sharply.  Staff disagree. Some say the contract allows the provider to set its own intake process. Others say families are being turned away before anyone hears their needs.   Separate matters the leader must address   The access barrier for families, which is the central problem.  What the contract says, and what authority the program has to require changes.  Whether the drop in referrals is real and who is affected most.  Language access and disability access requirements that apply to the service.  The working relationship with the provider.   What goes through an authorized process  The person or area responsible for the contract decides what can be required of the provider. Language access and accessibility obligations are existing requirements and are not optional because a contract is silent. Staff should raise the barrier through the contract channel rather than negotiate privately with the provider.  How different approaches might respond    A harmful response:  Bureaucratic or procedural leadership   “The contract lets them set their own intake. Nothing we can do.”  Compliance with the contract is treated as the end of the question, even though families are being turned away.    A stronger response:  Autocratic or directive leadership   “I&#x27;m raising this with the contract manager today. Until it&#x27;s resolved, our staff will help any family who calls us complete intake by phone.”  The leader acts within their authority right away and protects families while the formal question is worked out.    A stronger response:  Transformative or equity-centered leadership   “Let&#x27;s find out who is being screened out and why. Then let&#x27;s make language and disability access part of every contract renewal, not just this one.”  The leader moves from one provider&#x27;s problem to the contract rules that let it happen.    A stronger response:  Servant leadership   “Let&#x27;s ask a few families and community organizations what happened when they tried the new form, and what would have helped.”  The leader starts with the experience of the people affected. This works best paired with someone who can change the contract.    A harmful response:  Laissez-faire leadership   “That&#x27;s between the provider and the families.”  The leader steps back from a barrier the program is responsible for. Families with the least access carry the cost.    A combined response   Protect families now with an alternative way to complete intake.  Raise the barrier through the person or area responsible for the contract.  Gather evidence on who is affected, protecting privacy.  Ask families and community organizations what would help.  Build language and disability access into future contract terms.  Follow up on referral numbers by group, where privacy allows, and report what changed.   To discuss   When a contract is silent, what obligations still apply?  What could your program do this week to protect families, before the contract question is resolved?  How would you know whether access improved?       Scarce resources and competing priorities  One budget, two needs   A division has a small one-time budget. One team wants to translate a widely used notice into several more languages. Another team wants to fund training for staff on serving families with disabilities. Both are worthwhile. There is enough money for one.  The two team leads are friendly, but the disagreement has become tense. Each believes the other is not taking the needs of the families they serve seriously.   Separate matters the leader must address   Clear criteria for choosing between worthwhile options.  Evidence about who would benefit and who would be left out under each option.  Whether there are other funding sources or a way to phase both.  The working relationship between the two teams.   What goes through an authorized process  DHS Equity Policy sets requirements for applying an equity lens to budget work; the official Equity Analysis Toolkit supports that review. First confirm any existing language-access, accessibility, or other obligations with the responsible office; a choice between proposed projects does not suspend those duties. The person with budget authority decides among the available lawful options. The Toolkit structures the comparison rather than deciding the answer.  How different approaches might respond    A harmful response:  Charismatic leadership   “Let&#x27;s go with training. I&#x27;ve seen how powerful it can be.”  The decision follows the leader&#x27;s enthusiasm, not criteria or evidence about who benefits.    A stronger response:  Democratic or participative leadership   “Let&#x27;s agree on the criteria first, before we argue about the options. Then both teams can make their case against the same criteria.”  Agreeing on criteria first turns a contest between people into a comparison of options.    A stronger response:  Transformative or equity-centered leadership   “Under each option, who benefits, who carries the cost, and who gets left out? Let&#x27;s look at whether one option reaches families who have had the least access.”  The leader makes the distribution of benefits and burdens the center of the decision.    A stronger response:  Autocratic or directive leadership   “I&#x27;ll make the decision by Friday using the criteria we agreed on. I&#x27;ll explain my reasons in writing, and I&#x27;ll look for funding for the other option next year.”  A decision is made on time, with reasons, and the option not chosen is not forgotten.    A harmful response:  Laissez-faire leadership   “You two work it out between yourselves.”  The leader leaves a budget decision they are responsible for to an informal contest. The team with more influence wins.    A combined response   Name the decision-maker and the deadline.  Agree on criteria before comparing options.  Use the Equity Analysis Toolkit to compare effects on different groups.  Look for ways to phase or partly fund both.  Decide, explain the reasons in writing, and keep the other need on record.  Check the results and revisit the decision next budget cycle.   To discuss   Why should criteria come before the comparison?  How do you keep a choice between two worthwhile needs from becoming a contest between two teams?  What makes a decision explainable to the team that did not get the funding?       Staff disagreement during organizational change  The new case model   Two units are merging, and leadership introduces a new model for assigning cases. Many longtime staff say the model ignores what they know about the families they serve. Some newer staff like it.  An African American staff member raises detailed concerns in a meeting about how the model will affect families who rely on a consistent worker. Afterward, a manager describes her as “not a team player” in a conversation with other leaders.   Separate matters the leader must address   The substance of the concerns about the model.  The label applied to the staff member who raised them, and whether it could become adverse treatment.  How the change is being carried out and who is affected most.  Whether staff have real influence over the details of the change.   What goes through an authorized process  If labeling a staff member for raising concerns leads to worse assignments, evaluations or opportunities, it may become retaliation. Concerns about retaliation should go to the person or area responsible for responding to them. The change itself can be shaped through normal leadership channels.  How different approaches might respond    A harmful response:  Transformational leadership   “Change is hard. We need everyone on board with the vision.”  Disagreement is recast as resistance. The concerns, and the label, go unexamined.    A stronger response:  Adaptive and situational leadership   “We&#x27;ll start the new model as planned for most cases, but we&#x27;ll test it carefully for families who rely on a consistent worker. In eight weeks we&#x27;ll review what we learned with staff.”  The leader moves ahead while treating the concern as information to test, with a time limit and a review.    A stronger response:  Ethical leadership   “Raising detailed concerns is part of the job. I&#x27;m not going to accept anyone being labeled for doing it, and I&#x27;ll make sure it doesn&#x27;t affect anyone&#x27;s assignments or evaluations.”  The leader addresses the label directly and protects the staff member from adverse treatment.    A harmful response:  Authoritarian leadership   “The decision has been made. People who can&#x27;t support it should think about whether this is the right place for them.”  Disagreement is punished with an implied threat. The people who raised concerns, and others who share them, go silent.    A stronger response:  Shared or distributed leadership   “Let&#x27;s form a small group of longtime and newer staff with authority over the rollout details, and let it report to leadership every two weeks.”  The people closest to the work get real influence over how the change happens.    A combined response   Treat concerns as information and take the substance seriously.  Address the “not a team player” label directly and protect against any adverse treatment.  Test the model where the concerns are strongest, with a time limit.  Give staff real authority over rollout details.  Report back on what was learned and what changed.   To discuss   How can you tell resistance to change from a real problem with the change?  Who is most likely to be labeled for raising concerns, and why?  What would show staff that disagreement is safe during this change?       A leader&#x27;s own mistake and repair  Credit and names   At a leadership briefing, a manager presents an analysis and credits the wrong staff member. The two staff members are both Southeast Asian American, and the manager has confused their names before.  The staff member who did the analysis hears about it later from a colleague. They say nothing to the manager, but tell a coworker, “It&#x27;s not the first time.”   Separate matters the leader must address   The credit for the work, which needs to be corrected where it was given.  The repeated name confusion and what it signals to both staff members.  Whether the staff member feels safe raising it.  What the manager will do differently.   What goes through an authorized process  Correct the credit and address the repeated name confusion. Repair does not replace any applicable reporting or response obligation when the conduct raises a concern about race or national origin. Use the authorized process rather than deciding that an apology settles the concern. Do not ask the staff member to reassure the manager.  How different approaches might respond    A harmful response:  Charismatic leadership   “I&#x27;m terrible with names. Everyone knows that about me!”  The response treats a repeated mistake as a charming quirk and avoids its effect on professional recognition. The example calls for examining the pattern; it does not establish the manager&#x27;s motive.    A stronger response:  Ethical leadership   “I credited the wrong person for your analysis, and I&#x27;ve confused your names before. That&#x27;s not acceptable, and I&#x27;m sorry. I&#x27;ve corrected the credit with everyone who was at the briefing.”  The manager names the mistake specifically, takes responsibility without excuses and corrects it where the harm happened.    A stronger response:  Servant leadership   “Is there anything else you&#x27;d like me to do to set this right? You don&#x27;t need to answer now.”  The manager offers the staff member a voice in the repair without putting them on the spot.    A harmful response:  Autocratic or directive leadership   “It was an honest mistake. Let&#x27;s not make a big deal of it.”  The manager decides how much the mistake matters. The person harmed is told how to feel about it.    A stronger response:  Bureaucratic or procedural leadership   “From now on, every analysis I present will list the author on the first page, and I&#x27;ll check names before any briefing.”  The manager turns a personal apology into a practice that prevents the same harm.    A combined response   Acknowledge the specific mistake promptly, privately first, with no excuses.  Correct the credit with the same people who heard it wrong.  Name the pattern, not only the one incident.  Change a practice so it does not happen again.  Do not ask the staff member for reassurance or forgiveness.  Follow up later to see whether trust has been restored, and accept it if it takes time.   To discuss   What separates an apology from a repair?  Why is “I&#x27;m terrible with names” not a neutral statement in this situation?  What makes it safe for a staff member to tell a leader about a mistake like this?      Previous  1 of 7  Next    Practice with Guidance  Choose the response you think is strongest for each situation. Each choice is checked against the practice rubric, not against you. After you answer, you can ask Guidance for a hint or an example.     Practice with the fictional scenarios and with responses that contain nothing sensitive. Do not enter real complaints, personnel decisions or stories that could identify anyone.   Next: Race as a cross-cutting factor  Go to the capstone     "
+
+ ❯ app/learn/leadership-styles/leadership-styles-pages.test.tsx:43:154
+     41|     expect(capstone).toContain('data-guided-practice="ls01"');
+     42|     expect(capstone).toContain("Guidance");
+     43|     for (const html of [scenarios, capstone, renderToStaticMarkup(<Rac…
+       |                                                                                                                                                          ^
+     44|   });
+     45| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[13/29]⎯
+
+ FAIL  |node| lib/analysis/instruments.test.ts > INSTRUMENTS > equity-analysis guidance links are allowed, exist under app/, and carry lowercase keywords
+ FAIL  |node| lib/analysis/instruments.test.ts > INSTRUMENTS > policy-review guidance links are allowed, exist under app/, and carry lowercase keywords
+ FAIL  |node| lib/analysis/instruments.test.ts > INSTRUMENTS > program-analysis guidance links are allowed, exist under app/, and carry lowercase keywords
+AssertionError: app/community-outreach/county-map/page.tsx should exist: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ lib/analysis/instruments.test.ts:89:68
+     87|       expect(ALLOWED_HREFS).toContain(link.href);
+     88|       const page = DYNAMIC_ROUTES[link.href] ?? `app${link.href}/page.…
+     89|       expect(existsSync(join(ROOT, page)), `${page} should exist`).toB…
+       |                                                                    ^
+     90|       expect(nextStepSchema.shape.href.safeParse(link.href).success).t…
+     91|       expect(link.keywords.length).toBeGreaterThan(0);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[14/29]⎯
+
+ FAIL  |node| lib/analysis/instruments.test.ts > INSTRUMENTS > engagement-plan guidance links are allowed, exist under app/, and carry lowercase keywords
+AssertionError: app/community-outreach/plan/page.tsx should exist: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ lib/analysis/instruments.test.ts:89:68
+     87|       expect(ALLOWED_HREFS).toContain(link.href);
+     88|       const page = DYNAMIC_ROUTES[link.href] ?? `app${link.href}/page.…
+     89|       expect(existsSync(join(ROOT, page)), `${page} should exist`).toB…
+       |                                                                    ^
+     90|       expect(nextStepSchema.shape.href.safeParse(link.href).success).t…
+     91|       expect(link.keywords.length).toBeGreaterThan(0);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[15/29]⎯
+
+ FAIL  |node| lib/analysis/instruments.test.ts > INSTRUMENTS > plain-language guidance links are allowed, exist under app/, and carry lowercase keywords
+AssertionError: app/library/[id]/page.tsx should exist: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ lib/analysis/instruments.test.ts:89:68
+     87|       expect(ALLOWED_HREFS).toContain(link.href);
+     88|       const page = DYNAMIC_ROUTES[link.href] ?? `app${link.href}/page.…
+     89|       expect(existsSync(join(ROOT, page)), `${page} should exist`).toB…
+       |                                                                    ^
+     90|       expect(nextStepSchema.shape.href.safeParse(link.href).success).t…
+     91|       expect(link.keywords.length).toBeGreaterThan(0);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[16/29]⎯
+
+ FAIL  |node| lib/analysis/instruments.test.ts > INSTRUMENTS > working-group-plan guidance links are allowed, exist under app/, and carry lowercase keywords
+AssertionError: app/equity-review/working-group-plan/page.tsx should exist: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ lib/analysis/instruments.test.ts:89:68
+     87|       expect(ALLOWED_HREFS).toContain(link.href);
+     88|       const page = DYNAMIC_ROUTES[link.href] ?? `app${link.href}/page.…
+     89|       expect(existsSync(join(ROOT, page)), `${page} should exist`).toB…
+       |                                                                    ^
+     90|       expect(nextStepSchema.shape.href.safeParse(link.href).success).t…
+     91|       expect(link.keywords.length).toBeGreaterThan(0);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[17/29]⎯
+
+ FAIL  |node| lib/analysis/service.test.ts > privacy gate > refuses a context holding a personal email address
+AssertionError: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string
+ ❯ lib/analysis/service.test.ts:73:92
+     71|   });
+     72|   it("refuses a context holding a personal email address", () => {
+     73|     expect(privacyRefusal(request({ context: "Send the result to someo…
+       |                                                                                            ^
+     74|     expect(privacyRefusal(request())).toBeUndefined();
+     75|     // Known organization names are not a person's name: the division'…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[18/29]⎯
+
+ FAIL  |node| lib/analysis/service.test.ts > privacy gate > refuses a source whose only private detail is in its reading note, with no model call
+TypeError: Cannot read properties of undefined (reading 'parsed')
+ ❯ Module.analyze lib/analysis/service.ts:329:65
+    327|   );
+    328|
+    329|   let parsed = analysisDraftSchema.safeParse((await complete()).parsed…
+       |                                                                 ^
+    330|   if (!parsed.success) {
+    331|     // One more try with a reminder of the exact shape; the draft's ow…
+ ❯ lib/analysis/service.test.ts:89:21
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[19/29]⎯
+
+ FAIL  |node| lib/content/collections.test.ts > the promises on these pages > states plainly what is and is not recorded
+AssertionError: expected 'import type { Metadata } from "next";…' to contain 'no team view, no assignments and no s…'
+
+- Expected
++ Received
+
+- no team view, no assignments and no scores
++ import type { Metadata } from "next";
++ import Link from "@/components/app-link";
++ import { LEADING_LABEL, LEADING_PRIVACY_SENTENCE, REQUIRED_COURSE_LABEL, TRIBAL_REFERRAL_HREF } from "@/lib/content/collections";
++ import { TRAINING_CREDIT_NOTICE } from "@/lib/program/learning-credit";
++ import base from "@/app/learn/collaboration/collaboration.module.css";
++ import styles from "@/components/collections.module.css";
++ 
++ export const metadata: Metadata = {
++   title: `How this works | ${LEADING_LABEL}`,
++   description: "What is and is not recorded in the leadership space, and where your progress and questions go.",
++ };
++ 
++ export default function LeadingHowThisWorksPage() {
++   return <div className={base.page}><div className={base.content}>
++     <p className={base.back}><Link href="/leading">{LEADING_LABEL}</Link></p>
++     <header className={base.intro}>
++       <p className={base.eyebrow}>{LEADING_LABEL}</p>
++       <h1>How this works</h1>
++       <p className={base.lede}>What is recorded, what is not, and what this space does not do.</p>
++     </header>
++     <div className={styles.plain}>
++       <h2>There is no team view</h2>
++       <p>{LEADING_PRIVACY_SENTENCE}</p>
++       <ul>
++         <li>There is no sign-in for this space. All of it is public, and staff can read every page.</li>
++         <li>This leadership area does not give supervisors a learner scoreboard or assign these optional courses.</li>
++         <li>This area does not provide supervisors with individual course visits, progress or answers. Anyone using the same browser profile may still see information saved there.</li>
++       </ul>
++       <h2>What stays in your browser</h2>
++       <ul>
++         <li>Features that save a place on a suggested path, lesson progress or practice answers keep those items in this browser profile when storage is available.</li>
++         <li>The learning-progress feature does not send those saved items to supervisors or program staff. Exporting or sharing a copy is a separate action.</li>
++         <li>Anyone using the same browser profile may see saved items. Use the relevant feature to clear them; downloaded, printed or shared copies remain separate.</li>
++       </ul>
++       <h2>What happens to a question in Ask</h2>
++       <ul>
++         <li>Questions typed into Ask go to outside services so that it can answer.</li>
++         <li>The current service does not intentionally save a question-and-answer copy in the owner workspace. Operational activity may be recorded, and earlier versions may have retained separate records. Supervisors do not receive your browser conversation from Ask.</li>
++         <li>Please do not type anyone&apos;s name, case, health or personnel details. Ask general questions.</li>
++       </ul>
++       <h2>What this does not replace</h2>
++       <ul>
++         <li>This app does not replace training the state requires. It does not count as the training Minn. Stat. 43A.21 requires of supervisors and managers. The state&apos;s own training does that.</li>
++         <li>It is general information, not legal advice. For a real situation, ask Human Resources, labor relations or your ADA coordinator.</li>
++         <li>It does not make or record any personnel, accommodation or complaint decision.</li>
++       </ul>
++       <h2>Required responsibilities and optional learning</h2>
++       <p>{TRAINING_CREDIT_NOTICE}</p>
++       <p>The label &ldquo;{REQUIRED_COURSE_LABEL}&rdquo; refers to the agency responsibility associated with the Equity Analysis Toolkit. This local companion course does not assign or certify required agency training. Follow the designated agency process for training and the applicable policy requirements for equity analysis. <Link href="/courses/dhs-equity-analysis-toolkit">Open the Equity Analysis Toolkit course</Link>.</p>
++       <h2>Using the learning</h2>
++       <p>Use these courses as guidance for your work, alongside current policy and the people and offices responsible for a decision.</p>
++       <h2>Tribal and Native American learning</h2>
++       <p>This space does not offer Tribal curriculum. One DSD refers Native American and Tribal-specific learning, questions and engagement to ADSA and the responsible Tribal liaison. <Link href={TRIBAL_REFERRAL_HREF}>Native American and Tribal-specific guidance</Link>.</p>
++     </div>
++     <aside className={base.continue}>
++       <h2>Keep exploring</h2>
++       <p><Link href="/leading">What are you deciding?</Link><Link href="/about#participation-title">How participation and privacy work across the program</Link></p>
++     </aside>
++   </div></div>;
++ }
++
+
+ ❯ lib/content/collections.test.ts:175:456
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[20/29]⎯
+
+ FAIL  |node| lib/content/leadership-journey.test.ts > the promises the journey keeps > offers no badge, certificate, score, rating or ranking
+AssertionError: expected '\r\nimport { SourceLink } from "@/com…' not to match /\b(badges?|certificat\w*|certif\w*|s…/i
+
+- Expected:
+/\b(badges?|certificat\w*|certif\w*|scores?|scored|ratings?|ranked|ranking|leaderboard|grade[ds]?|points)\b/i
+
++ Received:
+"
+import { SourceLink } from \"@/components/app-link\";
+import type { Metadata } from \"next\";
+import Link from \"@/components/app-link\";
+import { LeadingStartChooser } from \"@/components/leading-start-chooser\";
+import { LEADING_LABEL, LEADING_PATHS, LEADING_PRIVACY_SENTENCE } from \"@/lib/content/collections\";
+import { END_OF_PATH_QUESTIONS, JOURNEY_STEPS, LEARNING_ELSEWHERE, LEARNING_WITH_OTHERS, PATH_JOURNEY, REFLECTION_PROMPTS, SIX_WEEKS, WEEKLY_RHYTHM } from \"@/lib/content/leadership-journey\";
+import base from \"@/app/learn/collaboration/collaboration.module.css\";
+import styles from \"@/components/collections.module.css\";
+
+export const metadata: Metadata = {
+  title: `Your leadership journey | ${LEADING_LABEL}`,
+  description: \"Connect leadership learning with a work decision, reflection and follow-up. This optional path does not enroll you in assigned training; related learning tools explain what they save.\",
+};
+
+export default function LeadingJourneyPage() {
+  const paths = LEADING_PATHS.map(path => ({ slug: path.slug, title: path.title, description: path.description }));
+  return <div className={base.page}><div className={base.content}>
+    <p className={base.back}><Link href=\"/leading\">{LEADING_LABEL}</Link></p>
+    <header className={base.intro}>
+      <p className={base.eyebrow}>Optional</p>
+      <h1>Your leadership journey</h1>
+      <p className={base.lede}>A way to grow as a leader at your own pace, from a first interest in leading to setting direction for others.</p>
+      <p>There is no nomination, no group to join and no deadline. You choose where to start and how fast to go. {LEADING_PRIVACY_SENTENCE} <Link href=\"/leading/how-this-works\">How this works</Link>.</p>
+    </header>
+
+    <section className={styles.section} aria-labelledby=\"journey-round-title\">
+      <h2 id=\"journey-round-title\">How one round works</h2>
+      <p>Each round is small: one lesson, a few lines of reflection, one thing tried in your real work, and a note on what happened. Then you go around again.</p>
+      <ol className=\"list-decimal space-y-2 pl-6\">
+        {JOURNEY_STEPS.map(step => <li key={step.id}><strong>{step.title}.</strong> {step.body} <Link href={step.href}>{step.link}</Link>.</li>)}
+      </ol>
+      <p className={styles.plain}>Combine structured learning with workplace experience and feedback from colleagues. A lesson can introduce a concept; applying it requires attention to the situation, your authority and the people affected. Review what happened before deciding what to retain or change.</p>
+    </section>
+
+    <section className={styles.section} aria-labelledby=\"journey-start-title\">
+      <h2 id=\"journey-start-title\">Find a starting point</h2>
+      <p>Answer two or three questions about your work, or simply choose from the list below.</p>
+      <LeadingStartChooser paths={paths} />
+      <ul className={styles.doors}>
+        {LEADING_PATHS.map(path => <li key={path.slug}><Link className={styles.door} href={`/leading/paths/${path.slug}`}>
+          <span className={styles.doorTitle}>{path.title}</span>
+          {PATH_JOURNEY[path.slug] ? <span>{PATH_JOURNEY[path.slug].question}</span> : <span>{path.description}</span>}
+          <span className={styles.doorAction}>Open this path</span>
+        </Link></li>)}
+      </ul>
+    </section>
+
+    <section className={styles.section} aria-labelledby=\"journey-rhythm-title\">
+      <h2 id=\"journey-rhythm-title\">A steady rhythm</h2>
+      <p>A week that fits inside real work looks something like this. Take less when the week is full.</p>
+      <ul className=\"list-disc pl-6\">
+        {WEEKLY_RHYTHM.map(item => <li key={item.what}>{item.what}: {item.time}</li>)}
+      </ul>
+      <details>
+        <summary>One way to pace a path over six weeks</summary>
+        <ol className=\"mt-2 space-y-2 pl-0\">
+          {SIX_WEEKS.map(week => <li key={week.week}><strong>Week {week.week}.</strong> Learn: {week.learn}. Reflect: {week.reflect}. Apply: {week.apply}.</li>)}
+        </ol>
+        <p className={styles.plain}>This is one example. Any path can be taken faster, slower or in a different order.</p>
+      </details>
+    </section>
+
+    <section className={styles.section} aria-labelledby=\"journey-reflect-title\">
+      <h2 id=\"journey-reflect-title\">Looking back</h2>
+      <p>Use reflection to compare your intention with what happened. Record the observations, their significance and what remains uncertain, then decide what to retain, revise or refer to someone with the relevant responsibility. <Link href=\"/my-work/reflections\">Open your reflection notebook</Link>.</p>
+      <ul className=\"list-disc space-y-2 pl-6\">
+        {REFLECTION_PROMPTS.map(prompt => <li key={prompt.kind}><strong>{prompt.kind}.</strong> {prompt.when} {prompt.questions.join(\" \")}</li>)}
+      </ul>
+      <p className={styles.plain}>When you set a date to look back, the notebook shows it to you the next time you open it. Nothing is sent as a reminder.</p>
+    </section>
+
+    <section className={styles.section} aria-labelledby=\"journey-others-title\">
+      <h2 id=\"journey-others-title\">Learning with others, if you want to</h2>
+      <p>None of this is required. A conversation with someone you trust can deepen what you notice.</p>
+      <ul className={styles.doors}>
+        {LEARNING_WITH_OTHERS.map(place => <li key={place.href}><Link className={styles.door} href={place.href}><span className={styles.doorTitle}>{place.title}</span><span>{place.body}</span></Link></li>)}
+      </ul>
+    </section>
+
+    <section className={styles.section} aria-labelledby=\"journey-elsewhere-title\">
+      <h2 id=\"journey-elsewhere-title\">Free courses elsewhere</h2>
+      <p>For anyone who wants more. These belong to other organizations, open on their sites, and may ask you to create an account there. Confirm any required-training credit through the agency process responsible for that requirement; do not assume that completing an external course satisfies it.</p>
+      <ul className=\"list-disc pl-6\">
+        {LEARNING_ELSEWHERE.map(course => <li key={course.href}><SourceLink className=\"underline\" href={course.href} target=\"_blank\" rel=\"noreferrer\">{course.title}</SourceLink>, {course.provider}. {course.body}</li>)}
+      </ul>
+    </section>
+
+    <section className={styles.section} aria-labelledby=\"journey-end-title\">
+      <h2 id=\"journey-end-title\">At the end of a path</h2>
+      <p>Four questions to ask yourself:</p>
+      <ul className=\"list-disc pl-6\">
+        {END_OF_PATH_QUESTIONS.map(question => <li key={question}>{question}</li>)}
+      </ul>
+      <p className={styles.plain}>This optional path has no completion submission or supervisor score report. Related lessons may save progress or practice responses in your browser profile. If you want something to bring to a development conversation, review and download your action plans and reflections from <Link href=\"/my-work\">My work</Link>. What you share, and with whom, is your choice.</p>
+    </section>
+  </div></div>;
+}
+"
+
+ ❯ lib/content/leadership-journey.test.ts:71:64
+     69|   });
+     70|   it("offers no badge, certificate, score, rating or ranking", () => {
+     71|     for (const text of [everyWord, ...files]) expect(text).not.toMatch…
+       |                                                                ^
+     72|   });
+     73|   it("says plainly that it is optional, with nothing to submit and not…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[21/29]⎯
+
+ FAIL  |node| lib/content/leadership-journey.test.ts > the promises the journey keeps > says plainly that it is optional, with nothing to submit and nothing counted
+AssertionError: expected '\r\nimport { SourceLink } from "@/com…' to contain 'nothing to submit'
+
+- Expected
++ Received
+
+- nothing to submit
++ 
++ import { SourceLink } from "@/components/app-link";
++ import type { Metadata } from "next";
++ import Link from "@/components/app-link";
++ import { LeadingStartChooser } from "@/components/leading-start-chooser";
++ import { LEADING_LABEL, LEADING_PATHS, LEADING_PRIVACY_SENTENCE } from "@/lib/content/collections";
++ import { END_OF_PATH_QUESTIONS, JOURNEY_STEPS, LEARNING_ELSEWHERE, LEARNING_WITH_OTHERS, PATH_JOURNEY, REFLECTION_PROMPTS, SIX_WEEKS, WEEKLY_RHYTHM } from "@/lib/content/leadership-journey";
++ import base from "@/app/learn/collaboration/collaboration.module.css";
++ import styles from "@/components/collections.module.css";
++ 
++ export const metadata: Metadata = {
++   title: `Your leadership journey | ${LEADING_LABEL}`,
++   description: "Connect leadership learning with a work decision, reflection and follow-up. This optional path does not enroll you in assigned training; related learning tools explain what they save.",
++ };
++ 
++ export default function LeadingJourneyPage() {
++   const paths = LEADING_PATHS.map(path => ({ slug: path.slug, title: path.title, description: path.description }));
++   return <div className={base.page}><div className={base.content}>
++     <p className={base.back}><Link href="/leading">{LEADING_LABEL}</Link></p>
++     <header className={base.intro}>
++       <p className={base.eyebrow}>Optional</p>
++       <h1>Your leadership journey</h1>
++       <p className={base.lede}>A way to grow as a leader at your own pace, from a first interest in leading to setting direction for others.</p>
++       <p>There is no nomination, no group to join and no deadline. You choose where to start and how fast to go. {LEADING_PRIVACY_SENTENCE} <Link href="/leading/how-this-works">How this works</Link>.</p>
++     </header>
++ 
++     <section className={styles.section} aria-labelledby="journey-round-title">
++       <h2 id="journey-round-title">How one round works</h2>
++       <p>Each round is small: one lesson, a few lines of reflection, one thing tried in your real work, and a note on what happened. Then you go around again.</p>
++       <ol className="list-decimal space-y-2 pl-6">
++         {JOURNEY_STEPS.map(step => <li key={step.id}><strong>{step.title}.</strong> {step.body} <Link href={step.href}>{step.link}</Link>.</li>)}
++       </ol>
++       <p className={styles.plain}>Combine structured learning with workplace experience and feedback from colleagues. A lesson can introduce a concept; applying it requires attention to the situation, your authority and the people affected. Review what happened before deciding what to retain or change.</p>
++     </section>
++ 
++     <section className={styles.section} aria-labelledby="journey-start-title">
++       <h2 id="journey-start-title">Find a starting point</h2>
++       <p>Answer two or three questions about your work, or simply choose from the list below.</p>
++       <LeadingStartChooser paths={paths} />
++       <ul className={styles.doors}>
++         {LEADING_PATHS.map(path => <li key={path.slug}><Link className={styles.door} href={`/leading/paths/${path.slug}`}>
++           <span className={styles.doorTitle}>{path.title}</span>
++           {PATH_JOURNEY[path.slug] ? <span>{PATH_JOURNEY[path.slug].question}</span> : <span>{path.description}</span>}
++           <span className={styles.doorAction}>Open this path</span>
++         </Link></li>)}
++       </ul>
++     </section>
++ 
++     <section className={styles.section} aria-labelledby="journey-rhythm-title">
++       <h2 id="journey-rhythm-title">A steady rhythm</h2>
++       <p>A week that fits inside real work looks something like this. Take less when the week is full.</p>
++       <ul className="list-disc pl-6">
++         {WEEKLY_RHYTHM.map(item => <li key={item.what}>{item.what}: {item.time}</li>)}
++       </ul>
++       <details>
++         <summary>One way to pace a path over six weeks</summary>
++         <ol className="mt-2 space-y-2 pl-0">
++           {SIX_WEEKS.map(week => <li key={week.week}><strong>Week {week.week}.</strong> Learn: {week.learn}. Reflect: {week.reflect}. Apply: {week.apply}.</li>)}
++         </ol>
++         <p className={styles.plain}>This is one example. Any path can be taken faster, slower or in a different order.</p>
++       </details>
++     </section>
++ 
++     <section className={styles.section} aria-labelledby="journey-reflect-title">
++       <h2 id="journey-reflect-title">Looking back</h2>
++       <p>Use reflection to compare your intention with what happened. Record the observations, their significance and what remains uncertain, then decide what to retain, revise or refer to someone with the relevant responsibility. <Link href="/my-work/reflections">Open your reflection notebook</Link>.</p>
++       <ul className="list-disc space-y-2 pl-6">
++         {REFLECTION_PROMPTS.map(prompt => <li key={prompt.kind}><strong>{prompt.kind}.</strong> {prompt.when} {prompt.questions.join(" ")}</li>)}
++       </ul>
++       <p className={styles.plain}>When you set a date to look back, the notebook shows it to you the next time you open it. Nothing is sent as a reminder.</p>
++     </section>
++ 
++     <section className={styles.section} aria-labelledby="journey-others-title">
++       <h2 id="journey-others-title">Learning with others, if you want to</h2>
++       <p>None of this is required. A conversation with someone you trust can deepen what you notice.</p>
++       <ul className={styles.doors}>
++         {LEARNING_WITH_OTHERS.map(place => <li key={place.href}><Link className={styles.door} href={place.href}><span className={styles.doorTitle}>{place.title}</span><span>{place.body}</span></Link></li>)}
++       </ul>
++     </section>
++ 
++     <section className={styles.section} aria-labelledby="journey-elsewhere-title">
++       <h2 id="journey-elsewhere-title">Free courses elsewhere</h2>
++       <p>For anyone who wants more. These belong to other organizations, open on their sites, and may ask you to create an account there. Confirm any required-training credit through the agency process responsible for that requirement; do not assume that completing an external course satisfies it.</p>
++       <ul className="list-disc pl-6">
++         {LEARNING_ELSEWHERE.map(course => <li key={course.href}><SourceLink className="underline" href={course.href} target="_blank" rel="noreferrer">{course.title}</SourceLink>, {course.provider}. {course.body}</li>)}
++       </ul>
++     </section>
++ 
++     <section className={styles.section} aria-labelledby="journey-end-title">
++       <h2 id="journey-end-title">At the end of a path</h2>
++       <p>Four questions to ask yourself:</p>
++       <ul className="list-disc pl-6">
++         {END_OF_PATH_QUESTIONS.map(question => <li key={question}>{question}</li>)}
++       </ul>
++       <p className={styles.plain}>This optional path has no completion submission or supervisor score report. Related lessons may save progress or practice responses in your browser profile. If you want something to bring to a development conversation, review and download your action plans and reflections from <Link href="/my-work">My work</Link>. What you share, and with whom, is your choice.</p>
++     </section>
++   </div></div>;
++ }
++
+
+ ❯ lib/content/leadership-journey.test.ts:75:191
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[22/29]⎯
+
+ FAIL  |node| lib/content/leadership-styles-pathway.test.ts > leadership styles pathway content > follows the owner's wording rules
+AssertionError: The leader asks: Where did this documentation rule come from? Which documents are hardest to get, and for whom? What help do applicants get, and when? Who can change the rule? The leader involves applicants and community partners and checks with the responsible Tribal-relations office about any consultation or coordination obligations. With the required approval, the team tests an allowed change, such as accepting other permitted documents or providing help earlier, and checks the results.: expected 'The leader asks: Where did this docum…' not to match /\boffices?\b/i
+
+- Expected:
+/\boffices?\b/i
+
++ Received:
+"The leader asks: Where did this documentation rule come from? Which documents are hardest to get, and for whom? What help do applicants get, and when? Who can change the rule? The leader involves applicants and community partners and checks with the responsible Tribal-relations office about any consultation or coordination obligations. With the required approval, the team tests an allowed change, such as accepting other permitted documents or providing help earlier, and checks the results."
+
+ ❯ lib/content/leadership-styles-pathway.test.ts:48:30
+     46|       expect(text, text).not.toMatch(/\bAI\b|\bA\.I\.\b|artificial int…
+     47|       // The responsible party is a "person or area responsible", neve…
+     48|       expect(text, text).not.toMatch(/\boffices?\b/i);
+       |                              ^
+     49|       expect(text, text).not.toMatch(/probabilit(?:y|ies) (?:of|that)|…
+     50|     }
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[23/29]⎯
+
+ FAIL  |node| lib/learning/resource-media-renderer.test.ts > encodes a GEFen narrated video with accessible caption and audio tracks
+Error: encoding_failed
+ ❯ encodeVideo lib/learning/resource-media-renderer.ts:347:13
+    345|         sources.length ? `Readings ${sources.join(", ")} · See the tra…
+    346|     } catch {
+    347|       throw new ResourceMediaRenderError("encoding_failed");
+       |             ^
+    348|     }
+    349|     await ffmpeg(binary, cwd, [
+ ❯ Module.renderResourceMedia lib/learning/resource-media-renderer.ts:396:16
+ ❯ lib/learning/resource-media-renderer.test.ts:105:18
+ ❯ withJob lib/learning/resource-media-renderer.test.ts:71:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[24/29]⎯
+
+ FAIL  |node| lib/program/page-purpose.test.ts > orders the landing page: cards, then the finder, then the Ask window, and does not speak as 'us'
+AssertionError: expected 2284 to be less than -1
+ ❯ lib/program/page-purpose.test.ts:23:46
+     21|   const home = readFileSync(path.join(process.cwd(), "app/home/page.ts…
+     22|   expect(home.indexOf('className="w doors"')).toBeLessThan(home.indexO…
+     23|   expect(home.indexOf("<HomeTaskFinder />")).toBeLessThan(home.indexOf…
+       |                                              ^
+     24|   expect(home).not.toMatch(/Tell us|we&apos;ll|we'll/);
+     25| });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[25/29]⎯
+
+ FAIL  |node| lib/downloads/adapters/hub.test.ts > hub downloads > resolves and renders every community page
+Error: Test timed out in 20000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ lib/downloads/adapters/hub.test.ts:134:3
+    132|   });
+    133|
+    134|   it("resolves and renders every community page", async () => {
+       |   ^
+    135|     expect(COMMUNITY_IDS.length).toBeGreaterThan(0);
+    136|     for (const id of COMMUNITY_IDS) {
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[26/29]⎯
+
+
+ Test Files  14 failed | 182 passed (196)
+      Tests  29 failed | 1508 passed (1537)
+   Start at  14:50:47
+   Duration  392.05s (tests 50%, import 27%, transform 14%, environment 9%)
+
+Environment  |components| jsdom was created 46 times · 142.43s total, 42% of tracked time
+             create it once per worker with pool: 'vmThreads' (keeps per-file isolation) or isolate: false (shares it across files)
+             learn more: https://vitest.dev/guide/improving-performance#test-environments
+

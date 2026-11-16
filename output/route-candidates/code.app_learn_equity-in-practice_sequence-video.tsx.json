@@ -1,0 +1,67 @@
+{
+  "target": "code.app/learn/equity-in-practice/sequence-video.tsx",
+  "kind": "surface",
+  "route": "app/learn/equity-in-practice/sequence-video.tsx",
+  "sourceSha256": "03503711df5a9819197106ca91bb71218922089f5dc846d42f19d6e6bb2ab01f",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Your browser does not support video.",
+      "after": "This video cannot be played in your browser.",
+      "reason": "Replaced generic phrasing with a more direct statement that describes the situation. The new wording clarifies for staff and users why the video may not be visible, which is helpful for troubleshooting and understanding access issues."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The original source text is: 'Your browser does not support video.' The proposed change, 'This video cannot be played in your browser,' is not supported by the source. The source provides a standard HTML fallback statement specifically about browser support for the <video> element, not about general playback capability. The new version shifts the meaning from a statement about browser feature support to an ambiguous status that could imply a video error, DRM, or other cause, and thus does not preserve the source intent or wording as required for official fallback messages."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1315,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 77,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1392
+    },
+    "review": {
+      "input_tokens": 1004,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 149,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1153
+    }
+  },
+  "createdAt": "2026-11-15T13:49:49.017Z"
+}

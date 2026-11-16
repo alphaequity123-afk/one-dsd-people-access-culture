@@ -1,0 +1,67 @@
+{
+  "target": "code.app/learn/tribal-referral/page.tsx",
+  "kind": "surface",
+  "route": "/learn/tribal-referral",
+  "sourceSha256": "9c6f8835b45da87292c14687fa8df8df9b57cc2f7fae24755dfee30df6b9fd0b",
+  "status": "needs_revision",
+  "reviewedFieldCount": 5,
+  "changes": [
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "For Native American and Tribal-specific learning, questions, or engagement, connect with the appropriate Department of Human Services office or responsible Tribal liaison. One DSD refers this work to those offices rather than providing its own training.",
+      "after": "Summary: DSD does not conduct its own training or guidance for Native American or Tribal-specific topics. Staff should direct all related questions and requests to the appropriate DHS office or recognized Tribal liaison.\n\nBody: DHS policy requires that requests about Native American or Tribal-specific issues—including learning, engagement, or consultation—be addressed through the offices or liaisons designated for government-to-government relations. DSD refers these matters to those responsible parties rather than providing separate or substitute training. This ensures that accurate information is provided and respects established relationships and protocols. If you receive a request in this area, use internal resources to identify and refer to the designated contact or office. Accurate referral prevents duplication, honors community relationships, and follows DHS roles.",
+      "reason": "Clarifies why DSD refers requests, explains the significance of contacting established liaisons, and provides context for staff action. Adds summary for accessible guidance and connects to underlying policy."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The revision adds detailed explanations of \"DHS policy\", government-to-government relations, protocols, and reasons for referral (accurate information, honoring community relationships, duplication, and DHS roles) that are not supported in the original source. The source states plainly: 'One DSD refers this work to those offices rather than providing its own training.' It does not reference a DHS policy requirement, specify what qualifies or explains the government-to-government framework, cite the purpose as accuracy or honoring relationships, or direct the use of internal resources. Adding these claims without explicit source support changes the meaning and overstates the official stance."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1348,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 216,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1564
+    },
+    "review": {
+      "input_tokens": 1089,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 146,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1235
+    }
+  },
+  "createdAt": "2026-11-15T13:50:32.468Z"
+}

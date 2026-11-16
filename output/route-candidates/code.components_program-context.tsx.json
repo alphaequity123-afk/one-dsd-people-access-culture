@@ -1,0 +1,67 @@
+{
+  "target": "code.components/program-context.tsx",
+  "kind": "surface",
+  "route": "components/program-context.tsx",
+  "sourceSha256": "452a4bf9fda2639d223bb8292770083eda2eb523179c4c39b1eda1070cfb6563",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field1"
+      ],
+      "before": "This program connects learning and practical equity work in the Disability Services Division. Department-wide resources remain available alongside DSD examples. Resource access follows the applicable source and authorization boundaries; choosing a resource does not grant authority to change a policy or service.",
+      "after": "This program supports learning and applied equity work in the Disability Services Division (DSD). Department-wide resources supplement DSD-specific materials, allowing staff to compare broader policies with division examples. Each resource is governed by its respective source and authorization limits; selecting a resource does not allow changes to policy or services without proper approval.",
+      "reason": "Clarifies how DSD and department-wide resources relate, explains the practical reasoning for staff to compare resources, and specifies that authority over changes remains with designated decision-makers."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The revised text appreciably changes and expands the source meaning: (1) 'supplement DSD-specific materials, allowing staff to compare broader policies...' introduces a function not stated in the source, which only confirms that department-wide resources remain available alongside DSD examples. (2) 'selecting a resource does not allow changes to policy or services without proper approval' introduces the notion of required approval for changes, whereas the source simply states that 'choosing a resource does not grant authority to change a policy or service.' The added text imports new concepts on decision-making and staff actions that are not supported in the full source record. The original language's scope and boundaries must be retained as written."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2674,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 124,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2798
+    },
+    "review": {
+      "input_tokens": 2385,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 163,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2548
+    }
+  },
+  "createdAt": "2026-11-15T13:55:41.554Z"
+}

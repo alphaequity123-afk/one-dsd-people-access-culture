@@ -1,0 +1,171 @@
+{
+  "target": "resource.ja-sm-fair-assignments",
+  "kind": "resource",
+  "route": "/library/ja-sm-fair-assignments",
+  "sourceSha256": "63aa62a0b9ee70e8322926088c53ced15fc5aab878ef58b765ca89b9e89cffd9",
+  "status": "needs_revision",
+  "reviewedFieldCount": 8,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "To check that a decision about someone's work rests on criteria that would hold for anyone.",
+      "after": "Check that your work decision uses criteria you would apply to any person in the same situation.",
+      "reason": "Clarifies that the purpose is to ensure decision criteria are consistently applied across all individuals. Uses more direct and precise language."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Use it for assignments, schedules, telework, reassignments and nominations.",
+      "after": "Use this approach when making decisions about job assignments, schedules, telework, reassignments, and nominations.",
+      "reason": "Expands and clarifies the statement to specify that the guidance applies to each listed staffing situation. Matches the context of workplace decisions."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Remember. One standard applies to all employees, in every direction. A small harm can count, even if pay and title do not change. Same criteria does not always mean same outcome. An accommodation is an added duty, and it stays private. A pattern prompts a review of process. Do not choose an individual by a trait to balance it.",
+      "after": "Apply one standard to all employees, regardless of role or direction. Even small effects matter, including those that do not involve changes in pay or title. Using the same criteria will not always produce the same result, but consistency in the process is required. If an accommodation is in place, treat it as a confidential added responsibility. Patterns of similar decisions should prompt review of your process. Do not attempt to balance workforce traits by assigning or withholding work based on personal characteristics.",
+      "reason": "Adds clarity about procedural consistency, confidentiality of accommodations, and what a pattern signals. Retains the original points but provides more reasoning for each."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Before you decide. Write what the work needs, in one or two lines, before you think of names. Offer it openly, using the same message for everyone eligible. State language or other skills as skills you can check.",
+      "after": "Before assigning work, clearly write out what the task requires—limit this to one or two lines—before considering who might do it. Communicate the opportunity using the same message to everyone who is eligible. Specify needed language or technical skills only if you can verify them objectively.",
+      "reason": "Clarifies the stepwise process; explains why to define needs first and gives additional specificity about communicating and verifying skills."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "The test. Swap the person's race, sex, age, religion, disability, national origin or family situation. Keep the work and the record the same. Would you still say your reason? Would you say it to the person who did not get the work? Watch for these words: fit, relate, comfortable, natural, \"hands full,\" \"connect,\" \"prove yourself.\"",
+      "after": "To test fairness, imagine switching the individual's race, sex, age, religion, disability, national origin, or family status in your scenario. Keep all task requirements and documentation the same. Would your explanation for the decision still hold? Could you give the same reason to the person not selected? Be cautious if your explanation relies on subjective words or concepts: fit, relate, comfortable, natural, 'hands full,' 'connect,' or 'prove yourself.'",
+      "reason": "Clarifies purpose and method of the test and explains why vague justifications may be problematic."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Before you act. Has this person recently made a report, joined an investigation or asked for an accommodation? Call Human Resources first. Is this a permanent hours change, reassignment, telework change or new rule? Check the agreement, and call labor relations. MAPE: Article 16, Section 2 for reassignment factors. Article 27 for hours and telework. Article 28 for work rules. Check other agreements directly.",
+      "after": "Before acting, consider: Has this employee recently reported a concern, participated in an investigation, or requested an accommodation? If yes, consult Human Resources before proceeding. For decisions about permanent schedule changes, reassignments, telework, or new work rules, review the relevant labor agreement and consult labor relations. For MAPE-represented staff: see Article 16, Section 2 for reassignment, Article 27 for hours and telework, and Article 28 for work rules. Refer to other agreements directly as needed.",
+      "reason": "Improves clarity about when to seek advice and where to check documentation, making the reasoning for HR or labor relations involvement explicit."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "After you decide. Write one line: the work, the criteria, the person and the reason. Leave out personal traits. Once a month, check three things: criteria first, record kept, open offer or second look.",
+      "after": "After making your decision, document one line: state the task, your selection criteria, the individual chosen, and the reason—excluding personal characteristics. Each month, review three items: that criteria guided your selection, records are complete, and opportunities were either openly offered or given a second review.",
+      "reason": "Clarifies what and how to document, and why periodic self-review is necessary. Specifies exclusion of personal traits from the documented reason."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "Do next. Use this page on your next assignment, and write the one-line record the same day.",
+      "after": "For your next assignment decision, use this guidance and record your decision with a one-line summary on the same day.",
+      "reason": "Clarifies immediate next steps and reinforces timely recording as practical advice."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed summary introduces 'your' (\"Check that your work decision uses criteria you would apply to any person in the same situation\") where the source is neutral about the decider. The source uses 'someone's work' and focuses on the universality of criteria, not specifically the reader's judgments. The change slightly narrows the scope in an unsupported way and invents a second-person framing not in the source."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revised 'whyItMatters' is a justified clarification: both versions identify the relevant staffing actions. No unsupported change."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "Field 2 is a tolerable clarification; all substantive points are retained and expanded. No unsupported claims are introduced."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "This field restates and clarifies—\"before assigning work\" for \"before you decide,\" and specifying why to define needs and how to specify skills are both sourced from the original instruction. No unsupported change."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "This restatement clarifies but does not alter the underlying \"swap test\" or its purpose. The warnings about subjective words are preserved."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The rewrite simply clarifies when to consult HR or labor relations and cites correct contract clause references. No unsupported change."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "This version adds clarity on documentation and monthly review, echoing the original points. No change to commitment, scope, or requirements."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "The final action rephrases and clarifies, with no substantive policy change."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2033,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 864,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2897
+    },
+    "review": {
+      "input_tokens": 2349,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 374,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2723
+    }
+  },
+  "createdAt": "2026-11-15T13:43:34.866Z"
+}

@@ -1,0 +1,421 @@
+{
+  "target": "code.components/program-work-controls.tsx",
+  "kind": "surface",
+  "route": "components/program-work-controls.tsx",
+  "sourceSha256": "fe0c4c73edb3d5c6bd0c8836a8ef430a9d9d09c91cd64d9ca691f88883daebfc",
+  "status": "needs_revision",
+  "reviewedFieldCount": 40,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Set a priority, explain the question and prepare a useful contribution. You can record your own analysis with automated assistance off, or assign bounded preparation when assistance is available. Neither path authorizes a policy or operational decision.",
+      "after": "Summarize your main priorities, describe the question, and clarify what your work will contribute. Decide if you will prepare the analysis yourself or assign parts that can use available program assistance. Assigning or preparing work does not, by itself, create a new policy or make an operational decision.",
+      "reason": "The revision improves clarity by separating instructions from limitations, increases specificity regarding preparation options, and explains why the distinction between recording and authorizing decisions matters."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field5"
+      ],
+      "before": "Use available program assistance",
+      "after": "Use program assistance, if available",
+      "reason": "Clarifies the requirement that assistance is available before selecting this option, and aligns the instruction more closely to expected staff reasoning."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field6"
+      ],
+      "before": "Review published resources in this area",
+      "after": "Review resources published in this area",
+      "reason": "Clarifies that the review pertains to published materials within the relevant program area, which is more precise for Minnesota DHS or DSD work."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field7"
+      ],
+      "before": "Question, affected people, evidence and intended contribution",
+      "after": "Describe the main question, affected people, relevant evidence, and your intended contribution",
+      "reason": "The revised wording adds clarity by explicitly listing each element to cover, emphasizing completeness and specificity."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field8"
+      ],
+      "before": "Connect this work to ADSA action steps, if relevant",
+      "after": "Link this work to related ADSA action steps, when relevant",
+      "reason": "This revision clarifies the conditional connection to ADSA action steps and avoids the implication of a required link."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "field9"
+      ],
+      "before": "Choose only the supplied steps this work supports. These links do not assign duties, establish agency-wide adoption or show that an action is completed.",
+      "after": "Select only from these supplied steps that directly relate to this work. These connections do not create new duties, mandate adoption throughout the agency, or indicate completion of any action.",
+      "reason": "Improves precision about what these links mean and makes explicit that staff must choose only steps that are directly relevant, not all presented."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "field12"
+      ],
+      "before": "Reviewed the preparation or result",
+      "after": "Confirm that the preparation or result has been reviewed",
+      "reason": "Provides specificity about the action being taken and why it is recorded."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "field13"
+      ],
+      "before": "Record an authorized decision reported to you",
+      "after": "Record an authorized decision shared with you",
+      "reason": "Clarifies that the staff action is to record a reported decision, and that the authority must come from elsewhere."
+    },
+    {
+      "fieldId": 11,
+      "path": [
+        "field14"
+      ],
+      "before": "Record observed results and limitations",
+      "after": "Record results observed and any limitations",
+      "reason": "Clarifies that both results and limitations must be included in the record, helping to encourage balanced reporting."
+    },
+    {
+      "fieldId": 12,
+      "path": [
+        "field16"
+      ],
+      "before": "Prepare a revised contribution",
+      "after": "Request a revised contribution",
+      "reason": "Clarifies that this phase means asking for an updated or improved submission."
+    },
+    {
+      "fieldId": 13,
+      "path": [
+        "field17"
+      ],
+      "before": "This records your account of an existing authorized decision. It does not grant approval or verify the responsible office&apos;s authority.",
+      "after": "Use this form to document your understanding of an existing authorized decision. This record does not grant approval, nor can it verify the responsible office's authority.",
+      "reason": "Clarifies that this action is strictly a record and sets expectations about the absence of approval or verification power."
+    },
+    {
+      "fieldId": 14,
+      "path": [
+        "field18"
+      ],
+      "before": "Who made the decision, and in what role?",
+      "after": "Who was the decision-maker, and what was their role?",
+      "reason": "This version clarifies that the role as well as the identity must be specified."
+    },
+    {
+      "fieldId": 15,
+      "path": [
+        "field19"
+      ],
+      "before": "Decision reference and relevant date",
+      "after": "Reference for the decision and the relevant date",
+      "reason": "This clarifies the type of reference (usually a document, order, or communication) being sought, and specifies its connection to timing."
+    },
+    {
+      "fieldId": 16,
+      "path": [
+        "field20"
+      ],
+      "before": "Responsible implementation person or role",
+      "after": "Who is responsible for implementing this decision?",
+      "reason": "This form makes clear that responsibility is required, clarifying both the person or role."
+    },
+    {
+      "fieldId": 17,
+      "path": [
+        "field21"
+      ],
+      "before": "What changed after implementation?",
+      "after": "Describe what changed after implementation",
+      "reason": "Clarifies that the focus of this section is on changes occurring after an action has been implemented, which facilitates understanding of observed impact."
+    },
+    {
+      "fieldId": 18,
+      "path": [
+        "field22"
+      ],
+      "before": "Describe what the evidence supports, including barriers that remain. A reported result does not establish that this action caused the change.",
+      "after": "Describe the evidence of change, including barriers that remain. Reporting a result does not confirm that this action was the cause.",
+      "reason": "Improves professional clarity by explicitly distinguishing observed change from causation, and ensuring staff reflect on ongoing barriers."
+    },
+    {
+      "fieldId": 19,
+      "path": [
+        "field23"
+      ],
+      "before": "Observed change and who was affected",
+      "after": "What was the observed change, and who was affected?",
+      "reason": "Combines the observation with the population or group affected, supporting detailed and connected reporting."
+    },
+    {
+      "fieldId": 20,
+      "path": [
+        "field24"
+      ],
+      "before": "Evidence source, period and comparison",
+      "after": "What evidence was used, for what period, and how does it compare with other sources or times?",
+      "reason": "This provides more guidance on the evidence needed, requiring comparison and time frame to support sound evaluation."
+    },
+    {
+      "fieldId": 21,
+      "path": [
+        "field25"
+      ],
+      "before": "Limitations, missing perspectives and other possible explanations",
+      "after": "What limitations, missing perspectives, or other causes could explain these results?",
+      "reason": "Expands on the initial entry by requiring consideration of alternative explanations and incomplete viewpoints."
+    },
+    {
+      "fieldId": 22,
+      "path": [
+        "field26"
+      ],
+      "before": "How strong is the observation?",
+      "after": "How well-supported and reliable is this observation?",
+      "reason": "Invites a judgment on the strength and reliability of the observation, clarifying the standard for evidence."
+    },
+    {
+      "fieldId": 23,
+      "path": [
+        "field27"
+      ],
+      "before": "Supported by the evidence described",
+      "after": "Observation is supported by the described evidence",
+      "reason": "Clarifies what type of support is being assessed."
+    },
+    {
+      "fieldId": 24,
+      "path": [
+        "field28"
+      ],
+      "before": "Your time spent, if known (minutes)",
+      "after": "Record the time you spent if you know it (in minutes)",
+      "reason": "Encourages tracking actual effort while clarifying that it is not required if unknown."
+    },
+    {
+      "fieldId": 25,
+      "path": [
+        "field29"
+      ],
+      "before": "Record your prepared analysis or recommendation",
+      "after": "Record your prepared analysis or recommendation here",
+      "reason": "Adds specificity about where to record and what is sought—an analysis or recommendation."
+    },
+    {
+      "fieldId": 26,
+      "path": [
+        "field30"
+      ],
+      "before": "Use general program information. Keep client, case, health, personnel and confidential records out of this workspace.",
+      "after": "Use general program information only. Do not include client, case, health, staff, or confidential records in this workspace.",
+      "reason": "Clarifies prohibited content categories and directs staff about the scope of what may be used, reducing the chance of inappropriate disclosure."
+    },
+    {
+      "fieldId": 27,
+      "path": [
+        "field32"
+      ],
+      "before": ". This preparation is a draft contribution; delivery, implementation and observed benefit are recorded separately.",
+      "after": "This preparation is a draft contribution. Delivery, implementation, and observing benefit require separate recording steps.",
+      "reason": "Improves sentence clarity and connection between actions, specifying the stages that are not covered by draft preparation."
+    },
+    {
+      "fieldId": 28,
+      "path": [
+        "field33"
+      ],
+      "before": "Question and scope; relevant sources; affected people and missing perspectives; options and tradeoffs; recommendation; uncertainty and the evidence still needed.",
+      "after": "Include: question and scope; relevant sources; who is affected and which perspectives are missing; options, tradeoffs, and recommendations; and document any uncertainty and what evidence is still needed.",
+      "reason": "Improves clarity by presenting the list of elements as requirements and linking them together for completeness."
+    },
+    {
+      "fieldId": 29,
+      "path": [
+        "field34"
+      ],
+      "before": "Connect a source or program resource, if useful",
+      "after": "Connect a source or program resource if it adds value",
+      "reason": "Emphasizes that only useful connections should be made, discouraging unnecessary additions."
+    },
+    {
+      "fieldId": 30,
+      "path": [
+        "field35"
+      ],
+      "before": "Use a public source or a page in this program. Keep restricted links and sign-in details out. In your review note, explain the source&apos;s date, scope and any uncertainty; adding a link does not establish authority.",
+      "after": "Use a public source or a program page as a reference. Do not include restricted links or login information. In your review note, provide the source's date, scope, and any uncertainty; adding a link does not establish authority.",
+      "reason": "Divides instructions for clarity and draws staff attention to review requirements beyond merely adding a link."
+    },
+    {
+      "fieldId": 31,
+      "path": [
+        "field36"
+      ],
+      "before": "Public HTTPS address or program path",
+      "after": "List a public HTTPS address or an internal program path",
+      "reason": "Clarifies the alternatives and improves the precision of what to provide."
+    },
+    {
+      "fieldId": 32,
+      "path": [
+        "field37"
+      ],
+      "before": "Review note and source limitations",
+      "after": "Describe the purpose of your review note and any limitations of the source used",
+      "reason": "Clarifies the expectation for a review note, focusing on both its purpose and the need to discuss limitations."
+    },
+    {
+      "fieldId": 33,
+      "path": [
+        "field38"
+      ],
+      "before": "Reviews needed before a decision",
+      "after": "Identify which reviews are needed before making a decision",
+      "reason": "Provides a clearer action and aligns with judgment-based review processes."
+    },
+    {
+      "fieldId": 34,
+      "path": [
+        "field39"
+      ],
+      "before": "Identify relevant policy, legal, fiscal, accessibility or community engagement needs; explain any not needed or still unknown.",
+      "after": "List relevant policy, legal, fiscal, accessibility, or community engagement needs. If some are not needed or still unknown, explain why.",
+      "reason": "Gives an explicit prompt about documenting either the presence or absence of needed reviews."
+    },
+    {
+      "fieldId": 35,
+      "path": [
+        "field40"
+      ],
+      "before": "How will you check whether the change helped?",
+      "after": "Describe how you will check whether the change led to improvement",
+      "reason": "Focuses on measurable outcomes and clarifies the scope of evaluation."
+    },
+    {
+      "fieldId": 36,
+      "path": [
+        "field41"
+      ],
+      "before": "Proposed measure, evidence source, comparison and remaining uncertainty.",
+      "after": "Describe the proposed measure, the evidence source, how comparison will be made, and what uncertainty remains",
+      "reason": "Clarifies each component required for this section, improving analytic rigor."
+    },
+    {
+      "fieldId": 37,
+      "path": [
+        "field42"
+      ],
+      "before": "Keep a proposed measure definition with this work",
+      "after": "Keep a measure definition with this work if a specific measurement is important",
+      "reason": "Improves clarity about the circumstances under which to keep a measure definition."
+    },
+    {
+      "fieldId": 38,
+      "path": [
+        "field43"
+      ],
+      "before": "When this work needs a repeatable measure, save its definition with the preparation. The program assigns a stable identity and a new version when you revise it. It remains proposed; actual agency review, data permissions and targets are not established here.",
+      "after": "Save the measure definition with your preparation when repeatable measurement is required. The program will manage versioning and identity. This action does not create agency approval, data access permissions, or official targets.",
+      "reason": "Adds detail about how definitions are managed and clarifies which agency permissions or conclusions do not result from using this option."
+    },
+    {
+      "fieldId": 39,
+      "path": [
+        "field45"
+      ],
+      "before": "Who should receive the findings and next update?",
+      "after": "Who should receive findings and be notified for the next update?",
+      "reason": "Clarifies the expectations for both reporting findings and assigning responsibility for subsequent updates."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revised field0 ('Summarize your main priorities...') contains several changes not supported by the source. The original text describes the scope and purpose (\"Set a priority, explain the question and prepare a useful contribution. You can record your own analysis with automated assistance off, or assign bounded preparation when assistance is available. Neither path authorizes a policy or operational decision.\"). The revision artificially distinguishes 'assign parts', shifts from 'priority' to 'main priorities,' and adds reasoning and process about discretion and 'clarify what your work will contribute.' The functional difference is subtle but removes the directness and the operational note in the last sentence is weakened ('does not, by itself, create a new policy or make an operational decision'), introducing ambiguity. These are not strictly error, but the changed logic and erasure of the source's specific sequence means the quote is no longer reliable as a representation of the actual instructions."
+      },
+      {
+        "fieldId": 27,
+        "severity": "blocker",
+        "finding": "Field32 (now 'This preparation is a draft contribution. Delivery, implementation, and observing benefit require separate recording steps.') adds a requirement that staff perform separate recording steps for delivery, implementation, and observation. The source states, \". This preparation is a draft contribution; delivery, implementation and observed benefit are recorded separately.\" This is a statement of how records are organized, not a requirement or instruction to the user about what must be done. The change of scope is material, and not just language improvement: \"require\" is not in the source and wrongly recasts the organizational note as an obligation."
+      },
+      {
+        "fieldId": 9,
+        "severity": "note",
+        "finding": "Field12: The proposed edit ('Confirm that the preparation or result has been reviewed') is acceptable and does not meaningfully shift the intent of the original field; it clarifies that the staff member is recording the review."
+      },
+      {
+        "fieldId": 13,
+        "severity": "note",
+        "finding": "Field17: The updated text for the decision record warning improves clarity; it still matches the source intent and compliance boundary."
+      },
+      {
+        "fieldId": 24,
+        "severity": "note",
+        "finding": "Field28: The suggestion to clarify the optional nature of the time tracked is harmless and consistent with the data entry field's (minutes, optional)."
+      },
+      {
+        "fieldId": 27,
+        "severity": "note",
+        "finding": "Several other fields (fields 3, 4, 5, 6, 7, and so forth) have small improvements that maintain the overall direction and do not introduce blockers."
+      },
+      {
+        "fieldId": 39,
+        "severity": "note",
+        "finding": "Field45: 'Who should receive findings and be notified for the next update?' is reasonably consistent with the source, clarifies dual expectations, and remains legitimate."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 6929,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 1799,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 8728
+    },
+    "review": {
+      "input_tokens": 8013,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 569,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 8582
+    }
+  },
+  "createdAt": "2026-11-15T13:56:05.419Z"
+}

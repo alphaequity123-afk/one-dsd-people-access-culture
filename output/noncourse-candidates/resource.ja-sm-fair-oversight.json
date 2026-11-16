@@ -1,0 +1,186 @@
+{
+  "target": "resource.ja-sm-fair-oversight",
+  "kind": "resource",
+  "route": "/library/ja-sm-fair-oversight",
+  "sourceSha256": "6bbfcae08adf246a972a846a86db07b2a65bf5e199a391e7a90f97366ff60661",
+  "status": "needs_revision",
+  "reviewedFieldCount": 9,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Help supervisors of review and program staff keep oversight firm and fair, using habits they control.",
+      "after": "Support supervisors and staff in program oversight by focusing on habits and practices within your influence that strengthen fair and consistent review processes.",
+      "reason": "Clarified that the guidance supports both supervisors and staff, specified that habits and practices under staff control are the focus, and defined the main goal as strengthening both fairness and consistency in oversight."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Accurate, consistent, explainable",
+      "after": "Oversight must be accurate and consistent, and you must be able to explain decisions and reasons for actions taken. This helps maintain trust and withstands scrutiny.",
+      "reason": "Expanded on the practical meaning of \"accurate, consistent, explainable\" to clarify the operational and accountability reasons these qualities matter."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Remember. Fraud harms people. Careless oversight harms people. A flag is a lead. A gap is not fraud. Criteria describe conduct, not community. Decisions on suspensions, sanctions, referrals and appeals belong to the responsible offices.",
+      "after": "Fraud and careless oversight both have real consequences for people. Treat every flagged case as a potential lead, not as proof. An identified gap does not mean fraud occurred. Review criteria describe specific conduct to examine—not groups or communities. The authority to decide on suspensions, sanctions, referrals, and appeals rests with the designated offices, not with reviewers or line staff.",
+      "reason": "Connected the impact of fraud and oversight to service users, clarified the difference between leads, gaps, and allegations, and specified who has decision authority."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Criteria. What conduct does this catch? Where did it come from, and what did past reviewers look at? How many of its flags were confirmed? Whom does it fall on, by provider size and region, and where sound, by communities served?",
+      "after": "For each review criterion, clarify what specific conduct triggers it. Identify its origin, and note what prior reviewers examined under this criterion. Track how many times a flagged issue was confirmed as a true issue. Consider how the criterion is distributed—by provider size, by region, and for those that apply, by the communities served.",
+      "reason": "Rewrote to clarify the sequence of questions needed to understand and evaluate criteria and how to analyze their effects."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Records. Why picked, what checked, what innocent explanations were considered, what concluded, what next, who reviewed. Second reader on hard calls and on a sample. Note who interpreted, and any access problems.",
+      "after": "Documentation should show why a record was selected, what was reviewed, which possible innocent explanations were considered, and the final conclusion. Record what actions are next and who reviewed the work. For challenging decisions and for a routine sample, use a second reviewer and note all participants—especially who interpreted information, and any barriers to access encountered.",
+      "reason": "Clarified the steps and rationale for full documentation, including the value and timing of second review."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Access. Qualified interpreter, not family or provider staff, for anything that matters. Plain requests with a date, a reason and a named contact. Ask the ADA coordinator about disability access, and your legal staff about language-access duties.",
+      "after": "Use a qualified interpreter—never a family member or provider staff—whenever meaningful communication is at stake. Make requests clear: state the date, reason, and a specific contact person. For questions about disability access, ask the ADA coordinator. For obligations regarding language access, consult your legal team.",
+      "reason": "Made explicit when interpreters are required, the risks of unqualified interpreters, and which sources to consult for access questions."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Words. Describe conduct and process, never communities. Use \"fraud\" only where the responsible office has reason to. Tell people what's happening, whether services are affected, and whom to call.",
+      "after": "Describe only individual conduct and the review process; do not make statements about groups or communities. Reserve the term \"fraud\" for situations when the responsible office has established grounds. Clearly inform people about the review process, the effect (if any) on their services, and who they can contact with questions.",
+      "reason": "Clarified when to use specific language, why not to reference communities, and what practical communication must occur."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "Patterns. Track confirmed cases as well as flags. Report fraud results and access effects together. No quotas. No claims about communities.",
+      "after": "Monitor both confirmed fraud cases and all flags generated. Report both fraud outcomes and any access-related effects together for a complete picture. Avoid setting quotas for fraud findings and refrain from making general statements about any community based on oversight data.",
+      "reason": "Clarified the need for comprehensive pattern tracking, explained why quotas and generalizations undermine fair oversight."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "body",
+        6
+      ],
+      "before": "Do next. Choose one rule your team uses. Ask what conduct it catches and how many flags were confirmed. Take the answer to your manager.",
+      "after": "Next step: Select one rule or criterion your team follows. Identify the specific conduct it seeks to address and how often it flags actual issues. Share these findings with your manager for discussion and further review.",
+      "reason": "Clarified instructions for practical next steps and connected the action to ongoing supervision and quality control."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revision for the summary changes the target audience from 'supervisors of review and program staff' to 'supervisors and staff,' and from 'habits they control' to 'habits and practices within your influence.' The source is explicit: it is a job aid 'for supervisors of review and program staff,' not for staff in general. The new language rewrites scope and misattributes the audience beyond the approved frame."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The expansion of 'why it matters' to include explaining decisions and upholding trust is defensible for operationalizing the original qualities. This is not a blocker but is a paraphrase and elaboration."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The rewritten explanation for the first body bullet preserves source intent with added connective language and explicit statements but does not change scope or invent obligation."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "This field paraphrases and reorganizes the list of questions in the original, making each element explicit. This is a permissible refactor and does not misstate the source."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "Although the new language offers a more sequential breakdown, it does not introduce unsupported process or alter the original's practical instructions."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "Expanded language for interpreter use preserves the substance (qualified interpreter, not family/provider staff) and resources (ADA coordinator, legal staff). Not a blocker."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The language clarifies and reinforces the original instructions about describing only conduct/process, using 'fraud' only when appropriate, and information for service users. This is a style and clarification change, not a substantive scope change."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "Expanded to add justification for no quotas and general statements—reflects the source and adds rationale, which is permissible."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "Expands and clarifies the instructions for the next step but does not change the practical instruction or its scope."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1904,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 802,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2706
+    },
+    "review": {
+      "input_tokens": 2256,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 565,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2821
+    }
+  },
+  "createdAt": "2026-11-15T13:44:28.532Z"
+}

@@ -1,0 +1,313 @@
+{
+  "target": "community-brief.tribal-nations",
+  "kind": "surface",
+  "route": "/minnesota-communities/tribal-nations",
+  "sourceSha256": "aee21ddf924b4e6cd9497ba802c84265494d35f44db9db3dfe8a4cbdd61ee722",
+  "status": "needs_revision",
+  "reviewedFieldCount": 18,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "whoAndWhere"
+      ],
+      "before": "Eleven federally recognized Tribal Nations share geography with Minnesota. Each is a sovereign government with its own name, laws, leadership, and consultation process. Urban Native people also live throughout the state. This page explains when staff should seek government-to-government guidance; it does not provide Nation-specific guidance.",
+      "after": "Minnesota includes the lands of eleven federally recognized Tribal Nations. Each Nation governs itself independently, with its own laws, leadership, and consultation process. Urban Native people also live throughout Minnesota and may have affiliations with multiple Nations. Use this page to determine when to seek government-to-government guidance. For Nation-specific instructions, consult the relevant Tribal government or designated Tribal relations contact.",
+      "reason": "Clarified the independent governmental status of each Nation, added specificity about urban Native populations, and made explicit that Nation-specific instructions are not included here, pointing staff to relevant contacts."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "When work may affect a Tribal Nation, Native children, Tribal data, services, or land, contact the designated Tribal relations office or liaison before planning consultation or engagement. A general community meeting is not government-to-government consultation.",
+      "after": "When work could affect a Tribal Nation, Native children, Tribal data, services, or land, staff must reach out to the designated Tribal relations office or liaison before planning any consultation or engagement. This initial step is necessary to respect each Nation’s consultation process and avoid bypassing required protocols. Note that holding a general community meeting does not meet the standards or requirements of government-to-government consultation.",
+      "reason": "Expanded the explanation to clarify the rationale for early contact and to highlight why a general meeting does not fulfill consultation obligations."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "withinGroupDiversity"
+      ],
+      "before": "Each Nation is distinct. Do not infer a person's Tribal citizenship, community ties, language, or residence.",
+      "after": "Do not assume one Nation’s experiences, citizenship criteria, or cultural practices apply to another. Nations differ in laws, traditions, and community structures. Do not infer an individual’s Tribal citizenship, connections, language, or residency based on their participation or self-identification.",
+      "reason": "Added context for why assumptions are inappropriate and described the substantive differences among Tribal Nations."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "preferredNames",
+        0
+      ],
+      "before": "The Nation's own name (for example Red Lake Nation, Lower Sioux Indian Community)",
+      "after": "Refer to the government by its official name—such as Red Lake Nation or Lower Sioux Indian Community—as determined by the Nation itself.",
+      "reason": "Clarified that the Nation's own name is an official governmental reference and should be used as provided by the Nation."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "nameNote"
+      ],
+      "before": "Name the Nation. Do not use a demographic count as a substitute for a government.",
+      "after": "Always identify the specific Tribal Nation when referencing governmental authority or engagement. Relying on a demographic count or general label does not recognize the Nation’s legal and political status.",
+      "reason": "Strengthened the reasoning for naming: to accurately represent governmental authority, not just population metrics."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "whatToAsk",
+        0
+      ],
+      "before": "Could this work affect a Tribal Nation, Native children, Tribal data, services, or land? If so, contact the designated Tribal relations office or liaison before planning consultation or engagement.",
+      "after": "Does this project or decision have the potential to impact a Tribal Nation, its citizens, Native children, data, services, or land? If the answer is yes—or if you are unsure—contact the designated Tribal relations office or liaison to determine the next appropriate steps before initiating any outreach or engagement.",
+      "reason": "Encouraged staff to check if in doubt and clarified the importance of contacting the correct office at the decision point, not after."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "accessChecks",
+        0
+      ],
+      "before": "This referral page does not provide Nation-specific access guidance. Ask the designated Tribal relations office or liaison which process and contacts apply.",
+      "after": "This page does not recommend Nation-specific access procedures. To identify the correct process and contacts for your situation, consult the designated Tribal relations office or liaison before proceeding.",
+      "reason": "Clarified the limits of this resource and the requirement to verify up-to-date procedures with the Tribal relations office."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "whoToInvolve",
+        0
+      ],
+      "before": "Before planning consultation or engagement, contact the Office of Indian Policy or current designated Tribal relations office or liaison and follow the required process.",
+      "after": "Contact the DHS Office of Indian Policy or the current designated Tribal relations office or liaison before developing consultation or engagement plans. Follow the required steps communicated by that office to ensure all protocols are met.",
+      "reason": "Specified the office name and the need to follow communicated steps, emphasizing staff responsibility for compliance."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "whoToInvolve",
+        1
+      ],
+      "before": "Work with the Nation's government through the process it designates.",
+      "after": "Engage directly with the relevant Tribal government using the process and communication channels it specifies. Respect the Nation's established protocols at every stage.",
+      "reason": "Added the importance of respecting the process set by each Nation and clarified that communication must run through Nation-designated channels."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "whatNotToAssume",
+        0
+      ],
+      "before": "Do not infer Tribal citizenship or community ties.",
+      "after": "Do not make assumptions about an individual's Tribal citizenship, Nation membership, or ties based on name, appearance, or participation in DHS activities.",
+      "reason": "Clarified the types of assumptions to avoid and relevant DHS contexts."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "whatNotToAssume",
+        1
+      ],
+      "before": "Do not place a sovereign Nation in a general community partner list.",
+      "after": "Do not list a sovereign Tribal Nation in a generic community partner roster or treat it as a non-governmental organization.",
+      "reason": "Clarified the substantive distinction between a sovereign government and general partner organizations."
+    },
+    {
+      "fieldId": 11,
+      "path": [
+        "whatNotToAssume",
+        2
+      ],
+      "before": "Do not use general cultural information as a substitute for consultation with the Nation.",
+      "after": "Do not substitute generalized cultural knowledge or demographic information for direct consultation with the specific Tribal Nation involved.",
+      "reason": "Specified the focus on consultation with the relevant government and the risk of substituting indirect information for actual engagement."
+    },
+    {
+      "fieldId": 12,
+      "path": [
+        "spotlightTitle"
+      ],
+      "before": "Relationships begin with sovereignty",
+      "after": "Sovereignty is the foundation of every relationship",
+      "reason": "Specified the meaning of 'sovereignty' in the title to highlight its foundational nature."
+    },
+    {
+      "fieldId": 13,
+      "path": [
+        "spotlightBody"
+      ],
+      "before": "Tribal Nations are contemporary governments as well as communities with distinct histories and cultures. Minnesota Indian Affairs offers a starting point for learning about those government relationships. Respect includes recognizing each Nation’s authority to speak and make decisions for itself.",
+      "after": "Tribal Nations function as modern governments, each with unique histories, legal authorities, and communities. The Minnesota Indian Affairs Council provides current information about formal government relationships and existing partnerships. Recognizing sovereignty means acknowledging each Nation’s legal right to make decisions on its own behalf.",
+      "reason": "Expanded the explanation to include legal authority and partnership references for context, and clarified the meaning of respecting sovereignty."
+    },
+    {
+      "fieldId": 14,
+      "path": [
+        "spotlightLinkLabel"
+      ],
+      "before": "Explore Minnesota Indian Affairs",
+      "after": "Visit the Minnesota Indian Affairs Council",
+      "reason": "Aligned the label with the formal name of the Council, improving clarity."
+    },
+    {
+      "fieldId": 15,
+      "path": [
+        "reflectionBody"
+      ],
+      "before": "Before shaping a proposal, whose governmental authority and designated consultation process must guide the next step?",
+      "after": "Before developing a program or policy, identify which governmental authority or consultation process legally governs next steps. Recognize that Tribal Nations, as sovereign governments, must be consulted according to their established procedures.",
+      "reason": "Clarified that the authority is legal and established, connecting the step to obligations and practice."
+    },
+    {
+      "fieldId": 16,
+      "path": [
+        "source0Label"
+      ],
+      "before": "DHS Tribal and Urban Indian Relations",
+      "after": "DHS Office of Tribal and Urban Indian Relations",
+      "reason": "Used the precise name for the DHS office to reduce ambiguity."
+    },
+    {
+      "fieldId": 17,
+      "path": [
+        "source0Note"
+      ],
+      "before": "Use the current DHS contact and guidance before planning consultation or engagement.",
+      "after": "Consult the latest DHS guidance and use the designated Tribal relations contact before initiating consultation or engagement.",
+      "reason": "Specified that up-to-date guidance and the right contact must be used, reinforcing the need for current information."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revised field changes the meaning of 'share geography with Minnesota' to 'Minnesota includes the lands of'. The source language avoids assertions about land and sovereignty boundaries, appropriately uses 'share geography', and avoids extending scope to Minnesota's entire land. The added line about urban Native people having affiliations is unsupported by the source. The source does not mention connections to multiple Nations, only that urban Native people live throughout the state."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The prose is expanded for clarity and practical instruction. The requirement to contact before planning consultation is preserved, and it is permissible to add the rationale that this respects process and avoids bypassing protocols. The clarification that a general meeting is not government-to-government is in the source."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "This expands on the source explanation of diversity with reasonable interpretation faithful to the factual differences among Nations and supplementation regarding implications for assumption-making."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "Rewording clarifies the intent of using the Nation's own name as official, preserving the source meaning."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The reworded explanation strengthens the logic without overstating the original fact: a Nation should be named as a government rather than through counts."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The revision encourages contact if unsure, which is a reasonable clarification for staff."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "This minor rewrite preserves content and intent."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "Specifying 'DHS Office of Indian Policy' is supported, as is emphasizing protocol compliance."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "Expanded explanation remains faithful to the requirement to use Nation-designated processes."
+      },
+      {
+        "fieldId": 9,
+        "severity": "note",
+        "finding": "Added examples clarify forbidden assumptions, consistent with DHS context."
+      },
+      {
+        "fieldId": 10,
+        "severity": "note",
+        "finding": "This restates and clarifies, still aligned with the original guidance."
+      },
+      {
+        "fieldId": 11,
+        "severity": "note",
+        "finding": "The clarification is acceptable as it affirms the source."
+      },
+      {
+        "fieldId": 12,
+        "severity": "note",
+        "finding": "Expanded title aligns with the intent of the original, with no policy or factual shift."
+      },
+      {
+        "fieldId": 13,
+        "severity": "note",
+        "finding": "Expanded explanation about legal authority is a supported deepening; no legal scope is wrongly asserted."
+      },
+      {
+        "fieldId": 14,
+        "severity": "note",
+        "finding": "Renaming is precise and correct."
+      },
+      {
+        "fieldId": 15,
+        "severity": "note",
+        "finding": "It is accurate to clarify the legal context of required consultation."
+      },
+      {
+        "fieldId": 16,
+        "severity": "note",
+        "finding": "Given that the official office name is being updated for clarity, this is correct."
+      },
+      {
+        "fieldId": 17,
+        "severity": "note",
+        "finding": "Instruction to use current guidance and contacts correctly reflects the original policy."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2227,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 1435,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3662
+    },
+    "review": {
+      "input_tokens": 2918,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 839,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3757
+    }
+  },
+  "createdAt": "2026-11-15T13:40:51.319Z"
+}

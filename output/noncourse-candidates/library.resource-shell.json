@@ -1,0 +1,109 @@
+{
+  "target": "library.resource-shell",
+  "kind": "surface",
+  "route": "/library/[id]",
+  "sourceSha256": "2b8e7a8a67b77cc34d02b9a868aec45f998a4f33f95bd340e3942bf531253abe",
+  "status": "needs_revision",
+  "reviewedFieldCount": 4,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "outsideSourceNote"
+      ],
+      "before": "This reference comes from outside the program. Check the original source for the current version before relying on it.",
+      "after": "This reference is from outside the program. Check the original source to confirm the most current and accurate version before using it in your work.",
+      "reason": "Clarified that the source may not be current and explained that checking the original supports accurate and up-to-date DHS or DSD work decisions."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "intranetSourceNote"
+      ],
+      "before": "Find the current version on the DHS intranet.",
+      "after": "For the latest version, refer to the DHS intranet.",
+      "reason": "Clarified that the intranet provides the most current version, making the instruction more specific and relevant to staff needs."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "pathsTitle"
+      ],
+      "before": "Use this resource in a learning path",
+      "after": "How this resource fits in DHS learning paths",
+      "reason": "Clarified the intended use by linking the resource explicitly to DHS learning paths, specifying context."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "correctionsLead"
+      ],
+      "before": "If something is missing or does not seem right, tell your Equity Director or",
+      "after": "If you notice missing or incorrect information, inform your Equity Director or",
+      "reason": "Clarified the importance of reporting issues by specifying the action and its purpose for maintaining accurate program information."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revised text adds 'to confirm the most current and accurate version before using it in your work,' which introduces a claim of accuracy assurance and an instruction for use in DHS or DSD 'work decisions' that is not supported by the original field ('Check the original source for the current version before relying on it'). The original simply asks users to check for currency, not accuracy, and does not explicitly connect the instruction to staff work decisions."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The change shifts from 'Find the current version' to 'refer to the DHS intranet for the latest version,' which clarifies intent but still aligns with the original source's meaning. No precision or legal condition is compromised."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The change from 'Use this resource in a learning path' to 'How this resource fits in DHS learning paths' interprets the label but does not erase source meaning or requirements. However, it changes a concrete instruction into a descriptive label, which may slightly shift user expectation but does not directly contradict source evidence."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The revision clarifies reporting by switching from 'does not seem right' to 'incorrect information.' This makes the action a bit more specific and actionable, but does not add or delete key instructions or legal conditions."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1203,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 213,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1416
+    },
+    "review": {
+      "input_tokens": 1006,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 351,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1357
+    }
+  },
+  "createdAt": "2026-11-15T13:38:01.545Z"
+}

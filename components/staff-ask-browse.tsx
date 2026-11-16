@@ -24,7 +24,7 @@ export function StaffAskBrowse({
     <div className="max-w-4xl">
       <div>
         <div className="mb-4 flex flex-wrap items-end gap-3">
-          <p className="help m-0 max-w-xl">Choose a question to read an answer and find a useful next step. Your choice is not saved.</p>
+          <p className="help m-0 max-w-xl">Choose a question to read an answer and find a useful next step.</p>
           <Link href="/library" className="btn btn--light">Browse the Library</Link>
         </div>
         <details className="mb-4 border-b border-[#c5d0d7]">
@@ -96,7 +96,6 @@ export function StaffAskBrowse({
           <p className="kicker">How this page works</p>
           <ul className="list-disc pl-5 text-sm">
             <li>Choose a common question to read its answer or download a copy.</li>
-            <li>Choosing a question does not save a personal response.</li>
             <li>If the topic is not listed, browse the Library or Areas of work.</li>
             <li>Decisions stay with the person or area responsible.</li>
           </ul>

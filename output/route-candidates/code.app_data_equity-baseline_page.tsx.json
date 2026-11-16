@@ -1,0 +1,179 @@
+{
+  "target": "code.app/data/equity-baseline/page.tsx",
+  "kind": "surface",
+  "route": "/data/equity-baseline",
+  "sourceSha256": "ba04e373f69d7e4a8eaca3e93aead40e4f0f40f353d2efbe686c29684e52b041",
+  "status": "needs_revision",
+  "reviewedFieldCount": 9,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Who gets Disability Services Division employment services, by race and ethnicity, fiscal years 2022 to 2024 pooled.",
+      "after": "Pooled data showing who received Disability Services Division employment services by race and ethnicity for fiscal years 2022–2024.",
+      "reason": "Clarified the description and replaced a noun string with a concrete subject and time span, reflecting the professional practice of defining what the pooled data represents."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "A baseline is the starting line. It shows who got each employment service, by race and ethnicity, before the next plan begins.",
+      "after": "A baseline marks the starting point. It records who used each employment service, by race and ethnicity, before the next planning cycle.",
+      "reason": "Used more precise terminology to link the baseline to the start of analysis for planning cycles, which better supports DHS and DSD colleagues' understanding."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "These numbers pool fiscal years 2022, 2023 and 2024 into one value for each group. Three years together give a steadier picture than any one year. The plan for fiscal years 2027 to 2030 will be measured against this starting line.",
+      "after": "This summary pools data from fiscal years 2022, 2023, and 2024 to create a single value for each group. Combining three years helps reduce fluctuations and provides a more stable picture than using just one year. The upcoming plan for fiscal years 2027 to 2030 will use this baseline for comparison.",
+      "reason": "Explicitly stated the purpose and benefit of pooling the data and drew a direct link to its planned use for future progress measurement."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field4"
+      ],
+      "before": "Each goal comes from the Aging and Disability Services Administration Equity and Inclusion Implementation Plan. Open a goal to see its measures and the questions the plan asks.",
+      "after": "Each goal is drawn from the Aging and Disability Services Administration Equity and Inclusion Implementation Plan. Select a goal for its corresponding measures and the plan's guiding questions.",
+      "reason": "Clarified the source and rephrased to specify how to interact with goals for practical use."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field5"
+      ],
+      "before": "The five widest gaps in the baseline, in plain words.",
+      "after": "Plain-language summaries of the five largest disparities at the baseline stage.",
+      "reason": "Reworded to specify what \"gaps\" are and at what stage, anchoring the language to staff's task of understanding disparities."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field6"
+      ],
+      "before": "Each value pools three fiscal years, 2022 to 2024. Where the source gives counts, the pooled value is count-weighted, and a 95% confidence interval is shown. Where the source gives only a figure, the value is a simple average and no interval is shown.",
+      "after": "Each value summarizes three fiscal years—2022, 2023, and 2024. Where the source reports counts, we use a weighted value with a 95% confidence interval. Where only a figure is available, we calculate a simple average without an interval. Explaining these methods supports clearer interpretation and helps staff compare values reliably.",
+      "reason": "Expanded on the explanation to clarify why different statistical approaches are used, and why this matters for interpretation."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field7"
+      ],
+      "before": "A risk ratio compares one group with everyone else. A value of 1.0 means no difference. Below 1.0 means less likely; above 1.0 means more likely.",
+      "after": "A risk ratio compares outcomes for one group to everyone else. A ratio of 1.0 means identical likelihood. Ratios below 1.0 show lower likelihood for the group; ratios above 1.0 show higher likelihood. Understanding this helps identify and discuss inequities in service access.",
+      "reason": "Added explanation of why understanding risk ratios matters for equity analysis work."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "field8"
+      ],
+      "before": "Small counts are suppressed in the source and appear as &quot;Not available&quot;. People whose record does not say their race are shown as &quot;Race not recorded&quot;.",
+      "after": "The source suppresses small counts, which appear as \"Not available.\" Records without race information are labeled \"Race not recorded.\" Recognizing these data limitations helps avoid misinterpretation and guides follow-up for missing information.",
+      "reason": "Clarified that these are specific data limitations and stated why acknowledging them is important to proper analysis."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "field9"
+      ],
+      "before": "Have a question about a measure? Each card links to Ask with a question ready, for example:",
+      "after": "If you have a question about a measure, use each card's Ask link. The link opens a ready-made question so you can request more detail or clarification as needed. For example:",
+      "reason": "Clarified the purpose of the Ask feature and how it supports staff work."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "Field 0 changes the source description from an exact, official record—\"Who gets Disability Services Division employment services, by race and ethnicity, fiscal years 2022 to 2024 pooled.\"—to a paraphrased and restructured line. The source establishes the description as an official summary and title for the data (in metadata and introductory eyebrow). The rewrite introduces new structure, changes the verbal focus from \"gets\" to \"received,\" and restructures the time. These are not merely clarifications or style improvements: they change the precise, standard phrasing appearing as a record heading and its legal/official tone in a way not authorized by the Program writing standard."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "Field 1 changes \"A baseline is the starting line\" (plain, record-based official explanation) into \"A baseline marks the starting point.\" While similar semantically, the Program writing standard requires preservation of officially recognized phrasing where it opens a definition or key section; \"starting line\" is deliberate and official here, and allowed for leeway in reading. The rewrite removes this and silently changes derived meaning, which is not supported."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "Field 2 in the source clearly states: \"These numbers pool fiscal years 2022, 2023 and 2024 into one value for each group. Three years together give a steadier picture than any one year. The plan for fiscal years 2027 to 2030 will be measured against this starting line.\" The proposed text removes the concise official phrasing and adds editorialized explanation (\"helps reduce fluctuations and provides a more stable picture,\" \"upcoming plan ... will use this baseline for comparison\"). While accurate, this rewrites both style and factual expression of the official note, and unnecessarily restates intent. The change fails to preserve the official record and its function."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "Field 4 (ID 3 in change log) rephrases to \"is drawn from\" and slightly recasts how to interact, but does not alter any record, legal statement, or official condition. This is a minor style change, not a blocker."
+      },
+      {
+        "fieldId": 4,
+        "severity": "blocker",
+        "finding": "Field 5 (ID 4 in the log): The rewrite changes \"widest gaps\" (in source, a term DHS routinely uses for highest absolute disparity; this is official phrasing) into \"largest disparities,\" which is a non-specific broadening and may import bias by altering what is officially labeled a gap. The further expansion (\"at the baseline stage\") changes the intended meaning—this is superfluous since the page and section already set the context. This is a record change."
+      },
+      {
+        "fieldId": 5,
+        "severity": "blocker",
+        "finding": "Field 6 alters the factual and procedural statement regarding statistical methods, adding \"Explaining these methods supports clearer interpretation\" and so on, which turns a procedural note into a blended guidance/justification. The source explains how the value is derived, not why in an interpretive sense. This is unauthorized editorializing per program writing standard."
+      },
+      {
+        "fieldId": 6,
+        "severity": "blocker",
+        "finding": "Field 7 adds an interpretive justification (\"Understanding this helps identify and discuss inequities\"), which, though helpful in training, is not in the source. The standard only permits this type of addition when the page is marked as instructional with distinct body/guidance areas, and this page does not. The original must be preserved; the addition makes the page no longer an official record."
+      },
+      {
+        "fieldId": 7,
+        "severity": "blocker",
+        "finding": "Field 8 in the source presents strictly record-focused statements: small counts are suppressed and appear as \"Not available.\" The rewrite introduces a statement about \"guides follow-up for missing information,\" which is speculative and shifts from record fact to staff action or recommendation, not grounded in this page's official role."
+      },
+      {
+        "fieldId": 8,
+        "severity": "blocker",
+        "finding": "Field 9 (ID 8 in log): The rewrite expands the purpose from simply linking to \"Ask\" to one of requesting \"more detail or clarification as needed.\" This imports an explicit value judgment about the intent and implication of the \"Ask\" function not present in the source. The page simply notes \"Each card links to Ask with a question ready, for example:\" The change is not supported."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2987,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 687,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3674
+    },
+    "review": {
+      "input_tokens": 3223,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 929,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4152
+    }
+  },
+  "createdAt": "2026-11-15T13:48:33.116Z"
+}

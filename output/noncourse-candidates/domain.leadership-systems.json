@@ -1,0 +1,81 @@
+{
+  "target": "domain.leadership-systems",
+  "kind": "surface",
+  "route": "/areas/leadership-systems",
+  "sourceSha256": "358110ec7ef380a6f785c0f64ee810a031d364f34ca7043989c6a2bc5d348f9a",
+  "status": "needs_revision",
+  "reviewedFieldCount": 20,
+  "changes": [
+    {
+      "fieldId": 2,
+      "path": [
+        "summary"
+      ],
+      "before": "Moving from foundation to integration to institutionalization: decision rights, resources, accountability, and the leadership practices that make equity part of how the organization runs.",
+      "after": "To move equity from a stated goal to an integrated part of day-to-day operations, leadership systems must assign clear decision rights, dedicate resources, and require accountability. Lasting change depends on practices that connect these elements so that equity considerations become routine, not just ideals. This work evolves from laying a foundation, to repeated integration, and finally to institutionalization, where equity is reflected in how decisions are made and resources are distributed.",
+      "reason": "Expanded the summary to clarify the role of decision rights, resources, and accountability in embedding equity into organizational routines. Connected the introductory phrase to a complete professional explanation."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Approval bottlenecks, diffuse responsibility, and unclear decision rights were named repeatedly. Systems change is leadership work with owners, not an event.",
+      "after": "Repeatedly, staff and leaders named approval bottlenecks, unclear accountability, and undecided ownership as barriers to progress. Lasting systems change requires leaders to define who decides, how decisions are made, and who will be responsible for following through. Seeing systems change as ongoing leadership work—rather than a one-time event—clarifies expectations and responsibility across the organization.",
+      "reason": "Provided a more explicit explanation of why these issues matter, linking recurring problems to their practical consequences and the need for ongoing clarity in leadership roles."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The rewritten summary (field 2) expands on the original by introducing multiple new concepts not found in the provided source: it introduces 'day-to-day operations,' asserts that 'leadership systems must assign clear decision rights, dedicate resources, and require accountability,' and frames lasting change as dependent specifically on connecting these elements so equity becomes routine. The original source statement is considerably narrower and only states: 'Moving from foundation to integration to institutionalization: decision rights, resources, accountability, and the leadership practices that make equity part of how the organization runs.' The rewrite adds new causal claims, reorders concepts, and adds interpretation not supported directly by the original text. This constitutes unsupported expansion and a change in source meaning."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The revised 'why it matters' content (field 3) is a supported but more detailed restatement of the source: 'Approval bottlenecks, diffuse responsibility, and unclear decision rights were named repeatedly. Systems change is leadership work with owners, not an event.' The rewrite remains within the scope of the original, elaborating on who is naming the problems and clarifying process ownership, without inventing new evidence."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2100,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 325,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2425
+    },
+    "review": {
+      "input_tokens": 1446,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 292,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1738
+    }
+  },
+  "createdAt": "2026-11-15T13:39:25.271Z"
+}

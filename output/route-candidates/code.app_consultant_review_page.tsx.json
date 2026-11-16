@@ -1,0 +1,67 @@
+{
+  "target": "code.app/consultant/review/page.tsx",
+  "kind": "surface",
+  "route": "/consultant/review",
+  "sourceSha256": "951fe97076e6e7bf8610f34d63332937c7205b781075409dd4c78d023a8c7e49",
+  "status": "needs_revision",
+  "reviewedFieldCount": 3,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "The currency check only points out content that may need attention. It never removes an item, and you decide what happens next.",
+      "after": "The currency check highlights content that might require your attention but does not remove any items. You are responsible for deciding if a change is needed, based on your knowledge of the content and its purpose.",
+      "reason": "Clarified that the check highlights rather than simply points out, emphasized user responsibility, and noted the basis for deciding whether to make a change. This connects staff action to professional judgment, which helps explain the process's purpose."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The proposed revision adds several unsupported claims and over-explains beyond the direct, plain meaning provided in the source. The original text is: 'The currency check only points out content that may need attention. It never removes an item, and you decide what happens next.' The revision: 'The currency check highlights content that might require your attention but does not remove any items. You are responsible for deciding if a change is needed, based on your knowledge of the content and its purpose.' — is unsupported in three main ways: (1) 'Highlights' and 'points out' have subtly different connotations, where the source uses minimalist language to avoid implying additional priority or prominence. (2) The phrase, 'You are responsible for deciding if a change is needed, based on your knowledge of the content and its purpose,' adds new rationale and a basis for user decision-making not stated or implied in the source text—this moves from neutral process description to instructional and interpretive explanation. (3) The source explicitly keeps its statement brief and matter-of-fact, which matches the intent of not introducing unnecessary complexity, explanation, or inferred agency. Therefore, the proposed change fails the Program writing standard for source fidelity and unnecessary expansion."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1643,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 136,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1779
+    },
+    "review": {
+      "input_tokens": 1321,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 270,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1591
+    }
+  },
+  "createdAt": "2026-11-15T13:48:14.789Z"
+}

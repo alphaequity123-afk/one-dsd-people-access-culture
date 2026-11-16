@@ -1,0 +1,67 @@
+{
+  "target": "code.app/administrations/adsa/divisions/dsd/page.tsx",
+  "kind": "surface",
+  "route": "/administrations/adsa/divisions/dsd",
+  "sourceSha256": "6a900b66c931bb10bd51e809339d10b58a412e4c036ae792d811660ca403a9d0",
+  "status": "needs_revision",
+  "reviewedFieldCount": 3,
+  "changes": [
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "The complete One DSD program remains available with its programs, examples, team resources and learning connections. Division-specific responsibilities stay identified as such.",
+      "after": "The One DSD program provides access to all current division programs, detailed examples, team resources, and staff learning materials. Information and tasks that apply only to the Disability Services Division are clearly marked so staff can distinguish shared practices from division-specific responsibilities. Keeping this distinction helps staff use the correct procedures when supporting people who use disability services.",
+      "reason": "Clarified the program's structure and purpose, specifying how information is organized to support staff. Added reasoning about the importance of identifying division-specific versus shared responsibilities to inform staff practice."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The revision extends and interprets the original scope, adding claims not supported by the provided source. The source says: 'The complete One DSD program remains available with its programs, examples, team resources and learning connections. Division-specific responsibilities stay identified as such.' The change asserts that all current programs, detailed examples, and learning materials are included, and states specifically how division-specific duties are marked and why the distinction is important for staff procedure. These statements (about access to 'all current division programs', about how information is 'clearly marked', about improving staff procedure) introduce explanatory and operational claims not present in the original. The revised text may be plausible, but it goes beyond the source evidence."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1653,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 1536
+      },
+      "output_tokens": 154,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1807
+    },
+    "review": {
+      "input_tokens": 1351,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 182,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1533
+    }
+  },
+  "createdAt": "2026-11-15T14:02:55.642Z"
+}

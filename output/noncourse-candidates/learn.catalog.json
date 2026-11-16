@@ -1,0 +1,95 @@
+{
+  "target": "learn.catalog",
+  "kind": "surface",
+  "route": "/learn",
+  "sourceSha256": "5e35b8cb6eebaaa00174d53c252922693a4abdcff3183eca2bd74eb5746fc3cb",
+  "status": "model_checked",
+  "reviewedFieldCount": 7,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "climateSummary"
+      ],
+      "before": "Explore how meetings, supervision, and recognition shape participation and fair opportunities.",
+      "after": "Meetings, supervision, and recognition influence how staff and participants engage in services. These elements affect who participates, how fairly people are treated, and what opportunities are available. Understanding their impact helps identify ways to foster a more inclusive and equitable environment.",
+      "reason": "Expanded the summary to clarify how meetings, supervision, and recognition specifically influence participation and fairness. Added reasoning for why understanding these elements matters, following the standard to explain connected ideas and the significance of staff actions."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "facilitationSummary"
+      ],
+      "before": "Plan accessible sessions that give participants time to practice and apply what they learn.",
+      "after": "Organize sessions that are accessible to all participants and allow time to practice new skills and discuss how they apply to everyday work. A session designed in this way helps people build confidence and ensures they can use what they learn in real settings.",
+      "reason": "Revised to explain the purpose behind planning accessible sessions and practicing skills, and connected this to staff needs. Provides a clear explanation of why this approach supports effective learning and use in work."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "interpreterSummary"
+      ],
+      "before": "Prepare for conversations with a qualified interpreter and support clear, respectful communication.",
+      "after": "Get ready to work with a qualified interpreter by planning your conversation and setting up support for mutual understanding. This helps ensure that everyone involved communicates clearly and respectfully, reducing confusion and supporting accurate service delivery.",
+      "reason": "Clarified the steps involved and explained why preparing for interpreter-supported conversations matters—namely, to improve clarity, respect, and accuracy in communication relevant to DHS and DSD work."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The expanded climateSummary retains the source’s meaning about meetings, supervision, and recognition influencing participation and fairness, and clarifies impact without overstating or inventing legal or policy obligations. The added explanation for why these elements matter aligns with the standard to give clear reasoning and connect ideas, and is supported by the source’s emphasis on participation and fairness. The longer summary does not introduce errors or unsupported claims."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The revised facilitationSummary accurately restates the original point about accessible sessions and skill practice, and elaborates on why these practices matter for staff and participants. The explanation of building confidence and applying skills is an unpacking of \"apply what they learn\" and fits both the source scope and the program writing standard’s direction for substantive explanation. There are no unsupported assertions."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The reworded interpreterSummary breaks down the steps and clarifies the practical benefits of preparing to work with an interpreter. It keeps the spirit and scope of the original, providing supporting reasoning (clarity, respect, accuracy) relevant to DHS/DSD work, without misstating privacy, overpromising interpreter roles, or erasing qualifications. The field remains grounded in the original source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1343,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 307,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1650
+    },
+    "review": {
+      "input_tokens": 1125,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 278,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1403
+    }
+  },
+  "createdAt": "2026-11-15T13:38:00.194Z"
+}

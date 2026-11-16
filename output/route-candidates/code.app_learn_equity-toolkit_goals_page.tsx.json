@@ -1,0 +1,95 @@
+{
+  "target": "code.app/learn/equity-toolkit/goals/page.tsx",
+  "kind": "surface",
+  "route": "/learn/equity-toolkit/goals",
+  "sourceSha256": "448b2d0f2e15b1e0e3c38735ae57d50127123a9ea4f15db3f794fa91a8422cfa",
+  "status": "needs_revision",
+  "reviewedFieldCount": 6,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Aging and Disability Services Administration six goals and work plan",
+      "after": "Six equity goals and ADSA work plan",
+      "reason": "Streamlined the heading to improve clarity and focus. The agency's name appears naturally in the body and does not need to repeat at maximum length in a heading."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "Explore the Aging and Disability Services Administration’s six equity goals, find related resources, and prepare a three-goal work plan where this implementation plan applies.",
+      "after": "Review the six equity goals established by the Aging and Disability Services Administration (ADSA), access supporting resources, and, where required, prepare a work plan selecting three applicable goals for implementation.",
+      "reason": "Clarified that the six goals are established by ADSA and specified the purpose for different users—reviewing goals, finding resources, and preparing a plan. Made the sentence more direct and specific without assuming the reader’s requirements."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": "These are ADSA goals, not an agency-wide requirement to choose three goals. DHS staff outside ADSA can learn from this example while confirming their own applicable priorities, requirements and decision authority. The program constitution governs how this resource supports the whole One DSD program.",
+      "after": "These ADSA goals are offered as an example. There is no agency-wide requirement for staff to select three goals unless specifically directed under this implementation plan. DHS staff outside ADSA can use these materials to inform their own work, but should confirm any priorities, requirements, or decision authority that apply to their program. The program constitution explains how this resource supports the broader One DSD initiative.",
+      "reason": "Separated the explanation of ADSA's example status and clarified that the three-goal selection is conditional. Added specificity about confirming requirements and explicitly referenced the program constitution’s shaping role for context."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The rewritten heading ('Six equity goals and ADSA work plan') removes the full agency name and the qualifying context provided by the original ('Aging and Disability Services Administration six goals and work plan'). The original is unambiguous, directly aligns with the referenced work, and avoids unexplained abbreviations in a heading. The abbreviation 'ADSA' is not introduced in the heading, and using it without introduction reduces clarity, especially given the program writing standard's emphasis on accessible and precise context. No evidence in the source supports shortening or omitting the agency's full name at this location."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The rewrite clarifies intent, specifies that the goals are set by ADSA, and addresses multiple user paths. While it explicates purpose and removes some ambiguity, it remains within the scope, does not add obligations, and retains factual intent. The change is editorially acceptable."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "This edit generally retains the same scope and intent: it keeps the conditional context about the requirement to choose three goals, explains the example status, and guides non-ADSA staff to check program-specific requirements. The phrasing shifts for clarity and explicitness without distorting source meaning or introducing new requirements, so it is acceptable as a refinement."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2065,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 338,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2403
+    },
+    "review": {
+      "input_tokens": 1888,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 330,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2218
+    }
+  },
+  "createdAt": "2026-11-15T13:49:57.045Z"
+}

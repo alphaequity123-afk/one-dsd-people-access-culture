@@ -1,0 +1,81 @@
+{
+  "target": "code.app/search/page.tsx",
+  "kind": "surface",
+  "route": "/search",
+  "sourceSha256": "a24f6ce33d7517bc05038f7716a3191148cfe1acd0fd2767201af20fadfe6e26",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Search the whole program and State of Minnesota agencies",
+      "after": "Search across program materials and Minnesota state agencies",
+      "reason": "Revised for clarity and precision. 'Program materials' more specifically refers to the content users are likely searching, and 'Minnesota state agencies' matches internal usage. Redundant wording removed."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Search courses, policies, communities, agencies…",
+      "after": "Search for courses, policies, communities, or agencies",
+      "reason": "Simplified the list for directness and clarity. Replaced the ellipsis with a complete thought to clarify what can be found."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "Source wording is: 'Search the whole program and State of Minnesota agencies.' The proposed change ('Search across program materials and Minnesota state agencies') alters the meaning and removes the inclusive language 'the whole program' and adds 'program materials' (which may not be the same as 'the whole program'). This is unsupported by the source. The label specifically matches the intended broad scope signaled to users in the source."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "Source wording is: 'Search courses, policies, communities, agencies…' Used as a placeholder, this is concise and includes the ellipsis to indicate examples but not a limit. The proposed change ('Search for courses, policies, communities, or agencies') turns the list into a limiting statement and removes the ellipsis. This could mislead users about the possible search scope and does not preserve the placeholder's function."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1562,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 122,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1684
+    },
+    "review": {
+      "input_tokens": 1290,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 233,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1523
+    }
+  },
+  "createdAt": "2026-11-15T13:51:37.015Z"
+}

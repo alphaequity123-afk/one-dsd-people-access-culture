@@ -1,0 +1,172 @@
+{
+  "target": "resource.pn-equity-in-practice",
+  "kind": "resource",
+  "route": "/library/pn-equity-in-practice",
+  "sourceSha256": "33a6f25989e9730e085fb4f60b730f7c655b93b2bbc77320a4af3ed86ca70e0e",
+  "status": "needs_revision",
+  "reviewedFieldCount": 8,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Look at a decision from six perspectives: compliance and civil rights, diversity and representation, hearts and minds, inclusion and belonging, organizational learning, and social justice. Seven questions then help you choose a thoughtful response.",
+      "after": "Examine a decision using six perspectives—compliance and civil rights, diversity and representation, hearts and minds, inclusion and belonging, organizational learning, and social justice. Seven guiding questions support thorough, accountable consideration and reporting.",
+      "reason": "Combined the list of perspectives into a single compound sentence for brevity. Clarified the purpose of the seven questions, emphasizing accountability and reporting, making the professional reasoning for each step clearer."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Compliance and civil rights: start with the rights, protections, and required procedures that apply. Equity work must respect due process.",
+      "after": "Compliance and civil rights: Identify which rights, protections, and required procedures apply to the decision. Equity work in DHS must always honor due process, because neglecting it can compromise both legal standing and trust in outcomes.",
+      "reason": "Clarified the importance of identifying rights and procedures and explained why respecting due process is critical."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Diversity and representation: who is present, absent, promoted, heard, and contracted with.",
+      "after": "Diversity and representation: Review who is present, absent, promoted, consulted, and contracted in the process. Gaps here can result in missed perspectives and unintended barriers.",
+      "reason": "Specified the importance of each action and the potential consequence of missing representation."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Hearts and minds: notice bias, fear, gaps in knowledge, empathy, and everyday behavior. Question an assumption and consider another person's experience.",
+      "after": "Hearts and minds: Recognize how bias, fear, gaps in knowledge, empathy, and daily behavior influence choices. Actively questioning assumptions and considering others' experiences can expose unintentional obstacles or sources of harm.",
+      "reason": "Tied the process of recognition and questioning to practical outcomes and explained its relevance in agency work."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Inclusion and belonging: whether people can take part, disagree, contribute, and be themselves without penalty.",
+      "after": "Inclusion and belonging: Consider whether people are able to participate, dissent, contribute, and show their authentic selves without negative consequences. Meaningful inclusion shapes the effectiveness and legitimacy of decisions.",
+      "reason": "Added explanation for why inclusion and belonging matter, connecting participation to quality of outcomes."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Organizational learning: what the team needs to learn, reconsider, or change because important voices were left out earlier.",
+      "after": "Organizational learning: Determine what the team must learn, review, or update because critical perspectives were absent before. Ongoing organizational learning helps DHS adapt and reduce repeat exclusion.",
+      "reason": "Clarified the value of learning from previously missing voices and connected continuous learning to agency practice."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "Social justice: who is harmed, what fairness requires, and what responsibility DHS holds.",
+      "after": "Social justice: Assess who is harmed, what fairness requires, and which responsibilities DHS must address. This perspective asks staff to evaluate both immediate and structural impacts.",
+      "reason": "Clarified that this perspective involves both case-by-case and broader considerations of responsibility and fairness."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "body",
+        6
+      ],
+      "before": "Seven questions: What are we deciding or creating? What authority, rights, and obligations apply? Who benefits, carries the burden, faces the risk, or is missing? What assumptions, rules, and routines shape who is affected? What evidence and community knowledge are needed? What can we change or redesign, and what must go to the responsible decision-maker? What changed, how will we know, and how will we report back?",
+      "after": "Seven questions:\n- What are we deciding or creating?\n- What authority, rights, and obligations apply?\n- Who benefits, carries the burden, faces risk, or is left out?\n- What assumptions, rules, and routines shape who is affected?\n- What evidence and community knowledge do we need?\n- What can we change or redesign now, and what must be forwarded to the responsible decision-maker?\n- After any change, what is different, how will outcomes be checked, and how will results be reported back?\n\nThese questions prompt you to specify the decision, identify underlying rules or gaps, and plan steps for documentation and future accountability.",
+      "reason": "Clarified the focus of each question for application in practice, arranged questions for clarity, and explained how they guide documentation and accountability."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revised summary alters the original scope and implication. It adds 'thorough, accountable consideration and reporting,' which shifts the intended emphasis. The source summary only says, 'Seven questions then help you choose a thoughtful response.' The change introduces reporting as a necessary outcome, which is not stated or implied in the original One DHS source. This is a policy implication that is unsupported."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The added sentence explaining the importance of due process is consistent with DHS context and helpful. It expands reasoning but does not alter the legal meaning or the program’s position."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The expansion to include practical consequences of gaps in diversity is grounded in DHS practice. The edit does not add requirements or misrepresent official policy."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The revision ties the original text to outcomes, which is a reasonable clarification for the audience. There is no unsupported claim introduced."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "Extra explanation regarding 'effectiveness and legitimacy of decisions' aligns with accepted equity concepts and adds reasoning but maintains the meaning and scope of the original."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "Clarification of organizational learning is sound, explaining reasoning without overreaching or adding program obligations."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The added clarification around immediate and structural impacts remains within the intent and scope of the original guidance."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "The reformatting of the seven questions clarifies them but does not change policy or introduce unsupported obligations. The explanatory paragraph is appropriate contextual guidance."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1830,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 680,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2510
+    },
+    "review": {
+      "input_tokens": 2067,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 365,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2432
+    }
+  },
+  "createdAt": "2026-11-15T13:41:10.429Z"
+}

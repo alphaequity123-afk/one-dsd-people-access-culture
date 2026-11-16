@@ -205,7 +205,7 @@ async function run() {
       assert.equal(notes.decisionNotesSections({ ...content, task })[0].entries[0].text, task);
     }
     assert.equal(notes.decisionNotesSections({ ...content, task: '   ' })[0].entries[0].text, 'Not yet selected.');
-    assert.ok(notes.decisionNotesText(content).includes('Working draft. This is not submitted, approved, or a completed official equity analysis.'));
+    assert.ok(notes.decisionNotesText(content).includes('Working draft. This is not a completed official equity analysis.'));
     assert.ok(!notes.decisionNotesText(content).includes('Private working draft'));
     assert.ok(plans.planText(legacy).includes('Private working draft.'));
   });

@@ -25,7 +25,7 @@ export default async function WaterCoursePage() {
     {foundationAvailable && <WaterFoundationFeature />}
     <WaterCompanionPodcast companion={companion} />
     <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this course</summary><ResourceDownloads kind="water-we-swim-in" id="home" noun="course" /></details>
-    <p className="community-opening">A voluntary course on Minnesota&apos;s mainstream culture: its real strengths, its blind spots, and how it shapes our work with Minnesotans of other cultures and with disabled people and their families.</p>
+    <p className="community-opening">A course on Minnesota&apos;s mainstream culture: its real strengths, its blind spots, and how it shapes our work with Minnesotans of other cultures and with disabled people and their families.</p>
     <p>There are six modules of about 20 minutes each. Each has a short podcast conversation, practice decisions and a one-page job aid. You can take them in any order. The course activities are ungraded.</p>
     <WaterLearningAssistant />
     <WaterCoursePath hrefFor={n => `${WATER_COURSE_HREF}/${WATER_MODULES.find(m => m.number === n)?.slug ?? ""}`} />

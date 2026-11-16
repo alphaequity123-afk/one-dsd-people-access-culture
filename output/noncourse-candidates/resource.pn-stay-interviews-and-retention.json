@@ -1,0 +1,141 @@
+{
+  "target": "resource.pn-stay-interviews-and-retention",
+  "kind": "resource",
+  "route": "/library/pn-stay-interviews-and-retention",
+  "sourceSha256": "4062b9aa9c24e4b1f21ac9580352635a2e4496823d2317f8122b733c8a2a5ed3",
+  "status": "needs_revision",
+  "reviewedFieldCount": 6,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "In a stay conversation, a supervisor asks a current team member what keeps them, what might lead them to leave, and what they would change. It is not an evaluation, and its value depends on what the supervisor does afterward.",
+      "after": "A stay conversation is a discussion in which a supervisor asks a current staff member what keeps them at their job, what might prompt them to leave, and what they would change if they could. This is not a performance review. The conversation's usefulness depends on the supervisor’s follow-up actions.",
+      "reason": "Clarified the practical intent and differentiated it from an evaluation using more precise language. Added the connection between the conversation and the supervisor’s actions for clarity."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Exit patterns arrive too late to act on. Stay conversations surface barriers while there is still time, and they signal that a person's experience matters.",
+      "after": "By the time exit data is collected, it is usually too late to change the outcome. Stay conversations allow supervisors to identify concerns and barriers before a resignation. They can show individuals that their perspective matters and help create opportunities for change while the person is still engaged.",
+      "reason": "Expanded to clarify both the timing challenge presented by exit data and the dual purpose of stay conversations: uncovering issues early and demonstrating that the team values individual experiences."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Before. Tell the person what the conversation is and is not. Explain that the conversation is for understanding the employee experience rather than assigning a performance rating. Agree what may be recorded or shared and explain applicable limits; do not promise absolute confidentiality or that no record can exist. Offer to hold it in whatever setting works for them.",
+      "after": "Before. Tell the person what the stay conversation will include and what it will not. Make clear that this is to understand their experience at work, not to evaluate their performance. Agree on what will be written down or shared, and be specific about what limits apply. Do not guarantee complete confidentiality or that nothing will be recorded. Offer to hold the conversation in the setting that best supports their comfort and candor.",
+      "reason": "Improved clarity and specificity about how to introduce the process and set appropriate expectations, including clear acknowledgment of limits regarding confidentiality and settings."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "During. Ask open questions. What do you look forward to here? What would make you consider leaving? What have you wanted to say that you have not had a chance to? What would you change about how work is assigned or recognized? Listen more than you speak.",
+      "after": "During. Use open-ended questions. For example: What aspects of your work do you look forward to? What would make you consider leaving? Is there anything you wanted to share but have not? What changes would improve how tasks are assigned or recognized? Prioritize listening over speaking during the conversation.",
+      "reason": "Refined the sample question wording for greater clarity and professional tone. Made the instruction to listen a directive and placed it at the end for emphasis."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "After. Choose one thing you can change and tell the person what it is. If a pattern appears across several conversations, take the pattern, not the names, to your leadership or Equity Director.",
+      "after": "After. Select at least one change you can reasonably make, and inform the person what you will do. When you see a pattern across multiple conversations, bring forward the pattern—not individual names—to your leadership or Equity Director. This helps leadership address broader issues without exposing individual comments.",
+      "reason": "Expanded to clarify the significance of reporting patterns and the reason for omitting names, connecting this practice to protecting team member confidentiality and encouraging candid feedback."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Boundaries. If the conversation raises a complaint about a named person, harassment, or discrimination, stop and connect the person to the confidential channel. Do not investigate and do not record it here.",
+      "after": "Boundaries. If a conversation brings up a complaint involving a specific person, an allegation of harassment, or possible discrimination, stop the discussion. Refer the person to the appropriate confidential reporting channel. Do not investigate further and do not record the details in the stay conversation notes.",
+      "reason": "Clarified the appropriate steps for supervisors when mandatory reporting boundaries are crossed and why investigation or documentation in this context could be problematic."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The new summary changes specific terms and subtly alters the source's tone and focus. The original says \"In a stay conversation, a supervisor asks ... what keeps them, what might lead them to leave, and what they would change.\" The revision adds \"at their job,\" shifts ‘might lead’ to ‘might prompt,’ and finishes with 'if they could,' which is softer but potentially dilutes the pointed 'what they would change.' Importantly, the original closes: 'It is not an evaluation, and its value depends on what the supervisor does afterward' — a construction that ties the event's value directly to the supervisor’s response. The revision's 'the conversation's usefulness depends on the supervisor’s follow-up actions' is accurate but reworded, moving away from the original’s intent to avoid evaluation. The original wording should be retained for this summary per the program writing standard."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revised 'why it matters' field closely follows the original, expanding in a way that does not distort the foundational meaning. The added phrasing ('show individuals their perspective matters,' 'create opportunities for change') is supported by the original's statement: 'they signal that a person's experience matters.' This change is permissible but could risk padding if taken further."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "This rewrite largely preserves the factual content but intensifies specificity on settings and comfort ('in the setting that best supports their comfort and candor') not present in the source. However, this is not materially misleading as the source says 'whatever setting works for them.' No significant blockers."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The change in sample questions and wording shifts tone from direct, conversational to more formal/professional. All the original questions are substantially represented, and the essence of 'Listen more than you speak' is kept with 'Prioritize listening over speaking.' This does not introduce error or inappropriate complexity."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The revised field slightly increases the prescribed scope ('at least one change you can reasonably make'), but this remains within plausible interpretation of 'choose one thing you can change.' The explanation for anonymity ('protecting team member confidentiality') is added but is implicit in the original's practice note. Not a blocker."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The boundaries guidance remains consistent in action and scope; clarification about not recording details or continuing the discussion matches the intent of the original ('do not record it here'). This is clarifying, not misleading."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1813,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 703,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2516
+    },
+    "review": {
+      "input_tokens": 2002,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 547,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2549
+    }
+  },
+  "createdAt": "2026-11-15T13:41:55.170Z"
+}

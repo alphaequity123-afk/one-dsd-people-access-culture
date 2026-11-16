@@ -1,0 +1,67 @@
+{
+  "target": "workforce.compliance",
+  "kind": "surface",
+  "route": "/consultant/workforce/compliance",
+  "sourceSha256": "a50a8e69b2fa3ffb0a48997f5bed91034f714e664268e2aaa15cc606f430bd90",
+  "status": "model_checked",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "relationship"
+      ],
+      "before": "Listed as an agency area or associated service. This does not establish a direct reporting line.",
+      "after": "The Compliance Office appears as a designated agency area or listed support service, but this listing does not imply a supervisory or formal reporting relationship to other teams or divisions. Confirm any direct oversight or local responsibility through current organizational charts or official agency documentation before making role-based assumptions.",
+      "reason": "Added clarity on the specific distinction between being listed as an agency area and actual reporting authority, and included instruction to check official documentation to resolve ambiguity."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revision adds clarity about what the directory listing means and appropriately cautions users to check official documents before assuming formal authority or reporting relationships. This is consistent with the source (DHS organizational information) and does not introduce unsupported claims. The added explanation increases practical guidance and does not misrepresent source content or legal conditions."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1091,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 108,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1199
+    },
+    "review": {
+      "input_tokens": 811,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 86,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 897
+    }
+  },
+  "createdAt": "2026-11-15T13:37:41.937Z"
+}

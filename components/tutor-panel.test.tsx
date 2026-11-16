@@ -27,7 +27,7 @@ beforeEach(() => { localStorage.clear(); mockFetch({ correct: false, feedback: i
 afterEach(() => { cleanup(); vi.unstubAllGlobals(); localStorage.clear(); });
 
 describe('guided practice panel', () => {
-  it('renders the question, an accessible radio group and the privacy notice; asks for a choice before checking', () => {
+  it('renders the question and an accessible radio group; asks for a choice before checking', () => {
     const view = render(<TutorPanel lessonId="01" />);
     expect(view.getByText(item.question)).toBeTruthy();
     const radios = view.getAllByRole('radio');
@@ -35,7 +35,6 @@ describe('guided practice panel', () => {
     for (const option of item.options) expect(view.getByLabelText(option.text)).toBeTruthy();
     expect(view.getByRole('heading', { name: GUIDANCE_COPY.heading })).toBeTruthy();
     expect(view.getByText(GUIDANCE_COPY.before)).toBeTruthy();
-    expect(view.getByText(GUIDANCE_COPY.notice)).toBeTruthy();
     expect(view.queryByRole('button', { name: GUIDANCE_COPY.getGuidance })).toBeNull();
     fireEvent.click(view.getByRole('button', { name: GUIDANCE_COPY.check }));
     expect(view.getByText(GUIDANCE_COPY.needsChoice)).toBeTruthy();

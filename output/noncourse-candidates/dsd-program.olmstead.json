@@ -1,0 +1,97 @@
+{
+  "target": "dsd-program.olmstead",
+  "kind": "surface",
+  "route": "/one-dsd/programs/olmstead",
+  "sourceSha256": "16b20494a5bf9e8fe8d50e561e72f6ae95f4cc441d25c795159795043f6eb946",
+  "status": "model_checked",
+  "reviewedFieldCount": 4,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "intro"
+      ],
+      "before": "Work toward services in the most integrated setting appropriate to the person.",
+      "after": "Support people in accessing services in the most integrated setting appropriate to each person’s needs, in line with the Olmstead decision. This guides the work of Disability Services Division staff as we identify barriers and compare options so that people with disabilities can live, learn, work, and participate in community life.",
+      "reason": "Expanded and clarified the purpose of working toward integrated settings, explaining the connection to the Olmstead decision and how this shapes DSD staff responsibilities, as well as the practical impact for people with disabilities."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "equityEntryPoints",
+        0
+      ],
+      "before": "Defaults that steer people to segregated settings",
+      "after": "Standard practices or system defaults that may direct people toward segregated residential or service settings",
+      "reason": "Clarified that 'defaults' refers to standard practices or system processes, and specified that these may lead to segregated rather than integrated settings, giving more context for why this is an equity entry point."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "equityEntryPoints",
+        2
+      ],
+      "before": "Data on who moves and who does not",
+      "after": "Data on which people transition to more integrated settings and which remain in less integrated or segregated arrangements",
+      "reason": "Made the entry point more specific by clarifying that the data concern transitions to integrated settings as well as those who do not move, to support a clearer understanding of equity challenges."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The expanded intro accurately reflects the purpose and legal framework established by the Olmstead decision, including the focus on individualized needs, DSD staff roles in identifying barriers and options, and the overarching goal of enabling people with disabilities to integrate into community life. The clarification both improves context for the audience and does not alter source meaning."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The clarified equity entry point for defaults provides useful additional context about what is meant by defaults, namely standard practices or system processes. Specifying the link to segregated settings aligns with the subject of Olmstead and does not misstate the source intent."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The expanded description of data on transitions to integrated settings more precisely reflects the underlying concern: understanding who is able to move to more integrated settings and who is not. This increased specificity does not introduce unsupported policy or erase necessary qualifications."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1149,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 312,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1461
+    },
+    "review": {
+      "input_tokens": 990,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 207,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1197
+    }
+  },
+  "createdAt": "2026-11-15T13:38:34.160Z"
+}

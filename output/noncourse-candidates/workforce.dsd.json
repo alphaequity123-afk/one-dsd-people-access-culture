@@ -1,0 +1,164 @@
+{
+  "target": "workforce.dsd",
+  "kind": "surface",
+  "route": "/consultant/workforce/dsd",
+  "sourceSha256": "103bd4f9e8cf0b132a2ab3a5f4419dfd526d9f82d152e44edccd6aa83ca0dbeb",
+  "status": "needs_revision",
+  "reviewedFieldCount": 9,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "relationship"
+      ],
+      "before": "Within the Aging and Disability Services Administration.",
+      "after": "Part of the Aging and Disability Services Administration.",
+      "reason": "Clarified structure by replacing 'within' with 'part of' for professional precision and to reduce ambiguity regarding hierarchical placement."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "leadership",
+        0
+      ],
+      "before": "Division Director and Deputy Director appear in the public directory.",
+      "after": "Division Director and Deputy Director are listed in the public directory.",
+      "reason": "Streamlined the statement for clarity and consistency in describing directory listings."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "leadership",
+        1
+      ],
+      "before": "The owner describes the Equity and Inclusion Operations Consultant as responsible for operationalizing division equity work. The specific position classification has not been confirmed.",
+      "after": "The Equity and Inclusion Operations Consultant is described as coordinating operational aspects of division equity work, but the precise classification of this position has not been verified.",
+      "reason": "Clarified that description is based on current information, and emphasized that position classification needs to be confirmed, increasing accuracy and specificity."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "roles",
+        1,
+        "text"
+      ],
+      "before": "The owner identifies these areas of experience within the One DSD Team. This is not a complete divisional roster or a confirmed classification assignment.",
+      "after": "These experience areas were identified for the One DSD Team. This is not a full divisional roster or a confirmed job classification.",
+      "reason": "Clarified the limits of the information, using more precise wording to note that not all roles or job classifications are included or confirmed."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "roles",
+        2,
+        "items",
+        0
+      ],
+      "before": "Confirm recurring decisions and tasks with members before assigning learning.",
+      "after": "Check with team members to confirm which recurring decisions and tasks apply before assigning learning activities.",
+      "reason": "Clarified who should be consulted and why—ensuring staff understand the practical step to confirm responsibilities before assigning learning."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "roles",
+        2,
+        "items",
+        1
+      ],
+      "before": "Keep participation in the team separate from a person's formal decision authority.",
+      "after": "Participation in the team does not grant formal decision-making authority; keep this distinction clear when assigning roles or tasks.",
+      "reason": "Clarified the instruction to specify the importance of distinguishing team participation from decision authority, and explained its practical application."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "roles",
+        2,
+        "items",
+        2
+      ],
+      "before": "Record responsibilities that continue when a position becomes vacant or moves.",
+      "after": "Document responsibilities that persist when a position becomes vacant or changes, so essential tasks are not missed.",
+      "reason": "Explained why responsibilities should be recorded—this ensures ongoing work is tracked and not overlooked during transitions."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "'Part of' instead of 'Within' does not materially misstate the public source (which lists DSD under Aging and Disability Services Administration); both are colloquial and interchangeable for describing the organizational relationship, but neither 'part of' nor 'within' adds factual precision over the other. It's a permissible rewording for plainness, not a blocker."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "'Are listed in the public directory' and 'appear in the public directory' have the same meaning for the context. No factual error created. Statement remains supported by the public directory link."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The source only states the owner describes the Equity and Inclusion Operations Consultant as responsible for operationalizing division equity work, and that the specific position classification has not been confirmed. The rewrite introduces new language—'coordinating operational aspects'—without evidence and loses the wording 'the owner describes,' which creates ambiguity about the source and authority of the information. Do not alter the quoted or summarized meaning."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "Both versions explain the information is not a full roster or confirmed job classification, and the edit slightly simplifies this. The transition from 'owner identifies' to 'were identified' reduces source clarity by not specifying who identified the areas, but does not mislead about the lack of confirmation. Not a blocker."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "This is a slight elaboration for clarity and does not add or change any requirement unsupported by the source."
+      },
+      {
+        "fieldId": 6,
+        "severity": "blocker",
+        "finding": "The edited version asserts 'participation in the team does not grant formal decision-making authority' as a generalized principle. The source only instructs that team participation must be kept separate from formal decision authority. Do not add categorical statements about participation or authority that are not in the source."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "The edit adds explanation for documenting responsibilities (so tasks are not missed), which does not conflict with the reason behind the original instruction and is plausible as clarifying rather than inventing a new policy. Not a blocker."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1509,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 389,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1898
+    },
+    "review": {
+      "input_tokens": 1409,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 466,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1875
+    }
+  },
+  "createdAt": "2026-11-15T13:37:43.668Z"
+}

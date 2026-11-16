@@ -1,0 +1,123 @@
+{
+  "target": "support.request.dsd",
+  "kind": "surface",
+  "route": "/support/request",
+  "sourceSha256": "6204080e45b3850d9a08ce837165f13a22ebb5ef6a163c7eef1319dcc8adecca",
+  "status": "needs_revision",
+  "reviewedFieldCount": 7,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "previewTitle"
+      ],
+      "before": "Find the responsible person or office",
+      "after": "Identify who to consult for your question",
+      "reason": "The new title clarifies that the purpose is to help staff determine the right contact for their specific issue. It avoids the vague wording 'responsible person or office' and directly reflects the function of this guidance."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "openLede"
+      ],
+      "before": "Share a few details so the Equity and Inclusion Operations Consultant can understand what you need and prepare. You can receive support without a live meeting. This form does not schedule a meeting or send a calendar invitation.",
+      "after": "Briefly explain your situation so the Equity and Inclusion Operations Consultant can review your request and determine how to assist you. You do not need to schedule a meeting or wait for a live call—written support is available. This form will not add anything to your calendar.",
+      "reason": "This revision more specifically describes what information to give, the consultant’s review process, and clarifies available support channels. It avoids repeating that it doesn’t 'schedule a meeting' and instead focuses on the practical effect."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "previewLede"
+      ],
+      "before": "See what information a consultation request would include and review the summary it would create. Requests are not open yet, so nothing is created, stored, or sent to the Equity and Inclusion Operations Consultant.",
+      "after": "Review the type of information you would submit for a consultation and see the summary that would be generated. Because requests are not currently open, nothing you enter is stored or sent to the Equity and Inclusion Operations Consultant.",
+      "reason": "The revised text better explains the preview’s function and outcomes for the user, making the process and limitation clear."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "openPrivacyNote"
+      ],
+      "before": "Leave out names, case details, medical or personnel information, complaints, and anything else that should remain private. After you submit, only the consultant and people authorized to support this service can see the request.",
+      "after": "Exclude names, case specifics, medical or HR details, formal complaints, or any other sensitive information that is not appropriate to share. After you submit, only the consultant and authorized support staff will be able to review your request details.",
+      "reason": "The wording now clarifies which categories of private information should not be entered, and rephrases access in a professional manner consistent with record-keeping and confidentiality practices."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "previewPrivacyNote"
+      ],
+      "before": "Leave out names and private details. What you enter stays on this page and is not saved or sent to the consultant.",
+      "after": "Do not include names or sensitive details. Any text you enter here remains on this page and will not be saved or sent to the consultant.",
+      "reason": "This revision gives a clearer instruction about which information is excluded and the outcome, matching privacy expectations for a preview environment."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The change from 'Find the responsible person or office' to 'Identify who to consult for your question' alters the source's neutral language. The source avoids implying direct staff action ('Identify') and does not frame the page purpose as helping staff deduce contacts, but as providing information about responsibility. The original is broader ('responsible person or office'), consistent with source practice, and does not presume the process is limited to seeking advice for 'your question.' This is a source-based nuance; the proposed change constrains scope and intent, so is not fully supported."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revised openLede still preserves all key information from the source, with slightly more specificity and no change to effect or meaning. Both versions clarify that live meetings are not required and the calendar is not affected. No issues."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The previewLede revision tightens language and clarifies limitations, but does not introduce or omit anything of legal or practical significance."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The revised openPrivacyNote rearranges and clarifies which information should be excluded, but does not add or remove substantive exclusions when compared with the source text. The clarification about who can access after submission is consistent with practices outlined in the source."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The updated previewPrivacyNote uses slightly stronger command language ('Do not include' vs. 'Leave out'), but this does not change scope or effect, and the assurance that data is not saved or sent remains accurate."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1462,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 418,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1880
+    },
+    "review": {
+      "input_tokens": 1411,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 347,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1758
+    }
+  },
+  "createdAt": "2026-11-15T13:38:08.809Z"
+}

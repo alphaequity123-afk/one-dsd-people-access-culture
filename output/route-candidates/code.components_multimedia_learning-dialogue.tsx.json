@@ -1,0 +1,81 @@
+{
+  "target": "code.components/multimedia/learning-dialogue.tsx",
+  "kind": "surface",
+  "route": "components/multimedia/learning-dialogue.tsx",
+  "sourceSha256": "43d45d973e388a56e4eb6e0f551a489f3cfbfc87eac185f9d0bd8de681f72282",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "You can listen or read along. The spoken text is available beside each recording.",
+      "after": "You may listen to the audio or follow the written text shown next to each recording. This arrangement helps you compare the conversation as spoken and as written, supporting both understanding and review.",
+      "reason": "Expanded the explanation to clarify how the layout supports different approaches to following the conversation and why pairing audio with text helps in understanding and review. The wording now addresses staff and provides context for the instructional design."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field2"
+      ],
+      "before": "What might you say next in a similar conversation? Think it through privately, or jot down a line and what you hope it would help you understand.",
+      "after": "Consider what you might say next in a similar situation. Briefly write your next line and what you want to learn from the response. This practice helps organize your approach when responding or asking follow-up questions.",
+      "reason": "Rewrote to connect the suggestion to professional practice and clarify the point of the activity—structuring a response or question. This addresses why the reflection exercise matters for staff development."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The replacement text expands the instruction and rationale, but the source sentence ('You can listen or read along. The spoken text is available beside each recording.') is a simple usability note to learners. The proposed explanation ('You may listen to the audio or follow the written text shown next to each recording. This arrangement helps you compare the conversation as spoken and as written, supporting both understanding and review.') introduces new interpretation about comparing audio and text and supporting review, which is not present in the source. While these may be reasonable instructional observations, they do not appear in the original text or as an official lesson justification, and thus alter the precise meaning and scope per the program writing standard."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revision on field2 adds a rationale for the exercise ('This practice helps organize your approach when responding or asking follow-up questions.'), which is not stated in the provided source, though it does logically follow from the activity. The instruction itself ('Consider what you might say next...') remains faithful to the original. The added rationale could be flagged as unsupported expansion, but it does not fundamentally change the instruction or introduce policy not present."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2011,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 191,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2202
+    },
+    "review": {
+      "input_tokens": 1806,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 258,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2064
+    }
+  },
+  "createdAt": "2026-11-15T13:54:35.516Z"
+}

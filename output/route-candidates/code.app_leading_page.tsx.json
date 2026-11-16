@@ -1,0 +1,380 @@
+{
+  "target": "code.app/leading/page.tsx",
+  "kind": "surface",
+  "route": "/leading",
+  "sourceSha256": "0bb7222e519c52dfaab138e8bbb5a06805349bd5d2e6ac13cff4060dcbfe1680",
+  "status": "needs_revision",
+  "reviewedFieldCount": 33,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Start from the decision in front of you. Nine kinds of decision, each with plain questions and one course to start with.",
+      "after": "Start from the real decision you are facing. This page lists nine types of decision common in DSD work. For each, you will find practical questions to guide you, and a recommended starting course.",
+      "reason": "Clarifies the intended sequence, specifies that the nine decisions are common in DSD, and that users will find questions and a starting course for each. This improves the connection to the DSD context and shows why the structure matters."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field2"
+      ],
+      "before": "Find learning and tools for the decisions and responsibilities in front of you.",
+      "after": "Find learning options and tools matched to your immediate decisions and work responsibilities.",
+      "reason": "Makes the instruction more specific by indicating that resources are matched to actual decisions and responsibilities encountered in the job, rather than being generic."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field3"
+      ],
+      "before": "Connect a goal with a chance to practice and get feedback.",
+      "after": "Connect a goal with practical ways to try new skills, reflect, and receive specific feedback tied to your work.",
+      "reason": "Clarifies that feedback is relevant to practice, and highlights the purpose of linking goals with actual skill-building activities in context."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field5"
+      ],
+      "before": "Find questions and tools for a decision in front of you.",
+      "after": "Find specific questions and practical tools for a decision currently in front of you.",
+      "reason": "Adds emphasis on immediacy and practicality, connecting the resource directly to real decisions rather than hypothetical ones."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field7"
+      ],
+      "before": "Explore all leadership resources",
+      "after": "See all leadership guidance and resources available to support your work.",
+      "reason": "Clarifies 'leadership resources' as usable guidance and resources that directly support staff work, bridging the general title with actual intent."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field9"
+      ],
+      "before": "Whether you are exploring leadership, leading a team or shaping direction across the division, find learning and practical tools for the decisions and responsibilities in front of you.",
+      "after": "Whether your current role involves exploring leadership, supervising a team, or contributing to strategy across the division, this site provides clear learning and tools for the decisions and responsibilities in your daily work.",
+      "reason": "Reframes to clarify that resources apply regardless of formal position, and that practical tools are relevant to concrete responsibilities and decisions."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field10"
+      ],
+      "before": "Everything here is public, and anyone can use it. You can start anywhere and skip anything.",
+      "after": "All resources here are public and open to any user. You may choose whichever parts fit your needs and skip sections that do not apply to your current situation.",
+      "reason": "Removes vague 'anyone can use it' in favor of explicitly stating public/open, and explains the purpose—users can tailor their participation based on their current context."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "field11"
+      ],
+      "before": "Leadership can begin before a formal role. Choose a starting point that fits your work; these are invitations, not assignments or assessments.",
+      "after": "Leadership action is not limited to those with a formal title or authority. Choose whichever entry point best fits your current work; these options are invitations to learn or act when needed, not assignments or performance measures.",
+      "reason": "Clarifies that anyone may use these starting points, explains why, and notes that there is no assessment linked to participation."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "field12"
+      ],
+      "before": "Connect an interest or aspiration with an accessible opportunity to practice, support and feedback.",
+      "after": "Link your current interest or development goal with a concrete opportunity to practice, receive support, and get feedback relevant to your role.",
+      "reason": "Clarifies that the opportunity is specific and directly supports professional growth, not just an aspiration."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "field14"
+      ],
+      "before": "Find questions and resources for hiring, access, feedback, team culture and policy.",
+      "after": "Find guiding questions and focused resources for hiring, expanding access, building feedback channels, supporting team culture, and addressing policy decisions.",
+      "reason": "Specifies the types of decisions staff might face, clarifies what resources purposefully address."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "field16"
+      ],
+      "before": "See how sixteen leadership approaches handle conflict and affect equity and inclusion, with scenarios, a practice rubric and a capstone.",
+      "after": "Explore how sixteen different leadership approaches handle conflict, support equity and inclusion, and connect to real scenarios. Review sample cases, a structured practice rubric, and an optional capstone.",
+      "reason": "Clarifies how the approaches relate to work situations, what the rubric and capstone offer, and removes redundancy."
+    },
+    {
+      "fieldId": 11,
+      "path": [
+        "field18"
+      ],
+      "before": "For managers, supervisors and the consultant (access key required). Who gets each employment service, by race and ethnicity, fiscal years 2022 to 2024.",
+      "after": "Available to managers, supervisors, and the DSD consultant (access key required). Data shows which groups use each employment service, broken down by race and ethnicity, for fiscal years 2022–2024.",
+      "reason": "Clarifies audience, introduces what the data actually shows, and presents the fiscal years as a data range—not as a list."
+    },
+    {
+      "fieldId": 12,
+      "path": [
+        "field19"
+      ],
+      "before": "For managers, supervisors and the consultant (access key required). Which communities have organizations on record, figures, and a completed community review.",
+      "after": "Available to managers, supervisors, and the DSD consultant (access key required). Review which communities have organizations on record, key figures, and whether a community review has been completed.",
+      "reason": "Clarifies audience, defines the figures and purpose, and condenses the accessibility information."
+    },
+    {
+      "fieldId": 13,
+      "path": [
+        "field20"
+      ],
+      "before": "Lead leaders and set direction",
+      "after": "Support leaders and set direction",
+      "reason": "Aligns heading language with professional tone and clarifies the focus on supporting leaders and organizational direction-setting. 'Lead leaders' is ambiguous; support clarifies intent."
+    },
+    {
+      "fieldId": 14,
+      "path": [
+        "field21"
+      ],
+      "before": "Support supervisors and managers, examine organizational practices, and connect decisions to accountability.",
+      "after": "Support supervisors and managers, review organizational practices, and connect real decisions to accountability measures.",
+      "reason": "Adds specificity about examining practices and spells out how decisions relate to accountability, improving professional grounding."
+    },
+    {
+      "fieldId": 15,
+      "path": [
+        "field22"
+      ],
+      "before": "Plan for continuity, share knowledge and make development opportunities visible and accessible.",
+      "after": "Plan for continuity, share knowledge, and make sure development opportunities are visible and accessible to everyone in your work area.",
+      "reason": "Clarifies the goal of equitable visibility and access to development opportunities within work areas."
+    },
+    {
+      "fieldId": 16,
+      "path": [
+        "field24"
+      ],
+      "before": "Learn, reflect, try it in your real work and note what changed, at your own pace and in any order.",
+      "after": "Take time to learn, reflect, apply your learning to real DSD work, and note any changes. Move at your own pace, in any order.",
+      "reason": "Emphasizes application to real work and highlights autonomy, clarifying learning is self-paced and non-linear."
+    },
+    {
+      "fieldId": 17,
+      "path": [
+        "field25"
+      ],
+      "before": "Each decision opens with practical questions, a course, a job aid where available, and people or offices who may help.",
+      "after": "Each decision starts with practical questions, a recommended course, a job aid when available, and a list of staff or offices who can offer support or answer questions.",
+      "reason": "Clarifies what starts each decision section and itemizes what is consistently offered, specifying the practical support."
+    },
+    {
+      "fieldId": 18,
+      "path": [
+        "field26"
+      ],
+      "before": "The Equity Analysis Toolkit is required of all staff of the Minnesota Department of Human Services, regardless of status. Everything else here is voluntary.",
+      "after": "All Minnesota Department of Human Services staff are required to complete the Equity Analysis Toolkit, regardless of job status or assignment. All other offerings on this page are voluntary.",
+      "reason": "Clarifies to whom the requirement applies and separates required and voluntary offerings."
+    },
+    {
+      "fieldId": 19,
+      "path": [
+        "field27"
+      ],
+      "before": "These are suggestions. Nobody is enrolled, and nobody else can see where you are.",
+      "after": "These paths are suggestions. Enrollment is not required, and your progress or selections are not visible to anyone except yourself.",
+      "reason": "Clarifies intent, and states privacy in terms of progress and choices—improving specificity and reducing ambiguity."
+    },
+    {
+      "fieldId": 20,
+      "path": [
+        "field28"
+      ],
+      "before": "Use a tool to prepare for a real conversation or decision. Include the people affected, follow the applicable policy and work with the office responsible for the decision.",
+      "after": "Use these tools to prepare for real conversations or decisions in your work. Include people who are affected by the issue, check relevant policies, and work directly with the office responsible for the decision.",
+      "reason": "Gives clearer instruction about what 'use a tool' involves and why it matters, specifying the importance of including affected people and checking policy."
+    },
+    {
+      "fieldId": 21,
+      "path": [
+        "field29"
+      ],
+      "before": "Consider effects, evidence, alternatives and who needs to be involved.",
+      "after": "Consider the possible effects, supporting evidence, alternative approaches, and identify everyone who should be included in the discussion or decision.",
+      "reason": "Expands to clarify what types of effects and alternatives to consider, and why identifying key participants matters."
+    },
+    {
+      "fieldId": 22,
+      "path": [
+        "field30"
+      ],
+      "before": "Practice across the employee life cycle",
+      "after": "Apply skills throughout the employee life cycle",
+      "reason": "Clarifies action orientation and consistent language (parallel to other heading changes)."
+    },
+    {
+      "fieldId": 23,
+      "path": [
+        "field31"
+      ],
+      "before": "Explore role design, development, advancement, retention, succession and transitions.",
+      "after": "Review how to design roles, support staff development and mobility, retain employees, plan for advancement or succession, and handle transitions.",
+      "reason": "Expands and clarifies each area—retention, advancement, succession, transition—as a continuum tied to organizational practice."
+    },
+    {
+      "fieldId": 24,
+      "path": [
+        "field33"
+      ],
+      "before": "Prepare a mentoring conversation",
+      "after": "Prepare for a mentoring conversation",
+      "reason": "Small change to signal the action of preparing, clarifying intent to use a tool or guide."
+    },
+    {
+      "fieldId": 25,
+      "path": [
+        "field34"
+      ],
+      "before": "Name a question, consider the support you need and choose a useful next step.",
+      "after": "Identify your main question, consider the support you would benefit from, and select a practical next step for the mentoring relationship.",
+      "reason": "Clarifies the process for preparing: naming a question, support needed, and choosing a next action; links to the intended practical outcomes."
+    },
+    {
+      "fieldId": 26,
+      "path": [
+        "field35"
+      ],
+      "before": "Connect critical work, a development opportunity, knowledge sharing and follow-up.",
+      "after": "Connect critical tasks, upcoming development opportunities, knowledge sharing, and plans for follow-up action.",
+      "reason": "Clarifies what succession planning should connect and makes the professional intent explicit."
+    },
+    {
+      "fieldId": 27,
+      "path": [
+        "field37"
+      ],
+      "before": "Development and continuity drafts stay on their page until you copy or download them. Do not enter names or private personnel details. They do not replace the applicable Human Resources or selection process.",
+      "after": "Drafts for development and continuity stay only on their page until you copy or download them. Do not enter anyone's name or private personnel details. These tools do not substitute for official Human Resources or selection processes.",
+      "reason": "Clarifies data storage limits, purpose, and the distinction from HR processes in professional terms."
+    },
+    {
+      "fieldId": 28,
+      "path": [
+        "field38"
+      ],
+      "before": "Explore leadership approaches, power and inclusive practice",
+      "after": "Explore leadership approaches, organizational power dynamics, and inclusive practices.",
+      "reason": "Expands 'power' to 'organizational power dynamics' for clarity and professional context."
+    },
+    {
+      "fieldId": 29,
+      "path": [
+        "field39"
+      ],
+      "before": "Find the right person or office",
+      "after": "Identify the appropriate person or office for your question or decision.",
+      "reason": "Clarifies that the goal is to identify—not just 'find'—and that this applies to both questions and decisions."
+    },
+    {
+      "fieldId": 30,
+      "path": [
+        "field42"
+      ],
+      "before": "Native American and Tribal-specific guidance",
+      "after": "Native American and Tribal guidance",
+      "reason": "Removes redundancy—'Tribal' includes Native American; makes heading succinct and professionally neutral."
+    },
+    {
+      "fieldId": 31,
+      "path": [
+        "field43"
+      ],
+      "before": "About participation and privacy",
+      "after": "Participation and privacy",
+      "reason": "Matches formality with brevity. 'About' is not needed for a heading in this context; improves parallel structure with other headings."
+    },
+    {
+      "fieldId": 32,
+      "path": [
+        "field44"
+      ],
+      "before": "Please do not type anyone&apos;s name or details into Ask. It answers general questions only.",
+      "after": "Do not enter anyone’s name or private personnel information in Ask. It provides general information only.",
+      "reason": "Clarifies data entry prohibition and defines Ask as offering only general information, using formal professional language."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "Field0 rewrites the original summary. 'Start from the real decision you are facing' changes meaning from an invitational framing to an instruction, while 'This page lists nine types of decision common in DSD work' introduces a specific DSD scope not directly present in the source. The source: 'Start from the decision in front of you. Nine kinds of decision, each with plain questions and one course to start with.' does not mention DSD specifically nor does it require that the user is facing a decision, only that the page presents nine types. The change introduces scope and intent not documented in the full source and could exclude intended users."
+      },
+      {
+        "fieldId": 6,
+        "severity": "blocker",
+        "finding": "Field10 changes 'Everything here is public, and anyone can use it. You can start anywhere and skip anything.' to 'All resources here are public and open to any user. You may choose whichever parts fit your needs and skip sections that do not apply to your current situation.' The extra explanation about 'fit your needs' and 'current situation' adds specificity not sustained by the source. The original statement is a general assurance, intentionally brief. Adding the user's 'current situation' introduces interpretive context not in evidence."
+      },
+      {
+        "fieldId": 7,
+        "severity": "blocker",
+        "finding": "Field11 expands 'Leadership can begin before a formal role. Choose a starting point that fits your work; these are invitations, not assignments or assessments.' to include 'Leadership action is not limited to those with a formal title or authority. Choose whichever entry point best fits your current work; these options are invitations to learn or act when needed, not assignments or performance measures.' The original does not state 'performance measures' or 'act when needed,' nor does it apply 'action' or broaden eligibility with extra explanation. The source intentionally retains a neutral, concise assurance. Do not add qualifiers regarding performance or assessment beyond 'assignments or assessments.'"
+      },
+      {
+        "fieldId": 18,
+        "severity": "blocker",
+        "finding": "Field26 changes 'The Equity Analysis Toolkit is required of all staff of the Minnesota Department of Human Services, regardless of status. Everything else here is voluntary.' to 'All Minnesota Department of Human Services staff are required to complete the Equity Analysis Toolkit, regardless of job status or assignment. All other offerings on this page are voluntary.' The phrase 'required to complete' broadens the evidence beyond the source wording ('required of'). The full source retains the original policy language for what is required; do not reword official requirements. Also, the source's 'regardless of status' should not be expanded to include 'job status or assignment' unless the policy document itself uses that phrasing."
+      },
+      {
+        "fieldId": 19,
+        "severity": "blocker",
+        "finding": "Field27 changes 'These are suggestions. Nobody is enrolled, and nobody else can see where you are.' to 'These paths are suggestions. Enrollment is not required, and your progress or selections are not visible to anyone except yourself.' The new phrase 'progress or selections are not visible to anyone except yourself' is not supported in the full source. The source is intentionally brief and does not make guarantees about tracking or data. Unless privacy mechanics are documented elsewhere, do not add guarantees not found in the source."
+      },
+      {
+        "fieldId": 27,
+        "severity": "note",
+        "finding": "Field37 improves clarity about privacy: 'Drafts for development and continuity stay only on their page until you copy or download them. Do not enter anyone's name or private personnel details. These tools do not substitute for official Human Resources or selection processes.' The rewording remains faithful to the instructions and restrictions in the source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 5585,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 1926,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 7511
+    },
+    "review": {
+      "input_tokens": 6875,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 832,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 7707
+    }
+  },
+  "createdAt": "2026-11-15T13:49:25.407Z"
+}

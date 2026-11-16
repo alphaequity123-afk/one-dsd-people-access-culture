@@ -1,0 +1,186 @@
+{
+  "target": "resource.ja-leadership-criteria-job-relatedness",
+  "kind": "resource",
+  "route": "/library/ja-leadership-criteria-job-relatedness",
+  "sourceSha256": "3006621d8de6551c167305f05af270b40481f1eabb507090bc62b5b59674f250",
+  "status": "model_checked",
+  "reviewedFieldCount": 9,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Review formal and informal criteria for nominating, selecting, and promoting people into lead roles, such as executive presence, quick verbal response, travel, long hours, and always-on availability. For each, name what leaders actually do that it predicts, or replace it.",
+      "after": "Review both formal and informal criteria for nominating, selecting, and promoting staff into lead roles—including executive presence, quick verbal response, travel expectations, long hours, and always-on availability. For each criterion, identify what actual leadership work it predicts or replace it with specific, observable requirements.",
+      "reason": "Clarified that both formal and informal criteria must be considered and added examples. Emphasized the need for criteria to tie directly to specific leadership work, with reasoning for why unspecific or proxy criteria should be replaced."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Leadership criteria are rarely written down and rarely tested. The ones that live in people's heads tend to reward a narrow style of presence and stamina rather than the work of leading.",
+      "after": "Most leadership criteria are undocumented and rarely evaluated. Informal expectations often reward limited styles of interaction and stamina, rather than aligning with the real demands and impact of leadership work. This can unintentionally exclude capable staff, especially those with disabilities, and fails to promote inclusion or effectiveness.",
+      "reason": "Expanded on the risks of undocumented and untested criteria by explaining how they can exclude qualified staff and fail to support broader organizational effectiveness."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "List every criterion actually used. Include the unwritten ones: who gets called confident, who is seen as ready, who is invited to present.",
+      "after": "List all criteria used to assess or advance candidates, including any unwritten expectations. Consider who is labeled confident, who is perceived as ready, and who receives opportunities for visibility or presentation.",
+      "reason": "Specified that criteria should include both written and unwritten expectations and clarified examples for greater specificity and practical application."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "For each criterion, write the leadership work it predicts. Decisions made, people developed, conflicts resolved, plans delivered, communities served. If you cannot connect it to that work, it is a proxy.",
+      "after": "For each criterion, state which concrete leadership responsibilities it predicts. Examples include: making decisions, developing staff, resolving conflicts, delivering programs or plans, and serving communities. If the criterion cannot be directly connected to these areas, treat it as a proxy—and consider replacing it.",
+      "reason": "Clarified that criteria must be directly tied to concrete leadership responsibilities, provided clear examples, and explained what to do if a criterion is merely a proxy."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Ask who each criterion screens out. Quick verbal response screens out people who process or communicate differently. Travel and long hours screen out people with energy, mobility, or care constraints. Always-on availability screens out most people with a disability and many without one.",
+      "after": "Identify whom each criterion might screen out. For instance, requiring quick verbal responses can disadvantage people who communicate or process information differently. Expectations for travel or frequent long hours can exclude those with energy limitations, mobility differences, or caregiving responsibilities. Demanding always-on availability will often exclude staff with disabilities and many others as well.",
+      "reason": "Added clarity with examples of how specific criteria may exclude particular groups, and linked examples to common workplace realities to promote practical assessment."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Replace proxies with observable leadership behaviors and give people several ways to show them: written work, a portfolio, a structured conversation, a work sample with time to prepare.",
+      "after": "Replace proxy measures with observable leadership behaviors and offer multiple ways for candidates to demonstrate them. These might include evaluating written work, a portfolio, a structured interview, or a work sample with sufficient time to prepare.",
+      "reason": "Clarified the importance of observable measures and reinforced the need to provide different demonstration options to accommodate diverse abilities."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Offer accommodation for every stage in the same sentence you use for scheduling, to everyone, without asking why.",
+      "after": "When scheduling any part of the process, offer accommodations to everyone in the same sentence, without asking for a reason. This normalizes the option and reduces barriers to participation.",
+      "reason": "Expanded the reasoning to highlight that proactively offering accommodations reduces barriers and supports equal participation."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "Prepare the panel on disability bias before the interviews, and use a written rubric applied the same way to everyone.",
+      "after": "Ensure interview panels are trained to recognize and address disability bias before the process begins. Use a standardized, written rubric and apply it consistently to all candidates.",
+      "reason": "Clarified the need to prepare panels before interviews and explained that consistent use of a written rubric helps reduce bias and standardizes evaluation."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "body",
+        6
+      ],
+      "before": "Record who reviewed the criteria: leadership, the HR partner, and the Equity Director. Keep the reasoning with the pathway map.",
+      "after": "Document who participated in reviewing the criteria—such as leadership team members, the HR partner, and the Equity Director—and include the rationale with the pathway map. This record supports decision transparency and accountability.",
+      "reason": "Clarified the importance of documenting reviewers and their reasoning and explained that this improves transparency and accountability."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revised summary remains within scope. It makes explicit what was implicit: both formal and informal criteria must be considered, and it rewords the need for observable leadership work. It does not overstate or misattribute the original guidance."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The after version of 'why it matters' offers more detail but does not overreach; it elaborates the risks of undocumented criteria with respect to inclusion, but this is consistent with the intent of the original."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revision makes explicit the instruction to consider both formal and informal criteria, and expands the examples slightly. This increase in specificity is faithful to the source's intent."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The changes provide more concrete language, clarifying the expectation that criteria directly relate to leadership duties. Treating unrelated criteria as proxies and considering their replacement is supported in the original."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "This section rephrases and expands on examples of exclusion by specific criteria. All examples listed are either present in the original or are faithful expansions and thus supported."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The addition of 'offer multiple ways for candidates to demonstrate' simply expands on 'give people several ways to show them' from the original, which is appropriate."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "Adding rationale about normalizing accommodations is a faithful clarification to the intent of the original policy, not a policy expansion."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "The revision clarifies that panels should be prepared before the process and that consistent rubrics help reduce bias, matching the underlying meaning."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "The revision clarifies the purpose of documenting reviewers and rationale without expanding requirements."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1963,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 760,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2723
+    },
+    "review": {
+      "input_tokens": 2271,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 402,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2673
+    }
+  },
+  "createdAt": "2026-11-15T13:43:00.324Z"
+}

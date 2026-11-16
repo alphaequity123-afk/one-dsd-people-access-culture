@@ -1,0 +1,81 @@
+{
+  "target": "code.components/intake-client.tsx",
+  "kind": "surface",
+  "route": "components/intake-client.tsx",
+  "sourceSha256": "0ec77d8a2e9e20ab1054f1bef292b86b13785fa8fc752c7910a0dbd7d20c6266",
+  "status": "needs_revision",
+  "reviewedFieldCount": 29,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Please keep both. You will need the reference ID and access key to check or withdraw the request. They remain available until you close this tab",
+      "after": "Keep both the reference ID and access key. You will need them if you want to check or withdraw this request. Both remain available until you close this tab.",
+      "reason": "This revision clarifies why keeping both the reference ID and access key is necessary and explains that access persists only for the session. It connects the information more directly to a real staff purpose."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": ". Anyone using this computer may see a copy you chose to save. Deleting that copy does not withdraw or delete the request.",
+      "after": "If you chose to save your request details on this device, anyone using it may see them. Deleting a saved copy from your device does not cancel or remove the request itself.",
+      "reason": "The revision separates storage and withdrawal actions, notes visibility risk on a shared device, and clarifies the difference between deleting a local copy and withdrawing a request. This makes the reasoning for the instruction explicit."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The revised text ('Keep both the reference ID and access key...') changes the tone, order, and detail from the original source. The source is an official eligibility-tracking explanation: 'Please keep both. You will need the reference ID and access key to check or withdraw the request. They remain available until you close this tab...' The original is already clear that both credentials must be retained for reference purposes. The proposed replacement omits 'Please', adds 'if you want to', reorders statements, and is less formal. This is not supported by the program writing standard, which requires preservation of official records and their substantive explanations."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The proposed change ('If you chose to save your request details on this device ... does not cancel or remove the request itself') diverges from the official program explanation. The source says: 'Anyone using this computer may see a copy you chose to save. Deleting that copy does not withdraw or delete the request.' The edit introduces new language ('cancel or remove'), shifts to a hypothetical, and reorganizes the statement, which is not permitted for protected program language. The original wording's relationship between device storage and request status must be preserved exactly as evidence and for clarity in accountability."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 9527,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 237,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 9764
+    },
+    "review": {
+      "input_tokens": 8555,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 280,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 8835
+    }
+  },
+  "createdAt": "2026-11-15T13:53:52.469Z"
+}

@@ -1,0 +1,81 @@
+{
+  "target": "code.components/dsd-program-footer.tsx",
+  "kind": "surface",
+  "route": "components/dsd-program-footer.tsx",
+  "sourceSha256": "bdf116a8caf3b768f677c71b722719c96822327b9b73b839579bb5a2c5b366a8",
+  "status": "needs_revision",
+  "reviewedFieldCount": 4,
+  "changes": [
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "For leaders, supervisors, managers, and directors",
+      "after": "Guidance for DSD leaders, supervisors, managers, and directors",
+      "reason": "Clarified intent and made the audience explicit, supporting precision while preserving the list's specificity."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field5"
+      ],
+      "before": "Participation in this program is voluntary. Keep private client, case, health, and personnel information out of questions and learning notes. This resource does not replace official DHS systems, policies, or required training.",
+      "after": "Participation in this program is voluntary. Do not include private client, case, health, or personnel information in questions or learning notes. This resource adds to, but does not replace, official DHS systems, policies, or required training.",
+      "reason": "Clarified sentence structure and made the list of protected information parallel for easier reading. Emphasized that the resource supplements rather than substitutes for official materials, supporting practical understanding."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The change from 'For leaders, supervisors, managers, and directors' to 'Guidance for DSD leaders, supervisors, managers, and directors' introduces two unsupported alterations. First, the original string is a navigation link label matching the source code exactly—'For leaders, supervisors, managers, and directors'. The revised version both changes the heading ('Guidance for') and adds 'DSD' as a modifier, which are not in the source. Field labels for navigation must match the source for clarity and integrity."
+      },
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "The revised privacy/disclaimer text ('Do not include... This resource adds to, but does not replace, official DHS systems, policies, or required training.') is a change in both wording and meaning. The original source states: 'Keep private client, case, health, and personnel information out of questions and learning notes. This resource does not replace official DHS systems, policies, or required training.' The revision omits the original's phrasing ('Keep ... out of ...'), which is a practical instruction, and instead uses 'Do not include ... in ...'. This is a minor change, but the revised statement about supplementation ('adds to, but does not replace') introduces a different legal and practical assurance than simply 'does not replace'. The original does not commit to supplementing or adding to official resources, only stating it is not a replacement. The revision is unsupported and changes the legal condition."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1504,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 154,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1658
+    },
+    "review": {
+      "input_tokens": 1210,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 320,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1530
+    }
+  },
+  "createdAt": "2026-11-15T13:53:11.266Z"
+}

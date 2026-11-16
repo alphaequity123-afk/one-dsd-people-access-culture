@@ -1,0 +1,45 @@
+
+ RUN  v5.0.5 C:/Users/garyb/Projects/one-dsd-writing-standard-20261115
+
+ ❯ |node| lib/learning/resource-media-renderer.test.ts (4 tests | 1 failed) 860ms
+   × encodes a GEFen narrated video with accessible caption and audio tracks 366ms
+ ❯ |node| lib/downloads/adapters/hub.test.ts (42 tests | 1 failed) 32910ms
+   ❯ hub downloads (42)
+     × resolves and renders every community page 20014ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |node| lib/learning/resource-media-renderer.test.ts > encodes a GEFen narrated video with accessible caption and audio tracks
+Error: encoding_failed
+ ❯ encodeVideo lib/learning/resource-media-renderer.ts:347:13
+    345|         sources.length ? `Readings ${sources.join(", ")} · See the tra…
+    346|     } catch {
+    347|       throw new ResourceMediaRenderError("encoding_failed");
+       |             ^
+    348|     }
+    349|     await ffmpeg(binary, cwd, [
+ ❯ Module.renderResourceMedia lib/learning/resource-media-renderer.ts:396:16
+ ❯ lib/learning/resource-media-renderer.test.ts:105:18
+ ❯ withJob lib/learning/resource-media-renderer.test.ts:71:5
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  |node| lib/downloads/adapters/hub.test.ts > hub downloads > resolves and renders every community page
+Error: Test timed out in 20000ms.
+If this is a long-running test, pass a timeout value as the last argument or configure it globally with "testTimeout".
+ ❯ lib/downloads/adapters/hub.test.ts:134:3
+    132|   });
+    133|
+    134|   it("resolves and renders every community page", async () => {
+       |   ^
+    135|     expect(COMMUNITY_IDS.length).toBeGreaterThan(0);
+    136|     for (const id of COMMUNITY_IDS) {
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  2 failed (2)
+      Tests  2 failed | 44 passed (46)
+   Start at  15:04:17
+   Duration  49.37s (tests 67%, transform 22%, import 10%)
+

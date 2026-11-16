@@ -1,0 +1,207 @@
+{
+  "target": "code.app/learn/collaboration/page.tsx",
+  "kind": "surface",
+  "route": "/learn/collaboration",
+  "sourceSha256": "b32bde4c8777105e352e5f76326ab3432ecf1445f4e92c35d342d908d7b2f311",
+  "status": "needs_revision",
+  "reviewedFieldCount": 11,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Strengthen your team, work across the Disability Services Division and the Aging and Disability Services Administration, and collaborate with partners. Find learning at Foundation, Intermediate, and Advanced levels.",
+      "after": "Build your team's skills, work with others across the Disability Services Division (DSD) and the Aging and Disability Services Administration (ADSA), and strengthen collaboration with partners. Find learning at Foundation, Intermediate, and Advanced levels tailored to different team situations.",
+      "reason": "Clarifies program units and specifies that the levels are tailored to different team situations, improving the relevance for DHS and DSD audiences."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field2"
+      ],
+      "before": "Good collaboration helps people contribute, understand one another, and carry shared work forward. Explore learning for your team, work across the Disability Services Division and the Aging and Disability Services Administration, and relationships with partners.",
+      "after": "Effective collaboration allows people to contribute, understand others’ perspectives, and sustain shared work. Here you can find learning to support your team, connect across the Disability Services Division and Aging and Disability Services Administration, and build productive partnerships.",
+      "reason": "Clarifies how collaboration affects shared work and aligns the examples more closely with DHS/DSD roles."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field3"
+      ],
+      "before": "Choose the situation that fits your work. Each course brings together explanation, examples, reflection, and practice you can return to when it is useful.",
+      "after": "Choose the area that matches your current work needs. Each course includes explanations, practical examples, reflection opportunities, and activities you can revisit as situations arise.",
+      "reason": "Clarifies intent and specifies what learners can expect in each course, making the resource's purpose more apparent."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field5"
+      ],
+      "before": "Foundation builds understanding. Intermediate offers practice with situations. Advanced explores more complex shared responsibilities. These describe learning depth, not job rank. Directors, managers, supervisors, and staff can begin wherever the learning helps.",
+      "after": "Foundation courses focus on basic understanding. Intermediate courses address applied situations and skill practice. Advanced courses address complex or shared responsibilities. These levels describe the depth of learning, not a person’s job title or authority. Anyone—directors, managers, supervisors, and staff—should begin with the topic that best supports their work.",
+      "reason": "More precisely distinguishes between the course levels and explains that anyone can start at any level as fits their needs."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field6"
+      ],
+      "before": "Open a topic to explore its courses, or choose a path above to focus on a particular kind of work.",
+      "after": "Select a topic to view its related courses, or use the options above to focus on a specific kind of collaboration.",
+      "reason": "Provides clearer instruction about the navigation and the available choices."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field7"
+      ],
+      "before": "No courses are available in this selection.",
+      "after": "There are no courses available for this selection.",
+      "reason": "Slightly rephrased for formality and clarity."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field8"
+      ],
+      "before": "Choose another level or return to",
+      "after": "Try another level or return to",
+      "reason": "Clarifies that users can try another option if their current choice yields no results."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "field10"
+      ],
+      "before": "Browse all learning and resources",
+      "after": "Browse all courses and resources",
+      "reason": "Adds precision by clarifying that both courses and resources are included."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "field11"
+      ],
+      "before": "Find resources for team and workplace practice",
+      "after": "Explore resources for team and workplace practice",
+      "reason": "Clarifies that the resources are for both team and overall workplace practice, using a verb that invites action."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "field12"
+      ],
+      "before": "About participation and training credit",
+      "after": "Participation and training credit",
+      "reason": "Shortens and clarifies the heading for easier scanning and accuracy."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "field13"
+      ],
+      "before": "Learning here is voluntary. Choose what supports your work and return when it is useful.",
+      "after": "Participation in this learning is voluntary. Select what is most useful for your work, and return as needed.",
+      "reason": "More clearly frames the voluntary nature and the ability to revisit learning, improving formality and specificity."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The change substitutes \"Build your team's skills\" for \"Strengthen your team,\" but the source only uses the more general 'strengthen'. More critically, adding 'tailored to different team situations' is not supported by the source, which does not state the levels are tailored by team situation—only that there are Foundation, Intermediate, and Advanced levels. This claim introduces unsupported specificity."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "'Effective collaboration allows people to contribute, understand others’ perspectives, and sustain shared work' is a faithful restatement of 'Good collaboration helps people contribute, understand one another, and carry shared work forward.' Replacing 'relationships with partners' with 'build productive partnerships' retains scope and specificity; acceptable."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "'Choose the area that matches your current work needs' changes 'situation that fits your work' to a more abstract 'area'; source specifically encourages users to 'choose the situation,' i.e., the context or scenario, not just a general 'area.' 'Reflection opportunities, and activities you can revisit as situations arise' changes 'reflection, and practice you can return to when it is useful' to a form that introduces 'activities' not evident in the source (which offers 'practice,' not necessarily discrete 'activities'), and adds 'as situations arise' which restates but does not improve clarity. The net result changes intended meaning and slightly overstates what each course includes."
+      },
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "'Foundation courses focus on basic understanding' is a restatement, but 'Intermediate courses address applied situations and skill practice' and 'Advanced courses address complex or shared responsibilities' alters 'Intermediate offers practice with situations' and 'Advanced explores more complex shared responsibilities.' The use of 'applied situations and skill practice' and 'complex or shared responsibilities' is not explicitly present—source says 'practice with situations' and 'explores more complex shared responsibilities.' 'Anyone—directors, managers, supervisors, and staff—should begin with the topic that best supports their work' is longer but neutral; the main issue is with the introduction of interpretations absent in the source."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "'Select a topic to view its related courses, or use the options above to focus on a specific kind of collaboration' is a more explicit, but faithful, restatement of the source: no problematic changes."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "'There are no courses available for this selection' is an acceptable, formal rephrase—does not alter factual scope."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "'Try another level or return to' is a minor rephrase, maintains intent; acceptable."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "'Browse all courses and resources' is a reasonable clarification—source says 'learning and resources'; since the section contains explicit courses, the swap is acceptable for clarity."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "'Explore resources for team and workplace practice' is an acceptable revision; explicitly invites participation but does not limit or overstate the content."
+      },
+      {
+        "fieldId": 9,
+        "severity": "note",
+        "finding": "'Participation and training credit' shortens and clarifies the heading; context is preserved and nothing essential is omitted."
+      },
+      {
+        "fieldId": 10,
+        "severity": "note",
+        "finding": "'Participation in this learning is voluntary. Select what is most useful for your work, and return as needed.' is a more formalized statement. 'Participation in this learning is voluntary' restates 'Learning here is voluntary' and further clarification follows the spirit of the source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3571,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 748,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4319
+    },
+    "review": {
+      "input_tokens": 3714,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 776,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4490
+    }
+  },
+  "createdAt": "2026-11-15T13:49:38.931Z"
+}

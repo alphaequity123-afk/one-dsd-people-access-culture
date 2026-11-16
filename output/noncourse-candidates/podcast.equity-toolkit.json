@@ -1,0 +1,81 @@
+{
+  "target": "podcast.equity-toolkit",
+  "kind": "surface",
+  "route": "/learn/equity-toolkit#podcast-equity-toolkit",
+  "sourceSha256": "80450de5e6be0a314b18e638098ce3f1abdc4843ef54cdd31dea9cadedd2a864",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "intro"
+      ],
+      "before": "Listen to the podcast about DHS equity policy and the toolkit.",
+      "after": "Listen to this podcast for an overview of Minnesota DHS equity policy and how the DHS equity toolkit supports staff. The episode explains the aims of the policy and describes how the toolkit guides practical steps, which can help staff strengthen fairness and access in their work.",
+      "reason": "Expanded the summary to specify Minnesota DHS, clarify the podcast's topics, and explain why understanding the policy and toolkit matters for staff decisions and daily practice. This adds practical context and purpose for staff listening to the recording."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "errorMessage"
+      ],
+      "before": "This recording could not be played. Please try again.",
+      "after": "This recording cannot be played at this time. Please try again or download the file to check for access issues.",
+      "reason": "Clarified the situation for when playback fails and suggested downloading as an alternative, giving staff practical next steps for troubleshooting."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The expanded introduction includes details and interpretations not supported in the source. The original text, ‘Listen to the podcast about DHS equity policy and the toolkit,’ is neutral. The proposed text claims the episode provides an ‘overview,’ ‘explains the aims,’ and ‘describes’ specific uses related to ‘practical steps’ and ‘help[ing] staff strengthen fairness and access in their work.’ There is no supporting source evidence to verify that the episode covers these details or that these are its intended purposes. This constitutes an unsupported expansion and attribution of content and function, which the standard prohibits."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revised error message adds a suggestion to download the file. This aligns with practical troubleshooting for access issues and does not make unsupportable claims about the cause or the solution. The change remains within the range of an error message and does not introduce policy, legal, or technical misrepresentations."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1080,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 176,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1256
+    },
+    "review": {
+      "input_tokens": 860,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 243,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1103
+    }
+  },
+  "createdAt": "2026-11-15T13:38:17.019Z"
+}

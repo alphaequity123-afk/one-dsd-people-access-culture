@@ -1,0 +1,291 @@
+{
+  "target": "code.app/leading/journey/page.tsx",
+  "kind": "surface",
+  "route": "/leading/journey",
+  "sourceSha256": "037abb477ed9e4bec15745cfa6235abee18600f407da060f6f1048a16be39224",
+  "status": "needs_revision",
+  "reviewedFieldCount": 17,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Grow as a leader at your own pace: learn, reflect, try it in your real work, note what changed, and go around again. Nobody is enrolled and nothing is recorded.",
+      "after": "Grow as a leader on your own schedule. Learn, reflect, try new approaches in your regular work, and note what changed. Nobody is registered or tracked on this journey.",
+      "reason": "Clarified that participation is untracked and independent. Used more precise language to set the context for the professional audience."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "A way to grow as a leader at your own pace, from a first interest in leading to setting direction for others.",
+      "after": "This is a practical approach to developing leadership skills, whether you are considering a first leadership role or already setting direction for others.",
+      "reason": "Specified that this applies both to prospective and current leaders, and clarified the purpose as practical skill development."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "There is no nomination, no group to join and no deadline. You choose where to start and how fast to go.",
+      "after": "There is no nomination process, group membership, or deadline. You choose your starting point and pace.",
+      "reason": "Broke down elements for clarity and specified absence of formal enrollment or timelines. Avoided repetitive phrasing."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": "Each round is small: one lesson, a few lines of reflection, one thing tried in your real work, and a note on what happened. Then you go around again.",
+      "after": "Each round is brief: complete a lesson, write a few lines of reflection, try something new in your work, and record what changed. Then repeat the process as needed.",
+      "reason": "Clarified the components of each cycle and why the steps matter for professional growth."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field4"
+      ],
+      "before": "Most of what makes someone a better leader comes from trying things in real work. Some comes from other people: a colleague, a mentor, a team. A small part comes from lessons. So the lessons here are short, and each one leads to something to try.",
+      "after": "Most leadership development happens by trying out new skills in real work situations. Additional growth can come from feedback or support from a colleague, mentor, or team. Only a limited part of learning comes through formal lessons, so the materials here are concise and each lesson suggests something practical to attempt.",
+      "reason": "Explained the reason lessons are brief and highlighted multiple sources of learning, connecting these points to agency practice."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field5"
+      ],
+      "before": "Answer two or three questions about your work, or simply choose from the list below.",
+      "after": "You can answer a few guiding questions about your work, or select a starting point from the options below.",
+      "reason": "Offered a clearer description of the options for choosing a starting point."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field6"
+      ],
+      "before": "A week that fits inside real work looks something like this. Take less when the week is full.",
+      "after": "A typical week for leadership development should fit alongside your usual responsibilities. Take less time if your week is already full.",
+      "reason": "Clarified intent and audience, and connected the advice to agency work schedules."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "field7"
+      ],
+      "before": "One way to pace a path over six weeks",
+      "after": "Sample schedule for completing a path in six weeks",
+      "reason": "Reworded for clarity and specificity; replaced ambiguous \"one way to pace\" with \"sample schedule.\""
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "field8"
+      ],
+      "before": "This is one example. Any path can be taken faster, slower or in a different order.",
+      "after": "This is only one suggested schedule. You can move through any path more quickly, more slowly, or in an order that works for your workload.",
+      "reason": "Made the flexibility explicit and grounded alternatives in work constraints."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "field9"
+      ],
+      "before": "Reflection is what turns a lesson into a change. A few lines are enough, and three questions carry most of it: what happened, why it matters, and what you will do next.",
+      "after": "Reflection helps turn learning into changes in practice. Write a few lines in response to three main questions: what happened, why it matters, and what you will do next.",
+      "reason": "Explains the purpose of reflection and specifies the focus of the reflection prompts."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "field11"
+      ],
+      "before": "When you set a date to look back, the notebook shows it to you the next time you open it. Nothing is sent as a reminder.",
+      "after": "When you set a date to review your reflections, the notebook displays it the next time you open it. No reminders are sent.",
+      "reason": "Clarified the system's function and what staff should expect."
+    },
+    {
+      "fieldId": 11,
+      "path": [
+        "field12"
+      ],
+      "before": "Learning with others, if you want to",
+      "after": "Learning with others (optional)",
+      "reason": "Clarified that collaboration is not required, and condensed the heading for easy scanning."
+    },
+    {
+      "fieldId": 12,
+      "path": [
+        "field13"
+      ],
+      "before": "None of this is required. A conversation with someone you trust can deepen what you notice.",
+      "after": "Participation is voluntary. Talking with someone you trust can help you notice changes or see patterns you might miss on your own.",
+      "reason": "Clarified the benefit of discussion and avoided ambiguous language. Maintained the core idea without repetition."
+    },
+    {
+      "fieldId": 13,
+      "path": [
+        "field14"
+      ],
+      "before": "For anyone who wants more. These belong to other organizations, open on their sites, and may ask you to create an account there. They do not count toward required training unless your manager, director or agency leadership approves an exception.",
+      "after": "These optional courses are offered by other organizations. You may need to make an account on their website. Completion of these courses does not meet required DHS training unless approved by your manager, director, or agency leadership.",
+      "reason": "Increased precision about course authority and explicit conditions under which external learning counts."
+    },
+    {
+      "fieldId": 14,
+      "path": [
+        "field15"
+      ],
+      "before": "Four questions to ask yourself:",
+      "after": "Questions to consider at the end of a path:",
+      "reason": "Clarified that these are prompts for professional self-assessment."
+    },
+    {
+      "fieldId": 15,
+      "path": [
+        "field16"
+      ],
+      "before": "There is nothing to submit, and nothing here is counted or rated. If you want something to bring to a development conversation, download your action plans and reflections from",
+      "after": "You are not required to submit anything, and nothing is evaluated or scored here. If you want materials for a development discussion, you can download your action plans and reflections from",
+      "reason": "Clarified what is or is not recorded, and why someone might download reflections."
+    },
+    {
+      "fieldId": 16,
+      "path": [
+        "field17"
+      ],
+      "before": ". What you share, and with whom, is your choice.",
+      "after": ". You decide what to share and with whom.",
+      "reason": "Clarified agency over sharing decisions."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The source specifies: 'Nobody is enrolled and nothing is recorded.' The rewrite to 'Nobody is registered or tracked on this journey' shifts precise policy language. 'Enrolled' and 'registered' are not necessarily synonymous in this context (agency programs distinguish them), and 'nothing is recorded' is policy language that must not be replaced with 'not tracked' since 'recorded' aligns with privacy policy and user assurances elsewhere. The phrase 'try new approaches' is not source-backed; the source is broader: 'try it in your real work.'"
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The rewritten text does not contradict source but puts more emphasis on 'practical skill development' and current leaders. Source is: 'from a first interest in leading to setting direction for others.' The change is not a blocker, but it increases scope and loses reference to the progression."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The rewrite splits the components, which is accurate, but the source has a deliberate plain style: 'There is no nomination, no group to join and no deadline.' Adding 'process,' 'membership,' or 'formal enrollment' is not necessary, but does not distort policy."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "Reworded for clarity and scope is preserved. Adding 'as needed' does not contradict source intent since it says 'you go around again.'"
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "Expanded for clarity; maintains source meaning. No misleading or unsupported claims."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "Reworded—no blocker."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The rewrite is clearer, but source is both briefer and more permissive: 'Take less when the week is full.' No blocker."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "Simple heading change; no blocker."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "Expanded but not misleading. No blocker."
+      },
+      {
+        "fieldId": 9,
+        "severity": "note",
+        "finding": "No harm in more explicit language. No blocker."
+      },
+      {
+        "fieldId": 10,
+        "severity": "blocker",
+        "finding": "The source field for field 10 is 'Open your reflection notebook' and the only relevant surrounding text is in field11: 'When you set a date to look back, the notebook shows it to you the next time you open it. Nothing is sent as a reminder.' The rewrite of field11 changes 'shows it to you' to 'displays it the next time you open it'. This is not a significant distortion of meaning, but field10 itself ('Open your reflection notebook') must remain verbatim as it is tied to an exact user label and linking pattern. There is no justification to remove or rewrite this direct call-to-action in source-backed interface design."
+      },
+      {
+        "fieldId": 11,
+        "severity": "note",
+        "finding": "Change is minimal and clarifies language; not a blocker."
+      },
+      {
+        "fieldId": 12,
+        "severity": "blocker",
+        "finding": "Heading change from 'Learning with others, if you want to' to 'Learning with others (optional)' omits the encouraging tone and shifts the nuance. Source explicitly positions this as fully optional but invites consideration. For program standards, retain original heading or revise for equivalence in tone and intent, not just brevity."
+      },
+      {
+        "fieldId": 13,
+        "severity": "note",
+        "finding": "Rewording clarifies the authority for external course counting. No blocker."
+      },
+      {
+        "fieldId": 14,
+        "severity": "note",
+        "finding": "Expanded but does not misrepresent the prompt. Not a blocker."
+      },
+      {
+        "fieldId": 15,
+        "severity": "note",
+        "finding": "Expanded for clarity; no blocker."
+      },
+      {
+        "fieldId": 16,
+        "severity": "note",
+        "finding": "Expanded for clarity and affirmation; no blocker."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 4012,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 936,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4948
+    },
+    "review": {
+      "input_tokens": 4436,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 1008,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5444
+    }
+  },
+  "createdAt": "2026-11-15T13:49:21.455Z"
+}

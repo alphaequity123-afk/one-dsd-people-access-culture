@@ -1,0 +1,172 @@
+{
+  "target": "resource.ja-sm-deaf-deafblind-hoh",
+  "kind": "resource",
+  "route": "/library/ja-sm-deaf-deafblind-hoh",
+  "sourceSha256": "71595aa06909b900c9c234ad82dcbe5762a9b3e1d5ccd35e26f5de24595e3c90",
+  "status": "model_checked",
+  "reviewedFieldCount": 8,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "A one-page reminder for working with Deaf, DeafBlind and hard of hearing staff, peers and managers.",
+      "after": "A quick reference for supervising and collaborating with Deaf, DeafBlind, and hard of hearing staff, peers, and managers. Focuses on communication access, participation, and fair workplace practices.",
+      "reason": "Revised to clarify the document supports effective supervision and collaboration, and to specify its focus on communication, participation, and fairness. The description now more precisely matches the document's scope and purpose."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Remember. General information as of October 2026. Local steps come from your ADA coordinator and Human Resources. Draft, written without Deaf, DeafBlind or hard of hearing reviewers. Your colleague's own account comes first. No one speaks for a whole community. Ask the person in front of you.",
+      "after": "Summary: This guidance provides general information current as of October 2026. Check with your ADA coordinator and Human Resources for local steps, as processes can differ. This draft does not include review by Deaf, DeafBlind, or hard of hearing colleagues. Respect each person's account of their experiences; individuals define their own needs and preferences. No single person can represent a whole community. Always start by asking the person you are working with about their preferences and needs.",
+      "reason": "Expanded for clarity about why local steps and direct input matter, and described the absence of community review as a factual limitation in current guidance. Emphasized that each person defines their own experiences and that individual input is the starting point."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Ask. \"How do you prefer to communicate in this setting? What makes it harder?\" Use the term they use for themselves. Skip questions about how much they hear or why. Record the answer so that they do not have to repeat it.",
+      "after": "Ask: Begin by asking, \"How do you prefer to communicate in this setting? What causes difficulties?\" Use the terminology your colleague uses for themselves. Do not ask about the extent of their hearing or the reasons for it. Record their preferred communication method so they are not repeatedly asked the same questions. This respects their autonomy and simplifies future coordination.",
+      "reason": "Clarified the purpose behind each suggested step, including respectful language choices and recording information to reduce repetition and administrative burden."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Route (Policy 1433). No special words are needed. Document oral requests. Forward promptly. Tell them who decides. Do not ask for medical information. Regular meetings get a standing arrangement, with no new request each time. The ADA coordinator is consulted before any denial. Budget is not your call to make. Keep the accommodation confidential.",
+      "after": "Routing (Policy 1433): You do not need special wording to forward a request. Document all oral and written requests for accommodations, and forward them without delay. Let the colleague know who will decide on the request. Do not ask for medical details. For recurring meetings, arrange ongoing accommodations so staff do not have to request each time. The ADA coordinator must be consulted before a denial. Supervisors are not responsible for making budget decisions about accommodations. Keep all requests and arrangements confidential.",
+      "reason": "Improved connection between steps and explained why prompt documentation, confidentiality, clarity on decision-makers, and adherence to process are important in accommodation requests."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Run the meeting. Talk to your colleague, not to the interpreter. Send agenda, names and acronyms ahead of time. Book about two weeks out where you can. State your name. One at a time. Pause. CART and automatic captions are different. Do not swap them without asking. Notes afterward are not participation. Do not hold a review or discipline talk without working access.",
+      "after": "Running Meetings: Speak directly to your colleague, not to the interpreter or captioner. Send agendas, names, and acronyms in advance to support understanding. Schedule meetings at least two weeks ahead when possible. Introduce yourself by name, and ensure only one person speaks at a time, pausing as needed for interpretation or captioning. Understand that CART (Communication Access Realtime Translation) and automatic captions serve different purposes; do not change the assigned method without confirming with your colleague. Providing notes afterwards does not replace full participation during a meeting. Do not hold reviews or disciplinary meetings without ensuring the colleague has full access; this is essential to fairness and process integrity.",
+      "reason": "Clarified the rationale for advance materials, direct communication, and respecting chosen communication methods. Emphasized participation, fairness, and the difference between real-time and delayed access."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "DeafBlind colleagues. Ask, and plan early. Methods vary. SSP and interpreter are different roles. Assign a communication facilitator. Change how votes work. No touch or technique without agreement and skill.",
+      "after": "DeafBlind Colleagues: Early planning is essential as communication methods vary widely. Support Service Providers (SSPs) and interpreters serve distinct roles; do not substitute one for the other. Assign a communication facilitator if needed, and adapt voting or group decision processes to ensure inclusion. Seek explicit agreement and have proper training before using any physical communication techniques. Each adaptation supports direct participation and reduces misunderstandings.",
+      "reason": "Specified why early planning matters and the importance of role clarity, appropriate assignment, and training when supporting DeafBlind colleagues. Linked the actions to participation and communication accuracy."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "Keep it fair. Put hallway decisions in writing. Same criteria for stretch work. Do not decide for them. Do not make them the unit's Deaf expert, and do not make signing coworkers the interpreter. Safety questions get an individualized review, not an assumption. Mockery goes to Human Resources or the Affirmative Action Officer immediately.",
+      "after": "Maintaining Fairness: Document informal or hallway decisions in writing to ensure transparency. Apply the same stretch or development opportunities to Deaf, DeafBlind, and hard of hearing staff as others. Do not make decisions on their behalf, assign them as the default \"Deaf expert,\" or expect signing coworkers to interpret. Review workplace safety questions individually—never assume based on hearing status. If you observe mockery or harassment, immediately report to Human Resources or the Affirmative Action Officer. These steps promote equal participation and a respectful environment.",
+      "reason": "Explained the effect and purpose of each step for workplace equity, and the importance of individualized safety reviews and immediate escalation of discrimination."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "body",
+        6
+      ],
+      "before": "Do next. Ask all your direct reports the same communication question. Find out who books and how the agency pays. Check your recurring meetings for standing access. Check alarms and emergency plans with your colleague and safety lead. Save your ADA coordinator's contact, and find DHS State Services' regional office for your area.",
+      "after": "Next Steps: Ask all direct reports about their communication needs as a standard practice. Identify who is responsible for booking accommodations and how costs are managed. Confirm standing access arrangements for recurring meetings. Review emergency procedures and alarm systems with your colleague and the safety lead, ensuring they meet individual needs. Save the contact information for your ADA coordinator and locate your regional DHS State Services office. Taking these steps supports effective communication and preparedness for all staff.",
+      "reason": "Expanded to clarify why each step is recommended and how it contributes to supporting staff communication and safety. The explanation links each action to ongoing accessibility and organizational readiness."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revised summary accurately reflects the focus on supervision, collaboration, communication access, participation, and fairness. It is well supported by the job aid’s content, which emphasizes these elements throughout. The adjustment improves clarity and match to the actual document scope."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The expanded summary retains all original meaning and adds explanation as to why direct input and local steps matter. The factual note about the absence of review by Deaf, DeafBlind, or hard of hearing staff is retained. The revision increases clarity. No content is lost or misrepresented."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The expanded language and explanation for each suggested step align with the original job aid's instructions and intent, with no overreach. It keeps the focus on autonomy and practical recording of preferences without demanding unnecessary personal information."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "All process steps required by the original are maintained (including Policy 1433 references), and confidentiality, documentation, promptness, and supervisor role boundaries are preserved. No changes are made to decision authority or procedural protections."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The revision is faithful to the explicit meeting guidance in the source. It clarifies and elaborates on the reasons for the steps, without erasing nuance or practical detail. The differences between CART and captions, direct communication, and full participation are kept."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "There is no loss of meaning or specificity in the rephrased section on DeafBlind colleagues. The distinctions between roles and the need for explicit training and consent are well grounded in the original."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "Instructions for maintaining workplace equity are expanded for clarity, but not changed in essence. The guidance retains source intent around not making assumptions, individualizing safety assessments, and initiating reporting for mockery or harassment."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "All practical next steps remain, with expanded explanation for rationale behind each. There is no unsupported claim, scope change, or erasure of important procedural limits."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2194,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 1067,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3261
+    },
+    "review": {
+      "input_tokens": 2817,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 455,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3272
+    }
+  },
+  "createdAt": "2026-11-15T13:44:07.317Z"
+}

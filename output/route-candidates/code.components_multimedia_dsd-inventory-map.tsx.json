@@ -1,0 +1,67 @@
+{
+  "target": "code.components/multimedia/dsd-inventory-map.tsx",
+  "kind": "surface",
+  "route": "components/multimedia/dsd-inventory-map.tsx",
+  "sourceSha256": "5ccacd69b412505bb4fb2d5f6609b7bc0b41ac56ed3acacc8b8c7ff1dc523dbf",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Find a program through a work question",
+      "after": "Explore programs by selecting a key work question relevant to your area. This method helps you locate programs that address specific challenges or needs identified in daily Disability Services Division work.",
+      "reason": "Revised the summary to clarify the practical value for staff. It now explains why using a work question to find a program is helpful, reflecting the purpose and implications for the intended DHS and DSD audience."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The source uses the plain summary: 'Find a program through a work question.' The proposed replacement expands with, 'Explore programs by selecting a key work question relevant to your area. This method helps you locate programs that address specific challenges or needs identified in daily Disability Services Division work.' There is no source support for the interpretation, expansion, or the claims about staff experience, intention, or method. The standard requires the short summary (labeling a menu) to preserve the original wording unless an official revision exists."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1466,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 100,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1566
+    },
+    "review": {
+      "input_tokens": 1179,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 126,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1305
+    }
+  },
+  "createdAt": "2026-11-15T13:54:19.339Z"
+}

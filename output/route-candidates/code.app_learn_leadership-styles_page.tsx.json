@@ -1,0 +1,67 @@
+{
+  "target": "code.app/learn/leadership-styles/page.tsx",
+  "kind": "surface",
+  "route": "/learn/leadership-styles",
+  "sourceSha256": "429b98b980800192f1cb42a2e8aece7bc15b64e12fefe5b49ffa9aee533af79e",
+  "status": "needs_revision",
+  "reviewedFieldCount": 15,
+  "changes": [
+    {
+      "fieldId": 3,
+      "path": [
+        "field4"
+      ],
+      "before": "Each lesson gives a working definition and its limits, a stronger and a harmful response to the same scenario, a second conflict example, an analysis of how the approach can promote or undermine equity and inclusion, including racial equity, strengths, weaknesses, opportunities and threats, when to use it and when not to, approaches that complement it, a practice exercise and review questions.",
+      "after": "Each lesson defines one leadership approach, outlines its practical scope and limits, and compares effective and counterproductive responses to a shared scenario. Lessons also include a second example of conflict, an analysis of how the approach may promote or undermine equity and inclusion—including racial equity—common strengths, weaknesses, opportunities and threats, guidance on when to choose or avoid the approach, methods it may complement, as well as a practice exercise and review questions.",
+      "reason": "Increases specificity and clarity about the lesson components and their professional purpose. Avoids vague or redundant lists and separates instructional elements for easier reference by staff."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "The proposed replacement text for field 4 moves from a source sentence with a single, connected explanation to a more segmented and editorially altered sequence. Several terms are changed or reinterpreted (e.g., 'Working definition' becomes 'defines one leadership approach'; 'methods it may complement' is a new phrase for 'approaches that complement it'). The original states each lesson gives: (1) 'a working definition and its limits'; (2) 'a stronger and a harmful response to the same scenario'; (3) 'a second conflict example'; (4) 'an analysis of how the approach can promote or undermine equity and inclusion, including racial equity'; (5) 'strengths, weaknesses, opportunities and threats'; (6) 'when to use it and when not to'; (7) 'approaches that complement it'; (8) 'a practice exercise and review questions.' The proposed change replaces the list format with prose and rephrases several items, introducing new language ('guidance on when to choose or avoid the approach,' 'methods it may complement') and omitting the tightly-bound structure and precise itemization found in the source. This expands and editorializes the conditions and procedures implied by the source, and as such, the edit is not fully supported or justified by the evidence."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3738,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 170,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3908
+    },
+    "review": {
+      "input_tokens": 3124,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 288,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3412
+    }
+  },
+  "createdAt": "2026-11-15T13:50:10.969Z"
+}

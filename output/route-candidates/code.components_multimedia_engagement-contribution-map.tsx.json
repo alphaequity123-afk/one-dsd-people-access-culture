@@ -1,0 +1,95 @@
+{
+  "target": "code.components/multimedia/engagement-contribution-map.tsx",
+  "kind": "surface",
+  "route": "components/multimedia/engagement-contribution-map.tsx",
+  "sourceSha256": "5a0c374aec821618a59a8c7add38cab9fe99db27b8f24e2331a553c3c356baf3",
+  "status": "needs_revision",
+  "reviewedFieldCount": 7,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "A notice points to one contact. The staff instructions point to another. Name the mismatch without guessing why it happened.",
+      "after": "A notice directs people to one contact, while staff instructions list another. Identify and document the inconsistency without speculating about its cause.",
+      "reason": "Clarifies the importance of neutrality and accuracy when noticing conflicting contact information, and explains the action is to document, not assume underlying reasons."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "The team compares the two instructions and drafts a clearer first contact, next step, and fallback for discussion.",
+      "after": "The team reviews both sets of instructions to draft a clearer process. This includes specifying the first contact, outlining the next step, and identifying a fallback. Share the draft for discussion.",
+      "reason": "Adds reasoning about why steps are clarified and makes the expectation of review and sharing explicit, which matters for practical workflow and collaboration."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "The service owner considers the proposal with the people responsible for the handoff. Agree what can change and what needs more work.",
+      "after": "The service owner reviews the proposal with those who manage the handoff process. As a group, decide what can be changed now and what may need further review or input.",
+      "reason": "Clarifies why group review is needed: responsibility rests not only with the owner, and some issues may require more discussion or authority."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The changed wording shifts 'Name the mismatch without guessing why it happened' to 'Identify and document the inconsistency without speculating about its cause.' The source says 'Name,' which is a guided step toward naming or articulating, not necessarily to document. The change from 'Name' to 'Identify and document' is not supported—'document' is an added step. Additionally, 'directs people' is more specific than the original 'points,' and 'list another' slightly alters the meaning from 'point to another.' These changes are not evidence-based refinements; they risk changing the specific action and scope in the source."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The change mostly restates the source, with minor expansion on clarification and process sharing. While it adds process context and the expectation of sharing, these are implicit in the source's 'for discussion.' This is not a blocker, but reviewers should watch that expansion does not inadvertently introduce new procedural expectations not present in the original."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The rewritten field clarifies the need for group review and potential additional review or input, which is reasonable given the source text's wording. The meaning remains consistent, but the note is warranted in case further expansion is not grounded in additional specifics from process documentation."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2128,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 1920
+      },
+      "output_tokens": 278,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2406
+    },
+    "review": {
+      "input_tokens": 1827,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 290,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2117
+    }
+  },
+  "createdAt": "2026-11-15T14:03:26.542Z"
+}

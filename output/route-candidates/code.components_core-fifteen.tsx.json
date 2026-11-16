@@ -1,0 +1,67 @@
+{
+  "target": "code.components/core-fifteen.tsx",
+  "kind": "surface",
+  "route": "components/core-fifteen.tsx",
+  "sourceSha256": "8311a837c1ecbb74c4f2417ced5a21bbce2f312f8c23d89609b6e6eb6da9b63d",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Fifteen recommended courses for staff. Choose a course that fits your work and learn at your own pace.",
+      "after": "Fifteen recommended courses selected to support DHS and DSD staff learning. Each course addresses a key concept or practice relevant to daily work. Choose topics that match your responsibilities or interests. You may complete courses in any order and progress at your own pace. Completing these courses builds a shared foundation for effective and equitable services.",
+      "reason": "Provided greater specificity by stating the courses are selected for DHS and DSD work. Clarified purpose by linking course selection to key concepts or practices relevant to daily tasks. Explained why staff may choose any order and the benefit to shared service quality, making the consequences of participation clearer."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The original source text for field0 is: \"Fifteen recommended courses for staff. Choose a course that fits your work and learn at your own pace.\" The proposed rewrite introduces several claims not present in the source:\n- That the courses are specifically selected to support DHS and DSD staff learning (the source only says \"for staff\" without specifying these divisions).\n- That each course addresses a key concept or practice relevant to daily work (the source does not make this assertion).\n- That choosing topics should match responsibilities or interests (the source is less specific: \"fits your work\").\n- That completing these courses builds a shared foundation for effective and equitable services (the source says nothing about building a foundation or about service quality).\n\nThese are examples of adding legal conditions, expanding scope, and inventing consequences not found in the simple, descriptive source. The rewrite is not source-anchored per the standard and must be rejected."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1746,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 147,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1893
+    },
+    "review": {
+      "input_tokens": 1479,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 217,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1696
+    }
+  },
+  "createdAt": "2026-11-15T13:52:48.366Z"
+}

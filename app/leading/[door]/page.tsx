@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "@/components/app-link";
 import { notFound } from "next/navigation";
 import { CollectionItemLink } from "@/components/collection-item-link";
-import { DOOR_ASK, DOOR_RESOURCES, LEADING_LABEL, LEADING_PRIVACY_SENTENCE, QUESTION_SCENARIOS, RIGHT_PERSON_HREF, TRIBAL_REFERRAL_HREF, collectionItem, jobAidHref, leadingDoor, scenarioHref, whomToAsk } from "@/lib/content/collections";
+import { DOOR_ASK, DOOR_RESOURCES, LEADING_LABEL, QUESTION_SCENARIOS, RIGHT_PERSON_HREF, TRIBAL_REFERRAL_HREF, collectionItem, jobAidHref, leadingDoor, scenarioHref, whomToAsk } from "@/lib/content/collections";
 import { publishedCourses } from "@/lib/content/courses/published";
 import { DSD_SCENARIOS } from "@/lib/dsd";
 import { requestedContentScope } from "@/lib/product/request-context";
@@ -28,7 +28,7 @@ export default async function LeadingDoorPage({ params }: { params: Promise<{ do
       <p className={base.eyebrow}>What are you deciding?</p>
       <h1>{door.title}</h1>
       <p className={base.lede}>{door.description}.</p>
-      <p>Find your question, and start with the one course named under it. {LEADING_PRIVACY_SENTENCE}</p>
+      <p>Find your question, and start with the one course named under it.</p>
     </header>
     <section aria-label="Questions">
       {door.questions.map(question => {
@@ -56,7 +56,7 @@ export default async function LeadingDoorPage({ params }: { params: Promise<{ do
       <p><Link href={RIGHT_PERSON_HREF}>Find the person or area responsible</Link></p>
     </Hub2More>
     <Hub2More title="Keep exploring">
-      <p className="flex flex-wrap gap-x-6 gap-y-2"><Link href="/leading">All nine decisions</Link><Link href="/leading/paths">Suggested paths</Link><Link href="/leading/how-this-works">How this works</Link><Link href={TRIBAL_REFERRAL_HREF}>Native American and Tribal-specific guidance</Link></p>
+      <p className="flex flex-wrap gap-x-6 gap-y-2"><Link href="/leading">All nine decisions</Link><Link href="/leading/paths">Suggested paths</Link><Link href={TRIBAL_REFERRAL_HREF}>Native American and Tribal-specific guidance</Link></p>
     </Hub2More>
   </div></div>;
 }

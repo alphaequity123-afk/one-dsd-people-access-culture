@@ -202,7 +202,6 @@ async function homeDocument(scope: StaffProgramScope): Promise<ResourceDocument 
         callout(text("numbersNote")),
         paragraph(text("tribalNote")),
         paragraph(TRIBAL_GUIDANCE),
-        paragraph(text("privacyNote")),
       ]),
     ]),
   });
@@ -485,7 +484,7 @@ function planDocument(scope: StaffProgramScope): ResourceDocument {
     subtitle: "Answer these questions before you reach out. Then draft your engagement and report-back plan.",
     meta: [{ label: "Page", value: "program page /community-outreach/plan" }],
     sections: compactSections([
-      section(undefined, [callout("This copy is blank. Nothing about what you plan is recorded or shared. Keep it with your own working records.")]),
+      section(undefined, [callout("This copy is blank. Keep it with your own working records.")]),
       section("Before you reach out", BEFORE_YOU_REACH_OUT.flatMap((group): DocumentBlock[] => [heading(group.title), bullets(group.items)])),
       section("Practice before you plan", [
         paragraph("Think through each situation, then compare your thinking with the reasoning."),

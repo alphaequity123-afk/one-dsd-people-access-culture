@@ -1,0 +1,67 @@
+{
+  "target": "code.components/clas-curriculum/job-aid.tsx",
+  "kind": "surface",
+  "route": "components/clas-curriculum/job-aid.tsx",
+  "sourceSha256": "090ed52a1448730bc730fad120a3c348f9bb8349bd077a151df06b582f43538d",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": ". Use the current procedures applicable to your role and program when taking action. Leave names, case details and other private information out of your notes.",
+      "after": "Follow the procedures that apply to your position and the specific program before you act. Do not record names, case numbers, or any information that identifies an individual in your notes.",
+      "reason": "Clarified that staff should check both their role and the relevant program for procedures, which helps prevent errors due to differing requirements. Revised the privacy statement to specify what not to record, explaining that identifiers such as names or case numbers should be excluded to protect individual confidentiality. These edits provide more direct professional guidance and reasoning tied to DSD expectations."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The original text (source): \". Use the current procedures applicable to your role and program when taking action. Leave names, case details and other private information out of your notes.\"\n\nThe proposed replacement changes meaning and introduces unsupported specificity. The phrase, \"Do not record names, case numbers, or any information that identifies an individual in your notes,\" misrepresents the original privacy statement, which generally says to leave out names, case details, and private information—but does not list or define private information as \"names, case numbers, or any information that identifies,\" nor does it limit the original \"case details\" to \"case numbers\" alone. The phrase also changes the source's handling of \"case details and other private information,\" which might be broader than identifiers and is grounded in the program or DHS/DSD procedures, as referenced in the sentence just prior.\n\nAdditionally, the original instruction to \"use the current procedures applicable to your role and program\" is replaced with \"follow the procedures that apply to your position and the specific program before you act.\" While not a blocker in itself, this changes the emphasis from generally applicable current procedures (ongoing) to a before-action directive, potentially narrowing the instruction's intended scope. However, the blocker remains the rewording and narrowing of the privacy guidance. Any alteration to privacy guidance must remain strictly source-founded to prevent privacy misrepresentation."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1479,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 129,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1608
+    },
+    "review": {
+      "input_tokens": 1220,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 306,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1526
+    }
+  },
+  "createdAt": "2026-11-15T13:52:15.213Z"
+}

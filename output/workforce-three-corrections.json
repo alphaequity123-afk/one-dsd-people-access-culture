@@ -1,0 +1,46 @@
+{
+  "revisions": [
+    {
+      "target": "workforce.dhs",
+      "kind": "surface",
+      "route": "/consultant/workforce/dhs",
+      "changes": [
+        {
+          "path": [
+            "roles",
+            3,
+            "text"
+          ],
+          "before": "The specification describes complex work across programs involving policy, legislation, services, or compliance. Suggested learning connection: examine cross-program effects, compare policy options, and plan an improvement with responsible partners. This does not identify the owner's classification.",
+          "after": "The specification describes complex work across programs involving policy, legislation, services, or compliance. Suggested learning connection: examine cross-program effects, compare policy options, and plan an improvement with responsible partners. This description does not establish the classification of a specific position."
+        }
+      ],
+      "status": "draft"
+    },
+    {
+      "target": "workforce.dsd",
+      "kind": "surface",
+      "route": "/consultant/workforce/dsd",
+      "changes": [
+        {
+          "path": [
+            "leadership",
+            1
+          ],
+          "before": "The owner describes the Equity and Inclusion Operations Consultant as responsible for operationalizing division equity work. The specific position classification has not been confirmed.",
+          "after": "The Equity and Inclusion Operations Consultant’s locally described role is to put division equity work into practice. The position’s formal classification has not been confirmed."
+        },
+        {
+          "path": [
+            "roles",
+            1,
+            "text"
+          ],
+          "before": "The owner identifies these areas of experience within the One DSD Team. This is not a complete divisional roster or a confirmed classification assignment.",
+          "after": "Policy, program, and eligibility experience is described among One DSD Team members. This is not a complete divisional roster or a confirmed classification assignment."
+        }
+      ],
+      "status": "draft"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "target": "code.components/dsd-program-header.tsx",
+  "kind": "surface",
+  "route": "components/dsd-program-header.tsx",
+  "sourceSha256": "8ac3b3f72a78dc69dc6c1f88d9c7d1c44e89d379ea89d79498155b945534f693",
+  "status": "needs_revision",
+  "reviewedFieldCount": 4,
+  "changes": [
+    {
+      "fieldId": 2,
+      "path": [
+        "field3"
+      ],
+      "before": "For leaders, supervisors, managers, and directors",
+      "after": "Leadership resources for supervisors, managers, and directors",
+      "reason": "Clarified the link description to specify that the resources are for supervisors, managers, and directors, and omitted the less specific 'for leaders' to focus on the actual program audience referred in the menu context."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field4"
+      ],
+      "before": "Aging and Disability Services Administration",
+      "after": "Aging and Disability Services Division",
+      "reason": "Corrected 'Administration' to 'Division' to match the current structure and naming conventions used for the Minnesota DHS and its DSD. This provides accurate context for DHS and DSD staff."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The original source (code) uses the exact label 'For leaders, supervisors, managers, and directors' for the menu link. The change to 'Leadership resources for supervisors, managers, and directors' is not supported by the source: it omits 'for leaders' (present in the source) and alters the statement from a description of audience to a claim about available resources. This is a change in meaning and scope (from identifying intended users to an implicit promise about 'resources'), and erases the original wording without source basis. Per the program writing standard, official menu text tied to audience and navigation must retain its original form unless there is a documented, officially adopted title change."
+      },
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "The current code and navigation use the label 'Aging and Disability Services Administration.' There is no record in the source or external authority cited showing that the entity has changed its official name to 'Division.' Unless the agency has formally adopted this new name and reflected it in policy, navigation, and communications, the label must remain unchanged as 'Aging and Disability Services Administration.' Changing sector or organizational titles without an official directive or matching record misrepresents the source and confuses staff and users."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3098,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 138,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3236
+    },
+    "review": {
+      "input_tokens": 2795,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 272,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3067
+    }
+  },
+  "createdAt": "2026-11-15T13:53:13.640Z"
+}

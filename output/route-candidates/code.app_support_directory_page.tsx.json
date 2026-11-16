@@ -1,0 +1,67 @@
+{
+  "target": "code.app/support/directory/page.tsx",
+  "kind": "surface",
+  "route": "/support/directory",
+  "sourceSha256": "04273902f2b52c6328bacee27034debaf4c4341bc490a541906181a4d9eb9606",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "These DHS pages can help you find an office or understand a process. Your team may have a specific contact for the next step.",
+      "after": "These DHS pages explain how to identify a relevant office, locate contact information, or review DHS processes. If your question is about program guidance or a specific case, check whether your team names a direct contact for that subject. Otherwise, use the listed offices as a starting point to understand responsibilities and next steps.",
+      "reason": "Expanded to clarify that pages are intended to help staff match their purpose—whether seeking contact information or guidance—to the right office, emphasizing why checking for a team-specific contact first matters and when to use general listings."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The revised field changes the scope and meaning of the original. The source states: 'These DHS pages can help you find an office or understand a process. Your team may have a specific contact for the next step.' The proposed text adds unsupported claims: that DHS pages help 'identify a relevant office,' 'locate contact information,' or 'review DHS processes,' which are restatements but add new framing. More notably, the new version asserts: 'If your question is about program guidance or a specific case, check whether your team names a direct contact for that subject. Otherwise, use the listed offices as a starting point to understand responsibilities and next steps.' This guidance about what to do in the case of a program guidance or specific case question, and a process about what order to follow, is not in the original. The change introduces a decision flow not supported by the source and alters the focus from the original description to generalized procedure. Only source-backed clarifications and minor rewording for clarity are permitted."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1425,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 131,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1556
+    },
+    "review": {
+      "input_tokens": 1145,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 245,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1390
+    }
+  },
+  "createdAt": "2026-11-15T13:51:46.733Z"
+}

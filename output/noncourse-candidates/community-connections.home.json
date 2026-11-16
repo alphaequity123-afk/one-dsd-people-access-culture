@@ -1,0 +1,137 @@
+{
+  "target": "community-connections.home",
+  "kind": "surface",
+  "route": "/learn/community-connections",
+  "sourceSha256": "3c1a3487602890bd0940640545afe2448e0653dc8879357f3f02d18423f8c113",
+  "status": "model_checked",
+  "reviewedFieldCount": 40,
+  "changes": [
+    {
+      "fieldId": 1,
+      "path": [
+        "intro"
+      ],
+      "before": "Connect a decision with the people it affects, the knowledge they bring, and the changes that follow.",
+      "after": "Engage those affected by a decision, draw on their expertise, and document how their involvement leads to change. Effective participation requires clear purpose, shared understanding of influence, and follow-through on feedback.",
+      "reason": "Clarifies the connection between participation and outcomes for staff audience, adds specificity on the role of follow-through and expertise, and supports professional reasoning about engagement."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "planningIntro"
+      ],
+      "before": "An invitation is a beginning. Meaningful engagement also makes room for influence, disagreement, and a response from the people responsible for the decision.",
+      "after": "Inviting participation signals openness, but effective engagement also requires a clear definition of what can change, recognition of disagreement, and accountability for how feedback is used.",
+      "reason": "Expands on the importance of clarity and accountability to ensure colleagues understand why each component of engagement matters, aligns with practical approach to influence."
+    },
+    {
+      "fieldId": 16,
+      "path": [
+        "activity"
+      ],
+      "before": "The team holds two conversations. Attendance describes participation, but does not establish that the approach was effective.",
+      "after": "The team holds two sessions to gather input. Attendance provides a count of participants, but does not indicate whether the engagement approach addressed participant needs or influenced decisions.",
+      "reason": "Improves clarity on why simple attendance does not equate to meaningful input, prompting staff to consider effectiveness rather than just participation rates."
+    },
+    {
+      "fieldId": 17,
+      "path": [
+        "influence"
+      ],
+      "before": "The team revises the plan to offer a phone response option, different meeting times, and a way to request communication support. It records which suggestions it could act on and which need another decision-maker.",
+      "after": "The team updates its plan, adding a phone participation option, varied meeting times, and support for communication needs. It tracks which community suggestions were implemented and which require escalation or further review by those with decision-making authority.",
+      "reason": "Clarifies the process of reviewing and responding to feedback, distinguishing between staff-level actions and items needing leadership or additional authority."
+    },
+    {
+      "fieldId": 18,
+      "path": [
+        "result"
+      ],
+      "before": "After the revised session, the team asks whether people could participate in their preferred way and whether the information helped them identify a next step. It checks whose experience is still missing. It does not infer improved employment outcomes from attendance.",
+      "after": "After the adjusted session, the team follows up by asking if individuals could participate as they preferred and whether the content helped them identify a next step. It identifies whose perspectives were still missing and does not assume that increased participation alone leads to improved employment outcomes.",
+      "reason": "Strengthens emphasis on assessing participant experience and recognizing the limits of attendance as evidence, specifically for evaluating outcome impact."
+    },
+    {
+      "fieldId": 19,
+      "path": [
+        "return"
+      ],
+      "before": "Participants receive an accessible summary of what changed, what remains unresolved, and who will follow up. They can correct the summary and explain whether it reflects their contributions.",
+      "after": "Participants receive an accessible summary outlining changes made, unresolved issues, and designated follow-up responsibility. They are invited to correct the summary and offer input on whether it accurately represents their feedback and contributions.",
+      "reason": "Details the dual importance of closing the feedback loop and allowing participants to verify representation, clarifying professional expectations for reporting back."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revised intro accurately expands on the original point about connecting decisions with people and knowledge. Adding the need for a 'clear purpose, shared understanding of influence, and follow-through on feedback' clarifies standard engagement components for staff. The elaboration is consistent with principles in the referenced ADSA Outreach and Engagement Guide and does not introduce unsupported obligations or erase any caveats from the source note."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The new wording provides a precise professional framing for meaningful engagement by clarifying what follows from inviting participation. It does not remove qualifications or change the meaning of the original advice. The expanded statements about defining what can change and accountability are justified by practice in the source guidance and are relevant for a staff audience."
+      },
+      {
+        "fieldId": 16,
+        "severity": "note",
+        "finding": "The revision clarifies why attendance is not itself evidence of effective engagement. The added detail—explaining the difference between counting participants and measuring whether their needs are met—offers useful context and does not introduce new requirements or contradict the original example."
+      },
+      {
+        "fieldId": 17,
+        "severity": "note",
+        "finding": "The revised field retains the facts of the example while emphasizing professional distinctions (e.g., which feedback can be addressed by the team vs. which requires escalation). The language aligns with the original process description and respects decision-making boundaries set by agency process."
+      },
+      {
+        "fieldId": 18,
+        "severity": "note",
+        "finding": "This change clearly links post-session follow-up to both accessibility and limits on inferring impact. The addition that the team identifies whose perspectives are missing and does not equate attendance with better outcomes is appropriately derived from principles in the source and does not overstate claims."
+      },
+      {
+        "fieldId": 19,
+        "severity": "note",
+        "finding": "The update refines the reporting-back process, emphasizing participant review and verification. This represents best practice and is supported by the original toolkit's focus on responsiveness and accuracy in reporting outcomes. The change maintains the correct scope."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3398,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 539,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3937
+    },
+    "review": {
+      "input_tokens": 2461,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 412,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2873
+    }
+  },
+  "createdAt": "2026-11-15T13:35:39.409Z"
+}

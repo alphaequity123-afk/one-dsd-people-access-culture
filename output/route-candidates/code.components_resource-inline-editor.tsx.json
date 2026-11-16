@@ -1,0 +1,123 @@
+{
+  "target": "code.components/resource-inline-editor.tsx",
+  "kind": "surface",
+  "route": "components/resource-inline-editor.tsx",
+  "sourceSha256": "2bda49babea7d2823cbc716796ce2ddd6bb44843e005983bd20b725fafb029c7",
+  "status": "needs_revision",
+  "reviewedFieldCount": 5,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "You are editing the most recent draft. Staff still see the current approved version.",
+      "after": "You are editing the most recent draft version. Staff using the application will continue to see the last approved wording until this draft is published.",
+      "reason": "Clarified that staff see the prior approved version and explained the consequence of editing the draft: changes are not visible to staff until publication."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Review this draft and decide whether to publish it",
+      "after": "Review this draft to decide whether it should be published or further edited.",
+      "reason": "Clarified the action: reviewing the draft is for decision regarding publication or further edits, connecting the instruction to its purpose."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "What this resource helps staff do",
+      "after": "What this resource is intended to help staff accomplish",
+      "reason": "Clarified that the section focuses on intended staff tasks or accomplishments, making the instructional aim explicit."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": "Next steps shown with this resource",
+      "after": "Next steps that appear with this resource",
+      "reason": "Clarified that the next steps are displayed alongside the resource, to specify their function in guiding users."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field4"
+      ],
+      "before": "Closing the editing fields will discard them. The saved draft is not affected.",
+      "after": "If you close the editing fields now, any unsaved changes will be lost. The previously saved draft will remain unchanged.",
+      "reason": "Clarified what is meant by discarding changes and that only unsaved changes are lost, while the existing saved draft is preserved."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The changed text ('You are editing the most recent draft version. Staff using the application will continue to see the last approved wording until this draft is published.') is not directly supported by the component source code, which uses: 'You are editing the most recent draft. Staff still see the current approved version.' The rewrite adds unsupported explanations ('using the application', 'until this draft is published') that may not always be true (e.g., depending on the audience or application context), and omits the precisely matched copy from the source. Policy requires preservation of the official system response where possible. The original text already provides sufficient clarity given the label and adjacent context."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The proposed wording ('Review this draft to decide whether it should be published or further edited.') changes the intent of the existing label 'Review this draft and decide whether to publish it'. The original, shorter label is entirely supported by the source and specifically matches the code (which links to the review/publish path). The rewrite adds a hypothetical action ('further edited'), which is not called for by source, nor is it a common imperative in this UI context."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The change to 'What this resource is intended to help staff accomplish' is clearer and makes explicit whose intent is being described. The source label ('What this resource helps staff do') is already concise and accurate. Since the change does not introduce error but slightly increases specificity, it is not a blocker but could be reverted for simplicity."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "'Next steps that appear with this resource' is a permissible clarification since these steps do display with the resource in the UI. The original label is correct but a bit less explicit. This is a harmless adjustment."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The new text ('If you close the editing fields now, any unsaved changes will be lost. The previously saved draft will remain unchanged.') closely matches the intent of the original ('Closing the editing fields will discard them. The saved draft is not affected.') and clarifies that only unsaved changes are affected. The original is correct, but the new version is not a blocker; it is a slight clarification."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 5749,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 274,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 6023
+    },
+    "review": {
+      "input_tokens": 5605,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 487,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 6092
+    }
+  },
+  "createdAt": "2026-11-15T13:56:10.110Z"
+}

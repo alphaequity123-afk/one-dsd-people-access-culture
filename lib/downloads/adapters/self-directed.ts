@@ -2,7 +2,6 @@ import "server-only";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import type { StaffProgramScope } from "@/lib/content/staff-publications";
-import { TRAINING_CREDIT_NOTICE } from "@/lib/program/learning-credit";
 import {
   bullets,
   compactSections,
@@ -152,7 +151,6 @@ export async function selfDirectedCourseDocument(id: string, scope: StaffProgram
     sections: compactSections([
       section("What you can practice in this course", course.outcomes.length > 0 ? [bullets(course.outcomes)] : []),
       ...visible.map((slide, index) => pageSection(slide, index + 1, byNumber)),
-      section(undefined, [paragraph(TRAINING_CREDIT_NOTICE)]),
     ]),
     sources: course.sources.map(sourceEntry),
     attribution: programName(scope),

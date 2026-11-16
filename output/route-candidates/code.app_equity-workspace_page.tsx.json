@@ -1,0 +1,123 @@
+{
+  "target": "code.app/equity-workspace/page.tsx",
+  "kind": "surface",
+  "route": "/equity-workspace",
+  "sourceSha256": "eaeeedd70c43c36fd0ebc03e1156a848321b7aa1350f9d39ef839b86d5250bfc",
+  "status": "needs_revision",
+  "reviewedFieldCount": 15,
+  "changes": [
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "The toolkit sets up the analysis and lists the information still needed.",
+      "after": "The toolkit organizes your analysis and identifies what information is still missing, so you can address any evidence gaps before moving forward.",
+      "reason": "Adds reasoning about why the toolkit identifies missing information, clarifying the benefit of this step for the user."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": "It runs the analysis and produces the report, the worksheet, the action plan, the leadership brief and the information request.",
+      "after": "It completes the analysis and generates several outputs: the main report, a worksheet for detailed review, an action plan to track next steps, a leadership brief, and a request listing additional needed information.",
+      "reason": "Clarifies the distinct purposes of each output product, connecting them directly to the staff workflow. This helps staff select the right output for different review or communication needs."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "field7"
+      ],
+      "before": "Analyze it with equity principles, with every finding tied to quoted evidence.",
+      "after": "Apply equity principles throughout the analysis, with each finding linked to direct evidence from the policy document. Documenting evidence for each finding supports transparent decision-making and review.",
+      "reason": "Expands the explanation to clarify why tying findings to quoted evidence is important, emphasizing transparency and supporting further review."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "field8"
+      ],
+      "before": "Draft named changes to protocol, process, procedure and wording.",
+      "after": "Draft proposed changes, naming them specifically and describing how each affects protocol, process, procedure, or the language used. This specificity helps reviewers understand the intent and implications of each change.",
+      "reason": "Adds specificity about what is drafted and why naming and describing each change matters, which supports better review and decision-making."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "field9"
+      ],
+      "before": "Approve, reject or defer each change. Decisions are recorded by role.",
+      "after": "For each proposed change, record a decision to approve, reject, or defer. The system tracks who made each decision by role, which supports accountability and helps document the review process.",
+      "reason": "Clarifies that decision-tracking is by role, and explains the value of recording this information for accountability and transparency."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The change expands the original ('lists the information still needed') to add an explicit claim of benefit ('so you can address any evidence gaps before moving forward'). The source only says the toolkit 'lists the information still needed.' It does not state or imply the consequence is to address evidence gaps before proceeding. This is added reasoning not in the source. Reject."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The change breaks out the original list of outputs into more detail about their purpose. The source does not explicitly list these purposes but does use explicit names: 'the report, the worksheet, the action plan, the leadership brief and the information request.' While some inference is allowed for explanation, the added wording ('an action plan to track next steps,' etc.) edges into assumed intent not present in the source. Consider a more neutral restatement, but this is not a blocker if purpose explanation is allowed by page standards."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "The edit supplements the original by explicitly outlining why evidence is tied ('support transparent decision-making and review'). This is a reasonable and accurate explanation for professional readers, and does not conflict with the source. Allowed."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "The revision adds explicit justification for naming and describing each change ('This specificity helps reviewers understand the intent and implications of each change'). This is a fair professional inference and does not misrepresent or contradict the source. Allowed."
+      },
+      {
+        "fieldId": 9,
+        "severity": "note",
+        "finding": "The revised text clarifies the role of record-keeping for each decision. The addition explains the tracking system's value ('supports accountability and helps document the review process'), which is a reasonable, accurate expansion. Allowed."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2486,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 451,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2937
+    },
+    "review": {
+      "input_tokens": 2146,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 373,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2519
+    }
+  },
+  "createdAt": "2026-11-15T13:48:56.427Z"
+}

@@ -1,0 +1,67 @@
+{
+  "target": "code.app/explore/[facet]/[value]/page.tsx",
+  "kind": "surface",
+  "route": "/explore/[facet]/[value]",
+  "sourceSha256": "70983791100bd4db1c2b0ced35fffb833f9df60b8b1f91c681099be82c4a2de3",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": ". When you are done, you can turn what you learned into an action plan that stays on your computer.",
+      "after": "After completing this section, you can use what you learned to create an action plan saved on your computer. This helps you organize your next steps and refer back to your decisions as your work progresses.",
+      "reason": "Improved clarity by explaining the purpose and practical consequence of turning what was learned into an action plan, connecting it explicitly to organizing next steps and referencing decisions. This adds rationale and avoids vague encouragement."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed rewrite for field0 expands the original text by describing the action plan as a tool to 'organize your next steps and refer back to your decisions as your work progresses.' The source says only: 'When you are done, you can turn what you learned into an action plan that stays on your computer.' This is a straightforward offer without explanation, scope, or instructions. The additional rationale in the rewrite may be reasonable and even correct, but is not present in the source and invents practical effects or user purposes ('organize your next steps,' 'refer back to your decisions'). This violates the standard's requirement to retain scope and not invent consequences, policy, or user intent beyond what is present in the source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1950,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 104,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2054
+    },
+    "review": {
+      "input_tokens": 1666,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 187,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1853
+    }
+  },
+  "createdAt": "2026-11-15T13:49:00.884Z"
+}

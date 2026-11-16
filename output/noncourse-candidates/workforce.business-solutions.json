@@ -1,0 +1,67 @@
+{
+  "target": "workforce.business-solutions",
+  "kind": "surface",
+  "route": "/consultant/workforce/business-solutions",
+  "sourceSha256": "1b75ee8afc3023c3d2b57cb6b4bc9eb4a3028a1eae9ab48bf5d477b54d5f38ed",
+  "status": "model_checked",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "relationship"
+      ],
+      "before": "Listed as an agency area or associated service. This does not establish a direct reporting line.",
+      "after": "This office is recognized as an agency area or related service. Inclusion here does not mean it has a supervisory or direct reporting relationship to other listed areas. Verify specific responsibilities or reporting structures through current organizational charts or direct inquiry, as these may change.",
+      "reason": "Rewritten for clarity and specificity. The new text explains that listing the office does not determine reporting relationships and advises staff to confirm additional details as needed."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revision improves clarity and maintains the original meaning. Both versions state that the Business Solutions Office listing does not establish a direct reporting line. The updated text adds practical advice to check current organizational charts or inquire directly, which aligns with the original note that detailed responsibilities still need confirmation. This is an appropriate clarification given the source context."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1094,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 105,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1199
+    },
+    "review": {
+      "input_tokens": 811,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 88,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 899
+    }
+  },
+  "createdAt": "2026-11-15T13:37:55.676Z"
+}

@@ -1,0 +1,67 @@
+{
+  "target": "code.components/support-context-options.tsx",
+  "kind": "surface",
+  "route": "components/support-context-options.tsx",
+  "sourceSha256": "31c52420628cd151e766773a69eedc93cfc1aa302a725ca5134cff52f8670e9d",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field1"
+      ],
+      "before": "Use the Library, or find the right person.",
+      "after": "Check the Library for program materials or ask the DSD contact who can best address your question. This helps ensure you use current guidance and reach staff equipped to respond to your specific situation.",
+      "reason": "The revision increases specificity relevant to DHS and DSD staff. It clarifies that the Library contains program materials and encourages directly asking the appropriate DSD contact, explaining why this action matters: using current guidance and reaching the right staff. This addresses the standard's requirements for connected prose, reasoning, and grounding in DSD work."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The revised text ('Check the Library for program materials or ask the DSD contact who can best address your question. This helps ensure you use current guidance and reach staff equipped to respond to your specific situation.') is not supported by the supplied source. The source's corresponding text ('Use the Library, or find the right person.') does not specify that the Library necessarily contains 'program materials,' nor does it instruct the user to 'ask the DSD contact.' The explanation about using current guidance and reaching equipped staff is an inferred rationale not present in the official text. The revision adds factual detail about program materials, changes the nature of instruction from 'find' to 'ask,' and elaborates on motivations without direct evidence. This constitutes unsupported content and erases the concise scope of the source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1475,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 128,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1603
+    },
+    "review": {
+      "input_tokens": 1215,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 181,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1396
+    }
+  },
+  "createdAt": "2026-11-15T13:56:25.884Z"
+}

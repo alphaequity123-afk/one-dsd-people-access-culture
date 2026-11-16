@@ -1,0 +1,426 @@
+{
+  "checkedAt": "2026-11-15T15:12:34.092Z",
+  "commit": "ec17403",
+  "results": [
+    {
+      "target": "practice.measurement",
+      "url": "https://one-people-access-culture.up.railway.app/practice/measurement",
+      "status": 200,
+      "expectedFields": 2,
+      "matchedFields": 2,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "community-connections.home",
+      "url": "https://one-people-access-culture.up.railway.app/learn/community-connections",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "resource.ja-equity-impact-questions",
+      "url": "https://one-people-access-culture.up.railway.app/library/ja-equity-impact-questions",
+      "status": 200,
+      "expectedFields": 2,
+      "matchedFields": 0,
+      "missing": [
+        "Use these questions to identify the evidence, affected interests, and authority needed for a decision. They do not provide legal advice or replace the responsible official. If a procurement, budget, or policy decision has significant equity implications that the available guidance does not resolve, seek advice from the appropriate policy, legal, or operational role.",
+        "Find guidance for high-stakes decisions"
+      ],
+      "passed": false
+    },
+    {
+      "target": "resource.pn-intercultural-method",
+      "url": "https://one-people-access-culture.up.railway.app/library/pn-intercultural-method",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "resource.pn-when-to-escalate",
+      "url": "https://one-people-access-culture.up.railway.app/library/pn-when-to-escalate",
+      "status": 200,
+      "expectedFields": 2,
+      "matchedFields": 0,
+      "missing": [
+        "Equity and Inclusion Operations Consultant: another perspective may help with an early program idea, a high-stakes decision, or community-specific work that the available guidance does not fully address. Use Support to identify the responsible person or office and the appropriate contact route. Staff consultation request forms are currently closed.",
+        "Find the responsible person or office"
+      ],
+      "passed": false
+    },
+    {
+      "target": "community-brief.somali",
+      "url": "https://one-people-access-culture.up.railway.app/minnesota-communities/somali",
+      "status": 200,
+      "expectedFields": 2,
+      "matchedFields": 2,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "community-brief.hmong",
+      "url": "https://one-people-access-culture.up.railway.app/minnesota-communities/hmong",
+      "status": 200,
+      "expectedFields": 4,
+      "matchedFields": 4,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "community-brief.karen",
+      "url": "https://one-people-access-culture.up.railway.app/minnesota-communities/karen",
+      "status": 200,
+      "expectedFields": 4,
+      "matchedFields": 4,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "community-brief.oromo",
+      "url": "https://one-people-access-culture.up.railway.app/minnesota-communities/oromo",
+      "status": 200,
+      "expectedFields": 4,
+      "matchedFields": 4,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "community-brief.african-american",
+      "url": "https://one-people-access-culture.up.railway.app/minnesota-communities/african-american",
+      "status": 200,
+      "expectedFields": 3,
+      "matchedFields": 3,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "community-brief.latino",
+      "url": "https://one-people-access-culture.up.railway.app/minnesota-communities/latino",
+      "status": 200,
+      "expectedFields": 3,
+      "matchedFields": 3,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "community-brief.vietnamese",
+      "url": "https://one-people-access-culture.up.railway.app/minnesota-communities/vietnamese",
+      "status": 200,
+      "expectedFields": 3,
+      "matchedFields": 3,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "community-brief.khmer",
+      "url": "https://one-people-access-culture.up.railway.app/minnesota-communities/khmer",
+      "status": 200,
+      "expectedFields": 5,
+      "matchedFields": 5,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "community-brief.lao",
+      "url": "https://one-people-access-culture.up.railway.app/minnesota-communities/lao",
+      "status": 200,
+      "expectedFields": 2,
+      "matchedFields": 2,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "community-brief.russian-speaking",
+      "url": "https://one-people-access-culture.up.railway.app/minnesota-communities/russian-speaking",
+      "status": 200,
+      "expectedFields": 2,
+      "matchedFields": 2,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "community-brief.arabic-speaking",
+      "url": "https://one-people-access-culture.up.railway.app/minnesota-communities/arabic-speaking",
+      "status": 200,
+      "expectedFields": 2,
+      "matchedFields": 2,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "community-brief.deaf-deafblind-hard-of-hearing",
+      "url": "https://one-people-access-culture.up.railway.app/minnesota-communities/deaf-deafblind-hard-of-hearing",
+      "status": 200,
+      "expectedFields": 3,
+      "matchedFields": 3,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "community-brief.rural",
+      "url": "https://one-people-access-culture.up.railway.app/minnesota-communities/rural",
+      "status": 200,
+      "expectedFields": 3,
+      "matchedFields": 3,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "resource.ja-inclusive-hiring-lifecycle",
+      "url": "https://one-people-access-culture.up.railway.app/library/ja-inclusive-hiring-lifecycle",
+      "status": 200,
+      "expectedFields": 3,
+      "matchedFields": 3,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "resource.lm-facilitation-application",
+      "url": "https://one-people-access-culture.up.railway.app/library/lm-facilitation-application",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 0,
+      "missing": [
+        "Design sessions so participants can apply a specific skill to their own work. Begin with what they should be able to do, keep presentations focused, and leave substantial time to practice with real materials."
+      ],
+      "passed": false
+    },
+    {
+      "target": "resource.lm-how-this-program-works",
+      "url": "https://one-people-access-culture.up.railway.app/library/lm-how-this-program-works",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "resource.pn-pay-classification-advancement",
+      "url": "https://one-people-access-culture.up.railway.app/library/pn-pay-classification-advancement",
+      "status": 200,
+      "expectedFields": 2,
+      "matchedFields": 2,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "resource.pn-mentoring-sponsorship",
+      "url": "https://one-people-access-culture.up.railway.app/library/pn-mentoring-sponsorship",
+      "status": 200,
+      "expectedFields": 2,
+      "matchedFields": 2,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "resource.pn-stay-interviews-and-retention",
+      "url": "https://one-people-access-culture.up.railway.app/library/pn-stay-interviews-and-retention",
+      "status": 200,
+      "expectedFields": 3,
+      "matchedFields": 3,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "resource.ja-procurement-contract-equity",
+      "url": "https://one-people-access-culture.up.railway.app/library/ja-procurement-contract-equity",
+      "status": 200,
+      "expectedFields": 2,
+      "matchedFields": 2,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "resource.ja-engagement-influence-ladder",
+      "url": "https://one-people-access-culture.up.railway.app/library/ja-engagement-influence-ladder",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "resource.ja-report-back",
+      "url": "https://one-people-access-culture.up.railway.app/library/ja-report-back",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "resource.pn-cultural-humility-briefs-as-questions",
+      "url": "https://one-people-access-culture.up.railway.app/library/pn-cultural-humility-briefs-as-questions",
+      "status": 200,
+      "expectedFields": 3,
+      "matchedFields": 3,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "resource.lm-plain-language-carries-complexity",
+      "url": "https://one-people-access-culture.up.railway.app/library/lm-plain-language-carries-complexity",
+      "status": 200,
+      "expectedFields": 2,
+      "matchedFields": 2,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "resource.lm-psychological-safety-and-repair",
+      "url": "https://one-people-access-culture.up.railway.app/library/lm-psychological-safety-and-repair",
+      "status": 200,
+      "expectedFields": 3,
+      "matchedFields": 3,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "resource.lm-power-and-positional-authority",
+      "url": "https://one-people-access-culture.up.railway.app/library/lm-power-and-positional-authority",
+      "status": 200,
+      "expectedFields": 4,
+      "matchedFields": 0,
+      "missing": [
+        "Supervisors, managers, and people with expertise or tenure can influence whose ideas are heard, whose account is believed, and whose time is treated as important. Intercultural practice includes examining that influence and using authority to make participation more accessible.",
+        "What it can do. Unequal influence may make people cautious about disagreeing or offering ideas, particularly when earlier concerns were ignored. Silence does not establish agreement, and directness does not establish hostility. Ask what would help people contribute without assuming why someone is quiet.",
+        "What to do with it. Leave room for other views before stating your conclusion. Invite contributions without putting a person on the spot, and offer written or later input as well as discussion. Credit ideas to their contributors and avoid making participation depend on speaking quickly in English.",
+        "In supervision. Explain the work expectations and decisions within your responsibility, and ask what information, access, or support the person needs. Make expectations explicit so people do not have to infer unwritten rules."
+      ],
+      "passed": false
+    },
+    {
+      "target": "equity.practice",
+      "url": "https://one-people-access-culture.up.railway.app/about#equity-in-practice",
+      "status": 200,
+      "expectedFields": 8,
+      "matchedFields": 0,
+      "missing": [
+        "Engagement brings staff and community experience into the work. Analysis examines those accounts alongside other evidence to understand the process, and applied practice develops a specific response with the responsible decision-maker. Review what was tried and what changed without scoring individual learners.",
+        "Begin while choices remain open, explain whether participants are being informed, consulted, or invited to design with staff, and plan compensation through approved arrangements. Report what changed, what did not, and why. Tribal consultation follows a separate government-to-government process.",
+        "Foundation, integration, and institutionalization describe proposed stages for division-level planning. Use them to examine how equity practices become part of routine decisions; they are not labels for individual staff or evidence that a stage has already been achieved.",
+        "Learning and reflection in this program are voluntary. Staff can choose a pace and starting point that fit their needs. Personal learning is not used to score or profile staff. Some activities let you save notes on your device; check the privacy information for the activity and keep identifying information out of shared work.",
+        "Examine approval bottlenecks, unclear decision rights, credential requirements, and data systems built for billing. Ask which features reflect necessary requirements, which are inherited practices, and who has authority to consider a change.",
+        "Respond to reported harm without deciding in advance whether it was intentional. Use the appropriate Human Resources or other established channel for an individual concern and explain its privacy limits. A concern may also reveal a wider pattern, but equity analysis does not replace the formal process.",
+        "Build accessibility, language access, and plain language into routine work, with responsibility for implementation. Individual accommodation requests still need the appropriate established process; accessible design does not replace that responsibility.",
+        "Use the proposed stages of foundation, integration, and institutionalization to plan the work. Identify the resources, responsible people, and review needed at each stage rather than treating a stated intention as an implemented change."
+      ],
+      "passed": false
+    },
+    {
+      "target": "resource.ext-emerging-leaders-institute",
+      "url": "https://one-people-access-culture.up.railway.app/library/ext-emerging-leaders-institute",
+      "status": 200,
+      "expectedFields": 3,
+      "matchedFields": 0,
+      "missing": [
+        "Minnesota Management and Budget offers the Emerging Leaders Institute for Minnesota state employees preparing for future leadership responsibilities. Check the current eligibility, application cycle, and agency process before planning to apply.",
+        "Why it is here: this state program provides a leadership-development option to consider alongside learning and practice in People, Access and Culture.",
+        "How to use it: review the current program information and ask your agency Human Resources or learning and development team about the application process. Supervisors can help staff learn about the opportunity and discuss support for an application; nomination and selection follow the published process."
+      ],
+      "passed": false
+    },
+    {
+      "target": "resource.pn-measurement-without-surveillance",
+      "url": "https://one-people-access-culture.up.railway.app/library/pn-measurement-without-surveillance",
+      "status": 200,
+      "expectedFields": 5,
+      "matchedFields": 5,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "resource.pn-accessible-leadership-pathways",
+      "url": "https://one-people-access-culture.up.railway.app/library/pn-accessible-leadership-pathways",
+      "status": 200,
+      "expectedFields": 7,
+      "matchedFields": 0,
+      "missing": [
+        "Leadership pathways can create barriers through nomination rules, interview formats, access arrangements, and informal judgments of readiness. Invite disabled staff to describe those processes without requiring personal disclosure in a learning discussion. Examine each stage and plan accessible development, sponsorship, and clear information about requirements.",
+        "Report back on access commitments. Explain what changed, what did not, why, and who is responsible for the next decision. This lets people examine the response to their concerns rather than having to rely on a general promise.",
+        "Test leadership criteria against the work. Ask what executive presence, quick verbal response, travel, long hours, or constant availability are intended to demonstrate. Examine whether each requirement is necessary and what other ways could demonstrate the relevant capability.",
+        "Use structured leadership interviews with criteria tied to the work. Tell candidates how to request accommodation through the designated process, and prepare the panel to assess relevant evidence without making assumptions about disability.",
+        "Boundaries this program keeps. Do not infer disability from behavior, accommodation history, or participation. Do not track individual learning for personnel decisions. Review any program-level reporting for identification risk, including small groups. Use the authorized processes for accommodation requests, complaints, and personnel matters; keep those records out of this program.",
+        "Plan access across transitions. Before a rotation, leadership cohort, interview, or change of supervisor, confirm who will coordinate access arrangements with the person and the authorized accommodation process. Check what will continue and what needs review in the new setting.",
+        "Design leadership programs for accessible participation: provide materials in advance, captioning, flexible formats, and alternatives to timed or drag-based activities. Review access arrangements across cohort events. Minnesota Management and Budget offers the Emerging Leaders Institute; use the current program information when considering this option."
+      ],
+      "passed": false
+    },
+    {
+      "target": "resource.ja-leadership-criteria-job-relatedness",
+      "url": "https://one-people-access-culture.up.railway.app/library/ja-leadership-criteria-job-relatedness",
+      "status": 200,
+      "expectedFields": 3,
+      "matchedFields": 3,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "resource.ja-accommodation-across-transitions",
+      "url": "https://one-people-access-culture.up.railway.app/library/ja-accommodation-across-transitions",
+      "status": 200,
+      "expectedFields": 4,
+      "matchedFields": 0,
+      "missing": [
+        "A change in role, supervisor, assignment, or learning program can disrupt access arrangements if responsibilities are unclear. Identify who will coordinate the transition and check with the person and the authorized accommodation process about what is needed in the new setting.",
+        "Planning responsibilities before a transition can prevent gaps in access. The arrangements that worked in one setting may need review in another, so confirm what will continue, what needs adjustment, and who can decide.",
+        "For each transition, identify the person responsible for coordinating access arrangements with the individual and the designated accommodation office. Confirm what can continue and what requires review before the new activity begins.",
+        "Tell everyone entering the activity how to request accommodation. Keep requests within the authorized process. The designated office may need supporting information to assess an individual request."
+      ],
+      "passed": false
+    },
+    {
+      "target": "resource.lm-intersectionality-foundations",
+      "url": "https://one-people-access-culture.up.railway.app/library/lm-intersectionality-foundations",
+      "status": 200,
+      "expectedFields": 2,
+      "matchedFields": 2,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "resource.lm-structural-racism-and-institutions",
+      "url": "https://one-people-access-culture.up.railway.app/library/lm-structural-racism-and-institutions",
+      "status": 200,
+      "expectedFields": 2,
+      "matchedFields": 2,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "resource.pn-idi-and-tool-registry",
+      "url": "https://one-people-access-culture.up.railway.app/library/pn-idi-and-tool-registry",
+      "status": 200,
+      "expectedFields": 2,
+      "matchedFields": 0,
+      "missing": [
+        "The Intercultural Development Inventory is one proprietary assessment that can inform qualified developmental practice. This program does not use individual results for personnel decisions or reproduce protected assessment content. Learning here can also begin without an assessment.",
+        "Choose how to use a tool with the people responsible for the work, drawing on equity professionals and other relevant expertise. A tool can structure inquiry, but it does not confer authority or make the decision."
+      ],
+      "passed": false
+    },
+    {
+      "target": "resource.pn-role-aware-entry",
+      "url": "https://one-people-access-culture.up.railway.app/library/pn-role-aware-entry",
+      "status": 200,
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "course.dhs-equity-analysis-toolkit",
+      "url": "https://one-people-access-culture.up.railway.app/courses/dhs-equity-analysis-toolkit",
+      "status": 200,
+      "expectedFields": 38,
+      "matchedFields": 38,
+      "missing": [],
+      "passed": true
+    }
+  ]
+}

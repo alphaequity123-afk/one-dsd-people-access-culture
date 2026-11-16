@@ -1,0 +1,95 @@
+{
+  "target": "code.components/course-lesson.tsx",
+  "kind": "surface",
+  "route": "components/course-lesson.tsx",
+  "sourceSha256": "51c7598f2f39a332284e65a52bf4eb952f08e988f1be731d067306530ab5cb3e",
+  "status": "needs_revision",
+  "reviewedFieldCount": 4,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Download this example to adapt it in your own document.",
+      "after": "Download this example and adapt it for your documentation needs.",
+      "reason": "Clarifies the intended use. Uses more precise language for professional colleagues, specifying the example is for documentation needs, relevant to staff work, without implying any one right way to use it."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field2"
+      ],
+      "before": "Turn this lesson into an action plan",
+      "after": "Create an action plan from this lesson",
+      "reason": "Uses clear, active language. 'Create an action plan' specifies the action a staff member would take as a direct result of the lesson, rather than a generic phrase. This is professionally direct and fits the audience."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field3"
+      ],
+      "before": ": one change you will try, a first step and a date to look back. It stays on this computer.",
+      "after": "Include one change to try, your first step, and a date to review progress. This plan remains saved on this device.",
+      "reason": "Clarifies what elements to include in the action plan for colleagues, and makes it explicit that the plan stays local without implying permanent privacy or guaranteeing data retention. This makes expectations clearer and ties instructions directly to staff workflow."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The original wording ('Download this example to adapt it in your own document.') directly matches the authoritative intent of the source. The revision ('Download this example and adapt it for your documentation needs.') changes 'your own document' to 'your documentation needs,' which is less direct, more abstract, and subtly shifts meaning. The instruction in the source is concrete: adapt it in your own document. The change also removes the invitation for individual adaptation, which is part of the source's intent. This is a blocker: the change is unsupported and erases source intent."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The source reads: 'Turn this lesson into an action plan.' The revision: 'Create an action plan from this lesson.' Although both are clear, the original better preserves the source's imperative and slightly more conversational tone. The change does not add specificity or professionalism per the review standard, and alters source phrasing. Unnecessary and unsupported word shifts are not permitted; this is a blocker."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The source wording (': one change you will try, a first step and a date to look back. It stays on this computer.') is direct, plain, and aligned with the evidence. The suggested revision ('Include one change to try, your first step, and a date to review progress. This plan remains saved on this device.') adds directions not present in the source (e.g., 'review progress' vs. 'look back'), and turns the statement from a clarifying note into an explicit instruction ('Include...'), which goes beyond the intention and style of the source. This is a blocker because it changes the function and nuance of the original line."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 5540,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 219,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5759
+    },
+    "review": {
+      "input_tokens": 5318,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 372,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 5690
+    }
+  },
+  "createdAt": "2026-11-15T13:52:53.734Z"
+}

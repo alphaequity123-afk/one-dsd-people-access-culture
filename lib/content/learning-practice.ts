@@ -1,4 +1,3 @@
-import { TRAINING_CREDIT_NOTICE } from "@/lib/program/learning-credit";
 
 export const PRACTICE_FIELDS = [
   {id:"situation",label:"The situation I want to work on",required:true},
@@ -18,7 +17,7 @@ export function emptyPractice(): PracticeValues {
 }
 export function buildPracticeNote(title: string, values: PracticeValues): string | null {
   if (!values.situation.trim() || !values.action.trim()) return null;
-  return ["My learning in practice",title,...PRACTICE_FIELDS.map(field => field.label+"\n"+(values[field.id].trim() || "Not recorded.")),TRAINING_CREDIT_NOTICE].join("\n\n");
+  return ["My learning in practice",title,...PRACTICE_FIELDS.map(field => field.label+"\n"+(values[field.id].trim() || "Not recorded."))].join("\n\n");
 }
 /** Restore this tool's own bounded notes only; do not treat arbitrary local data as valid. */
 export function readPracticeNotes(raw: string, stopIds: readonly string[]): PracticeNotes {

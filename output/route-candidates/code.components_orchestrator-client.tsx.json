@@ -1,0 +1,81 @@
+{
+  "target": "code.components/orchestrator-client.tsx",
+  "kind": "surface",
+  "route": "components/orchestrator-client.tsx",
+  "sourceSha256": "2e0995889bb8682379e96443eeb70c48220f0198d9fa5e47052b2237b02ac1e5",
+  "status": "needs_revision",
+  "reviewedFieldCount": 24,
+  "changes": [
+    {
+      "fieldId": 22,
+      "path": [
+        "field25"
+      ],
+      "before": "Choose which areas may help and how independently each may work. The strictest limit always applies: the area’s built-in limit, the limit you choose here, or the overall workspace limit.",
+      "after": "Set limits for each program support area and decide how independently it may work. The most restrictive limit applies at all times—this can be the area’s built-in ceiling, any limit you set here, or the overall workspace maximum. Adjusting these limits directly shapes the workflow and controls staff access to each area.",
+      "reason": "Revised for greater clarity about why the strictest limit always applies and what practical effects these settings have. Added explanation of consequence for staff and workflow."
+    },
+    {
+      "fieldId": 23,
+      "path": [
+        "field27"
+      ],
+      "before": "A selected option may still need a connection or unfinished work before it can be used. Items described as planned remain unavailable until they are built and checked.",
+      "after": "Some features and pilots require an active connection or additional development before they can be used. Items listed as planned are unavailable until they are complete and verified. Selecting a feature here does not alone guarantee it will be usable in the current workspace. This helps staff understand the status of available options and prevents confusion about feature readiness.",
+      "reason": "Expanded with specific consequences and clarified why an unavailable or incomplete feature cannot be used, explaining the purpose for staff and preventing confusion."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 22,
+        "severity": "blocker",
+        "finding": "The proposed rewrite changes both meaning and scope of the source text. The original statement ('Choose which areas may help and how independently each may work. The strictest limit always applies: the area’s built-in limit, the limit you choose here, or the overall workspace limit.') focuses solely on the rule that the strictest of several work level limits always governs. The rewrite introduces several unstated ideas: that the user is 'directly shaping workflow,' 'controls staff access,' and attributes broader workflow consequences to these limit settings. The source only establishes a rule of limits—not a practical workflow, access control, or direct staff consequences. The revised version exceeds what the code and source text provide."
+      },
+      {
+        "fieldId": 23,
+        "severity": "blocker",
+        "finding": "The rewrite adds information about 'helping staff understand the status of available options' and 'preventing confusion,' which is not present in the component's source. The original text simply states that a selected option may still be unavailable (due to needing a connection or being incomplete), and that 'planned' items remain unavailable until built and checked. The rewrite invents the rationale and practical effect, which exceeds the page's direct, source-grounded content. This is unsupported expansion, not source-based clarification."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 8995,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 262,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 9257
+    },
+    "review": {
+      "input_tokens": 8179,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 275,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 8454
+    }
+  },
+  "createdAt": "2026-11-15T13:55:01.851Z"
+}

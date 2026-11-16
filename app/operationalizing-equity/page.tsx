@@ -57,11 +57,11 @@ export default async function OperationalizingEquityPage({ searchParams }: { sea
       </section>
       <section aria-labelledby="choose-support" className="mt-12 rounded-xl border border-line bg-white p-6 md:p-8">
         <h2 id="choose-support" className="mt-0 text-3xl font-bold">Connect it to your work</h2>
-        <p>Explore at your own pace and choose what is useful. Participation in People, Access and Culture is voluntary.</p>
+        <p>Explore at your own pace and choose what is useful.</p>
         <ul className="grid gap-4 pl-5 md:grid-cols-2">
           <li><Link href="/ask">Ask a question</Link> to read a published answer and download a copy.</li>
           <li><Link href="/learn/equity-toolkit">Use the Equity Analysis Toolkit companion</Link> to explore decisions, participation and practical application.</li>
-          <li><Link href="/equity-policy">Read the DHS equity policy</Link> and run the guided toolkit walkthrough on your own work; what staff add is counted there.</li>
+          <li><Link href="/equity-policy">Read the DHS equity policy</Link> and run the guided toolkit walkthrough on your own work.</li>
           <li><Link href="/equity-review/director-toolkit">Use the Equity Director toolkit</Link> for a first 90-day plan, a 12-item starter package and printable templates for leading equity work across the Department of Human Services.</li>
           <li><Link href="/equity-framework">Read the Equity Strategic Framework</Link>, the operational spine that every part of the program is mapped to.</li>
           <li><Link href="/practice">Explore guided practice</Link> to develop a checklist, plan, or other useful piece of work.</li>

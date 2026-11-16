@@ -1,0 +1,112 @@
+{
+  "target": "dsd-program.employment",
+  "kind": "surface",
+  "route": "/one-dsd/programs/employment",
+  "sourceSha256": "2b74dd4cc05da659d3772b0f1f7939b625272a2f3d8e1c21672b6c9a6a913128",
+  "status": "needs_revision",
+  "reviewedFieldCount": 4,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "intro"
+      ],
+      "before": "Employment-first practice and day service policy.",
+      "after": "Minnesota DHS supports employment-first practices, making competitive integrated employment the primary goal for people with disabilities. Day service policy helps ensure people have opportunities to develop skills, participate in their communities, and pursue meaningful employment according to their interests and needs. Staff must use these practices to support informed choice and improve employment outcomes for people receiving disability services.",
+      "reason": "Expanded summary to explain what employment-first means, how day service policy connects to real opportunities, and why staff play a key role. Explained the importance of informed choice and specific outcomes, as program standard requires."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "equityEntryPoints",
+        0
+      ],
+      "before": "Competitive integrated employment as the first option",
+      "after": "Competitive integrated employment is the preferred and primary outcome for people with disabilities.",
+      "reason": "Clarified that this principle frames the program's approach and specifies its meaning in the service context."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "equityEntryPoints",
+        1
+      ],
+      "before": "Provider practice with different communities",
+      "after": "Providers must understand and respect differences within Minnesota's communities, including cultural, linguistic, and disability-related factors, to deliver effective services.",
+      "reason": "Added detail on what \"practice with different communities\" involves and why it matters. Connects provider actions to service effectiveness."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "equityEntryPoints",
+        2
+      ],
+      "before": "Outcomes by disability, race, language, and place",
+      "after": "Collect and compare outcomes by disability type, race, language, and location to identify disparities and guide improvements in service access and quality.",
+      "reason": "Specified why measuring outcomes across these dimensions is important and how the information is used, in line with equity and program standards."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The rewritten intro adds several claims not supported by the source. The original states: 'Employment-first practice and day service policy.' The revision asserts that 'making competitive integrated employment the primary goal,' describes day service policy as ensuring opportunities, and directs staff to 'use these practices.' None of this appears in the surface source, and there is no evidence that all staff must use these practices or that day service policy ensures specific opportunities for skill development or participation. The rewritten intro overstates program requirements, invents obligations, and adds unsupported explanation."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The change from 'Competitive integrated employment as the first option' to 'Competitive integrated employment is the preferred and primary outcome for people with disabilities' changes the meaning and creates a legal condition not found in the source. The source only specifies 'first option,' not 'primary outcome,' which implies a stricter and potentially mandatory standard that is not in evidence. The program may lead with this approach, but the phrase 'preferred and primary outcome' risks erasing the role of individual choice or exceptions, which are not addressed in the source."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revision expands 'Provider practice with different communities' to specify expected provider understandings and behaviors. While this adds clarity, the original source provides only a broad topic, not a detailed requirement. There is some risk of implying a more prescriptive standard than is documented in the provided source, but this is a clarification rather than an invented rule."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The expanded explanation for outcomes by disability, race, language, and place clarifies the purpose of collecting and comparing outcomes, which is not explicit in the source. However, it is a logical expansion (why collect these data), not an invented legal requirement. This is a reasonable clarification."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1143,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 303,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1446
+    },
+    "review": {
+      "input_tokens": 1037,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 453,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1490
+    }
+  },
+  "createdAt": "2026-11-15T13:38:36.311Z"
+}

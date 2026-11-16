@@ -1,0 +1,109 @@
+{
+  "target": "code.components/leadership-styles-pathway.tsx",
+  "kind": "surface",
+  "route": "components/leadership-styles-pathway.tsx",
+  "sourceSha256": "1a87a86b370b0303d08784893096dd909a5f3c8a3c9ef8387a1cebb1dcda84c8",
+  "status": "needs_revision",
+  "reviewedFieldCount": 4,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Seven fictional situations, from accessible meetings to a leader's own mistake, with several styles responding to each.",
+      "after": "Seven example situations, such as holding accessible meetings or addressing a leader’s mistake, with contrasting style-based responses explained for each scenario.",
+      "reason": "Clarifies that these are example scenarios and gives concrete context for their use in practice. The revision avoids redundant language and connects directly to staff learning through applied cases."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "How race shapes the way leadership is recognized, limited and evaluated, without stereotyping anyone.",
+      "after": "Explains how race can affect how leadership is noticed, limited, or judged in practice, and makes clear that the discussion avoids generalizations or group stereotypes.",
+      "reason": "Adds clarity about why race is discussed and explicitly directs the focus to practical implications in leadership within DHS/DSD, while reaffirming the commitment to avoid stereotyping, as per standards."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "A worked example that combines approaches from the first response to lasting change.",
+      "after": "A step-by-step case showing how different leadership styles may shape the approach from an initial response through to sustained organizational change.",
+      "reason": "Clarifies that the example is both sequential and comparative, and relates it more directly to how different styles influence progression over time in agency work."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": "Rewrite a weak response and check it against the eight-point practice rubric.",
+      "after": "Practice revising an inadequate leadership response and evaluate it using the eight-point practice criteria to support better decision-making in future situations.",
+      "reason": "Specifies the purpose and benefit—learning to improve actual responses—and makes the evaluation framework explicit, giving context for why the rubric is being used."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revision changes the scope and supporting details of the source. The original, 'Seven fictional situations, from accessible meetings to a leader's own mistake, with several styles responding to each,' is tightened to precise source language with reference to 'fictional' and 'seven,' and makes clear that there are multiple styles per situation. The rewrite, 'Seven example situations, such as holding accessible meetings or addressing a leader’s mistake, with contrasting style-based responses explained for each scenario,' introduces 'example situations' as an instructional framing and says 'contrasting style-based responses explained,' but the original only describes that there are several styles responding—not that they are necessarily contrasting or explained. Changing 'fictional' to 'example' alters the meaning, and adding 'explained' is not supported by the source. These introduce instructional intent not in the code and depart from the original source's informational and cataloging tone."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The revision alters the meaning and framing of the source. The original, 'How race shapes the way leadership is recognized, limited and evaluated, without stereotyping anyone,' is an informational statement describing the topic focus of the page. The rewrite changes this to 'Explains how race can affect how leadership is noticed, limited, or judged in practice, and makes clear that the discussion avoids generalizations or group stereotypes.' Adding 'explains' makes the description instructional, rather than a neutral catalog of the page content. 'Affect in practice' and 'avoids generalizations or group stereotypes' introduce new terminology, slightly alter the subject's emphasis, and move away from the plain statement that no stereotyping is performed. The edit introduces a rationale and context ('practical implications in leadership within DHS/DSD') not present in the source."
+      },
+      {
+        "fieldId": 2,
+        "severity": "blocker",
+        "finding": "The edit adds unstated information and shifts intent. The original is 'A worked example that combines approaches from the first response to lasting change.' The proposed text, 'A step-by-step case showing how different leadership styles may shape the approach from an initial response through to sustained organizational change,' adds 'step-by-step,' 'case,' and that 'different leadership styles may shape the approach,' which is not explicitly stated in the original. While the source refers to combining approaches, it does not specify a sequential or comparative breakdown nor explicitly describe the role of different styles. The word 'case' changes the genre from 'example' to 'case study.' This is an expansion beyond the original textual description."
+      },
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "The edit unnecessarily elaborates and invents context absent from the source. The original, 'Rewrite a weak response and check it against the eight-point practice rubric,' is succinct and instructional. The revision, 'Practice revising an inadequate leadership response and evaluate it using the eight-point practice criteria to support better decision-making in future situations,' adds a rationale ('to support better decision-making in future situations') and paraphrases 'rubric' to 'criteria,' which loses the technical meaning and precise correspondence with the original. The proposed edit also shifts 'rewrite' to 'practice revising,' which is more about the learner's activity than the page content itself—this subtly shifts the focus and intent."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2395,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 351,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2746
+    },
+    "review": {
+      "input_tokens": 2277,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 743,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3020
+    }
+  },
+  "createdAt": "2026-11-15T13:54:08.052Z"
+}

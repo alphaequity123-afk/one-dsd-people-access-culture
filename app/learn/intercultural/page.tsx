@@ -17,7 +17,6 @@ import { linkListValue, EDITABLE_SURFACE_REGISTRY } from "@/lib/content/staff-su
 import { loadPublishedEditableSurfaces } from "@/lib/content/editable-surfaces";
 import { requestedContentScope } from "@/lib/product/request-context";
 import { culturalIntelligenceHubAvailable } from "@/lib/content/cultural-intelligence-publication";
-import { TRAINING_CREDIT_NOTICE } from "@/lib/program/learning-credit";
 
 export const dynamic="force-dynamic";
 export const metadata:Metadata={title:"Intercultural learning in everyday work"};
@@ -51,7 +50,7 @@ export default async function InterculturalLearningPage({searchParams}:{searchPa
         <summary>Download this learning journey</summary>
         <ResourceDownloads kind="learning-journey" id="intercultural" noun="learning journey" scope={scope} />
       </details>
-      <div className="max-w-4xl"><p className="text-lg leading-8">{text("choice")}</p><p className="mt-3 text-sm leading-6">{TRAINING_CREDIT_NOTICE}</p></div>
+      <div className="max-w-4xl"><p className="text-lg leading-8">{text("choice")}</p></div>
       <section className={styles.topicStart} aria-labelledby="journey-start-title"><h2 id="journey-start-title">Start here: {stops[0].title}</h2><p>{stops[0].purpose}</p><Link className={styles.primaryAction} href={"#" + stops[0].id}>Explore the foundations</Link></section>
       <section className={styles.topicStart} aria-labelledby="intercultural-curriculum-title"><h2 id="intercultural-curriculum-title">Follow a connected learning path</h2><p>Explore seven parts that bring intercultural learning into everyday work, with individual practice and optional community context.</p><Link href="/learn/intercultural/curriculum">Explore the curriculum</Link></section>
       {culturalIntelligenceAvailable && <section className={styles.topicStart} aria-labelledby="cultural-intelligence-collection-title"><h2 id="cultural-intelligence-collection-title">Cultural Intelligence collection</h2><p>Learn, explore community context, and practice decisions for everyday work.</p><Link href="/learn/cultural-intelligence">Explore the collection</Link></section>}

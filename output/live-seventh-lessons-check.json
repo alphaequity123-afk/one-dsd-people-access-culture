@@ -1,0 +1,137 @@
+{
+  "checkedAt": "2026-11-15T16:20:12.866Z",
+  "results": [
+    {
+      "course": "disability-and-language",
+      "lesson": "dl-two",
+      "steps": 4,
+      "expectedTeachingFields": 4,
+      "matchedTeachingFields": 0,
+      "missing": [
+        [
+          "course",
+          "lessons",
+          0,
+          "blocks",
+          1,
+          "body"
+        ],
+        [
+          "course",
+          "lessons",
+          0,
+          "blocks",
+          2,
+          "question"
+        ],
+        [
+          "course",
+          "lessons",
+          0,
+          "blocks",
+          3,
+          "failure"
+        ],
+        [
+          "course",
+          "lessons",
+          0,
+          "blocks",
+          3,
+          "next"
+        ]
+      ]
+    },
+    {
+      "course": "disability-and-language",
+      "lesson": "dl-evidence",
+      "steps": 4,
+      "expectedTeachingFields": 4,
+      "matchedTeachingFields": 0,
+      "missing": [
+        [
+          "course",
+          "lessons",
+          1,
+          "blocks",
+          0,
+          "body"
+        ],
+        [
+          "course",
+          "lessons",
+          1,
+          "blocks",
+          1,
+          "question"
+        ],
+        [
+          "course",
+          "lessons",
+          1,
+          "blocks",
+          2,
+          "failure"
+        ],
+        [
+          "course",
+          "lessons",
+          1,
+          "blocks",
+          2,
+          "next"
+        ]
+      ]
+    },
+    {
+      "course": "disability-and-language",
+      "lesson": "dl-book",
+      "steps": 3,
+      "expectedTeachingFields": 2,
+      "matchedTeachingFields": 0,
+      "missing": [
+        [
+          "course",
+          "lessons",
+          2,
+          "blocks",
+          1,
+          "failure"
+        ],
+        [
+          "course",
+          "lessons",
+          2,
+          "blocks",
+          1,
+          "next"
+        ]
+      ]
+    },
+    {
+      "course": "disability-and-language",
+      "lesson": "dl-one",
+      "steps": 3,
+      "expectedTeachingFields": 2,
+      "matchedTeachingFields": 0,
+      "missing": [
+        [
+          "course",
+          "lessons",
+          3,
+          "blocks",
+          1,
+          "failure"
+        ],
+        [
+          "course",
+          "lessons",
+          3,
+          "blocks",
+          1,
+          "next"
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,291 @@
+{
+  "checkedAt": "2026-11-15T15:15:03.035Z",
+  "results": [
+    {
+      "target": "lib--content--director-toolkit.ts--DIRECTOR_TOOLKIT_INTRO-2",
+      "routes": [
+        "/equity-review/director-toolkit"
+      ],
+      "expectedFields": 2,
+      "matchedFields": 2,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "lib--content--director-toolkit.ts--DIRECTOR_TOOLKIT_INTRO-3",
+      "routes": [
+        "/equity-review/director-toolkit"
+      ],
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "lib--content--director-toolkit.ts--DIRECTOR_TOOLKIT_SECTIONS-9",
+      "routes": [
+        "/equity-review/director-toolkit"
+      ],
+      "expectedFields": 2,
+      "matchedFields": 2,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "lib--content--director-toolkit.ts--DIRECTOR_TEMPLATES-0",
+      "routes": [
+        "/equity-review/director-toolkit/templates"
+      ],
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "lib--content--director-toolkit.ts--DIRECTOR_TEMPLATES-9",
+      "routes": [
+        "/equity-review/director-toolkit/templates"
+      ],
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "lib--program--dsd-logic-model.ts--logicStages-1",
+      "routes": [
+        "/program/model",
+        "/program/practice",
+        "/program/progress"
+      ],
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "lib--program--dsd-logic-model.ts--logicStages-3",
+      "routes": [
+        "/program/model",
+        "/program/practice",
+        "/program/progress"
+      ],
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "lib--equity-analysis--policy.ts--EQUITY_POLICY-4",
+      "routes": [
+        "/equity-policy"
+      ],
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "lib--equity-analysis--policy.ts--EQUITY_POLICY-5",
+      "routes": [
+        "/equity-policy"
+      ],
+      "expectedFields": 3,
+      "matchedFields": 3,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "lib--equity-analysis--policy.ts--EQUITY_POLICY-6",
+      "routes": [
+        "/equity-policy"
+      ],
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "lib--program--adsa-implementation.ts--adsaImplementation-4",
+      "routes": [
+        "/program/implementation"
+      ],
+      "expectedFields": 4,
+      "matchedFields": 4,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "lib--program--equity-framework.ts--EQUITY_FRAMEWORK-3",
+      "routes": [
+        "/equity-framework"
+      ],
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "lib--program--equity-framework.ts--EQUITY_FRAMEWORK-4",
+      "routes": [
+        "/equity-framework"
+      ],
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "lib--program--equity-framework.ts--EQUITY_FRAMEWORK-11",
+      "routes": [
+        "/equity-framework"
+      ],
+      "expectedFields": 4,
+      "matchedFields": 4,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "lib--program--equity-framework.ts--EQUITY_FRAMEWORK-15",
+      "routes": [
+        "/equity-framework"
+      ],
+      "expectedFields": 6,
+      "matchedFields": 6,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "lib--program--equity-framework.ts--EQUITY_FRAMEWORK-23",
+      "routes": [
+        "/equity-framework"
+      ],
+      "expectedFields": 4,
+      "matchedFields": 4,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "lib--program--equity-framework.ts--EQUITY_FRAMEWORK-31",
+      "routes": [
+        "/equity-framework"
+      ],
+      "expectedFields": 2,
+      "matchedFields": 2,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "lib--program--equity-framework.ts--EQUITY_FRAMEWORK-34",
+      "routes": [
+        "/equity-framework"
+      ],
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "lib--program--equity-framework.ts--EQUITY_FRAMEWORK-35",
+      "routes": [
+        "/equity-framework"
+      ],
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "lib--program--equity-framework.ts--EQUITY_FRAMEWORK-40",
+      "routes": [
+        "/equity-framework"
+      ],
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "missing": [],
+      "passed": true
+    },
+    {
+      "target": "lib--program--equity-framework.ts--EQUITY_FRAMEWORK-44",
+      "routes": [
+        "/equity-framework"
+      ],
+      "expectedFields": 1,
+      "matchedFields": 1,
+      "missing": [],
+      "passed": true
+    }
+  ],
+  "sourceOnly": [
+    {
+      "target": "lib--content--director-toolkit.ts--DIRECTOR_TOOLKIT_SECTIONS-7",
+      "fields": 1,
+      "reason": "No live route consumer for the changed source metadata/property."
+    },
+    {
+      "target": "lib--program--adsa-implementation.ts--adsaImplementation-3",
+      "fields": 1,
+      "reason": "No live route consumer for the changed source metadata/property."
+    },
+    {
+      "target": "lib--program--constitution.ts--foundationResponsibilities-2",
+      "fields": 1,
+      "reason": "No live route consumer for the changed source metadata/property."
+    },
+    {
+      "target": "lib--program--constitution.ts--foundationResponsibilities-3",
+      "fields": 1,
+      "reason": "No live route consumer for the changed source metadata/property."
+    },
+    {
+      "target": "lib--program--constitution.ts--foundationResponsibilities-4",
+      "fields": 1,
+      "reason": "No live route consumer for the changed source metadata/property."
+    },
+    {
+      "target": "lib--program--constitution.ts--foundationResponsibilities-5",
+      "fields": 1,
+      "reason": "No live route consumer for the changed source metadata/property."
+    },
+    {
+      "target": "lib--program--constitution.ts--foundationResponsibilities-6",
+      "fields": 1,
+      "reason": "No live route consumer for the changed source metadata/property."
+    },
+    {
+      "target": "lib--program--constitution.ts--foundationResponsibilities-7",
+      "fields": 1,
+      "reason": "No live route consumer for the changed source metadata/property."
+    },
+    {
+      "target": "lib--program--constitution.ts--foundationResponsibilities-8",
+      "fields": 1,
+      "reason": "No live route consumer for the changed source metadata/property."
+    },
+    {
+      "target": "lib--program--constitution.ts--foundationResponsibilities-9",
+      "fields": 1,
+      "reason": "No live route consumer for the changed source metadata/property."
+    },
+    {
+      "target": "lib--program--constitution.ts--foundationResponsibilities-10",
+      "fields": 1,
+      "reason": "No live route consumer for the changed source metadata/property."
+    },
+    {
+      "target": "lib--program--constitution.ts--foundationResponsibilities-11",
+      "fields": 1,
+      "reason": "No live route consumer for the changed source metadata/property."
+    },
+    {
+      "target": "lib--program--constitution.ts--foundationResponsibilities-12",
+      "fields": 1,
+      "reason": "No live route consumer for the changed source metadata/property."
+    },
+    {
+      "target": "lib--program--constitution.ts--foundationResponsibilities-13",
+      "fields": 1,
+      "reason": "No live route consumer for the changed source metadata/property."
+    }
+  ]
+}

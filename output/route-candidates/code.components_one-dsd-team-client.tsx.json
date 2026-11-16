@@ -1,0 +1,109 @@
+{
+  "target": "code.components/one-dsd-team-client.tsx",
+  "kind": "surface",
+  "route": "components/one-dsd-team-client.tsx",
+  "sourceSha256": "8769aa9d413ff3827bcaf6f87f5f5ac0daf5cd58c2be4cdb598552063cf6db5f",
+  "status": "needs_revision",
+  "reviewedFieldCount": 5,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "This is a place for the One DSD Team to learn and practice together.",
+      "after": "This space supports learning and practice for the One DSD Team.",
+      "reason": "The revision is more direct and focuses on the ongoing purpose, avoiding filler and reiterating only the team's intended use as described."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "The committee can use what it learns here to shape how the team works. Until the committee agrees to use this space for official work, keep official committee records in the place the team has approved.",
+      "after": "The committee may use what it learns here to improve how the team works. Unless the committee has decided to use this area for official work, keep official committee records in the currently approved location. This distinction avoids confusion about where the record of decisions and actions must be maintained.",
+      "reason": "This revision clarifies why the instruction matters by explaining the consequence of not following the procedure: possible confusion about record location and official status. It specifies what the condition is for moving official work here, as implied by the source."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "It does not read, send, or change anything in Microsoft Teams. It is also separate from Minnesota Department of Human Services, Aging and Disability Services Administration, and Disability Services Division services and records.",
+      "after": "This space does not access Microsoft Teams and does not change Teams records or messages. It is also separate from Minnesota Department of Human Services, Aging and Disability Services Administration, and Disability Services Division systems and records. This distinction prevents misunderstanding about where actions or documents are stored.",
+      "reason": "The revision clarifies the distinction by explaining why it matters—avoiding confusion over which records are affected or stored here. Language is made more precise and specific to the actual staff task."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field4"
+      ],
+      "before": "Please keep the discussion general and leave out names or details that could identify someone.",
+      "after": "Keep discussion general and do not include names or details that could identify someone. This helps protect privacy and ensures the space remains focused on shared topics.",
+      "reason": "The revision explains why avoiding identifying details matters—protecting privacy and keeping discussion general as intended for the collaborative environment."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The source field is: 'This is a place for the One DSD Team to learn and practice together.' The revision, 'This space supports learning and practice for the One DSD Team,' removes 'is a place for,' which is more welcoming and less institutional. The revision also omits the original strong, forward tone of 'to learn and practice together,' and eliminates the emphasis on collaborative practice. Additionally, removing 'together' subtly changes the meaning from group activity to a general purpose. The revision is less precise about the unique function and tone of the space as described in the source. This is a weakened and not fully supported change."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revision retains the same instruction and expands on why it matters. The source meaning ('Until the committee agrees to use this space for official work, keep official committee records in the place the team has approved.') is preserved, and the explanation about avoiding confusion is supported by implicit consequences of not following the guidance. This change is supported."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revision preserves the key distinction—this space does not interact with Microsoft Teams nor with other DHS/DSD systems or records—while clarifying why the distinction is important. The source meaning is retained and the added explanation is factual, so this is supported."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The revision adds a reason for the instruction, supporting privacy and focus, which is logical and supported by the original. The instruction remains accurate and the rationale is clear, so this is acceptable."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 7513,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 404,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 7917
+    },
+    "review": {
+      "input_tokens": 7420,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 400,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 7820
+    }
+  },
+  "createdAt": "2026-11-15T13:55:02.877Z"
+}

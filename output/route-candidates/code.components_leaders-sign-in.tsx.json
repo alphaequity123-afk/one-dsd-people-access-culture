@@ -1,0 +1,67 @@
+{
+  "target": "code.components/leaders-sign-in.tsx",
+  "kind": "surface",
+  "route": "components/leaders-sign-in.tsx",
+  "sourceSha256": "8e9bfba0d0032f34a4c2e76ba2f1e6f2f4244396a79e1874a0024587ae7f37cc",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "The access key did not match. Check it and try again.",
+      "after": "The access key you entered does not match our records. Please review your entry and try again. If you continue to have issues, confirm you are using the correct key as provided, or consult the Equity and Inclusion Operations Consultant for assistance. Accurate entry is necessary to maintain secure access to equity baseline data.",
+      "reason": "Clarified the consequence of mismatched access keys and explained why accuracy matters. Added instructions for recurring issues to help staff resolve problems and support correct access procedures."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed replacement for field0 changes the tone, scope, and length compared to the original source. The source message \u001cThe access key did not match. Check it and try again.\u001d is a direct, concise error, typical of login interfaces. The new version adds un-sourced explanations (\"maintain secure access to equity baseline data\"), procedures (ask the consultant), and a statement on accuracy, none of which appear in the component's original wording or comment context. The source does not provide or reference these extended troubleshooting instructions. This change also loses the straightforward, impersonal tone critical for error alerts and deviates from the recorded user experience."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1380,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 117,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1497
+    },
+    "review": {
+      "input_tokens": 1109,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 160,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1269
+    }
+  },
+  "createdAt": "2026-11-15T13:53:55.237Z"
+}

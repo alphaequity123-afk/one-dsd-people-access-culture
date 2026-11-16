@@ -1,0 +1,157 @@
+{
+  "target": "resource.ja-sm-budget-cuts-separation",
+  "kind": "resource",
+  "route": "/library/ja-sm-budget-cuts-separation",
+  "sourceSha256": "a43e5f7c459b05af287254f936c6f1a6cfdc0b91d54b3889cd75e8047f519908",
+  "status": "needs_revision",
+  "reviewedFieldCount": 7,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Help you stay fair and truthful when positions, duties or people are affected, and call the right people before you act.",
+      "after": "Use this checklist to ensure fairness and accuracy when positions, duties, or staff are affected. Know whom to consult before taking any action.",
+      "reason": "Clarifies the summary’s purpose and connects it directly to the use of the checklist, specifying the importance of consulting relevant staff before any step."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Remember. You can't promise a job. You can promise the truth when you can tell it. Criteria come before names. A pattern calls for a review of process, never a change based on one person's race or sex. If the people go and the work stays, you cut the wrong thing.",
+      "after": "Key standards: You cannot guarantee continued employment. You can be clear and direct about what you do know. Always identify objective criteria before discussing individuals. When patterns emerge—such as possible bias in decisions—review your process and do not make exceptions based on personal characteristics like race or sex. If work remains but people are cut, evaluate if the right reductions are being made.",
+      "reason": "Links each guidance point more directly to supervision practice and clarifies why process and objective criteria matter."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Call first. Labor relations: contract articles on layoff, reassignment and work rules, and representation. Human Resources: what you may say, who says it, what's in writing, references. ADA coordinator: any accommodation or cost question. Tribal liaison and ADSA: any change touching work with Tribal governments.",
+      "after": "Consult first: Labor relations can explain contract terms on layoff, reassignment, work rules, and representation. Human Resources will clarify what may be communicated, who delivers messages, what is documented, and reference practices. Contact the ADA coordinator about any accommodation or questions about cost. Bring in the tribal liaison and ADSA for any change that affects collaboration or service with Tribal governments.",
+      "reason": "Strengthens connections between the reason to consult and the expertise each resource provides. Adds more specific consequences for missing a consult."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Before you give input or reassign. What duty sits behind this function? Who loses what if it stops? What hidden work is in this position? Would I give this reason for anyone on the team? Does any accommodation still work? Is anyone who raised a concern affected? Get a second look. Do uneven effects show? Say so to Human Resources.",
+      "after": "Before making recommendations or reassigning, clarify the core duties of the position. Consider the impact on service or staff if the function is reduced or eliminated. Identify essential, hidden, or unrecognized work. Ask if your stated reason would apply to any team member in a similar role. Confirm any required accommodations are still effective. Assess whether staff affected have previously raised concerns, as this may require additional review. Ask a colleague to review for unintentional disparate effects. Share observed patterns with Human Resources so they can assess for equity or legal issues.",
+      "reason": "Clarifies why each step matters and what questions to bring forward, addressing the consequences of missing these checks."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "The conversation. Prepare with Human Resources. Practice your first three sentences. Arrange a qualified interpreter, captioning or accessible notice. Never use a coworker to interpret. Say it in the first minute. Stop talking. Then give next steps. If they raise a complaint or leave, take it to Human Resources right away. Don't invent reasons or promise anything.",
+      "after": "Conducting the conversation: Prepare your message with Human Resources. Practice your opening statements. If language or access is a barrier, ensure a professional qualified interpreter, captioning, or accessible written notice is ready in advance. Do not rely on a coworker to interpret, as this can compromise accuracy and confidentiality. State the change clearly in the first minute, then pause to give space for reaction. After that, share the specific next steps. If the staff member expresses a complaint or leaves the conversation, report immediately to Human Resources. Avoid inventing reasons or making informal promises, as this exposes both staff and the agency to risk.",
+      "reason": "Connects actions directly to outcomes and makes explicit why improper communication or interpretation practices are a risk."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "After. Ask how they want the team told. Tell the team what's changing, soon, within what you may say. List the work: keep, move, reduce or stop. Take something off each receiver's plate. Check at 30 and 90 days. Write a short look-back for your manager.",
+      "after": "After the conversation: Ask the departing or reassigned staff how they want their team informed, within the limits of what can be disclosed. Communicate changes to the team promptly. Clarify which work will continue, move, be reduced, or end. Adjust each person’s workload accordingly, so no one is overloaded. Check in with affected staff at 30 and 90 days to monitor impact and address emerging concerns. Write a brief summary of the situation and outcomes for your manager to support oversight and organizational learning.",
+      "reason": "Explains the purpose behind each after-action step, emphasizing workload management, timely communication, and process review."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "Do next. Find the articles on layoff, reassignment and work rules in each contract that covers your team, and write down your first question for labor relations.",
+      "after": "Next steps: Review contract provisions on layoff, reassignment, and work rules for all relevant bargaining units covering your team. Prepare at least one question for labor relations based on your review to ensure you understand the requirements before proceeding.",
+      "reason": "Clarifies the scope of contractual review and makes the instruction to prepare for a labor relations discussion more concrete."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed 'summary' changes both the length and content. The original says, 'Help you stay fair and truthful when positions, duties or people are affected, and call the right people before you act.' The rewrite shifts from describing helpful results to instructive language ('Use this checklist to ensure fairness and accuracy'), introduces 'accuracy' where the source said 'truthful,' and replaces 'call the right people' with 'Know whom to consult'—an explicit instruction absent in the source summary. This is a material change, not a clarification or tightening."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The after text closely tracks the meaning in all key points in the original body. Tighter rewording and expanded explanations don't introduce unsupported claims or shift the guidance. No blockers."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revision clarifies each consult's domain and effect but remains consistent with the source's intent: consult the listed resources, with their domains unchanged. It infers consequences of skipping a consult, which is reasonable though not literally in the source. Not a blocker."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The edit expands on why each step is needed and what might go wrong, but these explanations are implicit in the supervisor's process and do not add new requirements. No blockers."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "All revised language closely matches the checklist's instructions and rationale. Adding clarification on interpreter choice and risk is supported by the source's emphasis on professionalism and confidentiality. No change to limits or requirements. No blockers."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "Added detail about communicating with the team and summary purposes appropriately reflect existing checklist items without expanding the requirement. No blockers."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The revised instruction generalizes 'contracts that cover your team' to 'all relevant bargaining units' but matches the intent that multiple contracts may apply. No new obligations. No blockers."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2040,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 809,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2849
+    },
+    "review": {
+      "input_tokens": 2413,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 430,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2843
+    }
+  },
+  "createdAt": "2026-11-15T13:43:57.843Z"
+}

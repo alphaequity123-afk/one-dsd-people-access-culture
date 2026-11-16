@@ -1,0 +1,115 @@
+
+ RUN  v5.0.5 C:/Users/garyb/Projects/one-dsd-writing-standard-20261115
+
+stderr | lib/intelligence/clone/named-pdf.test.ts > named original PDF grounding > feeds real page passages into ASK and preserves validated PDF citations in its answer
+ask_generation_failed {
+  traceId: '4cecf283-d438-4528-a884-c7b2cc30b68a',
+  provider: undefined,
+  modelId: 'synthetic-pdf',
+  providerModel: undefined,
+  category: 'provider_request_failed',
+  code: 'AssertionError',
+  error: "expected [ { ref: 'S1', …(5) }, …(9) ] to have a length of 5 but got 10"
+}
+
+stdout | lib/intelligence/clone/named-pdf.test.ts > named original PDF grounding > feeds real page passages into ASK and preserves validated PDF citations in its answer
+ask_timing {
+  traceId: '4cecf283-d438-4528-a884-c7b2cc30b68a',
+  generative: false,
+  read: 1823,
+  plan: 0,
+  total: 1882,
+  research_ms: undefined,
+  research: 'none'
+}
+
+stderr | lib/intelligence/clone/named-pdf.test.ts > named original PDF grounding > attaches the exact supplied PDF passage to each cited label and leaves out an invented one
+ask_format_retry { traceId: '4cecf283-d438-4528-a884-c7b2cc30b68a' }
+
+stderr | lib/intelligence/clone/named-pdf.test.ts > named original PDF grounding > attaches the exact supplied PDF passage to each cited label and leaves out an invented one
+ask_generation_failed {
+  traceId: '4cecf283-d438-4528-a884-c7b2cc30b68a',
+  provider: undefined,
+  modelId: 'synthetic-pdf',
+  providerModel: undefined,
+  category: 'provider_request_failed',
+  code: 'SyntaxError',
+  error: 'Unexpected non-whitespace character after JSON at position 48831 (line 2 column 1)'
+}
+
+stdout | lib/intelligence/clone/named-pdf.test.ts > named original PDF grounding > attaches the exact supplied PDF passage to each cited label and leaves out an invented one
+ask_timing {
+  traceId: '4cecf283-d438-4528-a884-c7b2cc30b68a',
+  generative: false,
+  read: 2048,
+  plan: 0,
+  total: 2108,
+  research_ms: undefined,
+  research: 'none'
+}
+
+stdout | lib/intelligence/clone/named-pdf.test.ts
+ask_evidence_review {
+  traceId: '00000000-0000-4000-8000-000000000001',
+  repaired: false,
+  writerModelId: undefined
+}
+
+stdout | lib/intelligence/clone/named-pdf.test.ts
+ask_timing {
+  traceId: '00000000-0000-4000-8000-000000000001',
+  generative: true,
+  read: 7351,
+  plan: 0,
+  write: 0,
+  evidence_review: 1,
+  review: 0,
+  total: 7415,
+  research_ms: undefined,
+  research: 'none'
+}
+
+ ❯ |node| lib/intelligence/clone/named-pdf.test.ts (18 tests | 2 failed) 45449ms
+   ❯ named original PDF grounding (18)
+     × feeds real page passages into ASK and preserves validated PDF citations in its answer 1887ms
+     × attaches the exact supplied PDF passage to each cited label and leaves out an invented one 2111ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |node| lib/intelligence/clone/named-pdf.test.ts > named original PDF grounding > feeds real page passages into ASK and preserves validated PDF citations in its answer
+AssertionError: Target cannot be null or undefined.
+ ❯ lib/intelligence/clone/named-pdf.test.ts:81:44
+     79|     if (result.kind === "answer") {
+     80|       expect(result.answer.failureCode).toBeUndefined();
+     81|       expect(result.answer.evidenceClaims).toHaveLength(2);
+       |                                            ^
+     82|       expect(result.answer.sources).toHaveLength(2);
+     83|       expect(result.answer.sources.every(source => source.href.include…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  |node| lib/intelligence/clone/named-pdf.test.ts > named original PDF grounding > attaches the exact supplied PDF passage to each cited label and leaves out an invented one
+AssertionError: expected false to be true // Object.is equality
+
+- Expected
++ Received
+
+- true
++ false
+
+ ❯ lib/intelligence/clone/named-pdf.test.ts:99:38
+     97|     if (result.kind !== "answer") throw Error("Expected validated PDF …
+     98|     expect(result.answer.failureCode).toBeUndefined();
+     99|     expect(result.answer.generative).toBe(true);
+       |                                      ^
+    100|     expect(result.answer.sources).toHaveLength(2);
+    101|     expect(result.answer.evidenceClaims).toHaveLength(2);
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  2 failed | 16 passed (18)
+   Start at  14:31:58
+   Duration  56.13s (tests 81%, import 10%, transform 9%)
+

@@ -1,0 +1,95 @@
+{
+  "target": "code.app/community-outreach/county-agencies/page.tsx",
+  "kind": "surface",
+  "route": "/community-outreach/county-agencies",
+  "sourceSha256": "b659cf166a7544d90a7b5dbd117025ff74fb0029f1067aff327b763f0448a6e3",
+  "status": "needs_revision",
+  "reviewedFieldCount": 6,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "The agency that serves people in each Minnesota county for Department of Human Services disability programs, including counties that share one agency.",
+      "after": "Each Minnesota county has an agency that serves people who use Department of Human Services (DHS) disability programs. Some agencies serve more than one county.",
+      "reason": "Clarified the relationship between counties, agencies, and disability programs, while specifying the shared arrangement in some cases; eliminated repetition and improved connection between agency and program purpose."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field3"
+      ],
+      "before": "Counties are where most people meet the disability services system: assessments, waivers and case management happen there. Most counties publish one human services line rather than a separate disability line. Details were checked on",
+      "after": "Most Minnesotans interact with the disability services system through their county agency. County agencies handle assessments, waivers, and case management for disability services. In most cases, counties list a main human services phone line instead of a number for disability-specific questions. The information here was last checked on",
+      "reason": "Clarified why counties are central to system access and separated general human services contacts from disability-specific contacts. Kept the purpose and connection intact while making the explanation more direct for staff context."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field4"
+      ],
+      "before": "; confirm them before you share them.",
+      "after": "; check the agency details for any updates before sharing or referring someone.",
+      "reason": "Clarified why checking agency details before sharing matters—to prevent staff from passing on outdated information or misdirecting individuals. Added the action and consequence relevant to DHS and DSD work."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The rewritten version alters the scope and meaning of the authoritative description. The source text is used both as page metadata (SEO/summary) and as a body introductory statement, and says: \"The agency that serves people in each Minnesota county for Department of Human Services disability programs, including counties that share one agency.\" The revision changes this to: \"Each Minnesota county has an agency that serves people who use Department of Human Services (DHS) disability programs. Some agencies serve more than one county.\" This is not equivalent: the original does not state that 'each county has an agency' but rather that 'the agency that serves people in each county' is listed (which accounts for cases where one agency covers multiple counties, as with shared agencies). The rewrite could mislead users to think every county has a unique agency, which the page (and underlying data) contradicts. Therefore, this is a legal and factual change and fails the review."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The rewrite for this field is mostly faithful and clarifies the staff-facing explanation of why counties are where people interact with the disability services system. The adjustments make explicit that agencies are the contact point for assessments, waivers, and case management, and make the nature of published phone numbers clearer. The meaning is retained, the scope is accurate, and it's appropriately detailed for the audience."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The new version correctly retains the instruction to check agency details for updates before sharing, and expands with a rationale that is supported by the source context. This aligns with the staff's duty to provide accurate referrals and does not overstate the policy."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3024,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 266,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3290
+    },
+    "review": {
+      "input_tokens": 2824,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 403,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3227
+    }
+  },
+  "createdAt": "2026-11-15T13:47:34.702Z"
+}

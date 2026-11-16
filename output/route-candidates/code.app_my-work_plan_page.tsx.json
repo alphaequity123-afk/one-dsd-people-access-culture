@@ -1,0 +1,67 @@
+{
+  "target": "code.app/my-work/plan/page.tsx",
+  "kind": "surface",
+  "route": "/my-work/plan",
+  "sourceSha256": "d3e02cf0e13924d6e85e85427e247871e674573a88f0526f1b100c59ffdabf6c",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Connect what you are learning with a decision or practice you can influence. Describe the question, consider the people affected, and identify an action and a way to review it.",
+      "after": "Relate your current learning to a work decision or practice that you can change or guide. Explain the question, name the people or groups involved, and choose a practical action you could take. Also, decide how you will check the effects of that action, so you can adjust your approach as you learn more.\n\nThis process connects theory to daily work, helps clarify responsibilities, and supports thoughtful improvement.",
+      "reason": "I revised the summary to clarify each step and why it matters. The explanation now specifies how relating a question to practice helps staff use learning to guide concrete actions, and notes that reviewing the results supports improvement. This aligns with the standard to give a substantive professional explanation, not just instructions."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed revision for field0 materially expands the explanation beyond what is present in the current, full source. The source only provides the original sentence: \"Connect what you are learning with a decision or practice you can influence. Describe the question, consider the people affected, and identify an action and a way to review it.\" The added sentences—\"Relate your current learning to a work decision or practice that you can change or guide. Explain the question, name the people or groups involved, and choose a practical action you could take. Also, decide how you will check the effects of that action, so you can adjust your approach as you learn more.\" and especially the new paragraph about connecting theory to practice and clarifying responsibilities—are not grounded in this source and introduce unsupported rationale, process steps, and claimed outcomes. The program writing standard requires that explanatory expansions be grounded in source evidence for the specific work supported; adding un-sourced generalizations and implications about process, responsibility, or method is not supported here."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1304,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 166,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1470
+    },
+    "review": {
+      "input_tokens": 1061,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 227,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1288
+    }
+  },
+  "createdAt": "2026-11-15T13:50:52.205Z"
+}

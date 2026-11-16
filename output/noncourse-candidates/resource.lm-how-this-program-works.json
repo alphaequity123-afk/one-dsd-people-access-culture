@@ -1,0 +1,142 @@
+{
+  "target": "resource.lm-how-this-program-works",
+  "kind": "resource",
+  "route": "/library/lm-how-this-program-works",
+  "sourceSha256": "bf31462946c07c5a4154c457fd4f266e1c9948a45042e0ad9db5b08d7a895fd2",
+  "status": "model_checked",
+  "reviewedFieldCount": 6,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Begin with Ask or Resources, plus a community brief when Minnesota communities or partners are involved. Use a learning path to build and review a checklist or plan, and turn to Support when stakes are high or questions remain.",
+      "after": "Start by selecting Ask or Resources. When Minnesota communities or partner organizations are involved, review the community brief. Use a learning path to organize your checklist or planning steps. If important questions remain or the situation is complex, use Support to discuss options.",
+      "reason": "Clarifies initial actions by distinguishing options plainly. Describes context for each tool without jargon or implication that steps must be followed in order. Explains why to use each area."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Begin at your own pace with program orientation. Explore the wider DHS context, One DSD, learning, practice, and opportunities to connect through Amplify Equity, the One DSD Team, and employee resource groups. Bring your experience and follow the questions that matter to your work.",
+      "after": "You may begin with program orientation and proceed at your own pace. This program connects your work to the broader DHS environment, including One DSD initiatives, learning activities, and opportunities for practice and professional development. You can explore topics relevant to your work, such as Amplify Equity, the One DSD Team, and employee resource groups. Bring your own perspective and review questions that are meaningful for your professional responsibilities.",
+      "reason": "Combines brief and professional explanation, clarifies where orientation fits and names relevant program components. Connects activities to DHS context and specifies why users might explore each topic beyond mere awareness."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Sources and limits: each answer identifies its sources and any important uncertainty. Information here is not official DHS policy unless it is clearly linked to a current official source.",
+      "after": "Each answer explains its sources and clarifies where uncertainty remains. Unless an answer specifically references a current official DHS policy, treat the information as guidance rather than official direction.",
+      "reason": "Explains the importance of source disclosure and sets a clear boundary between provided guidance and DHS policy without redundancy."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Growing your practice: use what you learn here to strengthen future work and recognize when additional guidance would help.",
+      "after": "Apply what you learn here to improve future work, and assess when you need to seek further direction or clarification. Recognizing when guidance is not enough helps maintain informed, responsible practice.",
+      "reason": "Links learning to practice improvement, underlining the role of judgment in seeking additional guidance as appropriate for staff."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Responsibility for decisions: the responsible officials and partners continue to make decisions about policy, budgets, procurement, legal matters, personnel, and Tribal consultation.",
+      "after": "Responsible officials and designated partners retain authority for decisions related to policy, budgets, procurement, legal matters, personnel, and Tribal consultation. This information helps support your work, but the final responsibility for these decisions lies with those designated under DHS procedures.",
+      "reason": "Clarifies the boundaries of decision-making authority and why knowing this distinction matters for the user’s actions in the program."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Sharing: the Share control at the top of every page copies a link that opens that page or resource only, in the program view you are using. If you share from the One DSD view, the person who opens the link sees the One DSD view. Nothing from My Work or from your own questions travels with the link.",
+      "after": "Use the Share button at the top of any page to copy a link that opens the specific page or resource, matching your current program view. For example, if you share from the One DSD view, recipients see the same view. Personal data from My Work or your own inquiries does not transfer with the shared link.",
+      "reason": "Clarifies what the Share feature does and why view consistency matters. Adds specificity on personal data not being shared, grounding in privacy relevance."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": true,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "note",
+        "finding": "The revised summary accurately clarifies which tool to use (Ask, Resources, community brief, learning path, Support), and for what context. It avoids unnecessary sequencing and aligns with the intent to explain each available area distinctly. The change does not misrepresent the content or scope of the original summary."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The edit adds context about orientation and connects specific program components to the wider DHS environment. It elaborates on components (Amplify Equity, One DSD Team, employee resource groups) and specifies relevance for a user's work. The edit is substantiated by the original content, adding only clarification."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revision preserves the page’s clear distinction between DHS policy and program guidance, while better explaining the need to check for official sourcing. The meaning and intent of the official status disclaimer remain aligned with the source."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The rewrite underlines the practical application of what is learned, emphasizing the reader's judgment in seeking further guidance. This aligns with the original intent and scope without overstating obligations or expectations."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "This clarifies boundaries of authority, specifying the types of decisions that remain with responsible officials and partners. No authority is changed or misstated; the distinction is made clearer for users following DHS procedures."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The edit provides additional clarity on how the Share feature works, and appropriately specifies that personal data from My Work or custom user questions does not travel with a shared link. This reflects current privacy standards and matches the original source."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1698,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 561,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2259
+    },
+    "review": {
+      "input_tokens": 1831,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 439,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2270
+    }
+  },
+  "createdAt": "2026-11-15T13:41:32.497Z"
+}

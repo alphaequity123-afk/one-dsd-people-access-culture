@@ -1,0 +1,156 @@
+{
+  "target": "resource.lm-power-and-positional-authority",
+  "kind": "resource",
+  "route": "/library/lm-power-and-positional-authority",
+  "sourceSha256": "ba956715f0c00e141f79820b539a72aee902d876f5b490b2e5b645e9de288947",
+  "status": "needs_revision",
+  "reviewedFieldCount": 7,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "Supervisors, managers, and people with expertise or tenure hold power that shapes who speaks, who is believed, and whose time counts. The first intercultural skill is seeing that power; the second is using it deliberately.",
+      "after": "Supervisors, managers, and individuals with specific expertise or significant tenure have power that influences group dynamics—determining who speaks, who is listened to, and which perspectives are prioritized. Recognizing this power is the starting point for intercultural skill in the workplace. The next step is to use this awareness intentionally to support productive and inclusive collaboration.",
+      "reason": "Clarified how power operates in organizational contexts by naming specific effects, removed implied role limitations, and specified what 'using it deliberately' means in practice for greater usefulness to DHS/DSD staff."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "whyItMatters"
+      ],
+      "before": "Dominant-culture defaults feel like neutrality to the people they serve. Naming positional power lets a leader change a room instead of asking others to adapt to it.",
+      "after": "Practices that reflect the dominant culture can seem neutral to those accustomed to them, but they may unintentionally exclude or disadvantage others. By openly acknowledging positional power, a leader gains choices about group dynamics and can shift structural defaults, rather than placing the responsibility on others to adapt.",
+      "reason": "Expanded explanation to show how naming power clarifies responsibility and enables systemic change, rather than relying on individual adaptation."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "Where power sits. Role, tenure, credential, language fluency, familiarity with the organization, race, disability, and who the process was designed for all shape who is heard.",
+      "after": "Where positional power sits. Formal role, organizational tenure, credentials, communication skills in English, familiarity with how the agency operates, race, disability, and alignment with established processes each affect whose perspectives are recognized and whose voices are prioritized in decision making.",
+      "reason": "Specified \"where power sits\" as \"positional power\" and linked dimensions more explicitly to how they affect whose perspectives are recognized, with workplace relevance."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "What it does. People with less power wait to be asked, soften disagreement, and stop offering ideas that were ignored once. People with more power mistake that quiet for agreement.",
+      "after": "How power shapes participation. People with less positional authority may wait to be invited before contributing, downplay disagreement, or stop sharing ideas after their input has gone unaddressed. Those with more authority may misinterpret quiet as agreement and overlook missed perspectives.",
+      "reason": "Clarified how power shapes specific behaviors, named positional authority, and explained common misinterpretations to clarify consequences for group process."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "What to do with it. Speak last. Ask the newest and the quietest first. Credit ideas to the person who had them. Change the format so contribution does not depend on speaking fast in English.",
+      "after": "Intentional approaches to positional power. Supervisors and those with authority can deliberately foster inclusion by speaking last, inviting input first from newcomers or those who are less vocal, directly attributing ideas to their contributors, and using meeting formats that do not assume quick verbal responses in English. These actions broaden participation and surface a wider range of perspectives.",
+      "reason": "Directly connected specific practices to the goal of increasing inclusion. Made the reasoning more explicit for each suggested action."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "In supervision. Ask what the person needs from you rather than telling them what you need. Make expectations explicit so people do not have to guess the unwritten rules.",
+      "after": "Practical supervision. Begin supervisory conversations by asking staff what support or clarity they need, rather than only communicating your own expectations. State both formal and informal rules to avoid placing the burden on staff to infer unwritten norms. This approach helps to reduce uncertainty and supports staff who may be unfamiliar with dominant workplace culture.",
+      "reason": "Expanded to clarify the purpose and consequence of making expectations explicit, linking to practical supervision and workplace adjustment."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Across difference. Cultural humility means assuming you do not know how your habits land and asking. The Intercultural Development Inventory can help a person see their own orientation; it is one tool, used by qualified administrators, and never a label or a rating.",
+      "after": "Recognizing cultural difference. Practicing cultural humility means presuming you may not fully understand how your actions are perceived by others and being willing to ask for feedback. The Intercultural Development Inventory (IDI) offers one method for self-assessment; it requires a trained facilitator, and it should be used as a developmental guide, not to categorize or rate people.",
+      "reason": "Clarified the intent and limits of cultural humility and the IDI, specifying that trained facilitation is necessary and cautioning against misuse as a rating system."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revision generalizes 'power that shapes who speaks, who is believed, and whose time counts' by introducing 'determining who speaks, who is listened to, and which perspectives are prioritized.' This shifts from the original record's grounding in the direct effects of positional authority (including being 'believed' and 'whose time counts') to more abstract 'group dynamics' and 'perspectives.' The source emphasizes how positional power shapes specific, observable outcomes; the rewrite risks vagueness and partially omits these specifics, especially the critical outcome regarding whose time is valued. The new explanation, while clear, does not preserve the full meaning or scope of the source."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The revision for 'whyItMatters' expands the prior definition in a way that is faithful to the source. The source situates leader action as the means for systemic change and explicitly cautions against shifting the responsibility to adapt onto others. The edit deepens this reasoning, so it is permissible."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revision adds workplace context and slightly expands on what factors matter in shaping whose perspective is heard. The changes do not materially alter the source's meaning and accurately reflect the practical relevance."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The rewording of power dynamics in participation maintains the meaning in the original—listing the common dynamics (waiting, softening disagreement, withdrawing) and the risk that silence is misread as agreement. This is an effective clarification without distortion."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The detailed actions (speaking last, naming contributors, etc.) are preserved and the intent ('broaden participation') clarified, consistent with the original guidance."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The edit clarifies the intent of explicit expectations in supervision and adds the reasoning that it supports those less familiar with dominant workplace norms, consistent with the original's direction and audience."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The new version accurately rephrases the importance of cultural humility and directness about the limitations and intended developmental use of the Intercultural Development Inventory, following the source's warning against its use as a label or rating."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1833,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 711,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2544
+    },
+    "review": {
+      "input_tokens": 2108,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 483,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2591
+    }
+  },
+  "createdAt": "2026-11-15T13:42:26.868Z"
+}

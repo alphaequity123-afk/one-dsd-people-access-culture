@@ -27,7 +27,7 @@ const wording: EditableSurfaceValues = {
   printLabel: "Print or save my draft", nextLabel: "Next step", previousLabel: "Previous step",
   resourcesTitle: "Toolkit and related resources", resourcesIntro: "Open resources at any time. You do not need to finish a lesson or practice activity.",
   resourceTitle: "Official policy and related resources",
-  resourceIntro: "The DHS equity policy and toolkit resource are available here without completing the steps. Follow DHS instructions for access to internal materials and any required review. This companion does not submit work to DHS or grant approval. DHS requirements should not be treated as requirements for every Minnesota agency.",
+  resourceIntro: "The DHS equity policy and toolkit resource are available here without completing the steps. Follow DHS instructions for access to internal materials and any required review. DHS requirements should not be treated as requirements for every Minnesota agency.",
   toolkitLabel: "Open the Equity Analysis Toolkit", briefsLabel: "Explore community briefs",
   scenarioNote: "Use this example to compare choices and consider what you would ask before deciding. It does not describe an actual case or predict the results of a particular decision.",
   culturalContext: "Community briefs can help you ask more informed questions. They do not tell you what an individual believes, needs, or prefers. Confirm preferences with the person and involve affected communities in real decisions.",

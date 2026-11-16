@@ -1,0 +1,81 @@
+{
+  "target": "code.components/geffen-course-read-aloud.tsx",
+  "kind": "surface",
+  "route": "components/geffen-course-read-aloud.tsx",
+  "sourceSha256": "941caeaa36d450941d0de8e13df47c7fc9ce1a61f06b67c973d67cbe6748f310",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Listen at your own pace, with the text here whenever you want to return to it.",
+      "after": "You can listen to this section whenever you want, and the text remains available if you need to refer back to it.",
+      "reason": "Clarifies that listening and reading the text are both continuously available options, with emphasis on the practical benefit of having the text accessible during listening."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "This recording could not be played. You can continue with the text.",
+      "after": "The recording is unavailable, but you can still read and use the text to continue your work.",
+      "reason": "Explains what to do if playback fails and clarifies that the text still supports the learning process, giving a practical next step for staff and learners."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revised text ('You can listen to this section whenever you want, and the text remains available if you need to refer back to it.') is more explicit, but the source states: 'Listen at your own pace, with the text here whenever you want to return to it.' The original communicates both flexible listening and text access in a single, concise sentence. The revision needlessly expands and rephrases, introducing a slight shift in tone ('if you need to refer back') not present in the original and loses the 'at your own pace' phrase, which has mainstream meaning for accessibility/ease. Changing this is not justified by the source and could affect user experience/accessibility interpretations."
+      },
+      {
+        "fieldId": 1,
+        "severity": "blocker",
+        "finding": "The original source is: 'This recording could not be played. You can continue with the text.' The proposed revision ('The recording is unavailable, but you can still read and use the text to continue your work.') explains the situation with a mild wording change and explicitly adds 'your work.' However, the original is both concise and neutral, making no additional claims or instructions. The proposed text introduces 'continue your work' which is not part of the quoted source, and alters the actionable context by suggesting broader use ('use the text to continue your work') rather than the no-frills assurance of 'You can continue with the text.' The original aligns with the standard's retention of official records and minimalism for assistive UI prompts. The change is not evidence-driven and could misinterpret the intended instructional minimalism."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2805,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 139,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2944
+    },
+    "review": {
+      "input_tokens": 2548,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 338,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2886
+    }
+  },
+  "createdAt": "2026-11-15T13:53:44.297Z"
+}

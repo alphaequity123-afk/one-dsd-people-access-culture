@@ -1,0 +1,81 @@
+{
+  "target": "code.app/data/equity-baseline/goal/[number]/page.tsx",
+  "kind": "surface",
+  "route": "/data/equity-baseline/goal/[number]",
+  "sourceSha256": "ca0999c907b1898b0456aa2a388bdf7e761c50b945cff3c4ef5172011fd7f314",
+  "status": "needs_revision",
+  "reviewedFieldCount": 2,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "No measure serves this goal yet. The list below says what data would fill the gap.",
+      "after": "There are currently no measures assigned to this goal. The points listed below specify which data would be needed to evaluate progress on this goal and help staff identify gaps for future reporting or data collection.",
+      "reason": "Expanded to clarify that no data are available yet and explained why identifying needed data matters for future tracking and reporting."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "Each card shows one program or service: who gets it, by race and ethnicity, fiscal years 2022 to 2024 pooled. Young people age 14 to 21 and adults age 22 to 64 are shown separately.",
+      "after": "Each card displays data for one program or service, detailing participation by race and ethnicity. Data combines fiscal years 2022 to 2024. Measures are separated by age group: young people ages 14 to 21 and adults ages 22 to 64, to support fairer comparisons and targeted analysis.",
+      "reason": "Revised for specificity and to clarify why these details—age separation and data pooling—are presented, supporting more accurate comparison and interpretation."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed revision adds unsupported claims and interpretation. The original source states: 'No measure serves this goal yet. The list below says what data would fill the gap.' The replacement ('There are currently no measures assigned to this goal. The points listed below specify which data would be needed to evaluate progress on this goal and help staff identify gaps for future reporting or data collection.') changes the meaning in several ways: (1) it adds a reason ('to evaluate progress on this goal and help staff identify gaps for future reporting or data collection') that is not present in the source; (2) it interprets the 'list' as 'points' and as an aid for staff, which is not explicitly stated. The standard requires fidelity to the source—this rewrite is not supported and alters the intent and scope of the original official record."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The new version clarifies details in a way consistent with the source: 'Each card displays data for one program or service, detailing participation by race and ethnicity. Data combines fiscal years 2022 to 2024. Measures are separated by age group: young people ages 14 to 21 and adults ages 22 to 64, to support fairer comparisons and targeted analysis.' This is specific, accurate, and does not add unsupported policy or reasoning, instead providing helpful explanation for readers. No blocker—but see note: further explanation ('to support fairer comparisons and targeted analysis') is an accurate and reasonable inference but not explicitly in the source; retain clarity that this is an explanation for convenience/interpretation, not a formal policy statement."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2308,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 187,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2495
+    },
+    "review": {
+      "input_tokens": 2099,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 352,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2451
+    }
+  },
+  "createdAt": "2026-11-15T13:48:24.088Z"
+}

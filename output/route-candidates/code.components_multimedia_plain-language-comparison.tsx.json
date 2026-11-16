@@ -1,0 +1,305 @@
+{
+  "target": "code.components/multimedia/plain-language-comparison.tsx",
+  "kind": "surface",
+  "route": "components/multimedia/plain-language-comparison.tsx",
+  "sourceSha256": "87f382c384043a04b5ceebed31d1de5e773b6256ff67f8c4d6f74ad35731ca16",
+  "status": "needs_revision",
+  "reviewedFieldCount": 18,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "A working way to contact the workshop team.",
+      "after": "A clear way for the reader to contact the workshop team.",
+      "reason": "Clarifies that the purpose is for the reader to make contact, not just that the team is reachable, emphasizing usability for DHS and DSD staff."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "An explanation of the team's internal scheduling process.",
+      "after": "Details about how the team sets its internal schedule.",
+      "reason": "Clarifies that the explanation would include internal steps rather than wording suggesting a requirement, helping staff distinguish between needed external information and background."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "Make the next action easy to find",
+      "after": "Help readers find the next action",
+      "reason": "Uses a more direct and purpose-focused heading, connecting to typical communication improvement work and reducing unnecessary abstraction."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": "Compare two versions of a made-up workshop notice. The revision keeps the choices, reply date and offer of support while changing how a reader finds them.",
+      "after": "This page compares two sample workshop notices. The revised version makes the choices, reply deadline, and offer of support easier for readers to find.",
+      "reason": "Clarifies that these are example notices and highlights the practical purpose: improving how readers find the information they need."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "field5"
+      ],
+      "before": "In order to facilitate the finalization of arrangements for the forthcoming workshop,",
+      "after": "To complete arrangements for the upcoming workshop,",
+      "reason": "Shortens and focuses the introductory phrase to practical arrangements, which is more typical DHS and DSD correspondence language."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "field7"
+      ],
+      "before": "communicate their preferred session",
+      "after": "share their session preference",
+      "reason": "Replaces "
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "field8"
+      ],
+      "before": "(morning or afternoon) to the workshop team by October 18. Requests for language or access support may be included with the reply. The team can answer questions.",
+      "after": "(morning or afternoon) with the workshop team by October 18. If you need language or access support, add this in your reply. The team can also answer questions.",
+      "reason": "Improves clarity and coherence by making actions and choices explicit and in the audience's terms."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "field9"
+      ],
+      "before": "Choose a workshop time. Reply by October 18.",
+      "after": "Pick a workshop time and reply by October 18.",
+      "reason": "Combines both the action and the deadline in one direct sentence, making the instruction actionable and clear."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "field10"
+      ],
+      "before": "Tell the workshop team whether you prefer morning or afternoon.",
+      "after": "Tell the workshop team your preference: morning or afternoon.",
+      "reason": "Increases clarity by directly stating the specific choice required, using familiar terms for ease of reading."
+    },
+    {
+      "fieldId": 9,
+      "path": [
+        "field11"
+      ],
+      "before": "You can ask for language or access support when you reply.",
+      "after": "You may also request language or access support in your reply.",
+      "reason": "Uses formal agency style ('may also request'), clarifying that this is an optional but available support."
+    },
+    {
+      "fieldId": 10,
+      "path": [
+        "field12"
+      ],
+      "before": "Ask the workshop team if you have questions.",
+      "after": "If you have questions, ask the workshop team.",
+      "reason": "Provides a conditional introductory phrase to clarify when to seek help, making the audience's action more explicit."
+    },
+    {
+      "fieldId": 11,
+      "path": [
+        "field13"
+      ],
+      "before": "The heading gives the choice and reply date before the background.",
+      "after": "Start with the action and reply date before giving background.",
+      "reason": "Explains the organizational principle of placing action and timing information first, relevant for staff who structure communications."
+    },
+    {
+      "fieldId": 12,
+      "path": [
+        "field14"
+      ],
+      "before": "“Tell the team” replaces “communicate their preferred session.”",
+      "after": "\"Tell the team\" uses plain, direct language instead of \"communicate their preferred session.\"",
+      "reason": "Clarifies the plain language move and articulates the purpose for DHS/DSD communications."
+    },
+    {
+      "fieldId": 13,
+      "path": [
+        "field15"
+      ],
+      "before": "The choice, support and questions each have room to be read.",
+      "after": "Each topic—choice, support, questions—appears separately to make each step easier to follow.",
+      "reason": "Articulates the advantage of separating ideas by explicitly describing the effect on reader understanding."
+    },
+    {
+      "fieldId": 14,
+      "path": [
+        "field16"
+      ],
+      "before": "The highlighted phrases are also underlined. Both drafts and the explanation remain available with highlighting turned off.",
+      "after": "The highlighted and underlined phrases show specific writing choices. Both the original and revised drafts, plus the explanation, remain available whether highlighting is on or off.",
+      "reason": "Explains the dual use of highlighting and availability, clarifying practical navigation for staff reviewing examples."
+    },
+    {
+      "fieldId": 15,
+      "path": [
+        "field17"
+      ],
+      "before": "What does this sample still need before someone could use it?",
+      "after": "What does this example still need before a reader could use it?",
+      "reason": "Uses 'example' and 'reader' for clarity about whose experience is considered; clarifies the remaining gap for staff."
+    },
+    {
+      "fieldId": 16,
+      "path": [
+        "field19"
+      ],
+      "before": "Try it with one sentence you use",
+      "after": "Try this with one of your own sentences",
+      "reason": "Clarifies that the exercise applies the method to a real example from the reader's own work."
+    },
+    {
+      "fieldId": 17,
+      "path": [
+        "field20"
+      ],
+      "before": "Rewrite the action first. Keep the original facts and any required wording. Ask a colleague to point to what to do, when to do it and how to get help. Use what they find to revise the draft.",
+      "after": "Rewrite the sentence so the action comes first. Keep the facts and any required wording. Have a colleague check if it's clear what to do, when to do it, and how to get help. Use their feedback to revise your draft.",
+      "reason": "Breaks up the instructions for ease of use, connects the review step to real practice, and clarifies the process."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The source label is: \"A working way to contact the workshop team.\" The proposed change, \"A clear way for the reader to contact the workshop team,\" removes the word 'working,' which in the context means 'functional' or 'real.' The original is supported and specific about functional contact. The change introduces 'clear,' which is helpful, but the field is a direct answer within a set of response choices that must exactly match the corresponding item in the code's checks array. Changing this to 'clear' instead of 'working' is not source-appropriate as the user must pick the option which matches the internally defined correct answer, and changing the specific phrase could cause the content and interaction to no longer line up with the code. This is a blocker for fidelity to the practice and UI logic."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "'An explanation of the team's internal scheduling process.' vs. 'Details about how the team sets its internal schedule.'—this edit clarifies meaning, but the source wording is sufficient and aligns more specifically with the UI logic. It's a minor improvement, but not required; if changed, it should retain a close match for user experience and activity."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "'Make the next action easy to find' to 'Help readers find the next action'—both are functionally equivalent summaries for this heading, but the source phrasing directly supports the UI and the focus of the practice example."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "Proposed change clarifies purpose and audience for the example description. Acceptable but not required."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "Edit to source phrase maintains meaning and improves brevity. Not a blocker."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "Phrase 'communicate their preferred session' to 'share their session preference' is a plain language improvement, but the field is directly quoted and underlined/highlighted by the code logic, so changing this could break alignment with instruction and code references."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "Edit increases clarity, but replaces original wording used for highlighting and specific demonstration. Not a blocker here, but should check code for impacts."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "Combines and clarifies instruction. Acceptable for clarity but not necessary if this is a highlighted/quoted phrase in the code."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "Rewording is functionally similar and slightly clearer, but should retain close alignment with the code if used in a demonstration or answer validation."
+      },
+      {
+        "fieldId": 9,
+        "severity": "note",
+        "finding": "Polished agency style wording is not required; both forms are clear. Acceptable."
+      },
+      {
+        "fieldId": 10,
+        "severity": "note",
+        "finding": "Slightly improved clarity. Acceptable. Not a blocker."
+      },
+      {
+        "fieldId": 11,
+        "severity": "note",
+        "finding": "Clarifies 'put the action first' method for professional communication. Acceptable and may be preferred."
+      },
+      {
+        "fieldId": 12,
+        "severity": "note",
+        "finding": "Change is explanatory and preserves meaning, helps train intent. Acceptable."
+      },
+      {
+        "fieldId": 13,
+        "severity": "note",
+        "finding": "Edit makes the result of separating topics more explicit. Acceptable."
+      },
+      {
+        "fieldId": 14,
+        "severity": "note",
+        "finding": "More explicit about using highlighting and navigation. Acceptable; matches original intent."
+      },
+      {
+        "fieldId": 15,
+        "severity": "note",
+        "finding": "Frames the user's perspective more clearly. Acceptable; no loss of meaning."
+      },
+      {
+        "fieldId": 16,
+        "severity": "note",
+        "finding": "Encourages personal application, more explicit. Acceptable."
+      },
+      {
+        "fieldId": 17,
+        "severity": "note",
+        "finding": "Breaks up the instructions and makes the review and revision process explicit. Acceptable."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 3462,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 1120,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4582
+    },
+    "review": {
+      "input_tokens": 3838,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 805,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 4643
+    }
+  },
+  "createdAt": "2026-11-15T13:54:52.053Z"
+}

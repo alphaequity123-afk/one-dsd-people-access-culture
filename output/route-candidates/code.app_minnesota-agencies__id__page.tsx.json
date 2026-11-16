@@ -1,0 +1,67 @@
+{
+  "target": "code.app/minnesota-agencies/[id]/page.tsx",
+  "kind": "surface",
+  "route": "/minnesota-agencies/[id]",
+  "sourceSha256": "b04842107042ed260d2584d071f60957715d166adb78bd129f23260d805fc74e",
+  "status": "needs_revision",
+  "reviewedFieldCount": 3,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Minnesota agencies and partners",
+      "after": "Minnesota agencies and program partners",
+      "reason": "This clarifies that the list includes both state agencies and program partners, matching how colleagues often distinguish internal state organizations from external or program-specific partners. It avoids ambiguity about the scope of entities covered by the label, which helps staff efficiently locate the intended group."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The source uses 'Minnesota agencies and partners'. The proposed change to 'Minnesota agencies and program partners' adds vocabulary and a qualifier ('program') not present in the original source. There is no explicit evidence in the source that the phrase should be clarified this way, and the original wording should be preserved under the program writing standard. This change introduces a category ('program partners') unsupported by the canonical source and may unintentionally narrow or shift the scope of entities included, contrary to the requirement to preserve scope."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1822,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 88,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1910
+    },
+    "review": {
+      "input_tokens": 1475,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 144,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 1619
+    }
+  },
+  "createdAt": "2026-11-15T13:50:41.744Z"
+}

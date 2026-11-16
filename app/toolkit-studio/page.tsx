@@ -54,7 +54,7 @@ export default async function ToolkitStudioPage() {
 
         <section aria-labelledby="pack-title">
           <h2 id="pack-title" className="text-2xl font-extrabold">Download pack</h2>
-          <p>Download these materials to use with your own work. This page does not save your notes.</p>
+          <p>Download these materials to use with your own work.</p>
           <ul className="mt-4 list-none space-y-4 p-0">
             {TOOLKIT_DOWNLOADS.map((item) => (
               <li key={item.id} className="border-t border-line pt-3">

@@ -1,0 +1,764 @@
+
+> one-dsd-people-access-culture-standalone@0.1.0 test
+> node scripts/testing/run-tests.mjs
+
+
+ RUN  v5.0.5 C:/Users/garyb/Projects/one-dsd-writing-standard-20261115
+
+ ❯ |components| components/director-toolkit-template.test.tsx (2 tests | 1 failed) 230ms
+   ❯ Equity Director toolkit template (2)
+     × renders labeled fields, keeps everything in the page and copies the filled text 116ms
+ ❯ |components| components/clas-curriculum.test.tsx (22 tests | 1 failed) 4763ms
+   ❯ working notes and the improvement plan (3)
+     × keeps each part's note on this device, shows it again and can clear every note 145ms
+ ❯ |components| components/analysis/analyze-workspace.test.tsx (15 tests | 1 failed) 846ms
+   ❯ Analyze a document workspace (14)
+     × keeps the request and result in this browser only on request, and forgets them 78ms
+ ❯ |components| app/leading/leading-pages.test.tsx (9 tests | 3 failed) 15742ms
+   ❯ supervisor and manager pages render with their data (4)
+     × keeps the question and all nine doors in the detailed leadership view 884ms
+     × lists every course on every path, with the Toolkit marked 6ms
+     × states the promises 1ms
+ ❯ |components| components/cl-closing-sections.test.tsx (2 tests | 1 failed) 567ms
+   ❯ closing sections sit in closed panels, with nothing removed (2)
+     × intercultural lessons 54ms
+ ❯ |components| components/participation-notice.test.tsx (1 test | 1 failed) 39ms
+   ❯ Ask participation disclosure (1)
+     × tells users that outside services may receive their conversation and does not claim current full response records 37ms
+ ❯ |node| lib/content/leadership-journey.test.ts (11 tests | 1 failed) 34ms
+   ❯ the promises the journey keeps (5)
+     × says plainly that it is optional, with nothing to submit and nothing counted 19ms
+ ❯ |components| components/user-guide.test.tsx (5 tests | 1 failed) 34ms
+   ❯ end-user guide (5)
+     × offers a download whose words match the page 25ms
+ ❯ |node| lib/content/collections.test.ts (18 tests | 1 failed) 1263ms
+   ❯ the promises on these pages (2)
+     × states plainly what is and is not recorded 72ms
+ ❯ |node| lib/downloads/adapters/self-directed.test.ts (7 tests | 1 failed) 7846ms
+   ❯ self-directed course downloads (7)
+     × keeps the page order and puts each hidden explanation with the response that opens it 751ms
+Could not parse CSS stylesheet
+Could not parse CSS stylesheet
+Not implemented: navigation to another Document
+Not implemented: navigation to another Document
+(node:2444) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+ ❯ |node| lib/intelligence/retrieval/public-practice-path-search.test.ts (2 tests | 1 failed) 26ms
+   ❯ published practice path search projection (2)
+     × uses rendered privacy and closed consultation wording even for older stored values 23ms
+(node:11552) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+⎯⎯⎯⎯⎯⎯ Failed Tests 13 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  |components| components/cl-closing-sections.test.tsx > closing sections sit in closed panels, with nothing removed > intercultural lessons
+TestingLibraryElementError: Unable to find an element with the text: /Progress is kept in this browser/. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"intercultural-study"[39m
+    [36m>[39m
+      [36m<nav[39m
+        [33maria-label[39m=[32m"Intercultural learning"[39m
+      [36m>[39m
+        [36m<a[39m
+          [33mhref[39m=[32m"/learn/intercultural"[39m
+        [36m>[39m
+          [0mIntercultural learning[0m
+        [36m</a>[39m
+        [36m<a[39m
+          [33mhref[39m=[32m"/learn/intercultural/curriculum"[39m
+        [36m>[39m
+          [0mCurriculum overview[0m
+        [36m</a>[39m
+      [36m</nav>[39m
+      [36m<header>[39m
+        [36m<p[39m
+          [33mclass[39m=[32m"intercultural-eyebrow"[39m
+        [36m>[39m
+          [0mSELF-DIRECTED LEARNING[0m
+        [36m</p>[39m
+        [36m<h1>[39m
+          [0mUse context without making a profile[0m
+        [36m</h1>[39m
+        [36m<p>[39m
+          [0mBring curiosity, care and practical questions to the work in front of you.[0m
+        [36m</p>[39m
+      [36m</header>[39m
+      [36m<p>[39m
+        [0mPart [0m
+        [0m2[0m
+        [0m of [0m
+        [0m7[0m
+      [36m</p>[39m
+      [36m<div[39m
+        [33mdata-course-media-slot[39m=[32m""[39m
+        [33mid[39m=[32m"course-media"[39m
+      [36m/>[39m
+      [36m<section>[39m
+        [36m<h2>[39m
+          [0mRead and reflect[0m
+        [36m</h2>[39m
+        [36m<section>[39m
+          [36m<h3>[39m
+            [0mStart with a better question[0m
+          [36m</h3>[39m
+          [36m<p>[39m
+            [0mIn the last part, we noticed how a familiar routine can carry an assumption. Now we will add context without turning that context into a prediction about a person.[0m
+          [36m</p>[39m
+          [36m<p>[39m
+            [0mThe Minnesota Communities collection brings together history, place, contributions, experiences, and questions for work. The material can help you prepare, notice a possible access barrier, and find ideas for respectful questions. It does not tell you what an individual believes, what language they use, whom they trust, or what they want you to do.[0m
+          [36m</p>[39m
+          [36m<p>[39m
+            [0mYou may explore a brief that is relevant to your work or simply follow the example. You are not expected to read the entire collection. Each person and each situation deserves attention in its own right.[0m
+          [36m</p>[39m
+        [36m</section>[39m
+        [36m<section>[39m
+          [36m<h3>[39m
+            [0mRead for context, then check the source[0m
+          [36m</h3>[39m
+          [36m<p>[39m
+            [0mImagine that you are helping prepare the planning invitation. You open a community brief before discussing the invitation with people affected by it. A passage describes a historical experience or a possible obstacle to using a public service. That gives you a reason to ask whether the current process creates a similar barrier. It does not establish that the person you will meet has encountered it.[0m
+          [36m</p>[39m
+          [36m<p>[39m
+            [0mLook at where a statement comes from and when it was written. A statistic may describe a particular place, period, definition, or group of respondents. A book offers an author's perspective. A community account may describe a real experience without representing every person in that community. If the source or its date is unclear, record the uncertainty and seek a current, appropriate source before repeating the claim.[0m
+          [36m</p>[39m
+          [36m<p>[39m
+            [0mYou do not have to turn every unknown into a question for the person receiving a service. Ask only what helps with the work. Do not ask someone to explain their community, faith, immigration history, or a painful experience simply to satisfy your curiosity.[0m
+          [36m</p>[39m
+        [36m</section>[39m
+        [36m<section>[39m
+          [36m<h3>[39m
+            [0mTurn a description into an invitation[0m
+          [36m</h3>[39m
+          [36m<p>[39m
+            [0mSuppose a brief discusses relationships and support. A rushed conclusion would be, “This person will want their family to decide.” A better question is, “Is there anyone you would like involved, and how would you like them to participate?” The question leaves room for a relative, a friend, a professional supporter, or no one else.[0m
+          [36m</p>[39m
+          [36m<p>[39m
+            [0mThe same habit applies to language. A person's name, appearance, community, or country of origin does not tell you which language or communication method they prefer. Make it easy for everyone to request support, and ask what works for the individual when that information is needed.[0m
+          [36m</p>[39m
+          [36m<p>[39m
+            [0mThere is variety within every community, and people may identify with more than one community or with none of the labels in a directory. Let the person describe what matters to them. When the brief raises a question about the way your team works, examine the process as well as the conversation.[0m
+          [36m</p>[39m
+        [36m</section>[39m
+        [36m<section>[39m
+          [36m<h3>[39m
+            [0mContext belongs beside accountability[0m
+          [36m</h3>[39m
+          [36m<p>[39m
+            [0mCulture is not the only possible explanation for a barrier. A short response period, inaccessible document, missing interpretation, unreliable technology, transportation, workload, or unclear decision process may also affect participation. Start with what you can observe and the information people are willing to share; do not use a cultural label as a shortcut.[0m
+          [36m</p>[39m
+          [36m<p>[39m
+            [0mIn the planning example, the team might learn that a notice is difficult to use. The useful follow-up is to ask what made it difficult, what would help, and who can review a change. Explain what is open to change and how feedback will be considered. If an answer is not yet known, say so and identify a next step.[0m
+          [36m</p>[39m
+          [36m<p>[39m
+            [0mFor substantive questions concerning Native American individuals, communities, or Tribal Nations, follow this program's standing deference to the Office of Indian Affairs and the DHS offices responsible for Tribal relations and consultation. A general reading or listening activity does not replace a Nation's authority or government-to-government consultation. Seek the appropriate guidance rather than inventing an answer.[0m
+          [36m</p>[39m
+        [36m</section>[39m
+        [36m<section>[39m
+          [36m<h3>[39m
+            [0mTry a decision[0m
+          [36m</h3>[39m
+          [36m<p>[39m
+            [0mA colleague reads that some people may value involving trusted supporters. The colleague proposes inviting a participant's relatives to...
+ ❯ Object.getElementError ../one-dsd-calm-rebuild-20261109/node_modules/@testing-library/dom/dist/config.js:37:19
+ ❯ ../one-dsd-calm-rebuild-20261109/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ ❯ ../one-dsd-calm-rebuild-20261109/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ ❯ ../one-dsd-calm-rebuild-20261109/node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ ❯ components/cl-closing-sections.test.tsx:32:17
+     30|     expect(view.getByText('A related reading')).toBeTruthy();
+     31|     expect(view.getByText(`Previous: ${intercultural.modules[0].title}…
+     32|     expect(view.getByText(/Progress is kept in this browser/)).toBeTru…
+       |                 ^
+     33|     expect(view.getByRole('heading', { name: 'Read and reflect' })).to…
+     34|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/13]⎯
+
+ FAIL  |components| components/clas-curriculum.test.tsx > working notes and the improvement plan > keeps each part's note on this device, shows it again and can clear every note
+TestingLibraryElementError: Unable to find an element with the text: Saved in this browser profile.. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div>[39m
+    [36m<div[39m
+      [33mclass[39m=[32m"clas-study"[39m
+    [36m>[39m
+      [36m<header>[39m
+        [36m<p[39m
+          [33mclass[39m=[32m"clas-study-eyebrow"[39m
+        [36m>[39m
+          [0mSELF-DIRECTED LEARNING[0m
+        [36m</p>[39m
+        [36m<h1>[39m
+          [0mMake language assistance usable[0m
+        [36m</h1>[39m
+        [36m<p[39m
+          [33mclass[39m=[32m"clas-study-lede"[39m
+        [36m>[39m
+          [0mTrace an assistance request from offer through follow-up[0m
+        [36m</p>[39m
+      [36m</header>[39m
+      [36m<p>[39m
+        [0mPart [0m
+        [0m3[0m
+        [0m of [0m
+        [0m9[0m
+        [0m · CLAS standards [0m
+        [0m5, 6, 7[0m
+      [36m</p>[39m
+      [36m<p[39m
+        [33mclass[39m=[32m"media-quick-links"[39m
+      [36m>[39m
+        [36m<a[39m
+          [33mclass[39m=[32m"media-quick-link media-quick-link--video text-white"[39m
+          [33mhref[39m=[32m"#watch"[39m
+          [33mstyle[39m=[32m"background: rgb(0, 56, 101); color: rgb(255, 255, 255);"[39m
+        [36m>[39m
+          [0mWatch the lesson[0m
+        [36m</a>[39m
+      [36m</p>[39m
+      [36m<div[39m
+        [33maria-label[39m=[32m"Video explainer"[39m
+        [33mclass[39m=[32m"featured-media-panel featured-media-panel--video"[39m
+        [33mdata-featured-media[39m=[32m"video"[39m
+        [33mrole[39m=[32m"group"[39m
+      [36m>[39m
+        [36m<section[39m
+          [33maria-labelledby[39m=[32m"watch"[39m
+        [36m>[39m
+          [36m<h2[39m
+            [33mid[39m=[32m"watch"[39m
+          [36m>[39m
+            [0mWatch the lesson[0m
+          [36m</h2>[39m
+          [36m<div[39m
+            [33mclass[39m=[32m"clas-player clas-player--video"[39m
+          [36m>[39m
+            [36m<video[39m
+              [33maria-label[39m=[32m"Make language assistance usable"[39m
+              [33mcontrols[39m=[32m""[39m
+              [33mplaysinline[39m=[32m""[39m
+              [33mposter[39m=[32m"/learning/clas-curriculum/03/poster.png"[39m
+              [33mpreload[39m=[32m"metadata"[39m
+            [36m>[39m
+              [36m<source[39m
+                [33msrc[39m=[32m"/learning/clas-curriculum/03/lesson.mp4"[39m
+                [33mtype[39m=[32m"video/mp4"[39m
+              [36m/>[39m
+              [36m<track[39m
+                [33mdefault[39m=[32m""[39m
+                [33mkind[39m=[32m"captions"[39m
+                [33mlabel[39m=[32m"English"[39m
+                [33msrc[39m=[32m"/learning/clas-curriculum/03/captions.vtt"[39m
+                [33msrclang[39m=[32m"en"[39m
+              [36m/>[39m
+              [0mYour browser cannot play this video. The transcript below has every sentence.[0m
+            [36m</video>[39m
+            [36m<p>[39m
+              [36m<a[39m
+                [33mhref[39m=[32m"/learning/clas-curriculum/03/lesson.mp4"[39m
+              [36m>[39m
+                [0mOpen the video[0m
+              [36m</a>[39m
+              [0m · [0m
+              [36m<a[39m
+                [33mhref[39m=[32m"/learning/clas-curriculum/03/captions.vtt"[39m
+              [36m>[39m
+                [0mDownload captions[0m
+              [36m</a>[39m
+            [36m</p>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"clas-player-controls"[39m
+            [36m>[39m
+              [36m<label[39m
+                [33mclass[39m=[32m"clas-speed"[39m
+                [33mfor[39m=[32m"_r_1n_"[39m
+              [36m>[39m
+                [0mSpeed[0m
+                [36m<select[39m
+                  [33mid[39m=[32m"_r_1n_"[39m
+                [36m>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"0.75"[39m
+                  [36m>[39m
+                    [0m0.75×[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"1"[39m
+                  [36m>[39m
+                    [0mNormal[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"1.25"[39m
+                  [36m>[39m
+                    [0m1.25×[0m
+                  [36m</option>[39m
+                  [36m<option[39m
+                    [33mvalue[39m=[32m"1.5"[39m
+                  [36m>[39m
+                    [0m1.5×[0m
+                  [36m</option>[39m
+                [36m</select>[39m
+              [36m</label>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"clas-study-secondary"[39m
+                [33mdisabled[39m=[32m""[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mPrevious chapter[0m
+              [36m</button>[39m
+              [36m<button[39m
+                [33mclass[39m=[32m"clas-study-secondary"[39m
+                [33mtype[39m=[32m"button"[39m
+              [36m>[39m
+                [0mNext chapter[0m
+              [36m</button>[39m
+              [36m<p[39m
+                [33mclass[39m=[32m"clas-player-status"[39m
+                [33mrole[39m=[32m"status"[39m
+              [36m/>[39m
+            [36m</div>[39m
+            [36m<nav[39m
+              [33maria-label[39m=[32m"Chapters: Make language assistance usable"[39m
+              [33mclass[39m=[32m"clas-chapters"[39m
+            [36m>[39m
+              [36m<ol>[39m
+                [36m<li>[39m
+                  [36m<button[39m
+                    [33mtype[39m=[32m"button"[39m
+                  [36m>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"clas-chapter-time"[39m
+                    [36m>[39m
+                      [0m0:00[0m
+                    [36m</span>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"clas-chapter-title"[39m
+                    [36m>[39m
+                      [0mFollow the request through[0m
+                    [36m</span>[39m
+                  [36m</button>[39m
+                [36m</li>[39m
+                [36m<li>[39m
+                  [36m<button[39m
+                    [33mtype[39m=[32m"button"[39m
+                  [36m>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"clas-chapter-time"[39m
+                    [36m>[39m
+                      [0m0:54[0m
+                    [36m</span>[39m
+                    [36m<span[39m
+                      [33mclass[39m=[32m"clas-chapter-title"[39m
+                    [36m>[39m
+                      [0mBefore the encounter[0m
+                    [36m</span>[39m
+                  [36m</button>[39m
+                [36m</li>[39m
+                [36m<li>[39m
+                  [36m<button[39m
+ ...
+ ❯ Object.getElementError ../one-dsd-calm-rebuild-20261109/node_modules/@testing-library/dom/dist/config.js:37:19
+ ❯ ../one-dsd-calm-rebuild-20261109/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ ❯ ../one-dsd-calm-rebuild-20261109/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ ❯ ../one-dsd-calm-rebuild-20261109/node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ ❯ components/clas-curriculum.test.tsx:268:17
+    266|     fireEvent.change(view.getByLabelText(/Your working note for this p…
+    267|     expect(localStorage.getItem('one-dsd-clas-curriculum-note-v1:03'))…
+    268|     expect(view.getByText('Saved.')).toBeTruthy();
+       |                 ^
+    269|     expect(view.getByText(/Someone using the same profile may be able …
+    270|     view.unmount();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/13]⎯
+
+ FAIL  |components| components/director-toolkit-template.test.tsx > Equity Director toolkit template > renders labeled fields, keeps everything in the page and copies the filled text
+AssertionError: expected 'Decision and mitigation logKeep findi…' to contain 'Nothing you type here is saved or sent'
+
+Expected: "Nothing you type here is saved or sent"
+Received: "Decision and mitigation logKeep findings, changes to make, decisions, reasons, owners and open risks in one place.Add a row each time a finding leads to a decision. It also serves as the decision and risk register in governance.Part of Area in the toolkit.Decision or review this log coversLogRowFindingChange to makeDecision madeReasonAccountable owner (role)Open risksDate123Add a rowUse roles, not names. Leave out client information, case details, personnel matters and any sensitive employee concern. Formal concerns go to authorized processes, not to this form. Copy, download or print if you need a record before leaving this page.Print this templateCopy as textDownload as textClear"
+
+ ❯ components/director-toolkit-template.test.tsx:28:39
+     26|     expect(document.querySelector("#template-decision-log")).not.toBeN…
+     27|     expect(document.body.textContent).not.toContain("Project recommend…
+     28|     const subject = document.querySelector<HTMLInputElement>("#templat…
+       |                                       ^
+     29|     await act(async () => { type(subject, "Notice redesign"); });
+     30|     const cells = document.querySelectorAll("tbody tr");
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[3/13]⎯
+
+ FAIL  |components| components/participation-notice.test.tsx > Ask participation disclosure > tells users that outside services may receive their conversation and does not claim current full response records
+TestingLibraryElementError: Unable to find an element with the text: /question and recent conversation may be sent to outside services/i. This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
+
+Ignored nodes: comments, script, style
+[36m<body>[39m
+  [36m<div />[39m
+[36m</body>[39m
+ ❯ Object.getElementError ../one-dsd-calm-rebuild-20261109/node_modules/@testing-library/dom/dist/config.js:37:19
+ ❯ ../one-dsd-calm-rebuild-20261109/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+ ❯ ../one-dsd-calm-rebuild-20261109/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+ ❯ ../one-dsd-calm-rebuild-20261109/node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+ ❯ components/participation-notice.test.tsx:9:19
+      7|   it("renders nothing on staff pages", () => {
+      8|     for (const surface of ["start_routing", "support_routing", "ask", …
+      9|       const view = render(<ParticipationNotice surface={surface} />);
+       |                   ^
+     10|       expect(view.container.innerHTML, surface).toBe("");
+     11|       view.unmount();
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[4/13]⎯
+
+ FAIL  |components| components/user-guide.test.tsx > end-user guide > offers a download whose words match the page
+AssertionError: expected 'One DSD People, Access and Culture\n\…' to contain 'Use My view to review or remove what …'
+
+- Expected
++ Received
+
+- Use My view to review or remove what you have saved. Some worksheets clear when you reload, so download or print them before leaving.
++ One DSD People, Access and Culture
++
++ How to use One DSD
++
++ A short guide to finding what you need, reading pages that open in sections, and saving, sharing and returning to your work.
++
++ Find your way around
++ --------------------
++ The menu across the top of every page leads to the main areas: Start, Learn, Practice, Support and the other sections. Each area opens on a landing page with a short row of links to the pages inside it.
++
++ The home page offers three ways in: Learn, Apply a tool, and Communities. Near the bottom, a finder takes you to resources for your task, and a box lets you type a question for Ask. It also lists the next observances from the Culture Calendar and has a link for leaders, supervisors, managers and directors.
++
++ Not sure where to begin? The Start page asks three short questions about your role, your work and your timing, then suggests a place to begin and explains why it fits. Nothing you choose there is saved or shared.
++
++ How pages are laid out
++ ----------------------
++ Each page opens with what most people need first. More detail sits in panels with dark blue title bars. Select a title to open its panel and select it again to close it.
++
++ A link that points to something inside a closed panel opens that panel for you and scrolls to it. When you print a page, every panel opens so the printout is complete.
++
++ Long lists, such as sources, readings and policies, show one page of entries at a time. Use the search box to narrow the list and the page numbers to move through it.
++
++ Learn: courses, lessons and readings
++ ------------------------------------
++ Courses are grouped by subject and level: Foundation, Intermediate and Advanced. Each lesson ends with a Finish this lesson area. Use its tabs to try a situation, review what to carry forward and choose your next step.
++
++ The standards lessons are arranged in tabs: Watch, Discuss, Practice, Use it at work, Full lesson text and Sources. Your next step follows the tabs.
++
++ The self-directed collection has 72 courses. Filter by level, search titles, audiences and outcomes, download an editable PowerPoint, or share a course with a colleague.
++
++ Readings offer a summary, key ideas and questions to discuss for each book. Use a reading path when you would like help choosing where to begin.
++
++ Minnesota communities
++ ---------------------
++ Each community page opens with an overview: who the community is, the names people use, and a list of the page's parts. The parts cover history and culture, learning and reflection, working with the community, people and institutions, and sources.
++
++ The Native American, Tribal Nations and Alaska Native pages stay as single pages and follow their own guidance about Tribal authority and relationships.
++
++ A community page gives context for better questions. It cannot tell you what any one person needs; ask people directly what matters to them.
++
++ Practice and tools
++ ------------------
++ The Equity Analysis Toolkit helps you examine a policy, service or working practice: identify the question, look at evidence and who is affected, compare options and note what is still uncertain. Start with the worked example, then try your own decision.
++
++ Practice plans record an action within your responsibility, the review it needs, who will act and how you will know what changed. A draft does not authorize a change.
++
++ Community Outreach and Engagement
++ ---------------------------------
++ Community Outreach and Engagement brings together partner organizations, county agencies, designated providers, a county map, the policy catalog and how the service system connects. Each list has a search box and page numbers.
++
++ Share and download
++ ------------------
++ Most pages and resources have Share this page and Share by email. A shared link opens exactly that page and carries nothing personal.
++
++ Downloads come in several formats: Word, Excel, PowerPoint, PDF, web page and plain text. A downloaded file is your own copy; check its content before sending it on.
++
++ Save your place and return
++ --------------------------
++ My work gathers your saved resources, plans and places in the self-directed courses. Saved work stays in this browser on this device; another device, a private window or clearing browser data will not keep it.
++
++ Use My view to review or remove what this browser has saved. Some worksheets clear when you reload, so download or print them before leaving.
++
++ Ask and get support
++ -------------------
++ Ask takes a question in your own words and gives an answer with its sources and limits. Type in the box near the bottom of the home page and the answer opens in a panel beside the page, or use the Ask page. The small buttons in the box let you speak your question or hold a spoken conversation, and the one under an answer reads it aloud. Keep private client, case, health and personnel details out of what you type or say.
++
++ When a matter needs professional support, a formal response or an authorized decision, find the person or area responsible through Support.
++
++ Protect information
++ -------------------
++ Use general descriptions in practice activities. Keep private client, case, health and personnel information out of notes, plans and questions.
++
++ Lesson and course activity is never counted, stored or shown to anyone. These resources support your work; applicable law, approved policies and official processes still apply.
++
++ Updated November 8, 2026.
++
+
+ ❯ components/user-guide.test.tsx:29:95
+     27|     expect(existsSync(file)).toBe(true);
+     28|     const text = readFileSync(file, "utf8");
+     29|     for (const section of USER_GUIDE.sections) for (const para of sect…
+       |                                                                                               ^
+     30|     expect(html).toContain(`href="${USER_GUIDE.download}"`);
+     31|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[5/13]⎯
+
+ FAIL  |components| app/leading/leading-pages.test.tsx > supervisor and manager pages render with their data > keeps the question and all nine doors in the detailed leadership view
+AssertionError: expected '<div class="_page_919532"><div class=…' to contain 'until you copy or download them'
+
+Expected: "until you copy or download them"
+Received: "<div class="_page_919532"><div class="_content_919532"><header class="_intro_919532"><a href="/leading">Back to Leadership</a><p class="_eyebrow_919532">For leaders, supervisors, managers, and directors</p><h1>Lead equity in everyday work</h1><p class="_lede_919532">Whether you are exploring leadership, leading a team or shaping direction across the division, find learning and practical tools for the decisions and responsibilities in front of you.</p><p>The learning collection is open to everyone. Choose a starting point that fits your work; designated management resources require an access key. Follow any formal duties or assigned training that apply to your role.</p></header><section class="_section_809a7d" aria-labelledby="leadership-start-title"><h2 id="leadership-start-title">Start where you are</h2><p>Leadership can begin before a formal role. Choose a starting point that fits your work; these are invitations, not assignments or assessments.</p><ul class="_doors_809a7d"><li><a class="_door_809a7d" href="/one-dsd/leadership#starting-points"><span class="_doorTitle_809a7d">Explore leadership</span><span>Connect an interest or aspiration with an accessible opportunity to practice, support and feedback.</span><span class="_doorAction_809a7d">Make a development map</span></a></li><li><a class="_door_809a7d" href="#decision-doors"><span class="_doorTitle_809a7d">Lead a team or a decision</span><span>Find questions and resources for hiring, access, feedback, team culture and policy.</span><span class="_doorAction_809a7d">Choose a decision</span></a></li><li><a class="_door_809a7d" href="/learn/leadership-styles"><span class="_doorTitle_809a7d">Compare leadership approaches</span><span>See how sixteen leadership approaches handle conflict and affect equity and inclusion, with scenarios, a practice rubric and a capstone.</span><span class="_doorAction_809a7d">Leadership styles pathway</span></a></li><li><a class="_door_809a7d" href="/data/equity-baseline"><span class="_doorTitle_809a7d">See the equity baseline</span><span>For managers, supervisors and the consultant (access key required). Who gets each employment service, by race and ethnicity, fiscal years 2022 to 2024.</span><span class="_doorAction_809a7d">Open the baseline</span></a></li><li><a class="_door_809a7d" href="/leading/community-coverage"><span class="_doorTitle_809a7d">See community coverage</span><span>For managers, supervisors and the consultant (access key required). Which communities have organizations on record, figures, and a completed community review.</span><span class="_doorAction_809a7d">Open community coverage</span></a></li><li><a class="_door_809a7d" href="/leading/direction"><span class="_doorTitle_809a7d">Lead leaders and set direction</span><span>Support supervisors and managers, examine organizational practices, and connect decisions to accountability.</span><span class="_doorAction_809a7d">Explore direction</span></a></li><li><a class="_door_809a7d" href="/one-dsd/leadership#continuity-plan"><span class="_doorTitle_809a7d">Build future leadership</span><span>Plan for continuity, share knowledge and make development opportunities visible and accessible.</span><span class="_doorAction_809a7d">Practice succession planning</span></a></li><li><a class="_door_809a7d" href="/leading/journey"><span class="_doorTitle_809a7d">Follow your own journey</span><span>Learn, reflect, try it in your real work and note what changed, at your own pace and in any order.</span><span class="_doorAction_809a7d">See how it works</span></a></li></ul></section><section id="decision-doors" class="_section_809a7d" aria-labelledby="decision-doors-title"><h2 id="decision-doors-title">What are you deciding?</h2><p>Each decision opens with practical questions, a course, a job aid where available, and people or offices who may help.</p><ul class="_doors_809a7d" aria-label="Decisions"><li><a class="_door_809a7d" href="/leading/hiring"><span class="_doorTitle_809a7d">Who should we hire, and how do they start?</span><span>Roles, criteria, panels, state hiring rules, onboarding</span><span class="_doorAction_809a7d">6 questions</span></a></li><li><a class="_door_809a7d" href="/leading/who-does-what"><span class="_doorTitle_809a7d">Who does what, when and where?</span><span>Assignments, schedules, hybrid fairness, hidden work, stretch work</span><span class="_doorAction_809a7d">5 questions</span></a></li><li><a class="_door_809a7d" href="/leading/feedback"><span class="_doorTitle_809a7d">How do I give feedback, rate, correct and develop?</span><span>Everyday supervision, feedback, reviews, ratings, corrective action, coaching, retention</span><span class="_doorAction_809a7d">14 questions</span></a></li><li><a class="_door_809a7d" href="/leading/access"><span class="_doorTitle_809a7d">Someone needs access, leave or a change</span><span>Accommodation, leave and return, Deaf and DeafBlind colleagues, neurodivergence, mental health</span><span class="_doorAction_809a7d">6 questions</span></a></li><li><a class="_door_809a7d" href="/leading/concern"><span class="_doorTitle_809a7d">Someone raised a concern, or named me in one</span><span>Duties on hearing a report, retaliation, being named, harm, repair</span><span class="_doorAction_809a7d">7 questions</span></a></li><li><a class="_door_809a7d" href="/leading/team"><span class="_doorTitle_809a7d">How do I lead this team across difference?</span><span>Climate, meetings, conflict, race and equity conversations, norms, leading across cultures</span><span class="_doorAction_809a7d">16 questions</span></a></li><li><a class="_door_809a7d" href="/leading/policy"><span class="_doorTitle_809a7d">What should this policy, budget or program decision be?</span><span>Equity analysis, policy, budgets, data, patterns, program integrity, engagement</span><span class="_doorAction_809a7d">15 questions</span></a></li><li><a class="_door_809a7d" href="/leading/keep-going"><span class="_doorTitle_809a7d">What do I answer for, and how do I keep going?</span><span>First week, the rules, why this is the job, your own load, change, cuts</span><span class="_doorAction_809a7d">10 questions</span></a></li><li><a class="_door_809a7d" href="/leading/direction"><span class="_doorTitle_809a7d">How do I back supervisors and set direction?</span><span>Backing supervisors, governance, succession, senior sessions, live practice, learning culture</span><span class="_doorAction_809a7d">10 questions</span></a></li></ul></section><aside class="_requiredNote_809a7d" aria-labelledby="required-course-title"><h2 id="required-course-title">Toolkit use and required training</h2><p><a href="/courses/dhs-equity-analysis-toolkit">DHS Equity Analysis Toolkit</a><span class="_required_809a7d">Required of all DHS staff</span></p><p>DHS requires staff to use the Equity Analysis Toolkit and complete assigned Toolkit training through the agency's learning platform. The course linked here supports that work.</p></aside><section class="_section_809a7d" aria-labelledby="paths-title"><h2 id="paths-title">Suggested paths</h2><ul class="_doors_809a7d"><li><a class="_door_809a7d" href="/leading/paths/exploring-leadership"><span class="_doorTitle_809a7d">Exploring leadership</span><span>For anyone drawn to leading, with or without a title: knowing your own starting point, hearing and being heard, and planning how you want to grow.</span><span class="_doorAction_809a7d">15 courses, about 11 hours</span></a></li><li><a class="_door_809a7d" href="/leading/paths/program-leads"><span class="_doorTitle_809a7d">Program leads</span><span>For people who guide a program, policy or project without supervising the team: where a process loses people, partnership, evidence, and advising the person who decides.</span><span class="_doorAction_809a7d">16 courses, about 12 hours</span></a></li><li><a class="_door_809a7d" href="/leading/paths/first-year"><span class="_doorTitle_809a7d">First-year supervisors</span><span>For your first year of supervising: the duties that start on day one, then everyday decisions one at a time.</span><span class="_doorAction_809a7d">31 courses, about 29 hours</span></a></li><li><a class="_door_809a7d" href="/leading/paths/experienced"><span class="_doorTitle_809a7d">Experienced supervisors</span><span>For supervisors with some years behind them: harder conversations, whose norms count, and what to do when you are named.</span><span class="_doorAction_809a7d">19 courses, about 17 hours</span></a></li><li><a class="_door_809a7d" href="/leading/paths/managers-of-managers"><span class="_doorTitle_809a7d">Managers of managers</span><span>For people who back other supervisors: conversations before decisions, consistency, patterns and oversight.</span><span class="_doorAction_809a7d">19 courses, about 18 hours</span></a></li><li><a class="_door_809a7d" href="/leading/paths/senior-leaders"><span class="_doorTitle_809a7d">Senior leaders</span><span>For decisions only senior leaders can make: ownership, measures, change and what the rules say now.</span><span class="_doorAction_809a7d">14 courses, about 13 hours</span></a></li></ul><p><a href="/leading/paths">All suggested paths</a></p></section><section class="_section_809a7d" aria-labelledby="leadership-tools-title"><h2 id="leadership-tools-title">Tools for the work</h2><p>Use a tool to prepare for a real conversation or decision. Include the people affected, follow the applicable policy and work with the office responsible for the decision.</p><ul class="_doors_809a7d"><li><a class="_door_809a7d" href="/learn/equity-toolkit"><span class="_doorTitle_809a7d">Examine a decision</span><span>Consider effects, evidence, alternatives and who needs to be involved.</span><span class="_doorAction_809a7d">Equity Analysis Toolkit</span></a></li><li><a class="_door_809a7d" href="/one-dsd/leadership#life-cycle"><span class="_doorTitle_809a7d">Practice across the employee life cycle</span><span>Explore role design, development, advancement, retention, succession and transitions.</span><span class="_doorAction_809a7d">Open the life-cycle explorer</span></a></li><li><a class="_door_809a7d" href="/one-dsd/amplify/mentoring#mentoring-tool"><span class="_doorTitle_809a7d">Prepare a mentoring conversation</span><span>Name a question, consider the support you need and choose a useful next step.</span><span class="_doorAction_809a7d">Prepare a conversation</span></a></li><li><a class="_door_809a7d" href="/one-dsd/leadership#continuity-plan"><span class="_doorTitle_809a7d">Plan for continuity</span><span>Connect critical work, a development opportunity, knowledge sharing and follow-up.</span><span class="_doorAction_809a7d">Create a succession draft</span></a></li></ul><p>Do not enter names or private personnel details. They do not replace the applicable Human Resources or selection process.</p></section><details class="course-more-item"><summary><h2>Keep exploring</h2></summary><p><a href="/learn/cultural-intelligence#leaders">Explore leadership approaches, power and inclusive practice</a></p><p class="flex flex-wrap gap-x-6 gap-y-2"><a href="/support/right-person">Find the person or area responsible</a><a href="/learn/collections">Collections for all staff</a><a href="/one-dsd/leadership">Equity leadership and growth</a><a href="/learn/tribal-referral">Native American and Tribal-specific guidance</a></p></details></div></div>"
+
+ ❯ app/leading/leading-pages.test.tsx:35:18
+     33|     expect(page).toContain("/one-dsd/amplify/mentoring#mentoring-tool"…
+     34|     expect(page).toContain("/learn/leadership-styles");
+     35|     expect(page).toContain("Human Resources or selection process");
+       |                  ^
+     36|     expect(page).toContain("What are you deciding?");
+     37|     for (const door of LEADING_DOORS) { expect(page).toContain(door.ti…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[6/13]⎯
+
+ FAIL  |components| app/leading/leading-pages.test.tsx > supervisor and manager pages render with their data > lists every course on every path, with the Toolkit marked
+AssertionError: expected '<div class="_page_919532"><div class=…' to contain 'All of them are optional'
+
+Expected: "All of them are optional"
+Received: "<div class="_page_919532"><div class="_content_919532"><p class="_back_919532"><a href="/leading">For leaders, supervisors, managers, and directors</a></p><header class="_intro_919532"><h1>Suggested paths</h1><p class="_lede_919532">Six suggested orders through the material.</p><p>Not sure where to begin, or how to make a path your own? <a href="/leading/journey">See how the leadership journey works</a>.</p><p>Choose material that fits your responsibilities and learning needs; complete assigned training through the agency’s designated process. The Equity Analysis Toolkit, marked “Required of all DHS staff”, supports applicable equity-analysis duties.</p></header><ul class="_doors_809a7d"><li><a class="_door_809a7d" href="/leading/paths/exploring-leadership"><span class="_doorTitle_809a7d">Exploring leadership</span><span>For anyone drawn to leading, with or without a title: knowing your own starting point, hearing and being heard, and planning how you want to grow.</span><span class="_doorAction_809a7d">15 courses, about 11 hours</span></a></li><li><a class="_door_809a7d" href="/leading/paths/program-leads"><span class="_doorTitle_809a7d">Program leads</span><span>For people who guide a program, policy or project without supervising the team: where a process loses people, partnership, evidence, and advising the person who decides.</span><span class="_doorAction_809a7d">16 courses, about 12 hours</span></a></li><li><a class="_door_809a7d" href="/leading/paths/first-year"><span class="_doorTitle_809a7d">First-year supervisors</span><span>For your first year of supervising: the duties that start on day one, then everyday decisions one at a time.</span><span class="_doorAction_809a7d">31 courses, about 29 hours</span></a></li><li><a class="_door_809a7d" href="/leading/paths/experienced"><span class="_doorTitle_809a7d">Experienced supervisors</span><span>For supervisors with some years behind them: harder conversations, whose norms count, and what to do when you are named.</span><span class="_doorAction_809a7d">19 courses, about 17 hours</span></a></li><li><a class="_door_809a7d" href="/leading/paths/managers-of-managers"><span class="_doorTitle_809a7d">Managers of managers</span><span>For people who back other supervisors: conversations before decisions, consistency, patterns and oversight.</span><span class="_doorAction_809a7d">19 courses, about 18 hours</span></a></li><li><a class="_door_809a7d" href="/leading/paths/senior-leaders"><span class="_doorTitle_809a7d">Senior leaders</span><span>For decisions only senior leaders can make: ownership, measures, change and what the rules say now.</span><span class="_doorAction_809a7d">14 courses, about 13 hours</span></a></li></ul><p class="_plain_809a7d">Times come from each course's own stated length and have not been tested with readers. They count courses only, not optional practice or live sessions.</p></div></div>"
+
+ ❯ app/leading/leading-pages.test.tsx:60:38
+     58|   it("lists every course on every path, with the Toolkit marked", asyn…
+     59|     expect(html(LeadingPathsPage())).toContain("Six suggested orders t…
+     60|     for (const path of LEADING_PATHS) {
+       |                                      ^
+     61|       const page = html(await LeadingPathPage({ params: Promise.resolv…
+     62|       for (const id of path.courseIds) expect(page, id).toContain(`/co…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[7/13]⎯
+
+ FAIL  |components| app/leading/leading-pages.test.tsx > supervisor and manager pages render with their data > states the promises
+Error: NEXT_REDIRECT
+ ❯ getRedirectError ../one-dsd-calm-rebuild-20261109/node_modules/next/src/client/components/redirect.ts:15:17
+ ❯ getRedirectError ../one-dsd-calm-rebuild-20261109/node_modules/next/src/client/components/redirect.ts:40:9
+ ❯ Module.LeadingHowThisWorksPage app/leading/how-this-works/page.tsx:8:3
+      6|
+      7| export default function LeadingHowThisWorksPage() {
+      8|   redirect("/leading");
+       |   ^
+      9| }
+     10|
+ ❯ app/leading/leading-pages.test.tsx:69:23
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[8/13]⎯
+
+ FAIL  |components| components/analysis/analyze-workspace.test.tsx > Analyze a document workspace > keeps the request and result in this browser only on request, and forgets them
+AssertionError: expected 'Step 1Choose what to analyzeEquity an…' to contain 'saved in this browser profile'
+
+Expected: "saved in this browser profile"
+Received: "Step 1Choose what to analyzeEquity analysisUpload or paste a proposal, decision memo, budget request or draft analysis that a team wants to examine for its effect on different groups of people.Policy, process or service changeUpload or paste a policy, procedure, bulletin, service change notice or decision memo, with any data or engagement notes that support it.Program or service designUpload or paste a program description, service design, waiver material, provider guidance or dashboard extract for home and community-based services or a related program.Engagement or outreach planUpload or paste an engagement plan, listening session outline, outreach schedule, invitation or report-back draft.Notice, letter, form or web pageUpload or paste a notice, letter, form, instruction sheet or web page that people receive or must complete.Working group or task force planUpload or paste a working group, task force or advisory council plan, charter, workplan or meeting schedule, with the enacting law if the plan does not quote it.This instrument walks the supplied material through the six steps of the Department of Human Services equity analysis: results and outcomes, data, engaging communities, benefits and burdens, implementation, and accountability. It separates what the document shows from what it leaves open, so the team can see where evidence, engagement or a responsible role is still missing.Step 2Bring in the materialUse only public or appropriately de-identified material approved for this purpose. Leave out names, case details and other confidential information.Add sample sourceAdd untitled sourceStep 3Your questionWhat do you want to know or decide? (optional)One or two sentences about the decision in front of you help the analysis focus. Leave out names and personal details.0 of 2000 charactersCommunity this work concerns (optional)No particular communityHmongStep 4AnalyzeAnalyzeClearThis is a draft analysis of the material you supplied. It has not been reviewed or approved. Check the quotations against your document before relying on them.Analysis: Equity analysisA short summary of the material.Evidence: 1Inference: 0Gap: 0Evidence is quoted from the material. Inference is a conclusion drawn from the material. Gap means the material does not settle the question.PreparationWho is doing the analysis, who is affected, and which perspectives are still missing.Does this team adequately represent the organization?Evidencequoted from the material. The notice goes by mail.“The notice is mailed to the person”From: Sample noticeDoes this team adequately represent the identities of people who will be impacted by the action(s) or decision(s)?No answer was returned for this question.What perspectives does this team have and what perspectives is the team still missing?No answer was returned for this question.How will the team engage missing perspectives?No answer was returned for this question.Set desired results and outcomesStep 1 of the six-step method.What decision is being reviewed, what community results and organizational outcomes are intended, and who may be affected differently by race and intersecting identities?No answer was returned for this question.DataStep 2 of the six-step method.What available quantitative and qualitative evidence describes existing inequities, and which gaps or assumptions need checking?No answer was returned for this question.Engaging CommunitiesStep 3 of the six-step method.What have affected communities actually contributed, whose views are missing, and how will they influence the next decision?No answer was returned for this question.Benefits/BurdensStep 4 of the six-step method.Who may gain or carry additional burdens, and which changes or alternatives could reduce racial inequity and unintended harm?No answer was returned for this question.ImplementationStep 5 of the six-step method.What actions, responsible roles, resources, and timing would make the proposed response feasible?No answer was returned for this question.Accountability, Communication, and Evaluation of ResultsStep 6 of the six-step method.How will results be measured, shared with affected people, and revisited when evidence or circumstances change?No answer was returned for this question.Next stepsNo next steps were added. Every question was answered from the material.LimitationsNo limitations were listed.Keep or share the resultPrint or save as PDFCopy as textForgetClear"
+
+ ❯ components/analysis/analyze-workspace.test.tsx:185:39
+    183|     expect(stored.request.sources[0].title).toBe("Sample notice");
+    184|     expect(stored.result.summary).toBe(result.summary);
+    185|     const writeText = vi.fn().mockResolvedValue(undefined);
+       |                                       ^
+    186|     Object.assign(navigator, { clipboard: { writeText } });
+    187|     await act(async () => { button("Copy as text").click(); });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[9/13]⎯
+
+ FAIL  |node| lib/content/collections.test.ts > the promises on these pages > states plainly what is and is not recorded
+AssertionError: expected 'import type { Metadata } from "next";…' to contain 'no team view, no assignments and no s…'
+
+- Expected
++ Received
+
+- no team view, no assignments and no scores
++ import type { Metadata } from "next";
++ import { redirect } from "next/navigation";
++ import { LEADING_LABEL } from "@/lib/content/collections";
++
++ export const metadata: Metadata = { title: LEADING_LABEL };
++
++ export default function LeadingHowThisWorksPage() {
++   redirect("/leading");
++ }
++
+
+ ❯ lib/content/collections.test.ts:175:456
+    171|     for (const file of pageFiles) expect(readFileSync(path.join(root, …
+    172|   });
+    173| });
+       |     ^
+    174|
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[10/13]⎯
+
+ FAIL  |node| lib/content/leadership-journey.test.ts > the promises the journey keeps > says plainly that it is optional, with nothing to submit and nothing counted
+AssertionError: expected '\r\nimport { SourceLink } from "@/com…' to contain 'no nomination, no group to join and n…'
+
+- Expected
++ Received
+
+- no nomination, no group to join and no deadline
++ 
++ import { SourceLink } from "@/components/app-link";
++ import type { Metadata } from "next";
++ import Link from "@/components/app-link";
++ import { LeadingStartChooser } from "@/components/leading-start-chooser";
++ import { LEADING_LABEL, LEADING_PATHS } from "@/lib/content/collections";
++ import { END_OF_PATH_QUESTIONS, JOURNEY_STEPS, LEARNING_ELSEWHERE, LEARNING_WITH_OTHERS, PATH_JOURNEY, REFLECTION_PROMPTS, SIX_WEEKS, WEEKLY_RHYTHM } from "@/lib/content/leadership-journey";
++ import base from "@/app/learn/collaboration/collaboration.module.css";
++ import styles from "@/components/collections.module.css";
++ 
++ export const metadata: Metadata = {
++   title: `Your leadership journey | ${LEADING_LABEL}`,
++   description: "Connect leadership learning with a work decision, reflection and follow-up.",
++ };
++ 
++ export default function LeadingJourneyPage() {
++   const paths = LEADING_PATHS.map(path => ({ slug: path.slug, title: path.title, description: path.description }));
++   return <div className={base.page}><div className={base.content}>
++     <p className={base.back}><Link href="/leading">{LEADING_LABEL}</Link></p>
++     <header className={base.intro}>
++       <h1>Your leadership journey</h1>
++       <p className={base.lede}>A way to grow as a leader at your own pace, from a first interest in leading to setting direction for others.</p>
++       <p>You choose where to start and how fast to go.</p>
++     </header>
++ 
++     <section className={styles.section} aria-labelledby="journey-round-title">
++       <h2 id="journey-round-title">How one round works</h2>
++       <p>Each round is small: one lesson, a few lines of reflection, one thing tried in your real work, and a note on what happened. Then you go around again.</p>
++       <ol className="list-decimal space-y-2 pl-6">
++         {JOURNEY_STEPS.map(step => <li key={step.id}><strong>{step.title}.</strong> {step.body} <Link href={step.href}>{step.link}</Link>.</li>)}
++       </ol>
++       <p className={styles.plain}>Combine structured learning with workplace experience and feedback from colleagues. A lesson can introduce a concept; applying it requires attention to the situation, your authority and the people affected. Review what happened before deciding what to retain or change.</p>
++     </section>
++ 
++     <section className={styles.section} aria-labelledby="journey-start-title">
++       <h2 id="journey-start-title">Find a starting point</h2>
++       <p>Answer two or three questions about your work, or simply choose from the list below.</p>
++       <LeadingStartChooser paths={paths} />
++       <ul className={styles.doors}>
++         {LEADING_PATHS.map(path => <li key={path.slug}><Link className={styles.door} href={`/leading/paths/${path.slug}`}>
++           <span className={styles.doorTitle}>{path.title}</span>
++           {PATH_JOURNEY[path.slug] ? <span>{PATH_JOURNEY[path.slug].question}</span> : <span>{path.description}</span>}
++           <span className={styles.doorAction}>Open this path</span>
++         </Link></li>)}
++       </ul>
++     </section>
++ 
++     <section className={styles.section} aria-labelledby="journey-rhythm-title">
++       <h2 id="journey-rhythm-title">A steady rhythm</h2>
++       <p>A week that fits inside real work looks something like this. Take less when the week is full.</p>
++       <ul className="list-disc pl-6">
++         {WEEKLY_RHYTHM.map(item => <li key={item.what}>{item.what}: {item.time}</li>)}
++       </ul>
++       <details>
++         <summary>One way to pace a path over six weeks</summary>
++         <ol className="mt-2 space-y-2 pl-0">
++           {SIX_WEEKS.map(week => <li key={week.week}><strong>Week {week.week}.</strong> Learn: {week.learn}. Reflect: {week.reflect}. Apply: {week.apply}.</li>)}
++         </ol>
++         <p className={styles.plain}>This is one example. Any path can be taken faster, slower or in a different order.</p>
++       </details>
++     </section>
++ 
++     <section className={styles.section} aria-labelledby="journey-reflect-title">
++       <h2 id="journey-reflect-title">Looking back</h2>
++       <p>Use reflection to compare your intention with what happened. Record the observations, their significance and what remains uncertain, then decide what to retain, revise or refer to someone with the relevant responsibility. <Link href="/my-work/reflections">Open your reflection notebook</Link>.</p>
++       <ul className="list-disc space-y-2 pl-6">
++         {REFLECTION_PROMPTS.map(prompt => <li key={prompt.kind}><strong>{prompt.kind}.</strong> {prompt.when} {prompt.questions.join(" ")}</li>)}
++       </ul>
++       <p className={styles.plain}>When you set a date to look back, the notebook shows it to you the next time you open it.</p>
++     </section>
++ 
++     <section className={styles.section} aria-labelledby="journey-others-title">
++       <h2 id="journey-others-title">Learning with others, if you want to</h2>
++       <p>A conversation with someone you trust can deepen what you notice.</p>
++       <ul className={styles.doors}>
++         {LEARNING_WITH_OTHERS.map(place => <li key={place.href}><Link className={styles.door} href={place.href}><span className={styles.doorTitle}>{place.title}</span><span>{place.body}</span></Link></li>)}
++       </ul>
++     </section>
++ 
++     <section className={styles.section} aria-labelledby="journey-elsewhere-title">
++       <h2 id="journey-elsewhere-title">Free courses elsewhere</h2>
++       <p>For anyone who wants more. These belong to other organizations, open on their sites, and may ask you to create an account there.</p>
++       <ul className="list-disc pl-6">
++         {LEARNING_ELSEWHERE.map(course => <li key={course.href}><SourceLink className="underline" href={course.href} target="_blank" rel="noreferrer">{course.title}</SourceLink>, {course.provider}. {course.body}</li>)}
++       </ul>
++     </section>
++ 
++     <section className={styles.section} aria-labelledby="journey-end-title">
++       <h2 id="journey-end-title">At the end of a path</h2>
++       <p>Four questions to ask yourself:</p>
++       <ul className="list-disc pl-6">
++         {END_OF_PATH_QUESTIONS.map(question => <li key={question}>{question}</li>)}
++       </ul>
++       <p className={styles.plain}>If you want something to bring to a development conversation, review and download your action plans and reflections from <Link href="/my-work">My work</Link>.</p>
++     </section>
++   </div></div>;
++ }
++
+
+ ❯ lib/content/leadership-journey.test.ts:75:191
+     76|   });
+     77|   it("lists free courses elsewhere only on secure outside addresses, e…
+     78|     expect(LEARNING_ELSEWHERE.length).toBeGreaterThan(0);
+       |                                            ^
+     79|     for (const course of LEARNING_ELSEWHERE) expect(course.href).toMat…
+     80|     expect(new Set(LEARNING_ELSEWHERE.map(course => course.href)).size…
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[11/13]⎯
+
+ FAIL  |node| lib/downloads/adapters/self-directed.test.ts > self-directed course downloads > keeps the page order and puts each hidden explanation with the response that opens it
+AssertionError: expected [ …(4) ] to deeply equal [ …(5) ]
+
+- Expected
++ Received
+
+  [
+    "What you can practice in this course",
+    "Page 1: Opening page",
+    "Page 2: A choice",
+    "Page 3: Closing page",
+-   undefined,
+  ]
+
+ ❯ lib/downloads/adapters/self-directed.test.ts:103:63
+    101|       expect(document.meta.find((row) => row.label === "Curriculum")?.…
+    102|       expect(document.meta.find((row) => row.label === "Pages")?.value…
+    103|       expect(document.sections.map((entry) => entry.heading)).toEqual(…
+       |                                                               ^
+    104|       expect(document.sources).toEqual([{ title: "A program course", n…
+    105|       const plain = text.renderText(document).toString("utf8");
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[12/13]⎯
+
+ FAIL  |node| lib/intelligence/retrieval/public-practice-path-search.test.ts > published practice path search projection > uses rendered privacy and closed consultation wording even for older stored values
+AssertionError: expected '{"title":"New program or service conc…' to contain 'This page does not save your answers …'
+
+Expected: "This page does not save your answers or progress"
+Received: "{"title":"New program or service concept","staffLabel":"I'm planning something new","startingCompetence":"You have a program idea and want a clear way to consider equity and access before the design is settled.","graduatedLooksLike":"By the end, you will have a completed equity and access checklist for your program, with clear responsibilities and a review date. Staff consultation request forms are closed. Use Find the right person to identify the responsible role or office.","steps":["Find the right person when needed","If another perspective would help, use Find the right person to identify the responsible role or office. Staff consultation request forms are closed. Use Find the right person to identify the responsible role or office.","Consider community context","If the work names Minnesota communities or partners, read the relevant brief. Focus on what to ask, access needs, who to involve, and what not to assume.","Explore Minnesota Communities","Choose practical resources","Use the launch checklist, the journey and burden questions, and the partner map to work through your idea.","Launch equity and access checklist","Journey and burden questions","Partner map","Draft your equity and access checklist","Complete the checklist for your program. Use the downloaded checklist to write your answers in a tool you normally use.","Review your work","Confirm who is responsible, the access needs you considered, who was involved, what you chose not to assume, the review date, and any questions that remain.","Find the right person when needed","If the idea is high stakes or questions remain, use your checklist to explain the work to the person or area responsible. Use existing workplace channels to contact them.","Find the right person"],"artifactTitle":"Staff consultation request forms are closed. Use Find the right person to identify the responsible role or office.","artifactFields":["Program or service name","Use the program or service name, not a client's name.","Who this is for, and who carries the burden if it does not work","Use general terms and consider which communities may be missing from the design process.","Access needs and assumptions","Consider broadband, a printer, English, transportation, daytime availability, a person people can reach instead, and accessible documents.","Languages and vital documents","Note the languages people may need, which documents need translation and review by a qualified translator, and how an interpreter will be available at first contact.","Steps or barriers you can remove","Consider the number of steps, documents, and trips, along with requirements that may be easy to miss.","Who is involved before the design is settled, and what role they have","Consider the Equity Director, accessibility and language access leads, community partners, and Tribal consultation when applicable.","What you chose not to assume","Note the assumptions you avoided about the people affected.","Who is responsible for each follow-up","Add one line for each follow-up, including the action and the person responsible.","Next review date","Choose a date when you will return to this work.","Questions that remain","Note what you still need to learn and who can help."],"review":["A quick answer with no next step","A completed checklist without clear responsibilities or a review date","An equity section added without considering access or burden","The checklist is connected to your program","Access, involvement, and assumptions are addressed","Questions that remain are clearly noted and taken to the right people"],"privacy":""}"
+
+ ❯ lib/intelligence/retrieval/public-practice-path-search.test.ts:17:18
+     15|     const text = JSON.stringify(projected);
+     16|     expect(text).toContain("Staff consultation request forms are close…
+     17|     expect(text).toContain("This page does not save your answers or pr…
+       |                  ^
+     18|     expect(text).not.toMatch(/Submit confidential request|consultant w…
+     19|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[13/13]⎯
+
+
+ Test Files  11 failed | 186 passed (197)
+      Tests  13 failed | 1541 passed | 1 skipped (1555)
+   Start at  15:50:12
+   Duration  484.28s (tests 50%, import 31%, transform 10%, environment 9%)
+
+Environment  |components| jsdom was created 46 times · 169.80s total, 50% of tracked time
+             create it once per worker with pool: 'vmThreads' (keeps per-file isolation) or isolate: false (shares it across files)
+             learn more: https://vitest.dev/guide/improving-performance#test-environments
+

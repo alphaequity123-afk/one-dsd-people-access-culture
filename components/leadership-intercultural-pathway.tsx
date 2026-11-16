@@ -5,7 +5,6 @@ import { LearningTile } from "@/components/learning-tile";
 import { courseContentItem, courseHref, courseSummary } from "@/lib/content/courses/published";
 import type { CoursePack } from "@/lib/content/courses/source-types";
 import { LEADERSHIP_INTERCULTURAL_PATHWAY, LEADERSHIP_LIFECYCLE_CONTEXTS, resolveLeadershipPathwayCourses } from "@/lib/content/leadership-intercultural-pathway";
-import { TRAINING_CREDIT_NOTICE } from "@/lib/program/learning-credit";
 
 export function LeadershipInterculturalPathway({ courses }: { courses: readonly CoursePack[] }) {
   return <section id="intercultural-leadership" className="my-10 scroll-mt-8">
@@ -28,6 +27,5 @@ export function LeadershipInterculturalPathway({ courses }: { courses: readonly 
       })}
     </div>
     <details className="mt-6 border-t border-[#d5dfe6] pt-4"><summary className="cursor-pointer font-semibold text-[#103f62]">Intercultural development and your learning</summary><p className="mt-4 max-w-3xl leading-7">Intercultural development involves recognizing cultural differences, considering another perspective, and adapting behavior appropriately. The Intercultural Development Continuum describes Denial, Polarization, Minimization, Acceptance, and Adaptation. These ideas inform the learning; the three course stages do not assign you an orientation or measure your development. If you have an IDI development plan, you may use it to choose a focus. The same courses are available if you have not taken the IDI.</p><p className="mt-3 leading-7"><SourceLink href="https://www.idiinventory.com/idc">Explore the Intercultural Development Continuum</SourceLink></p></details>
-    <p className="mt-5 max-w-3xl text-sm leading-6">{TRAINING_CREDIT_NOTICE}</p>
   </section>;
 }

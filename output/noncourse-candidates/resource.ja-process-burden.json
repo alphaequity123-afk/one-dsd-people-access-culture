@@ -1,0 +1,187 @@
+{
+  "target": "resource.ja-process-burden",
+  "kind": "resource",
+  "route": "/library/ja-process-burden",
+  "sourceSha256": "25e3e91869ca5766773ae376f79b490f5240b8a4561c32cc38e9ffa9c8fe427c",
+  "status": "needs_revision",
+  "reviewedFieldCount": 9,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "summary"
+      ],
+      "before": "From the person’s point of view, count the steps, documents, trips, and hours away from work, and notice when a deadline, mailed notice, or login becomes a barrier. At each step, keep staff help reachable without the online option.",
+      "after": "Count every step, form, required trip, and hour a person spends away from work, starting from their first contact with the service. Identify when a deadline, mailed notice, or login requirement might prevent someone from completing the process. At each stage, ensure that people can reach staff for support without needing to use an online system. These details help us find where the process may lose people or create unnecessary barriers.",
+      "reason": "Clarified sentence structure to specify which steps to count and why. Explained how staff accessibility without using online systems affects the process, emphasizing what can create barriers. Provided reasoning for identifying these points as a way to improve access and avoid losing people during the process."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "body",
+        0
+      ],
+      "before": "First contact: how does a person learn that the service exists? Which languages and ways of reaching people are used?",
+      "after": "First contact: How does a person find out the service is available, and in which languages or formats is this information provided? Consider whether outreach includes multiple ways for people to learn about the service, not just written English or digital channels.",
+      "reason": "Added specificity and expanded on the need for multiple formats and outreach methods. Explained the purpose: to ensure people with varied language and communications needs are not excluded at the starting point."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Access at each step: can people complete it with a screen reader, keyboard, interpreter, captioning, or an alternate format?",
+      "after": "Accessibility at each step: Can people use a screen reader, keyboard navigation, interpreter, captioned video, or request materials in alternate formats? Review where the process may unintentionally exclude someone who needs an adaptation.",
+      "reason": "Clarified technology and adaptation examples and included reasoning to check for unintentional exclusion at each stage, emphasizing the importance of reviewing for diverse accessibility needs."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Each document: what must they already have, and what happens if they do not?",
+      "after": "For each required document: What must the person already have in their possession, and what happens if they do not? Does the process have a way to help or direct someone who is missing a document, or does it result in a denial or delay?",
+      "reason": "Clarified practical consequences of missing documents and added a specific question about the process response for people who do not have all necessary paperwork. Emphasized checking for possible denials or delays that affect service."
+    },
+    {
+      "fieldId": 4,
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Each wait: how long, and what happens to their service meanwhile?",
+      "after": "Each wait: How long does a person wait at each stage, and what happens to their access to services during that time? Consider whether waiting has practical or negative effects for the person or their household.",
+      "reason": "Expanded question to clarify that waits can have different effects on a person or family, and encouraged considering the practical consequences of each period of waiting."
+    },
+    {
+      "fieldId": 5,
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Each decision: who decides, how is it explained, and can it be appealed in plain language?",
+      "after": "Each decision: Who makes the decision at each stage? How is their reasoning communicated to the person, and is the process for appeal or challenge explained in straightforward language? Review if the explanation gives the person enough information to respond or appeal if needed.",
+      "reason": "Expanded to ask for explanation of decisions, clarity of communication, and sufficiency of information for appeals, emphasizing the importance of plain language and transparency."
+    },
+    {
+      "fieldId": 6,
+      "path": [
+        "body",
+        5
+      ],
+      "before": "Each notice: mailed, emailed, or in an account? Who never sees it?",
+      "after": "Each notice: Is information sent by mail, email, or posted in an online account? Who might not receive or notice these communications, and what happens if they do not? Check for gaps where people miss critical updates.",
+      "reason": "Specified possible notice types and added reasoning about the consequences of missed communications, with a prompt to check for service gaps due to these issues."
+    },
+    {
+      "fieldId": 7,
+      "path": [
+        "body",
+        6
+      ],
+      "before": "When the process breaks down: who is left carrying the burden—the person, a family member, a county worker, or a community organization?",
+      "after": "When the process fails or breaks down: Who has to carry the extra work or burden? Does it fall on the person seeking services, a family member, a county worker, or a community group? Recognize where staff decisions or technology shifts responsibility instead of removing a barrier.",
+      "reason": "Clarified the scenario in which the process breaks down and explained why it matters who carries the extra work, especially when staff actions or system design shift burdens."
+    },
+    {
+      "fieldId": 8,
+      "path": [
+        "body",
+        7
+      ],
+      "before": "Removal: which steps could be removed, combined, or done by the agency instead of the person?",
+      "after": "Step removal: Which parts of the process could be removed, combined, or handled by agency staff rather than the person? Examining this helps identify where staff involvement can reduce unnecessary complexity for the person.",
+      "reason": "Clarified that the review is about reducing unnecessary complexity and making staff responsible for steps where possible, providing reasoning for the benefit of simplifying the process for the person."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed summary changes expand on reasoning and scope by inserting \"These details help us find where the process may lose people or create unnecessary barriers,\" which is not stated or implied in the original source. The original summary limits itself to identifying specific elements from the person’s view (steps, documents, trips, hours, and navigation barriers) and to ensuring staff help is reachable without the online option. The addition of justification is not source-grounded, and the rephrased structure risks changing the focus from objective counting to a process improvement/removal directive. This is not fully supported by the source as written."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The rewritten subpoint accurately clarifies and slightly expands on the original intent regarding 'First contact', making explicit the need for multiple language/format outreach. This is implied in the original mention of 'Which languages and ways of reaching people are used?' and does not add policy or meaning not present in the source."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The new wording presents legitimate clarifications and examples upon the existing intent about accessibility at each step, in line with source scope. Adding 'keyboard navigation' and 'captioned video' as examples still serves the original direction and clarifies diversity of adaptations without adding obligation or requirements."
+      },
+      {
+        "fieldId": 3,
+        "severity": "note",
+        "finding": "The revision for required documents adds helpful granularity about consequences and process for missing documentation, which is implied (\"what happens if they do not?\") and does not change the source meaning."
+      },
+      {
+        "fieldId": 4,
+        "severity": "note",
+        "finding": "The addition about considering effects of waiting is a logical extension of 'what happens to their service meanwhile?' and stays within the analytic frame of the source resource."
+      },
+      {
+        "fieldId": 5,
+        "severity": "note",
+        "finding": "The new wording expands the level of detail on explanation and appeal but stays within the source's purpose of asking who decides, how it's explained, and whether appeal is communicated clearly."
+      },
+      {
+        "fieldId": 6,
+        "severity": "note",
+        "finding": "The clarification of notice types and consequences of missing them is still anchored in the source question of who never sees notices. Asking about impacts is a minor extension supporting the original intent."
+      },
+      {
+        "fieldId": 7,
+        "severity": "note",
+        "finding": "Expanding who carries the burden and the possible role of staff/technology in shifting the burden does not stray from the intent and meaning of the original source question."
+      },
+      {
+        "fieldId": 8,
+        "severity": "note",
+        "finding": "Specifying that staff could take on steps to reduce unnecessary complexity is consistent with the source's query about which steps could be handled by the agency instead of the person."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 1719,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 875,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2594
+    },
+    "review": {
+      "input_tokens": 2150,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 561,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2711
+    }
+  },
+  "createdAt": "2026-11-15T13:41:05.713Z"
+}

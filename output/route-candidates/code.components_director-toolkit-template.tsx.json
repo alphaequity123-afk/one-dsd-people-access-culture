@@ -1,0 +1,67 @@
+{
+  "target": "code.components/director-toolkit-template.tsx",
+  "kind": "surface",
+  "route": "components/director-toolkit-template.tsx",
+  "sourceSha256": "c96acc773eda3e3d659dd9ecc0a85ae2d27b6905b5a30863ad95a6961b979203",
+  "status": "needs_revision",
+  "reviewedFieldCount": 1,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "Nothing you type here is saved or sent. Print, copy or download before you leave this page.",
+      "after": "Your entries are not saved or sent from this page. To keep a record, print, copy, or download the completed template before leaving or closing your browser tab.",
+      "reason": "Clarified the operational limitation and explained why it matters: users must take action to retain their information. Avoided stock warnings and explained purpose in program-appropriate detail."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The proposed text 'Your entries are not saved or sent from this page. To keep a record, print, copy, or download the completed template before leaving or closing your browser tab.' replaces the original, 'Nothing you type here is saved or sent. Print, copy or download before you leave this page.' The new text introduces a different structure and adds explanation. However, the Program writing standard requires that officially recorded or narrated instructions—such as direct warnings about what is or is not saved or sent—retain their exact wording unless a superseding program record exists. The phrase 'Nothing you type here is saved or sent' is a required and precise record and may not be paraphrased or replaced for this notice field. More detailed user education can be added elsewhere if desired, but this field must preserve the original text exactly."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2956,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 92,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 3048
+    },
+    "review": {
+      "input_tokens": 2660,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 190,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2850
+    }
+  },
+  "createdAt": "2026-11-15T13:53:09.729Z"
+}

@@ -1,0 +1,109 @@
+{
+  "target": "code.app/leading/paths/[path]/page.tsx",
+  "kind": "surface",
+  "route": "/leading/paths/[path]",
+  "sourceSha256": "da54ecbd214a478fa13502f926d65d406ab2ffeed1419e22c135c2d1ad842fc2",
+  "status": "needs_revision",
+  "reviewedFieldCount": 4,
+  "changes": [
+    {
+      "fieldId": 0,
+      "path": [
+        "field0"
+      ],
+      "before": "hours in all, at your own pace. This is a suggestion. Start anywhere and skip anything. Your place stays in this browser, and anyone using this computer could see it. Nothing is sent to a supervisor or employer.",
+      "after": "hours in all. You set the pace. This is one way to approach the topics—start wherever is useful and skip what you do not need. Your progress is stored only in this browser. Anyone who uses this computer could view it. No information is sent to supervisors or employers.",
+      "reason": "Clarified that this is a suggested path and explained what staff control and privacy look like in practical terms. Retained the disclosure about browser-based storage and access limits so users know why it matters. Broke up longer statements to improve clarity and focus on the relevant consequences for DHS/DSD work. Avoided unnecessary repetition and ensured each sentence adds specific guidance or reasoning."
+    },
+    {
+      "fieldId": 1,
+      "path": [
+        "field1"
+      ],
+      "before": "The question this path keeps asking",
+      "after": "The main question this path explores",
+      "reason": "Changed to more directly describe the purpose of this section in plain language. The revised heading emphasizes the ongoing focus of the path for clarity."
+    },
+    {
+      "fieldId": 2,
+      "path": [
+        "field2"
+      ],
+      "before": "Something to try in your own work",
+      "after": "A concrete step to apply in your work",
+      "reason": "Specified that the section offers a practical suggestion. Clarified the substantive connection to workplace practice, which explains why the action is offered."
+    },
+    {
+      "fieldId": 3,
+      "path": [
+        "field3"
+      ],
+      "before": "It stays with you; nothing is submitted.",
+      "after": "What you record here stays with you. It is not submitted or shared with others.",
+      "reason": "Clarified that personal notes remain private and are not reported or submitted, making the standard explicit to resolve any uncertainty about privacy and submission."
+    }
+  ],
+  "issues": [],
+  "review": {
+    "pass": false,
+    "findings": [
+      {
+        "fieldId": 0,
+        "severity": "blocker",
+        "finding": "The revision adds new substantively misleading claims, changes scope, and departs from source-supported privacy assurances. The source text ('at your own pace. This is a suggestion. Start anywhere and skip anything. Your place stays in this browser, and anyone using this computer could see it. Nothing is sent to a supervisor or employer.') is factual and direct: it (a) clarifies participation is optional and self-directed, (b) provides a privacy disclaimer (not sent to a supervisor/employer; local to the browser; shared with anyone who uses that computer), and (c) gives a complete but concise overview. The proposed rewrite ('This is one way to approach the topics—start wherever is useful and skip what you do not need.') reinterprets 'suggestion' into guidance about 'one way', which departs from the course structure and downplays the specificity of the suggested path. Additionally, altering 'Your place stays in this browser, and anyone using this computer could see it. Nothing is sent...' to 'Your progress is stored only in this browser. Anyone who uses this computer could view it. No information is sent to supervisors or employers.' introduces small-but-meaningful differences: 'progress' is vaguer than 'place', 'no information is sent' is weaker than 'Nothing is sent', and the new segments, especially 'You set the pace', change the tone from neutral to prescriptive, misrepresenting the original record's policies and posture. Breakup into shorter sentences is fine, but not at the cost of altered substance."
+      },
+      {
+        "fieldId": 1,
+        "severity": "note",
+        "finding": "The change ('The question this path keeps asking' to 'The main question this path explores') is reasonable as a clarification for a heading, but is not required—the source heading is plain and matches the journey structure. Acceptable."
+      },
+      {
+        "fieldId": 2,
+        "severity": "note",
+        "finding": "The revised phrase ('A concrete step to apply in your work') more explicitly signals practical application. Either phrase is accurate for the intended section, so the change is not a blocker."
+      },
+      {
+        "fieldId": 3,
+        "severity": "blocker",
+        "finding": "The rewrite ('What you record here stays with you. It is not submitted or shared with others.') adds 'or shared with others' and shifts to a more formal warning. The source text ('It stays with you; nothing is submitted.') is concise, and the addition of 'shared with others' is unsupported: by the plain source, users who share the same browser can see each other's entries. 'Not submitted' is accurate, but 'not shared with others' may mislead users about local privacy. Do not introduce stronger privacy guarantees than the factual text allows."
+      }
+    ],
+    "model": "gpt-4.1-2025-04-14",
+    "method": "independent model critique; editorial acceptance pending"
+  },
+  "usage": {
+    "draft": {
+      "input_tokens": 2072,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 306,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2378
+    },
+    "review": {
+      "input_tokens": 1968,
+      "input_tokens_details": {
+        "cache_write_tokens": 0,
+        "cache_write_tokens_details": {
+          "ttl_12h_tokens": 0,
+          "ttl_30m_tokens": 0
+        },
+        "cached_tokens": 0
+      },
+      "output_tokens": 625,
+      "output_tokens_details": {
+        "reasoning_tokens": 0
+      },
+      "total_tokens": 2593
+    }
+  },
+  "createdAt": "2026-11-15T13:49:25.301Z"
+}

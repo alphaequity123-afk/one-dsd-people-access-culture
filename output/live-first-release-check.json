@@ -1,0 +1,275 @@
+{
+  "checkedAt": "2026-11-15T14:05:37.393Z",
+  "results": [
+    {
+      "target": "about.page",
+      "url": "https://one-people-access-culture.up.railway.app/about",
+      "status": 200,
+      "expectedFields": 4,
+      "visibleMatches": 4,
+      "passed": true,
+      "heading": "About this program"
+    },
+    {
+      "target": "start.page",
+      "url": "https://one-people-access-culture.up.railway.app/start",
+      "status": 200,
+      "expectedFields": 7,
+      "visibleMatches": 2,
+      "passed": true,
+      "heading": "Where would you like to start?"
+    },
+    {
+      "target": "areas.page",
+      "url": "https://one-people-access-culture.up.railway.app/areas",
+      "status": 200,
+      "expectedFields": 1,
+      "visibleMatches": 1,
+      "passed": true,
+      "heading": "Areas of work"
+    },
+    {
+      "target": "learn.page",
+      "url": "https://one-people-access-culture.up.railway.app/learn",
+      "status": 200,
+      "expectedFields": 6,
+      "visibleMatches": 0,
+      "passed": false,
+      "heading": "Learn"
+    },
+    {
+      "target": "learn.hub",
+      "url": "https://one-people-access-culture.up.railway.app/learn",
+      "status": 200,
+      "expectedFields": 4,
+      "visibleMatches": 0,
+      "passed": false,
+      "heading": "Learn"
+    },
+    {
+      "target": "learn.cultural-intelligence",
+      "url": "https://one-people-access-culture.up.railway.app/learn/cultural-intelligence",
+      "status": 200,
+      "expectedFields": 3,
+      "visibleMatches": 3,
+      "passed": true,
+      "heading": "Cultural Intelligence collection"
+    },
+    {
+      "target": "community-outreach.home",
+      "url": "https://one-people-access-culture.up.railway.app/community-outreach",
+      "status": 200,
+      "expectedFields": 4,
+      "visibleMatches": 4,
+      "passed": true,
+      "heading": "Community Outreach and Engagement"
+    },
+    {
+      "target": "practice.page",
+      "url": "https://one-people-access-culture.up.railway.app/practice",
+      "status": 200,
+      "expectedFields": 3,
+      "visibleMatches": 3,
+      "passed": true,
+      "heading": "Practice"
+    },
+    {
+      "target": "paths.index",
+      "url": "https://one-people-access-culture.up.railway.app/paths",
+      "status": 200,
+      "expectedFields": 1,
+      "visibleMatches": 0,
+      "passed": false,
+      "heading": "Learning paths"
+    },
+    {
+      "target": "ask.page",
+      "url": "https://one-people-access-culture.up.railway.app/ask?mode=review",
+      "status": 200,
+      "expectedFields": 4,
+      "visibleMatches": 1,
+      "passed": true,
+      "heading": "Ask"
+    },
+    {
+      "target": "library.page",
+      "url": "https://one-people-access-culture.up.railway.app/library",
+      "status": 200,
+      "expectedFields": 2,
+      "visibleMatches": 1,
+      "passed": true,
+      "heading": "Library"
+    },
+    {
+      "target": "communities.index",
+      "url": "https://one-people-access-culture.up.railway.app/minnesota-communities",
+      "status": 200,
+      "expectedFields": 2,
+      "visibleMatches": 1,
+      "passed": true,
+      "heading": "Minnesota Communities"
+    },
+    {
+      "target": "one-dsd.page",
+      "url": "https://one-people-access-culture.up.railway.app/one-dsd",
+      "status": 200,
+      "expectedFields": 3,
+      "visibleMatches": 1,
+      "passed": true,
+      "heading": "One DSD"
+    },
+    {
+      "target": "support.page",
+      "url": "https://one-people-access-culture.up.railway.app/support",
+      "status": 200,
+      "expectedFields": 2,
+      "visibleMatches": 1,
+      "passed": true,
+      "heading": "Support"
+    },
+    {
+      "target": "my-work.page",
+      "url": "https://one-people-access-culture.up.railway.app/my-work",
+      "status": 200,
+      "expectedFields": 1,
+      "visibleMatches": 1,
+      "passed": true,
+      "heading": "My work"
+    },
+    {
+      "target": "course.cultural-humility-vs-checklist",
+      "url": "https://one-people-access-culture.up.railway.app/courses/cultural-humility-vs-checklist",
+      "status": 200,
+      "expectedFields": 19,
+      "visibleMatches": 19,
+      "passed": true,
+      "heading": "Cultural Humility vs. a Checklist"
+    },
+    {
+      "target": "lesson.hu-both",
+      "url": "https://one-people-access-culture.up.railway.app/courses/cultural-humility-vs-checklist/hu-both",
+      "status": 200,
+      "expectedFields": 10,
+      "visibleMatches": 6,
+      "passed": true,
+      "heading": "Both are true"
+    },
+    {
+      "target": "lesson.hu-sheet",
+      "url": "https://one-people-access-culture.up.railway.app/courses/cultural-humility-vs-checklist/hu-sheet",
+      "status": 200,
+      "expectedFields": 5,
+      "visibleMatches": 2,
+      "passed": true,
+      "heading": "The limits of a fact sheet"
+    },
+    {
+      "target": "lesson.hu-check",
+      "url": "https://one-people-access-culture.up.railway.app/courses/cultural-humility-vs-checklist/hu-check",
+      "status": 200,
+      "expectedFields": 10,
+      "visibleMatches": 5,
+      "passed": true,
+      "heading": "When a checklist is the right tool"
+    },
+    {
+      "target": "lesson.hu-one",
+      "url": "https://one-people-access-culture.up.railway.app/courses/cultural-humility-vs-checklist/hu-one",
+      "status": 200,
+      "expectedFields": 8,
+      "visibleMatches": 5,
+      "passed": true,
+      "heading": "Ask questions and set the review date"
+    },
+    {
+      "target": "course.intercultural-competence-without-a-score",
+      "url": "https://one-people-access-culture.up.railway.app/courses/intercultural-competence-without-a-score",
+      "status": 200,
+      "expectedFields": 18,
+      "visibleMatches": 18,
+      "passed": true,
+      "heading": "Intercultural Competence without a Score"
+    },
+    {
+      "target": "lesson.ic-maps",
+      "url": "https://one-people-access-culture.up.railway.app/courses/intercultural-competence-without-a-score/ic-maps",
+      "status": 200,
+      "expectedFields": 14,
+      "visibleMatches": 1,
+      "passed": true,
+      "heading": "Maps, not badges"
+    },
+    {
+      "target": "lesson.ic-not",
+      "url": "https://one-people-access-culture.up.railway.app/courses/intercultural-competence-without-a-score/ic-not",
+      "status": 200,
+      "expectedFields": 4,
+      "visibleMatches": 4,
+      "passed": true,
+      "heading": "What these maps are not for"
+    },
+    {
+      "target": "lesson.ic-use",
+      "url": "https://one-people-access-culture.up.railway.app/courses/intercultural-competence-without-a-score/ic-use",
+      "status": 200,
+      "expectedFields": 6,
+      "visibleMatches": 1,
+      "passed": true,
+      "heading": "How to use a map on an ordinary workday"
+    },
+    {
+      "target": "lesson.ic-next",
+      "url": "https://one-people-access-culture.up.railway.app/courses/intercultural-competence-without-a-score/ic-next",
+      "status": 200,
+      "expectedFields": 1,
+      "visibleMatches": 1,
+      "passed": true,
+      "heading": "Next on this spine"
+    },
+    {
+      "target": "course.plain-language-in-human-services",
+      "url": "https://one-people-access-culture.up.railway.app/courses/plain-language-in-human-services",
+      "status": 200,
+      "expectedFields": 5,
+      "visibleMatches": 5,
+      "passed": true,
+      "heading": "Plain Language in Human Services"
+    },
+    {
+      "target": "lesson.pl-gate",
+      "url": "https://one-people-access-culture.up.railway.app/courses/plain-language-in-human-services/pl-gate",
+      "status": 200,
+      "expectedFields": 9,
+      "visibleMatches": 1,
+      "passed": true,
+      "heading": "The sentence is a gate"
+    },
+    {
+      "target": "lesson.pl-how",
+      "url": "https://one-people-access-culture.up.railway.app/courses/plain-language-in-human-services/pl-how",
+      "status": 200,
+      "expectedFields": 12,
+      "visibleMatches": 6,
+      "passed": true,
+      "heading": "Writing for action: DHS plain language in practice"
+    },
+    {
+      "target": "lesson.pl-not",
+      "url": "https://one-people-access-culture.up.railway.app/courses/plain-language-in-human-services/pl-not",
+      "status": 200,
+      "expectedFields": 1,
+      "visibleMatches": 1,
+      "passed": true,
+      "heading": "Limits of plain language"
+    },
+    {
+      "target": "lesson.pl-one",
+      "url": "https://one-people-access-culture.up.railway.app/courses/plain-language-in-human-services/pl-one",
+      "status": 200,
+      "expectedFields": 7,
+      "visibleMatches": 4,
+      "passed": true,
+      "heading": "Revise one page for clarity"
+    }
+  ]
+}

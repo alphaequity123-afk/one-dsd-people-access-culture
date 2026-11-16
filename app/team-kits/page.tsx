@@ -30,7 +30,7 @@ export default function TeamKitsPage() {
   return <div className="calm">
     <p className="calm-kicker">Learn together</p>
     <h1>Team kits</h1>
-    <p className="calm-lede">Adapt these session plans for a regular staff meeting. Each includes suggested timing, an agenda, related material and a proposed working record. This page does not collect attendance; follow your team’s requirements for any official meeting record.</p>
+    <p className="calm-lede">Adapt these session plans for a regular staff meeting. Each includes suggested timing, an agenda, related material and a proposed working record. Follow your team’s requirements for any official meeting record.</p>
     {KITS.map(kit => <details key={kit.id} id={kit.id}>
       <summary>{kit.title} <span className="calm-muted calm-small">{kit.minutes} minutes</span></summary>
       <p className="calm-muted">{kit.when}</p>
