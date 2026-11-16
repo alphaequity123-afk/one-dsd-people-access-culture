@@ -1,0 +1,127 @@
+{
+  "date": "2026-11-16",
+  "courseId": "gc-age-inclusion",
+  "status": "accepted_complete_written_course_review",
+  "countsAsCompleteCourseReview": true,
+  "scope": "Course overview, all four lessons and 16 objectives, four practice cases with 12 choices and feedback, four knowledge checks, reflection and action instructions, five flashcards, complete job aid and ten source notes. Recordings are outside this acceptance.",
+  "method": "Read the complete source spec and final generated overview/job aid, reviewed all amendments against the source and primary guidance, measured clarity, preserved assessment answers and choices, and verified all four serialized lesson readings.",
+  "sourcePackSha256": "3fae07c76b3d173828b82460026f44c4ca1abf77fc4cb3aa5693813379930200",
+  "specSha256": "7b467351eefb4b1f46186451fbc6daefe41864c01a21c36bc78efccd65996fb0",
+  "findings": [
+    "Ageism examples are distinguished from findings about a particular person or workplace.",
+    "WHO survey scope is explicit and cannot establish local discrimination prevalence.",
+    "State/local government ADEA coverage has no minimum employee count.",
+    "Minnesota employment age protection differs from the separate educational provision.",
+    "Supervisory reporting is immediate; the hiring scenario establishes that reporting has occurred.",
+    "Generational labels do not reliably describe an individual; practical mentoring suggestions do not promise causal outcomes.",
+    "Service choices include verification of any legal representative’s authority.",
+    "Current regulation accompanies historical HHS guidance."
+  ],
+  "diagnostics": [
+    {
+      "title": "What ageism is and why it matters",
+      "teaching": {
+        "words": 305,
+        "sents": 19,
+        "asl": 16.05263157894737,
+        "fk": 11.407575496117342,
+        "fog": 14.02761000862813,
+        "smog": 13.110285616738597,
+        "poly": 19.016393442622952,
+        "long": 35.08196721311475,
+        "short": 0,
+        "ease": 41.8674805867127
+      }
+    },
+    {
+      "title": "Age protections at work: federal and Minnesota law",
+      "teaching": {
+        "words": 403,
+        "sents": 21,
+        "asl": 19.19047619047619,
+        "fk": 13.620340304856434,
+        "fog": 17.403237622592464,
+        "smog": 15.470042427545799,
+        "poly": 24.317617866004962,
+        "long": 34.98759305210918,
+        "short": 9.523809523809524,
+        "ease": 31.59190239867661
+      }
+    },
+    {
+      "title": "Multigenerational teams without generational stereotypes",
+      "teaching": {
+        "words": 319,
+        "sents": 19,
+        "asl": 16.789473684210527,
+        "fk": 12.782346147500416,
+        "fog": 16.245570037947534,
+        "smog": 14.554592549557764,
+        "poly": 23.82445141065831,
+        "long": 37.61755485893417,
+        "short": 0,
+        "ease": 33.32346477478964
+      }
+    },
+    {
+      "title": "Age in service delivery",
+      "teaching": {
+        "words": 387,
+        "sents": 23,
+        "asl": 16.82608695652174,
+        "fk": 10.852277272216607,
+        "fog": 12.725266823952365,
+        "smog": 12.200932325342574,
+        "poly": 14.987080103359173,
+        "long": 29.45736434108527,
+        "short": 8.695652173913043,
+        "ease": 47.22628918099093
+      }
+    }
+  ],
+  "diagnosticJudgment": "Complete editorial reading and two clarity measures preserve distinctions about approved time, evidence, records and reporting. Numerical measurements are diagnostic, not a substitute for source and assessment review.",
+  "assessmentChecks": {
+    "knowledgeCheckAnswersUnchanged": true,
+    "knowledgeCheckQuestionsUnchanged": true,
+    "scenarioReportingAndDecisionAuthorityClarified": true,
+    "scenarioRecommendedIndicesUnchanged": true,
+    "scenarioChoicesUnchanged": true,
+    "finalLessonReadingsMatchCurrentPack": true
+  },
+  "priorFieldReview": "data/editorial/reviews/2026-11-16-age-guidance-review.json",
+  "sources": [
+    "https://www.who.int/news-room/q-a-detail/ageing-ageism",
+    "https://www.who.int/news/item/18-03-2021-ageism-is-a-global-challenge-un",
+    "https://www.eeoc.gov/age-discrimination",
+    "https://www.revisor.mn.gov/statutes/cite/363A.03",
+    "https://nap.nationalacademies.org/read/25796/chapter/2",
+    "https://www.hhs.gov/civil-rights/for-providers/laws-regulations-guidance/nondiscrimination-basis-of-age/index.html",
+    "https://www.supremecourt.gov/opinions/18pdf/17-587_n7ip.pdf",
+    "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-A/part-91",
+    "https://mn.gov/mmb-stat/policies/1436-harassmentdiscriminationprohibited.pdf",
+    "https://mn.gov/dhs/assets/discrimination-harassment-retaliation_tcm1053-646912.pdf"
+  ],
+  "readings": [
+    {
+      "slug": "gc-age-inclusion",
+      "readingSha256": "90ec02ef5cad728b61fb824963d73cc77b28f3e0c383d8e6e7efe57183aec945"
+    },
+    {
+      "slug": "gc-age-inclusion--what-ageism-is-and-why-it-matters",
+      "readingSha256": "f069681833fd257bae865d62571faa81f4e50650f7aa8a49fe87c862fa1cbbaa"
+    },
+    {
+      "slug": "gc-age-inclusion--age-protections-at-work-federal-and-minnesota-law",
+      "readingSha256": "aeb853fdbd4a76a5513adbfb71e5cd760777ab44001eb3b5b383156dc3dae565"
+    },
+    {
+      "slug": "gc-age-inclusion--multigenerational-teams-without-generational-stere",
+      "readingSha256": "208ed0b54ed97f4f4305686708673d40dedeaed65576e46b27c099a0e4602b3f"
+    },
+    {
+      "slug": "gc-age-inclusion--age-in-service-delivery",
+      "readingSha256": "b6c0f198580e17b435d479b1e0232abfc8d309d86bc72125601e5a2097b1f928"
+    }
+  ],
+  "liveVerification": "pending final deployment"
+}
