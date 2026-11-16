@@ -1,0 +1,123 @@
+{
+  "date": "2026-11-16",
+  "courseId": "gc-respectful-workplace",
+  "status": "accepted_complete_written_course_review",
+  "countsAsCompleteCourseReview": true,
+  "scope": "Course overview, all four lessons and 16 objectives, four practice cases with 12 choices and feedback, four knowledge checks, reflection and action instructions, six flashcards, full job aid and seven source notes. Recorded media are outside this acceptance.",
+  "method": "Read the complete final canonical spec and generated overview/job aid, checked reporting and bystander qualifications against primary sources, compared assessment answers with the pre-pass spec reconstructed from exact field history, and verified all serialized lesson readings against the current pack.",
+  "sourcePackSha256": "0b1a31e9bc5838d586e82483833d458cca02f87005128bbca0042bda2832ab67",
+  "specSha256": "e2a2292c067716558dd34c36a1e4234a427dc703e9d761c9a9e202b4d7ce5540",
+  "findings": [
+    "Policy concerns can be raised without first proving unlawful harassment.",
+    "Right To Be support preferences do not override workplace reporting or records duties.",
+    "Employee reporting expectations and additional supervisor duties are distinct.",
+    "A camera being switched off or silence does not establish another person’s experience.",
+    "Psychological safety research is associational; suggested practices do not guarantee an outcome.",
+    "Support, complaint referral and authorized investigation have distinct functions.",
+    "Retaliation protection includes disability and religious accommodation requests."
+  ],
+  "diagnostics": [
+    {
+      "title": "What harassment and a respectful workplace mean",
+      "teaching": {
+        "words": 367,
+        "sents": 19,
+        "asl": 19.31578947368421,
+        "fk": 14.031986232611501,
+        "fog": 17.971547397103112,
+        "smog": 15.835779097396397,
+        "poly": 25.61307901907357,
+        "long": 36.51226158038147,
+        "short": 5.2631578947368425,
+        "ease": 28.86380610927867
+      }
+    },
+    {
+      "title": "Bystander action: the five Ds at work",
+      "teaching": {
+        "words": 432,
+        "sents": 26,
+        "asl": 16.615384615384617,
+        "fk": 12.441388888888891,
+        "fog": 15.25726495726496,
+        "smog": 13.9334771578574,
+        "poly": 21.52777777777778,
+        "long": 39.81481481481482,
+        "short": 0,
+        "ease": 35.45788461538464
+      }
+    },
+    {
+      "title": "Psychological safety as team practices",
+      "teaching": {
+        "words": 389,
+        "sents": 20,
+        "asl": 19.45,
+        "fk": 12.531746786632393,
+        "fog": 16.10904884318766,
+        "smog": 14.625780107752846,
+        "poly": 20.822622107969153,
+        "long": 31.619537275064268,
+        "short": 10,
+        "ease": 39.85880269922882
+      }
+    },
+    {
+      "title": "Reporting routes: route, do not investigate",
+      "teaching": {
+        "words": 381,
+        "sents": 22,
+        "asl": 17.318181818181817,
+        "fk": 13.896899308041043,
+        "fog": 16.481078501550943,
+        "smog": 14.747713142868488,
+        "poly": 23.88451443569554,
+        "long": 38.58267716535433,
+        "short": 0,
+        "ease": 26.27436828919113
+      }
+    }
+  ],
+  "diagnosticJudgment": "Teaching averages 16.6–19.5 words per sentence with 0–10 percent short sentences. Estimated Flesch–Kincaid grades are 12.4–14.0; Fog estimates 15.3–18.0. Retained necessary policy and professional terms; kept direct instructions short rather than adding complexity to meet a numerical target.",
+  "assessmentChecks": {
+    "knowledgeCheckQuestionsAndAnswersUnchanged": true,
+    "knowledgeCheckFeedbackQualified": true,
+    "scenarioRecommendedIndicesUnchanged": true,
+    "ambiguousBystanderDistractorCorrected": true,
+    "finalLessonReadingsMatchCurrentPack": true
+  },
+  "priorFieldReview": "data/editorial/reviews/2026-11-16-workplace-guidance-review.json",
+  "sources": [
+    "https://www.eeoc.gov/harassment",
+    "https://mn.gov/mdhr/yourrights/mhra/",
+    "https://mn.gov/mmb-stat/policies/1432-respectful-workplace-policy.pdf",
+    "https://mn.gov/mmb-stat/policies/1436-harassmentdiscriminationprohibited.pdf",
+    "https://mn.gov/dhs/assets/discrimination-harassment-retaliation_tcm1053-646912.pdf",
+    "https://righttobe.org/guides/bystander-intervention-training/",
+    "https://journals.sagepub.com/doi/10.2307/2666999",
+    "https://www.revisor.mn.gov/statutes/cite/363A.03"
+  ],
+  "readings": [
+    {
+      "slug": "gc-respectful-workplace",
+      "readingSha256": "fae29e52e716f74cc6da349cf24a3484be0140dcc07b830dbf4164fbe7d99959"
+    },
+    {
+      "slug": "gc-respectful-workplace--what-harassment-and-a-respectful-workplace-mean",
+      "readingSha256": "cdd7387739d56cbf12fccc0986673e5edce0969d3aa89529dfed3605e730456b"
+    },
+    {
+      "slug": "gc-respectful-workplace--bystander-action-the-five-ds-at-work",
+      "readingSha256": "6aabd7338c406235a84ed7b5b9c047c970ec4f8c27590d8efd3809096ac8a63b"
+    },
+    {
+      "slug": "gc-respectful-workplace--psychological-safety-as-team-practices",
+      "readingSha256": "dd35ad684b578de3a687b38b39e495e43b42d765acefefbf76d2457c3a20da48"
+    },
+    {
+      "slug": "gc-respectful-workplace--reporting-routes-route-do-not-investigate",
+      "readingSha256": "4b20caa9179210d07adc9f29fe26b7c162b53158710c542e4ed36c45c809e96e"
+    }
+  ],
+  "liveVerification": "pending final deployment"
+}
