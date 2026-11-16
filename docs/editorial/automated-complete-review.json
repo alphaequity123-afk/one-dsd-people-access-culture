@@ -1,0 +1,128 @@
+{
+  "date": "2026-11-16",
+  "courseId": "gc-automated-decisions",
+  "status": "accepted_complete_written_course_review",
+  "countsAsCompleteCourseReview": true,
+  "scope": "Course overview, all four lessons and 16 objectives, four practice cases with 12 choices and feedback, four knowledge checks, reflection and action instructions, five flashcards, complete job aid and eleven source notes. Recordings are outside this acceptance.",
+  "method": "Read the complete source spec and final generated overview/job aid, reviewed all amendments against the source and primary guidance, measured clarity, preserved assessment answers and choices, and verified all four serialized lesson readings.",
+  "sourcePackSha256": "b752644c93f1ae386851e507d4378ec930f6f45074de9594d3b726c8e1f166a8",
+  "specSha256": "3cb055c839640942aeb2f02eca4866cc7e2bfe5e9b0ababa94c9faefa8a7e15f",
+  "findings": [
+    "Low override rates alone do not establish either accuracy or ineffective review.",
+    "Fixed rules do not necessarily learn from historical data.",
+    "NIST AI RMF scope and voluntary status are explicit.",
+    "Public/private data rights differ from confidential classification.",
+    "A data challenge does not extend a separate benefits-appeal deadline.",
+    "Family record access requires verified authorization.",
+    "Historical settlement commitments are distinguished from completed implementation.",
+    "Release, pause and retirement require authorized review and continuity."
+  ],
+  "diagnostics": [
+    {
+      "title": "Where automated decision tools appear and what is at stake",
+      "teaching": {
+        "words": 435,
+        "sents": 21,
+        "asl": 20.714285714285715,
+        "fk": 12.100985221674875,
+        "fog": 14.630541871921185,
+        "smog": 13.484332010920856,
+        "poly": 15.862068965517242,
+        "long": 26.436781609195403,
+        "short": 14.285714285714286,
+        "ease": 45.19896551724139
+      }
+    },
+    {
+      "title": "Data quality, disparate impact and testing for bias",
+      "teaching": {
+        "words": 553,
+        "sents": 28,
+        "asl": 19.75,
+        "fk": 12.917201627486438,
+        "fog": 16.001265822784813,
+        "smog": 14.554592549557764,
+        "poly": 20.253164556962027,
+        "long": 34.719710669077756,
+        "short": 21.428571428571427,
+        "ease": 37.629617992766754
+      }
+    },
+    {
+      "title": "Notice, explanation, appeal and meaningful staff review",
+      "teaching": {
+        "words": 517,
+        "sents": 24,
+        "asl": 21.541666666666668,
+        "fk": 13.05612427466151,
+        "fog": 16.276241134751775,
+        "smog": 14.731742533061166,
+        "poly": 19.148936170212767,
+        "long": 29.013539651837526,
+        "short": 12.5,
+        "ease": 39.82475378787882
+      }
+    },
+    {
+      "title": "Governing tools: inventories, vendor contracts and accountability",
+      "teaching": {
+        "words": 461,
+        "sents": 22,
+        "asl": 20.954545454545453,
+        "fk": 12.701144744626308,
+        "fog": 15.236481956221652,
+        "smog": 13.954579477098967,
+        "poly": 17.136659436008678,
+        "long": 30.802603036876356,
+        "short": 18.181818181818183,
+        "ease": 41.32405393413529
+      }
+    }
+  ],
+  "diagnosticJudgment": "Flesch-Kincaid ranges from 12.1 to 13.1 in this advanced governance course. Necessary legal and technical distinctions remain; short diagnostic questions are retained without inflated wording.",
+  "assessmentChecks": {
+    "knowledgeCheckAnswersUnchanged": true,
+    "knowledgeCheckQuestionsUnchanged": true,
+    "scenarioAccessAndDecisionAuthorityClarified": true,
+    "scenarioRecommendedIndicesUnchanged": true,
+    "scenarioChoicesUnchanged": true,
+    "finalLessonReadingsMatchCurrentPack": true
+  },
+  "priorFieldReview": "data/editorial/reviews/2026-11-16-automated-guidance-review.json",
+  "sources": [
+    "https://www.nist.gov/itl/ai-risk-management-framework",
+    "https://www.govinfo.gov/content/pkg/FR-2025-12-10/pdf/2025-22448.pdf",
+    "https://public-inspection.federalregister.gov/2026-15000.pdf",
+    "https://bidenwhitehouse.archives.gov/ostp/ai-bill-of-rights/",
+    "https://www.revisor.mn.gov/statutes/cite/13.04",
+    "https://www.revisor.mn.gov/statutes/cite/13.05",
+    "https://proceedings.mlr.press/v81/chouldechova18a.html",
+    "https://www.aclu.org/the-devil-is-in-the-details-interrogating-values-embedded-in-the-allegheny-family-screening-tool",
+    "https://www.aclu.org/news/privacy-technology/pitfalls-artificial-intelligence-decisionmaking-highlighted-idaho-aclu-case",
+    "https://healthandwelfare.idaho.gov/services-programs/about-kw-lawsuit",
+    "https://www.govinfo.gov/content/pkg/USCOURTS-idd-1_12-cv-00022/pdf/USCOURTS-idd-1_12-cv-00022-30.pdf"
+  ],
+  "readings": [
+    {
+      "slug": "gc-automated-decisions",
+      "readingSha256": "d283ef2bb088bea4a6d63cd4c5ed3790a7128fe83b97b14f9f13c9d9b34e158d"
+    },
+    {
+      "slug": "gc-automated-decisions--where-automated-decision-tools-appear-and-what-is",
+      "readingSha256": "255db0b374c327ab24715eb1ab3defa3e963e160f6b9e91f4f9919b42337ecd8"
+    },
+    {
+      "slug": "gc-automated-decisions--data-quality-disparate-impact-and-testing-for-bias",
+      "readingSha256": "86a6946d4ef2a7c1871fe1f53ed5bd896d938160357f0cb4bb78da858b93af1a"
+    },
+    {
+      "slug": "gc-automated-decisions--notice-explanation-appeal-and-meaningful-staff-rev",
+      "readingSha256": "1719f855b2574e7f9d6d6b2bbe762f1aea3dc8a884a86cae62ac81f409f8a3d1"
+    },
+    {
+      "slug": "gc-automated-decisions--governing-tools-inventories-vendor-contracts-and-a",
+      "readingSha256": "1693dd25e927806868385bcc4c09c83d62044d6dd67f0bc7365423432477f6fb"
+    }
+  ],
+  "liveVerification": "pending final deployment"
+}

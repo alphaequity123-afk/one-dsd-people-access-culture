@@ -1,0 +1,125 @@
+{
+  "date": "2026-11-16",
+  "courseId": "gc-disability-led-leadership",
+  "status": "accepted_complete_written_course_review",
+  "countsAsCompleteCourseReview": true,
+  "scope": "Course overview, all four lessons and 16 objectives, four practice cases with 12 choices and feedback, four knowledge checks, reflection and action instructions, five flashcards, complete job aid and eight source notes. Recordings are outside this acceptance.",
+  "method": "Read the complete source spec and final generated overview/job aid, reviewed all amendments against the source and primary guidance, measured clarity, preserved assessment answers and choices, and verified all four serialized lesson readings.",
+  "sourcePackSha256": "c87dbcfb47ad11e39b6f13a12d314f005d613702e12ddc729f567d956d5516b8",
+  "specSha256": "5796c7c140e784f2516353a691ebfd387715430a723da376bbdc8eaca720d28d",
+  "findings": [
+    "Participation and disclosure remain voluntary.",
+    "Payment requires an authorized route and approval before commitments.",
+    "Process changes preserve urgent assistance and deadlines.",
+    "Family participation does not itself confer decision authority for an adult.",
+    "Meeting examples cannot diagnose an intercultural orientation.",
+    "Provider authority is distinguished from required oversight and reporting.",
+    "Historical competency research is not presented as outcome trial evidence.",
+    "Source links now point to the historical Council evidence and original university publication."
+  ],
+  "diagnostics": [
+    {
+      "title": "What disability-led leadership asks of a leader",
+      "teaching": {
+        "words": 417,
+        "sents": 24,
+        "asl": 17.375,
+        "fk": 11.135890287769787,
+        "fog": 13.952398081534774,
+        "smog": 13.09234351052407,
+        "poly": 17.50599520383693,
+        "long": 30.215827338129497,
+        "short": 20.833333333333332,
+        "ease": 46.17059802158275
+      }
+    },
+    {
+      "title": "History as a leadership lesson",
+      "teaching": {
+        "words": 377,
+        "sents": 23,
+        "asl": 16.391304347826086,
+        "fk": 9.832847422442626,
+        "fog": 11.861561526928844,
+        "smog": 11.552084857699999,
+        "poly": 13.26259946949602,
+        "long": 28.116710875331567,
+        "short": 8.695652173913043,
+        "ease": 53.76069080844195
+      }
+    },
+    {
+      "title": "Sharing power with self-advocates and families",
+      "teaching": {
+        "words": 434,
+        "sents": 22,
+        "asl": 19.727272727272727,
+        "fk": 13.039120234604106,
+        "fog": 15.54067867616255,
+        "smog": 14.22525824180931,
+        "poly": 19.12442396313364,
+        "long": 34.7926267281106,
+        "short": 0,
+        "ease": 36.7150439882698
+      }
+    },
+    {
+      "title": "Leading frontline teams in the same spirit",
+      "teaching": {
+        "words": 469,
+        "sents": 23,
+        "asl": 20.391304347826086,
+        "fk": 13.798856030406974,
+        "fog": 16.855882080281823,
+        "smog": 15.159528703192944,
+        "poly": 21.748400852878465,
+        "long": 31.556503198294244,
+        "short": 0,
+        "ease": 32.450832483545014
+      }
+    }
+  ],
+  "diagnosticJudgment": "Read all lessons, assessment feedback, final overview and job aid. Flesch-Kincaid ranges from 9.8 to 13.8; necessary professional terms and source names increase later lessons. Short framing statements remain clear and are not padded to meet a numerical target.",
+  "assessmentChecks": {
+    "knowledgeCheckAnswersUnchanged": true,
+    "knowledgeCheckQuestionsUnchanged": true,
+    "scenarioAccessAndDecisionAuthorityClarified": true,
+    "scenarioRecommendedIndicesUnchanged": true,
+    "scenarioChoicesUnchanged": true,
+    "finalLessonReadingsMatchCurrentPack": true
+  },
+  "priorFieldReview": "data/editorial/reviews/2026-11-16-disability-leadership-guidance-review.json",
+  "sources": [
+    "https://mn.gov/mnddc/council-history/four.html",
+    "https://partnersonlinecourses.com/",
+    "https://partnersonlinecourses.com/partners-in-living/",
+    "https://partnersonlinecourses.com/partners-in-time/",
+    "https://partnersonlinecourses.com/partners-in-making-your-case/",
+    "https://ici.umn.edu/products/553",
+    "https://ici-s.umn.edu/files/TCmaGMF4Xh/nationalfrontlinesupervisorcomp?preferredLocale=en-US",
+    "https://www.idiinventory.com/idc"
+  ],
+  "readings": [
+    {
+      "slug": "gc-disability-led-leadership",
+      "readingSha256": "a191bfe4e5a1153458beb2b30e2140d4e76be63f01b4674085bc1e61710d188a"
+    },
+    {
+      "slug": "gc-disability-led-leadership--what-disability-led-leadership-asks-of-a-leader",
+      "readingSha256": "2a4ef46f51995209f18378c989e1748c087b1733968bc6e620d86463b8283ad1"
+    },
+    {
+      "slug": "gc-disability-led-leadership--history-as-a-leadership-lesson",
+      "readingSha256": "097ba9526726e0c4b4f579101ab5a8f7642f933710314beecc5d9fc438fd15b6"
+    },
+    {
+      "slug": "gc-disability-led-leadership--sharing-power-with-self-advocates-and-families",
+      "readingSha256": "14590e80e9ea131ebd44c3f3106cc95d3374e6154cb8e586d2ad90705dbad07c"
+    },
+    {
+      "slug": "gc-disability-led-leadership--leading-frontline-teams-in-the-same-spirit",
+      "readingSha256": "bcf602b3ee6db80f96547ca8598e446abe32a61482a050b0c0da8b466fbdd382"
+    }
+  ],
+  "liveVerification": "pending final deployment"
+}

@@ -1,0 +1,127 @@
+{
+  "date": "2026-11-16",
+  "courseId": "gc-structural-racism",
+  "status": "accepted_complete_written_course_review",
+  "countsAsCompleteCourseReview": true,
+  "scope": "Course overview, all four lessons and 16 objectives, four practice cases with 12 choices and feedback, four knowledge checks, reflection and action instructions, five flashcards, complete job aid and eleven source notes. Recordings are outside this acceptance.",
+  "method": "Read the complete source spec and final generated overview/job aid, reviewed all amendments against the source and primary guidance, measured clarity, preserved assessment answers and choices, and verified all four serialized lesson readings.",
+  "sourcePackSha256": "1e98751adec6a7e3b5fefdc64dcc1617f8eda3938247c5931935c24142c672dd",
+  "specSha256": "6c72bcadcf73ccbbda9ca93b07878daf13602d4ec833dfb3bc55b3bd28f8aa3c",
+  "findings": [
+    "Outcome differences prompt inquiry without proving cause or a legal violation.",
+    "Conduct and process concerns can overlap; required reporting remains prompt.",
+    "Housing history is dated and does not establish an individual household’s circumstances.",
+    "Current department-specific rules are separated from historical design questions and other legal duties.",
+    "Published estimates require methods and uncertainty; privacy and denominators matter.",
+    "Review may support retaining a practice, revising it or seeking further evidence.",
+    "Tribal engagement uses applicable government-to-government processes."
+  ],
+  "diagnostics": [
+    {
+      "title": "Intent and effect: two questions about the same rule",
+      "teaching": {
+        "words": 378,
+        "sents": 22,
+        "asl": 17.181818181818183,
+        "fk": 11.714083694083698,
+        "fog": 14.280134680134683,
+        "smog": 13.319297830178854,
+        "poly": 18.51851851851852,
+        "long": 33.86243386243386,
+        "short": 18.181818181818183,
+        "ease": 41.68116883116886
+      }
+    },
+    {
+      "title": "How neutral rules land on unequal histories",
+      "teaching": {
+        "words": 413,
+        "sents": 26,
+        "asl": 15.884615384615385,
+        "fk": 11.747857142857143,
+        "fog": 14.295734773700875,
+        "smog": 13.274406872562384,
+        "poly": 19.854721549636803,
+        "long": 36.31961259079903,
+        "short": 19.23076923076923,
+        "ease": 39.12858027565659
+      }
+    },
+    {
+      "title": "Title VI, disparate impact and reading data responsibly",
+      "teaching": {
+        "words": 529,
+        "sents": 34,
+        "asl": 15.558823529411764,
+        "fk": 11.267355165128432,
+        "fog": 13.784966084732572,
+        "smog": 12.926379034027164,
+        "poly": 18.90359168241966,
+        "long": 31.947069943289225,
+        "short": 11.764705882352942,
+        "ease": 41.99326670743915
+      }
+    },
+    {
+      "title": "Reviewing a policy with the Equity Analysis Toolkit",
+      "teaching": {
+        "words": 375,
+        "sents": 28,
+        "asl": 13.392857142857142,
+        "fk": 10.149480952380951,
+        "fog": 13.25047619047619,
+        "smog": 12.416235457179464,
+        "poly": 19.733333333333334,
+        "long": 30.933333333333334,
+        "short": 35.714285714285715,
+        "ease": 46.15005000000002
+      }
+    }
+  ],
+  "diagnosticJudgment": "Flesch-Kincaid ranges from 10.1 to 11.7. Short toolkit questions are intentional prompts; clarity and substance take priority over padding sentences.",
+  "assessmentChecks": {
+    "knowledgeCheckAnswersUnchanged": true,
+    "knowledgeCheckQuestionsUnchanged": true,
+    "scenarioAccessAndDecisionAuthorityClarified": true,
+    "scenarioRecommendedIndicesUnchanged": true,
+    "scenarioChoicesUnchanged": true,
+    "finalLessonReadingsMatchCurrentPack": true
+  },
+  "priorFieldReview": "data/editorial/reviews/2026-11-16-structural-guidance-review.json",
+  "sources": [
+    "https://www.law.cornell.edu/uscode/text/42/2000d",
+    "https://www.revisor.mn.gov/statutes/cite/363A/full",
+    "https://www.govinfo.gov/content/pkg/FR-2025-12-10/pdf/2025-22448.pdf",
+    "https://public-inspection.federalregister.gov/2026-15000.pdf",
+    "https://www.minneapolisfed.org/article/2021/systemic-racism-haunts-homeownership-rates-in-minnesota",
+    "https://mappingprejudice.umn.edu/",
+    "https://www.mncompass.org/topics/quality-of-life/housing",
+    "https://mn.gov/mmb-stat/equal-opportunity/office-of-inclusion/equity-analysis-toolkit.pdf",
+    "https://www.raceforward.org/what-racial-equity-0",
+    "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-A/part-80/section-80.3",
+    "https://www.ecfr.gov/current/title-28/chapter-I/part-42/subpart-C/section-42.104"
+  ],
+  "readings": [
+    {
+      "slug": "gc-structural-racism",
+      "readingSha256": "f99ab13e682a95d1c6ddd8c598cc01d202bdeb292dc83f58058d20c065172e99"
+    },
+    {
+      "slug": "gc-structural-racism--intent-and-effect-two-questions-about-the-same-rul",
+      "readingSha256": "fb84849a18ea59cc7017cf57d2edaa70a710d5ba5ac6a5446aeb63201fb79ce3"
+    },
+    {
+      "slug": "gc-structural-racism--how-neutral-rules-land-on-unequal-histories",
+      "readingSha256": "c3b4cec71dff4db5b2b08208f322005614d323335270d4bbe86241f1031cecd6"
+    },
+    {
+      "slug": "gc-structural-racism--title-vi-disparate-impact-and-reading-data-respons",
+      "readingSha256": "6bd734deca78ab381c64dfd7f8ff3701ac96b237b3225a1b7dd1a6df79a90f3b"
+    },
+    {
+      "slug": "gc-structural-racism--reviewing-a-policy-with-the-equity-analysis-toolki",
+      "readingSha256": "8e6b517a1eb8bf7ea1a2faee8e8eb68c755adc55400867b3777e8c695fd88f01"
+    }
+  ],
+  "liveVerification": "pending final deployment"
+}
