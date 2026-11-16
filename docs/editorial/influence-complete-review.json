@@ -1,0 +1,126 @@
+{
+  "date": "2026-11-16",
+  "courseId": "gc-leading-without-authority",
+  "status": "accepted_complete_written_course_review",
+  "countsAsCompleteCourseReview": true,
+  "scope": "Course overview, all four lessons and 16 objectives, four practice cases with 12 choices and feedback, four knowledge checks, reflection and action instructions, six flashcards, complete job aid and ten source notes. Recordings are outside this acceptance.",
+  "method": "Read the complete source spec and final generated overview/job aid, reviewed all amendments against the source and primary guidance, measured clarity, preserved assessment answers and choices, and verified all four serialized lesson readings.",
+  "sourcePackSha256": "f2a3e4f96829393597eb1735ed71ecc7941d649b676539b1b014e1b163e11fd1",
+  "specSha256": "fcd62603edc0c644cf97c9a469c40c6c30aff770d68a6d1219eb5faf654ddb14",
+  "findings": [
+    "Ordinary disagreement guidance preserves protected reporting, urgent escalation and confidential advice.",
+    "MMB 1436 reporting cannot wait for a clarifying conversation or an informal investigation.",
+    "Accommodation requests do not need special terminology; project responsibilities remain after referral.",
+    "Attribution respects privacy, preferences and legitimate team credit.",
+    "The CCL hospital illustration is accurately summarized and does not authorize unrestricted task swaps.",
+    "Comment opportunities are described by their actual scope rather than treating every draft as unchangeable.",
+    "Continuum examples are illustrative rather than assessments.",
+    "Lawful implementation and records duties are distinguished from unconditional obedience."
+  ],
+  "diagnostics": [
+    {
+      "title": "Knowing who decides and who is affected",
+      "teaching": {
+        "words": 519,
+        "sents": 26,
+        "asl": 19.96153846153846,
+        "fk": 11.61157032755299,
+        "fog": 14.766888987698236,
+        "smog": 13.639024540459548,
+        "poly": 16.95568400770713,
+        "long": 25.81888246628131,
+        "short": 11.538461538461538,
+        "ease": 47.367102045353505
+      }
+    },
+    {
+      "title": "Building trust and sharing credit across teams",
+      "teaching": {
+        "words": 503,
+        "sents": 30,
+        "asl": 16.766666666666666,
+        "fk": 9.950988071570578,
+        "fog": 13.068495692511597,
+        "smog": 12.457975602129121,
+        "poly": 15.904572564612327,
+        "long": 26.44135188866799,
+        "short": 10,
+        "ease": 53.582240888005316
+      }
+    },
+    {
+      "title": "Making a case that people can act on",
+      "teaching": {
+        "words": 440,
+        "sents": 27,
+        "asl": 16.296296296296298,
+        "fk": 10.047828282828284,
+        "fog": 13.154882154882154,
+        "smog": 12.522536065205912,
+        "poly": 16.59090909090909,
+        "long": 27.954545454545453,
+        "short": 7.407407407407407,
+        "ease": 52.05016835016838
+      }
+    },
+    {
+      "title": "When agreement does not come",
+      "teaching": {
+        "words": 488,
+        "sents": 27,
+        "asl": 18.074074074074073,
+        "fk": 13.051921675774139,
+        "fog": 16.737826350941106,
+        "smog": 14.970199986440825,
+        "poly": 23.770491803278688,
+        "long": 34.42622950819672,
+        "short": 3.7037037037037037,
+        "ease": 33.67874924104436
+      }
+    }
+  ],
+  "diagnosticJudgment": "Flesch–Kincaid estimates approximately 10–13 and Fog 13–17. Sentences average about 16–20 words; short-sentence shares remain below 15 percent. Clear practice instructions are retained without artificial vocabulary inflation; qualifications and source limits are explicit.",
+  "assessmentChecks": {
+    "knowledgeCheckAnswersUnchanged": true,
+    "allFourQuestionContextsClarified": true,
+    "scenarioRecommendedIndicesUnchanged": true,
+    "scenarioChoicesUnchanged": true,
+    "finalLessonReadingsMatchCurrentPack": true
+  },
+  "priorFieldReview": "data/editorial/reviews/2026-11-16-influence-guidance-review.json",
+  "sources": [
+    "https://www.thecentrehki.com.au/wp-content/uploads/2020/12/Person-Role-System-Framework-2013-1-2.pdf",
+    "https://assets.aecf.org/m/resourcedoc/AECF_EmbracingEquity7Steps-2014.pdf",
+    "https://mn.gov/mmb-stat/equal-opportunity/office-of-inclusion/equity-analysis-toolkit.pdf",
+    "https://www.deloitte.com/content/dam/insights/articles/2024/six-signature-traits-of-inclusive-leadership/dup-3046-inclusive-leader-vfinal.pdf",
+    "https://www.idiinventory.com/resources",
+    "https://training.fema.gov/EMIWeb/IS/IS240b/SM%20Files/SM_COMPLETE.pdf",
+    "https://www.ccl.org/wp-content/uploads/2026/01/edi-real-research-paper-center-for-creative-leadership.pdf",
+    "https://mn.gov/mmb-stat/policies/1436-harassmentdiscriminationprohibited.pdf",
+    "https://mn.gov/mmb-stat/equal-opportunity/ada/1433-reasonable-accommodation.pdf",
+    "https://www.revisor.mn.gov/statutes/cite/181.932"
+  ],
+  "readings": [
+    {
+      "slug": "gc-leading-without-authority",
+      "readingSha256": "b64eab3834291f83f78177495cc2e2f1cccc84297ad3f3b1231b8a8d3e229300"
+    },
+    {
+      "slug": "gc-leading-without-authority--knowing-who-decides-and-who-is-affected",
+      "readingSha256": "9664bb082d56931ac8817b4a4408f3d041cac6e4ade9afad53832998d212861a"
+    },
+    {
+      "slug": "gc-leading-without-authority--building-trust-and-sharing-credit-across-teams",
+      "readingSha256": "e9686a81e31222798ca38ede2dd1069d1caafc447aaeff46a6c6c0e9338a64db"
+    },
+    {
+      "slug": "gc-leading-without-authority--making-a-case-that-people-can-act-on",
+      "readingSha256": "85260250572b28fd3187449d87f21754acbf54247c57bb77a2252a9ed4d857e5"
+    },
+    {
+      "slug": "gc-leading-without-authority--when-agreement-does-not-come",
+      "readingSha256": "7e3c075ed128975cbe0e3d9fc5d2293042bbc03c4fb9ff2ed35a8b02a7a613fb"
+    }
+  ],
+  "liveVerification": "pending final deployment"
+}
