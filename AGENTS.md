@@ -12,11 +12,13 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 
 Write program-authored pages, navigation, learning materials, explanations, and audio/video scripts in plain, professional language for adults working in human and social services. Aim roughly at grades 10–12 while respecting the reader's experience and judgment. This is guidance for clarity, not a minimum complexity score: keep simple instructions simple.
 
-Use familiar words, direct sentences, short connected paragraphs, and concrete examples. Retain necessary professional terms, explain them when first needed, and preserve evidence, nuance, and qualifications. Keep the tone warm, supportive, honest, and optimistic.
+Use familiar words, direct sentences, short connected paragraphs, and concrete examples. Retain necessary professional terms, explain them when first needed, and preserve evidence, nuance, and qualifications. Keep the tone calm, warm, supportive, direct and professional. The owner-approved One DHS Learn introduction, “Learning for the work you do,” is the reference. Explain what a page offers and the next useful action. Avoid robotic system phrasing, promotional enthusiasm, overfamiliarity and condescension. Warmth comes from useful guidance and respect for the reader’s judgment.
 
 Keep original source documents, policy wording, citations, and quotations accurate. Apply the writing standard to the application's own explanations around those sources; do not silently rewrite the original as though it were the publisher's wording. Preserve the approved GEFen read-aloud voice and approved female/male Qwen podcast voices. User-facing playback labels stay simple: "Listen" and "Watch."
 
 ## Ask
+
+Provide guidance and support: help the reader understand the issue, consider relevant options and identify a practical next step. Use the same calm, warm, supportive and direct voice as the approved Learn page. Ask a focused follow-up when it materially affects the guidance; preserve privacy, source attribution and the distinction between general guidance and official decisions.
 
 Ask's primary function is evidence-based inference and synthesis across relevant application resources, agencies, partners, and the broader public web. It supports any subject, original work products, and optional contextual follow-up questions. Do not confine questions to diversity, equity, human services, or a fixed website list. Distinguish evidence, interpretation, uncertainty, and official authority. Preserve explicit source-only requests, citation integrity, privacy protections, owner stop controls, and existing spending limits. Keep the interface calm and preserve approved voice services.
 

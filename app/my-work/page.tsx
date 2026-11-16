@@ -26,9 +26,9 @@ export default async function MyWorkPage({ searchParams }: { searchParams?: Prom
       <h2 id="pilot-work">Put learning to work</h2>
       <ul className="pilot-topic-rows">
         <li><Link href="/my-work/action-plan"><strong>Your action plans</strong><span>Prepare a next step and a date to review what happened.</span></Link></li>
-        <li><Link href="/my-work/plan"><strong>Your practice plans</strong><span>Keep a plan for each piece of work.</span></Link></li>
+        <li><Link href="/my-work/plan"><strong>Your practice plans</strong><span>Develop and revisit plans for the responsibilities you are working on.</span></Link></li>
         <li><Link href="/my-work/reflections"><strong>Your reflection notebook</strong><span>Record what happened and what you learned.</span></Link></li>
-        <li><Link href="/my-work/decision-records"><strong>Decision records</strong><span>Record why a decision was made.</span></Link></li>
+        <li><Link href="/my-work/decision-records"><strong>Decision records</strong><span>Keep the reasoning, evidence and responsibilities behind a decision.</span></Link></li>
         <li><Link href="/my-work?view=workspace"><strong>Your saved work and learning</strong><span>Open saved resources, course progress, and other workspace tools.</span></Link></li>
         <li><Link href="/my-work/transfer"><strong>Move your work</strong><span>Bring your plans and notes from another address or browser.</span></Link></li>
       </ul>
@@ -51,7 +51,7 @@ export default async function MyWorkPage({ searchParams }: { searchParams?: Prom
             <li><Link className="calm-choice" href="/my-work/action-plan"><h3>Your action plans</h3><p>A next step within your responsibility, with a review date you can adjust.</p></Link></li>
             <li><Link className="calm-choice" href="/my-work/reflections"><h3>Your reflection notebook</h3><p>A few lines on what happened, why it matters and what you will do next, with a date to look back.</p></Link></li>
             <li><Link className="calm-choice" href="/my-work/decision-records"><h3>Decision records</h3><p>Write down why a consequential decision was made. Share one with the team space if you choose.</p></Link></li>
-            <li><Link className="calm-choice" href="/growth"><h3>Growth paths</h3><p>Start, apply and lead, suggested by role.</p></Link></li>
+            <li><Link className="calm-choice" href="/growth"><h3>Growth paths</h3><p>Explore suggested learning steps connected to your role.</p></Link></li>
             <li><Link className="calm-choice" href="/team-kits"><h3>Team kits</h3><p>Ready-to-run sessions for a staff meeting.</p></Link></li>
           </ul>
         </section>
