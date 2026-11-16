@@ -16,7 +16,7 @@ const examples = [
 ];
 const questions = [
   ["Clarify the work", "What decision, process or practice is open to change? What is already established, and who can influence the choices?"],
-  ["Understand experiences", "Who may experience the benefits, burdens and barriers differently? What do evidence and lived experience help us understand?"],
+  ["Understand experiences", "Who may experience the benefits, burdens and barriers differently? What do evidence and lived experience help you understand?"],
   ["Make room for contribution", "Whose knowledge would help shape the options? What would make meaningful participation possible while choices remain open?"],
   ["Consider alternatives", "Which approaches could address a barrier or strengthen access to opportunity, resources and influence? What tradeoffs need attention?"],
   ["Support the work", "What skills, resources, accessibility measures and agreed responsibilities would help carry the approach forward?"],
@@ -57,7 +57,7 @@ export default async function OperationalizingEquityPage({ searchParams }: { sea
       </section>
       <section aria-labelledby="choose-support" className="mt-12 rounded-xl border border-line bg-white p-6 md:p-8">
         <h2 id="choose-support" className="mt-0 text-3xl font-bold">Connect it to your work</h2>
-        <p>Explore at your own pace and choose what is useful. Participation in People, Access and Culture is voluntary.</p>
+        <p>Explore at your own pace and choose what is useful.</p>
         <ul className="grid gap-4 pl-5 md:grid-cols-2">
           <li><Link href="/ask">Ask a question</Link> to read a published answer and download a copy.</li>
           <li><Link href="/learn/equity-toolkit">Use the Equity Analysis Toolkit companion</Link> to explore decisions, participation and practical application.</li>

@@ -13,7 +13,7 @@ const course = (number: string) => `/learning/self-directed/index.html?course=${
 
 const DETAILS: Record<ProgressionLevelId, { canDo: string[]; milestone: string; next: { label: string; href: string }[] }> = {
   oriented: {
-    canDo: ["Explain what the program offers and what it does not", "Tell voluntary learning apart from required processes", "Know who holds authority for a decision"],
+    canDo: ["Explain what the program offers and what it does not", "Tell learning apart from required processes", "Know who holds authority for a decision"],
     milestone: "Complete one Equity Pause on a real routine decision",
     next: [{ label: "Get to know the program", href: "/start#new-to-dsd" }, { label: "Find your way around the site", href: "/user-guide" }, { label: "Try a ten-minute Equity Pause", href: "/practice/gp-12" }],
   },

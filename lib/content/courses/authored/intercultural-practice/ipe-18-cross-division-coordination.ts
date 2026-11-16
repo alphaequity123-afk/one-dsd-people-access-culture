@@ -60,7 +60,7 @@ const pack: CoursePack = {
           objective: "Identify every point where a piece of work you touch changes hands, and name the five things that must travel with it for the next unit to finish the job.",
           takeaways: [
             "A handoff is any point where the work, the decision or the responsibility for it moves to a different person, unit, agency or partner. Most processes have more of them than anyone has counted.",
-            "Five things have to travel across a handoff: the decision and the reason for it, what the person has already told us, the access and language arrangements already in place, the clock that is running for the person, and the name of whoever owns the next step and the next message.",
+            "Five things have to travel across a handoff: the decision and the reason for it, what the person has already told staff, the access and language arrangements already in place, the clock that is running for the person, and the name of whoever owns the next step and the next message.",
             "Steps have owners, queues and standards. Seams usually have none of the three, which is why a process can be fully staffed at every step and still fail between them.",
             "Counting the seams is the fastest way to find the delay, the repeat question and the missing notice before anyone is stopped by them.",
           ],
@@ -88,7 +88,7 @@ const pack: CoursePack = {
           { type: "text", heading: "Steps have owners; seams usually do not", body: "<p>Almost nothing a division produces is finished by one unit. A change to a service definition passes through policy, operations, communications, language access, fiscal, contracting, data and county partners before it reaches one person's kitchen table. Each of those units has a lead, a queue and a standard for its own step. The places where the work moves between them usually have none of those things.</p><p>Those places are worth a name: <strong>seams</strong>. A seam is any point where the work, the decision or the responsibility for it changes hands — between two units in the division, between the division and a central service, between the department and a county that administers the program locally, between the division and a provider, grantee or community organization. Seams are where the delay lives, where the same question gets asked a second time, and where an access arrangement somebody carefully set up quietly disappears.</p><p>The useful move is not to ask each unit whether it did its part. Most of the time, every unit did. The useful move is to count the seams, and then ask what is supposed to travel across each one. Five things usually have to. It is rare for all five to make it.</p>" },
           { type: "list", heading: "The five things that should travel", ordered: true, items: [
             "The decision and the reason for it, not only the document it produced. The next unit cannot apply a rule well when it has to work backward to the problem the rule was meant to solve.",
-            "What the person has already told us, so nobody asks them for the same information a second or third time.",
+            "What the person has already told staff, so nobody asks them for the same information a second or third time.",
             "The access and language arrangements already in place: the format a person reads, the interpreter already booked, the contact method that works, the extra time already agreed.",
             "The clock. Which deadline is running for the person, how much of it is left, and who is holding it while the work is internal.",
             "The name of the person who owns the next step, and the name of whoever owes the person on the other end an update.",
@@ -98,7 +98,7 @@ const pack: CoursePack = {
             { label: "To a central service", body: "<p>Fiscal, contracting, legal, communications, language access and technology support every division at once and see only their slice of any one request. What falls through here is the deadline and the person behind it. A routine position in a queue can be a hard date for someone waiting.</p>" },
             { label: "To another state agency", body: "<p>Housing, employment, education and health work reaches the same Minnesotans through different doors, different eligibility language and different records. What falls through here is the person's own account of their situation, which they end up giving again at every door.</p>" },
             { label: "To counties", body: "<p>Minnesota delivers much of its human services work through counties under state supervision. What falls through here is the practical burden. A change that costs the state a paragraph can cost a county office a new routine, retraining and a month of confused calls — and the notice often arrives after the effective date.</p>" },
-            { label: "With Tribal Nations", body: "<p>Coordination with Tribal Nations rests on a government-to-government relationship and on consultation requirements that this module does not interpret and does not substitute for. For anything involving Tribal Nations, Native American communities or tribal human services, the responsible offices are the Department of Human Services offices that handle tribal matters and the Office of Indian Affairs. Bring the question to them early rather than reading a general coordination practice across.</p>" },
+            { label: "With Tribal Nations", body: "<p>Coordination with Tribal Nations rests on a government-to-government relationship and on consultation requirements that this module does not interpret and does not substitute for. For anything involving Tribal Nations, Native American communities or tribal human services, the people or areas responsible are the Department of Human Services areas that handle tribal matters and the Office of Indian Affairs. Bring the question to them early rather than reading a general coordination practice across.</p>" },
             { label: "To providers and community partners", body: "<p>Contracts, grants, payments, reporting and program guidance all cross this seam. What falls through here is cost and timing. The same requirement and the same wait land very differently on a large organization and on a small, community-based one.</p>" },
           ] },
           { type: "leaderMove", heading: "Name the seam you already own", control: "You control what leaves your step: what you attach, what you write down, who you name as the next contact, and whether the person on the other end hears anything while they wait.", failure: "Do not treat a handoff as finished when the work leaves your queue. Sent is not received, and received is not usable.", next: "Before your next handoff leaves your desk, attach the five things and name the next owner by name, not by unit." },
@@ -170,7 +170,7 @@ const pack: CoursePack = {
             { text: "A family loses an unpaid day of work for an appointment rescheduled twice while two units settle who approves it.", category: "A wait the person absorbs" },
           ] },
           { type: "leaderMove", heading: "Send the draft before it is right", control: "You control whether your map arrives as a question or as a verdict about somebody else's work.", failure: "Do not present another unit's step as a finding in a meeting they are not in. The map will be argued rather than corrected, and you will lose the people whose help you need.", next: "Send your draft to each named owner with one line: this is my understanding of your step, tell me what I have wrong." },
-          { type: "statement", body: "Private reflection, for you only: think of a handoff you are part of every week. How might your role, your authority or the words you choose decide what the next unit assumes? Keep personal reflections in your own notes." },
+          { type: "statement", body: "Private reflection: think of a handoff you are part of every week. How might your role, your authority or the words you choose decide what the next unit assumes?" },
           { type: "knowledgeCheck", id: "ipe-18-2-check", question: "Four units each report that their average time to complete their own step is two days. The person applying waits seven weeks for an answer. What does the map need to show that the unit reports do not?", options: [
             { text: "A more precise measure of each unit's two days, so the total is accurate.", correct: false },
             { text: "The waits between the units and what the person hears during them; eight days of work inside seven weeks of elapsed time means the answer is in the gaps.", correct: true },
@@ -236,7 +236,7 @@ const pack: CoursePack = {
             { text: "Everyone agrees the notice should have gone out, and no one's step included sending it.", category: "Nobody owned the seam" },
           ] },
           { type: "quote", text: "We can carry a late payment once. Twice in a year and I am choosing between making payroll and applying for the next grant. Nobody has ever asked me which one I chose.", cite: "Composite community organization perspective, illustrative" },
-          { type: "leaderMove", heading: "Ask who absorbs the wait", control: "You control whether the question how long does this take us is followed by the question who is carrying that time.", failure: "Do not accept that a route is fair because it is identical. Identical is a fact about the process; fair is a claim about its effects, and only one of the two is easy to verify.", next: "At the next review of a process you are part of, ask out loud who absorbs the wait and what it costs them, and write the answer into the record." },
+          { type: "leaderMove", heading: "Ask who absorbs the wait", control: "You control whether the question “how long does this take us?” is followed by the question “who is carrying that time?”", failure: "Do not accept that a route is fair because it is identical. Identical is a fact about the process; fair is a claim about its effects, and only one of the two is easy to verify.", next: "At the next review of a process you are part of, ask out loud who absorbs the wait and what it costs them, and write the answer into the record." },
           { type: "knowledgeCheck", id: "ipe-18-3-check", question: "A division applies the same review timeline and the same correction process to every grantee. Two small, community-based organizations withdraw from the program in the same cycle; the larger organizations do not. What is the most useful reading?", options: [
             { text: "The route was applied equally, so the withdrawals reflect those organizations' own capacity rather than anything about the process.", correct: false },
             { text: "An identical route can still sort organizations, because the capacity to absorb delay is not evenly distributed. The process needs to be examined for who it costs most, not only for whether it was applied consistently.", correct: true },
@@ -309,7 +309,7 @@ const pack: CoursePack = {
             { text: "Hold the map until every step has been verified with every unit, so the version you send is beyond dispute.", correct: false },
             { text: "Circulate the map to the three other units at once and ask each to reply with a plan.", correct: false },
           ], feedbackCorrect: "Yes. A completed fix on your own side makes the map credible, and one seam with one specific ask is something a named owner can act on this month.", feedbackIncorrect: "Ask which version of this actually gets something changed. A map with nothing repaired on your own side reads as a complaint, and four requests at once tend to produce four replies and no repairs." },
-          { type: "statement", body: "Private reflection, for you only: if a handoff you are part of has excluded someone, what would accountability and repair actually require — of your own step, of the process, and toward the people who were left waiting? Keep personal reflections in your own notes." },
+          { type: "statement", body: "Private reflection: if a handoff you are part of has excluded someone, what would accountability and repair actually require — of your own step, of the process, and toward the people who were left waiting?" },
         ],
       },
     ],
@@ -322,7 +322,7 @@ const pack: CoursePack = {
       purpose: "Keep the seams, the five things that travel and the six map lines in view while you move work between units, issue a change, route an invoice or answer someone who is waiting.",
       remember: [
         "Steps have owners, queues and standards. Seams usually have none of the three, which is why problems collect there.",
-        "Five things have to travel: the decision and its reason, what the person already told us, the access and language arrangements, the clock, and the name of the next owner.",
+        "Five things have to travel: the decision and its reason, what the person already told staff, the access and language arrangements, the clock, and the name of the next owner.",
         "Map the path the person travels, not the organization chart. Unit-by-unit reporting cannot show the waits between queues.",
         "The same wait is not the same burden. Ask who absorbs it and what it costs them.",
         "Identical is a fact about the route. Fair is a claim about its effects, and it has to be checked.",
@@ -346,7 +346,7 @@ const pack: CoursePack = {
         heading: "The five things that should travel",
         items: [
           "The decision and the reason for it, not only the document it produced.",
-          "What the person has already told us, so nobody asks a second time.",
+          "What the person has already told staff, so nobody asks a second time.",
           "The access and language arrangements already in place: format, interpreter, contact method, extra time.",
           "The clock: which deadline is running for the person, how much is left, and who holds it.",
           "The name of the next owner, and of whoever owes the person an update.",

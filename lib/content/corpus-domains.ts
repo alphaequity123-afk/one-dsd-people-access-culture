@@ -70,7 +70,7 @@ export const DOMAIN_CORPUS: ContentItem[] = [
       "Federal guidance on employee selection expects employers to examine procedures that produce adverse impact and to have evidence that they are job related. This check helps you ask those questions before a posting goes out, without removing qualifications the work really needs.",
     body: [
       "Question 1. What part of the work does this requirement predict? Write the specific tasks. If you cannot name them, the requirement may be a proxy.",
-      "Question 2. What evidence do we have that it predicts that work? Consider whether current strong performers all meet it, and whether people without it have done the work well elsewhere.",
+      "Question 2. What evidence shows that it predicts that work? Consider whether current strong performers all meet it, and whether people without it have done the work well elsewhere.",
       "Question 3. Who does this requirement screen out? Think about communities, first-generation professionals, people who built skills outside formal education, and people with disabilities who took different paths.",
       "Question 4. What alternative shows the same ability? Consider a work sample, a portfolio, described experience, a certification, or a structured question in the interview.",
       "Question 5. Who reviewed and signed off? Note the hiring manager, the HR partner, and, where practice calls for it, the Equity Director. Keep the reasoning with the posting.",
@@ -199,8 +199,8 @@ export const DOMAIN_CORPUS: ContentItem[] = [
     body: [
       "Step 1. Clarify the decision. What exactly is being decided, by whom, and by when? What is already fixed and what is still open?",
       "Step 2. Identify affected people. Who benefits, who carries the burden, and who is missing from the room? Consider community, language, disability, age, place, and the people who deliver the service.",
-      "Step 3. Examine evidence. What do we know by community, language, disability, and place? What do people who use the service say? What does the evidence not show?",
-      "Step 4. Name assumptions and risks. What are we assuming about people's access, time, documents, technology, or trust? What could go wrong for the people with the least margin?",
+      "Step 3. Examine evidence. What is known by community, language, disability, and place? What do people who use the service say? What does the evidence not show?",
+      "Step 4. Name assumptions and risks. What is the team assuming about people's access, time, documents, technology, or trust? What could go wrong for the people with the least margin?",
       "Step 5. Compare options. Lay out at least two alternatives and compare who each helps and burdens. Include the option of not proceeding.",
       "Step 6. Choose accountable owners. Who owns each part of implementation and each follow-up? Name people, not units.",
       "Step 7. Define accessible implementation. How will people learn about the change, in which languages and formats, with what human alternative? What burden can still be removed?",

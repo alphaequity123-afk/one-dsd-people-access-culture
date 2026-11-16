@@ -111,7 +111,7 @@ const pack: CoursePack = {
             { front: "Belonging", back: "<p>Whether a person can contribute fully, be themselves at work without paying for it, influence what happens, and expect to still be here in three years. It is observable, and it is mostly produced by supervisors.</p>" },
             { front: "Retention", back: "<p>Who stays. A useful signal and a lagging one: by the time it moves, the decisions that produced it are a year or more old and the person is gone.</p>" },
           ] },
-          { type: "statement", body: "A private reflection, for you alone. Think of one workforce decision you made or influenced in the last month. How did your role, your authority and your assumptions about what a good candidate or a good employee looks like shape it? Who could have been helped, burdened, excluded or misunderstood by it? Keep personal reflections in your own notes." },
+          { type: "statement", body: "A private reflection. Think of one workforce decision you made or influenced in the last month. How did your role, your authority and your assumptions about what a good candidate or a good employee looks like shape it? Who could have been helped, burdened, excluded or misunderstood by it?" },
           { type: "knowledgeCheck", id: "ipe-31-1-check", question: "A unit's staff survey shows that staff with disabilities report lower agreement with “my ideas are valued.” Which follow-up is most likely to change the result?", options: [
             { text: "Run an all-staff session on inclusive communication, so everyone hears the same expectations about how ideas are received.", correct: false },
             { text: "Walk one process where ideas actually enter decisions — how the agenda is set, who is asked to present, who is on the project team — find where people are stopped, name the owner, and change one step.", correct: true },
@@ -184,7 +184,7 @@ const pack: CoursePack = {
             { text: "It depends on the classification; if the class specification names a degree, the supervisor has no discretion and the question does not arise.", correct: false },
             { text: "Acceptable as long as the posting also includes a statement welcoming applicants from a range of backgrounds.", correct: false },
           ], feedbackCorrect: "Yes. A filter operates on the people who read it, not on the people who reach the panel. If equivalent experience counts, the posting has to say so, and the panel has to know how to weigh it.", feedbackIncorrect: "Ask who is affected by a requirement, and when. The people it removes are gone before any discretion can be exercised, and discretion that is never written down tends to favor the familiar." },
-          { type: "statement", body: "A private reflection, for you alone. Picture the last person you hired or helped to select. What did they arrive with that made the process easy for them, and who would have found the same process expensive? Does this posting make sense to somebody who does not already know how this agency works? Keep personal reflections in your own notes." },
+          { type: "statement", body: "A private reflection. Picture the last person you hired or helped to select. What did they arrive with that made the process easy for them, and who would have found the same process expensive? Does this posting make sense to somebody who does not already know how this agency works?" },
         ],
       },
       {
@@ -258,7 +258,7 @@ const pack: CoursePack = {
             { text: "Raise it at the next team meeting and invite anyone who wants a more visible project to say so.", correct: false },
             { text: "Alternate visible projects strictly by seniority from now on, so the decision is transparent and cannot be questioned.", correct: false },
           ], feedbackCorrect: "Yes. Each decision can be defensible while the pattern is not. Naming who was left out and assigning deliberately, with support, is what changes the next year.", feedbackIncorrect: "Look at what each option does to the pattern. Defending individual decisions preserves it, an open invitation rewards whoever is most comfortable asking, and a rigid rule replaces one automatic outcome with another." },
-          { type: "statement", body: "A private reflection, for you alone. Who on your team is doing work that does not appear in their work plan, and what does it cost them? Whose expertise is missing from how your unit decides who gets grown? Keep personal reflections in your own notes." },
+          { type: "statement", body: "A private reflection. Who on your team is doing work that does not appear in their work plan, and what does it cost them? Whose expertise is missing from how your unit decides who gets grown?" },
         ],
       },
       {
@@ -332,7 +332,7 @@ const pack: CoursePack = {
             { text: "Barrier: new staff are not proactive about requesting what they need. Fix: include a reminder in the welcome message.", correct: false },
             { text: "Barrier: onboarding is inconsistent across the division. Fix: propose a division-wide onboarding standard for leadership consideration.", correct: false },
           ], feedbackCorrect: "Yes. Step, what it screens out, who it stops, the owner, a specific first fix and a named check. The line can be acted on by somebody who was not in the room.", feedbackIncorrect: "A complete line names the step and the effect, says who is stopped, gives the fix an owner, and ends with who checks and when. Anything that makes the new employee responsible, or defers to a future standard, leaves the next start exactly where it was." },
-          { type: "statement", body: "A private reflection, and then one line to keep. Privately: if exclusion happened in this process, what would accountability and repair actually require of your unit, beyond fixing the step? Then write the line you will keep with the work: “The process I will walk this month is… the first fix inside my own authority is… and the person who will ask me about it on… is…” Nothing you write in the reflection is collected, seen or kept." },
+          { type: "statement", body: "A private reflection, and then one line to keep. Privately: if exclusion happened in this process, what would accountability and repair actually require of your unit, beyond fixing the step? Then write the line you will keep with the work: “The process I will walk this month is… the first fix inside my own authority is… and the person who will ask me about it on… is…”" },
         ],
       },
     ],

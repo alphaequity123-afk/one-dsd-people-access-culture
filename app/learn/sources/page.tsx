@@ -12,8 +12,9 @@ import { ResourceFormatLinks } from "@/components/resource-format-links";
 import { ResourceThemeNav } from "@/components/resource-theme-nav";
 import { RESOURCE_THEMES } from "@/lib/content/resource-organization";
 import { matchesSourceTheme } from "@/lib/content/source-organization";
-import { catHref, catMatches, catPaginate, catParam, catWords } from "@/lib/cat-paging";
-import { CatList, CatPager, CatResultStatus, CatRow } from "@/components/cat-list";
+import { catParam } from "@/lib/cat-paging";
+import { CatRow } from "@/components/cat-list";
+import { PrivateCatalogForm, PrivateCatalogJump, PrivateCatalogProvider, PrivateCatalogResults, type CatalogRow } from "@/components/private-catalog";
 import { CatHashLocator } from "@/components/cat-hash-locator";
 import { unavailableExternalUrl } from "@/lib/content/external-readings";
 
@@ -37,16 +38,19 @@ export default async function SourcesPage({ searchParams }: { searchParams: Prom
   const text = (key: string) => stringValue(copy, key);
   const allGroups = registerSourcesForStaff().map(({ group, sources }) => ({ group, sources: sources.filter(source => source.kind === "external" && source.href && !unavailableExternalUrl(source.href)) })).filter(({ sources }) => sources.length);
   const allCount = allGroups.reduce((count, group) => count + group.sources.length, 0);
-  const words = catWords(q);
-  const groups = allGroups.map(({ group, sources }) => ({ group, sources: sources.filter(source => matchesSourceTheme(source, theme) && catMatches(words, source.title, source.host)) })).filter(({ sources }) => sources.length);
+  // The subject is a fixed choice in the address (the page is drawn around it). Every source for that subject is
+  // drawn once; the words typed and the kind-of-source buttons narrow the rows in the page.
+  const rows: CatalogRow[] = allGroups.flatMap(({ group, sources }) => sources.filter(source => matchesSourceTheme(source, theme)).map((source: RegisterSource) => ({
+    key: sourceAnchor(source),
+    text: `${source.title} ${source.host ?? ""}`,
+    values: { group },
+    node: <CatRow key={source.sourceId} id={sourceAnchor(source)}
+      title={<Link href={registerReadingHref(source)}>{source.title}</Link>}
+      meta={[source.host?.replace(/^www\./, ""), AUTHORITY_GROUP_LABEL[group]].filter(Boolean).join(" · ")} />,
+  })));
   const groupParam = catParam(params.group);
-  const selectedGroup = groups.some(g => g.group === groupParam) ? groupParam as AuthorityGroup : "";
-  const rows: { group: AuthorityGroup; source: RegisterSource }[] = groups
-    .filter(({ group }) => !selectedGroup || group === selectedGroup)
-    .flatMap(({ group, sources }) => sources.map(source => ({ group, source })));
-  const page = catPaginate(rows, catParam(params.page), PER_PAGE, find ? row => sourceAnchor(row.source) === find : undefined);
-  const choices = { theme, q, group: selectedGroup };
-  const filtered = Boolean(theme || q || selectedGroup);
+  const selectedGroup = allGroups.some(g => g.group === groupParam) ? groupParam as AuthorityGroup : "";
+  const choices = { theme, group: selectedGroup };
   return (
     <EditableSurfaceRegion surface={surface} className={styles.page}>
       <div className="wrap"><Link href="/learn" className={styles.back}>Learn</Link></div>
@@ -60,39 +64,19 @@ export default async function SourcesPage({ searchParams }: { searchParams: Prom
           <Link href={selectedTheme ? `/learn/readings?theme=${selectedTheme.id}` : "/learn/readings"}>Explore the reading collection</Link>
         </section>
         {!theme ? <details className="course-more-item"><summary>Explore by theme</summary><ResourceThemeNav basePath="/learn/sources" className={styles.themes} gridClassName={styles.themeGrid} /></details> : null}
-        <section className={styles.selection} aria-labelledby="source-selection-title">
-          <h2 id="source-selection-title">{selectedTheme?.title ?? (theme ? "Choose a subject" : "All reading and references")}</h2>
-          {selectedTheme ? <p>{selectedTheme.description}</p> : null}
-          <form action={BASE} method="get" className={styles.filters} role="search" aria-label="Find a source">
-            <label htmlFor="source-q">Search
-              <input id="source-q" type="search" name="q" defaultValue={q} placeholder="Title or website" className={styles.search} />
-            </label>
-            <label htmlFor="source-theme">Subject
-              <select key={theme} id="source-theme" name="theme" defaultValue={selectedTheme?.id ?? ""}>
-                <option value="">All subjects</option>
-                {RESOURCE_THEMES.map(item => <option key={item.id} value={item.id}>{item.title}</option>)}
-              </select>
-            </label>
-            <label htmlFor="source-group">Kind of source
-              <select id="source-group" name="group" defaultValue={selectedGroup}>
-                <option value="">All kinds of source</option>
-                {allGroups.map(({ group }) => <option key={group} value={group}>{AUTHORITY_GROUP_LABEL[group]}</option>)}
-              </select>
-            </label>
-            <button type="submit">Show sources</button>
-            {filtered ? <Link href={BASE}>View all sources</Link> : null}
-          </form>
-          {theme && !selectedTheme ? <p>This subject is not available. Choose a subject above or view all sources.</p> : null}
-        </section>
-        {surface.available ? <details className="max-w-4xl border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download the source register</summary><ResourceDownloads kind="sources" id="register" noun="source register" scope={scope} /></details> : null}
-        <nav aria-label="Source groups"><ul className={styles.groupNav}>{groups.map(({ group, sources }) => <li key={group} id={`group-${group}`}><Link href={catHref(BASE, choices, { group })} aria-current={group === selectedGroup ? "page" : undefined}>{AUTHORITY_GROUP_LABEL[group]} ({sources.length})</Link></li>)}</ul></nav>
-        <CatResultStatus page={page} noun="source" nouns="sources" of={allCount} />
-        {page.items.length ? <CatList label="Sources">
-          {page.items.map(({ group, source }) => <CatRow key={source.sourceId} id={sourceAnchor(source)}
-            title={<Link href={registerReadingHref(source)}>{source.title}</Link>}
-            meta={[source.host?.replace(/^www\./, ""), AUTHORITY_GROUP_LABEL[group]].filter(Boolean).join(" · ")} />)}
-        </CatList> : null}
-        <CatPager page={page} basePath={BASE} params={choices} label="Source result pages" />
+        <PrivateCatalogProvider key={`${theme}|${selectedGroup}`} basePath={BASE} rows={rows} choices={choices} perPage={PER_PAGE} initial={{ q, page: catParam(params.page), find }}
+          lists={[{ name: "theme", label: "Subject", allLabel: "All subjects", options: RESOURCE_THEMES.map(item => ({ value: item.id, label: item.title })), navigates: true }]}
+          jump={{ name: "group", label: "Source groups", allLabel: "All kinds of source", options: allGroups.map(({ group }) => ({ value: group, label: AUTHORITY_GROUP_LABEL[group] })), counts: true, listClassName: styles.groupNav, itemIdPrefix: "group-" }}>
+          <section className={styles.selection} aria-labelledby="source-selection-title">
+            <h2 id="source-selection-title">{selectedTheme?.title ?? (theme ? "Choose a subject" : "All reading and references")}</h2>
+            {selectedTheme ? <p>{selectedTheme.description}</p> : null}
+            <PrivateCatalogForm className={styles.filters} ariaLabel="Find a source" searchLabel="Search" inputId="source-q" placeholder="Title or website" inputClassName={styles.search} buttonLabel="Show sources" clearLabel="View all sources" />
+            {theme && !selectedTheme ? <p>This subject is not available. Choose a subject above or view all sources.</p> : null}
+          </section>
+          {surface.available ? <details className="max-w-4xl border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download the source register</summary><ResourceDownloads kind="sources" id="register" noun="source register" scope={scope} /></details> : null}
+          <PrivateCatalogJump />
+          <PrivateCatalogResults noun="source" nouns="sources" of={allCount} listLabel="Sources" pagerLabel="Source result pages" />
+        </PrivateCatalogProvider>
         <ProgramContextNote />
       </div>
     </EditableSurfaceRegion>

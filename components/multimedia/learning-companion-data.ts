@@ -117,7 +117,7 @@ export const LEARNING_COMPANIONS: readonly LearningCompanionSpec[] = [
     },
     {
       "title": "A concrete observation and request",
-      "text": "The revised agenda arrived as the meeting began. Two participants asked for reading time. What would help us share the next version early enough for people to prepare?",
+      "text": "The revised agenda arrived as the meeting began. Two participants asked for reading time. What would help the team share the next version early enough for people to prepare?",
       "annotation": "Check that these observations are accurate. Ask about the process and support, then agree on the next step without grading a person's identity or intercultural orientation."
     }
   ],
@@ -280,7 +280,7 @@ export const LEARNING_COMPANIONS: readonly LearningCompanionSpec[] = [
   "lessonId": "nd-environment-first-loop",
   "format": "parallel",
   "title": "Ask what would make this setting work",
-  "introduction": "The lesson's room image shows people reading and using a laptop. It cannot tell us how the light, sound, pace or communication method feels to either person.",
+  "introduction": "The lesson's room image shows people reading and using a laptop. It cannot show how the light, sound, pace or communication method feels to either person.",
   "panels": [
     {
       "title": "The person's request",

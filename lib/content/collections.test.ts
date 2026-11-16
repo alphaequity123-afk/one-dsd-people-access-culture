@@ -170,8 +170,9 @@ describe("the promises on these pages", () => {
   it("uses no sign-in or roster code", () => {
     for (const file of pageFiles) expect(readFileSync(path.join(root, file), "utf8"), file).not.toMatch(/@\/lib\/auth|fetch\(|editingModeFromCookies/);
   });
-  it("states plainly what is and is not recorded", () => {
+  it("keeps the duties and carries no recording or participation notices", () => {
     const page = readFileSync(path.join(root, "app/leading/how-this-works/page.tsx"), "utf8");
-    for (const words of ["does not give supervisors a learner scoreboard", "keep those items in this browser profile", "does not send those saved items to supervisors or program staff", "Exporting or sharing a copy is a separate action", "go to outside services", "does not intentionally save a question-and-answer copy", "earlier versions may have retained separate records", "does not replace training the state requires", "TRAINING_CREDIT_NOTICE", "does not assign or certify required agency training"]) expect(page).toContain(words);
+    for (const words of ["Do not type anyone&apos;s name, case, health or personnel details", "Minn. Stat. 43A.21", "TRAINING_CREDIT_NOTICE", "not legal advice"]) expect(page).toContain(words);
+    expect(page).not.toMatch(/recorded|retained|browser profile|optional|voluntary/i);
   });
 });

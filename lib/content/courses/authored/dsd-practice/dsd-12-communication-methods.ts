@@ -41,7 +41,7 @@ const pack: CoursePack = {
       nextReview: "At the agreed review point and whenever an update trigger occurs",
       updateTriggers: ["Change in Department language access or communication access policy", "Change in interpreter service arrangements", "Feedback from staff or participants that a description no longer matches practice"],
       relatedDoor: "Questions about a specific person's communication assessment or device go to a speech-language clinician; questions about interpreter booking go to the Department's language access resources. This course builds practice, it does not assess anyone.",
-      toolkitQuestion: "In this interaction, who was the conversation with, and how long did we wait?",
+      toolkitQuestion: "In this interaction, who was the conversation with, and how long did you wait?",
       status: "reviewed",
     },
     lessons: [

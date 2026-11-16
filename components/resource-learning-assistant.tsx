@@ -26,7 +26,7 @@ const modes: { value: StudyMode; label: string; library: string; scoped: string 
   {
     value: "reflect",
     label: "Reflect on a practice",
-    library: "Help me reflect on how our team invites feedback. Give me one assumption to check and a way to test it.",
+    library: "Help me reflect on how my team invites feedback. Give me one assumption to check and a way to test it.",
     scoped: "Give me a question I can use to reflect on my work and one way to try an idea from this resource.",
   },
 ];

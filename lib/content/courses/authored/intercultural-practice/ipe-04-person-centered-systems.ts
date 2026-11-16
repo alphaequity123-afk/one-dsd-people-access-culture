@@ -98,7 +98,7 @@ const pack: CoursePack = {
           {
             type: "text",
             heading: "Two different kinds of person-centered work",
-            body: "<p>Person-centered practice is familiar in service work: the plan starts from what matters to the person, in their own words, and supports are arranged around that life. Statewide work looks nothing like that. An analyst writes a paragraph. A program manager turns it into guidance. A field on a form changes. A notice goes out under a deadline. Nobody in that chain meets the person whose month the paragraph has just rearranged.</p><p>Person-centered thinking at this level is not a softer version of planning. It is a different job: keeping one reachable person in view while writing a rule that has to work for everyone. The plan belongs to the person. The conditions that plan has to survive belong to us — the deadline, the proof, the channel, the wording, the hours the line is open, the amount a contract pays for interpretation.</p><p>The test is not whether we care about people. It is whether the design still carries that care after we stop paying attention to it.</p>",
+            body: "<p>Person-centered practice is familiar in service work: the plan starts from what matters to the person, in their own words, and supports are arranged around that life. Statewide work looks nothing like that. An analyst writes a paragraph. A program manager turns it into guidance. A field on a form changes. A notice goes out under a deadline. Nobody in that chain meets the person whose month the paragraph has just rearranged.</p><p>Person-centered thinking at this level is not a softer version of planning. It is a different job: keeping one reachable person in view while writing a rule that has to work for everyone. The plan belongs to the person. The conditions that plan has to survive belong to the agency — the deadline, the proof, the channel, the wording, the hours the line is open, the amount a contract pays for interpretation.</p><p>The test is not whether staff care about people. It is whether the design still carries that care after staff stop paying attention to it.</p>",
           },
           {
             type: "tabs",
@@ -106,7 +106,7 @@ const pack: CoursePack = {
             tabs: [
               { label: "Policy and program staff", body: "<p>The requirement is one sentence inside a long document. It is lawful, consistent with the program’s purpose and defensible. The team has its own deadline, and this sentence is not the hardest part of the draft.</p>" },
               { label: "Lead agency staff", body: "<p>The sentence becomes a task list: a new field to complete, a new document to collect, and a question they will be asked over and over before the change is understood. What was one sentence is now their week too.</p>" },
-              { label: "A community organization", body: "<p>An organization the family already trusts starts explaining the change to people who call them first. Nobody funded that work, and nobody asked whether the explanation they are giving is the one we intended.</p>" },
+              { label: "A community organization", body: "<p>An organization the family already trusts starts explaining the change to people who call them first. Nobody funded that work, and nobody asked whether the explanation they are giving is the one the division intended.</p>" },
               { label: "The person and the people around them", body: "<p>A letter arrives. It uses a word the person has not seen before. It names a date and a document. It does not say what to do if the clinic cannot produce the document in time, and the number on the letter has a long wait.</p>" },
             ],
           },
@@ -159,7 +159,7 @@ const pack: CoursePack = {
           },
           {
             type: "statement",
-            body: "Private reflection, for you alone. For your own notes: How might my role, authority, language or assumptions shape the decision I am working on this week? Who could be helped, burdened, excluded or misunderstood by it?",
+            body: "Private reflection. For your own notes: How might my role, authority, language or assumptions shape the decision I am working on this week? Who could be helped, burdened, excluded or misunderstood by it?",
           },
         ],
       },
@@ -272,7 +272,7 @@ const pack: CoursePack = {
           },
           {
             type: "statement",
-            body: "Private reflection, for you alone and not recorded: Who could be helped, burdened, excluded or misunderstood by the process I am changing? Whose expertise is missing from the room where it is being decided?",
+            body: "Private reflection: Who could be helped, burdened, excluded or misunderstood by the process I am changing? Whose expertise is missing from the room where it is being decided?",
           },
         ],
       },
@@ -341,7 +341,7 @@ const pack: CoursePack = {
             heading: "Identical is not the same as fair",
             items: [
               { title: "Where identical treatment comes from", body: "<p>“One process for everyone” feels like fairness, and in public administration it also protects something real: consistency, predictability and equal application of the law. The trouble starts when sameness of process is treated as proof of sameness of result.</p>" },
-              { title: "The frame this program uses", body: "<p>This program uses a six-part continuum — denial, polarization, minimization, acceptance, adaptation and integration — as a working map for examining an organization's practice, not as a proven account of how organizations move. The first five are the orientations of the Intercultural Development Inventory. The sixth, Integration, is not an IDI orientation: in this program it means the people a process affects help design it, and the name comes from Bennett's developmental model, where it describes identity across cultures. Minimization is the stage where difference is acknowledged and then treated as unimportant: we serve everyone the same way. Acceptance and adaptation keep the standard and change the design so it actually reaches people whose circumstances differ. These stages describe the work of an organization. They are never a label, a score or a record about any individual person.</p>" },
+              { title: "The frame this program uses", body: "<p>This program uses a six-part continuum — denial, polarization, minimization, acceptance, adaptation and integration — as a working map for examining an organization's practice, not as a proven account of how organizations move. The first five are the orientations of the Intercultural Development Inventory. The sixth, Integration, is not an IDI orientation: in this program it means the people a process affects help design it, and the name comes from Bennett's developmental model, where it describes identity across cultures. Minimization is the stage where difference is acknowledged and then treated as unimportant: “we serve everyone the same way.” Acceptance and adaptation keep the standard and change the design so it actually reaches people whose circumstances differ. These stages describe the work of an organization. They are never a label, a score or a record about any individual person.</p>" },
               { title: "What adaptation is not", body: "<p>It is not lowering a standard, waiving a legal requirement or treating people as fragile. Accessibility duties, and the language-access duties that apply to your program, come from law and policy; they are not favors this program invented. Federal language-access direction changed in 2025 and 2026, so confirm the current duty with your language-access lead. Adaptation means the program does what it was created to do for the people it was created for.</p>" },
             ],
           },
@@ -379,7 +379,7 @@ const pack: CoursePack = {
           },
           {
             type: "statement",
-            body: "Private reflection, for you alone and never recorded: What might accessibility mean here beyond a legal minimum? Does this process make sense to people who do not already know how DHS works?",
+            body: "Private reflection: What might accessibility mean here beyond a legal minimum? Does this process make sense to people who do not already know how DHS works?",
           },
         ],
       },
@@ -445,7 +445,7 @@ const pack: CoursePack = {
               { label: "Who is most affected, and who is affected differently", value: "Everyone who must return the form. Within that: people who do not read English easily, people with no printer or stable mail, people whose disability makes a fixed short deadline hard, and households whose only adult cannot take a weekday afternoon." },
               { label: "What the person must do, and what it costs them", value: "Read a two-page letter, obtain one document, sign it, and return it by mail within ten days. Realistically: an afternoon, one trip, one copy, and one call to ask what a term on the letter means." },
               { label: "What happens if they cannot, and who hears about it", value: "Services close for non-response. The person hears this from an automated notice. Nobody on the drafting team hears anything unless an appeal is filed." },
-              { label: "What we will change, what we will not, and how we will say so", value: "Change: accept the document by mail, phone and drop-off; lengthen the window; call before closing. Not changing: the requirement itself, which is set in the program’s rules. Say so plainly in the guidance, the notice and the message to lead agencies." },
+              { label: "What will change, what will not, and how to say so", value: "Change: accept the document by mail, phone and drop-off; lengthen the window; call before closing. Not changing: the requirement itself, which is set in the program’s rules. Say so plainly in the guidance, the notice and the message to lead agencies." },
             ],
             action: "Copy the five lines into your drafting note, agenda or review checklist. Answer them in specifics for one decision you are working on now, and send the answers with the draft to the people who own the parts you cannot change yourself.",
           },
@@ -504,7 +504,7 @@ const pack: CoursePack = {
           },
           {
             type: "statement",
-            body: "Private reflection, for you alone and never recorded: How could the people most affected shape this work earlier than they do now? If harm or exclusion has already happened here, what would accountability and repair require of me, and of my team?",
+            body: "Private reflection: How could the people most affected shape this work earlier than they do now? If harm or exclusion has already happened here, what would accountability and repair require of me, and of my team?",
           },
         ],
       },
@@ -517,7 +517,7 @@ const pack: CoursePack = {
     use: {
       purpose: "Keep the person at the end of the chain in view while you draft, decide, measure or buy.",
       remember: [
-        "The plan belongs to the person. The conditions it has to survive belong to us: the deadline, the proof, the channel, the wording, the money in the contract.",
+        "The plan belongs to the person. The conditions it has to survive belong to the agency: the deadline, the proof, the channel, the wording, the money in the contract.",
         "The default is the real policy. Anything available only by exception reaches the people who already know how to ask.",
         "Costs the agency stops carrying move to the person, to a family member, or to a partner nobody funded.",
         "Imagining the person sharpens a draft. It never replaces inviting people early and paying them for their expertise.",
@@ -532,7 +532,7 @@ const pack: CoursePack = {
           "Who is most affected, and who is affected differently.",
           "What the person must do, and what it costs them in minutes, trips, documents and calls.",
           "What happens if they cannot, and who inside the program hears about it.",
-          "What we will change, what we will not change and why, and how we will say so.",
+          "What will change, what will not change and why, and how to say so.",
         ],
       },
       {

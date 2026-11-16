@@ -33,7 +33,7 @@ const pack: CoursePack = {
         "A knowledge check in every lesson with feedback that explains the accurate answer.",
         "A completed first-look check naming the open decision, its closing date, the signals and the route.",
       ],
-      appliedNextStep: "Take one live project, write down the last date its outcome can still change, run the first-look check, and send it to the DHS office that leads tribal relations before that date.",
+      appliedNextStep: "Take one live project, write down the last date its outcome can still change, run the first-look check, and send it to the person or area at DHS that leads tribal relations before that date.",
     },
     governance: {
       contentOwner: "One DSD — People, Access and Culture",
@@ -47,7 +47,7 @@ const pack: CoursePack = {
         "Direction from the DHS Office of Indian Policy or the DHS offices that handle tribal relations that any framing, example or routing step in this module is wrong or out of date",
       ],
       relatedDoor: "Formal consultation and any contact with a Tribal Nation are led by the DHS Office of Indian Policy and the DHS offices that handle tribal relations and consultation; this module prepares you to recognize and route the question, it does not authorize you to carry it.",
-      toolkitQuestion: "At what point in this project could a Tribal government still change the outcome, and have we reached the office that leads that conversation before that point passes?",
+      toolkitQuestion: "At what point in this project could a Tribal government still change the outcome, and has the team reached the person or area that leads that conversation before that point passes?",
       status: "reviewed",
     },
     lessons: [
@@ -74,7 +74,7 @@ const pack: CoursePack = {
           options: [
             { label: "Leave the section as it is and add a short cultural-competence paragraph so the plan shows respect for Tribal culture.", response: "Respect is not the problem; classification is. Placing Tribal Nations among advocacy and association groups treats governments as interest groups, and a paragraph about culture does not change where the plan puts them, when they are reached, or how much of the decision is still open when they are." },
             { label: "Move Tribal Nations out of the stakeholder list, record in the project file that the revision may have Tribal implications, and take that question to the DHS offices that lead tribal relations before the comment period is designed.", response: "Correct. Tribal Nations are governments, and the state's relationship with them is government to government, led at DHS by the Office of Indian Policy and the offices that handle tribal relations and consultation. Your job is to notice early and route it, not to design the engagement yourself.", recommended: true },
-            { label: "Ask a colleague who is a member of a Tribal Nation to review the plan and speak for the Tribal perspective.", response: "No individual employee speaks for a Tribal Nation, and asking a colleague to try puts an unfair and inaccurate load on them. A Nation speaks through its own government, in a process the responsible DHS offices lead." },
+            { label: "Ask a colleague who is a member of a Tribal Nation to review the plan and speak for the Tribal perspective.", response: "No individual employee speaks for a Tribal Nation, and asking a colleague to try puts an unfair and inaccurate load on them. A Nation speaks through its own government, in a process the people or areas responsible at DHS lead." },
           ],
         },
         transfer: {
@@ -86,8 +86,8 @@ const pack: CoursePack = {
           ],
         },
         blocks: [
-          { type: "text", heading: "Governments, not a line on a stakeholder list", body: "<p>Tribal Nations are sovereign governments. That sentence is not a courtesy and it is not a cultural observation. It describes a legal and political relationship between the United States, the state of Minnesota and each Tribal government, built from the Constitution of the United States, treaties, statutes, case law and agreements between governments.</p><p>Minnesota is home to eleven federally recognized Tribal Nations, each with its own elected officials. Minnesota law says the state acknowledges and supports their unique status and their right to existence, self-governance and self-determination, and it directs state agencies to accord Tribal governments the same respect accorded to other governments. The Department of Human Services is one of the agencies that law names.</p><p>For a state employee the practical effect is a change in category, not a change in tone. A Tribal Nation is not an advocacy organization, a cultural community, a service population or an audience for a communications plan. It is a government with its own laws, its own programs and its own authority over what happens on its own lands. When a DHS project reaches that authority, the right move is not a warmer invitation. It is to reach the DHS offices that lead government-to-government work before the shape of the project is set.</p>" },
-          { type: "statement", body: "This module is about state-employee responsibilities: noticing when a Tribal government has a stake in what you are doing, and getting that question to the right DHS office early enough to matter. It does not speak for any Tribal Nation, does not describe any Nation's culture, beliefs or internal affairs, and does not stand in for formal consultation or for the state's Tribal-state relations training." },
+          { type: "text", heading: "Governments, not a line on a stakeholder list", body: "<p>Tribal Nations are sovereign governments. That sentence is not a courtesy and it is not a cultural observation. It describes a legal and political relationship between the United States, the state of Minnesota and each Tribal government, built from the Constitution of the United States, treaties, statutes, case law and agreements between governments.</p><p>Minnesota is home to eleven federally recognized Tribal Nations, each with its own elected officials. Minnesota law says the state acknowledges and supports their unique status and their right to existence, self-governance and self-determination, and it directs state agencies to accord Tribal governments the same respect accorded to other governments. The Department of Human Services is one of the agencies that law names.</p><p>For a state employee the practical effect is a change in category, not a change in tone. A Tribal Nation is not an advocacy organization, a cultural community, a service population or an audience for a communications plan. It is a government with its own laws, its own programs and its own authority over what happens on its own lands. When a DHS project reaches that authority, the right move is not a warmer invitation. It is to reach the people or areas at DHS that lead government-to-government work before the shape of the project is set.</p>" },
+          { type: "statement", body: "This module is about state-employee responsibilities: noticing when a Tribal government has a stake in what you are doing, and getting that question to the person or area responsible at DHS early enough to matter. It does not speak for any Tribal Nation, does not describe any Nation's culture, beliefs or internal affairs, and does not stand in for formal consultation or for the state's Tribal-state relations training." },
           { type: "tabs", heading: "Four ideas that get blended together", tabs: [
             { label: "Sovereignty", body: "<p>A Tribal Nation governs itself. It makes and enforces its own laws, runs its own programs, and decides what happens on its lands. The state's relationship with that government is government to government, and at DHS it is led by the Office of Indian Policy and the offices that handle tribal relations and consultation.</p>" },
             { label: "Culture", body: "<p>Culture, language and practice belong to each Nation and to its members. This program does not describe them, and neither should your project documents. If cultural learning is part of your own development, take it from the Nations and from the offices that offer it, not from a summary written by a state work group.</p>" },
@@ -115,7 +115,7 @@ const pack: CoursePack = {
             { text: "A Tribal Nation is a government, and the state's relationship with it is government to government; an advisory seat is not consultation, and the process is led by the DHS offices responsible for tribal relations.", correct: true },
             { text: "It depends on the size of the project; small projects can use an advisory seat and large ones need consultation.", correct: false },
           ], feedbackCorrect: "Yes. The category decides the process. A Nation may take part in many things and still not have been consulted, and the route runs through the offices that lead this work.", feedbackIncorrect: "Start with what a Tribal Nation is rather than with how big the project is. A government's participation is arranged government to government, through the DHS offices that lead it." },
-          { type: "statement", body: "A private reflection, for your own notes: how might my role, my authority and my assumptions be shaping the category I have put a Tribal Nation in, and what would change in this project if I had that category right from the start?" },
+          { type: "statement", body: "A private reflection: how might my role, my authority and my assumptions be shaping the category I have put a Tribal Nation in, and what would change in this project if I had that category right from the start?" },
         ],
       },
       {
@@ -130,17 +130,17 @@ const pack: CoursePack = {
             "Minnesota law directs agencies to build Tribal consultation policies in consultation with Tribal governments, to consult the governing body of each Nation on matters with Tribal implications, and to carry what they hear into the decision itself.",
             "Coordinating with a body that represents several Nations is encouraged and does not satisfy the duty. Each Nation is its own government and is consulted on matters that affect it.",
             "A notice is not input, input is not consultation, and a public comment period is not consultation. Consultation is government to government, and at DHS it is led by the Office of Indian Policy and the offices that handle tribal relations.",
-            "Each agency designates a Tribal liaison as the principal point of contact, and state law directs staff whose work is likely to include matters with Tribal implications to complete Tribal-state relations training. This voluntary module is not that training.",
+            "Each agency designates a Tribal liaison as the principal point of contact, and state law directs staff whose work is likely to include matters with Tribal implications to complete Tribal-state relations training. This module is not that training.",
           ],
           evidence: "A scenario about a project team that sends a notice and records it as consultation, an accordion separating five things people call consultation, and a knowledge check on whose duty it is.",
-          appliedNextStep: "Write the sentence you would send to the DHS office that leads tribal relations for one project you are on: what the project is, what decision is still open, and when it closes.",
+          appliedNextStep: "Write the sentence you would send to the person or area at DHS that leads tribal relations for one project you are on: what the project is, what decision is still open, and when it closes.",
         },
         scenario: {
           context: "A DSD program team is changing how a service is authorized. Three weeks before the change takes effect, a project coordinator emails a summary to every partner list she has, including addresses she found for Tribal health and human services programs, and writes in the project file: “Tribal consultation complete.”",
           prompt: "What is wrong here, and what should happen next?",
           options: [
             { label: "Nothing is wrong. Every affected party received the same information at the same time, which is consistent and fair.", response: "Consistency across partner lists is the wrong measure. A mass email is notification, not consultation; it reached program employees rather than a Tribal government; and it arrived after the decision was effectively closed. The project file now records something that did not happen." },
-            { label: "Correct the project file, tell the DHS office that leads tribal relations what went out and when the change takes effect, and ask what this change requires and whether the timeline can still move.", response: "Right. Fix the record first, because an inaccurate record is its own harm and it will be believed later. Then bring the timing problem to the office that leads this work while something can still change. You are not repairing the relationship yourself; you are giving the people who hold it accurate facts early enough to act.", recommended: true },
+            { label: "Correct the project file, tell the person or area at DHS that leads tribal relations what went out and when the change takes effect, and ask what this change requires and whether the timeline can still move.", response: "Right. Fix the record first, because an inaccurate record is its own harm and it will be believed later. Then bring the timing problem to the person or area that leads this work while something can still change. You are not repairing the relationship yourself; you are giving the people who hold it accurate facts early enough to act.", recommended: true },
             { label: "Send a second, warmer email directly to Tribal chairs, apologizing and inviting comment within the three weeks.", response: "Direct contact with Tribal officials is not an individual staff member's to start, and a short deadline attached to an apology is still a closed decision. Route it instead." },
           ],
         },
@@ -175,7 +175,7 @@ const pack: CoursePack = {
             { text: "Coordination with such a body is encouraged, and the agency still owes consultation to the governing body of each affected Nation; the DHS offices that lead tribal relations arrange that.", correct: true },
             { text: "The briefing replaces consultation only if the council agrees to pass the information along to each Nation.", correct: false },
           ], feedbackCorrect: "Yes. Encouraged coordination and the duty to consult each Nation are two different things, and the second one is not transferable.", feedbackIncorrect: "Ask who holds the authority. A Nation's government speaks for that Nation, and no other body can carry the agency's duty on its behalf." },
-          { type: "statement", body: "A private reflection, for your own notes: who could be helped, burdened, excluded or misunderstood by the way this project has recorded its engagement so far, and whose expertise is missing from the decision as it currently stands?" },
+          { type: "statement", body: "A private reflection: who could be helped, burdened, excluded or misunderstood by the way this project has recorded its engagement so far, and whose expertise is missing from the decision as it currently stands?" },
         ],
       },
       {
@@ -240,10 +240,10 @@ const pack: CoursePack = {
           { type: "leaderMove", heading: "Move the date before you write the invitation", control: "You control when in a project's life the Tribal implications question gets asked, and you often control whether the schedule can still move.", failure: "Do not carry an unchangeable timeline into a conversation with another government and call it engagement. If nothing can move, say so honestly and expect it to be heard as exactly what it is.", next: "Name the last date your project's outcome can still change, put that date in the project record, and raise the routing question well before it." },
           { type: "knowledgeCheck", id: "ipe-20-3-check", question: "A project team plans to reach out about a service change after the design is approved but before the launch date, reasoning that there is still time to adjust the communications. Which assessment is most accurate?", options: [
             { text: "This is reasonable timing, because the change has not taken effect yet and the materials can still be revised.", correct: false },
-            { text: "The design is the decision; once it is approved, engagement can shape the announcement but not the outcome, so the question should have gone to the responsible DHS office while the design was still open.", correct: true },
+            { text: "The design is the decision; once it is approved, engagement can shape the announcement but not the outcome, so the question should have gone to the person or area responsible at DHS while the design was still open.", correct: true },
             { text: "Timing does not matter much, as long as the team documents that it reached out before launch.", correct: false },
           ], feedbackCorrect: "Yes. Ask what is still changeable on the day you ask. If only the wording is open, the outcome is closed.", feedbackIncorrect: "Separate the decision from the announcement. Being able to adjust materials is not the same as being able to change what was decided." },
-          { type: "statement", body: "A private reflection, for your own notes: if this project went ahead on its current schedule and later turned out to have caused harm or exclusion, what would accountability and repair actually require of my office, and how could the people most affected have shaped this work earlier?" },
+          { type: "statement", body: "A private reflection: if this project went ahead on its current schedule and later turned out to have caused harm or exclusion, what would accountability and repair actually require of my office, and how could the people most affected have shaped this work earlier?" },
         ],
       },
       {
@@ -261,7 +261,7 @@ const pack: CoursePack = {
             "The route is the point. The DHS Office of Indian Policy and the DHS offices that handle tribal relations and consultation lead this work; the check exists to reach them early, not to replace them.",
           ],
           evidence: "A completed first-look check, a scenario about an entry too vague to act on, and a knowledge check on what a usable entry contains.",
-          appliedNextStep: "Fill the check in for one live project this week and send it to the DHS office that leads tribal relations, with the open decision and its closing date in the first two lines.",
+          appliedNextStep: "Fill the check in for one live project this week and send it to the person or area at DHS that leads tribal relations, with the open decision and its closing date in the first two lines.",
         },
         scenario: {
           context: "A colleague sends you her first-look check for a contracting redesign. It reads, in full: “May have Tribal implications. Will reach out to the appropriate office at some point in the project.”",
@@ -285,9 +285,9 @@ const pack: CoursePack = {
           { type: "artifact", kind: "tagged-document", label: "Practical tool", title: "A first-look check for Tribal implications in one project", summary: "Five lines you fill in yourself, early, so the offices that lead this work receive an accurate question while the decision is still open.", fields: [
             { label: "Project and the decision still open", value: "Redesign of the contracting route for a DSD-funded service. Open decision: which entities may hold the contract and how funds move. It closes when the solicitation language is approved." },
             { label: "Signals you noticed", value: "One funding route currently runs to Tribal governments; the eligibility language would change who may hold a contract; the reporting requirement attached to the contract would apply to programs operated by Tribal Nations." },
-            { label: "Who leads from here", value: "Sent to the DHS office that leads tribal relations and consultation, addressed to the agency's designated Tribal liaison. Asking: does this require consultation, with which Nations, and by when must our schedule hold?" },
+            { label: "Who leads from here", value: "Sent to the person or area at DHS that leads tribal relations and consultation, addressed to the agency's designated Tribal liaison. Asking: does this require consultation, with which Nations, and by when must the project schedule hold?" },
             { label: "What this team will not decide on its own", value: "Whether the change has Tribal implications; whether consultation is required; which Nations are affected; who is contacted and how; any direct approach to a Tribal government or official." },
-            { label: "Record, timing and the review point", value: "Date sent and date the open decision closes, both written in the project file. If no reply arrives before the closing date, raise it to our own leadership and ask to hold the date rather than proceed. Revisit this entry whenever the design changes." },
+            { label: "Record, timing and the review point", value: "Date sent and date the open decision closes, both written in the project file. If no reply arrives before the closing date, raise it to the team's own leadership and ask to hold the date rather than proceed. Revisit this entry whenever the design changes." },
           ], action: "Copy the five lines into your project record, fill them in from one live project, and send the first three to the DHS office that leads tribal relations before the open decision closes." },
           { type: "list", heading: "Where the signals usually hide", items: [
             "Eligibility language: who may hold a contract, run a program, be licensed, or count as a provider.",
@@ -310,7 +310,7 @@ const pack: CoursePack = {
             { text: "“Reviewed for Tribal implications; none found; no action needed.”", correct: false },
             { text: "“Tribal Nations will be included in the public comment period along with our other partners.”", correct: false },
           ], feedbackCorrect: "Yes. A specific signal, an open decision with a date, a route with a date, and a clear statement of what the team is not deciding.", feedbackIncorrect: "Look for four things: what you noticed, what is still open and when it closes, who it went to and when, and what the team will not decide. A finding of none without reasoning, and an entry that treats a Nation as one more commenter, both fall short." },
-          { type: "statement", body: "A private reflection, for your own notes: does the way I have described this project make sense to someone who does not already know how DHS works, and what would accessibility mean here beyond a legal minimum? Keep personal reflections in your own notes." },
+          { type: "statement", body: "A private reflection: does the way I have described this project make sense to someone who does not already know how DHS works, and what would accessibility mean here beyond a legal minimum?" },
         ],
       },
     ],

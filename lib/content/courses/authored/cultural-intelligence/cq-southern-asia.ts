@@ -42,7 +42,7 @@ const pack: CoursePack = {
         "A new edition of a cited source"
       ],
       "relatedDoor": "These examples are practice. They are not an individual assessment, or authority to change a service requirement. Ask the person about preferences and check the actual work context.",
-      "toolkitQuestion": "What do we know from this person and this situation, what are we assuming, and what should we ask or verify next?",
+      "toolkitQuestion": "What do you know from this person and this situation, what are you assuming, and what should you ask or verify next?",
       "status": "reviewed"
     },
     "lessons": [
@@ -84,7 +84,7 @@ const pack: CoursePack = {
         "transfer": {
           "prompt": "What did each person understand a yes, a date or an invitation to mean?",
           "options": [
-            "How can we ask about scheduling needs without guessing someone’s religion or observance?",
+            "How can you ask about scheduling needs without guessing someone’s religion or observance?",
             "What did the person actually tell you, and which part is still your interpretation?",
             "What requirement needs verification before you suggest a change?"
           ]
@@ -98,15 +98,15 @@ const pack: CoursePack = {
           {
             "type": "text",
             "heading": "What the comparison can’t settle",
-            "body": "<p>Research that compares cultural groups describes broad averages. Whatever those averages show, they can’t tell you what this partner took your words to mean. Only asking can.</p><p>Keep three questions apart: What did the study report? What might it help us consider? What do we know about this situation? If you want to know where regional charts come from and why they can’t answer the last question, see the optional background course, <a href=\"/courses/cq-cluster-frameworks-foundations\">Optional background: where regional culture frameworks come from and what they cannot tell you</a>. You don’t need it to use this course.</p>"
+            "body": "<p>Research that compares cultural groups describes broad averages. Whatever those averages show, they can’t tell you what this partner took your words to mean. Only asking can.</p><p>Keep three questions apart: What did the study report? What might it help you consider? What do you know about this situation? If you want to know where regional charts come from and why they can’t answer the last question, see the background course <a href=\"/courses/cq-cluster-frameworks-foundations\">Where regional culture frameworks come from and what they cannot tell you</a>.</p>"
           },
           {
             "type": "list",
             "heading": "Questions for planning clear agreements",
             "items": [
               "What did each person understand a yes, a date or an invitation to mean?",
-              "How can we ask about scheduling needs without guessing someone’s religion or observance?",
-              "What would we need to ask or check before deciding that this approach will help?"
+              "How can you ask about scheduling needs without guessing someone’s religion or observance?",
+              "What would you need to ask or check before deciding that this approach will help?"
             ]
           },
           {

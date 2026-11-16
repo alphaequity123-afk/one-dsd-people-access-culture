@@ -80,7 +80,7 @@ export const SIX_WEEKS: readonly { week: number; learn: string; reflect: string;
 export const REFLECTION_PROMPTS: readonly { kind: string; when: string; questions: readonly string[] }[] = [
   { kind: "After a lesson", when: "A few minutes, the same day.", questions: ["What stood out?", "Why does it matter for the work I do?", "What will I try?"] },
   { kind: "A moment that mattered", when: "When something at work helped or got in the way of fair access or a good team.", questions: ["What happened, as I saw it?", "Who was affected, and how do I know?", "What was my part, and what would I do next time?"] },
-  { kind: "After a project or a stretch task", when: "Soon after it ends, while it is fresh.", questions: ["What did we set out to do?", "What happened?", "Why was there a difference?", "What will we keep, change or stop?"] },
+  { kind: "After a project or a stretch task", when: "Soon after it ends, while it is fresh.", questions: ["What did the team set out to do?", "What happened?", "Why was there a difference?", "What will the team keep, change or stop?"] },
   { kind: "At the end of a path", when: "When you have finished the lessons you chose.", questions: ["What do I do differently now?", "What have I seen that tells me so?", "What is still hard?", "What comes next?"] },
   { kind: "What I am leaving in place", when: "For leaders who set direction, once or twice a year.", questions: ["What will still be in place after me?", "What barriers remain?", "What will I personally do differently?"] },
 ];

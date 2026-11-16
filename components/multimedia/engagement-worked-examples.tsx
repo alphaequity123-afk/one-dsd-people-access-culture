@@ -65,10 +65,10 @@ const examples: Record<string, Example> = {
     ],
     columns: ["Part of the conversation", "A prompt to use"],
     rows: [
-      ["Begin with a question", "What would help us understand whose contributions are being considered?"],
-      ["Look at the example", "What did we observe? Which explanations are still assumptions?"],
-      ["Invite other perspectives", "What would we need to ask or learn before changing the meeting?"],
-      ["Close in a useful way", "What insight, optional next step, or question would we like to keep?"],
+      ["Begin with a question", "What would help the team understand whose contributions are being considered?"],
+      ["Look at the example", "What did the team observe? Which explanations are still assumptions?"],
+      ["Invite other perspectives", "What would the team need to ask or learn before changing the meeting?"],
+      ["Close in a useful way", "What insight, optional next step, or question would the team like to keep?"],
     ],
     prompt: "The scene can be read silently or aloud. Nobody needs to role-play or speak, and a useful insight can be enough.",
   },
@@ -98,7 +98,7 @@ const examples: Record<string, Example> = {
       ["The team sending the question", "Know whether it has reached the right place and how an update will return."],
       ["The team receiving it", "Understand the question, the context needed, and what decision is being requested."],
     ],
-    prompt: "What is shared, and what depends on each team’s work? A further conversation is optional; agreement on a new project is not required.",
+    prompt: "What is shared, and what depends on each team’s work? A further conversation can follow if both teams want one; agreement on a new project is not required.",
   },
   window: {
     title: "A window into a handoff",

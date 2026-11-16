@@ -99,7 +99,7 @@ const pack: CoursePack = {
           takeaways: [
             "A learned greeting or phrase is a fine starting point, but by itself it doesn't change the pace, structure, or formality of an interaction — the parts of Adaptation that actually meet the other person's frame.",
             "A process that stops at a scripted opening line trains a gesture; a process that also asks staff to check and use a person's stated preferences through the rest of the interaction supports genuine Adaptation.",
-            "Building in a simple prompt — what did this person tell us about how they want to be approached, and did we use it after the opening? — helps a team build the skill instead of settling for the appearance of it.",
+            "Building in a simple prompt — what did this person say about how they want to be approached, and did the team use it after the opening? — helps a team build the skill instead of settling for the appearance of it.",
             "The goal of a design change is to make the deeper shift easier to practice, not to grade whether any one interaction \"counts.\"",
           ],
           evidence: "A workplace scenario about redesigning an intake protocol, and a knowledge check on what a design change should actually require.",

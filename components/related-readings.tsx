@@ -14,7 +14,7 @@ export function RelatedReadings({courseId,collapsed=false}:{courseId:string;coll
 
 function RelatedReadingsBody({related}:{related:ReturnType<typeof readingsFor>}) {
   return <>
-    <p>These optional readings can deepen your reflection on this course. The connections and practice prompts below are suggestions for learning, not DHS policy.</p>
+    <p>These readings can deepen your reflection on this course. The connections and practice prompts below are suggestions for learning, not DHS policy.</p>
     <ul>{related.map(item=><li key={item.id}>
       <h3><Link href={item.href}>{item.title}</Link></h3>
       {item.why ? <p>{item.why}</p> : null}{item.practice ? <p><strong>Try this:</strong> {item.practice}</p> : null}

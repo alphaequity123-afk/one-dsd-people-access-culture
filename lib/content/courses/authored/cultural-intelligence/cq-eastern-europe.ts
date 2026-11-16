@@ -42,7 +42,7 @@ const pack: CoursePack = {
         "A new edition of a cited source"
       ],
       "relatedDoor": "These examples are practice. They are not an individual assessment, or authority to change a service requirement. Ask the person about preferences and check the actual work context.",
-      "toolkitQuestion": "What do we know from this person and this situation, what are we assuming, and what should we ask or verify next?",
+      "toolkitQuestion": "What do you know from this person and this situation, what are you assuming, and what should you ask or verify next?",
       "status": "reviewed"
     },
     "lessons": [
@@ -84,7 +84,7 @@ const pack: CoursePack = {
         "transfer": {
           "prompt": "What does a person need to know before sharing information with an institution?",
           "options": [
-            "How can we invite a contribution without guessing why someone has been quiet?",
+            "How can you invite a contribution without guessing why someone has been quiet?",
             "What did the person actually tell you, and which part is still your interpretation?",
             "What requirement needs verification before you suggest a change?"
           ]
@@ -98,15 +98,15 @@ const pack: CoursePack = {
           {
             "type": "text",
             "heading": "What a comparison leaves out",
-            "body": "<p>Survey comparisons summarize many people’s answers under particular conditions. They don’t show what this partner has experienced with government, or what they would want to know from you.</p><p>Keep three questions apart: What did the study report? What might it help us consider? What do we know about this situation? If you want to know where regional charts come from and why they can’t answer the last question, see the optional background course, <a href=\"/courses/cq-cluster-frameworks-foundations\">Optional background: where regional culture frameworks come from and what they cannot tell you</a>. You don’t need it to use this course.</p>"
+            "body": "<p>Survey comparisons summarize many people’s answers under particular conditions. They don’t show what this partner has experienced with government, or what they would want to know from you.</p><p>Keep three questions apart: What did the study report? What might it help you consider? What do you know about this situation? If you want to know where regional charts come from and why they can’t answer the last question, see the background course <a href=\"/courses/cq-cluster-frameworks-foundations\">Where regional culture frameworks come from and what they cannot tell you</a>.</p>"
           },
           {
             "type": "list",
             "heading": "Questions for planning what to share first",
             "items": [
               "What does a person need to know before sharing information with an institution?",
-              "How can we invite a contribution without guessing why someone has been quiet?",
-              "What would we need to ask or check before deciding that this approach will help?"
+              "How can you invite a contribution without guessing why someone has been quiet?",
+              "What would you need to ask or check before deciding that this approach will help?"
             ]
           },
           {
@@ -483,7 +483,7 @@ const pack: CoursePack = {
       {
         "heading": "Explain, invite and follow through",
         "items": [
-          "Why are we asking for this, and who will actually see it?",
+          "Why is this being asked for, and who will actually see it?",
           "What am I sure of, and what do I need to check before I answer?",
           "How will this person’s input be used, and what can still change?",
           "Can they respond in writing, later or one-on-one?",

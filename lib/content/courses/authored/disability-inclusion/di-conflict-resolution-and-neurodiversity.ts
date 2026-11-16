@@ -130,7 +130,7 @@ const pack: CoursePack = {
             { title: "Body language is treated as proof of attitude", body: "<p>Looking away, fidgeting or speaking in a flat tone can help someone stay focused. Many people read those same signs as guilt, boredom or hostility.</p>" },
             { title: "Fairness can look like stubbornness", body: "<p>Some people will not paper over a fact that feels wrong just to end the meeting smoothly. That can be a strong sense of consistency, not a need to win.</p>" },
           ] },
-          { type: "statement", body: "None of this means harmful behavior is fine. It means we should not treat one communication style as the only honest style." },
+          { type: "statement", body: "None of this means harmful behavior is fine. It means no one communication style should be treated as the only honest style." },
           { type: "sorting", id: "conflict-resolution-and-neurodiversity-2-sort", heading: "Style, or something that still needs a direct response?", categories: ["Likely a processing or communication difference", "Harm or a limit that must still be addressed"], items: [
             { text: "A colleague answers each question after a long silence and does not look up.", category: "Likely a processing or communication difference" },
             { text: "A colleague asks, \"What exactly are you asking me to do?\" after a manager says, \"We should all try harder.\"", category: "Likely a processing or communication difference" },

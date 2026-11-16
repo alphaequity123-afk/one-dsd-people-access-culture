@@ -55,7 +55,7 @@ export default async function SharedCoursePage({ params }: { params: Promise<{ c
           <p className={styles.eyebrow}>{course.seriesLabel}</p>
           <h1>{course.title}</h1>
           <p className={styles.description}>{courseSummary(pack)}</p>
-          <p className={styles.duration}>{course.duration ? <>{course.duration} · </> : null}{course.lessons.length} lessons · Voluntary learning</p>
+          <p className={styles.duration}>{course.duration ? <>{course.duration} · </> : null}{course.lessons.length} lessons</p>
           {course.lessons[0] ? <Link className="button" href={shareCourseHref(course.id, course.lessons[0].id)}>Start learning</Link> : null}
           <p className="text-sm text-muted mt-2">This shared link opens this course only.</p>
         </div>

@@ -57,7 +57,7 @@ export const EQUITY_FRAMEWORK = {
   howToRead: [
     "There are no years, phases by date or fixed cadences on this page. Stages are entered when readiness conditions are met, and review points are agreed with the people involved.",
     "Measures describe program practice and organizational patterns. Nothing on this page measures an individual employee, and the program holds no personnel records.",
-    "Participation in the program is voluntary. Published DHS policy requirements are separate from choosing this program as support.",
+    "Published DHS policy requirements apply whether or not staff use this program as support.",
   ],
 
   cycle: [

@@ -34,8 +34,8 @@
     "lib/policy-analysis/store.ts": "Policy analysis cases a person chooses to save (chosen work, encrypted).",
     "lib/sp-clone/request-store.ts": "A request a person chooses to send (staff POST is closed today).",
     "lib/intelligence/memory/owner-audit.ts": "Owner activity record: owner and contributor work only. appendAudit drops every event from a staff request before this file is reached (auditBelongsToOwnerWork); no counters.",
-    "lib/intelligence/memory/store.ts": "Work-object storage (local development files) for owner authoring, contributor and team work, and records a person chooses to save (program outcomes, policy and equity-analysis cases). No counters; audit goes through owner-audit.ts. Open owner decision: the outside-research spending ledger (research_usage records, one per outside-research call, no question content).",
-    "lib/intelligence/memory/postgres-store.ts": "Work-object storage (shared database) for the same chosen and owner records as store.ts, plus atomic program-event appends and the retired consultation compare-and-swap. No counters; audit goes through owner-audit.ts. Same open owner decision on the research spending ledger."
+    "lib/intelligence/memory/store.ts": "Work-object storage (local development files) for owner authoring, contributor and team work, and records a person chooses to save (program outcomes, policy and equity-analysis cases). No counters; audit goes through owner-audit.ts. The outside-research spending ledger is kept by owner decision 2026-11-16 (see kept.research_usage).",
+    "lib/intelligence/memory/postgres-store.ts": "Work-object storage (shared database) for the same chosen and owner records as store.ts, plus atomic program-event appends and the retired consultation compare-and-swap. No counters; audit goes through owner-audit.ts. Same research spending ledger, kept by owner decision 2026-11-16 (see kept.research_usage)."
   },
   "storedFunctions": {
     "consume_runtime_rate_limit": "Short-lived rate-limit bucket keyed by an HMAC of the address; operational protection, not learning. Retention not verified by this eval.",
@@ -52,5 +52,12 @@
     "pac_program_session": "contributor sign-in session (opaque token)",
     "pac_leaders": "leaders sign-in session (signed issue and expiry times and a random session id)",
     "pac_team": "One DSD Team sign-in session (signed issue and expiry times and a random session id)"
+  },
+  "kept": {
+    "runtime_audit_events": "Owner activity record, kept for owner work only (lib/intelligence/memory/owner-audit.ts). appendAudit drops every event from a staff request (auditBelongsToOwnerWork), so staff and Ask steps write nothing here; no counters.",
+    "research_usage": "Outside-research spending ledger, kept by owner decision 2026-11-16 to enforce the monthly spending cap. One record per outside-research call: its time, cost and a random id, with the operational fields the cost check uses (provider, model, depth, token and call figures, success, latency, the source web domains consulted and opaque trace ids). No question text: the legacy query_hash slot holds a random value unrelated to the question."
+  },
+  "askRecords": {
+    "lib/intelligence/tools/runtime.ts": "content_ids_touched is set on the in-memory audit event, but appendAudit saves owner work only (lib/intelligence/memory/owner-audit.ts, auditBelongsToOwnerWork); staff and Ask steps write nothing, and the stored form keeps only durable content identifiers. No retrieved-content trace is kept for a staff question."
   }
 }

@@ -1,6 +1,6 @@
-/** No program training credits; distinguish optional learning from official work and training duties. */
+/** Learning supports official duties; required training goes through the agency's designated process. */
 export const TRAINING_CREDIT_NOTICE =
-  "This program does not offer training credits. Optional learning here supports DHS responsibilities under the Equity Policy, including applicable equity-analysis requirements and assigned agency training. Complete required training through the agency's designated process.";
+  "Learning here supports DHS responsibilities under the Equity Policy, including applicable equity-analysis requirements and assigned agency training. Complete required training through the agency's designated process.";
 
 /** Shared reasoning context; staff receive the concise notice when they ask about credit. */
 export function trainingCreditContext(): string {

@@ -116,7 +116,7 @@ const pack: CoursePack = {
             { text: "The regions with the lowest returns are not following the re-assessment policy and should be asked to account for the gap.", correct: false },
             { text: "The packet is inaccessible and should be replaced with a plain-language version before the next cycle.", correct: false },
           ], feedbackCorrect: "Yes. It names what was observed, where to look, who is affected and what an answer would have to explain — and it contains no fix, so it rules nothing out.", feedbackIncorrect: "Check whether the sentence already contains its own answer. A statement that names the cause, the culprit or the repair has ended the inquiry before it started, and the parts it did not mention will never be examined." },
-          { type: "statement", body: "Private reflection, for you only: think of an issue you have described to someone else recently. How did your role, your authority and the words you chose shape what they then thought the problem was? Would your description make sense to someone who does not already know how DHS works? Keep personal reflections in your own notes." },
+          { type: "statement", body: "Private reflection: think of an issue you have described to someone else recently. How did your role, your authority and the words you chose shape what they then thought the problem was? Would your description make sense to someone who does not already know how DHS works?" },
         ],
       },
       {
@@ -184,7 +184,7 @@ const pack: CoursePack = {
             { text: "The other three lenses would have identified the same cause, so running them would not have changed the fix or the outcome.", correct: false },
             { text: "The issue was never a real one; an uneven pattern between regions is ordinary variation and needs no inquiry.", correct: false },
           ], feedbackCorrect: "Yes. Complex issues usually have several causes with different owners. One good fix removes one of them, and the system re-forms around the rest.", feedbackIncorrect: "Ask what each remaining lens would have looked at and who owns the fix it would have found. A cause that was never examined does not disappear because a different one was repaired." },
-          { type: "statement", body: "Private reflection, for you only: take a process you are close to. Who could be helped, burdened, excluded or misunderstood by it as it stands — and which of those four would show up in the numbers you normally see? Keep personal reflections in your own notes." },
+          { type: "statement", body: "Private reflection: take a process you are close to. Who could be helped, burdened, excluded or misunderstood by it as it stands — and which of those four would show up in the numbers you normally see?" },
         ],
       },
       {
@@ -246,7 +246,7 @@ const pack: CoursePack = {
             { text: "That the translation contract is not being performed and should be reviewed as the first step.", correct: false },
             { text: "Nothing usable, because breaking returns down by language risks describing communities rather than processes.", correct: false },
           ], feedbackCorrect: "Yes. A breakdown points; it does not explain. The explanation comes from the staff who run the process and from the people who meet it — and their time is paid work, not a favor.", feedbackIncorrect: "Numbers are strong at scale and pattern and silent about cause. Treating a breakdown as an explanation is precisely how a finding about a process turns into a description of a community." },
-          { type: "statement", body: "Private reflection, for you only: on the issue you are closest to, whose expertise is missing from the room — and how could the people most affected have shaped this work earlier than they will? Keep personal reflections in your own notes." },
+          { type: "statement", body: "Private reflection: on the issue you are closest to, whose expertise is missing from the room — and how could the people most affected have shaped this work earlier than they will?" },
         ],
       },
       {
@@ -319,7 +319,7 @@ const pack: CoursePack = {
             { text: "The case details the presenter described, so that the next consultation can pick up exactly where this one left off.", correct: false },
             { text: "No record at all. The consultation is voluntary, and anything written down could be used against someone later.", correct: false },
           ], feedbackCorrect: "Yes. The record is about the work and it has an owner and a date. It is filed with the process, not with a person.", feedbackIncorrect: "Ask two questions about anything you keep: does it name an individual, and can someone act on it? A good record fails the first test and passes the second." },
-          { type: "statement", body: "Private reflection, for you only: think of a process you work on where someone was quietly harmed or left out. What would accountability and repair actually require — of you, of the process, and toward the people who did not come back? What might accessibility mean here beyond the legal minimum? Keep personal reflections in your own notes." },
+          { type: "statement", body: "Private reflection: think of a process you work on where someone was quietly harmed or left out. What would accountability and repair actually require — of you, of the process, and toward the people who did not come back? What might accessibility mean here beyond the legal minimum?" },
         ],
       },
     ],

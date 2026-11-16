@@ -9,7 +9,7 @@ describe("Ask participation disclosure", () => {
     expect(screen.getByText(/question and recent conversation may be sent to outside services/i)).toBeTruthy();
     const contract = participationContract("ask");
     expect(contract.creates).not.toContain("ask_response_record");
-    expect(contract.disclosure.privacy).toMatch(/earlier versions may have retained separate records/i);
+    expect(contract.disclosure.privacy).not.toMatch(/may be recorded|earlier versions|retained separate records/i);
     expect(contract.disclosure.retention).toMatch(/external services have their own data-handling terms/i);
   });
 });

@@ -224,7 +224,7 @@ const pack: CoursePack = {
           { type: "artifact", kind: "plain-language-flyer", label: "Conversation record", title: "Financial-stability conversation", summary: "One page that records what the person wants, what they believe they cannot do, one tool to explore, and one next step.", fields: [
             { label: "What they want", value: "In their words; however small" },
             { label: "Beliefs to check", value: "Each with who said it and when; none confirmed or dismissed" },
-            { label: "One tool to explore", value: "Named in general terms; fit to be confirmed by a planner" },
+            { label: "One tool to explore", value: "Named in general terms; a planner checks the fit" },
             { label: "Questions for a planner", value: "The person's own" },
             { label: "One next step, one owner, one date", value: "Planner appointment, document, or question" },
           ], action: "Hold the conversation with one person and make the referral it produces." },

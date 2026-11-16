@@ -108,7 +108,7 @@ const collaboration: Builder = async (scope) => {
           }),
         ]);
       }),
-      section("About participation and training credit", [paragraph("Learning here is voluntary. Choose what supports your work and return when it is useful."), paragraph(TRAINING_CREDIT_NOTICE)]),
+      section("About required training", [paragraph("Choose what supports your work and return when it is useful."), paragraph(TRAINING_CREDIT_NOTICE)]),
     ]),
     attribution: programName(scope),
   };

@@ -39,7 +39,7 @@ export function intermediatePack(input: {
         ],
       })),
     },
-    jobAid: { title: input.aid.title, subtitle: "A personal practice aid for voluntary learning; use practice or nonidentifying details.",
+    jobAid: { title: input.aid.title, subtitle: "A personal practice aid; use practice or nonidentifying details.",
       use: { purpose: input.subtitle, remember: ["Attend to observable actions and effects.", "Do not infer another person's identity, motive, or IDI orientation.", "Use established workplace support channels when a concern needs a formal response."], doNext: input.lessons[3].practice }, sections: [...input.aid.sections, { heading: "Complete a private practice note", items: ["Situation: describe the practice case or a nonidentifying work process in two sentences. Separate what was observed from what remains uncertain. Do not include a colleague's private history or guess at an identity.", "Response: write the actual words or process change you would use, identify the role that can act, and explain why the response fits the stated purpose.", "Review: choose an ordinary observation that could show improvement, a point to reconsider the approach, and one possible unintended effect. A completed note shows preparation; only later evidence can show whether the action helped."] }] },
     sources: input.sources,
   };

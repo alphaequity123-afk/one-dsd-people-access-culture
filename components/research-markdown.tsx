@@ -43,7 +43,7 @@ function Block({ block, notesKey }: { block: ResearchBlock; notesKey?: string })
     case "fact": return <aside className="research-fact"><ResearchBlocks blocks={block.blocks} /></aside>;
     case "takeaway": return <aside className="research-takeaway"><p className="research-label">Practice this week</p><ResearchBlocks blocks={block.blocks} /></aside>;
     case "reflect": return <section className="research-reflect" aria-label="Reflection">
-      <p className="research-label">For your own reflection. Nothing here is collected.</p>
+      <p className="research-label">For your own reflection.</p>
       <ol>{block.items.map((item, index) => <li key={index}><ResearchInline text={item} /></li>)}</ol>
       {notesKey ? <PrivateNotes storageKey={notesKey} /> : null}
     </section>;

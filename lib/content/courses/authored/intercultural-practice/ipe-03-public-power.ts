@@ -45,7 +45,7 @@ const pack: CoursePack = {
         "Feedback from staff using this module that a scenario misstates how the work actually travels",
       ],
       relatedDoor: "Formal decisions about policy, eligibility, rates, contracts, appeals and corrective action belong to the responsible Disability Services Division program office and the department offices that handle legal, compliance, civil rights and appeals matters; this module prepares your thinking, it does not decide a case or change a policy.",
-      toolkitQuestion: "When this decision lands, who does the extra work, and did we ask them before we decided?",
+      toolkitQuestion: "When this decision lands, who does the extra work, and did your team ask them before deciding?",
       status: "reviewed",
     },
     lessons: [
@@ -80,7 +80,7 @@ const pack: CoursePack = {
               recommended: true,
             },
             {
-              label: "Approve the form and add a line to the notice telling people to call the office if they have trouble getting it completed.",
+              label: "Approve the form and add a line to the notice telling people to call the program if they have trouble getting it completed.",
               response: "An offer of help placed after the burden is designed in shifts the work to the person who is already carrying the most, and it only reaches people who read the notice, understand it and feel safe calling.",
             },
           ],
@@ -144,12 +144,12 @@ const pack: CoursePack = {
               { text: "The description is accurate if the form is one page or less and the deadline is at least thirty days.", correct: false },
               { text: "The description is accurate as long as the change is announced before it takes effect.", correct: false },
             ],
-            feedbackCorrect: "Yes. The label describes the work on our side. Public power is measured by what the instruction requires of the people who receive it.",
+            feedbackCorrect: "Yes. The label describes the work on the agency's side. Public power is measured by what the instruction requires of the people who receive it.",
             feedbackIncorrect: "Ask who has to do something new because of this change, how long it will take them, and what happens if they cannot. That answer, not the size of the document, tells you whether it is minor.",
           },
           {
             type: "statement",
-            body: "Private reflection, for you alone: How might my role, authority, language or assumptions shape this decision — and what would I have to know about someone’s week to price it honestly? Keep this reflection in your own notes without including identifying details.",
+            body: "Private reflection: How might my role, authority, language or assumptions shape this decision — and what would I have to know about someone’s week to price it honestly? Leave out identifying details about anyone.",
           },
         ],
       },
@@ -180,7 +180,7 @@ const pack: CoursePack = {
             },
             {
               label: "Read the notice as a person who has never heard of the division: does it say what changed, what they must do, by when, what happens if they do nothing, and who to ask — in plain language, in the languages people actually use, with a version tested by paid community members before it mails.",
-              response: "This is the highest-value addition. The notice is the only stop on the trip that most people will ever see, and it is the stop we control completely.",
+              response: "This is the highest-value addition. The notice is the only stop on the trip that most people will ever see, and it is the stop the agency controls completely.",
               recommended: true,
             },
             {
@@ -271,8 +271,8 @@ const pack: CoursePack = {
         learning: {
           objective: "Examine how criteria, definitions, measures and contract terms decide who the system can see, and identify one category in your own work that hides someone.",
           takeaways: [
-            "Every category is a decision. What a definition excludes does not become smaller; it becomes invisible, and invisibility reads in our reports as absence of need.",
-            "Measures count only what reached the channel we built. Low complaint numbers from a community can mean satisfaction, or can mean the complaint route is unusable, unsafe or unknown.",
+            "Every category is a decision. What a definition excludes does not become smaller; it becomes invisible, and invisibility reads in agency reports as absence of need.",
+            "Measures count only what reached the channel the agency built. Low complaint numbers from a community can mean satisfaction, or can mean the complaint route is unusable, unsafe or unknown.",
             "Uniform treatment and equal access are not the same thing. Identical procedure across very different circumstances produces very different results.",
             "The program uses a six-part continuum — denial, polarization, minimization, acceptance, adaptation and integration — as a working map for examining institutional practice, not as a proven account of how it matures. The first five are the orientations of the Intercultural Development Inventory. The sixth, Integration, is not an IDI orientation: in this program it means the people a process affects help design it, and the name comes from Bennett's developmental model, where it describes identity across cultures. The continuum is never a label, a score or a record about any individual person.",
           ],
@@ -294,7 +294,7 @@ const pack: CoursePack = {
             },
             {
               label: "Add a footnote noting possible cultural differences in help-seeking, then publish the reallocation as drafted.",
-              response: "A footnote that attributes a gap to culture, without checking the route we built, converts our own design problem into a statement about a community — and the reallocation still goes ahead.",
+              response: "A footnote that attributes a gap to culture, without checking the route the agency built, converts the agency's own design problem into a statement about a community — and the reallocation still goes ahead.",
             },
           ],
         },
@@ -310,7 +310,7 @@ const pack: CoursePack = {
           {
             type: "text",
             heading: "Categories are decisions wearing technical clothes",
-            body: "<p>Eligibility criteria, assessment questions, data fields, quality measures and contract terms all do the same quiet thing: they decide what the state can see. A need that has no field is not recorded. A person who does not fit a category is recorded as something else, or not at all. What falls outside the definition does not get smaller; it gets invisible, and in a report invisibility looks exactly like absence of need.</p><p>Measures have the same property. A count of complaints counts only complaints that reached the channel we built, in the language that channel accepts, from people who believed the complaint was safe to make and would lead somewhere. Read one way, a low number is good news. Read accurately, it is a question: is this satisfaction, or is this a route nobody can use?</p><p>Culture, language and disability all sit inside this. A family that organizes care among relatives may answer “no need” to a question about unmet need, because the need is being met by people who are exhausted. A person who communicates without speech may be recorded as declining to answer. A question about “the head of household” may not describe how a family actually decides anything. None of this is a flaw in the people answering. It is a limit in what we built to listen with.</p>",
+            body: "<p>Eligibility criteria, assessment questions, data fields, quality measures and contract terms all do the same quiet thing: they decide what the state can see. A need that has no field is not recorded. A person who does not fit a category is recorded as something else, or not at all. What falls outside the definition does not get smaller; it gets invisible, and in a report invisibility looks exactly like absence of need.</p><p>Measures have the same property. A count of complaints counts only complaints that reached the channel the agency built, in the language that channel accepts, from people who believed the complaint was safe to make and would lead somewhere. Read one way, a low number is good news. Read accurately, it is a question: is this satisfaction, or is this a route nobody can use?</p><p>Culture, language and disability all sit inside this. A family that organizes care among relatives may answer “no need” to a question about unmet need, because the need is being met by people who are exhausted. A person who communicates without speech may be recorded as declining to answer. A question about “the head of household” may not describe how a family actually decides anything. None of this is a flaw in the people answering. It is a limit in what the agency built to listen with.</p>",
           },
           {
             type: "flashcards",
@@ -318,7 +318,7 @@ const pack: CoursePack = {
             cards: [
               { front: "What counts as a need?", back: "<p>If unmet need is defined as need not currently covered by a paid service, all the work being done by unpaid relatives disappears from the record — and from the case for funding it.</p>" },
               { front: "Who counts as family?", back: "<p>A form with rows for parent, spouse and legal guardian can leave out grandparents, adult siblings, chosen family and the neighbor who has provided support for a decade. Who is left out is who cannot be consulted, notified or paid.</p>" },
-              { front: "What counts as a complaint?", back: "<p>Only what arrives in our channel, in our language, in our format, from someone who believed it was safe. Everything else is a conversation that happened somewhere we do not hear.</p>" },
+              { front: "What counts as a complaint?", back: "<p>Only what arrives in the agency's channel, in its language, in its format, from someone who believed it was safe. Everything else is a conversation that happened somewhere the agency does not hear.</p>" },
               { front: "What counts as an outcome?", back: "<p>Measures pick the outcome that is easy to count. Hours authorized, days to decision and utilization are easy. Whether the person has the life they wanted is hard, and it is the reason the program exists.</p>" },
               { front: "What counts as evidence?", back: "<p>If only clinical documentation and audited data count as evidence, then the account of the person living the result is treated as opinion — and the people who know the most about the impact carry the least weight in the decision.</p>" },
             ],
@@ -329,7 +329,7 @@ const pack: CoursePack = {
             tabs: [
               { label: "Minimization", body: "<p>“We apply the same procedure to everyone, so the process is fair.” The intent is real and the standard is sincerely held. What it misses is that identical procedure across very different circumstances produces very different results — the deadline that is routine for one household ends a service for another. Minimization is the most common place for a well-run public organization to sit, and it is comfortable, because from the inside it looks like integrity.</p>" },
               { label: "Acceptance", body: "<p>The difference is recognized as real and consequential, not as a preference or an excuse. The team can say out loud: this requirement is not the same requirement for a person who has no car, no printer, no paid leave, or no reason to trust a state letter. Nothing in the design has changed yet, but the conversation has stopped pretending the effect is uniform.</p>" },
-              { label: "Adaptation", body: "<p>The design shifts so that the same policy produces comparable access: the deadline moves, the proof changes, the notice is written and tested in the languages people use, the route accepts more than one way in. Adaptation is a change in what we build, not a change in how tolerant we feel. The program uses this continuum to describe institutional practice, never to label, score or record a person.</p>" },
+              { label: "Adaptation", body: "<p>The design shifts so that the same policy produces comparable access: the deadline moves, the proof changes, the notice is written and tested in the languages people use, the route accepts more than one way in. Adaptation is a change in what the agency builds, not a change in how tolerant staff feel. The program uses this continuum to describe institutional practice, never to label, score or record a person.</p>" },
             ],
           },
           {
@@ -359,7 +359,7 @@ const pack: CoursePack = {
           },
           {
             type: "statement",
-            body: "Private reflection, for you alone: Whose expertise is missing from the decisions I work on — and what would it take to have those people involved, and compensated, before the next one is drafted rather than after?",
+            body: "Private reflection: Whose expertise is missing from the decisions I work on — and what would it take to have those people involved, and compensated, before the next one is drafted rather than after?",
           },
         ],
       },
@@ -395,7 +395,7 @@ const pack: CoursePack = {
             },
             {
               label: "Send the change and add a monitoring item to watch for problems in the next quarterly report.",
-              response: "Monitoring notices harm after people have absorbed it, and only the harm that shows up in what we already count. It is not a substitute for looking at the route first.",
+              response: "Monitoring notices harm after people have absorbed it, and only the harm that shows up in what the program already counts. It is not a substitute for looking at the route first.",
             },
           ],
         },
@@ -466,12 +466,12 @@ const pack: CoursePack = {
               { text: "“Notice is written from manual language and does not say what to do or by when; it stops people who are new to the program and people reading in a second language. Owner: communications lead. First change: plain-language rewrite tested by paid community members before it mails. Reviewed at the agreed point.”", correct: true },
               { text: "“People do not respond to notices. First change: send a second notice.”", correct: false },
             ],
-            feedbackCorrect: "Yes. The barrier is named as ours, the people stopped are named, there is an owner, one specific change and a review point.",
+            feedbackCorrect: "Yes. The barrier is named as the agency's own, the people stopped are named, there is an owner, one specific change and a review point.",
             feedbackIncorrect: "A complete line names the barrier as the organization’s, says who it stops, names an owner, states one specific change, and says when it will be checked.",
           },
           {
             type: "statement",
-            body: "Private reflection, for you alone: Which stop on this trip do I have real authority over, and what is the one change I will make there before the decision goes out? If you use this map with a team, keep everyone’s reflections private and discuss the decision, never the person.",
+            body: "Private reflection: Which stop on this trip do I have real authority over, and what is the one change I will make there before the decision goes out? If you use this map with a team, keep everyone’s reflections private and discuss the decision, never the person.",
           },
         ],
       },
@@ -487,7 +487,7 @@ const pack: CoursePack = {
         "Public power sits in definitions, forms, timelines, money, words, measures and silence.",
         "Each handoff adds caution, delay and local extras that nobody decided.",
         "Burden arrives as learning costs, compliance costs and psychological costs, and it lands unevenly.",
-        "A measure counts what reached the route we built; a low number is a question, not an answer.",
+        "A measure counts what reached the route the agency built; a low number is a question, not an answer.",
         "Uniform procedure is not equal access. Comparable results usually require a change in the design.",
       ],
       doNext: "Spend one hour mapping a decision that is still open, then make the change that is inside your own authority.",

@@ -2,7 +2,7 @@
 export const culturalMultidisciplinary = {
   "title": "Connecting perspectives in everyday work",
   "introduction": [
-    "This is a multidisciplinary program. It draws on social sciences such as sociology, anthropology and psychology; research methods such as ethnography; the humanities; and the knowledge and lived experience of people and communities. Each offers a different way to understand culture, relationships and the systems around us.",
+    "This is a multidisciplinary program. It draws on social sciences such as sociology, anthropology and psychology; research methods such as ethnography; the humanities; and the knowledge and lived experience of people and communities. Each offers a different way to understand culture, relationships and the systems around people.",
     "Cultural understanding draws on more than one perspective. Intercultural development, awareness of implicit bias, psychological safety, disability and language access, person-centered practice, and lived experience each offer different ways to learn and act. They are complementary; none is a substitute for listening to people affected.",
     "The Intercultural Development Inventory is a developmental assessment administered by qualified administrators. It is not required to use this collection, and individual results should not be used to label people or make personnel decisions."
   ],
@@ -27,7 +27,7 @@ export const culturalMultidisciplinary = {
     },
     {
       "title": "Cultural anthropology",
-      "body": "Explore how meaning, history and everyday practices vary by context. What can we learn about the setting without assuming that it describes an individual?"
+      "body": "Explore how meaning, history and everyday practices vary by context. What can you learn about the setting without assuming that it describes an individual?"
     },
     {
       "title": "Cross-cultural learning and communication",

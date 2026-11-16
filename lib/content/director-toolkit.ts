@@ -47,7 +47,7 @@ export type ToolkitSection = {
 
 export const DIRECTOR_TOOLKIT_INTRO = {
   title: "Equity Director toolkit",
-  lede: "Tools that Equity Directors at the Minnesota Department of Human Services (DHS) can use to carry out diversity, equity and inclusion work across the agency.",
+  lede: "Tools that Equity Directors at the Minnesota Department of Human Services (DHS) can use to carry out People, Access and Culture work across the agency.",
   summary: [
     "These tools connect policy analysis, community engagement, workforce practices, accessibility, language access, procurement and accountability. Equity Directors use them with the staff responsible for those decisions. Training and software support the work; staff still need to act on findings and review the results.",
     "Start with the DHS Equity Policy and the internal DHS Equity Analysis Toolkit. Add the State of Minnesota Equity Analysis Toolkit, and build practical templates around those resources. The DHS Equity Policy requires employees to examine policies, practices, procedures, rules, budgets and decisions through an equity lens. The goal is to reduce disparities and improve access to human services.",
@@ -119,9 +119,9 @@ export const DIRECTOR_TOOLKIT_SECTIONS: readonly ToolkitSection[] = [
     id: "policy-program-budget",
     number: 2,
     title: "Policy, program and budget equity tools",
-    question: "What will this decision change, for whom, and what will we do about barriers we can see coming?",
+    question: "What will this decision change, for whom, and how will the agency address barriers it can see coming?",
     intro: [
-      "These tools answer one central question: what will this decision change, for whom, and what will we do about barriers we can see coming?",
+      "These tools answer one central question: what will this decision change, for whom, and how will the agency address barriers it can see coming?",
     ],
     items: [
       {
@@ -266,7 +266,7 @@ export const DIRECTOR_TOOLKIT_SECTIONS: readonly ToolkitSection[] = [
     id: "accessibility",
     number: 5,
     title: "Accessibility and disability inclusion tools",
-    question: "Can everyone use what we are building, from the first draft to approval?",
+    question: "Can everyone use what the agency is building, from the first draft to approval?",
     intro: [
       "Accessibility should be part of design and approval, not a final document check. Minnesota's published digital accessibility standard includes the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA and Section 508 of the Rehabilitation Act. The WCAG 2.1 update took effect July 1, 2024.",
     ],
@@ -331,7 +331,7 @@ export const DIRECTOR_TOOLKIT_SECTIONS: readonly ToolkitSection[] = [
     id: "language-access",
     number: 6,
     title: "Language access and culturally responsive communication tools",
-    question: "Can people who speak languages other than English understand us and reach help?",
+    question: "Can people who speak languages other than English understand the agency and reach help?",
     intro: [
       "DHS publishes practical language-access resources that can go straight into an implementation toolkit.",
     ],
@@ -384,7 +384,7 @@ export const DIRECTOR_TOOLKIT_SECTIONS: readonly ToolkitSection[] = [
     id: "workforce",
     number: 7,
     title: "Workforce equity and inclusive management tools",
-    question: "Do our hiring, development and retention practices remove barriers that have nothing to do with the work?",
+    question: "Do the agency's hiring, development and retention practices remove barriers that have nothing to do with the work?",
     intro: [
       "A strong set of workforce tools covers structured selection, accessible hiring, open advancement, employee support, and analysis of everything from recruitment through retention.",
     ],
@@ -467,7 +467,7 @@ export const DIRECTOR_TOOLKIT_SECTIONS: readonly ToolkitSection[] = [
     id: "procurement-grants",
     number: 9,
     title: "Procurement, contracting and grant-making tools",
-    question: "Do our purchasing and grant processes open doors or create barriers that are not needed?",
+    question: "Do the agency's purchasing and grant processes open doors or create barriers that are not needed?",
     intro: [
       "Minnesota's Office of Equity in Procurement provides a searchable directory of certified Targeted Group, Economically Disadvantaged and Veteran-Owned businesses. It is a practical resource for finding and reaching out to suppliers.",
     ],
@@ -563,7 +563,7 @@ export const DIRECTOR_TOOLKIT_SECTIONS: readonly ToolkitSection[] = [
     items: [
       { name: "Equity governance charter", purpose: "Set sponsorship, scope, membership and decision authority.", use: "Agree it with the executive sponsor first.", limitation: "A charter without decision authority becomes a discussion group." },
       { name: "Responsibility matrix", purpose: "Make clear who approves, advises, carries out, reviews and resolves escalations.", use: "Fill it in for each pilot decision.", limitation: "Name roles, not people.", href: "/support/right-person" },
-      { name: "Diversity, equity, inclusion and accessibility activity inventory", purpose: "Find current work, duplication, gaps and chances to share resources.", use: "Build it in the first 30 days.", limitation: "Keep it short enough to stay current." },
+      { name: "People, Access and Culture activity inventory", purpose: "Find current work, duplication, gaps and chances to share resources.", use: "Build it in the first 30 days.", limitation: "Keep it short enough to stay current." },
       { name: "Unit action-plan template", purpose: "Connect findings to actions, owners, resources, milestones and measures.", use: "One plan per unit or pilot.", limitation: "Every action needs an owner who has the authority to do it.", templateId: "action-tracker" },
       { name: "Decision and risk register", purpose: "Make unresolved barriers and executive decisions visible.", use: "Review it at each leadership review.", limitation: "Keep sensitive employee and client information out of it.", templateId: "decision-log" },
       { name: "Leadership review agenda", purpose: "Review results and decisions needed, not only completed activities.", use: "Put decisions needed at the top of the agenda.", limitation: "Keep the review on results, not on activity counts." },

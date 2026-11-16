@@ -51,13 +51,13 @@ export const SUPPORT_DESTINATIONS = [
   {
     id: "accessibility_or_language_access_lead",
     label: "The responsible accessibility or language access lead",
-    description: "Use the lead or office responsible for access requirements, interpretation, translation, or accessible formats.",
+    description: "Use the lead or area responsible for access requirements, interpretation, translation, or accessible formats.",
     category: "office_or_lead",
   },
   {
     id: "procurement_or_contract_office",
-    label: "The responsible procurement or contract office",
-    description: "Use the office with authority for grant, procurement, contract, or fiscal requirements.",
+    label: "The person or area responsible for procurement or contracts",
+    description: "Use the person or area with authority for grant, procurement, contract, or fiscal requirements.",
     category: "office_or_lead",
   },
   {
@@ -69,7 +69,7 @@ export const SUPPORT_DESTINATIONS = [
   {
     id: "community_engagement_lead",
     label: "The responsible community engagement lead",
-    description: "Use the lead or office responsible for community relationships, participation, and follow-through.",
+    description: "Use the lead or area responsible for community relationships, participation, and follow-through.",
     category: "office_or_lead",
   },
   {
@@ -86,8 +86,8 @@ export const SUPPORT_DESTINATIONS = [
   },
   {
     id: "communications_or_public_information_office",
-    label: "The responsible communications or public information office",
-    description: "Use the office responsible for the message, its release, the channel, and the public response.",
+    label: "The person or area responsible for communications or public information",
+    description: "Use the person or area responsible for the message, its release, the channel, and the public response.",
     category: "office_or_lead",
   },
 ] as const satisfies readonly SupportDestination[];
@@ -105,12 +105,12 @@ export const DSD_ELIGIBILITY_OPTIONS = [
   {
     id: "self_attested_dsd",
     label: "This work is within the Disability Services Division",
-    description: "See the people and offices responsible for this DSD work.",
+    description: "See the people or areas responsible for this DSD work.",
   },
   {
     id: "not_dsd",
     label: "This work is outside the Disability Services Division",
-    description: "You will see the responsible person or office for your area.",
+    description: "You will see who is responsible for your area.",
   },
 ] as const;
 
@@ -171,11 +171,11 @@ export function contextualizeSupportAction(
   if (!action.href.startsWith(DSD_CONSULTATION_PATH)) return { ...action };
   // Keep every staff handoff aligned with the published, closed request page.
   if (!STAFF_CONSULTATION_REQUESTS_OPEN) {
-    return { label: "Find the right person or office", href: "/support/right-person" };
+    return { label: "Find the person or area responsible", href: "/support/right-person" };
   }
   if (context !== "one_dsd") {
     return {
-      label: "Find the right person or office",
+      label: "Find the person or area responsible",
       href: "/support/right-person",
     };
   }
@@ -255,7 +255,7 @@ export function routeSupport(request: SupportRoutingRequest): SupportRouteDecisi
     kind: "right_person",
     scope: "one_dhs",
     label: "Connect with the right person",
-    description: "Start with program guidance, then contact the responsible person or office when a decision needs someone with the authority to make it.",
+    description: "Start with program guidance, then contact the person or area responsible when a decision needs someone with the authority to make it.",
     destinations,
     dsdConsultation: null,
   });

@@ -158,7 +158,7 @@ const pack: CoursePack = {
         learning: {
           objective: "Plan a discovery step that brings lived experience and community expertise into defining the problem, and tell the difference between designing together, a standing community group, targeted consultation and testing a draft.",
           takeaways: [
-            "Discovery answers two questions: what problem are we solving, and for whom? If only staff answer them, the design inherits whatever staff already believe about how the process works.",
+            "Discovery answers two questions: what problem is the team solving, and for whom? If only staff answer them, the design inherits whatever staff already believe about how the process works.",
             "The division's records mostly describe people who reached the process and got far enough to be counted. They are close to silent about people who stopped, never started or were never told.",
             "Designing together, a standing community group, targeted consultation and testing a draft are different arrangements that share different amounts of power. Saying honestly which one you are offering is part of the design.",
             "People with disabilities, families, interpreters, disability-led organizations and culturally specific organizations contribute professional expertise. Arrange access before the invitation and payment before anyone agrees.",
@@ -338,7 +338,7 @@ const pack: CoursePack = {
             heading: "Write the trade-off down where the decision lives",
             control: "You control whether a trade-off is recorded in the charter, the decision log or the requirements, with the name of the person who made it and the date it will be reviewed.",
             failure: "Do not let a deferred access decision disappear into a schedule. An access path postponed without a record, an owner and a date has, in practice, been canceled quietly.",
-            next: "In the next design decision you take part in, write one sentence: what we chose, who it leaves out, what we will offer them meanwhile, who decided, and when we will look at it again.",
+            next: "In the next design decision you take part in, write one sentence that says what was chosen, who it leaves out, what they will be offered meanwhile, who decided, and when it will be reviewed again.",
           },
           {
             type: "list",
@@ -384,7 +384,7 @@ const pack: CoursePack = {
           objective: "Write an impact-on-people section into a project charter that names who is affected, whose expertise is missing, the burden the design creates and the trade-offs accepted, and set the points in the project where the section will be reopened.",
           takeaways: [
             "A charter is where a project's questions become official. A question that is not in the charter is one somebody has to argue for later, usually when the schedule is tight.",
-            "Six short fields carry most of the value: who is affected, whose expertise is missing, burden and who carries it, access and language decisions, trade-offs and who decided, and how we will know.",
+            "Six short fields carry most of the value: who is affected, whose expertise is missing, burden and who carries it, access and language decisions, trade-offs and who decided, and how the team will know.",
             "The section earns its place by being reopened at a few moments — requirements, contract, pilot, launch and once after — for a few minutes each time.",
             "“We do not know yet” is a sound entry when it names who will be asked and by when. A field filled with a general phrase to look complete is not.",
             "The loop closes when the people who contributed hear what changed because of them, what did not and why.",
@@ -423,7 +423,7 @@ const pack: CoursePack = {
           {
             type: "text",
             heading: "Why the charter, and not a separate form",
-            body: "<p>Most organizations already have somewhere equity and accessibility questions could live: a review form, a checklist held by another office, a note in a plan. The reason to put them in the project charter instead is not that the charter is better written. It is that the charter is the document the project actually uses. A sponsor signs it. A project manager reads it at status meetings. A contracting colleague refers to it when drafting a solicitation. A new team member reads it in their first week. A question that lives in the charter gets asked. A question that lives in a separate form tends to be completed once and filed.</p><p>The section below is short on purpose: six fields, no specialist vocabulary, each answerable in a few sentences. It is not an assessment of anyone, and it produces no rating. What it produces is a record. This is who we believed the work affects. This is what we did not know and who we asked. This is the burden we accepted and who carries it. This is who decided. That record is what makes later questions answerable, including the hardest one: if this design harmed or excluded someone, what would accountability and repair require?</p>",
+            body: "<p>Most organizations already have somewhere equity and accessibility questions could live: a review form, a checklist held by another office, a note in a plan. The reason to put them in the project charter instead is not that the charter is better written. It is that the charter is the document the project actually uses. A sponsor signs it. A project manager reads it at status meetings. A contracting colleague refers to it when drafting a solicitation. A new team member reads it in their first week. A question that lives in the charter gets asked. A question that lives in a separate form tends to be completed once and filed.</p><p>The section below is short on purpose: six fields, no specialist vocabulary, each answerable in a few sentences. It is not an assessment of anyone, and it produces no rating. What it produces is a record. This is who the team believed the work affects. This is what the team did not know and whom it asked. This is the burden the team accepted and who carries it. This is who decided. That record is what makes later questions answerable, including the hardest one: if this design harmed or excluded someone, what would accountability and repair require?</p>",
           },
           {
             type: "artifact",
@@ -437,7 +437,7 @@ const pack: CoursePack = {
               { label: "Burden this design creates, and who carries it", value: "Walk the process as a person would and write down every task it assigns: documents to find, calls to make, time to take off, trips to arrange, explanations to repeat, signatures to obtain, deadlines counted from a printed date. For each task, note who it is heaviest for and what happens to someone who cannot complete it. Flag anything the process asks for that the division already holds." },
               { label: "Access, language and format decisions", value: "Record decisions, not intentions: which channels exist and which is the default; which formats are produced and when; how a person tells the division what they need to take part; how interpretation and translation are arranged and paid for; which accessibility requirements are written into the requirements and acceptance criteria rather than left to a final check; and which of these are already fixed by a system or contract the project does not control." },
               { label: "Trade-offs accepted, and who decided", value: "Write down what the project chose not to do and why: a path deferred, a review shortened, a format postponed, a pilot narrowed. For each, name who is left out or delayed, what they will be offered in the meantime, who made the decision, and the date it will be reviewed. A trade-off with no name and no date tends to be rediscovered later as a complaint." },
-              { label: "How we will know, and what we will tell people", value: "Name the few things you will look at to learn whether the design worked for the groups in the first field — not only completion and volume, but who stopped and where. Say when you will look and who will look. Say what you will tell the people who contributed: what changed because of them, what did not and why. Include how someone raises a problem with the service and what happens when they do." },
+              { label: "How the team will know, and what it will tell people", value: "Name the few things you will look at to learn whether the design worked for the groups in the first field — not only completion and volume, but who stopped and where. Say when you will look and who will look. Say what you will tell the people who contributed: what changed because of them, what did not and why. Include how someone raises a problem with the service and what happens when they do." },
             ],
             action: "Copy the six fields into the charter of one project you are working on now. Complete what you can in one sitting, mark each unknown with the person you will ask and a date, and reopen the section at requirements, before the contract, before the pilot, before launch and once after.",
           },
@@ -526,7 +526,7 @@ const pack: CoursePack = {
           "Burden this design creates, and who carries it.",
           "Access, language and format decisions, written as decisions.",
           "Trade-offs accepted, who is left out, who decided and the review date.",
-          "How we will know, and what we will tell the people who contributed.",
+          "How the team will know, and what it will tell the people who contributed.",
           "Reopen it at requirements, before the contract, before the pilot, before launch and once after.",
         ],
       },

@@ -34,7 +34,7 @@ export const USER_GUIDE = {
       "paras": [
         "The menu across the top of every page leads to the main areas: Start, Learn, Practice, Support and the other sections. Each area opens on a landing page with a short row of links to the pages inside it.",
         "The home page offers three ways in: Learn, Apply a tool, and Communities. Near the bottom, a finder takes you to resources for your task, and a box lets you type a question for Ask. It also lists the next observances from the Culture Calendar and has a link for leaders, supervisors, managers and directors.",
-        "Not sure where to begin? The Start page asks three short questions about your role, your work and your timing, then suggests a place to begin and explains why it fits. Nothing you choose there is saved or shared."
+        "Not sure where to begin? The Start page asks three short questions about your role, your work and your timing, then suggests a place to begin and explains why it fits."
       ],
       "links": [
         [
@@ -144,7 +144,7 @@ export const USER_GUIDE = {
       "id": "save-return",
       "title": "Save your place and return",
       "paras": [
-        "My work gathers your saved resources, plans and places in the self-directed courses. Saved work stays in this browser on this device; another device, a private window or clearing browser data will not keep it.",
+        "My work gathers your saved resources, plans and places in the self-directed courses.",
         "Use My view to review or remove what this browser has saved. Some worksheets clear when you reload, so download or print them before leaving."
       ],
       "links": [

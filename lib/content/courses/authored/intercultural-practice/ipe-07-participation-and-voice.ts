@@ -45,7 +45,7 @@ const pack: CoursePack = {
         "A change in ADA Title II effective-communication requirements, in Minnesota's accessibility standard for state digital content, or in language-access direction under Title VI",
         "Feedback from staff using this module that an example here reads as unrealistic, tokenizing or disrespectful",
       ],
-      relatedDoor: "Formal decisions about convening an advisory body, appointing or compensating its members, issuing a public comment period, or engaging Tribal Nations belong to the responsible DHS offices, including the offices that handle appointments, contracts, civil rights and tribal matters; this module prepares your thinking and your draft, it does not authorize or clear an engagement.",
+      relatedDoor: "Formal decisions about convening an advisory body, appointing or compensating its members, issuing a public comment period, or engaging Tribal Nations belong to the people or areas responsible at DHS, including the areas that handle appointments, contracts, civil rights and tribal matters; this module prepares your thinking and your draft, it does not authorize or clear an engagement.",
       toolkitQuestion: "Whose expertise is missing from this decision, and what would it take to have them shape it rather than react to it?",
       status: "reviewed",
     },
@@ -98,7 +98,7 @@ const pack: CoursePack = {
           {
             type: "text",
             heading: "The distance between input and influence",
-            body: "<p>Public work has a standard move. A decision is developed internally, a draft is produced, and then people are invited to say what they think about it. The invitation is genuine, the staff who send it mean well, and the session often goes reasonably. Months later, the people who came look at what was published and cannot find themselves in it. Nothing dishonest happened at any single step. The outcome is still that a process was described as participatory and was not.</p><p>The gap is almost never caused by ill will. It is caused by sequence. By the time an engagement is convened, the approach has been chosen, the authority has been cited, the resources have been committed, and the effective date is on a calendar someone else controls. What is left to discuss is the wording. Asking people to weigh in at that point produces comments the division cannot use and a feeling the division cannot undo.</p><p>So the honest question is not how many people came or how many comments arrived. It is two plainer questions: what was still changeable when we asked, and what changed because of what we heard? A unit that can answer both, specifically, is doing participation. A unit that can only answer the first with a number is doing outreach.</p>",
+            body: "<p>Public work has a standard move. A decision is developed internally, a draft is produced, and then people are invited to say what they think about it. The invitation is genuine, the staff who send it mean well, and the session often goes reasonably. Months later, the people who came look at what was published and cannot find themselves in it. Nothing dishonest happened at any single step. The outcome is still that a process was described as participatory and was not.</p><p>The gap is almost never caused by ill will. It is caused by sequence. By the time an engagement is convened, the approach has been chosen, the authority has been cited, the resources have been committed, and the effective date is on a calendar someone else controls. What is left to discuss is the wording. Asking people to weigh in at that point produces comments the division cannot use and a feeling the division cannot undo.</p><p>So the honest question is not how many people came or how many comments arrived. It is two plainer questions: what was still changeable when people were asked, and what changed because of what they said? A unit that can answer both, specifically, is doing participation. A unit that can only answer the first with a number is doing outreach.</p>",
           },
           {
             type: "tabs",
@@ -132,13 +132,13 @@ const pack: CoursePack = {
               { text: "Listening sessions are never meaningful involvement; only formal advisory bodies count.", correct: false },
             ],
             feedbackCorrect: "Yes. Volume of input and degree of influence are different measurements, and only one of them tells you whether participation happened.",
-            feedbackIncorrect: "Ask the two questions that the comment count cannot answer: what was open when we asked, and what changed because of the answer?",
+            feedbackIncorrect: "Ask the two questions that the comment count cannot answer: what was open when people were asked, and what changed because of the answer?",
           },
           {
             type: "flashcards",
             heading: "Keep these in reach",
             cards: [
-              { front: "What is the honest test for participation?", back: "<p>Two questions. What was still changeable when we asked? What changed afterward because of what people said? A number of attendees answers neither.</p>" },
+              { front: "What is the honest test for participation?", back: "<p>Two questions. What was still changeable when people were asked? What changed afterward because of what people said? A number of attendees answers neither.</p>" },
               { front: "When is informing the right choice?", back: "<p>When the decision genuinely is settled — a statutory change, a court-ordered requirement, a budget already enacted. Explaining it clearly is good work. Calling it input is not.</p>" },
               { front: "What separates partnership from consultation?", back: "<p>A decision right. In partnership, something specific is jointly decided, with agreed scope and resources. Without that, it is consultation with a warmer name.</p>" },
               { front: "Why does the same advisory group need company?", back: "<p>Because a standing relationship gives you consistency, not range. Consistency from a partial set of voices reads as agreement and is not.</p>" },
@@ -371,7 +371,7 @@ const pack: CoursePack = {
           },
           {
             type: "statement",
-            body: "For your own notes: on the project in front of me, whose expertise is missing — and am I describing what we are offering people accurately, or more generously than it is?",
+            body: "For your own notes: on the project in front of me, whose expertise is missing — and am I describing what the team is offering people accurately, or more generously than it is?",
           },
         ],
       },
@@ -432,7 +432,7 @@ const pack: CoursePack = {
             title: "A presence and absence review",
             summary: "One page you run on a decision that is still changeable. Copy the six rows into your own document and fill them from a project you are working on now. The example below is filled in for a quality review, but the rows work for a policy change, a contract requirement, a communication or a redesign.",
             fields: [
-              { label: "The decision, in one sentence", value: "We are deciding how quality will be described and measured for a service, and what the agreements will require providers to report. The description we write will shape what counts as good for the next several years." },
+              { label: "The decision, in one sentence", value: "The team is deciding how quality will be described and measured for a service, and what the agreements will require providers to report. The description it writes will shape what counts as good for the next several years." },
               { label: "Who is affected by it", value: "People who use the service and people who tried to and stopped. Family members and support people. Direct support workers. Providers of different sizes, including small and culturally specific organizations. Lead agency staff. People who were found ineligible. People who use interpreters or communicate in ways the current process does not accommodate well." },
               { label: "Who is actually in the room", value: "Three provider representatives, two family members, one advocacy organization, two county staff, five division staff. Nobody who personally uses the service. No direct support workers. No small or culturally specific provider. Nobody who stopped using the service." },
               { label: "Where staff assumption is standing in for someone", value: "The draft finding that people decline the service after initial contact is explained entirely by a staff assumption about motivation. The definition of a successful outcome was written by staff from the agreements rather than from anyone's account of a good result. Both are currently unmarked in the draft and will be read as established." },
@@ -488,7 +488,7 @@ const pack: CoursePack = {
     use: {
       purpose: "Keep the honest test, the access decisions and the presence-and-absence review in view while you plan an engagement or finish a decision.",
       remember: [
-        "Two questions decide whether participation happened: what was still changeable when we asked, and what changed because of what we heard.",
+        "Two questions decide whether participation happened: what was still changeable when people were asked, and what changed because of what they said.",
         "There are five different offers — inform, consult, involve, partner, design together. Pick the one the situation actually supports, and call it by its own name.",
         "The test for partnership is a decision right you can point at. Without one, it is consultation with a warmer name.",
         "Access is decided in the planning meeting: invitation, channel, timing, location, format, materials, communication support, money. The accommodation line is a backstop, not a plan.",
@@ -519,7 +519,7 @@ const pack: CoursePack = {
           "Vary the day, the hour and the format across a series, and offer more than one way to contribute.",
           "Budget participant compensation, travel and care costs, and name who owns that line.",
           "Route the invitation through organizations people already trust, and name a real person to contact.",
-          "Engagement with Tribal Nations is a distinct government-to-government relationship: route it to the responsible DHS offices, including the Office of Indian Affairs, rather than treating it as community engagement.",
+          "Engagement with Tribal Nations is a distinct government-to-government relationship: route it to the people or areas responsible at DHS, including the Office of Indian Affairs, rather than treating it as community engagement.",
         ],
       },
       {

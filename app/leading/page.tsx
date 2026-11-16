@@ -75,7 +75,7 @@ export default async function LeadingPage({ searchParams }: { searchParams?: Pro
     </aside>
     <section className={styles.section} aria-labelledby="paths-title">
       <h2 id="paths-title">Suggested paths</h2>
-      <p>These suggested paths do not enroll you or report your progress to a supervisor. If you save progress, others using the same browser profile may be able to see it.</p>
+      <p>Each path is a suggested order through the courses.</p>
       <ul className={styles.doors}>
         {LEADING_PATHS.map(path => <li key={path.slug}><Link className={styles.door} href={`/leading/paths/${path.slug}`}>
           <span className={styles.doorTitle}>{path.title}</span>
@@ -100,6 +100,6 @@ export default async function LeadingPage({ searchParams }: { searchParams?: Pro
       {culturalLearningAvailable && <p><Link href="/learn/cultural-intelligence#leaders">Explore leadership approaches, power and inclusive practice</Link></p>}
       <p className="flex flex-wrap gap-x-6 gap-y-2"><Link href="/support/right-person">Find the person or area responsible</Link><Link href="/learn/collections">Collections for all staff</Link><Link href="/one-dsd/leadership">Equity leadership and growth</Link><Link href={TRIBAL_REFERRAL_HREF}>Native American and Tribal-specific guidance</Link></p>
     </Hub2More>
-    <details className={base.credit}><summary>About participation and privacy</summary><p>Please do not type anyone&apos;s name or details into Ask. Use general work questions and examples without confidential details. {LEADING_PRIVACY_SENTENCE}</p><ParticipationNotice surface="learning" /></details>
+    <details className={base.credit}><summary>About privacy</summary><p>Do not type anyone&apos;s name or details into Ask. Use general work questions and examples without confidential details.</p><ParticipationNotice surface="learning" /></details>
   </div></div>;
 }

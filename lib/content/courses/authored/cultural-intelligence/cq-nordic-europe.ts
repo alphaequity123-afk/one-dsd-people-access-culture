@@ -42,7 +42,7 @@ const pack: CoursePack = {
         "A new edition of a cited source"
       ],
       "relatedDoor": "These examples are practice. They are not an individual assessment, or authority to change a service requirement. Ask the person about preferences and check the actual work context.",
-      "toolkitQuestion": "What do we know from this person and this situation, what are we assuming, and what should we ask or verify next?",
+      "toolkitQuestion": "What do you know from this person and this situation, what are you assuming, and what should you ask or verify next?",
       "status": "reviewed"
     },
     "lessons": [
@@ -82,9 +82,9 @@ const pack: CoursePack = {
           ]
         },
         "transfer": {
-          "prompt": "What can we learn from a brief message, and what remains unknown?",
+          "prompt": "What can you learn from a brief message, and what remains unknown?",
           "options": [
-            "How can we explain an option clearly while respecting someone’s choice to decline?",
+            "How can you explain an option clearly while respecting someone’s choice to decline?",
             "What did the person actually tell you, and which part is still your interpretation?",
             "What requirement needs verification before you suggest a change?"
           ]
@@ -93,20 +93,20 @@ const pack: CoursePack = {
           {
             "type": "text",
             "heading": "Begin with curiosity about this person",
-            "body": "<p>It is easy to assume how much a new partner wants to say or hear. What can we learn from a brief message, and what remains unknown? Treat a first meeting the same way. Ask what would be useful, and take a short answer as an answer rather than as a mood.</p><p>Keep an eye on your own expectations. If warmth to you means a greeting and a little context, a brisk note may feel cold even when none was intended.</p>"
+            "body": "<p>It is easy to assume how much a new partner wants to say or hear. What can you learn from a brief message, and what remains unknown? Treat a first meeting the same way. Ask what would be useful, and take a short answer as an answer rather than as a mood.</p><p>Keep an eye on your own expectations. If warmth to you means a greeting and a little context, a brisk note may feel cold even when none was intended.</p>"
           },
           {
             "type": "text",
             "heading": "Why a chart doesn’t get you there",
-            "body": "<p>A cultural comparison is built from group-level results. It might remind you that people differ on this. It gives you no information about the partner’s preferences or how they will feel about your plan.</p><p>Keep three questions apart: What did the study report? What might it help us consider? What do we know about this situation? If you want to know where regional charts come from and why they can’t answer the last question, see the optional background course, <a href=\"/courses/cq-cluster-frameworks-foundations\">Optional background: where regional culture frameworks come from and what they cannot tell you</a>. You don’t need it to use this course.</p>"
+            "body": "<p>A cultural comparison is built from group-level results. It might remind you that people differ on this. It gives you no information about the partner’s preferences or how they will feel about your plan.</p><p>Keep three questions apart: What did the study report? What might it help you consider? What do you know about this situation? If you want to know where regional charts come from and why they can’t answer the last question, see the background course <a href=\"/courses/cq-cluster-frameworks-foundations\">Where regional culture frameworks come from and what they cannot tell you</a>.</p>"
           },
           {
             "type": "list",
             "heading": "Questions for planning a clear exchange",
             "items": [
-              "What can we learn from a brief message, and what remains unknown?",
-              "How can we explain an option clearly while respecting someone’s choice to decline?",
-              "What would we need to ask or check before deciding that this approach will help?"
+              "What can you learn from a brief message, and what remains unknown?",
+              "How can you explain an option clearly while respecting someone’s choice to decline?",
+              "What would you need to ask or check before deciding that this approach will help?"
             ]
           },
           {

@@ -127,7 +127,7 @@ const pack: CoursePack = {
           options: [
             { label: "It looks professional and the deadline is prominent; send it.", response: "The deadline is inside an image, so a screen reader will never read it, a magnifier will blur it, and a translation tool will not find it. The most important fact on the page is invisible to the people who most need it." },
             { label: "Rebuild it as a real text document: the deadline and the action in the first two lines, a heading for each step, a plain font, the photo kept only if it adds meaning and given alt text, and the link written as the name of the page it opens. Then keep that layout as the template.", response: "The notice now works for screen readers, magnifiers, translation and everyone reading in a hurry, and the next notice inherits the fix.", recommended: true },
-            { label: "Send it as is and add a line inviting anyone who needs a different format to call the office.", response: "An accessible format on request is a lawful backstop, not a substitute for a notice that could have been readable to begin with. The people who cannot read the notice cannot read the invitation either." },
+            { label: "Send it as is and add a line inviting anyone who needs a different format to call and ask for one.", response: "An accessible format on request is a lawful backstop, not a substitute for a notice that could have been readable to begin with. The people who cannot read the notice cannot read the invitation either." },
           ],
         },
         transfer: {
@@ -227,11 +227,11 @@ const pack: CoursePack = {
         summary: "Walk through a meeting invitation, a web form, a PDF, a training video and a community event; find the barriers, pair each with a fix, and decide what you own and what to route.",
         minutes: 12,
         learning: {
-          objective: "Walk through five everyday artifacts, identify at least five barriers, pair each with a corrective action at the source, and distinguish what you can fix from what to route to the responsible office.",
+          objective: "Walk through five everyday artifacts, identify at least five barriers, pair each with a corrective action at the source, and distinguish what you can fix from what to route to the person or area responsible.",
           takeaways: [
             "Barriers cluster in predictable places: images posing as text, missing labels and captions, time limits, rooms without a step-free path, and plans that assume everyone can hear and climb.",
             "A corrective action changes the thing that creates the barrier; anything that leaves the barrier in place and moves the cost to the person is not a fix.",
-            "Most barriers in a workday can be fixed by the person who created them. The rest have an owner and a responsible office, and both deserve a specific, written note.",
+            "Most barriers in a workday can be fixed by the person who created them. The rest have an owner and a person or area responsible, and both deserve a specific, written note.",
           ],
           evidence: "A completed walkthrough with at least five barriers and a corrective action for each, and the final knowledge check for the course.",
           appliedNextStep: "Do the same walkthrough on five real items from your own unit this month and fix or route each one.",
@@ -259,7 +259,7 @@ const pack: CoursePack = {
             { title: "Community event", body: "<p><strong>Barriers:</strong> second-floor room reached by stairs; sign-in sheet in small type on a high table; no quiet space; no plan for an evacuation alarm that Deaf attendees cannot hear; parking two blocks away with no accessible spaces near the entrance.</p><p><strong>Fixes:</strong> move to a ground-floor room with step-free egress; provide a large-print sign-in and a lowered table, or have a greeter sign people in; designate a quiet room; confirm visual alarms and an assisted evacuation plan with the venue; arrange accessible parking or drop-off at the entrance.</p>" },
           ] },
           { type: "leaderMove", heading: "Write the barrier down with an owner", control: "You control whether a barrier you noticed becomes a note with an owner and a date or a comment that evaporates.", failure: "Do not say “the form is a bit hard to use” in a hallway. Say “the upload is drag-and-drop only and the timeout is five minutes; both need to change before the session on the date we agreed,” in writing, to the owner.", next: "For every barrier you find this month, write one line: what, where, the fix, the owner, the date." },
-          { type: "list", heading: "Immediate fix, source fix", ordered: true, items: ["Name the barrier specifically: what stops whom, where.", "Provide an immediate path if someone is waiting: an accessible copy, a phone option, a different room today.", "Fix the source if you own it: the template, the setting, the booking default.", "If you do not own it, send the owner the barrier, the fix and the date, and copy the responsible office when a standard or a building is involved.", "Check back on the date. A fix that was promised is not a fix."] },
+          { type: "list", heading: "Immediate fix, source fix", ordered: true, items: ["Name the barrier specifically: what stops whom, where.", "Provide an immediate path if someone is waiting: an accessible copy, a phone option, a different room today.", "Fix the source if you own it: the template, the setting, the booking default.", "If you do not own it, send the owner the barrier, the fix and the date, and copy the person or area responsible when a standard or a building is involved.", "Check back on the date. A fix that was promised is not a fix."] },
           { type: "flashcards", heading: "Barrier, fix", cards: [
             { front: "Image PDF", back: "<p>Fix: rebuild from the source with real text and heading styles; export tagged; post the source too. Not a fix: “call us for another format.”</p>" },
             { front: "Unlabeled form fields", back: "<p>Fix: visible labels on every field, text marking for required fields, clear error messages. Not a fix: a help line for people who cannot complete it.</p>" },

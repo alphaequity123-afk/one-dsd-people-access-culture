@@ -8,7 +8,7 @@ const moments = [
     description: "A facilitator passes around a revised two-page summary. This is the first time the group has received this version.",
     speaker: "Facilitator", dialogue: "Here is the revised summary. Let's choose an option at ten." },
   { title: "A request is made", time: "One minute before the planned decision",
-    description: "A participant asks for the file and time to read it. The scenario does not tell us why they need either.",
+    description: "A participant asks for the file and time to read it. The scenario does not say why they need either.",
     speaker: "Participant", dialogue: "Could you send me the file? I need more time to read this version." },
   { title: "The decision is still open", time: "At the planned decision time",
     description: "No option has been selected. The facilitator asks what is needed before the group decides.",
@@ -21,7 +21,7 @@ const openingNotes = [
   { id: "motive", label: "The facilitator did not care whether everyone could take part.",
     response: "The timing may create a barrier, but the scene does not establish what the facilitator cared about. Record when the summary arrived and what the participant requested, then examine the process." },
   { id: "ability", label: "The participant was not able to keep up with the group.",
-    response: "A request for a file and more time does not establish a person's ability. The scene gives us a format, a short reading period and a request. Start there and ask what would make participation workable." },
+    response: "A request for a file and more time does not establish a person's ability. The scene gives you a format, a short reading period and a request. Start there and ask what would make participation workable." },
 ] as const;
 
 /** One generated practice still plus original text; no video, timing, tracking or course storage. */
@@ -35,7 +35,7 @@ export function CriticalIncidentScene() {
 
   return <section aria-labelledby={uid + "-heading"} className="my-8 overflow-hidden rounded-2xl border border-[#8ea2b5] bg-[#f4f7f9]">
     <div className="p-5 sm:p-8">
-      <p className="text-sm font-semibold uppercase tracking-wider text-[#005ea8]">Practice scene · optional practice</p>
+      <p className="text-sm font-semibold uppercase tracking-wider text-[#005ea8]">Practice scene</p>
       <h2 id={uid + "-heading"} className="mt-3 text-2xl font-bold text-[#123f60] sm:text-3xl">The papers arrive just before the decision</h2>
       <p className="mt-4 leading-7">Use the scene to practice the lesson’s four lines. Look for the timing, materials and requests that can be described. The dialogue below supplies the facts of this practice event.</p>
     </div>

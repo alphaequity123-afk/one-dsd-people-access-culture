@@ -23,7 +23,7 @@ export function build(spec: PracticeCourse): CoursePack {
       introAudio:podcast?.src,introTranscript:podcast?.transcript,
       coverImage:spec.image,coverAlt:spec.alt,kind:'course',contentType:'practice',
       learning:{objectives:spec.lessons.map(l=>l.objective),evidence:['Explain your reasoning in the lesson decisions.','Use the final practice challenge to prepare and check a response.','Revisit one change after trying it in your work.'],appliedNextStep:'Choose a situation you recognize, explore a response, and leave with a guide you can use at work.'},
-      governance:{contentOwner:'Equity and Inclusion Operations Consultant',reviewers:[],evidenceDate:'2026-10-22',lastReviewed:'Research and authoring review, October 22, 2026; independent subject-matter review not recorded',nextReview:'April 2027 or sooner if relevant guidance changes',updateTriggers:['Changed research or agency guidance','Feedback about accessibility, accuracy, or stereotyping'],relatedDoor:'Use the appropriate agency office for policy, employment, accommodation, safety, or civil-rights matters.',toolkitQuestion:'Whose experience, choices, and access could this decision affect?',status:'current'},
+      governance:{contentOwner:'Equity and Inclusion Operations Consultant',reviewers:[],evidenceDate:'2026-10-22',lastReviewed:'Research and authoring review, October 22, 2026; independent subject-matter review not recorded',nextReview:'April 2027 or sooner if relevant guidance changes',updateTriggers:['Changed research or agency guidance','Feedback about accessibility, accuracy, or stereotyping'],relatedDoor:'Use the person or area responsible in the agency for policy, employment, accommodation, safety, or civil-rights matters.',toolkitQuestion:'Whose experience, choices, and access could this decision affect?',status:'current'},
       lessons:spec.lessons.map((l,i):Lesson=>{
         // Rotate the correct choice while keeping feedback attached to its answer.
         const order=[0,1,2].map(j=>(j+i)%3);
@@ -40,7 +40,7 @@ export function build(spec: PracticeCourse): CoursePack {
           ]};
       }),
     },
-    jobAid:{title:`${spec.title}: practice guide`,subtitle:spec.subtitle,use:{purpose:'Keep these questions nearby when you want to prepare a conversation or think through a next step.',remember:['Ask rather than assume.','Keep participation and personal reflection voluntary.','Check both the interaction and the conditions that shape it.'],doNext:'Choose one change within your responsibility, agree on a review point, and use what you learn to adjust it.'},sections:spec.aid},
+    jobAid:{title:`${spec.title}: practice guide`,subtitle:spec.subtitle,use:{purpose:'Keep these questions nearby when you want to prepare a conversation or think through a next step.',remember:['Ask rather than assume.','Check both the interaction and the conditions that shape it.'],doNext:'Choose one change within your responsibility, agree on a review point, and use what you learn to adjust it.'},sections:spec.aid},
     sources:spec.sources,
   };
 }
@@ -50,6 +50,6 @@ export const research = {
   measurement:{title:'O’Connor and colleagues (2019) — The Measurement of Emotional Intelligence',href:'https://doi.org/10.3389/fpsyg.2019.01116',note:'Review of ability, trait, and mixed approaches and their measurement limits. Course completion is not an emotional-intelligence score.'},
   values:{title:'Sagiv and Schwartz (2022) — Personal Values Across Cultures',href:'https://doi.org/10.1146/annurev-psych-020821-125100',note:'Research review of value priorities, compatibility, conflict, and behavior. Group patterns do not determine an individual’s preferences.'},
   humility:{title:'AHRQ — Consider Culture',href:'https://www.ahrq.gov/health-literacy/improve/precautions/tool10.html',note:'Healthcare guidance on asking about individual preferences and cultural humility; the public-service cases here are original learning examples.'},
-  clas:{title:'HHS Office of Minority Health — National CLAS Standards',href:'https://thinkculturalhealth.hhs.gov/clas',note:'A framework for culturally and linguistically appropriate services. Check applicable agency requirements with the responsible office.'},
+  clas:{title:'HHS Office of Minority Health — National CLAS Standards',href:'https://thinkculturalhealth.hhs.gov/clas',note:'A framework for culturally and linguistically appropriate services. Check applicable agency requirements with the person or area responsible.'},
   workshop:{title:'Cultural Intelligence Workshop Cohort 1 — adaptation credit',href:'/learn/emotions-and-values#sources',note:'The cultural-values reflection course adapts concepts and reflection topics from a DHS workshop presented by Verona Mitchell (slides dated October 19, 2021). The original workshop is retired from the learning catalog. No proprietary profile, assessment items, or certification is reproduced.'},
 };

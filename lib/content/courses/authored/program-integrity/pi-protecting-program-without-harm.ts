@@ -235,8 +235,8 @@ const pack: CoursePack = {
       doNext: "Run your next program integrity communication through the toolkit's first two stages before it goes out.",
     },
     sections: [
-      { heading: "Before a notice goes out, ask", items: ["Have we named the actual action accurately, without inflating or minimizing it?", "Who does this affect differently, and have we accounted for it?", "Is there a real way for someone to ask a question and get an answer from a person?", "After this goes out, how will we know if it worked?"] },
-      { heading: "Read your own draft as the reader would", items: ["Have we said clearly what is not changing right now?", "Have we given an honest, specific timeframe for what's still open?", "Is the contact a named person, not just a general office?"] },
+      { heading: "Before a notice goes out, ask", items: ["Is the actual action named accurately, without inflating or minimizing it?", "Who does this affect differently, and has that been accounted for?", "Is there a real way for someone to ask a question and get an answer from a person?", "After this goes out, how will you know if it worked?"] },
+      { heading: "Read your own draft as the reader would", items: ["Does it say clearly what is not changing right now?", "Does it give an honest, specific timeframe for what's still open?", "Is the contact a named person, not just a general office?"] },
       { heading: "What this course does not replace", items: ["The official equity analysis toolkit process for an actual policy or budget decision.", "Program integrity's own investigative procedures and legal standards.", "Legal review of any specific provider action or communication."] },
     ],
   },

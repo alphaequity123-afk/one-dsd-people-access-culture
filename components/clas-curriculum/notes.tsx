@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import { assemblePlan, clearNotes, planText, readAllNotes, readNote, writeNote, type PlanModule } from '@/lib/learning/clas-notes';
 import { downloadText } from './download';
 
-export const NOTE_PRIVACY = 'Your note is saved in this browser profile when browser storage is available. Someone using the same profile may be able to read it. Clearing browser data can remove it; downloaded or printed copies are separate. The working-note feature does not submit your note to supervisors or program staff. Do not include names, case details or other private information.';
+export const NOTE_PRIVACY = 'Do not include names, case details or other private information.';
 
 type NoteProps = { moduleId: string; title: string; prompt: string; allModuleIds: string[]; onChange?: () => void };
 

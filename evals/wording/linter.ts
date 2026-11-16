@@ -89,11 +89,23 @@ export const SYSTEM_NOTICE_SENTENCES = [
 
 const escape = (text: string) => text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
-/** A match counts only when its sentence also passes this test (when given). */
-type Pattern = { rule: RuleId; re: RegExp; message: string; sentence?: RegExp };
+/**
+ * sentence: the match counts only when its sentence (the match itself, for sentence-wide patterns) passes this test.
+ * word: where to point inside a sentence-wide match. skip: the match does not count when the sentence up to and
+ * including the match passes this test (reported speech, a promise the lesson warns against, a time clause in a story).
+ */
+type Pattern = { rule: RuleId; re: RegExp; message: string; sentence?: RegExp; word?: RegExp; skip?: RegExp };
 
 /** Words that show a sentence is about taking part in learning, practice or the program. */
 const PARTICIPATION_CONTEXT = /\b(?:participat\w*|learning|lessons?|courses?|modules?|reflect\w*|practice|exercises?|activit(?:y|ies)|training|sessions?|listening|discussions?|credits?|scores?|completion|complete|required|requirement|mandatory|this (?:program|page|tool|section|resource|guide|course|lesson)|resources?|private(?:ly)?|share|sharing|disclos\w*)\b/i;
+/** A lesson about plain language contrasts required and optional steps; that is the subject, not a notice. */
+const REQUIRED_OPTIONAL_CONTRAST = /\brequired (?:and|or) optional\b|\boptional (?:and|or) required\b|\boptional\b[^.!?;]{0,30}\bor an? (?:required|mandatory)\b|\b(?:required|requirement)\s+(?:\w+\s+)?(?:from|with|to|or) an optional\b|\bvoluntary agenc(?:y|ies)\b/i;
+/** Words that show a sentence speaks to the reader about the reflection or the course itself. */
+const READER_CONTEXT = /\b(?:you|your|reflect\w*|insights?|private(?:ly)?|personal|practice|exercises?|self-understanding|lessons?|courses?|modules?|learning|this (?:page|tool|section|activity|session))\b/i;
+/** Story and lesson wording around a notice phrase: someone reports or promises it, or a time clause in a scenario. */
+const REPORTED_OR_PROMISED = /\b(?:says?|said|saying|noted|shows?|showed|reported|stated|promis\w*|assur\w*|guarantee\w*|claimed|conclud\w*|tells?|told|avoid\w*)\b|\b(?:after|when|once|before|until|whether)\s+(?:a|an|the|each|every)\s+\w+\s+(?:is|are|was|were)\b/i;
+/** What a course, lesson or practice is: the subject of a "does not certify" disclaimer about the course itself. */
+const COURSE_SUBJECT = "(?:(?:this|the|a|an|your|optional|private)\\s+)?(?:course|lesson|module|training|learning|reflection|toolkit exercise|exercise|activity|program|finishing (?:it|this|the course|the lesson)|completing (?:it|this|them|the course|the lessons?))";
 
 const ROLE = "responsible|appropriate|right|proper|designated|authorized|relevant|applicable|correct";
 const PATTERNS: Pattern[] = [
@@ -109,11 +121,22 @@ const PATTERNS: Pattern[] = [
   { rule: "retired-terms", re: /\bdiversity,\s+equity,?\s+(?:and|&)\s+inclusion\b|\bdiversity,\s+equity,\s+inclusion,?\s+(?:and|&)\s+accessibility\b/gi, message: "spelled-out DEI or DEIA term outside an official name" },
   // System and participation notices.
   // "voluntary" and "optional" count when the sentence is about taking part in learning (not, say, a voluntary agency).
-  { rule: "system-notices", re: new RegExp(`[^.!?\\n]*\\b(?:voluntar(?:y|ily)|optional(?:ly)?|self-paced)\\b[^.!?\\n]*`, "gi"), message: "participation language (voluntary, optional, self-paced)", sentence: PARTICIPATION_CONTEXT },
+  { rule: "system-notices", re: new RegExp(`[^.!?\\n]*\\b(?:voluntar(?:y|ily)|optional(?:ly)?|self-paced)\\b[^.!?\\n]*`, "gi"), message: "participation language (voluntary, optional, self-paced)", sentence: PARTICIPATION_CONTEXT, word: /\b(?:voluntar(?:y|ily)|optional(?:ly)?|self-paced)\b/i, skip: REQUIRED_OPTIONAL_CONTRAST },
   { rule: "system-notices", re: /\btraining credits?\b|\bcompletion certificates?\b|\bcertificates? of completion\b|\bcompletion requirements?\b/gi, message: "training credit or completion notice" },
-  { rule: "system-notices", re: /\b(?:nothing|no record|no copy|no data|no answers?|none of (?:this|it|your \w+))\b[^.!?;]{0,80}?\b(?:saved|stored|recorded|tracked|logged|kept|sent|collected|counted|shared)\b/gi, message: "notice about what is or is not saved, recorded or sent" },
-  { rule: "system-notices", re: /\b(?:your|answers?|responses?|progress|notes?|choices?|reflections?|questions?|selections?|entries|activity|what you (?:type|write|enter|choose))\b[^.!?;]{0,40}?\b(?:is|are|stays?|remains?|will be|won't be|isn't|aren't)\s+(?:not\s+|never\s+|only\s+)?(?:saved|stored|recorded|tracked|logged|kept|sent|on (?:your|this) (?:device|computer|browser))\b/gi, message: "notice about what is or is not saved, recorded or kept" },
+  { rule: "system-notices", re: /\b(?:nothing|no record|no copy|no data|no answers?|none of (?:this|it|your \w+))\b[^.!?;]{0,80}?\b(?:saved|stored|recorded|tracked|logged|kept|sent|collected|counted|shared)\b/gi, message: "notice about what is or is not saved, recorded or sent", skip: REPORTED_OR_PROMISED },
+  { rule: "system-notices", re: /\b(?:your|answers?|responses?|progress|notes?|choices?|reflections?|questions?|selections?|entries|activity|what you (?:type|write|enter|choose))\b[^.!?;]{0,40}?\b(?:is|are|stays?|remains?|will be|won't be|isn't|aren't)\s+(?:not\s+|never\s+|only\s+)?(?:saved|stored|recorded|tracked|logged|kept|sent|on (?:your|this) (?:device|computer|browser))\b/gi, message: "notice about what is or is not saved, recorded or kept", skip: REPORTED_OR_PROMISED },
   { rule: "system-notices", re: /\bstays? (?:only )?(?:on|in) (?:your|this) (?:device|computer|browser)\b|\bkeeps? no (?:record|copy)\b|\bno sign-?in (?:is )?(?:needed|required)\b|\bwithout signing in\b/gi, message: "promise announced as a notice (kept, not announced)" },
+  // Unrecorded reflection, "not recorded", scores and grades: notices about the course or the reflection itself.
+  { rule: "system-notices", re: /[^.!?;\n]*\bunrecorded\b[^.!?;\n]*/gi, message: "notice that a reflection is unrecorded (write the reflection task itself)", sentence: READER_CONTEXT, word: /\bunrecorded\b/i },
+  { rule: "system-notices", re: /[^.!?;\n]*\b(?:is|are|will be|won't be|stays?|remains?)\s+(?:not|never)\s+recorded\b[^.!?;\n]*/gi, message: "notice about what is not recorded", sentence: READER_CONTEXT, word: /\b(?:not|never)\s+recorded\b/i, skip: REPORTED_OR_PROMISED },
+  { rule: "system-notices", re: /[^.!?;\n]*\b(?:no|without(?: a| any)?)\s+(?:scores?|scoring|grades?|grading)\b[^.!?;\n]*/gi, message: "notice that nothing is scored or graded", sentence: /^\W*no (?:scores?|grades?)\W*$|\b(?:kept|keeps|given|counted|still|ranking|pass|fail|completion|reflect\w*|practice|exercises?|checklists?|quiz\w*|lessons?|courses?|modules?|learning|answers?)\b/i, word: /\b(?:no|without(?: a| any)?)\s+(?:scores?|scoring|grades?|grading)\b/i, skip: REPORTED_OR_PROMISED },
+  { rule: "system-notices", re: /\b(?:is|are|will be)\s+not\s+(?:scored|graded|marked)\b|\bnot scored\b|\bungraded\b/gi, message: "notice that nothing is scored or graded" },
+  // Certification, required-training and work-product disclaimers about the course itself.
+  { rule: "system-notices", re: new RegExp(`\\b${COURSE_SUBJECT}\\s+(?:does not|doesn['’]t|will not|cannot|is not meant to)\\s+certify\\b`, "gi"), message: "\"does not certify\" disclaimer about the course (keep only a real duty)" },
+  { rule: "system-notices", re: /[^.!?;\n]*\b(?:is |are )?not (?:a )?certifications?\b[^.!?;\n]*/gi, message: "\"not a certification\" disclaimer about the course", sentence: /\b(?:courses?|lessons?|modules?|training|learning|exercises?|examples?|practice|routines?)\b/i, word: /\bnot (?:a )?certifications?\b/i },
+  { rule: "system-notices", re: /\bdoes not (?:replace|substitute for|count (?:as|toward))\s+(?:any\s+)?(?:required|mandatory|formal)\s+(?:training|learning|courses?)\b/gi, message: "required-training disclaimer" },
+  { rule: "system-notices", re: /\bno\b[^.!?;\n]{0,60}?\b(?:work products?|work results?|disclosures?|biograph(?:y|ies)|signatures?)\b[^.!?;\n]{0,30}?\b(?:is|are|will be)\s+(?:required|needed|expected|necessary|asked for)\b|\b(?:imposes|requires|needs|asks for)\s+no\s+(?:live\s+|actual\s+|real\s+)?work (?:products?|results?)\b/gi, message: "participation disclaimer (no work product or disclosure is required)" },
+  { rule: "system-notices", re: /\bno one (?:needs|has|is (?:asked|required|expected)) to (?:disclose|share)\b(?![^.!?;\n]*\bto (?:receive|join|get|access|use|ask for)\b)/gi, message: "participation disclaimer (no one needs to disclose)" },
   // Status and program labels.
   { rule: "status-labels", re: /\bcoming soon\b|\bto be (?:determined|announced|confirmed)\b|\bunder construction\b|\blorem ipsum\b|\bnot yet available\b|\bplaceholder\b/gi, message: "status label" },
   { rule: "status-labels", re: /\bTB[DA]\b/g, message: "status label (TBD/TBA)" },
@@ -252,17 +275,25 @@ export function lintText(text: string, options: LintOptions): Finding[] {
   if (BRAND_HINT.test(masked)) for (const finding of lintStaffCopy(masked, { allowInternal: true })) {
     if (finding.code === "model_brand") findings.push({ rule: "banned-words", match: finding.match.trim(), index: finding.index, message: `"${finding.match.trim()}": banned word or model brand in visible text` });
   }
+  // A status label quoted from someone else's website ("Coming Soon") or a line a character says in a story
+  // ("Our optional lunch…") is reported speech, not a program label or notice.
+  const quotedOut = outsideQuotes(masked);
   for (const pattern of PATTERNS) {
     pattern.re.lastIndex = 0;
-    // A status label quoted from someone else's website ("Coming Soon") is reported speech, not a program label.
-    for (const m of (pattern.rule === "status-labels" ? outsideQuotes(masked) : masked).matchAll(pattern.re)) {
-      if (pattern.sentence) {
-        if (!pattern.sentence.test(m[0])) continue;
-        const word = /\b(?:voluntar(?:y|ily)|optional(?:ly)?|self-paced)\b/i.exec(m[0]);
-        findings.push({ rule: pattern.rule, match: word?.[0] ?? m[0].trim(), index: (m.index ?? 0) + (word?.index ?? 0), message: pattern.message });
+    const source = pattern.rule === "status-labels" || pattern.rule === "system-notices" ? quotedOut : masked;
+    for (const m of source.matchAll(pattern.re)) {
+      const at = m.index ?? 0;
+      if (pattern.sentence && !pattern.sentence.test(m[0])) continue;
+      if (pattern.skip) {
+        const start = Math.max(source.lastIndexOf(".", at - 1), source.lastIndexOf("!", at - 1), source.lastIndexOf("?", at - 1), source.lastIndexOf("\n", at - 1)) + 1;
+        if (pattern.skip.test(source.slice(start, at + m[0].length))) continue;
+      }
+      if (pattern.word) {
+        const word = pattern.word.exec(m[0]);
+        findings.push({ rule: pattern.rule, match: word?.[0] ?? m[0].trim(), index: at + (word?.index ?? 0), message: pattern.message });
         continue;
       }
-      findings.push({ rule: pattern.rule, match: m[0], index: m.index ?? 0, message: pattern.message });
+      findings.push({ rule: pattern.rule, match: m[0], index: at, message: pattern.message });
     }
   }
   // The display rewrite in lib/content/responsible-wording.ts catches forms the patterns above may miss.
@@ -288,4 +319,4 @@ export function lintStandalone(text: string, allowlist = loadAllowlist(), option
   return lintText(text, { allowlist, acronyms: new AcronymTracker(allowlist.knownAcronyms), ...options });
 }
 
-export { escape as escapeRegExp };
+export { escape as escapeRegExp 

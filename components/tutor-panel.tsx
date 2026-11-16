@@ -32,7 +32,7 @@ export const GUIDANCE_COPY = {
   send: 'Send question',
   followUpDone: 'Thanks. That was your one question for this round.',
   readMore: 'Read more in the lesson',
-  notice: 'The guide sees the question and what you chose. Your progress stays on this device. Nothing is kept about who you are.',
+  notice: 'Leave out names and case details when you ask the guide a question.',
   strategy: {
     'socratic-hint': 'A question to think about',
     nudge: 'A short pointer',

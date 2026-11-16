@@ -1,13 +1,9 @@
 // @vitest-environment node
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import { readFile } from "node:fs/promises";
-import path from "node:path";
 import { NextRequest } from "next/server";
 import { getStore, resetStoreForTests } from "@/lib/intelligence/memory/store";
-import { readTutorTotals, recordTutorRound, tutorScopes } from "@/lib/tutor/counter-store";
 import { tutorItem } from "@/lib/tutor/items";
 import { fallbackReply } from "@/lib/tutor/prompt";
-import { PRACTICE_COUNTERS_ENABLED } from "@/lib/practice/equity-review-count";
 
 const provider = vi.hoisted(() => ({ generative: true, complete: vi.fn() }));
 vi.mock("@/lib/intelligence/providers", () => ({
@@ -151,16 +147,13 @@ describe("guidance endpoint", () => {
     expect(provider.complete).not.toHaveBeenCalled();
   });
 
-  it("counts nothing while One DSD's database cannot hold practice totals", async () => {
+  it("counts and keeps nothing from a guidance round", async () => {
     // The store has no counter at all (owner rule 2026-11-16: not even anonymous totals).
     expect("counter" in getStore()).toBe(false);
     const request = post({ ...base, learnerMessage: "My name is Pat and I work in Hennepin." });
     request.headers.set("x-forwarded-for", "203.0.113.9");
     expect((await POST(request)).status).toBe(200);
     expect((await POST(post({ ...base, chosenIndex: right, attemptNumber: 2, strategy: "stop" }))).status).toBe(200);
-    expect(PRACTICE_COUNTERS_ENABLED).toBe(false);
-    expect(await recordTutorRound({ lessonId: "01", itemId: "01", attemptNumber: 1, correct: true, strategy: "stop" })).toBe(false);
-    expect(await readTutorTotals()).toBeNull();
     for (const kind of ["consult_request", "decision", "eval_result", "collaboration_workspace"] as const) expect(await getStore().list(kind)).toEqual([]);
     expect(await getStore().listAudit()).toEqual([]);
   });
@@ -170,20 +163,5 @@ describe("guidance endpoint", () => {
     const refused = await POST(post(base));
     expect(refused.status).toBe(429);
     expect(refused.headers.get("retry-after")).toBeTruthy();
-  });
-});
-
-describe("guidance counter contract", () => {
-  it("stays off because the One DSD counter table accepts only consultation reference numbers", async () => {
-    const sql = await readFile(path.join(process.cwd(), "db/standalone/bootstrap.sql"), "utf8");
-    const block = sql.slice(sql.lastIndexOf("add constraint runtime_counters_registered_scope"));
-    const patterns = [...block.slice(0, block.indexOf(";")).matchAll(/scope ~ '([^']+)'/g)].map(match => new RegExp(match[1]));
-    expect(patterns.length).toBeGreaterThan(0);
-    const allowed = (scope: string) => patterns.some(pattern => pattern.test(scope));
-    expect(allowed("cr:20261103")).toBe(true);
-    const scopes = tutorScopes({ lessonId: "01", itemId: "01", attemptNumber: 1, correct: true, strategy: "nudge" }, new Date());
-    expect(scopes.length).toBe(4);
-    // If the database starts accepting these keys, counting can be turned on.
-    for (const scope of scopes) expect(allowed(scope), scope).toBe(PRACTICE_COUNTERS_ENABLED);
   });
 });

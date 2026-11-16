@@ -130,7 +130,7 @@ export async function CommunityDesignPage({ id, part }: { id: string; part?: str
   // All recovered chapters remain available in the brief. Learning brings full
   // readings alongside three objectives and a reflection, rather than replacing
   // the source material with short question-only summaries.
-  const lessonHistory = <section><h2>History and the decisions we make today</h2><h3>In this lesson</h3><ul>
+  const lessonHistory = <section><h2>History and the decisions made today</h2><h3>In this lesson</h3><ul>
       <li>Connect a historical condition described in the brief to a present-day service question.</li>
       <li>Distinguish community-level context from an individual’s circumstances.</li>
       <li>Identify evidence needed before changing a service requirement.</li>
@@ -157,7 +157,7 @@ export async function CommunityDesignPage({ id, part }: { id: string; part?: str
   const downloads = available ? <div className="community-download-links"><ResourceDownloads kind="community" id={id} noun="page" appearance="links" /></div> : null;
   const spotlightSection = spotlight && surface ? <section className="community-spotlight"><h2>{spotlight}</h2><p>{stringValue(surface.values, "spotlightBody")}</p><SourceLink href={stringValue(surface.values, "spotlightHref")}>{stringValue(surface.values, "spotlightLinkLabel")}</SourceLink></section> : null;
   const reflection = surface && stringValue(surface.values, "reflectionBody") ? <details className="community-opening-reflection"><summary>{stringValue(surface.values, "reflectionTitle")}</summary><div><p>{stringValue(surface.values, "reflectionBody")}</p></div></details> : null;
-  const aside = <aside><Link href="/minnesota-communities">Minnesota Communities</Link><p>History, everyday life, and the connections that shape our work.</p></aside>;
+  const aside = <aside><Link href="/minnesota-communities">Minnesota Communities</Link><p>History, everyday life, and the connections that shape the work.</p></aside>;
   const wrap = (content: ReactNode) => {
     const readings = readingSurface ? <EditableSurfaceRegion surface={readingSurface}>{content}</EditableSurfaceRegion> : content;
     return surface ? <EditableSurfaceRegion surface={surface}>{readings}</EditableSurfaceRegion> : readings;
@@ -182,7 +182,7 @@ export async function CommunityDesignPage({ id, part }: { id: string; part?: str
         {aside}
         <article>
           <p className="community-eyebrow">Minnesota Communities</p><h1>{title}</h1>
-          {(NATIVE_DEFERENCE_COMMUNITY_IDS as readonly string[]).includes(id) ? <Notice tone="info">This program defers to the Office of Indian Affairs and to the Department of Human Services offices that handle Tribal relations and consultation for anything concerning Native American individuals, communities, or Tribal Nations. That deference is standing, not a brief under construction — this program does not complete or expand this content on its own. For anything substantive, contact the Office of Indian Affairs or the Department of Human Services offices that handle Tribal relations and consultation directly.</Notice> : null}
+          {(NATIVE_DEFERENCE_COMMUNITY_IDS as readonly string[]).includes(id) ? <Notice tone="info">This program defers to the Office of Indian Affairs and to the Department of Human Services offices that handle Tribal relations and consultation for anything concerning Native American individuals, communities, or Tribal Nations. That deference is standing: this program does not complete or expand this content on its own. For anything substantive, contact the Office of Indian Affairs or the Department of Human Services offices that handle Tribal relations and consultation directly.</Notice> : null}
           {opening ? <p className="community-opening">{opening}</p> : null}
           {spotlightSection}
           {downloads}
@@ -201,7 +201,7 @@ export async function CommunityDesignPage({ id, part }: { id: string; part?: str
   const collection = collectionAddition ? await publishedCommunityAddition(id, research) : null;
   const bodies: Record<CommunityPartSlug, { sections: Array<string | false | null | undefined | 0>; body: ReactNode }> = {
     history: { sections: [history && "History, culture, and life today", context && "More context for your work", observances && "Observances at work"], body: <>{history}{context}{observances}</> },
-    learning: { sections: ["History and the decisions we make today", "Family, identity, and individual experience", "From understanding to an equity analysis"], body: <>{lessonHistory}{lessonIdentity}{lessonEquity}</> },
+    learning: { sections: ["History and the decisions made today", "Family, identity, and individual experience", "From understanding to an equity analysis"], body: <>{lessonHistory}{lessonIdentity}{lessonEquity}</> },
     "working-with": { sections: [practice && practiceTitle, "Before you reach out", "Continue the connection"], body: <>{practice}<CommunityBeforeOutreachSection id={id} />{links}</> },
     numbers: { sections: ["Numbers, with care"], body: <CommunityNumbersSection id={id} /> },
     organizations: { sections: ["Organizations connected with the Disability Services Division"], body: <CommunityOrganizationsSection id={id} title={title} /> },

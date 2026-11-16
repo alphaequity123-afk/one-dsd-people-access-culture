@@ -114,7 +114,7 @@ const pack: CoursePack = {
           },
           {
             type: "accordion",
-            heading: "Four arrangements we inherited and still administer",
+            heading: "Four arrangements the state inherited and still administers",
             items: [
               { title: "Rationing, and the waiting list as a normal object", body: "<p>A waiting-time average can hide differences in people’s experiences. Ask what the measure includes, who is still waiting and whether available information can show meaningful differences across locations or service routes. Use the relevant data and its limits rather than assuming the average tells the whole story.</p>" },
               { title: "Eligibility built on proving deficit", body: "<p>When the decision was whether to admit someone to an institution, establishing incapacity was the point of the assessment. Community services need a different question — what does this person want, and what support makes it possible — but many assessments still open by asking a person to document, often annually, what they cannot do. People describe this as having to fail well enough to qualify. It is a design inherited from a different purpose.</p>" },
@@ -153,7 +153,7 @@ const pack: CoursePack = {
           },
           {
             type: "statement",
-            body: "Private reflection, kept by you and recorded nowhere: think of one requirement you administer that you would find hard to justify to a person outside this agency. What would you need to know about where it came from before you could either defend it or change it?",
+            body: "Private reflection: think of one requirement you administer that you would find hard to justify to a person outside this agency. What would you need to know about where it came from before you could either defend it or change it?",
           },
         ],
       },
@@ -265,7 +265,7 @@ const pack: CoursePack = {
           },
           {
             type: "statement",
-            body: "Private reflection, kept by you: think of a program measure you trust. If it were broken out by race, language and county, which result would surprise you, and which would you rather not see? Neither answer goes anywhere but your own notes.",
+            body: "Private reflection: think of a program measure you trust. If it were broken out by race, language and county, which result would surprise you, and which would you rather not see? Neither answer goes anywhere but your own notes.",
           },
         ],
       },
@@ -366,7 +366,7 @@ const pack: CoursePack = {
           },
           {
             type: "statement",
-            body: "Private reflection, kept by you: think of a time you were asked for input by an organization that never told you what happened to it. What did you conclude, and what would have changed your mind? Keep personal reflections in your own notes.",
+            body: "Private reflection: think of a time you were asked for input by an organization that never told you what happened to it. What did you conclude, and what would have changed your mind?",
           },
         ],
       },
@@ -448,7 +448,7 @@ const pack: CoursePack = {
               { text: "Include an acknowledgment of past exclusion in the launch announcement.", category: "Explains the design" },
               { text: "Brief the leadership team on the findings of the review.", category: "Explains the design" },
               { text: "Add a line to the notice inviting people to call if they find it hard to understand, leaving the notice itself unchanged.", category: "Moves the work onto the person" },
-              { text: "Ask community organizations to explain the new process to their members on our behalf, with no funding attached.", category: "Moves the work onto the person" },
+              { text: "Ask community organizations to explain the new process to their members on the division's behalf, with no funding attached.", category: "Moves the work onto the person" },
               { text: "Tell applicants they may request an extension if the documentation deadline is difficult for them.", category: "Moves the work onto the person" },
             ],
           },
@@ -496,7 +496,7 @@ const pack: CoursePack = {
           },
           {
             type: "statement",
-            body: "Private reflection, kept by you and recorded nowhere: read your finished review as a person who has never worked inside this agency and who was affected by the arrangement you described. Does it say plainly what happened, what changed and what you are doing next — and which line would you rewrite first?",
+            body: "Private reflection: read your finished review as a person who has never worked inside this agency and who was affected by the arrangement you described. Does it say plainly what happened, what changed and what you are doing next — and which line would you rewrite first?",
           },
         ],
       },

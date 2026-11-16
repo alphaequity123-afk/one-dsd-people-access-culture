@@ -86,7 +86,7 @@ export const CULTURAL_INTELLIGENCE_SURFACE = defineEditableSurface({
     learnBook: "",
     exploreOwnCulture: "Consider the communities, experiences and workplaces that shape how you see the world, and stay open to what you may not have noticed.",
     exploreBook: "",
-    applyQuestions: "What assumptions might shape this decision? Who is affected, what access do they need, and whose perspective is missing? What can change, and who will tell us whether it helped?",
+    applyQuestions: "What assumptions might shape this decision? Who is affected, what access do they need, and whose perspective is missing? What can change, and who will report whether it helped?",
     applyRoutine: "Plan a next step, notice what happens and check with the people affected. Adjust your approach when you learn something new.",
   },
 });

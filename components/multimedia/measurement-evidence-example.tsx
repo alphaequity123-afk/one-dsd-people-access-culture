@@ -8,11 +8,11 @@ const readings = [
 ] as const;
 const interpretations = [
   { id: "activity", label: "Holding more review sessions shows that the notice became easier to use.",
-    response: "The session count tells us what happened. To understand whether the notice was easier to use, look at the reading task and ask people what still got in the way." },
+    response: "The session count shows what happened. To understand whether the notice was easier to use, look at the reading task and ask people what still got in the way." },
   { id: "cause", label: "The revised wording caused the entire improvement.",
     response: "The later group did better on this task, but these are separate groups. Differences between groups, the setting or other support could also matter. The comparison does not establish the cause." },
-  { id: "supported", label: "More readers found the next action in the later group; we should examine other explanations and whose experience is missing.",
-    response: "That fits the evidence. The outcome rose from 60% to 78%, an 18 percentage-point difference. It does not tell us why the difference occurred, whether it would last, or whether everyone could use the notice." },
+  { id: "supported", label: "More readers found the next action in the later group; other explanations, and whose experience is missing, still need examining.",
+    response: "That fits the evidence. The outcome rose from 60% to 78%, an 18 percentage-point difference. It does not show why the difference occurred, whether it would last, or whether everyone could use the notice." },
 ] as const;
 
 /** Original practice teaching example; no program or participant data is loaded. */

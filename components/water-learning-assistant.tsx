@@ -13,7 +13,7 @@ const modes: { value: StudyMode; label: string; prompt: string; modulePrompt: st
     value: "compare",
     label: "Compare readings",
     prompt: "How do the essay and the American and Minnesota Culture briefs help explain differences in communication at work?",
-    modulePrompt: "Compare what the essay and culture briefs tell us about this lesson's topic. Where do they emphasize different things?",
+    modulePrompt: "Compare what the essay and culture briefs say about this lesson's topic. Where do they emphasize different things?",
   },
   {
     value: "practice",

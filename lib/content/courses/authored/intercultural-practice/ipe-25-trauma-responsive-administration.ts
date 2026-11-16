@@ -46,7 +46,7 @@ const pack: CoursePack = {
         "Feedback from staff using this module that a scenario here reads as unrealistic, or that a recommended revision would create a new burden somewhere else",
       ],
       relatedDoor: "Formal decisions about notice language, appeal and grievance procedures, closure and termination rules, published data and official apologies belong to the responsible DHS policy, legal, appeals, data governance and communications offices; this module prepares the revision, it does not make the decision.",
-      toolkitQuestion: "What is this step asking a person to survive in order to get what they are entitled to, and what would it cost us to stop asking that without giving up what the step protects?",
+      toolkitQuestion: "What is this step asking a person to survive in order to get what they are entitled to, and what would it cost the program to stop asking that without giving up what the step protects?",
       status: "reviewed",
     },
     lessons: [
@@ -187,7 +187,7 @@ const pack: CoursePack = {
           },
           {
             type: "statement",
-            body: "A private reflection, for your own notes: how might my role, my authority and my assumptions be shaping what I have been treating as a neutral process, and who could be helped, burdened, excluded or misunderstood by the way it currently works?",
+            body: "A private reflection: how might my role, my authority and my assumptions be shaping what I have been treating as a neutral process, and who could be helped, burdened, excluded or misunderstood by the way it currently works?",
           },
         ],
       },
@@ -310,7 +310,7 @@ const pack: CoursePack = {
           },
           {
             type: "statement",
-            body: "A private reflection, for your own notes: does this process make sense to someone who does not already know how DHS works, and what might accessibility mean here beyond a legal minimum?",
+            body: "A private reflection: does this process make sense to someone who does not already know how DHS works, and what might accessibility mean here beyond a legal minimum?",
           },
         ],
       },
@@ -423,7 +423,7 @@ const pack: CoursePack = {
           },
           {
             type: "statement",
-            body: "A private reflection, for your own notes: whose expertise is missing from this decision, and how could the people most affected have shaped this work earlier? Keep personal reflections in your own notes.",
+            body: "A private reflection: whose expertise is missing from this decision, and how could the people most affected have shaped this work earlier?",
           },
         ],
       },
@@ -544,7 +544,7 @@ const pack: CoursePack = {
           },
           {
             type: "statement",
-            body: "A private reflection, for your own notes: if harm or exclusion has already happened through this process, what would accountability and repair actually require of my office — not of the person who was harmed? Write it for yourself. Keep personal reflections in your own notes.",
+            body: "A private reflection: if harm or exclusion has already happened through this process, what would accountability and repair actually require of my office — not of the person who was harmed? Write it for yourself.",
           },
         ],
       },

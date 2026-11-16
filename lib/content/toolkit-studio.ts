@@ -52,7 +52,7 @@ export const TOOLKIT_WHY = {
   title: "Why the Equity Analysis Toolkit",
   authority:
     "Program practice guidance. Use the current official DHS Equity Analysis Toolkit and User Guide for required analysis, review and documentation.",
-  chrome: "DHS staff are responsible for using the Equity Policy and Equity Analysis Toolkit in their work. This companion learning is optional; it does not replace required agency training or policy responsibilities. Equity professionals guide and support staff in applying the toolkit themselves.",
+  chrome: "DHS staff are responsible for using the Equity Policy and Equity Analysis Toolkit in their work and for completing required agency training. Equity professionals guide and support staff in applying the toolkit themselves.",
   beats: [
     {
       title: "Hook",
@@ -91,11 +91,11 @@ export const TOOLKIT_INSIGHT_CHROME = [
 export const TOOLKIT_CATALOG = [
   { id: "grant-rfp", title: "Grant RFP / procurement window", prompt: "Who can bid when the turnaround favors insider vendors?" },
   { id: "hiring-minimums", title: "Hiring minimum qualifications", prompt: "Which credentials are job-related — and which only feel like quality?" },
-  { id: "listening-session", title: "One-off community listening session", prompt: "Is this engagement — or extraction on our timeline?" },
+  { id: "listening-session", title: "One-off community listening session", prompt: "Is this engagement — or extraction on the agency's timeline?" },
   { id: "disparity-dashboard", title: "Disparity dashboard without process cuts", prompt: "Do the numbers explain systems, or invite cultural blame?" },
   { id: "interpreter-budget", title: "Budget cut to interpreters / liaisons", prompt: "Is access treated as core service cost or optional overhead?" },
   { id: "positive-supports", title: "Positive supports / “compliance” process (DSD)", prompt: "Who gets labeled noncompliant when the process is uniform?" },
-  { id: "tribal-deadline", title: "Tribal consultation vs launch deadline", prompt: "Does this decision require government-to-government Tribal consultation, and have we followed that process?" },
+  { id: "tribal-deadline", title: "Tribal consultation vs launch deadline", prompt: "Does this decision require government-to-government Tribal consultation, and has the team followed that process?" },
   { id: "campaign-imagery", title: "Campaign imagery and messaging", prompt: "Representation without consent, access, or usable language?" },
   { id: "colorblind-process", title: "Colorblind “same process for everyone” (team climate)", prompt: "Same process ≠ fair outcomes when access needs differ" },
 ] as const;
@@ -130,7 +130,7 @@ export const TOOLKIT_CARDS: ToolkitStudioCard[] = [
       {
         number: 2,
         walked: "Blended no-show averages hide who is missed. Missing breakouts: language, disability/communication need, geography, bounce/undeliverable by channel, “unreachable” after paper cut.",
-        insight: "What would breakouts need to show before we claim SMS “works”? Empty chairs in the data are data — not proof paper was waste.",
+        insight: "What would breakouts need to show before the team claims SMS “works”? Empty chairs in the data are data — not proof paper was waste.",
       },
       {
         number: 3,
@@ -183,7 +183,7 @@ export const TOOLKIT_CARDS: ToolkitStudioCard[] = [
       { href: "/minnesota-communities/deaf-deafblind-hard-of-hearing", label: "Deaf, DeafBlind, and hard of hearing", use: "Communication access questions; formats; what not to assume" },
       { href: "/minnesota-communities/somali", label: "Somali", use: "Language/partnership questions — not “what Somali clients want”" },
     ],
-    practice: { label: "Practice on a similar decision you own", body: "Download a published checklist. Staff notes are not saved here.", href: "/practice" },
+    practice: { label: "Practice on a similar decision you own", body: "Download a published checklist.", href: "/practice" },
     downloadBlurb: "On your own decision: keep channel mix open until preference + access are known. No case names in notes.",
   },
   {
@@ -269,7 +269,7 @@ export const TOOLKIT_CARDS: ToolkitStudioCard[] = [
       { href: "/minnesota-communities/rural", label: "Rural", use: "Greater Minnesota access questions" },
       { href: "/minnesota-communities/tribal-nations", label: "Tribal Nations", use: "Deference only when Nation-impacted" },
     ],
-    practice: { label: "Practice on a scheduling or access decision you own", body: "Download a published checklist. Staff notes are not saved here.", href: "/practice" },
+    practice: { label: "Practice on a scheduling or access decision you own", body: "Download a published checklist.", href: "/practice" },
     downloadBlurb: "Schedule design is service design. List assisted options before removing them.",
   },
   {
@@ -355,7 +355,7 @@ export const TOOLKIT_CARDS: ToolkitStudioCard[] = [
       { href: "/minnesota-communities/somali", label: "Somali", use: "Language/partnership questions" },
       { href: "/minnesota-communities/deaf-deafblind-hard-of-hearing", label: "Deaf, DeafBlind, and hard of hearing", use: "Format and access questions" },
     ],
-    practice: { label: "Practice on a notice, form, or letter you are changing", body: "Download a published checklist. Staff notes are not saved here.", href: "/practice" },
+    practice: { label: "Practice on a notice, form, or letter you are changing", body: "Download a published checklist.", href: "/practice" },
     downloadBlurb: "Success = people could act. “Notices sent” is not an equity metric.",
   },
 ];

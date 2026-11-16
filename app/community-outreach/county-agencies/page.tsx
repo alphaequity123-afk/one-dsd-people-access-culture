@@ -3,8 +3,9 @@ import { SourceLink } from "@/components/app-link";
 import type { Metadata } from "next";
 import Link from "@/components/app-link";
 import { getCountyAgencies, sharedAgencies } from "@/lib/content/hub/county-agencies";
-import { catHref, catPaginate, catParam } from "@/lib/cat-paging";
-import { CatExpandRow, CatList, CatPager, CatResultStatus, catStyles } from "@/components/cat-list";
+import { catParam } from "@/lib/cat-paging";
+import { CatExpandRow } from "@/components/cat-list";
+import { PrivateCatalogForm, PrivateCatalogJump, PrivateCatalogProvider, PrivateCatalogResults, type CatalogRow } from "@/components/private-catalog";
 import { CatHashLocator } from "@/components/cat-hash-locator";
 import styles from "../hub.module.css";
 import { ResourceDownloads } from "@/components/resource-downloads";
@@ -27,13 +28,20 @@ export default async function CountyAgenciesPage({ searchParams }: { searchParam
   const find = catParam(params.find);
   const data = getCountyAgencies();
   const all = data.counties.slice().sort((a, b) => a.county.localeCompare(b.county, "en-US"));
-  const query = q.toLowerCase();
-  const searched = all.filter(c => !query || `${c.county} ${c.agencyName}`.toLowerCase().includes(query));
-  const present = new Set(searched.map(c => c.county.charAt(0).toUpperCase()));
-  const letter = LETTERS.includes(letterParam) && present.has(letterParam) ? letterParam : "";
-  const counties = searched.filter(c => !letter || c.county.toUpperCase().startsWith(letter));
-  const page = catPaginate(counties, catParam(params.page), PER_PAGE, find ? c => `county-${c.fips}` === find : undefined);
-  const choices = { q, letter };
+  const letter = LETTERS.includes(letterParam) ? letterParam : "";
+  // Every county is drawn once; the words typed and the letter buttons narrow the list in the page.
+  const rows: CatalogRow[] = all.map(c => ({
+    key: `county-${c.fips}`,
+    text: `${c.county} ${c.agencyName}`,
+    values: { letter: c.county.charAt(0).toUpperCase() },
+    node: <CatExpandRow key={c.fips} id={`county-${c.fips}`}
+      title={c.county}
+      line={c.agencyName}>
+      <p>Agency: {c.website ? <SourceLink href={c.website}>{c.agencyName}</SourceLink> : c.agencyName}{c.shared ? <span className={styles.small}> (shared with {c.sharedCounties.filter(n => n !== c.county).join(", ")})</span> : null}</p>
+      <p>Phone: {c.phone ? <><SourceLink href={`tel:${c.phone.replace(/[^0-9]/g, "")}`}>{c.phone}</SourceLink> <span className={styles.small}>{c.phoneLabel}</span></> : <span className={styles.small}>Not published</span>}</p>
+      <p className={styles.small}>{c.status === "partial" ? "Partly confirmed. " : ""}{c.notes} <SourceLink href={c.sourceUrl}>Source</SourceLink></p>
+    </CatExpandRow>,
+  }));
   const shared = sharedAgencies();
   return <div className={styles.page}>
     <CatHashLocator prefix="county-" />
@@ -51,31 +59,12 @@ export default async function CountyAgenciesPage({ searchParams }: { searchParam
 
     <section className={styles.section} aria-labelledby="counties-title">
       <h2 id="counties-title">All {all.length} counties</h2>
-      <form method="get" action={BASE} className={styles.filters} role="search" aria-label="Find a county">
-        <label htmlFor="county-q">County or agency<input id="county-q" name="q" type="search" defaultValue={q} /></label>
-        {letter ? <input type="hidden" name="letter" value={letter} /> : null}
-        <button className={styles.button} type="submit">Find</button>
-        {q || letter ? <Link href={BASE}>Show all counties</Link> : null}
-      </form>
-      <nav className={catStyles.jump} aria-label="Counties by first letter">
-        <ul>
-          <li><Link href={catHref(BASE, { q })} aria-current={!letter ? "page" : undefined}>All</Link></li>
-          {LETTERS.map(l => <li key={l}>{present.has(l)
-            ? <Link href={catHref(BASE, { q, letter: l })} aria-current={l === letter ? "page" : undefined}>{l}</Link>
-            : <span className={catStyles.none} aria-hidden="true">{l}</span>}</li>)}
-        </ul>
-      </nav>
-      <CatResultStatus page={page} noun="county" nouns="counties" of={all.length} empty="No county matches that search." />
-      {page.items.length ? <CatList label="Counties">
-        {page.items.map(c => <CatExpandRow key={c.fips} id={`county-${c.fips}`}
-          title={c.county}
-          line={c.agencyName}>
-          <p>Agency: {c.website ? <SourceLink href={c.website}>{c.agencyName}</SourceLink> : c.agencyName}{c.shared ? <span className={styles.small}> (shared with {c.sharedCounties.filter(n => n !== c.county).join(", ")})</span> : null}</p>
-          <p>Phone: {c.phone ? <><SourceLink href={`tel:${c.phone.replace(/[^0-9]/g, "")}`}>{c.phone}</SourceLink> <span className={styles.small}>{c.phoneLabel}</span></> : <span className={styles.small}>Not published</span>}</p>
-          <p className={styles.small}>{c.status === "partial" ? "Partly confirmed. " : ""}{c.notes} <SourceLink href={c.sourceUrl}>Source</SourceLink></p>
-        </CatExpandRow>)}
-      </CatList> : null}
-      <CatPager page={page} basePath={BASE} params={choices} label="County result pages" />
+      <PrivateCatalogProvider key={letter} basePath={BASE} rows={rows} choices={{ letter }} perPage={PER_PAGE} initial={{ q, page: catParam(params.page), find }}
+        jump={{ name: "letter", label: "Counties by first letter", allLabel: "All", options: LETTERS.map(l => ({ value: l, label: l })), keepEmpty: true }}>
+        <PrivateCatalogForm className={styles.filters} ariaLabel="Find a county" searchLabel="County or agency" inputId="county-q" buttonLabel="Find" buttonClassName={styles.button} clearLabel="Show all counties" />
+        <PrivateCatalogJump />
+        <PrivateCatalogResults noun="county" nouns="counties" of={all.length} empty="No county matches that search." listLabel="Counties" pagerLabel="County result pages" />
+      </PrivateCatalogProvider>
     </section>
 
     <details className="course-more-item">

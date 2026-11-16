@@ -31,7 +31,7 @@ const pack: CoursePack = {
         "A sort of goodwill, systems, resources and accountability failures drawn from realistic agency situations.",
         "A drafted one-paragraph leadership case for your own area, with the cross-functional owners named.",
       ],
-      appliedNextStep: "Write the one-paragraph case for your own division, administration, board or program and read it aloud at your next leadership meeting. Ask one question afterward: which of the decisions in it can only we make?",
+      appliedNextStep: "Write the one-paragraph case for your own division, administration, board or program and read it aloud at your next leadership meeting. Ask one question afterward: which of the decisions in it can only this group make?",
     },
     governance: {
       contentOwner: "One DHS — People, Access and Culture",
@@ -94,7 +94,7 @@ const pack: CoursePack = {
           ] },
           { type: "quote", text: "People kept telling me how helpful the worker was. She was. But I should not have needed her to read my own eligibility notice to me over the phone, and when she left, nobody did.", cite: "Composite participant perspective, illustrative" },
           { type: "knowledgeCheck", id: "leadership-case-for-inclusion-1-check", question: "A division reports no accessibility complaints in the last two review periods. Which follow-up question best tests whether that reflects organizational capacity?", options: [
-            { text: "Which staff are especially good with disabled participants, so we can recognize them?", correct: false },
+            { text: "Which staff are especially good with disabled participants, so they can be recognized?", correct: false },
             { text: "If the staff who currently handle access requests were reassigned, which defaults, budgets and owners would still be in place?", correct: true },
             { text: "How many disabled participants does the division serve?", correct: false },
           ], feedbackCorrect: "Yes. The question separates a working system from people covering for the lack of one, which is the leadership distinction this lesson teaches.", feedbackIncorrect: "Recognition and headcounts do not tell you whether access survives a staffing change. Ask what would still work if the helpers were gone." },
@@ -268,8 +268,8 @@ const pack: CoursePack = {
       doNext: "Write the one-paragraph case for your area, with owners named, and read it at your next leadership meeting.",
     },
     sections: [
-      { heading: "Questions to ask in any review", items: ["If the most conscientious person in this unit left, would disabled people still get what they need?", "Does this project’s charter name access as a success criterion with an acceptance standard and an owner?", "Who is not appearing in our participation numbers, and what barrier explains it?", "Which functions does this barrier touch, and is each leader in the room?"] },
-      { heading: "The case in four lines", items: ["Mission: a large share of the people we serve have disabilities.", "Obligation: the agency already owes them equal access and integrated settings.", "Cost: building access in costs less than retrofits, parallel processes and unserved eligible people.", "Ownership: program, technology, procurement, human resources, communications, facilities and finance each have a named part."] },
+      { heading: "Questions to ask in any review", items: ["If the most conscientious person in this unit left, would disabled people still get what they need?", "Does this project’s charter name access as a success criterion with an acceptance standard and an owner?", "Who is not appearing in the participation numbers, and what barrier explains it?", "Which functions does this barrier touch, and is each leader in the room?"] },
+      { heading: "The case in four lines", items: ["Mission: a large share of the people the agency serves have disabilities.", "Obligation: the agency already owes them equal access and integrated settings.", "Cost: building access in costs less than retrofits, parallel processes and unserved eligible people.", "Ownership: program, technology, procurement, human resources, communications, facilities and finance each have a named part."] },
       { heading: "What to stop accepting", items: ["“We have never had a complaint” from a unit where one or two people handle everything.", "A best-practices clause in place of a measurable criterion.", "A cross-functional barrier assigned to a single office.", "Low disabled participation read as low need."] },
     ],
   },

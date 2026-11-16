@@ -21,7 +21,7 @@ export const PODCASTS = [
     href: "/learn#podcast-anti-racism-public-service",
     src: "/audio/anti-racism-public-service.mp3?v=229809628b3f",
     title: "Fair access in public service: the rules we inherit",
-    intro: "Two colleagues talk through how the rules, forms and systems we inherit shape who gets fair access to public services, and what staff can check, measure and fix in their own work.",
+    intro: "Two colleagues talk through how inherited rules, forms and systems shape who gets fair access to public services, and what staff can check, measure and fix in their own work.",
     duration: "15 minutes, 43 seconds",
     durationSeconds: 943.478,
     bytes: 18871245,

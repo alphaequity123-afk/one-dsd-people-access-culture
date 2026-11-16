@@ -251,7 +251,7 @@ export function VisualStudioPanel() {
         <section aria-labelledby="scene-brief-heading" className="min-w-0 rounded-2xl border border-[#d7dddf] bg-white p-5 shadow-[0_8px_30px_rgba(0,34,68,0.04)] md:p-7">
           <p className="mb-2 mt-0 text-xs font-bold uppercase tracking-[0.14em] text-muted">01 · Shape the conversation</p>
           <h2 id="scene-brief-heading" className="text-2xl font-bold">Your scene brief</h2>
-          <p className="mt-2 text-sm leading-6 text-muted">Choose a setting to create an editable scene with three abstract figures. Your dialogue and learning purpose are saved with the project for you to develop in Blender.</p>
+          <p className="mt-2 text-sm leading-6 text-muted">Choose a setting to create an editable scene with three abstract figures. The project includes your dialogue and learning purpose, ready to develop in Blender.</p>
           <form onSubmit={createScene} aria-busy={pending === "create"}>
             <fieldset disabled={pending === "create"} className="m-0 min-w-0 space-y-5 border-0 p-0">
               <div>

@@ -117,7 +117,7 @@ const pack: CoursePack = {
             { text: "Ask community organizations to encourage their members to comment early, before the fasting period begins.", correct: false },
             { text: "Run the sessions as scheduled and follow up afterward with anyone who says they were unable to attend.", correct: false },
           ], feedbackCorrect: "Yes. A fixed outer window still leaves the hour, the formats, the weight given to each route and the wording of the notice entirely inside the division's control.", feedbackIncorrect: "A statutory window fixes the dates, not the design. Ask what is still yours to change inside it — the hour, the number of routes in, and whether written and phone comment are treated as equal to the room." },
-          { type: "statement", body: "Private reflection, for you only: think of a date you set recently that other people had to work around. Who could have been helped, burdened, excluded or misunderstood by that timing, and how would you have found out? Keep personal reflections in your own notes." },
+          { type: "statement", body: "Private reflection: think of a date you set recently that other people had to work around. Who could have been helped, burdened, excluded or misunderstood by that timing, and how would you have found out?" },
         ],
       },
       {
@@ -178,7 +178,7 @@ const pack: CoursePack = {
             { text: "Ask attendees to bring their own lunch so that everyone is certain of what they are eating.", correct: false },
             { text: "Order a vegetarian meal for everyone, since that avoids the largest number of restrictions at once.", correct: false },
           ], feedbackCorrect: "Yes. Labeled choices remove the disclosure entirely, cover several practices and several allergy needs with one decision, and do not depend on anyone having read a form.", feedbackIncorrect: "Ask which plan requires a person to tell a government agency something private in order to have lunch. A single default — even a thoughtful one — still leaves people explaining themselves, and a bring-your-own instruction quietly excludes anyone who traveled or cannot afford it." },
-          { type: "statement", body: "Private reflection, for you only: at a gathering you hosted or attended, what did the room and the table assume about the people coming? Whose expertise about hospitality was missing from that planning conversation? Keep personal reflections in your own notes." },
+          { type: "statement", body: "Private reflection: at a gathering you hosted or attended, what did the room and the table assume about the people coming? Whose expertise about hospitality was missing from that planning conversation?" },
         ],
       },
       {
@@ -246,7 +246,7 @@ const pack: CoursePack = {
             { text: "“Which days and times are difficult for you, and is there anything we should know to make an appointment work?” — with a line stating who sees the answer and what it will change.", correct: true },
             { text: "No question at all; scheduling conflicts can be handled individually when they come up.", correct: false },
           ], feedbackCorrect: "Yes. It asks about participation rather than belief, it is answerable by everyone, it produces something the scheduler can act on, and it tells the person what happens to the answer.", feedbackIncorrect: "Check each option against purpose, use and record rule. Asking about religion — even optionally, even kindly — collects a belief the schedule does not need, while asking nothing leaves the conflict for the person to absorb." },
-          { type: "statement", body: "Private reflection, for you only: in a form, script or plan you work with, does what you ask make sense to someone who does not already know how DHS works — and would they understand what happens to the answer? Keep personal reflections in your own notes." },
+          { type: "statement", body: "Private reflection: in a form, script or plan you work with, does what you ask make sense to someone who does not already know how DHS works — and would they understand what happens to the answer?" },
         ],
       },
       {
@@ -317,7 +317,7 @@ const pack: CoursePack = {
             { text: "Note the venue problem as a constraint in the event record and proceed, since the booking cannot be undone at this point.", correct: false },
             { text: "Postpone the session until the venue standard and the invitation template have been revised.", correct: false },
           ], feedbackCorrect: "Yes. The people coming in five weeks need a workaround now, and the two owners need one specific, grantable ask each — which is what turns a single session into a standard.", feedbackIncorrect: "Ask which version actually helps the people attending in five weeks and also changes the next event. Sending the whole page upward assigns nothing, recording a constraint fixes nothing, and postponing makes access look like the reason an engagement was canceled." },
-          { type: "statement", body: "Private reflection, for you only: if someone was quietly left out of something you hosted — by a date, a room, a tray or a line on a form — what would accountability and repair actually require: of you, of the process, and toward the people who did not come back? And how could the people most affected have shaped that plan earlier? Keep personal reflections in your own notes." },
+          { type: "statement", body: "Private reflection: if someone was quietly left out of something you hosted — by a date, a room, a tray or a line on a form — what would accountability and repair actually require: of you, of the process, and toward the people who did not come back? And how could the people most affected have shaped that plan earlier?" },
         ],
       },
     ],

@@ -54,7 +54,7 @@ export default async function EquityBaselinePage() {
 
     <section className={styles.section} aria-labelledby="count-title">
       <div className={styles.howWeCount}>
-        <h2 id="count-title">How we count</h2>
+        <h2 id="count-title">How the count works</h2>
         <p>Each value pools three fiscal years, 2022 to 2024. Where the source gives counts, the pooled value is count-weighted, and a 95% confidence interval is shown. Where the source gives only a figure, the value is a simple average and no interval is shown.</p>
         <p>A risk ratio compares one group with everyone else. A value of 1.0 means no difference. Below 1.0 means less likely; above 1.0 means more likely.</p>
         <p>Small counts are suppressed in the source and appear as &quot;Not available&quot;. People whose record does not say their race are shown as &quot;Race not recorded&quot;. {measures().length} measures are included.</p>

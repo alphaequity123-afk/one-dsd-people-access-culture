@@ -116,7 +116,7 @@ const pack: CoursePack = {
             heading: "Why the reflex is so strong, and where this program is trying to move",
             items: [
               { title: "It is a system behavior, not a character flaw", body: "<p>Public agencies are built to be accountable for correctness. Staff are asked to document, justify and defend decisions, and are almost never rewarded for saying out loud that a process produced a bad result. The defensive reflex is what that training feels like from the inside. Naming it as a system behavior makes it far easier to interrupt than treating it as a personal failing — including your own.</p>" },
-              { title: "Polarization: defending, or agreeing much too fast", body: "<p>This program uses the intercultural development continuum as its theory of change. In the polarization range, a criticism of the division feels like a criticism of us, and the response is defense. Its mirror form is just as unhelpful: agreeing instantly, apologizing for everything, and examining nothing. Both end the inquiry. These describe a moment in a conversation — never a label, a score or a record about any person.</p>" },
+              { title: "Polarization: defending, or agreeing much too fast", body: "<p>This program uses the intercultural development continuum as its theory of change. In the polarization range, a criticism of the division feels like a personal criticism, and the response is defense. Its mirror form is just as unhelpful: agreeing instantly, apologizing for everything, and examining nothing. Both end the inquiry. These describe a moment in a conversation — never a label, a score or a record about any person.</p>" },
               { title: "Minimization: the two sentences to watch for", body: "<p>“We treat everyone the same” and “this is one person's experience” are the two most common minimization moves in a public agency. The first treats identical process as identical effect. The second treats a sample as a defect in the sample. Both are sincere, both sound reasonable in a meeting, and both make the concern disappear without anyone deciding to dismiss it.</p>" },
               { title: "Acceptance and adaptation: what actually changes", body: "<p>Further along the continuum, a concern becomes interesting rather than threatening. Acceptance sounds like genuine curiosity about what the person experienced and why it made sense from where they stood. Adaptation is the step after: changing the process, the format, the timing or the channel — not just the explanation of it. Integration, the program's sixth stage, is when the people a process affects help design it, so this is simply how a unit works and nobody has to push for it. It is not an orientation of the Intercultural Development Inventory; the name comes from Bennett's developmental model, where it describes identity across cultures.</p>" },
             ],
@@ -350,7 +350,7 @@ const pack: CoursePack = {
             heading: "What you can promise, and what you cannot",
             items: [
               "Promise what is inside your own authority, with a date: a call back by Thursday, a notice re-sent in a format they use, a deadline you can actually extend.",
-              "Promise the routing, not the outcome: that a question will reach the office that decides it, by when, and that you will tell them what came back.",
+              "Promise the routing, not the outcome: that a question will reach the person or area that decides it, by when, and that you will tell them what came back.",
               "Do not promise a policy change, a rule change, or a decision that belongs to a review body. Say who decides, what they will consider, and when the person will hear.",
               "Do not promise that a particular employee will be disciplined or retrained. Supervision happens, and it is not a bargaining chip or a public commitment.",
               "Say plainly when you do not know. “I do not know yet, I will know by Friday, and I will tell you either way” is a far better promise than a confident guess.",
@@ -483,7 +483,7 @@ const pack: CoursePack = {
           },
           {
             type: "statement",
-            body: "Private reflection, for you alone. Keep personal reflections in your own notes. Bring one recent concern to mind and sit with these: How might my role, authority or language have shaped how that conversation went? Who could have been helped, burdened, excluded or misunderstood by the way we responded? Whose expertise was missing from the room? And if harm or exclusion did occur, what would accountability and repair actually require — which part of that is mine to do, and which part have I been waiting for someone else to start?",
+            body: "Private reflection. Bring one recent concern to mind and sit with these: How might my role, authority or language have shaped how that conversation went? Who could have been helped, burdened, excluded or misunderstood by the way the team responded? Whose expertise was missing from the room? And if harm or exclusion did occur, what would accountability and repair actually require — which part of that is mine to do, and which part have I been waiting for someone else to start?",
           },
           {
             type: "knowledgeCheck",

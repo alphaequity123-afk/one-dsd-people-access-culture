@@ -32,7 +32,7 @@ const pack: CoursePack = {
         "Sorting practice that places a difference at the step where it was produced, and separates what a number shows from what it only suggests.",
         "A completed disparity inquiry guide kept with the program file rather than in a personal folder.",
       ],
-      appliedNextStep: "Choose one outcome you are responsible for where a difference has been mentioned but never examined. Fill in the inquiry guide, start with the line on who is missing from the number, confirm the payment route for community members with a fiscal colleague, and write down what the division will do if the answer points at a step we own.",
+      appliedNextStep: "Choose one outcome you are responsible for where a difference has been mentioned but never examined. Fill in the inquiry guide, start with the line on who is missing from the number, confirm the payment route for community members with a fiscal colleague, and write down what the division will do if the answer points at a step the division owns.",
     },
     governance: {
       contentOwner: "One DSD — People, Access and Culture",
@@ -99,7 +99,7 @@ const pack: CoursePack = {
           {
             type: "text",
             heading: "Two patterns, one process",
-            body: "<p>Ableism is the set of assumptions and designs that treat one way of moving, thinking, communicating and working as ordinary, and everything else as an exception to be requested, documented and approved. At the level of a public system, racism works through the same mechanism: rules, defaults and habits shaped around one set of conditions, applied to people whose conditions are different, producing results that follow the difference rather than the rule.</p><p>Neither needs a person with bad intentions to operate. Both are carried in ordinary working material: the form that assumes a stable address, the assessment that assumes the person speaks for themselves in English, the appointment slot that assumes a weekday off, the standard that reads family involvement as support or as interference depending on how the family behaves in a meeting. Most of what a division does is built out of that material, and most of it was built by people trying hard to be fair.</p><p>What makes this module harder than either topic alone is that people do not meet these patterns one at a time. A man with a brain injury who speaks Somali at home, a grandmother caring for a grandchild with a developmental disability in a household where three languages are spoken, a Black teenager whose behavior is recorded as a conduct problem in one setting and as a disability need in another, and a farmer forty miles from the nearest assessor are not four versions of the same problem. Each meets a specific combination of design decisions, and the combination can produce something neither pattern, taken alone, would have predicted.</p><p>This program uses a six-part continuum as a working map for examining practice: Denial, Polarization, Minimization, Acceptance, Adaptation and Integration. The first five are the orientations of the Intercultural Development Inventory. The sixth, Integration, is not an IDI orientation: in this program it means the people a process affects help design it, and the name comes from Bennett's developmental model, where it describes identity across cultures. Minimization is the most comfortable place for a public agency to sit, because it sounds exactly like fairness — the rules are the same for everyone, so the results must be fair enough. Moving toward Acceptance means letting a difference in results be real and worth understanding. Moving toward Adaptation means changing the design once you understand it. None of that is a label about you, and nothing in this program is recorded about any individual.</p>",
+            body: "<p>Ableism is the set of assumptions and designs that treat one way of moving, thinking, communicating and working as ordinary, and everything else as an exception to be requested, documented and approved. At the level of a public system, racism works through the same mechanism: rules, defaults and habits shaped around one set of conditions, applied to people whose conditions are different, producing results that follow the difference rather than the rule.</p><p>Neither needs a person with bad intentions to operate. Both are carried in ordinary working material: the form that assumes a stable address, the assessment that assumes the person speaks for themselves in English, the appointment slot that assumes a weekday off, the standard that reads family involvement as support or as interference depending on how the family behaves in a meeting. Most of what a division does is built out of that material, and most of it was built by people trying hard to be fair.</p><p>What makes this module harder than either topic alone is that people do not meet these patterns one at a time. A man with a brain injury who speaks Somali at home, a grandmother caring for a grandchild with a developmental disability in a household where three languages are spoken, a Black teenager whose behavior is recorded as a conduct problem in one setting and as a disability need in another, and a farmer forty miles from the nearest assessor are not four versions of the same problem. Each meets a specific combination of design decisions, and the combination can produce something neither pattern, taken alone, would have predicted.</p><p>This program uses a six-part continuum as a working map for examining practice: Denial, Polarization, Minimization, Acceptance, Adaptation and Integration. The first five are the orientations of the Intercultural Development Inventory. The sixth, Integration, is not an IDI orientation: in this program it means the people a process affects help design it, and the name comes from Bennett's developmental model, where it describes identity across cultures. Minimization is the most comfortable place for a public agency to sit, because it sounds exactly like fairness — the rules are the same for everyone, so the results must be fair enough. Moving toward Acceptance means letting a difference in results be real and worth understanding. Moving toward Adaptation means changing the design once you understand it. None of that is a label about you.</p>",
           },
           {
             type: "tabs",
@@ -116,7 +116,7 @@ const pack: CoursePack = {
             heading: "Words worth keeping apart",
             cards: [
               { front: "Difference", back: "<p>Any variation between groups in a measured result. Some differences are small, expected, or driven by something the program does not control. A difference becomes worth examining when it is consistent, large enough to matter to the people inside it, and attached to a step the division controls.</p>" },
-              { front: "Disparity", back: "<p>A difference in outcome that follows a line we have said we do not want results to follow: race, disability, language, income, geography. Calling something a disparity is a claim about the pattern. It is not yet a claim about the cause.</p>" },
+              { front: "Disparity", back: "<p>A difference in outcome that follows a line the agency has said results should not follow: race, disability, language, income, geography. Calling something a disparity is a claim about the pattern. It is not yet a claim about the cause.</p>" },
               { front: "Ableism", back: "<p>Designs, rules and expectations built around one way of moving, thinking, communicating and working, which then treat everything else as an exception to be requested. It operates through defaults, not only through attitudes.</p>" },
               { front: "Racism, at the level of a system", back: "<p>The same mechanism operating along racial lines: defaults, rules and habits shaped by one set of conditions and applied to people whose conditions differ, producing results that follow the difference. This module examines designs and results, not anyone's motives.</p>" },
               { front: "Intersectionality", back: "<p>A way of looking, not a category to put someone in. It asks what happens where two or more patterns meet in one person's path through a system, because the combination often behaves differently from either pattern alone.</p>" },
@@ -149,7 +149,7 @@ const pack: CoursePack = {
           },
           {
             type: "statement",
-            body: "A private reflection, for you alone: think of one process you touch. How might your role, your authority, your language or your assumptions shape what that process asks of people? Keep personal reflections in your own notes.",
+            body: "A private reflection: think of one process you touch. How might your role, your authority, your language or your assumptions shape what that process asks of people?",
           },
         ],
       },
@@ -238,7 +238,7 @@ const pack: CoursePack = {
           {
             type: "text",
             heading: "What this module does not cover",
-            body: "<p>Questions that involve Tribal Nations and American Indian communities are not settled inside this module, and this program does not author that content on its own. They belong with the Office of Indian Affairs and with the Department of Human Services offices that handle tribal matters. That is a standing deference, not a gap waiting to be filled here. The module on tribal sovereignty and state responsibilities, in this same area, describes the relationship and where those questions go.</p><p>This module also stays inside DHS and DSD public administration. It is not provider training, not a county or managed-care curriculum, and it does not describe how to deliver a service. Minnesota supports disability-services provider learning separately. What is examined here is our own side of the arrangement: the policies, requirements, contracts, reports and decisions the division makes.</p>",
+            body: "<p>Questions that involve Tribal Nations and American Indian communities are not settled inside this module, and this program does not author that content on its own. They belong with the Office of Indian Affairs and with the Department of Human Services offices that handle tribal matters. That is a standing deference, not a gap waiting to be filled here. The module on tribal sovereignty and state responsibilities, in this same area, describes the relationship and where those questions go.</p><p>This module also stays inside DHS and DSD public administration. It is not provider training, not a county or managed-care curriculum, and it does not describe how to deliver a service. Minnesota supports disability-services provider learning separately. What is examined here is the agency's own side of the arrangement: the policies, requirements, contracts, reports and decisions the division makes.</p>",
           },
           {
             type: "leaderMove",
@@ -261,7 +261,7 @@ const pack: CoursePack = {
           },
           {
             type: "statement",
-            body: "A private reflection, for you alone: look at the path you just mapped. Who could be helped, burdened, excluded or misunderstood at the step your work controls? Keep personal reflections in your own notes.",
+            body: "A private reflection: look at the path you just mapped. Who could be helped, burdened, excluded or misunderstood at the step your work controls?",
           },
         ],
       },
@@ -362,7 +362,7 @@ const pack: CoursePack = {
             heading: "Ask for the reading, not the verdict",
             control: "You control what you ask for when a difference appears: a reading with denominators, categories and missing people named, or a one-line answer about whether the number is a problem.",
             failure: "Do not ask an analyst to make a difference go away, and do not ask them to prove it is somebody's fault. Both requests produce a worse answer than the question deserved.",
-            next: "The next time a difference reaches you, ask three things: what is the denominator, who is not in this number, and which of the possible explanations sits inside a step we control.",
+            next: "The next time a difference reaches you, ask three things: what is the denominator, who is not in this number, and which of the possible explanations sits inside a step the division controls.",
           },
           {
             type: "knowledgeCheck",
@@ -378,7 +378,7 @@ const pack: CoursePack = {
           },
           {
             type: "statement",
-            body: "A private reflection, for you alone: when you last saw a difference in a report, what did you assume had caused it before you read any further? Keep this reflection in your own notes without including identifying details.",
+            body: "A private reflection: when you last saw a difference in a report, what did you assume had caused it before you read any further? Leave out identifying details about anyone.",
           },
         ],
       },
@@ -397,7 +397,7 @@ const pack: CoursePack = {
             "Write down what the division will do if the answer is inconvenient, while you still do not know the answer. A commitment made in advance survives a finding nobody wanted.",
             "Changing a requirement going forward does not reach the people already closed out under it. Accountability names them; repair reaches them.",
           ],
-          evidence: "A scenario about a contract renewal where provider-level differences appear, a disparity inquiry guide you can copy into your own work, an ordered question set to take into the room, an accordion on what to do when the answer points back at us, and a knowledge check on what a finding obliges.",
+          evidence: "A scenario about a contract renewal where provider-level differences appear, a disparity inquiry guide you can copy into your own work, an ordered question set to take into the room, an accordion on what to do when the answer points back at the division, and a knowledge check on what a finding obliges.",
           appliedNextStep: "Fill the inquiry guide in for one outcome you are responsible for. Start with the line naming who is missing from the inquiry, and ask a contracts or fiscal colleague about the payment route before the first invitation goes out.",
         },
         scenario: {
@@ -413,7 +413,7 @@ const pack: CoursePack = {
               response: "Monitoring with no question attached is how a difference becomes a permanent feature. Small counts are a reason to look across more cycles and protect privacy, not a reason to wait. Having no alternative provider makes the examination more urgent, not less.",
             },
             {
-              label: "Open a short joint inquiry with the provider and paid community members before the renewal, covering referral, assessment, expectations about capability and where job development staff are actually placed — and write down in advance what the division will do if the cause sits on our side.",
+              label: "Open a short joint inquiry with the provider and paid community members before the renewal, covering referral, assessment, expectations about capability and where job development staff are actually placed — and write down in advance what the division will do if the cause sits on the division's side.",
               response: "This treats the difference as a question about the whole arrangement, including the division's own referral and contracting decisions. It also settles the response before anyone knows the answer, which is what keeps a finding from being negotiated away afterward.",
               recommended: true,
             },
@@ -442,10 +442,10 @@ const pack: CoursePack = {
             summary: "One page that turns an observed difference into an examination somebody owns.",
             fields: [
               { label: "The outcome and the difference you can see", value: "On-time approvals for a waiver service. Across three cycles, the share approved within the standard timeframe for one recorded group runs roughly twelve points below the next largest group." },
-              { label: "Denominator, categories and who is missing from the number", value: "Denominator is applicants, not the likely eligible population. Broad race categories; at this size we cannot look inside them. Not in the number at all: people discouraged before they applied, and people whose race field is blank." },
+              { label: "Denominator, categories and who is missing from the number", value: "Denominator is applicants, not the likely eligible population. Broad race categories; at this size they cannot be broken down further. Not in the number at all: people discouraged before they applied, and people whose race field is blank." },
               { label: "The steps where the difference could have been produced", value: "The recently signed form requirement; interpreter availability at the assessment rather than at intake; which office processed the file; automatic closure after a missed appointment." },
               { label: "Who should shape the inquiry, and how they are paid", value: "Two people who went through the process, one family member, one culturally specific organization, one interpreter. Paid at the agreed rate through the existing grant route; confirm with fiscal before any invitation goes out." },
-              { label: "What we will do if the answer points back at us", value: "Record the finding in the program file in plain words, name an owner for the step, add a second route to meeting the requirement or change it, and contact the people whose applications were closed under it." },
+              { label: "What the division will do if the answer points back at it", value: "Record the finding in the program file in plain words, name an owner for the step, add a second route to meeting the requirement or change it, and contact the people whose applications were closed under it." },
               { label: "Owner, report-back date and next review point", value: "Named program manager owns the guide. Community members and affected applicants hear what was found within one cycle of the last session. Reviewed again at the agreed point." },
             ],
             action: "Copy the six fields onto a single page, fill them in for one outcome you are responsible for, start with the line on who is missing, and settle the payment route before the first invitation goes out.",
@@ -457,24 +457,24 @@ const pack: CoursePack = {
             items: [
               "What exactly is the outcome, and for whom is it a good or a bad one? Say it in a sentence a person outside the division would understand.",
               "What is the denominator, and what would the picture look like with a different one?",
-              "Which categories are we using, what do they collapse, and what are we prepared to say about the communities inside them?",
+              "Which categories is the team using, what do they collapse, and what is the team prepared to say about the communities inside them?",
               "Who is not in this number at all, and at which step did they leave or never arrive?",
               "Which steps in the path could have produced this, and which of those does the division control?",
-              "What would we expect to see if each competing explanation were true, and which of those can we actually check?",
+              "What would the team expect to see if each competing explanation were true, and which of those can it actually check?",
               "Whose expertise is missing from this conversation, and what would it take for them to shape it rather than review it at the end?",
               "What does accessibility mean here beyond the legal minimum — in how the inquiry itself is run, not only in what it examines?",
-              "Does the way we plan to describe this make sense to people who do not already know how DHS works?",
-              "If the answer points at one of our own decisions, what will we do, and who has agreed to that in advance?",
+              "Does the way the team plans to describe this make sense to people who do not already know how DHS works?",
+              "If the answer points at one of the division's own decisions, what will the division do, and who has agreed to that in advance?",
               "If harm or exclusion has already occurred, what would accountability and repair require for the people it happened to, not only for the process going forward?",
-              "Who hears what we found, in what language and format, and by when?",
+              "Who hears what the team found, in what language and format, and by when?",
             ],
           },
           {
             type: "accordion",
-            heading: "If the answer points back at us",
+            heading: "If the answer points back at the division",
             items: [
               { title: "Say it in the record", body: "<p>A finding that a division requirement produced a difference belongs in the program file in plain words, with a date and a named owner. Softening it there is how the same requirement survives the next review untouched.</p>" },
-              { title: "Separate what is obligated from what is chosen", body: "<p>Some responses are legal obligations under civil rights and accessibility law, and they are decided by the responsible offices rather than by a program team. Others are choices a program can make immediately. Keeping the two apart prevents both paralysis and overreach.</p>" },
+              { title: "Separate what is obligated from what is chosen", body: "<p>Some responses are legal obligations under civil rights and accessibility law, and they are decided by the people or areas responsible rather than by a program team. Others are choices a program can make immediately. Keeping the two apart prevents both paralysis and overreach.</p>" },
               { title: "Repair is about people, not only process", body: "<p>Changing a requirement going forward does not reach the people already closed out under it. Ask who they were, whether they can be contacted, and what could be offered: a reopened application, a waived step, a direct call rather than another letter.</p>" },
               { title: "Tell the people who helped what happened", body: "<p>People who helped examine a difference are owed the finding and the decision, including the parts that did not go their way. A report-back that only arrives when the news is good teaches people not to take part next time.</p>" },
               { title: "Expect the defensive turn, and plan for it", body: "<p>When a finding lands, the first reaction in the room is often polarization: the number is attacked, or a person is blamed. Naming that possibility in advance, and returning to the design question rather than the motive question, is usually what keeps the work moving.</p>" },
@@ -501,7 +501,7 @@ const pack: CoursePack = {
           },
           {
             type: "statement",
-            body: "A private reflection, for you alone: take one outcome you are responsible for. How could the people most affected by it have shaped this work earlier, and what would have had to change for that to be possible? If harm or exclusion has already occurred, what would accountability and repair require? Keep personal reflections in your own notes.",
+            body: "A private reflection: take one outcome you are responsible for. How could the people most affected by it have shaped this work earlier, and what would have had to change for that to be possible? If harm or exclusion has already occurred, what would accountability and repair require?",
           },
         ],
       },
@@ -529,9 +529,9 @@ const pack: CoursePack = {
         items: [
           "The outcome in one sentence, and the difference you can actually see.",
           "The denominator, the categories it collapses, and who is not in the number at all.",
-          "The steps where the difference could have been produced, and which of them we control.",
+          "The steps where the difference could have been produced, and which of them the division controls.",
           "Who should shape the inquiry, how they are paid, and who confirms the payment route.",
-          "What we will do if the answer points back at us, agreed before the answer is known.",
+          "What the division will do if the answer points back at it, agreed before the answer is known.",
           "A named owner for every line, the date people hear what was found, and the next review point.",
         ],
       },
@@ -541,7 +541,7 @@ const pack: CoursePack = {
           "Write the denominator down first; four denominators give four different answers.",
           "Say what the categories collapse, and whether you can look inside them at this size.",
           "Check how the information was recorded: self-reported, observed by staff, or left blank.",
-          "List the competing explanations, including the ones that point at our own steps.",
+          "List the competing explanations, including the ones that point at the division's own steps.",
           "If you adjust the figure, report both versions and say what the adjustment took out of view.",
         ],
       },
@@ -557,10 +557,10 @@ const pack: CoursePack = {
         ],
       },
       {
-        heading: "When the answer points back at us",
+        heading: "When the answer points back at the division",
         items: [
           "Put the finding in the program file in plain words, with a date and a named owner.",
-          "Keep legal obligations, which belong to the responsible offices, separate from choices a program can make now.",
+          "Keep legal obligations, which belong to the people or areas responsible, separate from choices a program can make now.",
           "Reach the people already closed out, not only the next applicant.",
           "Send the finding and the decision to the community members who helped, including the parts that did not go their way.",
           "Expect the defensive reaction, and return the room to the design question rather than the motive question.",
@@ -572,7 +572,7 @@ const pack: CoursePack = {
           "Policy and program staff, who write the requirements where an identical rule meets unequal conditions — a useful place to start.",
           "Quality, compliance and performance staff, who usually see a difference first and decide how it gets described — a useful place to start.",
           "Data, research and evaluation staff, who hold the denominators, the categories and the honest account of who is missing — a useful place to start.",
-          "Contracts, fiscal and procurement staff, whose renewal terms and payment routes decide both what providers are asked to do and who can afford to advise us — a good place to go deeper.",
+          "Contracts, fiscal and procurement staff, whose renewal terms and payment routes decide both what providers are asked to do and who can afford to advise the division — a good place to go deeper.",
           "Executive and senior leaders, who decide whether a finding is acted on or absorbed — a useful place to start.",
         ],
       },

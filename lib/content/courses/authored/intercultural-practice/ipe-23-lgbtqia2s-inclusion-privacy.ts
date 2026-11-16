@@ -103,7 +103,7 @@ const pack: CoursePack = {
           ] },
           { type: "leaderMove", heading: "Design for the person who cannot afford to be known", control: "You control whether the default design assumes that being known is free, and treats everyone for whom it is not as an exception to sort out later.", failure: "Do not build the process for the person who is comfortable answering and then bolt on a workaround for everyone else. The workaround is usually where the exposure happens.", next: "Before the next form, notice or survey leaves your unit, name the person for whom that document is riskiest, and check what the design does to them." },
           { type: "quote", text: "People assume the risk is one big dramatic thing. It is not. It is somebody mentioning it at shift change, and then a worker I have never met knowing before we are introduced.", cite: "Composite perspective from a person receiving services, illustrative" },
-          { type: "statement", body: "A private reflection, for you alone. How might my role, authority or assumptions shape what I think is safe to ask? Who could be helped, burdened, excluded or misunderstood by the way this information moves? Keep personal reflections in your own notes." },
+          { type: "statement", body: "A private reflection. How might my role, authority or assumptions shape what I think is safe to ask? Who could be helped, burdened, excluded or misunderstood by the way this information moves?" },
           { type: "knowledgeCheck", id: "ipe-23-1-check", question: "A planning meeting invitation says a person may bring “a family member or legal representative.” The person’s main support is a partner of many years who is not a legal relative. What is the most accurate reading?", options: [
             { text: "The invitation is correct as written; the person can ask for an exception if they want someone else in the room.", correct: false },
             { text: "The definition, not the person, is the barrier. Recognizing only legal relationships excludes the people who actually provide the support, and it forces the person to explain a relationship in order to be heard.", correct: true },
@@ -120,7 +120,7 @@ const pack: CoursePack = {
         learning: {
           objective: "Apply five questions to a proposal to collect identity information, and state what the Minnesota Government Data Practices Act requires when the state asks a person for private information about themselves.",
           takeaways: [
-            "Five questions decide whether a field belongs on a form: why we are asking, what changes because of the answers, whether the answer is genuinely optional, who will see it, and how long it stays.",
+            "Five questions decide whether a field belongs on a form: why the unit is asking, what changes because of the answers, whether the answer is genuinely optional, who will see it, and how long it stays.",
             "Under the Minnesota Government Data Practices Act, information the government keeps about individuals is classified by law, and when the state asks a person to supply private information about themselves it must tell them why it is being collected, how it will be used, whether they may refuse, what happens if they answer or refuse, and who else may receive it.",
             "Optional has to be optional in practice. A blank that stops the form, a phone script with no way past the question, or an answer that changes how a worker treats the person is not a choice.",
             "Collecting nothing is also a decision with effects. It leaves the division able to say only that it has not seen a difference, which is a statement about the questions asked rather than about the people served.",
@@ -149,7 +149,7 @@ const pack: CoursePack = {
         blocks: [
           { type: "text", heading: "A field is a promise, not a container", body: "<p>A field on a form is not neutral. It is a promise that somebody thought about what the answers are for, that the answers are safe where they are going, and that the person filling it in knows what they are agreeing to. When a field arrives because a new system offered it, none of those promises has been made.</p><p>The five questions below are the design work, not a compliance step at the end, and for most fields they take about twenty minutes. Any one of them left open is a reason to wait rather than a reason to stop forever. The usual result is not “do not ask.” It is “ask differently”: a private channel instead of a mailed form, a stated reason in plain words instead of a bare field, or reporting at a level where no single person can be picked out.</p><p>There is a genuine cost on the other side too. A division that collects nothing about who its programs reach can only report that it has not seen a difference. That will not hold the first time somebody asks whether a program works as well for everyone, and it leaves the people most likely to be missed invisible in exactly the places where decisions are made.</p>" },
           { type: "list", heading: "The five questions, in the order they matter", ordered: true, items: [
-            "Why are we asking? Name the decision, report or change the answers make possible. “It would be good to know” is not a purpose.",
+            "Why is the unit asking? Name the decision, report or change the answers make possible. “It would be good to know” is not a purpose.",
             "What changes because of the answers? If nothing in the program would be done differently, the question collects risk and returns nothing.",
             "Is the answer genuinely optional? A person must be able to skip it, in every channel, without the form stopping and without being treated differently.",
             "Who will see it? Name them: this unit, a contracted provider, a county, a public report, an audit file, anyone who makes a data request.",
@@ -170,7 +170,7 @@ const pack: CoursePack = {
             { text: "A voluntary, anonymous staff experience survey asks about identity, reports only for groups large enough to protect individuals, and is run by a unit that cannot link answers to employment records.", category: "Safe to ask" },
           ] },
           { type: "leaderMove", heading: "Answer the five before the field goes live", control: "You control whether a question reaches a form with its purpose, its optionality, its audience and its end point already written down.", failure: "Do not let a field arrive because a system offers it or because another survey has it. A borrowed question does not bring its conditions with it.", next: "Write the five answers into the same document that requests the change, so the next person can read them without asking you." },
-          { type: "statement", body: "A private reflection, for you alone. Whose expertise is missing from the decision to add this question? What would safety and accessibility mean here beyond a legal minimum? Keep personal reflections in your own notes." },
+          { type: "statement", body: "A private reflection. Whose expertise is missing from the decision to add this question? What would safety and accessibility mean here beyond a legal minimum?" },
           { type: "knowledgeCheck", id: "ipe-23-2-check", question: "A unit plans to ask people receiving services an optional question about gender identity. Which combination best matches what the state has to tell the person?", options: [
             { text: "That the question is optional, and nothing more; the rest is internal business.", correct: false },
             { text: "Why the information is being collected, how it will be used, whether they may refuse, what happens if they answer or refuse, and who else may receive it.", correct: true },
@@ -239,7 +239,7 @@ const pack: CoursePack = {
           ] },
           { type: "quote", text: "The report said they had my consent. What I said yes to was a conversation. Nobody ever showed me the sentence with my county printed under it.", cite: "Composite advisory group member perspective, illustrative" },
           { type: "leaderMove", heading: "Let the person hold the disclosure", control: "You control whether a person can choose how they are named, pictured, quoted and contacted, and whether that choice is written somewhere the next staff member will actually see it.", failure: "Do not treat a yes given months ago, in a different room, about a different draft, as approval of the thing you are about to publish.", next: "Before the next publication or first contact, confirm the exact wording with the person and record the contact route they chose." },
-          { type: "statement", body: "A private reflection, for you alone. Does this message make sense to someone who does not already know how the department works? Who could be exposed, burdened or misread by the way it arrives? Keep personal reflections in your own notes." },
+          { type: "statement", body: "A private reflection. Does this message make sense to someone who does not already know how the department works? Who could be exposed, burdened or misread by the way it arrives?" },
           { type: "knowledgeCheck", id: "ipe-23-3-check", question: "A person tells an intake worker that a letter to their home address is not safe for them and asks to be reached by text. The record has one address field and no place for contact preferences. What is the useful response?", options: [
             { text: "Note the request in a free-text comment and trust the next worker to read it.", correct: false },
             { text: "Follow the request now, and raise the missing field as a record design problem with the owner of the system, because a preference stored where it can be missed will be missed.", correct: true },
@@ -306,7 +306,7 @@ const pack: CoursePack = {
             { title: "Route the formal questions properly", body: "<p>Data classification and the wording of the notice given when the state collects private information go to the responsible authority and the department’s data practices office. Personnel questions go to human resources. Discrimination questions go to the department’s equal opportunity and legal offices and to the Minnesota Department of Human Rights. Anything involving Tribal Nations goes first to the Department of Human Services offices that handle tribal matters and to the Office of Indian Affairs.</p>" },
           ] },
           { type: "leaderMove", heading: "Fix your own line first", control: "You control the wording, the envelope, the contact question, the example and the reply inside your own step.", failure: "Do not send the whole review upward and wait. A review with no completed fix in it reads as a complaint.", next: "Make one change in your own step before the review leaves your desk, and say in the review what you already did." },
-          { type: "statement", body: "A private reflection, for you alone. If harm or exclusion happened through a document like this one, what would accountability and repair actually require? How could the people most affected have shaped this document earlier, paid for their expertise rather than commenting at the end? Keep personal reflections in your own notes." },
+          { type: "statement", body: "A private reflection. If harm or exclusion happened through a document like this one, what would accountability and repair actually require? How could the people most affected have shaped this document earlier, paid for their expertise rather than commenting at the end?" },
           { type: "knowledgeCheck", id: "ipe-23-4-check", question: "Which review finding is written so that somebody can act on it?", options: [
             { text: "The application form is not inclusive and should be updated.", correct: false },
             { text: "Question four asks marital status, and no one in the unit can state what the answer is used for. Owner: the program policy lead. First fix: remove the question or write the reason into the notice, by the agreed review point.", correct: true },
@@ -317,7 +317,7 @@ const pack: CoursePack = {
     ],
   },
   jobAid: {
-    title: "Inclusion and privacy in what we ask, keep and send",
+    title: "Inclusion and privacy in what a unit asks, keeps and sends",
     subtitle: "One page for anyone who writes a question, designs a record or sends a message",
     quote: "Ask what an answer costs the person before deciding the field is harmless.",
     use: {
@@ -336,7 +336,7 @@ const pack: CoursePack = {
       {
         heading: "The five questions before a field exists",
         items: [
-          "Why are we asking? Name the decision, report or change the answers make possible.",
+          "Why is the unit asking? Name the decision, report or change the answers make possible.",
           "What changes because of the answers? If nothing would be done differently, the question collects risk and returns nothing.",
           "Is the answer genuinely optional, in every channel, with no consequence for skipping it?",
           "Who will see it? Name them, including providers, counties, public reports and audit files.",

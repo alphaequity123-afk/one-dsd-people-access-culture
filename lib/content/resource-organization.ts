@@ -3,7 +3,7 @@ import type { ContentItem } from "./types";
 
 /** Subject, purpose and learning level are independent choices. */
 export const RESOURCE_THEMES = [
-  { id: "identity", title: "Culture, identity and intercultural practice", description: "Explore identity, racial equity, cultural understanding and the assumptions we bring to our work." },
+  { id: "identity", title: "Culture, identity and intercultural practice", description: "Explore identity, racial equity, cultural understanding and the assumptions people bring to their work." },
   { id: "access", title: "Accessibility, language and communication", description: "Make information, conversations and participation easier to access and use." },
   { id: "disability", title: "Disability rights and person-centered services", description: "Support choice, belonging and meaningful access through disability-informed practice." },
   { id: "policy", title: "Policy, programs and public decisions", description: "Examine policies, legislation, budgets, contracts and the decisions that shape services." },

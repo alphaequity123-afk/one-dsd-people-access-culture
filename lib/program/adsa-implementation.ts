@@ -249,7 +249,7 @@ export const adsaImplementation: ADSAImplementation = {
               },
               {
                 "number": 1,
-                "responsibility": "Advise leadership and staff on DEIA"
+                "responsibility": "Advise leadership and staff on People, Access and Culture work"
               }
             ],
             "constitutionalProvisions": [

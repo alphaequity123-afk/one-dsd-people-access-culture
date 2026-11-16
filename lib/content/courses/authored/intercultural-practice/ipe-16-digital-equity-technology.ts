@@ -272,7 +272,7 @@ const pack: CoursePack = {
           },
           {
             type: "statement",
-            body: "For your own notes: in the material my team sends out, what have we been treating as a favor granted on request that is really part of making the thing usable, and whose expertise is missing from how we decide that?",
+            body: "For your own notes: in the material my team sends out, what has the team been treating as a favor granted on request that is really part of making the thing usable, and whose expertise is missing from how the team decides that?",
           },
         ],
       },

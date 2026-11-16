@@ -24,7 +24,7 @@ export function StaffAskBrowse({
     <div className="max-w-4xl">
       <div>
         <div className="mb-4 flex flex-wrap items-end gap-3">
-          <p className="help m-0 max-w-xl">Choose a question to read an answer and find a useful next step. Your choice is not saved.</p>
+          <p className="help m-0 max-w-xl">Choose a question to read an answer and find a useful next step.</p>
           <Link href="/library" className="btn btn--light">Browse the Library</Link>
         </div>
         <details className="mb-4 border-b border-[#c5d0d7]">

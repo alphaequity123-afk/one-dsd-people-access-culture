@@ -16,7 +16,7 @@
   "learning": {
    "objectives": [
     "Separate a binding duty from a federal enforcement position and from a practical recommendation.",
-    "Explain Minn. Stat. 43A.21 as the state's own training duty, separate from this voluntary app.",
+    "Explain Minn. Stat. 43A.21 as the state's own training duty and how it is met.",
     "Act on the immediate reporting duty and the accommodation process without delay.",
     "Apply Ames and Muldrow to routine decisions such as assignments, schedules and transfers.",
     "Describe accurately what has changed on disparate impact, Olmstead and digital accessibility, and what is still pending in United States v. Minnesota."
@@ -40,7 +40,7 @@
     "Updated research, law, or official guidance",
     "Reader or reviewer feedback about accuracy, accessibility, or an example"
    ],
-   "relatedDoor": "Use the responsible agency office for formal employment, accommodation, civil-rights, labor or eligibility decisions. This course supports learning rather than making those determinations.",
+   "relatedDoor": "Take formal employment, accommodation, civil-rights, labor or eligibility decisions to the person or area responsible in the agency.",
    "toolkitQuestion": "Who is affected by this decision, and what would I need to learn from them before it is final?",
    "status": "reviewed"
   },
@@ -74,11 +74,11 @@
      },
      {
       "type": "statement",
-      "body": "<p>43A.21 is the state's duty. This app is not how the state meets it.</p>"
+      "body": "<p>43A.21 is the state's duty, and the state's own training is how it is met.</p>"
      },
      {
       "type": "text",
-      "body": "<p>This app is voluntary for everyone, from staff to commissioner, with one exception: the Equity Analysis Toolkit is required of all DHS staff, regardless of status. The app assigns nothing, tracks nothing for your manager, and sends nothing to your supervisor or employer. Your progress stays in your browser. The one exception is Ask: your questions go to outside answer and research services, and the app owner keeps a copy of them. Finishing every course here does not count as required training and does not replace Supervisor Core, Manager Core or your agency's annual training. If you are unsure which required training applies to you, ask Human Resources.</p><p>One more common mix-up. The Minnesota Human Rights Act, chapter 363A, does not require supervisor training. A full text search of the chapter (primary) found \"training\" only in a peace officer board reference and in remedies that can order admission to training programs. If someone tells you the Human Rights Act requires your training, they likely mean 43A.21.</p><p>Tribal-state relations training is a separate duty under Minn. Stat. 10.65 (primary) for a defined group of employees. This app refers Tribal learning to ADSA and the Tribal liaison.</p>"
+      "body": "<p>The Equity Analysis Toolkit is required of all DHS staff, regardless of status. Required training such as Supervisor Core, Manager Core and your agency's annual training is met through the state's own process. If you are unsure which required training applies to you, ask Human Resources.</p><p>One more common mix-up. The Minnesota Human Rights Act, chapter 363A, does not require supervisor training. A full text search of the chapter (primary) found \"training\" only in a peace officer board reference and in remedies that can order admission to training programs. If someone tells you the Human Rights Act requires your training, they likely mean 43A.21.</p><p>Tribal-state relations training is a separate duty under Minn. Stat. 10.65 (primary) for a defined group of employees. Refer Tribal learning questions to ADSA and the Tribal liaison.</p>"
      },
      {
       "type": "tabs",
@@ -89,7 +89,7 @@
        },
        {
         "label": "Enforcement position",
-        "body": "<p>The EEOC and DOJ documents on DEI from 2025. A Justice Department Office of Legal Counsel opinion. These shape federal action. They are not statutes.</p>"
+        "body": "<p>The 2025 EEOC and DOJ documents on diversity programs. A Justice Department Office of Legal Counsel opinion. These shape federal action. They are not statutes.</p>"
        },
        {
         "label": "Recommendation",
@@ -106,14 +106,14 @@
      {
       "type": "knowledgeCheck",
       "id": "sm-rules-fall-2026-1-check-1",
-      "question": "Which statement about this app and Minn. Stat. 43A.21 is correct?",
+      "question": "Which statement about Minn. Stat. 43A.21 is correct?",
       "options": [
        {
         "text": "Finishing the supervisor courses in this app meets the 43A.21 training requirement.",
         "correct": false
        },
        {
-        "text": "43A.21 is the state's own duty, and it is met through the state's own training. This app is voluntary and separate.",
+        "text": "43A.21 is the state's own duty, and it is met through the state's own training.",
         "correct": true
        },
        {
@@ -121,8 +121,8 @@
         "correct": false
        }
       ],
-      "feedbackCorrect": "<p>Right. The state's training meets the statutory duty. This app is a voluntary resource and keeps no record for anyone.</p>",
-      "feedbackIncorrect": "<p>This app does not satisfy the requirement, and the Human Rights Act contains no supervisor training duty. 43A.21 is the source, and the state's own training is how it is met.</p>"
+      "feedbackCorrect": "<p>Right. The state's training meets the statutory duty.</p>",
+      "feedbackIncorrect": "<p>The Human Rights Act contains no supervisor training duty. 43A.21 is the source, and the state's own training is how it is met.</p>"
      }
     ],
     "learning": {
@@ -131,11 +131,11 @@
       "Tell a requirement from an enforcement position and from a recommendation.",
       "Read the status labels used in this course.",
       "Explain what Minn. Stat. 43A.21 requires of the state and of supervisors.",
-      "Explain why this voluntary app does not satisfy that requirement."
+      "Explain how that requirement is met through the state's own training."
      ],
      "takeaways": [
       "Ask of any rule: is this law, an agency's stated position, or advice?",
-      "43A.21 is the state's duty. The state's own training meets it. This app does not.",
+      "43A.21 is the state's duty. The state's own training meets it.",
       "A date matters. Much of this field moved in 2026 and will keep moving."
      ],
      "evidence": "",
@@ -408,7 +408,7 @@
     "id": "sm-rules-fall-2026-4",
     "number": 4,
     "title": "Ames, Muldrow and the enforcement positions",
-    "summary": "Two Supreme Court decisions widened what can be challenged in a supervisor's routine decisions, and for everyone. Separately, the EEOC and DOJ have published positions on DEI. Learn which is which.",
+    "summary": "Two Supreme Court decisions widened what can be challenged in a supervisor's routine decisions, and for everyone. Separately, the EEOC and DOJ have published positions on diversity programs. Learn which is which.",
     "minutes": 14,
     "blocks": [
      {
@@ -424,7 +424,7 @@
        },
        {
         "label": "EEOC position",
-        "body": "<p>The technical assistance released March 19, 2025 remains posted with no withdrawal notice (primary). It still describes Ames as pending, so it has not been refreshed. It says DEI training can create a hostile environment depending on content, application or context. It treats mentoring, sponsorship, networking and training as terms or privileges of employment. It says limiting workplace groups or separating employees by protected characteristic can be unlawful, even with identical programming. It says there is no \"diversity interest\" exception, and that client or customer preference is no defense to race or color discrimination. It says opposing a training can be protected activity if there is a fact-specific basis.</p>"
+        "body": "<p>The technical assistance released March 19, 2025 remains posted with no withdrawal notice (primary). It still describes Ames as pending, so it has not been refreshed. It says diversity training can create a hostile environment depending on content, application or context. It treats mentoring, sponsorship, networking and training as terms or privileges of employment. It says limiting workplace groups or separating employees by protected characteristic can be unlawful, even with identical programming. It says there is no \"diversity interest\" exception, and that client or customer preference is no defense to race or color discrimination. It says opposing a training can be protected activity if there is a fact-specific basis.</p>"
        },
        {
         "label": "DOJ position",
@@ -432,7 +432,7 @@
        },
        {
         "label": "Courts so far",
-        "body": "<p>Courts are splitting on the facts. Young v. Colorado DOC (10th Cir., May 11, 2026) is reported to hold that a single mandatory training did not plausibly create a hostile environment, and a cert petition is reported (secondary). Diemert v. City of Seattle (9th Cir., Sept. 28, 2026) is reported to have sent a human-services employee's claim past summary judgment, on trainings plus about ten incidents over five years, including manager comments and denied advancement (secondary). The research for this course found no Eighth Circuit decision on DEI training. These cases do not bind Minnesota courts.</p>"
+        "body": "<p>Courts are splitting on the facts. Young v. Colorado DOC (10th Cir., May 11, 2026) is reported to hold that a single mandatory training did not plausibly create a hostile environment, and a cert petition is reported (secondary). Diemert v. City of Seattle (9th Cir., Sept. 28, 2026) is reported to have sent a human-services employee's claim past summary judgment, on trainings plus about ten incidents over five years, including manager comments and denied advancement (secondary). The research for this course found no Eighth Circuit decision on diversity training. These cases do not bind Minnesota courts.</p>"
        }
       ]
      },
@@ -468,7 +468,7 @@
       "question": "Which statement is accurate as of October 2026?",
       "options": [
        {
-        "text": "The EEOC's March 2025 DEI document is a statute that makes all DEI training illegal.",
+        "text": "The EEOC's March 2025 document on diversity programs is a statute that makes all diversity training illegal.",
         "correct": false
        },
        {
@@ -481,7 +481,7 @@
        }
       ],
       "feedbackCorrect": "<p>Right. Ames and Muldrow are Supreme Court holdings. The EEOC document states an agency's position and has no force as a statute.</p>",
-      "feedbackIncorrect": "<p>The EEOC document is an enforcement position, not a statute, and it does not say all DEI training is illegal. Muldrow held that \"some harm\" to a term or condition is enough, even with pay and rank unchanged.</p>"
+      "feedbackIncorrect": "<p>The EEOC document is an enforcement position, not a statute, and it does not say all diversity training is illegal. Muldrow held that \"some harm\" to a term or condition is enough, even with pay and rank unchanged.</p>"
      }
     ],
     "learning": {
@@ -646,7 +646,7 @@
      ]
     },
     "transfer": {
-     "prompt": "<p>If someone on my team says a federal change ended a duty, then I will say what changed, what remains and what date I am relying on, and I will check with the right office before we change how we serve people.</p>",
+     "prompt": "<p>If someone on my team says a federal change ended a duty, then I will say what changed, what remains and what date I am relying on, and I will check with the person or area responsible before we change how we serve people.</p>",
      "options": []
     }
    },
@@ -794,7 +794,7 @@
    "purpose": "A one-page reminder of what binds you, what is an enforcement position, and what to do while the rules move. Dated October 2026. Check before relying on it.",
    "remember": [
     "General information, not legal advice.",
-    "This app is voluntary and does not satisfy Minn. Stat. 43A.21. The state's own training does.",
+    "Minn. Stat. 43A.21 is met through the state's own training.",
     "\"Reported\" means the source was secondary. Verify it before you repeat it as fact."
    ],
    "doNext": ""

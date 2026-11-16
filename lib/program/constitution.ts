@@ -269,7 +269,7 @@ export const foundationProvisions: FoundationProvision[] = [
     "id": "3.8",
     "article": 3,
     "title": "Participation shall not become surveillance",
-    "summary": "Keep private reflection and voluntary learning separate from undisclosed employee scoring or monitoring.",
+    "summary": "Keep private reflection and learning separate from employee scoring or monitoring.",
     "state": "proposed",
     "resources": [
       {
@@ -737,7 +737,7 @@ export const foundationProvisions: FoundationProvision[] = [
         "href": "/library"
       }
     ],
-    "gap": "Text, editable materials and optional media exist; no complete accessibility or language-service certification is claimed."
+    "gap": "Text, editable materials and supporting media exist; no complete accessibility or language-service certification is claimed."
   },
   {
     "id": "11.2",
@@ -751,7 +751,7 @@ export const foundationProvisions: FoundationProvision[] = [
         "href": "/library"
       }
     ],
-    "gap": "Text, editable materials and optional media exist; no complete accessibility or language-service certification is claimed."
+    "gap": "Text, editable materials and supporting media exist; no complete accessibility or language-service certification is claimed."
   },
   {
     "id": "11.3",
@@ -765,7 +765,7 @@ export const foundationProvisions: FoundationProvision[] = [
         "href": "/library"
       }
     ],
-    "gap": "Text, editable materials and optional media exist; no complete accessibility or language-service certification is claimed."
+    "gap": "Text, editable materials and supporting media exist; no complete accessibility or language-service certification is claimed."
   },
   {
     "id": "11.4",
@@ -779,7 +779,7 @@ export const foundationProvisions: FoundationProvision[] = [
         "href": "/library"
       }
     ],
-    "gap": "Text, editable materials and optional media exist; no complete accessibility or language-service certification is claimed."
+    "gap": "Text, editable materials and supporting media exist; no complete accessibility or language-service certification is claimed."
   },
   {
     "id": "12.1",
@@ -1104,7 +1104,7 @@ export const foundationProvisions: FoundationProvision[] = [
 ];
 export const foundationResponsibilities: { title: string; output: string; currentPosition: string }[] = [
   {
-    "title": "Advise leadership and staff on DEIA",
+    "title": "Advise leadership and staff on People, Access and Culture work",
     "output": "Decision brief identifying the issue, evidence, options, recommendation, owner, and next step",
     "currentPosition": "Consultation intake, triage and queue are explicitly deferred under current direction; advisory resources and proactive consultant work remain"
   },

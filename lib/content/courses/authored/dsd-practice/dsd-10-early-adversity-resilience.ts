@@ -40,7 +40,7 @@ const pack: CoursePack = {
       nextReview: "At the agreed review point and whenever an update trigger occurs",
       updateTriggers: ["Change in the Division's intake or assessment instruments", "Change in trauma-responsive practice standards adopted by the Department", "Feedback from staff or participants that a description no longer matches practice"],
       relatedDoor: "Questions about a specific person's history, safety or mental health go to the responsible clinician or the adult protection process where required; this course builds practice, it does not assess anyone.",
-      toolkitQuestion: "What does this question about the person's past change about what we do, and if nothing, why are we asking it?",
+      toolkitQuestion: "What does this question about the person's past change about what you do, and if nothing, why ask it?",
       status: "reviewed",
     },
     lessons: [

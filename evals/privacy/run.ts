@@ -20,7 +20,7 @@ export async function run(_options: EvalOptions = {}): Promise<EvalResult> {
   const cookies = cookieInventory(allow);
   const counter = counters();
   const claims = countingClaims();
-  const records = askRecords();
+  const records = askRecords(allow);
 
   const list = (hits: { file: string; line: number; what: string; via?: string }[], max = 12) => hits.slice(0, max).map(formatHit);
   const measures = [
@@ -44,6 +44,7 @@ export async function run(_options: EvalOptions = {}): Promise<EvalResult> {
       `${writes.entries.length} staff entry files; ${writes.reach.size} files reachable by static imports; ${writes.allowed.length} reachable writes accepted by evals/privacy/allowlist.json (owner or contributor authoring, records a person chooses to share, rate limits).`,
       counter.exists ? `Counter switch ${counter.flagAt} is ${counter.enabled ? "ON" : "off"}; dormant counter code still present in ${counter.dormant.join(", ") || "no files"} (owner: anonymous totals must go, so removal is the end state).` : "Counter switch not found (removed).",
       `Cookies set by the app: ${cookies.names.join(", ")}.`,
+      `Kept by owner decision (evals/privacy/allowlist.json "kept"): ${Object.keys(allow.kept ?? {}).join(", ") || "none"}. A usage-like table that a later migration drops is not a finding.`,
     ].join(" "),
   });
 }

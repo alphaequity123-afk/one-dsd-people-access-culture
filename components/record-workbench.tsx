@@ -95,7 +95,7 @@ export function RecordWorkbench({ kind, prefill = {}, teamSpace = false }: { kin
       <p><strong>Ready to look back.</strong> The date you set has come for {due.length === 1 ? "this one" : "these"}. Open it and write what you notice now.</p>
       <ul>{due.slice(0, 6).map(record => <li key={record.id}><button type="button" className="calm-button calm-button--quiet" onClick={() => setActiveId(record.id)}>{record.title}</button></li>)}</ul>
     </div> : null}
-    {!active ? <p className="calm-muted">Nothing saved yet. Start one when you are ready.</p> : <form className="calm-form" onSubmit={event => event.preventDefault()}>
+    {!active ? <p className="calm-muted">No records yet. Start one when you are ready.</p> : <form className="calm-form" onSubmit={event => event.preventDefault()}>
       <p className="calm-note">Leave out client, case, health and personnel details. Entries save automatically in this browser profile, where others using the profile may see them. Downloaded, printed or shared copies are separate.</p>
       <div className="calm-field"><label htmlFor="record-title">Title</label><input id="record-title" value={active.title} maxLength={160} onChange={event => update({ title: event.target.value })} /></div>
       {fields.map(field => <div className="calm-field" key={field.key}>

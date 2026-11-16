@@ -3,8 +3,9 @@ import { SourceLink } from "@/components/app-link";
 import type { Metadata } from "next";
 import Link from "@/components/app-link";
 import { PARTNER_GROUP_LABEL, PUBLIC_PARTNERS, STATE_AGENCIES, STATE_AGENCY_SOURCE, agencyDisplayName, agencyPageHref, type PublicPartner, type StateAgency } from "@/lib/content/state-agencies";
-import { catMatches, catOneLine, catPaginate, catParam, catWords } from "@/lib/cat-paging";
-import { CatList, CatPager, CatResultStatus, CatRow } from "@/components/cat-list";
+import { catOneLine, catParam } from "@/lib/cat-paging";
+import { CatRow } from "@/components/cat-list";
+import { PrivateCatalogForm, PrivateCatalogProvider, PrivateCatalogResults, type CatalogRow } from "@/components/private-catalog";
 
 export const metadata: Metadata = { title: "Minnesota agencies and partners" };
 
@@ -20,8 +21,14 @@ export default async function MinnesotaAgenciesPage({ searchParams }: { searchPa
     ...agency, name: agencyDisplayName(agency.name),
     group: agency.group ? PARTNER_GROUP_LABEL[agency.group] : undefined,
   })).sort((a, b) => a.name.localeCompare(b.name));
-  const words = catWords(q);
-  const page = catPaginate(entries.filter(agency => catMatches(words, agency.name, agency.description)), catParam(params.page), 14);
+  // Every entry is drawn once; the words typed narrow the list in the page and never go into the address.
+  const rows: CatalogRow[] = entries.map(agency => ({
+    key: agency.id,
+    text: `${agency.name} ${agency.description}`,
+    node: <CatRow key={agency.id}
+      title={<Link href={agencyPageHref(agency.id)}>{agency.name}</Link>}
+      line={catOneLine(agency.description)} meta={agency.group} />,
+  }));
   const noun = partnerView ? "partner" : "agency";
   const nouns = partnerView ? "partners" : "agencies";
   return <div className="pilot-topic">
@@ -33,16 +40,10 @@ export default async function MinnesotaAgenciesPage({ searchParams }: { searchPa
         <Link href={base} aria-current={partnerView ? undefined : "page"}>State agencies</Link>
         <Link id="partners" href={base + "?view=partners"} aria-current={partnerView ? "page" : undefined}>Counties and partners</Link>
       </nav>
-      <form className="pilot-topic-search" action={base} role="search">
-        {partnerView ? <input type="hidden" name="view" value="partners" /> : null}
-        <label htmlFor="agency-q">Find a {noun === "agency" ? "state agency" : "partner"}</label>
-        <div><input id="agency-q" name="q" type="search" defaultValue={q} /><button type="submit">Search</button></div>
-      </form>
-      <CatResultStatus page={page} noun={noun} nouns={nouns} of={entries.length} />
-      {page.items.length ? <CatList label={nouns}>{page.items.map(agency => <CatRow key={agency.id}
-        title={<Link href={agencyPageHref(agency.id)}>{agency.name}</Link>}
-        line={catOneLine(agency.description)} meta={agency.group} />)}</CatList> : null}
-      <CatPager page={page} basePath={base} params={{ q, view: partnerView ? "partners" : "" }} label="Directory result pages" />
+      <PrivateCatalogProvider key={partnerView ? "partners" : "agencies"} basePath={base} rows={rows} choices={{}} perPage={14} initial={{ q, page: catParam(params.page) }}>
+        <PrivateCatalogForm className="pilot-topic-search" layout="bar" inputId="agency-q" searchLabel={`Find a ${noun === "agency" ? "state agency" : "partner"}`} buttonLabel="Search" clearLabel="Clear search" />
+        <PrivateCatalogResults noun={noun} nouns={nouns} of={entries.length} listLabel={nouns} pagerLabel="Directory result pages" />
+      </PrivateCatalogProvider>
     </section>
     <section aria-label="Related directories">
       {partnerView ? <p><Link href="/community-outreach/county-agencies">Find a county lead agency by county</Link></p> : <p>Directory source: <SourceLink href={STATE_AGENCY_SOURCE}>State of Minnesota agencies, boards and commissions</SourceLink>.</p>}

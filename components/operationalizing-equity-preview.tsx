@@ -8,7 +8,7 @@ export function OperationalizingEquityPreview() {
     <div className={styles.definition}>
       <p className={styles.eyebrow}>The idea behind the work</p>
       <h2 id="operationalizing-equity-title">Operationalizing equity</h2>
-      <p>Making equity a continuing part of how we plan, carry out and review our work—with the people affected by our decisions.</p>
+      <p>Making equity a continuing part of how staff plan, carry out and review their work—with the people affected by their decisions.</p>
       <Link href="/operationalizing-equity">Explore equity in practice</Link>
     </div>
     <div className={styles.toolkit}>

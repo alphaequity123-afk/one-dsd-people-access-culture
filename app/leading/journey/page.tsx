@@ -3,14 +3,14 @@ import { SourceLink } from "@/components/app-link";
 import type { Metadata } from "next";
 import Link from "@/components/app-link";
 import { LeadingStartChooser } from "@/components/leading-start-chooser";
-import { LEADING_LABEL, LEADING_PATHS, LEADING_PRIVACY_SENTENCE } from "@/lib/content/collections";
+import { LEADING_LABEL, LEADING_PATHS } from "@/lib/content/collections";
 import { END_OF_PATH_QUESTIONS, JOURNEY_STEPS, LEARNING_ELSEWHERE, LEARNING_WITH_OTHERS, PATH_JOURNEY, REFLECTION_PROMPTS, SIX_WEEKS, WEEKLY_RHYTHM } from "@/lib/content/leadership-journey";
 import base from "@/app/learn/collaboration/collaboration.module.css";
 import styles from "@/components/collections.module.css";
 
 export const metadata: Metadata = {
   title: `Your leadership journey | ${LEADING_LABEL}`,
-  description: "Connect leadership learning with a work decision, reflection and follow-up. This optional path does not enroll you in assigned training; related learning tools explain what they save.",
+  description: "Connect leadership learning with a work decision, reflection and follow-up.",
 };
 
 export default function LeadingJourneyPage() {
@@ -18,10 +18,10 @@ export default function LeadingJourneyPage() {
   return <div className={base.page}><div className={base.content}>
     <p className={base.back}><Link href="/leading">{LEADING_LABEL}</Link></p>
     <header className={base.intro}>
-      <p className={base.eyebrow}>Optional</p>
+      <p className={base.eyebrow}>{LEADING_LABEL}</p>
       <h1>Your leadership journey</h1>
       <p className={base.lede}>A way to grow as a leader at your own pace, from a first interest in leading to setting direction for others.</p>
-      <p>There is no nomination, no group to join and no deadline. You choose where to start and how fast to go. {LEADING_PRIVACY_SENTENCE} <Link href="/leading/how-this-works">How this works</Link>.</p>
+      <p>You choose where to start and how fast to go. <Link href="/leading/how-this-works">How this works</Link>.</p>
     </header>
 
     <section className={styles.section} aria-labelledby="journey-round-title">
@@ -67,12 +67,12 @@ export default function LeadingJourneyPage() {
       <ul className="list-disc space-y-2 pl-6">
         {REFLECTION_PROMPTS.map(prompt => <li key={prompt.kind}><strong>{prompt.kind}.</strong> {prompt.when} {prompt.questions.join(" ")}</li>)}
       </ul>
-      <p className={styles.plain}>When you set a date to look back, the notebook shows it to you the next time you open it. Nothing is sent as a reminder.</p>
+      <p className={styles.plain}>When you set a date to look back, the notebook shows it to you the next time you open it.</p>
     </section>
 
     <section className={styles.section} aria-labelledby="journey-others-title">
       <h2 id="journey-others-title">Learning with others, if you want to</h2>
-      <p>None of this is required. A conversation with someone you trust can deepen what you notice.</p>
+      <p>A conversation with someone you trust can deepen what you notice.</p>
       <ul className={styles.doors}>
         {LEARNING_WITH_OTHERS.map(place => <li key={place.href}><Link className={styles.door} href={place.href}><span className={styles.doorTitle}>{place.title}</span><span>{place.body}</span></Link></li>)}
       </ul>
@@ -80,7 +80,7 @@ export default function LeadingJourneyPage() {
 
     <section className={styles.section} aria-labelledby="journey-elsewhere-title">
       <h2 id="journey-elsewhere-title">Free courses elsewhere</h2>
-      <p>For anyone who wants more. These belong to other organizations, open on their sites, and may ask you to create an account there. Confirm any required-training credit through the agency process responsible for that requirement; do not assume that completing an external course satisfies it.</p>
+      <p>For anyone who wants more. These belong to other organizations, open on their sites, and may ask you to create an account there. Check with the agency process responsible for required training before counting an external course toward it; do not assume that completing one satisfies the requirement.</p>
       <ul className="list-disc pl-6">
         {LEARNING_ELSEWHERE.map(course => <li key={course.href}><SourceLink className="underline" href={course.href} target="_blank" rel="noreferrer">{course.title}</SourceLink>, {course.provider}. {course.body}</li>)}
       </ul>
@@ -92,7 +92,7 @@ export default function LeadingJourneyPage() {
       <ul className="list-disc pl-6">
         {END_OF_PATH_QUESTIONS.map(question => <li key={question}>{question}</li>)}
       </ul>
-      <p className={styles.plain}>This optional path has no completion submission or supervisor score report. Related lessons may save progress or practice responses in your browser profile. If you want something to bring to a development conversation, review and download your action plans and reflections from <Link href="/my-work">My work</Link>. What you share, and with whom, is your choice.</p>
+      <p className={styles.plain}>To bring something to a development conversation, review and download your action plans and reflections from <Link href="/my-work">My work</Link>.</p>
     </section>
   </div></div>;
 }

@@ -38,6 +38,50 @@ describe("A5 shared wording linter", () => {
     expect(rules("Voluntary agencies resettle refugees in Minnesota.")).toEqual([]);
   });
 
+  it("flags unrecorded-reflection, score, certification and disclosure notices about the course itself", () => {
+    for (const notice of [
+      "Name one open question, or keep the reflection unrecorded.",
+      "Use this private, unrecorded reflection to compare the two replies.",
+      "Your reflection is not recorded.",
+      "No score is kept.",
+      "No scores.",
+      "Use the checklist — still no score.",
+      "This exercise is not scored.",
+      "The practice is not graded.",
+      "This course does not certify compliance.",
+      "The response routines are course examples, not a certification.",
+      "No live work product is required.",
+      "This lesson imposes no live work product.",
+      "Nothing is saved.",
+      "Nothing will be shared.",
+      "No one needs to disclose personal experiences.",
+      "No personal disclosure is required.",
+      "This learning does not replace required training.",
+    ]) expect(rules(notice), notice).toEqual(["system-notices"]);
+  });
+
+  it("leaves story facts, real duties and lessons whose subject is records alone", () => {
+    for (const text of [
+      "Entry two asks a question. “No answer or travel offer is recorded.” Entry three follows.",
+      "Bren supplies the exact question and says no answer or travel offer is recorded.",
+      "Do not assure the person that nothing can ever be shared, because review may require it.",
+      "An honest explanation is better than a promise that nothing will ever be shared.",
+      "Avoid concluding that nothing remains because the initial email was sent.",
+      "After a response is sent, the confirmation appears only as a color change.",
+      "The note records the meal but says nothing about the shared table purpose.",
+      "The report labels the unknown race as Race not recorded.",
+      "The event is not recorded in the supplied interval.",
+      "A helpful heading edit does not certify an entire document.",
+      "Minnesota does not certify every spoken-language interpreter.",
+      "Distinguish required and optional steps.",
+      "Replace a required action with an optional one without review.",
+      "She said, “Our optional Thursday lunch is a chance to show that everyone belongs.”",
+      "Offer captions to everyone at the start, so no one has to disclose to receive them.",
+      "The panel gave each applicant a score and kept the notes.",
+      "Report harassment to Human Resources and follow the agency's policy.",
+    ]) expect(rules(text), text).toEqual([]);
+  });
+
   it("flags program voice outside quotations only", () => {
     expect(rules("We recommend this guide.")).toEqual(["program-voice"]);
     expect(rules("She said, \"we built our future here.\"")).toEqual([]);

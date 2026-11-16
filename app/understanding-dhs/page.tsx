@@ -9,11 +9,11 @@ import reference from "@/data/organization/minnesota-dhs.json";
 import { DHS_REFERENCE_GROUPS, dhsTopicAnchor } from "@/lib/content/dhs-reference";
 export const metadata: Metadata = {title:"Understanding DHS",description:"People, programs and partnerships across Minnesota DHS, including Disability Services, county and Tribal relationships, and original sources."};
 export default function UnderstandingDhsPage() {
-  return <><PageIntro kicker="People, Access and Culture" title="Understanding DHS" lede="People, programs and partnerships across Minnesota DHS, with a closer look at Disability Services and the work we share." />
+  return <><PageIntro kicker="People, Access and Culture" title="Understanding DHS" lede="People, programs and partnerships across Minnesota DHS, with a closer look at Disability Services and the work it shares with the rest of DHS." />
     <div className="pilot-topic pilot-reading-width">
       <p className="mt-0 max-w-3xl">Good work connects people across teams and organizations. This reference brings together their responsibilities, services and relationships so it is easier to see how your work fits into the wider picture.</p>
       <details className="pilot-supporting">
-        <summary>Two places in our DHS story</summary><div className="pilot-supporting-body space-y-4">
+        <summary>Two places in the DHS story</summary><div className="pilot-supporting-body space-y-4">
         <p className="max-w-3xl">These are real DHS buildings in St. Paul. The Lafayette photograph is an archival view from 1998; the buildings are shown here for orientation and connection to the department, not as a current visitor guide.</p>
         <div className="grid gap-6 md:grid-cols-2">
           <figure className="m-0 overflow-hidden rounded-xl border border-line bg-white">

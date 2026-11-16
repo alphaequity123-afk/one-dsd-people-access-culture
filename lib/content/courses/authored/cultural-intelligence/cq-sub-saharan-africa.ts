@@ -42,7 +42,7 @@ const pack: CoursePack = {
         "A new edition of a cited source"
       ],
       "relatedDoor": "These examples are practice. They are not an individual assessment, or authority to change a service requirement. Ask the person about preferences and check the actual work context.",
-      "toolkitQuestion": "What do we know from this person and this situation, what are we assuming, and what should we ask or verify next?",
+      "toolkitQuestion": "What do you know from this person and this situation, what are you assuming, and what should you ask or verify next?",
       "status": "reviewed"
     },
     "lessons": [
@@ -84,7 +84,7 @@ const pack: CoursePack = {
         "transfer": {
           "prompt": "How would the person like family, community knowledge or other support involved?",
           "options": [
-            "How can we agree on time and recognition without assigning a preference from someone’s background?",
+            "How can you agree on time and recognition without assigning a preference from someone’s background?",
             "What did the person actually tell you, and which part is still your interpretation?",
             "What requirement needs verification before you suggest a change?"
           ]
@@ -93,20 +93,20 @@ const pack: CoursePack = {
           {
             "type": "text",
             "heading": "Begin with curiosity about this person",
-            "body": "<p>It may seem helpful to work out in advance how a partner will treat time or recognition. How can we agree on time and recognition without assigning a preference from someone’s background? Bring it up as ordinary planning. Say what the time constraints are, and ask how the partner would like to work and how they would like to involve others.</p><p>You have your own defaults here as well. Punctuality, individual credit and deciding on your own may seem like plain good practice to you. Each of them is a choice that others might make differently.</p>"
+            "body": "<p>It may seem helpful to work out in advance how a partner will treat time or recognition. How can you agree on time and recognition without assigning a preference from someone’s background? Bring it up as ordinary planning. Say what the time constraints are, and ask how the partner would like to work and how they would like to involve others.</p><p>You have your own defaults here as well. Punctuality, individual credit and deciding on your own may seem like plain good practice to you. Each of them is a choice that others might make differently.</p>"
           },
           {
             "type": "text",
             "heading": "How far a chart can go",
-            "body": "<p>Group comparisons report tendencies under particular research conditions. They might prompt a thoughtful question, but they don’t establish how this partner will approach a schedule or a thank-you.</p><p>Keep three questions apart: What did the study report? What might it help us consider? What do we know about this situation? If you want to know where regional charts come from and why they can’t answer the last question, see the optional background course, <a href=\"/courses/cq-cluster-frameworks-foundations\">Optional background: where regional culture frameworks come from and what they cannot tell you</a>. You don’t need it to use this course.</p>"
+            "body": "<p>Group comparisons report tendencies under particular research conditions. They might prompt a thoughtful question, but they don’t establish how this partner will approach a schedule or a thank-you.</p><p>Keep three questions apart: What did the study report? What might it help you consider? What do you know about this situation? If you want to know where regional charts come from and why they can’t answer the last question, see the background course <a href=\"/courses/cq-cluster-frameworks-foundations\">Where regional culture frameworks come from and what they cannot tell you</a>.</p>"
           },
           {
             "type": "list",
             "heading": "Questions for planning around time and credit",
             "items": [
               "How would the person like family, community knowledge or other support involved?",
-              "How can we agree on time and recognition without assigning a preference from someone’s background?",
-              "What would we need to ask or check before deciding that this approach will help?"
+              "How can you agree on time and recognition without assigning a preference from someone’s background?",
+              "What would you need to ask or check before deciding that this approach will help?"
             ]
           },
           {
@@ -484,7 +484,7 @@ const pack: CoursePack = {
         "heading": "Raise, ask and credit",
         "items": [
           "What is the actual effect of a late start, and is the deadline real?",
-          "What start time works, and what happens if one of us runs behind?",
+          "What start time works, and what happens if either person runs behind?",
           "Whose advice would you like, and how much time do you need?",
           "Is this deadline a fixed requirement or an internal target?",
           "How would you like this work recognized, and who else contributed?"

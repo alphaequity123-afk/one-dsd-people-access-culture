@@ -218,7 +218,6 @@ function courseDocument(pack: CoursePack, scope: StaffProgramScope): ResourceDoc
     meta: [
       { label: "Length", value: plain(course.duration) },
       { label: "Lessons", value: String(course.lessons.length) },
-      { label: "Participation", value: "Voluntary learning" },
     ].filter((row) => row.value),
     sections: compactSections([
       section(

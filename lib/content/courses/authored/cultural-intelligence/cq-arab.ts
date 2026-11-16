@@ -42,7 +42,7 @@ const pack: CoursePack = {
         "A new edition of a cited source"
       ],
       "relatedDoor": "These examples are practice. They are not an individual assessment, or authority to change a service requirement. Ask the person about preferences and check the actual work context.",
-      "toolkitQuestion": "What do we know from this person and this situation, what are we assuming, and what should we ask or verify next?",
+      "toolkitQuestion": "What do you know from this person and this situation, what are you assuming, and what should you ask or verify next?",
       "status": "reviewed"
     },
     "lessons": [
@@ -84,7 +84,7 @@ const pack: CoursePack = {
         "transfer": {
           "prompt": "What would help someone feel welcomed without assuming their faith or preferences?",
           "options": [
-            "How can we explain a real work boundary while receiving a person’s goodwill respectfully?",
+            "How can you explain a real work boundary while receiving a person’s goodwill respectfully?",
             "What did the person actually tell you, and which part is still your interpretation?",
             "What requirement needs verification before you suggest a change?"
           ]
@@ -98,15 +98,15 @@ const pack: CoursePack = {
           {
             "type": "text",
             "heading": "Why a surname and a chart are not enough",
-            "body": "<p>A surname can’t tell you someone’s religion, and a comparison chart reports averages from particular people at a particular time. Neither is evidence about the partner you are about to meet.</p><p>Keep three questions apart: What did the study report? What might it help us consider? What do we know about this situation? If you want to know where regional charts come from and why they can’t answer the last question, see the optional background course, <a href=\"/courses/cq-cluster-frameworks-foundations\">Optional background: where regional culture frameworks come from and what they cannot tell you</a>. You don’t need it to use this course.</p>"
+            "body": "<p>A surname can’t tell you someone’s religion, and a comparison chart reports averages from particular people at a particular time. Neither is evidence about the partner you are about to meet.</p><p>Keep three questions apart: What did the study report? What might it help you consider? What do you know about this situation? If you want to know where regional charts come from and why they can’t answer the last question, see the background course <a href=\"/courses/cq-cluster-frameworks-foundations\">Where regional culture frameworks come from and what they cannot tell you</a>.</p>"
           },
           {
             "type": "list",
             "heading": "Questions for planning a good welcome",
             "items": [
               "What would help someone feel welcomed without assuming their faith or preferences?",
-              "How can we explain a real work boundary while receiving a person’s goodwill respectfully?",
-              "What would we need to ask or check before deciding that this approach will help?"
+              "How can you explain a real work boundary while receiving a person’s goodwill respectfully?",
+              "What would you need to ask or check before deciding that this approach will help?"
             ]
           },
           {

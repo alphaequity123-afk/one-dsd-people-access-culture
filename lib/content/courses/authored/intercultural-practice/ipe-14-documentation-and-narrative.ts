@@ -91,7 +91,7 @@ const pack: CoursePack = {
           options: [
             "Write down the explanation the document offered, in its own words",
             "Write down what evidence in the document actually supports that explanation",
-            "Name one part of our own process the document never examined",
+            "Name one part of the agency's own process the document never examined",
           ],
         },
         blocks: [
@@ -232,7 +232,7 @@ const pack: CoursePack = {
           {
             type: "text",
             heading: "Where this sits in the program's map of change",
-            body: "<p>This program uses a six-part map of intercultural development — Denial, Polarization, Minimization, Acceptance, Adaptation and Integration — as a working tool for examining the work and the organization, not as a proven account of how organizations and the people in them change over time. The first five are the orientations of the Intercultural Development Inventory. The sixth, Integration, is not an IDI orientation: in this program it means the people a process affects help design it, and the name comes from Bennett's developmental model, where it describes identity across cultures. It is never a label, a score or a record about any individual, and nothing you do in this module is assessed or kept.</p><p>In documentation, Minimization has a particular sound: “I write about everyone the same way, so my writing is neutral.” It is sincerely meant, and it is the position most professional writing training produces. The difficulty is that a single standard way of describing people is not neutral — it is the description that fits the writer's own expectations, and it treats everything outside those expectations as a deviation to be explained. That is how “did not respond” becomes “was not interested,” and how a ten-day English-only window disappears from a finding entirely.</p><p>Acceptance in this work is recognizing that a document lands differently depending on who is in it and who reads it, and that this is a real feature of the document rather than a sensitivity. Adaptation is changing the writing: naming the actor, attaching evidence to every explanation, stating what a number cannot support, asking what the process required of a person before concluding anything about what the person did. None of that is softer writing. It is more exact writing, which is why it also survives an audit.</p>",
+            body: "<p>This program uses a six-part map of intercultural development — Denial, Polarization, Minimization, Acceptance, Adaptation and Integration — as a working tool for examining the work and the organization, not as a proven account of how organizations and the people in them change over time. The first five are the orientations of the Intercultural Development Inventory. The sixth, Integration, is not an IDI orientation: in this program it means the people a process affects help design it, and the name comes from Bennett's developmental model, where it describes identity across cultures. It is never a label or a score about any individual.</p><p>In documentation, Minimization has a particular sound: “I write about everyone the same way, so my writing is neutral.” It is sincerely meant, and it is the position most professional writing training produces. The difficulty is that a single standard way of describing people is not neutral — it is the description that fits the writer's own expectations, and it treats everything outside those expectations as a deviation to be explained. That is how “did not respond” becomes “was not interested,” and how a ten-day English-only window disappears from a finding entirely.</p><p>Acceptance in this work is recognizing that a document lands differently depending on who is in it and who reads it, and that this is a real feature of the document rather than a sensitivity. Adaptation is changing the writing: naming the actor, attaching evidence to every explanation, stating what a number cannot support, asking what the process required of a person before concluding anything about what the person did. None of that is softer writing. It is more exact writing, which is why it also survives an audit.</p>",
           },
           {
             type: "knowledgeCheck",
@@ -249,7 +249,7 @@ const pack: CoursePack = {
           },
           {
             type: "statement",
-            body: "Private reflection, kept by you: think of a conclusion you have written into a document more than once. What is it actually based on, and what would it take to check?",
+            body: "Private reflection: think of a conclusion you have written into a document more than once. What is it actually based on, and what would it take to check?",
           },
         ],
       },
@@ -311,7 +311,7 @@ const pack: CoursePack = {
               { title: "A gap reported without asking who is missing", body: "<p>A summary of everyone who used a service describes people who got through the door. If the document's question is about reach, the people who never appear in the data are the subject, and their absence needs its own sentence rather than being silently excluded from the denominator.</p>" },
               { title: "A category treated as a property of people", body: "<p>Fields like primary language, race and disability type record what a form allowed and what someone entered. Say where the category came from and how it is completed. A category is a design decision, and readers need to know that before they build a program on it.</p>" },
               { title: "A difference reported without a comparison", body: "<p>“Authorization is lower in this region” invites the reader to supply a cause. Lower than what, over what period, and lower for whom? A difference with no basis of comparison is not yet a finding, and it is the sentence most likely to be quoted as one.</p>" },
-              { title: "A correlation written as a cause", body: "<p>Two things moved together in the same period. The summary says one produced the other. If that claim is worth making, it needs its own analysis; if it is not, take the causal verb out. The strongest version is usually the plainest: here is what moved, and here is what we would need to know to say why.</p>" },
+              { title: "A correlation written as a cause", body: "<p>Two things moved together in the same period. The summary says one produced the other. If that claim is worth making, it needs its own analysis; if it is not, take the causal verb out. The strongest version is usually the plainest: here is what moved, and here is what would need to be known to say why.</p>" },
               { title: "A trend built on a changed definition", body: "<p>When a field, a form or an eligibility rule changed partway through the period, a trend line can be entirely an artifact of the change. Any summary crossing such a change needs a line saying so, or it will be quoted as evidence of a program effect that did not happen.</p>" },
             ],
           },
@@ -360,7 +360,7 @@ const pack: CoursePack = {
           },
           {
             type: "statement",
-            body: "Private reflection, kept by you: think of a figure from your own work that gets quoted often. What does it actually count, and what would you want a reader to know before they used it to decide something?",
+            body: "Private reflection: think of a figure from your own work that gets quoted often. What does it actually count, and what would you want a reader to know before they used it to decide something?",
           },
         ],
       },
@@ -469,7 +469,7 @@ const pack: CoursePack = {
           },
           {
             type: "statement",
-            body: "Private reflection, kept by you: think of a document about a person that you would not want that person to read. What is in it that you would not say to them directly, and what would the document lose if it were written so that you could?",
+            body: "Private reflection: think of a document about a person that you would not want that person to read. What is in it that you would not say to them directly, and what would the document lose if it were written so that you could?",
           },
         ],
       },

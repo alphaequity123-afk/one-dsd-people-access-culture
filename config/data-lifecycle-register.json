@@ -458,7 +458,7 @@
         "rule": "The person may clear it at any time; the browser removes it when the session ends."
       },
       "correction": {
-        "rule": "The person edits or replaces their own browser value. This creates no server copy of browser history or staff profile; a submitted ASK interaction has a separate owner-accessible response record described by owner_ask_response_record."
+        "rule": "The person edits or replaces their own browser value. This creates no server copy of browser history or staff profile."
       },
       "backup": {
         "rule": "No application or server backup."
@@ -1195,7 +1195,7 @@
       "official_record": false,
       "purpose": "Owner-accessible ASK question, actual complete response, time, program scope, research result and outcome record. Private-information questions refused by the safety gate are omitted; no account, IP, cookie, session identifier or previous-turn transcript is stored.",
       "status": "defined",
-      "source": "db/migrations/0030_pac_ask_response_records.sql, lib/intelligence/observability/ask-records.ts, app/api/consultant/ask-records/route.ts, and lib/participation/contracts.ts"
+      "source": "db/migrations/0030_pac_ask_response_records.sql"
     },
     {
       "id": "db.program_accounts",
@@ -1986,41 +1986,6 @@
       "purpose": "Nonproduction technical counters.",
       "status": "nonproduction_only",
       "source": "lib/intelligence/memory/store.ts"
-    },
-    {
-      "id": "file_store.ask_response_records",
-      "physical_members": [
-        ".data/ask-response-records/*.json"
-      ],
-      "profile": "owner_ask_response_record",
-      "sensitivity_classes": [
-        "S2",
-        "S3"
-      ],
-      "participation_classes": [
-        "voluntary_shared"
-      ],
-      "official_record": false,
-      "purpose": "Nonproduction filesystem representation of the same dedicated ASK response record, with owner deletion and optional expiry. It is separate from transcript-free work-object and audit storage.",
-      "status": "nonproduction_only",
-      "source": "lib/intelligence/observability/ask-records.ts"
-    },
-    {
-      "id": "file_store.ask_response_deletions",
-      "physical_members": [
-        ".data/ask-response-records/.deletions/*.json"
-      ],
-      "profile": "ask_deletion_evidence",
-      "sensitivity_classes": [
-        "S2"
-      ],
-      "participation_classes": [
-        "not_interactive"
-      ],
-      "official_record": false,
-      "purpose": "Nonproduction file receipts containing only deleted ASK record UUID, deletion time and reason. Surviving receipts suppress restored bodies; prepareFileAskRecordRestore excludes all recovered bodies.",
-      "status": "nonproduction_only",
-      "source": "lib/intelligence/observability/ask-records.ts"
     }
   ],
   "browser_records": [

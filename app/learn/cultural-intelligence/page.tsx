@@ -65,7 +65,7 @@ export default async function CulturalIntelligencePage() {
       <div>
         <Hub2More id="learn" headingId="learn-title" title="Learn">
           {interculturalAvailable && <>
-            <p className="mt-4 max-w-4xl leading-7">Explore your own perspective and build skills for everyday interactions. The seven-part path includes optional video, captions, transcript, and individual practice.</p>
+            <p className="mt-4 max-w-4xl leading-7">Explore your own perspective and build skills for everyday interactions. The seven-part path includes video, captions, transcript, and individual practice.</p>
             <p className="mt-4"><Link className="font-semibold underline" href="/learn/intercultural/curriculum">Start the intercultural learning path</Link></p>
           </>}
           {orderedCourseGroups.map(group => <details key={group.id} className="mt-6 rounded-xl border border-line p-5"><summary className="cursor-pointer font-semibold">{group.title}</summary>

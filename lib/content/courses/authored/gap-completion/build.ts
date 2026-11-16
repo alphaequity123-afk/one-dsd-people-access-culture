@@ -54,7 +54,7 @@ export function gapCourse(spec: GapSpec): CoursePack {
         lastReviewed: 'Authoring and source checks, 2026-09-25; no independent check recorded',
         nextReview: '2027-03-25 or when evidence, law, or relevant guidance changes',
         updateTriggers: ['Updated research, law, or official guidance', 'Learner or community feedback about accuracy, accessibility, or a stereotyping example'],
-        relatedDoor: 'Use the responsible agency office for formal policy, employment, accommodation, civil-rights, or eligibility decisions. This course supports learning rather than making those determinations.',
+        relatedDoor: 'Take formal policy, employment, accommodation, civil-rights, or eligibility decisions to the person or area responsible in the agency.',
         toolkitQuestion: 'Who is affected by this decision, and what would I need to learn from them before it is final?',
         status: 'current',
       },

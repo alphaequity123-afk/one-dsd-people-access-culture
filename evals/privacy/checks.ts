@@ -14,6 +14,10 @@ export type PrivacyAllowlist = {
   writes: Record<string, string>;
   storedFunctions: Record<string, string>;
   cookies: Record<string, string>;
+  /** Files whose Ask-record pattern is reviewed and accepted, with the reason (for example, owner work only). */
+  askRecords?: Record<string, string>;
+  /** Records the owner decided to keep, by table name (without schema) or record family, with the reason. */
+  kept?: Record<string, string>;
 };
 
 export function loadPrivacyAllowlist(): PrivacyAllowlist {
@@ -187,7 +191,31 @@ export function typedTextInUrls(allow: PrivacyAllowlist): Hit[] {
   return hits;
 }
 
-/** GET forms (no method="post", no server action, no submit handler) that send text boxes in the address. */
+/**
+ * True when a form's `action={...}` is an address, not a server-action function: a string or template, a string
+ * joined with `+`, or a name declared in the same file as one of those (`const BASE = "/library"`). A name that is
+ * a function, or that cannot be resolved in the file (an import or a prop), is treated as a server action.
+ */
+export function actionIsAddress(expression: ts.Expression, sf: ts.SourceFile, seen = new Set<string>()): boolean {
+  if (ts.isParenthesizedExpression(expression) || ts.isAsExpression(expression) || ts.isSatisfiesExpression(expression)) return actionIsAddress(expression.expression, sf, seen);
+  if (ts.isStringLiteral(expression) || ts.isNoSubstitutionTemplateLiteral(expression) || ts.isTemplateExpression(expression)) return true;
+  if (ts.isBinaryExpression(expression) && expression.operatorToken.kind === ts.SyntaxKind.PlusToken) return actionIsAddress(expression.left, sf, seen) || actionIsAddress(expression.right, sf, seen);
+  if (!ts.isIdentifier(expression) || seen.has(expression.text)) return false;
+  seen.add(expression.text);
+  let address = false;
+  const find = (node: ts.Node): void => {
+    if (address) return;
+    if (ts.isVariableDeclaration(node) && ts.isIdentifier(node.name) && node.name.text === expression.text && node.initializer) {
+      address = actionIsAddress(node.initializer, sf, seen);
+      return;
+    }
+    ts.forEachChild(node, find);
+  };
+  find(sf);
+  return address;
+}
+
+/** GET forms (no method="post", no server-action function, no submit handler) that send text boxes in the address. */
 export function getForms(file: string, text: string): Hit[] {
   const sf = ts.createSourceFile(file, text, ts.ScriptTarget.Latest, true, ts.ScriptKind.TSX);
   const hits: Hit[] = [];
@@ -197,7 +225,10 @@ export function getForms(file: string, text: string): Hit[] {
       const a = attrs(node.openingElement);
       const method = (a.get("method") ?? "").replace(/["'{}]/g, "").toLowerCase();
       const action = a.get("action") ?? "";
-      const serverAction = /^\{/.test(action) && !/^\{\s*["'`]/.test(action);
+      const actionAttribute = node.openingElement.attributes.properties.find((p): p is ts.JsxAttribute => ts.isJsxAttribute(p) && p.name.getText(sf) === "action");
+      const actionExpression = actionAttribute?.initializer && ts.isJsxExpression(actionAttribute.initializer) ? actionAttribute.initializer.expression : undefined;
+      // action={save} is a server action; action={BASE} or action={"/library"} is an address the typed words are added to.
+      const serverAction = actionExpression !== undefined && !actionIsAddress(actionExpression, sf);
       // A form with its own submit handler does not navigate; any navigation it does is checked line by line.
       if (method !== "post" && !serverAction && !a.has("onSubmit")) {
         const inputs: string[] = [];
@@ -289,7 +320,8 @@ export function countingClaims(): Hit[] {
   });
 }
 
-type RecordCheck = { label: string; files: string[]; pattern: RegExp };
+/** kept: the record family looked up in the allowlist's "kept" section (an owner decision to keep it). */
+type RecordCheck = { label: string; files: string[]; pattern: RegExp; kept?: string };
 
 /** Owner decision 2026-11-16: no Ask records, no anonymous totals, no retrieved-content traces. Found by content, so removal passes. */
 const ASK_RECORD_CHECKS: RecordCheck[] = [
@@ -301,27 +333,51 @@ const ASK_RECORD_CHECKS: RecordCheck[] = [
   { label: "Audit event store", files: ["lib/intelligence/memory/postgres-store.ts", "lib/intelligence/memory/store.ts"], pattern: /insert into pac_dsd\.runtime_audit_events|appendFile\([^)]*audit\.jsonl/ },
   { label: "Anonymous counter store", files: ["lib/intelligence/memory/postgres-store.ts", "lib/intelligence/memory/store.ts"], pattern: /insert into pac_dsd\.runtime_counters|counters\.json/ },
   { label: "Question hash kept for research usage", files: ["lib/intelligence/research/index.ts", "lib/intelligence/research/governance.ts"], pattern: /const query_hash = await hashQuery\(question\)|^\s*query_hash: string;/ },
+  { label: "Outside-research spending ledger (one record per outside-research call)", files: ["lib/intelligence/research/governance.ts"], pattern: /`research_usage:\$\{/, kept: "research_usage" },
 ];
 
-export function askRecords(): Hit[] {
+export function askRecords(allow?: PrivacyAllowlist): Hit[] {
   const hits: Hit[] = [];
   for (const check of ASK_RECORD_CHECKS) for (const file of check.files) {
-    if (!existsSync(join(ROOT, file))) continue;
+    if (!existsSync(join(ROOT, file)) || allow?.askRecords?.[file] || (check.kept && allow?.kept?.[check.kept])) continue;
     // One finding per file and kind, listing every line.
     const lines: number[] = [];
     source(file).split("\n").forEach((line, index) => { if (check.pattern.test(line) && !isComment(line)) lines.push(index + 1); });
     if (lines.length) hits.push({ file, line: lines[0], what: `${check.label}${lines.length > 1 ? ` (also lines ${lines.slice(1, 9).join(", ")}${lines.length > 9 ? ", …" : ""})` : ""}` });
   }
-  // Tables that keep questions, answers, traces or totals, created and never dropped.
-  const sql = [...walk("db", f => f.endsWith(".sql"))];
-  const created = new Map<string, Hit>();
-  const dropped = new Set<string>();
-  for (const file of sql) source(file).split("\n").forEach((line, index) => {
-    const c = /create table (?:if not exists )?([\w.]*(?:ask_log|ask_response_records|runtime_counters|runtime_audit_events|ask_records|question_log|usage_events|page_views))\b/i.exec(line);
-    if (c) created.set(c[1].toLowerCase(), { file, line: index + 1, what: `table ${c[1]} (questions, answers, traces or totals)` });
-    const d = /drop table (?:if exists )?([\w.]+)/i.exec(line);
-    if (d) dropped.add(d[1].toLowerCase());
-  });
-  for (const [name, hit] of created) if (!dropped.has(name)) hits.push(hit);
+  // Tables that keep questions, answers, traces or totals, still present after every migration; reviewed tables are kept.
+  const sql = walk("db", f => f.endsWith(".sql")).map(file => ({ file, text: source(file) }));
+  for (const hit of usageTablesInSql(sql)) {
+    if (!allow?.kept?.[hit.table]) hits.push({ file: hit.file, line: hit.line, what: hit.what });
+  }
   return hits;
+}
+
+const USAGE_TABLE = /^\s*create table (?:if not exists )?([\w.]*(?:ask_log|ask_response_records|runtime_counters|runtime_audit_events|ask_records|question_log|usage_events|page_views))\b/i;
+const DROP_TABLE = /^\s*drop table (?:if exists )?([\w.]+(?:\s*,\s*[\w.]+)*)/i;
+
+/**
+ * The order a database applies these files: canonical migrations by name; for the private schema, bootstrap.sql,
+ * then the standalone forward files by name. Canonical (pac) and private (pac_dsd) names never collide.
+ */
+function applyOrder(file: string): string {
+  if (file === "db/standalone/bootstrap.sql") return `1 ${file}`;
+  return file.startsWith("db/standalone/") ? `2 ${file}` : `0 ${file}`;
+}
+
+/** Usage-like tables a migration creates and no later migration drops. A table created and later dropped is not a finding. */
+export function usageTablesInSql(files: { file: string; text: string }[]): (Hit & { table: string })[] {
+  const live = new Map<string, Hit & { table: string }>();
+  const ordered = [...files].sort((a, b) => applyOrder(a.file).localeCompare(applyOrder(b.file)));
+  for (const { file, text } of ordered) text.split("\n").forEach((line, index) => {
+    if (/^\s*--/.test(line)) return;
+    const d = DROP_TABLE.exec(line);
+    if (d) for (const name of d[1].split(",")) live.delete(name.trim().toLowerCase());
+    const c = USAGE_TABLE.exec(line);
+    if (c) {
+      const name = c[1].toLowerCase();
+      live.set(name, { file, line: index + 1, table: name.split(".").pop()!, what: `table ${c[1]} (questions, answers, traces or totals)` });
+    }
+  });
+  return [...live.values()];
 }

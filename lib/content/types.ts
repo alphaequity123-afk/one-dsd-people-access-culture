@@ -98,11 +98,11 @@ export const LAYER_LABEL: Record<ContentLayer, string> = {
   L4: "Reference and evidence",
 };
 
-/** Describe a review date without presenting a future date as completed work. */
+/** Describe a review date without presenting a future date as completed work; an unusable date shows no label. */
 export function reviewDateText(reviewDate: string, asOf = new Date()): string {
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(reviewDate)) return "Review date to be confirmed";
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(reviewDate)) return "";
   const date = new Date(`${reviewDate}T00:00:00Z`);
-  if (Number.isNaN(date.getTime())) return "Review date to be confirmed";
+  if (Number.isNaN(date.getTime())) return "";
   const formatted = new Intl.DateTimeFormat("en-US", {
     dateStyle: "long",
     timeZone: "UTC",

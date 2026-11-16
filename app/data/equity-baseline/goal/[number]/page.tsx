@@ -50,7 +50,7 @@ export default async function EquityGoalPage({ params }: Params) {
     </div>
 
     {dataGaps.length > 0 && <section className={styles.gaps} aria-labelledby={`gaps-${goal.number}`}>
-      <h2 id={`gaps-${goal.number}`}>Data we still need</h2>
+      <h2 id={`gaps-${goal.number}`}>Data still needed</h2>
       <ul>{dataGaps.map(gap => <li key={gap}>{gap}</li>)}</ul>
     </section>}
 

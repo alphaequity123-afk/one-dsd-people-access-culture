@@ -30,7 +30,7 @@ const pack: CoursePack = {
       evidence: [
         "A worked scenario in every lesson with an explanation of why one response fits public-administration work better than the others.",
         "A sorting exercise separating what a record can show, what it cannot, and the assumptions that fill the gap.",
-        "A completed assumption check for one real step, written in your own words and kept by you.",
+        "A completed assumption check for one real step, written in your own words.",
       ],
       appliedNextStep: "Choose one step in a process you touch — a notice, a deadline, a form field, a contract requirement, a meeting rule — and complete the assumption check in the last lesson for that one step.",
     },
@@ -45,7 +45,7 @@ const pack: CoursePack = {
         "A change in federal or state accessibility or civil rights guidance that affects how a state process must reach people",
         "Feedback from staff using this module that an example reads as unrealistic, stereotyping or out of date",
       ],
-      relatedDoor: "Formal determinations about policy, civil rights obligations, accommodation requests and language access belong to the responsible DHS or DSD office — division leadership and the agency office that handles equal opportunity and civil rights — and this module prepares you to bring them a clearer question, not to decide in their place.",
+      relatedDoor: "Formal determinations about policy, civil rights obligations, accommodation requests and language access belong to the person or area responsible at DHS or DSD — division leadership and the agency area that handles equal opportunity and civil rights — and this module prepares you to bring them a clearer question, not to decide in their place.",
       toolkitQuestion: "Which step in the process I am about to approve is easiest for people whose lives look like mine, and who has to work hardest to meet it?",
       status: "reviewed",
     },
@@ -73,7 +73,7 @@ const pack: CoursePack = {
           options: [
             {
               label: "Agree. Identical steps are the cleanest definition of fairness in public work, and anything else invites inconsistent treatment.",
-              response: "Consistency matters, and the instinct behind it is a good one. But identical steps are a description of our effort, not of people's access. One web page reaches people who already know the policy change is coming; one written form reaches people who write comfortably in English; ten business days reaches people whose week has room in it. The comment file will look tidy and still be missing most of the people the policy affects.",
+              response: "Consistency matters, and the instinct behind it is a good one. But identical steps are a description of the division's effort, not of people's access. One web page reaches people who already know the policy change is coming; one written form reaches people who write comfortably in English; ten business days reaches people whose week has room in it. The comment file will look tidy and still be missing most of the people the policy affects.",
             },
             {
               label: "Say that identical steps are not the same as equal access, and ask the group to name who this method is easiest for and who has to work hardest — then add a second way to comment and more time before the decision closes.",
@@ -98,24 +98,24 @@ const pack: CoursePack = {
           {
             type: "text",
             heading: "Culture shows up as a default, not as a decoration",
-            body: "<p>Every state process carries a culture, whether anyone designed it that way or not. A renewal notice assumes a reader who opens mail, reads print, trusts an envelope from a government agency, and can act alone inside the window. A public comment period assumes a person who already knows the comment period exists, writes comfortably in English, and has an opinion ready in the format we asked for. None of those assumptions appear in the policy. They are simply in it.</p><p>Three words are worth keeping apart. <strong>Culture</strong> is the set of habits, expectations and defaults a group treats as normal — and a state division is a group with a culture of its own, not a neutral space where other people's cultures arrive. <strong>Identity</strong> is the set of things about a person's life that shape how a process actually reaches them: language, community, age, family role, work, income, where they live, and disability among them. <strong>Disability</strong>, in this curriculum, is not treated as a diagnosis a person either has or does not have. It is what happens when a person meets an environment built without them in view: the form that times out, the phone tree with no callback, the meeting that moves at the speed of whoever speaks first.</p><p>That last definition matters for public-administration staff, because it moves most of the work back into your hands. If disability were only a medical fact, it would belong to clinicians. Because so much of it is produced by design — a deadline, a format, a proof requirement, a required channel — it belongs to the people who write the rule, the notice, the contract term, the survey question and the agenda. That is the work on your desk.</p>",
+            body: "<p>Every state process carries a culture, whether anyone designed it that way or not. A renewal notice assumes a reader who opens mail, reads print, trusts an envelope from a government agency, and can act alone inside the window. A public comment period assumes a person who already knows the comment period exists, writes comfortably in English, and has an opinion ready in the format the agency asked for. None of those assumptions appear in the policy. They are simply in it.</p><p>Three words are worth keeping apart. <strong>Culture</strong> is the set of habits, expectations and defaults a group treats as normal — and a state division is a group with a culture of its own, not a neutral space where other people's cultures arrive. <strong>Identity</strong> is the set of things about a person's life that shape how a process actually reaches them: language, community, age, family role, work, income, where they live, and disability among them. <strong>Disability</strong>, in this curriculum, is not treated as a diagnosis a person either has or does not have. It is what happens when a person meets an environment built without them in view: the form that times out, the phone tree with no callback, the meeting that moves at the speed of whoever speaks first.</p><p>That last definition matters for public-administration staff, because it moves most of the work back into your hands. If disability were only a medical fact, it would belong to clinicians. Because so much of it is produced by design — a deadline, a format, a proof requirement, a required channel — it belongs to the people who write the rule, the notice, the contract term, the survey question and the agenda. That is the work on your desk.</p>",
           },
           {
             type: "tabs",
             heading: "Where culture sits inside an ordinary state process",
             tabs: [
-              { label: "Channel", body: "<p>Which way of reaching us counts as the real one. A process that treats an online form as the front door and a phone call as the exception has made a cultural choice about whose life is easy to serve. So has a process that answers only in writing, or only during business hours, or only to the person named on the file.</p>" },
+              { label: "Channel", body: "<p>Which way of reaching the agency counts as the real one. A process that treats an online form as the front door and a phone call as the exception has made a cultural choice about whose life is easy to serve. So has a process that answers only in writing, or only during business hours, or only to the person named on the file.</p>" },
               { label: "Pace", body: "<p>How fast a response is expected, and what happens to someone who is slower. A short window rewards people with predictable weeks, reliable transportation, flexible work and no one else depending on them. A person who needs an interpreter, a support person, a ride, or a second read of a dense letter is not slower in any meaningful sense — the window is simply short.</p>" },
-              { label: "Proof", body: "<p>What we accept as evidence: a signature, a printed statement, a letter from an employer, a record from a system a person cannot see. Proof requirements are usually written for the convenience of the person checking it. They are worth re-reading from the side of the person who has to produce them.</p>" },
-              { label: "Voice", body: "<p>Who we expect to speak, and to whom. Some processes assume one adult speaks for a household; some assume a person will advocate for themselves in a room full of professionals; some assume a family member or support worker will do the talking. Each of those is a cultural expectation, and each one changes who is heard.</p>" },
+              { label: "Proof", body: "<p>What the agency accepts as evidence: a signature, a printed statement, a letter from an employer, a record from a system a person cannot see. Proof requirements are usually written for the convenience of the person checking it. They are worth re-reading from the side of the person who has to produce them.</p>" },
+              { label: "Voice", body: "<p>Who the process expects to speak, and to whom. Some processes assume one adult speaks for a household; some assume a person will advocate for themselves in a room full of professionals; some assume a family member or support worker will do the talking. Each of those is a cultural expectation, and each one changes who is heard.</p>" },
             ],
           },
           {
             type: "flashcards",
             heading: "Words this curriculum keeps apart",
             cards: [
-              { front: "Culture", back: "<p>Shared habits, expectations and defaults that a group treats as normal. Divisions, units and professions have cultures too — not only the communities we serve.</p>" },
-              { front: "Identity", back: "<p>The parts of a person's life that shape how a process reaches them. People do not arrive one part at a time, and none of it is ours to ask about without a reason.</p>" },
+              { front: "Culture", back: "<p>Shared habits, expectations and defaults that a group treats as normal. Divisions, units and professions have cultures too — not only the communities a program serves.</p>" },
+              { front: "Identity", back: "<p>The parts of a person's life that shape how a process reaches them. People do not arrive one part at a time, and none of it is for staff to ask about without a reason.</p>" },
               { front: "Disability", back: "<p>What happens when a person meets an environment built without them in view. Much of it is produced by design, which means much of it can be changed by design.</p>" },
               { front: "Cultural humility", back: "<p>A repeated practice, not an achievement: assume your view is partial, check it with people who see the process from elsewhere, and change something when you learn you were wrong.</p>" },
               { front: "Intercultural practice", back: "<p>Working well across difference on purpose: noticing the defaults in your own work, reading a situation from more than one angle, and adjusting the process rather than asking people to adjust to it.</p>" },
@@ -128,14 +128,14 @@ const pack: CoursePack = {
               { title: "Denial and Polarization", body: "<p>Denial misses difference: cultural difference is simply not on the screen, so a process is built as though everyone lives the way the designers do. Polarization judges difference as us-and-them, either by defending one's own way as obviously correct or by treating one's own group as the problem in every case. Both make it hard to look at a process clearly, because the conversation turns into a contest before the design question is reached.</p>" },
               { title: "Minimization", body: "<p>The common resting place for large public organizations, and the one worth knowing well. Minimization emphasizes what everyone has in common — “we treat everyone the same here” — and treats identical steps as proof of fairness. It sounds generous and it often comes from a sincere commitment to equal treatment. Its cost is that real differences in how people reach a process stop being visible, so the same people keep falling out of it and nobody can say why.</p>" },
               { title: "Acceptance, Adaptation and Integration", body: "<p>Acceptance recognizes that people bring genuinely different patterns and that those patterns are not deficits to be corrected. Adaptation goes further: a staff member can shift how they frame a question or run a meeting so that it works for people whose starting point is not theirs. Integration, in this program, means the people a process affects help design it. It is not one of the five orientations of the Intercultural Development Inventory; the name comes from Bennett's developmental model, where it describes identity across cultures. In a division, these look like better questions, earlier partnership, and processes that were built with the range in mind.</p>" },
-              { title: "What this is not", body: "<p>The program uses this continuum as a working map for examining the habits of an organization and pointing learning in a direction, not as a proven account of how organizations change. It is never a label, a rank, a score, or a record about any individual staff member. Activity choices and lesson progress can be saved in this browser. Keep personal reflections in your own notes. Formal intercultural assessment, where it happens at all, is a separate and professionally administered process, and this curriculum does not replace or shortcut it.</p>" },
+              { title: "What this is not", body: "<p>The program uses this continuum as a working map for examining the habits of an organization and pointing learning in a direction, not as a proven account of how organizations change. It is never a label, a rank or a score about any individual staff member. Formal intercultural assessment, where it happens at all, is a separate and professionally administered process, and this curriculum does not replace or shortcut it.</p>" },
             ],
           },
           {
             type: "leaderMove",
             heading: "Name the default before the group defends it",
             control: "You control whether the defaults in a process get said out loud. Naming one is a normal design question, not a criticism of the people who built it.",
-            failure: "Do not let “we treat everyone the same” end the discussion. It is usually a statement about our effort, offered in good faith, and it leaves the actual question — who can reach this step — unasked.",
+            failure: "Do not let “we treat everyone the same” end the discussion. It is usually a statement about the team's effort, offered in good faith, and it leaves the actual question — who can reach this step — unasked.",
             next: "In your next process discussion, ask one question: who is this step easiest for, and who has to work hardest to meet it?",
           },
           {
@@ -214,7 +214,7 @@ const pack: CoursePack = {
               { title: "Language and disability together", body: "<p>Interpreting and plain language are different problems, and solving one does not solve the other. A document translated faithfully from a dense original is still dense. A person who is deaf and uses American Sign Language may need an interpreter and captions and a document written for a first read. A family that uses a relative to interpret at home may still need a professional interpreter for a formal decision, because the two roles are not the same and the relative should not carry that weight.</p>" },
               { title: "Age and disability together", body: "<p>An older adult acquiring a disability late in life is often meeting the disability service system for the first time, with no vocabulary for it and no history of asking for help. A young adult leaving school is leaving one system designed around a family and entering one designed around an individual. Both are transitions, and transitions are where processes tend to drop people.</p>" },
               { title: "Distance and disability together", body: "<p>Distance changes what a requirement costs. An in-person signature is a small ask in a city and a half-day ask in a rural county, more if a person does not drive, more again if the ride has to be arranged in advance. Internet service that is uneven makes an online-only step a barrier rather than a convenience. None of this appears in the policy; all of it appears in who completes the step.</p>" },
-              { title: "Work, income and disability together", body: "<p>A person working an hourly shift may lose pay to attend a daytime appointment, and may not be able to take a call during the hours a program is staffed. Someone balancing a fluctuating condition may have good weeks and hard weeks that do not line up with our windows. A process with one appointment time, one channel and one deadline quietly selects for people whose work is flexible.</p>" },
+              { title: "Work, income and disability together", body: "<p>A person working an hourly shift may lose pay to attend a daytime appointment, and may not be able to take a call during the hours a program is staffed. Someone balancing a fluctuating condition may have good weeks and hard weeks that do not line up with a program's windows. A process with one appointment time, one channel and one deadline quietly selects for people whose work is flexible.</p>" },
             ],
           },
           {
@@ -238,7 +238,7 @@ const pack: CoursePack = {
               "What did this category get collected for, and is that what I am now using it to prove?",
               "Which two or three parts of a person's life would change this result, and are any of them in the record?",
               "If the number is lower here than elsewhere, what would have to be true about the step for that to make sense?",
-              "Who could tell me in ten minutes what this number cannot, and how do we pay them for that time?",
+              "Who could tell me in ten minutes what this number cannot, and how would they be paid for that time?",
               "What sentence should travel with this number so that the next reader does not over-read it?",
             ],
           },
@@ -317,7 +317,7 @@ const pack: CoursePack = {
             tabs: [
               { label: "Definition", body: "<p>The power to decide what a word means in practice: who counts as a caregiver, what counts as a documented need, when a household is one household. Definitions travel further than any memo and are rarely revisited once they are in a form.</p>" },
               { label: "Timing", body: "<p>The power to set the window: how long someone has to respond, how much notice a meeting gets, how quickly a decision closes. Timing decides who is able to participate more often than eligibility rules do.</p>" },
-              { label: "Channel", body: "<p>The power to decide how someone must reach us: an online portal, a mailed form, a phone line with set hours, a signature in person. Each channel is easy for someone and closed to someone else, and a single required channel is the most common quiet exclusion in public work.</p>" },
+              { label: "Channel", body: "<p>The power to decide how someone must reach the agency: an online portal, a mailed form, a phone line with set hours, a signature in person. Each channel is easy for someone and closed to someone else, and a single required channel is the most common quiet exclusion in public work.</p>" },
               { label: "Agenda", body: "<p>The power to decide which questions are discussed, in what order, and who speaks. A workgroup that hears from the people affected in the final ten minutes has already made its decisions, whatever the meeting record says.</p>" },
             ],
           },
@@ -335,9 +335,9 @@ const pack: CoursePack = {
           {
             type: "leaderMove",
             heading: "Separate the requirement from the habit",
-            control: "You control whether your team can say, for each step, where the requirement is written. That single question separates law and policy from things we have simply always done.",
+            control: "You control whether your team can say, for each step, where the requirement is written. That single question separates law and policy from things the team has simply always done.",
             failure: "Do not defend an inherited step as though it were a legal obligation. It costs the team credibility, and it protects a practice nobody chose.",
-            next: "Take one process your team owns, list its steps, and mark each one as required by law or policy, required by a system we use, or inherited. Start the next conversation with the inherited ones.",
+            next: "Take one process your team owns, list its steps, and mark each one as required by law or policy, required by a system the team uses, or inherited. Start the next conversation with the inherited ones.",
           },
           {
             type: "statement",
@@ -426,12 +426,12 @@ const pack: CoursePack = {
             kind: "tagged-document",
             label: "Practical tool",
             title: "An assumption check for one state process",
-            summary: "Five lines that turn a vague sense that a step is not working into work a named person can do. Copy them into your own notes; nothing is submitted anywhere.",
+            summary: "Five lines that turn a vague sense that a step is not working into work a named person can do. Copy them into your own notes.",
             fields: [
               { label: "Process and the exact step", value: "Program inquiry line — closing an inquiry after two unanswered voicemail messages in five business days." },
               { label: "The assumption the step makes", value: "That a voicemail reaches the person, that they can listen to it and understand it, that they can return a call during staffed hours, and that five business days is long enough for someone working shifts, sharing a phone, or waiting on an interpreter." },
               { label: "Who the step fits, and who works hardest", value: "Fits people with a private phone, voicemail they check, daytime flexibility and comfortable English. Hardest for shift workers, people who share a household phone, people who need an interpreter to call back, and anyone who has learned that a missed government call means trouble." },
-              { label: "How we will check it, and with whom", value: "Ask the staff who make the calls what they see. Then ask three participants and one community organization in the region what would have made the return call possible, with their time compensated at the division's standard rate for this kind of work." },
+              { label: "How to check it, and with whom", value: "Ask the staff who make the calls what they see. Then ask three participants and one community organization in the region what would have made the return call possible, with their time compensated at the division's standard rate for this kind of work." },
               { label: "Smallest change, owner and next look", value: "Extend to three attempts across two weeks, add a short written follow-up with a direct name and number, and note the preferred contact method on the first call. Owner: the unit supervisor. Look again at the agreed review point and record what changed." },
             ],
             action: "Copy these five lines for one step you touch this month, fill them in from what you actually know, and send the last line to whoever owns the step.",
@@ -445,7 +445,7 @@ const pack: CoursePack = {
               "Pay participants, family members and community organizations for review time at the division's standard rate, and say so in the invitation.",
               "Tell people afterward what changed because of what they said. Nothing ends a partnership faster than silence after the meeting.",
               "Ask an organization that serves the community in question what the step costs the people they work with, and treat the answer as evidence.",
-              "When the topic involves a community this program does not author content for on its own, route it through the responsible DHS office rather than filling the gap yourself.",
+              "When the topic involves a community this program does not author content for on its own, route it through the person or area responsible at DHS rather than filling the gap yourself.",
             ],
           },
           {
@@ -458,7 +458,7 @@ const pack: CoursePack = {
             question: "Which assumption-check entry is complete enough to act on?",
             options: [
               { text: "The renewal process is not culturally responsive and should be reviewed for equity.", correct: false },
-              { text: "Renewal notices go out by mail only, with a ten-day window; that assumes a reliable address, print reading and a flexible week. Hardest for people who move, who need a document read to them, or who work shifts. We will ask two participants and one community organization, compensated, what would help. Smallest change: add a phone or text reminder and extend the window. Owner: the notices lead. Next look: the agreed review point.", correct: true },
+              { text: "Renewal notices go out by mail only, with a ten-day window; that assumes a reliable address, print reading and a flexible week. Hardest for people who move, who need a document read to them, or who work shifts. Ask two participants and one community organization, compensated, what would help. Smallest change: add a phone or text reminder and extend the window. Owner: the notices lead. Next look: the agreed review point.", correct: true },
               { text: "Staff should be more aware of cultural differences when following up on renewals.", correct: false },
             ],
             feedbackCorrect: "Yes. A step, an assumption, who it fits, a way to check it with people who are paid for their time, a specific smallest change, an owner and a review point.",
@@ -513,13 +513,12 @@ const pack: CoursePack = {
         ],
       },
       {
-        heading: "Private reflection, kept private",
+        heading: "Private reflection",
         items: [
           "How might my role, authority, language or assumptions affect this decision?",
           "Who could be helped, burdened, excluded or misunderstood by this process?",
           "Whose expertise is missing, and how could the people most affected shape this work earlier?",
           "What might accessibility mean here beyond a legal minimum, and does this make sense to someone who does not already know how DHS works?",
-          "Keep your response in your own notes. Activity choices and lesson progress can be saved in this browser.",
         ],
       },
       {

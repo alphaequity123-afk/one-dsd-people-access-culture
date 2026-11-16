@@ -8,7 +8,7 @@ import { EngagementRouteMap } from "@/components/multimedia/engagement-route-map
 /** The former orientation page, now a section of Start. Several doors into the same program, in no required order. */
 const doors = [
 ["Understand the setting", "See how DHS is organized, where the Disability Services Division fits within the Aging and Disability Services Administration, and how decisions travel between them.", "/understanding-dhs", "Understanding DHS"],
-["Ground the work in equity", "Follow how equity moves from a value statement into decisions, everyday practice, service design, and the way we learn from results.", "/operationalizing-equity", "Operationalizing equity"],
+["Ground the work in equity", "Follow how equity moves from a value statement into decisions, everyday practice, service design, and the way teams learn from results.", "/operationalizing-equity", "Operationalizing equity"],
 ["Find your work in the program", "Explore the division’s programs, the people who rely on them, and the decisions that shape their experience of services.", "/one-dsd/programs", "DSD programs and services"],
 ["Learn something useful", "Courses, readings, and recordings organized around real questions, from a first conversation about bias to the design of an accessible system.", "/learn", "Explore learning"],
 ["Put an idea into practice", "Work through a real decision with a guided practice, from a ten-minute equity check to an in-depth review.", "/practice", "Explore practice"],
@@ -46,7 +46,7 @@ export function NewToDsd() {
   return <section id="new-to-dsd" className={styles.orientationPage}>
     <div>
       <h2 className="text-3xl font-semibold">New to DSD, or taking a fresh look?</h2>
-      <p className="mt-4 max-w-3xl text-lg leading-8">Welcome. Whether you joined the division last week or have years of experience behind you, this program is built to meet you where you are. It brings together learning, practical tools, and the people and perspectives that shape disability services in Minnesota. Taking part is voluntary; existing agency requirements, including required equity analysis, still apply.</p>
+      <p className="mt-4 max-w-3xl text-lg leading-8">Welcome. Whether you joined the division last week or have years of experience behind you, this program is built to meet you where you are. It brings together learning, practical tools, and the people and perspectives that shape disability services in Minnesota. Existing agency requirements, including required equity analysis, still apply.</p>
     </div>
     <Link className={styles.guideCard} href="/user-guide">
       <Image unoptimized src="/images/library-reading-and-research.webp" alt="" width={900} height={600} sizes="(min-width: 640px) 220px, 90vw" />

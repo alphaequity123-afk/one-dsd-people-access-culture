@@ -60,12 +60,12 @@ const pack: CoursePack = {
           objective: "Tell the difference between informing, consulting, involving, collaborating and sharing a decision, and name which one a specific relationship in your own work actually is.",
           takeaways: [
             "Relationships sit at different depths. Informing tells people what was decided. Consulting asks for reactions to something already shaped. Involving works with people through the decision. Collaborating shares the shaping. Sharing the decision shares the authority. All five are legitimate; calling one of them by the name of another is not.",
-            "The word partnership is doing an enormous amount of work in state government. It is worth checking, relationship by relationship, whether what we hold is a partnership or a mailing list.",
-            "Who is at the table is usually the result of accumulated convenience: the organizations that already had staff to send, already knew the abbreviations, and were already in our contacts. That is not the same as who is affected.",
+            "The word partnership is doing an enormous amount of work in state government. It is worth checking, relationship by relationship, whether what the division holds is a partnership or a mailing list.",
+            "Who is at the table is usually the result of accumulated convenience: the organizations that already had staff to send, already knew the abbreviations, and were already in the division's contacts. That is not the same as who is affected.",
             "Presence is not partnership. A seat on an advisory group proves nothing about whether the person could prepare, contribute in a way that worked for them, influence anything, or hear afterward what happened.",
           ],
           evidence: "A scenario about a program that lists twenty-two partners and hears from four, sorting practice that separates the depth of a relationship from its label, and a knowledge check on what a stakeholder list can and cannot show.",
-          appliedNextStep: "Take one stakeholder list you work from and mark each relationship with its honest depth: informed, consulted, involved, collaborating or sharing the decision. Then mark the word we use for it in writing, and see where the two disagree.",
+          appliedNextStep: "Take one stakeholder list you work from and mark each relationship with its honest depth: informed, consulted, involved, collaborating or sharing the decision. Then mark the word your team uses for it in writing, and see where the two disagree.",
         },
         scenario: {
           context: "A DSD program area keeps a stakeholder list of twenty-two organizations. Everyone on it receives the quarterly update and every notice of a comment period. Four organizations respond regularly, and the same three people speak at every listening session. The program's annual summary describes it as having strong community partnerships across the state.",
@@ -73,7 +73,7 @@ const pack: CoursePack = {
           options: [
             {
               label: "It is accurate. Twenty-two organizations receive everything the program sends, and the comment process is open to every one of them.",
-              response: "A distribution list is an informing relationship. It records who receives our material, not who can shape anything. Counting recipients and calling the result partnership is how a program stops noticing that eighteen of the twenty-two never answer.",
+              response: "A distribution list is an informing relationship. It records who receives the program's material, not who can shape anything. Counting recipients and calling the result partnership is how a program stops noticing that eighteen of the twenty-two never answer.",
             },
             {
               label: "It is not yet accurate. Most of the twenty-two are being informed and four are being consulted. Before the description changes, the program needs to know why the other eighteen do not answer, and what depth it is actually willing to offer.",
@@ -91,25 +91,25 @@ const pack: CoursePack = {
           options: [
             "Name the relationship and the depth you can honestly defend for it",
             "Write down what the other side would have to be able to do for the deeper word to be true",
-            "Decide whether the fix is to change the relationship or to change what we call it",
+            "Decide whether the fix is to change the relationship or to change what it is called",
           ],
         },
         blocks: [
           {
             type: "text",
             heading: "Five depths, and one word that covers all of them",
-            body: "<p>State agencies use the word partnership for almost every outside relationship they have. It covers a quarterly newsletter, a standing advisory group, a contracted provider association, a listening session, a comment period and a genuinely shared decision. When one word stretches that far it stops carrying information, and it becomes possible for a program to believe it has partners when what it has is a distribution list.</p><p>A more useful question is how deep a relationship actually goes. Informing means we tell people what we decided or what is about to happen. Consulting means we ask for reactions to something we have already shaped. Involving means we work with people through the decision, and they can see their contribution in what comes out. Collaborating means we shape it together and part of the agenda is theirs. Sharing the decision means the authority itself is shared, and we do not quietly overrule the result.</p><p>All five are legitimate. No program can share authority over everything, and nobody expects it to. What causes damage is calling one of them by the name of another: describing a comment period as designing together, or an advisory group as a partnership when its advice has never changed an outcome. People on the other side notice. The relationship that follows is more guarded than the one before it, and the next invitation gets a slower answer.</p>",
+            body: "<p>State agencies use the word partnership for almost every outside relationship they have. It covers a quarterly newsletter, a standing advisory group, a contracted provider association, a listening session, a comment period and a genuinely shared decision. When one word stretches that far it stops carrying information, and it becomes possible for a program to believe it has partners when what it has is a distribution list.</p><p>A more useful question is how deep a relationship actually goes. Informing means the agency tells people what it decided or what is about to happen. Consulting means it asks for reactions to something it has already shaped. Involving means staff work with people through the decision, and they can see their contribution in what comes out. Collaborating means staff and partners shape it together and part of the agenda is theirs. Sharing the decision means the authority itself is shared, and the agency does not quietly overrule the result.</p><p>All five are legitimate. No program can share authority over everything, and nobody expects it to. What causes damage is calling one of them by the name of another: describing a comment period as designing together, or an advisory group as a partnership when its advice has never changed an outcome. People on the other side notice. The relationship that follows is more guarded than the one before it, and the next invitation gets a slower answer.</p>",
           },
           {
             type: "list",
             heading: "What you can check without asking anyone",
             items: [
-              "How each relationship started: did we seek this organization out, or did it find us?",
+              "How each relationship started: did the division seek this organization out, or did it find the division?",
               "How long ago the list was built, and who has been added since.",
-              "Whether the same three or four voices account for most of what we hear.",
-              "What we sent last, how far ahead it arrived, and in what format.",
+              "Whether the same three or four voices account for most of what the division hears.",
+              "What the division sent last, how far ahead it arrived, and in what format.",
               "Whether anyone was paid for their time, and if so, who and through what route.",
-              "The last time someone outside the division changed a decision, and whether we ever told them they had.",
+              "The last time someone outside the division changed a decision, and whether anyone ever told them they had.",
             ],
           },
           {
@@ -141,7 +141,7 @@ const pack: CoursePack = {
           {
             type: "text",
             heading: "Where this sits in the program's map of change",
-            body: "<p>This program uses a six-part map of intercultural development — Denial, Polarization, Minimization, Acceptance, Adaptation and Integration — as a working tool for examining practice, not as a proven account of how organizations and the people in them change over time. The first five are the orientations of the Intercultural Development Inventory. The sixth, Integration, is not an IDI orientation: in this program it means the people a process affects help design it, and the name comes from Bennett's developmental model, where it describes identity across cultures. It is a map for the work, not a label, a score or a record about any individual. Nothing you do in this module is assessed, ranked or kept.</p><p>Stakeholder relationships are a good place to watch Minimization at work. Minimization is the sincere belief that differences between people are mostly surface, that one open and evenhanded process serves everyone, and that fairness means offering the same thing to all. It produces a single comment period, a single meeting format, a single kind of invitation, and a real confidence that the door is open to anyone who wants to walk through it.</p><p>The door is open. It opens onto a process that rewards organizations with spare staff time, familiarity with state vocabulary, reliable transportation and the confidence that speaking up is worth the trouble. Acceptance is recognizing that those differences are real and that they decide who answers. Adaptation is changing the invitation, the timing, the format and the compensation so that the answers come from more than the same four organizations. None of that is abstract; it lives in the details of how an invitation is built.</p>",
+            body: "<p>This program uses a six-part map of intercultural development — Denial, Polarization, Minimization, Acceptance, Adaptation and Integration — as a working tool for examining practice, not as a proven account of how organizations and the people in them change over time. The first five are the orientations of the Intercultural Development Inventory. The sixth, Integration, is not an IDI orientation: in this program it means the people a process affects help design it, and the name comes from Bennett's developmental model, where it describes identity across cultures. It is a map for the work, not a label or a score about any individual.</p><p>Stakeholder relationships are a good place to watch Minimization at work. Minimization is the sincere belief that differences between people are mostly surface, that one open and evenhanded process serves everyone, and that fairness means offering the same thing to all. It produces a single comment period, a single meeting format, a single kind of invitation, and a real confidence that the door is open to anyone who wants to walk through it.</p><p>The door is open. It opens onto a process that rewards organizations with spare staff time, familiarity with state vocabulary, reliable transportation and the confidence that speaking up is worth the trouble. Acceptance is recognizing that those differences are real and that they decide who answers. Adaptation is changing the invitation, the timing, the format and the compensation so that the answers come from more than the same four organizations. None of that is abstract; it lives in the details of how an invitation is built.</p>",
           },
           {
             type: "leaderMove",
@@ -169,7 +169,7 @@ const pack: CoursePack = {
           },
           {
             type: "statement",
-            body: "Private reflection, kept by you: think of one outside relationship you rely on. How do your role, your authority and the language you use in it shape what the other person feels able to say to you — and what would have to change for the honest version to reach you?",
+            body: "Private reflection: think of one outside relationship you rely on. How do your role, your authority and the language you use in it shape what the other person feels able to say to you — and what would have to change for the honest version to reach you?",
           },
         ],
       },
@@ -177,19 +177,19 @@ const pack: CoursePack = {
         id: "ipe-15-2",
         number: 2,
         title: "Reciprocity, and what participation costs",
-        summary: "What a partner spends to be in our room, why unpaid expertise is a subsidy, and the report-back that decides whether anyone comes back.",
+        summary: "What a partner spends to be in the division's room, why unpaid expertise is a subsidy, and the report-back that decides whether anyone comes back.",
         minutes: 11,
         learning: {
           objective: "Plan the reciprocity a partnership requires — lead time, usable information, compensation, role clarity and a report-back — and name whose budget carries each line before the invitation goes out.",
           takeaways: [
-            "Participation costs the participant: unpaid hours away from work or caregiving, travel, support arrangements, energy, and the effort of translating what they know into our vocabulary. None of it appears in our project budget unless somebody puts it there.",
+            "Participation costs the participant: unpaid hours away from work or caregiving, travel, support arrangements, energy, and the effort of translating what they know into the agency's vocabulary. None of it appears in the project budget unless somebody puts it there.",
             "Unpaid expertise is a subsidy paid to the state by people who usually have less than the state does. Paying people for their expertise is not a courtesy; it is what separates a working relationship from an extraction.",
-            "Lead time is part of what we owe. An invitation with three days' notice, or material that arrives the morning of a session, quietly restricts the relationship to organizations with staff to spare.",
+            "Lead time is part of what the agency owes. An invitation with three days' notice, or material that arrives the morning of a session, quietly restricts the relationship to organizations with staff to spare.",
             "Role clarity is part of it too. Someone who believes they are helping decide, and later learns they were being consulted, has been misled even when nobody meant to mislead them.",
             "The report-back is the most-skipped step and the one that decides whether anyone comes back. People need to hear what happened to what they said, including when the honest answer is that nothing changed, and why.",
           ],
           evidence: "A scenario in which fiscal and contracting colleagues are brought into an engagement plan, an accordion of what a partner is actually spending, flashcards on the five parts of reciprocity, and a knowledge check on what a thank-you does and does not settle.",
-          appliedNextStep: "Before the next invitation you send, write four lines: what we are asking of people, what it will cost them, what we are paying and from whose budget, and when they will hear what happened.",
+          appliedNextStep: "Before the next invitation you send, write four lines: what you are asking of people, what it will cost them, what you are paying and from whose budget, and when they will hear what happened.",
         },
         scenario: {
           context: "A DSD workgroup wants six family members and two adults who use the service to read and shape a redesigned service description across four sessions. The program manager plans to invite them as volunteers, describing it as a chance to shape the work. Contracting colleagues have been asked only to help book the rooms. Three of the eight would need unpaid time away from hourly jobs, and two would need to arrange and pay for support in order to attend.",
@@ -221,17 +221,17 @@ const pack: CoursePack = {
         blocks: [
           {
             type: "text",
-            heading: "What it costs to be in our room",
-            body: "<p>When a division asks eight people to review a service description over four sessions, what the division gains is easy to see. What the eight are spending is harder to see, because none of it lands in our budget. A parent takes unpaid hours off a shift. An adult who uses the service arranges and pays for support to get to the building. A small culturally specific organization sends its only program director, which means nothing else moves that afternoon. Somebody spends the evening before turning what they know into the vocabulary we use, because our material does not use theirs.</p><p>That spending is real and it falls unevenly. The organizations that can absorb it are the ones with grant-funded staff whose job already includes state relationships. The people who cannot absorb it are often the people whose experience we most need to hear. So an unpaid, short-notice, weekday-daytime invitation is not a neutral offer made equally to everyone. It selects for a particular kind of partner, and then the pattern of who answers confirms that those are the partners who care.</p><p>Reciprocity is the practice of putting something back on our side of the exchange. It has five parts, and none of them is a thank-you: lead time, information people can actually use, compensation, a clear role, and a report-back that closes the loop.</p>",
+            heading: "What it costs to be in the division's room",
+            body: "<p>When a division asks eight people to review a service description over four sessions, what the division gains is easy to see. What the eight are spending is harder to see, because none of it lands in the division's budget. A parent takes unpaid hours off a shift. An adult who uses the service arranges and pays for support to get to the building. A small culturally specific organization sends its only program director, which means nothing else moves that afternoon. Somebody spends the evening before turning what they know into the vocabulary the division uses, because its material does not use theirs.</p><p>That spending is real and it falls unevenly. The organizations that can absorb it are the ones with grant-funded staff whose job already includes state relationships. The people who cannot absorb it are often the people whose experience the division most needs to hear. So an unpaid, short-notice, weekday-daytime invitation is not a neutral offer made equally to everyone. It selects for a particular kind of partner, and then the pattern of who answers confirms that those are the partners who care.</p><p>Reciprocity is the practice of putting something back on the division's side of the exchange. It has five parts, and none of them is a thank-you: lead time, information people can actually use, compensation, a clear role, and a report-back that closes the loop.</p>",
           },
           {
             type: "accordion",
             heading: "Four things a partner is spending",
             items: [
-              { title: "Time, at the hours we chose", body: "<p>Weekday daytime is our convenience. For someone in an hourly job it is unpaid leave. For a family caregiver it is a support arrangement that has to be made and paid for. For a small organization it is the only program director's afternoon. Evening and weekend options cost us something instead, which is the point: the cost has to sit somewhere, and right now it sits entirely on them.</p>" },
-              { title: "Money that appears in no budget", body: "<p>Travel and parking, fuel for a long drive across a rural county, childcare, paid support staff, connection costs for a video session. These are ordinary costs of attending, and they stay invisible to us unless we ask about them and then cover them.</p>" },
+              { title: "Time, at the hours the division chose", body: "<p>Weekday daytime is the division's convenience. For someone in an hourly job it is unpaid leave. For a family caregiver it is a support arrangement that has to be made and paid for. For a small organization it is the only program director's afternoon. Evening and weekend options cost the division something instead, which is the point: the cost has to sit somewhere, and right now it sits entirely on them.</p>" },
+              { title: "Money that appears in no budget", body: "<p>Travel and parking, fuel for a long drive across a rural county, childcare, paid support staff, connection costs for a video session. These are ordinary costs of attending, and they stay invisible to the division unless staff ask about them and then cover them.</p>" },
               { title: "Energy, and the risk of saying it plainly", body: "<p>A person describing what went wrong in a service is not making a neutral contribution. They are telling a state agency something uncomfortable, often about a system they and their family still depend on. That takes energy, and it carries a risk they are weighing while they speak.</p>" },
-              { title: "Translation into our vocabulary", body: "<p>We ask about service categories, rule numbers, waivers and program abbreviations. Partners arrive with knowledge organized around daily life instead. Converting one into the other is real work, and we hand it to them almost every time.</p>" },
+              { title: "Translation into agency vocabulary", body: "<p>Staff ask about service categories, rule numbers, waivers and program abbreviations. Partners arrive with knowledge organized around daily life instead. Converting one into the other is real work, and staff hand it to them almost every time.</p>" },
             ],
           },
           {
@@ -242,7 +242,7 @@ const pack: CoursePack = {
               { front: "Usable information", back: "<p>What the decision is, what is open, what is fixed, who holds the final call, and what the program abbreviations mean. Without this, people can only react to the parts they happen to recognize.</p>" },
               { front: "Compensation", back: "<p>Payment for expertise, plus actual costs: travel, care, support, connection. Arranged before the first invitation, because the route takes time to set up and a late attempt usually fails.</p>" },
               { front: "Role clarity", back: "<p>Say which depth this is — informed, consulted, involved, collaborating, sharing the decision — and who decides. People can work with any honest answer. They cannot work with a vague one.</p>" },
-              { front: "Report-back", back: "<p>What we heard, what changed because of it, and what did not change and why. In writing, by a stated date, to everyone who contributed — not only to the ones who agreed with us.</p>" },
+              { front: "Report-back", back: "<p>What was heard, what changed because of it, and what did not change and why. In writing, by a stated date, to everyone who contributed — not only to the ones who agreed with the division.</p>" },
             ],
           },
           {
@@ -271,7 +271,7 @@ const pack: CoursePack = {
           },
           {
             type: "statement",
-            body: "Private reflection, kept by you: think about the last group you invited into a decision. Who was helped by the way that invitation was built, who was burdened by it, and who never saw it at all?",
+            body: "Private reflection: think about the last group you invited into a decision. Who was helped by the way that invitation was built, who was burdened by it, and who never saw it at all?",
           },
         ],
       },
@@ -332,8 +332,8 @@ const pack: CoursePack = {
             tabs: [
               { label: "A county lead worker", body: "<p>Her stake is operational: how the change lands in a caseload, what the transition looks like on a Monday morning, what she will have to explain to fifty households. She can tell you what will break in practice, and she is not a substitute for the households.</p>" },
               { label: "A provider association", body: "<p>Its stake includes the viability of its members: rates, staffing, administrative burden. That is a legitimate interest and a real source of knowledge. It is also an organizational interest, and it is not the same as the interest of the people those members support.</p>" },
-              { label: "An advocacy organization", body: "<p>Its stake is its mission and the people it represents. It often knows the policy landscape better than we expect and may hold a position before we ask. That does not make it less useful. It makes it a different kind of partner from an individual.</p>" },
-              { label: "A family member", body: "<p>Her stake is the daily consequence: who arrives in the morning, what happens when a schedule changes, what the notice means at the kitchen table. She may have no interest in our policy vocabulary and complete authority on the effect.</p>" },
+              { label: "An advocacy organization", body: "<p>Its stake is its mission and the people it represents. It often knows the policy landscape better than staff expect and may hold a position before anyone asks. That does not make it less useful. It makes it a different kind of partner from an individual.</p>" },
+              { label: "A family member", body: "<p>Her stake is the daily consequence: who arrives in the morning, what happens when a schedule changes, what the notice means at the kitchen table. She may have no interest in agency policy vocabulary and complete authority on the effect.</p>" },
               { label: "An adult who uses the service", body: "<p>His stake is his own life, and he is the only one of the five who cannot be represented by any of the others. Nothing about us without us began as a claim about exactly this: the person affected is in the room rather than described in it.</p>" },
             ],
           },
@@ -383,7 +383,7 @@ const pack: CoursePack = {
           },
           {
             type: "statement",
-            body: "Private reflection, kept by you: think of a decision in your work that is nearly final. How could the people most affected have shaped it earlier — and if something in the current version will land badly for someone, what would accountability and repair actually require of you?",
+            body: "Private reflection: think of a decision in your work that is nearly final. How could the people most affected have shaped it earlier — and if something in the current version will land badly for someone, what would accountability and repair actually require of you?",
           },
         ],
       },
@@ -397,7 +397,7 @@ const pack: CoursePack = {
           objective: "Complete a stakeholder-engagement map for one real decision, naming for every relationship its depth, its owner, the reciprocity it requires, and when it will be reviewed.",
           takeaways: [
             "Map a decision, not a division. A map of everyone the division knows is a directory. A map of one decision tells you who should be in it, at what depth, and by when.",
-            "The most useful column is the one for who is missing. Absences are patterned: the people furthest from our vocabulary, our hours, our buildings and our languages fall off the map most often, and they are usually the ones the decision affects most.",
+            "The most useful column is the one for who is missing. Absences are patterned: the people furthest from the agency's vocabulary, hours, buildings and languages fall off the map most often, and they are usually the ones the decision affects most.",
             "Every line needs a named owner and a date, or the map becomes a description of good intentions.",
             "Keep the map with the project file rather than in a personal folder. The next person to hold this work inherits the relationships either way; the map decides whether they inherit the understanding too.",
           ],
@@ -435,7 +435,7 @@ const pack: CoursePack = {
           {
             type: "text",
             heading: "Map the decision, not the division",
-            body: "<p>Most stakeholder maps are directories. They list the organizations a division knows, sorted by type, with contact details and a note about who spoke to them last. A directory is useful for finding a phone number and useless for planning a decision, because it says nothing about what any relationship is for.</p><p>A map that helps is built around one decision. It asks who this decision affects, who is missing from the conversation, how deep each relationship should be, who holds it, what it costs, and when it gets reviewed. Built that way it is short. Most decisions have five or six relationships that genuinely matter, and a map with six honest lines is worth more than a list of thirty-one names.</p><p>The hardest column is the one for who is missing, and it is the reason to do this at all. Absences are patterned. The groups that fall off our maps are the ones furthest from our vocabulary, our hours, our buildings and our languages: families in counties a long drive from any meeting, people who use interpreters, people who left the service and therefore stopped appearing on any list we keep, organizations with nobody paid to read state notices. They are also, routinely, the people the decision affects most.</p>",
+            body: "<p>Most stakeholder maps are directories. They list the organizations a division knows, sorted by type, with contact details and a note about who spoke to them last. A directory is useful for finding a phone number and useless for planning a decision, because it says nothing about what any relationship is for.</p><p>A map that helps is built around one decision. It asks who this decision affects, who is missing from the conversation, how deep each relationship should be, who holds it, what it costs, and when it gets reviewed. Built that way it is short. Most decisions have five or six relationships that genuinely matter, and a map with six honest lines is worth more than a list of thirty-one names.</p><p>The hardest column is the one for who is missing, and it is the reason to do this at all. Absences are patterned. The groups that fall off agency maps are the ones furthest from its vocabulary, hours, buildings and languages: families in counties a long drive from any meeting, people who use interpreters, people who left the service and therefore stopped appearing on any list the division keeps, organizations with nobody paid to read state notices. They are also, routinely, the people the decision affects most.</p>",
           },
           {
             type: "artifact",
@@ -459,7 +459,7 @@ const pack: CoursePack = {
               "People who left the service. They are on no current list, and they know something nobody still enrolled can tell you.",
               "Anyone who uses an interpreter, who is filtered out by every arrangement that assumes English and speed.",
               "Direct support professionals and county lead workers, who see the daily consequence of a policy written two levels above them.",
-              "Administrative and support staff inside our own division, who hold the lists and see every commitment that quietly disappears between meetings.",
+              "Administrative and support staff inside the division, who hold the lists and see every commitment that quietly disappears between meetings.",
               "Small culturally specific organizations with nobody assigned to state relationships. Reaching them takes a phone call, not a notice.",
               "The organization that sent a long response last time and never heard back. Start there, and start by saying what happened to it.",
             ],
@@ -496,7 +496,7 @@ const pack: CoursePack = {
           },
           {
             type: "statement",
-            body: "Private reflection, kept by you: read your finished map as someone who has never worked inside this agency. Does the decision, the ask and the reason for it make sense without already knowing how DHS is organized — and if not, which line would you rewrite first?",
+            body: "Private reflection: read your finished map as someone who has never worked inside this agency. Does the decision, the ask and the reason for it make sense without already knowing how DHS is organized — and if not, which line would you rewrite first?",
           },
         ],
       },

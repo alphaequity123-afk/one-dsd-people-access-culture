@@ -88,7 +88,7 @@ export default async function CollaborationLearningPage({ searchParams }: { sear
         })}
       </section>
       <Hub2More title="Keep exploring"><p className="flex flex-wrap gap-x-6 gap-y-2"><Link href="/learn?browse=all#catalog">Browse all learning and resources</Link><Link href="/library?theme=workforce">Find resources for team and workplace practice</Link></p></Hub2More>
-      <details className={styles.credit}><summary>About participation and training credit</summary><p>Learning here is voluntary. Choose what supports your work and return when it is useful.</p><p>{TRAINING_CREDIT_NOTICE}</p></details>
+      <details className={styles.credit}><summary>About required training</summary><p>Choose what supports your work and return when it is useful.</p><p>{TRAINING_CREDIT_NOTICE}</p></details>
     </div>
   </div>;
 }

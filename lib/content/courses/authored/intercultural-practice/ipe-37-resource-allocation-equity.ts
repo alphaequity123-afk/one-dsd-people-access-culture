@@ -46,7 +46,7 @@ const pack: CoursePack = {
         "Feedback from staff using this module that a barrier described here no longer matches the terms applicants actually meet",
       ],
       relatedDoor: "Spending authority, budget requests, solicitations, grant awards and contract execution are decided by the department's fiscal and contracting offices with Minnesota Management and Budget and the Department of Administration's Office of State Procurement; this module prepares the questions you bring to them and decides nothing on its own.",
-      toolkitQuestion: "Who carries the cost of the way we chose to spend this, and who was in the room before the number was set?",
+      toolkitQuestion: "Who carries the cost of the way the unit chose to spend this, and who was in the room before the number was set?",
       status: "reviewed",
     },
     lessons: [
@@ -402,13 +402,13 @@ const pack: CoursePack = {
               { front: "Compared with what?", back: "<p>A figure alone means little. Compared with last cycle, with another region, with the eligible population, or with what the same money bought somewhere else, it starts to mean something.</p>" },
               { front: "Per what?", back: "<p>Per enrolled person, per eligible person, per household, per staff hour. Changing the denominator often reverses which region looks well served.</p>" },
               { front: "Who is missing from the denominator?", back: "<p>People who were never enrolled, never applied, or never learned the service existed do not appear in a rate built from enrollment. They are the group most allocation decisions are meant to reach.</p>" },
-              { front: "What did we count as a cost?", back: "<p>Invoices are counted. Staff workaround hours, waiting, travel and unpaid partner work usually are not, which makes an inaccessible design look cheaper than it is.</p>" },
-              { front: "What would only a person tell us?", back: "<p>Why a request was never made, why an organization did not bid, what a family did instead. If the answer matters to the decision, budget the time to go and ask, and pay people for their expertise when you do.</p>" },
+              { front: "What was counted as a cost?", back: "<p>Invoices are counted. Staff workaround hours, waiting, travel and unpaid partner work usually are not, which makes an inaccessible design look cheaper than it is.</p>" },
+              { front: "What could only a person tell the unit?", back: "<p>Why a request was never made, why an organization did not bid, what a family did instead. If the answer matters to the decision, budget the time to go and ask, and pay people for their expertise when you do.</p>" },
             ],
           },
           {
             type: "statement",
-            body: "A private pause, for you only and recorded nowhere: looking at the last distribution you signed off on, whose expertise was missing from the room when the number was set, and what might they have seen that the record could not?",
+            body: "A private pause: looking at the last distribution you signed off on, whose expertise was missing from the room when the number was set, and what might they have seen that the record could not?",
           },
           {
             type: "knowledgeCheck",
@@ -482,10 +482,10 @@ const pack: CoursePack = {
             summary: "Six fields that attach to a budget worksheet, sourcing plan or grant announcement your unit already produces. Filled example shown; copy the field labels and answer them for your own item.",
             fields: [
               { label: "Decision and what it moves", value: "Contract for community engagement on an upcoming service change. Moves a one-time amount, about four months of one staff member's time, and the sequence of the engagement relative to the decision point." },
-              { label: "Who gains reach and who carries the cost", value: "Gains: households already connected to a provider, who will hear through existing channels. Carries the cost: households with no provider relationship, who speak a language the notice is not written in, and the community organizations who will be asked to explain the change whether or not we pay them." },
-              { label: "What we are choosing not to fund", value: "Regional awards, in favor of one statewide award; a plain-language rewrite of the notice; a second round of engagement after the decision. Recorded here so the pattern is visible across items rather than only inside this one." },
+              { label: "Who gains reach and who carries the cost", value: "Gains: households already connected to a provider, who will hear through existing channels. Carries the cost: households with no provider relationship, who speak a language the notice is not written in, and the community organizations who will be asked to explain the change whether or not the division pays them." },
+              { label: "What the unit is choosing not to fund", value: "Regional awards, in favor of one statewide award; a plain-language rewrite of the notice; a second round of engagement after the decision. Recorded here so the pattern is visible across items rather than only inside this one." },
               { label: "Access and language written into the line", value: "Interpreting and translated notices budgeted as named lines, not contingency. Accessible formats and a screen-reader check of the solicitation and submission form included in the sourcing plan. Payment for community members budgeted at a stated rate." },
-              { label: "Whose expertise shaped this and what we paid for it", value: "Two disability-led organizations and one culturally specific organization read the draft scope and said what they would change before the amount was set, compensated at the stated rate. Their two changes to the award structure are noted in the sourcing plan." },
+              { label: "Whose expertise shaped this and what it was paid", value: "Two disability-led organizations and one culturally specific organization read the draft scope and said what they would change before the amount was set, compensated at the stated rate. Their two changes to the award structure are noted in the sourcing plan." },
               { label: "Owner, date and the check", value: "Each field answered by the section owner in the planning meeting and recorded in the same worksheet. Reviewed at the agreed point with one question: did any answer here change a number, a term or a date? If not, the questions are rewritten or dropped." },
             ],
             action: "Copy the six field labels into the budget worksheet, sourcing plan or announcement template your unit already uses, answer them for the next item you plan, and set the date for the check.",
@@ -496,10 +496,10 @@ const pack: CoursePack = {
             ordered: false,
             items: [
               "Not answerable: Have equity considerations been taken into account? Answerable: Which of these lines reaches people the service currently reaches least well, and who knows that?",
-              "Not answerable: Is this procurement inclusive? Answerable: Which organizations could respond to these terms as drafted, and which term would stop the three we most want to hear from?",
+              "Not answerable: Is this procurement inclusive? Answerable: Which organizations could respond to these terms as drafted, and which term would stop the three the unit most wants to hear from?",
               "Not answerable: Are we being accessible? Answerable: Which line pays for interpreting, translated notices and accessible formats, and who checked that the submission route can be used with a screen reader?",
               "Not answerable: Did we engage the community? Answerable: Who reviewed this before the amount was set, what were they paid, and what changed because of them?",
-              "Not answerable: Will this reduce disparities? Answerable: What would we expect to look different in a year if this works, and which figure would show it?",
+              "Not answerable: Will this reduce disparities? Answerable: What would the unit expect to look different in a year if this works, and which figure would show it?",
             ],
           },
           {
@@ -507,7 +507,7 @@ const pack: CoursePack = {
             heading: "Write down what you are not funding",
             control: "You control whether the plan records only what was approved, or also the short list of what was requested, considered and declined this cycle.",
             failure: "Do not let the declined list live only in people's memory. Nothing that is never written down can be looked at across items, and a pattern that cannot be looked at cannot be changed.",
-            next: "Add three lines to the next plan: what we chose not to fund, why, and what would have to be true next cycle for that to change.",
+            next: "Add three lines to the next plan: what the unit chose not to fund, why, and what would have to be true next cycle for that to change.",
           },
           {
             type: "list",
@@ -522,7 +522,7 @@ const pack: CoursePack = {
           },
           {
             type: "statement",
-            body: "A private pause, for you only and recorded nowhere: think of one amount, timeline or contract term you have set or approved. How did your role, authority or working assumptions shape it — and if it turned out to have excluded someone, what would accountability and repair actually require of the division, not of them?",
+            body: "A private pause: think of one amount, timeline or contract term you have set or approved. How did your role, authority or working assumptions shape it — and if it turned out to have excluded someone, what would accountability and repair actually require of the division, not of them?",
           },
           {
             type: "knowledgeCheck",

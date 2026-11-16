@@ -50,7 +50,7 @@ export default async function EquityWorkspaceLayout({ children }: { children: Re
               )}
             </section>
           </div>
-          <p className="mt-6 text-sm"><Link href="/community-outreach/policies">Policies that shape disability services</Link> stay open to everyone without signing in.</p>
+          <p className="mt-6 text-sm"><Link href="/community-outreach/policies">Policies that shape disability services</Link> are open to everyone.</p>
         </div>
       </>
     );

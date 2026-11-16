@@ -41,7 +41,7 @@ const pack: CoursePack = {
       nextReview: "At the agreed review point and whenever an update trigger occurs",
       updateTriggers: ["Change in ADA, Section 504 or Section 508 guidance", "Change in DHS accessibility or language access standards", "Feedback from disabled staff or participants that a scenario reads as unrealistic or stigmatizing"],
       relatedDoor: "Questions about legal obligations behind a finding go to the ADA coordinator or civil rights office; budget and procurement decisions follow the agency’s own approval routes. This course helps you build and carry the plan, it does not grant authority to spend or decide.",
-      toolkitQuestion: "Who owns this change, who has the right to decide it, how will we know it worked, and who will feel the difference?",
+      toolkitQuestion: "Who owns this change, who has the right to decide it, how will you know it worked, and who will feel the difference?",
       status: "reviewed",
     },
     lessons: [

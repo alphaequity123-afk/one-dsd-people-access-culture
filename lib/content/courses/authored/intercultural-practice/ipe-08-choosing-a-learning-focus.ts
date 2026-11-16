@@ -11,7 +11,7 @@ const pack: CoursePack = {
     title: "Choosing a Learning Focus",
     subtitle: "Pick a learning focus from the work already in front of you, something genuinely worth your attention, without rating yourself or anyone else.",
     scope: "For every internal DHS and DSD staff member: leaders and managers; policy, program and operations staff; quality and performance staff; training, communications and learning-design staff; fiscal, contracts, grants and procurement staff; data, research and analytics staff; community engagement staff; and administrative and support staff. Four short lessons that help you choose where to start in this curriculum. Participation is voluntary and self-directed. There are no scores, badges, rankings, quizzes about you or completion requirements; reflections are private and are not recorded; and keep personal reflections in your own notes.",
-    treatment: "Four short lessons with Minnesota public-administration scenarios, sorting and tab exercises, knowledge checks, a private learning intention you write and keep, and optional private reflection",
+    treatment: "Four short lessons with Minnesota public-administration scenarios, sorting and tab exercises, knowledge checks, a private learning intention you write and keep, and private reflection",
     duration: "40–45 minutes",
     author: "One DSD — People, Access and Culture",
     coverImage: "/images/covers/stock-people-11.jpg",
@@ -28,9 +28,9 @@ const pack: CoursePack = {
         "Write a private learning intention in five lines: the work, the question, the first step, the expertise you are missing and how it will be paid for, and the date you will look at it again.",
       ],
       evidence: [
-        "A sorting exercise that separates focuses you can act on, formal decisions that belong to the responsible office, and ratings or judgments about people.",
+        "A sorting exercise that separates focuses you can act on, formal decisions that belong to the person or area responsible, and ratings or judgments about people.",
         "A knowledge check in every lesson with feedback that explains the reasoning, not just the answer.",
-        "A private learning intention written for one real piece of your own work, kept by you and collected by no one.",
+        "A private learning intention written for one real piece of your own work.",
       ],
       appliedNextStep: "Walk the four doorways once, narrow the strongest candidate until it names one document, decision or meeting, and write your intention in five lines with a date to look at it again.",
     },
@@ -45,7 +45,7 @@ const pack: CoursePack = {
         "A change in state or federal civil-rights, accessibility or language-access guidance that changes what is required rather than optional",
         "Feedback from staff using this module that the choosing method reads as an assessment, a ranking, or a judgment about individuals",
       ],
-      relatedDoor: "Formal decisions — required training assignments, position descriptions, development plans that go into a personnel file, accommodation requests, and civil-rights or complaint determinations — belong to the responsible DHS office, such as human resources, your division's learning and development staff, the accessibility coordinator or the equal opportunity office; this module helps you choose what to learn and makes none of those decisions.",
+      relatedDoor: "Formal decisions — required training assignments, position descriptions, development plans that go into a personnel file, accommodation requests, and civil-rights or complaint determinations — belong to the person or area responsible at DHS, such as human resources, your division's learning and development staff, the accessibility coordinator or the equal opportunity area; this module helps you choose what to learn and makes none of those decisions.",
       toolkitQuestion: "What in my own work keeps affecting people I rarely hear from, and what would I need to understand before I decide about it again?",
       status: "reviewed",
     },
@@ -62,7 +62,7 @@ const pack: CoursePack = {
             "A rating tells you where you placed yourself on somebody else's scale. A focus tells you what you will look at, in which piece of work, and when you will look at it.",
             "Confidence and understanding move separately in this work. People often feel most settled about the differences they notice least, which is exactly why a self-rating tends to point away from the useful question.",
             "This program uses a six-part continuum — denial, polarization, minimization, acceptance, adaptation and integration — to design content and as a working map for examining practice. The first five are the orientations of the Intercultural Development Inventory. The sixth, Integration, is not an IDI orientation: in this program it means the people a process affects help design it, and the name comes from Bennett's developmental model, where it describes identity across cultures. The continuum is never a label, a score, a gate or a record about you or anyone you supervise.",
-            "Activity choices and lesson progress can be saved in this browser. Keep personal reflections in your own notes. You can start anywhere, take modules out of order, stop, change your mind, and come back later.",
+            "You can start anywhere, take modules out of order, stop, change your mind, and come back later.",
           ],
           evidence: "A scenario about a division that wants to assign modules by survey score, and a knowledge check on what makes a starting point usable.",
           appliedNextStep: "Before you look at any module list, write down in one plain sentence the last thing at work you wished you understood better.",
@@ -99,7 +99,7 @@ const pack: CoursePack = {
           {
             type: "text",
             heading: "What a rating gives you, and what it leaves out",
-            body: "<p>Almost every workplace learning menu opens the same way: rate your current level, and we will tell you where to begin. It feels orderly. It is also the weakest available method for this particular subject, for three reasons that have nothing to do with anyone's sincerity.</p><p>First, a rating is a description of yourself, and this curriculum is about public administration — about notices, criteria, timelines, contracts, measures, meetings and the people on the other end of them. A number about you does not point at any of that. Second, confidence and understanding do not rise together here. The parts of a culture you were raised inside are the parts you are least likely to notice as choices, which means the areas where a person feels most settled are often the areas with the most left to see. That is not a character flaw; it is how being at home in something works. Third, a number invites comparison. The moment a self-description is written down and read by someone who writes your review, it stops being a private thought and becomes a thing to manage.</p><p>A focus does the job a rating was supposed to do, and does it better. A usable focus contains three things: a piece of work you can actually reach, a question that has an answer somewhere, and a first step you can take without anyone's permission. Everything else in this module is a way of finding those three things in work you are already doing.</p>",
+            body: "<p>Almost every workplace learning menu opens the same way: “rate your current level, and we will tell you where to begin.” It feels orderly. It is also the weakest available method for this particular subject, for three reasons that have nothing to do with anyone's sincerity.</p><p>First, a rating is a description of yourself, and this curriculum is about public administration — about notices, criteria, timelines, contracts, measures, meetings and the people on the other end of them. A number about you does not point at any of that. Second, confidence and understanding do not rise together here. The parts of a culture you were raised inside are the parts you are least likely to notice as choices, which means the areas where a person feels most settled are often the areas with the most left to see. That is not a character flaw; it is how being at home in something works. Third, a number invites comparison. The moment a self-description is written down and read by someone who writes your review, it stops being a private thought and becomes a thing to manage.</p><p>A focus does the job a rating was supposed to do, and does it better. A usable focus contains three things: a piece of work you can actually reach, a question that has an answer somewhere, and a first step you can take without anyone's permission. Everything else in this module is a way of finding those three things in work you are already doing.</p>",
           },
           {
             type: "accordion",
@@ -107,15 +107,11 @@ const pack: CoursePack = {
             items: [
               {
                 title: "Not an assessment",
-                body: "<p>There is no instrument here, no placement, no level and no result. You are not being measured, and neither is your unit. If you finish this module and decide none of the curriculum is for you right now, that is a legitimate outcome and no one is told.</p>",
+                body: "<p>There is no instrument here, no placement, no level and no result. You are not being measured, and neither is your unit. If you finish this module and decide none of the curriculum is for you right now, that is a legitimate outcome.</p>",
               },
               {
-                title: "Not a record",
-                body: "<p>The reflections and the intention you write in this module stay with you. They are not collected, stored against your name, reported to a supervisor, counted toward anything, or used in a performance conversation. If you want to share what you wrote, that is entirely your choice and your timing.</p>",
-              },
-              {
-                title: "Not a required program, and not a credential",
-                body: "<p>Participation is voluntary. Finishing a module produces no badge, certificate, score or standing, and it does not count toward DHS-required training credits. Where a legal or policy obligation exists — accessibility standards, language access, civil-rights requirements — that obligation is named plainly and stands on its own, separate from anything optional you choose to learn.</p>",
+                title: "Not a substitute for an obligation",
+                body: "<p>Where a legal or policy obligation exists — accessibility standards, language access, civil-rights requirements — that obligation is named plainly and applies on its own, whatever you choose to learn here.</p>",
               },
               {
                 title: "Not a place where the continuum becomes a label",
@@ -161,7 +157,7 @@ const pack: CoursePack = {
           },
           {
             type: "statement",
-            body: "Private reflection, not recorded and not shared: think of the last time something you sent, approved or decided reached someone it did not work for. What did you assume about that person first, before you looked at the process?",
+            body: "Private reflection: think of the last time something you sent, approved or decided reached someone it did not work for. What did you assume about that person first, before you looked at the process?",
           },
         ],
       },
@@ -180,7 +176,7 @@ const pack: CoursePack = {
             "Doorway four, the absent voice: the group your process produces results for and almost never hears from directly.",
             "A doorway is not a diagnosis. It points at a piece of work, names no one, and can be walked away from without explaining yourself.",
           ],
-          evidence: "A sorting exercise separating focuses you can act on, formal decisions that belong to the responsible office, and ratings or judgments about people, plus a scenario set in grants and contracting.",
+          evidence: "A sorting exercise separating focuses you can act on, formal decisions that belong to the person or area responsible, and ratings or judgments about people, plus a scenario set in grants and contracting.",
           appliedNextStep: "Walk all four doorways once and write down every candidate that comes up. Do not choose yet, and do not narrow yet.",
         },
         scenario: {
@@ -261,7 +257,7 @@ const pack: CoursePack = {
             ordered: false,
             items: [
               "What did I send out last month that someone had to act on within a deadline?",
-              "Which step in a process I touch do people most often fail to complete, and what have we assumed about why?",
+              "Which step in a process I touch do people most often fail to complete, and what has the team assumed about why?",
               "What do I explain to people over and over, and what does the repetition say about the material?",
               "Whose expertise have I never paid for, in work that is entirely about them?",
               "What would I want to know if I were on the receiving end of the process I run?",
@@ -295,7 +291,7 @@ const pack: CoursePack = {
           },
           {
             type: "statement",
-            body: "Private reflection, not recorded and not shared: of the four doorways, which one did you find hardest to answer honestly — and what does that difficulty tell you about where your attention usually goes?",
+            body: "Private reflection: of the four doorways, which one did you find hardest to answer honestly — and what does that difficulty tell you about where your attention usually goes?",
           },
         ],
       },
@@ -397,9 +393,9 @@ const pack: CoursePack = {
             categories: ["Ready to start", "Needs narrowing"],
             items: [
               { text: "Understanding cultural responsiveness in human services.", category: "Needs narrowing" },
-              { text: "The five questions on our intake form that people most often leave blank, and why.", category: "Ready to start" },
+              { text: "The five questions on the intake form that people most often leave blank, and why.", category: "Ready to start" },
               { text: "Becoming a more inclusive person.", category: "Needs narrowing" },
-              { text: "How our division decides which materials get translated, and who is never asked.", category: "Ready to start" },
+              { text: "How my division decides which materials get translated, and who is never asked.", category: "Ready to start" },
               { text: "Fixing inequity in state government.", category: "Needs narrowing" },
               { text: "The hour and format of the quarterly partner meeting, and who has stopped attending it.", category: "Ready to start" },
               { text: "The closure code on records that appear once and never again, and what it hides.", category: "Ready to start" },
@@ -427,7 +423,7 @@ const pack: CoursePack = {
           },
           {
             type: "statement",
-            body: "Private reflection, not recorded and not shared: which is more comfortable for you — a focus so large that no one can say you have not started, or one so small that nothing much is at stake? Notice which way you drift, and narrow or widen once against that habit.",
+            body: "Private reflection: which is more comfortable for you — a focus so large that no one can say you have not started, or one so small that nothing much is at stake? Notice which way you drift, and narrow or widen once against that habit.",
           },
         ],
       },
@@ -446,7 +442,7 @@ const pack: CoursePack = {
             "The revisit date is part of the tool. Most intentions are half wrong at the start, and the date is what turns that from a failure into an ordinary correction.",
             "Keeping it private is a design choice, not secrecy. A note that a supervisor will read becomes a note written to be read, and stops telling you the truth.",
           ],
-          evidence: "A private learning intention written for one real piece of your own work, kept by you, plus a knowledge check on what makes an intention actionable rather than aspirational.",
+          evidence: "A private learning intention written for one real piece of your own work, plus a knowledge check on what makes an intention actionable rather than aspirational.",
           appliedNextStep: "Write your five lines, keep them somewhere you will actually see them, and put the revisit date in your own calendar rather than anyone else's.",
         },
         scenario: {
@@ -480,7 +476,7 @@ const pack: CoursePack = {
         blocks: [
           {
             type: "text",
-            heading: "Five lines, kept by you",
+            heading: "Five lines for yourself",
             body: "<p>A learning intention is a short private note you write to yourself after you have found and narrowed a focus. It is not a development goal, and it is deliberately not built like one: no rating, no reporting line, no due date anyone else enforces, no audience. Its whole purpose is to survive the six weeks between deciding something matters and having any time for it.</p><p>Five lines do the work. The <strong>work</strong> it is attached to, named specifically enough that you could put your hand on the document. The <strong>question</strong> underneath it, written in the words you would use with a colleague rather than the words you would use in a memo. The <strong>first step</strong> inside your own authority, small enough that a bad week cannot defeat it. <strong>Whose expertise is missing</strong>, and how they will be paid for it. And the <strong>date</strong> you will look at this again.</p><p>The fourth line is the one people skip, and it is the one that most often separates learning from circling. If your focus concerns people with disabilities, families, interpreters or a community organization, the people who can answer your question are not a resource to be consulted for free. They are people with professional expertise, invited and paid for it — and told afterward what changed because of what they said. Arranging that takes lead time, which is exactly why it belongs in the note at the start rather than in an apology at the end.</p>",
           },
           {
@@ -488,7 +484,7 @@ const pack: CoursePack = {
             kind: "tagged-document",
             label: "Practical tool",
             title: "A private learning intention",
-            summary: "Five lines you write for yourself and keep. Keep personal reflections in your own notes. Replace the example wording with your own, keep it where you will see it, and change it whenever the work changes.",
+            summary: "Five lines you write for yourself and keep. Replace the example wording with your own, keep it where you will see it, and change it whenever the work changes.",
             fields: [
               { label: "The work this is attached to", value: "The eligibility instruction sheet my unit mails with every application, and the two-week response window printed on it." },
               { label: "The question underneath it", value: "What does that sheet assume about reading, translation time, housing stability and energy — and which of those assumptions did policy actually require, rather than habit adding them?" },
@@ -548,7 +544,7 @@ const pack: CoursePack = {
           },
           {
             type: "statement",
-            body: "Private reflection, not recorded and not shared: read your five lines once more. If the first step never happens, what will the real reason have been — and is that reason something you can change, something to ask for, or something to design around?",
+            body: "Private reflection: read your five lines once more. If the first step never happens, what will the real reason have been — and is that reason something you can change, something to ask for, or something to design around?",
           },
         ],
       },
@@ -564,7 +560,6 @@ const pack: CoursePack = {
         "A usable focus has three things a rating never has: a piece of work you can reach, a question with an answer somewhere, and a first step inside your own authority.",
         "Set aside a self-diagnosis, a verdict about a colleague, and a system you cannot move alone. None of the three has a first step in it for you.",
         "People with disabilities, families, community organizations and interpreters bring professional expertise. Arrange payment before you ask, and say what changed afterward.",
-        "Activity choices and lesson progress can be saved in this browser. Keep personal reflections in your own notes. Completion here does not count toward DHS-required training credits unless expressly approved through the applicable arrangements.",
       ],
       doNext: "Walk the four doorways, narrow the strongest candidate until it names one document or decision, and write your five lines with a date to look at them again.",
     },
@@ -604,7 +599,7 @@ const pack: CoursePack = {
           "No self-rating, placement, level or score — for you, a colleague or your unit.",
           "No collecting of other people's intentions, and no use of them in check-ins or development plans.",
           "No placement of anyone on the intercultural development continuum; the continuum shapes the content, never a record about a person.",
-          "Formal determinations — accommodation requests, complaints, discipline, required training, policy exceptions — go to the responsible DHS office, not into a learning note.",
+          "Formal determinations — accommodation requests, complaints, discipline, required training, policy exceptions — go to the person or area responsible at DHS, not into a learning note.",
         ],
       },
       {

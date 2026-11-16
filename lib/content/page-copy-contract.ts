@@ -275,7 +275,7 @@ export const STATIC_HOME_COPY: HomePageCopy = HomePageCopySchema.parse({
   secondaryActionLabel: "Ask a question",
   secondaryActionHref: "/ask",
   aboutLabel: "Bring the work in front of you.",
-  aboutText: "Ask a question, find guidance, practice with something you can use, or identify the right person to involve. Ordinary learning and practice are voluntary. Notes you choose to save stay on this computer.",
+  aboutText: "Ask a question, find guidance, practice with something you can use, or identify the right person to involve.",
   guidedKicker: "Areas of work",
   guidedTitle: "What are you responsible for today?",
   guidedIntro: "Choose the area closest to your work. Each area connects learning, practical questions, useful material, something you can use, and the people who hold the relevant responsibility.",
@@ -311,7 +311,7 @@ export const STATIC_HOME_COPY: HomePageCopy = HomePageCopySchema.parse({
   commitmentsLinkLabel: "Learn how the program works",
   commitmentsLinkHref: "/about",
   privacyLabel: "Protect your privacy.",
-  privacyText: "Please do not enter case, medical, personnel, complaint, or identifying details anywhere in this program. Guidance shows its sources and limits. It does not replace official policy, legal advice, Human Resources, civil-rights processes, Tribal consultation, or another the person or area responsible.",
+  privacyText: "Please do not enter case, medical, personnel, complaint, or identifying details anywhere in this program. Guidance shows its sources and limits. It does not replace official policy, legal advice, Human Resources, civil-rights processes, Tribal consultation, or another person or area responsible.",
 });
 
 export const STATIC_FOOTER_COPY: FooterCopy = FooterCopySchema.parse({
@@ -332,7 +332,7 @@ export const STATIC_FOOTER_COPY: FooterCopy = FooterCopySchema.parse({
   escalationLabel: "Find the person or area responsible",
   escalationHref: "/support/right-person",
   privacyHeading: "Privacy and access",
-  privacyText: "Please leave out case, medical, personnel, complaint, and identifying details anywhere in this program. Notes you write are saved only on this computer, so another person who uses it could see them. If any part of the program is hard to use with assistive technology, Support explains how to tell us.",
+  privacyText: "Please leave out case, medical, personnel, complaint, and identifying details anywhere in this program. If any part of the program is hard to use with assistive technology, Support explains how to report it.",
 });
 
 export function pageCopySchema(surface: PageBlockSurface) {

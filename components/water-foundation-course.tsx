@@ -37,7 +37,7 @@ export function WaterFoundationCourse() {
     <header className={styles.header}>
       <p className={styles.eyebrow}>People, Access and Culture</p>
       <h1>The Water We Swim In</h1>
-      <p className={styles.intro}>Recognize the cultural assumptions that shape our work—and use that understanding to improve services, workplace decisions and organizational responsibility.</p>
+      <p className={styles.intro}>Recognize the cultural assumptions that shape the agency's work—and use that understanding to improve services, workplace decisions and organizational responsibility.</p>
       <p className={styles.meta}>For staff and leaders · About 1 hour · 12 chapters</p>
     </header>
     <div className={styles.watch}>
@@ -62,9 +62,9 @@ export function WaterFoundationCourse() {
     <div className={styles.tabs} role="tablist" aria-label="Course materials">{tabs.map((name, index) => <button key={name} id={`water-tab-${index}`} type="button" role="tab" aria-selected={tab === index} aria-controls={`water-panel-${index}`} tabIndex={tab === index ? 0 : -1} onClick={() => setTab(index)} onKeyDown={event => moveTab(event, index)}>{name}</button>)}</div>
     {tabs.map((name, index) => <section key={name} id={`water-panel-${index}`} role="tabpanel" aria-labelledby={`water-tab-${index}`} hidden={tab !== index} tabIndex={0} className={styles.panel}>
       {index === 0 && <>
-        <h2>Turn the lens toward our own institution</h2>
+        <h2>Turn the lens toward the agency itself</h2>
         <p>This course examines how historically dominant white cultural norms in American and Minnesota institutions can shape what seems normal, credible or fair. It connects that examination to community perspectives, disability and language access, intercultural communication, workforce decisions and leadership responsibility.</p>
-        <p>Cultural patterns are a starting point for inquiry. They do not tell us what any individual believes or needs. Responsive practice combines evidence, direct listening and a willingness to change how the organization works.</p>
+        <p>Cultural patterns are a starting point for inquiry. They do not tell you what any individual believes or needs. Responsive practice combines evidence, direct listening and a willingness to change how the organization works.</p>
         <h3>By the end, you will be able to</h3>
         <ul><li>Identify assumptions in a service or workplace decision and distinguish evidence from interpretation.</li><li>Use community perspectives and cultural briefs to ask better questions without stereotyping people.</li><li>Choose a practical organizational response, identify who can act and decide how to check whether access improves.</li></ul>
         <h3>Connect the learning</h3>

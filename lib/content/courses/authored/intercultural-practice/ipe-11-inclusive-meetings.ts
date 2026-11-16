@@ -140,7 +140,7 @@ const pack: CoursePack = {
           {
             type: "text",
             heading: "Where this sits in the program's map of change",
-            body: "<p>This program uses a six-part map of intercultural development — Denial, Polarization, Minimization, Acceptance, Adaptation and Integration — as a working tool for examining practice, not as a proven account of how organizations and the people in them change over time. The first five are the orientations of the Intercultural Development Inventory. The sixth, Integration, is not an IDI orientation: in this program it means the people a process affects help design it, and the name comes from Bennett's developmental model, where it describes identity across cultures. It is a map for the work, not a label or a record about any individual. Nothing you do in this module is assessed, scored or kept.</p><p>Meetings are where Minimization is easiest to see. Minimization is the sincere belief that differences between people are mostly surface, that treating everyone the same is what fairness means, and that a good process is one that does not single anybody out. It sounds even-handed, and the people who hold it are usually trying hard to be fair. In a meeting it produces one format, one pace, one way of taking a turn, and a quiet confidence that this is neutral ground. It is not neutral ground. It is home ground for whoever the format already fits.</p><p>Moving toward Acceptance and Adaptation in a meeting is concrete and unglamorous. Acceptance is recognizing that the differences in the room are real and have consequences for who gets heard. Adaptation is changing what you do about it: more than one way to contribute, materials early enough to be useful, a decision method that does not reward speed. That is the whole shift, and it lives entirely in the details.</p>",
+            body: "<p>This program uses a six-part map of intercultural development — Denial, Polarization, Minimization, Acceptance, Adaptation and Integration — as a working tool for examining practice, not as a proven account of how organizations and the people in them change over time. The first five are the orientations of the Intercultural Development Inventory. The sixth, Integration, is not an IDI orientation: in this program it means the people a process affects help design it, and the name comes from Bennett's developmental model, where it describes identity across cultures. It is a map for the work, not a label about any individual.</p><p>Meetings are where Minimization is easiest to see. Minimization is the sincere belief that differences between people are mostly surface, that treating everyone the same is what fairness means, and that a good process is one that does not single anybody out. It sounds even-handed, and the people who hold it are usually trying hard to be fair. In a meeting it produces one format, one pace, one way of taking a turn, and a quiet confidence that this is neutral ground. It is not neutral ground. It is home ground for whoever the format already fits.</p><p>Moving toward Acceptance and Adaptation in a meeting is concrete and unglamorous. Acceptance is recognizing that the differences in the room are real and have consequences for who gets heard. Adaptation is changing what you do about it: more than one way to contribute, materials early enough to be useful, a decision method that does not reward speed. That is the whole shift, and it lives entirely in the details.</p>",
           },
           {
             type: "leaderMove",
@@ -168,7 +168,7 @@ const pack: CoursePack = {
           },
           {
             type: "statement",
-            body: "Private reflection, kept by you: think of a meeting where you said less than you knew. What about the design made staying quiet the easier choice, and who else in that room was probably running the same calculation?",
+            body: "Private reflection: think of a meeting where you said less than you knew. What about the design made staying quiet the easier choice, and who else in that room was probably running the same calculation?",
           },
         ],
       },
@@ -190,7 +190,7 @@ const pack: CoursePack = {
           appliedNextStep: "Rewrite one standing invitation template so it names what is already arranged, what else can be arranged, a person to contact with a direct way to reach them, and the date after which some arrangements become hard.",
         },
         scenario: {
-          context: "A DSD program team is holding a listening session on a change to service standards. The invitation went out with one line at the bottom: contact us if you require accommodations. Nine days before the session, a community member the division pays to weigh in on the change writes to ask whether American Sign Language interpreters will be there. None were booked. The room has one small screen at the far end, and the handouts are still in draft.",
+          context: "A DSD program team is holding a listening session on a change to service standards. The invitation went out with one line at the bottom: “contact us if you require accommodations.” Nine days before the session, a community member the division pays to weigh in on the change writes to ask whether American Sign Language interpreters will be there. None were booked. The room has one small screen at the far end, and the handouts are still in draft.",
           prompt: "You are the staff member organizing the session. What do you do?",
           options: [
             {
@@ -249,7 +249,7 @@ const pack: CoursePack = {
           {
             type: "text",
             heading: "The invitation is the first accessibility feature",
-            body: "<p>An invitation that gives only a time and a place hands the entire access job to the person with the least information. A useful invitation does five things in a short space: it says what the meeting is for and what will be decided, lists what is already arranged, says what else can be arranged, names a person and a direct way to reach them, and gives the date by which some arrangements stop being possible.</p><p>That last part gets left out most often, because naming a deadline feels unwelcoming. It is the opposite. Telling someone to contact Maria by the fifteenth so interpreters can be booked is honest and actionable. Telling them to contact us if you require accommodations gives no contact, no date and no examples, and it signals accurately that nothing has been arranged yet.</p><p>Under the Americans with Disabilities Act, meetings held by state and local government carry an effective-communication obligation, and the person's own expressed preference for how to communicate carries primary consideration. That is the floor, and it is worth knowing. It also only helps someone who already knows the floor exists and is willing to stand on it, which is why the planning matters more than the rule does.</p>",
+            body: "<p>An invitation that gives only a time and a place hands the entire access job to the person with the least information. A useful invitation does five things in a short space: it says what the meeting is for and what will be decided, lists what is already arranged, says what else can be arranged, names a person and a direct way to reach them, and gives the date by which some arrangements stop being possible.</p><p>That last part gets left out most often, because naming a deadline feels unwelcoming. It is the opposite. Telling someone to contact Maria by the fifteenth so interpreters can be booked is honest and actionable. Telling them “contact us if you require accommodations” gives no contact, no date and no examples, and it signals accurately that nothing has been arranged yet.</p><p>Under the Americans with Disabilities Act, meetings held by state and local government carry an effective-communication obligation, and the person's own expressed preference for how to communicate carries primary consideration. That is the floor, and it is worth knowing. It also only helps someone who already knows the floor exists and is willing to stand on it, which is why the planning matters more than the rule does.</p>",
           },
           {
             type: "leaderMove",
@@ -273,7 +273,7 @@ const pack: CoursePack = {
           },
           {
             type: "statement",
-            body: "Private reflection, kept by you: think of the last meeting you organized. If someone had needed an interpreter, captions or a translated handout, when would they have found out that you had not arranged it — and what would that have cost them?",
+            body: "Private reflection: think of the last meeting you organized. If someone had needed an interpreter, captions or a translated handout, when would they have found out that you had not arranged it — and what would that have cost them?",
           },
         ],
       },
@@ -381,7 +381,7 @@ const pack: CoursePack = {
           },
           {
             type: "statement",
-            body: "Private reflection, kept by you: in the meetings you attend, what does your own silence usually mean? Consider that the people you read as having nothing to add may be running exactly the same calculation.",
+            body: "Private reflection: in the meetings you attend, what does your own silence usually mean? Consider that the people you read as having nothing to add may be running exactly the same calculation.",
           },
         ],
       },
@@ -500,7 +500,7 @@ const pack: CoursePack = {
           },
           {
             type: "statement",
-            body: "Private reflection, kept by you: think of one meeting you run that people attend because they have to. If coming were genuinely optional, what would have to change for them to choose it — and which of those things is already yours to change?",
+            body: "Private reflection: think of one meeting you run that people attend because they have to. If coming were genuinely optional, what would have to change for them to choose it — and which of those things is already yours to change?",
           },
         ],
       },

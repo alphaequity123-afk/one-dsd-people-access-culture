@@ -85,7 +85,6 @@ export function CourseLesson({courseId,lesson,objectives,previous,next,companion
       <p className="course-finish-plan"><Link href={`/my-work/action-plan?from=${encodeURIComponent(lesson.title)}`}>Turn this lesson into an action plan</Link>: identify a next step within your responsibility and a date to review it. The evidence may support retaining a practice, revising it, or seeking further review. Saved plans remain in this browser profile unless you export or share a copy.</p>
     </section>:null}
     </FocusedSections>
-    <p className="notice" role="note">Your activity choices and lesson progress are saved in this browser. Keep any personal reflection notes in your own document.</p>
     <label className="course-choice"><input type="checkbox" checked={state.completed} onChange={event=>save({...state,completed:event.target.checked})}/>Mark this lesson complete</label>
     <button onClick={()=>{if(window.confirm("Clear your answers and progress for this lesson?"))save(blank());}}>Reset this lesson</button></fieldset><p role="status">{message}</p><nav aria-label="Lesson navigation">{previous?<Link href={previous}>Previous lesson</Link>:<Link href={overviewHref}>Course overview</Link>}{next?<Link href={next}>Next lesson</Link>:<Link href={overviewHref}>Back to course</Link>}</nav></article>;
 }

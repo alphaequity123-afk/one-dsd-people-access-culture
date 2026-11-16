@@ -6,7 +6,7 @@ import { Disclosure } from "./community-research-sections";
 import { ResearchMarkdown } from "./research-markdown";
 
 const BUSINESS_STATUS: Record<string, string> = {
-  "could not confirm open": "We could not confirm this is still open.",
+  "could not confirm open": "Not confirmed as still open.",
   closed: "Closed. Kept here as part of the history.",
 };
 

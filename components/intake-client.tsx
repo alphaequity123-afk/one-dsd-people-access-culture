@@ -73,7 +73,7 @@ const EMPTY: FormState = {
 
 const NONE_SAVED: Array<{ id: string; key: string; work_name: string; at: string }> = [];
 const MEETING_LABEL: Record<string, string> = { in_person: "In person", virtual: "Virtual", either: "Either", not_sure: "Not sure yet" };
-const PREVIEW_ONLY_MESSAGE = "Consultation requests are not open yet. You can review the summary that would be shared, but no request is created and nothing you type is kept.";
+const PREVIEW_ONLY_MESSAGE = "Review the summary that would be shared. To ask for a consultation now, use your usual workplace channels.";
 const SUBMISSION_CONTRACT = participationContract("consultation_submission");
 
 type IntakeRefusalField =

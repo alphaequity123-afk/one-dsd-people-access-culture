@@ -40,7 +40,7 @@ const pack: CoursePack = {
       lastReviewed: "At authoring",
       nextReview: "At the agreed review point and whenever an update trigger occurs",
       updateTriggers: ["Change in state contracting, stipend or vendor payment procedures affecting compensation for community members", "Change in DHS community engagement or advisory committee policy", "Feedback from staff using this course that a scenario or practice reads as unrealistic or disrespectful"],
-      relatedDoor: "Contracts, stipends, data practices and formal advisory committee appointments go through procurement, finance, data practices and the responsible program office; this course helps you design the partnership, it does not authorize a payment or an appointment.",
+      relatedDoor: "Contracts, stipends, data practices and formal advisory committee appointments go through procurement, finance, data practices and the person or area responsible for the program.",
       toolkitQuestion: "Who with lived experience is shaping this decision, are they paid, did they join before the design was fixed, and how will they learn what happened to their advice?",
       status: "reviewed",
     },

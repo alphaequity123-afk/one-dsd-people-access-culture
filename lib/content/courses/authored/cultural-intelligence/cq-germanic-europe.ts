@@ -42,7 +42,7 @@ const pack: CoursePack = {
         "A new edition of a cited source"
       ],
       "relatedDoor": "These examples are practice. They are not an individual assessment, or authority to change a service requirement. Ask the person about preferences and check the actual work context.",
-      "toolkitQuestion": "What do we know from this person and this situation, what are we assuming, and what should we ask or verify next?",
+      "toolkitQuestion": "What do you know from this person and this situation, what are you assuming, and what should you ask or verify next?",
       "status": "reviewed"
     },
     "lessons": [
@@ -82,7 +82,7 @@ const pack: CoursePack = {
           ]
         },
         "transfer": {
-          "prompt": "Which part of a direct message is an observation, and which part is our interpretation of tone?",
+          "prompt": "Which part of a direct message is an observation, and which part is your interpretation of tone?",
           "options": [
             "How can a procedure make both the usual steps and the authorized exception route understandable?",
             "What did the person actually tell you, and which part is still your interpretation?",
@@ -93,20 +93,20 @@ const pack: CoursePack = {
           {
             "type": "text",
             "heading": "Begin with curiosity about this person",
-            "body": "<p>Expecting a certain tone from a new partner can change how you hear them. Which part of a direct message is an observation, and which part is our interpretation of tone? Keep that question ready for the meeting. Ask the partner what they need from the time together, and let their answers shape what you do.</p><p>Think too about how you hear directness. Plain speech may feel like respect to you or like a rebuke, and that reaction belongs to you before it says anything about them.</p>"
+            "body": "<p>Expecting a certain tone from a new partner can change how you hear them. Which part of a direct message is an observation, and which part is your interpretation of tone? Keep that question ready for the meeting. Ask the partner what they need from the time together, and let their answers shape what you do.</p><p>Think too about how you hear directness. Plain speech may feel like respect to you or like a rebuke, and that reaction belongs to you before it says anything about them.</p>"
           },
           {
             "type": "text",
             "heading": "Why group averages don’t settle this",
-            "body": "<p>Research comparing groups reports tendencies across many respondents. Within any group, people differ widely in how directly they speak, and the same person speaks differently from one setting to the next.</p><p>Keep three questions apart: What did the study report? What might it help us consider? What do we know about this situation? If you want to know where regional charts come from and why they can’t answer the last question, see the optional background course, <a href=\"/courses/cq-cluster-frameworks-foundations\">Optional background: where regional culture frameworks come from and what they cannot tell you</a>. You don’t need it to use this course.</p>"
+            "body": "<p>Research comparing groups reports tendencies across many respondents. Within any group, people differ widely in how directly they speak, and the same person speaks differently from one setting to the next.</p><p>Keep three questions apart: What did the study report? What might it help you consider? What do you know about this situation? If you want to know where regional charts come from and why they can’t answer the last question, see the background course <a href=\"/courses/cq-cluster-frameworks-foundations\">Where regional culture frameworks come from and what they cannot tell you</a>.</p>"
           },
           {
             "type": "list",
             "heading": "Questions for planning a straightforward meeting",
             "items": [
-              "Which part of a direct message is an observation, and which part is our interpretation of tone?",
+              "Which part of a direct message is an observation, and which part is your interpretation of tone?",
               "How can a procedure make both the usual steps and the authorized exception route understandable?",
-              "What would we need to ask or check before deciding that this approach will help?"
+              "What would you need to ask or check before deciding that this approach will help?"
             ]
           },
           {

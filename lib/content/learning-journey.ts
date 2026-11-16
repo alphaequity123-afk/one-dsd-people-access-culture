@@ -13,7 +13,7 @@ export type LearningStop = {
 const stops: LearningStop[] = [
   {
     id: "foundations", title: "Begin with curiosity",
-    purpose: "A useful place to begin when you want shared language for culture, equity, and access. Our experience shapes what feels normal; another person's experience can reveal something we have not noticed.",
+    purpose: "A useful place to begin when you want shared language for culture, equity, and access. Your experience shapes what feels normal; another person's experience can reveal something you have not noticed.",
     objectives: ["Separate an observation from an interpretation in a workplace example.", "Identify one familiar expectation that may not work equally well for everyone.", "Frame a respectful question that leaves room for the person's own explanation."],
     example: "A colleague pauses before answering. You notice the pause; you do not yet know whether they are considering their words, need more context, or prefer another way to contribute. A question gives you better information than a label.",
     practice: "Choose a routine interaction. Write what you actually observed, what you initially thought it meant, and a question that could help you understand it. Consider other explanations before deciding what to do.",

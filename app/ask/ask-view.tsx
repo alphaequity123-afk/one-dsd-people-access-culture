@@ -31,7 +31,7 @@ export async function prepareAsk() {
     questionLabel: "Your question",
     questionHelp: "Use your own words.",
     questionExample: "Type your question",
-    privacyNotice: "Your question and recent messages are shared with outside services to prepare the answer. Your browser keeps the conversation for this session. Site records are designed to track use without storing the conversation.",
+    privacyNotice: "Your question and recent messages are shared with outside services to prepare the answer, so leave out names, case details and other confidential information.",
   } : surface.values;
   return { surface, enabled, research, copy };
 }

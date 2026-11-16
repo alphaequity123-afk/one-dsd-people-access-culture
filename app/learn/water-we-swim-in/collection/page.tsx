@@ -27,7 +27,7 @@ import styles from "./collection.module.css";
 
 export const metadata: Metadata = {
   title: WATER_COLLECTION_TITLE,
-  description: "A self-paced collection connecting The Water We Swim In, two culture briefs and the Equity Analysis Toolkit through a public-service practice case.",
+  description: "A collection connecting The Water We Swim In, two culture briefs and the Equity Analysis Toolkit through a public-service practice case.",
 };
 
 const workbook = [

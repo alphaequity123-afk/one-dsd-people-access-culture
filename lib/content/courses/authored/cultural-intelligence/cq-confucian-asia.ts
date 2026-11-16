@@ -42,7 +42,7 @@ const pack: CoursePack = {
         "A new edition of a cited source"
       ],
       "relatedDoor": "These examples are practice. They are not an individual assessment, or authority to change a service requirement. Ask the person about preferences and check the actual work context.",
-      "toolkitQuestion": "What do we know from this person and this situation, what are we assuming, and what should we ask or verify next?",
+      "toolkitQuestion": "What do you know from this person and this situation, what are you assuming, and what should you ask or verify next?",
       "status": "reviewed"
     },
     "lessons": [
@@ -98,7 +98,7 @@ const pack: CoursePack = {
           {
             "type": "text",
             "heading": "Keep the chart in its place",
-            "body": "<p>Group comparisons describe averages across many respondents. The same comparison can suggest something worth asking, but it cannot tell you whether this partner will speak up, or how.</p><p>Keep three questions apart: What did the study report? What might it help us consider? What do we know about this situation? If you want to know where regional charts come from and why they can’t answer the last question, see the optional background course, <a href=\"/courses/cq-cluster-frameworks-foundations\">Optional background: where regional culture frameworks come from and what they cannot tell you</a>. You don’t need it to use this course.</p>"
+            "body": "<p>Group comparisons describe averages across many respondents. The same comparison can suggest something worth asking, but it cannot tell you whether this partner will speak up, or how.</p><p>Keep three questions apart: What did the study report? What might it help you consider? What do you know about this situation? If you want to know where regional charts come from and why they can’t answer the last question, see the background course <a href=\"/courses/cq-cluster-frameworks-foundations\">Where regional culture frameworks come from and what they cannot tell you</a>.</p>"
           },
           {
             "type": "list",
@@ -106,7 +106,7 @@ const pack: CoursePack = {
             "items": [
               "What might a pause or an agreement mean in this particular conversation?",
               "How can someone question a plan without having to interrupt or disagree publicly?",
-              "What would we need to ask or check before deciding that this approach will help?"
+              "What would you need to ask or check before deciding that this approach will help?"
             ]
           },
           {
@@ -486,7 +486,7 @@ const pack: CoursePack = {
           "Which part of this would be difficult, and what would make it workable?",
           "Who does this person want in the room, and is qualified interpretation arranged?",
           "Is there a less public way to raise a question or concern?",
-          "What have we each agreed to do, and by when?",
+          "What has each person agreed to do, and by when?",
           "Does this correction need an audience, or only the person?"
         ]
       }

@@ -41,7 +41,7 @@ const pack: CoursePack = {
       nextReview: "At the agreed review point and whenever an update trigger occurs",
       updateTriggers: ["Change in ADA, Section 504 or Section 508 guidance", "Change in DHS accessibility or language access standards", "Feedback from disabled staff or participants that a scenario reads as unrealistic or stigmatizing"],
       relatedDoor: "Contract terms, remedies and vendor disputes follow the agency’s procurement office and legal counsel; technical standards follow the State of Minnesota accessibility standard maintained by Minnesota IT Services and the agency’s accessibility lead. This course prepares a leader to require the right things, not to draft the contract alone.",
-      toolkitQuestion: "Before we sign, approve or publish this, who has tested it with a keyboard and a screen reader, and what happens under the contract if it fails?",
+      toolkitQuestion: "Before you sign, approve or publish this, who has tested it with a keyboard and a screen reader, and what happens under the contract if it fails?",
       status: "reviewed",
     },
     lessons: [
@@ -89,7 +89,7 @@ const pack: CoursePack = {
             { front: "State of Minnesota accessibility standard", back: "<p>The accessibility standard for state agencies, published and supported by Minnesota IT Services. The agency’s accessibility lead can say how it applies to a given purchase.</p>" },
             { front: "ADA Title II and the web", back: "<p>The Department of Justice has made clear that web content and mobile applications of state and local governments must be accessible. Legal counsel and the ADA coordinator advise on specifics.</p>" },
           ] },
-          { type: "list", heading: "Questions to ask before approving any technology", ordered: true, items: ["Is this anyone’s only route to a job, a benefit, required training or a public decision?", "Who has tried it with a keyboard alone and with a screen reader, on our real tasks, and where is the record?", "Are captions, transcripts and other access features on by default, or does someone have to ask?", "What does the contract let us require if it fails after launch?", "What is the interim access plan if a defect is found on the first day?"] },
+          { type: "list", heading: "Questions to ask before approving any technology", ordered: true, items: ["Is this anyone’s only route to a job, a benefit, required training or a public decision?", "Who has tried it with a keyboard alone and with a screen reader, on the agency’s real tasks, and where is the record?", "Are captions, transcripts and other access features on by default, or does someone have to ask?", "What does the contract let the agency require if it fails after launch?", "What is the interim access plan if a defect is found on the first day?"] },
           { type: "knowledgeCheck", id: "inclusive-policy-procurement-technology-1-check", question: "Why do leaders who approve inaccessible technology rarely see its effects?", options: [
             { text: "Because most people with disabilities do not use technology.", correct: false },
             { text: "Because the people locked out appear in the data as nonapplicants, noncompliant staff or uninterested residents, not as people the system excluded.", correct: true },
@@ -322,7 +322,7 @@ const pack: CoursePack = {
       doNext: "Check your area’s solicitation template and project approval template for the standard, the evidence, the remedy and a criterion at every gate.",
     },
     sections: [
-      { heading: "Before you sign a contract", items: ["Does the solicitation name the standard for every user-facing function, including administrative screens?", "Did the accessibility lead and disabled users test the real product on our key tasks?", "Does the contract make conformance a material obligation with remediation dates, vendor-funded interim access, cure, withholding and termination?", "Does accessibility carry enough weight in scoring to decide the award?"] },
+      { heading: "Before you sign a contract", items: ["Does the solicitation name the standard for every user-facing function, including administrative screens?", "Did the accessibility lead and disabled users test the real product on the agency’s key tasks?", "Does the contract make conformance a material obligation with remediation dates, vendor-funded interim access, cure, withholding and termination?", "Does accessibility carry enough weight in scoring to decide the award?"] },
       { heading: "When a product under contract fails", items: ["Impact: who cannot do what, and is this their only route to something required?", "Contract: written notice, the clause, dated milestones, a cure period.", "Interim access: an equivalent path for everyone, no disclosure, deadlines paused.", "Prevention: the template, the scoring and the acceptance test changed, with an owner and date."] },
       { heading: "Before a rule or a template goes out", items: ["More than one channel; an extension process that does not require a diagnosis; no in-person-only requirement without an alternative.", "Made from an accessible template; real text; plain language; a named contact for alternative formats.", "Checked by the ADA coordinator and the accessibility lead before it advances."] },
     ],

@@ -57,7 +57,7 @@ export default function LeadershipCapstonePage() {
       <p className={`${styles.callout} mt-6`}>{RUBRIC.limits}</p>
     </Block>
     <Block id="guided-practice" title="Practice with Guidance">
-      <p className={styles.prose}>Work through the capstone one step at a time. Each choice is checked against the rubric, not against you. After you answer, you can ask Guidance for a hint or an example. Your progress stays on this device.</p>
+      <p className={styles.prose}>Work through the capstone one step at a time. Each choice is checked against the rubric, not against you. After you answer, you can ask Guidance for a hint or an example.</p>
       <TutorPanel lessonId={LEADERSHIP_CAPSTONE_LESSON_ID} />
       <p className={`${styles.prose} mt-4`}>More practice: <Link className="underline" href={`${LEADERSHIP_PATHWAY_PAGES.scenarios.href}#guided-practice`}>style scenarios with Guidance</Link>.</p>
     </Block>

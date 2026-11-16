@@ -153,7 +153,7 @@ function markdownSections(markdown: string, leading?: string): DocumentSection[]
 /* ---------- The Water We Swim In ---------- */
 
 const WATER_INTRO =
-  "A voluntary course on Minnesota's mainstream culture: its real strengths, its blind spots, and how it shapes our work with Minnesotans of other cultures and with disabled people and their families.";
+  "A course on Minnesota's mainstream culture: its real strengths, its blind spots, and how it shapes public-service work with Minnesotans of other cultures and with disabled people and their families.";
 
 function waterDocument(id: string, scope: StaffProgramScope): ResourceDocument | null {
   if (id === "home") {

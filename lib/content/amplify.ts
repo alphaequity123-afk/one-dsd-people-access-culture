@@ -8,7 +8,7 @@ export const AMPLIFY_PAGES = [
     title: "Make it your own",
     intro: "Starting points for a welcome, a conversation, and staying in touch. Adapt them to the people gathering with you.",
     sections: [
-      ["An invitation", "You are welcome to join an Amplify Equity conversation. We will explore [topic] on [date and time], at [joining details]. Come to share, listen, or ask a question. Participation is voluntary, and no preparation is needed. Contact [co-lead] with questions or to discuss what would help you participate."],
+      ["An invitation", "You are welcome to join an Amplify Equity conversation. We will explore [topic] on [date and time], at [joining details]. Come to share, listen, or ask a question. No preparation is needed. Contact [co-lead] with questions or to discuss what would help you participate."],
       ["A simple opening", "Welcome. There is room to speak, listen, or pass. Please speak from your own experience and leave room for others. We can question ideas without making assumptions about one another. Please keep names and private stories about other people out of the conversation. Today we are exploring [question]."],
       ["A 45-minute conversation", ["First 5 minutes: welcome, ways to participate, and the opening question.", "Next 10 minutes: a quiet reflection, short reading, or everyday example. No personal disclosure is required.", "Next 20 minutes: explore what people notice and what they wonder about. Leave room for different interpretations.", "Last 10 minutes: share a takeaway and decide together whether anything needs follow-up. Ending with connection alone is welcome."]],
       ["A question to carry forward", ["The question we agreed to share: [wording].", "Why it matters for work, access, or people's experience: [brief explanation without identifying details].", "What we are asking for: [information, consideration, or a response].", "Where it is going and who has agreed to receive it: [person or group].", "Who will bring back an update, and when: [co-lead and agreed date].", "What we have permission to share: [agreed boundaries]."]],
@@ -81,7 +81,7 @@ export const AMPLIFY_PAGES = [
           "What helps you think before you respond?",
           "When is written feedback more useful than a conversation?",
           "What makes a meeting easier to participate in?",
-          "What might we change so more people can contribute?"
+          "What might the group change so more people can contribute?"
         ]
       ],
       [
@@ -115,7 +115,7 @@ export const AMPLIFY_PAGES = [
         "Before a gathering",
         [
           "Choose a topic with participants rather than preparing a full lesson.",
-          "Share the time, joining details, and an optional opening question.",
+          "Share the time, joining details, and an opening question people can think about in advance.",
           "Consider access needs and offer more than one way to contribute.",
           "Agree who will welcome people and help the conversation stay respectful."
         ]

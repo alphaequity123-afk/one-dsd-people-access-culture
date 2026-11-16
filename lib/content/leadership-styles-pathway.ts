@@ -200,7 +200,7 @@ export const RUBRIC = {
     { id: "rights", title: "Preserved relevant rights and procedures", strong: "Protects against retaliation, respects privacy and follows applicable processes.", weak: "Asks for private details, promises secrecy it cannot keep, or skips a required step.", question: "What rights and procedures apply?" },
     { id: "action", title: "Chose an actionable response", strong: "Commits to specific steps that can actually be taken.", weak: "Offers only reassurance or values language.", question: "What will actually happen next?" },
     { id: "responsibility", title: "Assigned responsibility", strong: "Names who is responsible, without handing the burden to the person harmed.", weak: "Leaves it unclear, or makes the person who raised the concern fix it.", question: "Who owns each step?" },
-    { id: "followup", title: "Planned follow-up", strong: "Sets a date and says what evidence of improvement will be checked.", weak: "Ends with “let me know if anything else comes up.”", question: "When will we check, and what will we look at?" },
+    { id: "followup", title: "Planned follow-up", strong: "Sets a date and says what evidence of improvement will be checked.", weak: "Ends with “let me know if anything else comes up.”", question: "When will you check, and what will you look at?" },
   ],
   limits: "Do not use any part of this pathway to produce a racial-equity leadership probability, diagnose a personality type, or rank real leaders from their reflections. Do not infer intent, honesty, diagnosis or neurotype from silence, tone, eye contact or communication style.",
 };

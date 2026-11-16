@@ -6,10 +6,10 @@ export type LogicStage = {
 
 export const logicStages: LogicStage[] = [
   {
-    slug: "what-informs", label: "What informs our work", model: "Inputs",
-    question: "What informs our work?",
+    slug: "what-informs", label: "What informs the work", model: "Inputs",
+    question: "What informs the work?",
     introduction: "One DSD People, Access and Culture connects learning, practical resources and informed action to help Disability Services Division staff make their work and workplace more equitable. It brings policy, evidence, staff knowledge and community perspectives into decisions about disability services, policies and employee experience. Choose resources relevant to your responsibility, involve people affected by the work, and return to what happened after an approach was used.",
-    explanation: "Begin with evidence and the experience of people affected by the work. A community brief can help you prepare for a conversation, but it cannot speak for a person. Applicable law, approved policy and delegated authority guide decisions. People's knowledge and professional judgment help us apply them to the situation at hand.",
+    explanation: "Begin with evidence and the experience of people affected by the work. A community brief can help you prepare for a conversation, but it cannot speak for a person. Applicable law, approved policy and delegated authority guide decisions. People's knowledge and professional judgment help staff apply them to the situation at hand.",
     resources: [
       { title: "Program charter", href: "/program-foundation", description: "Connect the program’s purpose, responsibilities, operating principles and authority boundaries with the work you prepare." },
       { title: "Requirements and review evidence", href: "/practice/requirements", description: "Identify applicable requirements and sources, prepare supporting evidence and make the responsible review visible." },
@@ -23,12 +23,12 @@ export const logicStages: LogicStage[] = [
       { title: "Understanding DHS", href: "/understanding-dhs", description: "Find organizational context and responsibilities that can help you identify the appropriate source of guidance." },
       { title: "Program orientation", href: "/start#new-to-dsd", description: "Learn how the program connects personal development, professional practice, and participation with colleagues." },
     ],
-    reflection: "What do we already know, and whose perspective would help us understand the situation more fully?",
+    reflection: "What do you already know, and whose perspective would help you understand the situation more fully?",
   },
   {
     slug: "practice", label: "Put equity into practice", model: "Activities",
-    question: "What do we do with what we know?",
-    introduction: "Learning can help us examine a familiar practice, consider another perspective, or improve a decision that is still open. Choose an activity that fits your purpose. You might reflect on your own experience, prepare a team conversation, or plan a change in how work is done.",
+    question: "What do you do with what you know?",
+    introduction: "Learning can help you examine a familiar practice, consider another perspective, or improve a decision that is still open. Choose an activity that fits your purpose. You might reflect on your own experience, prepare a team conversation, or plan a change in how work is done.",
     explanation: "Operationalizing equity means making equity part of how work is designed, decided, resourced, carried out, and reviewed. Begin with a concrete question, involve people who experience the effects, and compare reasonable alternatives. You can enter at any point and return as the situation develops.",
     resources: [
       { title: "Applicable ADSA implementation steps", href: "/program/implementation", description: "Where an action step applies, connect it with an adaptable work product, participation and evidence of results. Equity work also extends beyond these steps." },
@@ -49,7 +49,7 @@ export const logicStages: LogicStage[] = [
   },
   {
     slug: "resources", label: "Tools and resources", model: "Outputs",
-    question: "What can we use or produce?",
+    question: "What can you use or produce?",
     introduction: "Find courses, community references, and practical tools that help you prepare for your work. You might develop a draft analysis, revise a conversation plan, or find a resource to share with colleagues. Choose what fits the situation, then consider how you will use it and what you hope it will help you understand.",
     explanation: "Use the complete learning collection for substantive study, or choose a tool when you need to prepare a particular piece of work. Keep original policy and source material alongside your interpretation. A completed document records what was produced; it does not, by itself, establish an improvement.",
     resources: [
@@ -60,7 +60,7 @@ export const logicStages: LogicStage[] = [
       { title: "Structural equity analysis", href: "/equity-review/structural", description: "Trace a process barrier, examine decision rights and evidence, and plan a change with a responsible role and a review date." },
       { title: "My work", href: "/my-work", description: "Return to your saved work and reflections, and continue an analysis or learning activity." },
     ],
-    reflection: "What have we produced, who will use it, and what would show that it helped them do the work?",
+    reflection: "What have you produced, who will use it, and what would show that it helped them do the work?",
   },
   {
     slug: "progress", label: "Review progress", model: "Outcomes",
@@ -75,7 +75,7 @@ export const logicStages: LogicStage[] = [
       { title: "Find support", href: "/support", description: "Identify guidance or another perspective when the result raises a question that needs further consideration." },
       { title: "Review applicable ADSA equity goals", href: "/learn/equity-toolkit/goals", description: "Where the ADSA plan applies, connect observations with its goals. Other administrations retain their own responsibilities and plans." },
     ],
-    reflection: "What evidence supports the change we describe, and what remains uncertain or needs another perspective?",
+    reflection: "What evidence supports the change you describe, and what remains uncertain or needs another perspective?",
   },
   {
     slug: "impact", label: "Lasting change", model: "Impact",

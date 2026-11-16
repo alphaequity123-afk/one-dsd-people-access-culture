@@ -57,7 +57,7 @@ const context: Step = {
 
 const otherExplanations = (path: Path): Step => ({
   id: "other-explanations", title: "Look beyond one explanation",
-  question: "Can you name more than one explanation for this: schedule, transport, cost, an agency rule? What does our own system assume?",
+  question: "Can you name more than one explanation for this: schedule, transport, cost, an agency rule? What does the agency's own system assume?",
   guidance: path === "service"
     ? "Ask this alongside what you learned about culture, not instead of it. A missed appointment can involve a shift change, a bus route and a family's way of deciding, all at once. Check what you can act on, and name anything the service itself is asking of people. Consider more than one possible explanation and ask the people involved."
     : "Ask this alongside what you know about culture, not instead of it. Someone quiet in a meeting may also be new, on a different shift, working through an interpreter or watching how speaking up has gone for others. Ask what the job design, the meeting format and the rules assume about how people work. Consider more than one possible explanation and ask the people involved.",
@@ -126,7 +126,7 @@ const followThrough = (guidance: string, practices: string[], resourceIds: strin
 const checkAfterward = (who: string) => [
   `Some days later, ask ${who} to tell you the next steps in their own words, spoken, written, through AAC or with someone they choose. It checks your explanation, not them.`,
   "Tell people what was decided, and say what you cannot share. Quiet rollouts leave some people out.",
-  "Compare what happened with what you expected, and talk it over with someone you trust. A private journal can help; keep names and case details out of it. Nothing here is stored.",
+  "Compare what happened with what you expected, and talk it over with someone you trust. A private journal can help; keep names and case details out of it.",
   "Ask who will tell you whether it helped them. Your own sense of progress, or finishing a course, does not show that anything changed for them.",
 ];
 
@@ -338,12 +338,12 @@ export function CulturalIntelligenceWorkJourney({ resources, title = "Connect le
 
   return <section aria-labelledby={`${instanceId}-title`} className="space-y-5 rounded-xl border border-line p-6">
     <h3 id={`${instanceId}-title`} className="text-2xl font-semibold">{title}</h3>
-    <p>Choose what the work is about and where to begin. This optional guide brings your own culture, the people affected and relevant tools into the same work question. Nothing you choose here is saved; if you leave or reload the page, choose again.</p>
+    <p>Choose what the work is about and where to begin. This guide brings your own culture, the people affected and relevant tools into the same work question.</p>
     <p>Use what you learn in everyday conversations and choices, and work directly with the people and communities affected by a decision. Learning and community briefs do not replace that engagement, or the everyday work of a welcoming, inclusive workplace.</p>
 
     <fieldset className="space-y-2">
       <legend className="font-semibold">What is the work about?</legend>
-      <label className="flex items-start gap-3"><input type="radio" name={`${instanceId}-path`} checked={path === "service"} onChange={() => { setPath("service"); setStepIndex(0); }} /> <span>Services, programs and the people we serve</span></label>
+      <label className="flex items-start gap-3"><input type="radio" name={`${instanceId}-path`} checked={path === "service"} onChange={() => { setPath("service"); setStepIndex(0); }} /> <span>Services, programs and the people DHS serves</span></label>
       <label className="flex items-start gap-3"><input type="radio" name={`${instanceId}-path`} checked={path === "workplace"} onChange={() => { setPath("workplace"); setStepIndex(0); }} /> <span>The workplace: hiring, supervision, development and belonging</span></label>
     </fieldset>
     <fieldset className="space-y-2">

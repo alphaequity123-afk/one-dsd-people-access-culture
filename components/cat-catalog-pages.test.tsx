@@ -1,11 +1,13 @@
 // The long catalog pages show one page of compact rows at a time. These tests walk every page of
 // each catalog and check that every entry is still reachable, that pages hold no more rows than
-// promised, and that the list is searchable and announces its count.
+// promised, and that the list is searchable and announces its count. Words typed in the search box
+// stay in the page (owner rule 2026-11-16): the box has no name and no form sends it to an address.
 import { renderToStaticMarkup } from "react-dom/server";
 import type { ReactElement } from "react";
 import { describe, expect, it, vi } from "vitest";
 
 vi.mock("server-only", () => ({}));
+vi.mock("next/navigation", async original => ({ ...await original<typeof import("next/navigation")>(), useRouter: () => ({ push() {}, replace() {} }) }));
 vi.mock("@/components/resource-downloads", () => ({ ResourceDownloads: ({ id }: { id: string }) => <span data-downloads={id} /> }));
 vi.mock("@/components/resource-format-links", () => ({ ResourceFormatLinks: () => null }));
 vi.mock("@/components/program-context", () => ({ ProgramContextNote: () => null }));
@@ -21,6 +23,7 @@ import SourcesPage from "@/app/learn/sources/page";
 import ReadingsPage from "@/app/learn/readings/page";
 import CountyAgenciesPage from "@/app/community-outreach/county-agencies/page";
 import OrganizationDirectory from "@/app/community-outreach/organizations/page";
+import MinnesotaAgenciesPage from "@/app/minnesota-agencies/page";
 import { getPoliciesData, policyHref } from "@/lib/content/hub/dsd-policies";
 import { registerSourcesForStaff, sourceAnchor } from "@/lib/content/source-register";
 import { unavailableExternalUrl } from "@/lib/content/external-readings";
@@ -38,17 +41,24 @@ function decode(html: string): string {
   return html.replace(/&amp;/g, "&");
 }
 
-/** Render every page of a catalog; return the HTML of each. */
-async function allPages(page: Page, params: Record<string, string> = {}): Promise<string[]> {
+/** Render every page of a catalog (the page buttons work in the browser; ?page= from an older link opens a page); return the HTML of each. */
+async function allPages(page: Page, params: Record<string, string> = {}, perPage = 12): Promise<string[]> {
   const first = await render(page, params);
   const count = /Showing \d+–\d+ of (\d+)/.exec(first);
   expect(count, "the result count is shown").toBeTruthy();
   const pages = [first];
-  for (let n = 2; ; n += 1) {
-    if (!decode(pages[pages.length - 1]).includes(`page=${n}`)) break;
-    pages.push(await render(page, { ...params, page: String(n) }));
-  }
+  const pageCount = Math.ceil(Number(count![1]) / perPage);
+  if (pageCount > 1) expect(first, "page buttons are offered").toMatch(/<button type="button"[^>]*>Next<span class="sr-only"> page/);
+  for (let n = 2; n <= pageCount; n += 1) pages.push(await render(page, { ...params, page: String(n) }));
   return pages;
+}
+
+/** No search box with a name, no form that sends to an address, no link that carries words. */
+function keepsWordsInThePage(html: string): void {
+  expect(html).not.toMatch(/<input[^>]*type="search"[^>]*name=/);
+  expect(html).not.toMatch(/<input[^>]*name="q"/);
+  expect(html).not.toMatch(/<form[^>]*(?:action|method)=/);
+  expect(decode(html)).not.toMatch(/href="[^"]*[?&]q=/);
 }
 
 function countOf(html: string, needle: RegExp): number {
@@ -71,16 +81,15 @@ describe("paged catalog pages", () => {
     for (const kind of getPoliciesData().kinds) expect(pages[0]).toContain(kind.intro.replace(/&/g, "&amp;").replace(/'/g, "&#x27;").replace(/"/g, "&quot;"));
   });
 
-  it("policies: search and filters narrow the list and keep the choices in page links", async () => {
-    const html = await render(PoliciesPage as Page, { q: "interpreter" });
-    expect(html).toMatch(/matching polic/);
-    const legacy = await render(PoliciesPage as Page, { search: "interpreter" });
-    expect(legacy).toContain(/Showing [^<]+/.exec(html)![0]);
+  it("policies: the kind from a link narrows the list; typed words never reach an address", async () => {
     const statutes = await allPages(PoliciesPage as Page, { kind: "statute" });
     const ids = getPoliciesData().policies.filter(p => p.kind === "statute").map(p => p.id);
     const all = statutes.join("\n");
     for (const id of ids) expect(all).toContain(`href="${policyHref(id)}"`);
-    expect(decode(statutes[0])).toContain("kind=statute&page=2");
+    expect(statutes[0]).toMatch(/<option value="statute" selected="">/);
+    keepsWordsInThePage(statutes[0]);
+    // Words from an older link are searched through the request body once the page opens.
+    expect(await render(PoliciesPage as Page, { q: "interpreter" })).toContain(">Searching.</p>");
   });
 
   it("sources: 12 per page, every available outside source reachable, and links to one source find its page", async () => {
@@ -98,6 +107,7 @@ describe("paged catalog pages", () => {
     expect(pages[0]).toContain('data-downloads="register"');
     expect(pages[0]).toMatch(/<label[^>]*for="source-q"/);
     expect(pages[0]).toContain('role="status"');
+    keepsWordsInThePage(pages[0]);
   });
 
   it("readings: 12 per page, every book reachable through its own page, and the theme filter still works", async () => {
@@ -110,7 +120,8 @@ describe("paged catalog pages", () => {
     const themed = await allPages(ReadingsPage as Page, { theme });
     const themedAll = themed.join("\n");
     for (const book of readings.filter(b => b.themes.includes(theme))) expect(themedAll).toContain(`href="${readingHref(book.id)}"`);
-    expect(decode(themed[0])).toContain(`theme=${theme}`);
+    expect(themed[0]).toContain(`<option value="${theme}" selected="">`);
+    keepsWordsInThePage(pages[0]);
   });
 
   it("county agencies: every county and its contact details reachable, with letter jumps and links to one county", async () => {
@@ -129,6 +140,8 @@ describe("paged catalog pages", () => {
     expect(letter).toContain("Aitkin");
     expect(letter).not.toContain(">Wright<");
     expect(pages[0]).toContain('data-downloads="county-agencies"');
+    keepsWordsInThePage(pages[0]);
+    expect(await render(CountyAgenciesPage as Page, { q: "wright" })).toContain("Showing 1–1 of 1 matching county");
   });
 
   it("organizations: a compact list, every organization reachable through its own page", async () => {
@@ -138,5 +151,14 @@ describe("paged catalog pages", () => {
     for (const html of pages) expect(countOf(html, /<h2/g)).toBeLessThanOrEqual(2);
     expect(pages[0]).toContain('data-downloads="organizations"');
     expect(pages[0]).toContain('role="status"');
+    keepsWordsInThePage(pages[0]);
+  });
+
+  it("Minnesota agencies and partners: every entry reachable, the search kept in the page", async () => {
+    for (const params of [{}, { view: "partners" }] as Record<string, string>[]) {
+      const pages = await allPages(MinnesotaAgenciesPage as Page, params, 14);
+      for (const html of pages) keepsWordsInThePage(html);
+      expect(pages[0]).toMatch(/<label[^>]*for="agency-q"/);
+    }
   });
 });

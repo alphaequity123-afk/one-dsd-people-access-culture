@@ -8,7 +8,7 @@ const pack: CoursePack = {
     indexNumber: 1175,
     seriesLabel: "Intercultural Practice and Equity · Internal leadership",
     title: "Responsible Data and Evaluation",
-    subtitle: "A number records what we counted, not what happened. Four lessons cover who gets counted, what categories hide, how findings can describe a community instead of a system, and a quick check before a number becomes a decision.",
+    subtitle: "A number records what was counted, not what happened. Four lessons cover who gets counted, what categories hide, how findings can describe a community instead of a system, and a quick check before a number becomes a decision.",
     scope: "For internal DHS and DSD staff who produce, request, read or act on division numbers: data, research and evaluation staff; quality, compliance and performance staff; policy and program staff; contracts, fiscal, grants and procurement staff; executive and senior leaders; and the communications and operations staff who carry a finding to its audience. Four short lessons you can take in any order and return to. Voluntary and self-directed: no score, no ranking, no completion requirement, and you can keep personal reflections in your own notes.",
     treatment: "Four short lessons with Minnesota DSD examples, scenarios, sorting and flashcard practice, private reflection prompts, and a one-page data-interpretation checklist you can copy into your own work",
     duration: "40–45 minutes",
@@ -46,7 +46,7 @@ const pack: CoursePack = {
         "Feedback from staff using this module that an example here does not match how reporting actually works, or that a published report described a community in a way this module should have caught",
       ],
       relatedDoor: "Formal decisions about how data is classified, shared, suppressed, released or published belong to the responsible DHS data practices, privacy, legal and research offices; this module helps you interpret and report numbers responsibly, not decide what may be disclosed.",
-      toolkitQuestion: "Who is missing from this count, what do these categories group together, and does this finding describe the people or the process we run?",
+      toolkitQuestion: "Who is missing from this count, what do these categories group together, and does this finding describe the people or the process the division runs?",
       status: "reviewed",
     },
     lessons: [
@@ -98,7 +98,7 @@ const pack: CoursePack = {
         blocks: [
           {
             type: "text",
-            heading: "A record of us, not a record of them",
+            heading: "A record of the department's work, not a record of the people",
             body: "<p>Almost every number a division reports is made of records, and a record exists because something happened between a person and the department: a referral arrived, an application was filed, an assessment was entered, a service was billed, a case was closed with a code. That is a real and useful thing to count. It is not the same as counting the people the division exists for.</p><p>Think about everything that has to go right before a person can appear in a count. Someone had to tell them the service existed, in a language and a format they could use. They had to reach a door that was open at a time they could get to it. They had to get through a first conversation, sometimes with an interpreter who may or may not have been arranged. Someone had to enter them correctly, in this system rather than another one. Only then are they countable. Every one of those steps is a filter, and none of them filters people at random.</p><p>This is why a division can run an honest, careful report and still describe a population that does not exist. The report describes the people the process managed to hold on to. The question that turns it into something you can act on is short: what is this a share of, and who could never be in it?</p>",
           },
           {
@@ -116,7 +116,7 @@ const pack: CoursePack = {
             type: "tabs",
             heading: "The same measure, four denominators",
             tabs: [
-              { label: "Of tracked cases", body: "<p>The most available and the narrowest. It answers one question: of the cases that entered our workflow with a start event, how many finished on time? Genuinely useful for managing the workflow. It says nothing whatever about who never entered it.</p>" },
+              { label: "Of tracked cases", body: "<p>The most available and the narrowest. It answers one question: of the cases that entered the workflow with a start event, how many finished on time? Genuinely useful for managing the workflow. It says nothing whatever about who never entered it.</p>" },
               { label: "Of applicants", body: "<p>Wider, and usually obtainable. It answers: of everyone who asked, how many got through? The space between this figure and the one above is a count of the people the workflow lost early, and that space is often exactly where the access problem lives.</p>" },
               { label: "Of people found eligible", body: "<p>This one asks a fairness question. Among people the program has already agreed it is for, is the experience even? A difference here is difficult to explain away, because eligibility has already been settled and the remaining variation belongs to the process.</p>" },
               { label: "Of people who could benefit", body: "<p>The question leaders usually mean, and the one administrative records cannot answer. Getting close to it takes population estimates, community knowledge, and compensated partners who can say who is not showing up and why. Naming the distance between this question and your available numbers is far more honest than quietly answering a smaller question instead.</p>" },
@@ -217,7 +217,7 @@ const pack: CoursePack = {
           {
             type: "text",
             heading: "A category is a decision with a purpose attached",
-            body: "<p>Every field in a record started as somebody's decision. A form designer picked the options. A rule writer defined who belongs in a payment category. A system had space for one value where a person might have offered three. None of those people were careless. They were answering the question in front of them, and that question was almost always operational: how do we pay for this, how do we route it, how do we know which rule applies.</p><p>The trouble begins when a category built for one purpose is asked a question it was never built for. An eligibility category tells you which set of rules governs a person's services. It does not tell you how that person experiences disability, which supports they actually use, or how they would describe themselves. A race field with six options tells you which of six boxes was available when the record was made, and often tells you who chose it: a person describing themselves, a worker guessing under time pressure, or a system carrying a value forward from an older record.</p><p>None of this makes a field useless. It makes the field specific. The discipline is to say out loud, every single time, what a category records and what it was built to decide, so that whoever reads the chart knows which question they are looking at the answer to.</p>",
+            body: "<p>Every field in a record started as somebody's decision. A form designer picked the options. A rule writer defined who belongs in a payment category. A system had space for one value where a person might have offered three. None of those people were careless. They were answering the question in front of them, and that question was almost always operational: how is this paid for, how is it routed, which rule applies.</p><p>The trouble begins when a category built for one purpose is asked a question it was never built for. An eligibility category tells you which set of rules governs a person's services. It does not tell you how that person experiences disability, which supports they actually use, or how they would describe themselves. A race field with six options tells you which of six boxes was available when the record was made, and often tells you who chose it: a person describing themselves, a worker guessing under time pressure, or a system carrying a value forward from an older record.</p><p>None of this makes a field useless. It makes the field specific. The discipline is to say out loud, every single time, what a category records and what it was built to decide, so that whoever reads the chart knows which question they are looking at the answer to.</p>",
           },
           {
             type: "flashcards",
@@ -325,7 +325,7 @@ const pack: CoursePack = {
           {
             type: "text",
             heading: "Two true sentences, one of them usable",
-            body: "<p>A report shows that people in one group complete a step less often than people in another. What you write next is not determined by the data. There are at least two sentences the same figures support.</p><p>The first: this group completes the step less often. True, and it puts a community in the subject position of a problem sentence. Readers supply an explanation for what they read, and the explanation they supply will be about the people, because the people are who the sentence was about.</p><p>The second: our process for this step reaches this group less well. Supported by exactly the same figures, and it puts the division in the subject position. It invites the question a reader can act on, which is what about the notice, the hours, the channel, the form or the wait would produce this result.</p><p>Neither sentence is spin. The first is the one that gets written by default, and its cost is paid by people who were not in the room when it was drafted. This is also where the program's organizing framework, the Intercultural Development Continuum, becomes visible in ordinary work. Reading a gap as evidence that everyone was treated identically and the difference must therefore belong to them is what Minimization sounds like in a report. Reading the same gap as a question about whose experience the process was designed around is the move toward Acceptance and Adaptation. That describes two readings of a sentence, not a label for the person who wrote it.</p>",
+            body: "<p>A report shows that people in one group complete a step less often than people in another. What you write next is not determined by the data. There are at least two sentences the same figures support.</p><p>The first: this group completes the step less often. True, and it puts a community in the subject position of a problem sentence. Readers supply an explanation for what they read, and the explanation they supply will be about the people, because the people are who the sentence was about.</p><p>The second: the division's process for this step reaches this group less well. Supported by exactly the same figures, and it puts the division in the subject position. It invites the question a reader can act on, which is what about the notice, the hours, the channel, the form or the wait would produce this result.</p><p>Neither sentence is spin. The first is the one that gets written by default, and its cost is paid by people who were not in the room when it was drafted. This is also where the program's organizing framework, the Intercultural Development Continuum, becomes visible in ordinary work. Reading a gap as evidence that everyone was treated identically and the difference must therefore belong to them is what Minimization sounds like in a report. Reading the same gap as a question about whose experience the process was designed around is the move toward Acceptance and Adaptation. That describes two readings of a sentence, not a label for the person who wrote it.</p>",
           },
           {
             type: "tabs",
@@ -389,7 +389,7 @@ const pack: CoursePack = {
           },
           {
             type: "statement",
-            body: "For your own notes: a finding I have written or repeated with a community as the subject is... the version with our process as the subject would read... and the person or group who should have seen it before it traveled is... You do not have to have written the original to be the person who changes how it is read next time.",
+            body: "For your own notes: a finding I have written or repeated with a community as the subject is... the version with the division's process as the subject would read... and the person or group who should have seen it before it traveled is... You do not have to have written the original to be the person who changes how it is read next time.",
           },
         ],
       },
@@ -405,7 +405,7 @@ const pack: CoursePack = {
             "The checklist works because it runs at a moment, not because it is comprehensive. Three moments are worth naming: when the question is asked, before the finding is written, and before it is used for a decision.",
             "A line that cannot be answered is the most valuable result the checklist produces. Record it as unknown rather than filling it in, because an unknown that is written down gets fixed and a plausible guess never does.",
             "Run it with at least one person who did not build the number. The blind spots in a set of records are invisible from the inside, and the questions that find them tend to sound naive.",
-            "Keep records about numbers and processes, never about people. Nothing in this checklist should become a rating of an analyst, a unit or a county, and nothing a colleague writes in a private reflection is collected.",
+            "Keep records about numbers and processes, never about people. Nothing in this checklist should become a rating of an analyst, a unit or a county.",
           ],
           evidence: "A completed six-line checklist you can copy, a scenario about a check that grew too large to use, and a knowledge check on what to do with a line that cannot be answered.",
           appliedNextStep: "Fill in the six lines for one report you produce or rely on, run them once with someone who did not build the number, and take the unanswerable lines to whoever could answer them.",
@@ -480,7 +480,7 @@ const pack: CoursePack = {
               "Write down: the comparison you chose, and why that reference point rather than another.",
               "Write down: what you promised would change, by when, and who was told.",
               "Leave alone: anything that becomes a rating of a person, a unit or a county. It will not improve the numbers; it will reduce what anyone is willing to write down.",
-              "Leave alone: anything a colleague wrote in a private reflection. Reflections in this program are not collected and are nobody else's business.",
+              "Leave alone: anything a colleague wrote in a private reflection.",
             ],
           },
           {
@@ -504,7 +504,7 @@ const pack: CoursePack = {
           },
           {
             type: "statement",
-            body: "A private reflection and a commitment, for your own notes: the report I would run these six lines on is... the colleague who did not build the number and would ask the questions out loud is... and the line I already know I cannot answer is... Write it where you will see it. If that last line stays unknown for a season, it is not a personal failure. It is the most useful thing this module can hand to whoever owns that part of the process.",
+            body: "A private reflection and a commitment: the report I would run these six lines on is... the colleague who did not build the number and would ask the questions out loud is... and the line I already know I cannot answer is... Write it where you will see it. If that last line stays unknown for a season, it is not a personal failure. It is the most useful thing this module can hand to whoever owns that part of the process.",
           },
         ],
       },

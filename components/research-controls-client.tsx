@@ -39,7 +39,7 @@ export function researchAvailability(policyEnabled: boolean, configured: boolean
     return {
       active: false,
       heading: "External research is off until the connection is ready",
-      detail: "A research service still needs to be connected. No questions are sent out for research.",
+      detail: "A research service still needs to be connected.",
     };
   }
   if (!policyEnabled) {
@@ -146,7 +146,7 @@ export function ResearchControlsClient({ policy, summary, usage, providers, rese
               </tr>
             </tbody>
           </table>
-          <p className="mt-2 text-sm text-muted">Costs use the amount reported by the research service when available. Otherwise, the program shows an estimate. The question itself is not stored in this record.</p>
+          <p className="mt-2 text-sm text-muted">Costs use the amount reported by the research service when available. Otherwise, the program shows an estimate.</p>
         </div>
         <div className="panel">
           <p className="kicker">Sources for program questions</p>

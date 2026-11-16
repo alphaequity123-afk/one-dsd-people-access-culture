@@ -10,7 +10,7 @@ const KITS: Kit[] = [
     agenda: ["Five minutes: one person reads the summary's main ideas aloud.", "Fifteen minutes: two of the ready-made discussion questions.", "Five minutes: invite participants to name something they noticed about their work, without sharing confidential or identifying details.", "Five minutes: decide what to retain, test or investigate further, within the team’s authority, and who will follow up."],
     materials: [{ label: "Readings and their discussion questions", href: "/learn/readings" }], record: "A brief record of the agreed next step, its reasons and who will follow up." },
   { id: "practice-case", title: "A twenty-minute practice case", when: "Before a real decision, rehearse a similar one where the stakes are low.", minutes: 20,
-    agenda: ["Three minutes: read the case aloud.", "Ten minutes: who is affected, and who has not been asked?", "Five minutes: compare two options, including keeping things as they are.", "Two minutes: what reasoning should we carry into the real decision, and what still needs checking?"],
+    agenda: ["Three minutes: read the case aloud.", "Ten minutes: who is affected, and who has not been asked?", "Five minutes: compare two options, including keeping things as they are.", "Two minutes: what reasoning should the team carry into the real decision, and what still needs checking?"],
     materials: [{ label: "Guided practices and cases", href: "/practice" }], record: "A note in the team’s appropriate working files on the reasoning, remaining questions and responsible next step." },
   { id: "hiring-panel", title: "Prepare a fair hiring panel", when: "Before the next interview round.", minutes: 45,
     agenda: ["Ten minutes: which requirements are necessary for the work, and what evidence supports them?", "Fifteen minutes: write the same job-related questions for every candidate.", "Ten minutes: agree on the scoring before anyone is interviewed.", "Ten minutes: plan accessible interviews and explain how candidates can request an accommodation through the authorized process."],
@@ -22,7 +22,7 @@ const KITS: Kit[] = [
     agenda: ["Ten minutes: read it as the person receiving it. What must they do next?", "Ten minutes: mark unclear words, missing language options and steps that need a smartphone.", "Ten minutes: decide whether revision is needed and how to test comprehension with intended readers, preserving required wording and procedures."],
     materials: [{ label: "Make a process easier to use", href: "/practice-guides/clearer-processes" }], record: "A record of the review, the decision and its reasons, kept through the appropriate process." },
   { id: "look-back", title: "A thirty-day look back", when: "A month after the team tried something new.", minutes: 20,
-    agenda: ["Five minutes: what did we try?", "Ten minutes: what changed for the people affected, and how do we know?", "Five minutes: keep, adjust or stop."],
+    agenda: ["Five minutes: what did the team try?", "Ten minutes: what changed for the people affected, and how does the team know?", "Five minutes: keep, adjust or stop."],
     materials: [{ label: "Find out what changed in practice", href: "/practice-guides/review-a-change" }], record: "The review section of each person's action plan, or the team's decision record." },
 ];
 

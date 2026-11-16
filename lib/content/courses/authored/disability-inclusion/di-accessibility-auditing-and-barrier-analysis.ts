@@ -41,7 +41,7 @@ const pack: CoursePack = {
       nextReview: "At the agreed review point and whenever an update trigger occurs",
       updateTriggers: ["Change in ADA, Section 504 or Section 508 guidance", "Change in the state accessibility standard or DHS audit and remediation procedures", "Feedback from disabled staff or participants that a scenario reads as unrealistic or stigmatizing"],
       relatedDoor: "An audit finding that involves a legal duty, an accommodation decision or a complaint goes to the ADA coordinator, human resources, civil rights or the accessibility team; this course helps you find and describe the barrier, it does not decide the case.",
-      toolkitQuestion: "Who is trying to take part, where exactly are they stopped, what is the fix we can make now, and what is the fix that means nobody is stopped there again?",
+      toolkitQuestion: "Who is trying to take part, where exactly are they stopped, what fix can be made now, and what is the fix that means nobody is stopped there again?",
       status: "reviewed",
     },
     lessons: [

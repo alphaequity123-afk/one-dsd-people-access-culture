@@ -23,6 +23,8 @@ export const BROWSER_STORAGE_KEYS = {
   learnSearchHandoff: "learn-search-pending",
   /** Words typed in the Library search, carried across a change of fixed choices and removed once read. */
   librarySearchHandoff: "library-search-pending",
+  /** Words typed in a long catalog (policies, readings, sources and the like), carried across a change of fixed choices and removed once read. */
+  catalogSearchHandoff: "catalog-search-pending",
   consultationPrefill: "pac_intake_prefill",
   recentConsultationReferences: "pac_requests_session",
   savedConsultationReferences: "pac_requests",
@@ -47,6 +49,7 @@ export const PRIVATE_BROWSER_STORAGE_KEYS: readonly PrivateBrowserStorageKey[] =
   { area: "session", key: BROWSER_STORAGE_KEYS.siteSearchHandoff, purpose: "search_handoff" },
   { area: "session", key: BROWSER_STORAGE_KEYS.learnSearchHandoff, purpose: "search_handoff" },
   { area: "session", key: BROWSER_STORAGE_KEYS.librarySearchHandoff, purpose: "search_handoff" },
+  { area: "session", key: BROWSER_STORAGE_KEYS.catalogSearchHandoff, purpose: "search_handoff" },
   { area: "session", key: BROWSER_STORAGE_KEYS.consultationPrefill, purpose: "consultation_prefill" },
   { area: "session", key: BROWSER_STORAGE_KEYS.recentConsultationReferences, purpose: "saved_request_reference" },
   { area: "local", key: BROWSER_STORAGE_KEYS.savedConsultationReferences, purpose: "saved_request_reference" },

@@ -57,7 +57,7 @@ describe("supervisor and manager pages render with their data", () => {
     expect(policy).toContain("/one-dsd/scenarios/dsd-policy-change");
   });
   it("lists every course on every path, with the Toolkit marked", async () => {
-    expect(html(LeadingPathsPage())).toContain("All of them are optional");
+    expect(html(LeadingPathsPage())).toContain("Six suggested orders through the material.");
     for (const path of LEADING_PATHS) {
       const page = html(await LeadingPathPage({ params: Promise.resolve({ path: path.slug }) }));
       for (const id of path.courseIds) expect(page, id).toContain(`/courses/${id}`);
@@ -67,9 +67,9 @@ describe("supervisor and manager pages render with their data", () => {
   });
   it("states the promises", () => {
     const page = html(LeadingHowThisWorksPage());
-    expect(page).toContain("This area shows you no information about your team's learning.");
+    expect(page).toContain("Do not type anyone's name, case, health or personnel details.");
     expect(page).toContain("agency responsibility associated with the Equity Analysis Toolkit");
-    expect(page).toContain("This local companion course does not assign or certify required agency training.");
+    expect(page).toContain("is met through the state's own training");
   });
 });
 

@@ -317,7 +317,7 @@ export const CORPUS: ContentItem[] = [
       "Inclusion and belonging: whether people can take part, disagree, contribute, and be themselves without penalty.",
       "Organizational learning: what the team needs to learn, reconsider, or change because important voices were left out earlier.",
       "Social justice: who is harmed, what fairness requires, and what responsibility DHS holds.",
-      "Seven questions: What are we deciding or creating? What authority, rights, and obligations apply? Who benefits, carries the burden, faces the risk, or is missing? What assumptions, rules, and routines shape who is affected? What evidence and community knowledge are needed? What can we change or redesign, and what must go to the responsible decision-maker? What changed, how will we know, and how will we report back?",
+      "Seven questions: What is the team deciding or creating? What authority, rights, and obligations apply? Who benefits, carries the burden, faces the risk, or is missing? What assumptions, rules, and routines shape who is affected? What evidence and community knowledge are needed? What can the team change or redesign, and what must go to the responsible decision-maker? What changed, how will the team know, and how will it report back?",
     ],
     nextActions: [
       { label: "Use the seven questions in a learning path", href: "/paths" },

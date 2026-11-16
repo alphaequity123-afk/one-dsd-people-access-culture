@@ -42,7 +42,7 @@ const pack: CoursePack = {
         "A new edition of a cited source"
       ],
       "relatedDoor": "These examples are practice. They are not an individual assessment, or authority to change a service requirement. Ask the person about preferences and check the actual work context.",
-      "toolkitQuestion": "What do we know from this person and this situation, what are we assuming, and what should we ask or verify next?",
+      "toolkitQuestion": "What do you know from this person and this situation, what are you assuming, and what should you ask or verify next?",
       "status": "reviewed"
     },
     "lessons": [
@@ -98,7 +98,7 @@ const pack: CoursePack = {
           {
             "type": "text",
             "heading": "Where the chart stops",
-            "body": "<p>A chart of cultural tendencies gives averages from particular samples and dates. Even when those averages are sound, they say nothing about who this partner would like at the table.</p><p>Keep three questions apart: What did the study report? What might it help us consider? What do we know about this situation? If you want to know where regional charts come from and why they can’t answer the last question, see the optional background course, <a href=\"/courses/cq-cluster-frameworks-foundations\">Optional background: where regional culture frameworks come from and what they cannot tell you</a>. You don’t need it to use this course.</p>"
+            "body": "<p>A chart of cultural tendencies gives averages from particular samples and dates. Even when those averages are sound, they say nothing about who this partner would like at the table.</p><p>Keep three questions apart: What did the study report? What might it help you consider? What do you know about this situation? If you want to know where regional charts come from and why they can’t answer the last question, see the background course <a href=\"/courses/cq-cluster-frameworks-foundations\">Where regional culture frameworks come from and what they cannot tell you</a>.</p>"
           },
           {
             "type": "list",
@@ -106,7 +106,7 @@ const pack: CoursePack = {
             "items": [
               "What would make a working relationship feel respectful to each person involved?",
               "Who does the person want involved in a decision, and what should remain private?",
-              "What would we need to ask or check before deciding that this approach will help?"
+              "What would you need to ask or check before deciding that this approach will help?"
             ]
           },
           {
@@ -487,7 +487,7 @@ const pack: CoursePack = {
           "Whom would you like with you today, and is there anything you’d like to discuss privately?",
           "What does the room, the time and the privacy rule actually allow?",
           "What small change could suit both people who want connection and people short on time?",
-          "What have we agreed, and can both of us see it in writing?"
+          "What was agreed, and can both people see it in writing?"
         ]
       }
     ]

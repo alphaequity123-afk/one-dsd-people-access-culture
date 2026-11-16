@@ -98,7 +98,7 @@ const pack: CoursePack = {
           {
             type: "text",
             heading: "Most people meet the paperwork, not the program",
-            body: "<p>A person rarely encounters public administration directly. They encounter a letter, a web page, a form, a phone tree, a slide at a public meeting, an email forwarded three times before it reached them. Whatever care went into the policy behind it, that artifact is the part they can act on. When it is unreadable, badly timed or written for an audience they are not in, the policy is effectively closed to them, and the closure looks like their failure rather than ours.</p><p>This is why communication belongs in the same conversation as program design, contracting and oversight rather than at the end of it. The decision about whether a summary exists, whether a page is real text, whether a notice goes out before or after an effective date, and whether anyone can reach a person to ask a question is a decision about who can use a public program. It is made by staff, usually quickly, often by default.</p><p>The useful news is that these decisions are ordinary and inside your reach. You are not being asked to become an accessibility specialist. You are being asked to make five decisions on purpose instead of by habit.</p>",
+            body: "<p>A person rarely encounters public administration directly. They encounter a letter, a web page, a form, a phone tree, a slide at a public meeting, an email forwarded three times before it reached them. Whatever care went into the policy behind it, that artifact is the part they can act on. When it is unreadable, badly timed or written for an audience they are not in, the policy is effectively closed to them, and the closure looks like their failure rather than the agency's.</p><p>This is why communication belongs in the same conversation as program design, contracting and oversight rather than at the end of it. The decision about whether a summary exists, whether a page is real text, whether a notice goes out before or after an effective date, and whether anyone can reach a person to ask a question is a decision about who can use a public program. It is made by staff, usually quickly, often by default.</p><p>The useful news is that these decisions are ordinary and inside your reach. You are not being asked to become an accessibility specialist. You are being asked to make five decisions on purpose instead of by habit.</p>",
           },
           {
             type: "tabs",
@@ -267,7 +267,7 @@ const pack: CoursePack = {
           },
           {
             type: "statement",
-            body: "Private reflection, kept by you: read one paragraph you wrote this month as if you were the person it describes. What would you want changed before it reached a report, a contract or a file?",
+            body: "Private reflection: read one paragraph you wrote this month as if you were the person it describes. What would you want changed before it reached a report, a contract or a file?",
           },
         ],
       },
@@ -394,7 +394,7 @@ const pack: CoursePack = {
           },
           {
             type: "statement",
-            body: "Private reflection, kept by you: in the last thing you designed or sent, who could have been helped, burdened, excluded or misunderstood — and whose expertise was missing from the room while it was being written?",
+            body: "Private reflection: in the last thing you designed or sent, who could have been helped, burdened, excluded or misunderstood — and whose expertise was missing from the room while it was being written?",
           },
         ],
       },

@@ -14,7 +14,7 @@ export const OPERATIONALIZING_EQUITY = {
     "How will people learn what happened to their input, examine effects and decide whether to retain, revise or stop the approach?",
   ],
   applicationRules: [
-    "Participation in One DHS/One DSD People, Access and Culture remains voluntary. Published DHS policy requirements are separate from choosing this program as support.",
+    "Published DHS policy requirements apply whether or not staff use One DHS/One DSD People, Access and Culture as support.",
     "Learning and reflection can build capability; a course completion, an answer from Ask or a checklist alone does not establish an equitable outcome.",
     "Name racial and structural inequity explicitly where relevant; also examine disability, language and other context-specific barriers without inferring an individual's needs from identity.",
     "Program operating decisions are shaped with colleagues and affected people. Do not invent their agreement, assignments, deadlines or meeting schedules.",

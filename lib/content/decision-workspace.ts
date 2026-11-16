@@ -9,7 +9,7 @@ const copy: Record<string, string> = {
   intro: "Begin with a piece of work, explore the choices, and prepare a useful next step. You can move between the five stages in any order.",
   boundary: "These are working notes alongside the Equity Analysis Toolkit. They do not replace the official toolkit, engagement with people affected, or the review and decisions your work requires.",
   privacy: "Use general notes. Leave out names, case details, personnel information, and other confidential information.",
-  saveNote: "Nothing is saved until you choose Save to My Work. Saved notes stay in this browser on this device.",
+  saveNote: "Choose Save to My Work when you want to keep these notes.",
   aboutNotes: "About these notes",
   retention: "Notes stay on this page until you choose Save to My Work. A saved copy stays in this browser on this device; it is not sent to anyone. Download a copy if you need to keep it elsewhere, following your work’s information rules.",
   titleLabel: "Give this piece of work a name",

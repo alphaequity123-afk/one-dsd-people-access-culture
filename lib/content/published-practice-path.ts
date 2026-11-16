@@ -8,7 +8,7 @@ export const PUBLISHED_PATH_DOWNLOAD_NOTICE =
   "Use the downloaded checklist to write your answers in a tool you normally use. This page does not save them.";
 
 export const PUBLISHED_PATH_FILE_NOTICE =
-  "This is a blank published checklist. If you complete a downloaded copy, store and share that file according to DHS requirements. Nothing you write in that file is saved back to this page.";
+  "This is a blank published checklist. If you complete a downloaded copy, store and share that file according to DHS requirements.";
 
 const SAVED_HERE_CLAIM = /\b(?:sav(?:e|ed|es|ing)|stor(?:e|ed|es|ing)|stay|stays|remain|remains|kept)\b[^.!?]{0,120}\b(?:browser|device|computer|here)\b|\b(?:this page|this path|here)\b[^.!?]{0,100}\b(?:sav(?:e|ed|es|ing)|stor(?:e|ed|es|ing))\b/i;
 

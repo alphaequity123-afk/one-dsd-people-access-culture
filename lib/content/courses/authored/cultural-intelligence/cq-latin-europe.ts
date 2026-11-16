@@ -42,7 +42,7 @@ const pack: CoursePack = {
         "A new edition of a cited source"
       ],
       "relatedDoor": "These examples are practice. They are not an individual assessment, or authority to change a service requirement. Ask the person about preferences and check the actual work context.",
-      "toolkitQuestion": "What do we know from this person and this situation, what are we assuming, and what should we ask or verify next?",
+      "toolkitQuestion": "What do you know from this person and this situation, what are you assuming, and what should you ask or verify next?",
       "status": "reviewed"
     },
     "lessons": [
@@ -82,7 +82,7 @@ const pack: CoursePack = {
           ]
         },
         "transfer": {
-          "prompt": "How can we hear the substance of a disagreement without deciding what someone feels?",
+          "prompt": "How can you hear the substance of a disagreement without deciding what someone feels?",
           "options": [
             "What balance of conversation and task work would fit this person and this situation?",
             "What did the person actually tell you, and which part is still your interpretation?",
@@ -98,15 +98,15 @@ const pack: CoursePack = {
           {
             "type": "text",
             "heading": "What averages can’t tell you",
-            "body": "<p>Comparisons of cultural groups work with averages, and the people inside any group vary a great deal. That variation is why the question has to go to the partner rather than to a chart.</p><p>Keep three questions apart: What did the study report? What might it help us consider? What do we know about this situation? If you want to know where regional charts come from and why they can’t answer the last question, see the optional background course, <a href=\"/courses/cq-cluster-frameworks-foundations\">Optional background: where regional culture frameworks come from and what they cannot tell you</a>. You don’t need it to use this course.</p>"
+            "body": "<p>Comparisons of cultural groups work with averages, and the people inside any group vary a great deal. That variation is why the question has to go to the partner rather than to a chart.</p><p>Keep three questions apart: What did the study report? What might it help you consider? What do you know about this situation? If you want to know where regional charts come from and why they can’t answer the last question, see the background course <a href=\"/courses/cq-cluster-frameworks-foundations\">Where regional culture frameworks come from and what they cannot tell you</a>.</p>"
           },
           {
             "type": "list",
             "heading": "Questions for planning the shape of a meeting",
             "items": [
-              "How can we hear the substance of a disagreement without deciding what someone feels?",
+              "How can you hear the substance of a disagreement without deciding what someone feels?",
               "What balance of conversation and task work would fit this person and this situation?",
-              "What would we need to ask or check before deciding that this approach will help?"
+              "What would you need to ask or check before deciding that this approach will help?"
             ]
           },
           {
@@ -485,8 +485,8 @@ const pack: CoursePack = {
         "items": [
           "What is the actual concern being raised?",
           "Has anyone’s behavior crossed a real workplace line, or is it only louder than I’m used to?",
-          "How can I acknowledge what this person shared and explain the time we have?",
-          "If we run out of time, what are the real options for following up?",
+          "How can I acknowledge what this person shared and explain the time available?",
+          "If time runs out, what are the real options for following up?",
           "What small change could make this meeting feel less cold without making it longer?"
         ]
       }

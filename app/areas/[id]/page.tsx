@@ -32,7 +32,7 @@ const CULTURAL_WORK_PROMPTS: Record<string, { prompt: string; practices: readonl
   "culture-trust": {
     prompt: "Consider how people experience feedback, belonging and speaking up. Ask what would make participation accessible rather than assuming what works for everyone.",
     practices: [
-      { text: "Agree on team norms and write the behaviors people could see for each one. One standard can have several routes: everyone can contribute by speaking, writing before or after, or talking one to one.", applied: "AAC, an interpreter and a chosen supporter are on the list from the start. Sharing how you like to work is voluntary, no one is asked to disclose a disability, and check-ins on norms stay with the team." },
+      { text: "Agree on team norms and write the behaviors people could see for each one. One standard can have several routes: everyone can contribute by speaking, writing before or after, or talking one to one.", applied: "AAC, an interpreter and a chosen supporter are on the list from the start. Each person decides whether to share how they like to work, no one is asked to disclose a disability, and check-ins on norms stay with the team." },
       { text: "Send the agenda early, say what input you need, and offer several ways to give it. Ask what you are missing, in place of asking whether anything is missing.", applied: "This also helps interpreters, people using screen readers, people who need more time and staff on shifts." },
       { text: "Check whether the same people are always the ones adapting.", applied: "Ask the same of agency procedures that face the people served." },
     ],

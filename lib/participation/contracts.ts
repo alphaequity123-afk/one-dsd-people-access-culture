@@ -160,19 +160,17 @@ const CONTRACTS = {
       "answer",
       "source_list",
       "browser_session_history",
-      "privacy_minimized_operational_event",
-      "privacy_minimized_research_usage",
       "short_lived_rate_limit_bucket",
     ],
     officialRecord: false,
     disclosure: {
-      participation: "Voluntary. You choose whether to use Ask.",
-      privacy: "The current Ask service sends your question and recent conversation to configured answering and research services when needed. Do not enter names, case details, medical or personnel information, or other confidential details. The current service does not intentionally save a question-and-answer copy in the owner workspace; operational activity may be recorded. Earlier versions may have retained separate records.",
-      purpose: `Self-directed learning and work support, not required training or compliance. ${TRAINING_CREDIT_NOTICE}`,
-      viewers: "You and anyone using this browser tab can see its temporary history. Configured answering and research services may process the question and recent context. Authorized operators can see operational activity. Supervisors do not receive the browser conversation from Ask.",
-      creates: "An answer with available sources and limits, temporary browser-session history, a privacy-minimized operational event, possible outside-research usage records, and a short-lived rate-limit bucket. New consultation intake is not provided here.",
+      participation: "Use Ask for any question about the work.",
+      privacy: "The current Ask service sends your question and recent conversation to configured answering and research services when needed. Do not enter names, case details, medical or personnel information, or other confidential details.",
+      purpose: `Learning and work support. ${TRAINING_CREDIT_NOTICE}`,
+      viewers: "Configured answering and research services process the question and recent context.",
+      creates: "An answer with available sources and limits.",
       officialRecord: "An Ask answer is not official DHS guidance, a training record, or a personnel decision.",
-      retention: `The browser conversation stays for the session until you clear it or close the tab. Operational events and outside-research usage records are subject to the configured ${OPERATIONAL_EVENT_RETENTION_DAYS}-day retention rule; a rate-limit bucket expires after 10 minutes. External services have their own data-handling terms. Clearing the browser does not remove any separately retained records from an earlier version.`,
+      retention: "Ask keeps no record of the question or the answer. A rate-limit bucket expires after 10 minutes. External services have their own data-handling terms.",
     },
   },
   learning: {
@@ -276,7 +274,7 @@ const CONTRACTS = {
       officialRecord:
         "The preview is not an official DHS record, training record, compliance record, or consultation record.",
       retention:
-        `The form and summary remain only in the open page and are gone when you refresh, close, or leave it. Information carried in from Ask or a path remains in this browser tab until you clear it or close the tab. The original ASK response record is kept separately for the program owner. The content-free operational event is removed after ${OPERATIONAL_EVENT_RETENTION_DAYS} days, and the request-limit bucket expires after one hour.`,
+        `The form and summary remain only in the open page and are gone when you refresh, close, or leave it. Information carried in from Ask or a path remains in this browser tab until you clear it or close the tab. The content-free operational event is removed after ${OPERATIONAL_EVENT_RETENTION_DAYS} days, and the request-limit bucket expires after one hour.`,
     },
   },
   consultation_submission: {

@@ -6,11 +6,11 @@ import {
   formatPolicyDate,
   getPoliciesData,
   policyHref,
-  searchPolicies,
   type Policy,
 } from "@/lib/content/hub/dsd-policies";
-import { catOneLine, catPaginate, catParam } from "@/lib/cat-paging";
-import { CatList, CatPager, CatResultStatus, CatRow } from "@/components/cat-list";
+import { catOneLine, catParam } from "@/lib/cat-paging";
+import { CatRow } from "@/components/cat-list";
+import { PrivateCatalogForm, PrivateCatalogProvider, PrivateCatalogResults, type CatalogRow } from "@/components/private-catalog";
 import styles from "../hub.module.css";
 import { ResourceDownloads } from "@/components/resource-downloads";
 
@@ -47,18 +47,25 @@ export default async function PoliciesPage({ searchParams }: { searchParams: Pro
   const programs = allPrograms();
   const groups = allAppliesTo();
 
-  let matches = data.policies;
-  if (kind) matches = matches.filter(p => p.kind === kind);
-  if (program) matches = matches.filter(p => p.programs.some(name => same(name, program)));
-  if (appliesTo) matches = matches.filter(p => p.appliesTo.some(name => same(name, appliesTo)));
-  if (search) matches = searchPolicies(search, matches);
+  // The kind is a fixed choice in the address (the page explains the chosen kind); the words typed go to
+  // /api/catalog-search in a request body, and the program and group lists narrow the rows in the page.
+  const selectedKind = kinds.find(k => k.id === kind);
+  const matches = selectedKind ? data.policies.filter(p => p.kind === selectedKind.id) : data.policies;
   // Keep the order of the kinds, as the catalog has always been read.
   const kindOrder = new Map(kinds.map((k, i) => [k.id, i]));
-  matches = matches.slice().sort((a, b) => (kindOrder.get(a.kind) ?? 99) - (kindOrder.get(b.kind) ?? 99));
-  const filtered = Boolean(kind || program || appliesTo || search);
-  const page = catPaginate(matches, catParam(query.page), PER_PAGE);
-  const params = { q: search, kind, program, "applies-to": appliesTo };
-  const selectedKind = kinds.find(k => k.id === kind);
+  const rows: CatalogRow[] = matches.slice().sort((a, b) => (kindOrder.get(a.kind) ?? 99) - (kindOrder.get(b.kind) ?? 99)).map(p => ({
+    key: p.id,
+    values: { program: p.programs, "applies-to": p.appliesTo },
+    node: <CatRow key={p.id} id={`policy-${p.id}`}
+      title={<Link href={policyHref(p.id)}>{p.title}</Link>}
+      line={catOneLine(p.summary)}
+      meta={`${kindTitle.get(p.kind) ?? p.kind} · ${rowDate(p)}`} />,
+  }));
+  const choices = {
+    kind: selectedKind?.id ?? "",
+    program: programs.find(name => same(name, program)) ?? "",
+    "applies-to": groups.find(name => same(name, appliesTo)) ?? "",
+  };
 
   return <div className={styles.page}>
     <p className={styles.kicker}><Link href="/community-outreach">Community Outreach and Engagement</Link></p>
@@ -75,41 +82,16 @@ export default async function PoliciesPage({ searchParams }: { searchParams: Pro
       <p><Link href="/community-outreach/how-the-system-connects">How the system connects</Link> shows where each policy sits between the Department of Human Services, lead agencies, providers and the people they serve. <Link href="/equity-review">Equity review</Link> holds the review tools. <Link href="/equity-review/analyze">Analyze a policy document</Link> to work through the text of a policy section by section.</p>
     </details>
 
-    <form method="get" action={BASE} className={styles.filters} role="search" aria-label="Find a policy">
-      <label htmlFor="policy-q">Search
-        <input id="policy-q" type="search" name="q" defaultValue={search} placeholder="Words in a policy" />
-      </label>
-      <label htmlFor="policy-kind">Kind
-        <select id="policy-kind" name="kind" defaultValue={kind}>
-          <option value="">All kinds</option>
-          {kinds.map(k => <option key={k.id} value={k.id}>{k.title}</option>)}
-        </select>
-      </label>
-      <label htmlFor="policy-program">Program
-        <select id="policy-program" name="program" defaultValue={program}>
-          <option value="">All programs</option>
-          {programs.map(name => <option key={name} value={name}>{name}</option>)}
-        </select>
-      </label>
-      <label htmlFor="policy-applies-to">Applies to
-        <select id="policy-applies-to" name="applies-to" defaultValue={appliesTo}>
-          <option value="">Everyone</option>
-          {groups.map(name => <option key={name} value={name}>{name}</option>)}
-        </select>
-      </label>
-      <button className={styles.button} type="submit">Show</button>
-      {filtered ? <Link href={BASE}>Show all policies</Link> : null}
-    </form>
-
-    {selectedKind ? <p>{selectedKind.intro}</p> : null}
-    <CatResultStatus page={page} noun="policy" nouns="policies" of={data.policies.length} empty="No policy matches these filters. Try fewer filters or different words." />
-    {page.items.length ? <CatList label="Policies">
-      {page.items.map(p => <CatRow key={p.id} id={`policy-${p.id}`}
-        title={<Link href={policyHref(p.id)}>{p.title}</Link>}
-        line={catOneLine(p.summary)}
-        meta={`${kindTitle.get(p.kind) ?? p.kind} · ${rowDate(p)}`} />)}
-    </CatList> : null}
-    <CatPager page={page} basePath={BASE} params={params} label="Policy result pages" />
+    <PrivateCatalogProvider key={Object.values(choices).join("|")} basePath={BASE} rows={rows} choices={choices} perPage={PER_PAGE} initial={{ q: search, page: catParam(query.page) }} endpoint="policies"
+      lists={[
+        { name: "kind", label: "Kind", allLabel: "All kinds", options: kinds.map(k => ({ value: k.id, label: k.title })), navigates: true },
+        { name: "program", label: "Program", allLabel: "All programs", options: programs.map(name => ({ value: name, label: name })) },
+        { name: "applies-to", label: "Applies to", allLabel: "Everyone", options: groups.map(name => ({ value: name, label: name })) },
+      ]}>
+      <PrivateCatalogForm className={styles.filters} ariaLabel="Find a policy" searchLabel="Search" inputId="policy-q" placeholder="Words in a policy" buttonLabel="Show" buttonClassName={styles.button} clearLabel="Show all policies" />
+      {selectedKind ? <p>{selectedKind.intro}</p> : null}
+      <PrivateCatalogResults noun="policy" nouns="policies" of={data.policies.length} empty="No policy matches these filters. Try fewer filters or different words." listLabel="Policies" pagerLabel="Policy result pages" />
+    </PrivateCatalogProvider>
 
     <p>
       <Link href="/community-outreach/how-the-system-connects">How the system connects</Link> · <Link href="/equity-review">Equity review</Link> · <Link href="/equity-review/analyze">Analyze a policy document</Link>

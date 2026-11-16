@@ -8,7 +8,7 @@ const stages = [
 
 const workNote = [
   ["Question", "How can someone tell whom to contact next without being sent between offices?"],
-  ["Evidence and gaps", "The notice and the staff instructions name different contacts. We have not yet heard from people who use this notice."],
+  ["Evidence and gaps", "The notice and the staff instructions name different contacts. The team has not yet heard from people who use this notice."],
   ["Team contribution", "Compare the instructions and prepare one proposed revision. Invite a colleague who handles the handoff to check it."],
   ["Next decision", "Ask the service owner to review the wording and confirm who is responsible for each contact and follow-up."],
   ["Agreed return", "Ask when a response can be shared, then bring it back to contributors. If a revision is agreed, ask willing staff and service users whether the next step is clearer."],
