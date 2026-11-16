@@ -1,0 +1,21 @@
+.agency-practice-header { background:#003865; color:#fff; border-bottom:3px solid #b88a35; font-family:Aptos,"Segoe UI",Calibri,system-ui,sans-serif; }
+.agency-practice-header .agency-practice-shell { max-width:1040px; padding-inline:20px; margin-inline:auto; box-sizing:border-box; }
+.agency-practice-brand-row { display:flex; align-items:center; justify-content:space-between; gap:16px; min-height:110px; padding-block:20px; }
+.agency-practice-header .agency-practice-brand { display:flex; align-items:center; gap:26px; min-width:0; color:#fff; text-decoration:none; }
+.agency-practice-brand img { width:200px; height:auto; max-width:100%; padding:8px 10px; background:#fff; box-sizing:border-box; }
+.agency-practice-brand > span { display:flex; flex-direction:column; border-left:1px solid #8fa8bd; padding-left:26px; line-height:1.3; }
+.agency-practice-brand strong { font-size:25px; font-weight:600; letter-spacing:-.02em; }
+.agency-practice-brand span span { font-size:14px; margin-top:5px; }
+.agency-practice-tools { display:flex; gap:8px; }
+.agency-practice-header .agency-practice-tools a { display:inline-flex; align-items:center; min-height:44px; padding:5px 16px; border:1px solid #b9cddd; border-radius:999px; color:#fff; text-decoration:none; }
+.agency-practice-header nav { border-top:1px solid #496e8c; }
+.agency-practice-header nav ul { display:flex; flex-wrap:wrap; gap:10px; list-style:none; padding-block:0; margin-block:0; }
+.agency-practice-header nav a { display:block; padding:11px 16px; font-size:16px; color:#fff; text-decoration:none; }
+.agency-practice-header a:hover, .agency-practice-header nav a[aria-current] { background:#002244; }
+.agency-practice-header a:focus-visible { outline:2px solid #fff; outline-offset:4px; }
+.agency-practice-return { max-width:1000px; margin:20px auto; padding:16px 20px; border-left:4px solid #003865; background:#f3f5f8; color:#101010; }
+.agency-practice-return a { color:#004f90; font-weight:600; text-decoration:underline; }
+.agency-practice-return p { margin:8px 0 0; }
+@media(max-width:800px) { .agency-practice-brand-row { flex-wrap:wrap; align-items:flex-start; } .agency-practice-header .agency-practice-brand { gap:12px; } .agency-practice-brand img { width:170px; } .agency-practice-brand > span { padding-left:12px; } }
+@media(max-width:760px) { .agency-practice-header nav ul { gap:0; } .agency-practice-header nav a { padding:10px 12px; font-size:14px; } .agency-practice-return { margin-inline:16px; } }
+@media(max-width:480px) { .agency-practice-header .agency-practice-brand { flex-direction:column; align-items:flex-start; } .agency-practice-brand > span { border-left:0; padding-left:0; } }
