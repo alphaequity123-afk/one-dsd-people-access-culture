@@ -1,0 +1,124 @@
+{
+  "date": "2026-11-16",
+  "courseId": "gc-foresight-and-stewardship",
+  "status": "accepted_complete_written_course_review",
+  "countsAsCompleteCourseReview": true,
+  "scope": "Course overview, all four lessons and 16 objectives, four practice cases with 12 choices and feedback, four knowledge checks, reflection and action instructions, five flashcards, complete job aid and eight source notes. Recordings are outside this acceptance.",
+  "method": "Read the complete source spec and final generated overview/job aid, reviewed all amendments against the source and primary guidance, measured clarity, preserved assessment answers and choices, and verified all four serialized lesson readings.",
+  "sourcePackSha256": "0bd3fb5c3e029ecb02156861705d71161693d7cca95036f35abcad3ebaec0276",
+  "specSha256": "5110b0c6f8964ce79b6990801d4a354bed66a2d5f75ab170b085e2bcfdbc5da7",
+  "findings": [
+    "Forecasts may contain ranges and probabilities; the exercise compares foresight with relying on one projection.",
+    "Four selected scenarios do not cover every possible future or authorize implementation.",
+    "Intercultural examples do not assess a person or team from a meeting practice.",
+    "Participation requires willing contributors, access support and authorized outreach; a small workshop does not replace required consultation.",
+    "A phone route or pilot is not proof of accessibility and needs appropriate authority, monitoring and stop conditions.",
+    "Scheduled review does not delay action on harm or serious service concerns.",
+    "Handover records preserve necessary facts under retention and access rules; blanket exclusion of individual information is inappropriate.",
+    "Optional foresight tools do not waive required equity analysis, staffing or procurement duties."
+  ],
+  "diagnostics": [
+    {
+      "title": "Why foresight matters in public service",
+      "teaching": {
+        "words": 447,
+        "sents": 27,
+        "asl": 16.555555555555557,
+        "fk": 9.451006711409399,
+        "fog": 12.438777032065623,
+        "smog": 11.99289558779546,
+        "poly": 14.5413870246085,
+        "long": 26.174496644295303,
+        "short": 18.51851851851852,
+        "ease": 56.790842654735314
+      }
+    },
+    {
+      "title": "Scanning, drivers and scenarios with the people affected",
+      "teaching": {
+        "words": 467,
+        "sents": 27,
+        "asl": 17.296296296296298,
+        "fk": 10.611658339281465,
+        "fog": 12.99988896819732,
+        "smog": 12.392965224024412,
+        "poly": 15.203426124197001,
+        "long": 30.406852248394003,
+        "short": 3.7037037037037037,
+        "ease": 49.78889523356335
+      }
+    },
+    {
+      "title": "Testing today's decisions against different futures",
+      "teaching": {
+        "words": 479,
+        "sents": 30,
+        "asl": 15.966666666666667,
+        "fk": 8.989818371607516,
+        "fog": 11.313597773138483,
+        "smog": 11.140535015026959,
+        "poly": 12.31732776617954,
+        "long": 23.59081419624217,
+        "short": 10,
+        "ease": 59.048457550452355
+      }
+    },
+    {
+      "title": "Stewardship: what a leader leaves in place",
+      "teaching": {
+        "words": 381,
+        "sents": 22,
+        "asl": 17.318181818181817,
+        "fk": 10.521046289668337,
+        "fog": 13.856406585540444,
+        "smog": 13.023866798666859,
+        "poly": 17.322834645669293,
+        "long": 30.446194225721786,
+        "short": 9.090909090909092,
+        "ease": 50.47751789549034
+      }
+    }
+  ],
+  "diagnosticJudgment": "Flesch–Kincaid estimates 9.0–10.6 and Fog 11.3–13.9; average sentences 16.0–17.3 words. Short-sentence shares are 3.7–10.0 percent in lessons 2–4 and 18.5 percent in lesson 1, whose U.S. abbreviations also split in the simple diagnostic. The full reading preserves advanced reasoning about uncertainty, authority and unequal exposure in concrete language; vocabulary is not inflated to reach a numerical target.",
+  "assessmentChecks": {
+    "knowledgeCheckAnswersUnchanged": true,
+    "questionOneContextClarified": true,
+    "scenarioRecommendedIndicesUnchanged": true,
+    "scenarioChoicesUnchanged": true,
+    "finalLessonReadingsMatchCurrentPack": true
+  },
+  "priorFieldReview": "data/editorial/reviews/2026-11-16-foresight-guidance-review.json",
+  "sources": [
+    "https://www.gov.uk/government/publications/futures-toolkit-for-policy-makers-and-analysts/the-futures-toolkit-html",
+    "https://www.opm.gov/policy-data-oversight/human-capital-management/foresight-guide.pdf",
+    "https://www.gao.gov/about/what-gao-does/audit-role/csf",
+    "https://www.opm.gov/policy-data-oversight/human-capital-framework/reference-materials/leadership-knowledge-management/successionplanning.pdf",
+    "https://mn.gov/mmb-stat/enterprise-talent-development/career-development/Enterprise-Leader-Competency-Definition-Guide.pdf",
+    "https://www.idiinventory.com/resources",
+    "https://mn.gov/dhs/assets/equity-policy_tcm1053-646921.pdf",
+    "https://www.revisor.mn.gov/statutes/cite/13.05"
+  ],
+  "readings": [
+    {
+      "slug": "gc-foresight-and-stewardship",
+      "readingSha256": "617c1341f9cafc9271f24c89cfe5c6f212772fd3da3e58323f5680024635c72f"
+    },
+    {
+      "slug": "gc-foresight-and-stewardship--why-foresight-matters-in-public-service",
+      "readingSha256": "fff4081d8fe359e658bd2e35d9b0b360c86a71bab9299804ee5075ffa99ec40f"
+    },
+    {
+      "slug": "gc-foresight-and-stewardship--scanning-drivers-and-scenarios-with-the-people-aff",
+      "readingSha256": "fe03fb46558e717e07f24148e1d8f2fb01bf38b5e8f08e5fe606a1ce9b471004"
+    },
+    {
+      "slug": "gc-foresight-and-stewardship--testing-today-s-decisions-against-different-future",
+      "readingSha256": "6194b1242c5ab64f51dfae4abd2462aa8f98bdcf2ee866b2ab77ae38128c6615"
+    },
+    {
+      "slug": "gc-foresight-and-stewardship--stewardship-what-a-leader-leaves-in-place",
+      "readingSha256": "09341b13f8d70a891a5a87edaa3dae11b8f0fd236a4438d8fccfe83bb75a9714"
+    }
+  ],
+  "liveVerification": "pending final deployment"
+}
