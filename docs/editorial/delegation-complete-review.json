@@ -1,0 +1,128 @@
+{
+  "date": "2026-11-16",
+  "courseId": "gc-delegation-and-development",
+  "status": "accepted_complete_written_course_review",
+  "countsAsCompleteCourseReview": true,
+  "scope": "Course overview, all four lessons and 16 objectives, four practice cases with 12 choices and feedback, four knowledge checks, reflection and action instructions, five flashcards, complete job aid and ten source notes. Recordings are outside this acceptance.",
+  "method": "Read the complete source spec and final generated overview/job aid, reviewed all amendments against the source and primary guidance, measured clarity, preserved assessment answers and choices, and verified all four serialized lesson readings.",
+  "sourcePackSha256": "23074d14a64cb1ec955a64225902176e4455c95a89928b6ac22be249f089ca1c",
+  "specSha256": "c4ec7301a8c8e9190361edbb051b27678a097d1be840fb711a2dbeabdc1f9d28",
+  "findings": [
+    "Delegation cannot override reserved authority, approval or separation of duties.",
+    "A licensing example explicitly permits the proposed transfer of review authority.",
+    "Work out of class requires more than some different duties; classification, agreement or compensation-plan conditions remain.",
+    "Accommodation requests reach the appropriate decision maker.",
+    "Development opportunities use relevant criteria without promising equal outcomes.",
+    "Continuum examples illustrate practice rather than assess colleagues.",
+    "Coaching does not delay urgent action or formal duties.",
+    "Authorized assignment and personnel records remain distinct from private learning reflections.",
+    "Reassignment and direct advice may be appropriate; reflection is not a universal prerequisite."
+  ],
+  "diagnostics": [
+    {
+      "title": "Delegation as a leadership duty, not a favor",
+      "teaching": {
+        "words": 409,
+        "sents": 24,
+        "asl": 17.041666666666668,
+        "fk": 9.636201100244502,
+        "fog": 12.782436837815812,
+        "smog": 12.236705956012809,
+        "poly": 14.91442542787286,
+        "long": 23.4718826405868,
+        "short": 16.666666666666668,
+        "ease": 56.328906377343145
+      }
+    },
+    {
+      "title": "Matching the task, the person and the authority",
+      "teaching": {
+        "words": 432,
+        "sents": 27,
+        "asl": 16,
+        "fk": 9.469907407407412,
+        "fog": 12.78888888888889,
+        "smog": 12.261556223090626,
+        "poly": 15.972222222222221,
+        "long": 24.305555555555557,
+        "short": 18.51851851851852,
+        "ease": 55.66583333333335
+      }
+    },
+    {
+      "title": "Delegation as development: offering stretch work",
+      "teaching": {
+        "words": 383,
+        "sents": 21,
+        "asl": 18.238095238095237,
+        "fk": 11.179254009697875,
+        "fog": 15.128136267561855,
+        "smog": 13.925175675911131,
+        "poly": 19.5822454308094,
+        "long": 32.114882506527415,
+        "short": 9.523809523809524,
+        "ease": 47.396962576153214
+      }
+    },
+    {
+      "title": "Supporting and following up without taking it back",
+      "teaching": {
+        "words": 433,
+        "sents": 27,
+        "asl": 16.037037037037038,
+        "fk": 11.075991788555303,
+        "fog": 13.98987255153537,
+        "smog": 13.08475824599816,
+        "poly": 18.937644341801384,
+        "long": 33.02540415704388,
+        "short": 14.814814814814815,
+        "ease": 44.21699170301946
+      }
+    }
+  ],
+  "diagnosticJudgment": "Flesch–Kincaid estimates 9.5–11.2 and Fog 12.8–15.1; average sentences 16.0–18.2 words. Short-sentence share is 9.5–18.5 percent, above the preferred 15 percent in two lessons because direct instructions and definitions were retained. No vocabulary inflation was added to reach a grade target.",
+  "assessmentChecks": {
+    "knowledgeCheckAnswersUnchanged": true,
+    "firstKnowledgeCheckQuestionUnchanged": true,
+    "threeQuestionContextsClarified": true,
+    "scenarioRecommendedIndicesUnchanged": true,
+    "scenarioChoicesUnchanged": true,
+    "finalLessonReadingsMatchCurrentPack": true
+  },
+  "priorFieldReview": "data/editorial/reviews/2026-11-16-delegation-guidance-review.json",
+  "sources": [
+    "https://www.opm.gov/policy-data-oversight/training-and-development/training-program-management/federal-supervisory-and-managerial-frameworks-and-guidance.pdf",
+    "https://www.opm.gov/policy-data-oversight/training-and-development/leadership-development/effective-learning-interventions-for-developing-ecqs.pdf",
+    "https://www.opm.gov/chcoc/transmittals/2018/coaching-federal-government_09-10-2018_508.pdf",
+    "https://des.wa.gov/sites/default/files/2022-06/Leadership_Competencies.pdf",
+    "https://www.deloitte.com/content/dam/insights/articles/2024/six-signature-traits-of-inclusive-leadership/dup-3046-inclusive-leader-vfinal.pdf",
+    "https://www.idiinventory.com/idc",
+    "https://mn.gov/mmb/assets/17-1-workoutofclass_tcm1059-124229.pdf",
+    "https://training.fema.gov/emiweb/is/is240b/ig%20files/ig_complete.pdf",
+    "https://www.ccl.org/articles/leading-effectively-articles/70-20-10-rule/",
+    "https://mn.gov/mmb-stat/equal-opportunity/ada/1433-reasonable-accommodation.pdf"
+  ],
+  "readings": [
+    {
+      "slug": "gc-delegation-and-development",
+      "readingSha256": "8f6aa9b60a4e09c7fd63f4f7b32496718e52ccfd229fe789c7f71a8ba8a3c409"
+    },
+    {
+      "slug": "gc-delegation-and-development--delegation-as-a-leadership-duty-not-a-favor",
+      "readingSha256": "2fcee23404b142384ee7f09a32f1b343758be36848a78941967fc5b2d803188e"
+    },
+    {
+      "slug": "gc-delegation-and-development--matching-the-task-the-person-and-the-authority",
+      "readingSha256": "b41009577a3d875a8031896030c9c78be68e1fe5811e9a547f8ae1031b8fd6d9"
+    },
+    {
+      "slug": "gc-delegation-and-development--delegation-as-development-offering-stretch-work",
+      "readingSha256": "5affac71e51799ed8a02ac577908f9cf471152d4f8c0495fe2af90d8e8c4fed2"
+    },
+    {
+      "slug": "gc-delegation-and-development--supporting-and-following-up-without-taking-it-back",
+      "readingSha256": "3ca1b18c800bbe23f2fbaeb8d1c72677fb6a86fea043a7e4b08c769e3b546995"
+    }
+  ],
+  "liveVerification": "pending final deployment"
+}
