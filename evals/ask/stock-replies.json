@@ -1,0 +1,143 @@
+{
+  "version": "2026-11-16",
+  "purpose": "A2: Ask always answers in words. A visible reply that matches any phrase below is a stock reply, whatever else it says. Patterns are case-insensitive regular expressions; curly and straight apostrophes both match.",
+  "minimumWords": 40,
+  "phrases": [
+    {
+      "id": "cannot-answer",
+      "pattern": "\\b(?:cannot|can['’]t|can not|unable to|not able to) (?:answer|help with|respond to) (?:this|that|your)"
+    },
+    {
+      "id": "not-able",
+      "pattern": "\\bI(?:[’']m| am) not able\\b"
+    },
+    {
+      "id": "try-again",
+      "pattern": "\\btry again\\b|\\bask again in a moment\\b|\\bplease retry\\b"
+    },
+    {
+      "id": "nothing-found",
+      "pattern": "\\bnothing (?:was|could be) found\\b|\\bno (?:results|matches) (?:were )?found\\b|\\bcouldn['’]t find (?:a|any) (?:program )?source\\b|\\bcould not find (?:a|any) (?:program )?source\\b"
+    },
+    {
+      "id": "temporarily-unavailable",
+      "pattern": "\\btemporarily unavailable\\b|\\b(?:is|are) not available (?:just )?(?:now|right now|at the moment)\\b|\\bnot available just now\\b"
+    },
+    {
+      "id": "could-not-put-together",
+      "pattern": "\\bcould(?:n['’]t| not) put together an answer\\b"
+    },
+    {
+      "id": "could-not-finish",
+      "pattern": "\\bcould(?:n['’]t| not) finish (?:this|a full|the) answer\\b"
+    },
+    {
+      "id": "could-not-verify",
+      "pattern": "\\bcould(?:n['’]t| not) verify this answer\\b"
+    },
+    {
+      "id": "paused",
+      "pattern": "\\bAsk (?:is|was) paused\\b"
+    },
+    {
+      "id": "limit-reached",
+      "pattern": "\\bhas reached its limit\\b|\\bwait a moment before asking\\b"
+    },
+    {
+      "id": "cannot-give-complete",
+      "pattern": "\\bcan['’]t give a complete answer\\b|\\bcannot give a complete answer\\b"
+    },
+    {
+      "id": "as-an-ai",
+      "pattern": "\\bas an AI\\b|\\b(?:AI|language) model\\b|\\bchatbot\\b"
+    },
+    {
+      "id": "please-consult-only",
+      "pattern": "^\\s*(?:please )?(?:consult|contact|ask) (?:your|the) [^.]{0,60}\\.?\\s*$"
+    },
+    {
+      "id": "browse-instead",
+      "pattern": "\\b(?:you can (?:still )?|or )browse (?:the )?(?:resources|library)\\b"
+    },
+    {
+      "id": "tailored-unavailable",
+      "pattern": "\\ba tailored (?:review|recommendation|answer) (?:of [^.]{0,40})?is (?:temporarily )?(?:un)?available\\b"
+    },
+    {
+      "id": "service-down",
+      "pattern": "\\b(?:answer|program|service) (?:service )?is (?:down|offline|unavailable)\\b|\\bpart of the program is temporarily unavailable\\b"
+    }
+  ],
+  "faults": [
+    {
+      "id": "none",
+      "title": "Control: no fault",
+      "layer": "none"
+    },
+    {
+      "id": "search-throws",
+      "title": "Word search throws",
+      "layer": "lib/intelligence/retrieval/search.ts searchDocs"
+    },
+    {
+      "id": "embeddings-unavailable",
+      "title": "Meaning search (embeddings) reports itself unavailable",
+      "layer": "lib/intelligence/retrieval/local-semantic.ts semanticRetrieveForAgent throws SemanticSearchUnavailable"
+    },
+    {
+      "id": "embeddings-error",
+      "title": "Meaning search (embeddings) fails with an unexpected error",
+      "layer": "lib/intelligence/retrieval/local-semantic.ts semanticRetrieveForAgent throws Error"
+    },
+    {
+      "id": "graph-throws",
+      "title": "Knowledge graph expansion throws",
+      "layer": "lib/intelligence/retrieval/brain.ts expandThroughGraph"
+    },
+    {
+      "id": "fast-writer-fails",
+      "title": "Fast streamed writer fails (provider network error)",
+      "layer": "lib/intelligence/agents/fast-answer.ts writeFastAnswer via fetch"
+    },
+    {
+      "id": "writer-fails-once",
+      "title": "Writer fails once, then succeeds",
+      "layer": "lib/intelligence/providers resolveBinding().adapter.complete"
+    },
+    {
+      "id": "writer-fails-always",
+      "title": "Writer fails on every attempt",
+      "layer": "lib/intelligence/providers resolveBinding().adapter.complete"
+    },
+    {
+      "id": "database-unconfigured-content",
+      "title": "Database unconfigured: content source is postgres with no database address",
+      "layer": "lib/content/staff-publications.ts runtimeReader"
+    },
+    {
+      "id": "database-unconfigured-ledger",
+      "title": "Database unconfigured: the Ask run ledger cannot open",
+      "layer": "lib/intelligence/clone/ledger.ts openLedger"
+    },
+    {
+      "id": "rerank-budget",
+      "title": "Rerank budget exceeded",
+      "layer": "not present in this codebase (no rerank step in lib/intelligence/agents/ask.ts)",
+      "applicable": false
+    }
+  ],
+  "questions": [
+    {
+      "id": "library",
+      "question": "How can I make a team meeting accessible for everyone who attends?"
+    },
+    {
+      "id": "general",
+      "question": "Why do the seasons change during the year?"
+    },
+    {
+      "id": "local-rule",
+      "question": "What is the approval rule for changing the wording of a public notice in my area?"
+    }
+  ]
+}

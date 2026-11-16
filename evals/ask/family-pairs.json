@@ -1,0 +1,39 @@
+{
+  "purpose": "A4: the same question with no job family and with each of the ten families must give the same required facts and the same related set (order may differ), with no statement about the person.",
+  "familyCookie": "job-family",
+  "settings": [
+    null,
+    "executive",
+    "managers",
+    "supervisors",
+    "policy-program",
+    "licensing-integrity",
+    "eligibility-public",
+    "data-research",
+    "finance-contracts",
+    "enterprise-services",
+    "admin-support"
+  ],
+  "questions": [
+    "lib-001",
+    "lib-004",
+    "lib-006",
+    "lib-007",
+    "lib-010",
+    "lib-016",
+    "lib-023",
+    "lib-030",
+    "lib-031",
+    "lib-034",
+    "lib-036",
+    "lib-037",
+    "lib-039",
+    "lib-044",
+    "lib-045",
+    "lib-053",
+    "par-005",
+    "par-016",
+    "dsd-004",
+    "dsd-011"
+  ]
+}
