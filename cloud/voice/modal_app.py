@@ -2,6 +2,7 @@
 import hashlib
 import io
 import json
+import os
 import re
 import time
 from pathlib import Path
@@ -22,17 +23,20 @@ def download_model():
 image = (
     modal.Image.debian_slim(python_version="3.12")
     .apt_install("libsndfile1", "sox")
-    .pip_install("torch==2.11.0", "torchaudio==2.11.0", index_url="https://download.pytorch.org/whl/cpu")
+    .pip_install("torch==2.11.0", "torchaudio==2.11.0", index_url="https://download.pytorch.org/whl/cu128")
     .pip_install("qwen-tts==0.1.1", "transformers==4.57.3", "huggingface-hub==0.36.2", "soundfile==0.14.0", "fastapi==0.115.12")
     .run_function(download_model)
     .add_local_dir(Path(__file__).parent / ".private-voice", REFERENCE_DIR, copy=True)
     .add_local_file(Path(__file__).parent / "voice_http.py", "/root/voice_http.py", copy=True)
     .env({"HF_HUB_OFFLINE": "1", "TRANSFORMERS_OFFLINE": "1"})
 )
-app = modal.App("one-dsd-approved-voice", image=image)
+app = modal.App(os.environ.get("PAC_VOICE_APP_NAME", "one-dsd-approved-voice"), image=image)
 
 
-@app.cls(cpu=2, memory=8192, min_containers=0, max_containers=1, scaledown_window=15, timeout=600)
+@app.cls(
+    gpu="L40S", cpu=2, memory=8192,
+    min_containers=0, max_containers=1, scaledown_window=300, timeout=600,
+)
 @modal.concurrent(max_inputs=1)
 class ApprovedVoice:
     @modal.enter()
@@ -48,14 +52,20 @@ class ApprovedVoice:
             if profile[kind]["file"] != source.name or hashlib.sha256(source.read_bytes()).hexdigest() != profile[kind]["sha256"]:
                 raise RuntimeError("Approved voice reference checksum mismatch")
         torch.set_num_threads(2)
-        self.model = Qwen3TTSModel.from_pretrained(MODEL_DIR, device_map="cpu", dtype=torch.float32, attn_implementation="sdpa", local_files_only=True)
+        self.model = Qwen3TTSModel.from_pretrained(MODEL_DIR, device_map="cuda:0", dtype=torch.bfloat16, attn_implementation="sdpa", local_files_only=True)
         prompts = {
             kind: self.model.create_voice_clone_prompt(ref_audio=str(Path(REFERENCE_DIR) / (kind + ".wav")), ref_text=profile[kind]["transcript"], x_vector_only_mode=False)[0]
             for kind in ("identity", "style")
         }
         self.prompt = [VoiceClonePromptItem(ref_code=prompts["style"].ref_code, ref_spk_embedding=prompts["identity"].ref_spk_embedding, x_vector_only_mode=False, icl_mode=True, ref_text=profile["style"]["transcript"])]
+        # Warm CUDA kernels before visitor requests.
+        for _ in self.render("Welcome to Ask."):
+            pass
+        torch.cuda.synchronize()
+        torch.cuda.empty_cache()
 
     def render(self, text):
+        import numpy as np
         import soundfile as sf
         import torch
         began = time.monotonic()
@@ -70,8 +80,16 @@ class ApprovedVoice:
                 chunk = " ".join(words[:count]); words = words[count:]; first = False
                 with torch.inference_mode():
                     waves, rate = self.model.generate_voice_clone(text=chunk, language="English", voice_clone_prompt=self.prompt, non_streaming_mode=True, do_sample=True, top_k=20, top_p=.8, temperature=.7, repetition_penalty=1.05, max_new_tokens=min(1100, len(chunk.split()) * 14 + 180))
+                audio = waves[0]
+                # Qwen occasionally adds silence around a correctly spoken segment.
+                # Keep a short natural margin without changing the approved voice.
+                voiced = np.flatnonzero(np.abs(audio) > 0.005)
+                if not len(voiced):
+                    raise RuntimeError("Voice generated an empty segment")
+                margin = int(rate * 0.08)
+                audio = audio[max(0, voiced[0] - margin):min(len(audio), voiced[-1] + margin + 1)]
                 output = io.BytesIO()
-                sf.write(output, waves[0], rate, format="WAV", subtype="PCM_16")
+                sf.write(output, audio, rate, format="WAV", subtype="PCM_16")
                 yield output.getvalue()
 
     @modal.asgi_app(requires_proxy_auth=True)
