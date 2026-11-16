@@ -1,0 +1,137 @@
+{
+  "date": "2026-11-16",
+  "courseId": "dsd-justice-involvement-reentry",
+  "status": "accepted_complete_written_course_review",
+  "countsAsCompleteCourseReview": true,
+  "scope": "Complete overview, four lessons and 16 objectives, four fictional practice cases and 12 choices, feedback, four knowledge checks, private reflection and actions, six flashcards, full job aid, fourteen source notes and cover description. Recordings are outside this review.",
+  "method": "Read full source and final generated overview/job aid; compare relevant primary authorities, revise observation, assessment, evidence, privacy and policy boundaries, inspect cover image, verify serialized readings and assessment distinctions.",
+  "sourcePackSha256": "413d95e2bd70d6ef3b360bbd06b6b1019eba02e9e5a1bba374e0ec9dd15d9c54",
+  "specSha256": "b656bb2fc1180e26fe05eaca855343b9381d814b8280fb2e7bb71b7dad573223",
+  "findings": [
+    "Disability and racial disparity statistics identify their study years and populations without implying joint estimates or individual predictions.",
+    "SSI full-calendar-month rules are distinct from retirement/disability conviction and duration rules.",
+    "A new SSI application can begin through prerelease procedures even without a facility agreement.",
+    "Current Minnesota MA application and suspension guidance replaces reliance on a proposal summary.",
+    "September 2026 reentry demonstration approval is distinct from implementation approval and possible early-2028 service launch.",
+    "Three weeks of planning does not guarantee housing, benefits or services at release.",
+    "Background-study timelines begin with a complete request and required information; safety and program integrity retain priority.",
+    "Set-asides, subsequent studies, variance exceptions and hiring inquiry timing retain their scope.",
+    "Fictional exercises, disclosure checks and formal equity-analysis responsibilities remain explicit."
+  ],
+  "diagnostics": [
+    {
+      "title": "Disability, race and the justice system",
+      "teaching": {
+        "words": 331,
+        "sents": 23,
+        "asl": 14.391304347826088,
+        "fk": 12.660070931301721,
+        "fog": 15.182503612242218,
+        "smog": 13.6494047153753,
+        "poly": 23.564954682779454,
+        "long": 37.764350453172206,
+        "short": 21.73913043478261,
+        "ease": 29.928732431367393
+      }
+    },
+    {
+      "title": "Protecting benefits during incarceration",
+      "teaching": {
+        "words": 368,
+        "sents": 26,
+        "asl": 14.153846153846153,
+        "fk": 13.626195652173916,
+        "fog": 16.748494983277592,
+        "smog": 14.44419872828201,
+        "poly": 27.717391304347824,
+        "long": 40.48913043478261,
+        "short": 19.23076923076923,
+        "ease": 22.579172240802706
+      }
+    },
+    {
+      "title": "Reentry planning that starts before release",
+      "teaching": {
+        "words": 348,
+        "sents": 17,
+        "asl": 20.470588235294116,
+        "fk": 13.145253549695742,
+        "fog": 16.2342123056119,
+        "smog": 14.721396884518768,
+        "poly": 20.114942528735632,
+        "long": 31.60919540229885,
+        "short": 11.764705882352942,
+        "ease": 37.27804259634891
+      }
+    },
+    {
+      "title": "Background studies, employment and inclusive service design",
+      "teaching": {
+        "words": 355,
+        "sents": 27,
+        "asl": 13.148148148148149,
+        "fk": 12.871862284820036,
+        "fog": 15.17475221700574,
+        "smog": 13.4425600293877,
+        "poly": 24.788732394366196,
+        "long": 45.352112676056336,
+        "short": 18.51851851851852,
+        "ease": 26.196108502869066
+      }
+    }
+  ],
+  "diagnosticJudgment": "Teaching FK approximately 12.7–13.7; retain necessary legal and service terms with explicit explanations.",
+  "assessmentChecks": {
+    "knowledgeChecks": "Lesson 1 question dates the survey; lesson 2 correct answer permits prerelease application; lesson 4 correct answer clarifies notice scope. Other questions, correct answers and all wrong options unchanged.",
+    "scenarioRecommendedIndicesUnchanged": true,
+    "scenarioChoiceChange": "Lessons 2 and 3 recommended choices clarify prerelease applications and authorized coordination. Recommended indices and other choices remain unchanged.",
+    "otherScenarioChoicesUnchanged": true,
+    "finalLessonReadingsMatchCurrentPack": true
+  },
+  "coverReview": {
+    "path": "public/images/covers/dsd-justice-involvement-reentry.webp",
+    "sha256": "6cb2a9fe79fb081fd76acbf295e9a6f4afd08eca8f8027c55b9210ba8a532d26",
+    "alt": "Six people gather around a table with colorful sticky notes while other groups work in the background.",
+    "method": "Direct local image inspection: six people around a table with colorful sticky notes while other groups work in the background."
+  },
+  "priorFieldReview": "data/editorial/reviews/2026-11-16-reentry-guidance-review.json",
+  "sources": [
+    "https://bjs.ojp.gov/library/publications/disabilities-reported-prisoners-survey-prison-inmates-2016",
+    "https://mn.gov/sentencing-guidelines/assets/2026-Minn-Sentencing-Guidelines-Comm-Report-to-the-Legislature_tcm30-719777.pdf",
+    "https://www.ssa.gov/pubs/EN-05-10133.pdf",
+    "https://mn.gov/dhs/reentry-waiver/",
+    "https://mn.gov/dhs/background-studies/reconsideration/",
+    "https://www.revisor.mn.gov/statutes/cite/245C.22",
+    "https://mn.gov/mdhr/employers/criminal-background/",
+    "https://www.ssa.gov/life-events/incarceration",
+    "https://www.ssa.gov/ssi/spotlights/spot-prerelease.htm",
+    "https://hcopub.dhs.state.mn.us/epm/2_5_5_1_1.htm",
+    "https://mn.gov/dhs/partners-and-providers/news-initiatives-reports-workgroups/minnesota-health-care-programs/federal-waivers.jsp",
+    "https://www.revisor.mn.gov/statutes/cite/364.021",
+    "https://www.revisor.mn.gov/statutes/cite/245C.30",
+    "https://mn.gov/dhs/assets/equity-policy_tcm1053-646921.pdf"
+  ],
+  "readings": [
+    {
+      "slug": "dsd-justice-involvement-reentry",
+      "readingSha256": "95673c21e2e36c83e438a50e231b571d5a72b81a02d91373c3600d785c9899f1"
+    },
+    {
+      "slug": "dsd-justice-involvement-reentry--disability-race-and-the-justice-system",
+      "readingSha256": "9d9f1f81e1b8be95f0a841201a94d3670af27aab6f43c8034dbccda1970f1c48"
+    },
+    {
+      "slug": "dsd-justice-involvement-reentry--protecting-benefits-during-incarceration",
+      "readingSha256": "a1e30fa17397d3528715335712a7cc3142f213d6526cdafe5daa68c44fc5ff4e"
+    },
+    {
+      "slug": "dsd-justice-involvement-reentry--reentry-planning-that-starts-before-release",
+      "readingSha256": "3c44fa1297c2aef9ba1172dd0bce09a0dc5ab3a7d3d106acd48620d525743458"
+    },
+    {
+      "slug": "dsd-justice-involvement-reentry--background-studies-employment-and-inclusive-servic",
+      "readingSha256": "2b4e0bd1c4cff0d2c02f38217f7e7d8bd3f1ee6ade825da87597c9a5f62b0789"
+    }
+  ],
+  "liveVerification": "pending final deployment"
+}
