@@ -74,11 +74,11 @@ if(!process.argv.includes('--isolated')) {
     for(const tool of ['email.send','publish.execute','teams.send','calendar.schedule_reversible'])await assert.rejects(runtime.runTool(ctx,tool,()=>{callbacks++;}));assert.equal(callbacks,0);
     results.push('Retired direct intake stops before validation/storage; triage and unregistered/disabled external actions never invoke callbacks');
     const audit=await oldStore.listAudit();assert.ok(audit.some(e=>e.error_code==='tool_disabled'));assert.ok(audit.some(e=>e.error_code==='tool_unknown'));
-    // Closed staff sharing and strict/minimized direct records are checked before client presentation.
-    const outcomeRoute=require(path.join(root,'app/api/program/outcomes/route.ts'));
+    // Closed staff endpoints and strict/minimized direct records are checked before client presentation. Voluntary outcome
+    // records were reopened by the owner (2026-11-16); lib/program/outcomes.test.ts covers their privacy.
     const surveyRoute=require(path.join(root,'app/api/equity-analysis/survey-waves/route.ts'));
     const forbiddenBody=new Proxy({},{get(){throw Error('A closed staff endpoint read submitted content');}});
-    assert.equal((await outcomeRoute.POST(forbiddenBody)).status,403);assert.equal((await surveyRoute.POST(forbiddenBody)).status,403);
+    assert.equal((await surveyRoute.POST(forbiddenBody)).status,403);
     const outcomes=require(path.join(root,'lib/program/outcomes.ts'));
     const {ProgramOutcomeInputSchema}=require(path.join(root,'lib/program/outcome-schema.ts'));
     const outcomeInput={submissionId:randomUUID(),programScope:'one-dhs',problem:'A general barrier in a program process.',action:'A general change to that process.',adoptedChange:'A clearer program step was tested.',observedResult:'An early general observation with limitations.',followUp:'Review evidence before deciding next steps.',decision:'not_yet_known',consent:true};

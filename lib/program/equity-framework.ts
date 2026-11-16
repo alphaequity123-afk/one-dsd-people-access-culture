@@ -257,9 +257,9 @@ export const EQUITY_FRAMEWORK = {
         "Integrate inclusive practices into onboarding, meetings, recognition, supervision and team norms.",
       ],
       measures: [
-        "Learning completion, knowledge gain, confidence and application, reported in aggregate.",
+        "Learning applied in real work, from accounts people choose to share and from representative task sessions.",
         "Climate indicators for belonging, psychological safety, trust, fairness, accessibility and voice.",
-        "Participation in employee resource groups, listening sessions and culture-building activities.",
+        "Barriers to taking part in employee resource groups, listening sessions and culture-building activities, identified and addressed.",
         "Trends in reported concerns and the timeliness and quality of organizational responses.",
         "Movement in inclusion and belonging results across demographic groups.",
       ],
@@ -393,7 +393,7 @@ export const EQUITY_FRAMEWORK = {
   ] satisfies Pillar[],
 
   indicatorTypes: [
-    { type: "Leading indicators", purpose: "Show whether the organization is carrying out the work needed to create change.", examples: "Learning completion, accessibility audits completed, job descriptions reviewed, equity analyses conducted, advisory meetings held." },
+    { type: "Leading indicators", purpose: "Show whether the organization is carrying out the work needed to create change.", examples: "Learning-and-application plans in place, accessibility audits completed, job descriptions reviewed, equity analyses conducted, advisory meetings held." },
     { type: "Intermediate indicators", purpose: "Show whether systems and behaviors are changing.", examples: "Improved manager confidence, greater use of accessible formats, increased employee voice, higher community participation, more equitable hiring processes." },
     { type: "Lagging indicators", purpose: "Show whether outcomes and disparities are improving.", examples: "Reduced retention gaps, improved belonging results, increased workforce representation, fewer service-access disparities, improved community satisfaction." },
   ],
@@ -583,7 +583,7 @@ export const EQUITY_FRAMEWORK = {
   measurementDomains: [
     ["Leadership and governance", "Equity analyses completed; equity goals in leader plans; committee participation", "Timely resolution of barriers; sustained cross-unit implementation"],
     ["Workforce equity", "Inclusive job descriptions reviewed; hiring-manager preparation completed", "Representation, hiring, promotion, retention and leadership trends"],
-    ["Workplace culture", "Learning completion; manager action plans; resource-group participation", "Belonging, psychological safety, fairness, trust and retention"],
+    ["Workplace culture", "Learning-and-application plans in place; manager action plans; barriers to resource-group participation addressed", "Belonging, psychological safety, fairness, trust and retention"],
     ["Accessibility", "Audits completed; barriers logged; materials remediated", "Accessible service experience and timely accommodations, with complaint patterns interpreted alongside other evidence rather than treating fewer complaints as proof of improvement."],
     ["Service delivery", "Programs reviewed; translation and interpretation use", "Improved access, timeliness, satisfaction, quality and reduced disparities"],
     ["Community partnership", "Engagement events; paying community members; advisory participation", "Community trust, perception of influence and recommendations adopted"],

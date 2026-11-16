@@ -1,5 +1,7 @@
 import { z } from "zod";
 import { adsaWorkAction } from "./adsa-work-links";
+import { programOutcomes, type ProgramOutcomeId } from "./model";
+import { forbiddenEvidenceIn, measureDefinitionProblems, pdsaDispositions, type PdsaStep } from "./evaluation";
 export const GoalActionIdsSchema=z.array(z.string().refine(id=>Boolean(adsaWorkAction(id)),"Choose a supplied ADSA action step.")).max(28).refine(ids=>new Set(ids).size===ids.length,"Choose each action once.").transform(ids=>[...ids].sort());
 /** Public/general references only; a link is not proof of applicability or approval. */
 export const ProgramReferenceSchema = z.object({
@@ -54,11 +56,16 @@ export const ProgramEventSchema = z.object({
   note: z.string().max(3000), receipt: ProgramReceiptSchema.optional(),
   disposition: z.enum(["retain", "revise", "stop", "not_yet_known"]).optional(),
   followUpAt: z.iso.datetime().optional(), humanMinutes: z.number().min(0).max(100000).optional(),
-  preparationPlan: z.object({reviewNeeds:z.string().trim().min(10).max(1500),measure:z.string().trim().min(10).max(1500),reportBack:z.string().trim().min(5).max(1000),measureDefinition:MeasureDefinitionSchema.optional()}).strict().optional(),
+  preparationPlan: z.object({reviewNeeds:z.string().trim().min(10).max(1500),measure:z.string().trim().min(10).max(1500),reportBack:z.string().trim().min(5).max(1000),measureDefinition:MeasureDefinitionSchema.optional(),
+    /** Plan-Do-Study-Act: what the owner expects to happen. Optional so earlier records stay valid. */
+    prediction:z.string().trim().min(10).max(1500).optional()}).strict().optional(),
   resultObservation: z.string().trim().min(10).max(1500).optional(),
   resultEvidence: z.string().trim().min(10).max(1500).optional(),
   resultLimitations: z.string().trim().min(10).max(1500).optional(),
   resultConfidence: z.enum(["early_observation", "supported_observation", "not_yet_known"]).optional(),
+  /** Plan-Do-Study-Act Study labels. Optional so earlier records stay valid. */
+  resultEvidenceLevel: z.enum(["delivery", "application", "benefit"]).optional(),
+  resultSourceType: z.enum(["participant_report", "independent_observation"]).optional(),
   decisionOwner: z.string().trim().min(2).max(240).optional(),
   decisionReference: z.string().trim().min(5).max(1500).optional(),
   nextAction: z.string().trim().min(5).max(1500).optional(),
@@ -70,3 +77,90 @@ export const ProgramEventSchema = z.object({
 .refine(x => !["results_recorded", "prepared", "decision_recorded", "applied", "reviewed", "cancelled", "retry_requested"].includes(x.phase) || x.actor === "owner", "Only the owner can record this decision.");
 export type ProgramEvent = z.infer<typeof ProgramEventSchema>;
 
+/* ------------------------------------------------------- Plan-Do-Study-Act cycle record ------------------------------------------------------- */
+
+const outcomeIdValues = programOutcomes.map(outcome => outcome.id) as [ProgramOutcomeId, ...ProgramOutcomeId[]];
+const cycleText = (min: number, max: number) => z.string().trim().min(min).max(max);
+
+/** Problems when a measure, prediction or piece of evidence counts learning or use. Empty means allowed. */
+export function learningActivityProblems(fields: { measure?: Partial<Record<string, string>>; texts?: Array<string | undefined> }): string[] {
+  const problems = fields.measure ? measureDefinitionProblems(fields.measure) : [];
+  for (const text of fields.texts ?? []) for (const finding of forbiddenEvidenceIn(text ?? "")) problems.push(`uses forbidden evidence (${finding.id}): "${finding.match}"`);
+  return problems;
+}
+
+/**
+ * One Plan-Do-Study-Act cycle, the owner's name for the program's six-stage improvement cycle (evaluation.ts pdsaCycle).
+ * It reuses the program work record's parts: ADSA action links, outcome ids, the ten measure fields and the disposition.
+ * A cycle can be written whole (this schema) or read from existing program work records (pdsaFromProgramWork).
+ */
+export const PdsaCycleSchema = z.object({
+  schemaVersion: z.literal(1),
+  id: z.string().regex(/^pdsa-[a-z0-9-]{3,80}$/),
+  taskId: z.string().regex(/^task-[a-f0-9]{32}$/).optional(),
+  title: cycleText(5, 180),
+  goalActionIds: GoalActionIdsSchema,
+  outcomeIds: z.array(z.enum(outcomeIdValues)).max(7).refine(ids => new Set(ids).size === ids.length, "Choose each outcome once."),
+  plan: z.object({
+    question: cycleText(10, 1500), change: cycleText(10, 1500), affected: cycleText(5, 1000), prediction: cycleText(10, 1500),
+    measure: MeasureDefinitionInputSchema, decisionOwner: cycleText(2, 240),
+    reviewMonth: z.string().regex(/^\d{4}-(?:0[1-9]|1[0-2])$/).optional(),
+  }).strict(),
+  do: z.object({ scope: cycleText(5, 1000), whatHappened: cycleText(10, 1500), beforeAfter: cycleText(5, 1500).optional() }).strict().optional(),
+  study: z.object({
+    comparedWithPrediction: cycleText(10, 1500), observation: cycleText(10, 1500), evidence: cycleText(10, 1500),
+    evidenceLevel: z.enum(["delivery", "application", "benefit"]), sourceType: z.enum(["participant_report", "independent_observation"]),
+    limits: cycleText(10, 1500), confidence: z.enum(["early_observation", "supported_observation", "not_yet_known"]),
+  }).strict().optional(),
+  act: z.object({
+    disposition: z.enum(pdsaDispositions), decisionOwner: cycleText(2, 240), decisionReference: cycleText(5, 1500),
+    nextAction: cycleText(5, 1500), implementationOwner: cycleText(2, 240), reportBack: cycleText(5, 1000),
+  }).strict().optional(),
+}).strict().superRefine((cycle, context) => {
+  if (!cycle.goalActionIds.length && !cycle.outcomeIds.length) context.addIssue({ code: "custom", path: ["outcomeIds"], message: "Link the cycle to an ADSA action or an outcome." });
+  if (cycle.study && !cycle.do) context.addIssue({ code: "custom", path: ["study"], message: "Study follows Do: write down what happened first." });
+  if (cycle.act && !cycle.study) context.addIssue({ code: "custom", path: ["act"], message: "Act follows Study: compare the result with the prediction first." });
+  for (const problem of learningActivityProblems({ measure: cycle.plan.measure, texts: [cycle.plan.prediction, cycle.study?.evidence] }))
+    context.addIssue({ code: "custom", path: ["plan", "measure"], message: `Learning or use is never counted as evidence. ${problem}` });
+});
+export type PdsaCycle = z.infer<typeof PdsaCycleSchema>;
+
+type MeasureDefinitionInput = z.infer<typeof MeasureDefinitionInputSchema>;
+export type PdsaView = {
+  taskId: string; title: string; step: PdsaStep | "Closed";
+  goalActionIds: string[]; outcomeIds: string[];
+  plan: { question: string; prediction?: string; measure?: string; measureDefinition?: MeasureDefinitionInput; decisionOwner?: string };
+  do?: { whatHappened: string };
+  study?: { observation: string; evidence: string; limits: string; confidence: string; evidenceLevel?: string; sourceType?: string };
+  act?: { disposition: string; decisionOwner: string; nextAction: string; implementationOwner: string };
+};
+
+/** Read an existing program work record as a Plan-Do-Study-Act cycle. Older records without a prediction still read. */
+export function pdsaFromProgramWork(task: ProgramTask, events: readonly ProgramEvent[]): PdsaView {
+  const own = events.filter(event => event.taskId === task.id && event.actor === "owner");
+  const prepared = own.findLast(event => event.phase === "prepared" && event.preparationPlan);
+  const firstDecision = own.find(event => event.phase === "decision_recorded");
+  const applied = own.findLast(event => event.phase === "applied");
+  const results = own.findLast(event => event.phase === "results_recorded");
+  const act = results ? own.findLast(event => event.phase === "decision_recorded" && event.at > results.at) : undefined;
+  const definition = prepared?.preparationPlan?.measureDefinition;
+  const view: PdsaView = {
+    taskId: task.id, title: task.title, step: "Plan",
+    goalActionIds: [...(task.goalActionIds ?? [])], outcomeIds: [...task.outcomeIds],
+    plan: {
+      question: task.objective, prediction: prepared?.preparationPlan?.prediction, measure: prepared?.preparationPlan?.measure,
+      measureDefinition: definition ? MeasureDefinitionInputSchema.parse(Object.fromEntries(Object.entries(definition).filter(([key]) => !["id", "version", "status"].includes(key)))) : undefined,
+      decisionOwner: firstDecision?.decisionOwner,
+    },
+  };
+  if (applied) { view.do = { whatHappened: applied.note }; view.step = "Do"; }
+  if (results?.resultObservation && results.resultEvidence && results.resultLimitations && results.resultConfidence) {
+    view.study = { observation: results.resultObservation, evidence: results.resultEvidence, limits: results.resultLimitations, confidence: results.resultConfidence, evidenceLevel: results.resultEvidenceLevel, sourceType: results.resultSourceType };
+    view.step = "Study";
+  }
+  if (act?.disposition && act.decisionOwner && act.nextAction && act.implementationOwner) {
+    view.act = { disposition: act.disposition, decisionOwner: act.decisionOwner, nextAction: act.nextAction, implementationOwner: act.implementationOwner };
+    view.step = act.disposition === "stop" || act.disposition === "retain" ? "Closed" : "Act";
+  }
+  return view;
+}

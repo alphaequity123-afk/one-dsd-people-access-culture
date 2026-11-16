@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { leadersAllowed } from "@/lib/auth/leaders-access";
 import Link from "@/components/app-link";
 import { askQuestion, goalMap, headlineNarratives, measures } from "@/lib/content/data/equity-baseline";
-import { readEquityReviewTotals } from "@/lib/practice/equity-review-count-store";
-import { EquityReviewCountSection } from "./review-count-section";
 import base from "@/app/learn/collaboration/collaboration.module.css";
 import styles from "./equity-baseline.module.css";
 import { ResourceDownloads } from "@/components/resource-downloads";
@@ -19,7 +17,6 @@ export default async function EquityBaselinePage() {
   if (!(await leadersAllowed())) return null;
   const goals = goalMap();
   const headlines = headlineNarratives(5);
-  const reviewTotals = await readEquityReviewTotals().catch(() => null);
   return <div className={base.page}><div className={base.content}>
     <header className={base.intro}>
       <p className={base.eyebrow}>Data</p>
@@ -54,8 +51,6 @@ export default async function EquityBaselinePage() {
         </li>)}
       </ul>
     </section>
-
-    <EquityReviewCountSection totals={reviewTotals} />
 
     <section className={styles.section} aria-labelledby="count-title">
       <div className={styles.howWeCount}>

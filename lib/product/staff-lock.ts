@@ -17,6 +17,9 @@ import { NextResponse } from "next/server";
  *   - My Work uploads
  *   - Staff consultation intake forms, booking and request queues (currently retired).
  *
+ * Exception (owner, 2026-11-16): voluntary outcome records at /api/program/outcomes are open again. They keep no
+ * identity, no network address or browser details, and the month only (lib/program/outcome-schema.ts).
+ *
  * F-01 / F-02 stay: staff writes fail closed. Same-origin is not authorization.
  * Owner and consultant typed tools remain on their own authenticated routes.
  * `ownerFromRequest` / `ownerFromCookies` require a live, unrevoked owner session.

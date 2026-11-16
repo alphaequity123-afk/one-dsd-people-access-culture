@@ -18,7 +18,8 @@ import { inspectCollaborationText } from "@/lib/collaboration/schema";
 import { consultationActivationStatus } from "@/lib/intelligence/consult/availability";
 import { programFunctions } from "./model";
 import { listProgramOutcomes } from "./outcomes";
-import { ProgramTaskSchema, ProgramEventSchema, ProgramReferenceSchema, MeasureDefinitionInputSchema, type ProgramTask, type ProgramEvent } from "./work-schema";
+import { ProgramTaskSchema, ProgramEventSchema, ProgramReferenceSchema, MeasureDefinitionInputSchema, learningActivityProblems, type ProgramTask, type ProgramEvent } from "./work-schema";
+import { outcomeReviewDay } from "./outcome-schema";
 
 const hash = (value: string) => createHash("sha256").update(value).digest("hex");
 const specialist: Record<string, AgentId> = { ask:"ask_concierge", learning:"graduation_coach", resources:"librarian", community_context:"ci_guide", guided_practice:"graduation_coach", equity_analysis:"embed_advisor", consultation:"embed_advisor", staff_engagement:"program_orchestrator", workforce_context:"embed_advisor", organizational_knowledge:"content_sentinel", content_stewardship:"a11y_reviewer", program_coordination:"program_orchestrator", evaluation:"eval_steward" };
@@ -49,7 +50,7 @@ export async function createProgramTask(input: Omit<ProgramTask,"recordType"|"id
   if(Object.keys(input).some(key=>JSON.stringify(saved[key as keyof ProgramTask])!==JSON.stringify(task[key as keyof ProgramTask])))throw new ProgramWorkConflict("This request was already used for a different work item.");
   return saved;
 }
-export async function recordProgramDecision(taskId:string, input:{phase:"results_recorded"|"decision_recorded"|"applied"|"reviewed"|"cancelled"|"retry_requested";note:string;disposition?:ProgramEvent["disposition"];followUpAt?:string;humanMinutes?:number;requestId?:string;expectedEventId?:string|null;decisionOwner?:string;decisionReference?:string;nextAction?:string;implementationOwner?:string;resultObservation?:string;resultEvidence?:string;resultLimitations?:string;resultConfidence?:ProgramEvent["resultConfidence"]}) {
+export async function recordProgramDecision(taskId:string, input:{phase:"results_recorded"|"decision_recorded"|"applied"|"reviewed"|"cancelled"|"retry_requested";note:string;disposition?:ProgramEvent["disposition"];followUpAt?:string;humanMinutes?:number;requestId?:string;expectedEventId?:string|null;decisionOwner?:string;decisionReference?:string;nextAction?:string;implementationOwner?:string;resultObservation?:string;resultEvidence?:string;resultLimitations?:string;resultConfidence?:ProgramEvent["resultConfidence"];resultEvidenceLevel?:ProgramEvent["resultEvidenceLevel"];resultSourceType?:ProgramEvent["resultSourceType"]}) {
   const task=(await listProgramWork()).find(t=>t.id===taskId);
   if(!task)throw new Error("That work item was not found.");
   const {requestId,expectedEventId,...details}=input;
@@ -57,6 +58,7 @@ export async function recordProgramDecision(taskId:string, input:{phase:"results
   if(replay){if(Object.entries(details).some(([key,value])=>replay[key as keyof ProgramEvent]!==value))throw new ProgramWorkConflict("This request was already used for a different decision.");return replay;}
   if(expectedEventId!==undefined&&expectedEventId!==task.lastEventId)throw new ProgramWorkConflict("This work changed since you opened it. Reload the page before continuing.");
   const issue=inspectCollaborationText([input.note,input.decisionOwner,input.decisionReference,input.nextAction,input.implementationOwner,input.resultObservation,input.resultEvidence,input.resultLimitations].filter(Boolean).join("\n"));if(issue)throw new ProgramWorkValidation(issue.message);
+  const counted=learningActivityProblems({texts:[input.resultEvidence]});if(counted.length)throw new ProgramWorkValidation("Learning or use is never counted as evidence. Describe the record people chose to keep or share instead.");
   return appendEvent(task,{recordType:"program_event",id:requestId??randomUUID(),taskId,at:nextEventTime(task),attempt:task.attempts,actor:"owner",...details});
 }
 /** Manual preparation remains useful with automated assistance disabled. It does not approve or implement the draft. */
@@ -66,6 +68,7 @@ export async function recordManualPreparation(taskId:string,input:{requestId:str
   const body=input.body.trim(),note=input.note.trim();
   const references=z.array(ProgramReferenceSchema).max(20).parse(input.references??[]);
   const issue=inspectCollaborationText([body,note,...Object.values(input.preparationPlan).flatMap(value=>typeof value==="string"?[value]:Object.values(value??{})),...references.flatMap(reference=>[reference.label,reference.href])].join("\n"));if(issue)throw new ProgramWorkValidation(issue.message);
+  const counted=learningActivityProblems({measure:input.preparationPlan.measureDefinition,texts:[input.preparationPlan.measure,input.preparationPlan.prediction]});if(counted.length)throw new ProgramWorkValidation("Learning or use is never counted as evidence. Choose a measure from records people keep or share, plans and reviews, before-and-after versions, or aggregate DHS data.");
   const replay=task.events.find(e=>e.id===input.requestId);
   const version=replay?.preparationPlan?.measureDefinition?.version??(Math.max(0,...task.events.map(event=>event.preparationPlan?.measureDefinition?.version??0))+1);
   const preparationPlan={...input.preparationPlan,...(input.preparationPlan.measureDefinition?{measureDefinition:{...MeasureDefinitionInputSchema.parse(input.preparationPlan.measureDefinition),id:"measure-"+task.id.slice(5),version,status:"proposed" as const}}:{})};
@@ -97,7 +100,7 @@ export async function prepareProgramWork(now=new Date()) {
 /** Only confirmed follow-up dates create due work; this never initializes a portfolio or schedules people. */
 export async function prepareProgramFollowups(now=new Date()) {
   const iso=now.toISOString();
-  for(const result of await listProgramOutcomes()) await createProgramTask({functionId:"evaluation",kind:"outcome_followup",title:"Review an applied-work contribution",objective:"Assess the reported change, distinguish self-report from verified evidence, and prepare a practical follow-up with a retain/revise/stop question. Do not infer employee attributes or contact the contributor.",sourceId:result.id,dueAt:result.reviewDate?result.reviewDate+"T12:00:00.000Z":iso,eligible:true,source:"staff_result",evidenceMode:"operational"},"outcome:"+result.id);
+  for(const result of await listProgramOutcomes()) await createProgramTask({functionId:"evaluation",kind:"outcome_followup",title:"Review an applied-work contribution",objective:"Assess the reported change, distinguish self-report from verified evidence, and prepare a practical follow-up with a retain/revise/stop question. Do not infer employee attributes or contact the contributor.",sourceId:result.id,dueAt:outcomeReviewDay(result)?outcomeReviewDay(result)+"T12:00:00.000Z":iso,eligible:true,source:"staff_result",evidenceMode:"operational"},"outcome:"+result.id);
   for(const work of await listProgramWork()){
     if(work.status==="cancelled")continue;
     const follow=work.events.findLast(e=>e.actor==="owner");

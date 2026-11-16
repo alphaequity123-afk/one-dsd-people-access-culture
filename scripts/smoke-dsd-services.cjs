@@ -85,7 +85,9 @@ async function main() {
   await check('/api/health', 'GET', 200, json(value => value.status === 'ok' ? [] : ['Unexpected health response']));
   await check('/api/page-text?route=%2Fprogram%2Ffoundation', 'GET', 200, json(value => value.degraded === true && value.reason === 'not-configured' && value.entries.length === 0 ? [] : ['Local database availability incorrectly reported']));
   await check('/api/page-text?route=https%3A%2F%2Finvalid.example', 'GET', 400);
-  for (const url of ['/api/ask', '/api/intake', '/api/intake/synthetic', '/api/equity-analysis', '/api/equity-analysis/follow-ups', '/api/equity-analysis/survey-waves', '/api/program/outcomes', '/api/sp-clone-request', '/api/one-dsd/team']) await check(url, 'POST', 403, closed);
+  for (const url of ['/api/ask', '/api/intake', '/api/intake/synthetic', '/api/equity-analysis', '/api/equity-analysis/follow-ups', '/api/equity-analysis/survey-waves', '/api/sp-clone-request', '/api/one-dsd/team']) await check(url, 'POST', 403, closed);
+  // Voluntary outcome records reopened (owner, 2026-11-16): a body that is not a complete, consented account is refused and nothing is kept.
+  await check('/api/program/outcomes', 'POST', 400);
   for (const url of ['/api/consultant/ask-records', '/api/one-dsd/team', '/api/sp-clone-request?trackingId=SYNTHETIC']) await check(url, 'GET', 401);
   for (const url of ['/api/page-text', '/api/media']) await check(url, 'POST', 401);
   await check('/api/intake/synthetic', 'GET', 405);
