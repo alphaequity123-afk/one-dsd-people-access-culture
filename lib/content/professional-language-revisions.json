@@ -1264,7 +1264,7 @@
             2
           ],
           "before": "Center lived experience: people affected by a decision should help shape it, with their role, authority, and compensation made clear.",
-          "after": "Center lived experience: people affected by a decision should help shape it. Explain their role, what they can influence, who holds decision-making authority, and what compensation is available so they can decide whether and how to participate."
+          "after": "Center lived experience: invite people affected by a decision to help shape it. Explain what they can influence, who has decision authority and whether payment is available. Confirm the approved payment process before promising compensation so people can make an informed participation choice."
         },
         {
           "path": [
@@ -1273,10 +1273,18 @@
           ],
           "before": "Move at the speed of trust: build relationships and explain how input was used before expanding the work. Rebuilding trust after a rushed launch takes time.",
           "after": "Build trust over time: develop relationships and explain what happened with people’s input before expanding the work. Include what changed, what did not change, and why; an invitation to participate is not by itself evidence that the relationship is working."
+        },
+        {
+          "path": [
+            "body",
+            3
+          ],
+          "before": "Follow the evidence: look at who receives services, who is denied or delayed, and who may be missing. Review patterns by community, language, disability, and place. Be clear about what the information shows and what it does not show.",
+          "after": "Follow the evidence: examine who receives services, who is denied or delayed and whose experience may be missing. Use authorized data, protect small groups from identification and explain gaps or uncertainty. A disparity is a reason to investigate contributing conditions; it does not by itself establish their cause."
         }
       ],
       "status": "reviewed",
-      "reviewNote": "Full original read; independent acceptance of these exact explanatory fields on 2026-11-15. Retains direction to revisit missing commitments before proceeding. Unchanged legal and authority claims are not represented as newly verified."
+      "reviewNote": "Complete reference review on 2026-11-16: authority, data privacy, participation, current accessibility guidance and practical use. Source fields remain exact-match bound."
     },
     {
       "target": "resource.pn-embed-early",
@@ -1298,10 +1306,26 @@
           ],
           "before": "Before creating an online option, decide how people can get help by phone, on paper, or in person. Make sure staff are available to support those options.",
           "after": "Plan phone, paper, or in-person help alongside an online option, and identify the staff needed to provide it. A listed alternative offers little practical access if the people who need it cannot reach someone able to help."
+        },
+        {
+          "path": [
+            "body",
+            4
+          ],
+          "before": "Involve the right partners before the design is fixed: an Equity Director, accessibility and language access leads, and community partners with purpose, authority, and compensation agreed.",
+          "after": "Involve the Equity Director, accessibility and language-access leads, and relevant community partners before the design is fixed. Agree on the purpose, influence and follow-up, and confirm any authorized compensation before inviting participation."
+        },
+        {
+          "path": [
+            "body",
+            5
+          ],
+          "before": "If the work touches a Tribal Nation, Native children, Tribal data, services, or land, government-to-government consultation comes first. Do not place a Nation in a generic stakeholder list.",
+          "after": "When proposed work may have Tribal implications, contact the agency Tribal liaison early to identify and carry out the required government-to-government consultation before the decision. Individual service preferences, public engagement and consultation with a community organization do not replace consultation with the relevant Tribal governments."
         }
       ],
       "status": "reviewed",
-      "reviewNote": "Full original read; independent acceptance of these exact explanatory fields on 2026-11-15. Retains direction to revisit missing commitments before proceeding. Unchanged legal and authority claims are not represented as newly verified."
+      "reviewNote": "Complete reference review on 2026-11-16: authority, data privacy, participation, current accessibility guidance and practical use. Source fields remain exact-match bound."
     },
     {
       "target": "resource.ja-launch-embed-checklist",
@@ -1314,10 +1338,58 @@
           ],
           "before": "Use it as a working document for your program, with a responsible person for each follow-up and a review date. This makes the next steps clear and accountable.",
           "after": "Use the checklist to connect each finding with a responsible person, a next step, and a review date. Its value lies in what it helps the team examine and change; completing the checklist alone does not establish that an access barrier has been resolved."
+        },
+        {
+          "path": [
+            "body",
+            1
+          ],
+          "before": "Access: screen reader, keyboard, magnification tested; equally effective phone, in-person, or paper path; documents meet the accessible-document standard.",
+          "after": "Access: test with a keyboard, screen reader and magnification under the current state standard. Plan usable help and alternate formats. A phone or paper option does not automatically excuse an inaccessible digital service; ask the accessibility team how to resolve remaining barriers."
+        },
+        {
+          "path": [
+            "body",
+            5
+          ],
+          "before": "Partners: Equity Director informed; accessibility and language access leads involved; community partners with purpose, authority, compensation, and report-back; Tribal consultation first where applicable.",
+          "after": "Partners: involve the Equity Director and staff responsible for access and language support. Tell community participants what they can influence, whether approved payment is available and how you will follow up. Contact the Tribal liaison early about possible Tribal implications and required consultation."
+        },
+        {
+          "path": [
+            "body",
+            0
+          ],
+          "before": "People and purpose: who it is for; who may be missing; what result would show that a disparity was reduced rather than shifted elsewhere.",
+          "after": "People and purpose: who will use this service, and who is missing from the plan? How will you check whether a change reduces a barrier instead of moving it elsewhere?"
+        },
+        {
+          "path": [
+            "body",
+            4
+          ],
+          "before": "Evidence: current use and denial patterns by community, language, disability, and place; missing community knowledge named with a respectful way to get it.",
+          "after": "Evidence: review who uses the service and who is denied or delayed. Use authorized data, protect privacy and explain missing information. Ask affected people what the records may leave out."
+        },
+        {
+          "path": [
+            "body",
+            6
+          ],
+          "before": "Decision responsibility: who decides; which rights, rules, and obligations set the limits; what can still change if a rule must remain.",
+          "after": "Decisions: who may approve a change? Which rights and rules must be protected? What can still improve when a rule must stay?"
+        },
+        {
+          "path": [
+            "body",
+            7
+          ],
+          "before": "Review: who is responsible for each follow-up; the next review date; what would lead you to pause, redesign, or seek further guidance.",
+          "after": "Review: name the person responsible for each next step and set a review date. Decide what evidence would prompt a pause, a change or further advice."
         }
       ],
       "status": "reviewed",
-      "reviewNote": "Full original read; independent acceptance of these exact explanatory fields on 2026-11-15. Retains direction to revisit missing commitments before proceeding. Unchanged legal and authority claims are not represented as newly verified."
+      "reviewNote": "Complete reference review on 2026-11-16: authority, data privacy, participation, current accessibility guidance and practical use. Source fields remain exact-match bound."
     },
     {
       "target": "resource.ja-language-access-checklist",
@@ -1354,10 +1426,34 @@
           ],
           "before": "If a person cannot read or use a notice, they may not be able to understand or appeal the decision. Accessibility needs to be addressed before release.",
           "after": "A notice may contain accurate information and still be difficult to read or use. If the reader cannot understand the decision or how to respond, their opportunity to act or appeal may be affected. Review meaning and accessibility together before release."
+        },
+        {
+          "path": [
+            "body",
+            2
+          ],
+          "before": "Sentences: aim for 15 to 20 words; one idea each; no double negatives.",
+          "after": "Sentences: use direct sentences with a natural mix of lengths. Keep each sentence focused and remove double negatives; do not add words merely to reach a numerical target."
+        },
+        {
+          "path": [
+            "body",
+            4
+          ],
+          "before": "Images: describe the important meaning in alternative text. Do not place essential information only inside an image, and do not use color as the only way to communicate meaning.",
+          "after": "Images: describe meaningful content with useful alternative text and mark purely decorative images as decorative. Keep essential information available as accessible text, and do not rely on color alone to communicate meaning."
+        },
+        {
+          "path": [
+            "body",
+            7
+          ],
+          "before": "Review: use the built-in accessibility checker, then ask someone outside the team to read the document without added explanation and describe what it means to them.",
+          "after": "Review: run the accessibility checker, then manually check heading order, reading order, links, tables and keyboard use as applicable. Follow the current state standard and test with assistive technology where needed. Ask a reader outside the team to explain the document's meaning; a passing automated check alone does not establish accessibility."
         }
       ],
       "status": "reviewed",
-      "reviewNote": "Full original read; independent acceptance of these exact explanatory fields on 2026-11-15. Retains direction to revisit missing commitments before proceeding. Unchanged legal and authority claims are not represented as newly verified."
+      "reviewNote": "Complete reference review on 2026-11-16: authority, data privacy, participation, current accessibility guidance and practical use. Source fields remain exact-match bound."
     },
     {
       "target": "resource.ja-access-checks",
@@ -1635,9 +1731,17 @@
           ],
           "before": "Request a consultation for high-stakes decisions",
           "after": "Find guidance for high-stakes decisions"
+        },
+        {
+          "path": [
+            "body",
+            3
+          ],
+          "before": "Procurement: Do the selection criteria give real weight to accessibility, language access, and community knowledge? Do the requirements create unnecessary barriers for small providers or community organizations?",
+          "after": "Procurement: do the planned criteria address accessibility, language access and relevant community knowledge? Do requirements create avoidable barriers for small providers? Work with procurement staff before publishing or changing criteria, preserve fair competition and follow the authorized contract process."
         }
       ],
-      "reviewNote": "Full source independently read by root and exact changes accepted on 2026-11-15. Source/authority limits and URLs preserved. Relevant current UI behavior checked. Not blanket factual revalidation."
+      "reviewNote": "Complete reference review on 2026-11-16: authority, data privacy, participation, current accessibility guidance and practical use. Source fields remain exact-match bound."
     },
     {
       "target": "resource.pn-intercultural-method",
@@ -4575,6 +4679,23 @@
         "date": "2026-11-15",
         "scope": "Three written job aids reviewed,21 authored fields accepted; no full linked-course or current litigation/enforcement certification. Official source links and metadata retained."
       }
+    },
+    {
+      "target": "resource.ja-process-burden",
+      "kind": "resource",
+      "route": "/resources/ja-process-burden",
+      "status": "reviewed",
+      "changes": [
+        {
+          "path": [
+            "body",
+            7
+          ],
+          "before": "Removal: which steps could be removed, combined, or done by the agency instead of the person?",
+          "after": "Removal: which unnecessary steps could be removed, combined or completed by the agency? Identify who may authorize the change, preserve required safeguards and appeal rights, and check whether the change improves access without shifting the burden elsewhere."
+        }
+      ],
+      "reviewNote": "Complete reference review on 2026-11-16: authority, data privacy, participation, current accessibility guidance and practical use. Source fields remain exact-match bound."
     }
   ]
 }
