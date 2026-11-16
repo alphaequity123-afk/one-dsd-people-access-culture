@@ -18,6 +18,7 @@ describe("the person or area responsible", () => {
     ["Find the right office.", "Find the person or area responsible."],
     ["the appropriate designated office", "the person or area responsible"],
     ["the responsible hiring office", "the person or area responsible for hiring"],
+    ["legal counsel or other responsible offices", "legal counsel or other people or areas responsible"],
   ])("%s", (before, after) => { expect(responsibleWording(before)).toBe(after); });
 
   it("leaves official names and unrelated sentences alone", () => {
