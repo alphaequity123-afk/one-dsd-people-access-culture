@@ -1,0 +1,137 @@
+{
+  "date": "2026-11-16",
+  "courseId": "dsd-housing-instability",
+  "status": "accepted_complete_written_course_review",
+  "countsAsCompleteCourseReview": true,
+  "scope": "Complete overview, four lessons and 16 objectives, four fictional practice cases and 12 choices, feedback, four knowledge checks, private reflection and actions, five flashcards, full job aid, fourteen source notes and cover description. Recordings are outside this review.",
+  "method": "Read full source and final generated overview/job aid; compare relevant primary authorities, revise current referrals, historical records, eligibility, privacy and notice boundaries, inspect cover image, verify serialized readings and assessment distinctions.",
+  "sourcePackSha256": "68b716a4d651ea65f990cedaf5b4cc137cc322e8dcd2bcf36241f3d28e49affe",
+  "specSha256": "aed8eaea6147de79c873d03e780163faccc750872d35e78261099c1085f7a0ea",
+  "findings": [
+    "HSS ended October 31, 2025; remove current referrals, not historical or required records.",
+    "Housing Support requires an eligible person, provider and place; no automatic replacement after HSS.",
+    "Replaced broken DHS link and preserved usable offline contact routes.",
+    "No fixed address does not by itself end residency; responsible staff handle actual eligibility and service questions.",
+    "Tennessen notice includes known consequences of providing or refusing data and does not itself authorize later disclosures.",
+    "Returned-mail procedures and current source distinctions replace an assumption of immediate closure.",
+    "Court conditions, executive interpretation and draft state plan remain distinct.",
+    "Fictional cases and blank templates avoid unnecessary access to private records."
+  ],
+  "diagnostics": [
+    {
+      "title": "How housing instability breaks the service chain",
+      "teaching": {
+        "words": 438,
+        "sents": 24,
+        "asl": 18.25,
+        "fk": 11.38275114155251,
+        "fog": 14.14931506849315,
+        "smog": 13.227904075235838,
+        "poly": 17.123287671232877,
+        "long": 31.506849315068493,
+        "short": 8.333333333333334,
+        "ease": 45.95919520547946
+      }
+    },
+    {
+      "title": "Minnesota housing supports for people with disabilities",
+      "teaching": {
+        "words": 331,
+        "sents": 24,
+        "asl": 13.791666666666666,
+        "fk": 11.784520392749247,
+        "fog": 13.613343403826788,
+        "smog": 12.67411722104261,
+        "poly": 20.241691842900302,
+        "long": 39.57703927492447,
+        "short": 12.5,
+        "ease": 35.13796890735148
+      }
+    },
+    {
+      "title": "Person-centered housing choice and the most integrated setting",
+      "teaching": {
+        "words": 341,
+        "sents": 19,
+        "asl": 17.94736842105263,
+        "fk": 12.31035344960642,
+        "fog": 14.686278746720172,
+        "smog": 13.613851032357722,
+        "poly": 18.7683284457478,
+        "long": 36.950146627565985,
+        "short": 10.526315789473685,
+        "ease": 38.769740700725436
+      }
+    },
+    {
+      "title": "Designing contact and notices for people without stable housing",
+      "teaching": {
+        "words": 448,
+        "sents": 25,
+        "asl": 17.92,
+        "fk": 11.153264285714286,
+        "fog": 13.060857142857145,
+        "smog": 12.411214026448931,
+        "poly": 14.732142857142858,
+        "long": 33.482142857142854,
+        "short": 12,
+        "ease": 47.016735714285744
+      }
+    }
+  ],
+  "diagnosticJudgment": "Teaching FK approximately 11.2–12.3; retain necessary legal and service terms with explicit explanations.",
+  "assessmentChecks": {
+    "knowledgeCheckQuestionsAndWrongAnswersUnchanged": true,
+    "knowledgeCheckCorrectAnswerChange": "Lesson 4 adds known consequences of supplying or refusing data; it remains the sole correct response.",
+    "scenarioRecommendedIndicesUnchanged": true,
+    "scenarioChoiceChange": "Recommended choices in lessons 1–3 clarify consent, current referrals and lawful placement; all recommended indices and distractors retain the tested distinctions.",
+    "otherScenarioChoicesUnchanged": true,
+    "finalLessonReadingsMatchCurrentPack": true
+  },
+  "coverReview": {
+    "path": "public/images/covers/catalog/other-P811.webp",
+    "sha256": "3887cb349f71b7e0059c69234a94902323222298c9f28f5f5cc7ae3297051afb",
+    "alt": "Two people look at a phone and papers at a table, with a cane beside the seated man and another person behind them.",
+    "method": "Direct local image inspection: two people reviewing a phone and papers at a table, cane beside the seated man and another person behind them."
+  },
+  "priorFieldReview": "data/editorial/reviews/2026-11-16-housing-guidance-review.json",
+  "sources": [
+    "https://mn.gov/dhs/housing-stabilization-services-termination/",
+    "https://content.govdelivery.com/accounts/MNDHS/bulletins/3f98793",
+    "https://mn.gov/dhs/housing-income/income-assistance/housing-support/",
+    "https://mn.hb101.org/a/9/",
+    "https://www.housinglink.org/",
+    "https://mn.gov/olmstead/",
+    "https://www.ada.gov/resources/olmstead-mandate-statement/",
+    "https://mn.gov/dhs/housing-resources/",
+    "https://hcopub.dhs.state.mn.us/epm/1_3_2_1.htm",
+    "https://hcopub.dhs.state.mn.us/epm/1_4.htm",
+    "https://www.dhs.state.mn.us/main/groups/publications/documents/pub/mndhs-073258.pdf",
+    "https://www.revisor.mn.gov/statutes/cite/13.04",
+    "https://www.govinfo.gov/content/pkg/USREPORTS-527/pdf/USREPORTS-527-581.pdf",
+    "https://www.justice.gov/olc/opinion/application-rehabilitation-act-and-americans-disabilities-act-state"
+  ],
+  "readings": [
+    {
+      "slug": "dsd-housing-instability",
+      "readingSha256": "acf9906d263be9adffe05b786dacaa9bd0d1b255b11b9d87e354d504b6e2c7d9"
+    },
+    {
+      "slug": "dsd-housing-instability--how-housing-instability-breaks-the-service-chain",
+      "readingSha256": "58bcfbeb58528f6377579c2374ccbdda37210a73b471605c98204c1c364b8a2e"
+    },
+    {
+      "slug": "dsd-housing-instability--minnesota-housing-supports-for-people-with-disabil",
+      "readingSha256": "5772e4acd03831a99a3599ac1360c8940014fc0f3203ae8340b9397c5fc1b6e2"
+    },
+    {
+      "slug": "dsd-housing-instability--person-centered-housing-choice-and-the-most-integr",
+      "readingSha256": "c21be1b2480b55ac138dfa1e5e1354716561984abccb59fd68b661548314a498"
+    },
+    {
+      "slug": "dsd-housing-instability--designing-contact-and-notices-for-people-without-s",
+      "readingSha256": "0bbcf181ad07496e327fa20b8995151df6776b24f7c1800788e37c4f9ff30e3c"
+    }
+  ],
+  "liveVerification": "pending final deployment"
+}
