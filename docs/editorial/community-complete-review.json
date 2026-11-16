@@ -1,0 +1,120 @@
+{
+  "date": "2026-11-16",
+  "courseId": "gc-using-community-briefs",
+  "status": "accepted_complete_written_course_review",
+  "countsAsCompleteCourseReview": true,
+  "scope": "The course overview, four complete lessons, 16 objectives, all explanations, four practice cases and their 12 choices and feedback, four knowledge checks, reflection/action instructions, five flashcards, job aid and source notes. Recorded media are outside this written-course acceptance.",
+  "method": "Read the complete canonical spec and generated course metadata, reviewed the earlier guidance corrections, then compared all four final serialized lessons against the current canonical pack. Examined each assessment distinction and the authority, privacy, access and partnership qualifications. Retain the resulting current reading after the documented corrections.",
+  "sourcePackSha256": "4ecb673dc8363bb32e2be49f3aaaec50cb34a2c9b78298d20796a064be4de0dc",
+  "specSha256": "4e9caa819bace702c8fe7f6306b8343cd8ff4ad1064c477805ecb198c110ecad",
+  "findings": [
+    "Community descriptions prepare relevant inquiry and do not predict an individual.",
+    "Necessary collection, compelled disclosure and notice about oneself are distinct.",
+    "Correct unsupported record content through the applicable process.",
+    "Oversight criteria rely on conduct and relevant evidence; public descriptions require more than a brief alone.",
+    "A pending section is a writing gap, not proof that the department lacks knowledge.",
+    "Brokering and interpretation are distinct; attribution preferences do not guarantee confidentiality; ordinary partnership does not replace required Tribal consultation."
+  ],
+  "diagnostics": [
+    {
+      "title": "What a community brief is for: questions, not predictions",
+      "teaching": {
+        "words": 403,
+        "sents": 22,
+        "asl": 18.318181818181817,
+        "fk": 11.962527633656666,
+        "fog": 15.466230543649898,
+        "smog": 14.158211354625415,
+        "poly": 20.34739454094293,
+        "long": 30.76923076923077,
+        "short": 13.636363636363637,
+        "ease": 41.92393131062488
+      }
+    },
+    {
+      "title": "Intake and case work: ask the person, collect only what you need",
+      "teaching": {
+        "words": 452,
+        "sents": 22,
+        "asl": 20.545454545454547,
+        "fk": 13.203258246178603,
+        "fog": 15.56331456154465,
+        "smog": 14.22525824180931,
+        "poly": 18.36283185840708,
+        "long": 33.849557522123895,
+        "short": 13.636363636363637,
+        "ease": 36.99552292839908
+      }
+    },
+    {
+      "title": "Program integrity and communications: avoiding profiling at scale",
+      "teaching": {
+        "words": 409,
+        "sents": 21,
+        "asl": 19.476190476190474,
+        "fk": 11.710848760041916,
+        "fog": 14.04964489463267,
+        "smog": 13.10208751628618,
+        "poly": 15.647921760391197,
+        "long": 29.095354523227385,
+        "short": 4.761904761904762,
+        "ease": 45.79087204563979
+      }
+    },
+    {
+      "title": "Working with community partners and cultural brokers",
+      "teaching": {
+        "words": 420,
+        "sents": 20,
+        "asl": 21,
+        "fk": 13.418571428571433,
+        "fog": 16.685714285714287,
+        "smog": 15.043977024124086,
+        "poly": 20.714285714285715,
+        "long": 34.523809523809526,
+        "short": 15,
+        "ease": 36.26142857142858
+      }
+    }
+  ],
+  "diagnosticJudgment": "Teaching averages 18.3–21 words per sentence, with 4.8–15 percent short sentences. Estimated Flesch–Kincaid grades are 11.7–13.4; Fog is 14.0–16.7. Retained necessary statutory, program and source terms rather than changing meaning to lower scores. Short instructions were read directly; the metric tool excludes samples too short for its estimates.",
+  "assessmentChecks": {
+    "knowledgeCheckContentAndCorrectnessUnchanged": true,
+    "scenarioRecommendedIndicesUnchanged": true,
+    "finalLessonReadingsMatchCurrentPack": true
+  },
+  "priorFieldReview": "data/editorial/reviews/community-briefs-guidance-review.json",
+  "sources": [
+    "https://nccc.georgetown.edu/foundations/framework.php",
+    "https://nccc.georgetown.edu/documents/Cultural_Broker_Guide_English.pdf",
+    "https://thinkculturalhealth.hhs.gov/clas/standards",
+    "https://mn.gov/admin/demography/data-by-topic/immigration-language/",
+    "https://mn.gov/dhs/assets/equity-policy_tcm1053-646921.pdf",
+    "https://www.revisor.mn.gov/statutes/cite/13.04",
+    "https://www.revisor.mn.gov/statutes/cite/13.05",
+    "https://www.revisor.mn.gov/statutes/2026/cite/10.65"
+  ],
+  "readings": [
+    {
+      "slug": "gc-using-community-briefs",
+      "readingSha256": "648d16d63997dcd986eea84a7c1dc74e99a61c1f8fc453b9b95176fad9edc6b5"
+    },
+    {
+      "slug": "gc-using-community-briefs--what-a-community-brief-is-for-questions-not-predic",
+      "readingSha256": "70569f1b9677a6a1d0d0081cf90fd864ab4998a33bdc2c96972e02537f85fccc"
+    },
+    {
+      "slug": "gc-using-community-briefs--intake-and-case-work-ask-the-person-collect-only-w",
+      "readingSha256": "c1dd806795afa8e74ccde91e6c4a057c6ccbd6ce1fec03247fb93c9ab177b526"
+    },
+    {
+      "slug": "gc-using-community-briefs--program-integrity-and-communications-avoiding-prof",
+      "readingSha256": "34310d5fd65bb6e3630aef007923b8fb94de9dd3cd50ea3bce1feee61f2f6e5b"
+    },
+    {
+      "slug": "gc-using-community-briefs--working-with-community-partners-and-cultural-broke",
+      "readingSha256": "4052321c4201961ce64a36af7ca366d8204112ac6f8cd73369603a63228f4bb7"
+    }
+  ],
+  "liveVerification": "pending final deployment"
+}
