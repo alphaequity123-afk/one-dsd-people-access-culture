@@ -1,0 +1,131 @@
+{
+  "date": "2026-11-16",
+  "courseId": "pi-equitable-oversight-design",
+  "status": "accepted_complete_written_course_review",
+  "countsAsCompleteCourseReview": true,
+  "scope": "Complete overview, four lessons and 16 objectives, four fictional practice cases and 12 choices, feedback, four knowledge checks, private reflection and actions, five flashcards, full job aid, nine source notes and cover description. Recordings are outside this review.",
+  "method": "Read full source and final generated overview/job aid; compare relevant primary authorities, revise scope and statistical claims, inspect cover image, verify serialized readings and assessment distinctions.",
+  "sourcePackSha256": "1dc11e99865da596015620af508361ca8eaf4173c8dcfbbab082a0c785fcea55",
+  "specSha256": "097231fb85db9aebbe92a9060a6e6d90c0f89e7390a68c8a3b4b514530a70e8b",
+  "findings": [
+    "Improper payment, credible allegation and a final fraud finding are different claims.",
+    "A tiered response does not delay a required action or referral.",
+    "Benefit notices and provider suspension notices follow distinct rules.",
+    "Goldberg is described within the welfare-benefit context it decided.",
+    "Specified access grounds require an actual good cause determination.",
+    "Confirmation shares do not alone establish false-positive rates, fairness or community fraud prevalence.",
+    "Exercises use fictional cases or approved summaries and do not authorize live enforcement changes.",
+    "Exact current CMS URL replaces a confirmed obsolete address."
+  ],
+  "diagnostics": [
+    {
+      "title": "Two kinds of harm: fraud and careless enforcement",
+      "teaching": {
+        "words": 423,
+        "sents": 26,
+        "asl": 16.26923076923077,
+        "fk": 11.928049645390072,
+        "fog": 15.396581196581195,
+        "smog": 13.991409890343128,
+        "poly": 22.22222222222222,
+        "long": 38.77068557919622,
+        "short": 26.923076923076923,
+        "ease": 38.5217307692308
+      }
+    },
+    {
+      "title": "Proportionate reviews that target conduct, not communities",
+      "teaching": {
+        "words": 492,
+        "sents": 34,
+        "asl": 14.470588235294118,
+        "fk": 12.19052128168341,
+        "fog": 15.706934481109517,
+        "smog": 13.95054839169497,
+        "poly": 24.796747967479675,
+        "long": 39.43089430894309,
+        "short": 29.41176470588235,
+        "ease": 33.4363773314204
+      }
+    },
+    {
+      "title": "Due process: notice, appeal rights and continuity of care",
+      "teaching": {
+        "words": 510,
+        "sents": 34,
+        "asl": 15,
+        "fk": 11.893333333333334,
+        "fog": 14.784313725490197,
+        "smog": 13.497565539657195,
+        "poly": 21.96078431372549,
+        "long": 35.88235294117647,
+        "short": 17.647058823529413,
+        "ease": 36.51000000000002
+      }
+    },
+    {
+      "title": "Using data responsibly and communicating with care",
+      "teaching": {
+        "words": 439,
+        "sents": 24,
+        "asl": 18.291666666666668,
+        "fk": 11.945116742596813,
+        "fog": 14.605960516324982,
+        "smog": 13.5591,
+        "poly": 18.223234624145785,
+        "long": 35.535307517084284,
+        "short": 12.5,
+        "ease": 42.001532365223994
+      }
+    }
+  ],
+  "diagnosticJudgment": "Teaching FK approximately 11.9–12.2; retain necessary legal and statistical terms with explicit explanations.",
+  "assessmentChecks": {
+    "knowledgeCheckQuestionsAndAnswersUnchanged": true,
+    "scenarioRecommendedIndicesUnchanged": true,
+    "scenarioChoiceChange": "Lesson 1 recommended choice preserves required referral without making the learner a gatekeeper for credible allegations.",
+    "otherScenarioChoicesUnchanged": true,
+    "finalLessonReadingsMatchCurrentPack": true
+  },
+  "coverReview": {
+    "path": "public/images/covers/pi-equitable-oversight-design.webp",
+    "sha256": "af7a90f0f4aadf723870226adce3d0c03b814d0104859bba96987e8b878ff4f3",
+    "alt": "Four colleagues examine a decision flowchart on an office whiteboard.",
+    "method": "Direct local image inspection: four colleagues and decision flowchart in an office."
+  },
+  "priorFieldReview": "data/editorial/reviews/2026-11-16-oversight-guidance-review.json",
+  "sources": [
+    "https://mn.gov/dhs/program-integrity/",
+    "https://www.gao.gov/assets/gao-15-593sp.pdf",
+    "https://www.medicaid.gov/medicaid/program-integrity",
+    "https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-C/part-455/subpart-A/section-455.23",
+    "https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-C/part-431/subpart-E",
+    "https://supreme.justia.com/cases/federal/us/397/254/",
+    "https://www.govinfo.gov/content/pkg/FR-2025-12-10/pdf/2025-22448.pdf",
+    "https://public-inspection.federalregister.gov/2026-15000.pdf",
+    "https://www.cms.gov/newsroom/fact-sheets/improper-payments-fact-sheet"
+  ],
+  "readings": [
+    {
+      "slug": "pi-equitable-oversight-design",
+      "readingSha256": "87053cd9e445c2652449c9861dfbee1dd6c28ce9e11325c35733ede95342855b"
+    },
+    {
+      "slug": "pi-equitable-oversight-design--two-kinds-of-harm-fraud-and-careless-enforcement",
+      "readingSha256": "62b4d9dbc7f10b64028ea765c5a068be43cd83c3ef3dc02f0c69339c78cb6fa5"
+    },
+    {
+      "slug": "pi-equitable-oversight-design--proportionate-reviews-that-target-conduct-not-comm",
+      "readingSha256": "13b8616cad104f8c0a4dc6b15406316a00652cb3fb6de6b2ba19997c0ea81e7c"
+    },
+    {
+      "slug": "pi-equitable-oversight-design--due-process-notice-appeal-rights-and-continuity-of",
+      "readingSha256": "8d5b613a09b1d51183681587a79d5fe2405512c2d4f9cd5ed6250718b74ccedd"
+    },
+    {
+      "slug": "pi-equitable-oversight-design--using-data-responsibly-and-communicating-with-care",
+      "readingSha256": "abbf8c8d04973529212b33a8a80c8cec17326f8d980ebe6490baded8109c2618"
+    }
+  ],
+  "liveVerification": "pending final deployment"
+}
