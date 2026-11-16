@@ -1,0 +1,310 @@
+{
+  "date": "2026-11-16",
+  "status": "accepted_complete_reference_review",
+  "scope": "Six complete program-authored reference items: titles, summaries, explanations, body lists, next-action labels and destinations, authority labels and imported reading text. Not an accessibility certification of the application.",
+  "method": "Read original source records, existing accepted field revisions, complete generated resources and imported readings. Check source guidance, revise substantive authority and privacy boundaries, measure clarity and verify canonical/reading agreement.",
+  "findings": [
+    "Participation payment must use an approved process.",
+    "Disparity does not alone establish cause; authorized data and small-group privacy matter.",
+    "Tribal consultation is government-to-government and applies through the responsible process.",
+    "Alternate channels do not automatically excuse inaccessible digital services.",
+    "Automated accessibility checks need manual review.",
+    "Decorative and meaningful images need different treatment.",
+    "Process simplification must preserve safeguards and approval authority.",
+    "Procurement criteria changes use the authorized process."
+  ],
+  "sources": [
+    "https://www.revisor.mn.gov/statutes/cite/10.65",
+    "https://mn.gov/mnit/government/policies/accessibility/",
+    "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html"
+  ],
+  "changes": [
+    {
+      "id": "pn-partnership-spine",
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Center lived experience: people affected by a decision should help shape it. Explain their role, what they can influence, who holds decision-making authority, and what compensation is available so they can decide whether and how to participate.",
+      "after": "Center lived experience: invite people affected by a decision to help shape it. Explain what they can influence, who has decision authority and whether payment is available. Confirm the approved payment process before promising compensation so people can make an informed participation choice."
+    },
+    {
+      "id": "pn-partnership-spine",
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Follow the evidence: look at who receives services, who is denied or delayed, and who may be missing. Review patterns by community, language, disability, and place. Be clear about what the information shows and what it does not show.",
+      "after": "Follow the evidence: examine who receives services, who is denied or delayed and whose experience may be missing. Use authorized data, protect small groups from identification and explain gaps or uncertainty. A disparity is a reason to investigate contributing conditions; it does not by itself establish their cause."
+    },
+    {
+      "id": "pn-embed-early",
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Involve the right partners before the design is fixed: an Equity Director, accessibility and language access leads, and community partners with purpose, authority, and compensation agreed.",
+      "after": "Involve the Equity Director, accessibility and language-access leads, and relevant community partners before the design is fixed. Agree on the purpose, influence and follow-up, and confirm any authorized compensation before inviting participation."
+    },
+    {
+      "id": "pn-embed-early",
+      "path": [
+        "body",
+        5
+      ],
+      "before": "If the work touches a Tribal Nation, Native children, Tribal data, services, or land, government-to-government consultation comes first. Do not place a Nation in a generic stakeholder list.",
+      "after": "When proposed work may have Tribal implications, contact the agency Tribal liaison early to identify and carry out the required government-to-government consultation before the decision. Individual service preferences, public engagement and consultation with a community organization do not replace consultation with the relevant Tribal governments."
+    },
+    {
+      "id": "ja-launch-embed-checklist",
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Access: screen reader, keyboard, magnification tested; equally effective phone, in-person, or paper path; documents meet the accessible-document standard.",
+      "after": "Access: test with a keyboard, screen reader and magnification under the current state standard. Plan usable help and alternate formats. A phone or paper option does not automatically excuse an inaccessible digital service; ask the accessibility team how to resolve remaining barriers."
+    },
+    {
+      "id": "ja-launch-embed-checklist",
+      "path": [
+        "body",
+        5
+      ],
+      "before": "Partners: Equity Director informed; accessibility and language access leads involved; community partners with purpose, authority, compensation, and report-back; Tribal consultation first where applicable.",
+      "after": "Partners: involve the Equity Director and staff responsible for access and language support. Tell community participants what they can influence, whether approved payment is available and how you will follow up. Contact the Tribal liaison early about possible Tribal implications and required consultation."
+    },
+    {
+      "id": "ja-plain-language",
+      "path": [
+        "body",
+        2
+      ],
+      "before": "Sentences: aim for 15 to 20 words; one idea each; no double negatives.",
+      "after": "Sentences: use direct sentences with a natural mix of lengths. Keep each sentence focused and remove double negatives; do not add words merely to reach a numerical target."
+    },
+    {
+      "id": "ja-plain-language",
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Images: describe the important meaning in alternative text. Do not place essential information only inside an image, and do not use color as the only way to communicate meaning.",
+      "after": "Images: describe meaningful content with useful alternative text and mark purely decorative images as decorative. Keep essential information available as accessible text, and do not rely on color alone to communicate meaning."
+    },
+    {
+      "id": "ja-plain-language",
+      "path": [
+        "body",
+        7
+      ],
+      "before": "Review: use the built-in accessibility checker, then ask someone outside the team to read the document without added explanation and describe what it means to them.",
+      "after": "Review: run the accessibility checker, then manually check heading order, reading order, links, tables and keyboard use as applicable. Follow the current state standard and test with assistive technology where needed. Ask a reader outside the team to explain the document's meaning; a passing automated check alone does not establish accessibility."
+    },
+    {
+      "id": "ja-process-burden",
+      "path": [
+        "body",
+        7
+      ],
+      "before": "Removal: which steps could be removed, combined, or done by the agency instead of the person?",
+      "after": "Removal: which unnecessary steps could be removed, combined or completed by the agency? Identify who may authorize the change, preserve required safeguards and appeal rights, and check whether the change improves access without shifting the burden elsewhere."
+    },
+    {
+      "id": "ja-equity-impact-questions",
+      "path": [
+        "body",
+        3
+      ],
+      "before": "Procurement: Do the selection criteria give real weight to accessibility, language access, and community knowledge? Do the requirements create unnecessary barriers for small providers or community organizations?",
+      "after": "Procurement: do the planned criteria address accessibility, language access and relevant community knowledge? Do requirements create avoidable barriers for small providers? Work with procurement staff before publishing or changing criteria, preserve fair competition and follow the authorized contract process."
+    },
+    {
+      "id": "ja-launch-embed-checklist",
+      "path": [
+        "body",
+        0
+      ],
+      "before": "People and purpose: who it is for; who may be missing; what result would show that a disparity was reduced rather than shifted elsewhere.",
+      "after": "People and purpose: who will use this service, and who is missing from the plan? How will you check whether a change reduces a barrier instead of moving it elsewhere?"
+    },
+    {
+      "id": "ja-launch-embed-checklist",
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Evidence: current use and denial patterns by community, language, disability, and place; missing community knowledge named with a respectful way to get it.",
+      "after": "Evidence: review who uses the service and who is denied or delayed. Use authorized data, protect privacy and explain missing information. Ask affected people what the records may leave out."
+    },
+    {
+      "id": "ja-launch-embed-checklist",
+      "path": [
+        "body",
+        6
+      ],
+      "before": "Decision responsibility: who decides; which rights, rules, and obligations set the limits; what can still change if a rule must remain.",
+      "after": "Decisions: who may approve a change? Which rights and rules must be protected? What can still improve when a rule must stay?"
+    },
+    {
+      "id": "ja-launch-embed-checklist",
+      "path": [
+        "body",
+        7
+      ],
+      "before": "Review: who is responsible for each follow-up; the next review date; what would lead you to pause, redesign, or seek further guidance.",
+      "after": "Review: name the person responsible for each next step and set a review date. Decide what evidence would prompt a pause, a change or further advice."
+    }
+  ],
+  "diagnostics": [
+    {
+      "id": "pn-partnership-spine",
+      "body": {
+        "words": 204,
+        "sents": 12,
+        "asl": 17,
+        "fk": 12.673333333333332,
+        "fog": 15.623529411764707,
+        "smog": 14.191785591663535,
+        "poly": 22.058823529411764,
+        "long": 35.78431372549019,
+        "short": 0,
+        "ease": 34.48000000000002
+      }
+    },
+    {
+      "id": "pn-embed-early",
+      "body": {
+        "words": 236,
+        "sents": 14,
+        "asl": 16.857142857142858,
+        "fk": 12.784285714285716,
+        "fog": 15.047941888619855,
+        "smog": 13.81666964889586,
+        "poly": 20.76271186440678,
+        "long": 30.508474576271187,
+        "short": 7.142857142857143,
+        "ease": 33.43008474576274
+      }
+    },
+    {
+      "id": "ja-launch-embed-checklist",
+      "body": {
+        "words": 236,
+        "sents": 18,
+        "asl": 13.11111111111111,
+        "fk": 9.573333333333334,
+        "fog": 11.007156308851226,
+        "smog": 10.980518767755715,
+        "poly": 14.40677966101695,
+        "long": 30.93220338983051,
+        "short": 16.666666666666668,
+        "ease": 49.77891713747647
+      }
+    },
+    {
+      "id": "ja-plain-language",
+      "body": {
+        "words": 201,
+        "sents": 13,
+        "asl": 15.461538461538462,
+        "fk": 9.930547263681596,
+        "fog": 11.557749712973596,
+        "smog": 11.362043627235082,
+        "poly": 13.432835820895523,
+        "long": 25.870646766169155,
+        "short": 7.6923076923076925,
+        "ease": 51.404225028702655
+      }
+    },
+    {
+      "id": "ja-process-burden",
+      "body": {
+        "words": 152,
+        "sents": 11,
+        "asl": 13.818181818181818,
+        "fk": 8.120143540669858,
+        "fog": 10.000956937799044,
+        "smog": 10.230975488527342,
+        "poly": 11.18421052631579,
+        "long": 26.973684210526315,
+        "short": 18.181818181818183,
+        "ease": 61.456913875598104
+      }
+    },
+    {
+      "id": "ja-equity-impact-questions",
+      "body": {
+        "words": 146,
+        "sents": 13,
+        "asl": 11.23076923076923,
+        "fk": 10.046164383561642,
+        "fog": 12.437513171759747,
+        "smog": 11.661520659325951,
+        "poly": 19.863013698630137,
+        "long": 36.3013698630137,
+        "short": 30.76923076923077,
+        "ease": 43.039878819810326
+      }
+    }
+  ],
+  "diagnosticJudgment": "Planning prose is about FK 12.7–12.8. Practical checklists and questions range from 8.1 to 10.05. Short questions serve their instructional purpose and are not padded to match a running-prose sentence distribution.",
+  "items": [
+    {
+      "id": "pn-partnership-spine",
+      "sourceRecordSha256": "982c4de2cc1257d5f1d7bf55741f532866be6ce904211cca0bb80b4d43bfa1b5",
+      "title": "Six commitments for working in partnership"
+    },
+    {
+      "id": "pn-embed-early",
+      "sourceRecordSha256": "4de411550da652480a494db35d00969d1865b5a60b4a3e5db9aaf7c7ff4326aa",
+      "title": "Building equity into an idea while it takes shape"
+    },
+    {
+      "id": "ja-launch-embed-checklist",
+      "sourceRecordSha256": "ddfeae2f0b8fc8cdfec8c08bc51b2ba0cf4848ca7c779f3e17acc5426a76aefc",
+      "title": "Equity and access checklist for new work"
+    },
+    {
+      "id": "ja-plain-language",
+      "sourceRecordSha256": "06229a374b7553d84f1f2421f9f140c703d9b9d22d506a37b7d41c65d8c40c99",
+      "title": "Plain language and accessible documents checklist"
+    },
+    {
+      "id": "ja-process-burden",
+      "sourceRecordSha256": "457d6c44b6c342fec9e6f04cb507d2a417bfbe5c6cd96240ecfa7a716012285e",
+      "title": "Questions about the steps, time, and effort a process requires"
+    },
+    {
+      "id": "ja-equity-impact-questions",
+      "sourceRecordSha256": "ac113784b6248e527f0eda2fbe07f6804890075b2c2d8177609a688b39b49cc1",
+      "title": "Equity impact questions for policy, budget, technology, and procurement"
+    }
+  ],
+  "readings": [
+    {
+      "slug": "six-commitments-for-working-in-partnership",
+      "readingSha256": "af054f560f9edd2436791247d580418907e0cb53f0246c89ccdb4334d2c66943"
+    },
+    {
+      "slug": "building-equity-into-an-idea-while-it-takes-shape",
+      "readingSha256": "c732071404daf7c2ffb1eb6294bdb0749bcad02cc3ba7278a4a3713796c3aeb7"
+    },
+    {
+      "slug": "equity-and-access-checklist-for-new-work",
+      "readingSha256": "df69830ac80c1cda4e96edf9064636080e4de94fde0151cea015c44c25be02a3"
+    },
+    {
+      "slug": "plain-language-and-accessible-documents-checklist",
+      "readingSha256": "7f7201ac10e76c794eac3a7bfba2cdb8921f7b24818f5dd924ca1079a689f8e3"
+    },
+    {
+      "slug": "questions-about-the-steps-time-and-effort-a-process-requires",
+      "readingSha256": "e34c07b33752e4c5c445c5d4e774cb525b73b9730d5441ed7bb10330c67eb112"
+    },
+    {
+      "slug": "equity-impact-questions-for-policy-budget-technology-and-procurement",
+      "readingSha256": "348b108c3ff46cdc63c2bca9b3efa27951d5a963c0f7dea24f6c32f8b1cced3b"
+    }
+  ],
+  "publication": "pending deployment and live verification"
+}
