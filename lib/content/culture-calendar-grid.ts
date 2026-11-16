@@ -180,7 +180,8 @@ export function upcomingObservances(entries: CompactEntry[], today: string, coun
     const name = item.name.toLowerCase();
     if (!picked.some(other => name.includes(other.name.toLowerCase()))) picked.push(item);
   }
-  return picked;
+  // The choice above favors what is happening today; the list itself reads in date order.
+  return picked.sort((a, b) => a.start.localeCompare(b.start) || a.end.localeCompare(b.end));
 }
 
 /** "November 11" or "November 1 to 30", for a short list. */
