@@ -1,0 +1,125 @@
+{
+  "date": "2026-11-16",
+  "courseId": "gc-new-supervisor-inclusive-leadership",
+  "status": "accepted_complete_written_course_review",
+  "countsAsCompleteCourseReview": true,
+  "scope": "Course overview, all four lessons and 16 objectives, four practice cases with 12 choices and feedback, four knowledge checks, reflection and action instructions, five flashcards, complete job aid and eight source notes. Recordings are outside this acceptance.",
+  "method": "Read the complete source spec and final generated overview/job aid, reviewed all amendments against the source and primary guidance, measured clarity, preserved assessment answers and choices, and verified all four serialized lesson readings.",
+  "sourcePackSha256": "0796b3007c8fbadaface5cf03422bd8c75e97347ba090793dc9ef163e5dc8150",
+  "specSha256": "8dd530f5c15d9c13858a15616a81a2ecb4b183591db2a8893cb57738df52af0f",
+  "findings": [
+    "Assignment counts alone do not establish fairness.",
+    "Shared assignment records exclude confidential medical reasons.",
+    "Supervisor Core requirements distinguish classified and unclassified appointments.",
+    "Accommodation approvals require actual agency delegation.",
+    "Medical documentation goes through designated staff.",
+    "Meeting input deadlines must precede decisions or explain later influence.",
+    "Protected-class allegations require immediate reporting without proof-gathering.",
+    "Retaliation depends on context and motive; legitimate performance expectations remain."
+  ],
+  "diagnostics": [
+    {
+      "title": "Fair assignments, recognition and one-to-ones",
+      "teaching": {
+        "words": 418,
+        "sents": 25,
+        "asl": 16.72,
+        "fk": 11.594914832535888,
+        "fog": 15.204746411483255,
+        "smog": 13.907888113698124,
+        "poly": 21.291866028708135,
+        "long": 33.97129186602871,
+        "short": 24,
+        "ease": 41.71300382775121
+      }
+    },
+    {
+      "title": "Accommodation requests: recognize, respond and route",
+      "teaching": {
+        "words": 431,
+        "sents": 23,
+        "asl": 18.73913043478261,
+        "fk": 13.538678502975891,
+        "fog": 16.96200948249773,
+        "smog": 15.159528703192944,
+        "poly": 23.665893271461716,
+        "long": 36.19489559164733,
+        "short": 13.043478260869565,
+        "ease": 31.373483304751346
+      }
+    },
+    {
+      "title": "Feedback without bias and meetings that include everyone",
+      "teaching": {
+        "words": 408,
+        "sents": 27,
+        "asl": 15.11111111111111,
+        "fk": 9.62294117647059,
+        "fog": 12.41699346405229,
+        "smog": 11.99289558779546,
+        "poly": 15.931372549019608,
+        "long": 25.980392156862745,
+        "short": 29.62962962962963,
+        "ease": 52.98545751633989
+      }
+    },
+    {
+      "title": "Handling concerns, formal routes and labor agreements",
+      "teaching": {
+        "words": 507,
+        "sents": 32,
+        "asl": 15.84375,
+        "fk": 13.16499938362919,
+        "fog": 15.883851084812626,
+        "smog": 14.237784482759423,
+        "poly": 23.86587771203156,
+        "long": 40.433925049309664,
+        "short": 18.75,
+        "ease": 28.895605584319554
+      }
+    }
+  ],
+  "diagnosticJudgment": "Flesch-Kincaid ranges from 9.6 to 13.54. Practical feedback instructions remain concise; statutory terms are retained where needed. Short examples and diagnostic questions are intentional and were not padded to meet a numerical target.",
+  "assessmentChecks": {
+    "knowledgeCheckAnswersUnchanged": true,
+    "knowledgeCheckQuestionsUnchanged": true,
+    "scenarioAccessAndDecisionAuthorityClarified": true,
+    "scenarioRecommendedIndicesUnchanged": true,
+    "scenarioChoicesUnchanged": true,
+    "finalLessonReadingsMatchCurrentPack": true
+  },
+  "priorFieldReview": "data/editorial/reviews/2026-11-16-new-supervisor-guidance-review.json",
+  "sources": [
+    "https://www.eeoc.gov/laws/guidance/enforcement-guidance-reasonable-accommodation-and-undue-hardship-under-ada",
+    "https://askjan.org/topics/interactive.cfm",
+    "https://mn.gov/mmb-stat/equal-opportunity/ada/1433-reasonable-accommodation.pdf",
+    "https://www.eeoc.gov/retaliation",
+    "https://mn.gov/mmb-stat/hr-toolbox/21-eelearningdevelopment.pdf",
+    "https://mn.gov/mmb/employee-relations/labor-relations/labor/",
+    "https://hbr.org/2019/03/why-inclusive-leaders-are-good-for-organizations-and-how-to-become-one",
+    "https://mn.gov/mmb-stat/policies/1436-harassmentdiscriminationprohibited.pdf"
+  ],
+  "readings": [
+    {
+      "slug": "gc-new-supervisor-inclusive-leadership",
+      "readingSha256": "e768ba9f1a4e77412816bcdc81bec74db613ccec52d0459331ed2593bf74a5fa"
+    },
+    {
+      "slug": "gc-new-supervisor-inclusive-leadership--fair-assignments-recognition-and-one-to-ones",
+      "readingSha256": "bd2024c83adf828b7620c222754f77d8b1f1d06e3db6ebde31db709e4c5d35d0"
+    },
+    {
+      "slug": "gc-new-supervisor-inclusive-leadership--accommodation-requests-recognize-respond-and-route",
+      "readingSha256": "b1d3aad9c3b7fd6e7fc09a9a5a409a2b608fc530e9884083f5e429beb49fc90a"
+    },
+    {
+      "slug": "gc-new-supervisor-inclusive-leadership--feedback-without-bias-and-meetings-that-include-ev",
+      "readingSha256": "775d77d604e7ce778118caf2548467132a6af98684176c1be2fb84d84584ea30"
+    },
+    {
+      "slug": "gc-new-supervisor-inclusive-leadership--handling-concerns-formal-routes-and-labor-agreemen",
+      "readingSha256": "ed7e8bc142fdc934df9d0443ee8b47e08571cc7ec21e01c94df57e22051191a3"
+    }
+  ],
+  "liveVerification": "pending final deployment"
+}
