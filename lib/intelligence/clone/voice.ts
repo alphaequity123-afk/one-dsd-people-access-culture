@@ -1,20 +1,10 @@
 import "server-only";
 import { voiceWorkerReady } from "./voice-queue";
-import { openLedger } from "./ledger";
 import { hostedVoiceConfiguration, hostedVoiceSelected } from "./hosted-voice";
 
-/** Record voice use before network work. Nothing is refused for volume. */
-export function reserveVoice(kind: "speech" | "transcribe", units: number, now = new Date()) {
-  const db = openLedger();
-  try {
-    db.exec("CREATE TABLE IF NOT EXISTS voice_usage (at TEXT NOT NULL, kind TEXT NOT NULL, units INTEGER NOT NULL)");
-    db.exec("BEGIN IMMEDIATE");
-    // Listening and speaking carry no site-wide allowance. Use is still recorded as counts.
-    const at = now.toISOString();
-    if (units <= 0) { db.exec("ROLLBACK"); return false; }
-    db.prepare("INSERT INTO voice_usage(at,kind,units) VALUES(?,?,?)").run(at, kind, units);
-    db.exec("COMMIT"); return true;
-  } finally { db.close(); }
+/** Admit voice work before network work. Nothing is refused for volume, and nothing about the use is recorded. */
+export function reserveVoice(_kind: "speech" | "transcribe", units: number): boolean {
+  return units > 0;
 }
 
 export function voiceStatus() {

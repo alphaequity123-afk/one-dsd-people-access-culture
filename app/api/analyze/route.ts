@@ -6,11 +6,9 @@ import { readBoundedJson } from "@/lib/http/request";
 import { isSameOriginMutation } from "@/lib/auth/mutation";
 import { consumeRequestLimit, rateLimitHeaders } from "@/lib/security/rate-limit";
 import { paused } from "@/lib/intelligence/orchestrator";
-import { admitRun, finishRun, openLedger } from "@/lib/intelligence/clone/ledger";
-import type { DatabaseSync } from "node:sqlite";
 import { analysisRequestSchema } from "@/lib/analysis/contract";
 import { plainIssue } from "@/lib/analysis/issues";
-import { analyze, isRefusal, promptTooLarge } from "@/lib/analysis/service";
+import { analyze, promptTooLarge } from "@/lib/analysis/service";
 
 export const maxDuration = 180;
 export const runtime = "nodejs";
@@ -63,14 +61,6 @@ function patientJson(work: () => Promise<unknown>) {
   return new Response(stream, { headers: { "content-type": "application/json; charset=utf-8", "cache-control": "no-store, no-transform", "x-accel-buffering": "no" } });
 }
 
-/** The ledger never turns a finished analysis into a failed response: a write that fails is logged by name only. */
-function settleRun(db: DatabaseSync, runId: string, status: "completed" | "refused" | "failed") {
-  try { finishRun(db, runId, status); } catch (error) { console.error("analyze_ledger_failed", error instanceof Error ? error.name : "unknown"); }
-}
-function closeLedger(db: DatabaseSync) {
-  try { db.close(); } catch (error) { console.error("analyze_ledger_failed", error instanceof Error ? error.name : "unknown"); }
-}
-
 export async function POST(request: NextRequest) {
   if (!isSameOriginMutation(request)) return json({ error: "Please use Analyze a document from its page on this site." }, 403);
   if (await paused()) return json({ error: "Analyze a document is paused for now. You can still browse resources." }, 503);
@@ -80,37 +70,20 @@ export async function POST(request: NextRequest) {
   const input = analysisRequestSchema.safeParse(body.value);
   if (!input.success) return json({ error: plainIssue(input.error.issues[0]) }, 400);
   // A request the model adapters would refuse for size can never succeed, so it is answered
-  // before the request limit and the ledger are charged.
+  // before the request limit is charged.
   const tooLarge = promptTooLarge(input.data);
   if (tooLarge) return json({ error: tooLarge }, 413);
   const limit = await consumeRequestLimit(request, RATE_LIMIT);
   if (!limit.allowed) return NextResponse.json({ error: "Please wait a few minutes before analyzing another document." }, { status: 429, headers: rateLimitHeaders(limit) });
-  const db = openLedger();
-  let id: string | null;
-  try {
-    id = admitRun(db);
-  } catch (error) {
-    closeLedger(db);
-    console.error("analyze_failed", error instanceof Error ? error.name : "unknown");
-    return json({ error: FAILED_MESSAGE }, 503);
-  }
-  if (!id) {
-    closeLedger(db);
-    return json({ error: "Analyze a document has reached its limit for now. Please try again a little later." }, 429);
-  }
-  const runId = id;
   const data = input.data;
   return patientJson(async () => {
     try {
       const outcome = await analyze(data);
-      if (await paused()) { settleRun(db, runId, "failed"); return { error: "Analyze a document was paused, so no result was shared." }; }
-      if (isRefusal(outcome)) { settleRun(db, runId, "refused"); return outcome; }
-      settleRun(db, runId, "completed");
+      if (await paused()) return { error: "Analyze a document was paused, so no result was shared." };
       return outcome;
     } catch (error) {
       console.error("analyze_failed", error instanceof Error ? error.name : "unknown");
-      settleRun(db, runId, "failed");
       return { error: FAILED_MESSAGE };
-    } finally { closeLedger(db); }
+    }
   });
 }

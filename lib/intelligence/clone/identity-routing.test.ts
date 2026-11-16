@@ -13,7 +13,6 @@ vi.mock("../providers", () => ({ resolveBinding: () => ({ generative: true, mode
 vi.mock("../research", () => ({ asksForScholarlyResearch: () => false, governedResearch: f.research, governedSearch: f.research }));
 vi.mock("./jev", () => ({ planWithJev: f.plan, reviewWithJev: f.review, SPECIALIST_GUIDANCE: { general: "Answer the actual question." } }));
 vi.mock("../orchestrator", () => ({ paused: f.paused, ask: f.ask, contextFor: () => ctx }));
-vi.mock("./ledger", () => ({ openLedger: () => ({ close: f.close }), admitRun: f.admit, finishRun: f.finish }));
 vi.mock("@/lib/security/rate-limit", () => ({ consumeRequestLimit: async () => ({ allowed: true }), rateLimitHeaders: () => ({}) }));
 import { askConcierge, type AskInput } from "../agents/ask";
 import { getAgent } from "../registry/agents";
@@ -89,21 +88,22 @@ describe("identity through the public ASK route", () => {
     expect(response.status).toBe(200);
     const body = await response.json();
     expect(body.answer.shortAnswer).toContain("I’m Ask, the One DSD question-and-answer tool, not a human adviser");
-    expect(f.admit).toHaveBeenCalledTimes(1);
-    expect(f.finish).toHaveBeenCalledWith(expect.anything(), "server-run", "completed");
     expect(f.research).not.toHaveBeenCalled(); expect(f.complete).not.toHaveBeenCalled(); expect(f.review).not.toHaveBeenCalled();
   });
-  it("blocks local answers when paused or allowance is exhausted", async () => {
+  it("answers from the library, with no provider call, while Ask is paused", async () => {
     f.paused.mockResolvedValue(true);
-    expect((await POST(request({ question: exactQuestion }))).status).toBe(503);
-    expect(f.ask).not.toHaveBeenCalled();
-    f.paused.mockResolvedValue(false); f.admit.mockReturnValue(null);
-    expect((await POST(request({ question: exactQuestion }))).status).toBe(429);
+    const response = await POST(request({ question: exactQuestion }));
+    expect(response.status).toBe(200);
+    const body = await response.json();
+    expect(body.error).toBeUndefined();
+    expect(body.answer.shortAnswer.length).toBeGreaterThan(0);
     expect(f.ask).not.toHaveBeenCalled();
   });
   it("rechecks owner stop before releasing the answer", async () => {
     f.paused.mockResolvedValueOnce(false).mockResolvedValueOnce(true);
-    expect((await (await POST(request({ question: exactQuestion }))).json()).error).toContain("paused");
+    const body = await (await POST(request({ question: exactQuestion }))).json();
+    expect(body.error).toBeUndefined();
+    expect(body.answer.shortAnswer).not.toContain("I’m Ask, the One DSD question-and-answer tool");
   });
 });
 

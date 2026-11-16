@@ -1,7 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
 vi.mock("../tools/runtime", () => ({ runTool: async (_ctx: unknown, _tool: string, fn: () => unknown) => fn() }));
-vi.mock("./ledger", () => ({ recordDecision: () => undefined }));
 
 import { planWithJev, reviewWithJev } from "./jev";
 import type { ToolContext } from "../types";

@@ -84,8 +84,8 @@ export const PRIVACY_NOTICE = {
 /** Degraded-mode copy (TRD §10.2). Plain language, no vendor names. */
 export const DEGRADED_COPY = {
   generativeLimited:
-    "Part of the program is temporarily unavailable. You can still search Resources, explore Minnesota Communities, or visit Support.",
-  noSource: "We couldn't find a program source that closely answers that question. Search the resource library or use the support directory to identify the appropriate office.",
+    "Resources, Minnesota Communities and Support each hold the program's guidance on this.",
+  noSource: "The program library does not cover this question directly. The support directory shows the person or area responsible for it.",
 } as const;
 
 export const SIX_GOALS = [

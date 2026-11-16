@@ -4,7 +4,8 @@
  *  2. tool is in the agent's allowlist
  *  3. tool min_autonomy <= agent ceiling <= environment max (A2 at MVP)
  *  4. permission mode: owner_only requires owner role; side-effect tools honor dry_run
- *  5. a redacted audit event is emitted, success or failure
+ *  5. a redacted audit event is emitted, success or failure, except for Ask, which keeps no record
+ *     of its steps or of the content each answer read (owner rule 2026-11-16)
  */
 import { randomUUID } from "node:crypto";
 import { getStore } from "../memory/store";
@@ -23,6 +24,9 @@ export class ToolDenied extends Error {
     super(`${tool}: ${reason}`);
   }
 }
+
+/** Ask keeps no record of what was asked or read, so its steps are not written to the audit store. */
+const keepsNoRecord = (ctx: ToolContext) => ctx.agent.agent_id === "ask_concierge";
 
 export function newTraceId(): string {
   return randomUUID();
@@ -61,7 +65,7 @@ function isOwnerPolicyControl(ctx: ToolContext, toolName: string, opts: RunOptio
 
 /** Run a named tool under the agent's authority. `fn` performs the work. */
 export async function runTool<T>(ctx: ToolContext, toolName: string, fn: () => T | Promise<T>, opts: RunOptions = {}): Promise<T> {
-  const appendAudit = (event: AuditEvent) => getStore().appendAudit(event);
+  const appendAudit = async (event: AuditEvent) => { if (!keepsNoRecord(ctx)) await getStore().appendAudit(event); };
   const def = getTool(toolName);
   const started = Date.now();
   const base: Omit<AuditEvent, "ok" | "latency_ms"> = {
@@ -149,6 +153,7 @@ export async function runTool<T>(ctx: ToolContext, toolName: string, fn: () => T
 
 /** Audit a safety refusal (no payload). */
 export async function auditRefusal(ctx: ToolContext, toolName: string, code: SafetyRefusalCode): Promise<void> {
+  if (keepsNoRecord(ctx)) return;
   await getStore().appendAudit({
     trace_id: ctx.trace_id,
     span_id: randomUUID().slice(0, 8),

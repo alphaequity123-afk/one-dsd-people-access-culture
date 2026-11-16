@@ -8,10 +8,10 @@ import { readBoundedJson } from "@/lib/http/request";
 import { isSameOriginMutation } from "@/lib/auth/mutation";
 import { consumeRequestLimit, rateLimitHeaders } from "@/lib/security/rate-limit";
 import { ask, paused } from "@/lib/intelligence/orchestrator";
-import { toStaffAskResult } from "@/lib/intelligence/agents/ask";
+import { libraryAskResult, toStaffAskResult } from "@/lib/intelligence/agents/ask";
+import { randomUUID } from "node:crypto";
 import { PracticeArtifactSchema } from "@/lib/content/practice-artifact";
 import { AskWorkProductSchema } from "@/lib/ask/work-product";
-import { admitRun, finishRun, openLedger } from "@/lib/intelligence/clone/ledger";
 import type { AskProgress, AskProgressSink } from "@/lib/intelligence/agents/ask-progress";
 import { ASK_PROGRESS_TYPE } from "@/lib/ask/progress-stream";
 
@@ -80,62 +80,42 @@ function progressLines(work: (report: AskProgressSink) => Promise<unknown>) {
         if (open) { open = false; controller.close(); }
       });
     },
-    // The page went away. The answer is still finished and recorded as usual; nothing more is sent.
+    // The page went away. The answer is still finished; nothing more is sent, and nothing is kept.
     cancel() { open = false; },
   });
   return new Response(stream, { headers: { "content-type": `${ASK_PROGRESS_TYPE}; charset=utf-8`, "cache-control": "no-store, no-transform", "x-accel-buffering": "no" } });
 }
 
-/** Owner-authorized clone pilot; the other deployments remain browse-only. */
+/**
+ * Owner-authorized clone pilot; the other deployments remain browse-only.
+ * Ask keeps no record of runs: no ledger, no counts, nothing about the question. When any step fails,
+ * is paused or is limited, the person still gets an answer in words, composed from the library's own text.
+ */
 export async function POST(request: NextRequest) {
   if (!cloneAgentsEnabled()) return staffWriteClosedResponse();
   if (!isSameOriginMutation(request)) return json({ error: "Please use Ask from its page on this site." }, 403);
-  if (await paused()) return json({ error: "Ask is paused for now. You can still browse resources." }, 503);
   const body = await readBoundedJson(request, 128_000);
   if (!body.ok) return json({ error: body.message }, body.status);
   const input = Input.safeParse(body.value);
   if (!input.success) return json({ error: "Please shorten your question or start a new conversation." }, 400);
+  const library = () => toStaffAskResult(libraryAskResult(input.data.question, DEFAULT_PRODUCT_CONTEXT));
+  if (await paused()) return json(library());
   const limit = await consumeRequestLimit(request, { scope: "staff-ask", limit: 120, windowSeconds: 600 });
-  if (!limit.allowed) return NextResponse.json({ error: "Please wait a moment before asking another question." }, { status: 429, headers: rateLimitHeaders(limit) });
-  const db = openLedger();
-  let id: string | null;
-  try {
-    id = admitRun(db);
-  } catch (error) {
-    db.close();
-    console.error("ask_route_failed", error instanceof Error ? `${error.name}: ${error.message}` : "unknown");
-    return json({ error: "Ask could not finish this answer. Please try again later, or browse the Library." }, 503);
-  }
-  if (!id) {
-    db.close();
-    return json({ error: "Ask has reached its limit for now. You can browse resources, or try again a little later." }, 429);
-  }
-  const runId = id;
+  // Past the limit, the answer comes from the library alone: no model call, no cost, still an answer.
+  if (!limit.allowed) return NextResponse.json(library(), { headers: { ...rateLimitHeaders(limit), "cache-control": "no-store" } });
+  // A random id ties the steps of this one answer together in the operational log; it is never stored.
+  const runId = randomUUID();
   const answer = async (onProgress?: AskProgressSink) => {
     try {
       const result = await ask({ ...input.data, contextPreference: DEFAULT_PRODUCT_CONTEXT, researchMode: input.data.researchMode ?? "auto", cloneRunId: runId, onProgress }, "staff", runId);
-      if (await paused()) { finishRun(db, runId, "failed"); return { error: "Ask was paused, so no answer was shared." }; }
-      if (result.kind === "refusal") { finishRun(db, runId, "refused"); return toStaffAskResult(result); }
-      const answer = result.answer;
-      if (answer.failureCode) {
-        finishRun(db, runId, "failed");
-        onProgress?.({ type: "reset" });
-        const evidenceFailure = /evidence|review|source_link/.test(answer.failureCode);
-        return {
-          error: evidenceFailure
-            ? "I couldn’t verify this answer against its sources. Please try again or open the original reading."
-            : "Ask couldn’t finish this answer right now. Your question is still here; please try again shortly.",
-          code: evidenceFailure ? "answer_not_verified" : "answer_unavailable",
-          retryable: true,
-        };
-      }
-      finishRun(db, runId, answer.degraded ? "needs_review" : "completed");
+      if (await paused()) { onProgress?.({ type: "reset" }); return library(); }
+      if (result.kind === "answer" && result.answer.failureCode) { onProgress?.({ type: "reset" }); return library(); }
       return toStaffAskResult(result);
     } catch (error) {
-      console.error("ask_route_failed", error instanceof Error ? `${error.name}: ${error.message}` : "unknown");
-      finishRun(db, runId, "failed");
-      return { error: "Ask could not finish this answer. Please try again later, or browse the Library." };
-    } finally { db.close(); }
+      console.error("ask_route_failed", error instanceof Error ? error.name : "unknown");
+      onProgress?.({ type: "reset" });
+      return library();
+    }
   };
   // A page that asks for progress gets it line by line; anything else gets the single finished answer as before.
   return request.headers.get("accept")?.includes(ASK_PROGRESS_TYPE) ? progressLines(answer) : patientJson(() => answer());

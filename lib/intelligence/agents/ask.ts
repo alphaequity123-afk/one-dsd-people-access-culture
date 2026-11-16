@@ -41,6 +41,7 @@ import { z } from "zod";
 import { startsNewPracticeTopic, PracticeArtifactSchema, PracticeDraftSchema, type PracticeArtifact } from "@/lib/content/practice-artifact";
 import { publishedPracticePath, matchingPriorArtifact, practiceDraftContext, buildPracticeArtifact } from "../practice-artifact";
 import { DEGRADED_COPY, PROGRAM } from "@/lib/constants";
+import { composeLibraryAnswer, type LibraryPassage } from "./library-answer";
 import type { AskIntent } from "@/lib/content/types";
 import { getPath, GRADUATION_PATHS, type GraduationPath } from "@/lib/content/paths";
 import { CATEGORY_LABEL, questionBank, type EmbedQuestion, type LaunchType } from "@/lib/content/question-banks";
@@ -334,12 +335,53 @@ const WriterDraftSchema = z.object({
   workProduct: DraftSchema.shape.workProduct,
 });
 
+/**
+ * The answer a person gets when any step of the written answer fails: the library's own text, with its sources,
+ * composed without a model. Private details are refused here exactly as in the main path.
+ */
+export function libraryAskResult(question: string, contextPreference?: AskInput["contextPreference"], found: LibraryPassage[] = []): AskResult {
+  const asked = (question ?? "").trim();
+  const privacy = askPrivacyGate(asked);
+  if (!privacy.ok) return { kind: "refusal", safety: privacy };
+  const library = composeLibraryAnswer(asked, found);
+  const tribal = TRIBAL_SUBJECT.test(asked) && TRIBAL_WORK.test(asked);
+  return { kind: "answer", answer: {
+    context: resolveProductContext(contextPreference),
+    intent: "next_actions",
+    shortAnswer: tribal ? `${TRIBAL_REFERRAL_FIRST}
+
+${library.shortAnswer}` : library.shortAnswer,
+    whyItMatters: library.whyItMatters,
+    sources: library.sources,
+    limits: [],
+    nextActions: library.nextActions,
+    grounding: library.matched ? "partial" : "none",
+    degraded: false,
+    generative: false,
+  } };
+}
+
+/** Ask always answers in words: when any step fails, the library's own text answers instead. */
 export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<AskResult> {
+  try {
+    const result = await askConciergeSteps(input, ctx);
+    if (result.kind === "answer" && result.answer.failureCode) {
+      const found = result.answer.sources.filter(source => source.citeable);
+      return libraryAskResult(input.question, input.contextPreference, found);
+    }
+    return result;
+  } catch (error) {
+    console.error("ask_step_failed", { traceId: ctx.trace_id, error: error instanceof Error ? error.name : "unknown" });
+    return libraryAskResult(input.question, input.contextPreference);
+  }
+}
+
+async function askConciergeSteps(input: AskInput, ctx: ToolContext): Promise<AskResult> {
   const startedAt = Date.now();
   const deadlineAt = startedAt + 165_000;
   const recoveryBudget = { switchesRemaining: 1 };
   const sink = input.onProgress;
-  // How long each part took, for the operational log. No question or answer text is ever recorded here.
+  // How long each part took, kept in memory for this answer only; nothing is logged or stored per use.
   const took: Record<string, number> = {};
   const question = (input.question ?? "").trim();
   const context = resolveProductContext(input.contextPreference);
@@ -452,7 +494,6 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
       const shortAnswer = askAnswerText(written.text);
       if (!shortAnswer) throw new Error("fast_answer_empty");
       took.total = Date.now() - startedAt;
-      console.info("ask_timing", { traceId: ctx.trace_id, generative: true, fast: true, ...took });
       return { kind: "answer", answer: {
         context, intent: primary, shortAnswer, whyItMatters: "",
         sources: usedSources, limits: [],
@@ -473,12 +514,17 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
       { modelId: ctx.agent.model_setting.embed_model_id },
     );
   } catch (error) {
-    if (!(error instanceof SemanticSearchUnavailable)) throw error;
-    // The failed semantic attempt is recorded by runTool. Lexical search remains useful.
+    // Any semantic failure, expected or not, leaves lexical search to carry the answer.
+    if (!(error instanceof SemanticSearchUnavailable)) console.warn("ask_semantic_failed", { traceId: ctx.trace_id, error: error instanceof Error ? error.name : "unknown" });
   }
-  const keyword = await runTool(ctx, "corpus.search", async () =>
-    searchDocs(retrievalQuestion, await staffDocs(), { limit: 5, intents: all }),
-  );
+  let keyword: Awaited<ReturnType<typeof searchDocs>> = [];
+  try {
+    keyword = await runTool(ctx, "corpus.search", async () =>
+      searchDocs(retrievalQuestion, await staffDocs(), { limit: 5, intents: all }),
+    );
+  } catch (error) {
+    console.warn("ask_search_failed", { traceId: ctx.trace_id, error: error instanceof Error ? error.name : "unknown" });
+  }
   const queryTerms = new Set(tokens(retrievalQuestion));
   // staffDocs already includes current public program destinations. Appending
   // them again duplicates context and graph work without adding evidence.
@@ -692,7 +738,7 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   // at all (a calculation, a rewrite). Any other failure means a check that was wanted did not happen: say so.
   const outsideCheckFailed = publicResearch?.status === "failed" && researchFailureCode !== "research_no_tool_evidence" && researchFailureCode !== "research_search_not_performed";
   if (outsideCheckFailed && !asksForCurrentInformation(question)) {
-    limits.push("Public sources could not be checked for this answer just now. Treat dates, amounts, requirements, and other details that change as unverified, or ask again in a moment.");
+    limits.push("Public sources could not be checked for this answer just now. Treat dates, amounts, requirements, and other details that change as unverified until you check them at their original source.");
   }
   if (asksForCurrentInformation(question) && publicResearch?.status !== "used") {
     limits.push("Current public information could not be checked for this answer. Treat dates, officeholders, prices, requirements, and other changing details as unverified.");
@@ -736,10 +782,7 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   if (composeSources !== sources) answerSources = composeSources;
   let draft = programRelated
     ? compose(primary, question, composeSources, questions, briefLink, path, context)
-    : {
-        shortAnswer: "We could not put together an answer just now. Please try again in a moment. Your question does not have to match anything in the program.",
-        whyItMatters: "Ask can help with general questions as well as program work when its answer service is available.",
-      };
+    : (() => { const library = composeLibraryAnswer(question); return { shortAnswer: library.shortAnswer, whyItMatters: library.whyItMatters }; })();
   // When the question is about a community that has its own brief, the brief leads; organizational facts do not replace it.
   const namedBrief = Boolean(briefLink && briefLink.href !== "/minnesota-communities");
   if (organization.entries.length && input.mode !== "review" && !namedBrief) {
@@ -756,8 +799,8 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   }
   if (input.mode === "review") {
     draft = {
-      shortAnswer: "A tailored review of your draft is temporarily unavailable. Use the draft review worksheet to check equity, access, plain language, sources, and burden, or try again.",
-      whyItMatters: "Your draft has not been reviewed or approved.",
+      shortAnswer: "Check the draft in five passes. Equity: who is affected, and does anyone carry more of the burden or get less of the benefit? Access: can someone using a screen reader, an interpreter or a phone read and act on it? Plain language: is each sentence short, with the action first? Sources: is every rule, date and amount traced to its official source? Burden: does it ask people for anything they do not need to give?",
+      whyItMatters: "These are the checks in the draft review worksheet. The person or area responsible for the document approves it; this review does not.",
     };
     answerSources = [];
   }
@@ -779,7 +822,6 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
       const writerUser = cloneAgentsEnabled()
         ? fitWriterPrompt(writerSystem, publicDirectory, programKnowledge, publicResearch, writerPrompt)
         : { user: writerPrompt(publicDirectory, programKnowledge, publicResearch), step: 0 };
-      if (writerUser.step) console.info("ask_prompt_fitted", { traceId: ctx.trace_id, step: writerUser.step });
       // Everyday answers appear on the page as they are written. A question that touches a personnel matter,
       // a decision with serious consequences or a request for a person is shown only after the closing check.
       const sourcedTask = Boolean(requestedSources) || explicitProgramOnly || wantsCitation(question) || asksForCurrentInformation(question) || shouldPrepareResearchAnswer || publicResearch?.status === "used" || (programRelated && !selfContained);
@@ -872,7 +914,6 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
       writtenDraft = verified.draft;
       if (verified.unresolved.length || !verified.reviewed) limits.push("Some references could not be confirmed against the current sources and were left out. Open the listed sources to confirm details.");
       took.evidence_review = Date.now() - reviewStarted;
-      console.info("ask_evidence_review", { traceId: ctx.trace_id, repaired: verified.repaired, writerModelId: out.model_id });
       const writerParsed: unknown = out.parsed;
       // Each supported statement stands or falls on its own. A statement whose sources cannot be
       // resolved from what was supplied is left out; nothing is repaired, and nothing is written twice.
@@ -999,8 +1040,8 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   if (learningNavigation && !generative && publicResearch?.status !== "used" && input.mode !== "review") {
     draft = {
       shortAnswer: learningJourney
-        ? `You can explore "${learningJourney.title}" and choose a starting point that fits what you want to practice. A tailored recommendation is not available just now.`
-        : "A tailored learning recommendation is not available just now. You can try again or explore any related resources listed below.",
+        ? `"${learningJourney.title}" is the place to start. It sets out the learning in order, so you can pick the starting point that fits what you want to practice and move on from there at your own pace.`
+        : "The learning paths and resources listed below cover this. Each one says what it is for and how long it takes, so you can pick the one that fits what you want to practice.",
       whyItMatters: "",
     };
     answerSources = [];
@@ -1069,7 +1110,7 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
     if (review === "revise") console.warn("ask_review_flagged", { traceId: ctx.trace_id, review });
     if (review === "human") {
       console.warn("ask_review_withheld", { traceId: ctx.trace_id, review });
-      draft = { shortAnswer: "I can’t give a complete answer to this one here, because part of it needs a person’s judgment. The resources below can help, and Find the right person can connect you with someone who can decide.", whyItMatters: "" };
+      draft = { shortAnswer: "Part of this question needs a person’s judgment, so the decision stays with the person or area responsible for it. The resources below set out what the program says on the subject, and Find the right person shows who can decide.", whyItMatters: "" };
       answerSources = []; evidenceClaims = []; practiceArtifact = undefined;
       workProduct = undefined; followUpQuestions = [];
       nextActions.push({ label: "Find the right person", href: "/support/right-person" });
@@ -1080,9 +1121,6 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   if (tribalWork && !/Office of Indian Policy|Tribal liaison/i.test(draft.shortAnswer.slice(0, 500))) {
     draft = { ...draft, shortAnswer: `${TRIBAL_REFERRAL_FIRST}\n\n${draft.shortAnswer}` };
   }
-  // Operational timing only: how long each part took, in milliseconds. No question or answer text.
-  took.total = Date.now() - startedAt;
-  console.info("ask_timing", { traceId: ctx.trace_id, generative, ...took, research_ms: took.research, research: publicResearch?.status ?? "none" });
   const showProgramExtras = !generative || answerSources.length > 0 || learningNavigation || trainingCreditQuestion || (routine && namedResource) || Boolean(escalate) || tribalWork;
   const pathSuggestion = showProgramExtras && path ? { id: path.id, title: path.title, why: `This question connects with the "${path.staffLabel}" path. It covers ${path.steps.map((s) => s.title).slice(0, 4).join(", ")} and ends with a review checklist.` } : undefined;
 
@@ -1248,7 +1286,7 @@ function compose(intent: AskIntent, question: string, sources: Citation[], quest
   }
   if (intent === "escalation") {
     return {
-      shortAnswer: lead ? lead : `Routine questions about tools and job aids may not need a meeting. Complaints and discipline belong with Employee Culture or Human Resources. Conflicting official guidance belongs with the policy owner. Work involving a Tribal Nation must go first to the Office of Indian Policy. ${context === "one_dsd" ? "The DSD consultation request preview can help you organize questions that the available program resources do not settle." : "The right-person route can help you organize the question and identify the responsible person or office."}`,
+      shortAnswer: lead ? lead : `Routine questions about tools and job aids may not need a meeting. Complaints and discipline belong with Employee Culture or Human Resources. Conflicting official guidance belongs with the policy owner. Work involving a Tribal Nation must go first to the Office of Indian Policy. ${context === "one_dsd" ? "The DSD consultation request preview can help you organize questions that the available program resources do not settle." : "The right-person route can help you organize the question and identify the person or area responsible."}`,
       whyItMatters: "Clear ownership keeps decisions with the people who have authority to make them and helps you reach the right support sooner.",
     };
   }
@@ -1429,7 +1467,7 @@ export function toStaffAskResult(result: AskResult): StaffAskResult {
     };
   }
 
-  const { degraded, publicResearch } = result.answer;
+  const { publicResearch } = result.answer;
   const sourceForStaff = (source: Citation): StaffAnswerSource => ({
     evidence: source.evidence,
     title: sourceTitle(source.title),
@@ -1503,9 +1541,7 @@ export function toStaffAskResult(result: AskResult): StaffAskResult {
             href: `/practice/${result.answer.pathSuggestion.id}`,
           }
         : undefined,
-      notice: degraded
-        ? "We could not put together an answer just now. Any program material or public research we found is shown below."
-        : undefined,
+      notice: undefined,
       publicResearch: publicResearch
         ? {
             heading:

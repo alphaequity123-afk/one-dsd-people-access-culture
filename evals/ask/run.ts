@@ -33,6 +33,8 @@ export function stockLiterals(files = REPLY_CODE): string[] {
       // Comments, and instructions telling the writer what never to say, are not replies.
       if (code.startsWith("//") || code.startsWith("*") || /\b(?:Never|never|Do not|do not) (?:reply|say|answer)\b/.test(code)) return;
       for (const match of code.matchAll(/(["'`])((?:\\.|(?!\1).){12,}?)\1/g)) {
+        // Regular-expression sources (for example the pattern that recognizes "are you a chatbot?") are not replies.
+        if (/\(\?:|\\b|\[\^/.test(match[2])) continue;
         const phrases = stock(match[2]);
         if (phrases.length) found.push(`${file}:${index + 1} [${phrases.join(", ")}] ${match[2].slice(0, 110)}`);
       }
@@ -110,6 +112,6 @@ export async function run(_options: EvalOptions = {}): Promise<EvalResult> {
   }
   return result({
     id, title: "Ask: golden set sound; always answers in words (fault matrix)", layer: "A", cadence: "unit", measures, skipped,
-    notes: "Delivery evidence only. Synthetic questions; no record of anyone's questions is read or kept. A failing fault case means the person would see stock text: the owner must choose a non-stock fallback.",
+    notes: "Delivery evidence only. Synthetic questions; no record of anyone's questions is read or kept. A failing fault case means the person would see stock text instead of the library answer.",
   });
 }

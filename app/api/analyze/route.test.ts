@@ -6,7 +6,6 @@ import { ANALYSIS_NOTICE } from "@/lib/analysis/contract";
 vi.mock("server-only", () => ({}));
 const f = vi.hoisted(() => ({ paused: vi.fn(), analyze: vi.fn(), tooLarge: vi.fn(), finish: vi.fn(), close: vi.fn(), admit: vi.fn(), limit: vi.fn() }));
 vi.mock("@/lib/intelligence/orchestrator", () => ({ paused: f.paused }));
-vi.mock("@/lib/intelligence/clone/ledger", () => ({ openLedger: () => ({ close: f.close }), admitRun: f.admit, finishRun: f.finish }));
 vi.mock("@/lib/security/rate-limit", () => ({ consumeRequestLimit: f.limit, rateLimitHeaders: () => ({ "retry-after": "60" }) }));
 vi.mock("@/lib/analysis/service", () => ({
   analyze: f.analyze,
@@ -63,7 +62,7 @@ describe("POST /api/analyze", () => {
     expect(f.analyze).not.toHaveBeenCalled();
     expect(f.admit).not.toHaveBeenCalled();
   });
-  it("answers sources too large for one analysis before the request limit and the ledger are charged", async () => {
+  it("answers sources too large for one analysis before the request limit is charged", async () => {
     f.tooLarge.mockReturnValue("The sources together hold too much text for one analysis. Remove a source or paste shorter excerpts, then try again.");
     const response = await POST(request(valid));
     expect(response.status).toBe(413);
@@ -78,7 +77,7 @@ describe("POST /api/analyze", () => {
     expect(f.limit.mock.calls[0][1]).toEqual({ scope: "staff-equity-analysis", limit: 10, windowSeconds: 600 });
     expect(f.analyze).not.toHaveBeenCalled();
   });
-  it("streams the result with no-store and finishes the run as completed", async () => {
+  it("streams the result with no-store", async () => {
     const response = await POST(request(valid));
     expect(response.status).toBe(200);
     expect(response.headers.get("cache-control")).toContain("no-store");
@@ -86,42 +85,26 @@ describe("POST /api/analyze", () => {
     expect(text.startsWith(" ")).toBe(true);
     expect(JSON.parse(text)).toEqual(result);
     expect(f.analyze).toHaveBeenCalledWith(expect.objectContaining({ instrumentId: "equity-analysis" }));
-    expect(f.finish).toHaveBeenCalledWith(expect.anything(), "server-run", "completed");
-    expect(f.close).toHaveBeenCalled();
   });
-  it("returns the privacy refusal as 200 and finishes the run as refused", async () => {
+  it("returns the privacy refusal as 200", async () => {
     f.analyze.mockResolvedValue({ refusal: true, message: "Remove private details." });
     const response = await POST(request(valid));
     expect(response.status).toBe(200);
     expect(await readBody(response)).toEqual({ refusal: true, message: "Remove private details." });
-    expect(f.finish).toHaveBeenCalledWith(expect.anything(), "server-run", "refused");
   });
-  it("reports a failure in the body without request content and finishes the run as failed", async () => {
+  it("reports a failure in the body without request content", async () => {
     const error = vi.spyOn(console, "error").mockImplementation(() => undefined);
     f.analyze.mockRejectedValue(new Error("The Disability Services Division serves adults."));
     const body = await readBody(await POST(request(valid)));
     expect(body.error).toBeTruthy();
     expect(JSON.stringify(body)).not.toContain("serves adults");
-    expect(f.finish).toHaveBeenCalledWith(expect.anything(), "server-run", "failed");
     expect(error).toHaveBeenCalledWith("analyze_failed", "Error");
     expect(JSON.stringify(error.mock.calls)).not.toContain("serves adults");
-    expect(f.close).toHaveBeenCalled();
-    error.mockRestore();
-  });
-  it("still closes the response with the result when the ledger cannot record the finish", async () => {
-    const error = vi.spyOn(console, "error").mockImplementation(() => undefined);
-    f.finish.mockImplementation(() => { throw new Error("SQLITE_BUSY"); });
-    f.close.mockImplementation(() => { throw new Error("closed"); });
-    const response = await POST(request(valid));
-    expect(response.status).toBe(200);
-    expect(JSON.parse(await response.text())).toEqual(result);
-    expect(error).toHaveBeenCalledWith("analyze_ledger_failed", "Error");
     error.mockRestore();
   });
   it("closes the response with a plain error when the work itself rejects after the analysis", async () => {
     const error = vi.spyOn(console, "error").mockImplementation(() => undefined);
     f.analyze.mockRejectedValue(new Error("boom"));
-    f.finish.mockImplementation(() => { throw new Error("SQLITE_BUSY"); });
     const body = await readBody(await POST(request(valid)));
     expect(body.error).toContain("could not be finished");
     expect(JSON.stringify(body)).not.toContain("boom");
@@ -132,6 +115,5 @@ describe("POST /api/analyze", () => {
     const body = await readBody(await POST(request(valid)));
     expect(body.error).toContain("paused");
     expect(body.answers).toBeUndefined();
-    expect(f.finish).toHaveBeenCalledWith(expect.anything(), "server-run", "failed");
   });
 });
