@@ -100,7 +100,7 @@
 .needList li { padding: 1rem 0; border-bottom: 1px solid #d7e0e7; display: grid; gap: .35rem; }
 .needList li:last-child { border-bottom: 0; }
 .needList details summary { cursor: pointer; color: var(--blue); font-weight: 600; font-size: .95rem; }
-.closed { padding: 1rem 1.2rem; border-left: 4px solid var(--green); background: #eef6f0; margin: 1rem 0; }
+.closed { padding: 1rem 1.2rem; border-left: 4px solid var(--green); background: #f4f7f9; margin: 1rem 0; }
 .closed h3 { font-size: 1.1rem; }
 .downloads { grid-template-columns: repeat(auto-fit,minmax(min(15rem,100%),1fr)); }
 @media(max-width:900px) { .steps { grid-template-columns: repeat(3,minmax(0,1fr)); } }

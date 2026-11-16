@@ -25,7 +25,7 @@ export function mediaLength(seconds: number | undefined) {
 export function MediaQuickLinks({ links }: { links: { href: string; kind: FeaturedMediaKind; text: string }[] }) {
   if (links.length === 0) return null;
   return <p className="media-quick-links">
-    {links.map(link => <SourceLink key={link.href} href={link.href} className={`media-quick-link media-quick-link--${link.kind} text-white`} style={{ background: link.kind === "video" ? "#003865" : "#1f5f3f", color: "#fff" }}>{link.text}</SourceLink>)}
+    {links.map(link => <SourceLink key={link.href} href={link.href} className={`media-quick-link media-quick-link--${link.kind} text-white`} style={{ background: "#003865", color: "#fff" }}>{link.text}</SourceLink>)}
   </p>;
 }
 

@@ -29,20 +29,15 @@
 .community-brief-preview h3 { font-weight: 600; }
 .community-brief-preview table { display: block; overflow-x: auto; }
 
-/*
-  People, Access and Culture design tokens.
-  Color and type harvested from One DHS live (one-dhs-equity-resource): navy #003865,
-  deep navy #024, mid navy #004f90, green #78be21 (accent), green-strong #2e6b12 (text/buttons).
-  #78be21 on white is about 2.2:1, so it is never used for text or as a button background with
-  white text; green-strong (#2e6b12, about 6.4:1 on white) carries text and CTAs.
-*/
+/* Landing-page navy and neutral design tokens. Legacy green token names remain
+   as compatibility aliases for existing components; their values are navy. */
 :root {
   --blue: #003865;
   --blue-dark: #002244;
   --blue-mid: #004f90;
-  --green: #78be21;
-  --green-strong: #2e6b12;
-  --green-stronger: #245610;
+  --green: #005793;
+  --green-strong: #003865;
+  --green-stronger: #003865;
   --green-soft: #eef2f5;
   --white: #ffffff;
   --gray-50: #f5f5f3;

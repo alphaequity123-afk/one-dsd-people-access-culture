@@ -1,6 +1,6 @@
 /* Site-wide search (2026-11-11). Area colors mark where a result lives; no labels, no icons. */
 :root {
-  --area-learn: #0f766e; --area-tools: #b45309; --area-support: #6d28d9; --area-communities: #15803d;
+  --area-learn: #003865; --area-tools: #b45309; --area-support: #6d28d9; --area-communities: #003865;
   --area-leading: #1e3a8a; --area-programs: #003865; --area-start: #0e7490; --area-state: #475569; --area-about: #475569;
 }
 .site-search { position: relative; display: flex; align-items: center; gap: 6px; flex: 1 1 260px; max-width: 420px; }
