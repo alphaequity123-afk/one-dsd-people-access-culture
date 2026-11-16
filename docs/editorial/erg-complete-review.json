@@ -1,0 +1,129 @@
+{
+  "date": "2026-11-16",
+  "courseId": "gc-employee-resource-groups",
+  "status": "accepted_complete_written_course_review",
+  "countsAsCompleteCourseReview": true,
+  "scope": "Course overview, all four lessons and 16 objectives, four practice cases with 12 choices and feedback, four knowledge checks, reflection and action instructions, five flashcards, complete job aid and ten source notes. Recordings are outside this acceptance.",
+  "method": "Read the complete source spec and final generated overview/job aid, reviewed all amendments against the source and primary guidance, measured clarity, preserved assessment answers and choices, and verified all four serialized lesson readings.",
+  "sourcePackSha256": "41f550e76323fe65c02f35e7a56937b5fbb7fa88d09a2c5f3869f8ad292cd1d7",
+  "specSha256": "877b1d466b15b977efe8aa1ae0264406eafcf933ed4e8d415f8915aad9414da5",
+  "findings": [
+    "Open participation does not imply automatic work-time approval or an identity-based event restriction.",
+    "Substantial requests require realistic scope and approved workload capacity; credit preferences do not override records rules.",
+    "Outside-hours pay guidance includes the directly-related-duty exception for non-exempt employees.",
+    "Qualifying business events differ from community service, charitable and social activities.",
+    "Coverage judgments use actual work needs, with the scenario explicitly establishing feasible coverage and no overtime.",
+    "Optional development recognition is distinct from required timekeeping, approvals and formal evaluations.",
+    "Business minutes and formal complaint records have different purposes; existing records must not be destroyed to preserve privacy.",
+    "A group cannot guarantee anonymity or legal confidentiality; classification and collection require applicable data rules.",
+    "EAP and union support do not substitute for immediate supervisory reporting or prompt DHS referral.",
+    "ERG input does not replace engagement with people served or formal Tribal consultation."
+  ],
+  "diagnostics": [
+    {
+      "title": "What ERGs and affinity spaces are in state service",
+      "teaching": {
+        "words": 388,
+        "sents": 24,
+        "asl": 16.166666666666668,
+        "fk": 12.581494845360826,
+        "fog": 15.848109965635741,
+        "smog": 14.253075177516354,
+        "poly": 23.45360824742268,
+        "long": 37.88659793814433,
+        "short": 4.166666666666667,
+        "ease": 33.65418384879729
+      }
+    },
+    {
+      "title": "Sponsorship without extracting unpaid labor",
+      "teaching": {
+        "words": 373,
+        "sents": 23,
+        "asl": 16.217391304347824,
+        "fk": 12.626471616738549,
+        "fog": 15.49499941718149,
+        "smog": 14.046536153873902,
+        "poly": 22.5201072386059,
+        "long": 37.265415549597854,
+        "short": 4.3478260869565215,
+        "ease": 33.42206900571162
+      }
+    },
+    {
+      "title": "How supervisors support time and recognition",
+      "teaching": {
+        "words": 371,
+        "sents": 25,
+        "asl": 14.84,
+        "fk": 12.748004312668467,
+        "fog": 16.394221024258762,
+        "smog": 14.381905143607526,
+        "poly": 26.1455525606469,
+        "long": 40.97035040431267,
+        "short": 4,
+        "ease": 30.09746738544476
+      }
+    },
+    {
+      "title": "Confidentiality, data and boundaries",
+      "teaching": {
+        "words": 405,
+        "sents": 24,
+        "asl": 16.875,
+        "fk": 13.221867283950616,
+        "fog": 15.737654320987657,
+        "smog": 14.253075177516354,
+        "poly": 22.469135802469136,
+        "long": 37.77777777777778,
+        "short": 4.166666666666667,
+        "ease": 30.32465277777777
+      }
+    }
+  ],
+  "diagnosticJudgment": "Complete editorial reading and two clarity measures preserve distinctions about approved time, evidence, records and reporting. Numerical measurements are diagnostic, not a substitute for source and assessment review.",
+  "assessmentChecks": {
+    "knowledgeCheckAnswersUnchanged": true,
+    "knowledgeCheckQuestionsUnchanged": true,
+    "scenarioCoverageAndRecordsContextClarified": true,
+    "scenarioRecommendedIndicesUnchanged": true,
+    "scenarioChoicesUnchanged": true,
+    "finalLessonReadingsMatchCurrentPack": true
+  },
+  "priorFieldReview": "data/editorial/reviews/2026-11-16-erg-guidance-review.json",
+  "sources": [
+    "https://mn.gov/mmb/ergs/",
+    "https://mn.gov/mmb/assets/Enterprise%20ERG%20Guidelines_tcm1059-595436.pdf",
+    "https://mn.gov/mmb/assets/Revised%20bylaws%200923_tcm1059-596173.pdf",
+    "https://mn.gov/mmb/ergs/join/",
+    "https://mn.gov/mmb/employee-relations/equal-opportunity/eo-19-15/retention/",
+    "https://www.revisor.mn.gov/statutes/cite/13.03",
+    "https://www.revisor.mn.gov/statutes/cite/10.65",
+    "https://mn.gov/mmb-stat/policies/1436-harassmentdiscriminationprohibited.pdf",
+    "https://mn.gov/dhs/assets/discrimination-harassment-retaliation_tcm1053-646912.pdf",
+    "https://www.revisor.mn.gov/statutes/cite/13.05"
+  ],
+  "readings": [
+    {
+      "slug": "gc-employee-resource-groups",
+      "readingSha256": "218f7d70fd546ee49e8ac44297ef3bfafb10a5d1af6dc4a3434670371dd20a22"
+    },
+    {
+      "slug": "gc-employee-resource-groups--what-ergs-and-affinity-spaces-are-in-state-service",
+      "readingSha256": "a8d19eb010255512eff40b6894d8a15f4f824ea5fdff1294874c4ab54ff72d79"
+    },
+    {
+      "slug": "gc-employee-resource-groups--sponsorship-without-extracting-unpaid-labor",
+      "readingSha256": "bb1a2c00e60d7236e7506ba5b281cbab4c7b25f92146f727cdeaeb3ed1298fda"
+    },
+    {
+      "slug": "gc-employee-resource-groups--how-supervisors-support-time-and-recognition",
+      "readingSha256": "132a9e829c8e693b3423f266a6f01fb082f07727a2b04e1d54e324cfb262fef7"
+    },
+    {
+      "slug": "gc-employee-resource-groups--confidentiality-data-and-boundaries",
+      "readingSha256": "eb49abc3aecb3b8fb4410a32fe6430d9c084c1347f4698258e9efe2be1d382bf"
+    }
+  ],
+  "liveVerification": "pending final deployment"
+}
