@@ -1,0 +1,128 @@
+{
+  "date": "2026-11-16",
+  "courseId": "gc-leading-culture-at-scale",
+  "status": "accepted_complete_written_course_review",
+  "countsAsCompleteCourseReview": true,
+  "scope": "Course overview, all four lessons and 16 objectives, four practice cases with 12 choices and feedback, four knowledge checks, reflection and action instructions, five flashcards, complete job aid and twelve source notes. Recordings are outside this acceptance.",
+  "method": "Read the complete source spec and final generated overview/job aid, reviewed all amendments against the source and primary guidance, measured clarity, preserved assessment answers and choices, and verified all four serialized lesson readings.",
+  "sourcePackSha256": "ef662898fa9b32a589fa368a38c0f1e2b4a9cee01126105e8f58615266ded54e",
+  "specSha256": "cb943d77ba90c8e0d84515ad3abf6bde188d9fceac7c3713f37083c522a0eac3",
+  "findings": [
+    "One concern can prompt inquiry without proving a pattern or waiting for recurrence.",
+    "Leadership responsibility is not reduced to signals while HR alone makes every staffing decision.",
+    "Intercultural meeting examples do not assess an individual or organization; the Integration analogy was removed.",
+    "Providing needed access is a responsibility, not a kind gesture; broader format improvement must not delay individual access.",
+    "The 2025 survey protections do not automatically apply to local listening sessions or future surveys.",
+    "Group sessions cannot guarantee anonymity; authorized information handling and clear limits replace absolute safety promises.",
+    "Necessary records and immediate reporting duties continue alongside themes and action planning.",
+    "A routine change needs authority, access safeguards and monitoring; a six-month review does not delay urgent correction."
+  ],
+  "diagnostics": [
+    {
+      "title": "What this division rewards in practice",
+      "teaching": {
+        "words": 392,
+        "sents": 24,
+        "asl": 16.333333333333332,
+        "fk": 10.376428571428573,
+        "fog": 13.880272108843537,
+        "smog": 13.023866798666859,
+        "poly": 18.367346938775512,
+        "long": 31.632653061224488,
+        "short": 4.166666666666667,
+        "ease": 49.76023809523812
+      }
+    },
+    {
+      "title": "The signals a senior leader sends every week",
+      "teaching": {
+        "words": 344,
+        "sents": 22,
+        "asl": 15.636363636363637,
+        "fk": 11.398298097251587,
+        "fog": 14.626638477801272,
+        "smog": 13.463846863241148,
+        "poly": 20.930232558139537,
+        "long": 35.46511627906977,
+        "short": 4.545454545454546,
+        "ease": 41.19257928118395
+      }
+    },
+    {
+      "title": "Listening at scale with clear privacy limits",
+      "teaching": {
+        "words": 429,
+        "sents": 29,
+        "asl": 14.793103448275861,
+        "fk": 11.688867454384695,
+        "fog": 14.775050237119203,
+        "smog": 13.468795269971068,
+        "poly": 22.144522144522146,
+        "long": 35.1981351981352,
+        "short": 6.896551724137931,
+        "ease": 37.607412587412625
+      }
+    },
+    {
+      "title": "Changing culture one routine at a time",
+      "teaching": {
+        "words": 453,
+        "sents": 26,
+        "asl": 17.423076923076923,
+        "fk": 10.22045253863135,
+        "fog": 13.150246221769402,
+        "smog": 12.502718667466524,
+        "poly": 15.45253863134658,
+        "long": 28.69757174392936,
+        "short": 3.8461538461538463,
+        "ease": 52.819451095262366
+      }
+    }
+  ],
+  "diagnosticJudgment": "Flesch–Kincaid estimates 10.2–11.7 and Fog 13.2–14.8; average sentences 14.8–17.4 words and short shares 3.8–6.9 percent. The full reading retains professional distinctions about survey privacy, reporting, access and authority. Clear clauses carry these qualifications without unnecessary complexity.",
+  "assessmentChecks": {
+    "knowledgeCheckAnswersUnchanged": true,
+    "questionsTwoThreeContextClarified": true,
+    "scenarioRecommendedIndicesUnchanged": true,
+    "scenarioChoicesUnchanged": true,
+    "finalLessonReadingsMatchCurrentPack": true
+  },
+  "priorFieldReview": "data/editorial/reviews/2026-11-16-culture-guidance-review.json",
+  "sources": [
+    "https://mn.gov/mmb-stat/enterprise-talent-development/career-development/Enterprise-Leader-Competency-Definition-Guide.pdf",
+    "https://mn.gov/mmb-stat/enterprise-employee-resources/Statewide%20Employee%20Engagement%20Survey%20Participants%20FAQ%202025.pdf",
+    "https://www.deloitte.com/content/dam/insights/articles/2024/six-signature-traits-of-inclusive-leadership/dup-3046-inclusive-leader-vfinal.pdf",
+    "https://www.opm.gov/fevs/reports/governmentwide-reports/governmentwide-management-report/governmentwide-report/2017/2017-governmentwide-management-report.pdf",
+    "https://www.idiinventory.com/resources",
+    "https://www.ccl.org/wp-content/uploads/2026/01/edi-real-research-paper-center-for-creative-leadership.pdf",
+    "https://www.nationalequityproject.org/s/NEP-LFE-Framework-2024.pdf",
+    "https://mn.gov/dhs/assets/equity-policy_tcm1053-646921.pdf",
+    "https://www.revisor.mn.gov/statutes/cite/13.05",
+    "https://mn.gov/mmb-stat/policies/1436-harassmentdiscriminationprohibited.pdf",
+    "https://mn.gov/dhs/assets/discrimination-harassment-retaliation_tcm1053-646912.pdf",
+    "https://www.revisor.mn.gov/statutes/cite/13.64"
+  ],
+  "readings": [
+    {
+      "slug": "gc-leading-culture-at-scale",
+      "readingSha256": "5647db388771c20625b6a6c5c2be6610f2f6f1e78c5d4f6223eb35a6bd6d629b"
+    },
+    {
+      "slug": "gc-leading-culture-at-scale--what-this-division-rewards-in-practice",
+      "readingSha256": "f2eb71de12a259c0f3d2b5507500eede802e2fcaaf59c2ac72c69e9e18de95ca"
+    },
+    {
+      "slug": "gc-leading-culture-at-scale--the-signals-a-senior-leader-sends-every-week",
+      "readingSha256": "1cfe5db1c0a3fec4158fc7b6f173cacbdbdf7c1842b4c65867373d74599137f9"
+    },
+    {
+      "slug": "gc-leading-culture-at-scale--listening-at-scale-without-exposing-anyone",
+      "readingSha256": "bbafd1a28e0833d6f703c073d9df6428309b580a21c7078b1c65691b95e7216c"
+    },
+    {
+      "slug": "gc-leading-culture-at-scale--changing-culture-one-routine-at-a-time",
+      "readingSha256": "d67bfa501de7e108eefffee07d3f312b708f25199e785921b322207bde35eca3"
+    }
+  ],
+  "liveVerification": "pending final deployment"
+}
