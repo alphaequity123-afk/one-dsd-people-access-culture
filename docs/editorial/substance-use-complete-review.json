@@ -1,0 +1,133 @@
+{
+  "date": "2026-11-16",
+  "courseId": "dsd-co-occurring-substance-use",
+  "status": "accepted_complete_written_course_review",
+  "countsAsCompleteCourseReview": true,
+  "scope": "Complete overview, four lessons and 16 objectives, four fictional practice cases and 12 choices, feedback, four knowledge checks, private reflection and actions, six flashcards, full job aid, eleven source notes and cover description. Recordings are outside this review.",
+  "method": "Read full source and final generated overview/job aid; compare relevant primary authorities, revise observation, assessment, evidence, privacy and policy boundaries, inspect cover image, verify serialized readings and assessment distinctions.",
+  "sourcePackSha256": "7855af88672aa753a4f61a39f0769235b59f6d05382dcf2c12db2b910de42a15",
+  "specSha256": "e8dab55595d1441e2f9dc45871ad913f2f4618d7f3bad8da94ed3524ce17d626",
+  "findings": [
+    "Dated population evidence does not predict an individual diagnosis or reason for dropout.",
+    "Financial eligibility and clinical assessment have distinct roles; coverage and pre-assessment exceptions require service-specific checks.",
+    "Access requests must use a process the person can use, without imposing a writing requirement.",
+    "Treatment-information sharing requires valid consent or another lawful basis, including applicable Part 2 rules.",
+    "Medication decisions remain with qualified clinicians.",
+    "Emergency guidance calls for immediate help and product instructions without administrative delay; naloxone is temporary and does not treat every emergency.",
+    "Good Samaritan protections have conditions and limits.",
+    "Fictional practice protects personal information and record corrections retain history."
+  ],
+  "diagnostics": [
+    {
+      "title": "Why co-occurring substance use deserves attention",
+      "teaching": {
+        "words": 372,
+        "sents": 26,
+        "asl": 14.307692307692308,
+        "fk": 11.591612903225805,
+        "fog": 14.110173697270472,
+        "smog": 13.023866798666859,
+        "poly": 20.967741935483872,
+        "long": 33.064516129032256,
+        "short": 26.923076923076923,
+        "ease": 37.440111662531024
+      }
+    },
+    {
+      "title": "Accessible treatment and Minnesota's substance use disorder system",
+      "teaching": {
+        "words": 335,
+        "sents": 27,
+        "asl": 12.407407407407407,
+        "fk": 11.862620232172471,
+        "fog": 14.515201768933114,
+        "smog": 12.962598303700922,
+        "poly": 23.880597014925375,
+        "long": 42.08955223880597,
+        "short": 14.814814814814815,
+        "ease": 32.112526257600905
+      }
+    },
+    {
+      "title": "Brain injury, cognitive disability and substance use",
+      "teaching": {
+        "words": 424,
+        "sents": 21,
+        "asl": 20.19047619047619,
+        "fk": 13.435229110512132,
+        "fog": 17.03845462713387,
+        "smog": 15.279682290573568,
+        "poly": 22.40566037735849,
+        "long": 35.14150943396226,
+        "short": 9.523809523809524,
+        "ease": 34.70015723270441
+      }
+    },
+    {
+      "title": "Harm reduction, naloxone and stigma-free language",
+      "teaching": {
+        "words": 425,
+        "sents": 22,
+        "asl": 19.318181818181817,
+        "fk": 13.045267379679146,
+        "fog": 16.386096256684493,
+        "smog": 14.811377253095038,
+        "poly": 21.647058823529413,
+        "long": 36.470588235294116,
+        "short": 13.636363636363637,
+        "ease": 35.94233957219254
+      }
+    }
+  ],
+  "diagnosticJudgment": "Teaching FK approximately 11.6–13.5; retain necessary legal and service terms with explicit explanations.",
+  "assessmentChecks": {
+    "knowledgeChecks": "Lesson 2 correct answer distinguishes financial and clinical eligibility. Lesson 4 question and correct answer now reflect qualified FDA/MDH guidance. All wrong options and other questions/answers remain unchanged.",
+    "scenarioRecommendedIndicesUnchanged": true,
+    "scenarioChoiceChange": "Lessons 2 and 4 recommended choices clarify accessible requests and emergency preparation with record integrity; all indices and distractors remain unchanged.",
+    "otherScenarioChoicesUnchanged": true,
+    "finalLessonReadingsMatchCurrentPack": true
+  },
+  "coverReview": {
+    "path": "public/images/covers/dsd-co-occurring-substance-use.webp",
+    "sha256": "d7770e287f2143808dacfc92122b4b53d18ab402b11e3c9ced2af4d911e85018",
+    "alt": "Three colleagues talk at a table with notebooks, a closed laptop, a glass and a mug.",
+    "method": "Direct local image inspection: three colleagues talking at a table with notebooks, a closed laptop, a glass and a mug."
+  },
+  "priorFieldReview": "data/editorial/reviews/2026-11-16-substance-use-guidance-review.json",
+  "sources": [
+    "https://store.samhsa.gov/sites/default/files/pep19-02-00-002.pdf",
+    "https://www.dhs.state.mn.us/id_008949/",
+    "https://www.health.state.mn.us/communities/overdose/harmreduce/naloxone.html",
+    "https://archives.nida.nih.gov/sites/default/files/words_matter_handout.pdf",
+    "https://wexnermedical.osu.edu/neurological-institute/neuroscience-research-institute/research-centers/ohio-valley-center-for-brain-injury-prevention-and-rehabilitation/for-professionals/substance-use-and-tbi",
+    "https://www.samhsa.gov/substance-use/recovery",
+    "https://www.ada.gov/resources/opioid-use-disorder/",
+    "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/fact-sheet-42-cfr-part-2-final-rule/index.html",
+    "https://www.fda.gov/consumers/consumer-updates/access-naloxone-can-save-life-during-opioid-overdose",
+    "https://www.revisor.mn.gov/statutes/cite/604A.04",
+    "https://www.revisor.mn.gov/statutes/cite/604A.05"
+  ],
+  "readings": [
+    {
+      "slug": "dsd-co-occurring-substance-use",
+      "readingSha256": "8c7007fdc57b23278382b39eefe536006271084acfa050c137369f792400beac"
+    },
+    {
+      "slug": "dsd-co-occurring-substance-use--why-co-occurring-substance-use-deserves-attention",
+      "readingSha256": "82bcd6a4180bf15c8270104cf567f435af364a81d135a91ae557ae616ab198b8"
+    },
+    {
+      "slug": "dsd-co-occurring-substance-use--accessible-treatment-and-minnesota-s-substance-use",
+      "readingSha256": "d04986a65b0c06876b1864734746c478ea6329c08320ccafeb861efdda8042f5"
+    },
+    {
+      "slug": "dsd-co-occurring-substance-use--brain-injury-cognitive-disability-and-substance-us",
+      "readingSha256": "ec280d920f4c26553771bb3ffb36c288eb12397a8b01383ebccc96bfa202f927"
+    },
+    {
+      "slug": "dsd-co-occurring-substance-use--harm-reduction-naloxone-and-stigma-free-language",
+      "readingSha256": "a42341d63d332cf9ed920c3736c47525835f4aea91416d68e1148dc38a3b36ab"
+    }
+  ],
+  "liveVerification": "pending final deployment"
+}
