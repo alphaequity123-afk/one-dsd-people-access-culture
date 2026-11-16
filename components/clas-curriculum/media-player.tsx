@@ -122,7 +122,7 @@ export function SyncedMediaPlayer({ mediaId, kind, src, captions, poster, label,
           <button type="button" className="clas-study-secondary" onClick={() => goToChapter(activeChapter + 1)} disabled={activeChapter >= chapters.length - 1}>Next chapter</button>
         </>}
         <p className="clas-player-status" role="status">
-          {resumedFrom !== null && <>Resumed at {formatTime(resumedFrom)}, where you left off on this device. <button type="button" className="clas-study-link" onClick={startOver}>Start from the beginning</button></>}
+          {resumedFrom !== null && <>Resumed at {formatTime(resumedFrom)}, where you left off. <button type="button" className="clas-study-link" onClick={startOver}>Start from the beginning</button></>}
         </p>
       </div>
       <ChapterList label={`Chapters: ${label}`} chapters={chapterItems} active={activeChapter} onSelect={goToChapter} />

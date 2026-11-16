@@ -68,7 +68,7 @@ export function DirectorToolkitTemplate({ template, sectionTitle }: { template: 
         </div>;
       })}
     </form>
-    <p id={`${anchor}-keep-out`} className={`notice ${styles.keepOut}`}>{TEMPLATE_KEEP_OUT} The app does not autosave or submit your entries. Copy, download or print if you need a record before leaving this page.</p>
+    <p id={`${anchor}-keep-out`} className={`notice ${styles.keepOut}`}>{TEMPLATE_KEEP_OUT} Copy, download or print if you need a record before leaving this page.</p>
     <div className={styles.actions}>
       <button type="button" className="btn btn--primary" onClick={print}>Print this template</button>
       <button type="button" className="btn btn--light" onClick={copy}>Copy as text</button>

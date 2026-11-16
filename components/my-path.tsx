@@ -139,7 +139,7 @@ export function MyPath() {
     </div>
 
     <div><h3 className="font-semibold">Bring it to a conversation</h3>
-      <p className="text-sm">If it would help, download a one-page summary to share with a supervisor or mentor in a development conversation. That is always your choice, and the summary says so. Moving to a new computer? Save a copy here and open it there.</p>
+      <p className="text-sm">If it would help, download a one-page summary to share with a supervisor or mentor in a development conversation. Moving to a new computer? Save a copy here and open it there.</p>
       <div className="mt-2 flex flex-wrap gap-3">
         <button type="button" className="btn btn--primary" onClick={downloadSummary}>Download a summary (Word)</button>
         <button type="button" className="btn btn--light" onClick={exportPath}>Save a copy</button>

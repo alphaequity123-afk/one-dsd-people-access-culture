@@ -18,7 +18,6 @@ import { Hub2More } from "@/components/hub2-choices";
 import styles from "./learning-family.module.css";
 import preview from "./learning-preview.module.css";
 import { getLearningJourney } from "@/lib/content/learning-journey";
-import { TRAINING_CREDIT_NOTICE } from "@/lib/program/learning-credit";
 import { learningStageHref } from "@/lib/content/learning-journey";
 import { DhsReferenceLink } from "@/components/dhs-reference-link";
 import { publishedCourses, courseContentItem, courseSummary, courseHref } from "@/lib/content/courses/published";
@@ -37,7 +36,6 @@ import { CONTENT_TYPE_LABEL, type ContentType } from "@/lib/content/types";
 import { loadStaffContentSnapshot } from "@/lib/content/staff-publications";
 import { GRADUATION_PATHS } from "@/lib/content/paths";
 import { ProgramContextNote } from "@/components/program-context";
-import { ParticipationNotice } from "@/components/participation-notice";
 import { LEARNING_STAGES } from "@/lib/product";
 import { requestedContentScope } from "@/lib/product/request-context";
 import { culturalIntelligenceHubAvailable } from "@/lib/content/cultural-intelligence-publication";
@@ -223,7 +221,6 @@ export default async function LearnPage({ searchParams }: { searchParams?: Promi
           {staffGuide ? <p><Link href={`/library/${staffGuide.id}`}>{staffGuide.title}</Link></p> : null}
         </Hub2More> : null}
         <div className={styles.context}><p><Link href="/learn/sources">Research and sources</Link> · <Link href="/ask">Ask</Link></p><details className={preview.disclosure}><summary>About these learning resources</summary><DhsReferenceLink /><ProgramContextNote /></details></div>
-        {catalog.available ? <details className={styles.participation}><summary>{stringValue(catalog.values, "participationDetailsLabel")}</summary><ParticipationNotice surface="learning" /></details> : <ParticipationNotice surface="learning" />}
       </div>
     </EditableSurfaceRegion>
   );

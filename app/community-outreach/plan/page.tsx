@@ -10,7 +10,7 @@ import { ResourceDownloads } from "@/components/resource-downloads";
 
 export const metadata: Metadata = {
   title: "Plan an engagement",
-  description: "Questions to answer before you reach out to a community, and a fill-in engagement and report-back plan that saves nothing.",
+  description: "Questions to answer before you reach out to a community, and a fill-in engagement and report-back plan.",
 };
 
 
@@ -19,7 +19,6 @@ export default function PlanPage() {
     <p className={`${styles.kicker} ${styles.noPrint}`}><Link href="/community-outreach">Community Outreach and Engagement</Link></p>
     <h1 className={styles.title}>Plan an engagement</h1>
     <p className={styles.lede}>Prepare for a conversation and draft an engagement and report-back plan.</p>
-    <p className={styles.note}>This page saves nothing. Your plan stays on this page until you print it or copy it. Nothing about what you plan is recorded or shared.</p>
     <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this page</summary><ResourceDownloads kind="community-outreach" id="plan" noun="blank plan" /></details>
 
     <details className="pilot-supporting print:hidden">

@@ -15,11 +15,11 @@ const ALTERNATIVES = [
 export default function ShareResultPage() {
   return (
     <>
-      <PageIntro kicker="Read and download" title="Share a result" lede="Nothing you share here is collected or stored by the site." />
+      <PageIntro kicker="Read and download" title="Share a result" />
       <div className="wrap max-w-3xl space-y-6 py-8">
         <Notice>
           <strong>Sharing results is closed. </strong>
-          There is no form on this page. Staff writing is not accepted or stored.
+          There is no form on this page.
         </Notice>
         <section aria-labelledby="share-result-alternatives">
           <h2 id="share-result-alternatives" className="text-xl font-bold">Where to go now</h2>

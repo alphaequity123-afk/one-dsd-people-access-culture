@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "@/components/app-link";
 import { CollectionItemLink } from "@/components/collection-item-link";
-import { ParticipationNotice } from "@/components/participation-notice";
 import { LEADING_HREF, LEADING_LABEL, REQUIRED_COURSE_ID, STAFF_COLLECTIONS, TRIBAL_REFERRAL_HREF } from "@/lib/content/collections";
 import { publishedCourses } from "@/lib/content/courses/published";
 import { requestedContentScope } from "@/lib/product/request-context";
@@ -37,7 +36,7 @@ export default async function CollectionsPage() {
     <aside className={styles.requiredNote} aria-labelledby="required-course-title">
       <h2 id="required-course-title">One course is required</h2>
       <p><CollectionItemLink id={REQUIRED_COURSE_ID} published={published} /></p>
-      <p>The Equity Analysis Toolkit is required of all staff of the Minnesota Department of Human Services, regardless of status. Everything else here is voluntary.</p>
+      <p>The Equity Analysis Toolkit is required of all staff of the Minnesota Department of Human Services, regardless of status.</p>
     </aside>
     <ul className={styles.doors} aria-label="Collections">
       {STAFF_COLLECTIONS.map(collection => <li key={collection.id}><Link className={styles.door} href={`/learn/collections/${collection.id}`}>
@@ -50,6 +49,5 @@ export default async function CollectionsPage() {
       <h2>Keep exploring</h2>
       <p><Link href={LEADING_HREF}>{LEADING_LABEL}</Link><Link href="/courses">All courses</Link><Link href="/learn/paths">Paths</Link><Link href={TRIBAL_REFERRAL_HREF}>Native American and Tribal-specific guidance</Link></p>
     </aside>
-    <ParticipationNotice surface="learning" />
   </div></div>;
 }

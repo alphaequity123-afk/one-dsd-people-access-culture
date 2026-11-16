@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import { assemblePlan, clearNotes, planText, readAllNotes, readNote, writeNote, type PlanModule } from '@/lib/learning/clas-notes';
 import { downloadText } from './download';
 
-export const NOTE_PRIVACY = 'Your note is saved in this browser profile when browser storage is available. Someone using the same profile may be able to read it. Clearing browser data can remove it; downloaded or printed copies are separate. The working-note feature does not submit your note to supervisors or program staff. Do not include names, case details or other private information.';
+export const NOTE_PRIVACY = 'Do not include names, case details or other private information.';
 
 type NoteProps = { moduleId: string; title: string; prompt: string; allModuleIds: string[]; onChange?: () => void };
 
@@ -17,18 +17,18 @@ export function WorkingNote({ moduleId, title, prompt, allModuleIds, onChange }:
 
   // Browser storage is unavailable during server rendering; show the saved note after hydration.
   // eslint-disable-next-line react-hooks/set-state-in-effect
-  useEffect(() => { const saved = readNote(moduleId); setNote(saved); if (saved) setStatus('Your earlier note for this part is shown from this browser profile.'); }, [moduleId]);
+  useEffect(() => { const saved = readNote(moduleId); setNote(saved); if (saved) setStatus('Your earlier note for this part is shown.'); }, [moduleId]);
 
   function update(text: string) {
     setNote(text);
-    setStatus(writeNote(moduleId, text) ? 'Saved in this browser profile.' : 'This browser could not save the note. Download it if you want to keep a copy.');
+    setStatus(writeNote(moduleId, text) ? 'Saved.' : 'This browser could not save the note. Download it if you want to keep a copy.');
     onChange?.();
   }
   function clearAll() {
     const cleared = clearNotes(allModuleIds);
     setNote('');
     setConfirming(false);
-    setStatus(cleared ? 'Your notes for the nine parts have been removed from this browser profile. Downloaded or printed copies are unchanged.' : 'This browser could not remove the notes.');
+    setStatus(cleared ? 'Your notes for the nine parts have been removed.' : 'This browser could not remove the notes.');
     onChange?.();
   }
   return (
@@ -41,7 +41,7 @@ export function WorkingNote({ moduleId, title, prompt, allModuleIds, onChange }:
       {!confirming
         ? <button type="button" className="clas-study-secondary" onClick={() => setConfirming(true)}>Clear my notes in this browser</button>
         : <span className="clas-note-confirm" role="group" aria-label="Confirm clearing notes">
-          <span>Remove your notes for all nine parts from this browser profile? This cannot be undone. Downloaded or printed copies will remain.</span>
+          <span>Remove your notes for all nine parts? This cannot be undone.</span>
           <button type="button" onClick={clearAll}>Yes, clear all my notes</button>
           <button type="button" className="clas-study-secondary" onClick={() => setConfirming(false)}>Keep my notes</button>
         </span>}
@@ -72,7 +72,7 @@ export function ImprovementPlan({ curriculumTitle, modules, version }: PlanProps
   return (
     <section className="clas-plan" aria-labelledby="plan">
       <h2 id="plan">Your improvement plan</h2>
-      <p>This plan is assembled from the working notes saved in this browser profile for the nine parts ({written} of {modules.length} parts have a note). Each heading is the lesson&apos;s prompt. Edit any part&apos;s note on its own page; the plan updates when you return.</p>
+      <p>This plan is assembled from your working notes for the nine parts ({written} of {modules.length} parts have a note). Each heading is the lesson&apos;s prompt. Edit any part&apos;s note on its own page; the plan updates when you return.</p>
       <p>{NOTE_PRIVACY}</p>
       <div className="clas-plan-actions">
         <button type="button" onClick={() => downloadText('CLAS-my-improvement-plan.txt', planText(curriculumTitle, sections))}>Download my plan (.txt)</button>
@@ -87,7 +87,7 @@ export function ImprovementPlan({ curriculumTitle, modules, version }: PlanProps
             {s.note ? <p className="clas-plan-note">{s.note}</p> : <p className="clas-plan-empty">No note yet. <SourceLink href={`/learn/clas/curriculum/${s.id}#apply`}>Add one on Part {s.part}</SourceLink>.</p>}
           </article>
         ))}
-        <article><h3>Follow-up</h3><p>Voluntary follow-up date: ______. What changed? What evidence do I have? What remains?</p></article>
+        <article><h3>Follow-up</h3><p>Follow-up date: ______. What changed? What evidence do I have? What remains?</p></article>
       </div>
     </section>
   );

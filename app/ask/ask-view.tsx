@@ -6,7 +6,6 @@ import styles from "./ask.module.css";
 import { PageIntro } from "@/components/ui";
 import { StaffAskBrowse } from "@/components/staff-ask-browse";
 import { matchStaffAskTopic, staffAskTopics } from "@/lib/content/staff-ask-topics";
-import { ParticipationNotice } from "@/components/participation-notice";
 import { ProgramContextNote } from "@/components/program-context";
 import { EditableSurfaceRegion, prepareEditableSurface } from "@/components/editable-surface";
 import { stringValue } from "@/lib/content/staff-surface-registry";
@@ -31,7 +30,6 @@ export async function prepareAsk() {
     questionLabel: "Your question",
     questionHelp: "Use your own words.",
     questionExample: "Type your question",
-    privacyNotice: "Your question and recent messages are shared with outside services to prepare the answer. Your browser keeps the conversation for this session. Site records are designed to track use without storing the conversation.",
   } : surface.values;
   return { surface, enabled, research, copy };
 }
@@ -54,10 +52,9 @@ export async function AskView({ searchParams, part }: { searchParams: AskSearchP
         </> : null}
         {!enabled ? <StaffAskBrowse topics={topics} initialTopicId={initial?.id} facet={sp.facet} scope={scope} /> : null}
         {all ? <details className={styles.details}>
-          <summary>Your privacy and program view</summary>
+          <summary>Program view</summary>
           <div className={styles.detailsBody}>
             <ProgramContextNote />
-            <ParticipationNotice surface="ask" />
           </div>
         </details> : null}
       </div>

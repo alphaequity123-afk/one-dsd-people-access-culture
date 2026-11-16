@@ -9,7 +9,7 @@ export function DevelopmentFocus({ initialFocus = "" }: { initialFocus?: string 
   const journey = developmentJourney(focus);
   function downloadGuide() {
     if (!journey) return;
-    const text = [journey.title, journey.summary, "", ...developmentModel.stages.flatMap(stage => [stage.title, stageGuidance(journey, stage.id), "Something to carry forward: " + stage.evidence, ""]), "Learning with other people", journey.social, "", "Resources to explore", `${journey.title}: ${new URL(journeyHref(journey.id), window.location.origin).href}`, "", "Keep any personal notes in a location you choose. This guide does not submit information to the program."].join("\n");
+    const text = [journey.title, journey.summary, "", ...developmentModel.stages.flatMap(stage => [stage.title, stageGuidance(journey, stage.id), "Something to carry forward: " + stage.evidence, ""]), "Learning with other people", journey.social, "", "Resources to explore", `${journey.title}: ${new URL(journeyHref(journey.id), window.location.origin).href}`, "", "Keep any personal notes in a location you choose."].join("\n");
     const url = URL.createObjectURL(new Blob([text], { type: "text/plain;charset=utf-8" }));
     const link = document.createElement("a");
     link.href = url;
@@ -19,7 +19,7 @@ export function DevelopmentFocus({ initialFocus = "" }: { initialFocus?: string 
   }
   return <section className="development-focus" aria-labelledby="development-focus-title">
     <h2 id="development-focus-title" className="text-2xl font-semibold">Choose what you want to work on</h2>
-    <p>Connect a question or learning interest with a practical pathway. Your selection stays on this page; it is not saved as a personal profile.</p>
+    <p>Connect a question or learning interest with a practical pathway.</p>
     <label htmlFor="development-focus">What would you like to explore?</label>
     <select id="development-focus" value={focus} onChange={event => setFocus(event.target.value)}><option value="">Choose a focus</option>{developmentModel.journeys.map(item => <option key={item.id} value={item.id}>{item.title}</option>)}</select>
     <p role="status" className="sr-only">{journey ? `${journey.title} pathway selected. Details are below.` : "No pathway selected."}</p>

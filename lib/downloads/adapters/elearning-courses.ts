@@ -9,7 +9,6 @@ import { prepareEditableSurface } from "@/lib/content/prepare-editable-surface";
 import type { StaffProgramScope } from "@/lib/content/staff-publications";
 import { getEditableSurfaceDefinition } from "@/lib/content/staff-surface-registry";
 import { REFERRAL_ONLY_COURSE_IDS, isRetiredCulturalWorkshop } from "@/lib/program/retired-features";
-import { TRAINING_CREDIT_NOTICE } from "@/lib/program/learning-credit";
 import type { DownloadKind } from "../catalog";
 import { decodeEntities, htmlToBlocks } from "../html-text";
 import {
@@ -218,7 +217,6 @@ function courseDocument(pack: CoursePack, scope: StaffProgramScope): ResourceDoc
     meta: [
       { label: "Length", value: plain(course.duration) },
       { label: "Lessons", value: String(course.lessons.length) },
-      { label: "Participation", value: "Voluntary learning" },
     ].filter((row) => row.value),
     sections: compactSections([
       section(
@@ -246,7 +244,6 @@ function courseDocument(pack: CoursePack, scope: StaffProgramScope): ResourceDoc
       ]),
       ...course.lessons.map(lessonAsOneSection),
       jobAidSection(pack),
-      section(undefined, [paragraph(TRAINING_CREDIT_NOTICE)]),
     ]),
     sources: courseSources(pack),
     attribution: programName(scope),
@@ -264,7 +261,7 @@ function lessonDocument(pack: CoursePack, lessonIndex: number, scope: StaffProgr
       { label: "Course", value: plain(course.title) },
       { label: "Time", value: lesson.minutes > 0 ? `${lesson.minutes} minutes` : "" },
     ].filter((row) => row.value),
-    sections: compactSections([...lessonSections(lesson), section(undefined, [paragraph(TRAINING_CREDIT_NOTICE)])]),
+    sections: compactSections(lessonSections(lesson)),
     attribution: programName(scope),
   };
 }

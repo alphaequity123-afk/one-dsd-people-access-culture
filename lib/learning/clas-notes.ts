@@ -29,5 +29,5 @@ export function assemblePlan(modules: PlanModule[], notes: Record<string, string
 
 export function planText(title: string, sections: PlanSection[]): string {
   const body = sections.map(s => `Part ${s.part}: ${s.title}\n${s.prompt}\n\n${s.note || '(No note yet.)'}\n`).join('\n');
-  return `${title}\n\nMY IMPROVEMENT PLAN\n\nAssembled from my working notes for the nine parts. These notes are for my own use; no names, case details or other private information belong here.\n\n${body}\nVoluntary follow-up date:\nWhat changed?\nWhat evidence do I have?\nWhat remains?\n`;
+  return `${title}\n\nMY IMPROVEMENT PLAN\n\nAssembled from my working notes for the nine parts. These notes are for my own use; no names, case details or other private information belong here.\n\n${body}\nFollow-up date:\nWhat changed?\nWhat evidence do I have?\nWhat remains?\n`;
 }

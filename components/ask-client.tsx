@@ -4,7 +4,8 @@ import { SourceLink } from "@/components/app-link";
 
 /** Typed Ask is explicitly enabled only for the owner-authorized clone pilot. */
 import Link from "@/components/app-link";
-import { AskVoice, VOICE_PRIVACY_NOTE } from "./ask-voice";
+import { AskVoice } from "./ask-voice";
+import { withoutSystemNotices } from "@/lib/content/work-guidance";
 import { AskBox } from "@/components/ask-box";
 import { ResourceMediaPreview, mediaResourceIdFromHref } from "@/components/multimedia/resource-media-preview";
 import styles from "@/components/workspace-presentation.module.css";
@@ -190,12 +191,8 @@ export function AskClient({
               {retryQuestion ? <> <button type="button" className="underline" disabled={busy} onClick={() => void sendQuestion(retryQuestion)}>Try again</button></> : null}
             </p>
           ) : null}
-          <p className="ask-box-small" id={`${textId}-research-privacy`}>Leave out names and private details. Outside services help answer your question.</p>
+          <p className="ask-box-small" id={`${textId}-research-privacy`}>Leave out names and private details.</p>
           <div className="mt-2 flex flex-wrap items-start gap-x-5 text-sm">
-            <details>
-              <summary className="min-h-11 cursor-pointer py-2">Privacy</summary>
-              <p className="max-w-prose pb-2">{copyText(copy, "privacyNotice")} {VOICE_PRIVACY_NOTE}</p>
-            </details>
             {session.turns.length ? <button
               type="button"
               className="min-h-11 underline"
@@ -296,8 +293,8 @@ export function AskClient({
             {context !== "one_dsd"
               ? copyText(copy, "moreOneDhsBody")
               : intakeEnabled
-                ? copyText(copy, "moreDsdOpenBody")
-                : copyText(copy, "moreDsdPreviewBody")}
+                ? withoutSystemNotices(copyText(copy, "moreDsdOpenBody"))
+                : withoutSystemNotices(copyText(copy, "moreDsdPreviewBody"))}
           </p>
           <Link href="/support/right-person">{copyText(copy, "rightPersonLabel")}</Link>
         </div>
@@ -458,7 +455,7 @@ export function AnswerView({ answer, onPrepareConsult, intakeEnabled, dsdContext
             {answer.consultation.reason}{" "}
             {intakeEnabled
               ? copyText(copy, "consultOpenBody")
-              : copyText(copy, "consultPreviewBody")}
+              : withoutSystemNotices(copyText(copy, "consultPreviewBody"))}
           </p>
           <p className="mt-2">
             <Link href={consult?.href ?? "/support/request"} className="btn btn--primary" onClick={() => onPrepareConsult(answer)}>

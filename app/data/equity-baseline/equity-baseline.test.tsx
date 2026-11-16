@@ -5,7 +5,6 @@ import EquityBaselinePage from "./page";
 import EquityGoalPage from "./goal/[number]/page";
 import EquityGlossaryPage from "./glossary/page";
 import { resetStoreForTests } from "@/lib/intelligence/memory/store";
-import { REVIEW_COUNT_OFF } from "./review-count-section";
 
 vi.mock("@/lib/auth/leaders-access", () => ({ leadersAllowed: async () => true }));
 vi.mock("next/navigation", async original => ({ ...await original<typeof import("next/navigation")>(), usePathname: () => "/data/equity-baseline", notFound: () => { throw new Error("not found"); } }));
@@ -58,12 +57,9 @@ describe("equity baseline pages", () => {
     expect(page).toContain("No workforce data exists yet");
     expect(shortFormIn(visibleText(page))).toBeNull();
   });
-  it("says plainly that One DSD keeps no review totals and shows nothing about lesson activity", async () => {
+  it("shows no review totals and nothing about lesson activity", async () => {
     const page = html(await EquityBaselinePage());
-    const reviews = page.slice(page.indexOf('aria-labelledby="reviews-completed-title"'), page.indexOf('aria-labelledby="count-title"'));
-    expect(reviews).toContain("Equity reviews completed");
-    expect(reviews).toContain(REVIEW_COUNT_OFF);
-    expect(reviews).not.toContain("<table");
+    expect(page).not.toContain('aria-labelledby="reviews-completed-title"');
     expect(page).not.toContain("guidance-signals-title");
     expect(visibleText(page)).not.toMatch(/Guidance signals|Guidance sessions|Guidance rounds|Hints given/i);
     expect(visibleText(page)).not.toMatch(BANNED_VISIBLE);

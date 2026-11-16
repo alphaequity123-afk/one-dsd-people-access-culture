@@ -5,7 +5,7 @@ export const PAGE_AREAS = {
   tools: { label: "Practice", home: "/practice", links: [["Guided practices", "/practice"], ["Equity Analysis Toolkit", "/learn/equity-toolkit"], ["Equity reviews", "/equity-review"], ["Tools", "/program/resources"]] },
   support: { label: "Support", home: "/support", links: [["Support", "/support"], ["Ask", "/ask"], ["Minnesota communities", "/minnesota-communities"]] },
   programs: { label: "One DSD", home: "/one-dsd", links: [["One DSD", "/one-dsd"], ["Programs and services", "/one-dsd/programs"], ["Planning and progress", "/one-dsd/planning"], ["Equity leadership and growth", "/one-dsd/leadership"], ["Understanding DHS", "/understanding-dhs"], ["About", "/about"]] },
-  leading: { label: "For leaders, supervisors, managers, and directors", home: "/leading", links: [["What are you deciding?", "/leading"], ["Suggested paths", "/leading/paths"], ["Your leadership journey", "/leading/journey"], ["How this works", "/leading/how-this-works"]] },
+  leading: { label: "For leaders, supervisors, managers, and directors", home: "/leading", links: [["What are you deciding?", "/leading"], ["Suggested paths", "/leading/paths"], ["Your leadership journey", "/leading/journey"]] },
   about: { label: "About the program", home: "/about", links: [["About", "/about"], ["How the program works", "/program/model"], ["Program charter", "/program-foundation"]] },
   consultant: { label: "Consultant workspace", home: "/consultant", links: [["Workspace", "/consultant"], ["My work", "/my-work"], ["Return to the program", "/home"]] },
 } as const;

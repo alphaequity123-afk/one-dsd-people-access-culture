@@ -6,18 +6,17 @@ import styles from "@/components/collections.module.css";
 
 export const metadata: Metadata = {
   title: `Suggested paths | ${LEADING_LABEL}`,
-  description: "Six optional paths, from exploring leadership to senior leaders. Nobody is enrolled, and progress stays in your browser.",
+  description: "Six suggested paths, from exploring leadership to senior leaders.",
 };
 
 export default function LeadingPathsPage() {
   return <div className={base.page}><div className={base.content}>
     <p className={base.back}><Link href="/leading">{LEADING_LABEL}</Link></p>
     <header className={base.intro}>
-      <p className={base.eyebrow}>Optional</p>
       <h1>Suggested paths</h1>
-      <p className={base.lede}>Six suggested orders through the material. All of them are optional.</p>
+      <p className={base.lede}>Six suggested orders through the material.</p>
       <p>Not sure where to begin, or how to make a path your own? <Link href="/leading/journey">See how the leadership journey works</Link>.</p>
-      <p>These suggested learning paths do not enroll you in agency training. Choose material that fits your responsibilities and learning needs; complete assigned training through the agency’s designated process. The Equity Analysis Toolkit, marked &ldquo;{REQUIRED_COURSE_LABEL}&rdquo;, supports applicable equity-analysis duties. If you keep your place here, it is saved in this browser profile and may be visible to anyone using that profile.</p>
+      <p>Choose material that fits your responsibilities and learning needs; complete assigned training through the agency’s designated process. The Equity Analysis Toolkit, marked &ldquo;{REQUIRED_COURSE_LABEL}&rdquo;, supports applicable equity-analysis duties.</p>
     </header>
     <ul className={styles.doors}>
       {LEADING_PATHS.map(path => <li key={path.slug}><Link className={styles.door} href={`/leading/paths/${path.slug}`}>

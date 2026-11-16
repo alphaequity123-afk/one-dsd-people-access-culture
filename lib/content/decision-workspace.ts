@@ -76,7 +76,7 @@ const copy: Record<string, string> = {
   resourcesKeep: "Keep these links with my notes", resourcesKept: "Resource links added to your notes. Save to My Work to keep this change.",
   contextTitle: "Connect with the wider purpose", contextDsd: "The Equity Outcome Map sets out intended outcomes. Where an ADSA goal applies, connect its action to a real work product and questions about results. The goals do not replace the requirements for your work.", contextDhs: "The Equity Outcome Map provides shared direction. The DSD video shows one application of that direction; confirm the priorities and requirements that apply to your own work.",
   saveLabel: "Save to My Work", downloadLabel: "Download my notes", printLabel: "Print my notes", newLabel: "Start a new analysis", previousLabel: "Previous stage", nextLabel: "Next stage", myWorkLabel: "Open My Work",
-  saved: "Saved to My Work in this browser on this device. Nothing has been submitted.",
+  saved: "Saved to My Work.",
   changed: "You have changes that are not saved to My Work.",
   downloaded: "Your notes download is ready.",
   downloadError: "The download could not be created. Your notes remain here. Try printing them, or save to My Work before leaving.",

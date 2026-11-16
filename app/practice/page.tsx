@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "@/components/app-link";
 import { EditableSurfaceRegion, prepareEditableSurface } from "@/components/editable-surface";
 import { LearningJourneyLink } from "@/components/learning-journey-link";
-import { ParticipationNotice } from "@/components/participation-notice";
 import { ProgramContextNote } from "@/components/program-context";
 import { PageIntro } from "@/components/ui";
 import { WorkOriginLinks } from "@/components/work-origin-links";
@@ -110,7 +109,6 @@ export default async function PracticePage({ searchParams }: { searchParams?: Pr
             </ul>
             <LearningJourneyLink scope={scope} compact />
             <ProgramContextNote />
-            <ParticipationNotice surface="path_practice" />
           </div>
         </details>
       </div>

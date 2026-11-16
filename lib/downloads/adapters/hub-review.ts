@@ -143,7 +143,7 @@ function directorToolkitDocument(scope: StaffProgramScope): ResourceDocument {
         bullets([
           "The first 90 days: what to do in each 30-day period, and what each period should produce.",
           "The 12-item priority starter package: three foundational resources and nine practical supports to build with the people responsible for each area.",
-          "The printable templates: fill them in on screen, then print, copy or download. Nothing is saved or sent. Program page /equity-review/director-toolkit/templates",
+          "The printable templates: fill them in on screen, then print, copy or download. Program page /equity-review/director-toolkit/templates",
         ]),
       ]),
       ...DIRECTOR_TOOLKIT_SECTIONS.map(entry =>
@@ -188,7 +188,7 @@ function templateSection(template: DirectorTemplate) {
     paragraph(template.howToUse),
     paragraph(`Part of ${parent} in the toolkit.`),
     ...template.fields.flatMap(templateFieldBlocks),
-    callout(`${TEMPLATE_KEEP_OUT} Nothing you write on this copy is saved or sent.`),
+    callout(`${TEMPLATE_KEEP_OUT}`),
   ]);
 }
 
@@ -203,7 +203,7 @@ function templatesDocument(scope: StaffProgramScope): ResourceDocument {
     sections: compactSections([
       section("Before you start", [
         paragraph("These templates put the Department of Human Services Equity Policy, the Department of Human Services Equity Analysis Toolkit and the State of Minnesota Equity Analysis Toolkit into practice. They do not replace them. Adapt each one with the people responsible for the work it covers."),
-        callout(`This copy is blank. Nothing you write on it is saved, stored or sent anywhere. ${TEMPLATE_KEEP_OUT}`),
+        callout(`This copy is blank. ${TEMPLATE_KEEP_OUT}`),
         heading(`The ${DIRECTOR_TEMPLATES.length} templates`),
         numbered(DIRECTOR_TEMPLATES.map(template => template.title)),
       ]),

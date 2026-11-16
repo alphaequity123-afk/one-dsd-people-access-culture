@@ -92,7 +92,7 @@ export function practicePlanSections(plan: PracticePlan): DecisionSection[] {
 export function planText(plan: PracticePlan, scope: "dsd" | "dhs" = "dsd"): string {
   if (plan.analysis) return decisionNotesText(plan.analysis, scope);
   return [`One ${scope.toUpperCase()} People, Access and Culture`, plan.title.trim() || "Untitled plan",
-    "Private working draft. This is not submitted, approved, or a completed official equity analysis.",
+    "Private working draft. This is not a completed official equity analysis.",
     ...planFields.map(field => `${field.label}\n${plan.fields[field.key] || "Not yet recorded."}`),
   ].join("\n\n") + "\n";
 }

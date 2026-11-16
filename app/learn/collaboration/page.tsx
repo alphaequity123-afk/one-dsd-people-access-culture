@@ -3,7 +3,6 @@ import { ResourceDownloads } from "@/components/resource-downloads";
 import Link from "@/components/app-link";
 import { courseHref, courseSummary, publishedCourses } from "@/lib/content/courses/published";
 import { requestedContentScope } from "@/lib/product/request-context";
-import { TRAINING_CREDIT_NOTICE } from "@/lib/program/learning-credit";
 import { COLLABORATION_FOCUSES, COLLABORATION_LEVELS, collaborationCourses, collaborationHref, normalizeCollaborationFilters } from "@/lib/learning/collaboration-collection";
 import styles from "./collaboration.module.css";
 import { Hub2More } from "@/components/hub2-choices";
@@ -88,7 +87,6 @@ export default async function CollaborationLearningPage({ searchParams }: { sear
         })}
       </section>
       <Hub2More title="Keep exploring"><p className="flex flex-wrap gap-x-6 gap-y-2"><Link href="/learn?browse=all#catalog">Browse all learning and resources</Link><Link href="/library?theme=workforce">Find resources for team and workplace practice</Link></p></Hub2More>
-      <details className={styles.credit}><summary>About participation and training credit</summary><p>Learning here is voluntary. Choose what supports your work and return when it is useful.</p><p>{TRAINING_CREDIT_NOTICE}</p></details>
     </div>
   </div>;
 }

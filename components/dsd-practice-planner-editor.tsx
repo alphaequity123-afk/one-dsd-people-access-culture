@@ -19,7 +19,7 @@ function openPlans(): EditorState {
     if (requested && loaded.data.plans.some(plan => plan.id === requested)) loaded.data = { ...loaded.data, activeId: requested };
   }
   return loaded.ok
-    ? { data: loaded.data, raw: loaded.raw, problem: null, status: loaded.data.plans.length ? "Your saved plans are open." : "Create a plan to begin. Changes save automatically on this device." }
+    ? { data: loaded.data, raw: loaded.raw, problem: null, status: loaded.data.plans.length ? "Your saved plans are open." : "Create a plan to begin. Changes save automatically." }
     : { data: emptyPlans(), raw: undefined, problem: "unreadable", status: openingFailure };
 }
 function failureMessage(problem: SaveProblem): string {
@@ -75,7 +75,7 @@ export default function PracticePlannerEditor() {
   function commit(data: PracticePlans, deletion = false) {
     const result = savePlans(storage, data, state.raw);
     if (result.ok) {
-      setState({ data, raw: result.raw, problem: null, status: deletion ? "The plan was deleted from this device." : "All plans saved on this device." });
+      setState({ data, raw: result.raw, problem: null, status: deletion ? "The plan was deleted." : "All plans saved." });
       return true;
     }
     setState({ ...state, data: deletion ? state.data : data, problem: result.reason,
@@ -129,7 +129,7 @@ export default function PracticePlannerEditor() {
     try{const data:unknown=JSON.parse(await file.text());if(!validPlans(data)||data.plans.length>300)throw Error('invalid');const combined=keepPlanCopies(state.data,data);if(commit(combined))setDownloadStatus('The working copy is open. Existing plans were kept, and different versions are kept separately.');}catch{setDownloadStatus(`This file could not be read as a ${programName} working copy. Your existing plans have not changed.`);}
   }
   function report(): GoalPlanReport {
-    return {title: active?.title || "Practice plan", notes:[`${programName} People, Access and Culture`, active?.analysis ? "Working draft. This is not submitted, approved, or a completed official equity analysis." : "Private working draft. This is not submitted or approved. Share only the information you intend to share."], sections: active ? practicePlanSections(active) : []};
+    return {title: active?.title || "Practice plan", notes:[`${programName} People, Access and Culture`, active?.analysis ? "Working draft. This is not a completed official equity analysis." : "Private working draft. Share only the information you intend to share."], sections: active ? practicePlanSections(active) : []};
   }
   async function downloadWord() {
     if(!active)return;
@@ -163,7 +163,7 @@ export default function PracticePlannerEditor() {
   }
 
   return <div className="dsd-planner">
-    <p className="dsd-planner-privacy">Plans are private working drafts saved on this device. They are not submitted to the program or shared with supervisors. Anyone using this device may be able to open them. Use role descriptions and general work information; leave out names and private client, case, health, or personnel information.</p>
+    <p className="dsd-planner-privacy">Use role descriptions and general work information; leave out names and private client, case, health, or personnel information.</p>
     <div className="dsd-planner-status" role="status" aria-live="polite"><p>{state.status}</p>{state.problem && !(deleteId && state.problem === "unavailable") ? <button type="button" onClick={retry}>{state.problem === "conflict" ? "Keep my changes as separate copies" : state.problem === "unreadable" ? "Check saved plans again" : "Retry saving"}</button> : null}</div>
     <div className="dsd-planner-actions"><button type="button" onClick={backup}>Download restorable working copy</button><label>Import working copy<input type="file" accept=".json,application/json" onChange={event=>{void restore(event.target.files?.[0]);event.target.value="";}} /></label></div>
     <p className="dsd-planner-download-status" role="status" aria-live="polite">{downloadStatus}</p>

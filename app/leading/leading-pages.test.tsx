@@ -32,7 +32,6 @@ describe("supervisor and manager pages render with their data", () => {
     expect(page).toContain("/one-dsd/leadership#continuity-plan");
     expect(page).toContain("/one-dsd/amplify/mentoring#mentoring-tool");
     expect(page).toContain("/learn/leadership-styles");
-    expect(page).toContain("until you copy or download them");
     expect(page).toContain("Human Resources or selection process");
     expect(page).toContain("What are you deciding?");
     for (const door of LEADING_DOORS) { expect(page).toContain(door.title); expect(page).toContain(`/leading/${door.slug}`); }
@@ -57,7 +56,7 @@ describe("supervisor and manager pages render with their data", () => {
     expect(policy).toContain("/one-dsd/scenarios/dsd-policy-change");
   });
   it("lists every course on every path, with the Toolkit marked", async () => {
-    expect(html(LeadingPathsPage())).toContain("All of them are optional");
+    expect(html(LeadingPathsPage())).toContain("Six suggested orders through the material.");
     for (const path of LEADING_PATHS) {
       const page = html(await LeadingPathPage({ params: Promise.resolve({ path: path.slug }) }));
       for (const id of path.courseIds) expect(page, id).toContain(`/courses/${id}`);
@@ -65,10 +64,11 @@ describe("supervisor and manager pages render with their data", () => {
       expect(page.match(/not available right now/g), path.slug).toBeNull();
     }
   });
-  it("states the promises", () => {
-    const page = html(LeadingHowThisWorksPage());
-    expect(page).toContain("This area shows you no information about your team's learning.");
-    expect(page).toContain("The one exception is the Equity Analysis Toolkit, which is required.");
+  it("sends the former How this works address to the leadership page", () => {
+    let digest = "";
+    try { LeadingHowThisWorksPage(); } catch (error) { digest = String((error as { digest?: string }).digest); }
+    expect(digest).toContain("NEXT_REDIRECT");
+    expect(digest).toContain("/leading");
   });
 });
 

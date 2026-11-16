@@ -110,7 +110,7 @@ export function EquityGoalExperience({ resourceLinks = [], linkPrefix = "", scop
   }
   function planReport(): GoalPlanReport {
     return { title: `${program}: three-goal working plan`, notes: [
-      "Local working draft — not submitted, approved or a completed equity analysis.",
+      "Local working draft — not a completed equity analysis.",
       "Goal headings: ADSA Equity and Inclusion Implementation Plan. Selecting three priorities does not waive other applicable responsibilities. Staff apply the current DHS Equity Policy and Equity Analysis Toolkit; consultation supports that responsibility.",
     ], sections: goals.filter(goal => selected.includes(goal.number)).map(goal => ({ heading: `Goal ${goal.number}: ${goal.title}`, entries: fields.map(field => ({ label: field.label, text: drafts[goal.number]?.[field.key]?.trim() || "Not yet recorded." })) })) };
   }
@@ -129,7 +129,7 @@ export function EquityGoalExperience({ resourceLinks = [], linkPrefix = "", scop
       anchor.download = `equity-three-goal-working-plan.${format === "word" ? "docx" : "html"}`;
       document.body.appendChild(anchor); anchor.click();
       setCopyPlan(false);
-      setMessage(`Your ${format === "word" ? "Word document" : "web page"} is ready for download. Check your downloads. Nothing has been submitted to the program.`);
+      setMessage(`Your ${format === "word" ? "Word document" : "web page"} is ready for download. Check your downloads.`);
     } catch {
       setCopyPlan(true);
       setMessage("The download could not start. Copy your complete working plan below to keep it. Your notes are still on this page.");
@@ -156,7 +156,7 @@ export function EquityGoalExperience({ resourceLinks = [], linkPrefix = "", scop
       <p style={paragraph}>Using the DHS Equity Policy and its Equity Analysis Toolkit is part of every staff member’s responsibility. Equity professionals can help you work through it.</p>
       <details style={{ margin: "18px 0" }}><summary style={{ cursor: "pointer", color: navy, fontWeight: 700 }}>About these goals and the toolkit</summary>
         <p style={paragraph}>These six goals come from the Aging and Disability Services Administration Equity and Inclusion Implementation Plan. All six guide every unit in the Disability Services Division. They are not department-wide DHS goals.</p>
-        <p style={paragraph}>This companion learning does not replace required agency training. Staff apply the current policy and toolkit to their work; the equity consultant and appropriate partners provide guidance, facilitation and analysis support. That support does not transfer staff responsibility or grant approval authority.</p>
+        <p style={paragraph}>Staff apply the current policy and toolkit to their work; the equity consultant and appropriate partners provide guidance, facilitation and analysis support. That support does not transfer staff responsibility or grant approval authority.</p>
         <p style={paragraph}>The goals describe what to improve. The official toolkit guides how to examine a decision. The plan below helps record action and follow-through. Use the current official decision guidance to determine the appropriate review; a short timeline alone does not establish that a scan is sufficient.</p>
         <p style={paragraph}>In DSD, the <strong>One DSD Team</strong> is the division equity team. DHS and ADSA committees retain their own names and responsibilities.</p>
       </details>
@@ -219,8 +219,8 @@ export function EquityGoalExperience({ resourceLinks = [], linkPrefix = "", scop
       <h2 style={heading}>Three-goal work plan</h2>
       <p style={paragraph}>Directors, managers, supervisors, and staff can use this plan together to connect priorities with practical work and the outcomes they seek. The constitution guides the whole program; these ADSA goals provide one path through its wider learning, tools and implementation support.</p>
       <p style={paragraph}>Select exactly three focus goals and prepare a practical next step for each. Three priorities help organize agreed work; they do not waive responsibilities under the other goals or applicable policies. Use this working draft to prepare for review; it is not an approved agency work plan.</p>
-      <p style={{ ...paragraph, padding: 14, background: "#edf3f8", borderLeft: `4px solid ${navy}` }}>Your plan saves automatically on this device so you can return to it. It is not shared with the program or available on another device. Anyone using this browser may see it. Download a copy to keep or share, and clear the draft when using a shared device. Use role descriptions and appropriate aggregate evidence; leave out private personnel or case details.</p>
-      <p role="status">{loadedKey !== draftKey ? "Opening your plan…" : saveProblem || "Your plan is saved on this device."}</p>
+      <p style={{ ...paragraph, padding: 14, background: "#edf3f8", borderLeft: `4px solid ${navy}` }}>Download a copy to keep or share, and clear the draft when using a shared device. Use role descriptions and appropriate aggregate evidence; leave out private personnel or case details.</p>
+      <p role="status">{loadedKey !== draftKey ? "Opening your plan…" : saveProblem || "Your plan is saved."}</p>
       <fieldset style={{ margin: "20px 0", padding: 16, border: "1px solid #94a3b8", borderRadius: 4 }}>
         <legend style={{ fontWeight: 700, padding: "0 8px" }}>Choose three focus goals</legend>
         <p style={{ margin: "0 0 12px" }}>When three are selected, unselect one to choose a different goal. Notes for unselected goals stay in your draft; reselect a goal to continue.</p>

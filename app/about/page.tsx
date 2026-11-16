@@ -52,27 +52,6 @@ export default async function AboutPage() {
 
         <section aria-labelledby="how-it-works-title" className="border-t border-line pt-6"><h2 id="how-it-works-title" className="text-2xl font-extrabold">How the program works</h2><p>The program connects learning, practice and review, with three pillars of equity practice and commitments to the people who use it. Read the program model alongside the proposed charter. The charter is a planning framework; applicable law, policy and assigned responsibilities continue to govern the work.</p><p><Link href="/program/model" className="font-semibold">Read how the program works</Link> · <Link href="/program-foundation" className="font-semibold">Read the Program charter</Link></p></section>
 
-        <section aria-labelledby="participation-title">
-          <p className="kicker">{stringValue(copy, "participationKicker")}</p>
-          <h2 id="participation-title" className="text-2xl font-extrabold">
-            {stringValue(copy, "participationTitle")}
-          </h2>
-          <div className="mt-4 grid gap-x-12 gap-y-6 md:grid-cols-2">
-            <div className="border-t border-line pt-4">
-              <h3 className="text-xl font-bold">{stringValue(copy, "voluntaryTitle")}</h3>
-              <p className="m-0">
-                {stringValue(copy, "voluntaryBody")}
-              </p>
-            </div>
-            <div className="border-t border-line pt-4">
-              <h3 className="text-xl font-bold">{stringValue(copy, "requiredTitle")}</h3>
-              <p className="m-0">
-                {stringValue(copy, "requiredBody")}
-              </p>
-            </div>
-          </div>
-        </section>
-
         <section className="max-w-4xl border-t border-line pt-5" aria-labelledby="sources-title">
           <p className="kicker">{stringValue(copy, "sourcesKicker")}</p>
           <h2 id="sources-title" className="text-2xl font-extrabold">

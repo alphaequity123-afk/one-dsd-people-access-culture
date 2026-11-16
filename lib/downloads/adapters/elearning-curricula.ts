@@ -205,7 +205,7 @@ function clasCurriculumDocument(scope: StaffProgramScope): ResourceDocument {
           "Begin with the person’s experience, then explore communication, responsibility, participation and improvement. Every part includes recorded guidance, a transcript, decisions to practice, a working note that builds into your own plan and a one-page job aid.",
         ),
         paragraph(
-          "You do not need a group. You can pause, revisit a lesson or use the sample service notice. Reflection is optional and does not need to be shared. Leave names, case details and other private information out of learning notes.",
+          "You do not need a group. You can pause, revisit a lesson or use the sample service notice. Leave names, case details and other private information out of learning notes.",
         ),
       ]),
       section("The parts", [
@@ -295,7 +295,7 @@ async function toolkitCurriculumDocument(scope: StaffProgramScope): Promise<Reso
     sections: compactSections([
       section("A connected path at your own pace", [
         paragraph("Use a work example that matters to you, or follow the example in the lessons. Each part offers guidance, a transcript, an individual decision to practice, and a prompt for your own work."),
-        paragraph("Participation in this learning is voluntary. You do not need a group or need to share personal experiences. Leave names, case details, and other confidential information out of learning notes."),
+        paragraph("You do not need a group or need to share personal experiences. Leave names, case details, and other confidential information out of learning notes."),
         paragraph("The learning supports your work. Follow applicable policy and review requirements, and consult the responsible people when a decision needs their approval. A quick check does not replace a full analysis when one is required."),
       ]),
       section("The parts", [numbered(toolkit.modules.map((lesson): InlineRun[] => [{ text: lesson.title, bold: true }, { text: ` — ${lesson.deliverable}` }]))]),
@@ -402,7 +402,7 @@ async function interculturalCurriculumDocument(scope: StaffProgramScope): Promis
     sections: compactSections([
       section("A connected path, at your own pace", [
         paragraph("Follow one work example through seven parts, from noticing an assumption to listening and learning from a change. Choose the parts and resources that support your work."),
-        paragraph("This learning is voluntary and individual. You can pause, revisit a section, and keep reflections to yourself. Leave names, case details and other private information out of learning notes."),
+        paragraph("You can pause, revisit a section, and keep reflections to yourself. Leave names, case details and other private information out of learning notes."),
       ]),
       section("The parts", [numbered(interculturalCurriculum.modules.map((module) => module.title))]),
       ...interculturalCurriculum.modules.map((module, index) =>

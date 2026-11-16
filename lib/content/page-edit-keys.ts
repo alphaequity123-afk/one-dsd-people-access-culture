@@ -50,7 +50,7 @@ const PUBLIC_EDIT_PAGES = new Set([
   "/learn/equity-toolkit", "/learn/equity-toolkit/curriculum", "/learn/intercultural",
   "/learn/intercultural/curriculum", "/learn/readings", "/learn/readings/pathways",
   "/learn/self-directed", "/learn/sources", "/learn/tribal-referral", "/learn/water-we-swim-in",
-  "/learn/water-we-swim-in/essay", "/learn/collections", "/leading", "/leading/how-this-works", "/leading/journey",
+  "/learn/water-we-swim-in/essay", "/learn/collections", "/leading", "/leading/journey",
   "/leading/paths", "/library", "/minnesota-communities", "/minnesota-communities/calendar",
   "/one-dsd", "/one-dsd/amplify", "/one-dsd/amplify/co-leads", "/one-dsd/amplify/gatherings",
   "/one-dsd/amplify/ideas", "/one-dsd/amplify/materials", "/one-dsd/amplify/mentoring",

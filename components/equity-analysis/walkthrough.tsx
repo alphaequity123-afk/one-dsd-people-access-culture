@@ -238,7 +238,7 @@ function Intro({ savedDraft, onStart, onResume }: { savedDraft: Draft | null; on
         </p>
         {savedDraft ? (
           <div className="notice">
-            <p className="m-0 font-semibold">You have a draft on this device.</p>
+            <p className="m-0 font-semibold">You have a draft.</p>
             <p className="m-0 mt-1 text-sm">
               {KIND_LABEL[savedDraft.kind]}
               {savedDraft.answers.work_title ? `: “${savedDraft.answers.work_title}”` : ""}
@@ -261,7 +261,7 @@ function Intro({ savedDraft, onStart, onResume }: { savedDraft: Draft | null; on
           <h2 id="how-it-works" className="mt-0 text-2xl font-bold">How it works</h2>
           <ol className="mt-3 list-decimal space-y-2 pl-5">
             <li><strong>Learn.</strong> Each step opens with what the toolkit means by it and the mistake teams usually make.</li>
-            <li><strong>Write.</strong> You answer for your own work. Roles and dates, never names. Your draft stays on this device until you add it.</li>
+            <li><strong>Write.</strong> You answer for your own work. Roles and dates, never names.</li>
             <li><strong>See.</strong> When you add it, you get a page to bring to your equity director, and the Equity Policy page counts it.</li>
           </ol>
         </section>
@@ -275,7 +275,7 @@ function Intro({ savedDraft, onStart, onResume }: { savedDraft: Draft | null; on
         </div>
         <div className="card text-sm">
           <p className="m-0 font-semibold">What this is not</p>
-          <p className="mt-2">Not the official form you file, and not a substitute for civil rights, Tribal consultation, or labor relations. Bring the page to your administration’s equity director; file the official toolkit as required. Participation is voluntary.</p>
+          <p className="mt-2">Not the official form you file, and not a substitute for civil rights, Tribal consultation, or labor relations. Bring the page to your administration’s equity director; file the official toolkit as required.</p>
         </div>
       </aside>
     </div>
@@ -323,7 +323,7 @@ function StepScreen({ step, index, count, kind, answers, showErrors, onChange, o
         <div className="mt-8 flex flex-wrap items-center gap-3">
           <button type="submit" className="btn">{index + 1 < count ? "Save and continue" : "Review"}</button>
           <button type="button" className="btn btn--light" onClick={onBack}>Back</button>
-          <span className="text-xs text-muted">Draft kept on this device.</span>
+          <span className="text-xs text-muted">Draft kept.</span>
         </div>
       </form>
     </div>

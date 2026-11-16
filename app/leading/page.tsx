@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import Link from "@/components/app-link";
 import { CollectionItemLink } from "@/components/collection-item-link";
-import { ParticipationNotice } from "@/components/participation-notice";
-import { LEADING_DOORS, LEADING_LABEL, LEADING_PATHS, LEADING_PRIVACY_SENTENCE, REQUIRED_COURSE_ID, TRIBAL_REFERRAL_HREF, pathHours } from "@/lib/content/collections";
+import { LEADING_DOORS, LEADING_LABEL, LEADING_PATHS, REQUIRED_COURSE_ID, TRIBAL_REFERRAL_HREF, pathHours } from "@/lib/content/collections";
 import { publishedCourses } from "@/lib/content/courses/published";
 import { requestedContentScope } from "@/lib/product/request-context";
 import { culturalIntelligenceHubAvailable } from "@/lib/content/cultural-intelligence-publication";
@@ -41,7 +40,7 @@ export default async function LeadingPage({ searchParams }: { searchParams?: Pro
       <p className={base.eyebrow}>{LEADING_LABEL}</p>
       <h1>Lead equity in everyday work</h1>
       <p className={base.lede}>Whether you are exploring leadership, leading a team or shaping direction across the division, find learning and practical tools for the decisions and responsibilities in front of you.</p>
-      <p>The learning collection is open to everyone. Choose a starting point that fits your work; designated management resources require an access key. Follow any formal duties or assigned training that apply to your role. {LEADING_PRIVACY_SENTENCE} <Link href="/leading/how-this-works">How this works</Link>.</p>
+      <p>The learning collection is open to everyone. Choose a starting point that fits your work; designated management resources require an access key. Follow any formal duties or assigned training that apply to your role.</p>
     </header>
     <section className={styles.section} aria-labelledby="leadership-start-title">
       <h2 id="leadership-start-title">Start where you are</h2>
@@ -71,11 +70,10 @@ export default async function LeadingPage({ searchParams }: { searchParams?: Pro
     <aside className={styles.requiredNote} aria-labelledby="required-course-title">
       <h2 id="required-course-title">Toolkit use and required training</h2>
       <p><CollectionItemLink id={REQUIRED_COURSE_ID} published={published} /></p>
-      <p>DHS requires staff to use the Equity Analysis Toolkit and complete assigned Toolkit training through the agency&apos;s learning platform. The course linked here supports that work; it does not document completion of the agency&apos;s required training.</p>
+      <p>DHS requires staff to use the Equity Analysis Toolkit and complete assigned Toolkit training through the agency&apos;s learning platform. The course linked here supports that work.</p>
     </aside>
     <section className={styles.section} aria-labelledby="paths-title">
       <h2 id="paths-title">Suggested paths</h2>
-      <p>These suggested paths do not enroll you or report your progress to a supervisor. If you save progress, others using the same browser profile may be able to see it.</p>
       <ul className={styles.doors}>
         {LEADING_PATHS.map(path => <li key={path.slug}><Link className={styles.door} href={`/leading/paths/${path.slug}`}>
           <span className={styles.doorTitle}>{path.title}</span>
@@ -94,12 +92,11 @@ export default async function LeadingPage({ searchParams }: { searchParams?: Pro
         <li><Link className={styles.door} href="/one-dsd/amplify/mentoring#mentoring-tool"><span className={styles.doorTitle}>Prepare a mentoring conversation</span><span>Name a question, consider the support you need and choose a useful next step.</span><span className={styles.doorAction}>Prepare a conversation</span></Link></li>
         <li><Link className={styles.door} href="/one-dsd/leadership#continuity-plan"><span className={styles.doorTitle}>Plan for continuity</span><span>Connect critical work, a development opportunity, knowledge sharing and follow-up.</span><span className={styles.doorAction}>Create a succession draft</span></Link></li>
       </ul>
-      <p>Development and continuity drafts stay on their page until you copy or download them. Do not enter names or private personnel details. They do not replace the applicable Human Resources or selection process.</p>
+      <p>Do not enter names or private personnel details. These drafts do not replace the applicable Human Resources or selection process.</p>
     </section>
     <Hub2More title="Keep exploring">
       {culturalLearningAvailable && <p><Link href="/learn/cultural-intelligence#leaders">Explore leadership approaches, power and inclusive practice</Link></p>}
       <p className="flex flex-wrap gap-x-6 gap-y-2"><Link href="/support/right-person">Find the person or area responsible</Link><Link href="/learn/collections">Collections for all staff</Link><Link href="/one-dsd/leadership">Equity leadership and growth</Link><Link href={TRIBAL_REFERRAL_HREF}>Native American and Tribal-specific guidance</Link></p>
     </Hub2More>
-    <details className={base.credit}><summary>About participation and privacy</summary><p>Please do not type anyone&apos;s name or details into Ask. Use general work questions and examples without confidential details. {LEADING_PRIVACY_SENTENCE}</p><ParticipationNotice surface="learning" /></details>
   </div></div>;
 }

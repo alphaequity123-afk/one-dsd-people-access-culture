@@ -72,7 +72,7 @@ export function HomeAsk({ copy, researchAvailable }: { copy: EditableSurfaceValu
         <button type="button" className="ask-icon" title="Talk with Ask" aria-haspopup="dialog" onClick={event => show(event.currentTarget)}><WaveIcon /><span className="sr-only">Talk with Ask</span></button>
       </AskBox>
       {error ? <p id={`${id}-error`} role="alert" className="ask-box-small error">{error}</p> : null}
-      <p id={`${id}-note`} className="ask-box-small">Please leave out names, case details and anything private. Your question, and your recording when you speak, go to outside services to be answered. No audio is saved on this site.</p>
+      <p id={`${id}-note`} className="ask-box-small">Please leave out names, case details and anything private.</p>
     </form>
     {open ? <dialog ref={panel} className="ask-panel-layer" aria-labelledby={`${id}-panel-title`} onClose={restoreFocus}>
       <div className="ask-panel-shade" onClick={close} aria-hidden="true" />

@@ -103,7 +103,7 @@ export function WalkthroughPlaylist({ items }: { items: WalkthroughItem[] }) {
         <button type="button" className="clas-study-secondary" onClick={() => select(index - 1, false)} disabled={index === 0}>Previous chapter</button>
         <button type="button" className="clas-study-secondary" onClick={() => select(index + 1, false)} disabled={index >= items.length - 1}>Next chapter</button>
         <p className="clas-player-status" role="status">
-          {resumedFrom !== null && <>Resumed at {formatTime(resumedFrom)}, where you left off on this device. <button type="button" className="clas-study-link" onClick={startOver}>Start this chapter from the beginning</button> </>}
+          {resumedFrom !== null && <>Resumed at {formatTime(resumedFrom)}, where you left off. <button type="button" className="clas-study-link" onClick={startOver}>Start this chapter from the beginning</button> </>}
           {status}
         </p>
       </div>

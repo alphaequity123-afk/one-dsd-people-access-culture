@@ -196,7 +196,6 @@ async function aboutDocument(scope: StaffProgramScope): Promise<ResourceDocument
     sections: compactSections([
       section(text("purposeTitle"), [paragraph(text("purposeBody")), paragraph(PROGRAM.leadershipStatement), paragraph(text("purposeBoundary"))]),
       section(text("federationTitle"), [paragraph(text("federationBody")), paragraph(text("federationBoundary"))]),
-      section(text("participationTitle"), [heading(text("voluntaryTitle")), paragraph(text("voluntaryBody")), heading(text("requiredTitle")), paragraph(text("requiredBody"))]),
       section(text("sourcesTitle"), [paragraph(text("sourcesBody").replace(/\b(?:its\s+)?review date,\s*/gi, "")), paragraph(text("sourcesBoundary"))]),
       section(text("boundariesTitle"), [bullets(stringListValue(copy, "boundaries"))]),
       section(text("supportTitle"), [paragraph(text("supportBody")), linkList(linkListValue(copy, "supportLinks"))]),

@@ -5,7 +5,6 @@ import type { Metadata } from "next";
 import { requestedContentScope } from "@/lib/product/request-context";
 import { StaffWorkBrowse } from "@/components/staff-work-browse";
 import { PageIntro } from "@/components/ui";
-import { ParticipationNotice } from "@/components/participation-notice";
 import { EditableSurfaceRegion, prepareEditableSurface } from "@/components/editable-surface";
 import { stringValue } from "@/lib/content/staff-surface-registry";
 import { DsdSavedResourceShelf } from "@/components/dsd-workspace";
@@ -13,6 +12,7 @@ import { SavedDecisionLinks } from "@/components/dsd-practice-planner-editor";
 import { MyPath } from "@/components/my-path";
 import { ExplainerVideo } from "@/components/explainer-video";
 import { AskHistoryNote } from "@/components/ask-history-note";
+import { withoutSystemNotices } from "@/lib/content/work-guidance";
 
 export const metadata: Metadata = { title: "My Work" };
 
@@ -21,7 +21,7 @@ export default async function MyWorkPage({ searchParams }: { searchParams?: Prom
   const surface = await prepareEditableSurface("my-work.page");
   const copy = surface.values;
   if (!surface.canEdit && (await searchParams)?.view !== "workspace") return <EditableSurfaceRegion surface={surface} className="pilot-topic">
-    <header><h1>{stringValue(copy, "introTitle")}</h1><p>{stringValue(copy, "introLede")}</p></header>
+    <header><h1>{stringValue(copy, "introTitle")}</h1><p>{withoutSystemNotices(stringValue(copy, "introLede"))}</p></header>
     <section aria-labelledby="pilot-work">
       <h2 id="pilot-work">Put learning to work</h2>
       <ul className="pilot-topic-rows">
@@ -38,7 +38,7 @@ export default async function MyWorkPage({ searchParams }: { searchParams?: Prom
       <PageIntro
         kicker={stringValue(copy, "introKicker")}
         title={stringValue(copy, "introTitle")}
-        lede={stringValue(copy, "introLede")}
+        lede={withoutSystemNotices(stringValue(copy, "introLede"))}
       />
       <div className="wrap space-y-6 py-8">
         <Link href="/my-work">Back to My Work</Link>
@@ -78,7 +78,6 @@ export default async function MyWorkPage({ searchParams }: { searchParams?: Prom
           <p className="flex flex-wrap gap-3"><Link className="btn btn--primary" href="/learn/equity-toolkit/goals#equity-work-plan">Prepare your three-goal work plan</Link><Link className="btn btn--light" href="/leading">For leaders, supervisors, managers, and directors</Link></p>
         </section> : null}
         <StaffWorkBrowse scope={scope} />
-        <ParticipationNotice surface="my_work" />
       </div>
     </EditableSurfaceRegion>
   );

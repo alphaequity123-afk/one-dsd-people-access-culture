@@ -154,7 +154,7 @@ export function EquityDashboard({ workspace }: { workspace: EquityWorkspace }) {
         <div>
           <h3 className="m-0 text-xl font-bold">Where the numbers come from</h3>
           <ul className="mt-3 list-disc space-y-2 pl-5 text-sm">
-            <li>Tool use: every analysis or scan staff added through the guided walkthrough, counted by the quarter it was added and the administration named in it. Nothing is counted per person.</li>
+            <li>Tool use: every analysis or scan staff added through the guided walkthrough, counted by the quarter it was added and the administration named in it.</li>
             <li>Survey: one row per wave (percent favorable per item, respondents, response rate), entered by program staff after each wave.</li>
             <li>Open by design: every analysis, follow-up, and survey figure is readable by all DHS staff, and every change is kept in the register’s change history where it can be seen and reversed.</li>
           </ul>

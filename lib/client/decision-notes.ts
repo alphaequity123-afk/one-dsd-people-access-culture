@@ -125,7 +125,7 @@ export function decisionNotesSections(notes: DecisionNotes): DecisionSection[] {
 }
 export function decisionNotesText(notes: DecisionNotes, scope: "dsd" | "dhs" = "dsd"): string {
   return [`One ${scope.toUpperCase()} People, Access and Culture`, notes.title || "Untitled analysis",
-    "Working draft. This is not submitted, approved, or a completed official equity analysis.",
+    "Working draft. This is not a completed official equity analysis.",
     ...decisionNotesSections(notes).flatMap(section => [section.heading, ...section.entries.map(entry => `${entry.label}\n${entry.text}`)]),
   ].join("\n\n") + "\n";
 }

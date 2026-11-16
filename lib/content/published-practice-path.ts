@@ -1,14 +1,13 @@
 import type { GraduationPath } from "./paths";
 
-/** Staff practice paths are published reading and downloads, not writable worksheets. */
-export const PUBLISHED_PATH_STORAGE_NOTICE =
-  "This page does not save your answers or progress. Notes saved through an earlier version may still be in this browser's site data; this page does not show or delete them.";
+import { withoutSystemNotices } from "./work-guidance";
 
+/** Staff practice paths are published reading and downloads, not writable worksheets. */
 export const PUBLISHED_PATH_DOWNLOAD_NOTICE =
-  "Use the downloaded checklist to write your answers in a tool you normally use. This page does not save them.";
+  "Use the downloaded checklist to write your answers in a tool you normally use.";
 
 export const PUBLISHED_PATH_FILE_NOTICE =
-  "This is a blank published checklist. If you complete a downloaded copy, store and share that file according to DHS requirements. Nothing you write in that file is saved back to this page.";
+  "This is a blank published checklist. If you complete a downloaded copy, store and share that file according to DHS requirements.";
 
 const SAVED_HERE_CLAIM = /\b(?:sav(?:e|ed|es|ing)|stor(?:e|ed|es|ing)|stay|stays|remain|remains|kept)\b[^.!?]{0,120}\b(?:browser|device|computer|here)\b|\b(?:this page|this path|here)\b[^.!?]{0,100}\b(?:sav(?:e|ed|es|ing)|stor(?:e|ed|es|ing))\b/i;
 
@@ -36,6 +35,6 @@ export function publishedPracticePath(path: GraduationPath): GraduationPath {
           : guidance,
       };
     }),
-    privacy: `${withoutPublishedSaveClaims(path.privacy)} ${PUBLISHED_PATH_STORAGE_NOTICE}`.trim(),
+    privacy: withoutSystemNotices(withoutPublishedSaveClaims(path.privacy)),
   };
 }

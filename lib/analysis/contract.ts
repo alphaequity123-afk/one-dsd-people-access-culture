@@ -107,7 +107,7 @@ export const analysisResponseSchema = z.object({
 export type AnalysisResponse = z.infer<typeof analysisResponseSchema>;
 
 /** Shown with every result and on the page. */
-export const ANALYSIS_NOTICE = "This is a draft analysis of the material you supplied. It has not been reviewed or approved, and nothing you uploaded or pasted was stored. Check the quotations against your document before relying on them.";
+export const ANALYSIS_NOTICE = "This is a draft analysis of the material you supplied. It has not been reviewed or approved. Check the quotations against your document before relying on them.";
 
 export type InstrumentQuestion = { id: string; prompt: string; help?: string };
 export type InstrumentStage = { id: string; title: string; description?: string; questions: InstrumentQuestion[] };

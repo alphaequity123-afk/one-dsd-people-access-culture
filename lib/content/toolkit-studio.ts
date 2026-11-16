@@ -52,7 +52,7 @@ export const TOOLKIT_WHY = {
   title: "Why the Equity Analysis Toolkit",
   authority:
     "Program practice guidance. Use the current official DHS Equity Analysis Toolkit and User Guide for required analysis, review and documentation.",
-  chrome: "DHS staff are responsible for using the Equity Policy and Equity Analysis Toolkit in their work. This companion learning is optional; it does not replace required agency training or policy responsibilities. Equity professionals guide and support staff in applying the toolkit themselves.",
+  chrome: "DHS staff are responsible for using the Equity Policy and Equity Analysis Toolkit in their work. Equity professionals guide and support staff in applying the toolkit themselves.",
   beats: [
     {
       title: "Hook",
@@ -183,7 +183,7 @@ export const TOOLKIT_CARDS: ToolkitStudioCard[] = [
       { href: "/minnesota-communities/deaf-deafblind-hard-of-hearing", label: "Deaf, DeafBlind, and hard of hearing", use: "Communication access questions; formats; what not to assume" },
       { href: "/minnesota-communities/somali", label: "Somali", use: "Language/partnership questions — not “what Somali clients want”" },
     ],
-    practice: { label: "Practice on a similar decision you own", body: "Download a published checklist. Staff notes are not saved here.", href: "/practice" },
+    practice: { label: "Practice on a similar decision you own", body: "Download a published checklist.", href: "/practice" },
     downloadBlurb: "On your own decision: keep channel mix open until preference + access are known. No case names in notes.",
   },
   {
@@ -269,7 +269,7 @@ export const TOOLKIT_CARDS: ToolkitStudioCard[] = [
       { href: "/minnesota-communities/rural", label: "Rural", use: "Greater Minnesota access questions" },
       { href: "/minnesota-communities/tribal-nations", label: "Tribal Nations", use: "Deference only when Nation-impacted" },
     ],
-    practice: { label: "Practice on a scheduling or access decision you own", body: "Download a published checklist. Staff notes are not saved here.", href: "/practice" },
+    practice: { label: "Practice on a scheduling or access decision you own", body: "Download a published checklist.", href: "/practice" },
     downloadBlurb: "Schedule design is service design. List assisted options before removing them.",
   },
   {
@@ -355,7 +355,7 @@ export const TOOLKIT_CARDS: ToolkitStudioCard[] = [
       { href: "/minnesota-communities/somali", label: "Somali", use: "Language/partnership questions" },
       { href: "/minnesota-communities/deaf-deafblind-hard-of-hearing", label: "Deaf, DeafBlind, and hard of hearing", use: "Format and access questions" },
     ],
-    practice: { label: "Practice on a notice, form, or letter you are changing", body: "Download a published checklist. Staff notes are not saved here.", href: "/practice" },
+    practice: { label: "Practice on a notice, form, or letter you are changing", body: "Download a published checklist.", href: "/practice" },
     downloadBlurb: "Success = people could act. “Notices sent” is not an equity metric.",
   },
 ];

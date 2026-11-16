@@ -7,7 +7,6 @@ import { editingModeFromCookies } from "@/lib/auth/request";
 import { groupDiversityCourses } from "@/lib/content/courses/diversity-series";
 import { courseContentItem, courseHref, courseSummary, publishedCourses } from "@/lib/content/courses/published";
 import { requestedContentScope } from "@/lib/product/request-context";
-import { TRAINING_CREDIT_NOTICE } from "@/lib/program/learning-credit";
 import styles from "../learning-family.module.css";
 
 export const metadata: Metadata = { title: "Diversity: understanding and practice" };
@@ -39,7 +38,6 @@ export default async function DiversityCoursesPage() {
           </ul> : <p>No courses in this group are currently published for this view.</p>}
         </details>
       </section>)}
-      <p>{TRAINING_CREDIT_NOTICE}</p>
     </div>
   </div>;
 }

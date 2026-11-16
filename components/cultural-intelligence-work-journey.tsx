@@ -338,7 +338,7 @@ export function CulturalIntelligenceWorkJourney({ resources, title = "Connect le
 
   return <section aria-labelledby={`${instanceId}-title`} className="space-y-5 rounded-xl border border-line p-6">
     <h3 id={`${instanceId}-title`} className="text-2xl font-semibold">{title}</h3>
-    <p>Choose what the work is about and where to begin. This optional guide brings your own culture, the people affected and relevant tools into the same work question. Nothing you choose here is saved; if you leave or reload the page, choose again.</p>
+    <p>Choose what the work is about and where to begin. This guide brings your own culture, the people affected and relevant tools into the same work question.</p>
     <p>Use what you learn in everyday conversations and choices, and work directly with the people and communities affected by a decision. Learning and community briefs do not replace that engagement, or the everyday work of a welcoming, inclusive workplace.</p>
 
     <fieldset className="space-y-2">
