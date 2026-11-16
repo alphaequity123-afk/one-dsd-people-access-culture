@@ -1,0 +1,127 @@
+{
+  "date": "2026-11-16",
+  "courseId": "gc-setting-direction",
+  "status": "accepted_complete_written_course_review",
+  "countsAsCompleteCourseReview": true,
+  "scope": "Course overview, all four lessons and 16 objectives, four practice cases with 12 choices and feedback, four knowledge checks, reflection and action instructions, five flashcards, complete job aid and ten source notes. Recordings are outside this acceptance.",
+  "method": "Read the complete source spec and final generated overview/job aid, reviewed all amendments against the source and primary guidance, measured clarity, preserved assessment answers and choices, and verified all four serialized lesson readings.",
+  "sourcePackSha256": "8a0f3d94fd3b005df70e68174fc4dba0ad3ae27e798cd22d9ad4aa5cfd5aec00",
+  "specSha256": "de4f0e73bc59f824648c807f38ab2893bdf16834dc51fb1e3915043396227ec3",
+  "findings": [
+    "Results-oriented planning does not authorize dropping required safety, compliance or service duties.",
+    "Discretionary improvements are distinguished from mandatory deadlines before prioritization.",
+    "Delivery commitments require authority and resources; a review date is not a promised completion date.",
+    "Intercultural examples are illustrations, not assessments based on scheduling choices.",
+    "Input can be considered seriously while a plan is retained; the reasons should be explained.",
+    "HR and labor consultation supports applicable management processes rather than transferring every routine decision.",
+    "Group labels, ranges and suppression do not guarantee anonymity; data practices review remains necessary.",
+    "Observed trends do not establish causal attribution and do not automatically prescribe one response.",
+    "General state tools and optional course practice do not waive required DHS equity analysis."
+  ],
+  "diagnostics": [
+    {
+      "title": "Naming a direction as a result for people",
+      "teaching": {
+        "words": 398,
+        "sents": 22,
+        "asl": 18.09090909090909,
+        "fk": 10.529273640931933,
+        "fog": 13.668524440383738,
+        "smog": 12.872792785125622,
+        "poly": 16.08040201005025,
+        "long": 26.633165829145728,
+        "short": 4.545454545454546,
+        "ease": 51.79483782549113
+      }
+    },
+    {
+      "title": "Choosing what comes first and who waits",
+      "teaching": {
+        "words": 421,
+        "sents": 22,
+        "asl": 19.136363636363637,
+        "fk": 10.736364716044054,
+        "fog": 14.115353055495575,
+        "smog": 13.172668634160413,
+        "poly": 16.152019002375297,
+        "long": 25.653206650831354,
+        "short": 4.545454545454546,
+        "ease": 52.172160980349844
+      }
+    },
+    {
+      "title": "Connecting teams to the direction and inviting challenge",
+      "teaching": {
+        "words": 406,
+        "sents": 22,
+        "asl": 18.454545454545453,
+        "fk": 11.603331840573222,
+        "fog": 14.968025078369905,
+        "smog": 13.81666964889586,
+        "poly": 18.96551724137931,
+        "long": 30.049261083743843,
+        "short": 0,
+        "ease": 44.7420600089566
+      }
+    },
+    {
+      "title": "Checking who is better off and changing course openly",
+      "teaching": {
+        "words": 486,
+        "sents": 25,
+        "asl": 19.44,
+        "fk": 11.39118847736626,
+        "fog": 14.113448559670784,
+        "smog": 13.154929023078342,
+        "poly": 15.843621399176955,
+        "long": 29.4238683127572,
+        "short": 0,
+        "ease": 48.018214814814854
+      }
+    }
+  ],
+  "diagnosticJudgment": "Flesch–Kincaid estimates 10.5–11.6 and Fog 13.7–15.0. Average sentences are 18.1–19.4 words and short-sentence shares 0–4.6 percent. The professional reasoning and practical limits remain explicit without artificial vocabulary inflation.",
+  "assessmentChecks": {
+    "knowledgeCheckAnswersUnchanged": true,
+    "thirdQuestionContextClarified": true,
+    "scenarioRecommendedIndicesUnchanged": true,
+    "scenarioChoicesUnchanged": true,
+    "finalLessonReadingsMatchCurrentPack": true
+  },
+  "priorFieldReview": "data/editorial/reviews/2026-11-16-direction-guidance-review.json",
+  "sources": [
+    "https://assets.aecf.org/m/resourcedoc/aecf-introductiontotheresultscountpath-2021.pdf",
+    "https://assets.aecf.org/m/resourcedoc/aecf-LeadingforResults-2013.pdf",
+    "https://assets.aecf.org/m/resourcedoc/AECF_EmbracingEquity7Steps-2014.pdf",
+    "https://www.csuohio.edu/sites/default/files/GARE-Racial_Equity_Toolkit.pdf",
+    "https://mn.gov/mmb-stat/equal-opportunity/office-of-inclusion/equity-analysis-toolkit.pdf",
+    "https://mn.gov/mmb-stat/equal-opportunity/office-of-inclusion/Step-by-Step_Guide_Applying_the_State_of_Minnesota_Equity_Analysis_Tool.pdf",
+    "https://mn.gov/mmb-stat/enterprise-talent-development/career-development/Enterprise-Leader-Competency-Definition-Guide.pdf",
+    "https://mn.gov/dhs/assets/equity-policy_tcm1053-646921.pdf",
+    "https://www.revisor.mn.gov/statutes/cite/13.05",
+    "https://www.idiinventory.com/resources"
+  ],
+  "readings": [
+    {
+      "slug": "gc-setting-direction",
+      "readingSha256": "c8ee721de74416998b472b196a2d4fabb54f90da499c7deb33d0d0b66770e9bc"
+    },
+    {
+      "slug": "gc-setting-direction--naming-a-direction-as-a-result-for-people",
+      "readingSha256": "f1b01bcc0d7584f8671bee855828465e0f36b8284397d482137d58d303ed6cf8"
+    },
+    {
+      "slug": "gc-setting-direction--choosing-what-comes-first-and-who-waits",
+      "readingSha256": "44e8b6e5fe1bfeb1765dfcc5ae6d59525bb15f6fd7819b315f0c00db964a896b"
+    },
+    {
+      "slug": "gc-setting-direction--connecting-teams-to-the-direction-and-inviting-cha",
+      "readingSha256": "694aca47349a3218ee6f3cd277e5a1402a9fe600ecf82ae4301349add34091c5"
+    },
+    {
+      "slug": "gc-setting-direction--checking-who-is-better-off-and-changing-course-ope",
+      "readingSha256": "9fcacea7e0fadd22dbc5cb6ef087392d9f0f203982adaf113f15431c9b56e562"
+    }
+  ],
+  "liveVerification": "pending final deployment"
+}
