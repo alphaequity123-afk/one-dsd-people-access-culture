@@ -73,10 +73,9 @@ export async function POST(request: NextRequest) {
       source: { id: `upload-${randomUUID()}`, title: name.slice(0, ANALYSIS_LIMITS.titleCharacters), text: result.text },
       ...(result.note ? { note: result.note } : {}),
     };
-    console.info(`analyze-upload ${traceId} ok characters=${result.text.length}`);
     return json(body);
   } catch (error) {
-    if (error instanceof UploadError) { console.info(`analyze-upload ${traceId} rejected status=${error.status}`); return json({ error: error.message }, error.status); }
+    if (error instanceof UploadError) { return json({ error: error.message }, error.status); }
     // Parser errors can carry file contents. Never serialize or log them.
     console.error(`analyze-upload ${traceId} failed`);
     return json({ error: "This document could not be read. Try again, or paste its text instead." }, 500);

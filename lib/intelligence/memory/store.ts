@@ -17,6 +17,7 @@ import { AsyncLocalStorage } from "node:async_hooks";
 import { withIsolatedFlagOverrides } from "../registry/flags";
 import path from "node:path";
 import { PostgresStore } from "./postgres-store";
+import { appendOwnerAuditLine, auditBelongsToOwnerWork } from "./owner-audit";
 import type { AuditEvent } from "../types";
 import {
   assertAuditEventPersistence,
@@ -89,9 +90,9 @@ export interface Store {
   ): Promise<ConsultationCasResult<T>>;
   appendProgramEvent(taskId: string, expectedEventId: string | null, event: ProgramEvent): Promise<ProgramAppendResult>;
   list<T>(kind: WorkObjectKind): Promise<T[]>;
+  /** Writes owner and contributor work only; an event from a staff request is dropped (owner-audit.ts). */
   appendAudit(event: AuditEvent): Promise<void>;
   listAudit(limit?: number): Promise<AuditEvent[]>;
-  counter(scope: string): Promise<number>;
   consumeRateLimit(scope: string, subjectHash: string, limit: number, windowSeconds: number): Promise<RateLimitDecision>;
   purgeExpiredSecurityRecords(): Promise<SecurityHousekeepingResult>;
   close?(): Promise<void>;
@@ -102,7 +103,6 @@ class MemoryStore implements Store {
   private data = new Map<string, unknown>();
   private idem = new Map<string, { kind: WorkObjectKind; id: string }>();
   private audit: AuditEvent[] = [];
-  private counters = new Map<string, number>();
   private rateLimits = new Map<string, { count: number; resetAt: number }>();
 
   async get<T>(kind: WorkObjectKind, id: string): Promise<T | null> {
@@ -164,15 +164,11 @@ class MemoryStore implements Store {
   async appendAudit(event: AuditEvent) {
     assertCanonicalOperationalInstant(event.at);
     assertAuditEventPersistence(event);
+    if (!auditBelongsToOwnerWork(event)) return;
     this.audit.push(event);
   }
   async listAudit(limit = 200) {
     return this.audit.slice(-limit).reverse();
-  }
-  async counter(scope: string) {
-    const n = (this.counters.get(scope) ?? 0) + 1;
-    this.counters.set(scope, n);
-    return n;
   }
   async consumeRateLimit(scope: string, subjectHash: string, limit: number, windowSeconds: number) {
     const now = Date.now();
@@ -411,10 +407,8 @@ class FileStore implements Store {
   async appendAudit(event: AuditEvent) {
     assertCanonicalOperationalInstant(event.at);
     assertAuditEventPersistence(event);
-    await this.withAuditLock(async () => {
-      await fs.mkdir(this.root, { recursive: true });
-      await fs.appendFile(path.join(this.root, "audit.jsonl"), JSON.stringify(event) + "\n", "utf8");
-    });
+    if (!auditBelongsToOwnerWork(event)) return;
+    await this.withAuditLock(() => appendOwnerAuditLine(this.root, event));
   }
   async listAudit(limit = 200) {
     try {
@@ -431,28 +425,6 @@ class FileStore implements Store {
       if ((error as NodeJS.ErrnoException).code !== "ENOENT") throw error;
       return [];
     }
-  }
-  async counter(scope: string) {
-    await fs.mkdir(this.root, { recursive: true });
-    const f = path.join(this.root, "counters.json");
-    let counters: Record<string, number> = {};
-    try {
-      const parsed: unknown = JSON.parse(await fs.readFile(f, "utf8"));
-      if (
-        !parsed
-        || typeof parsed !== "object"
-        || Array.isArray(parsed)
-        || !Object.values(parsed).every((value) => Number.isSafeInteger(value) && Number(value) >= 0)
-      ) {
-        throw new Error("Local counter storage is invalid.");
-      }
-      counters = parsed as Record<string, number>;
-    } catch (error) {
-      if ((error as NodeJS.ErrnoException).code !== "ENOENT") throw error;
-    }
-    counters[scope] = (counters[scope] ?? 0) + 1;
-    await fs.writeFile(f, JSON.stringify(counters), "utf8");
-    return counters[scope];
   }
   async consumeRateLimit(scope: string, subjectHash: string, limit: number, windowSeconds: number) {
     const now = Date.now();

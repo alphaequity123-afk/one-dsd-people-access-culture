@@ -14,6 +14,10 @@
 .pager ul { display: flex; flex-wrap: wrap; gap: 0.4rem; list-style: none; margin: 0; padding: 0; align-items: center; }
 .pager a, .pager span[aria-current] { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; padding: 0 0.7rem; border: 1px solid var(--color-line, #8ea2b5); border-radius: 0.3rem; font-weight: 600; text-decoration: underline; }
 .pager a[aria-current="page"] { background: var(--blue, #183247); border-color: var(--blue, #183247); color: #fff; text-decoration: none; }
+/* Page buttons for searches kept in the page (components/private-search.tsx) look like the page links. */
+.pager button { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; padding: 0 0.7rem; border: 1px solid var(--color-line, #8ea2b5); border-radius: 0.3rem; background: transparent; color: inherit; font: inherit; font-weight: 600; text-decoration: underline; cursor: pointer; }
+.pager button[aria-current="page"] { background: var(--blue, #183247); border-color: var(--blue, #183247); color: #fff; text-decoration: none; }
+.pager button:focus-visible { outline: 3px solid #b66c00; outline-offset: 3px; }
 .pager a:focus-visible, .jump a:focus-visible { outline: 3px solid #b66c00; outline-offset: 3px; }
 .gap { padding: 0 0.3rem; color: var(--color-muted, #4b5a66); }
 .jump { margin-block: 1rem; }

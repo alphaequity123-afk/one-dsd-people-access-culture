@@ -40,8 +40,8 @@ import {
   type ConsultRequest,
 } from "../consult/schema";
 import { getStore } from "../memory/store";
+import { withOwnerWorkAudit } from "../memory/owner-audit";
 import { organizationalBrief, organizationalMaintenance } from "../memory/organization";
-import { purgeExpiredAskResponseRecords } from "../observability/ask-records";
 import { agentAllowed, effectiveCeiling, getPolicy, setPolicy, type AutonomyPolicy } from "../policy";
 import { resolveBinding, generativeStatus } from "../providers";
 import { getAgent } from "../registry/agents";
@@ -108,7 +108,12 @@ async function step<T>(report: CycleReport, name: string, autonomy: Autonomy, fn
   }
 }
 
-export async function runCycle(by: CycleReport["by"]): Promise<CycleReport> {
+/** The scheduled or owner-started program cycle: its steps belong in the owner's activity record. */
+export function runCycle(by: CycleReport["by"]): Promise<CycleReport> {
+  return withOwnerWorkAudit(() => runCycleSteps(by));
+}
+
+async function runCycleSteps(by: CycleReport["by"]): Promise<CycleReport> {
   const policy = await getPolicy();
   const trace_id = newTraceId();
   const cycle_id = `cycle-${trace_id}`;
@@ -160,14 +165,6 @@ export async function runCycle(by: CycleReport["by"]): Promise<CycleReport> {
         ? String(result.expiredInvitationsClosed) + " expired invitations closed; " + String(result.expiredSessionsDeleted) + " expired sessions removed"
         : "Named contributor storage is not configured.";
     } catch { throw new Error("Named contributor security cleanup failed."); }
-  });
-  await step(report, "purge expired ASK response records", "A0", async () => {
-    try {
-      const deleted = await purgeExpiredAskResponseRecords();
-      return String(deleted) + " expired ASK response records removed";
-    } catch {
-      throw new Error("ASK response record cleanup failed.");
-    }
   });
 
   if (policy.killed) {
@@ -438,7 +435,11 @@ function deriveProposals(r: CycleReport, open: ConsultRequest[], policy: Autonom
  * Consultation lifecycle history is append-only, so an Under review status is
  * never moved backward to Received and no history entry is erased.
  */
-export async function undoCycle(cycleId: string, by: string): Promise<{ ok: boolean; reverted: number; reason?: string }> {
+export function undoCycle(cycleId: string, by: string): Promise<{ ok: boolean; reverted: number; reason?: string }> {
+  return withOwnerWorkAudit(() => undoCycleSteps(cycleId, by));
+}
+
+async function undoCycleSteps(cycleId: string, by: string): Promise<{ ok: boolean; reverted: number; reason?: string }> {
   const store = getStore();
   const report = await store.get<CycleReport>("decision", `cycle:${cycleId}`);
   if (!report) return { ok: false, reverted: 0, reason: "cycle not found" };
@@ -507,7 +508,11 @@ export async function listProposals(): Promise<Proposal[]> {
 }
 
 /** Owner decides. Accepted policy-shaped proposals apply through setPolicy (the only way autonomy changes). */
-export async function decideProposal(id: string, decision: "accepted" | "rejected", note: string | undefined, ctx: ToolContext): Promise<Proposal | null> {
+export function decideProposal(id: string, decision: "accepted" | "rejected", note: string | undefined, ctx: ToolContext): Promise<Proposal | null> {
+  return withOwnerWorkAudit(() => decideProposalSteps(id, decision, note, ctx));
+}
+
+async function decideProposalSteps(id: string, decision: "accepted" | "rejected", note: string | undefined, ctx: ToolContext): Promise<Proposal | null> {
   const store = getStore();
   const p = await store.get<Proposal>("decision", `proposal:${id}`);
   if (!p) return null;

@@ -2,7 +2,7 @@
  * Consultation Intake & Queue Agent (mindset workflow (c)). A0 to A2.
  * Humans own scheduling outcomes; no invitation is ever sent.
  */
-import { createHash } from "node:crypto";
+import { createHash, randomInt } from "node:crypto";
 import { z } from "zod";
 import { CONSULTATION_REQUESTS_REMOVED } from "@/lib/program/retired-features";
 import { getStore, isIsolatedMemoryStore } from "../memory/store";
@@ -123,8 +123,8 @@ export async function submitIntake(raw: unknown, ctx: ToolContext, idempotencyKe
   const store = getStore();
   const created_at = new Date().toISOString();
   const day = created_at.slice(0, 10).replace(/-/g, "");
-  const n = await store.counter(`cr:${day}`);
-  const request_id = `CR-${day}-${String(n).padStart(4, "0")}`;
+  // A random reference, not a running count: nothing tallies how many requests arrive.
+  const request_id = `CR-${day}-${String(randomInt(0, 1_000_000_000)).padStart(10, "0")}`;
   const trackingSecret = issueTrackingSecret(
     idempotencyKey ? { idempotencyKey, requestId: request_id } : undefined,
   );

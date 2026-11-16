@@ -10,9 +10,9 @@ import type {
   Store,
   WorkObjectKind,
 } from "./store";
+import { auditBelongsToOwnerWork, OWNER_AUDIT_INSERT, ownerAuditParameters } from "./owner-audit";
 import {
   assertAuditEventPersistence,
-  durableAuditContentIds,
   assertIdempotencyReceiptPersistence,
   assertWorkObjectPersistence,
 } from "@/lib/trust/work-object-contract";
@@ -71,20 +71,11 @@ const STATEMENTS = {
     from pac_dsd.runtime_work_objects
     where work_kind = $1
     order by created_at, object_id`,
-  appendAudit: `/* pac-runtime:append-audit */
-    insert into pac_dsd.runtime_audit_events (event, occurred_at)
-    values ($1::text::jsonb, $2::timestamptz)`,
   listAudit: `/* pac-runtime:list-audit */
     select event::text as event_json
     from pac_dsd.runtime_audit_events
     order by audit_id desc
     limit $1`,
-  counter: `/* pac-runtime:counter */
-    insert into pac_dsd.runtime_counters (scope, counter_value)
-    values ($1, 1)
-    on conflict (scope)
-    do update set counter_value = pac_dsd.runtime_counters.counter_value + 1, updated_at = now()
-    returning counter_value`,
   consumeRateLimit: `/* pac-runtime:consume-rate-limit */
     select allowed, remaining, reset_at
     from pac_dsd.consume_runtime_rate_limit($1, $2, $3, $4)`,
@@ -316,22 +307,13 @@ export class PostgresStore implements Store {
   async appendAudit(event: AuditEvent): Promise<void> {
     assertCanonicalOperationalInstant(event.at);
     assertAuditEventPersistence(event);
-    const durable = { ...event, content_ids_touched: durableAuditContentIds(event.content_ids_touched) };
-    await this.database().query(STATEMENTS.appendAudit, [json(durable), event.at]);
+    if (!auditBelongsToOwnerWork(event)) return;
+    await this.database().query(OWNER_AUDIT_INSERT, ownerAuditParameters(event));
   }
 
   async listAudit(limit = 200): Promise<AuditEvent[]> {
     const rows = await this.database().query<{ event_json: string }>(STATEMENTS.listAudit, [positiveLimit(limit)]);
     return rows.map((row) => parseJson<AuditEvent>(row.event_json));
-  }
-
-  async counter(scope: string): Promise<number> {
-    const rows = await this.database().query<{ counter_value: number | string }>(STATEMENTS.counter, [scope]);
-    const value = Number(rows[0]?.counter_value);
-    if (!Number.isSafeInteger(value) || value < 1) {
-      throw new Error("The PostgreSQL counter returned an invalid value.");
-    }
-    return value;
   }
 
   async consumeRateLimit(
