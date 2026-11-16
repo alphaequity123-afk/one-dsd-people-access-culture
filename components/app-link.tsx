@@ -2,7 +2,7 @@ import NextLink from "next/link";
 import type { ComponentProps, AnchorHTMLAttributes } from "react";
 import { externalReadingHref, externalSourceHref } from "@/lib/content/external-readings";
 import { canonicalResourceHref } from "@/lib/product/resource-hrefs";
-import { agencyZoneEnabled, isAgencyRoute } from "@/lib/program/agency-zone";
+import { agencyZoneEnabled, agencyHref, isAgencyRoute } from "@/lib/program/agency-zone";
 
 type LinkProps = ComponentProps<typeof NextLink> & { original?: boolean };
 /** All known public resources open their complete reading in the app. */
@@ -11,7 +11,7 @@ export default function AppLink({ original, ...props }: LinkProps) {
   const href = suppliedHref === undefined ? undefined : canonicalResourceHref(suppliedHref);
   if (href !== undefined && href !== suppliedHref) props = { ...props, href };
   if (href && agencyZoneEnabled && isAgencyRoute(href)) {
-    return <a href={href} className={props.className} id={props.id} title={props.title} target={props.target} rel={props.rel}
+    return <a href={agencyHref(href)} className={props.className} id={props.id} title={props.title} target={props.target} rel={props.rel}
       onClick={props.onClick} style={props.style} tabIndex={props.tabIndex} aria-label={props['aria-label']} aria-current={props['aria-current']}>{props.children}</a>;
   }
   if (href && /^https?:\/\//.test(href) && !original) {

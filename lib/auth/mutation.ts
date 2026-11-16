@@ -54,7 +54,12 @@ export function isSameOriginMutation(request: MutationRequest): boolean {
   if (configuredOrigin !== undefined) {
     const publicOrigin = parseOrigin(configuredOrigin);
     if (!publicOrigin || (process.env.NODE_ENV === "production" && !publicOrigin.startsWith("https://"))) return false;
-    return suppliedOrigin === publicOrigin;
+    if (suppliedOrigin === publicOrigin) return true;
+    // The same division service retains its existing media volume while serving the exact agency origin.
+    // Forwarded headers and arbitrary subdomains never extend this explicit pair of origins.
+    if (process.env.NEXT_PUBLIC_DHS_AGENCY_ZONE !== "1") return false;
+    const agencyOrigin = parseOrigin(process.env.NEXT_PUBLIC_DHS_AGENCY_ORIGIN ?? "");
+    return Boolean(agencyOrigin && (process.env.NODE_ENV !== "production" || agencyOrigin.startsWith("https://")) && suppliedOrigin === agencyOrigin);
   }
   // Railway production requires explicit provenance rather than trusting Host.
   if (process.env.RAILWAY_DEPLOYMENT_ID) return false;

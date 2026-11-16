@@ -25,7 +25,7 @@ describe("Equity Director toolkit template", () => {
     await mount("decision-log");
     expect(document.querySelector("#template-decision-log")).not.toBeNull();
     expect(document.body.textContent).not.toContain("Project recommendation");
-    expect(document.body.textContent).toContain("Nothing you type here is saved or sent");
+    expect(document.body.textContent).toContain("The app does not autosave or submit your entries.");
     const subject = document.querySelector<HTMLInputElement>("#template-decision-log-subject")!;
     await act(async () => { type(subject, "Notice redesign"); });
     const cells = document.querySelectorAll("tbody tr");

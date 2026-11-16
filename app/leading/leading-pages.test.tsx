@@ -68,7 +68,8 @@ describe("supervisor and manager pages render with their data", () => {
   it("states the promises", () => {
     const page = html(LeadingHowThisWorksPage());
     expect(page).toContain("This area shows you no information about your team's learning.");
-    expect(page).toContain("The one exception is the Equity Analysis Toolkit, which is required.");
+    expect(page).toContain("agency responsibility associated with the Equity Analysis Toolkit");
+    expect(page).toContain("This local companion course does not assign or certify required agency training.");
   });
 });
 

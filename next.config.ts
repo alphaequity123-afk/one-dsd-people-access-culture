@@ -6,7 +6,7 @@ const development = process.env.NODE_ENV === "development";
 // where HTTPS upgrades and HSTS would stop other computers loading the page.
 const offlineBuild = process.env.PAC_OFFLINE_BUILD === "1";
 const agencyZone = process.env.NEXT_PUBLIC_DHS_AGENCY_ZONE === "1";
-const agencyOrigin = process.env.DHS_AGENCY_ORIGIN;
+const agencyOrigin = process.env.NEXT_PUBLIC_DHS_AGENCY_ORIGIN || process.env.DHS_AGENCY_ORIGIN;
 const contentSecurityPolicy = [
   "default-src 'self'",
   `script-src 'self' 'unsafe-inline'${development ? " 'unsafe-eval'" : ""}`,
@@ -83,6 +83,7 @@ const downloadRuntimeIncludes = [
 
 const nextConfig: NextConfig = {
   ...(agencyZone ? { assetPrefix: "/dsd-static" } : {}),
+  async rewrites() { return agencyZone ? [{ source: "/dsd-api/ask", destination: "/api/ask" }] : []; },
   // Send the full page head before the status, so a missing page really answers 404.
   htmlLimitedBots: /.*/,
   // Each build worker holds its own database pool. Bound prerender concurrency

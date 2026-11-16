@@ -4,6 +4,13 @@
   "package_manager": "npm@11.9.0",
   "settings": [
     {
+      "name": "NEXT_PUBLIC_DHS_AGENCY_ORIGIN",
+      "class": "configuration",
+      "surface": "agency_navigation",
+      "example": false,
+      "required_when": "Exact HTTPS origin of One DHS for shared navigation and origin validation when serving the division through the agency app."
+    },
+    {
       "name": "PORT",
       "class": "configuration",
       "surface": "service_listener",
