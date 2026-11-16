@@ -4,7 +4,7 @@
   "scope": "Specified authored source, access, privacy and partnership guidance across the four lessons and job aid",
   "countsAsCompleteCourseReview": false,
   "sourceSha256": "ab98cef6ed5ffbaf767fc27ab61b07ea297003b3d481332c0ba6cb87b3220c21",
-  "revisedSha256": "d6ec938f63ea5568aab1fc387008aa2f30b876f4aa180effdb9ee073aaaa3804",
+  "revisedSha256": "a412f90897b1589e1c5390fcad1e539a3c8862be1bdc8b2862fd14ebd73abb10",
   "sources": [
     "https://nccc.georgetown.edu/foundations/framework.php",
     "https://nccc.georgetown.edu/documents/Cultural_Broker_Guide_English.pdf",
@@ -272,6 +272,60 @@
       "before": "Intake is where a brief can do the most good and the most harm. It can help you anticipate that a person may prefer a particular language or dialect, may be wary of government agencies because of past experience, or may have a name order that differs from your system's fields. It can harm when staff use a person's apparent community to fill in answers, choose an interpreter based on a surname, or ask extra questions of some people and not others. That second pattern is profiling: treating a person differently because of assumptions about a group they appear to belong to.\n\nA practical rule is to plan access from what people tell you. Language, interpreter, format, timing, setting, technology and trusted messenger are decisions to make with people, not for them. Offer everyone a consistent opportunity to describe communication needs, including language, interpretation, format and who they want involved. Adapt the question or communication method when needed for access, and confirm existing information rather than repeatedly requesting it. The brief can remind you why these questions matter and help you prepare, for example by checking that interpreter services can cover a less common language. It should not decide the answers. The National CLAS Standards, which the DHS Equity Policy incorporates, call for language assistance at no cost to people with limited English proficiency or other communication needs.\n\nData law reinforces the same discipline. Under the Minnesota Government Data Practices Act, collection and storage of data on individuals must be limited to what is necessary to administer programs authorized by law. When staff request private or confidential data about the person supplying it, section 13.04, subdivision 2, generally requires explaining the purpose and intended use, whether they may refuse or are legally required to answer, the known consequences of answering or not, and who else is authorized to receive the data. This notice is often called a Tennessen warning. Use the approved notice and consult data practices staff about its application, including any statutory exception; a local form cannot change the law.\n\nFor the same reasons, do not ask about immigration status, faith, refugee history or experiences of trauma because a brief suggests they might be relevant. Collect information necessary for the authorized program purpose through its approved process. A question may serve that purpose without requiring the person to answer; explain that distinction accurately. If eligibility rules do require immigration information, follow the program's procedure exactly and explain why it is asked. Never ask a person to retell a traumatic migration story to justify a service or satisfy curiosity. Questions about data use belong with your unit's data practices contact or legal counsel.",
       "after": "Intake is where a brief can do the most good and the most harm. It can help you anticipate that a person may prefer a particular language or dialect, may be wary of government agencies because of past experience, or may have a name order that differs from your system's fields. It can harm when staff use a person's apparent community to fill in answers, choose an interpreter based on a surname, or ask extra questions of some people and not others. That second pattern is profiling: treating a person differently because of assumptions about a group they appear to belong to.\n\nA practical rule is to plan access from what people tell you. Language, interpreter, format, timing, setting, technology and trusted messenger are decisions to make with people, not for them. Offer everyone a consistent opportunity to describe communication needs, including language, interpretation, format and who they want involved. Adapt the question or communication method when needed for access, and confirm existing information rather than repeatedly requesting it. The brief can remind you why these questions matter and help you prepare, for example by checking that interpreter services can cover a less common language. It should not decide the answers. The National CLAS Standards, which the DHS Equity Policy incorporates, call for language assistance at no cost to people with limited English proficiency or other communication needs.\n\nData law reinforces the same discipline. Under the Minnesota Government Data Practices Act, collection and storage of data on individuals must be limited to what is necessary to administer programs authorized by law. When staff request private or confidential data about the person supplying it, section 13.04, subdivision 2, generally requires explaining the purpose and intended use, whether they may refuse or are legally required to answer, the known consequences of answering or not, and who else is authorized to receive the data. This notice is often called a Tennessen warning. Use the approved notice and consult data practices staff about its application, including any statutory exception; a local form cannot change the law.\n\nFor the same reasons, do not ask about immigration status, faith, refugee history or experiences of trauma because a brief suggests they might be relevant. Collect information necessary for the authorized program purpose through its approved process. A question may serve that purpose without requiring the person to answer; explain that distinction accurately. If eligibility rules do require immigration information, follow the program's procedure exactly and explain why it is asked. Do not seek a traumatic personal history merely to satisfy curiosity; when sensitive information is necessary for the service, use the applicable process and explain its purpose. Questions about data use belong with your unit's data practices contact or legal counsel.",
       "reason": "Keep the prohibition on intrusive curiosity without excluding sensitive information needed for an authorized service."
+    },
+    {
+      "path": [
+        "lessons",
+        1,
+        "objectives",
+        2
+      ],
+      "before": "Explain how the Minnesota Government Data Practices Act limits data collection to what a program needs and requires notice when private data is requested.",
+      "after": "Explain the limit on data collection and the notice generally required when people supply private or confidential data about themselves.",
+      "reason": "Align objectives and practical reminders with the reviewed guidance; retain notice scope, authorized purpose, and attribution limits."
+    },
+    {
+      "path": [
+        "lessons",
+        1,
+        "objectives",
+        3
+      ],
+      "before": "Identify why immigration status and similar sensitive information should not be collected unless a program requires it.",
+      "after": "Distinguish information needed for an authorized program purpose from information a person is legally required to provide.",
+      "reason": "Align objectives and practical reminders with the reviewed guidance; retain notice scope, authorized purpose, and attribution limits."
+    },
+    {
+      "path": [
+        "lessons",
+        2,
+        "keyPoint"
+      ],
+      "before": "Community patterns must not become targeting rules for oversight. Check the date and source of any figure, base review on conduct and data, and use briefs to shape questions for partners rather than public descriptions of a community.",
+      "after": "Base oversight on conduct and relevant data, rather than presumed community traits. Check the date and source of figures, consult partners, and do not use a brief as the sole basis for describing a community publicly.",
+      "reason": "Align objectives and practical reminders with the reviewed guidance; retain notice scope, authorized purpose, and attribution limits."
+    },
+    {
+      "path": [
+        "aid",
+        2,
+        "items",
+        1
+      ],
+      "before": "Use briefs to shape questions for partners, not public descriptions of a community.",
+      "after": "Use briefs to prepare questions for partners. Do not rely on a brief alone to describe a community in a public message.",
+      "reason": "Align objectives and practical reminders with the reviewed guidance; retain notice scope, authorized purpose, and attribution limits."
+    },
+    {
+      "path": [
+        "aid",
+        2,
+        "items",
+        2
+      ],
+      "before": "Make requests to partners specific, compensated where possible, credited as they wish and reported back.",
+      "after": "Make requests specific, check compensation options, agree on attribution within applicable data-handling limits, and report back.",
+      "reason": "Align objectives and practical reminders with the reviewed guidance; retain notice scope, authorized purpose, and attribution limits."
     }
   ],
   "affectedReadings": [
@@ -312,6 +366,16 @@
           "before": "Subdivision 3 limits collection and storage of data on individuals to what is necessary for authorized programs. Supports collecting only what a program requires.",
           "after": "Subdivision 3 limits collection and storage to information necessary for authorized programs. Necessity and whether the individual must answer are separate questions.",
           "occurrences": 1
+        },
+        {
+          "before": "Use briefs to shape questions for partners, not public descriptions of a community.",
+          "after": "Use briefs to prepare questions for partners. Do not rely on a brief alone to describe a community in a public message.",
+          "occurrences": 1
+        },
+        {
+          "before": "Make requests to partners specific, compensated where possible, credited as they wish and reported back.",
+          "after": "Make requests specific, check compensation options, agree on attribution within applicable data-handling limits, and report back.",
+          "occurrences": 1
         }
       ]
     },
@@ -342,6 +406,12 @@
           "before": "Subdivision 3 limits collection and storage of data on individuals to what is necessary for authorized programs. Supports collecting only what a program requires.",
           "after": "Subdivision 3 limits collection and storage to information necessary for authorized programs. Necessity and whether the individual must answer are separate questions.",
           "occurrences": 1
+        },
+        {
+          "before": "Learning objective\n\nExplain the purpose of the program's Minnesota community briefs as starting points for respectful inquiry.",
+          "after": "Learning objectives\n\nExplain the purpose of the program's Minnesota community briefs as starting points for respectful inquiry.\n\nDistinguish a general statement about a community from a prediction about an individual.\n\nIdentify within-group variation in history, faith, language, disability, age and class that a brief cannot capture.\n\nConvert a descriptive statement from a brief into a question you could ask a person or a community partner.",
+          "occurrences": 1,
+          "reason": "Include all four authored lesson objectives in the searchable reading."
         }
       ]
     },
@@ -407,6 +477,12 @@
           "before": "Never ask a person to retell a traumatic migration story to justify a service or satisfy curiosity.",
           "after": "Do not seek a traumatic personal history merely to satisfy curiosity; when sensitive information is necessary for the service, use the applicable process and explain its purpose.",
           "occurrences": 1
+        },
+        {
+          "before": "Learning objective\n\nPlan access decisions, including language, interpreter, format, timing, setting, technology and trusted messenger, with the person rather than for them.",
+          "after": "Learning objectives\n\nPlan access decisions, including language, interpreter, format, timing, setting, technology and trusted messenger, with the person rather than for them.\n\nDistinguish asking about a person's needs and preferences from profiling them based on a presumed community.\n\nExplain the limit on data collection and the notice generally required when people supply private or confidential data about themselves.\n\nDistinguish information needed for an authorized program purpose from information a person is legally required to provide.",
+          "occurrences": 1,
+          "reason": "Include all four authored lesson objectives in the searchable reading."
         }
       ]
     },
@@ -432,6 +508,17 @@
           "before": "Subdivision 3 limits collection and storage of data on individuals to what is necessary for authorized programs. Supports collecting only what a program requires.",
           "after": "Subdivision 3 limits collection and storage to information necessary for authorized programs. Necessity and whether the individual must answer are separate questions.",
           "occurrences": 1
+        },
+        {
+          "before": "Community patterns must not become targeting rules for oversight. Check the date and source of any figure, base review on conduct and data, and use briefs to shape questions for partners rather than public descriptions of a community.",
+          "after": "Base oversight on conduct and relevant data, rather than presumed community traits. Check the date and source of figures, consult partners, and do not use a brief as the sole basis for describing a community publicly.",
+          "occurrences": 1
+        },
+        {
+          "before": "Learning objective\n\nIdentify how community-level patterns can become profiling when used to target oversight or review.",
+          "after": "Learning objectives\n\nIdentify how community-level patterns can become profiling when used to target oversight or review.\n\nDistinguish conduct-based and data-based review criteria from criteria based on a community's presumed characteristics.\n\nExplain why the date and source of data in a brief matter before it is used in a decision or public message.\n\nDraft a communications approach that uses brief content to shape questions for partners rather than to describe a community to itself.",
+          "occurrences": 1,
+          "reason": "Include all four authored lesson objectives in the searchable reading."
         }
       ]
     },
@@ -462,6 +549,12 @@
           "before": "Subdivision 3 limits collection and storage of data on individuals to what is necessary for authorized programs. Supports collecting only what a program requires.",
           "after": "Subdivision 3 limits collection and storage to information necessary for authorized programs. Necessity and whether the individual must answer are separate questions.",
           "occurrences": 1
+        },
+        {
+          "before": "Learning objective\n\nDescribe the roles cultural brokers can play, such as liaison, cultural guide, mediator and catalyst for change.",
+          "after": "Learning objectives\n\nDescribe the roles cultural brokers can play, such as liaison, cultural guide, mediator and catalyst for change.\n\nDistinguish a respectful, reciprocal request to a community partner from an extractive one.\n\nPlan how partner input will be used, credited and reported back.\n\nExplain how sources and corrections keep brief content accurate.",
+          "occurrences": 1,
+          "reason": "Include all four authored lesson objectives in the searchable reading."
         }
       ]
     }
