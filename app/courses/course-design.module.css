@@ -1,5 +1,5 @@
 .page:global(.course-page) { max-width: 1240px; margin-inline: auto; padding: 2rem clamp(1.25rem,4vw,3.5rem) 4.5rem; color: #182c3a; background: var(--pac-white, #ffffff); }
-.page :is(a,button,input,summary,textarea,select):focus-visible { outline: 3px solid #176B65; outline-offset: 4px; }
+.page :is(a,button,input,summary,textarea,select):focus-visible { outline: 3px solid #003865; outline-offset: 4px; }
 .breadcrumb { display: inline-block; margin-bottom: 1.8rem; color: #183247; font-size: .9rem; font-weight: 600; text-underline-offset: .25em; }
 .hero { display: grid; grid-template-columns: minmax(0,1.2fr) minmax(0,1fr); gap: clamp(2rem,4vw,3.5rem); align-items: center; padding-block: .5rem 2.5rem; border-bottom: 1px solid var(--pac-border, #adb9c4); }
 .page .hero h1 { margin: .65rem 0 1.15rem; color: #183247; font-size: clamp(2rem,3.5vw,3.3rem); line-height: 1.13; letter-spacing: -.035em; font-weight: 600; text-wrap: balance; }
@@ -119,7 +119,7 @@
 .cover, .outline, .page .lessons, .lessonMain, .outcomes { border-radius: 6px; }
 .lessonLayout { grid-template-columns: minmax(0,1fr) minmax(14rem,18rem); gap: 2rem; }
 .lessonMain { border: 0; padding: 0; }
-.outline { border-top: 3px solid #176b65; }
+.outline { border-top: 3px solid #003865; }
 .outline li + li { border-top: 1px solid #dce2e7; }
 .outline a { display: inline-block; padding-block: .25rem; }
 .page .lessons > li { padding-block: 1.35rem; }
