@@ -1,0 +1,182 @@
+{
+  "date": "2026-11-16",
+  "status": "accepted_complete_reference_review",
+  "scope": "Three complete program-authored reference items about orientation, role entry points and measurement. Linked planning guides remain separate and are not accepted by this review.",
+  "method": "Read all source fields before and after revision, compare imported readings and inspect the share-link and assigned-access implementations.",
+  "findings": [
+    "Generated answers require source checking and do not guarantee completeness.",
+    "Support guidance must not delay urgent response or required reporting.",
+    "Role entry points are suggestions rather than topic restrictions.",
+    "Job titles do not grant publishing permissions.",
+    "Share behavior is explicitly scoped to One DSD and retains search filters only on specified list pages.",
+    "Protect individual learning records while distinguishing official agency training requirements.",
+    "Small-group protection requires more than a numerical threshold."
+  ],
+  "sources": [
+    "components/share-page.tsx",
+    "lib/product/share-link.ts",
+    "lib/auth/program-access-contract.ts"
+  ],
+  "changes": [
+    {
+      "id": "lm-how-this-program-works",
+      "path": [
+        "summary"
+      ],
+      "before": "Begin with Ask or Resources, plus a community brief when Minnesota communities or partners are involved. Use a learning path to build and review a checklist or plan, and turn to Support when stakes are high or questions remain.",
+      "after": "Begin with Ask or Resources and use community context when it helps you frame questions about your work. A learning path can help you develop and review a checklist or plan. Use Support for guidance, and follow the designated agency route for urgent matters or required reporting."
+    },
+    {
+      "id": "lm-how-this-program-works",
+      "path": [
+        "body",
+        1
+      ],
+      "before": "Sources and limits: each answer identifies its sources and any important uncertainty. Information here is not official DHS policy unless it is clearly linked to a current official source.",
+      "after": "Sources and limits: check the sources behind an answer and distinguish evidence from interpretation or uncertainty. Generated answers can contain mistakes or omit relevant information. Treat guidance here as program material unless a current official source establishes the policy or requirement, and confirm consequential decisions through the responsible process."
+    },
+    {
+      "id": "pn-role-aware-entry",
+      "path": [
+        "summary"
+      ],
+      "before": "Policy analysts, hiring managers, fiscal analysts, and supervisors need different doors into the same equity knowledge. This program organizes by task and role, so you can do the next piece well without learning the whole subject first.",
+      "after": "Start with the task you are working on and explore resources connected to your role. These entry points offer practical suggestions across the same knowledge base; they do not limit which topics you can study or replace the responsibilities and procedures of your position."
+    },
+    {
+      "id": "pn-role-aware-entry",
+      "path": [
+        "body",
+        7
+      ],
+      "before": "Equity Directors and Specialists use all of it and, in the One DSD area, can contribute and review material for their scope.",
+      "after": "Equity directors and specialists can use resources across the program and explore the complete One DSD example. Contributing or reviewing content depends on assigned access and the applicable publication process; a job title alone does not grant editing or approval authority."
+    },
+    {
+      "id": "pn-role-aware-entry",
+      "path": [
+        "body",
+        8
+      ],
+      "before": "Role names, responsibilities, and reporting relationships change. If a door does not fit your work, use Ask and describe what you are doing.",
+      "after": "Role names, responsibilities and reporting relationships can change. If an entry point does not fit your work, browse another area or describe the task in Ask without including private client, personnel or case information."
+    },
+    {
+      "id": "pn-measurement-without-surveillance",
+      "path": [
+        "summary"
+      ],
+      "before": "Learn to tell a platform that works from a program that improves equity, using a logic model, baselines, mixed methods, disaggregation with small-group protection, and honest limits. Individual learning, participation, or assessment results must never be used as performance data.",
+      "after": "Distinguish a functioning platform from a program that improves practice or outcomes. Use a logic model, baselines, quantitative evidence and people's accounts, with privacy protections and clear limits. Keep this program's individual learning, reflection, Ask and practice records out of performance evaluation."
+    },
+    {
+      "id": "pn-measurement-without-surveillance",
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Disaggregate with protection. By community, language, disability, and place where the data allows. Set the smallest group you will report, and suppress below it. Ask the data owner about denominators.",
+      "after": "Examine differences with protection. Use authorized data and appropriate categories for the question, with the data owner and relevant partners. Agree on disclosure controls before reporting; a minimum group size alone may not prevent identification through combined tables or distinctive details. Check denominators, missing data and changes in definitions. Do not collect sensitive demographic information informally to fill a gap."
+    },
+    {
+      "id": "pn-measurement-without-surveillance",
+      "path": [
+        "body",
+        6
+      ],
+      "before": "Never use assessment results as performance data. Intercultural assessments and similar instruments describe development; they are not scores of competence and must not enter personnel decisions.",
+      "after": "Keep developmental assessments in their intended learning context. Do not treat this program's intercultural assessment or practice results as measures of employee competence or use them in personnel decisions. Official agency training or qualification records follow their own authorized processes; this program does not replace those requirements."
+    },
+    {
+      "id": "lm-how-this-program-works",
+      "path": [
+        "body",
+        4
+      ],
+      "before": "Sharing: the Share control copies a link to a page or resource in the program view you are using. On learning and resource search pages, the link can include search terms and filters. Private working notes and Ask questions are not included. Check the link before sharing it.",
+      "after": "In the One DSD program, the Share control copies a link to a page or resource in the current program view. On its learning and resource search pages, the link can include search terms and filters. Working notes and Ask questions are not included. Check the link before sharing it."
+    }
+  ],
+  "reconciliation": "Preserve the agency-specific clarification that Share behavior describes One DSD, and make the source wording equally explicit.",
+  "importedExistingRevisions": [],
+  "diagnostics": [
+    {
+      "id": "lm-how-this-program-works",
+      "body": {
+        "words": 184,
+        "sents": 12,
+        "asl": 15.333333333333334,
+        "fk": 10.783478260869565,
+        "fog": 13.307246376811595,
+        "smog": 12.602617957971052,
+        "poly": 17.934782608695652,
+        "long": 38.04347826086956,
+        "short": 25,
+        "ease": 45.06079710144928
+      }
+    },
+    {
+      "id": "pn-role-aware-entry",
+      "body": {
+        "words": 195,
+        "sents": 11,
+        "asl": 17.727272727272727,
+        "fk": 14.439533799533802,
+        "fog": 18.372960372960375,
+        "smog": 15.903189008614273,
+        "poly": 28.205128205128204,
+        "long": 41.02564102564103,
+        "short": 9.090909090909092,
+        "ease": 23.11258741258743
+      }
+    },
+    {
+      "id": "pn-measurement-without-surveillance",
+      "body": {
+        "words": 319,
+        "sents": 29,
+        "asl": 11,
+        "fk": 10.89435736677116,
+        "fog": 13.67899686520376,
+        "smog": 12.25470773602088,
+        "poly": 23.197492163009404,
+        "long": 42.63322884012539,
+        "short": 37.93103448275862,
+        "ease": 36.54774294670847
+      }
+    }
+  ],
+  "diagnosticJudgment": "Retain concise navigation suggestions and necessary distinctions about records and authority; avoid adding complexity to meet a score.",
+  "items": [
+    {
+      "id": "lm-how-this-program-works",
+      "sourceRecordSha256": "b75df6785d61a146f65cd52dd150bd8f9634af56e507dc38b26977a0daf342d6",
+      "title": "How to use this program"
+    },
+    {
+      "id": "pn-role-aware-entry",
+      "sourceRecordSha256": "adbfa09fbf2999013e6f957de960e134449cab677dcb993fdd247b88e60f0146",
+      "title": "Start from the work you are doing: role-aware entry points"
+    },
+    {
+      "id": "pn-measurement-without-surveillance",
+      "sourceRecordSha256": "786147a802feed1d15e363550e563a3eafa5a61ff2168c7a50e1ba65b36aeb21",
+      "title": "Measuring whether equity work is working, without scoring people"
+    }
+  ],
+  "readings": [
+    {
+      "slug": "how-to-use-this-program",
+      "readingSha256": "7a8b18d1ada1b02fafdfd98832838da7426cd8bdbe8475df1886a0bd23a99a28"
+    },
+    {
+      "slug": "start-from-the-work-you-are-doing-role-aware-entry-points",
+      "readingSha256": "181e3a753c679e926393c4aeb978c98cfc69b3e5da3f2c0470e33d5ff2b9e2f1"
+    },
+    {
+      "slug": "measuring-whether-equity-work-is-working-without-scoring-people",
+      "readingSha256": "1d7f7a67bcbd71fd8907d133e579f80ebab5f242a4795f8283664e6f352bb4c0"
+    }
+  ],
+  "publication": "pending deployment and live verification"
+}

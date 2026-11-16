@@ -2393,10 +2393,25 @@
             4
           ],
           "before": "Sharing: the Share control at the top of every page copies a link that opens that page or resource only, in the program view you are using. If you share from the One DSD view, the person who opens the link sees the One DSD view. Nothing from My Work or from your own questions travels with the link.",
-          "after": "Sharing: the Share control copies a link to a page or resource in the program view you are using. On learning and resource search pages, the link can include search terms and filters. Private working notes and Ask questions are not included. Check the link before sharing it."
+          "after": "In the One DSD program, the Share control copies a link to a page or resource in the current program view. On its learning and resource search pages, the link can include search terms and filters. Working notes and Ask questions are not included. Check the link before sharing it."
+        },
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "Begin with Ask or Resources, plus a community brief when Minnesota communities or partners are involved. Use a learning path to build and review a checklist or plan, and turn to Support when stakes are high or questions remain.",
+          "after": "Begin with Ask or Resources and use community context when it helps you frame questions about your work. A learning path can help you develop and review a checklist or plan. Use Support for guidance, and follow the designated agency route for urgent matters or required reporting."
+        },
+        {
+          "path": [
+            "body",
+            1
+          ],
+          "before": "Sources and limits: each answer identifies its sources and any important uncertainty. Information here is not official DHS policy unless it is clearly linked to a current official source.",
+          "after": "Sources and limits: check the sources behind an answer and distinguish evidence from interpretation or uncertainty. Generated answers can contain mistakes or omit relevant information. Treat guidance here as program material unless a current official source establishes the policy or requirement, and confirm consequential decisions through the responsible process."
         }
       ],
-      "reviewNote": "Root independently read full resource, exact changes, share-link behavior and EEOC Job Applicants and ADA Q7/11/14; accepted 2026-11-15 with clearer supporting-information wording. Original source URLs and formal process boundaries preserved.",
+      "reviewNote": "Complete program-practice review on 2026-11-16: source uncertainty, role permissions, sharing scope and privacy in measurement.",
       "sources": []
     },
     {
@@ -2971,9 +2986,32 @@
           ],
           "before": "State the limits. Every report says what the evidence does not show. That sentence is what makes the rest trustworthy.",
           "after": "State the limits. Explain what each report can support, what it cannot establish, and which questions need further evidence. Acknowledging a limit helps readers judge the findings; it does not by itself validate the rest of the analysis."
+        },
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "Learn to tell a platform that works from a program that improves equity, using a logic model, baselines, mixed methods, disaggregation with small-group protection, and honest limits. Individual learning, participation, or assessment results must never be used as performance data.",
+          "after": "Distinguish a functioning platform from a program that improves practice or outcomes. Use a logic model, baselines, quantitative evidence and people's accounts, with privacy protections and clear limits. Keep this program's individual learning, reflection, Ask and practice records out of performance evaluation."
+        },
+        {
+          "path": [
+            "body",
+            4
+          ],
+          "before": "Disaggregate with protection. By community, language, disability, and place where the data allows. Set the smallest group you will report, and suppress below it. Ask the data owner about denominators.",
+          "after": "Examine differences with protection. Use authorized data and appropriate categories for the question, with the data owner and relevant partners. Agree on disclosure controls before reporting; a minimum group size alone may not prevent identification through combined tables or distinctive details. Check denominators, missing data and changes in definitions. Do not collect sensitive demographic information informally to fill a gap."
+        },
+        {
+          "path": [
+            "body",
+            6
+          ],
+          "before": "Never use assessment results as performance data. Intercultural assessments and similar instruments describe development; they are not scores of competence and must not enter personnel decisions.",
+          "after": "Keep developmental assessments in their intended learning context. Do not treat this program's intercultural assessment or practice results as measures of employee competence or use them in personnel decisions. Official agency training or qualification records follow their own authorized processes; this program does not replace those requirements."
         }
       ],
-      "reviewNote": "Independent coverage reviewer read full original contexts and accepted bounded40field set on 2026-11-15. Removed unverified inherited engagement-review claim as requested. ELI agency process primary-source verified. Unchanged fields are not blanket source-verified or fully corrected."
+      "reviewNote": "Complete program-practice review on 2026-11-16: source uncertainty, role permissions, sharing scope and privacy in measurement."
     },
     {
       "target": "resource.pn-accessible-leadership-pathways",
@@ -3228,9 +3266,32 @@
           ],
           "before": "Generic awareness training rarely changes a decision. Support that recognizes what you are trying to do can.",
           "after": "A work-specific starting point connects learning with a decision or task the reader can examine. Choose resources that help clarify the question, consider other perspectives, and identify the next step within the responsible process."
+        },
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "Policy analysts, hiring managers, fiscal analysts, and supervisors need different doors into the same equity knowledge. This program organizes by task and role, so you can do the next piece well without learning the whole subject first.",
+          "after": "Start with the task you are working on and explore resources connected to your role. These entry points offer practical suggestions across the same knowledge base; they do not limit which topics you can study or replace the responsibilities and procedures of your position."
+        },
+        {
+          "path": [
+            "body",
+            7
+          ],
+          "before": "Equity Directors and Specialists use all of it and, in the One DSD area, can contribute and review material for their scope.",
+          "after": "Equity directors and specialists can use resources across the program and explore the complete One DSD example. Contributing or reviewing content depends on assigned access and the applicable publication process; a job title alone does not grant editing or approval authority."
+        },
+        {
+          "path": [
+            "body",
+            8
+          ],
+          "before": "Role names, responsibilities, and reporting relationships change. If a door does not fit your work, use Ask and describe what you are doing.",
+          "after": "Role names, responsibilities and reporting relationships can change. If an entry point does not fit your work, browse another area or describe the task in Ask without including private client, personnel or case information."
         }
       ],
-      "reviewNote": "Independent coverage reviewer read full source/context and accepted exact seven-field set on 2026-11-15. Preserves qualitative privacy, responsible tool use, source URLs and authority limits."
+      "reviewNote": "Complete program-practice review on 2026-11-16: source uncertainty, role permissions, sharing scope and privacy in measurement."
     },
     {
       "kind": "surface",
