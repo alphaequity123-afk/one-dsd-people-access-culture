@@ -34,14 +34,12 @@ const PRESERVED_TABLES = [
   "change_events", "resource_owner_approvals", "page_block_owner_approvals", "surface_owner_approvals",
   "surface_definitions", "surface_revisions", "surface_reviews", "surface_publication_decisions",
 ];
+// Ask response records and their functions were dropped by migration 0073 (owner decision 2026-11-16).
 const REQUIRED_RUNTIME_FUNCTIONS = [
-  "pac.append_program_event(text,text,jsonb)", "pac.append_ask_response_record(jsonb)",
-  "pac.list_ask_response_records(integer,timestamptz,uuid,timestamptz)",
-  "pac.delete_ask_response_records(jsonb)", "pac.purge_expired_ask_response_records(timestamptz)",
+  "pac.append_program_event(text,text,jsonb)",
 ];
 const REQUIRED_FUNCTIONS = [
-  "pac.valid_ask_practice_artifact(jsonb)", "pac.valid_ask_source_evidence(jsonb)",
-  "pac.valid_ask_evidence_claims(jsonb)", "pac.prepare_isolated_program_restore(text,uuid)",
+  "pac.prepare_isolated_program_restore(text,uuid)",
   "pac.run_protected_content_mutation(text,text,text,text,text,text,text,text,text,jsonb)",
   "public.digest(text,text)",
 ];
@@ -173,8 +171,6 @@ async function contentSnapshot(tx) {
       from pac.${table} r) hashes`);
     result[table] = fingerprint;
   }
-  const [askCount] = await tx.unsafe("select count(*)::int as count from pac.ask_response_records");
-  result.askResponseRecordCount = askCount.count;
   return result;
 }
 
@@ -217,12 +213,7 @@ async function releaseReadiness(tx) {
     where n.nspname='pac' and p.proname=any($1::text[]) and (
       has_function_privilege('pac_contributor_runtime',p.oid,'EXECUTE') or has_function_privilege('pac_authentication_broker',p.oid,'EXECUTE'))`, [OWNER_FUNCTIONS]);
   if (ownerAccess.count !== 0) fail("named_role_has_existing_owner_function_access", "owner_functions");
-  const [constraint] = await tx.unsafe(`select exists(select 1 from pg_constraint
-    where conrelid='pac.ask_response_records'::regclass and conname='ask_record_contract' and convalidated
-      and pg_get_constraintdef(oid) like '%valid_ask_evidence_claims%'
-      and pg_get_constraintdef(oid) like '%valid_ask_practice_artifact%') as ready`);
-  if (!constraint.ready) fail("ask_optional_record_contract_missing", "ask_record_contract");
-  return { functions, namedRoleCount: roles.length, namedOwnerFunctionAccess: ownerAccess.count, askRecordContract: "validated" };
+  return { functions, namedRoleCount: roles.length, namedOwnerFunctionAccess: ownerAccess.count };
 }
 
 function safeFailure(error, phase) {
@@ -278,7 +269,7 @@ export async function runFunctionalMigrationRelease(args = process.argv.slice(2)
       phase = "verify_preservation_and_runtime_readiness";
       const after = { ownerAccess: await ownerAccessSnapshot(tx), content: await contentSnapshot(tx), named: await namedInactiveSnapshot(tx) };
       if (JSON.stringify(before.ownerAccess) !== JSON.stringify(after.ownerAccess)) fail("existing_owner_access_changed", "owner_access");
-      if (JSON.stringify(before.content) !== JSON.stringify(after.content)) fail("existing_content_or_ask_count_changed", "preserved_content");
+      if (JSON.stringify(before.content) !== JSON.stringify(after.content)) fail("existing_content_changed", "preserved_content");
       const readiness = await releaseReadiness(tx);
       const finalLedger = await tx.unsafe("select migration_name,migration_sha256 from pac.schema_migrations order by migration_name");
       if (pendingReleaseMigrations(files, finalLedger).length !== 0) fail("pending_release_migrations_remain", "schema_migrations");

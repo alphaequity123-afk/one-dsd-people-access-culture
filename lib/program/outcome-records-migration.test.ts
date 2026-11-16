@@ -63,7 +63,7 @@ describe("schema-2 outcome records and the database contract (migration 0070)", 
     expect(manifest.migrations.find((entry: { name: string }) => entry.name === "0070_pac_program_outcome_records_v2.sql")).toEqual({
       name: "0070_pac_program_outcome_records_v2.sql", sourceHash: sha(canonical), transformedHash: sha(standalone),
     });
-    expect(manifest.forwardMigrations.at(-1)).toEqual({ file: "0070_pac_dsd_program_outcome_records_v2.sql", sha256: sha(standalone), appliesOnlyTo: "pac_dsd" });
+    expect(manifest.forwardMigrations.find((entry: { file: string }) => entry.file === "0070_pac_dsd_program_outcome_records_v2.sql")).toEqual({ file: "0070_pac_dsd_program_outcome_records_v2.sql", sha256: sha(standalone), appliesOnlyTo: "pac_dsd" });
     expect(manifest.bootstrapSha256).toBe(sha(bootstrap));
   });
 });
