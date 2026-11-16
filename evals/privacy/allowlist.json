@@ -1,0 +1,49 @@
+{
+  "about": "What A9 (evals/privacy/run.ts) accepts. Owner rules: learning is never counted, stored or shown, not even as anonymous totals (CORE-PRINCIPLES promise 2); 2026-11-16: no Ask records, no anonymous totals (monthly Ask run counts and retrieved-content traces must go). Every entry needs its reason. Owner and contributor authoring, and records a person chooses to share, are the only data-changing writes a staff request may reach.",
+  "ownerOrSystemEntries": {
+    "app/consultant/": "Consultant Workspace: owner sign-in required.",
+    "app/api/consultant/": "Owner API: owner session checked on every handler.",
+    "app/api/owner/": "Owner media uploads.",
+    "app/api/contribute/": "Named contributors who sign in to author resources (not staff learning).",
+    "app/api/cron/": "Scheduled job, not a staff request.",
+    "app/api/offline/": "Owner settings for the offline edition."
+  },
+  "writes": {
+    "lib/content/page-copy.ts": "Owner page-copy authoring (owner session checked in app/api/consultant/page-copy).",
+    "lib/content/editable-surfaces.ts": "Owner surface authoring (owner session checked in app/api/consultant/content).",
+    "lib/content/page-text.ts": "Owner page wording overrides (POST /api/page-text checks the owner session; staff GET only reads).",
+    "lib/content/page-edits-store.ts": "Owner page edits (POST /api/page-edits checks the owner session; staff GET only reads).",
+    "lib/content/media.ts": "Owner media and page images.",
+    "lib/content/resource-release.ts": "Owner resource release.",
+    "lib/content/resource-drafts.ts": "Owner resource drafts (staff pages only read the published copy).",
+    "lib/content/resource-delete.ts": "Owner resource delete and restore.",
+    "lib/content/contributor-resources.ts": "Named contributor authoring behind the contributor session.",
+    "lib/content/course-media.ts": "Owner media upload.",
+    "lib/content/geffen-ingest.ts": "Owner read-aloud media upload.",
+    "lib/content/leadership-media.ts": "Owner leadership video upload.",
+    "lib/auth/program-identity.ts": "Contributor sign-in sessions (contributor authoring).",
+    "lib/auth/protected-mutation.ts": "Owner and contributor content mutations.",
+    "lib/learning/resource-creation-store.ts": "Owner resource-creation jobs.",
+    "lib/learning/resource-media-renderer.ts": "Owner media rendering (temporary files).",
+    "lib/consultant-analysis/media-upload.ts": "Owner analysis uploads (temporary files).",
+    "lib/offline/connectors.ts": "Owner offline-edition settings.",
+    "lib/visual-studio/server.ts": "Owner asset studio projects.",
+    "lib/intelligence/clone/scheduler.ts": "Owner daily review scheduler (cron).",
+    "lib/consultant-toolkit/cases.ts": "Shared workspace cases a person chooses to save and share (P14; content they choose, encrypted). Needs the private-details reminder and a retention rule.",
+    "lib/decision-records/store.ts": "Decision records a team chooses to keep (chosen work, encrypted).",
+    "lib/policy-analysis/store.ts": "Policy analysis cases a person chooses to save (chosen work, encrypted).",
+    "lib/sp-clone/request-store.ts": "A request a person chooses to send (staff POST is closed today)."
+  },
+  "storedFunctions": {
+    "consume_runtime_rate_limit": "Short-lived rate-limit bucket keyed by an HMAC of the address; operational protection, not learning. Retention not verified by this eval.",
+    "end_program_account_session": "Contributor sign-out.",
+    "purge_expired_security_records": "Deletes expired owner-session revocations and rate-limit buckets (housekeeping that removes data)."
+  },
+  "cookies": {
+    "job-family": "job family",
+    "work-area": "area",
+    "depth": "reading depth",
+    "pac_dsd_owner": "owner session",
+    "one_dsd_context": "product context (One DHS or One DSD view)"
+  }
+}

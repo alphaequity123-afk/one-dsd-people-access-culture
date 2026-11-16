@@ -1,0 +1,12 @@
+{
+  "about": "Pages that are opened from outside the navigation by design, so the three-selections measure leaves them out of its count. They are still listed in every report. Add a route only with its reason.",
+  "routes": {
+    "/share/courses/[courseId]": "Opened from a share link someone sends; the course itself is in the catalog.",
+    "/share/courses/[courseId]/[lessonId]": "Opened from a share link someone sends; the lesson is reached through its course.",
+    "/share/equity-toolkit": "Opened from a share link someone sends.",
+    "/share/equity-toolkit/practice": "Opened from a share link someone sends.",
+    "/share/library/[id]": "Opened from a share link someone sends; the item is in the library.",
+    "/embedded-tools/ask": "Embedded in other DHS sites, not a page in this site's navigation.",
+    "/embedded-tools/search": "Embedded in other DHS sites, not a page in this site's navigation."
+  }
+}

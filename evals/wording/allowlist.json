@@ -1,0 +1,34 @@
+{
+  "about": "Exceptions to the A5 wording rules (evals/wording/linter.ts). Only official names, direct quotes, acronyms readers already know, files that reproduce someone else's words, and real public figures belong here. Everything else the linter finds is a real finding under the owner's wording rules. Add an entry only with its reason; never to make a count go down.",
+  "officialNames": [
+    "The Water We Swim In",
+    "the Water We Swim In",
+    "Water We Swim In",
+    "AI Risk Management Framework",
+    "Mr. Robot"
+  ],
+  "directQuotes": [],
+  "knownAcronyms": {
+    "DHS": "Every page header shows the Minnesota Department of Human Services name with its logo (components/site-header.tsx).",
+    "DSD": "Every page header shows the Disability Services Division label (components/site-header.tsx).",
+    "PDF": "File format readers know by its acronym; download buttons name the format.",
+    "CSV": "File format named on download controls.",
+    "HTML": "File format named on download controls.",
+    "MP3": "File format.",
+    "MP4": "File format.",
+    "URL": "Web address; widely known.",
+    "FAQ": "Widely known heading.",
+    "ID": "Widely known.",
+    "USA": "Country name.",
+    "COVID": "Disease name as people say it (COVID-19)."
+  },
+  "quotedSourceFiles": {
+    "lib/content/state-pages.json": "Text copied from public State of Minnesota agency pages for search and Ask; the publisher's words, kept as published."
+  },
+  "publicFigures": [
+    "Claude Pepper",
+    "Claude M. Steele",
+    "Claude Steele",
+    "Lee Mun Wah"
+  ]
+}
