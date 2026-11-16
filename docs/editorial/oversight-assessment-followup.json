@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-16",
+  "courseId": "pi-equitable-oversight-design",
+  "status": "accepted_assessment_followup",
+  "countsAsCompleteCourseReview": false,
+  "priorCompleteReview": "data/editorial/reviews/2026-11-16-oversight-complete-review.json",
+  "priorCompleteReviewSha256": "66fb51a9adefd1c22c4cb02c2fff8f28cf55c3885f63b210dac8b4b495a67653",
+  "sourceSha256": "041558bc3b5b3666ed0a0b30d469eead0f2e05a88d797c46ae88075aa75d4c6c",
+  "specSha256": "d6f8e8337d3d82e378b0dec08171e1d46e8d3dc1ad3c34253d4da0349bbd4916",
+  "change": {
+    "path": [
+      "lessons",
+      3,
+      "check",
+      "correct"
+    ],
+    "before": "To detect whether a method imposes burden on some groups through false positives without finding real problems.",
+    "after": "To identify patterns that warrant closer examination of selection, follow-up and data quality."
+  },
+  "finding": "A confirmation share can identify patterns requiring examination; it cannot itself establish false-positive rates or absence of real problems. Revised the keyed answer to match the already qualified lesson and feedback.",
+  "assessmentIntegrity": {
+    "questionUnchanged": true,
+    "wrongAnswersUnchanged": true,
+    "correctAnswerRemainsDistinct": true,
+    "feedbackUnchanged": true,
+    "otherCourseFieldsUnchanged": true
+  },
+  "readings": [
+    {
+      "slug": "pi-equitable-oversight-design",
+      "readingSha256": "87053cd9e445c2652449c9861dfbee1dd6c28ce9e11325c35733ede95342855b"
+    },
+    {
+      "slug": "pi-equitable-oversight-design--two-kinds-of-harm-fraud-and-careless-enforcement",
+      "readingSha256": "62b4d9dbc7f10b64028ea765c5a068be43cd83c3ef3dc02f0c69339c78cb6fa5"
+    },
+    {
+      "slug": "pi-equitable-oversight-design--proportionate-reviews-that-target-conduct-not-comm",
+      "readingSha256": "13b8616cad104f8c0a4dc6b15406316a00652cb3fb6de6b2ba19997c0ea81e7c"
+    },
+    {
+      "slug": "pi-equitable-oversight-design--due-process-notice-appeal-rights-and-continuity-of",
+      "readingSha256": "8d5b613a09b1d51183681587a79d5fe2405512c2d4f9cd5ed6250718b74ccedd"
+    },
+    {
+      "slug": "pi-equitable-oversight-design--using-data-responsibly-and-communicating-with-care",
+      "readingSha256": "6aea4ee088b5d5d4850f376ab5ef3bb2dc32096b799af725be08c4dd6d4e0cca"
+    }
+  ],
+  "liveVerification": "pending deployment",
+  "ownerWording": "Final generated reading hashes include the existing shared owner wording rules; the other four readings remain unchanged."
+}
