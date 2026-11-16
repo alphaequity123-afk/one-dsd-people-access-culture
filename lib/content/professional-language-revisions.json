@@ -1810,9 +1810,17 @@
           ],
           "before": "Applying information about a group to an individual is profiling and can lead to worse service. A respectful approach is direct: ask the person, confirm what they need, and address the access barriers within your control.",
           "after": "Treating group-level information as evidence of an individual's preferences can lead to inaccurate judgments and poorer service. Use community context to prepare questions, then ask the person what matters to them and address access barriers within your control."
+        },
+        {
+          "path": [
+            "body",
+            3
+          ],
+          "before": "Involve partners through established channels, with a clear purpose, role, compensation, and plan to report back. Staff who share a background are colleagues; do not expect them to interpret or represent an entire community.",
+          "after": "Involve partners through established channels, with a clear purpose, role and plan to report back. Confirm approved payment arrangements before promising compensation. Staff who share a background are colleagues; do not expect them to represent a whole community or interpret unless qualified and assigned to that role."
         }
       ],
-      "reviewNote": "Full source independently read by root and exact changes accepted on 2026-11-15. Source/authority limits and URLs preserved. Relevant current UI behavior checked. Not blanket factual revalidation."
+      "reviewNote": "Complete engagement-reference review on 2026-11-16: influence, privacy, individual inquiry, escalation and plain-language guidance."
     },
     {
       "target": "resource.pn-when-to-escalate",
@@ -1836,9 +1844,32 @@
           ],
           "before": "Request a consultation",
           "after": "Find the responsible person or office"
+        },
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "Complaints, investigations, discipline, and accommodation decisions go through the Employee Culture, Human Resources, civil-rights, or accommodation process; take conflicting or missing guidance to its policy or legal owner. If a Tribal Nation may be affected, contact the Office of Indian Policy or designated Tribal liaison before planning engagement.",
+          "after": "Use the established process for complaints, investigations, discipline and accommodation decisions. Take conflicting or missing guidance to the responsible policy staff or legal counsel. Contact the agency Tribal liaison early when proposed work may have Tribal implications."
+        },
+        {
+          "path": [
+            "body",
+            0
+          ],
+          "before": "Start with the available resources: search Resources, open a relevant community brief, or use a checklist. These options may give you what you need without a meeting.",
+          "after": "For a routine planning question, start with Resources, a relevant community brief or a checklist. Do not delay a required report, urgent safety response or time-sensitive accommodation while searching this learning program; use the applicable agency process promptly."
+        },
+        {
+          "path": [
+            "body",
+            3
+          ],
+          "before": "Office of Indian Policy or Tribal liaison: any work touching a Tribal Nation, Native children, Tribal data, services, or land. Consultation is government-to-government and comes first.",
+          "after": "Tribal liaison: when proposed work may have Tribal implications, contact the agency Tribal liaison early to identify and carry out the required consultation process before the decision. DHS Tribal and Urban Indian Relations can help identify the appropriate contact. Community engagement does not replace government-to-government consultation."
         }
       ],
-      "reviewNote": "Full source independently read by root and exact changes accepted on 2026-11-15. Source/authority limits and URLs preserved. Relevant current UI behavior checked. Not blanket factual revalidation."
+      "reviewNote": "Complete engagement-reference review on 2026-11-16: influence, privacy, individual inquiry, escalation and plain-language guidance."
     },
     {
       "target": "community-brief.somali",
@@ -2461,9 +2492,72 @@
           ],
           "before": "The most common harm in engagement is asking for input that cannot change anything. Naming the level of influence protects trust and tells people what their time is worth.",
           "after": "Asking for input when a decision cannot change can leave participants unclear about why they were invited. Explain what is open to influence, who decides, and how input will be used so people can decide whether and how to participate."
+        },
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "Engagement can share influence at five levels, from informing people about a decision to designing it with them. Choose a level honestly, state it plainly, and match the supports, compensation, and report-back to it.",
+          "after": "This planning aid describes five ways people can influence a decision, from receiving information to designing with the agency. Explain what is open to change, who has authority and how input will be used. Plan access, approved payment arrangements and follow-up."
+        },
+        {
+          "path": [
+            "body",
+            0
+          ],
+          "before": "Inform. You tell people what is happening and why. Appropriate when the decision is already made. Say so.",
+          "after": "Inform: explain what is happening and why. When a decision is already made, say so and describe any remaining choices. Do not invite input as though people can change a settled decision."
+        },
+        {
+          "path": [
+            "body",
+            1
+          ],
+          "before": "Consult. You ask for input and decide. Appropriate when choices are open and you will explain what you did with the input.",
+          "after": "Consult: ask for input while choices are open, then explain how the authorized decision-maker used it. State which questions are open and which constraints are fixed before people contribute their time."
+        },
+        {
+          "path": [
+            "body",
+            2
+          ],
+          "before": "Involve. People work with you throughout and their concerns shape the options. Appropriate when the decision affects them directly and the timeline allows.",
+          "after": "Involve: work with affected people throughout the process so their concerns shape the options. Allow enough time and practical support for participation, and explain how unresolved concerns will reach the decision-maker."
+        },
+        {
+          "path": [
+            "body",
+            3
+          ],
+          "before": "Collaborate. People share in developing options and in the decision. Appropriate when you can share authority and want the result to be owned together.",
+          "after": "Collaborate: develop options with participants and share decisions where the agency has authority to do so. State who retains each legal responsibility and how disagreements will be resolved; an invitation cannot transfer authority the agency must retain."
+        },
+        {
+          "path": [
+            "body",
+            4
+          ],
+          "before": "Design together. People with lived experience lead the design with you. Appropriate when the service is theirs and you are prepared to change how it works.",
+          "after": "Design together: give people with lived experience a substantial role in developing and testing the service. Explain what they can change, what requires further approval and how their work will influence the final decision."
+        },
+        {
+          "path": [
+            "body",
+            5
+          ],
+          "before": "For any level, plan these. Begin before the decision is fixed. Identify who is affected and who is missing. Understand prior contacts so you do not repeat requests or extract labor. Address compensation, language, disability access, format, schedule, setting, technology, and trusted messenger. Document what was heard, what changed, what could not change, and why. Assign an owner for the ongoing relationship.",
+          "after": "At every level, identify who is affected and who may be missing. Review earlier engagement to avoid repeating unanswered requests. Plan language and disability access, timing, technology and approved payment arrangements before inviting people. For work that can still change, begin before the design is fixed. Record what was heard, what changed and why, and name the person responsible for follow-up."
+        },
+        {
+          "path": [
+            "body",
+            6
+          ],
+          "before": "Tribal Nations. Do not treat Tribal consultation as community engagement. Sovereignty and government-to-government responsibilities have separate sources, roles, and routing. Contact the Office of Indian Policy or your Tribal liaison first.",
+          "after": "Tribal Nations: government-to-government consultation follows separate authority and procedures. Contact the agency Tribal liaison early when the work may have Tribal implications; this planning aid does not replace the required consultation process."
         }
       ],
-      "reviewNote": "Independent coverage reviewer read full original contexts and accepted bounded40field set on 2026-11-15. Removed unverified inherited engagement-review claim as requested. ELI agency process primary-source verified. Unchanged fields are not blanket source-verified or fully corrected."
+      "reviewNote": "Complete engagement-reference review on 2026-11-16: influence, privacy, individual inquiry, escalation and plain-language guidance."
     },
     {
       "target": "resource.ja-report-back",
@@ -2477,9 +2571,48 @@
           ],
           "before": "DSD's engagement review found that people rarely learned what happened after they gave input. Closing that loop is the difference between engagement and extraction.",
           "after": "Reporting back lets participants examine how their contributions were represented, what influenced the decision, and which questions remain unresolved."
+        },
+        {
+          "path": [
+            "summary"
+          ],
+          "before": "Give the people who offered input a short, accessible record of what they said in their own words, what changed because of it, what could not change and why, and what happens next, with a named contact.",
+          "after": "Give participants an accessible account of the main themes, changes made, limits and next steps. Protect personal information and explain how people can correct a misunderstanding or contact the person responsible for follow-up."
+        },
+        {
+          "path": [
+            "body",
+            0
+          ],
+          "before": "What we heard. Summarize the main themes in plain language, using participants' own words where you have permission. Do not identify anyone.",
+          "after": "What we heard: summarize the main themes, including disagreement and views that differed from the majority. Use participants' words only with permission and appropriate privacy review. A quotation or combination of details can identify someone even when their name is removed."
+        },
+        {
+          "path": [
+            "body",
+            2
+          ],
+          "before": "What could not change, and why. Be direct. If a rule, budget, or law prevented a change, say which one and who owns it.",
+          "after": "What could not change, and why: identify the verified rule, budget limit or decision that prevented a change and the person or area responsible. Distinguish a legal requirement from an agency choice, and explain whether a later review is possible."
+        },
+        {
+          "path": [
+            "body",
+            4
+          ],
+          "before": "How to share it. Use the same languages, formats, and channels the engagement used. Send it to the partners who helped convene, and ask them to pass it on.",
+          "after": "How to share it: use accessible languages, formats and channels that reach the participants. Share the approved public account with partners who helped convene the discussion. Do not send private attendance lists, case details or raw notes simply because a partner helped organize it."
+        },
+        {
+          "path": [
+            "body",
+            5
+          ],
+          "before": "Keep it short. One page is usually right. Link to more if people want it.",
+          "after": "Keep the main account concise and link to supporting detail where useful. Include enough context to represent the input fairly, and provide a way for participants to point out a misunderstanding. A one-page target should not erase qualifications or minority views."
         }
       ],
-      "reviewNote": "Independent coverage reviewer read full original contexts and accepted bounded40field set on 2026-11-15. Removed unverified inherited engagement-review claim as requested. ELI agency process primary-source verified. Unchanged fields are not blanket source-verified or fully corrected."
+      "reviewNote": "Complete engagement-reference review on 2026-11-16: influence, privacy, individual inquiry, escalation and plain-language guidance."
     },
     {
       "target": "resource.pn-cultural-humility-briefs-as-questions",
@@ -2509,9 +2642,25 @@
           ],
           "before": "Notice the diversity inside every community. Immigration history, faith, language, disability, age, and class differ within a community as much as between communities.",
           "after": "Notice diversity within a community. Immigration history, faith, language, disability, age, and class can shape different experiences among people who share a community identity."
+        },
+        {
+          "path": [
+            "body",
+            3
+          ],
+          "before": "Say what you do not know. A brief that leaves a self-description pending is telling you to go ask.",
+          "after": "Say what you do not know. An incomplete brief is a reason to check sources or ask a relevant, voluntary question. It does not make a person responsible for explaining a whole community or disclosing personal beliefs."
+        },
+        {
+          "path": [
+            "body",
+            4
+          ],
+          "before": "Check the source. Community material needs authoritative sources before it becomes a program fact, and no brief is a description of anyone.",
+          "after": "Check the source, date, scope and limitations before relying on a factual claim. A community organization's account can explain its own work without speaking for every member of a community. Keep individual preferences separate from group-level findings."
         }
       ],
-      "reviewNote": "Independent coverage reviewer read full original contexts and accepted bounded40field set on 2026-11-15. Removed unverified inherited engagement-review claim as requested. ELI agency process primary-source verified. Unchanged fields are not blanket source-verified or fully corrected."
+      "reviewNote": "Complete engagement-reference review on 2026-11-16: influence, privacy, individual inquiry, escalation and plain-language guidance."
     },
     {
       "target": "resource.lm-plain-language-carries-complexity",
@@ -2533,9 +2682,25 @@
           ],
           "before": "One idea per sentence. About twenty words. Prefer the common word unless the precise term matters, and then define it once.",
           "after": "Give each sentence a clear purpose and keep related ideas connected. Prefer familiar words; when a technical term adds precision, explain it. Vary sentence length to preserve the reasoning rather than cutting important qualifications to meet a word count."
+        },
+        {
+          "path": [
+            "body",
+            2
+          ],
+          "before": "Layer the depth. Short answer, why it matters, questions to consider, a tool to use, the sources, and the deeper material. Readers choose how far to go.",
+          "after": "Layer the detail: start with the answer and why it matters, then offer questions, tools, sources and deeper material. Keep essential conditions, deadlines and rights beside the action they qualify so readers do not have to open optional material to find them."
+        },
+        {
+          "path": [
+            "body",
+            5
+          ],
+          "before": "Federal plain-language guidance and DHS plain-language practice are the sources for style decisions. Check DHS examples when they are supplied to you.",
+          "after": "Use the program writing standard and applicable DHS guidance for local work. The federal plain-language guides on Digital.gov offer practical methods for writing, design and testing; using those methods does not make a federal writing requirement a DHS policy."
         }
       ],
-      "reviewNote": "Independent coverage reviewer read full original contexts and accepted bounded40field set on 2026-11-15. Removed unverified inherited engagement-review claim as requested. ELI agency process primary-source verified. Unchanged fields are not blanket source-verified or fully corrected."
+      "reviewNote": "Complete engagement-reference review on 2026-11-16: influence, privacy, individual inquiry, escalation and plain-language guidance."
     },
     {
       "target": "resource.lm-psychological-safety-and-repair",
