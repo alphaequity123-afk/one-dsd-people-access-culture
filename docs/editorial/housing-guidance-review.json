@@ -1,0 +1,608 @@
+{
+  "date": "2026-11-16",
+  "courseId": "dsd-housing-instability",
+  "status": "reviewed_guidance_revision",
+  "countsAsCompleteCourseReview": false,
+  "sourceSha256": "984daf9285bc383f788ca812f43a24ba4141300c66aa85e1eace5725800519b7",
+  "revisedSha256": "a2f4da8642764ff6f81950a56c506f1901a57d665f55baa038116e7e37ec8e3a",
+  "changes": [
+    {
+      "path": [
+        "lessons",
+        0,
+        "teaching"
+      ],
+      "before": "For people with disabilities, housing is not only shelter. Many services are organized around where a person lives: the county responsible for case management, the providers that come to the home, the setting a waiver plan is built around and the address where every notice is sent. When housing becomes unstable, each of those links can break at once. A person staying on a friend's couch, in a shelter or in a car may still be eligible for everything they had last month, but the system may no longer be able to reach them.\n\nMuch of public benefits administration still runs on mail. Renewal packets, requests for information, notices of change and appeal rights are often sent to the address on file. DHS tells people who get Medical Assistance or MinnesotaCare that they must report changes, including a new address, within a set number of days. For someone who has just lost housing, that duty competes with finding a place to sleep, keeping belongings safe and managing a disability. Missed mail can lead to a missed renewal, and a missed renewal can lead to a gap in coverage, which can in turn interrupt waiver services that depend on Medical Assistance. Check current reporting rules with the county or Tribe rather than relying on memory.\n\nThere is a second risk. When a person loses community housing, the fastest available bed may be in a hospital, a nursing facility or another congregate setting. A short emergency stay can quietly become permanent if no one is actively planning a return to the community. That outcome can run against the person's wishes and against Minnesota's Olmstead commitments.\n\nCase managers and care coordinators are often the first to hear that housing is at risk: a late rent notice, a conflict with a landlord, a provider giving notice, a hospital discharge with nowhere to go. Early action matters. With the person's consent, update contact information, note alternate ways to reach them, flag upcoming renewal dates, alert the team and start housing problem-solving before an eviction or discharge date arrives.",
+      "after": "For people with disabilities, housing is not only shelter. Many services are organized around where a person lives: the county responsible for case management, the providers that come to the home, the setting a waiver plan is built around and the address where every notice is sent. When housing becomes unstable, each of those links can break at once. Losing a fixed address does not by itself end Minnesota residency under the health care programs’ rules. A move can still affect how services are delivered, so the responsible staff must review the actual circumstances. Do not assume that every benefit ends or that every service can continue unchanged.\n\nMuch of public benefits administration still runs on mail. Renewal packets, requests for information, notices of change and appeal rights are often sent to the address on file. DHS tells people who get Medical Assistance or MinnesotaCare that they must report changes, including a new address, within a set number of days. For someone who has just lost housing, that duty competes with finding a place to sleep, keeping belongings safe and managing a disability. Missed mail can lead to a missed renewal, and a missed renewal can lead to a gap in coverage, which can in turn interrupt waiver services that depend on Medical Assistance. The current Eligibility Policy Manual sets different reporting deadlines: generally ten days for Medical Assistance, but thirty days for MA for Employed Persons with Disabilities and MinnesotaCare. Check the person’s program and servicing agency before advising. A missed response calls for the required follow-up and notice process; it does not authorize immediate closure.\n\nThere is a second risk. When a person loses community housing, the fastest available bed may be in a hospital, a nursing facility or another congregate setting. A short emergency stay can quietly become permanent if no one is actively planning a return to the community. That outcome can run against the person's wishes and against Minnesota's Olmstead commitments.\n\nCase managers and care coordinators are often the first to hear that housing is at risk: a late rent notice, a conflict with a landlord, a provider giving notice, a hospital discharge with nowhere to go. Early action matters. Work with the person to agree on usable contact methods and check upcoming renewal dates. Confirm what may be shared with a trusted contact or team member; permission to leave a message does not grant access to a case file. Authorized staff should follow the current rules for address updates and returned mail, including updates from reliable sources. Address urgent housing needs through the appropriate service contacts while eligibility staff resolve coverage questions.",
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "lessons",
+        0,
+        "keyPoint"
+      ],
+      "before": "Losing housing can break eligibility, renewals and waiver services all at once, mostly because systems lose contact. Act early to keep the person reachable and to prevent an emergency placement from becoming permanent.",
+      "after": "Housing loss can disrupt contact, coverage and the delivery of services. Address each issue with the person and the responsible staff rather than assuming that homelessness automatically ends eligibility.",
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "lessons",
+        0,
+        "example"
+      ],
+      "before": "Joanna, a county case manager, learns in a phone call that Ruben, who has a brain injury and receives waiver services, was evicted two weeks ago and is staying in different places. His Medical Assistance renewal is due next month, and the renewal packet will go to his old apartment. Ruben has a phone that works when he can charge it, and he trusts a staff member at a drop-in center he visits most days.",
+      "after": "Fictional practice case: Joanna, a county case manager, learns in a phone call that Ruben, who has a brain injury and receives waiver services, was evicted two weeks ago and is staying in different places. His Medical Assistance renewal is due next month, and the renewal packet will go to his old apartment. Ruben has a phone that works when he can charge it, and he trusts a staff member at a drop-in center he visits most days.",
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "lessons",
+        0,
+        "choices",
+        0
+      ],
+      "before": "With Ruben's consent, report his change of address and add alternate contacts, such as his phone and the drop-in center, and flag his renewal date so she can help him complete it.",
+      "after": "Work with Ruben on a usable mailing and contact arrangement, confirm what may be shared with the drop-in center, report the change through the proper channel and help him address the renewal date.",
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "lessons",
+        0,
+        "feedback",
+        0
+      ],
+      "before": "This is the strongest response. It keeps Ruben reachable, respects his consent, uses the people and places he already trusts and protects his coverage before the renewal is missed.",
+      "after": "This is the strongest response. It addresses the renewal while checking which contact arrangements Ruben can use. Confirm the center’s role and permission to share information; updating an address alone does not guarantee continuing coverage.",
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "lessons",
+        0,
+        "action"
+      ],
+      "before": "Check your caseload or review queue for anyone whose housing may be unstable, and confirm that each has a current address, an alternate contact method and a noted renewal date.",
+      "after": "Use Ruben’s fictional case to outline the contact, renewal and service questions that need answers. Identify the responsible roles without opening or copying actual case records for this exercise.",
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "lessons",
+        1,
+        "teaching"
+      ],
+      "before": "Minnesota has several resources that can help people with disabilities get and keep housing. One of the most important is Housing Support, formerly called Group Residential Housing. DHS describes it as providing help with housing costs for some people at risk of institutional placement or homelessness. According to Housing Benefits 101, a Minnesota benefits information site, Housing Support serves people with disabilities and older adults with low income, pays for room and board in certain settings such as adult foster care, assisted living, board and lodge and supportive housing, and can fund some supplemental services. People can apply online through MNbenefits or with the Combined Application Form at their county or Tribal human services office, which administers the program.\n\nPrograms change, and staff need current information. Minnesota ended the Housing Stabilization Services program, a Medical Assistance benefit that had helped people find and keep housing, at the end of October after DHS cited widespread fraud and the federal Centers for Medicare and Medicaid Services approved the termination. DHS said it was coordinating with counties, Tribes, Urban Indian organizations and managed care organizations to identify resources for people affected, and it posted resources on its housing resources page. If a plan, form or resource list still refers to Housing Stabilization Services, it is out of date.\n\nTwo navigation tools help staff and the people they serve. HousingLink is a Minnesota nonprofit that helps renters find affordable and subsidized housing and offers information on Housing Choice Vouchers, fair housing, legal help and a program for renters with criminal, credit or rental history barriers. Housing Benefits 101 explains Minnesota housing programs in plain language and suggests next steps, including connecting with case managers and county or Tribal human services.\n\nWaiver services and other disability programs may also include housing-related supports, and rules change. Your role is to know where current information lives, help the person explore options and connect them with the office that decides eligibility. Counties, Tribes and DHS make eligibility determinations. Avoid promising a specific benefit before that office has reviewed the person's situation.",
+      "after": "Housing Support, formerly Group Residential Housing, helps eligible people pay housing costs. DHS describes it as serving older adults and adults with disabilities who have low incomes and face a risk of homelessness or institutional care. Housing Benefits 101 explains that it can pay room and board in approved group or community settings. The person, provider and place must all qualify. Supplemental services have additional conditions, including limits related to waiver and other covered services. Contact the county or Tribe about eligible providers and places before assuming a benefit will apply. People can apply through MNbenefits or submit the Combined Application Form to the county or Tribal office.\n\nHousing Stabilization Services, or HSS, was a separate Medical Assistance benefit that helped people find and keep housing. It ended October 31, 2025, after DHS cited widespread fraud and received federal approval to end it. DHS worked with counties, Tribes, Urban Indian organizations and managed care organizations to identify possible alternatives. Its housing resources page describes those options. Stop listing HSS as an available referral, while preserving historical records needed for claims, audits or accounts of past services. DHS has discussed a possible redesign without a confirmed launch date. Do not present that proposal as an available replacement.\n\nHousingLink helps renters search for affordable or subsidized housing. It also offers information about vouchers, fair housing, legal help and rental barriers. Housing Benefits 101 explains housing programs and possible next steps in plain language. Each alternative has its own criteria, and former HSS eligibility does not carry over automatically. A listing or referral does not promise an opening, funding or approval. Help the person check current details with the responsible program.\n\nWaiver services and other disability programs may also include housing-related supports, and rules change. Your role is to know where current information lives, help the person explore options and connect them with the office that decides eligibility. Counties, Tribes and DHS make eligibility determinations. Avoid promising a specific benefit before that office has reviewed the person's situation.",
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "lessons",
+        1,
+        "example"
+      ],
+      "before": "Gabriel, a DSD program specialist, is updating a resource sheet that lead agencies hand to people with disabilities facing housing loss. The sheet was last revised some time ago. It lists Housing Stabilization Services as the first option, calls Housing Support by its old name only, and gives a phone number for a county office that has since moved. Several county partners have asked DSD to send the updated version soon.",
+      "after": "Fictional practice case: Gabriel, a DSD program specialist, is updating a resource sheet that lead agencies hand to people with disabilities facing housing loss. The sheet was last revised some time ago. It lists Housing Stabilization Services as the first option, calls Housing Support by its old name only, and gives a phone number for a county office that has since moved. Several county partners have asked DSD to send the updated version soon.",
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "lessons",
+        1,
+        "choices",
+        2
+      ],
+      "before": "Remove Housing Stabilization Services, use the current name for Housing Support, link to DHS, HousingLink and Housing Benefits 101 pages instead of fixed phone numbers where possible, and ask program owners to confirm the content before release.",
+      "after": "Correct the sheet so it no longer lists HSS as available, use the current Housing Support name, verify links and contact details, provide usable phone or print options, and ask program owners to confirm it before release.",
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "lessons",
+        1,
+        "feedback",
+        0
+      ],
+      "before": "Sending out-of-date information could send people to a program that no longer exists at a moment when time matters. A short delay to correct it is worth it.",
+      "after": "Do not circulate known inaccurate referral information. Provide verified interim contacts while the sheet is corrected so that people with urgent needs are not left waiting for a full redesign.",
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "lessons",
+        1,
+        "feedback",
+        2
+      ],
+      "before": "This is the strongest response. It corrects the content, relies on sources that stay current and has the responsible program owners confirm accuracy before release.",
+      "after": "This is the strongest response. It corrects current referrals and verifies both digital and offline contact routes. A link can also become outdated, so program-owner review and dated updates remain necessary.",
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "lessons",
+        1,
+        "action"
+      ],
+      "before": "Search the forms, handouts and templates you use for Housing Stabilization Services or Group Residential Housing, and flag each one for updating.",
+      "after": "Check a current referral handout for HSS or the former Housing Support name. Flag inaccurate current guidance for its owner; preserve historical records and official titles. Verify links and an accessible phone or print route before release.",
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "lessons",
+        2,
+        "teaching"
+      ],
+      "before": "The ADA's integration regulation requires public entities to administer services in the most integrated setting appropriate to the needs of people with disabilities. Federal technical assistance has described that setting as one that lets people with disabilities interact with people without disabilities to the fullest extent possible. The Supreme Court's Olmstead decision held that unjustified segregation is discrimination. Minnesota's Olmstead Plan includes housing among the areas where state agencies set goals so that people with disabilities can live full, integrated lives in the community. Federal enforcement positions on Olmstead have recently shifted, and the Minnesota Olmstead Implementation Office has said Minnesota remains committed to this work. Legal questions belong to counsel.\n\nHousing crises test these commitments. When someone loses housing, the easiest path is often whatever bed is open: a congregate setting, a nursing facility, a hospital stay extended because there is nowhere to discharge to. Sometimes that is the right short-term choice for safety. The risk comes when no one plans the way back. Watch for signs that a temporary placement is becoming a default: no written plan to return to community housing, no one assigned to search, no conversation with the person about what they want, or a team that describes the placement as working because the person is safe and fed.\n\nPerson-centered housing planning starts with the person's own preferences: where they want to live, with whom, near what, and what kind of support they need to succeed. It pairs those preferences with honest information about options, costs, waiting lists and trade-offs. Informed choice means the person hears about community options, not only the placements that are easiest to arrange, and that their decision is respected even when the team would choose differently.\n\nPeople experiencing homelessness keep the right to make choices about their lives. Some may decline shelter or a particular setting for reasons that make sense to them, such as safety, pets, a partner or past trauma in congregate settings. Ask about those reasons without judgment, look for options that address them and document the conversation.",
+      "after": "The ADA integration regulation addresses services in the most integrated setting appropriate to a person’s needs. Olmstead held that unjustified segregation is discrimination, with conditions for community-based treatment: professional appropriateness, the person not opposing it and reasonable accommodation in light of state resources and others’ needs. On June 18, 2026, the DOJ Office of Legal Counsel issued a narrower interpretation than earlier federal guidance. That opinion is distinct from the Court’s decision. Minnesota has affirmed its commitment to its Olmstead work, and the next state plan remains a draft. Ask counsel how current requirements apply rather than treating an older guidance page as a complete legal answer.\n\nHousing crises test these commitments. When someone loses housing, the easiest path is often whatever bed is open: a congregate setting, a nursing facility, a hospital stay extended because there is nowhere to discharge to. Sometimes that is the right short-term choice for safety. The risk comes when no one plans the way back. Watch for signs that a temporary placement is becoming a default: no written plan to return to community housing, no one assigned to search, no conversation with the person about what they want, or a team that describes the placement as working because the person is safe and fed.\n\nPerson-centered housing planning starts with where the person wants to live, with whom and what support they would need. Explain actual options, costs, eligibility conditions and waiting lists, including information that remains uncertain. Discuss community options as well as available interim arrangements. A preference deserves serious consideration, but it does not establish eligibility, funding or the availability of a particular home. Follow applicable decision-making authority and service procedures while making room for the person’s views and communication needs.\n\nPeople experiencing homelessness keep the right to make choices about their lives. Some may decline shelter or a particular setting for reasons that make sense to them, such as safety, pets, a partner or past trauma in congregate settings. Ask about those reasons without judgment, look for options that address them and document the conversation.",
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "lessons",
+        2,
+        "example"
+      ],
+      "before": "Sunita, a hospital-based care coordinator working with a county lead agency, is planning discharge for Elliott, who has a psychiatric disability and lost his apartment during a long hospital stay. A nursing facility has an open bed, and the team is leaning toward it because it is available now. Elliott says he wants his own place near his sister and is willing to use supports at home. He also says he stayed in a congregate setting years ago and felt unsafe there.",
+      "after": "Fictional practice case: Sunita, a hospital-based care coordinator working with a county lead agency, is planning discharge for Elliott, who has a psychiatric disability and lost his apartment during a long hospital stay. A nursing facility has an open bed, and the team is leaning toward it because it is available now. Elliott says he wants his own place near his sister and is willing to use supports at home. He also says he stayed in a congregate setting years ago and felt unsafe there.",
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "lessons",
+        2,
+        "choices",
+        1
+      ],
+      "before": "Hold an informed choice conversation with Elliott about community options near his sister, explore Housing Support and waiver supports with the county, and if a short interim stay is unavoidable, write down a return-to-community plan with names and dates.",
+      "after": "Explore community options near Elliott’s sister with him and the responsible team, check eligibility and availability, and document who will resolve next steps. If an interim stay is needed, confirm its appropriateness and authority and plan the next housing review.",
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "lessons",
+        2,
+        "feedback",
+        1
+      ],
+      "before": "This is the strongest response. It centers Elliott's goals, uses real options, respects his concerns about congregate settings and builds a written path back to the community if an interim stay is needed.",
+      "after": "This is the strongest response. It takes Elliott’s goals seriously while checking what is available, appropriate and authorized. Assign next steps and review dates; do not assume an open nursing-facility bed is a suitable or lawful discharge plan.",
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "lessons",
+        2,
+        "action"
+      ],
+      "before": "For anyone you support who is in a temporary or emergency setting, check whether there is a written plan to return to community housing, with a named person responsible and a next date.",
+      "after": "Using Elliott’s fictional case, identify the questions about choice, eligibility, safe discharge and community options. Propose responsible roles and a next review date without promising a placement or accessing personal records.",
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "lessons",
+        2,
+        "check",
+        "feedback"
+      ],
+      "before": "The principle comes from the ADA's integration regulation and the Olmstead decision. It focuses on integration and the person's needs, not cost alone or uniformity. Federal enforcement views have shifted recently, but Minnesota's Olmstead Plan continues to set housing goals.",
+      "after": "The integration regulation focuses on an appropriate integrated setting. Olmstead adds the professional, individual-choice and reasonable-accommodation conditions described in the lesson. The June 2026 OLC opinion is a separate executive interpretation; route application to counsel.",
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "lessons",
+        3,
+        "teaching"
+      ],
+      "before": "Many problems that look like a person's failure to respond are really design problems. A notice that is mailed once to an old address, written at a high reading level and giving ten days to respond will fail many people who are moving between places, especially people whose disabilities affect memory, reading or organization. Program and policy staff can reduce these failures through the way contact and notices are designed, within the rules that govern each program.\n\nStart with contact. With the person's agreement, collect more than one way to reach them: a phone number, text permission, an email, a trusted person or agency such as a shelter, drop-in center or provider, and a mailing address that works, which for some people may be a relative, a program address or general delivery where the program allows it. Ask how they prefer to be reached and when. Record the date the information was confirmed so staff know how fresh it is.\n\nCollecting this information is collecting government data. Under the Minnesota Government Data Practices Act, when you ask a person for private data about themselves, you generally need to tell them why you are asking, how it will be used, whether they must provide it and who else may see it. Follow your agency's notice practices and ask your data practices contact when unsure. Only collect what you need to reach the person.\n\nThen look at the notices themselves. Plain language, a clear statement of what the person needs to do and by when, a phone number that a real person answers and accessible formats all help. Where the program's rules allow, pair important mailed notices with a reminder by phone or text, and give case managers visibility of upcoming renewal dates so they can help in advance. When mail comes back undeliverable, follow the program's returned mail rules and use the alternate contacts the person gave you before any adverse action that policy permits. The Equity Analysis Toolkit can help teams examine who a notice process leaves out before changing it.",
+      "after": "A missed response can reflect a barrier in the process, but the reason needs examination. For example, a notice sent to an old address with complex wording and a short response window may be difficult to act on. Housing changes or a disability affecting reading, memory or organization can add barriers. Examine the actual notice, delivery record and person’s account before assigning a cause. Program and policy staff can reduce these failures through the way contact and notices are designed, within the rules that govern each program.\n\nStart with contact. With the person's agreement, collect more than one way to reach them: a phone number, text permission, an email, a trusted person or agency such as a shelter, drop-in center or provider, and a mailing address that works, which for some people may be a relative, a program address or general delivery where the program allows it. Ask how they prefer to be reached and when. Confirm whether a trusted contact can receive a message and what it may contain; do not disclose benefit status or health details merely because someone is listed. Use approved communication methods and record when the information was confirmed. A phone or internet connection may be shared, unavailable or unsafe to use.\n\nCollecting this information is collecting government data. Minnesota Statutes 13.04, subdivision 2, generally requires a Tennessen warning when government asks for private or confidential data about the person. It covers the purpose and intended use, whether giving the data is required or may be refused, known consequences of giving or refusing it, and who is authorized to receive it. A notice explains collection; it is not automatically consent to a later disclosure. Follow your agency's notice practices and ask your data practices contact when unsure. Only collect what you need to reach the person.\n\nThen look at the notices themselves. Plain language, a clear statement of what the person needs to do and by when, a phone number that a real person answers and accessible formats all help. Where the program's rules allow, pair important mailed notices with a reminder by phone or text, and give case managers visibility of upcoming renewal dates so they can help in advance. When mail is returned, refer the issue to the staff responsible for eligibility and the current returned-mail process. DHS Bulletin 25-21-07 continues specified in-state address updates from USPS and managed care organizations; out-of-state or inconsistent information needs different handling. Follow required outreach, response periods, notices and appeal procedures before an adverse action. Do not treat a single returned envelope as proof that the person moved out of state. The Equity Analysis Toolkit can help teams examine who a notice process leaves out before changing it.",
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "lessons",
+        3,
+        "keyPoint"
+      ],
+      "before": "Many missed responses are design failures, not personal failures. Collect alternate contacts with the person's informed agreement, write clear notices and use every contact route policy allows before services are affected.",
+      "after": "Examine why contact failed, use authorized contact routes and preserve required notices and appeal information. A plain-language rewrite or alternate contact does not replace the program’s legal process.",
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "lessons",
+        3,
+        "example"
+      ],
+      "before": "Mirela, a DSD policy analyst, is reviewing why waiver renewals lapse. Data show that people who had moved or were staying in shelters in the past year lapsed far more often than others. Most lapses followed a single mailed notice that came back undeliverable. Case managers say they often do not know a renewal is due until services are already interrupted. Mirela's supervisor, Dev, asks for a recommendation by next month.",
+      "after": "Fictional practice case: Mirela, a DSD policy analyst, is reviewing why waiver renewals lapse. Data show that people who had moved or were staying in shelters in the past year lapsed far more often than others. Most lapses followed a single mailed notice that came back undeliverable. Case managers say they often do not know a renewal is due until services are already interrupted. Mirela's supervisor, Dev, asks for a recommendation by next month.",
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "lessons",
+        3,
+        "feedback",
+        1
+      ],
+      "before": "This is the strongest response. It addresses the actual failure points, shares responsibility across the system, respects data practices and uses the program's equity method and owners to check the changes.",
+      "after": "This is the strongest response. It proposes changes tied to the observed pattern and calls for review by program owners. The data does not by itself prove the cause of each lapse; test the changes, protect private information and preserve required notice and appeal procedures.",
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "lessons",
+        3,
+        "action"
+      ],
+      "before": "Take one notice or letter your team sends and rewrite its first paragraph in plain language that says what the person needs to do, by when and whom to call.",
+      "after": "Use a blank, approved notice template to draft a clearer opening with the action, deadline and contact route. Preserve required reasons and appeal information, and send the proposed wording through the program’s review before use.",
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "lessons",
+        3,
+        "check",
+        "correct"
+      ],
+      "before": "Tell the person why the data is being collected, how it will be used, whether they must provide it and who may see it.",
+      "after": "Explain the purpose and use, whether providing the data is required, known consequences of providing or refusing it, and who is authorized to receive it.",
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "lessons",
+        3,
+        "check",
+        "feedback"
+      ],
+      "before": "When government asks people for private data about themselves, it generally must explain the purpose, intended use, whether giving it is required and who else may receive it. Check your agency's notice forms and ask your data practices contact for specifics.",
+      "after": "The general Tennessen-warning requirement includes known consequences of providing or refusing data, as well as purpose, intended use, required or voluntary status and authorized recipients. Follow the agency’s approved notice and consult data practices staff; the notice alone does not authorize all later sharing.",
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "cards",
+        1,
+        "back"
+      ],
+      "before": "A former Medical Assistance housing benefit that Minnesota ended after DHS cited widespread fraud. Resources that still list it are out of date.",
+      "after": "A former Medical Assistance service that ended October 31, 2025. Remove it as an available referral while preserving historical records and directing people to verified current options.",
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "cards",
+        3,
+        "back"
+      ],
+      "before": "A setting that lets people with disabilities interact with people without disabilities to the fullest extent possible, as described in federal ADA guidance and reflected in Minnesota's Olmstead Plan.",
+      "after": "The integration regulation concerns a setting appropriate to the person’s needs that permits interaction with people without disabilities. Apply current requirements with counsel, including the conditions in Olmstead.",
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "aid",
+        0,
+        "items",
+        0
+      ],
+      "before": "With consent, update the address and add alternate contacts.",
+      "after": "Agree on usable contact routes and confirm what information may be shared; authorized staff follow address-update rules.",
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "aid",
+        0,
+        "items",
+        2
+      ],
+      "before": "Alert the team and start housing problem-solving before eviction or discharge dates.",
+      "after": "Use authorized channels to address urgent housing needs and identify who is responsible for each next step.",
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "aid",
+        1,
+        "items",
+        0
+      ],
+      "before": "Remove references to Housing Stabilization Services.",
+      "after": "Remove HSS as an available referral, while preserving historical and required program records.",
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "aid",
+        1,
+        "items",
+        2
+      ],
+      "before": "Link to DHS, HousingLink and Housing Benefits 101 pages rather than fixed lists.",
+      "after": "Verify current DHS, HousingLink and Housing Benefits 101 links, and provide usable phone or print options.",
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "aid",
+        2,
+        "items",
+        2
+      ],
+      "before": "If an interim stay is needed, write a return-to-community plan with a responsible person and dates.",
+      "after": "Check that an interim stay is appropriate and authorized; name who will follow up on community options and when.",
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "aid",
+        3,
+        "items",
+        0
+      ],
+      "before": "Collect more than one contact method, with an informed data practices notice.",
+      "after": "Use the required data notice, including known consequences of providing or refusing data; confirm disclosure authority separately.",
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "aid",
+        3,
+        "items",
+        3
+      ],
+      "before": "Follow returned mail rules and try alternate contacts before any adverse action.",
+      "after": "Refer returned mail through current eligibility procedures, including required outreach, response periods, notices and appeals.",
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "sources",
+        0,
+        "title"
+      ],
+      "before": "Minnesota Department of Human Services — Housing Stabilization Services program ends Oct. 31 (news release)",
+      "after": "Minnesota DHS — HSS program termination FAQ",
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "sources",
+        0,
+        "href"
+      ],
+      "before": "https://mn.gov/dhs/media/news/index.jsp?id=1053-711321",
+      "after": "https://mn.gov/dhs/housing-stabilization-services-termination/",
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "sources",
+        0,
+        "note"
+      ],
+      "before": "Supports the statement that the program ended, that DHS cited widespread fraud and that federal CMS approved termination.",
+      "after": "Confirms October 31, 2025 termination, separate Housing Support program, continuing documentation requirements and no confirmed redesign timeline.",
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "sources",
+        2,
+        "href"
+      ],
+      "before": "https://mn.gov/dhs/people-we-serve/adults/services/housing/programs-and-services/housing-support.jsp",
+      "after": "https://mn.gov/dhs/housing-income/income-assistance/housing-support/",
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "sources",
+        5,
+        "note"
+      ],
+      "before": "Supports the Olmstead Plan's inclusion of housing and Minnesota's stated commitment after the recent U.S. Department of Justice memo.",
+      "after": "Describes the state plan’s housing goals, next draft plan and Minnesota’s commitment after the June 2026 OLC opinion.",
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "sources",
+        6,
+        "note"
+      ],
+      "before": "Used for the integration regulation and the description of the most integrated setting. This is non-binding federal technical assistance, and federal enforcement positions have since shifted; route legal questions to counsel.",
+      "after": "Historical federal guidance explains the integration regulation; distinguish it from the Court decision and June 2026 OLC interpretation when seeking current legal advice.",
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "sources",
+        7
+      ],
+      "after": {
+        "title": "DHS — Resources after HSS termination",
+        "href": "https://mn.gov/dhs/housing-resources/",
+        "note": "Each alternative has separate criteria; former HSS eligibility does not guarantee eligibility or a replacement service."
+      },
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "sources",
+        8
+      ],
+      "after": {
+        "title": "DHS Eligibility Policy Manual — Change in circumstances",
+        "href": "https://hcopub.dhs.state.mn.us/epm/1_3_2_1.htm",
+        "note": "Reporting channels and differing deadlines for MA, MA-EPD and MinnesotaCare; eligibility redetermination and notice requirements."
+      },
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "sources",
+        9
+      ],
+      "after": {
+        "title": "DHS Eligibility Policy Manual — State residency",
+        "href": "https://hcopub.dhs.state.mn.us/epm/1_4.htm",
+        "note": "Residency can include people without a fixed address; inconsistent information follows the stated process."
+      },
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "sources",
+        10
+      ],
+      "after": {
+        "title": "DHS Bulletin 25-21-07 — Enrollee address updates",
+        "href": "https://www.dhs.state.mn.us/main/groups/publications/documents/pub/mndhs-073258.pdf",
+        "note": "Continues specified in-state updates from USPS and MCOs; distinguishes inconsistent and out-of-state information."
+      },
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "sources",
+        11
+      ],
+      "after": {
+        "title": "Minnesota Statutes 13.04 — Rights of subjects of data",
+        "href": "https://www.revisor.mn.gov/statutes/cite/13.04",
+        "note": "Subdivision 2 includes known consequences of providing or refusing data in the Tennessen warning."
+      },
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "sources",
+        12
+      ],
+      "after": {
+        "title": "U.S. Supreme Court — Olmstead v. L.C.",
+        "href": "https://www.govinfo.gov/content/pkg/USREPORTS-527/pdf/USREPORTS-527-581.pdf",
+        "note": "Primary decision and the conditions for community-based treatment."
+      },
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    },
+    {
+      "path": [
+        "sources",
+        13
+      ],
+      "after": {
+        "title": "DOJ Office of Legal Counsel — June 18, 2026 opinion",
+        "href": "https://www.justice.gov/olc/opinion/application-rehabilitation-act-and-americans-disabilities-act-state",
+        "note": "Dated executive interpretation, distinct from the Supreme Court holding and state plan."
+      },
+      "reason": "Clarify current referrals, historical records, eligibility, privacy, notice and evidence boundaries."
+    }
+  ],
+  "sources": [
+    "https://mn.gov/dhs/housing-stabilization-services-termination/",
+    "https://content.govdelivery.com/accounts/MNDHS/bulletins/3f98793",
+    "https://mn.gov/dhs/housing-income/income-assistance/housing-support/",
+    "https://mn.hb101.org/a/9/",
+    "https://www.housinglink.org/",
+    "https://mn.gov/olmstead/",
+    "https://www.ada.gov/resources/olmstead-mandate-statement/",
+    "https://mn.gov/dhs/housing-resources/",
+    "https://hcopub.dhs.state.mn.us/epm/1_3_2_1.htm",
+    "https://hcopub.dhs.state.mn.us/epm/1_4.htm",
+    "https://www.dhs.state.mn.us/main/groups/publications/documents/pub/mndhs-073258.pdf",
+    "https://www.revisor.mn.gov/statutes/cite/13.04",
+    "https://www.govinfo.gov/content/pkg/USREPORTS-527/pdf/USREPORTS-527-581.pdf",
+    "https://www.justice.gov/olc/opinion/application-rehabilitation-act-and-americans-disabilities-act-state"
+  ],
+  "sourceChecks": [
+    {
+      "url": "https://mn.gov/dhs/housing-stabilization-services-termination/",
+      "evidence": "Current DHS FAQ confirms October 31, 2025 end, documents remaining claims/records duties, and says redesign has no specific timeframe."
+    },
+    {
+      "url": "https://content.govdelivery.com/accounts/MNDHS/bulletins/3f98793",
+      "evidence": "Dated October 31, 2025 bulletin confirms termination and partner coordination."
+    },
+    {
+      "url": "https://mn.gov/dhs/housing-income/income-assistance/housing-support/",
+      "evidence": "Replaced broken older DHS path with current official Housing Support page; room and board support and eligibility/application routes. No current dollar amount reproduced."
+    },
+    {
+      "url": "https://mn.hb101.org/a/9/",
+      "evidence": "October 30, 2026 HB101 page: eligible person, provider and place; supplemental-services limits, application routes and no blanket rent entitlement."
+    },
+    {
+      "url": "https://www.housinglink.org/",
+      "evidence": "Direct HousingLink site lists rental search, waitlists, fair housing, legal help and rental-barrier resources; no availability guarantee."
+    },
+    {
+      "url": "https://mn.gov/dhs/housing-resources/",
+      "evidence": "DHS alternatives each have separate criteria; HSS eligibility does not transfer automatically or guarantee replacement."
+    },
+    {
+      "url": "https://hcopub.dhs.state.mn.us/epm/1_3_2_1.htm",
+      "evidence": "Current manual ten-day MA reporting deadline with thirty-day MA-EPD and MinnesotaCare exceptions; relevant servicing agency and notices."
+    },
+    {
+      "url": "https://hcopub.dhs.state.mn.us/epm/1_4.htm",
+      "evidence": "State residency includes people without a fixed address; loss of housing alone does not establish a move out of state."
+    },
+    {
+      "url": "https://www.dhs.state.mn.us/main/groups/publications/documents/pub/mndhs-073258.pdf",
+      "evidence": "Read three-page bulletin: specified in-state USPS/MCO updates; inconsistent or out-of-state data handled differently. Did not apply the January 2027 statutory expansion early."
+    },
+    {
+      "url": "https://www.revisor.mn.gov/statutes/cite/13.04",
+      "evidence": "Read subdivision 2: known consequences of providing or refusing data were missing from teaching and keyed assessment; added while preserving wrong options."
+    },
+    {
+      "url": "https://www.govinfo.gov/content/pkg/USREPORTS-527/pdf/USREPORTS-527-581.pdf",
+      "evidence": "Court conditions preserved and distinct from executive interpretation."
+    },
+    {
+      "url": "https://www.justice.gov/olc/opinion/application-rehabilitation-act-and-americans-disabilities-act-state",
+      "evidence": "June 18, 2026 OLC date; earlier guidance not presented as complete current advice."
+    },
+    {
+      "url": "https://mn.gov/olmstead/",
+      "evidence": "State commitment and next plan draft distinguished."
+    }
+  ],
+  "assessmentNote": "Knowledge-check questions and wrong options retained; lesson 4 keyed answer completed with known consequences. Recommended scenario indices retained, with choices in lessons 1–3 clarified.",
+  "remainingReview": [
+    "Final generated overview, job aid, diagnostics and serialized readings."
+  ],
+  "readings": [
+    {
+      "slug": "dsd-housing-instability",
+      "readingSha256": "33ac85e01e5be86788a381e03123b7d62698dad5e2e73b16c1f841482201a2b6"
+    },
+    {
+      "slug": "dsd-housing-instability--how-housing-instability-breaks-the-service-chain",
+      "readingSha256": "58bcfbeb58528f6377579c2374ccbdda37210a73b471605c98204c1c364b8a2e"
+    },
+    {
+      "slug": "dsd-housing-instability--minnesota-housing-supports-for-people-with-disabil",
+      "readingSha256": "5838f23988571e9b6547a283201aea6d60cc69200681617694be492354d887f3"
+    },
+    {
+      "slug": "dsd-housing-instability--person-centered-housing-choice-and-the-most-integr",
+      "readingSha256": "c21be1b2480b55ac138dfa1e5e1354716561984abccb59fd68b661548314a498"
+    },
+    {
+      "slug": "dsd-housing-instability--designing-contact-and-notices-for-people-without-s",
+      "readingSha256": "0bbcf181ad07496e327fa20b8995151df6776b24f7c1800788e37c4f9ff30e3c"
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "date": "2026-11-16",
+  "courseId": "idi-acceptance",
+  "status": "accepted_complete_written_course_review",
+  "countsAsCompleteCourseReview": true,
+  "scope": "Complete overview, four lessons and 16 objectives, four fictional practice cases and 12 choices, feedback, four knowledge checks, private reflection and actions, five flashcards, full job aid, eleven source notes and cover description. Recordings are outside this review.",
+  "method": "Read full source and final generated overview/job aid; compare relevant primary authorities, revise observation, assessment, evidence, privacy and policy boundaries, inspect cover image, verify serialized readings and assessment distinctions.",
+  "sourcePackSha256": "3818f4ef6a1d29ec0d49b78cb899355ae99df25e481fc21232ba9484732df677",
+  "specSha256": "312eb8c6d29c37d7337b2b5c7bb95b237e68287288c9ae4497d2284fcce56ee1",
+  "findings": [
+    "Title and subtitle now distinguish contextual understanding from approval or suspension of judgment.",
+    "Practice observations do not establish individual or group inventory results.",
+    "Qualified administrators administer and debrief; they do not guess results.",
+    "Existing procedures and standards require review, including legally required modifications.",
+    "Person-centered service requirements retain their scope and relevant decision-making authority.",
+    "Formal Tribal consultation is distinct from ordinary engagement.",
+    "Current agency analysis processes are distinguished from the statewide guide.",
+    "Fictional cases avoid collecting real case information; individual preferences are not inferred from community membership."
+  ],
+  "diagnostics": [
+    {
+      "title": "Naming Acceptance: seeing patterns of difference and commonality",
+      "teaching": {
+        "words": 439,
+        "sents": 23,
+        "asl": 19.08695652173913,
+        "fk": 13.464846984252752,
+        "fog": 17.11086461325146,
+        "smog": 15.27690151875764,
+        "poly": 23.690205011389523,
+        "long": 35.99088838268793,
+        "short": 13.043478260869565,
+        "ease": 32.52233138556008
+      }
+    },
+    {
+      "title": "Connecting curiosity with team decisions",
+      "teaching": {
+        "words": 415,
+        "sents": 24,
+        "asl": 17.291666666666668,
+        "fk": 10.943629518072292,
+        "fog": 13.76004016064257,
+        "smog": 12.954912879858846,
+        "poly": 17.10843373493976,
+        "long": 31.80722891566265,
+        "short": 8.333333333333334,
+        "ease": 47.400584839357435
+      }
+    },
+    {
+      "title": "Reflecting on curiosity, decisions and follow-through",
+      "teaching": {
+        "words": 358,
+        "sents": 22,
+        "asl": 16.272727272727273,
+        "fk": 11.785413915693248,
+        "fog": 15.112442864398174,
+        "smog": 13.81666964889586,
+        "poly": 21.508379888268156,
+        "long": 36.87150837988827,
+        "short": 9.090909090909092,
+        "ease": 39.55058405281869
+      }
+    },
+    {
+      "title": "From recognizing to adapting: applying Acceptance to DHS decisions",
+      "teaching": {
+        "words": 451,
+        "sents": 30,
+        "asl": 15.033333333333333,
+        "fk": 11.832201773835923,
+        "fog": 14.882512934220252,
+        "smog": 13.5591,
+        "poly": 22.172949002217294,
+        "long": 35.47671840354767,
+        "short": 13.333333333333334,
+        "ease": 37.00765225424982
+      }
+    }
+  ],
+  "diagnosticJudgment": "Teaching FK approximately 10.9–13.5; retain necessary legal and service terms with explicit explanations.",
+  "assessmentChecks": {
+    "knowledgeCheckQuestionsAndAnswersUnchanged": true,
+    "scenarioRecommendedIndicesUnchanged": true,
+    "scenarioChoiceChange": "Lessons 3 and 4 recommended choices clarify participation, decision authority and review of required modifications; all recommended indices and distractors remain unchanged.",
+    "otherScenarioChoicesUnchanged": true,
+    "finalLessonReadingsMatchCurrentPack": true
+  },
+  "coverReview": {
+    "path": "public/images/covers/idi-acceptance.webp",
+    "sha256": "c4db237bb7ce4a782b8bcf402fdecfcd116c8baf9c056392907c2738036ba3b0",
+    "alt": "Two colleagues shake hands beside a table with laptops while three others look on.",
+    "method": "Direct local image inspection: two colleagues shaking hands beside a laptop table while three others look on."
+  },
+  "priorFieldReview": "data/editorial/reviews/2026-11-16-acceptance-guidance-review.json",
+  "sources": [
+    "https://www.idiinventory.com/idc",
+    "https://idiinventory.com/why-the-idi",
+    "https://www.idrinstitute.org/wp-content/uploads/2019/02/DMIS-IDRI.pdf",
+    "https://www.sciencedirect.com/science/article/abs/pii/S0147176703000324",
+    "https://mn.gov/dhs/assets/equity-policy_tcm1053-646921.pdf",
+    "https://mn.gov/mmb-stat/equal-opportunity/office-of-inclusion/equity-analysis-toolkit.pdf",
+    "https://www.revisor.mn.gov/statutes/cite/10.65",
+    "https://www.revisor.mn.gov/statutes/cite/245D.03",
+    "https://www.revisor.mn.gov/statutes/cite/245D.07",
+    "https://www.revisor.mn.gov/rules/9544.0030/",
+    "https://www.ada.gov/law-and-regs/regulations/title-ii-2010-regulations/"
+  ],
+  "readings": [
+    {
+      "slug": "idi-acceptance",
+      "readingSha256": "a596966167840bc079f309fe63206adc11a6c12a885997255d07df3b76100491"
+    },
+    {
+      "slug": "idi-acceptance--naming-acceptance-seeing-patterns-of-difference-an",
+      "readingSha256": "5b51c4206c91952b37cfa3a26a75d6965cc0afb2bf4982f49c6c20a5ab47ec80"
+    },
+    {
+      "slug": "idi-acceptance--noticing-acceptance-in-a-team-curiosity-without-ch",
+      "readingSha256": "14949bf0662618c43a5a57b37935605d609edb1f3aa8b64a65c81bd780b0534b"
+    },
+    {
+      "slug": "idi-acceptance--finding-your-own-acceptance-honestly",
+      "readingSha256": "9ca500e775f21bd470d0a07c176d9e8d10c1df6ab4f88af8d507d70ce67b2b28"
+    },
+    {
+      "slug": "idi-acceptance--from-recognizing-to-adapting-applying-acceptance-t",
+      "readingSha256": "b907064e662d476f8668eef83259cb88af42c84ea4f95794352023a0e06626c7"
+    }
+  ],
+  "liveVerification": "pending final deployment"
+}

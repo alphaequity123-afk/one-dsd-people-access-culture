@@ -1,0 +1,128 @@
+{
+  "date": "2026-11-16",
+  "courseId": "idi-minimization",
+  "status": "accepted_complete_written_course_review",
+  "countsAsCompleteCourseReview": true,
+  "scope": "Complete overview, four lessons and 16 objectives, four fictional practice cases and 12 choices, feedback, four knowledge checks, private reflection and actions, five flashcards, full job aid, six source notes and cover description. Recordings are outside this review.",
+  "method": "Read full source and final generated overview/job aid; compare relevant primary authorities, revise observation, assessment, evidence, privacy and policy boundaries, inspect cover image, verify serialized readings and assessment distinctions.",
+  "sourcePackSha256": "abb3bff21ff93b0fa6a2263c9798a171af9b4c2a30a75d9dcad8222f99044f17",
+  "specSha256": "41008bee95500f4589063a536c6291e39d4eccded2810f527b7d09abc7ae13a4",
+  "findings": [
+    "Single comments or routine patterns do not establish an inventory result or a causal cultural explanation.",
+    "Five-orientation IDC and six-stage DMIS remain distinct; development is not automatic.",
+    "Individual results require confidential one-to-one debriefs with a qualified administrator.",
+    "Replaced inaccessible continuum link with current official page; historical article access limit disclosed.",
+    "Current approved equity analysis procedures remain separate from practice questions.",
+    "Lesson 3 recommended response avoids false anonymity promises and unnecessary case sharing.",
+    "Fictional cases, private reflection and compensation approval protect voluntary participation.",
+    "Practice outcomes require examination rather than guaranteed trust or fewer missed appointments."
+  ],
+  "diagnostics": [
+    {
+      "title": "Naming Minimization: commonality, universalism and a transitional mindset",
+      "teaching": {
+        "words": 452,
+        "sents": 23,
+        "asl": 19.652173913043477,
+        "fk": 13.377002693343595,
+        "fog": 16.887418237783763,
+        "smog": 15.159528703192944,
+        "poly": 22.56637168141593,
+        "long": 32.9646017699115,
+        "short": 13.043478260869565,
+        "ease": 34.15883993843789
+      }
+    },
+    {
+      "title": "Noticing Minimization in a team's default practice",
+      "teaching": {
+        "words": 362,
+        "sents": 24,
+        "asl": 15.083333333333334,
+        "fk": 11.480345303867406,
+        "fog": 13.878637200736648,
+        "smog": 12.954912879858846,
+        "poly": 19.613259668508288,
+        "long": 35.0828729281768,
+        "short": 16.666666666666668,
+        "ease": 39.619339318600396
+      }
+    },
+    {
+      "title": "Reflecting on your own assumptions about sameness",
+      "teaching": {
+        "words": 384,
+        "sents": 21,
+        "asl": 18.285714285714285,
+        "fk": 10.654970238095238,
+        "fog": 13.876785714285715,
+        "smog": 13.023866798666859,
+        "poly": 16.40625,
+        "long": 27.083333333333332,
+        "short": 4.761904761904762,
+        "ease": 51.24062500000002
+      }
+    },
+    {
+      "title": "Supporting practice that recognizes similarity and difference",
+      "teaching": {
+        "words": 401,
+        "sents": 25,
+        "asl": 16.04,
+        "fk": 11.99976458852868,
+        "fog": 15.194054862842894,
+        "smog": 13.847162063638184,
+        "poly": 21.945137157107233,
+        "long": 33.915211970074814,
+        "short": 16,
+        "ease": 37.59928778054865
+      }
+    }
+  ],
+  "diagnosticJudgment": "Teaching FK approximately 10.7–13.4; retain necessary legal and service terms with explicit explanations.",
+  "assessmentChecks": {
+    "knowledgeCheckQuestionsAndAnswersUnchanged": true,
+    "scenarioRecommendedIndicesUnchanged": true,
+    "scenarioChoiceChange": "Lesson 3 recommended choice clarifies privacy and sharing an agenda; recommended indices and all other choices remain unchanged.",
+    "otherScenarioChoicesUnchanged": true,
+    "finalLessonReadingsMatchCurrentPack": true
+  },
+  "coverReview": {
+    "path": "public/images/covers/idi-minimization.webp",
+    "sha256": "9dcbccf8d22936807706b86b4e6a952e7f28589121d5be2c8837aef4b4dc0e59",
+    "alt": "Four colleagues stand beside a blank whiteboard while one speaks and gestures with a marker.",
+    "method": "Direct local image inspection: four colleagues beside a blank whiteboard, one gesturing with a marker."
+  },
+  "priorFieldReview": "data/editorial/reviews/2026-11-16-minimization-guidance-review.json",
+  "sources": [
+    "https://www.idiinventory.com/idc",
+    "https://idiinventory.com/why-the-idi",
+    "https://www.idiinventory.com/how-individuals-use-the-idi",
+    "https://www.idrinstitute.org/wp-content/uploads/2019/02/DMIS-IDRI.pdf",
+    "https://www.sciencedirect.com/science/article/abs/pii/S0147176703000324",
+    "https://mn.gov/dhs/assets/equity-policy_tcm1053-646921.pdf"
+  ],
+  "readings": [
+    {
+      "slug": "idi-minimization",
+      "readingSha256": "7a8184b3160eb691c681d5e333116ea67352f6530e0360f7ff2c18d65602dadd"
+    },
+    {
+      "slug": "idi-minimization--naming-minimization-commonality-universalism-and-a",
+      "readingSha256": "76b667982e980481168ae1ac766ba1349101077209fa1846e3c2ce47aa6dc369"
+    },
+    {
+      "slug": "idi-minimization--noticing-minimization-in-a-team-s-default-practice",
+      "readingSha256": "1dd69197581188b311882316e226803743ae5aa7897c8cd774c0d7b657375230"
+    },
+    {
+      "slug": "idi-minimization--finding-your-own-minimization-honestly",
+      "readingSha256": "18d37be5548bf94fabd5b19b93bff3c526f54309a8ea4e103e9891f67e8a5271"
+    },
+    {
+      "slug": "idi-minimization--what-actually-helps-people-and-teams-move-through",
+      "readingSha256": "a087c9308f23d0461070d78ece591112392fea89390c20f0a73b49c19f320246"
+    }
+  ],
+  "liveVerification": "pending final deployment"
+}
