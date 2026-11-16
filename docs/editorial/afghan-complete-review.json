@@ -1,0 +1,140 @@
+{
+  "date": "2026-11-16",
+  "courseId": "cq-afghan-minnesota",
+  "status": "accepted_complete_written_course_review",
+  "countsAsCompleteCourseReview": true,
+  "scope": "Complete overview, four lessons and 16 objectives, four fictional practice cases and 12 choices, feedback, four knowledge checks, private reflection and actions, five flashcards, full job aid, fourteen source notes and cover description. Recordings are outside this review.",
+  "method": "Read full source and final generated overview/job aid; compare relevant primary authorities, revise observation, assessment, evidence, privacy and policy boundaries, inspect cover image, verify serialized readings and assessment distinctions.",
+  "sourcePackSha256": "ce639fe3c89f863e12265ae30db41fbf5d8676b300e3522f16857bc7bdc53fff",
+  "specSha256": "ecbf8c4040834e398db881502bd7671b91306388c1c74d01abd3b1ce34fb0815",
+  "findings": [
+    "Dates the 2021–2022 response cohort and 2024 report; neither is a current population census.",
+    "Distinguishes initial resettlement from the first physical stop in the United States.",
+    "Updates cumulative-source context to 2025 and removes unsupported county and unavailable first-year claims.",
+    "Explains temporary parole without treating it as immigration status, permanent residence or a blanket benefit rule.",
+    "Current SIV deadline reference is dated and does not promise an available route.",
+    "Corrects the implication of a complete 1979 census and treats the 2004 Constitution as historical.",
+    "Confirms language preferences without assigning dialect from another person’s impression.",
+    "Offers feasible participation options with applicable authority and privacy limits.",
+    "Record mismatches follow verification and correction procedures.",
+    "A spouse’s notice requires authorized access; review stated reasons and deadlines rather than guessing.",
+    "Helpline navigation and referral do not replace qualified legal advice."
+  ],
+  "diagnostics": [
+    {
+      "title": "From earlier arrivals to the evacuation: how Afghan Minnesota grew",
+      "teaching": {
+        "words": 381,
+        "sents": 25,
+        "asl": 15.24,
+        "fk": 13.396119685039373,
+        "fog": 16.384713910761157,
+        "smog": 14.439760564264141,
+        "poly": 25.721784776902886,
+        "long": 41.20734908136483,
+        "short": 24,
+        "ease": 26.163250393700793
+      }
+    },
+    {
+      "title": "Languages and peoples: Dari, Pashto and much more",
+      "teaching": {
+        "words": 364,
+        "sents": 26,
+        "asl": 14,
+        "fk": 11.589780219780224,
+        "fog": 13.731868131868133,
+        "smog": 12.766815935922704,
+        "poly": 20.32967032967033,
+        "long": 33.79120879120879,
+        "short": 23.076923076923077,
+        "ease": 36.905219780219795
+      }
+    },
+    {
+      "title": "Family, gender and communication without stereotypes",
+      "teaching": {
+        "words": 383,
+        "sents": 23,
+        "asl": 16.652173913043477,
+        "fk": 10.89964808718356,
+        "fog": 13.03162674537405,
+        "smog": 12.432590859559816,
+        "poly": 15.926892950391645,
+        "long": 29.242819843342037,
+        "short": 30.434782608695652,
+        "ease": 46.576907708025914
+      }
+    },
+    {
+      "title": "Service barriers and respectful practice",
+      "teaching": {
+        "words": 373,
+        "sents": 25,
+        "asl": 14.92,
+        "fk": 10.791802680965148,
+        "fog": 13.689179624664881,
+        "smog": 12.823951912226406,
+        "poly": 19.302949061662197,
+        "long": 36.997319034852545,
+        "short": 16,
+        "ease": 44.264926541554985
+      }
+    }
+  ],
+  "diagnosticJudgment": "Teaching FK approximately 10.8–13.4; retains needed immigration and data terminology with clearer sentences. Short-sentence shares exceed the style target in several lessons; preserve direct instructions rather than padding them.",
+  "assessmentChecks": {
+    "knowledgeCheckQuestionsAndDistractorsUnchanged": true,
+    "correctAnswerChanges": "Lessons 1–3 clarify primary resettlement, incomplete census evidence and participation/privacy. Lesson 4 correct answer unchanged.",
+    "scenarioRecommendedIndicesUnchanged": true,
+    "scenarioChoiceChange": "Lessons 2–4 recommended choices clarify language inquiry, feasible participation and authorized notice review. All indices and other choices unchanged.",
+    "otherScenarioChoicesUnchanged": true,
+    "finalLessonReadingsMatchCurrentPack": true
+  },
+  "coverReview": {
+    "path": "public/images/covers/cq-afghan-minnesota.webp",
+    "sha256": "3ed7b2daa268df2ba41066909e2911308b032638c718fe2fa52382fe6bcd67e0",
+    "alt": "Three adults and a child look at picture cards together around a table.",
+    "method": "Direct local image inspection: three adults and a child looking at picture cards around a table."
+  },
+  "priorFieldReview": "data/editorial/reviews/2026-11-16-afghan-guidance-review.json",
+  "sources": [
+    "https://www.health.state.mn.us/communities/rih/stats/24rhrpt.pdf",
+    "https://www.health.state.mn.us/communities/rih/stats/reftotals.pdf",
+    "https://mn.gov/dhs/resettlement/",
+    "https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2024.1413258/full",
+    "https://www.health.state.mn.us/communities/rih/coe/clinical/afghan.html",
+    "https://minorityrights.org/country/afghanistan/",
+    "https://www.uscis.gov/humanitarian/information-for-afghan-nationals",
+    "https://mn.gov/dhs/resettlement/helpline/",
+    "https://afghanistan.unfpa.org/en/news/unfpa-linking-population-policies-and-development",
+    "https://travel.state.gov/content/travel/en/us-visas/immigrate/special-immg-visa-afghans-employed-us-gov/afghan-faq.html",
+    "https://files.gao.gov/reports/GAO-26-107433/index.html",
+    "https://moj.gov.af/index.php/en/enforced-constitution-afghanistan",
+    "https://www.revisor.mn.gov/statutes/cite/13.05",
+    "https://www.revisor.mn.gov/statutes/cite/13.46"
+  ],
+  "readings": [
+    {
+      "slug": "cq-afghan-minnesota",
+      "readingSha256": "fa0334638f42808c5f3f015502913c740858d71897545a2bd602aae7d94e52dd"
+    },
+    {
+      "slug": "cq-afghan-minnesota--from-earlier-arrivals-to-the-evacuation-how-afghan",
+      "readingSha256": "c4148270e080eb0b2863aadd9de99ed73c981c4ea91771868b89d2d7fb39ced5"
+    },
+    {
+      "slug": "cq-afghan-minnesota--languages-and-peoples-dari-pashto-and-much-more",
+      "readingSha256": "b6b9e707b7349e2491f40c3a7fcb443f0ec4af72897a3cb1ab877f7677363caa"
+    },
+    {
+      "slug": "cq-afghan-minnesota--family-gender-and-communication-without-stereotype",
+      "readingSha256": "119b82af844dbd2f39dfe11605c0fe06ae5f0c3f96452d968017661cece19295"
+    },
+    {
+      "slug": "cq-afghan-minnesota--service-barriers-and-respectful-practice",
+      "readingSha256": "e911af0070e680e5a1659f7886d2fc6076aa3850b5dd82dc6d454c848a260588"
+    }
+  ],
+  "liveVerification": "pending final deployment"
+}
