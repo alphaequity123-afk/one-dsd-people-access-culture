@@ -3298,12 +3298,44 @@
             2
           ],
           "before": "Someone mentions a medical or access need. Ask: \"What would help?\" Do not ask for a diagnosis or a note. Write down an oral request. Forward it promptly, and tell the person who decides. ADA coordinator: ____________ Consult the ADA coordinator before any denial, or when questions arise.",
-          "after": "When someone raises an access or accommodation need, ask what would help with the work and contact the ADA coordinator about the appropriate process. Document an oral request and forward it promptly. Any supporting medical documentation belongs with the authorized accommodation process, not an informal request for a diagnosis. ADA coordinator: ____________",
+          "after": "When someone raises an access or accommodation need, ask about the work barrier and route the request promptly. Contact the ADA coordinator for disability accommodation and HR for the appropriate religious-accommodation process. Record an oral request through the approved process; supporting medical details belong with authorized staff. Contacts: ____________",
           "reason": "Clarify practical reasoning, authorized action and privacy without blanket guarantees, automatic deletion or assumptions about identity."
+        },
+        {
+          "path": [
+            "body",
+            0
+          ],
+          "before": "Remember. Report possible harassment or discrimination immediately. No threshold, no written complaint needed. A request needs no special words. Move it forward promptly. Check the contract before you change someone's work. Pause decisions affecting someone who has just made a report or a request. Then check them.",
+          "after": "Remember: report allegations or incidents covered by Policies 1436 or 1329 immediately through the designated route; do not wait for proof or a written complaint. Respond promptly to accommodation needs. Check the applicable agreement before changing work, and consult HR about proposed adverse decisions following protected activity rather than freezing all ordinary work."
+        },
+        {
+          "path": [
+            "body",
+            1
+          ],
+          "before": "Someone tells you about harassment or discrimination. Listen, take notes, and do not promise secrecy. Say: \"I have to take this to Human Resources today, and I'll tell you what happens next.\" Report the same day to Human Resources or the Affirmative Action Officer: ____________ Do not investigate or confront anyone yourself.",
+          "after": "When someone reports harassment or discrimination, listen, keep factual notes in an approved secure location and explain the limits on confidentiality. Say: \"I need to report this through the required process now. I can explain the next contact, but I cannot promise the outcome.\" Immediately contact Human Resources or the Affirmative Action Officer: ____________ Follow assigned procedures; do not begin your own investigation or confront the person accused."
+        },
+        {
+          "path": [
+            "body",
+            3
+          ],
+          "before": "You plan to change hours, duties or rules. Which agreement covers each person? MAPE, AFSCME, MMA, Managerial Plan, or other: ____________ MAPE: 14 calendar days for permanent hour changes, unless mutually waived. Article 28 for work rules. Check other agreements directly. Call labor relations before you announce: ____________",
+          "after": "Before changing hours, duties or rules, identify each employee's agreement or plan and consult labor relations: ____________ Under MAPE 2025–2027 Article 27, permanent schedule changes for full-time employees generally require 14 calendar days' notice to the employee and Association. Confirm waiver provisions, exceptions and supplements. Article 28 covers work rules; other agreements have their own terms."
+        },
+        {
+          "path": [
+            "body",
+            4
+          ],
+          "before": "Someone asks for sign-off on a long-term action. Ask: \"Where is the equity analysis?\" Ask which people are affected and what changes for them, including language and disability access.",
+          "after": "Before signing off on an action covered by the DHS Equity Policy analysis requirement, confirm that the required analysis has been completed. Ask who is affected and what changes for them, including language and disability access. Refer uncertainty about scope or approval to the responsible policy staff."
         }
       ],
       "status": "reviewed",
-      "reviewNote": "Independent full-context editorial acceptance by coverage_review, 2026-11-15; source-sensitive retained fields are not factually recertified."
+      "reviewNote": "Complete supervisor-tool review on 2026-11-16: reporting, accommodation, labor agreement scope, privacy and workload authority."
     },
     {
       "kind": "resource",
@@ -3326,10 +3358,34 @@
           "before": "Before you decide. Write what the work needs, in one or two lines, before you think of names. Offer it openly, using the same message for everyone eligible. State language or other skills as skills you can check.",
           "after": "Before you decide, describe what the work requires before considering names. Offer the opportunity openly to everyone eligible, using consistent information about the work and the selection criteria. Define language proficiency or other relevant skills in terms you can assess, so familiarity with a candidate does not substitute for evidence.",
           "reason": "Make the supervisory purpose, evidence and responsibility explicit without expanding source legal or contract claims."
+        },
+        {
+          "path": [
+            "body",
+            0
+          ],
+          "before": "Remember. One standard applies to all employees, in every direction. A small harm can count, even if pay and title do not change. Same criteria does not always mean same outcome. An accommodation is an added duty, and it stays private. A pattern prompts a review of process. Do not choose an individual by a trait to balance it.",
+          "after": "Remember: use job-related criteria consistently and examine how the decision affects the employee. Pay or title does not have to change for a decision to deserve review. Consistent criteria can lead to different outcomes when relevant circumstances differ, including authorized accommodations. Review patterns with HR; do not select a person by a protected trait to balance a count."
+        },
+        {
+          "path": [
+            "body",
+            4
+          ],
+          "before": "After you decide. Write one line: the work, the criteria, the person and the reason. Leave out personal traits. Once a month, check three things: criteria first, record kept, open offer or second look.",
+          "after": "After deciding, keep a factual record of the work, criteria, evidence and reason in the approved location. Include enough detail to explain the decision; one line may not be enough. Keep medical or accommodation documentation in its designated process. Periodically review whether opportunities were offered fairly and the criteria were applied consistently."
+        },
+        {
+          "path": [
+            "body",
+            5
+          ],
+          "before": "Do next. Use this page on your next assignment, and write the one-line record the same day.",
+          "after": "Next step: apply this check to your next assignment and record the work-related reasons through the approved process. Obtain any required review before acting."
         }
       ],
       "status": "reviewed",
-      "reviewNote": "Independent full-context editorial acceptance by coverage_review, 2026-11-15; source-sensitive retained fields are not factually recertified."
+      "reviewNote": "Complete supervisor-tool review on 2026-11-16: reporting, accommodation, labor agreement scope, privacy and workload authority."
     },
     {
       "kind": "resource",
@@ -3352,10 +3408,42 @@
           "before": "All year. One or two lines per person after each one-to-one. Include invisible work, good news and problems. Raise problems when they happen, so the rating is no surprise.",
           "after": "Throughout the review period, record relevant examples after each one-to-one, using the same headings for each employee. Include contributions that may be less visible, progress and concerns. Discuss concerns when they arise so the employee has an opportunity to understand and respond before the formal rating.",
           "reason": "Make the supervisory purpose, evidence and responsibility explicit without expanding source legal or contract claims."
+        },
+        {
+          "path": [
+            "body",
+            0
+          ],
+          "before": "Remember. Equal ratings do not guarantee equal results. Watch the handoff. Same headings and same amount of evidence for everyone. Keep the ADA, FMLA, the Employee Assistance Program and health details off the form. A response or an appeal is a right. It is not a mark against anyone. These contract terms come from MAPE 2025-2027. Check other agreements directly.",
+          "after": "Remember: a rating can influence later decisions, so review how it is used. Apply consistent evidence standards rather than requiring an identical number of examples from every employee. Follow the applicable agreement's rules for appraisal content, response and appeal. Keep medical details and accommodation records in their designated process; the MAPE-specific terms below do not apply automatically to other employees. MAPE Article 6 excludes EAP, ADA and FMLA references from the appraisal form."
+        },
+        {
+          "path": [
+            "body",
+            3
+          ],
+          "before": "At the handoff. Name the decision, and state its criteria. Start from the roster of everyone eligible. Compare evidence side by side. Check against the ratings, write the reason and get a second look. MAPE step increases: written notice before the anniversary date, or the increase shall be granted.",
+          "after": "At the handoff, name the next decision and its criteria, consider everyone eligible and document the work-related reasons. Seek a second review where needed. MAPE Article 24 ties step progression to satisfactory performance and the range maximum. Withholding for performance requires timely written notice before the anniversary date; consult HR about eligibility and the full provision. Without timely notice, the agreement requires the otherwise eligible increase."
+        },
+        {
+          "path": [
+            "body",
+            4
+          ],
+          "before": "The meeting and after. Ask for their view first. Share evidence and next steps. Signing does not mean agreeing. Written response: 30 calendar days from receipt. Appeal: 30 days from the official date of rating. Representative may attend the appeal if they ask. Report any discrimination or retaliation claim immediately to Human Resources or the Affirmative Action Officer. Keep their assignments and your note-taking the same as for everyone else.",
+          "after": "At the meeting, invite the employee's view, explain evidence and agree on next steps. For MAPE employees, signing does not indicate agreement. A written response is due within 30 calendar days after receipt of the finalized appraisal; the rating appeal uses 30 days from its official date. Explain the designated appeal route and representation option. Report discrimination or retaliation concerns immediately through the required route, and keep later decisions grounded in legitimate work reasons."
+        },
+        {
+          "path": [
+            "body",
+            5
+          ],
+          "before": "Do next. Start an evidence file with the same headings for each person this week.",
+          "after": "Next step: use the approved performance-record system with consistent headings for relevant evidence. Follow access and retention requirements; do not create informal personnel files in this learning app."
         }
       ],
       "status": "reviewed",
-      "reviewNote": "Independent full-context editorial acceptance by coverage_review, 2026-11-15; source-sensitive retained fields are not factually recertified."
+      "reviewNote": "Complete supervisor-tool review on 2026-11-16: reporting, accommodation, labor agreement scope, privacy and workload authority."
     },
     {
       "kind": "resource",
@@ -3481,10 +3569,42 @@
           "before": "Remember. You are someone's staff too. \"I'm overwhelmed\" describes you. \"Here are three things, and I can do two\" describes the work. Delegating is fair only if something comes off their plate. You have the same rights you tell staff to use.",
           "after": "Your workload also needs supervision. Explain which responsibilities compete for time, what cannot be completed to the expected standard and which choices require your manager’s decision. Before delegating, review the receiving employee’s existing responsibilities and agree on what can move, decrease or stop.",
           "reason": "Clarify practical reasoning, authorized action and privacy without blanket guarantees, automatic deletion or assumptions about identity."
+        },
+        {
+          "path": [
+            "body",
+            1
+          ],
+          "before": "Check the five kinds of load. My own work. My people. Things I can't talk about. Other people's hardest moments. Being the middle. What's circled that no one above me knows about?",
+          "after": "Review five demands: your own work, supervision, confidential responsibilities, support during difficult situations and coordination between staff and management. Identify which demands are invisible to your manager and describe their effect on deadlines, quality or capacity."
+        },
+        {
+          "path": [
+            "body",
+            2
+          ],
+          "before": "Bring it to your manager. What's happening. What it costs. The choices. What I recommend. What I need, and by when. Keep out staff names and medical details. Write down what was agreed.",
+          "after": "Bring your manager the situation, its consequences, the choices and your recommendation. State what decision you need and by when, then record the agreed priorities. Share only necessary details through authorized channels; a general workload discussion rarely needs another employee's medical information."
+        },
+        {
+          "path": [
+            "body",
+            4
+          ],
+          "before": "My support plan. One peer: no names, and clear rules. One confidential option: the Employee Assistance Program, or my own provider. One place for my rights: Human Resources, the ADA coordinator or my representative. In danger: call or text 988, or follow emergency procedures.",
+          "after": "Plan support before demands become unmanageable. A peer can help you think through general work questions without receiving identifiable staff or case information. Use the Employee Assistance Program or a provider for personal support, and ask about confidentiality limits. Use HR, the ADA coordinator or your representative for their respective roles. For immediate danger, contact emergency services and follow the applicable agency response procedure."
+        },
+        {
+          "path": [
+            "body",
+            5
+          ],
+          "before": "Do next. Choose one thing to drop, move or make visible this month. Put a date on it.",
+          "after": "Next step: identify one demand to reduce, reassign or make visible this month. Agree on the change with the person who has authority, and protect required services and deadlines while priorities are reviewed."
         }
       ],
       "status": "reviewed",
-      "reviewNote": "Independent full-context editorial acceptance by coverage_review, 2026-11-15; source-sensitive retained fields are not factually recertified."
+      "reviewNote": "Complete supervisor-tool review on 2026-11-16: reporting, accommodation, labor agreement scope, privacy and workload authority."
     },
     {
       "kind": "resource",
@@ -3508,10 +3628,42 @@
           "before": "A fair ask. What's the task, and how long does it take? What skill is needed? What moves to make room? Who decides? How is it credited? Open to anyone. Fine to say no.",
           "after": "Before asking someone to contribute, define the task, relevant skills, expected time, decision authority and how the work will be recognized. Review what must change in the person’s current workload. Explain whether this is an optional opportunity or an assigned responsibility, and discuss barriers to carrying it out.",
           "reason": "Clarify practical reasoning, authorized action and privacy without blanket guarantees, automatic deletion or assumptions about identity."
+        },
+        {
+          "path": [
+            "body",
+            1
+          ],
+          "before": "Check your team every quarter. What equity, access, language and community tasks got done? Who did them? Assigned, requested or picked up? Was it in their work plan? Did something come off their plate? Did it count? Use task records only. No identity data.",
+          "after": "Periodically review which equity, access, language and community tasks were completed, who performed them and how the work was assigned. Check time, workload adjustments and recognition. Use authorized task records and avoid collecting identity information for this informal review; a separate authorized equity analysis may have different data requirements."
+        },
+        {
+          "path": [
+            "body",
+            3
+          ],
+          "before": "Never. Use a coworker as an interpreter. Ask someone to speak for a group or share their story. Send someone to a community because of their background. Send Tribal questions to a Native colleague. Go to the Tribal liaison and ADSA. Hold a no against anyone.",
+          "after": "Do not assume a colleague can interpret, represent a group or disclose personal experiences because of their identity. Language assistance requires qualification and an assigned role. Use the Tribal liaison for consultation questions and the designated Tribal-learning channel for training. Respect a declined optional invitation; discuss an assigned duty through the appropriate workload and employment process."
+        },
+        {
+          "path": [
+            "body",
+            5
+          ],
+          "before": "If it lands on you. Scope it. Trade it. Redirect it. Decline it. Or say yes on terms. Tell people up front what you have to report. You speak for yourself. You have the same routes as anyone if you're harmed.",
+          "after": "If you are asked to contribute, clarify the scope, authority, time and recognition. For an optional invitation, you may decline or propose conditions. For an assigned duty, raise workload or access concerns through the appropriate process rather than treating it as optional. Explain reporting duties before inviting disclosures and speak from your own experience."
+        },
+        {
+          "path": [
+            "body",
+            6
+          ],
+          "before": "Do next. Run the quarterly check this week, then choose one task to re-scope, share or take back.",
+          "after": "Next step: review recent tasks with your team, then identify one responsibility to clarify, share or resource differently. Confirm the authorized change and a follow-up date."
         }
       ],
       "status": "reviewed",
-      "reviewNote": "Independent full-context editorial acceptance by coverage_review, 2026-11-15; source-sensitive retained fields are not factually recertified."
+      "reviewNote": "Complete supervisor-tool review on 2026-11-16: reporting, accommodation, labor agreement scope, privacy and workload authority."
     },
     {
       "kind": "resource",
@@ -3526,10 +3678,18 @@
           "before": "Remember. Ask about the decision. Never ask about a course. Stop coaching and route when a duty starts. Nothing goes into a review, a tracking sheet or this app. Remove one obstacle only you can remove.",
           "after": "Focus the conversation on a work decision and the evidence behind it. Do not use participation in this voluntary learning program as a performance measure. When the discussion raises a reporting, accommodation or other formal responsibility, involve the responsible office and follow its documentation requirements. Identify an obstacle you can help the supervisor address.",
           "reason": "Clarify practical reasoning, authorized action and privacy without blanket guarantees, automatic deletion or assumptions about identity."
+        },
+        {
+          "path": [
+            "body",
+            1
+          ],
+          "before": "Duties: act the same day. Accommodation: \"Tell me what they asked for, without the medical details. Have you called the ADA coordinator or Human Resources?\" Report of harm: \"Have you reported it to Human Resources or the Affirmative Action Officer? If not, let's do that now.\"",
+          "after": "Formal duties need the required timing. Ask whether a Policy 1436 or 1329 allegation has been reported immediately to HR or the Affirmative Action Officer; if not, help make that report now. For an accommodation need, ask about the work barrier and whether the appropriate coordinator or HR process is involved, without requesting medical details for a coaching conversation."
         }
       ],
       "status": "reviewed",
-      "reviewNote": "Independent full-context editorial acceptance by coverage_review, 2026-11-15; source-sensitive retained fields are not factually recertified."
+      "reviewNote": "Complete supervisor-tool review on 2026-11-16: reporting, accommodation, labor agreement scope, privacy and workload authority."
     },
     {
       "kind": "resource",
