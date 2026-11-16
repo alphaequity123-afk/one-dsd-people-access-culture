@@ -4,6 +4,32 @@
   "package_manager": "npm@11.9.0",
   "settings": [
     {
+      "name": "PORT",
+      "class": "configuration",
+      "surface": "service_listener",
+      "example": false,
+      "required_when": "Optional listener port supplied by the hosting platform."
+    },
+    {
+      "name": "NEXT_PUBLIC_DHS_AGENCY_ZONE",
+      "class": "configuration",
+      "surface": "agency_navigation",
+      "example": false,
+      "allowed": [
+        "0",
+        "1"
+      ],
+      "default": "0",
+      "required_when": "Set to 1 only for the division service embedded in the One DHS agency application."
+    },
+    {
+      "name": "DHS_AGENCY_ORIGIN",
+      "class": "configuration",
+      "surface": "agency_navigation",
+      "example": false,
+      "required_when": "The exact public agency origin when the division is served as an agency zone."
+    },
+    {
       "name": "GEMINI_API_KEY",
       "class": "server_secret",
       "surface": "decision_routing_and_review",
@@ -1126,6 +1152,139 @@
       "surface": "local_content_import",
       "example": false,
       "required_when": "overriding the supervisor course source directory for local import"
+    },
+    {
+      "name": "PAC_ASK_FAST",
+      "class": "configuration",
+      "surface": "existing_ask_services",
+      "example": false,
+      "required_when": "Optional fast-answer switch; off disables the existing fast-answer path."
+    },
+    {
+      "name": "PAC_ASK_FAST_MODEL",
+      "class": "configuration",
+      "surface": "existing_ask_services",
+      "example": false,
+      "required_when": "Optional model for the existing fast-answer path."
+    },
+    {
+      "name": "PAC_ASK_FAST_MAX_OUTPUT_TOKENS",
+      "class": "configuration",
+      "surface": "existing_ask_services",
+      "example": false,
+      "required_when": "Optional output-token limit for fast answers."
+    },
+    {
+      "name": "PAC_HOSTED_VOICE_URL",
+      "class": "configuration",
+      "surface": "existing_ask_services",
+      "example": false,
+      "required_when": "Optional endpoint for the existing hosted voice service."
+    },
+    {
+      "name": "PAC_HOSTED_VOICE_KEY",
+      "class": "server_secret",
+      "surface": "existing_ask_services",
+      "example": false,
+      "required_when": "Authentication key for the existing hosted voice service."
+    },
+    {
+      "name": "PAC_HOSTED_VOICE_SECRET",
+      "class": "server_secret",
+      "surface": "existing_ask_services",
+      "example": false,
+      "required_when": "Authentication secret for the existing hosted voice service."
+    },
+    {
+      "name": "PAC_RESEARCH_SCOPE",
+      "class": "configuration",
+      "surface": "existing_ask_services",
+      "example": false,
+      "required_when": "Optional existing research scope selection: government or open."
+    },
+    {
+      "name": "PAC_ASK_LIBRARY_CACHE_MS",
+      "class": "configuration",
+      "surface": "existing_ask_services",
+      "example": false,
+      "required_when": "Optional lifetime of the Ask library cache in milliseconds."
+    },
+    {
+      "name": "DSD_DOWNLOAD_CONCURRENCY",
+      "class": "configuration",
+      "surface": "maintenance_scripts",
+      "example": false,
+      "required_when": "Concurrency limit for the download-readiness audit."
+    },
+    {
+      "name": "DSD_DOWNLOAD_BATCH_LIMIT",
+      "class": "configuration",
+      "surface": "maintenance_scripts",
+      "example": false,
+      "required_when": "Batch limit for the download-readiness audit."
+    },
+    {
+      "name": "DSD_AUDIT_BASE",
+      "class": "configuration",
+      "surface": "maintenance_scripts",
+      "example": false,
+      "required_when": "Base URL for explicit DSD audit runs."
+    },
+    {
+      "name": "DSD_ASSET_CONCURRENCY",
+      "class": "configuration",
+      "surface": "maintenance_scripts",
+      "example": false,
+      "required_when": "Concurrency limit for the featured-asset audit."
+    },
+    {
+      "name": "DSD_AUDIT_CONCURRENCY",
+      "class": "configuration",
+      "surface": "maintenance_scripts",
+      "example": false,
+      "required_when": "Concurrency limit for the featured-link audit."
+    },
+    {
+      "name": "DSD_AUDIT_REPLAY_ONLY",
+      "class": "configuration",
+      "surface": "maintenance_scripts",
+      "example": false,
+      "required_when": "Set to 1 to replay existing audit evidence."
+    },
+    {
+      "name": "MAPBUILD_DIR",
+      "class": "configuration",
+      "surface": "maintenance_scripts",
+      "example": false,
+      "required_when": "Local source directory for the county-shape build."
+    },
+    {
+      "name": "ASK_MODEL",
+      "class": "configuration",
+      "surface": "maintenance_scripts",
+      "example": false,
+      "required_when": "Optional model for editorial drafting scripts."
+    },
+    {
+      "name": "REVIEW_BASE",
+      "class": "configuration",
+      "surface": "maintenance_scripts",
+      "example": false,
+      "required_when": "Base URL for the page review script."
+    },
+    {
+      "name": "REVIEW_OUT",
+      "class": "configuration",
+      "surface": "maintenance_scripts",
+      "example": false,
+      "required_when": "Output directory for the page review script."
+    },
+    {
+      "name": "REVIEW_CONCURRENCY",
+      "class": "configuration",
+      "surface": "maintenance_scripts",
+      "example": false,
+      "required_when": "Concurrency limit for the page review script."
     }
   ],
   "forbidden_client_settings": [

@@ -3,7 +3,8 @@ const fs = require('node:fs');
 const path = require('node:path');
 const Module = require('node:module');
 const ts = require('typescript');
-const { isAcceptedReferenceRepair } = require('./reference-repair.cjs');
+const { isAcceptedReferenceRepair, isAcceptedAssetRepair } = require('./reference-repair.cjs');
+const { createHash } = require('node:crypto');
 const root = path.resolve(__dirname, '../..');
 const originalResolve = Module._resolveFilename;
 Module._resolveFilename = function(request, parent, isMain, options) {
@@ -43,7 +44,13 @@ for (const row of rows) {
       }
     }
     const sourceNote = change.path[0] === 'pack' && change.path[1] === 'sources' && typeof change.path[2] === 'number' && change.path[3] === 'note' && change.path.length === 4;
-    if (!sourceNote && !isAcceptedReferenceRepair(row, change) && change.path.some(key => typeof key === 'string' && /^(?:sources?|href|url|src|introTranscript|introAudio|transcript|captions|poster|audio|video|id|correct|correctAnswer)$/i.test(key))) throw Error(`Protected field changed: ${row.target} ${change.path.join('.')}`);
+    const assetRepair = isAcceptedAssetRepair(row, change);
+    if (assetRepair) {
+      const block = original.pack?.course?.lessons?.[2]?.blocks?.[0];
+      const bytes = fs.readFileSync(path.join(root, 'public', change.after));
+      if (block?.type !== 'image' || createHash('sha256').update(bytes).digest('hex') !== 'f6389222fb177b833e9aa340b3081cd0b9111ce3ff54544e7e528567ebff831d') throw Error(`Reviewed diagram identity changed: ${row.target}`);
+    }
+    if (!sourceNote && !isAcceptedReferenceRepair(row, change) && !assetRepair && change.path.some(key => typeof key === 'string' && /^(?:sources?|href|url|src|introTranscript|introAudio|transcript|captions|poster|audio|video|id|correct|correctAnswer)$/i.test(key))) throw Error(`Protected field changed: ${row.target} ${change.path.join('.')}`);
     if (definition?.protectedFields?.includes(change.path[0])) throw Error(`Protected surface field changed: ${row.target}`);
     if (/<script|<iframe|javascript:/i.test(change.after)) throw Error(`Unsafe markup: ${row.target}`);
   }

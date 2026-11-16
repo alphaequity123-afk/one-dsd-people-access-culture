@@ -1,4 +1,5 @@
 "use client";
+import { agencyZoneEnabled } from "@/lib/program/agency-zone";
 import { SourceLink } from "@/components/app-link";
 
 
@@ -114,7 +115,7 @@ export function AskClient({
     const previousAnswer = session.turns.find(turn => (turn.context ?? context) === context && turn.result.kind === "answer")?.result;
     const priorWorkProduct = previousAnswer?.kind === "answer" ? previousAnswer.answer.workProduct : undefined;
     try {
-      const res = await fetch("/api/ask", {
+      const res = await fetch(agencyZoneEnabled ? "/dsd-api/ask" : "/api/ask", {
         method: "POST",
         // Ask for progress as the answer is prepared; a single finished answer is still accepted.
         headers: { "content-type": "application/json", accept: `${ASK_PROGRESS_TYPE}, application/json` },

@@ -13,4 +13,18 @@ function isAcceptedReferenceRepair(row, change) {
     repair.review?.status === 'accepted' && typeof repair.review.evidence === 'string' && repair.review.evidence.trim().length > 0 &&
     typeof repair.review.reviewer === 'string' && repair.review.reviewer.trim().length > 0);
 }
-module.exports = { isAcceptedReferenceRepair };
+/** The already-reviewed Somali course diagram replacement is an exact exception, not general media editing. */
+function isAcceptedAssetRepair(row, change) {
+  const expected = ['pack', 'course', 'lessons', 2, 'blocks', 0, 'src'];
+  return row.courseId === 'somali-minnesota-brief'
+    && JSON.stringify(change.path) === JSON.stringify(expected)
+    && change.before === '/images/course-sm/iceberg.png'
+    && change.after === '/images/course-sm/observation-inquiry-service.svg'
+    && Array.isArray(row.assetRepairs) && row.assetRepairs.some(repair =>
+      repair.courseId === row.courseId && repair.kind === 'illustrative-image'
+      && JSON.stringify(repair.path) === JSON.stringify(expected.slice(1))
+      && repair.before === change.before && repair.after === change.after
+      && repair.sha256 === 'f6389222fb177b833e9aa340b3081cd0b9111ce3ff54544e7e528567ebff831d'
+      && repair.review?.status === 'accepted' && repair.review.reviewer && repair.review.evidence);
+}
+module.exports = { isAcceptedReferenceRepair, isAcceptedAssetRepair };
