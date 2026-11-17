@@ -30,3 +30,8 @@ describe("source navigation without changing source wording", () => {
     expect(readingSectionHtml('<p><a href="https://example.org/retained">A complete guide</a></p>',"Other title",false)).toContain('<a href="/source-reading/retained">A complete guide</a>');
   });
 });
+
+it("fits source headings beneath the page title without losing text, anchors or sibling relationships", () => {
+  const result = readingSectionHtml('<h3 id="a">First</h3><p>Exact source wording.</p><h5 id="b">Detail</h5><h3 id="c">Next</h3>', "Different title", false);
+  expect(result).toBe('<h2 id="a">First</h2><p>Exact source wording.</p><h3 id="b">Detail</h3><h2 id="c">Next</h2>');
+});

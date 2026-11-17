@@ -76,6 +76,7 @@ export async function renderXlsx(document: ResourceDocument): Promise<Buffer> {
   const workbook = new ExcelJS.Workbook();
   workbook.creator = document.attribution;
   workbook.title = document.title;
+  workbook.subject = document.subtitle ?? document.title;
   workbook.created = new Date();
   const usedNames = new Set<string>(["overview", "content", "sources"]);
 
@@ -144,6 +145,33 @@ export async function renderXlsx(document: ResourceDocument): Promise<Buffer> {
     finishSheet(sources);
   }
 
+  // Every sheet begins with a visible title and a named, navigable Excel table.
+  for (const sheet of workbook.worksheets) {
+    const columns = sheet.columnCount;
+    const headers = Array.from({ length: columns }, (_, i) => String(sheet.getCell(1, i + 1).value ?? `Column ${i + 1}`));
+    const rows = Array.from({ length: Math.max(0, sheet.rowCount - 1) }, (_, r) =>
+      Array.from({ length: columns }, (_, c) => sheet.getCell(r + 2, c + 1).value || "Not provided"));
+    sheet.spliceRows(1, sheet.rowCount);
+    sheet.getCell("A1").value = `${document.title} — ${sheet.name}`;
+    sheet.getCell("A1").font = { name: T.fontFamily, size: 14, bold: true, color: { argb: `FF${T.navy}` } };
+    sheet.getCell("A2").value = "Use the table headers to navigate. Not provided means this item has no supplied value.";
+    sheet.getRow(2).alignment = { wrapText: true };
+    sheet.getRow(2).height = 130;
+    sheet.addTable({ name: `ResourceTable${sheet.id}`, ref: "A3", headerRow: true,
+      style: { theme: "TableStyleMedium2", showRowStripes: true },
+      columns: headers.map(name => ({ name, filterButton: true })), rows });
+    sheet.views = [{ state: "frozen", ySplit: 3 }];
+    sheet.eachRow((row, i) => { if (i > 2) { row.alignment = { vertical: "top", wrapText: true }; row.font = { name: T.fontFamily, size: 12 }; } });
+    sheet.eachRow(row => row.eachCell(cell => {
+      if (cell.value && typeof cell.value === "object" && "hyperlink" in cell.value) {
+        cell.font = { name: T.fontFamily, size: 12, color: { argb: `FF${T.navy}` }, underline: true };
+      }
+    }));
+    sheet.getRow(3).font = { name: T.fontFamily, size: 12, bold: true, color: { argb: "FFFFFFFF" } };
+    sheet.getRow(3).fill = { type: "pattern", pattern: "solid", fgColor: { argb: `FF${T.navy}` } };
+    sheet.pageSetup.printArea = `A1:${sheet.getColumn(columns).letter}${sheet.rowCount}`;
+    sheet.pageSetup.printTitlesRow = "1:3";
+  }
   const output = await workbook.xlsx.writeBuffer();
   return Buffer.isBuffer(output) ? output : Buffer.from(output as ArrayBuffer);
 }

@@ -4,7 +4,7 @@
 .ask-box.ask-box { display: flex; flex-direction: column; max-width: 100%; background: #fff; border: 1px solid #677a85; border-radius: 18px; padding: 12px 10px 8px 18px; box-shadow: 0 8px 24px -20px #003865; transition: border-color .15s ease, box-shadow .15s ease; }
 .ask-box.ask-box:focus-within { border-color: #003865; box-shadow: 0 0 0 3px rgba(0, 56, 101, .2); }
 .ask-box.ask-box textarea.ask-box-input { display: block; width: 100%; min-height: 3.4rem; max-height: 20rem; margin: 0; padding: 4px 8px 4px 0; border: 0; border-radius: 0; background: transparent; box-shadow: none; resize: none; font: inherit; font-size: 1.05rem; font-weight: 400; line-height: 1.6; color: #182c3a; }
-.ask-box.ask-box textarea.ask-box-input:focus, .ask-box.ask-box textarea.ask-box-input:focus-visible { outline: none; box-shadow: none; }
+.ask-box.ask-box textarea.ask-box-input:focus, .ask-box.ask-box textarea.ask-box-input:focus-visible { outline: 2px solid #003865; outline-offset: 3px; box-shadow: none; }
 .ask-box.ask-box textarea.ask-box-input::placeholder { color: #4c606d; opacity: 1; }
 .ask-box-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 4px 6px; margin-top: 4px; min-height: 40px; }
 .ask-box .ask-voice-status { flex: 1 1 12rem; margin: 0; max-width: none; font-size: .9rem; font-weight: 400; line-height: 1.4; color: #42525f; text-align: left; }
@@ -59,3 +59,7 @@ body .ask-panel-layer .ask-panel .ask-panel-head h2.ask-panel-title { margin: 0;
 @media (max-width: 600px) { .ask-panel-body { padding: 16px 16px 28px; } }
 
 /* The microphone step: a button that asks the browser for the microphone (2026-11-11). */
+
+@media (forced-colors: active) {
+  .ask-box.ask-box textarea.ask-box-input:focus-visible { outline-color: Highlight; }
+}

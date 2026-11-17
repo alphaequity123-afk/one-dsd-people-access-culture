@@ -203,7 +203,7 @@ export function DecisionWorkspace({ values, scope = "one-dhs" }: { values?: Edit
       </div>
       {taskKnown && <p className={styles.taskPrompt}>{text(`${notes.task}${scope === "dsd" ? "DsdPrompt" : "Prompt"}`)}</p>}
       <nav className={styles.stages} aria-label="Stages for your working analysis">{DECISION_STAGES.map((item, index) => <button type="button" key={item} aria-current={index === step ? "step" : undefined} aria-controls={`${id}-stage`} onClick={() => go(index)}><span>{index + 1}</span>{text(`${item}Stage`)}</button>)}</nav>
-      <section id={`${id}-stage`} className={styles.stage} aria-labelledby={`${id}-stage-title`}>
+      <section id={`${id}-stage`} className={styles.stage} aria-label={`Working draft: ${text(`${stage}Stage`)}`}>
         <header className={styles.stageHeader}><h3 ref={headingRef} id={`${id}-stage-title`} tabIndex={-1}>{text(`${stage}Stage`)}</h3><p>{text(`${stage}Intro`)}</p></header>
         {stage === "decision" && <>{field("decision", 4)}{field("decisionOwner", 2)}{field("requirements")}</>}
         {stage === "people" && <>{field("people")}{field("evidence", 4)}{field("uncertainties")}</>}

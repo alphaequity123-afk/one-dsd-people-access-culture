@@ -59,9 +59,9 @@ async function ShareProgramNotice() {
   }
   const ownershipNote = secondSentence(PROGRAM.ownership) || PROGRAM.ownership;
   return (
-    <p className="share-program-notice wrap text-sm text-muted py-6">
-      {firstSentence(privacyText)} {ownershipNote}
-    </p>
+    <footer className="share-program-notice wrap text-sm text-muted py-6">
+      <p>{firstSentence(privacyText)} {ownershipNote}</p>
+    </footer>
   );
 }
 

@@ -18,10 +18,16 @@ function heading(children: ReactNode): string {
   return "";
 }
 
+/** A page introduction remains available when a deep link opens a later topic. */
+function containsPageHeading(children: ReactNode): boolean {
+  return Children.toArray(children).some(child => isValidElement<ElementProps>(child)
+    && (child.type === "h1" || containsPageHeading(child.props.children)));
+}
+
 /** Existing sections stay mounted, so notes, media and activity choices survive topic changes. */
 export function FocusedSections({ children, label = "Explore this page" }: { children: ReactNode; label?: string }) {
   const nodes = flatten(children);
-  const sections = nodes.filter((node): node is ReactElement<ElementProps> => isValidElement<ElementProps>(node) && node.type === "section");
+  const sections = nodes.filter((node): node is ReactElement<ElementProps> => isValidElement<ElementProps>(node) && node.type === "section" && !containsPageHeading(node.props.children));
   const uid = useId().replace(/:/g, "");
   const [selected, setSelected] = useState(0);
   const [ready, setReady] = useState(false);
@@ -65,7 +71,7 @@ export function FocusedSections({ children, label = "Explore this page" }: { chi
   };
   return <div className="focused-sections" data-ready={ready}>
     {nodes.map((node,index) => {
-      if (!isValidElement<ElementProps>(node) || node.type !== "section") return <Fragment key={index}>{node}</Fragment>;
+      if (!isValidElement<ElementProps>(node) || node.type !== "section" || containsPageHeading(node.props.children)) return <Fragment key={index}>{node}</Fragment>;
       const current = sections.indexOf(node);
       const first = current === 0;
       return <Fragment key={index}>{first ? <details className="pilot-supporting focused-contents"><summary>{label}</summary><nav className="pilot-supporting-body" aria-label={label}><ol>{labels.map((title,i)=><li key={ids[i]}><button type="button" aria-current={selected===i?"page":undefined} onClick={()=>choose(i)}>{title}</button></li>)}</ol></nav></details> : null}

@@ -30,7 +30,7 @@ export function HeroMotion({ children, src }: { children: ReactNode; src: string
     const player = video.current;
     if (!player) return;
     if (!player.paused) player.pause();
-    else void player.play().catch(() => setPlaying(false));
+    else { if (player.ended) player.currentTime = 0; setEnded(false); void player.play().catch(() => setPlaying(false)); }
   }
 
   return (
@@ -39,7 +39,7 @@ export function HeroMotion({ children, src }: { children: ReactNode; src: string
         {children}
         {enabled && !failed && (
           <video ref={video} className="home-hero-video" data-visible={visible}
-            src={src} muted playsInline autoPlay aria-hidden="true"
+            src={src} muted playsInline preload="none" aria-hidden="true"
             onPlaying={() => { setVisible(true); setPlaying(true); }}
             onPause={() => setPlaying(false)}
             onEnded={() => { setPlaying(false); setEnded(true); }}
@@ -47,10 +47,10 @@ export function HeroMotion({ children, src }: { children: ReactNode; src: string
           />
         )}
       </div>
-      {enabled && !ended && !failed && (
+      {enabled && !failed && (
         <button className="home-hero-motion-control" type="button"
-          aria-label={playing ? "Pause hero video" : "Play hero video"} onClick={toggle}>
-          {playing ? "Pause" : "Play"}
+          aria-label={playing ? "Pause animation" : ended ? "Replay animation" : "Play animation"} onClick={toggle}>
+          {playing ? "Pause animation" : ended ? "Replay animation" : "Play animation"}
         </button>
       )}
     </div>

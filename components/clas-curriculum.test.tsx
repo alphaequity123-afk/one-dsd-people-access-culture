@@ -115,12 +115,16 @@ describe('lesson page with practice data', () => {
     const decision = view.getByRole('group', { name: moduleOne.decisions[0].question });
     fireEvent.click(within(decision).getByRole('button', { name: 'Check my answer' }));
     expect(within(decision).getByText('Choose one option, then check your answer.')).toBeTruthy();
+    expect(document.activeElement).toBe(within(decision).getAllByRole('radio')[0]);
+
+    expect(document.getElementById(decision.getAttribute('aria-describedby')!)?.textContent).toContain('Choose one option');
     fireEvent.click(within(decision).getByLabelText('Resend it unchanged.'));
     fireEvent.click(within(decision).getByRole('button', { name: 'Check my answer' }));
     expect(within(decision).getByText('Not the strongest choice')).toBeTruthy();
     expect(within(decision).getByText('Repeating an unclear message can repeat the barrier.')).toBeTruthy();
     fireEvent.click(within(decision).getByRole('button', { name: 'Try again' }));
     expect(within(decision).queryByText('Not the strongest choice')).toBeNull();
+    expect(document.activeElement).toBe(within(decision).getAllByRole('radio')[0]);
     fireEvent.click(within(decision).getByLabelText('Examine the notice and the response routes first.'));
     fireEvent.click(within(decision).getByRole('button', { name: 'Check my answer' }));
     expect(within(decision).getByText('That is the stronger choice')).toBeTruthy();
@@ -132,6 +136,7 @@ describe('lesson page with practice data', () => {
     const ordering = view.getByRole('group', { name: moduleOne.ordering!.prompt });
     const steps = moduleOne.ordering!.steps;
     fireEvent.click(within(ordering).getByRole('button', { name: `Step 1: ${steps[2]}` }));
+    expect(document.activeElement).toBe(within(ordering).getByRole('heading', { name: 'Your order (1 of 4)' }));
     fireEvent.click(within(ordering).getByRole('button', { name: `Step 2: ${steps[1]}` }));
     fireEvent.click(within(ordering).getByRole('button', { name: `Step 3: ${steps[0]}` }));
     fireEvent.click(within(ordering).getByRole('button', { name: `Step 4: ${steps[3]}` }));
@@ -141,6 +146,7 @@ describe('lesson page with practice data', () => {
     expect(within(ordering).getByText(moduleOne.ordering!.feedback)).toBeTruthy();
     fireEvent.click(within(ordering).getByRole('button', { name: 'Try again' }));
     expect(within(ordering).getByText('No steps chosen yet.')).toBeTruthy();
+    expect(document.activeElement).toBe(within(ordering).getByRole('heading', { name: 'Your order' }));
     for (const [position, step] of moduleOne.ordering!.correctOrder.entries()) fireEvent.click(within(ordering).getByRole('button', { name: `Step ${position + 1}: ${steps[step]}` }));
     fireEvent.click(within(ordering).getByRole('button', { name: 'Check my order' }));
     expect(within(ordering).getByText('That matches the suggested order')).toBeTruthy();

@@ -198,7 +198,7 @@ export function GeffenReadAloud({ text, label, recordingSrc }: { text: string; l
   }
 
   return <div className="wc-read-aloud flex flex-wrap items-center gap-2">
-    <audio ref={player} hidden preload="none" />
+    <audio ref={player} controls preload="none" aria-label={`Read aloud: ${label}`} className="w-full" />
     <button type="button" onClick={() => busy ? stop("Audio stopped.") : void read()} aria-label={`${busy ? "Stop" : "Listen"}: ${label}`}>
       {busy ? "Stop" : "Listen"}
     </button>

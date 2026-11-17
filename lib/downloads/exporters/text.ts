@@ -86,12 +86,12 @@ function blockHtml(block: DocumentBlock): string {
     }
     case "table": {
       const head = block.headers.length
-        ? `<thead><tr>${block.headers.map((cell) => `<th>${escapeHtml(cell)}</th>`).join("")}</tr></thead>`
+        ? `<thead><tr>${block.headers.map((cell) => `<th scope="col">${escapeHtml(cell)}</th>`).join("")}</tr></thead>`
         : "";
       const body = `<tbody>${block.rows
         .map((row) => `<tr>${row.map((cell) => `<td>${escapeHtml(cell)}</td>`).join("")}</tr>`)
         .join("")}</tbody>`;
-      return `<table>${head}${body}</table>`;
+      return `<div role="region" aria-label="Data table, scroll for all columns" tabindex="0" style="overflow:auto"><table>${head}${body}</table></div>`;
     }
     case "quote":
       return `<blockquote><p>${escapeHtml(block.text)}</p>${block.cite ? `<cite>${escapeHtml(block.cite)}</cite>` : ""}</blockquote>`;
@@ -124,6 +124,7 @@ export function documentToHtml(document: ResourceDocument): string {
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>${escapeHtml(document.title)}</title>
 <style>
   body { font-family: Georgia, serif; line-height: 1.5; color: #182c3a; max-width: 52rem; margin: 2rem auto; padding: 0 1.25rem; }
@@ -131,10 +132,13 @@ export function documentToHtml(document: ResourceDocument): string {
   table { border-collapse: collapse; width: 100%; margin: 1rem 0; font-size: 0.95rem; }
   th, td { border: 1px solid #c5d0d7; padding: 0.4rem 0.55rem; vertical-align: top; }
   th { background: #003865; color: #fff; text-align: left; }
+  :focus-visible { outline:3px solid #003865; outline-offset:3px; }
+  p,dd,td,th,a { overflow-wrap:anywhere; }
   aside { background: #eef2f5; padding: 0.8rem 1rem; }
 </style>
 </head>
 <body>
+<main>
 ${document.kicker ? `<p>${escapeHtml(document.kicker)}</p>` : ""}
 <h1>${escapeHtml(document.title)}</h1>
 ${document.subtitle ? `<p><em>${escapeHtml(document.subtitle)}</em></p>` : ""}
@@ -142,6 +146,7 @@ ${meta}
 ${sections}
 ${sources}
 <p>${escapeHtml(document.attribution)}</p>
+</main>
 </body>
 </html>
 `;

@@ -14,7 +14,7 @@ const BODY_TOP = 1.15;
 const BODY_HEIGHT = 3.85;
 const CHARS_PER_LINE = 88;
 const LINES_PER_SLIDE = 12;
-const TABLE_ROWS_PER_SLIDE = 9;
+const TABLE_LINES_PER_SLIDE = 16;
 
 type TextItem = PptxGenJS.TextProps;
 type Chunk = { lines: number; items: TextItem[] } | { table: { headers: string[]; rows: string[][] } };
@@ -84,12 +84,39 @@ function blockChunks(block: DocumentBlock): Chunk[] {
   }
 }
 
+/** Keep long source text readable without truncating it or shrinking the body font. */
+function paginateChunk(chunk: Chunk): Chunk[] {
+  if ("table" in chunk || chunk.lines <= LINES_PER_SLIDE) return [chunk];
+  const pages: Chunk[] = [];
+  let items: TextItem[] = [];
+  let lines = 0;
+  for (const item of chunk.items) {
+    let rest = item.text ?? "";
+    let first = true;
+    while (rest.length) {
+      const limit = CHARS_PER_LINE * 8;
+      let end = Math.min(rest.length, limit);
+      if (end < rest.length) {
+        const space = rest.lastIndexOf(" ", end);
+        if (space > end / 2) end = space + 1;
+      }
+      const part = rest.slice(0, end);
+      const size = estimateLines(part);
+      if (items.length && lines + size > LINES_PER_SLIDE) {
+        items[items.length - 1].options = { ...items[items.length - 1].options, breakLine: true };
+        pages.push({ items, lines }); items = []; lines = 0;
+      }
+      items.push({ text: part, options: { ...item.options, bullet: first ? item.options?.bullet : undefined } });
+      lines += size; rest = rest.slice(end); first = false;
+    }
+  }
+  if (items.length) pages.push({ items, lines });
+  return pages;
+}
+
 function frame(pptx: PptxGenJS, title: string, footer: string) {
-  const slide = pptx.addSlide();
-  slide.background = { color: "FFFFFF" };
-  slide.addShape(pptx.ShapeType.rect, { x: 0, y: 0, w: SLIDE_WIDTH, h: 0.9, fill: { color: T.navy }, line: { color: T.navy } });
-  slide.addShape(pptx.ShapeType.rect, { x: 0, y: 0.9, w: SLIDE_WIDTH, h: 0.05, fill: { color: "78BE21" }, line: { color: "78BE21" } });
-  slide.addText(title, { x: 0.4, y: 0.12, w: 9.2, h: 0.66, fontFace: FONT, fontSize: 22, bold: true, color: "FFFFFF", valign: "middle", fit: "shrink" });
+  const slide = pptx.addSlide({ masterName: "Accessible body" });
+  slide.addText(title, { placeholder: "title", objectName: "Slide title", x: 0.4, y: 0.12, w: 9.2, h: 0.66, fontFace: FONT, fontSize: 22, bold: true, color: "FFFFFF", valign: "middle", fit: "shrink" });
   slide.addText(footer, { x: 0.4, y: 5.18, w: 8.2, h: 0.3, fontFace: FONT, fontSize: 9, color: T.muted, valign: "middle" });
   slide.slideNumber = { x: 8.9, y: 5.18, w: 0.7, h: 0.3, fontFace: FONT, fontSize: 9, color: T.muted, align: "right" };
   return slide;
@@ -101,8 +128,9 @@ function addBodySlides(pptx: PptxGenJS, title: string, footer: string, chunks: C
   let page = 0;
   const flush = () => {
     if (items.length === 0) return;
-    const slide = frame(pptx, page === 0 ? title : `${title} (continued)`, footer);
+    const slide = frame(pptx, page === 0 ? title : `${title} (continued ${page + 1})`, footer);
     slide.addText(items, {
+      placeholder: "body", objectName: "Lesson content",
       x: 0.5,
       y: BODY_TOP,
       w: 9,
@@ -117,25 +145,46 @@ function addBodySlides(pptx: PptxGenJS, title: string, footer: string, chunks: C
     lines = 0;
     page += 1;
   };
-  for (const chunk of chunks) {
+  for (const chunk of chunks.flatMap(paginateChunk)) {
     if ("table" in chunk) {
       flush();
       const { headers, rows } = chunk.table;
       const columns = Math.max(headers.length, ...rows.map((row) => row.length), 1);
       const colW = Array.from({ length: columns }, () => 9 / columns);
       const headerRow: PptxGenJS.TableRow = Array.from({ length: columns }, (_, index) => ({
-        text: headers[index] ?? "",
+        text: headers[index]?.trim() || `Column ${index + 1}`,
         options: { bold: true, color: "FFFFFF", fill: { color: T.navy }, fontFace: FONT, fontSize: 11 },
       }));
-      for (let start = 0; start < rows.length; start += TABLE_ROWS_PER_SLIDE) {
-        const slide = frame(pptx, page === 0 ? title : `${title} (continued)`, footer);
-        const bodyRows: PptxGenJS.TableRow[] = rows.slice(start, start + TABLE_ROWS_PER_SLIDE).map((row) =>
+      // Wide tables and long cells read more clearly as labeled records.
+      if (columns > 4 || rows.some(row => row.some(cell => cell.length > 150))) {
+        const records: Chunk[] = rows.flatMap((row, index) => [
+          { lines: 1, items: [{ text: `Record ${index + 1}`, options: { bold: true, breakLine: true } }] },
+          ...Array.from({ length: columns }, (_, col) => {
+            const text = `${headers[col] || `Column ${col + 1}`}: ${row[col]?.trim() || "Not provided"}`;
+            return { lines: estimateLines(text), items: [{ text, options: { breakLine: true } }] };
+          }),
+        ]);
+        addBodySlides(pptx, `${title} — table ${page + 1} records`, footer, records);
+        page += 1;
+        continue;
+      }
+      let start = 0;
+      while (start < rows.length) {
+        let end = start;
+        let usedLines = 2;
+        while (end < rows.length) {
+          const rowLines = 1 + Math.max(...rows[end].map(cell => Math.ceil(cell.length / (CHARS_PER_LINE / columns))), 1);
+          if (end > start && usedLines + rowLines > TABLE_LINES_PER_SLIDE) break;
+          usedLines += rowLines; end += 1;
+        }
+        const slide = frame(pptx, page === 0 ? title : `${title} (continued ${page + 1})`, footer);
+        const bodyRows: PptxGenJS.TableRow[] = rows.slice(start, end).map((row) =>
           Array.from({ length: columns }, (_, index) => ({
-            text: (row[index] ?? "").slice(0, 400),
+            text: row[index]?.trim() || "Not provided",
             options: { fontFace: FONT, fontSize: 11, color: T.ink, valign: "top" as const, bold: index === 0 },
           })),
         );
-        slide.addTable(headers.length > 0 ? [headerRow, ...bodyRows] : bodyRows, {
+        slide.addTable([headerRow, ...bodyRows], {
           x: 0.5,
           y: BODY_TOP,
           w: 9,
@@ -144,6 +193,7 @@ function addBodySlides(pptx: PptxGenJS, title: string, footer: string, chunks: C
           autoPage: false,
         });
         page += 1;
+        start = end;
       }
       continue;
     }
@@ -160,15 +210,25 @@ export async function renderPptx(document: ResourceDocument): Promise<Buffer> {
   pptx.author = document.attribution;
   pptx.company = document.attribution;
   pptx.title = document.title;
+  pptx.subject = document.subtitle ?? document.title;
+
+  pptx.defineSlideMaster({ title: "Accessible body", background: { color: "FFFFFF" }, objects: [
+    { rect: { x: 0, y: 0, w: SLIDE_WIDTH, h: .9, fill: { color: T.navy }, line: { color: T.navy } } },
+    { placeholder: { options: { name: "title", type: "title", x: .4, y: .12, w: 9.2, h: .66, color: "FFFFFF", fontFace: FONT, fontSize: 22 } } },
+    { placeholder: { options: { name: "body", type: "body", x: .5, y: BODY_TOP, w: 9, h: BODY_HEIGHT, fontFace: FONT, fontSize: 14 } } },
+  ] });
+  pptx.defineSlideMaster({ title: "Accessible cover", background: { color: T.navy }, objects: [
+    { placeholder: { options: { name: "title", type: "title", x: .6, y: 1.2, w: 8.8, h: 1.6, color: "FFFFFF", fontFace: FONT, fontSize: 34 } } },
+  ] });
   const footer = document.attribution;
 
-  const cover = pptx.addSlide();
+  const cover = pptx.addSlide({ masterName: "Accessible cover" });
   cover.background = { color: T.navy };
   cover.addShape(pptx.ShapeType.rect, { x: 0, y: 4.35, w: SLIDE_WIDTH, h: 0.06, fill: { color: "78BE21" }, line: { color: "78BE21" } });
   if (document.kicker) {
     cover.addText(document.kicker.toUpperCase(), { x: 0.6, y: 0.7, w: 8.8, h: 0.4, fontFace: FONT, fontSize: 12, color: "D9EAF0", charSpacing: 2 });
   }
-  cover.addText(document.title, { x: 0.6, y: 1.2, w: 8.8, h: 1.6, fontFace: FONT, fontSize: 34, bold: true, color: "FFFFFF", valign: "top", fit: "shrink" });
+  cover.addText(document.title, { placeholder: "title", objectName: "Slide title", x: 0.6, y: 1.2, w: 8.8, h: 1.6, fontFace: FONT, fontSize: 34, bold: true, color: "FFFFFF", valign: "top", fit: "shrink" });
   if (document.subtitle) {
     cover.addText(document.subtitle, { x: 0.6, y: 2.85, w: 8.8, h: 1.3, fontFace: FONT, fontSize: 16, color: "E1F3FA", valign: "top", fit: "shrink" });
   }

@@ -39,7 +39,7 @@
 .topicCount { font-size:.9rem; font-weight:400; color:#425969; white-space:nowrap; }
 .courseGrid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 1.5rem; list-style:none; padding:0 1.25rem 1rem; margin:0; }
 .courseGrid > li { min-width:0; padding:1.3rem 0; border-top:1px solid #dce3e8; }
-.courseGrid h4 { font-size:1.15rem; line-height:1.5; margin:.45rem 0; }
+.courseGrid :is(h3, h4) { font-size:1.15rem; line-height:1.5; margin:.45rem 0; }
 .courseGrid p { margin:.65rem 0; }
 .courseGrid .courseLevel { color:#425969; font-size:.82rem; font-weight:650; margin:0; }
 .courseAction { display:inline-block; min-height:44px; padding-block:.6rem; font-weight:650; }

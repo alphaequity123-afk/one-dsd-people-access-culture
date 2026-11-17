@@ -1,3 +1,4 @@
+import { canonicalDomainHref } from "./domain-hrefs";
 /** Exact earlier destinations retained after their content moved to dedicated pages. */
 export const LEGACY_RESOURCE_DESTINATIONS: Readonly<Record<string, string>> = {
   "/learn#start-here": "/learn/core-15",
@@ -14,6 +15,8 @@ export const LEGACY_RESOURCE_DESTINATIONS: Readonly<Record<string, string>> = {
 };
 
 export function canonicalResourceHref(href: string): string {
+  const domain = canonicalDomainHref(href);
+  if (domain !== href) return domain;
   if (!href.startsWith("/") || href.startsWith("//")) return href;
   const url = new URL(href, "https://one-dsd.invalid");
   // Filtered topic pages still use this anchor; the unfiltered page now links to Core 15.

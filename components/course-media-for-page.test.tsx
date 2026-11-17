@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { cleanup, render, waitFor } from "@testing-library/react";
+import { cleanup, fireEvent, render, waitFor } from "@testing-library/react";
 
 vi.mock("next/navigation", () => ({ usePathname: () => "/courses/example" }));
 import { CourseMediaForPage, CourseMediaJumpSlot, CourseMediaSlot } from "./course-media-for-page";
@@ -30,7 +30,7 @@ describe("published course media sits under the page title (owner rule 2026-11-1
     expect(second.querySelector("audio")).not.toBeNull();
     for (const panel of [first, second]) {
       expect(panel.querySelector(".featured-media-label, .featured-media__label")).toBeNull();
-      expect(panel.textContent).not.toMatch(/Video explainer|Listen ·|about \d+ minutes?/);
+      expect(panel.textContent).not.toMatch(/Video explainer|Listen Â·|about \d+ minutes?/);
     }
     // The title area's jump button reads plainly, without minutes.
     const jump = view.getByRole("link", { name: "Watch the lesson" });
@@ -54,4 +54,19 @@ describe("published course media sits under the page title (owner rule 2026-11-1
     await new Promise(resolve => setTimeout(resolve, 0));
     expect(view.container.querySelector("[data-featured-media]")).toBeNull();
   });
+});
+
+it("seeks after metadata when a chapter is selected before loading", async () => {
+  respond([{ ...item("chaptered", "video"), chapters: [{ title: "Start", start: 0 }, { title: "Review", start: 80 }] }]);
+  const play=vi.spyOn(HTMLMediaElement.prototype,"play").mockResolvedValue();
+  const load=vi.spyOn(HTMLMediaElement.prototype,"load").mockImplementation(()=>{});
+  const v=render(<main id="main"><h1>Course</h1><CourseMediaSlot /><CourseMediaForPage /></main>);
+  await waitFor(()=>expect(v.container.querySelector("video")).not.toBeNull());
+  const video=v.container.querySelector("video")!;
+  expect(video.getAttribute("aria-label")).toBe("Title chaptered");
+  fireEvent.click(v.getByRole("button",{name:"Review"}));
+  expect(load).toHaveBeenCalled(); expect(video.currentTime).toBe(0);
+  fireEvent.loadedMetadata(video); expect(video.currentTime).toBe(80);
+  await waitFor(()=>expect(play).toHaveBeenCalled());
+  play.mockRestore();load.mockRestore();
 });

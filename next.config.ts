@@ -26,7 +26,7 @@ const contentSecurityPolicy = [
 // the person before any microphone use, and only the Ask page requests it.
 const askVoiceAllowed = process.env.PAC_CLONE_AGENTS === "on";
 const securityHeaders = [
-  { key: "Content-Security-Policy", value: contentSecurityPolicy + (askVoiceAllowed ? "; media-src 'self' blob:" : "") },
+  { key: "Content-Security-Policy", value: contentSecurityPolicy + "; media-src 'self' blob:" },
   { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
   { key: "Cross-Origin-Resource-Policy", value: "same-origin" },
   { key: "Permissions-Policy", value: `camera=(), microphone=(${askVoiceAllowed ? "self" : ""}), geolocation=(), browsing-topics=()` },
@@ -74,6 +74,8 @@ const hostedSemanticRuntimeIncludes = [
  */
 const downloadRuntimeIncludes = [
   "./node_modules/pdfkit/js/data/**/*",
+  "./node_modules/pdfjs-dist/standard_fonts/LiberationSans-*.ttf",
+  "./node_modules/pdfjs-dist/standard_fonts/LICENSE_LIBERATION",
   "./node_modules/jszip/**/*",
   "./node_modules/pako/**/*",
   "./node_modules/lie/**/*",

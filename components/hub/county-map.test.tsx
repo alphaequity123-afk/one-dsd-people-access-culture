@@ -47,7 +47,7 @@ describe("CountyMap", () => {
     const first = container.querySelector('path[data-fips][tabindex="0"]') as SVGPathElement;
     first.focus();
     await userEvent.keyboard("{ArrowRight}{Enter}");
-    const details = screen.getByRole("complementary", { name: "Details for the selected place" });
+    const details = screen.getByRole("region", { name: "Details for the selected place" });
     expect(within(details).getByRole("heading").textContent).toBe("Anoka");
   });
 

@@ -142,7 +142,7 @@ export async function toolkitReportWord(value:ToolkitCase,kind:ToolkitReportKind
     indent:block.kind==="quote"?{left:300,right:160}:undefined,
     children:block.text.split("\n").map((text,index)=>new TextRun({text,break:index?1:0,italics:block.kind==="quote"})),
   }));
-  const doc=new Document({creator:"People, Access and Culture",title:value.title,description:titles[kind],styles:{default:{document:{run:{font:"Aptos",size:22,color:"000000"},paragraph:{spacing:{line:285}}}},paragraphStyles:[
+  const doc=new Document({creator:"People, Access and Culture",title:value.title,description:titles[kind],subject:titles[kind],styles:{default:{document:{run:{font:"Aptos",size:22,color:"000000",language:{value:"en-US"}},paragraph:{spacing:{line:285}}}},paragraphStyles:[
     {id:"Title",name:"Title",basedOn:"Normal",next:"Normal",run:{font:"Aptos",size:38,bold:true,color:"000000"}},
     {id:"Heading1",name:"Heading 1",basedOn:"Normal",next:"Normal",run:{font:"Aptos",size:28,bold:true,color:"000000"}},
     {id:"Heading2",name:"Heading 2",basedOn:"Normal",next:"Normal",run:{font:"Aptos",size:23,bold:true,color:"000000"}},
@@ -153,25 +153,27 @@ export async function toolkitReportWord(value:ToolkitCase,kind:ToolkitReportKind
 export async function toolkitReportPdf(value:ToolkitCase,kind:ToolkitReportKind):Promise<Uint8Array>{
   const {default:PDFDocument}=await import("pdfkit");
   const {join}=await import("node:path");
-  const doc=new PDFDocument({size:"LETTER",margins:{top:54,bottom:56,left:54,right:54},bufferPages:true,info:{Title:value.title,Author:"People, Access and Culture",Subject:titles[kind]}});
+  const doc=new PDFDocument({size:"LETTER",margins:{top:54,bottom:56,left:54,right:54},bufferPages:true,tagged:true,lang:"en-US",pdfVersion:"1.7",displayTitle:true,info:{Title:value.title,Author:"People, Access and Culture",Subject:titles[kind]}});
   doc.registerFont("Toolkit",join(process.cwd(),"lib/consultant-toolkit/fonts/DejaVuSans.ttf")).font("Toolkit");
   const font=(doc as unknown as {_font:{font:{hasGlyphForCodePoint:(point:number)=>boolean}}})._font.font;
   const blocks=toolkitReportBlocks(value,kind);
   for(const block of blocks)for(const character of block.text){if(!/\s/u.test(character)&&!font.hasGlyphForCodePoint(character.codePointAt(0)!)){doc.destroy();throw new ToolkitPdfFontError();}}
   const chunks:Buffer[]=[];
   const finished=new Promise<Uint8Array>((resolve,reject)=>{doc.on("data",chunk=>chunks.push(Buffer.from(chunk)));doc.on("end",()=>resolve(new Uint8Array(Buffer.concat(chunks))));doc.on("error",reject);});
+  const root=doc.struct("Document");doc.addStructure(root);
   const width=doc.page.width-108;
   for(const block of blocks){
     const heading=["title","heading","subheading"].includes(block.kind);
     const size=block.kind==="title"?22:block.kind==="heading"?15:block.kind==="subheading"?11.5:10.5;
     if(heading && doc.y>doc.page.height-120)doc.addPage();
     if(block.kind==="heading")doc.moveDown(.7);
-    const latinOnly=/^[\u0020-\u00ff\u2010-\u2022\n\r\t]*$/.test(block.text);
-    doc.font(heading&&latinOnly?"Helvetica-Bold":"Toolkit").fontSize(size).fillColor("000000");
-    doc.text(block.text,block.kind==="quote"?68:54,doc.y,{width:width-(block.kind==="quote"?28:0),lineGap:3,paragraphGap:3});
+    doc.font("Toolkit").fontSize(size).fillColor("000000");
+    const tag=block.kind==="title"?"H1":block.kind==="heading"?"H2":block.kind==="subheading"?"H3":block.kind==="quote"?"BlockQuote":"P";
+    root.add(doc.struct(tag,{},[()=>doc.text(block.text,block.kind==="quote"?68:54,doc.y,{width:width-(block.kind==="quote"?28:0),lineGap:3,paragraphGap:3})]));
+    if(block.kind==="heading")doc.outline.addItem(block.text);
     doc.moveDown(block.kind==="title"?.6:.55);
   }
   const pages=doc.bufferedPageRange();
-  for(let i=pages.start;i<pages.start+pages.count;i++){doc.switchToPage(i);const bottom=doc.page.margins.bottom;doc.page.margins.bottom=0;doc.font("Helvetica").fontSize(8).fillColor("444444").text(`${value.status==="final"?"Final copy":"Working copy"} · ${i+1} / ${pages.count}`,54,doc.page.height-36,{width,align:"right",lineBreak:false});doc.page.margins.bottom=bottom;}
-  doc.end();return finished;
+  for(let i=pages.start;i<pages.start+pages.count;i++){doc.switchToPage(i);const bottom=doc.page.margins.bottom;doc.page.margins.bottom=0;doc.markContent("Artifact",{type:"Pagination"});doc.font("Toolkit").fontSize(8).fillColor("444444").text(`${value.status==="final"?"Final copy":"Working copy"} · ${i+1} / ${pages.count}`,54,doc.page.height-36,{width,align:"right",lineBreak:false});doc.endMarkedContent();doc.page.margins.bottom=bottom;}
+  root.end();doc.end();return finished;
 }

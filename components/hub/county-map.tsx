@@ -640,7 +640,7 @@ function Details({
   const cmp = measureFor(place, group, "comparison");
   const share2018 = populationShare2018(place, group);
   return (
-    <aside className={styles.details} aria-live="polite" aria-label="Details for the selected place">
+    <section className={styles.details} aria-live="polite" aria-label="Details for the selected place">
       <SubHeading className={styles.detailsTitle}>{place.name}</SubHeading>
       <p className={styles.muted}>{groupLabel(group)}</p>
       <dl className={styles.facts}>
@@ -704,7 +704,7 @@ function Details({
       ) : (
         <p className={styles.hint}>Select a county on the map, list or table to see its figures here.</p>
       )}
-    </aside>
+    </section>
   );
 }
 

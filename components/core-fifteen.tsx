@@ -18,11 +18,12 @@ export function CoreFifteen({ standalone = false }: { standalone?: boolean }) {
       return course && href ? [{ number, title: course.title, href }] : [];
     }),
   }));
+  const GroupHeading = standalone ? "h2" : "h3";
   const content = <div id="start-here" className="scroll-mt-24 space-y-4">
       <p className="max-w-3xl">Fifteen recommended courses for staff. Choose a course that fits your work and learn at your own pace.</p>
       <div className={standalone ? "space-y-8" : "grid gap-6 md:grid-cols-3"}>
         {groups.map(group => <div key={group.title}>
-          <h3 className="text-lg font-bold">{group.title}</h3>
+          <GroupHeading className="text-lg font-bold">{group.title}</GroupHeading>
           <p className="text-muted">{group.note}</p>
           <ol className="mt-2 list-decimal space-y-1 pl-5">{group.courses.map(course => <li key={course.number}><Link href={course.href}>{course.title}</Link></li>)}</ol>
         </div>)}

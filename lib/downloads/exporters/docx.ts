@@ -84,7 +84,7 @@ function dataTable(headers: string[], rows: string[][]) {
   const columns = Math.max(headers.length, ...rows.map((row) => row.length), 1);
   const width = Math.floor(USABLE / columns);
   const widths = Array.from({ length: columns }, () => width);
-  const pad = (row: string[]) => Array.from({ length: columns }, (_, index) => row[index] ?? "");
+  const pad = (row: string[]) => Array.from({ length: columns }, (_, index) => row[index]?.trim() || "Not provided");
   return new Table({
     width: { size: USABLE, type: WidthType.DXA },
     columnWidths: widths,
@@ -110,9 +110,9 @@ function fieldsTable(rows: { label: string; value: string }[]) {
     width: { size: USABLE, type: WidthType.DXA },
     columnWidths: [labelWidth, valueWidth],
     borders: tableBorders,
-    rows: rows.map(
+    rows: [new TableRow({ tableHeader: true, children: [cell("Item", labelWidth, { header: true }), cell("Detail", valueWidth, { header: true })] }), ...rows.map(
       (row) => new TableRow({ children: [cell(row.label, labelWidth, { bold: true, shade: true }), cell(row.value, valueWidth)] }),
-    ),
+    )],
   });
 }
 
@@ -190,7 +190,7 @@ export async function renderDocx(document: ResourceDocument): Promise<Buffer> {
     );
   }
   children.push(
-    new Paragraph({ spacing: { after: 120 }, children: [plain(document.title, { bold: true, size: 40, color: T.navy })] }),
+    new Paragraph({ heading: HeadingLevel.TITLE, spacing: { after: 120 }, children: [plain(document.title, { bold: true, size: 40, color: T.navy })] }),
   );
   if (document.subtitle) {
     children.push(new Paragraph({ spacing: { after: 160 }, children: [plain(document.subtitle, { italics: true, size: 23, color: T.muted })] }));
@@ -275,7 +275,8 @@ export async function renderDocx(document: ResourceDocument): Promise<Buffer> {
     creator: document.attribution,
     title: document.title,
     description: document.subtitle,
-    styles: { default: { document: { run: { font: T.fontFamily, size: BODY, color: T.ink } } } },
+    subject: document.subtitle ?? document.title,
+    styles: { default: { document: { run: { font: T.fontFamily, size: BODY, color: T.ink, language: { value: "en-US" } } } } },
     numbering: {
       config: [
         {

@@ -24,26 +24,37 @@ function clock(seconds: number) {
 function Player({ item, withinSection = false }: { item: Item; withinSection?: boolean }) {
   const Heading = withinSection ? "h3" : "h2";
   const ref = useRef<HTMLVideoElement & HTMLAudioElement>(null);
-  const seek = (start: number) => { if (ref.current) { ref.current.currentTime = start; void ref.current.play().catch(() => undefined); } };
+  const pendingSeek = useRef<number | null>(null);
+  const [message, setMessage] = useState("");
+  const loaded = () => { if (ref.current && pendingSeek.current !== null) { ref.current.currentTime = pendingSeek.current; pendingSeek.current = null; } };
+  const seek = (start: number) => {
+    const media = ref.current;
+    if (!media) return;
+    if (media.readyState < 1) { pendingSeek.current = start; media.load(); }
+    else media.currentTime = start;
+    void media.play().then(() => setMessage(`Playing ${item.title}.`)).catch(() => setMessage("Use the player’s Play control to begin, or read the transcript below."));
+  };
+  const failed = () => setMessage("This recording could not be loaded. You can read the transcript below.");
   return <FeaturedMediaPanel kind={item.kind === "video" ? "video" : "audio"} label={item.kind === "video" ? undefined : "Listen"} length={minutes(item.durationSeconds)}><section className="course-media-item" aria-labelledby={`cm-${item.id}`}>
     <Heading id={`cm-${item.id}`}>{item.title}</Heading>
     {item.summary ? <p className="calm-muted">{item.summary}</p> : null}
     {item.kind === "video"
-      ? <video ref={ref} controls preload="none" poster={item.poster} style={{ width: "100%", maxWidth: "960px", borderRadius: "8px", background: "#000" }}>
+      ? <video ref={ref} aria-label={item.title} onLoadedMetadata={loaded} onError={failed} controls preload="none" poster={item.poster} style={{ width: "100%", maxWidth: "960px", borderRadius: "8px", background: "#000" }}>
           <source src={item.media} type="video/mp4" />
           <track kind="captions" src={item.captions} srcLang="en" label="English" default />
         </video>
-      : <audio ref={ref} controls preload="none" style={{ width: "100%", maxWidth: "720px" }}>
+      : <audio ref={ref} aria-label={item.title} onLoadedMetadata={loaded} onError={failed} controls preload="none" style={{ width: "100%", maxWidth: "720px" }}>
           <source src={item.media} type="audio/mpeg" />
           <track kind="captions" src={item.captions} srcLang="en" label="English" default />
         </audio>}
+    <p role="status" aria-live="polite">{message}</p>
     {item.chapters.length > 1 ? <details>
-      <summary>Chapters</summary>
+      <summary>Chapters for {item.title}</summary>
       <ol className="calm-list">{item.chapters.map(chapter => <li key={`${chapter.start}-${chapter.title}`}>
         <button type="button" className="course-media-chapter" onClick={() => seek(chapter.start)}>{chapter.title}</button> <span className="calm-muted calm-small">{clock(chapter.start)}</span>
       </li>)}</ol>
     </details> : null}
-    <p className="calm-small"><SourceLink href={item.transcript}>Read the full transcript</SourceLink> · <SourceLink href={item.captions}>Download the captions</SourceLink></p>
+    <p className="calm-small"><SourceLink href={item.transcript}>Read the full transcript</SourceLink> Â· <SourceLink href={item.captions}>Download the captions</SourceLink></p>
   </section></FeaturedMediaPanel>;
 }
 

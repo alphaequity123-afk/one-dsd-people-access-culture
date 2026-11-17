@@ -49,6 +49,8 @@ export function SyncedMediaPlayer({ mediaId, kind, src, captions, poster, label,
   const [speed, setSpeed] = useState<Speed>(1);
   const [resumedFrom, setResumedFrom] = useState<number | null>(null);
   const [fetchedCues, setFetchedCues] = useState<Cue[]>([]);
+  const [mediaStatus, setMediaStatus] = useState('');
+  const [transcriptStatus, setTranscriptStatus] = useState(cues.length || !captions ? '' : 'Loading the transcript…');
   const headingId = useId();
 
   const allCues = cues.length ? cues : fetchedCues;
@@ -64,7 +66,12 @@ export function SyncedMediaPlayer({ mediaId, kind, src, captions, poster, label,
   useEffect(() => {
     if (cues.length || !captions || typeof fetch !== 'function') return;
     let cancelled = false;
-    fetch(captions).then(r => (r.ok ? r.text() : '')).then(text => { if (!cancelled && text) setFetchedCues(groupCuesIntoSentences(parseVtt(text))); }).catch(() => { /* transcript simply stays hidden */ });
+    fetch(captions).then(r => { if (!r.ok) throw new Error('Transcript unavailable'); return r.text(); }).then(text => {
+      if (cancelled) return;
+      const loaded = groupCuesIntoSentences(parseVtt(text));
+      if (!loaded.length) throw new Error('Transcript unavailable');
+      setFetchedCues(loaded); setTranscriptStatus('');
+    }).catch(() => { if (!cancelled) setTranscriptStatus('The transcript could not be loaded. Try reloading the page, or use the written lesson.'); });
     return () => { cancelled = true; };
   }, [captions, cues.length]);
 
@@ -74,7 +81,7 @@ export function SyncedMediaPlayer({ mediaId, kind, src, captions, poster, label,
     el.currentTime = seconds;
     setTime(seconds);
     const started = el.play();
-    if (started && typeof started.catch === 'function') started.catch(() => { /* the learner can press play */ });
+    if (started && typeof started.catch === 'function') started.catch(() => { setMediaStatus('The recording is ready at this passage. Use its Play control to begin.'); });
   }, []);
 
   function onLoadedMetadata(event: SyntheticEvent<HTMLMediaElement>) {
@@ -107,6 +114,7 @@ export function SyncedMediaPlayer({ mediaId, kind, src, captions, poster, label,
     ref: (el: HTMLMediaElement | null) => { media.current = el; },
     controls: true, preload: 'metadata' as const, 'aria-label': label,
     onLoadedMetadata, onTimeUpdate, onPause, onPlay, onEnded,
+    onError: () => setMediaStatus('The recording could not be loaded. Use the transcript or written lesson, or try reloading the page.'),
   };
 
   return (
@@ -114,6 +122,8 @@ export function SyncedMediaPlayer({ mediaId, kind, src, captions, poster, label,
       {kind === 'video'
         ? <video {...mediaProps} playsInline poster={poster}><source src={src} type="video/mp4" />{captions && <track kind="captions" src={captions} srcLang="en" label="English" default />}Your browser cannot play this video. The transcript below has every sentence.</video>
         : <audio {...mediaProps} src={src}>Your browser cannot play this audio. The transcript below has every sentence.</audio>}
+      <p role="status" className="clas-player-status">{mediaStatus}</p>
+      <p role="status" className="clas-player-status">{transcriptStatus}</p>
       {children}
       <div className="clas-player-controls">
         <SpeedControl speed={speed} onChange={changeSpeed} />

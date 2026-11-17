@@ -41,7 +41,7 @@ export function EquityToolkitExperience({ values, renderDraft = true, decisionVa
           <option value="">{text("noRoleLabel")}</option>
           {EAT_ROLES.map(item => <option key={item.id} value={item.id}>{text(`${item.id}Label`)}</option>)}
         </select>
-        {role ? <p className="max-w-3xl border-l-2 border-line pl-5" aria-live="polite">{text(`${role}Context`)}</p> : null}
+        <div role="status" aria-live="polite" aria-atomic="true">{role ? <p className="max-w-3xl border-l-2 border-line pl-5">{text(`${role}Context`)}</p> : null}</div>
       </section>
 
       <nav aria-label={text("stageNavLabel")} className="flex flex-wrap gap-2">
@@ -56,7 +56,7 @@ export function EquityToolkitExperience({ values, renderDraft = true, decisionVa
         >{index + 1}. {text(`${item.id}Title`)}</button>)}
       </nav>
 
-      <section id={`${prefix}-stage`} aria-labelledby={`${prefix}-stage-title`} className="space-y-7 rounded-xl border border-line bg-slate-50/70 p-5 md:p-7">
+      <section id={`${prefix}-stage`} aria-label={`Learning example: ${text(`${stage.id}Title`)}`} className="space-y-7 rounded-xl border border-line bg-slate-50/70 p-5 md:p-7">
         <header className="max-w-3xl space-y-4">
           <h2 id={`${prefix}-stage-title`} ref={stageHeading} tabIndex={-1} className="text-3xl font-semibold">{text(`${stage.id}Title`)}</h2>
           <p className="text-lg">{text(`${stage.id}Intro`)}</p>

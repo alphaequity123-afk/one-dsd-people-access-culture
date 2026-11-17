@@ -29,6 +29,7 @@ export default async function CollaborationLearningPage({ searchParams }: { sear
   const selectedFocus = COLLABORATION_FOCUSES.find(focus => focus.id === filters.focus);
   const selectedLevel = COLLABORATION_LEVELS.find(level => level.id === filters.level);
 
+  const CourseHeading = selectedFocus ? "h3" : "h4";
   return <div className={styles.page}>
     <div className={styles.content}>
       <p className={styles.back}><Link href="/learn">Learn</Link></p>
@@ -68,7 +69,7 @@ export default async function CollaborationLearningPage({ searchParams }: { sear
           const rows = visible.filter(course => course.focus === focus.id);
           if (!rows.length) return null;
           const categories = [...new Set(rows.map(course => course.category))];
-          return <section key={focus.id} className={styles.focusGroup} aria-label={focus.title}>
+          return <section key={focus.id} className={styles.focusGroup} aria-label={`${focus.title}: course group`}>
             {!selectedFocus ? <><h3>{focus.title}</h3><p>{focus.description}</p></> : null}
             {categories.map(category => {
               const courses = rows.filter(course => course.category === category);
@@ -78,7 +79,7 @@ export default async function CollaborationLearningPage({ searchParams }: { sear
                 <summary><span>{title}</span><span className={styles.topicCount}>{courses.length} {courses.length === 1 ? "course" : "courses"}</span></summary>
                 <ul className={styles.courseGrid}>{courses.map(({ pack, level, topicId }) => <li key={pack.course.id} data-collaboration-course={pack.course.id} data-collaboration-level={level} data-collaboration-topic={topicId}>
                   <p className={styles.courseLevel}>{COLLABORATION_LEVELS.find(item => item.id === level)!.title}</p>
-                  <h4><Link href={courseHref(pack.course.id)} prefetch={false}>{pack.course.title}</Link></h4>
+                  <CourseHeading><Link href={courseHref(pack.course.id)} prefetch={false}>{pack.course.title}</Link></CourseHeading>
                   <p>{summary(courseSummary(pack))}</p>
                   <Link className={styles.courseAction} href={courseHref(pack.course.id)} prefetch={false} aria-label={`Explore ${pack.course.title}`}>Explore course</Link>
                 </li>)}</ul>

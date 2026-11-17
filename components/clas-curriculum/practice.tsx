@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { checkOrdering, type Decision, type Ordering, type PracticeOption, type RecallQuestion } from '@/lib/content/clas-curriculum-practice';
 
 type ChoiceProps = { id: string; question: string; scenario?: string; options: PracticeOption[] };
@@ -12,23 +12,24 @@ export function ChoiceQuestion({ id, question, scenario, options }: ChoiceProps)
   const [selected, setSelected] = useState<number | null>(null);
   const [checked, setChecked] = useState(false);
   const [needsChoice, setNeedsChoice] = useState(false);
+  const firstChoice = useRef<HTMLInputElement>(null);
   const chosen = checked && selected !== null ? options[selected] : null;
   return (
-    <fieldset className="clas-question">
+    <fieldset className="clas-question" aria-describedby={`${id}-feedback`}>
       <legend>{question}</legend>
       {scenario && <p className="clas-question-scenario">{scenario}</p>}
       {options.map((option, n) => (
         <label key={n}>
-          <input type="radio" name={id} value={n} checked={selected === n} onChange={() => { setSelected(n); setChecked(false); setNeedsChoice(false); }} />
+          <input ref={n === 0 ? firstChoice : undefined} type="radio" name={id} value={n} checked={selected === n} onChange={() => { setSelected(n); setChecked(false); setNeedsChoice(false); }} />
           <span>{option.text}</span>
         </label>
       ))}
       <div className="clas-question-actions">
         {!checked
-          ? <button type="button" onClick={() => { if (selected === null) setNeedsChoice(true); else setChecked(true); }}>Check my answer</button>
-          : <button type="button" className="clas-study-secondary" onClick={() => { setChecked(false); setSelected(null); }}>Try again</button>}
+          ? <button type="button" onClick={() => { if (selected === null) { setNeedsChoice(true); firstChoice.current?.focus(); } else setChecked(true); }}>Check my answer</button>
+          : <button type="button" className="clas-study-secondary" onClick={() => { setChecked(false); setSelected(null); firstChoice.current?.focus(); }}>Try again</button>}
       </div>
-      <div className="clas-study-feedback" aria-live="polite">
+      <div id={`${id}-feedback`} className="clas-study-feedback" aria-live="polite" aria-atomic="true">
         {needsChoice && !checked && <p>Choose one option, then check your answer.</p>}
         {chosen && <>
           <h3>{chosen.correct ? 'That is the stronger choice' : 'Not the strongest choice'}</h3>
@@ -71,14 +72,17 @@ export function OrderingQuestion({ ordering }: { ordering: Ordering }) {
   const [result, setResult] = useState<ReturnType<typeof checkOrdering> | null>(null);
   const remaining = ordering.steps.map((_, i) => i).filter(i => !chosen.includes(i));
   const complete = chosen.length === ordering.steps.length;
-  function reset() { setChosen([]); setResult(null); }
+  const orderHeading = useRef<HTMLHeadingElement>(null);
+  const moveFocus = useRef(false);
+  useEffect(() => { if (moveFocus.current) { orderHeading.current?.focus(); moveFocus.current = false; } }, [chosen, result]);
+  function reset() { moveFocus.current = true; setChosen([]); setResult(null); }
   return (
     <fieldset className="clas-ordering">
       <legend>{ordering.prompt}</legend>
       {ordering.scenario && <p className="clas-question-scenario">{ordering.scenario}</p>}
       <p className="clas-ordering-help">Choose the step you would do first, then the next. Use the numbered buttons; nothing needs to be dragged. You can remove the last step or start over at any time.</p>
       <div className="clas-ordering-chosen">
-        <h3>Your order{chosen.length ? ` (${chosen.length} of ${ordering.steps.length})` : ''}</h3>
+        <h3 ref={orderHeading} tabIndex={-1}>Your order{chosen.length ? ` (${chosen.length} of ${ordering.steps.length})` : ''}</h3>
         {chosen.length
           ? <ol aria-live="polite">{chosen.map((step, position) => <li key={step}>{ordering.steps[step]}{result && <em className={result.matches[position] ? 'clas-order-match' : 'clas-order-miss'}> ({result.matches[position] ? 'in the suggested place' : 'not in the suggested place'})</em>}</li>)}</ol>
           : <p>No steps chosen yet.</p>}
@@ -86,12 +90,12 @@ export function OrderingQuestion({ ordering }: { ordering: Ordering }) {
       {!complete && (
         <div className="clas-ordering-remaining">
           <h3>Choose step {chosen.length + 1}</h3>
-          <ul>{remaining.map(i => <li key={i}><button type="button" className="clas-study-secondary" onClick={() => { setChosen([...chosen, i]); setResult(null); }}>Step {chosen.length + 1}: {ordering.steps[i]}</button></li>)}</ul>
+          <ul>{remaining.map(i => <li key={i}><button type="button" className="clas-study-secondary" onClick={() => { moveFocus.current = true; setChosen([...chosen, i]); setResult(null); }}>Step {chosen.length + 1}: {ordering.steps[i]}</button></li>)}</ul>
         </div>
       )}
       <div className="clas-question-actions">
-        {complete && !result && <button type="button" onClick={() => setResult(checkOrdering(chosen, ordering.correctOrder))}>Check my order</button>}
-        {chosen.length > 0 && !result && <button type="button" className="clas-study-secondary" onClick={() => setChosen(chosen.slice(0, -1))}>Remove last step</button>}
+        {complete && !result && <button type="button" onClick={() => { moveFocus.current = true; setResult(checkOrdering(chosen, ordering.correctOrder)); }}>Check my order</button>}
+        {chosen.length > 0 && !result && <button type="button" className="clas-study-secondary" onClick={() => { moveFocus.current = true; setChosen(chosen.slice(0, -1)); }}>Remove last step</button>}
         {chosen.length > 0 && <button type="button" className="clas-study-secondary" onClick={reset}>{result ? 'Try again' : 'Start over'}</button>}
       </div>
       <div className="clas-study-feedback" aria-live="polite">

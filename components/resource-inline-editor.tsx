@@ -77,6 +77,15 @@ export function ResourceInlineEditor({
   const [error, setError] = useState("");
   const [confirmClose, setConfirmClose] = useState(false);
   const keepEditingRef = useRef<HTMLButtonElement>(null);
+  const openButtonRef = useRef<HTMLButtonElement>(null);
+  const titleRef = useRef<HTMLInputElement>(null);
+  const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const previousOpen = useRef(false);
+  useEffect(() => {
+    if (open) titleRef.current?.focus();
+    else if (previousOpen.current) openButtonRef.current?.focus();
+    previousOpen.current = open;
+  }, [open]);
 
   // Unsaved edits live only in this component. Warn before the page is left,
   // and ask before the fields are closed, so a draft is never lost silently.
@@ -200,7 +209,7 @@ export function ResourceInlineEditor({
         </p>
       ) : null}
       {!open ? (
-        <button className="btn btn--primary mt-4" type="button" onClick={() => setOpen(true)}>
+        <button ref={openButtonRef} className="btn btn--primary mt-4" type="button" aria-expanded={false} onClick={() => setOpen(true)}>
           Open editing fields
         </button>
       ) : (
@@ -209,6 +218,7 @@ export function ResourceInlineEditor({
             <Field id="resource-title" label="Title">
               <input
                 id="resource-title"
+                ref={titleRef}
                 type="text"
                 value={fields.title}
                 maxLength={300}
@@ -380,7 +390,7 @@ export function ResourceInlineEditor({
             <div className="mt-3 space-y-4">
               {fields.nextActions.map((action, index) => (
                 <div className="grid gap-x-4 border-b border-line pb-4 md:grid-cols-[1fr_1fr_auto]" key={index}>
-                  <Field id={`next-step-label-${index}`} label="Link wording">
+                  <Field id={`next-step-label-${index}`} label={`Step ${index + 1}: link wording`}>
                     <input
                       id={`next-step-label-${index}`}
                       type="text"
@@ -397,7 +407,7 @@ export function ResourceInlineEditor({
                       }
                     />
                   </Field>
-                  <Field id={`next-step-address-${index}`} label="Program path or secure web address">
+                  <Field id={`next-step-address-${index}`} label={`Step ${index + 1}: program path or secure web address`}>
                     <input
                       id={`next-step-address-${index}`}
                       type="text"
@@ -415,6 +425,7 @@ export function ResourceInlineEditor({
                     />
                   </Field>
                   <button
+                    aria-label={`Remove this step: ${action.label || `step ${index + 1}`}`}
                     className="btn btn--light self-end mb-4"
                     type="button"
                     onClick={() => update("nextActions", fields.nextActions.filter((_, currentIndex) => currentIndex !== index))}
@@ -468,11 +479,7 @@ export function ResourceInlineEditor({
               {error}
             </p>
           ) : null}
-          {message ? (
-            <p className="notice" role="status">
-              {message}
-            </p>
-          ) : null}
+          <p className={message ? "notice" : undefined} role="status" aria-live="polite">{busy ? "Saving changes." : message}</p>
 
           <div className="flex flex-wrap gap-3">
             <button className="btn btn--primary" type="submit" disabled={busy}>
@@ -481,7 +488,7 @@ export function ResourceInlineEditor({
             <button className="btn btn--light" type="button" disabled={busy} onClick={restoreSavedDraft}>
               {publishImmediately ? "Restore saved wording" : "Restore saved draft"}
             </button>
-            <button className="text-button" type="button" disabled={busy} onClick={requestClose}>
+            <button ref={closeButtonRef} className="text-button" type="button" disabled={busy} onClick={requestClose}>
               Close editing fields
             </button>
           </div>
@@ -490,7 +497,7 @@ export function ResourceInlineEditor({
               <p className="m-0 font-bold" id="resource-close-confirm-title">You have unsaved changes</p>
               <p className="mt-1 mb-0" id="resource-close-confirm-text">Closing the editing fields will discard them. The saved draft is not affected.</p>
               <div className="mt-3 flex flex-wrap gap-3">
-                <button className="btn btn--light" type="button" ref={keepEditingRef} onClick={() => setConfirmClose(false)}>Keep editing</button>
+                <button className="btn btn--light" type="button" ref={keepEditingRef} onClick={() => { setConfirmClose(false); closeButtonRef.current?.focus(); }}>Keep editing</button>
                 <button className="btn btn--primary" type="button" onClick={discardAndClose}>Discard changes and close</button>
               </div>
             </div>

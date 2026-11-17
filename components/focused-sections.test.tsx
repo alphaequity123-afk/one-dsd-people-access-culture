@@ -37,3 +37,18 @@ describe("reading one topic at a time", () => {
     expect(view.queryByRole("navigation",{name:"Page topics"})).toBeNull();
   });
 });
+
+it("keeps the page heading visible when a deep link opens a later topic", () => {
+  window.history.replaceState(null, "", "/#third");
+  const view = render(<FocusedSections>
+    <section><h1>Implementation guidance</h1><p>How to use this page.</p></section>
+    <section id="first"><h2>First topic</h2></section>
+    <section id="second"><h2>Second topic</h2></section>
+    <section id="third"><h2>Third topic</h2></section>
+  </FocusedSections>);
+  expect(view.getByRole("heading", { level: 1, name: "Implementation guidance" })).toBeTruthy();
+  expect(view.getByRole("heading", { name: "Third topic" })).toBeTruthy();
+  fireEvent.click(view.getByRole("button", { name: "Previous" }));
+  expect(view.getByRole("heading", { level: 1 })).toBeTruthy();
+  expect(view.getByRole("heading", { name: "Second topic" })).toBeTruthy();
+});

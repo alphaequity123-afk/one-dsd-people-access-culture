@@ -20,7 +20,7 @@ export default function UserGuide() {
       <Hub2Choices label="Where to go" className="lg:grid-cols-3" choices={USER_GUIDE.choices.map(choice => ({ ...choice }))} />
       {guideMedia.ready ? <Hub2More id="welcome-video" title={guideMedia.title}>
         <p className="my-3">{guideMedia.runtime}</p>
-        <SequenceVideo className="block aspect-video w-full rounded-lg bg-white" src={guideMedia.src} poster={guideMedia.poster} title={guideMedia.title} />
+        <SequenceVideo className="block aspect-video w-full rounded-lg bg-white" src={guideMedia.src} poster={guideMedia.poster} title={guideMedia.title} captions={guideMedia.captions} transcript={guideMedia.transcript} />
         <p className="mt-4"><SourceLink href={guideMedia.transcript}>Read the transcript</SourceLink> · <SourceLink href={guideMedia.captions}>Download the captions</SourceLink></p>
       </Hub2More> : null}
       <div>

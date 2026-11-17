@@ -21,3 +21,7 @@
 .intercultural-study :is(a,button,input,textarea,summary):focus-visible{outline:3px solid #005ea8;outline-offset:4px}
 @media(max-width:700px){.intercultural-study{padding:24px 16px}.intercultural-study header{padding:24px}.intercultural-path{grid-template-columns:1fr}.intercultural-study button{max-width:100%;white-space:normal}}
 @media print{.intercultural-study video,.intercultural-study button,.intercultural-study>nav{display:none}.intercultural-study header{padding:12px}.intercultural-study{max-width:none;padding:0}.intercultural-path{display:block}.intercultural-path li{break-inside:avoid}}
+
+/* Keep filled actions legible when the approved palette styles ordinary links. */
+body.dsd-calm main .intercultural-study a.intercultural-primary[href],
+body.dsd-calm main .intercultural-study a.intercultural-primary[href]:hover { color: #fff; }

@@ -13,12 +13,12 @@ export function PageContents({ items, children, className = "" }: {
 }) {
   const links = <ul>{items.map(item => <li key={item.href}><SourceLink href={item.href}>{item.label}</SourceLink></li>)}</ul>;
   return <div className={`${styles.layout} ${className}`}>
-    <aside className={styles.rail}>
+    <div className={styles.rail}>
       <details className={styles.contents}>
         <summary>On this page</summary>
         <nav aria-label="On this page">{links}</nav>
       </details>
-    </aside>
+    </div>
     <div className={styles.body}>{children}</div>
   </div>;
 }

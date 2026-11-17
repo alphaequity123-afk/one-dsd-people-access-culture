@@ -97,6 +97,7 @@ export function EditableSurfaceEditor({
   const [error, setError] = useState("");
   const [confirmClose, setConfirmClose] = useState(false);
   const keepEditingRef = useRef<HTMLButtonElement>(null);
+  const toggleRef = useRef<HTMLButtonElement>(null);
 
   // Unsaved edits live only in this component. Warn before the page is left,
   // and ask before the panel is closed, so wording is never lost silently.
@@ -120,6 +121,7 @@ export function EditableSurfaceEditor({
     setChangeNote("");
     setConfirmClose(false);
     setOpen(false);
+    toggleRef.current?.focus();
   }
 
   async function openEditor() {
@@ -201,7 +203,7 @@ export function EditableSurfaceEditor({
 
   return (
     <div className="mb-3 border-b border-line pb-3 text-left">
-      <button className="btn btn--light" type="button" aria-expanded={open} aria-controls={open ? panelId : undefined} onClick={() => void openEditor()}>
+      <button ref={toggleRef} className="btn btn--light" type="button" aria-expanded={open} aria-controls={open ? panelId : undefined} onClick={() => void openEditor()}>
         {open ? "Close editing" : `Edit ${surfaceLabel.toLowerCase()}`}
       </button>
 
@@ -215,13 +217,13 @@ export function EditableSurfaceEditor({
           {inherited ? <Notice>Right now this DSD view shows the One DHS wording. Saving here creates DSD wording of its own without changing One DHS.</Notice> : null}
           {loading ? <p aria-live="polite">Opening the saved wording.</p> : null}
           {error ? <p className="error" role="alert">{error}</p> : null}
-          {message ? <p className="notice" role="status">{message}</p> : null}
+          <p className={message ? "notice" : undefined} role="status" aria-live="polite">{busy ? "Saving changes." : message}</p>
           {confirmClose ? (
             <div className="notice notice--warn mt-3" role="alertdialog" aria-modal="false" aria-labelledby={`${panelId}-close-confirm-title`} aria-describedby={`${panelId}-close-confirm-text`}>
               <p className="m-0 font-bold" id={`${panelId}-close-confirm-title`}>You have unsaved changes</p>
               <p className="mt-1 mb-0" id={`${panelId}-close-confirm-text`}>Closing this editor will discard them. The saved wording is not affected.</p>
               <div className="mt-3 flex flex-wrap gap-3">
-                <button className="btn btn--light" type="button" ref={keepEditingRef} onClick={() => setConfirmClose(false)}>Keep editing</button>
+                <button className="btn btn--light" type="button" ref={keepEditingRef} onClick={() => { setConfirmClose(false); toggleRef.current?.focus(); }}>Keep editing</button>
                 <button className="btn btn--primary" type="button" onClick={discardAndClose}>Discard changes and close</button>
               </div>
             </div>
@@ -308,7 +310,7 @@ function EditableField({
           {items.map((item, index) => (
             <div className="flex gap-2" key={index}>
               <input aria-label={`${field.label}, item ${index + 1}`} value={item} maxLength={field.maxLength} onChange={(event) => updateValue(field.key, items.map((current, itemIndex) => itemIndex === index ? event.target.value : current))} />
-              <button className="btn btn--light" type="button" onClick={() => updateValue(field.key, items.filter((_, itemIndex) => itemIndex !== index))}>Remove</button>
+              <button className="btn btn--light" type="button" aria-label={`Remove ${field.label}, item ${index + 1}`} onClick={() => updateValue(field.key, items.filter((_, itemIndex) => itemIndex !== index))}>Remove</button>
             </div>
           ))}
         </div>
@@ -327,7 +329,7 @@ function EditableField({
             <div className="panel grid gap-2 md:grid-cols-[1fr_1fr_auto]" key={index}>
               <label><span className="block text-sm font-bold">Link wording</span><input value={link.label} maxLength={field.maxLength} onChange={(event) => updateValue(field.key, links.map((current, linkIndex) => linkIndex === index ? { ...current, label: event.target.value } : current))} /></label>
               <label><span className="block text-sm font-bold">Destination</span><input value={link.href} maxLength={2_000} onChange={(event) => updateValue(field.key, links.map((current, linkIndex) => linkIndex === index ? { ...current, href: event.target.value } : current))} /></label>
-              <button className="btn btn--light self-end" type="button" onClick={() => updateValue(field.key, links.filter((_, linkIndex) => linkIndex !== index))}>Remove</button>
+              <button className="btn btn--light self-end" type="button" aria-label={`Remove ${field.label}, link ${index + 1}`} onClick={() => updateValue(field.key, links.filter((_, linkIndex) => linkIndex !== index))}>Remove</button>
             </div>
           ))}
         </div>

@@ -69,7 +69,7 @@ export function QueueItemClient(props: { requestId: string; status: Status; elig
           <button type="button" className="btn btn--primary" onClick={() => decideEligibility("confirmed_dsd")} disabled={busy}>Confirm DSD request</button>
           <button type="button" className="btn btn--light" onClick={() => decideEligibility("not_dsd")} disabled={busy}>Redirect outside DSD</button>
         </div>
-        {msg ? <p className="mt-3 text-sm" role="status">{msg}</p> : null}
+        <p className="mt-3 text-sm" role="status" aria-live="polite">{busy ? "Saving the eligibility decision." : msg}</p>
         <h3 className="mt-4 text-lg font-bold">Decision history</h3>
         <ul className="list-disc pl-5 text-sm">
           {props.history.map((h) => (
@@ -117,7 +117,7 @@ export function QueueItemClient(props: { requestId: string; status: Status; elig
       </Field>
       {status === "declined" ? (
         <Field id="reason" label="Reason and redirect (required when declining)">
-          <select id="reason" value={reason} onChange={(e) => setReason(e.target.value)}>
+          <select id="reason" required value={reason} onChange={(e) => setReason(e.target.value)}>
             <option value="">Choose a reason and next route</option>
             {OWNER_STATUS_REASON_TEMPLATES.map((r) => (
               <option key={r} value={r}>
@@ -144,11 +144,7 @@ export function QueueItemClient(props: { requestId: string; status: Status; elig
       <button type="submit" className="btn btn--primary" disabled={busy}>
         Save changes
       </button>
-      {msg ? (
-        <p className="mt-2 text-sm" role="status">
-          {msg}
-        </p>
-      ) : null}
+      <p className="mt-2 text-sm" role="status" aria-live="polite">{busy ? "Saving changes." : msg}</p>
       <h3 className="mt-4 text-lg font-bold">Decision history</h3>
       <ul className="list-disc pl-5 text-sm">
         {props.history.map((h) => (

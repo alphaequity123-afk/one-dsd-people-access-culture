@@ -25,6 +25,7 @@ export default async function WorkingGroupPlanPage({ searchParams }: { searchPar
     <details className="pilot-supporting" id="charge" open={expanded}>
       <summary>The charge, from the law</summary>
       <div className="pilot-supporting-body space-y-4">
+      <h2 className="sr-only">The charge, from the law</h2>
       <p>{CHARGE.purpose}</p>
       <h3 className="font-bold">Members</h3>
       <ul className="list-disc pl-6">{CHARGE.membership.map(m => <li key={m}>{m}</li>)}</ul>
@@ -44,6 +45,7 @@ export default async function WorkingGroupPlanPage({ searchParams }: { searchPar
     <details className="pilot-supporting" id="roadmap" open={expanded}>
       <summary>Roadmap: recommendations develop during topic review, with a complete draft in June</summary>
       <div className="pilot-supporting-body space-y-4">
+      <h2 className="sr-only">Roadmap: recommendations develop during topic review, with a complete draft in June</h2>
       <div role="region" aria-label="Roadmap" tabIndex={0} style={{ overflowX: "auto" }}><table className={styles.table}>
         <thead><tr><th scope="col">Period</th><th scope="col">Primary work</th><th scope="col">Milestone</th></tr></thead>
         <tbody>{ROADMAP.map(r => <tr key={r.period}><th scope="row">{r.period}</th><td>{r.work}</td><td>{r.milestone}</td></tr>)}</tbody>
@@ -54,6 +56,7 @@ export default async function WorkingGroupPlanPage({ searchParams }: { searchPar
     <details className="pilot-supporting" id="meetings" open={expanded}>
       <summary>Meeting sequence: one full-group session a month, with focused work between</summary>
       <div className="pilot-supporting-body space-y-4">
+      <h2 className="sr-only">Meeting sequence: one full-group session a month, with focused work between</h2>
       <div role="region" aria-label="Meeting sequence" tabIndex={0} style={{ overflowX: "auto" }}><table className={styles.table}>
         <thead><tr><th scope="col">Meeting</th><th scope="col">Focus and preparation</th><th scope="col">Output</th></tr></thead>
         <tbody>{MEETINGS.map(m => <tr key={m.number}><th scope="row">{m.number} · {m.month}</th><td>{m.focus}</td><td>{m.output}</td></tr>)}</tbody>
@@ -64,6 +67,7 @@ export default async function WorkingGroupPlanPage({ searchParams }: { searchPar
     <details className="pilot-supporting" id="method" open={expanded}>
       <summary>A consistent approach to every topic</summary>
       <div className="pilot-supporting-body space-y-4">
+      <h2 className="sr-only">A consistent approach to every topic</h2>
       <p>Staff organize the evidence and the discussion. Members shape the recommendations.</p>
       <div className="grid gap-4">{TOPIC_METHOD.map(step => <div className={styles.card} key={step.when}><h3>{step.when}</h3><p>{step.what}</p></div>)}</div>
       </div>
@@ -72,6 +76,7 @@ export default async function WorkingGroupPlanPage({ searchParams }: { searchPar
     <details className="pilot-supporting" id="topics" open={expanded}>
       <summary>Topic plans</summary>
       <div className="pilot-supporting-body space-y-4">
+      <h2 className="sr-only">Topic plans</h2>
       <div className="grid gap-4">{TOPICS.map(topic => <div className={styles.card} key={topic.title}>
         <p className={styles.kicker}>{topic.duty} · {topic.month}</p>
         <h3>{topic.title}</h3>
@@ -87,6 +92,7 @@ export default async function WorkingGroupPlanPage({ searchParams }: { searchPar
     <details className="pilot-supporting" id="record" open={expanded}>
       <summary>The recommendation record</summary>
       <div className="pilot-supporting-body space-y-4">
+      <h2 className="sr-only">The recommendation record</h2>
       <p>Keep one record per proposed change from the first topic onward.</p>
       <dl>{RECOMMENDATION_RECORD.map(item => <div key={item.field} style={{ marginBottom: ".5rem" }}><dt><strong>{item.field}</strong></dt><dd>{item.what}</dd></div>)}</dl>
       </div>
@@ -95,6 +101,7 @@ export default async function WorkingGroupPlanPage({ searchParams }: { searchPar
     <details className="pilot-supporting" id="checkpoints" open={expanded}>
       <summary>Report checkpoints that protect the deadline</summary>
       <div className="pilot-supporting-body space-y-4">
+      <h2 className="sr-only">Report checkpoints that protect the deadline</h2>
       <div role="region" aria-label="Checkpoints" tabIndex={0} style={{ overflowX: "auto" }}><table className={styles.table}>
         <thead><tr><th scope="col">Target</th><th scope="col">Checkpoint</th><th scope="col">Responsibility</th></tr></thead>
         <tbody>{CHECKPOINTS.map(c => <tr key={c.target}><th scope="row">{c.target}</th><td>{c.checkpoint}</td><td>{c.responsibility}</td></tr>)}</tbody>
@@ -106,6 +113,7 @@ export default async function WorkingGroupPlanPage({ searchParams }: { searchPar
     <details className="pilot-supporting" id="kickoff" open={expanded}>
       <summary>Kickoff decisions for the first full-group meeting</summary>
       <div className="pilot-supporting-body space-y-4">
+      <h2 className="sr-only">Kickoff decisions for the first full-group meeting</h2>
       <div className="grid gap-4">{KICKOFF_DECISIONS.map(item => <div className={styles.card} key={item.title}><h3>{item.title}</h3><p>{item.what}</p></div>)}</div>
       </div>
     </details>
@@ -113,6 +121,7 @@ export default async function WorkingGroupPlanPage({ searchParams }: { searchPar
     <details className="pilot-supporting" id="reuse" open={expanded}>
       <summary>Reuse this plan for another working group</summary>
       <div className="pilot-supporting-body space-y-4">
+      <h2 className="sr-only">Reuse this plan for another working group</h2>
       <ol className="list-decimal space-y-2 pl-6">{REUSE_STEPS.map(step => <li key={step}>{step}</li>)}</ol>
       <p className={styles.noPrint}><Link href="/community-outreach/plan">Plan an engagement</Link> covers the participation supports in detail.</p>
       </div>
@@ -121,6 +130,7 @@ export default async function WorkingGroupPlanPage({ searchParams }: { searchPar
     <details className="pilot-supporting" id="support" open={expanded}>
       <summary>What this program can supply to the duties</summary>
       <div className="pilot-supporting-body space-y-4">
+      <h2 className="sr-only">What this program can supply to the duties</h2>
       <div role="region" aria-label="Program support by duty" tabIndex={0} style={{ overflowX: "auto" }}><table className={styles.table}>
         <thead><tr><th scope="col">Duties</th><th scope="col">Resource</th></tr></thead>
         <tbody>{PROGRAM_SUPPORT.map(item => <tr key={item.duties}><th scope="row">{item.duties}</th><td><Link href={item.href}>{item.resource}</Link></td></tr>)}</tbody>

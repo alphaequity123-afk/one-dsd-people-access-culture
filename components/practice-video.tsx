@@ -26,7 +26,8 @@ export function PracticeVideo({ clip }: { clip: keyof typeof practiceVideos }) {
     <details className="my-4 max-w-3xl rounded-lg border border-line px-4 print:hidden">
       <summary aria-label={`Watch: ${title}`} className="min-h-11 cursor-pointer py-2.5 font-semibold text-[#183247]">Watch</summary>
       <div className="space-y-3 pb-4">
-        <video aria-label={title} className="aspect-video w-full rounded bg-[#102b40]" controls playsInline preload="none" poster={`/videos/practice/${clip}.jpg`}>
+        <p id={`practice-video-${clip}-help`}>This clip has no audio. Read the description below for the actions and example wording.</p>
+        <video aria-label={title} aria-describedby={`practice-video-${clip}-help`} className="aspect-video w-full rounded bg-[#102b40]" controls playsInline preload="none" poster={`/videos/practice/${clip}.jpg`}>
           <source src={source} type="video/mp4" />
           <SourceLink href={source}>Open the video</SourceLink>
         </video>

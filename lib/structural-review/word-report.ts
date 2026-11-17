@@ -15,5 +15,5 @@ export async function structuralWordBlob(draft:StructuralDraft):Promise<Blob> {
     return paragraph(block.text,block.kind==='note');
   });
   const title=blocks[0].kind==='title'?blocks[0].text:'Structural analysis record';
-  return Packer.toBlob(new Document({creator:'One DSD People, Access and Culture',title,styles:{default:{document:{run:{font:'Calibri',size:23,color:'183149'},paragraph:{spacing:{line:300}}}}},sections:[{properties:{page:{margin:{top:1000,bottom:1000,left:900,right:900}}},children}]}));
+  return Packer.toBlob(new Document({creator:'One DSD People, Access and Culture',title,subject:"Structural analysis record",styles:{default:{document:{run:{font:'Calibri',size:23,color:'183149',language:{value:'en-US'}},paragraph:{spacing:{line:300}}}}},sections:[{properties:{page:{margin:{top:1000,bottom:1000,left:900,right:900}}},children}]}));
 }

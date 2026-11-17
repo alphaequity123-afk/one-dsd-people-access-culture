@@ -165,7 +165,7 @@ export function ResourceReleaseClient({
       </p>
 
       {editHref ? <p><Link href={editHref}>Prepare a resource draft</Link></p> : null}
-      {message ? <p className="notice" role="status">{message}</p> : null}
+      <p className={message ? "notice" : undefined} role="status" aria-live="polite">{busy ? "Saving the resource decision." : message}</p>
       {error ? <p className="error" role="alert">{error}</p> : null}
 
       {release.withdrawn ? (
@@ -230,6 +230,7 @@ export function ResourceReleaseClient({
                 return (
                   <form
                     className="panel"
+                    aria-label={`${RESOURCE_REVIEW_LABELS[dimension]} review`}
                     key={`${dimension}-${current?.reviewId ?? "missing"}`}
                     onSubmit={(event) => saveReview(event, dimension)}
                   >
@@ -239,7 +240,7 @@ export function ResourceReleaseClient({
                       {current?.recordedAt ? `. Saved ${dateText(current.recordedAt)}.` : "."}
                     </p>
                     {current?.note ? <p className="text-sm">Latest note: {current.note}</p> : null}
-                    <fieldset disabled={!canReview || Boolean(busy)}><legend className="sr-only">Record this review</legend><div className="grid gap-4 md:grid-cols-2">
+                    <fieldset disabled={!canReview || Boolean(busy)}><legend className="sr-only">Record {RESOURCE_REVIEW_LABELS[dimension]} review</legend><div className="grid gap-4 md:grid-cols-2">
                       <label className="field">
                         <span>Decision</span>
                         <select name="decision" defaultValue={current?.status === "pending" ? "pass" : current?.status ?? "pass"}>

@@ -132,6 +132,7 @@ export default async function WaterCollectionPage({ searchParams }: { searchPara
         return section ? [{ href: `/minnesota-communities/${id}/profile#profile-${section.id}`, label: `${label} · ${section.heading}` }] : [];
       });
       const passage = stepReadAloud[index];
+      const SectionHeading = focusedStep ? "h2" : "h3";
 
       return <section id={`step-${number}`} key={step.title} className={styles.step} aria-labelledby={`step-title-${number}`}>
         <header>
@@ -143,14 +144,14 @@ export default async function WaterCollectionPage({ searchParams }: { searchPara
           <summary>Read and practice</summary>
           <p className={styles.stepIdea}>{step.idea}</p>
           <div className={styles.stepBody}>
-            <section aria-labelledby={`readings-${number}`}>
-              <h3 id={`readings-${number}`}>Read and connect</h3>
+            <section aria-labelledby={`readings-${number} step-title-${number}`}>
+              <SectionHeading className={styles.sectionHeading} id={`readings-${number}`}>Read and connect</SectionHeading>
               <p><Link href={moduleHref}>Original module · {courseModule.title}</Link></p>
               <ul>{[...readings, ...briefs, ...(available.toolkit ? step.tools ?? [] : [])].map(item =>
                 <li key={item.href}><Link href={item.href} prefetch={false}>{item.label}</Link></li>)}</ul>
             </section>
-            <section aria-labelledby={`apply-${number}`}>
-              <h3 id={`apply-${number}`}>Try it at North Crossing</h3>
+            <section aria-labelledby={`apply-${number} step-title-${number}`}>
+              <SectionHeading className={styles.sectionHeading} id={`apply-${number}`}>Try it at North Crossing</SectionHeading>
               <p>{step.caseUpdate}</p>
               {number === 1 && <PracticeVideo clip="north-crossing" />}
               <GeffenReadAloud text={passage.text} recordingSrc={recordings.get(passage.id)} label={step.title} />
@@ -161,7 +162,7 @@ export default async function WaterCollectionPage({ searchParams }: { searchPara
           </div>
           {lesson?.podcast ? <details className={styles.podcast}>
             <summary>Module podcast</summary>
-            <WaterLessonPodcast lesson={lesson} moduleTitle={courseModule.title} readingHref={moduleHref} />
+            <WaterLessonPodcast lesson={lesson} moduleTitle={courseModule.title} readingHref={moduleHref} headingLevel={focusedStep ? 2 : 3} />
           </details> : null}
         </details>
         {focusedStep ? <nav className={styles.actions} aria-label="Collection step navigation">

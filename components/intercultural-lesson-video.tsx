@@ -2,7 +2,8 @@
 import { SourceLink } from "@/components/app-link";
 
 
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
+import transcripts from '@/lib/content/intercultural-transcripts.json';
 import { FeaturedMediaPanel, mediaLength } from './featured-media-panel';
 
 // Isolated presentation candidate. Its parent must supply media only after a
@@ -28,18 +29,23 @@ export function validLessonMedia(id: string, media: LessonMedia | undefined): me
 
 export default function InterculturalLessonVideo({ id, title, media }: { id: string; title: string; media?: LessonMedia }) {
   const video = useRef<HTMLVideoElement>(null);
+  const pendingSeek = useRef<number | null>(null);
+  const [message, setMessage] = useState('');
   if (!validLessonMedia(id, media)) return null;
+  const sections = (transcripts as Record<string, { title: string; text: string }[]>)[id] ?? [];
   return <FeaturedMediaPanel kind="video" length={mediaLength(media.durationSeconds)}><section aria-labelledby={`watch-${id}`}>
     <h2 id={`watch-${id}`}>Watch and work through the lesson</h2>
-    <video ref={video} controls preload="metadata" playsInline poster={media.poster} aria-label={title}
+    <video ref={video} onLoadedMetadata={() => { if (video.current && pendingSeek.current !== null) { video.current.currentTime = pendingSeek.current; pendingSeek.current = null; } }} onError={() => setMessage('This video could not be loaded. You can read its complete transcript below.')} controls preload="metadata" playsInline poster={media.poster} aria-label={title}
       onPlay={event => document.querySelectorAll<HTMLMediaElement>('audio,video').forEach(other => { if (other !== event.currentTarget) other.pause(); })}>
       <source src={media.video} type="video/mp4" />
       <track kind="captions" src={media.captions} srcLang="en" label="English" default />
       Your browser cannot play this video. The full transcript is below.
     </video>
+    <p role="status">{message}</p>
     <SourceLink href={media.video}>Open the video</SourceLink>{' | '}<SourceLink href={media.captions}>Download captions</SourceLink>
     <details><summary>Go to a chapter</summary><ol>{media.chapters.map((chapter, i) => <li key={`${i}-${chapter.title}`}>
-      <button type="button" onClick={() => { if (video.current) { video.current.currentTime = chapter.start; video.current.focus(); } }}>{chapter.title}</button>
+      <button type="button" onClick={() => { if (video.current) { if (video.current.readyState < 1) { pendingSeek.current = chapter.start; video.current.load(); } else video.current.currentTime = chapter.start; video.current.focus(); } }}>{chapter.title}</button>
     </li>)}</ol></details>
+    <details><summary>Read the complete transcript for {title}</summary>{sections.map(section => <section key={section.title}><h3>{section.title}</h3><p>{section.text}</p></section>)}</details>
   </section></FeaturedMediaPanel>;
 }

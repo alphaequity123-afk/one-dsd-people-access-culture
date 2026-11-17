@@ -52,9 +52,9 @@ export function analysisReportHtml(input:AnalysisReportInput):string {
 export async function analysisReportWord(input:AnalysisReportInput):Promise<Blob>{
  const {Document,Paragraph,TextRun,Packer,HeadingLevel}=await import('docx');
  const children=analysisReportBlocks(input).map(block=>new Paragraph({
-  heading:block.kind==='title'?HeadingLevel.TITLE:block.kind==='heading'?HeadingLevel.HEADING_2:undefined,
+  heading:block.kind==='title'?HeadingLevel.TITLE:block.kind==='heading'?HeadingLevel.HEADING_1:undefined,
   spacing:{after:180},indent:block.kind==='quote'?{left:360}:undefined,
   children:[...block.text.split('\n').flatMap((text,index)=>[new TextRun({text,break:index?1:0,italics:block.kind==='quote'})]),...(block.url?[new TextRun({text:block.url,break:1})]:[])],
  }));
- return Packer.toBlob(new Document({creator:'One DSD People, Access and Culture',title:input.request.title,styles:{default:{document:{run:{font:'Calibri',size:24,color:'183149'},paragraph:{spacing:{line:300}}}}},sections:[{children}]}));
+ return Packer.toBlob(new Document({creator:'One DSD People, Access and Culture',title:input.request.title,subject:"Working equity analysis",styles:{default:{document:{run:{font:'Calibri',size:24,color:'183149',language:{value:'en-US'}},paragraph:{spacing:{line:300}}}}},sections:[{children}]}));
 }

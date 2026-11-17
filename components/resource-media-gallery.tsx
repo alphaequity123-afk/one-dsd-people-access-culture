@@ -4,6 +4,7 @@ import { FeaturedMediaPanel } from "@/components/featured-media-panel";
 import { listResourceMedia, mediaAvailable, videoEmbedUrl, type ResourceMediaItem } from "@/lib/content/media";
 import { ResourceMediaManager } from "@/components/resource-media-manager";
 import { SyncedAudio } from "@/components/synced-audio";
+import { ResourceVideo } from "@/components/resource-video";
 import type { ReactNode } from "react";
 
 /**
@@ -47,6 +48,7 @@ export async function ResourceMediaGallery({ contentItemId, owner, visualFallbac
               {item.script && item.script.length > 0
                 ? <SyncedAudio src={item.mediaId ? `/api/media/${item.mediaId}` : item.externalUrl ?? ""} title={item.title || "Read aloud"} script={item.script} />
                 : <audio controls preload="none" src={item.mediaId ? `/api/media/${item.mediaId}` : item.externalUrl ?? undefined} style={{ width: "100%" }} aria-label={item.title || "Read aloud"} />}
+              {owner && !item.script?.length ? <p className="notice notice--warn">Accessibility review needed: no transcript is attached to this audio.</p> : null}
               {item.title ? <figcaption className="mt-1 text-sm">{item.title}</figcaption> : null}
               {owner ? <ResourceMediaManager contentItemId={contentItemId} deleteId={item.id} deleteTitle={item.title || item.fileName || "audio"} /> : null}
             </figure>
@@ -58,6 +60,8 @@ export async function ResourceMediaGallery({ contentItemId, owner, visualFallbac
         {visual.map((item) => (
           <figure key={item.id} className="m-0" style={{ position: "relative" }}>
             <MediaBody item={item} />
+            {item.kind === "video" && item.script?.length ? <details><summary>Read the transcript for {item.title || "this video"}</summary>{item.script.map((line, index) => <p key={index}>{line.text}</p>)}</details> : null}
+            {owner && item.kind === "video" && !item.script?.length ? <p className="notice notice--warn">Accessibility review needed: no timed transcript is attached to this video. Confirm its captions and any essential visual descriptions before sharing it.</p> : null}
             {item.title ? <figcaption className="mt-2 text-sm">{item.title}</figcaption> : null}
             {owner ? <ResourceMediaManager contentItemId={contentItemId} deleteId={item.id} deleteTitle={item.title || item.fileName || item.kind} /> : null}
           </figure>
@@ -83,7 +87,7 @@ function MediaBody({ item }: { item: ResourceMediaItem }) {
         </div>
       );
     }
-    if (fileUrl) return <video controls preload="none" src={fileUrl} style={{ width: "100%", borderRadius: 12, background: "#000" }} aria-label={item.title || "Video"} />;
+    if (fileUrl) return <ResourceVideo src={fileUrl} title={item.title || "Video"} script={item.script ?? []} />;
     if (item.externalUrl) return <SourceLink href={item.externalUrl} target="_blank" rel="noreferrer">Watch: {item.title || item.externalUrl}</SourceLink>;
   }
   if (item.kind === "document") {

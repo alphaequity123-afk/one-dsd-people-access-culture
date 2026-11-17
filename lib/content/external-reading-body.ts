@@ -28,6 +28,16 @@ export function readingSectionHtml(html: string, title: string, firstSection: bo
     heading.children = [];
     changed = true;
   }
+  // Published source wording and anchors stay intact. Only presentation levels
+  // change to place each independently opened section beneath the page's h1.
+  const stack: { sourceLevel: number; level: number }[] = [{ sourceLevel: 0, level: 1 }];
+  for (const item of findAll(node => /^h[1-6]$/.test(node.name), document.children)) {
+    const sourceLevel = Number(item.name.slice(1));
+    while (stack.length > 1 && stack[stack.length - 1].sourceLevel >= sourceLevel) stack.pop();
+    const level = Math.min(6, stack[stack.length - 1].level + 1);
+    if (item.name !== `h${level}`) { item.name = `h${level}`; changed = true; }
+    stack.push({ sourceLevel, level });
+  }
   return changed ? getOuterHTML(document) : linkedHtml;
 }
 export const loadExternalReading = cache(async (id: string): Promise<ReadingBody | null> => {

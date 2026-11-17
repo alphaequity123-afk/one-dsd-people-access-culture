@@ -64,6 +64,8 @@ export function AnalyzeWorkspace({ communities, analyzeUrl = "/api/analyze", upl
   useEffect(() => {
     const stored = readKept();
     if (!stored) return;
+    // Browser-kept work is restored after hydration so the server and first render agree.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setAnalyzed(stored);
     setKept(true);
     setInstrumentId(stored.request.instrumentId);
@@ -174,13 +176,13 @@ export function AnalyzeWorkspace({ communities, analyzeUrl = "/api/analyze", upl
     <section className={`${styles.step} ${styles.noPrint}`} aria-labelledby={`${id}-choose`}>
       <p className={styles.stepNumber}>Step 1</p>
       <h2 id={`${id}-choose`}>Choose what to analyze</h2>
-      <ul className={styles.instruments} role="radiogroup" aria-labelledby={`${id}-choose`}>
+      <div role="radiogroup" aria-labelledby={`${id}-choose`}><ul className={styles.instruments}>
         {INSTRUMENTS.map(item => <li key={item.id} className={styles.instrument}>
           <input type="radio" name={`${id}-instrument`} id={`${id}-instrument-${item.id}`} value={item.id} checked={instrumentId === item.id} disabled={busy} aria-describedby={`${id}-instrument-${item.id}-about`} onChange={() => setInstrumentId(item.id)} />
           <label htmlFor={`${id}-instrument-${item.id}`}>{item.title}</label>
           <p id={`${id}-instrument-${item.id}-about`}>{item.whatToUpload}</p>
         </li>)}
-      </ul>
+      </ul></div>
       <p className={styles.help} aria-live="polite">{instrument.intro}</p>
     </section>
 

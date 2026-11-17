@@ -14,11 +14,12 @@ it("creates a real workbook with editable table rows and source links, without e
   const workbook = new ExcelJS.Workbook();
   await workbook.xlsx.load(new Uint8Array(data).buffer);
   const sheet = workbook.getWorksheet("Discussion")!;
-  expect(sheet.getRow(1).getCell(1).text).toBe("Topic");
-  expect(sheet.getRow(2).getCell(2).text).toBe("What would make participation easier?");
-  expect(sheet.getRow(3).getCell(2).type).toBe(ExcelJS.ValueType.String);
-  expect(workbook.getWorksheet("Sources")!.getRow(2).getCell(2).hyperlink).toBe("https://example.org/learn");
-  expect(workbook.getWorksheet("Sources")!.rowCount).toBe(3);
+  expect(sheet.getRow(1).getCell(1).text).toContain("Community discussion plan");
+  expect(sheet.getRow(3).getCell(1).text).toBe("Topic");
+  expect(sheet.getRow(4).getCell(2).text).toBe("What would make participation easier?");
+  expect(sheet.getRow(5).getCell(2).type).toBe(ExcelJS.ValueType.String);
+  expect(workbook.getWorksheet("Sources")!.getRow(4).getCell(2).hyperlink).toBe("https://example.org/learn");
+  expect(workbook.getWorksheet("Sources")!.rowCount).toBe(5);
 });
 it("creates a Word document with the requested narrative, table and attribution", async () => {
   const data = await renderResourceDocument(workProductDocument({ ...work, format: "docx" }, "https://example.org"), "docx");

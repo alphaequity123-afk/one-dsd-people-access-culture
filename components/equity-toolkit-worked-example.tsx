@@ -15,7 +15,7 @@ export function EquityToolkitWorkedExample() {
     {media.src ? <FeaturedMediaPanel kind="video"><div className={styles.video}>
       <h3>{example.title}</h3>
       <p className={styles.runtime}>{media.runtime}</p>
-      <SequenceVideo className={styles.player} src={media.src} poster={media.poster} title={example.title} />
+      <SequenceVideo className={styles.player} src={media.src} poster={media.poster} title={example.title} captions={media.captions} transcript={media.transcript} />
       {media.transcript ? <p className={styles.runtime}><SourceLink href={media.transcript}>Read the video transcript</SourceLink></p> : null}
     </div></FeaturedMediaPanel> : null}
     <p className={styles.note}>Use these five questions to build confidence alongside the Equity Analysis Toolkit training. For an actual review, follow the official toolkit and the approval steps that apply to your work.</p>

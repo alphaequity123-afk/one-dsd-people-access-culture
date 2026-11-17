@@ -12,11 +12,11 @@ export function CulturalLeadershipStyles() {
   return <section aria-labelledby="leadership-approaches-title" className="space-y-5 border-t border-line pt-8">
     <h3 id="leadership-approaches-title" className="text-2xl font-semibold">Leadership approaches and the decisions they shape</h3>
     <p className="max-w-4xl leading-7">Leadership is part of cultural understanding and organizational change. Leaders, supervisors, managers and directors can use these approaches to examine their own decisions and responsibilities. These approaches describe ways people may lead; they are not labels, scores or a complete list. A person can use different approaches in different situations. Consider what is needed, who has authority, who can influence the decision, and what happens for the people affected.</p>
-    <aside aria-labelledby="leadership-pathway-callout" className="max-w-4xl rounded-xl border-2 border-line p-5 leading-7">
+    <section aria-labelledby="leadership-pathway-callout" className="max-w-4xl rounded-xl border-2 border-line p-5 leading-7">
       <h4 id="leadership-pathway-callout" className="text-xl font-semibold">Go deeper: {LEADERSHIP_PATHWAY_TITLE}</h4>
       <p className="mt-2">A full pathway with sixteen leadership approaches. For each one: how it resolves conflict, how it can promote or undermine equity and inclusion, strengths and risks, when to use it and when not to, practice and review. It adds seven more fictional scenarios, a worked conflict lifecycle, a practice rubric and a capstone.</p>
       <p className="mt-3"><Link className="font-semibold underline" href={LEADERSHIP_PATHWAY_HREF}>Start the leadership styles pathway</Link></p>
-    </aside>
+    </section>
     <div className="grid gap-4 md:grid-cols-2">{culturalLeadershipApproaches.map(approach => <details id={`leadership-style-${approach.id}`} key={approach.id} className="rounded-xl border border-line p-5">
       <summary className="cursor-pointer font-semibold">{approach.name}</summary>
       <LeadershipStyleVideo style={approach.id} title={approach.name} />

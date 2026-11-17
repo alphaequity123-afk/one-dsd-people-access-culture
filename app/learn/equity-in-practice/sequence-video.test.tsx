@@ -16,7 +16,7 @@ describe("tutorial video playback", () => {
     for (const pause of pauses) expect(pause).toHaveBeenCalledTimes(1);
     expect(ownPause).not.toHaveBeenCalled();
   });
-  it("retains manual controls, no autoplay and existing captions-in-picture behavior", () => {
+  it("retains manual controls, no autoplay and the user’s chosen caption mode", () => {
     vi.stubGlobal("React", React);
     const view = render(<SequenceVideo className="player" src="/video.mp4" poster="/poster.png" title="Worked example" />);
     const current = view.getByLabelText("Worked example video with captions") as HTMLVideoElement;
@@ -25,6 +25,16 @@ describe("tutorial video playback", () => {
     const play = vi.spyOn(current, "play").mockResolvedValue();
     expect(current.controls).toBe(true); expect(current.autoplay).toBe(false); expect(current.preload).toBe("metadata");
     fireEvent.loadedMetadata(current);
-    expect(track.mode).toBe("disabled"); expect(play).not.toHaveBeenCalled();
+    expect(track.mode).toBe("showing"); expect(play).not.toHaveBeenCalled();
+  });
+  it("attaches the matching caption file and provides a transcript fallback", () => {
+    vi.stubGlobal("React", React);
+    const view = render(<SequenceVideo className="player" src="/video.mp4" poster="/poster.png" title="Worked example" captions="/captions.vtt" transcript="/transcript.txt" />);
+    const track = view.container.querySelector("track");
+    expect(track?.getAttribute("src")).toBe("/captions.vtt");
+    expect(track?.getAttribute("kind")).toBe("captions");
+    expect(view.getByText("Read the transcript for Worked example").getAttribute("href")).toBe("/transcript.txt");
+    fireEvent.error(view.getByLabelText("Worked example video with captions"));
+    expect(view.getByRole("status").textContent).toContain("could not be loaded");
   });
 });

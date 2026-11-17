@@ -13,7 +13,7 @@ export function ExplainerVideo({ id, open = false }: { id: string; open?: boolea
   return <FeaturedMediaPanel kind="video"><details className="explainer-video" open={open}>
     <summary className="cursor-pointer font-semibold">Watch a short explainer: {video.title} <span className="font-normal text-muted">({video.runtime})</span></summary>
     <p className="mt-3">{video.summary}</p>
-    <SequenceVideo className="mt-3 block aspect-video w-full rounded-lg bg-white" src={video.src} poster={video.poster} title={video.title} />
+    <SequenceVideo className="mt-3 block aspect-video w-full rounded-lg bg-white" src={video.src} poster={video.poster} title={video.title} captions={video.captions} transcript={video.transcript} />
     <p className="mt-3 text-sm"><SourceLink href={video.transcript}>Read the transcript</SourceLink> · <SourceLink href={video.captions}>Download the captions</SourceLink></p>
   </details></FeaturedMediaPanel>;
 }

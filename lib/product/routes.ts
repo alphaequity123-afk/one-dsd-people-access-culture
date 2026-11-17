@@ -1,3 +1,4 @@
+import { canonicalDomainHref } from "./domain-hrefs";
 import { retiredFeatureDestination } from "@/lib/program/retired-features";
 const LEGACY_STAFF_ROUTE_PREFIXES = [
   { legacy: "/domains", canonical: "/areas" },
@@ -6,6 +7,8 @@ const LEGACY_STAFF_ROUTE_PREFIXES = [
 ] as const;
 
 export function canonicalStaffHref(href: string): string {
+  const domain = canonicalDomainHref(href);
+  if (domain !== href) return domain;
   const retired = retiredFeatureDestination(href);
   if (retired) return retired;
   if (href === "/guided-start") return "/start";

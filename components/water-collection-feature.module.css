@@ -45,3 +45,7 @@
   .photoFeature { grid-template-columns: 1fr 1fr; align-items: center; gap: 28px; }
   .photoFeature img { aspect-ratio: 4/3; }
 }
+
+/* Preserve the navy filled control against the site-wide link color. */
+:global(.od.dsd-home) .photoFeature a:global(.pilot-primary),
+:global(.od.dsd-home) .photoFeature a:global(.pilot-primary):hover { color: #fff; }

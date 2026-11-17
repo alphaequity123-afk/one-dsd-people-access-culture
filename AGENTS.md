@@ -25,3 +25,7 @@ Ask's primary function is evidence-based inference and synthesis across relevant
 ## Source republication
 
 The program owner chose full in-app copies only for verified public-domain or openly licensed content. Keep other working original links. An accessible website or government domain alone is not an approval for its images, guest material, or third-party publications. Record the specific source, license evidence, attribution, and reviewed content identity in `config/source-republication.json`. Preserve substantive text and source credits in converted readings. If a page cannot be reproduced completely, retain its original destination; do not replace it with an empty or partial reading. Confirmed missing pages are excluded from featured resources.
+
+## Application accessibility
+
+The owner requires application-wide accessibility for this internal staff tool. Follow `docs/ACCESSIBILITY-STANDARD.md` for shared interfaces, Ask, learning, practice, media and document exports. Preserve approved branding and voice. Test meaningful keyboard and assistive-technology behavior; never infer full conformance from automated checks alone.
