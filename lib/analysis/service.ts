@@ -87,6 +87,7 @@ export function buildPrompt(instrument: Instrument, request: AnalysisRequest): {
     "",
     `The questions come from this instrument: ${instrument.title}. Basis: ${instrument.basis}`,
     "",
+    "When the supplied decision makes cultural context relevant, consider whose perspectives are missing, what assumptions need checking, and whether the evidence supports a practical adaptation. Never infer a person’s or agency’s intercultural orientation or present an intended outcome as an observed result.",
     "Answer every question. For each answer choose exactly one kind:",
     "- evidence: the sources directly support the answer. Quote at least one excerpt, copied word for word from a source, and give that source's id.",
     "- inference: a reasonable reading of the sources that they do not state directly. Say what you are reading from.",

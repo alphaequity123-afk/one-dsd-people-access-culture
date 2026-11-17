@@ -1,3 +1,4 @@
+import { ResourceLearningOpportunity } from "@/components/resource-learning-opportunity";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { redirect } from "next/navigation";
@@ -55,6 +56,7 @@ export default async function SourceReadingPage({ params, searchParams }: Props)
     </nav> : null}
     {notes.length ? <details className="pilot-supporting"><summary>Notes from One DSD</summary><div className="pilot-supporting-body space-y-4">{notes.map(note => <p key={note}>{note}</p>)}</div></details> : null}
     {citations.length ? <details className="pilot-supporting"><summary>Where this source is used</summary><div className="pilot-supporting-body"><ul className="pilot-topic-rows">{citations.map(citation => <li key={citation.route}><Link href={citation.route}>{citation.resourceTitle}</Link></li>)}</ul></div></details> : null}
+    <ResourceLearningOpportunity kind="reading" resourceId={entry.id} title={reading.title} />
     <footer className="source-reading-footer">{reading.attribution ? <p>{reading.attribution}{licenseHref ? <> <a href={licenseHref}>Use and attribution</a></> : null}</p> : null}<p>Source accessed {new Intl.DateTimeFormat("en-US", {month:"long",day:"numeric",year:"numeric",timeZone:"America/Chicago"}).format(new Date(reading.checkedAt))}.</p></footer>
   </article>;
 }

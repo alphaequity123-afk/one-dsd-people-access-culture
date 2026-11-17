@@ -1,0 +1,6 @@
+/** Program owner direction, not a claim that an assessment or outcome has been achieved. */
+export const PROGRAM_PURPOSE = {
+  outcome: "Help staff across the Department of Human Services build and apply cultural understanding so their everyday decisions, communication, workplace relationships, programs and services become more responsive to the people affected.",
+  development: "Support a developmental direction toward acceptance and adaptation through reflection, perspective-taking, practice, application and learning from effects. Do not infer, assign or record an intercultural orientation for a person or the agency; a learning activity does not establish cultural change.",
+  askGuidance: "For relevant work, help the reader connect cultural understanding to an actual decision or interaction: examine assumptions, seek the perspectives of people affected, consider practical adaptations and reflect on their effects. A group description does not define an individual. Support a developmental direction toward acceptance and adaptation without diagnosing, scoring or assigning an orientation to any person or the agency. Keep the answer responsive to the question; do not impose a cultural lesson on unrelated work. Respect sources, privacy, authority and human decisions.",
+} as const;

@@ -1,3 +1,5 @@
+import { AskFeedbackPanel } from "@/components/ask-feedback-panel";
+import { communityAskHref } from "@/lib/learning/community-ask";
 
 import { SourceLink } from "@/components/app-link";
 import Link from "@/components/app-link";
@@ -111,13 +113,14 @@ export async function CommunityDesignPage({ id, part }: { id: string; part?: str
     {Object.entries({ "What to ask": b.level1.whatToAsk, "Access considerations": b.level1.accessChecks, "Who to involve": b.level1.whoToInvolve, "Assumptions to examine": b.level1.whatNotToAssume }).map(([heading, items]) => <details key={heading}><summary>{heading}</summary><div><ul>{items.map((item, index) => <li key={index}>{item}</li>)}</ul></div></details>)}
   </section> : null;
   const links = <section id="community-connections"><h2>Continue the connection</h2>
+    {!native ? <AskFeedbackPanel kind="community" practiceId={`${id}${part ? `:${part}` : ""}`} /> : null}
     <ul className="community-link-list">
       {b?.relatedPathIds.map(id => getPath(id)).filter(path => path !== undefined).map(path => <li key={path.id}><Link href={`/paths/${path.id}`}>{path.title}</Link></li>)}
       <li><Link href="/learn/equity-toolkit">Equity Analysis Toolkit</Link></li>
       <li><Link href="/community-outreach">Community Outreach and Engagement</Link></li>
       <li><Link href="/learn/community-connections">Community engagement and connections</Link></li>
       <li><Link href="/learn">Learning and resources</Link></li>
-      <li><Link href="/ask">Ask a question</Link></li>
+      <li><Link href={communityAskHref(id, native, part)}>Ask a question</Link></li>
     </ul>
     {culturalIntelligenceAvailable ? <p><Link href="/learn/cultural-intelligence">Explore the Cultural Intelligence collection</Link></p> : null}
     {suggestedReadingFor(id).length ? <><h3>Suggested reading</h3><p>Two books chosen to deepen your understanding of this community, with reading notes, key ideas and questions to discuss with your team.</p><ul className="community-link-list">{suggestedReadingFor(id).map(book => <li key={book.id}><Link href={`/learn/readings/${book.id}`}>{book.title}</Link> <span>· {book.authors}</span></li>)}</ul></> : null}

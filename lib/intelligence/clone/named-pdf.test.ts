@@ -153,6 +153,8 @@ describe("named original PDF grounding", () => {
     expect(f.complete).toHaveBeenCalledOnce();
     expect(f.research).not.toHaveBeenCalled();
     expect(writerSystem).toMatch(/use only the supplied application sources/i);
+    expect(writerSystem).toMatch(/examine assumptions, seek the perspectives of people affected/i);
+    expect(writerSystem).toMatch(/without diagnosing, scoring or assigning an orientation/i);
     expect(writerSystem).not.toMatch(/use your general knowledge and reasoning/i);
     expect(writerSystem).not.toMatch(/give a useful general explanation/i);
     expect(payload.answerPreference).toMatch(/only the supplied application sources/i);

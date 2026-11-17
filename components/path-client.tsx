@@ -5,7 +5,9 @@ import { SourceLink } from "@/components/app-link";
 import Link from "@/components/app-link";
 import { workOriginForPath, withWorkOrigin, type WorkOrigin } from "@/lib/product/work-origin";
 import { readPracticeValues, practiceNotesText } from "@/lib/client/practice-export";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { AskReviewHandoff } from "@/components/ask-review-handoff";
+import { practiceReturnKey } from "@/lib/learning/practice-review";
 import { Field, Notice } from "@/components/ui";
 import type { GraduationPath, PathStepKey } from "@/lib/content/paths";
 import { selfCheck, type ArtifactValues, type SelfCheckResult } from "@/lib/intelligence/agents/graduation";
@@ -43,6 +45,20 @@ export function PathClient({ path, intakeEnabled, copy, contract = "", origin: i
   const progress: Progress = storedProgress && typeof storedProgress === "object" && !Array.isArray(storedProgress)
     ? Object.fromEntries(Object.entries(storedProgress).filter(([key,value]) => (key === "updatedAt" && typeof value === "string") || ((key === "complete" || path.steps.some(step=>step.key===key)) && typeof value === "boolean"))) : {};
   const values = draft ?? restored.values;
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+    try {
+      const key = practiceReturnKey(path.id); const raw = sessionStorage.getItem(key); if (!raw) return;
+      const saved = JSON.parse(raw) as { values?: unknown; draftSource?: unknown };
+      const parsed = readPracticeValues(saved.values, path);
+      if (!parsed.needsAttention) { setDraft(parsed.values); setTransferNotice("Your practice notes are back in this tab. Your saved copy was not replaced."); }
+      const source = PracticeArtifactSchema.safeParse(saved.draftSource);
+      if (source.success && source.data.pathId === path.id && source.data.context === context) setDraftSource(source.data);
+      sessionStorage.removeItem(key);
+    } catch { /* Saved practice notes remain available as before. */ }
+    }, 0);
+    return () => window.clearTimeout(timer);
+  }, [path, context]);
   const [exportNotice, setExportNotice] = useState("");
   const [manualCopy, setManualCopy] = useState(false);
   const pendingResult = PracticeArtifactSchema.safeParse(pending);
@@ -202,6 +218,7 @@ export function PathClient({ path, intakeEnabled, copy, contract = "", origin: i
           <button type="button" className="btn btn--light" onClick={()=>void copyNotes()}>Copy notes</button>
           <button type="button" className="btn btn--light" onClick={downloadNotes}>Download notes</button>
         </div>
+        <AskReviewHandoff practiceId={path.id} title={path.artifactTitle} notes={practiceNotesText(path,values,visibleSource)} hasNotes={Object.values(values).some(value => typeof value === "string" ? Boolean(value.trim()) : Array.isArray(value) && value.some(item => item.trim()))} returnState={{ values, draftSource }} />
         {exportNotice ? <p role="status" className="mt-2 text-sm">{exportNotice}</p> : null}
         {manualCopy ? <label className="mt-3 block">Your notes<textarea readOnly className="min-h-60 w-full" value={practiceNotesText(path,values,visibleSource)} onFocus={event=>event.currentTarget.select()} /></label> : null}
         {savedAt ? <p className="mt-2 text-sm text-muted">Notes saved on this device.</p> : draft ? <p className="mt-2 text-sm text-muted">{copyText(copy, "unsavedLabel")}</p> : null}

@@ -1,4 +1,5 @@
 import { WorkOriginLinks } from "@/components/work-origin-links";
+import { withLearningTrailForAsk } from "@/lib/product/ask-origin";
 import { workOriginForPath, withWorkOrigin, type WorkOriginInput } from "@/lib/product/work-origin";
 import type { Metadata } from "next";
 import Link from "@/components/app-link";
@@ -39,7 +40,8 @@ export default async function PathPage({ params, searchParams }: { params: Promi
   const shell = shellSurface.values;
   const intakeEnabled = consultationIntakeEnabled();
   const context = await requestedProductContext();
-  const origin = workOriginForPath(await searchParams ?? {}, p.id);
+  const incoming = await searchParams ?? {};
+  const origin = workOriginForPath(incoming, p.id);
   const domain = (origin.area ? getDomain(origin.area) : undefined) ?? domainForPath(p.id);
   const domainSurface = domain ? await prepareEditableSurface(domainSurfaceId(domain.id), { scope }) : undefined;
   return (
@@ -83,7 +85,7 @@ export default async function PathPage({ params, searchParams }: { params: Promi
                               context,
                               intakeEnabled,
                             );
-                            return <Link href={withWorkOrigin(action.href, origin)}>{action.label}</Link>;
+                            return <Link href={withLearningTrailForAsk(withWorkOrigin(action.href, origin), incoming)}>{action.label}</Link>;
                           })()}
                         </span>
                       ))}

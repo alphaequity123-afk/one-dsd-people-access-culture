@@ -1,3 +1,4 @@
+import { ResourceLearningOpportunity } from "@/components/resource-learning-opportunity";
 
 import { SourceLink } from "@/components/app-link";
 import { ResourceEvidence } from "@/components/source-evidence";
@@ -181,6 +182,7 @@ export default async function ResourcePage({ params, searchParams }: { params: P
           {relatedUnavailable ? <p role="status">Related reading is temporarily unavailable. You can continue exploring the Library.</p> : null}
         </details>
         <details className="my-6 border-t border-line py-4"><summary className="cursor-pointer font-semibold">About this resource</summary><dl className="mt-3 space-y-2"><div><dt className="font-semibold">Responsible team or person</dt><dd>{c.owner || "Not recorded"}</dd></div></dl><p className="mt-3">Check the original source for the decision in front of you.</p></details>
+        <ResourceLearningOpportunity kind="resource" resourceId={c.id} title={c.title} />
         <ResourceEvidence resourceType={["corpus_item","domain_corpus_item"]} resourceId={c.id} />
         <LearningJourneyLink scope={scope} resourceId={c.id} />
         {editorUnavailable ? <p className="notice notice--warn mt-6" role="status" data-resource-editor-unavailable="true">Editing controls for this resource could not be loaded right now. The published resource is unaffected. Reload the page to try again.</p> : null}

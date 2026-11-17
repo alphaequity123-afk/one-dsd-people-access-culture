@@ -1,3 +1,4 @@
+import { ResourceLearningOpportunity } from "@/components/resource-learning-opportunity";
 import styles from "../../learn/learning-family.module.css";
 import type { Metadata } from "next";
 import Link from "@/components/app-link";
@@ -39,6 +40,7 @@ export default async function PodcastPage({ params }: { params: Promise<{ id: st
     </header>
     <PublishedPodcast headingLevel={1} ownPage podcast={podcast} surface={surface} />
     <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this page</summary><ResourceDownloads kind="equity-review" id={`podcast~${podcast.id}`} noun="podcast chapters and transcript" /></details>
+    <ResourceLearningOpportunity kind="podcast" resourceId={podcast.id} title={stringValue(surface.values, "title")} />
     <section className="space-y-4 border-t border-line pt-8 print:hidden" aria-labelledby="podcast-related-title">
       <h2 id="podcast-related-title" className="text-2xl font-semibold">Related</h2>
       <ul className="list-disc space-y-3 pl-6">

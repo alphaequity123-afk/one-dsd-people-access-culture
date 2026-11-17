@@ -6,6 +6,8 @@ import { ANALYSIS_LIMITS, ANALYSIS_NOTICE, analysisRequestSchema, analysisRespon
 import { plainIssue } from "@/lib/analysis/issues";
 import { INSTRUMENTS, getInstrument } from "@/lib/analysis/instruments";
 import { SourceIntake } from "@/components/analysis/source-intake";
+import { AskReviewHandoff } from "@/components/ask-review-handoff";
+import { practiceReturnKey } from "@/lib/learning/practice-review";
 import { AnalysisResult, analysisResultText } from "./analysis-result";
 import styles from "./analyze.module.css";
 import { LTSS_RESOURCES } from "@/lib/consultant-toolkit/ltss";
@@ -77,16 +79,28 @@ export function AnalyzeWorkspace({ communities, analyzeUrl = "/api/analyze", upl
 
   useEffect(() => {
     const stored = readKept(storageKey);
-    if (!stored) return;
+    let returning: Kept | null = null;
+    if (toolkit) {
+      try {
+        const key = practiceReturnKey("equity-toolkit"); const raw = window.sessionStorage.getItem(key);
+        if (raw) {
+          const value = JSON.parse(raw) as { request?: unknown; result?: unknown };
+          const request = analysisRequestSchema.safeParse(value.request); const result = analysisResponseSchema.safeParse(value.result);
+          if (request.success && result.success) { returning = { request: request.data, result: result.data }; window.sessionStorage.removeItem(key); }
+        }
+      } catch { /* A saved browser copy, if any, remains available. */ }
+    }
+    const restored = returning ?? stored;
+    if (!restored) return;
     // Browser-kept work is restored after hydration so the server and first render agree.
     // eslint-disable-next-line react-hooks/set-state-in-effect
-    setAnalyzed(stored);
-    setKept(true);
-    setInstrumentId(stored.request.instrumentId);
-    setSources(stored.request.sources);
-    setContext(stored.request.context ?? "");
-    setCommunityId(stored.request.communityId ?? "");
-  }, [storageKey]);
+    setAnalyzed(restored);
+    setKept(Boolean(stored));
+    setInstrumentId(restored.request.instrumentId);
+    setSources(restored.request.sources);
+    setContext(restored.request.context ?? "");
+    setCommunityId(restored.request.communityId ?? "");
+  }, [storageKey, toolkit]);
 
   function settle(next: Kept) {
     setAnalyzed(next);
@@ -274,6 +288,7 @@ export function AnalyzeWorkspace({ communities, analyzeUrl = "/api/analyze", upl
     {analyzed ? <div ref={resultRef} tabIndex={-1} role="region" aria-label="Analysis result">
       <p className={styles.notice}>{ANALYSIS_NOTICE}</p>
       <AnalysisResult result={analyzed.result} instrument={analyzedInstrument} sources={analyzed.request.sources} />
+      {toolkit ? <AskReviewHandoff practiceId="equity-toolkit" title="Equity analysis" notes={analysisResultText(analyzed.result, analyzedInstrument, analyzed.request.sources)} hasNotes={!analyzed.result.unavailable} returnState={analyzed} /> : null}
       {toolkit ? <p className={styles.help}>Review the source passages and missing perspectives, then use the findings to identify actions, a responsible person and a review date. <Link href="/ask">Continue the discussion in Ask</Link> · <Link href="/learn/equity-toolkit">Return to toolkit learning</Link></p> : null}
       <section className={`${styles.step} ${styles.noPrint}`} aria-labelledby={`${id}-after`}>
         <h2 id={`${id}-after`}>Keep or share the result</h2>
