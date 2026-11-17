@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-11-17T15:34:35+00:00",
+  "snapshot": {
+    "period": "2023-01",
+    "ltss": 132290,
+    "hcbs": 120866
+  },
+  "sources": {
+    "demographics": {
+      "url": "https://mn.gov/dhs/assets/LTSS%20Program%20Demographics_tcm1053-631765.xlsx",
+      "sha256": "6fc2b433fed0128ded1326b7951a3fbcf23675d8e78941faf8eff71f180c03ed"
+    },
+    "performance": {
+      "url": "https://mn.gov/dhs/assets/LTSS-Performance-Measures_tcm1053-492103.xlsx",
+      "sha256": "d51e83692da4451ef6619f401a3f5c58fdf02846dbbee5fe0c3c9a52119a80de"
+    }
+  }
+}

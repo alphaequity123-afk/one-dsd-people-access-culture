@@ -9,6 +9,7 @@ import { SourceIntake } from "@/components/analysis/source-intake";
 import { AnalysisResult, analysisResultText } from "./analysis-result";
 import styles from "./analyze.module.css";
 import { LTSS_RESOURCES } from "@/lib/consultant-toolkit/ltss";
+import ltssData from "@/public/data/ltss/metadata.json";
 
 export type CommunityOption = { id: string; title: string };
 
@@ -183,14 +184,17 @@ export function AnalyzeWorkspace({ communities, analyzeUrl = "/api/analyze", upl
     setError("");
   }
 
+  const snapshotDate = new Date(`${ltssData.snapshot.period}-01T00:00:00Z`).toLocaleDateString("en-US", { month: "long", year: "numeric", timeZone: "UTC" });
+  const checkedDate = new Date(ltssData.checkedAt).toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric", timeZone: "UTC" });
+
   function addLtssSnapshot() {
     if (sources.length >= ANALYSIS_LIMITS.sources) { setError("Remove a source before adding the data."); return; }
-    if (sources.some(source => source.id === "ltss-statewide-2023")) { setError("The LTSS data example is already included."); return; }
+    if (sources.some(source => source.id === "ltss-statewide-snapshot")) { setError("The LTSS data example is already included."); return; }
     setSources([...sources, {
-      id: "ltss-statewide-2023",
-      title: "DHS LTSS demographics: statewide, January 2023 (historical example)",
-      text: "Source: Minnesota Department of Human Services LTSS Program Demographics workbook, Summary worksheet, downloaded November 17, 2026: https://mn.gov/dhs/assets/LTSS%20Program%20Demographics_tcm1053-631765.xlsx. Reporting month: January 2023. Geography: Statewide. Race summary: All Race/Ethnicities. Age summary: All Ages. Program population: Total LTSS Population. Number of people: 132,290. Program population: Total HCBS Population. Number of people: 120,866. These are historical counts of people receiving services, not scheduling requests, wait times, unmet need, or evidence of barriers. The figures alone do not establish differences in access or their causes.",
-      note: "Historical January 2023 snapshot, not current scheduling data. Confirm definitions and select a relevant geography and period before applying findings to a decision.",
+      id: "ltss-statewide-snapshot",
+      title: `DHS LTSS demographics: statewide, ${snapshotDate}`,
+      text: `Source: Minnesota Department of Human Services LTSS Program Demographics workbook, Summary worksheet, checked ${checkedDate}: ${ltssData.sources.demographics.url}. Reporting month: ${snapshotDate}. Geography: Statewide. Race summary: All Race/Ethnicities. Age summary: All Ages. Program population: Total LTSS Population. Number of people: ${ltssData.snapshot.ltss.toLocaleString("en-US")}. Program population: Total HCBS Population. Number of people: ${ltssData.snapshot.hcbs.toLocaleString("en-US")}. These are counts of people receiving services, not scheduling requests, wait times, unmet need, or evidence of barriers. The figures alone do not establish differences in access or their causes.`,
+      note: `${snapshotDate} statewide snapshot, not scheduling data. Confirm definitions and select a relevant geography and period before applying findings to a decision.`,
     }]);
     setError("");
   }
@@ -203,10 +207,10 @@ export function AnalyzeWorkspace({ communities, analyzeUrl = "/api/analyze", upl
       <p className={styles.help}>The example is a practice situation. It adds to your sources without replacing your work. It does not contain real scheduling results.</p>
       <h3>Long-term services and supports data</h3>
       <p>Use published data to understand who receives services. Add relevant rows or figures, including their measure, location, period and source. These data alone do not establish scheduling barriers or their causes.</p>
-      <button type="button" className={styles.secondary} disabled={busy} onClick={addLtssSnapshot}>Add historical statewide LTSS data</button>
-      <p className={styles.help}>January 2023: a public, statewide snapshot for context; it does not measure scheduling. Review the source and use more relevant or recent figures when available.</p>
-      <ul>{LTSS_RESOURCES.map(resource => <li key={resource.id}><a href={resource.url} target="_blank" rel="noreferrer">{resource.title}</a>{"downloadUrl" in resource ? <> · <a href={resource.downloadUrl}>Download data</a></> : null}</li>)}</ul>
-      <p className={styles.help}>The linked data are not automatically included. Use the button above to add the historical snapshot, or download the data and attach or paste a relevant selection with its context below. Large workbooks may need a smaller selection.</p>
+      <button type="button" className={styles.secondary} disabled={busy} onClick={addLtssSnapshot}>Add statewide LTSS data</button>
+      <p className={styles.help}>{snapshotDate}: a public, statewide snapshot for context; it does not measure scheduling. Source files checked {checkedDate} (UTC). The reporting period changes only when DHS publishes newer figures.</p>
+      <ul>{LTSS_RESOURCES.map(resource => <li key={resource.id}><a href={resource.url} target="_blank" rel="noreferrer">{resource.title}</a>{resource.id === "ltss-demographics" ? <> · <a href="/data/ltss/demographics.xlsx">Download checked data</a></> : resource.id === "ltss-performance" ? <> · <a href="/data/ltss/performance.xlsx">Download checked data</a></> : null}</li>)}</ul>
+      <p className={styles.help}>The linked data are not automatically included. Use the button above to add the statewide snapshot, or download the data and attach or paste a relevant selection with its context below. Large workbooks may need a smaller selection.</p>
     </section> : null}
     {!toolkit && <section className={`${styles.step} ${styles.noPrint}`} aria-labelledby={`${id}-choose`}>
       <p className={styles.stepNumber}>Step 1</p>
