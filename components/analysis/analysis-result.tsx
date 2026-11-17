@@ -9,7 +9,7 @@ export const KIND_LABELS: Record<AnswerKind, { label: string; meaning: string }>
   gap: { label: "Gap", meaning: "the material does not settle this" },
 };
 
-export type SourceTitle = { id: string; title: string };
+export type SourceTitle = { id: string; title: string; note?: string };
 
 function sourceTitle(sources: readonly SourceTitle[], id: string) {
   return sources.find(source => source.id === id)?.title ?? "Source";
@@ -68,6 +68,7 @@ export function AnalysisResult({ result, instrument, sources }: { result: Analys
       {counts.map(([kind, count]) => <li key={kind} className={styles.chip}>{KIND_LABELS[kind].label}: {count}</li>)}
     </ul>
     <p className={styles.help}>Evidence is quoted from the material. Inference is a conclusion drawn from the material. Gap means the material does not settle the question.</p>
+    {sources.some(source => source.note) ? <section className={styles.stage}><h3>Source reading notes</h3><ul className={styles.limitations}>{sources.filter(source => source.note).map(source => <li key={source.id}><strong>{source.title}:</strong> {source.note}</li>)}</ul></section> : null}
     {instrument.stages.map(stage => <section key={stage.id} className={styles.stage} aria-labelledby={`result-${stage.id}`}>
       <h3 id={`result-${stage.id}`}>{stage.title}</h3>
       {stage.description ? <p>{stage.description}</p> : null}
@@ -102,6 +103,7 @@ export function analysisResultText(result: AnalysisResponse, instrument: Instrum
     return lines.join("\n");
   }
   const answered = new Map(result.answers.map(answer => [answer.questionId, answer]));
+  for (const source of sources) if (source.note) lines.push(`Source reading note — ${source.title}: ${source.note}`, "");
   lines.push("Summary", result.summary, "", `Evidence: ${result.counts.evidence}. Inference: ${result.counts.inference}. Gap: ${result.counts.gap}.`, "");
   for (const stage of instrument.stages) {
     lines.push(stage.title.toUpperCase());

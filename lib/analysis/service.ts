@@ -92,6 +92,7 @@ export function buildPrompt(instrument: Instrument, request: AnalysisRequest): {
     "- inference: a reasonable reading of the sources that they do not state directly. Say what you are reading from.",
     "- gap: the sources do not settle it. Say in one sentence what is missing.",
     "",
+    "Treat automatically generated media descriptions or transcripts as extracted text, not as verified statements of what the original image or recording shows. Identify this limitation and do not treat a quoted extraction as proof of the original media. Distinguish a labelled practice scenario from actual data and do not present it as a real event. LTSS demographics alone do not establish scheduling barriers or causes.",
     "Rules for quotations: copy excerpts exactly as they appear in the source, including punctuation and capitalization. Keep each excerpt under 1,200 characters. Do not paraphrase inside an excerpt. Up to six excerpts per answer.",
     "",
     "Rules for writing:",

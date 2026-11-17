@@ -1,12 +1,14 @@
 "use client";
 
 import { useEffect, useId, useRef, useState } from "react";
+import Link from "@/components/app-link";
 import { ANALYSIS_LIMITS, ANALYSIS_NOTICE, analysisRequestSchema, analysisResponseSchema, type AnalysisRequest, type AnalysisResponse, type AnalysisSource, type InstrumentId } from "@/lib/analysis/contract";
 import { plainIssue } from "@/lib/analysis/issues";
 import { INSTRUMENTS, getInstrument } from "@/lib/analysis/instruments";
 import { SourceIntake } from "@/components/analysis/source-intake";
 import { AnalysisResult, analysisResultText } from "./analysis-result";
 import styles from "./analyze.module.css";
+import { LTSS_RESOURCES } from "@/lib/consultant-toolkit/ltss";
 
 export type CommunityOption = { id: string; title: string };
 
@@ -22,9 +24,9 @@ const STAFF_WRITE_CLOSED_CODE = "staff_browse_download_only";
 
 type Kept = { request: AnalysisRequest; result: AnalysisResponse };
 
-function readKept(): Kept | null {
+function readKept(key: string): Kept | null {
   try {
-    const raw = window.localStorage.getItem(KEEP_KEY);
+    const raw = window.localStorage.getItem(key);
     if (!raw) return null;
     const parsed = JSON.parse(raw) as { request?: unknown; result?: unknown };
     const request = analysisRequestSchema.safeParse(parsed.request);
@@ -33,10 +35,10 @@ function readKept(): Kept | null {
   } catch { return null; }
 }
 
-function writeKept(kept: Kept | null): boolean {
+function writeKept(kept: Kept | null, key: string): boolean {
   try {
-    if (kept) window.localStorage.setItem(KEEP_KEY, JSON.stringify(kept));
-    else window.localStorage.removeItem(KEEP_KEY);
+    if (kept) window.localStorage.setItem(key, JSON.stringify(kept));
+    else window.localStorage.removeItem(key);
     return true;
   } catch { return false; }
 }
@@ -46,9 +48,10 @@ function unavailableResult(instrumentId: InstrumentId, reason: string): Analysis
   return { instrumentId, summary: "", answers: [], limitations: [], nextSteps: [], counts: { evidence: 0, inference: 0, gap: 0 }, unavailable: true, unavailableReason: reason, notice: ANALYSIS_NOTICE };
 }
 
-export function AnalyzeWorkspace({ communities, analyzeUrl = "/api/analyze", uploadUrl }: { communities: readonly CommunityOption[]; analyzeUrl?: string; uploadUrl?: string }) {
+export function AnalyzeWorkspace({ communities, analyzeUrl = "/api/analyze", uploadUrl, toolkit = false }: { communities: readonly CommunityOption[]; analyzeUrl?: string; uploadUrl?: string; toolkit?: boolean }) {
+  const storageKey = toolkit ? "one-dhs-equity-toolkit-analysis-v1" : KEEP_KEY;
   const id = useId();
-  const [instrumentId, setInstrumentId] = useState<InstrumentId>(INSTRUMENTS[0].id);
+  const [instrumentId, setInstrumentId] = useState<InstrumentId>(toolkit ? "equity-analysis" : INSTRUMENTS[0].id);
   const [sources, setSources] = useState<AnalysisSource[]>([]);
   const [context, setContext] = useState("");
   const [communityId, setCommunityId] = useState("");
@@ -62,7 +65,7 @@ export function AnalyzeWorkspace({ communities, analyzeUrl = "/api/analyze", upl
   const instrument = getInstrument(instrumentId) ?? INSTRUMENTS[0];
 
   useEffect(() => {
-    const stored = readKept();
+    const stored = readKept(storageKey);
     if (!stored) return;
     // Browser-kept work is restored after hydration so the server and first render agree.
     // eslint-disable-next-line react-hooks/set-state-in-effect
@@ -72,11 +75,11 @@ export function AnalyzeWorkspace({ communities, analyzeUrl = "/api/analyze", upl
     setSources(stored.request.sources);
     setContext(stored.request.context ?? "");
     setCommunityId(stored.request.communityId ?? "");
-  }, []);
+  }, [storageKey]);
 
   function settle(next: Kept) {
     setAnalyzed(next);
-    if (kept && !writeKept(next)) {
+    if (kept && !writeKept(next, storageKey)) {
       setKept(false);
       setError("The new result could not be saved. An earlier saved copy may remain in this browser profile. Keep this page open to copy the new result, or use Clear to remove the saved copy.");
     }
@@ -131,7 +134,7 @@ export function AnalyzeWorkspace({ communities, analyzeUrl = "/api/analyze", upl
   }
 
   function clear() {
-    if (!writeKept(null)) {
+    if (!writeKept(null, storageKey)) {
       setError("This browser could not remove the saved copy. Your current material is still shown; try Clear again before leaving.");
       return;
     }
@@ -146,12 +149,12 @@ export function AnalyzeWorkspace({ communities, analyzeUrl = "/api/analyze", upl
 
   function keep() {
     if (!analyzed) return;
-    if (writeKept(analyzed)) { setKept(true); setError(""); }
+    if (writeKept(analyzed, storageKey)) { setKept(true); setError(""); }
     else setError("This browser did not allow the analysis to be kept.");
   }
 
   function forget() {
-    if (!writeKept(null)) {
+    if (!writeKept(null, storageKey)) {
       setError("This browser could not remove the saved copy. It may still be visible to others using this browser profile. Try Forget again.");
       return;
     }
@@ -172,8 +175,40 @@ export function AnalyzeWorkspace({ communities, analyzeUrl = "/api/analyze", upl
 
   const analyzedInstrument = analyzed ? getInstrument(analyzed.result.instrumentId) ?? instrument : instrument;
 
+  function addExample() {
+    const example: AnalysisSource = { id: `practice-scheduling-${Date.now()}`, title: "Practice situation: LTSS service scheduling", text: "Practice situation, not an actual DHS record: A team is considering changes to how people schedule home and community-based services. The current proposed schedule offers appointments during weekday business hours. The team wants to consider whether other appointment times or ways to schedule would better support people who rely on family assistance, interpreters, transportation, or support workers. The team has not yet reviewed scheduling requests, declined appointments, wait times, program requirements, staffing capacity, or feedback from people receiving services. No differences in access or outcomes have been established." };
+    if (sources.length >= ANALYSIS_LIMITS.sources) { setError("Remove a source before adding the example."); return; }
+    setSources([...sources, example]);
+    if (!context.trim()) setContext("How could a team assess whether proposed LTSS service scheduling options meet people's needs, and what evidence and perspectives are needed before deciding?");
+    setError("");
+  }
+
+  function addLtssSnapshot() {
+    if (sources.length >= ANALYSIS_LIMITS.sources) { setError("Remove a source before adding the data."); return; }
+    if (sources.some(source => source.id === "ltss-statewide-2023")) { setError("The LTSS data example is already included."); return; }
+    setSources([...sources, {
+      id: "ltss-statewide-2023",
+      title: "DHS LTSS demographics: statewide, January 2023 (historical example)",
+      text: "Source: Minnesota Department of Human Services LTSS Program Demographics workbook, Summary worksheet, downloaded November 17, 2026: https://mn.gov/dhs/assets/LTSS%20Program%20Demographics_tcm1053-631765.xlsx. Reporting month: January 2023. Geography: Statewide. Race summary: All Race/Ethnicities. Age summary: All Ages. Program population: Total LTSS Population. Number of people: 132,290. Program population: Total HCBS Population. Number of people: 120,866. These are historical counts of people receiving services, not scheduling requests, wait times, unmet need, or evidence of barriers. The figures alone do not establish differences in access or their causes.",
+      note: "Historical January 2023 snapshot, not current scheduling data. Confirm definitions and select a relevant geography and period before applying findings to a decision.",
+    }]);
+    setError("");
+  }
+
   return <div className={styles.workspace}>
-    <section className={`${styles.step} ${styles.noPrint}`} aria-labelledby={`${id}-choose`}>
+    {toolkit ? <section className={`${styles.step} ${styles.noPrint}`} aria-labelledby={`${id}-start`}>
+      <h2 id={`${id}-start`}>Start with a decision</h2>
+      <p>Bring a decision and the information you have. This initial scan follows the six DHS equity analysis steps: outcomes, data, community engagement, benefits and burdens, implementation, and accountability.</p>
+      <button type="button" className={styles.secondary} disabled={busy} onClick={addExample}>Add the service-scheduling example</button>
+      <p className={styles.help}>The example is a practice situation. It adds to your sources without replacing your work. It does not contain real scheduling results.</p>
+      <h3>Long-term services and supports data</h3>
+      <p>Use published data to understand who receives services. Add relevant rows or figures, including their measure, location, period and source. These data alone do not establish scheduling barriers or their causes.</p>
+      <button type="button" className={styles.secondary} disabled={busy} onClick={addLtssSnapshot}>Add historical statewide LTSS data</button>
+      <p className={styles.help}>January 2023: a public, statewide snapshot for context; it does not measure scheduling. Review the source and use more relevant or recent figures when available.</p>
+      <ul>{LTSS_RESOURCES.map(resource => <li key={resource.id}><a href={resource.url} target="_blank" rel="noreferrer">{resource.title}</a>{"downloadUrl" in resource ? <> · <a href={resource.downloadUrl}>Download data</a></> : null}</li>)}</ul>
+      <p className={styles.help}>The linked data are not automatically included. Use the button above to add the historical snapshot, or download the data and attach or paste a relevant selection with its context below. Large workbooks may need a smaller selection.</p>
+    </section> : null}
+    {!toolkit && <section className={`${styles.step} ${styles.noPrint}`} aria-labelledby={`${id}-choose`}>
       <p className={styles.stepNumber}>Step 1</p>
       <h2 id={`${id}-choose`}>Choose what to analyze</h2>
       <div role="radiogroup" aria-labelledby={`${id}-choose`}><ul className={styles.instruments}>
@@ -184,17 +219,17 @@ export function AnalyzeWorkspace({ communities, analyzeUrl = "/api/analyze", upl
         </li>)}
       </ul></div>
       <p className={styles.help} aria-live="polite">{instrument.intro}</p>
-    </section>
+    </section>}
 
     <section className={`${styles.step} ${styles.noPrint}`} aria-labelledby={`${id}-material`}>
-      <p className={styles.stepNumber}>Step 2</p>
+      <p className={styles.stepNumber}>{toolkit ? "Step 1" : "Step 2"}</p>
       <h2 id={`${id}-material`}>Bring in the material</h2>
-      <p className={styles.privacy}>{PRIVACY_LINE}</p>
-      <SourceIntake sources={sources} onChange={setSources} disabled={busy} uploadUrl={uploadUrl} maxSources={ANALYSIS_LIMITS.sources} />
+      <p className={styles.privacy}>{toolkit ? "Use public or appropriately de-identified material approved for this purpose. Leave out names, case details and other confidential information." : PRIVACY_LINE}</p>
+      <SourceIntake sources={sources} onChange={setSources} disabled={busy} uploadUrl={toolkit ? "/api/ask-attachment" : uploadUrl} multimedia={toolkit} maxSources={ANALYSIS_LIMITS.sources} />
     </section>
 
     <section className={`${styles.step} ${styles.noPrint}`} aria-labelledby={`${id}-question`}>
-      <p className={styles.stepNumber}>Step 3</p>
+      <p className={styles.stepNumber}>{toolkit ? "Step 2" : "Step 3"}</p>
       <h2 id={`${id}-question`}>Your question</h2>
       <div className={styles.field}>
         <label htmlFor={`${id}-context`}>What do you want to know or decide? (optional)</label>
@@ -212,7 +247,7 @@ export function AnalyzeWorkspace({ communities, analyzeUrl = "/api/analyze", upl
     </section>
 
     <section className={`${styles.step} ${styles.noPrint}`} aria-labelledby={`${id}-run`}>
-      <p className={styles.stepNumber}>Step 4</p>
+      <p className={styles.stepNumber}>{toolkit ? "Step 3" : "Step 4"}</p>
       <h2 id={`${id}-run`}>Analyze</h2>
       <div className={styles.actions}>
         <button type="button" className={styles.primary} disabled={busy} onClick={() => void analyze()}>{busy ? "Analyzing" : "Analyze"}</button>
@@ -225,6 +260,7 @@ export function AnalyzeWorkspace({ communities, analyzeUrl = "/api/analyze", upl
     {analyzed ? <div ref={resultRef} tabIndex={-1} role="region" aria-label="Analysis result">
       <p className={styles.notice}>{ANALYSIS_NOTICE}</p>
       <AnalysisResult result={analyzed.result} instrument={analyzedInstrument} sources={analyzed.request.sources} />
+      {toolkit ? <p className={styles.help}>Review the source passages and missing perspectives, then use the findings to identify actions, a responsible person and a review date. <Link href="/ask">Continue the discussion in Ask</Link> · <Link href="/learn/equity-toolkit">Return to toolkit learning</Link></p> : null}
       <section className={`${styles.step} ${styles.noPrint}`} aria-labelledby={`${id}-after`}>
         <h2 id={`${id}-after`}>Keep or share the result</h2>
         <div className={styles.actions}>

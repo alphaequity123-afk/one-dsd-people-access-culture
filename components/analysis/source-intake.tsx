@@ -9,6 +9,7 @@ export type SourceIntakeProps = {
   disabled?: boolean;
   uploadUrl?: string;
   maxSources?: number;
+  multimedia?: boolean;
 };
 
 const ACCEPT = ".pdf,.docx,.pptx,.txt,.csv,.tsv,.xlsx";
@@ -26,7 +27,7 @@ function describeFailure(cause: unknown, fallback: string) {
   return message && message.length <= 300 ? message : fallback;
 }
 
-export function SourceIntake({ sources, onChange, disabled = false, uploadUrl = "/api/analyze/upload", maxSources = ANALYSIS_LIMITS.sources }: SourceIntakeProps) {
+export function SourceIntake({ sources, onChange, disabled = false, uploadUrl = "/api/analyze/upload", maxSources = ANALYSIS_LIMITS.sources, multimedia = false }: SourceIntakeProps) {
   const fileInput = useRef<HTMLInputElement>(null);
   const baseId = useId();
   const helpId = `${baseId}-help`;
@@ -62,7 +63,7 @@ export function SourceIntake({ sources, onChange, disabled = false, uploadUrl = 
     try {
       for (const file of Array.from(files)) {
         if (sources.length + added.length >= maxSources) { problems.push(`Use up to ${maxSources} sources at a time.`); break; }
-        if (!EXTENSION.test(file.name)) { problems.push(`${file.name}: choose a PDF, Word, PowerPoint, Excel, comma-separated, tab-separated or plain text file.`); continue; }
+        if (!(EXTENSION.test(file.name) || (multimedia && /\.(png|jpe?g|webp|mp3|wav|m4a|mp4|webm)$/i.test(file.name)))) { problems.push(`${file.name}: choose a supported file.`); continue; }
         if (!file.size || file.size > MAX_FILE_BYTES) { problems.push(`${file.name}: choose a nonempty file no larger than 20 MB.`); continue; }
         try {
           const form = new FormData();
@@ -72,7 +73,9 @@ export function SourceIntake({ sources, onChange, disabled = false, uploadUrl = 
           if (!response.ok) throw new Error(body.error || `${file.name} could not be read.`);
           const source = body.source;
           if (!source || typeof source.text !== "string" || typeof source.title !== "string" || typeof source.id !== "string") throw new Error(`${file.name} could not be read.`);
-          const note = typeof body.note === "string" && body.note ? body.note : typeof source.note === "string" && source.note ? source.note : undefined;
+          const originalNote = typeof body.note === "string" && body.note ? body.note : typeof source.note === "string" && source.note ? source.note : "";
+          const isMedia = multimedia && /\.(png|jpe?g|webp|mp3|wav|m4a|mp4|webm)$/i.test(file.name);
+          const note = [isMedia ? "This is an automatically extracted description or transcription, not the original media. Check it against the recording or image; quotations are from this extracted text." : "", originalNote].filter(Boolean).join(" ") || undefined;
           added.push({ id: /^[a-z0-9][a-z0-9-]{0,79}$/.test(source.id) ? source.id : newId("upload"), title: source.title.slice(0, ANALYSIS_LIMITS.titleCharacters) || file.name.slice(0, ANALYSIS_LIMITS.titleCharacters), text: source.text, ...(note ? { note: note.slice(0, 2000) } : {}) });
         } catch (cause) {
           problems.push(describeFailure(cause, `${file.name} could not be read.`));
@@ -94,14 +97,14 @@ export function SourceIntake({ sources, onChange, disabled = false, uploadUrl = 
         <span className={styles.muted}>{sources.length} of {maxSources} sources</span>
       </div>
       <div className={styles.actions}>
-        <input ref={fileInput} type="file" multiple accept={ACCEPT} className={styles.hidden} tabIndex={-1} aria-hidden="true" onChange={event => void upload(event.target.files)} />
+        <input ref={fileInput} type="file" multiple accept={multimedia ? `${ACCEPT},.png,.jpg,.jpeg,.webp,.mp3,.wav,.m4a,.mp4,.webm` : ACCEPT} className={styles.hidden} tabIndex={-1} aria-hidden="true" onChange={event => void upload(event.target.files)} />
         <button type="button" className={`${styles.button} ${styles.attach}`} disabled={locked || full} aria-describedby={helpId} onClick={() => fileInput.current?.click()}>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true"><path d="m8 12 7-7a4 4 0 0 1 6 6L10 22a6 6 0 0 1-8-8L13 3a2 2 0 0 1 3 3L5 17" /></svg>
-          Attach documents
+          {multimedia ? "Attach files" : "Attach documents"}
         </button>
         <button type="button" className={`${styles.button} ${styles.textButton}`} disabled={locked || full} aria-describedby={helpId} onClick={paste}>Paste a document</button>
       </div>
-      <p id={helpId} className={styles.help}>{INTAKE_HELP}</p>
+      <p id={helpId} className={styles.help}>{multimedia ? "Documents, spreadsheets, images, audio and video up to 20 MB each. Review extracted text before analysis. Audio and video review covers up to the first five minutes; video visuals are sampled." : INTAKE_HELP}</p>
       <p role="status" aria-live="polite" className={status ? styles.status : styles.silent}>{status}</p>
       <p role="alert" className={error ? styles.error : styles.silent}>{error}</p>
       {sources.length > 0 && (

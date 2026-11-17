@@ -20,6 +20,7 @@ export default function EquityReviewPage() {
     <section className="pilot-topic-themes" aria-labelledby="review-tools">
       <h2 id="review-tools">Tools for your review</h2>
       <ul className="pilot-topic-rows">
+        <li><Link href="/equity-review/toolkit">DHS Equity Analysis Toolkit<span>Work through a decision with your evidence and the people it affects.</span></Link></li>
         <li id="analyze-document"><Link href="/equity-review/analyze">Analyze a document<span>Use one of six methods to identify evidence, inferences, and gaps.</span></Link></li>
         <li id="working-group-plan"><Link href="/equity-review/working-group-plan">Plan a legislatively required working group<span>Turn a statutory charge into a work plan.</span></Link></li>
         <li id="director-toolkit"><Link href="/equity-review/director-toolkit">Equity Director toolkit<span>Find guidance and templates for leading equity work across DHS.</span></Link></li>
