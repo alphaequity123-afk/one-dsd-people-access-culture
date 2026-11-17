@@ -115,12 +115,12 @@ async function decodeRecording(bytes: Uint8Array, extension: string, video: bool
   }
 }
 
-export async function extractMediaUpload(bytes: Uint8Array, fileName: string, _mimeType: string): Promise<{text:string;note?:string}> {
+export async function extractMediaUpload(bytes: Uint8Array, fileName: string, _mimeType: string, role: 'staff' | 'owner' = 'owner'): Promise<{text:string;note?:string}> {
   void _mimeType;
   const kind = mediaKind(bytes,fileName);
-  const readiness = await analysisAvailability();
+  const readiness = await analysisAvailability(role);
   if (!readiness.analysisAvailable) throw new MediaUploadError("Image and recording analysis is unavailable in the current program settings. Text documents can still be added.");
-  const ctx = contextFor("ask_concierge","owner");
+  const ctx = contextFor("ask_concierge",role);
   const binding = resolveBinding(ctx.agent);
   const key = process.env.OPENAI_API_KEY?.trim();
   if (!key || binding.model.provider_id !== "openai") throw new MediaUploadError("The image and recording connection is unavailable. Upload a text excerpt instead.");

@@ -11,11 +11,11 @@ import { autonomyRank } from "@/lib/intelligence/types";
 
 export class AnalysisUnavailable extends Error {}
 
-async function analysisReadiness() {
+async function analysisReadiness(role: 'staff' | 'owner' = 'owner') {
   // Loading policy also applies the owner's stored flag overrides. Resolve the
   // binding only afterward so the first request sees the current settings.
   const policy = await getPolicy();
-  const context = contextFor("ask_concierge", "owner");
+  const context = contextFor("ask_concierge", role);
   const binding = resolveBinding(context.agent);
   const tool = getTool("answer.structured_draft");
   const environment = process.env.VERCEL_ENV === "preview" ? "preview"
@@ -23,7 +23,7 @@ async function analysisReadiness() {
   const permitted = agentAllowed(context.agent, policy).ok
     && Boolean(tool?.enabled)
     && context.agent.tools_allowlist.includes("answer.structured_draft")
-    && context.agent.scope.roles.includes("owner")
+    && context.agent.scope.roles.includes(role)
     && context.agent.scope.environments.includes(environment)
     && Boolean(tool && autonomyRank(effectiveCeiling(context.agent, policy)) >= autonomyRank(tool.min_autonomy));
   const unavailableReason = !permitted
@@ -34,8 +34,8 @@ async function analysisReadiness() {
   return { context, binding, available: permitted && binding.generative, unavailableReason };
 }
 
-export async function analysisAvailability() {
-  const readiness = await analysisReadiness();
+export async function analysisAvailability(role: 'staff' | 'owner' = 'owner') {
+  const readiness = await analysisReadiness(role);
   const research = await governedResearchAvailability("owner");
   return { analysisAvailable: readiness.available, analysisUnavailableReason: readiness.unavailableReason, researchAvailable: research.enabled,
     saving: "Drafts are saved only when you choose browser saving or download a copy. No shared analysis record is created." };
