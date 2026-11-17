@@ -17,7 +17,7 @@ function finish(text: string, note: string): ExtractedUpload {
 }
 
 /** Validate and actually decompress every ZIP entry under a shared limit before ExcelJS reads it. */
-async function checkWorkbook(bytes: Uint8Array) {
+export async function checkWorkbook(bytes: Uint8Array) {
   await new Promise<void>((resolve, reject) => {
     let archive: ZipFile | undefined;
     let ended = false, expanded = 0;

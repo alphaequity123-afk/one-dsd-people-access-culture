@@ -9,7 +9,7 @@ import { SourceIntake } from "@/components/analysis/source-intake";
 import { AnalysisResult, analysisResultText } from "./analysis-result";
 import styles from "./analyze.module.css";
 import { LTSS_RESOURCES } from "@/lib/consultant-toolkit/ltss";
-import ltssData from "@/public/data/ltss/metadata.json";
+import bundledLtssData from "@/public/data/ltss/metadata.json";
 
 export type CommunityOption = { id: string; title: string };
 
@@ -61,9 +61,19 @@ export function AnalyzeWorkspace({ communities, analyzeUrl = "/api/analyze", upl
   const [analyzed, setAnalyzed] = useState<Kept | null>(null);
   const [kept, setKept] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [ltssData, setLtssData] = useState(bundledLtssData);
   const resultRef = useRef<HTMLDivElement>(null);
   const options = communities.filter(community => !EXCLUDED_COMMUNITY_IDS.has(community.id));
   const instrument = getInstrument(instrumentId) ?? INSTRUMENTS[0];
+
+  useEffect(() => {
+    if (!toolkit) return;
+    const controller = new AbortController();
+    void fetch("/api/ltss", { signal: controller.signal }).then(response => response.ok ? response.json() : null).then(data => {
+      if (data && typeof data.checkedAt === "string" && /^\d{4}-\d{2}$/.test(data.snapshot?.period) && Number.isSafeInteger(data.snapshot?.ltss) && Number.isSafeInteger(data.snapshot?.hcbs) && data.sources?.demographics?.url === bundledLtssData.sources.demographics.url && data.sources?.performance?.url === bundledLtssData.sources.performance.url) setLtssData(data);
+    }).catch(() => {});
+    return () => controller.abort();
+  }, [toolkit]);
 
   useEffect(() => {
     const stored = readKept(storageKey);
@@ -209,7 +219,7 @@ export function AnalyzeWorkspace({ communities, analyzeUrl = "/api/analyze", upl
       <p>Use published data to understand who receives services. Add relevant rows or figures, including their measure, location, period and source. These data alone do not establish scheduling barriers or their causes.</p>
       <button type="button" className={styles.secondary} disabled={busy} onClick={addLtssSnapshot}>Add statewide LTSS data</button>
       <p className={styles.help}>{snapshotDate}: a public, statewide snapshot for context; it does not measure scheduling. Source files checked {checkedDate} (UTC). The reporting period changes only when DHS publishes newer figures.</p>
-      <ul>{LTSS_RESOURCES.map(resource => <li key={resource.id}><a href={resource.url} target="_blank" rel="noreferrer">{resource.title}</a>{resource.id === "ltss-demographics" ? <> · <a href="/data/ltss/demographics.xlsx">Download checked data</a></> : resource.id === "ltss-performance" ? <> · <a href="/data/ltss/performance.xlsx">Download checked data</a></> : null}</li>)}</ul>
+      <ul>{LTSS_RESOURCES.map(resource => <li key={resource.id}><a href={resource.url} target="_blank" rel="noreferrer">{resource.title}</a>{resource.id === "ltss-demographics" ? <> · <a href={ltssData.sources.demographics.url}>Download DHS data</a></> : resource.id === "ltss-performance" ? <> · <a href={ltssData.sources.performance.url}>Download DHS data</a></> : null}</li>)}</ul>
       <p className={styles.help}>The linked data are not automatically included. Use the button above to add the statewide snapshot, or download the data and attach or paste a relevant selection with its context below. Large workbooks may need a smaller selection.</p>
     </section> : null}
     {!toolkit && <section className={`${styles.step} ${styles.noPrint}`} aria-labelledby={`${id}-choose`}>

@@ -29,8 +29,9 @@ it("adds the practice situation without replacing staff data, and submits the eq
   expect(screen.getByText(/My scheduling data: A staff source/)).toBeTruthy();
   expect(screen.getByText(/Practice situation, not an actual DHS record/)).toBeTruthy();
   fireEvent.click(screen.getByRole("button", { name: "Analyze" }));
-  await waitFor(() => expect(request).toHaveBeenCalled());
-  const body = JSON.parse(request.mock.calls[0][1]?.body as string);
+  await waitFor(() => expect(request.mock.calls.some(call => call[0] === "/api/analyze")).toBe(true));
+  const analysisCall = request.mock.calls.find(call => call[0] === "/api/analyze");
+  const body = JSON.parse(analysisCall?.[1]?.body as string);
   expect(body.instrumentId).toBe("equity-analysis");
   expect(body.sources).toHaveLength(3);
   expect(body.sources[2].text).toContain(ltssData.snapshot.ltss.toLocaleString("en-US"));

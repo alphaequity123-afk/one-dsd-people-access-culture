@@ -3,28 +3,14 @@ on:
   schedule:
     - cron: '15 9 1 * *'
   workflow_dispatch:
-permissions:
-  contents: write
+permissions: {}
 concurrency:
   group: refresh-public-ltss
   cancel-in-progress: false
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - run: python -m pip install openpyxl==3.1.5
-      - run: python -m unittest discover -s scripts/ltss -p "*_test.py"
-      - run: python scripts/ltss/refresh.py
-      - name: Publish validated data through the normal release branch
-        run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add public/data/ltss/demographics.xlsx public/data/ltss/performance.xlsx public/data/ltss/metadata.json
-          if git diff --cached --quiet; then exit 0; fi
-          git commit -m 'Refresh public LTSS data'
-          git push origin HEAD:main
+      - name: Check the DHS data and refresh the application cache
+        run: curl --fail --silent --show-error --retry 2 --max-time 180 https://web-production-50d04b26.up.railway.app/api/ltss --output /dev/null
