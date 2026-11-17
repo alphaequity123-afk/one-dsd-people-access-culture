@@ -1,0 +1,20 @@
+import { afterEach, expect, it, vi } from "vitest";
+import { cleanup, fireEvent, render } from "@testing-library/react";
+import { MeasurementWorksheet } from "./measurement-worksheet";
+vi.mock("@/components/multimedia/measurement-evidence-example", () => ({ MeasurementEvidenceExample: () => null }));
+afterEach(cleanup);
+it("loads editable fictional answers without replacing existing notes and includes them in copied notes", async () => {
+ const writeText = vi.fn().mockResolvedValue(undefined);
+ Object.defineProperty(navigator, "clipboard", { configurable: true, value: { writeText } });
+ const v = render(<MeasurementWorksheet copy={{}} source={{ title: "Source", href: "/source" }} />);
+ const need = v.getByLabelText("The question and the need") as HTMLTextAreaElement;
+ fireEvent.change(need, { target: { value: "My existing question" } });
+ fireEvent.click(v.getByRole("button", { name: "Load fictional example" }));
+ expect(need.value).toBe("My existing question");
+ const baseline = v.getByLabelText("The starting point") as HTMLTextAreaElement;
+ expect(baseline.value).toContain("Fictional example");
+ fireEvent.change(baseline, { target: { value: "Edited baseline" } });
+ fireEvent.click(v.getByRole("button", { name: "Copy notes" }));
+ expect(writeText).toHaveBeenCalledWith(expect.stringContaining("Edited baseline"));
+ expect(v.getByRole("status").textContent).toContain("Fictional example");
+});
