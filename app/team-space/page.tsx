@@ -23,7 +23,7 @@ export default async function TeamSpacePage() {
       : !available ? <p className="calm-note">The team space is not available right now. Records on people&apos;s own computers are unaffected.</p>
       : !records.length ? <p className="calm-muted">No decision records have been shared yet.</p>
       : records.map(record => <details key={record.id}>
-        <summary>{record.title} <span className="calm-muted calm-small">updated {record.updatedAt.slice(0, 10)}</span></summary>
+        <summary><h2 style={{ display: "inline", fontSize: "inherit", fontWeight: "inherit", lineHeight: "inherit", color: "inherit", margin: 0 }}>{record.title} <span className="calm-muted calm-small">updated {record.updatedAt.slice(0, 10)}</span></h2></summary>
         {DECISION_RECORD_FIELDS.map(field => record.fields[field.key]?.trim() ? <div key={field.key}><h3 style={{ marginTop: "1rem" }}>{field.label}</h3><p style={{ whiteSpace: "pre-wrap" }}>{record.fields[field.key]}</p></div> : null)}
       </details>)}
   </div>;
