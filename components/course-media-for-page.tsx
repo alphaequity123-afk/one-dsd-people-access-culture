@@ -21,7 +21,14 @@ function clock(seconds: number) {
   return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
 }
 
-function Player({ item, withinSection = false }: { item: Item; withinSection?: boolean }) {
+function recordingName(item: Item, items: Item[]) {
+  const normalizedTitle = (title: string) => title.trim().replace(/\s+/g, " ").toLocaleLowerCase("en-US");
+  const peers = items.filter(other => other.kind === item.kind && normalizedTitle(other.title) === normalizedTitle(item.title));
+  const position = peers.findIndex(other => other.id === item.id) + 1;
+  return `${item.title}: ${item.kind} recording${peers.length > 1 ? `, ${position} of ${peers.length}` : ""}`;
+}
+
+function Player({ item, accessibleName, withinSection = false }: { item: Item; accessibleName: string; withinSection?: boolean }) {
   const Heading = withinSection ? "h3" : "h2";
   const ref = useRef<HTMLVideoElement & HTMLAudioElement>(null);
   const pendingSeek = useRef<number | null>(null);
@@ -35,26 +42,26 @@ function Player({ item, withinSection = false }: { item: Item; withinSection?: b
     void media.play().then(() => setMessage(`Playing ${item.title}.`)).catch(() => setMessage("Use the player’s Play control to begin, or read the transcript below."));
   };
   const failed = () => setMessage("This recording could not be loaded. You can read the transcript below.");
-  return <FeaturedMediaPanel kind={item.kind === "video" ? "video" : "audio"} label={item.kind === "video" ? undefined : "Listen"} length={minutes(item.durationSeconds)}><section className="course-media-item" aria-labelledby={`cm-${item.id}`}>
+  return <FeaturedMediaPanel kind={item.kind === "video" ? "video" : "audio"} label={item.kind === "video" ? undefined : "Listen"} length={minutes(item.durationSeconds)}><section className="course-media-item" aria-label={accessibleName}>
     <Heading id={`cm-${item.id}`}>{item.title}</Heading>
     {item.summary ? <p className="calm-muted">{item.summary}</p> : null}
     {item.kind === "video"
-      ? <video ref={ref} aria-label={item.title} onLoadedMetadata={loaded} onError={failed} controls preload="none" poster={item.poster} style={{ width: "100%", maxWidth: "960px", borderRadius: "8px", background: "#000" }}>
+      ? <video ref={ref} aria-label={accessibleName} onLoadedMetadata={loaded} onError={failed} controls preload="none" poster={item.poster} style={{ width: "100%", maxWidth: "960px", borderRadius: "8px", background: "#000" }}>
           <source src={item.media} type="video/mp4" />
           <track kind="captions" src={item.captions} srcLang="en" label="English" default />
         </video>
-      : <audio ref={ref} aria-label={item.title} onLoadedMetadata={loaded} onError={failed} controls preload="none" style={{ width: "100%", maxWidth: "720px" }}>
+      : <audio ref={ref} aria-label={accessibleName} onLoadedMetadata={loaded} onError={failed} controls preload="none" style={{ width: "100%", maxWidth: "720px" }}>
           <source src={item.media} type="audio/mpeg" />
           <track kind="captions" src={item.captions} srcLang="en" label="English" default />
         </audio>}
     <p role="status" aria-live="polite">{message}</p>
     {item.chapters.length > 1 ? <details>
-      <summary>Chapters for {item.title}</summary>
+      <summary aria-label={`Chapters for ${accessibleName}`}>Chapters for {item.title}</summary>
       <ol className="calm-list">{item.chapters.map(chapter => <li key={`${chapter.start}-${chapter.title}`}>
         <button type="button" className="course-media-chapter" onClick={() => seek(chapter.start)}>{chapter.title}</button> <span className="calm-muted calm-small">{clock(chapter.start)}</span>
       </li>)}</ol>
     </details> : null}
-    <p className="calm-small"><SourceLink href={item.transcript}>Read the full transcript</SourceLink> Â· <SourceLink href={item.captions}>Download the captions</SourceLink></p>
+    <p className="calm-small"><SourceLink href={item.transcript} aria-label={`Read the full transcript for ${accessibleName}`}>Read the full transcript</SourceLink> · <SourceLink href={item.captions} aria-label={`Download the captions for ${accessibleName}`}>Download the captions</SourceLink></p>
   </section></FeaturedMediaPanel>;
 }
 
@@ -125,12 +132,12 @@ export function CourseMediaForPage() {
   const ordered = [...pageItems.filter(item => item.kind === "video"), ...pageItems.filter(item => item.kind !== "video")];
   const sectionMedia = items.flatMap(item => {
     const slot = itemTargets.get(item.id);
-    return slot ? [createPortal(<Player item={item} withinSection />, slot, item.id)] : [];
+    return slot ? [createPortal(<Player item={item} accessibleName={recordingName(item, items)} withinSection />, slot, item.id)] : [];
   });
   // In a page's own slot the media lines up with the page column; elsewhere it keeps its own margins.
   const inSlot = target?.hasAttribute("data-course-media-slot") ?? false;
   const media = <div className="calm course-media" style={inSlot ? { paddingTop: "1.5rem", paddingBottom: "1.5rem", paddingLeft: 0, paddingRight: 0 } : { paddingTop: "1.5rem", paddingBottom: "1.5rem" }}>
-    {ordered.map(item => <Player key={item.id} item={item} />)}
+    {ordered.map(item => <Player key={item.id} item={item} accessibleName={recordingName(item, items)} />)}
   </div>;
   const placedMedia = ordered.length ? (target ? createPortal(media, target) : media) : null;
   // A button in the title area, so the video is found without scrolling (owner rule, 2026-11-10).
