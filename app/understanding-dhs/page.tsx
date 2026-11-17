@@ -28,7 +28,7 @@ export default function UnderstandingDhsPage() {
       </div></details>
       <details className="my-7 border-y border-line py-4"><summary className="cursor-pointer font-semibold">Download this DHS reference</summary><div className="mt-4"><ResourceDownloads kind="understanding-dhs" id="reference" noun="reference" compact /></div></details>
       <div className="mt-8">{DHS_REFERENCE_GROUPS.map(group=><details key={group.id} id={group.id} className="pilot-supporting scroll-mt-28">
-        <summary>{group.title}</summary>
+        <summary><h2 style={{ display: "inline", fontSize: "inherit", fontWeight: "inherit", lineHeight: "inherit", color: "inherit", margin: 0 }}>{group.title}</h2></summary>
         <div className="pilot-supporting-body space-y-6">{group.entries.map(entry=><article key={entry.id} id={dhsTopicAnchor(entry.id)} aria-labelledby={dhsTopicAnchor(entry.id)+"-title"} className="scroll-mt-28 rounded-xl border border-line bg-white p-6">
           <h3 id={dhsTopicAnchor(entry.id)+"-title"} className="m-0 text-xl font-bold">{entry.title}</h3>
           <p className="leading-relaxed">{entry.facts}</p>

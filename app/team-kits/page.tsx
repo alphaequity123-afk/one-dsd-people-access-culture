@@ -32,7 +32,7 @@ export default function TeamKitsPage() {
     <h1>Team kits</h1>
     <p className="calm-lede">Adapt these session plans for a regular staff meeting. Each includes suggested timing, an agenda, related material and a proposed working record. This page does not collect attendance; follow your team’s requirements for any official meeting record.</p>
     {KITS.map(kit => <details key={kit.id} id={kit.id}>
-      <summary>{kit.title} <span className="calm-muted calm-small">{kit.minutes} minutes</span></summary>
+      <summary><h2 style={{ display: "inline", fontSize: "inherit", fontWeight: "inherit", lineHeight: "inherit", color: "inherit", margin: 0 }}>{kit.title} <span className="calm-muted calm-small">{kit.minutes} minutes</span></h2></summary>
       <p className="calm-muted">{kit.when}</p>
       <h3 style={{ marginTop: "1rem" }}>Agenda</h3>
       <ol>{kit.agenda.map(step => <li key={step}>{step}</li>)}</ol>
