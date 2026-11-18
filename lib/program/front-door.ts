@@ -17,10 +17,29 @@ export function dsdFrontDoorHosts(origin = dsdFrontDoorOrigin, extra = process.e
   return [hostOf(origin), ...extra.split(",").map(h => h.trim().toLowerCase())].filter((h, i, all) => h && all.indexOf(h) === i);
 }
 
-/** Runs before the page paints, so the right name shows from the first frame. */
-export function frontDoorScript(hosts = dsdFrontDoorHosts()): string {
-  if (!hosts.length) return "";
-  return `(function(){try{if(${JSON.stringify(hosts)}.indexOf(location.host.toLowerCase())>-1)document.documentElement.setAttribute("data-pac-unit","dsd")}catch(e){}})();`;
+const DSD_NAME = "One DSD People, Access and Culture";
+const DHS_NAME = "One DHS People, Access and Culture";
+
+/** The agency address, when this program also serves as part of One DHS. */
+export const agencyHost = process.env.NEXT_PUBLIC_DHS_AGENCY_ZONE === "1" ? hostOf(process.env.NEXT_PUBLIC_DHS_AGENCY_ORIGIN || "") : "";
+
+/** On the One DHS address, the browser tab names One DHS rather than One DSD. */
+export function agencyTitle(title: string): string {
+  return title.split(DSD_NAME).join(DHS_NAME);
+}
+
+/**
+ * Runs before the page paints. On a One DSD address it marks the page so the header shows One DSD from the
+ * first frame. On the One DHS address it keeps the tab title naming One DHS, including after in-app navigation.
+ */
+export function frontDoorScript(hosts = dsdFrontDoorHosts(), agency = agencyHost): string {
+  if (!hosts.length && !agency) return "";
+  return `(function(){try{var h=location.host.toLowerCase();`
+    + `if(${JSON.stringify(hosts)}.indexOf(h)>-1){document.documentElement.setAttribute("data-pac-unit","dsd");return}`
+    + `if(h!==${JSON.stringify(agency)})return;`
+    + `var fix=function(){var t=document.title,n=t.split(${JSON.stringify(DSD_NAME)}).join(${JSON.stringify(DHS_NAME)});if(n!==t)document.title=n};`
+    + `fix();new MutationObserver(fix).observe(document.head,{subtree:true,childList:true,characterData:true})`
+    + `}catch(e){}})();`;
 }
 
 /** An agency link becomes the same page on the One DSD front door. */
