@@ -58,8 +58,9 @@ export function isSameOriginMutation(request: MutationRequest): boolean {
     // The same division service retains its existing media volume while serving the exact agency origin.
     // Forwarded headers and arbitrary subdomains never extend this explicit pair of origins.
     if (process.env.NEXT_PUBLIC_DHS_AGENCY_ZONE !== "1") return false;
-    const agencyOrigin = parseOrigin(process.env.NEXT_PUBLIC_DHS_AGENCY_ORIGIN ?? "");
-    return Boolean(agencyOrigin && (process.env.NODE_ENV !== "production" || agencyOrigin.startsWith("https://")) && suppliedOrigin === agencyOrigin);
+    // The One DSD front door serves the same program, so it is the one other exact origin accepted.
+    const exact = [process.env.NEXT_PUBLIC_DHS_AGENCY_ORIGIN, process.env.NEXT_PUBLIC_DSD_FRONT_DOOR_ORIGIN].map(value => parseOrigin(value ?? ""));
+    return exact.some(origin => Boolean(origin && (process.env.NODE_ENV !== "production" || origin.startsWith("https://")) && suppliedOrigin === origin));
   }
   // Railway production requires explicit provenance rather than trusting Host.
   if (process.env.RAILWAY_DEPLOYMENT_ID) return false;

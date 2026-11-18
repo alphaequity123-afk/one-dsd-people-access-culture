@@ -1,8 +1,9 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import type { ReactNode } from "react";
-import { agencyHref, agencyZoneEnabled } from "@/lib/program/agency-zone";
+import { useEffect, type ReactNode } from "react";
+import { agencyHref, agencyOrigin, agencyZoneEnabled } from "@/lib/program/agency-zone";
+import { onDsdFrontDoor, toFrontDoor } from "@/lib/program/front-door";
 import paths from "@/lib/program/agency-learning-paths.json";
 import "./agency-practice-header.css";
 import { useLearningTrail, trailHref } from "./use-learning-trail";
@@ -13,6 +14,18 @@ const sections = [["Home", "/"], ["Your work", "/work"], ["Across DHS", "/areas"
 export function AgencyPracticeHeader({ children }: { children: ReactNode }) {
   const pathname = usePathname();
   const trail = useLearningTrail(paths);
+  // On a One DSD front door, agency links lead to the same page there, so people stay in One DSD.
+  useEffect(() => {
+    if (!agencyZoneEnabled || !onDsdFrontDoor()) return;
+    const retarget = () => document.querySelectorAll<HTMLAnchorElement>("a[href^='http']").forEach(a => {
+      const next = toFrontDoor(a.href, agencyOrigin);
+      if (next !== a.href) a.href = next;
+    });
+    retarget();
+    const observer = new MutationObserver(retarget);
+    observer.observe(document.body, { childList: true, subtree: true });
+    return () => observer.disconnect();
+  }, []);
   if (!agencyZoneEnabled) return children;
   const title = trail ? paths[trail.path as keyof typeof paths] : undefined;
   const returnHref = agencyHref(trail ? trailHref(trail) : "/learn");
@@ -20,11 +33,11 @@ export function AgencyPracticeHeader({ children }: { children: ReactNode }) {
   return <>
     <header className="agency-practice-header">
       <div className="agency-practice-shell agency-practice-brand-row">
-        <a className="agency-practice-brand" href={agencyHref("/")} aria-label="One DHS People, Access and Culture home">
+        <a className="agency-practice-brand" href={agencyHref("/")}>
           {/* The existing DHS logo is kept at its original aspect ratio. */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/images/dhs-logo.png" width={319} height={68} alt="Minnesota Department of Human Services" />
-          <span><strong>One DHS</strong><span>People, Access and Culture</span></span>
+          <span><strong className="pac-unit-dhs">One DHS</strong><strong className="pac-unit-dsd">One DSD</strong><span>People, Access and Culture</span></span>
         </a>
         <div className="agency-practice-tools"><a href={agencyHref("/ask")}>Ask</a><a href={agencyHref("/library")}>Search</a></div>
       </div>

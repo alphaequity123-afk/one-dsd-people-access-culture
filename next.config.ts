@@ -91,7 +91,7 @@ const nextConfig: NextConfig = {
   // Each build worker holds its own database pool. Bound prerender concurrency
   // so builds and the running service fit the hosted session pooler's budget.
   experimental: { cpus: 2, webpackMemoryOptimizations: true,
-    ...(agencyZone && agencyOrigin ? { serverActions: { allowedOrigins: [new URL(agencyOrigin).host] } } : {}),
+    ...(agencyZone && agencyOrigin ? { serverActions: { allowedOrigins: [agencyOrigin, process.env.NEXT_PUBLIC_DSD_FRONT_DOOR_ORIGIN].filter((o): o is string => Boolean(o)).map(o => new URL(o).host) } } : {}),
   },
   allowedDevOrigins: ["127.0.0.1"],
   devIndicators: false,

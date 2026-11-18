@@ -33,6 +33,7 @@ import { loadPublishedPageCopy } from "@/lib/content/page-copy";
 import { staticPageCopy } from "@/lib/content/page-copy-contract";
 import { offlineShareOrigin } from "@/lib/offline/mode";
 import { SHARE_ORIGIN_META } from "@/lib/product/share-link";
+import { frontDoorScript } from "@/lib/program/front-door";
 
 /**
  * A shared page (/share/…) hides the full footer, but two facts from it must still
@@ -97,9 +98,12 @@ export default async function RootLayout({ children }: { children: React.ReactNo
     editingModeFromCookies(),
   ]);
   const shareOrigin = offlineShareOrigin();
+  const frontDoor = frontDoorScript();
   return (
-    <html lang="en" className="h-full">
+    <html lang="en" className="h-full" suppressHydrationWarning>
       <body className="program-design dsd-calm flex min-h-full flex-col">
+        {/* Marks a One DSD front door before the header paints; see lib/program/front-door.ts. */}
+        {frontDoor ? <script dangerouslySetInnerHTML={{ __html: frontDoor }} /> : null}
         <NavigationStatus />
         {shareOrigin ? <meta name={SHARE_ORIGIN_META} content={shareOrigin} /> : null}
         <ProgramContextProvider
