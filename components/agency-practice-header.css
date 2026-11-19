@@ -22,3 +22,7 @@
 /* One front door shows its own name; the other stays out of view and out of the accessible name. */
 .agency-practice-brand .pac-unit-dsd, html[data-pac-unit="dsd"] .agency-practice-brand .pac-unit-dhs { display:none; }
 html[data-pac-unit="dsd"] .agency-practice-brand .pac-unit-dsd { display:inline; }
+
+/* The same name switch anywhere on the page (footers, notices): One DHS by default, One DSD on a One DSD address. */
+.pac-unit-dsd, html[data-pac-unit="dsd"] .pac-unit-dhs { display:none; }
+html[data-pac-unit="dsd"] .pac-unit-dsd { display:inline; }

@@ -20,7 +20,9 @@ export function dsdFrontDoorHosts(origin = dsdFrontDoorOrigin, extra = process.e
 /** Runs before the page paints, so the right name shows from the first frame. */
 export function frontDoorScript(hosts = dsdFrontDoorHosts()): string {
   if (!hosts.length) return "";
-  return `(function(){try{if(${JSON.stringify(hosts)}.indexOf(location.host.toLowerCase())>-1)document.documentElement.setAttribute("data-pac-unit","dsd")}catch(e){}})();`;
+  // On a One DSD address the page is marked so One DSD shows. Anywhere else (One DHS) the tab title is kept on
+  // One DHS as well, including after moving between pages, because the title is written once for both.
+  return `(function(){try{if(${JSON.stringify(hosts)}.indexOf(location.host.toLowerCase())>-1){document.documentElement.setAttribute("data-pac-unit","dsd");return}var f=function(){var t=document.title;if(t.indexOf("One DSD People, Access and Culture")>-1)document.title=t.split("One DSD People, Access and Culture").join("One DHS People, Access and Culture")};f();new MutationObserver(f).observe(document.head,{subtree:true,childList:true,characterData:true})}catch(e){}})();`;
 }
 
 /** An agency link becomes the same page on the One DSD front door. */
