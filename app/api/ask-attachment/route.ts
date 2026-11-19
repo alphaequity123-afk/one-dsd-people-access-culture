@@ -1,6 +1,6 @@
 import { randomUUID } from "node:crypto";
 import { NextResponse, type NextRequest } from "next/server";
-import { acceptsDocumentUpload, extractDocumentUpload, MAX_UPLOAD_BYTES, MAX_UPLOAD_REQUEST_BYTES, UploadError } from "@/lib/consultant-analysis/uploads";
+import { acceptsDocumentUpload, extractDocumentUpload, ASK_READING_LIMITS, withReadingLimits, MAX_UPLOAD_BYTES, MAX_UPLOAD_REQUEST_BYTES, UploadError } from "@/lib/consultant-analysis/uploads";
 import { isTabularUpload, extractTabularUpload } from "@/lib/consultant-toolkit/tabular-upload";
 import { isSameOriginMutation } from "@/lib/auth/mutation";
 import { consumeRequestLimit, rateLimitHeaders } from "@/lib/security/rate-limit";
@@ -73,9 +73,12 @@ export async function POST(request: NextRequest) {
       if (mediaAttempts.length >= 10) return json({ error: "Image and recording review is busy. Please try again in a few minutes." }, 429);
       mediaAttempts.push(now);
     }
+    // Ask reads whole documents (its model takes about a million tokens). Analyze a document keeps the smaller
+    // per-source limit its analysis request expects.
+    const forAsk = request.nextUrl.searchParams.get("for") === "ask";
     const bytes = new Uint8Array(await file.arrayBuffer());
     // Documents are read locally. Image and recording extraction uses the governed media provider.
-    const result = tabular ? await extractTabularUpload(name, bytes) : media ? await extractMediaUpload(bytes, name, file.type, "staff") : await extractDocumentUpload(bytes, name);
+    const result = tabular ? await extractTabularUpload(name, bytes) : media ? await extractMediaUpload(bytes, name, file.type, "staff") : forAsk ? await withReadingLimits(ASK_READING_LIMITS, () => extractDocumentUpload(bytes, name)) : await extractDocumentUpload(bytes, name);
     const body: UploadResponse = {
       source: { id: `upload-${randomUUID()}`, title: name.slice(0, ANALYSIS_LIMITS.titleCharacters), text: result.text },
       ...(result.note ? { note: result.note } : {}),

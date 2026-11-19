@@ -2,6 +2,7 @@ import "server-only";
 import { extname } from "node:path";
 import { SaxesParser } from "saxes";
 import { fromBuffer, type Entry, type ZipFile } from "yauzl";
+import { AsyncLocalStorage } from "node:async_hooks";
 
 export const MAX_UPLOAD_BYTES = 20 * 1024 * 1024;
 export const MAX_UPLOAD_REQUEST_BYTES = 21 * 1024 * 1024;
@@ -10,6 +11,19 @@ const MAX_EXPANDED_BYTES = 40 * 1024 * 1024;
 const MAX_XML_BYTES = 8 * 1024 * 1024;
 const MAX_PARTS = 3000;
 const MAX_PAGES = 100;
+
+/**
+ * Reading limits for one upload. The consultant tools keep the small defaults their own request limits expect.
+ * Ask reads whole documents: its model takes about a million tokens, so a long report or handbook fits.
+ */
+type ReadingLimits = { text: number; xmlBytes: number; pages: number };
+const DEFAULT_LIMITS: ReadingLimits = { text: MAX_UPLOAD_TEXT, xmlBytes: MAX_XML_BYTES, pages: MAX_PAGES };
+export const ASK_UPLOAD_TEXT = 1_200_000;
+export const ASK_READING_LIMITS: ReadingLimits = { text: ASK_UPLOAD_TEXT, xmlBytes: 36 * 1024 * 1024, pages: 1000 };
+const readingLimits = new AsyncLocalStorage<ReadingLimits>();
+const limits = () => readingLimits.getStore() ?? DEFAULT_LIMITS;
+/** Runs one extraction with the given limits (for example ASK_READING_LIMITS). */
+export function withReadingLimits<T>(value: ReadingLimits, run: () => Promise<T>): Promise<T> { return readingLimits.run(value, run); }
 
 export class UploadError extends Error {
   constructor(message: string, public status = 422) { super(message); this.name = "UploadError"; }
@@ -20,7 +34,7 @@ function finish(text: string, note?: string, retainReadingLimits = false): Extra
   const cleaned = text.replace(/\u0000/g, "").replace(/[ \t]+\n/g, "\n").replace(/\n{4,}/g, "\n\n\n").trim();
   if (!cleaned) throw new UploadError("No readable text was found. If this is a scanned document, use a copy with selectable text or add a transcript.");
   const sourceText = retainReadingLimits && note ? `Reading limits\n${note}\n\nExtracted text\n${cleaned}` : cleaned;
-  if (sourceText.length > MAX_UPLOAD_TEXT) throw new UploadError("This document contains too much text for one source. Upload a shorter section or paste selected excerpts.", 413);
+  if (sourceText.length > limits().text) throw new UploadError("This document contains too much text for one source. Upload a shorter section or paste selected excerpts.", 413);
   return { text: sourceText, ...(note ? { note } : {}) };
 }
 
@@ -36,7 +50,7 @@ function xmlText(xml: string) {
   let length = 0;
   const add = (value: string) => {
     length += value.length;
-    if (length > MAX_UPLOAD_TEXT) throw new UploadError("This document contains too much text for one source. Upload a shorter section.", 413);
+    if (length > limits().text) throw new UploadError("This document contains too much text for one source. Upload a shorter section.", 413);
     parts.push(value);
   };
   parser.on("doctype", () => { throw new UploadError("This document uses an unsupported document structure. Save a new PDF or text copy and try again."); });
@@ -94,7 +108,7 @@ async function officeParts(bytes: Uint8Array): Promise<Map<string, string>> {
           || entry.fileName === "ppt/presentation.xml" || entry.fileName === "ppt/_rels/presentation.xml.rels"
           || /^ppt\/slides\/slide\d+\.xml$/.test(entry.fileName);
         if (!wanted) { zip.readEntry(); return; }
-        if (entry.uncompressedSize > MAX_XML_BYTES) { fail(new UploadError("A section of this document is too large. Upload a shorter copy.", 413)); return; }
+        if (entry.uncompressedSize > limits().xmlBytes) { fail(new UploadError("A section of this document is too large. Upload a shorter copy.", 413)); return; }
         zip.openReadStream(entry, (streamError, stream) => {
           if (streamError || !stream) { fail(streamError); return; }
           const chunks: Buffer[] = [];
@@ -102,7 +116,7 @@ async function officeParts(bytes: Uint8Array): Promise<Map<string, string>> {
           stream.on("error", fail);
           stream.on("data", (chunk: Buffer) => {
             received += chunk.length;
-            if (received > MAX_XML_BYTES || received > entry.uncompressedSize) {
+            if (received > limits().xmlBytes || received > entry.uncompressedSize) {
               stream.destroy(); fail(new UploadError("A section of this document is too large or damaged. Upload a new copy.", 413)); return;
             }
             chunks.push(chunk);
@@ -139,7 +153,7 @@ function slideOrder(parts: Map<string, string>) {
     const target = relationships.get(id);
     if (!target || !parts.has(target)) throw new UploadError("A slide could not be read. Save a new PowerPoint or PDF copy and try again.");
     ordered.push(target);
-    if (ordered.length > MAX_PAGES) throw new UploadError("Use a presentation with 100 slides or fewer, or upload one section at a time.", 413);
+    if (ordered.length > limits().pages) throw new UploadError("Use a presentation with fewer slides, or upload one section at a time.", 413);
   });
   presentationParser.write(parts.get("ppt/presentation.xml") ?? "").close();
   return ordered;
@@ -155,7 +169,7 @@ async function pdfText(bytes: Uint8Array): Promise<ExtractedUpload> {
   const timer = setTimeout(() => { void task.destroy().catch(() => undefined); }, 30000);
   try {
     const document = await task.promise;
-    if (document.numPages > MAX_PAGES) throw new UploadError("Use a PDF with 100 pages or fewer, or upload one section at a time.", 413);
+    if (document.numPages > limits().pages) throw new UploadError("Use a PDF with fewer pages, or upload one section at a time.", 413);
     const pages: string[] = [];
     let total = 0;
     let emptyPages = 0;
@@ -166,7 +180,7 @@ async function pdfText(bytes: Uint8Array): Promise<ExtractedUpload> {
         const text = content.items.map(item => "str" in item ? `${item.str}${item.hasEOL ? "\n" : " "}` : "").join("").trim();
         if (!text) emptyPages += 1;
         total += text.length + 20;
-        if (total > MAX_UPLOAD_TEXT) throw new UploadError("This PDF contains too much text for one source. Upload a shorter section.", 413);
+        if (total > limits().text) throw new UploadError("This PDF contains too much text for one source. Upload a shorter section.", 413);
         if (text) pages.push(`Page ${pageNumber}\n${text}`);
       } finally { page.cleanup(); }
     }
