@@ -22,6 +22,8 @@ export const ASK_UPLOAD_TEXT = 4_800_000; // about 920,000 tokens of English pro
 export const ASK_READING_LIMITS: ReadingLimits = { text: ASK_UPLOAD_TEXT, xmlBytes: 36 * 1024 * 1024, pages: 1000 };
 const readingLimits = new AsyncLocalStorage<ReadingLimits>();
 const limits = () => readingLimits.getStore() ?? DEFAULT_LIMITS;
+/** The text limit in force for the current upload (the small default unless Ask's limits are set). */
+export const currentTextLimit = () => limits().text;
 /** Runs one extraction with the given limits (for example ASK_READING_LIMITS). */
 export function withReadingLimits<T>(value: ReadingLimits, run: () => Promise<T>): Promise<T> { return readingLimits.run(value, run); }
 

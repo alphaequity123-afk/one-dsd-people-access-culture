@@ -2,7 +2,7 @@ import "server-only";
 import { extname } from "node:path";
 import ExcelJS from "exceljs";
 import { fromBuffer, type ZipFile } from "yauzl";
-import { MAX_UPLOAD_BYTES, MAX_UPLOAD_TEXT, UploadError, type ExtractedUpload } from "@/lib/consultant-analysis/uploads";
+import { MAX_UPLOAD_BYTES, currentTextLimit, UploadError, type ExtractedUpload } from "@/lib/consultant-analysis/uploads";
 
 export const isTabularUpload = (name: string) => [".csv", ".tsv", ".xlsx"].includes(extname(name).toLowerCase());
 const MAX_EXPANDED = 40 * 1024 * 1024;
@@ -12,7 +12,7 @@ const MAX_COLUMNS = 80;
 function finish(text: string, note: string): ExtractedUpload {
   const combined = `Reading notes: ${note}\n\n${text}`;
   if (!text.trim()) throw new UploadError("No readable cells were found. Attach a worksheet or paste the figures you want to examine.");
-  if (combined.length > MAX_UPLOAD_TEXT) throw new UploadError("This table is too large for one source. Export a smaller selection, including its headings, dates and definitions.", 413);
+  if (combined.length > currentTextLimit()) throw new UploadError("This table is too large for one source. Export a smaller selection, including its headings, dates and definitions.", 413);
   return { text: combined, note };
 }
 
@@ -59,7 +59,7 @@ function parseDelimited(text: string, separator: string) {
     else if (c === separator) pushCell();
     else if (c === "\r" || c === "\n") { if (c === "\r" && text[i + 1] === "\n") i++; pushRow(); }
     else { if (closed) throw new UploadError("A quoted cell is malformed. Save a new CSV copy."); cell += c; }
-    if (cell.length > MAX_UPLOAD_TEXT) throw new UploadError("A cell is too long. Upload a smaller selection.", 413);
+    if (cell.length > currentTextLimit()) throw new UploadError("A cell is too long. Upload a smaller selection.", 413);
   }
   if (quoted) throw new UploadError("A quoted cell is incomplete. Save a new CSV copy.");
   if (cell || row.length || closed) pushRow();
@@ -72,7 +72,7 @@ export async function extractTabularUpload(name: string, bytes: Uint8Array): Pro
   if (extension === ".csv" || extension === ".tsv") {
     let text: string;
     try { text = new TextDecoder("utf-8", { fatal: true }).decode(bytes).replace(/^\uFEFF/, ""); } catch { throw new UploadError("Save this table as UTF-8 CSV or XLSX and try again."); }
-    if (text.length > MAX_UPLOAD_TEXT) throw new UploadError("Export a smaller selection, including its column headings and definitions.", 413);
+    if (text.length > currentTextLimit()) throw new UploadError("Export a smaller selection, including its column headings and definitions.", 413);
     const rows = parseDelimited(text, extension === ".tsv" ? "\t" : ",");
     return finish(rows.map((values, i) => `Row ${i + 1}: ${JSON.stringify(values)}`).join("\n"), "Cells are read as text; formulas are not executed. Keep headings, reporting periods, units, filters and suppressed values with the selected data.");
   }
@@ -82,7 +82,7 @@ export async function extractTabularUpload(name: string, bytes: Uint8Array): Pro
   try { await workbook.xlsx.load(Buffer.from(bytes) as unknown as Parameters<typeof workbook.xlsx.load>[0]); } catch { throw new UploadError("This workbook could not be read. Export the relevant worksheet as CSV."); }
   if (workbook.worksheets.length > 20) throw new UploadError("Use a workbook with 20 worksheets or fewer.", 413);
   const lines: string[] = []; let chars = 0, rows = 0, formulas = 0;
-  const add = (line: string) => { chars += line.length + 1; if (chars > MAX_UPLOAD_TEXT - 600) throw new UploadError("This workbook is too large for one source. Export the relevant selection with headings and definitions.", 413); lines.push(line); };
+  const add = (line: string) => { chars += line.length + 1; if (chars > currentTextLimit() - 600) throw new UploadError("This workbook is too large for one source. Export the relevant selection with headings and definitions.", 413); lines.push(line); };
   for (const sheet of workbook.worksheets) {
     if (sheet.rowCount > MAX_ROWS || sheet.columnCount > MAX_COLUMNS) throw new UploadError("Use worksheets with 2,000 rows and 80 columns or fewer. Export a smaller selection.", 413);
     if (!sheet.actualRowCount) continue;
