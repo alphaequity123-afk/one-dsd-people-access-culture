@@ -16,7 +16,7 @@ MODEL_DIR = "/opt/voice-model"
 REFERENCE_DIR = "/opt/approved-voice"
 PROFILE = "approved-geffen-read-aloud-v1"
 CPU_CORES = 2
-BUNDLE = Path(__file__).parent / ".private-geffen-public"
+REFERENCE_VOLUME_NAME = "one-dsd-geffen-reference"
 
 
 def download_model():
@@ -56,17 +56,18 @@ image = (
     .pip_install("torch==2.11.0", "torchaudio==2.11.0", index_url="https://download.pytorch.org/whl/cu128")
     .pip_install("qwen-tts==0.1.1", "transformers==4.57.3", "huggingface-hub==0.36.2", "soundfile==0.14.0", "fastapi==0.115.12")
     .run_function(download_model)
-    .add_local_file(BUNDLE / "identity.wav", REFERENCE_DIR + "/identity.wav", copy=True)
-    .add_local_file(BUNDLE / "profile.json", REFERENCE_DIR + "/profile.json", copy=True)
     .add_local_file(Path(__file__).parent / "voice_http.py", "/root/voice_http.py", copy=True)
     .env({"HF_HUB_OFFLINE": "1", "TRANSFORMERS_OFFLINE": "1"})
 )
 app = modal.App("one-dsd-approved-voice", image=image)
+# The approved GEFen reference lives in a private Modal Volume, uploaded once by the owner, so the
+# deploy can run from GitHub without the recording ever entering Git. load() still verifies its hash.
+reference_volume = modal.Volume.from_name(REFERENCE_VOLUME_NAME)
 
 
 # GPU fallback list per Modal support (Nov 13, 2026); scaledown_window=300 approved by the owner on Nov 15, 2026.
 @app.cls(gpu=["L4", "A10", "T4", "L40S"], cpu=CPU_CORES, memory=8192, min_containers=0, max_containers=1,
-         scaledown_window=300, timeout=600)
+         scaledown_window=300, timeout=600, volumes={REFERENCE_DIR: reference_volume.read_only()})
 @modal.concurrent(max_inputs=1)
 class ApprovedVoice:
     @modal.enter()
