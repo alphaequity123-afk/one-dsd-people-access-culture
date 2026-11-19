@@ -13,7 +13,7 @@ describe("reading limits", () => {
     expect(result.text.length).toBeGreaterThan(290_000);
   });
   it("still refuses a document beyond what Ask can read", async () => {
-    const huge = new TextEncoder().encode("word ".repeat(300_000)); // 1.5 million characters
+    const huge = new TextEncoder().encode("word ".repeat(1_000_000)); // 5 million characters
     await expect(withReadingLimits(ASK_READING_LIMITS, () => extractDocumentUpload(huge, "huge.txt"))).rejects.toThrow(/too much text/);
   });
 });
