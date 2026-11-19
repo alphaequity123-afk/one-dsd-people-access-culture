@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { FeaturedMediaPanel } from "./featured-media-panel";
+import { CaptionsBelow } from "./captions-below";
 
 type Item = {
   id: string; title: string; kind: "video" | "audio"; summary: string; media: string; captions: string;
@@ -50,7 +51,8 @@ function Player({ item, accessibleName, withinSection = false }: { item: Item; a
           <source src={item.media} type="video/mp4" />
           <track kind="captions" src={item.captions} srcLang="en" label="English" default />
         </video>
-      : <audio ref={ref} aria-label={accessibleName} onLoadedMetadata={loaded} onError={failed} controls preload="none" style={{ width: "100%", maxWidth: "720px" }}>
+      : null}
+    {item.kind === "video" ? <CaptionsBelow media={ref} label={item.title} /> : <audio ref={ref} aria-label={accessibleName} onLoadedMetadata={loaded} onError={failed} controls preload="none" style={{ width: "100%", maxWidth: "720px" }}>
           <source src={item.media} type="audio/mpeg" />
           <track kind="captions" src={item.captions} srcLang="en" label="English" default />
         </audio>}
