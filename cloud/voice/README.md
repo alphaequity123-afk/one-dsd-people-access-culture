@@ -20,17 +20,22 @@ List prices on 2026-11-15, before credits: L4 $0.000222, A10 $0.000306, T4 $0.00
 
 1. Authenticate the approved Modal account and confirm the monthly budget above is set. Any account terms or payment entry must be handled through the appropriate user approval flow.
 2. Install `modal==1.6.4` in an isolated deployment environment.
-3. Stage the approved GEFen reference with `python cloud/voice/prepare_geffen_bundle.py <absolute-path-to-approved-profile.lock.json>`. This verifies the hash. The bundle folders are deliberately excluded from Git. This step does not upload files.
-4. Deploy with `modal deploy cloud/voice/geffen_public_app.py`. This uploads the reference into the private image and downloads the pinned model during image build. The service has no dependency on any local file after deployment.
+3. Stage the approved GEFen reference with `python cloud/voice/prepare_geffen_bundle.py <absolute-path-to-approved-profile.lock.json>`. This verifies the hash. The bundle folders are deliberately excluded from Git.
+   Then upload it once, from that same computer, to the private Modal Volume the app reads:
+   `modal volume create one-dsd-geffen-reference`, then
+   `modal volume put -f one-dsd-geffen-reference cloud/voice/.private-geffen-public/identity.wav /identity.wav` and
+   `modal volume put -f one-dsd-geffen-reference cloud/voice/.private-geffen-public/profile.json /profile.json`.
+   Repeat the upload only if the approved reference changes. The app checks the reference's hash against `profile.json` each time it starts.
+4. Deploy with `modal deploy cloud/voice/geffen_public_app.py`, or from GitHub: save the dedicated Modal deploy token as the repository secrets `MODAL_TOKEN_ID` and `MODAL_TOKEN_SECRET`, open Actions, choose "Deploy GEFen voice to Modal", press "Run workflow" and type `deploy`. Either way the image build downloads the pinned model; the reference stays in the Volume and never enters Git or the image.
 5. Use the dedicated Modal proxy token for this voice deployment. Do not reuse the Railway local-worker credential or place any credential in source code, browser storage, logs, or client bundles.
 6. Verify that the authenticated `/health` endpoint reports the GEFen voice, and test a streamed `/speech` response. Verify that unauthenticated requests are denied. Measure one cold and one warm first-audio time.
 7. Set Railway server environment variables `PAC_HOSTED_VOICE_URL` (the exact HTTPS `.modal.run` URL ending in `/speech`), `PAC_HOSTED_VOICE_KEY`, and `PAC_HOSTED_VOICE_SECRET`. Store values through secure tool input, without printing them.
 8. Deploy the application integration. `GET /api/ask/voice` reports availability from complete hosted configuration without waking the GPU. A provider failure returns a readable error; it never changes voice or falls back to the user's computer.
-9. Rollback: redeploy the previous app version in Modal, or point `PAC_HOSTED_VOICE_URL` back at a known-good endpoint.
+9. Rollback: redeploy the previous app version in Modal (the Volume is unchanged by a deploy), or point `PAC_HOSTED_VOICE_URL` back at a known-good endpoint.
 
 ## Data handling
 
-Only the approved GEFen reference and its locked profile are packaged for Ask; no Host 1 or Host 2 references are needed. The service receives the text being read aloud, renders it in memory, and streams WAV packets. Application code does not save request text or generated audio. Modal's own service terms and retention still apply. The provider endpoint uses Modal proxy authentication; credentials remain on Railway. Existing origin checks, pause controls and per-request limits continue to apply on the site.
+Only the approved GEFen reference and its locked profile are used for Ask, kept in the private Modal Volume `one-dsd-geffen-reference`; no Host 1 or Host 2 references are needed. The service receives the text being read aloud, renders it in memory, and streams WAV packets. Application code does not save request text or generated audio. Modal's own service terms and retention still apply. The provider endpoint uses Modal proxy authentication; credentials remain on Railway. Existing origin checks, pause controls and per-request limits continue to apply on the site.
 
 ## Acceptance checks
 

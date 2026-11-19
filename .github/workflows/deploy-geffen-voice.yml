@@ -1,0 +1,32 @@
+name: Deploy GEFen voice to Modal
+# Runs only when the owner presses "Run workflow" on GitHub. Each run rebuilds and
+# deploys the GEFen read-aloud app, and the app then uses paid Modal GPU time when called.
+on:
+  workflow_dispatch:
+    inputs:
+      confirm:
+        description: Type deploy to rebuild and deploy the GEFen voice on Modal GPU
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: deploy-geffen-voice
+  cancel-in-progress: false
+jobs:
+  deploy:
+    if: ${{ inputs.confirm == 'deploy' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Modal
+        run: python -m pip install modal==1.6.4
+      - name: Deploy the GEFen app
+        env:
+          MODAL_TOKEN_ID: ${{ secrets.MODAL_TOKEN_ID }}
+          MODAL_TOKEN_SECRET: ${{ secrets.MODAL_TOKEN_SECRET }}
+        run: modal deploy cloud/voice/geffen_public_app.py
