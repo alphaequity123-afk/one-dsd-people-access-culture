@@ -25,4 +25,10 @@ describe("One DSD front door", () => {
     expect(toFrontDoor(`${DHS}/learn`, DHS, "")).toBe(`${DHS}/learn`);
     expect(toFrontDoor("/learn", DHS, DSD)).toBe("/learn");
   });
+
+  it("keeps the tab title on One DHS away from a One DSD address", () => {
+    const script = frontDoorScript(["dsd.example"]);
+    expect(script).toContain("One DHS People, Access and Culture");
+    expect(script).toContain("MutationObserver");
+  });
 });
