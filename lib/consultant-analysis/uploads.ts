@@ -18,7 +18,7 @@ const MAX_PAGES = 100;
  */
 type ReadingLimits = { text: number; xmlBytes: number; pages: number };
 const DEFAULT_LIMITS: ReadingLimits = { text: MAX_UPLOAD_TEXT, xmlBytes: MAX_XML_BYTES, pages: MAX_PAGES };
-export const ASK_UPLOAD_TEXT = 1_200_000;
+export const ASK_UPLOAD_TEXT = 4_800_000; // about 920,000 tokens of English prose; the Ask model reads about 1,050,000
 export const ASK_READING_LIMITS: ReadingLimits = { text: ASK_UPLOAD_TEXT, xmlBytes: 36 * 1024 * 1024, pages: 1000 };
 const readingLimits = new AsyncLocalStorage<ReadingLimits>();
 const limits = () => readingLimits.getStore() ?? DEFAULT_LIMITS;
