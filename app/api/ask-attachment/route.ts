@@ -78,7 +78,7 @@ export async function POST(request: NextRequest) {
     const forAsk = request.nextUrl.searchParams.get("for") === "ask";
     const bytes = new Uint8Array(await file.arrayBuffer());
     // Documents are read locally. Image and recording extraction uses the governed media provider.
-    const result = tabular ? await extractTabularUpload(name, bytes) : media ? await extractMediaUpload(bytes, name, file.type, "staff") : forAsk ? await withReadingLimits(ASK_READING_LIMITS, () => extractDocumentUpload(bytes, name)) : await extractDocumentUpload(bytes, name);
+    const result = tabular ? await (forAsk ? withReadingLimits(ASK_READING_LIMITS, () => extractTabularUpload(name, bytes)) : extractTabularUpload(name, bytes)) : media ? await extractMediaUpload(bytes, name, file.type, "staff") : forAsk ? await withReadingLimits(ASK_READING_LIMITS, () => extractDocumentUpload(bytes, name)) : await extractDocumentUpload(bytes, name);
     const body: UploadResponse = {
       source: { id: `upload-${randomUUID()}`, title: name.slice(0, ANALYSIS_LIMITS.titleCharacters), text: result.text },
       ...(result.note ? { note: result.note } : {}),
