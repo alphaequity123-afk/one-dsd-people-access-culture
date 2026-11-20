@@ -10,7 +10,7 @@ export function WaterCollectionFeature({ withPhoto = false }: { withPhoto?: bool
       <div>
         <h2 id="water-collection-feature-title">{WATER_RESOURCE_COLLECTION_TITLE}</h2>
         <p>Explore culture at work through the American and Minnesota briefs and the Equity Analysis Toolkit.</p>
-        {withPhoto && <Link className="pilot-primary" href={WATER_RESOURCE_COLLECTION_PATH}>Open the collection</Link>}
+        {withPhoto && <Link className="pilot-secondary" href={WATER_RESOURCE_COLLECTION_PATH}>Open the collection</Link>}
       </div>
       {!withPhoto && <Link className="btn btn--primary" href={WATER_RESOURCE_COLLECTION_PATH}>Open the collection</Link>}
     </section>
