@@ -149,3 +149,13 @@ body.dsd-calm main .dsd-home .home-task[aria-pressed="true"] { border-color: var
   .dsd-home .home-feature > section { grid-template-columns: 160px 1fr; align-items: center; }
   .dsd-home .home-feature > section img { aspect-ratio: 4/3; }
 }
+
+/* This week's course: the one part of the page that changes. */
+.dsd-home .home-weekly-card { display: grid; gap: 14px; padding: 18px; border: 1px solid #d9dfe5; border-radius: 16px; background: #fff; }
+.dsd-home .home-weekly-card img { display: block; width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; border-radius: 10px; background: var(--od-soft); }
+.dsd-home .home-weekly-card > div { display: grid; gap: 8px; justify-items: start; align-content: center; }
+@media (min-width: 640px) { .dsd-home .home-weekly-card { grid-template-columns: 300px 1fr; gap: 24px; align-items: center; } }
+.dsd-home .home-weekly-card h3 { margin: 0; font-size: 1.2rem; font-weight: 600; line-height: 1.25; }
+.dsd-home .home-weekly-card p { margin: 0; color: var(--od-muted); }
+.dsd-home .home-weekly-card .home-weekly-level { font-size: .875rem; font-weight: 600; color: var(--od-link); }
+.dsd-home .home-pair .pilot-section-heading a { min-height: 44px; }

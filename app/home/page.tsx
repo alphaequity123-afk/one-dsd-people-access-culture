@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "@/components/app-link";
 import { HomeTaskFinder } from "@/components/home-task-finder";
 import { HeroMotion } from "./hero-motion";
+import { WeeklyCourse } from "@/components/weekly-course";
 import { publishedCalendar } from "@/lib/content/cultural-calendar";
 import { CALENDAR_PATH, chicagoToday, compactCalendar, shortDateRange, upcomingObservances } from "@/lib/content/culture-calendar-grid";
 import "./task-home.css";
@@ -42,6 +43,8 @@ export default async function HomePage() {
         </li>)}</ul>
       </section>
 
+      <WeeklyCourse today={chicagoToday()} />
+
       <div className="pilot-section home-pair">
         <section className="home-box" aria-labelledby="pilot-calendar">
           <div className="pilot-section-heading"><h2 id="pilot-calendar">Coming up</h2><Link href={CALENDAR_PATH}>Open the calendar</Link></div>
@@ -61,7 +64,7 @@ export default async function HomePage() {
 /** The calendar preview must never break the home page: if the calendar cannot be read, it shows the link only. */
 async function upcomingFromCalendar() {
   try {
-    return upcomingObservances(compactCalendar(await publishedCalendar()), chicagoToday(), 2);
+    return upcomingObservances(compactCalendar(await publishedCalendar()), chicagoToday(), 3);
   } catch (error) {
     console.error("home calendar preview unavailable", error instanceof Error ? `${error.name}: ${error.message}` : error);
     return [];

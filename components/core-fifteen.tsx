@@ -3,7 +3,7 @@ import { SELF_DIRECTED_COURSES, selfDirectedHref } from "@/lib/content/self-dire
 import { ExplainerVideo } from "@/components/explainer-video";
 
 /** The Core 15: the courses every staff member is encouraged to start with. Approved by the program lead, Oct 25, 2026. */
-const CORE_FIFTEEN = [
+export const CORE_FIFTEEN = [
   { title: "Start here", note: "A shared language for equity, access and everyday judgment", numbers: ["F21", "F02", "F05", "F09", "F10", "F15"] },
   { title: "Apply it", note: "Equity brought into real decisions and services", numbers: ["I09", "I10", "I21", "I15", "I17", "I06"] },
   { title: "Lead it", note: "The systems view that policy and leadership require", numbers: ["A09", "A20", "A21"] },
