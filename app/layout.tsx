@@ -19,8 +19,6 @@ import { OpenDetailsForHash } from "@/components/open-details-for-hash";
 import { CourseMediaForPage } from "@/components/course-media-for-page";
 import { PROGRAM } from "@/lib/constants";
 import { PublishedProgramHeader } from "@/components/published-program-header";
-import { DsdProgramFooter } from "@/components/dsd-program-footer";
-import { ConnectedMinnesota } from "@/components/connected-minnesota";
 import { DsdResourceActions } from "@/components/dsd-workspace";
 import { ProgramContextProvider } from "@/components/program-context";
 import { requestedProductContext } from "@/lib/product/request-context";
@@ -130,8 +128,6 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 
           </main>
           <ChromeGate hideOnPrefixes={["/share/", "/embedded-tools/"]} hideOnExact={["/"]}>
-            <ConnectedMinnesota />
-            <DsdProgramFooter />
             <UniversalEditor owner={owner} />
           </ChromeGate>
           <ChromeGate onlyOnPrefixes={["/share/"]}>
