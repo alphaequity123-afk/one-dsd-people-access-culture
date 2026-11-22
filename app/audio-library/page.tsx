@@ -29,6 +29,8 @@ export default async function AudioLibraryPage({ searchParams }: { searchParams?
   const shelves = filterAudioShelves(allShelves, selectedTheme?.id);
   const count = countAudioLibraryEntries(shelves);
   const podcasts = PODCASTS.flatMap((podcast, index) => podcastSurfaces[index].available && podcastMatchesTheme(podcast.id, selectedTheme?.id) ? [{ podcast, surface: podcastSurfaces[index] }] : []);
+  // Owner decision 2026-11-22: each podcast appears once, in the Podcasts section with its full player.
+  const playerShelves = podcasts.length ? shelves.filter(shelf => shelf.id !== "podcasts") : shelves;
   const courseListening = listCourseListening(courses.map(({ pack }) => pack), selfDirectedItems()).filter(course => !selectedTheme || course.themes.includes(selectedTheme.id));
   return <>
     <PageIntro kicker="Learning and resources" title="Audio library" lede="Explore podcasts and courses with recordings. Choose a theme, listen at your own pace, or read the accompanying text.">
@@ -42,8 +44,8 @@ export default async function AudioLibraryPage({ searchParams }: { searchParams?
         {selectedTheme ? <Link href="/audio-library" className="inline-flex min-h-11 items-center underline underline-offset-4">View all listening</Link> : null}
       </form>
       {selectedTheme ? <section className="mb-8" aria-labelledby="audio-theme-title"><h2 id="audio-theme-title" className="text-2xl font-semibold">{selectedTheme.title}</h2><p className="mt-2 max-w-3xl leading-7">{selectedTheme.description}</p></section> : null}
-      {podcasts.length ? <section aria-labelledby="podcasts-title" className="mb-10"><h2 id="podcasts-title" className="text-2xl font-semibold">Featured podcasts</h2><div className="mt-5 space-y-8">{podcasts.map(({ podcast, surface }) => <PublishedPodcast key={podcast.id} headingLevel={3} podcast={podcast} surface={surface} />)}</div></section> : null}
-      {count > 0 ? <AudioLibraryPlayer key={selectedTheme?.id ?? "all"} shelves={shelves} themeLabels={audioThemeLabels(shelves)} /> : <p>No stand-alone recordings match this theme yet. Explore the courses below or choose another way to learn.</p>}
+      {podcasts.length ? <section aria-labelledby="podcasts-title" className="mb-10"><h2 id="podcasts-title" className="text-2xl font-semibold">Podcasts</h2><div className="mt-5 space-y-8">{podcasts.map(({ podcast, surface }) => <PublishedPodcast key={podcast.id} headingLevel={3} podcast={podcast} surface={surface} />)}</div></section> : null}
+      {playerShelves.some(shelf => shelf.entries.length) ? <AudioLibraryPlayer key={selectedTheme?.id ?? "all"} shelves={playerShelves} themeLabels={audioThemeLabels(shelves)} /> : <p>No stand-alone recordings match this theme yet. Explore the courses below or choose another way to learn.</p>}
       {courseListening.length ? <section aria-labelledby="course-listening-title" className="mt-10"><h2 id="course-listening-title" className="text-2xl font-semibold">Listen within a course</h2><p className="mt-2 max-w-3xl leading-7">These courses include optional listening alongside the lesson. Open a course to hear its recordings, read the spoken text, and work through its activities.</p><ul className="mt-5 grid list-none gap-4 p-0 md:grid-cols-2">{courseListening.map(course => <li key={course.id} data-course-listening={course.id} className="rounded-lg border border-line bg-white p-5"><h3 className="text-lg font-semibold"><Link href={course.href} className="underline underline-offset-4">{course.title}</Link></h3><p className="mt-2 text-sm">Open the course for listening and practice.</p></li>)}</ul></section> : null}
     </div>
   </>;
