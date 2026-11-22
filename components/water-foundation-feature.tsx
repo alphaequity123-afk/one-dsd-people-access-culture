@@ -3,6 +3,9 @@ import { WATER_FOUNDATION } from "@/lib/learning/water-foundation";
 import styles from "./water-foundation-course.module.css";
 
 export function WaterFoundationFeature() {
+  // Owner decision 2026-11-21: the course and its video are retired; nothing is shown.
+  return null;
+
   return <section className={styles.feature} aria-labelledby="water-foundation-title">
     <div>
       <p className={styles.eyebrow}>Featured course · About 1 hour</p>

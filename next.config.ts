@@ -143,6 +143,9 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       ...legacyCourseDataRedirects,
+      // Owner decision 2026-11-21: The Water We Swim In is a reading now; the course pages open the essay.
+      ...["/learn/water-we-swim-in", "/learn/water-we-swim-in/course", "/learn/water-we-swim-in/collection", "/learn/water-we-swim-in/module-:n"]
+        .map(source => ({ source, destination: "/learn/water-we-swim-in/essay", permanent: false })),
       { source: "/contribute", destination: "/support", permanent: false },
       { source: "/contribute/:path*", destination: "/support", permanent: false },
       { source: "/library/self-directed-:number", destination: "/learning/self-directed/index.html?course=:number", permanent: false },

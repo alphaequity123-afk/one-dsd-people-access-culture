@@ -73,7 +73,7 @@ export const USER_GUIDE = {
         ],
         [
           "/learn/self-directed",
-          "Self-directed courses"
+          "Practice for the Moments That Matter"
         ],
         [
           "/learn/readings",

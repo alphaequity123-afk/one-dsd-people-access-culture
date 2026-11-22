@@ -48,7 +48,7 @@ export function WaterEssayPager({ index }: { index: number }) {
   const next = WATER_ESSAY_PARTS[index + 1];
   return <nav className="course-next" aria-label="Essay parts">
     {previous ? <Link href={waterPartHref(previous)}>Previous: {previous.heading}</Link> : <Link href={WATER_ESSAY_HREF}>Essay contents</Link>}
-    {next ? <Link href={waterPartHref(next)}>Next: {next.heading}</Link> : <Link href={WATER_COURSE_HREF}>Course overview</Link>}
+    {next ? <Link href={waterPartHref(next)}>Next: {next.heading}</Link> : <Link href="/learn#learn-culture-title">Back to Culture at work in Learn</Link>}
   </nav>;
 }
 

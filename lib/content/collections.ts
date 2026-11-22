@@ -170,7 +170,7 @@ export const STAFF_RESOURCES: Readonly<Record<string, readonly ResourceLink[]>> 
   "disability-access": [{ label: "Readings", href: "/learn/readings" }],
   "services-choice-system": [{ label: "DSD programs and services", href: "/one-dsd/programs" }],
   "culture-language": [{ label: "National CLAS Standards", href: "/learn/clas" }, { label: "Intercultural learning", href: "/learn/intercultural" }, { label: "Cultural Intelligence collection", href: "/learn/cultural-intelligence" }, GP[9], GP[13]],
-  "minnesota-communities": [{ label: "Minnesota Communities", href: "/minnesota-communities" }, { label: "The Water We Swim In", href: "/learn/water-we-swim-in" }],
+  "minnesota-communities": [{ label: "Minnesota Communities", href: "/minnesota-communities" }, { label: "The Water We Swim In", href: "/learn/water-we-swim-in/essay" }],
   "working-together": [{ label: "Amplify mentoring and peer learning", href: "/one-dsd/amplify/mentoring" }, { label: "Employee resource groups", href: "/employee-resource-groups" }, GP[4], GP[8]],
   "policy-data-decisions": [TOOLKIT, { label: "Equity in Practice", href: "/learn/equity-in-practice" }, GP[1], GP[2], GP[3], GP[7], GP[9], GP[10], GP[12]],
 };

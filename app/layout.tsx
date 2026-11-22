@@ -12,6 +12,8 @@ import "./inner-theme.css";
 import "./calm-system.css";
 import "./dsd-pilot.css";
 import "./source-readings.css";
+import "./hybrid-reading.css";
+import { ArticleLayoutMarker, ArticleLayoutScript } from "@/components/article-layout-marker";
 import { InternalPage } from "@/components/internal-page";
 import { OpenDetailsForHash } from "@/components/open-details-for-hash";
 import { CourseMediaForPage } from "@/components/course-media-for-page";
@@ -104,6 +106,9 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <body className="program-design dsd-calm flex min-h-full flex-col">
         {/* Marks a One DSD front door before the header paints; see lib/program/front-door.ts. */}
         {frontDoor ? <script dangerouslySetInnerHTML={{ __html: frontDoor }} /> : null}
+        {/* Reading pages get one readable column before the first paint; see lib/article-layout.ts. */}
+        <ArticleLayoutScript />
+        <ArticleLayoutMarker />
         <NavigationStatus />
         {shareOrigin ? <meta name={SHARE_ORIGIN_META} content={shareOrigin} /> : null}
         <ProgramContextProvider
