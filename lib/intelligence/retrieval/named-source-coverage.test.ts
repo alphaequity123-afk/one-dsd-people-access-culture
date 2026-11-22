@@ -29,36 +29,6 @@ const currentReadings = [...unprojectedReadings, waterCollectionDoc("dsd", unpro
 const synthesis = "Use The Water We Swim In, American Culture Brief, Minnesota Culture Brief, and DHS Equity Analysis Toolkit to draft a guide to accessible appointment notices in Minnesota.";
 
 describe("Ask coverage of named published sources", () => {
-  it("reserves direct evidence for all four sources and rejects a collection description as coverage", () => {
-    const plan = namedSourcePlan(synthesis, currentReadings);
-    expect(plan.groups.map(group => group.title)).toEqual([
-      "The Water We Swim In essay", "American Culture Brief", "Minnesota Culture Brief", "DHS Equity Analysis Toolkit public companion",
-    ]);
-    expect(plan.hits.slice(0, 4).map(hit => hit.href)).toEqual([
-      expect.stringMatching(/^\/learn\/water-we-swim-in\/essay\/.+/),
-      expect.stringMatching(/^\/minnesota-communities\/american\/profile#profile-.+/),
-      expect.stringMatching(/^\/minnesota-communities\/minnesota\/profile#profile-.+/),
-      "/learn/equity-toolkit",
-    ]);
-    expect(plan.ids.has("water-collection-hub")).toBe(false);
-    expect(plan.ids.has(reference.id)).toBe(false);
-    const sources = citationEvidenceFromDocs(plan.hits, currentReadings, { question: synthesis });
-    const coverage = namedSourceCoverage(plan.groups, sources);
-    expect(coverage.every(group => group.refs.length)).toBe(true);
-    expect(coverage[3].limitation).toMatch(/original internal toolkit text is unavailable/);
-    const allClaims = resolveCitedStatements(coverage.map(group => ({
-      text: "A supported statement based on " + group.title, refs: [group.refs[0]],
-    })), sources).claims;
-    expect(uncitedNamedSources(coverage, sources, allClaims.slice(0, 1)).map(group => group.title))
-      .toEqual(coverage.slice(1).map(group => group.title));
-    expect(uncitedNamedSources(coverage, sources, allClaims)).toEqual([]);
-    expect(validateEvidenceClaims(allClaims, sources, currentReadings)).toEqual(allClaims);
-    expect(() => validateEvidenceClaims(allClaims, sources, currentReadings.filter(reading => reading.id !== companion.id)))
-      .toThrow("generated_evidence_rejected");
-    const review = buildAnswerEvidenceReview({ question: synthesis, draft: {}, sources, sourceOnly: true, requestedSources: coverage });
-    expect(JSON.parse(review.user).requestedSources).toEqual(coverage);
-    expect(review.system).toContain("meaningfully uses each named resource");
-  });
 
   it("keeps a missing named brief visible and treats the official toolkit request as access only", () => {
     const docs = currentReadings.filter(reading => !reading.href.startsWith("/minnesota-communities/american/profile"));

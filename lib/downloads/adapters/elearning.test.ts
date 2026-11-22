@@ -51,7 +51,7 @@ async function resolved(kind: DownloadKind, id: string): Promise<ResourceDocumen
 describe("eLearning downloads", () => {
   it("lists every published course, each lesson and every curriculum part", () => {
     const kinds = new Set(ALL_IDS.map((entry) => entry.kind));
-    for (const kind of ["course", "lesson", "clas-curriculum", "clas-lesson", "toolkit-curriculum", "toolkit-lesson", "intercultural-curriculum", "intercultural-lesson", "water-we-swim-in", "leadership-styles", "reading", "learn-page"]) {
+    for (const kind of ["course", "lesson", "clas-curriculum", "clas-lesson", "toolkit-curriculum", "toolkit-lesson", "intercultural-curriculum", "intercultural-lesson", "leadership-styles", "reading", "learn-page"]) {
       expect(kinds.has(kind as DownloadKind), kind).toBe(true);
     }
     expect(new Set(ALL_IDS.map((entry) => `${entry.kind}/${entry.id}`)).size).toBe(ALL_IDS.length);

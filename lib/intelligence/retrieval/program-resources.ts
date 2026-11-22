@@ -13,7 +13,7 @@ import { MEASUREMENT_RESOURCE_ID } from "@/lib/content/measurement-practice";
 import type { Doc } from "./search";
 import { searchDocs, tokens } from "./search";
 import { publicSourceMetadata } from "../research/source-context";
-import { communityProfileDocs, communityResearchDocs, culturalCalendarDocs, curriculumDocs, selfDirectedCurriculumDocs, waterCourseDocs, waterCollectionDoc } from "./brain-content";
+import { communityProfileDocs, communityResearchDocs, culturalCalendarDocs, curriculumDocs, selfDirectedCurriculumDocs } from "./brain-content";
 import { publishedPodcastReadings } from "./podcast-reading";
 import { developmentModel, journeyHref } from "@/lib/program/development";
 import equityGoals from "@/lib/program/equity-goals.json";
@@ -219,11 +219,14 @@ export async function indexedProgramResources(scope: StaffProgramScope): Promise
       const id = new URL(doc.href, "https://local.invalid").searchParams.get("course");
       return id ? [id] : [];
     }));
-    destinations.push(...communityResearchDocs(scope, communityDocs), ...communityProfileDocs(scope, communityDocs), ...culturalCalendarDocs(scope, communityDocs), ...waterCourseDocs(scope), ...curriculumDocs(scope, publishedIds), ...publicCourseMediaDocs(scope, currentCourses, activeSelfDirected), ...publicExplainerMediaDocs(scope, publishedIds));
+    destinations.push(...communityResearchDocs(scope, communityDocs), ...communityProfileDocs(scope, communityDocs), ...culturalCalendarDocs(scope, communityDocs), ...curriculumDocs(scope, publishedIds), ...publicCourseMediaDocs(scope, currentCourses, activeSelfDirected), ...publicExplainerMediaDocs(scope, publishedIds));
   } catch (error) {
     console.error("ask_brain_content_unavailable", error instanceof Error ? error.message : "unknown");
   }
-  destinations.push(waterCollectionDoc(scope, destinations));
+  // Owner decision 2026-11-22: The Water We Swim In is removed entirely, essay included; Ask never cites it.
+  for (let i = destinations.length - 1; i >= 0; i--) {
+    if (/^\/learn\/water-we-swim-in(?:[/?#]|$)/.test(destinations[i].href) || /water we swim in/i.test(destinations[i].title)) destinations.splice(i, 1);
+  }
   // Courses One DSD refers elsewhere are not answer evidence or destinations.
   const index = { communityDocs, destinations: destinations.filter(publicRetrievalDocumentEligible).map(doc => ({ ...doc, id: publicProjectionAuditId(doc.id) })) };
   currentIndexes.set(scope, { key: scopedKey, index });
