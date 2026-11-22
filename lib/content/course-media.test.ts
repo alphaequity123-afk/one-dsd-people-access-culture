@@ -24,3 +24,12 @@ describe("course media manifests", () => {
     expect(mediaForPage([item], "/courses/x")[0].media).toBe("/learning/course-media/" + base.media);
   });
 });
+
+describe('retired leadership films', () => {
+  it('matches the 14 retired film ids and nothing else', async () => {
+    const { RETIRED_COURSE_MEDIA } = await import('./course-media');
+    expect(RETIRED_COURSE_MEDIA.test('leadership-film-01-what-leadership-is')).toBe(true);
+    expect(RETIRED_COURSE_MEDIA.test('leadership-film-14-anything')).toBe(true);
+    expect(RETIRED_COURSE_MEDIA.test('cultural-humility-video')).toBe(false);
+  });
+});
