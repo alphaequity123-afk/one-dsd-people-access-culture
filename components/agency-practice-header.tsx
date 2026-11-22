@@ -10,7 +10,7 @@ import { useLearningTrail, trailHref } from "./use-learning-trail";
 
 // Owner decision 2026-11-22: these pages now reach people only through the One DSD site, so they carry its menu
 // (same items and order as the front door's components/site-header.tsx for One DSD; Ask and Search sit in the banner).
-const sections = [["Home", "/"], ["Your work", "/work"], ["Begin with equity", "/start"], ["Learn", "/learn"], ["Leadership", "/learn/leadership"], ["Library", "/library"], ["Communities", "/communities"]];
+const sections = [["Home", "/"], ["Your work", "/work"], ["Begin with equity", "/start"], ["Learn", "/learn"], ["Leadership", "/learn/leadership"], ["Library", "/library"], ["Communities", "/minnesota-communities"]];
 
 /** Agency branding spans the connected program; the learning trail survives related-page visits. */
 export function AgencyPracticeHeader({ children }: { children: ReactNode }) {

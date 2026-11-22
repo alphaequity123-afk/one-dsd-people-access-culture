@@ -1,3 +1,4 @@
+import { DsdConversationGuide } from "@/components/dsd-conversation-guide";
 import Link from "@/components/app-link";
 import { LiveSearchForm } from "./live-search-form";
 import { notFound } from "next/navigation";
@@ -11,7 +12,6 @@ import { EditableSurfaceRegion, prepareEditableSurface } from "./editable-surfac
 import "./community-editorial.css";
 import { ExplainerVideo } from "@/components/explainer-video";
 import { ToolDecisionQuestions } from "@/components/tool-decision-questions";
-import { WATER_RESOURCE_COLLECTION_PATH, WATER_RESOURCE_COLLECTION_TITLE } from "@/lib/learning/water-resource-collection";
 
 export async function CommunityDesignIndex({ query = "" }: { query?: string }) {
   const pageSurface = await prepareEditableSurface("communities.index");
@@ -44,12 +44,12 @@ export async function CommunityDesignIndex({ query = "" }: { query?: string }) {
     <div className="community-index-layout">
       <p className="community-eyebrow">People, place, and perspective</p>
       <h1>{copy("introTitle", "Minnesota Communities")}</h1><p className="community-opening">{copy("introLede", "Minnesota's communities carry long histories, real contributions and everyday experiences that shape how people meet public services. These briefs offer that context so you can ask better questions and plan for access, never to describe any one person.")}</p>
-      <p className="community-opening">Start with <Link href={WATER_RESOURCE_COLLECTION_PATH}>{WATER_RESOURCE_COLLECTION_TITLE}</Link>.</p>
       <LiveSearchForm action="/minnesota-communities" className="community-search"><label htmlFor="community-query">{copy("searchLabel", "Find a community")}</label><div><input id="community-query" type="search" name="q" defaultValue={query} placeholder={copy("searchExample", "") || undefined} /><button type="submit">{copy("searchButton", "Search")}</button>{normalized ? <Link href="/minnesota-communities">Clear search</Link> : null}</div></LiveSearchForm>
       <p role="status">{normalized ? `${matching.length} matching ${matching.length === 1 ? "brief" : "briefs"}` : `${entries.length} community and place briefs`}</p>
       {normalized ? list(matching) : <><h2>Explore communities</h2>{list(featured)}<details className="community-more"><summary>All other communities and places ({more.length})</summary>{list(more)}</details></>}
       {normalized && !matching.length ? <p>No community matched that name. You might try a different spelling, or browse the full collection.</p> : null}
       {!normalized ? <ExplainerVideo id="community-briefs" /> : null}
+      {!normalized ? <DsdConversationGuide /> : null}
       <p className="mt-8"><Link href="/minnesota-communities/calendar">Open the cultural calendar</Link> for observances, festivals and remembrances across these communities.</p>
       <p><Link href="/community-outreach">Community Outreach and Engagement</Link>: find organizations connected with the Disability Services Division, compare counties, and plan an engagement.</p>
       <ToolDecisionQuestions tool="minnesota-communities" className="mt-8" />
