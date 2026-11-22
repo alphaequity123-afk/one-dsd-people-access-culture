@@ -26,3 +26,13 @@ html[data-pac-unit="dsd"] .agency-practice-brand .pac-unit-dsd { display:inline;
 /* The same name switch anywhere on the page (footers, notices): One DHS by default, One DSD on a One DSD address. */
 .pac-unit-dsd, html[data-pac-unit="dsd"] .pac-unit-dhs { display:none; }
 html[data-pac-unit="dsd"] .pac-unit-dsd { display:inline; }
+
+/* Owner decision 2026-11-22: borrowed pages look like the One DSD site's header (app/globals.css in one-dhs-pac):
+   one-row menu that slides sideways on narrow screens, green bar under the current page, same hover colors. */
+.agency-practice-header nav ul { flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none; -webkit-overflow-scrolling:touch; padding-inline:16px; }
+.agency-practice-header nav ul::-webkit-scrollbar { display:none; }
+.agency-practice-header nav li { flex:0 0 auto; }
+.agency-practice-header nav a { white-space:nowrap; padding:.7rem 1rem; font-size:.98rem; }
+.agency-practice-header nav a:hover, .agency-practice-header nav a[aria-current] { background:#002244; box-shadow:inset 0 -4px 0 #78BE21; }
+.agency-practice-header .agency-practice-tools a:hover { background:#2b4960; }
+@media(max-width:760px) { .agency-practice-header nav a { padding:.65rem .75rem; font-size:.9rem; } }
