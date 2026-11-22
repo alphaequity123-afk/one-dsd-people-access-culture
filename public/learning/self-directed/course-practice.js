@@ -59,7 +59,3 @@
   document.addEventListener('course-rendered', event => show(event.detail));
   if (typeof courses !== 'undefined' && courses[selected]?.slides) show({course:courses[selected],page:courses[selected].slides.find(s=>s.number===current)});
 })();
-
-// Owner decision 2026-11-21: the series is named Practice for the Moments That Matter.
-// index.html is a fingerprinted accessibility artifact (config/accessible-static-assets), so the name is set here.
-(function(){function rename(){var h=document.querySelector('main h1');if(h&&h.textContent.trim()==='Self-directed learning')h.textContent='Practice for the Moments That Matter';if(/^Self-Directed Learning \|/.test(document.title))document.title=document.title.replace(/^Self-Directed Learning/,'Practice for the Moments That Matter');}if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',rename);else rename();})();
