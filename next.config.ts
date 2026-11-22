@@ -142,6 +142,15 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // Owner decision 2026-11-22: the old address opens the current One DSD site. Requests the front door passes
+      // through carry x-one-dsd-front-door and are served as before; owner upload tools under /api keep working.
+      ...["/", "/:path((?!api(?:/|$)).+)"].map(source => ({
+        source,
+        has: [{ type: "host" as const, value: "one-people-access-culture.up.railway.app" }],
+        missing: [{ type: "header" as const, key: "x-one-dsd-front-door" }],
+        destination: source === "/" ? "https://dsd-web-production-3080eb48.up.railway.app/" : "https://dsd-web-production-3080eb48.up.railway.app/:path",
+        permanent: false,
+      })),
       ...legacyCourseDataRedirects,
       // Owner decision 2026-11-21: The Water We Swim In is a reading now; the course pages open the essay.
       ...["/learn/water-we-swim-in", "/learn/water-we-swim-in/course", "/learn/water-we-swim-in/collection", "/learn/water-we-swim-in/module-:n"]
