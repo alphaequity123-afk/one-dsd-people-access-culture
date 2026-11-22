@@ -35,10 +35,9 @@ describe("hub pages keep their content in closed panels", () => {
     // The Learn page now opens with one recommended starting point; the full catalog is one step away.
     for (const t of ["Start with the Core 15", 'href="/learn/core-15"']) expect(page, t).toContain(t);
   });
-  it("finds The Water We Swim In by title", async () => {
+  it("no longer lists The Water We Swim In, which was removed", async () => {
     const page = html(await LearnPage({ searchParams: Promise.resolve({ q: "Water We Swim In" }) }));
-    expect(page).toContain('href="/learn/water-we-swim-in/collection"');
-    expect(page).not.toContain("No matching resources");
+    expect(page).not.toContain("water-we-swim-in");
   });
   it("library", async () => {
     const page = html(await LibraryPage({ searchParams: Promise.resolve({}) }));
