@@ -2,7 +2,6 @@
 import { SourceLink } from "@/components/app-link";
 import { catPaginate, catParam } from "@/lib/cat-paging";
 import { CatPager, CatResultStatus } from "@/components/cat-list";
-import { WaterCollectionFeature } from "@/components/water-collection-feature";
 import { WATER_RESOURCE_COLLECTION_PATH, WATER_RESOURCE_COLLECTION_TITLE } from "@/lib/learning/water-resource-collection";
 import { podcastMatchesTheme } from "@/lib/content/audio-organization";
 import { COLLABORATION_FOCUSES, collaborationCourses, collaborationHref } from "@/lib/learning/collaboration-collection";
@@ -122,10 +121,7 @@ export default async function LearnPage({ searchParams }: { searchParams?: Promi
     return !query.level && published.available && podcastMatchesTheme(podcast.id, query.theme) && podcastMatches(podcast, { ...query, theme: "" }, stringValue(published.values, "title"), stringValue(published.values, "intro")) ? [{ podcast, surface: published }] : [];
   });
   const searchTerms = query.q.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
-  const waterMatch = searchTerms.length > 0 && !query.theme && !query.level
-    && (!query.type || query.type === "learning_module")
-    && searchTerms.every(term => WATER_RESOURCE_COLLECTION_TITLE.toLocaleLowerCase().includes(term));
-  const totalFound = selected.length + podcasts.length + Number(waterMatch);
+  const totalFound = selected.length + podcasts.length;
   const podcastAvailable = podcastSurfaces.some(published => published.available);
   const types = [...new Set(items.map((item) => item.type))];
   const hubText = (key: string) => stringValue(hub.values, key);
@@ -156,7 +152,6 @@ export default async function LearnPage({ searchParams }: { searchParams?: Promi
         </div>
       </header>
       <div className={styles.content}>
-        {!filtered ? <div className="mb-6"><WaterCollectionFeature /></div> : null}
         <div id="catalog" className={styles.catalog}>
           <h2 className={preview.collectionTitle}>Search the collection</h2>
           <EditableSurfaceRegion surface={hub}>
@@ -177,7 +172,6 @@ export default async function LearnPage({ searchParams }: { searchParams?: Promi
             {expanded ? <p role="status" className={styles.resultCount}>{totalFound} {hubText(totalFound === 1 ? "countSingular" : "countLabel")}</p> : null}
             {!totalFound ? <div><h2>{hubText("emptyTitle")}</h2><p>{hubText("emptyBody")}</p></div> : null}
           </EditableSurfaceRegion>
-          {waterMatch ? <div className="mb-6"><WaterCollectionFeature /></div> : null}
           <EditableSurfaceRegion surface={catalog}>{null}</EditableSurfaceRegion>
           {selectedTheme || legacyThemeTitle ? <section id="start-here" className={preview.startHere} aria-labelledby="topic-start-title">
             <p className={styles.eyebrow}>Explore a topic</p><h2 id="topic-start-title">{selectedTheme?.title ?? legacyThemeTitle}</h2><p>{selectedTheme?.description ?? "Explore learning and practical resources related to this topic."}</p>
@@ -211,7 +205,6 @@ export default async function LearnPage({ searchParams }: { searchParams?: Promi
             <li><Link href="/learn/collections">Collections</Link><p>All the learning on eight shelves named by subject, each opening with where to start. Leaders, supervisors, managers, and directors can start from <Link href="/leading">the decision in front of them</Link>.</p></li>
             {culturalIntelligenceAvailable && <li><Link href="/learn/cultural-intelligence">Cultural Intelligence collection</Link><p>Connect community context and intercultural learning with decisions in everyday work.</p></li>}
             <li><Link href="/learn/self-directed">Practice for the Moments That Matter</Link><p>Seventy-two courses built around real service and workplace situations, with reflection and practice. Choose Foundation, Intermediate, or Advanced, and download editable slides to use with a team. Includes <Link href="/learn/self-directed?curriculum=policy">Equity in Policy and Legislative Practice</Link>.</p></li>
-            <li><Link href="/learn/water-we-swim-in/essay">The Water We Swim In</Link><p>A reading on Minnesota&apos;s mainstream culture: its strengths, its blind spots, and how it shapes work, with every source it draws on.</p></li>
             <li><Link href="/learn/emotions-and-values">Emotions, Values, and Everyday Practice</Link><p>Four courses that connect emotional intelligence and cultural values with conversations, team decisions, and usable services.</p></li>
             <li><Link href="/learn/clas">National Culturally and Linguistically Appropriate Services Standards</Link><p>Explore cultural and language access learning, planning tools and supporting references together.</p></li>
             {collaborationCollection.length ? <li><Link href={collaborationHref()}>Teams and Cross-Collaboration</Link><p>Build trust within your team, connect work across the Disability Services Division and the Aging and Disability Services Administration, and strengthen relationships with partners.</p></li> : null}

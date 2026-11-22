@@ -36,9 +36,6 @@ export async function pathwayDownloadDocument(kind: DownloadKind, id: string, sc
 export async function pathwayDownloadIds(scope: StaffProgramScope): Promise<{ kind: DownloadKind; id: string }[]> {
   void scope;
   return [
-    { kind: "water-we-swim-in", id: "home" },
-    { kind: "water-we-swim-in", id: "essay" },
-    ...WATER_MODULES.map((module) => ({ kind: "water-we-swim-in" as const, id: module.slug })),
     ...LEADERSHIP_PAGE_IDS.map((id) => ({ kind: "leadership-styles" as const, id })),
     ...LEADERSHIP_STYLE_LESSONS.map((lesson) => ({ kind: "leadership-styles" as const, id: lesson.slug })),
     { kind: "reading", id: "pathways" },
