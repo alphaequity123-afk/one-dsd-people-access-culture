@@ -167,3 +167,18 @@
   }
   window.addEventListener('hashchange',fromAddress); window.addEventListener('popstate',fromAddress); fromAddress();
 })();
+
+// Hybrid design and series name for the self-directed course pages (owner decisions 2026-11-21).
+// The pages' own files ship from the release asset bucket, so these small changes live here.
+(function () {
+  if (!/^\/learning\/self-directed\//.test(location.pathname)) return;
+  var style = document.createElement("style");
+  style.textContent = '.dsd-calm main :is(strong, b, dt, th, legend, label, h4, h5, h6):not(:is(a, button, .button, [role="button"], [aria-pressed="true"], [aria-selected="true"]) *) { color: #003865; }';
+  document.head.appendChild(style);
+  function rename() {
+    var h = document.querySelector("main h1");
+    if (h && h.textContent.trim() === "Self-directed learning") h.textContent = "Practice for the Moments That Matter";
+    if (/^Self-Directed Learning \|/.test(document.title)) document.title = document.title.replace(/^Self-Directed Learning/, "Practice for the Moments That Matter");
+  }
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", rename); else rename();
+})();
