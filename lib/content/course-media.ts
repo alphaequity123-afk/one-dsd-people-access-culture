@@ -161,6 +161,9 @@ export async function ingestCourseMedia(request: Request, name: string, root: st
 
 let cache: { at: number; root: string; items: CourseMediaItem[] } | undefined;
 
+/** Owner decision 2026-11-22: the 14 leadership films are retired. Their files stay in storage but are never listed. */
+export const RETIRED_COURSE_MEDIA = /^leadership-film-\d{2}-/;
+
 /** Every published item whose files are all present. Cached for one minute. */
 export async function publishedCourseMedia(root: string | undefined, fresh = false): Promise<CourseMediaItem[]> {
   if (!root) return [];
@@ -175,7 +178,7 @@ export async function publishedCourseMedia(root: string | undefined, fresh = fal
       try {
         if (!opened.info.size || opened.info.size > MAX_MANIFEST) continue;
         const item = cleanCourseMediaManifest(JSON.parse(await opened.file.readFile('utf8')), name.slice(0, -5));
-        if (!item) continue;
+        if (!item || RETIRED_COURSE_MEDIA.test(item.id)) continue;
         let present = true;
         for (const file of [item.media, item.captions, item.transcript]) if (!await assetPresent(root, file, false)) { present = false; break; }
         if (present) items.push(item);
