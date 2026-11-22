@@ -1,5 +1,6 @@
-export const WATER_RESOURCE_COLLECTION_PATH = "/learn/water-we-swim-in/collection";
-export const WATER_RESOURCE_COLLECTION_TITLE = "The Water We Swim In";
+// Owner decision 2026-11-21: the course is retired; its related readings now sit under Culture at work in Learn.
+export const WATER_RESOURCE_COLLECTION_PATH = "/learn#learn-culture-title";
+export const WATER_RESOURCE_COLLECTION_TITLE = "Culture at work";
 
 export const WATER_RESOURCE_COLLECTION_SOURCES = [
   { family: "water", title: "The Water We Swim In essay", resourcePath: "/learn/water-we-swim-in/essay" },

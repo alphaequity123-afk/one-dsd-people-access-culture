@@ -4,6 +4,9 @@ import { WATER_RESOURCE_COLLECTION_PATH, WATER_RESOURCE_COLLECTION_TITLE } from 
 import styles from "./water-collection-feature.module.css";
 
 export function WaterCollectionFeature({ withPhoto = false }: { withPhoto?: boolean }) {
+  // Owner decision 2026-11-21: the course and its video are retired; nothing is shown.
+  return null;
+
   return (
     <section className={withPhoto ? styles.photoFeature : styles.feature} aria-labelledby="water-collection-feature-title">
       {withPhoto && <Image src="/images/pilot-home/water-we-swim-in.jpg" alt="Two staff members meet with a family around a table in a bright room." width={1000} height={667} sizes="(min-width: 760px) 480px, 100vw" />}

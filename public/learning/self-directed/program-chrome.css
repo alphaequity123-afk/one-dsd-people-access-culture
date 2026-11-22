@@ -102,3 +102,6 @@ body.dsd-calm { --blue:#173f59; --blue-dark:#183447; --blue-mid:#365f79; --green
 }
 @media(prefers-reduced-motion:reduce) { .dsd-calm *, .dsd-calm *::before, .dsd-calm *::after { scroll-behavior:auto!important; animation:none!important; transition:none!important; } }
 @media print { .dsd-nav, .dsd-utilities, .dsd-footer, .skip-link { display:none; } .dsd-shell, .dsd-calm main { width:100%; } }
+
+/* Hybrid design (2026-11-21): bold text inside pages reads in navy; links and buttons keep their colors. */
+.dsd-calm main :is(strong, b, dt, th, legend, label, h4, h5, h6):not(:is(a, button, .button, [role="button"], [aria-pressed="true"], [aria-selected="true"]) *) { color: #003865; }
