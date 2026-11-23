@@ -184,7 +184,10 @@
 (function () {
   if (!/^\/learning\/self-directed\//.test(location.pathname)) return;
   var style = document.createElement("style");
-  style.textContent = '.dsd-calm main :is(strong, b, dt, th, legend, label, h4, h5, h6):not(:is(a, button, .button, [role="button"], [aria-pressed="true"], [aria-selected="true"]) *) { color: #003865; }';
+  style.textContent = '.dsd-calm main :is(strong, b, dt, th, legend, label, h4, h5, h6):not(:is(a, button, .button, [role="button"], [aria-pressed="true"], [aria-selected="true"]) *) { color: #003865; }' +
+    // One photograph per course (owner decision 2026-11-23): the first page already shows the cover image, so the
+    // separate cover above it is not shown inside the course. Course cards in the list keep their covers.
+    ' #course-hero { display: none !important; }';
   document.head.appendChild(style);
   function rename() {
     var h = document.querySelector("main h1");
