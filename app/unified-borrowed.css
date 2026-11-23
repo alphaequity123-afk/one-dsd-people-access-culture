@@ -1,0 +1,53 @@
+/*
+ * Owner decision 2026-11-22: borrowed pages carry the unified One DSD design (front door app/unified.css).
+ * Soft page tone, white cards with one shadow, navy pill buttons, rows with arrows, navy headings.
+ */
+body.dsd-calm {
+  --u-page: #f4f6f9; --u-line: #dfe6ee; --u-row-line: #edf1f5; --u-radius: 20px; --u-radius-md: 16px;
+  --u-shadow: 0 1px 2px rgba(11,42,74,.04), 0 18px 40px -24px rgba(11,42,74,.22);
+  --u-shadow-hover: 0 1px 2px rgba(11,42,74,.05), 0 24px 44px -24px rgba(11,42,74,.3);
+  --u-shadow-sm: 0 1px 2px rgba(11,42,74,.05); --u-navy: #0b2a4a; --u-muted: #5a6b7d; --u-tint: #f3f7fb; --u-accent: #5f9a1a;
+  background: var(--u-page);
+}
+body.dsd-calm main { background: var(--u-page); }
+body.dsd-calm main :is(h1, h2) { color: var(--u-navy); letter-spacing: -.01em; }
+body.dsd-calm main h3 { color: var(--u-navy); }
+
+/* Intro band: same soft tone, a hairline under it instead of a heavy rule */
+body.dsd-calm main :is(.page-intro, header.dsd-page-heading) { background: transparent !important; border-bottom: 0 !important; }
+body.dsd-calm main .internal-page { background: var(--u-page); }
+body.dsd-calm main .kicker, body.dsd-calm main .community-eyebrow { font-size: .72rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--u-muted); }
+
+/* Cards: the Tailwind card pattern and the program panels */
+body.dsd-calm main :is(.rounded-lg.border, .featured-media-panel, .dsd-model-note, .community-search) { background: #fff; border: 1px solid var(--u-line); border-radius: var(--u-radius-md); box-shadow: var(--u-shadow); }
+body.dsd-calm main li.rounded-lg.border:has(a) { transition: transform .18s ease, box-shadow .18s ease; }
+body.dsd-calm main li.rounded-lg.border:has(a):hover { transform: translateY(-2px); box-shadow: var(--u-shadow-hover); }
+body.dsd-calm main li.rounded-lg.border a { color: var(--u-navy); text-decoration: none; }
+body.dsd-calm main li.rounded-lg.border h3 a::after { content: "\203A"; margin-left: 8px; color: #8a9aab; }
+
+/* Buttons: navy pills */
+body.dsd-calm main .btn { border-radius: 999px; font-weight: 600; box-shadow: var(--u-shadow-sm); }
+body.dsd-calm main .btn--primary { background: #003865; border-color: #003865; color: #fff; }
+body.dsd-calm main .btn--primary:hover { background: #17527d; }
+body.dsd-calm main .btn--light { background: #fff; color: var(--u-navy); border: 1px solid color-mix(in srgb, var(--u-navy) 25%, #fff); }
+body.dsd-calm main .btn--light:hover { background: var(--u-navy); color: #fff; }
+body.dsd-calm main select, body.dsd-calm main input[type="search"], body.dsd-calm main input[type="text"] { border-radius: 10px; border-color: #c9d4df; }
+
+/* Lists of links become one card with rows */
+body.dsd-calm main :is(.dsd-model-list, .community-directory) { list-style: none; margin: 0; padding: 0; background: #fff; border: 1px solid var(--u-line); border-radius: var(--u-radius); box-shadow: var(--u-shadow); overflow: hidden; }
+body.dsd-calm main :is(.dsd-model-list, .community-directory) > li { position: relative; margin: 0; padding: 0; border: 0; }
+body.dsd-calm main :is(.dsd-model-list, .community-directory) > li + li { border-top: 1px solid var(--u-row-line); }
+body.dsd-calm main :is(.dsd-model-list, .community-directory) > li > a { display: block; padding: 12px 44px 12px 18px; color: var(--u-navy); font-weight: 600; text-decoration: none; transition: background .15s ease; }
+body.dsd-calm main :is(.dsd-model-list, .community-directory) > li > a::after { content: "\203A"; position: absolute; right: 18px; top: 50%; transform: translateY(-50%); font-size: 1.15rem; color: #8a9aab; transition: transform .15s ease, color .15s ease; }
+body.dsd-calm main :is(.dsd-model-list, .community-directory) > li > a:hover { background: var(--u-tint); }
+body.dsd-calm main :is(.dsd-model-list, .community-directory) > li > a:hover::after { color: var(--u-navy); transform: translate(2px, -50%); }
+body.dsd-calm main .dsd-model-note .dsd-model-list { box-shadow: none; }
+
+/* Site map: groups in a calm two-column grid */
+body.dsd-calm main .site-map-groups { display: grid; gap: 24px 28px; margin-top: 24px; }
+@media (min-width: 860px) { body.dsd-calm main .site-map-groups { grid-template-columns: 1fr 1fr; align-items: start; } }
+body.dsd-calm main .site-map-groups h2 { margin: 0 0 10px; font-size: .72rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--u-muted); }
+
+@media (prefers-reduced-motion: reduce) {
+  body.dsd-calm main li.rounded-lg.border, body.dsd-calm main :is(.dsd-model-list, .community-directory) > li > a { transition: none; }
+}
