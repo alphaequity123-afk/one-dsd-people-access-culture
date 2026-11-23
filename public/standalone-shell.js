@@ -192,4 +192,11 @@
     if (/^Self-Directed Learning \|/.test(document.title)) document.title = document.title.replace(/^Self-Directed Learning/, "Practice for the Moments That Matter");
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", rename); else rename();
+  // "Put this course to work" closing step (owner decision 2026-11-22).
+  if (/\/learning\/self-directed\/(index\.html)?$/.test(location.pathname)) {
+    var closing = document.createElement("script");
+    closing.src = "/learning/self-directed/course-closing.js?v=20261123";
+    closing.defer = true;
+    document.head.appendChild(closing);
+  }
 })();
