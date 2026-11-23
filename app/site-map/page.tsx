@@ -13,7 +13,7 @@ const GROUPS: { title: string; links: [string, string][] }[] = [
 ];
 
 export default function SiteMap() {
-  return <article className="dsd-shell dsd-stage site-map-page"><header className="dsd-page-heading"><h1>Site map</h1><p>Every part of One DSD People, Access and Culture, in the order of the menu.</p></header>
+  return <article className="dsd-shell dsd-stage site-map-page"><header className="dsd-page-heading"><h1>Site map</h1><p>Find your way to every part of One DSD People, Access and Culture.</p></header>
     <div className="site-map-groups">{GROUPS.map((group, i) => <section key={group.title} aria-labelledby={`site-map-${i}`}><h2 id={`site-map-${i}`}>{group.title}</h2><ul className="dsd-model-list">{group.links.map(([label, href]) => <li key={href}><Link href={href}>{label}</Link></li>)}</ul></section>)}</div>
   </article>;
 }
