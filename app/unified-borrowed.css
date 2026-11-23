@@ -111,5 +111,5 @@ body.dsd-calm {
   --s3-shadow-hover: 0 1px 0 rgba(255,255,255,.95) inset, 0 3px 6px rgba(11,42,74,.09), 0 16px 30px -8px rgba(11,42,74,.2), 0 40px 72px -30px rgba(11,42,74,.48);
   --s3-line: #cdd9e5;
 }
-body.dsd-calm main :is(.featured-media-panel, .dsd-model-note, .community-search, .dsd-model-list, .community-directory, .audio-filter, .audio-course-rows) { border-top: 3px solid #003865; }
-body.dsd-calm main .dsd-model-note .dsd-model-list { border-top: 1px solid var(--u-row-line); }
+body.dsd-calm main :is(.featured-media-panel, .dsd-model-note, .community-search, .dsd-model-list, .community-directory, .audio-filter, .audio-course-rows) { border-top: 3px solid #003865 !important; }
+body.dsd-calm main .dsd-model-note .dsd-model-list { border-top: 1px solid var(--u-row-line) !important; }
