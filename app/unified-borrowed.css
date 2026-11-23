@@ -80,3 +80,27 @@ body.dsd-calm main .audio-empty { margin-top: 24px; }
 
 /* Rows keep the navy text used across the app, over the older link color (owner, 2026-11-22). */
 body.dsd-calm main :is(.audio-course-rows, .dsd-model-list, .community-directory) a { color: var(--u-navy) !important; }
+
+/*
+ * Owner decision 2026-11-22: every page has a soft satin sheen and every card a subtle 3D look.
+ * Matches the front door (app/unified.css) so borrowed pages look the same.
+ */
+body.dsd-calm {
+  --s3-face: linear-gradient(180deg, #ffffff 0%, #fbfcfe 55%, #f5f8fb 100%);
+  --s3-line: rgba(205, 217, 229, .9);
+  --s3-shadow: 0 1px 0 rgba(255,255,255,.95) inset, 0 -1px 0 rgba(11,42,74,.04) inset, 0 1px 2px rgba(11,42,74,.06), 0 4px 8px -2px rgba(11,42,74,.07), 0 18px 36px -18px rgba(11,42,74,.28);
+  --s3-shadow-hover: 0 1px 0 rgba(255,255,255,.95) inset, 0 -1px 0 rgba(11,42,74,.04) inset, 0 2px 4px rgba(11,42,74,.07), 0 10px 18px -6px rgba(11,42,74,.12), 0 28px 48px -22px rgba(11,42,74,.34);
+  --s3-shadow-sm: 0 1px 0 rgba(255,255,255,.95) inset, 0 1px 2px rgba(11,42,74,.08), 0 3px 6px -3px rgba(11,42,74,.12);
+  --satin: radial-gradient(1200px 600px at 15% -10%, rgba(255,255,255,.95), rgba(255,255,255,0) 60%), radial-gradient(900px 500px at 100% 20%, rgba(214,226,238,.55), rgba(214,226,238,0) 65%), linear-gradient(165deg, #f7f9fc 0%, #eef2f7 38%, #f6f8fb 62%, #ebeff5 100%);
+  background-color: #f1f4f8; background-image: var(--satin); background-attachment: fixed;
+}
+body.dsd-calm main, body.dsd-calm main .internal-page { background: transparent; }
+body.dsd-calm main :is(.rounded-lg.border, .featured-media-panel, .dsd-model-note, .community-search, .dsd-model-list, .community-directory, .audio-filter, .audio-course-rows) {
+  background: var(--s3-face);
+  border: 1px solid var(--s3-line);
+  box-shadow: var(--s3-shadow);
+}
+body.dsd-calm main .dsd-model-note .dsd-model-list { box-shadow: none; }
+body.dsd-calm main li.rounded-lg.border:has(a):hover { box-shadow: var(--s3-shadow-hover); transform: translateY(-3px); }
+body.dsd-calm main :is(.btn--light, .btn--primary) { box-shadow: var(--s3-shadow-sm); }
+@media (prefers-reduced-motion: reduce) { body.dsd-calm main li.rounded-lg.border:has(a):hover { transform: none; } }
