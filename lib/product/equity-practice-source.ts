@@ -32,7 +32,7 @@ export const PRACTICE_PILLARS = {
         "People with lived experience help shape decisions, with their role, authority, and compensation stated. This is the center lived experience commitment and the DSD listening work.",
         "Engagement is voluntary, private, and non-shaming. Staff learn on their own time, reflect without being recorded, and are never scored or profiled. That is why participation classes are labeled on every experience.",
         "Feedback loops close. Staff hear what changed because of their input and what could not change and why. The DSD needs assessment found that staff doubted their input mattered; the report-back practice answers that directly.",
-        "Role-aware entry meets people in their actual work. A hiring manager, a fiscal analyst, and a supervisor each get a different door into the same knowledge base.",
+        "Role-aware entry meets people in their actual work. A hiring manager, a fiscal analyst, and a supervisor each get a different door into the same library of learning and guidance.",
         "Governed contribution paths let Equity Directors, Specialists, and One DSD Team members add and review material with attribution, rather than only consume it.",
       ],
       inTheBuild: "Ask, Learn stages, Practice paths, the One DSD Team workspace, the contributor roles, and the aggregate listening themes, published only after owner approval.",
