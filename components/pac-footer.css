@@ -1,5 +1,5 @@
 /* Owner decision 2026-11-22: navy footer with a thin DHS-green top line (matches the green in the DHS logo). */
-.pac-footer { background: #003865; color: #fff; border-top: 3px solid #78BE21; margin-top: 64px; font-family: Aptos, "Segoe UI", Calibri, system-ui, sans-serif; }
+.pac-footer { background: #003865; color: #fff; border-top: 3px solid #78BE21; margin-top: 0; font-family: Aptos, "Segoe UI", Calibri, system-ui, sans-serif; }
 .pac-footer-inner { max-width: 1040px; margin: 0 auto; padding: 44px 20px 28px; display: grid; gap: 28px 48px; }
 @media (min-width: 760px) { .pac-footer-inner { grid-template-columns: 1.4fr 1fr 1fr; } }
 .pac-footer-brand strong { display: block; font-size: 1.15rem; font-weight: 600; color: #fff; }
