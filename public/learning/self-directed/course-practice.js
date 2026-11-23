@@ -74,9 +74,9 @@
     list.style.cssText = 'display:grid;gap:8px;margin:12px 0';
     const planBox = document.createElement('div'); planBox.hidden = true; planBox.setAttribute('aria-live', 'polite');
     const planLabel = element('label', 'Make it your own, then copy it into your calendar or notes.'); planLabel.htmlFor = name + '-plan';
-    const plan = document.createElement('textarea'); plan.id = planLabel.htmlFor; plan.rows = 3;
+    const plan = document.createElement('textarea'); plan.id = planLabel.htmlFor; plan.rows = 4;
     plan.style.cssText = 'display:block;margin:8px 0 12px;width:100%;font:inherit;padding:12px;border:1px solid #b9c7d5;border-radius:10px';
-    const copy = element('button', 'Copy my plan'); copy.type = 'button'; copy.className = 'button';
+    const copy = element('button', 'Copy my plan'); copy.type = 'button'; copy.className = 'button'; copy.style.cssText = 'padding:10px 18px;background:#003865;color:#fff;border:0;border-radius:8px;font:inherit;font-weight:600;cursor:pointer';
     const note = element('p', ''); note.setAttribute('role', 'status');
     copy.addEventListener('click', async () => {
       try { await navigator.clipboard.writeText(plan.value); note.textContent = 'Copied. Keep it somewhere you will see it this week.'; }
