@@ -1,3 +1,8 @@
+/* Owner decision 2026-11-22: no system notices on staff pages. The course page ships as a release asset, so the browser-saving notice is removed here; the Save and My work links stay. */
+(() => {
+  const note = [...document.querySelectorAll('p')].find(el => el.firstChild && el.firstChild.nodeType === 3 && /When browser saving is available/.test(el.firstChild.textContent));
+  if (note) note.firstChild.textContent = '';
+})();
 /* Owner decision 2026-11-22: the line under the menu is DHS green, matching the logo. The course chrome CSS ships as a release asset, so the color is set here. */
 (() => {
   const style = document.createElement('style');
