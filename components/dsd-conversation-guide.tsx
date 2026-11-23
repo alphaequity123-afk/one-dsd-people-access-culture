@@ -16,6 +16,7 @@ export function DsdConversationGuide() {
       <li>Invite people with disabilities to speak for themselves, with supporters they choose. Seek more than one perspective and avoid treating an organization as the voice of every member of a community.</li>
       <li>Explain what happened to people’s input. For matters affecting Tribal governments, use the appropriate government-to-government process; a listening session is not a substitute for consultation.</li>
     </ul>
+    <p className="dsd-conversation-plan"><a href="/minnesota-communities/prepare">Prepare for a conversation</a>: choose what it is for, the community and the access needed, and get a plan with questions to copy or print.</p>
     <h3>Disability-led learning and rights resources</h3>
     <ul>{RESOURCES.map(r => <li key={r.url}><a href={r.url}>{r.title}</a></li>)}</ul>
     <style>{`
@@ -24,6 +25,8 @@ export function DsdConversationGuide() {
       .dsd-conversation-guide h3 { margin: 1.25rem 0 .5rem; font-size: 1.05rem; }
       .dsd-conversation-guide ul { padding-left: 1.25rem; }
       .dsd-conversation-guide li { margin-block: .35rem; }
+      .dsd-conversation-plan { padding: .75rem 1rem; border-left: 3px solid #003865; background: #f4f7fb; border-radius: 6px; }
+      .dsd-conversation-plan a { font-weight: 700; }
     `}</style>
   </section>;
 }
