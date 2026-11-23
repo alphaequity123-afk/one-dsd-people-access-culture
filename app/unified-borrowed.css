@@ -77,3 +77,6 @@ body.dsd-calm main .audio-course-rows a { display: block; padding: 14px 44px 14p
 body.dsd-calm main .audio-course-rows a::after { content: "\203A"; position: absolute; right: 18px; top: 50%; transform: translateY(-50%); font-size: 1.15rem; color: #8a9aab; }
 body.dsd-calm main .audio-course-rows a:hover { background: var(--u-tint); }
 body.dsd-calm main .audio-empty { margin-top: 24px; }
+
+/* Rows keep the navy text used across the app, over the older link color (owner, 2026-11-22). */
+body.dsd-calm main :is(.audio-course-rows, .dsd-model-list, .community-directory) a { color: var(--u-navy) !important; }
