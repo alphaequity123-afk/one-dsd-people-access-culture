@@ -17,6 +17,8 @@ function protect(text: string): string {
     .replace(/https?:\/\/[^\s)\]]*[^\s)\].,;:!?]/g, match => match.replace(/[.!?]/g, PROTECTED))
     .replace(/\b[\w-]+(?:\.[\w-]+)+\.(?:com|org|net|gov|edu|us|io)\b/gi, match => match.replace(/\./g, PROTECTED))
     .replace(ABBREVIATIONS, match => match.replace(/\./g, PROTECTED))
+    // single-letter initials and street directions: "W. Lake Dr.", "J. K. Sports"
+    .replace(/(^|[\s(])([A-Z])\.(?=\s+[A-Z0-9])/g, `$1$2${PROTECTED}`)
     .replace(/(\d)\.(\d)/g, `$1${PROTECTED}$2`);
 }
 const restore = (text: string) => text.replace(/\u0000/g, ".");
@@ -31,9 +33,12 @@ function cleanLine(line: string): string {
   return kept && /[A-Za-z0-9]/.test(kept.replace(/\*\*[^*]*\*\*/g, "")) ? lead + kept : "";
 }
 
+/** A note tucked into a clause ("..., but that page could not be opened") is removed on its own, keeping the facts around it. */
+const NOTE_CLAUSE = /(?:\s*[,;]\s*(?:but|and|though|although)?|\s+(?:but|though|although))\s*(?:that|its|the|this|their)\s+(?:own\s+)?(?:page|pages|site|sites|website|websites|listing|listings|link)\b[^.;()]*?\b(?:could not be (?:opened|confirmed|verified|loaded|reached)|(?:was|were) (?:unavailable|not available|not reachable)|did not load)\b/gi;
+
 export function withoutResearchNotes(markdown: string): string {
   if (!markdown) return markdown;
-  return markdown.split(/\r?\n/).map(cleanLine)
+  return markdown.replace(NOTE_CLAUSE, "").split(/\r?\n/).map(cleanLine)
     .filter((line, index, lines) => line !== "" || (index > 0 && lines[index - 1] !== ""))
     .join("\n").replace(/\n{3,}/g, "\n\n").trim();
 }
