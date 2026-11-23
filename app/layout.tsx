@@ -19,6 +19,7 @@ import { OpenDetailsForHash } from "@/components/open-details-for-hash";
 import { CourseMediaForPage } from "@/components/course-media-for-page";
 import { PROGRAM } from "@/lib/constants";
 import { PublishedProgramHeader } from "@/components/published-program-header";
+import { PacFooter } from "@/components/pac-footer";
 import { DsdResourceActions } from "@/components/dsd-workspace";
 import { ProgramContextProvider } from "@/components/program-context";
 import { requestedProductContext } from "@/lib/product/request-context";
@@ -128,6 +129,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 
           </main>
           <ChromeGate hideOnPrefixes={["/share/", "/embedded-tools/"]} hideOnExact={["/"]}>
+            <PacFooter />
             <UniversalEditor owner={owner} />
           </ChromeGate>
           <ChromeGate onlyOnPrefixes={["/share/"]}>

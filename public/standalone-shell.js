@@ -1,3 +1,9 @@
+/* Owner decision 2026-11-22: the line under the menu is DHS green, matching the logo. The course chrome CSS ships as a release asset, so the color is set here. */
+(() => {
+  const style = document.createElement('style');
+  style.textContent = '.dsd-header{border-bottom-color:#78BE21!important}';
+  document.head.appendChild(style);
+})();
 /* Portable pages use the same hosted Ask and Search tools as the rest of One DSD. */
 (() => {
   if (location.protocol === 'file:') return;
