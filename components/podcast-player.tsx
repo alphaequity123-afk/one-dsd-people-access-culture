@@ -13,6 +13,8 @@ type PodcastPlayerProps = PodcastReadingSupport & {
   headingLevel?: 1 | 2 | 3;
   /** True when the player is on the podcast's own page, so it does not link to itself. */
   ownPage?: boolean;
+  /** In a list of podcasts (the Audio library), chapters open on request so the page stays calm. */
+  compact?: boolean;
   id: string;
   src: string;
   title: string;
@@ -53,7 +55,7 @@ function rememberPosition(id: string, seconds: number, clear = false) {
   try { if (clear) window.localStorage.removeItem(positionKey(id)); else window.localStorage.setItem(positionKey(id), String(Math.floor(seconds))); } catch { /* Playback still works without saving. */ }
 }
 
-export function PodcastPlayer({ headingLevel = 3, ownPage = false, id, src, title, intro, downloadLabel, retryLabel, errorMessage, transcript, transcriptUrl, chapters }: PodcastPlayerProps) {
+export function PodcastPlayer({ headingLevel = 3, ownPage = false, compact = false, id, src, title, intro, downloadLabel, retryLabel, errorMessage, transcript, transcriptUrl, chapters }: PodcastPlayerProps) {
   const Heading = headingLevel === 1 ? "h1" : headingLevel === 2 ? "h2" : "h3";
   const player = useRef<HTMLAudioElement>(null);
   const [failed, setFailed] = useState(false);
@@ -126,25 +128,27 @@ export function PodcastPlayer({ headingLevel = 3, ownPage = false, id, src, titl
       {ownPage ? null : <Link href={podcastShareHref(id)} className="text-sm underline underline-offset-4">Open the podcast page</Link>}
     </div>
     {failed ? <div><p id={errorId} role="alert" className="error">{errorMessage}</p><button className="btn btn--light" type="button" onClick={() => void retry()}>{retryLabel}</button></div> : null}
-    {chapters?.length ? <nav aria-label={`${title} chapters`} className="rounded-xl border border-line p-4">
-      <p className="font-semibold">Choose a chapter</p>
-      <ol className="mt-3 space-y-2">{chapters.map((chapter, index) => <li key={`${chapter.start}-${index}`}>
+    {chapters?.length ? (() => {
+      const list = <ol className="mt-3 space-y-2">{chapters.map((chapter, index) => <li key={`${chapter.start}-${index}`}>
         <button type="button" className="inline-flex min-h-11 items-center text-left underline underline-offset-4" disabled={!usableTime(chapter.start)} aria-controls={playerId} onClick={() => void playFrom(chapter.start)}>
-          {usableTime(chapter.start) ? `Play from ${timestamp(chapter.start)} · ` : ""}{chapter.title}
+          {usableTime(chapter.start) ? `Listen from ${timestamp(chapter.start)} · ` : ""}{chapter.title}
         </button>
-      </li>)}</ol>
-    </nav> : null}
+      </li>)}</ol>;
+      return compact
+        ? <nav aria-label={`${title} chapters`} className="podcast-chapters rounded-xl border border-line p-4"><details><summary className="cursor-pointer font-semibold">Chapters</summary>{list}</details></nav>
+        : <nav aria-label={`${title} chapters`} className="rounded-xl border border-line p-4"><p className="font-semibold">Choose a chapter</p>{list}</nav>;
+    })() : null}
     {transcript?.segments.length || transcriptUrl ? <div className="rounded-xl border border-line p-4">
       <details className="mt-3" onToggle={event => { if (event.currentTarget.open) void loadTranscript(); }}>
         <summary className="cursor-pointer font-semibold">Read the complete transcript</summary>
-        <p className="mt-3 text-sm leading-6">Read at your own pace. Each time stamp starts the recording at that passage. The text stays here even if the recording will not play.</p>
+        <p className="mt-3 text-sm leading-6">Read at your own pace. Choose any time stamp to listen from that point.</p>
         {transcriptLoading ? <p role="status" className="mt-3">Loading the transcript…</p> : null}
         {transcriptFailed ? <div className="mt-3"><p role="alert">The transcript could not be loaded. The recording remains available above.</p><button type="button" className="btn btn--light mt-2" onClick={() => void loadTranscript()}>Try loading the transcript again</button></div> : null}
         {reading ? <div className="mt-4"><label className="block font-semibold" htmlFor={`podcast-${id}-transcript-search`}>Find words in this transcript</label><input id={`podcast-${id}-transcript-search`} type="search" value={transcriptQuery} onChange={event => setTranscriptQuery(event.target.value)} className="mt-2 w-full rounded-lg border border-line bg-white px-3 py-2" />
           {query ? <p role="status" className="mt-2 text-sm">{passages.length} matching {passages.length === 1 ? "passage" : "passages"}. <button type="button" className="underline" onClick={() => setTranscriptQuery("")}>Show the complete transcript</button></p> : null}
         </div> : null}
         <ol className="mt-4 list-none space-y-5 p-0">{passages.map((segment, index) => <li key={`${segment.start}-${index}`}>
-          {usableTime(segment.start) ? <button type="button" className="inline-flex min-h-11 items-center text-sm font-semibold underline underline-offset-4" aria-controls={playerId} onClick={() => void playFrom(segment.start)}>Play from {timestamp(segment.start)}</button> : null}
+          {usableTime(segment.start) ? <button type="button" className="inline-flex min-h-11 items-center text-sm font-semibold underline underline-offset-4" aria-controls={playerId} onClick={() => void playFrom(segment.start)}>Listen from {timestamp(segment.start)}</button> : null}
           <p className="mt-2 whitespace-pre-line leading-7">{segment.text}</p>
         </li>)}</ol>
       </details>
