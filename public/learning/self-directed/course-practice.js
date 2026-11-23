@@ -87,7 +87,7 @@
     planBox.append(element('h3', 'Your plan for this week'), planLabel, plan, copy, note, talk);
     course.outcomes.forEach((outcome, i) => {
       const label = document.createElement('label');
-      label.style.cssText = 'display:flex;gap:10px;align-items:flex-start;padding:11px 14px;border:1px solid #cdd9e5;border-radius:12px;cursor:pointer;line-height:1.5;background:#fff';
+      label.style.cssText = 'display:flex;gap:10px;align-items:flex-start;padding:11px 14px;border:1px solid #cdd9e5;border-radius:12px;cursor:pointer;line-height:1.5;background:#fff;font-weight:400';
       const input = document.createElement('input'); input.type = 'radio'; input.name = name; input.value = String(i);
       input.style.cssText = 'margin-top:.3rem;accent-color:#003865;flex:none';
       input.addEventListener('change', () => {
