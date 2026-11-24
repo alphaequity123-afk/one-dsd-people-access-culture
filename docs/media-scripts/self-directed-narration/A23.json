@@ -1,0 +1,73 @@
+{
+  "id": "A23",
+  "title": "Responsible Data and Automated Decisions: Evidence before Conclusions",
+  "status": "script-awaiting-recording",
+  "voices": {
+    "host1": "{{HOST_1}}",
+    "host2": "{{HOST_2}}"
+  },
+  "afterSlide": 1,
+  "before": "Explore how DSD staff check what data measures, whose experience it misses, and whether a decision rule repeats earlier barriers.",
+  "turns": [
+    {
+      "host": "host1",
+      "text": "This discussion opens Responsible Data and Automated Decisions: Evidence before Conclusions. It’s about relying on records, reports, and decision tools in our work, and checking what they actually measure before we act on them. The course begins with a question that’s easy to skip: what has to happen before a record even exists?"
+    },
+    {
+      "host": "host2",
+      "text": "A person may need to learn about a service, reach an entry route, and have the contact recorded before they appear in a report. So a count can describe the recorded journey while earlier barriers stay unseen. The course asks which experience a proposed decision actually needs to understand, and whether the available information fits that purpose."
+    },
+    {
+      "host": "host1",
+      "text": "Because reliability belongs to a purpose. A record that works well for tracking scheduled appointments may not measure unmet need. The worked example makes this concrete. A practice contact-priority tool gives higher priority to people with earlier successful contacts. But those contacts may partly reflect usable communication and available assistance, not current need."
+    },
+    {
+      "host": "host2",
+      "text": "So previous visibility can become the next gate. The course shows how a historical signal can carry earlier entry conditions into priority and then into future records, repeating the pattern. You’ll practice with a version of that tool whose test excludes unsuccessful attempts and reports high overall accuracy, and decide what recommendation makes sense."
+    },
+    {
+      "host": "host1",
+      "text": "The course is careful about blanks and bases. A missing language field doesn’t mean English is preferred, and no response doesn’t mean satisfaction. In one invented example, 26 people are invited and 18 respond. Each percentage you could report depends on which base you use, and the course walks through what each one describes and what stays unknown."
+    },
+    {
+      "host": "host2",
+      "text": "Categories have histories, too. A field was defined for some question or rule, and it doesn’t describe a person’s whole identity or culture. Privacy matters here as well. Combined fields and filters can reveal more than a single table, and removing names doesn’t establish anonymity. A learning exercise supplies no collection or release authority."
+    },
+    {
+      "host": "host1",
+      "text": "There’s a workforce example as well. A proposed employee dashboard counts visible assignments and fast responses, but staff had unequal access to those assignments and to usable onboarding. You’ll consider what account best supports a readiness discussion. The course notes that a high count may describe exposure as well as competence."
+    },
+    {
+      "host": "host2",
+      "text": "Then the course takes up prediction. A pattern may help estimate a defined result under tested conditions, but it doesn’t explain why the result occurs or determine an individual’s future. Overall accuracy can conceal unequal errors, so we ask who is wrongly flagged and who is missed. And human review needs a real opportunity to question the output, not just a signature or an override button."
+    },
+    {
+      "host": "host1",
+      "text": "Community knowledge tests what a measure means. People affected by it can explain what the recorded event means in their experience and what the record misses. Culture briefs help prepare those questions; they don’t predict anyone’s answer. The course also compares responses to an evidence gap, without treating more data or a new model as an automatic remedy."
+    },
+    {
+      "host": "host2",
+      "text": "Near the end, you’ll rewrite a finding so it keeps its value without overstating it. You’ll also see that a tool’s evidence can become less suitable when entry routes, policies, or recording practices change, so past testing doesn’t certify every future decision. Then there’s a private reflection about an assumption you once made about a number or a category."
+    },
+    {
+      "host": "host1",
+      "text": "As you go, think of a report, dashboard, or decision rule you use or see in your work. What is its actual question, and what must happen for someone to enter its count? Bring that example along. The practice will help you recommend a fitting response with evidence and uncertainty, rather than declaring fairness from a score."
+    }
+  ],
+  "guidance": [
+    {
+      "id": "A23-explainer",
+      "kind": "explainer",
+      "afterSlide": 3,
+      "title": "Start with the decision",
+      "text": "Before asking whether data is good, write down the decision it will inform. Then ask what the record captured, how people entered it, and who could not. A dataset can be accurate for its original purpose and still be a poor fit for a new one. Naming the decision first keeps the evidence tied to a question it can actually answer."
+    },
+    {
+      "id": "A23-check-in",
+      "kind": "check-in",
+      "afterSlide": 23,
+      "title": "Explaining the limits",
+      "text": "Think about the report you chose for the reflection, or another you know well. If a colleague wanted to use it for a new decision, what would you want them to know first? Consider the base, the missing observations, and the protections that apply. How might you explain those limits so the number stays useful without describing more than it measured?"
+    }
+  ]
+}

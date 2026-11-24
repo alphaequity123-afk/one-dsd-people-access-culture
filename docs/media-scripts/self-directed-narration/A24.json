@@ -1,0 +1,73 @@
+{
+  "id": "A24",
+  "title": "Evaluating System Change with a Logic Model",
+  "status": "script-awaiting-recording",
+  "voices": {
+    "host1": "{{HOST_1}}",
+    "host2": "{{HOST_2}}"
+  },
+  "afterSlide": 1,
+  "before": "Explore how DSD staff use a logic model to connect a change with its intended results and examine the conditions in between.",
+  "turns": [
+    {
+      "host": "host1",
+      "text": "This discussion introduces Evaluating System Change with a Logic Model. It’s about examining whether a program, policy, or workforce change is doing what it was meant to do. The course starts with results people can recognize: a service change that helps people understand their options and receive a usable handoff, and a workforce change that widens access to meaningful development."
+    },
+    {
+      "host": "host2",
+      "text": "And right away it asks whose experience defines a useful result. A statement of purpose is an intention, not evidence that the result has occurred. The logic model helps by making the intended connections visible. It has five parts, starting with inputs, which are resources; activities, which are the work performed; and outputs, the things produced or contacts completed."
+    },
+    {
+      "host": "host1",
+      "text": "Then come outcomes, which are changes in experience or conditions, and intended impact, the broader difference being sought. The course stresses that the connections depend on assumptions and context. The arrows between the boxes aren’t proof of cause. They show what we expect should happen, which makes it easier to see what needs examining."
+    },
+    {
+      "host": "host2",
+      "text": "The worked example is a clearer handoff. Staff preparation and usable materials support an activity, explaining a service route, which produces a revised letter and completed explanations. The intended outcome is that people understand the next step and reach a usable handoff. But that depends on a condition: the named route has to be able to receive and respond to the contact."
+    },
+    {
+      "host": "host1",
+      "text": "That’s the heart of it, finding the assumptions between stages. What must be true for an output to support an outcome? Is a route available, is the information usable, is a responsibility understood, is there time? Some conditions are supplied by a proposal and some are simply assumed. A gap in the connection suggests a question worth examining."
+    },
+    {
+      "host": "host2",
+      "text": "And the question determines the evidence. “Was the letter revised?” asks about an output. “Could people identify the next step?” asks about understanding. “Did the handoff work?” asks about experience. The course uses invented response figures to show how supplied answers, uncertainty, and missing responses each tell you something different, and what none of them can establish."
+    },
+    {
+      "host": "host1",
+      "text": "Comparing periods takes care too. A before-and-after difference might reflect the change, other conditions, recording practices, or who participated. There’s also a workforce example: a development activity is opened to every employee, while some staff lack preparation and access to assignments that apply it. You’ll consider which finding best fits the logic model."
+    },
+    {
+      "host": "host2",
+      "text": "The course also looks at benefits and burden together. A change may improve one route while shifting difficulty to another person, team, or stage. And it’s clear about protections. A useful question doesn’t authorize record linkage, new identity questions, or public release, and evaluation doesn’t postpone existing duties or replace assigned decision roles."
+    },
+    {
+      "host": "host1",
+      "text": "Community meaning belongs in the model. People affected by a change can say what a useful result would mean to them. In one practice situation, participants describe a useful handoff as understanding choices and getting an answer without repeating their story, while a report counts completed contacts. You’ll decide what the next inquiry should be."
+    },
+    {
+      "host": "host2",
+      "text": "The course connects the model to a relevant ADSA goal, while keeping intended results, implementation, and observed effects distinct. A mixed finding isn’t automatically a failure. Near the end, you’ll rewrite an outcome that’s really an output, and then reflect privately on a change you experienced and one condition between an activity and that result."
+    },
+    {
+      "host": "host1",
+      "text": "As you go, think of a change you’ve seen in your work, such as a new form, process, guide, or opportunity. What was it meant to change for people, and what had to be true in between? Bring that change along. The practice will help you describe what happened honestly and choose a next inquiry the evidence can support."
+    }
+  ],
+  "guidance": [
+    {
+      "id": "A24-explainer",
+      "kind": "explainer",
+      "afterSlide": 3,
+      "title": "Reading the arrows as questions",
+      "text": "Each arrow in a logic model is a claim that one stage leads to the next. Try turning every arrow into a question. If materials are prepared, will staff have time to use them? If a guide is published, can people reach the route it names? Writing the questions out helps you see which conditions the plan supplies and which it simply assumes."
+    },
+    {
+      "id": "A24-check-in",
+      "kind": "check-in",
+      "afterSlide": 23,
+      "title": "From reflection to evaluation",
+      "text": "Return to the change you chose in the reflection. If you were evaluating it, which connection would you examine first, and what evidence would fit that question? Consider whose experience would help define a useful result, and what you would need to see before calling the intended impact an observed change rather than an aim."
+    }
+  ]
+}

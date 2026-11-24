@@ -1,0 +1,73 @@
+{
+  "id": "A11",
+  "title": "Accessible Technology and Learning from the Start",
+  "status": "script-awaiting-recording",
+  "voices": {
+    "host1": "{{HOST_1}}",
+    "host2": "{{HOST_2}}"
+  },
+  "afterSlide": 1,
+  "before": "Explore how to build access into digital services and learning from the start, using evidence about the whole task.",
+  "turns": [
+    {
+      "host": "host1",
+      "text": "Accessible Technology and Learning from the Start is for staff who create, review, or select digital services and learning, and for supervisors and managers examining access across service delivery and the employee life cycle. The course asks you to build usable participation into the tasks, evidence, and continuing use of the tools and learning we offer."
+    },
+    {
+      "host": "host2",
+      "text": "The opening case is a vendor demonstration. A service tool looks clear, and the presenter uses a mouse to complete every step without an error. It’s a polished picture, but what have you learned about someone who needs keyboard access, enlargement, or a way to correct a mistake? The course points out that the demonstration leaves those questions open."
+    },
+    {
+      "host": "host1",
+      "text": "The key idea is that access belongs to the task. Accessibility concerns whether people can perceive, understand, and operate what the task requires, and a usable welcome page doesn’t establish a usable application, confirmation, or report. So the course asks you to describe the complete task first, then decide what evidence would be sufficient."
+    },
+    {
+      "host": "host2",
+      "text": "That applies to learning as much as to services. A usable learning platform can still contain an unstructured document or a recording without usable captions, because the platform, the agency’s configuration, and the material all work together. One accessible component can’t make an inaccessible step disappear, which is why the whole experience needs examining."
+    },
+    {
+      "host": "host1",
+      "text": "The course also looks at evidence from vendors. An Accessibility Conformance Report describes a product against identified criteria, and it’s worth reading its explanations for the tasks you need. The course notes that MNIT states these reports don’t replace acceptance testing or other accessibility verification. A favorable label is useful information, but it isn’t the whole review."
+    },
+    {
+      "host": "host2",
+      "text": "And it values two kinds of knowledge. People using assistive technology can reveal barriers in real tasks, while specialist review examines requirements and problems beyond one person’s experience, and neither speaks for every user. Recovery matters too, because if an error or a lost connection means starting over, that burden can fall hardest on people using slower routes."
+    },
+    {
+      "host": "host1",
+      "text": "You’ll practice in three situations. In a practice DSD service demonstration, the opening page works with a keyboard, but the final submission control requires a mouse. An onboarding course accepts answers only by dragging cards, though its subject is recognizing service barriers. And a community participant finds a revised welcome screen clear, while later steps haven’t been examined."
+    },
+    {
+      "host": "host2",
+      "text": "The onboarding example connects to the employee life cycle. If the same digital barrier follows a person through recruitment, onboarding, routine learning, and development, a small design choice can repeatedly restrict opportunity. The course also reminds us that a completion record can’t explain every missing attempt, because a barrier before entry may leave no trace at all."
+    },
+    {
+      "host": "host1",
+      "text": "Near the end, you’ll rewrite a vague requirement, “the tool should be easy to use,” into a task-specific statement about entering, correcting, submitting, and understanding a response. You’ll also write a supported finding that names the task, the observed barrier, the version and method, and the questions that remain. Precision helps others act on the evidence."
+    },
+    {
+      "host": "host2",
+      "text": "The last reflection asks whose attempts become visible. Completion figures show completed routes, not everyone who wanted to begin. So the course asks you to examine reporting access and user accounts alongside the numbers, and to keep missing information visible as a limitation rather than reading it as good news."
+    },
+    {
+      "host": "host1",
+      "text": "As you begin, think of a digital tool or a piece of learning your work depends on. What task are people actually trying to complete with it, from start to finish? Bring that example along, and notice which parts of the task you have evidence about and which parts you’re still assuming will work."
+    }
+  ],
+  "guidance": [
+    {
+      "id": "A11-explainer",
+      "kind": "explainer",
+      "afterSlide": 3,
+      "title": "Describe the task first",
+      "text": "Before asking whether a tool is accessible, ask what someone needs to do with it. Finding information, making an entry, fixing a mistake, and confirming that it worked are all part of one task. Evidence about one step tells you about that step. Describing the whole task first makes it easier to see which evidence you have and which you still need."
+    },
+    {
+      "id": "A11-check-in",
+      "kind": "check-in",
+      "afterSlide": 21,
+      "title": "What the figures leave out",
+      "text": "Think of a report or completion figure you rely on for a digital service or course. Who appears in it, and who might have stopped before the record began? What would you need, such as user accounts or reporting access, to understand the attempts it doesn’t show? How would you describe that limit to a colleague who relies on it?"
+    }
+  ]
+}

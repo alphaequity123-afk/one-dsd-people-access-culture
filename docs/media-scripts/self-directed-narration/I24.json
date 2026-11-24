@@ -1,0 +1,73 @@
+{
+ "id": "I24",
+ "title": "Comparing Policy Options and Possible Unintended Effects",
+ "status": "script-awaiting-recording",
+ "voices": {
+  "host1": "{{HOST_1}}",
+  "host2": "{{HOST_2}}"
+ },
+ "afterSlide": 1,
+ "before": "A conversation about comparing policy alternatives with the same questions so that possible unintended effects come into view.",
+ "turns": [
+  {
+   "host": "host1",
+   "text": "This course is Comparing Policy Options and Possible Unintended Effects. It’s for anyone interested in policy, including analysts, supervisors, and staff who support legislative work. The core habit it builds is keeping a proposal’s intended purpose separate from its possible effects. When we let the purpose stand in for the result, unintended effects are easy to miss."
+  },
+  {
+   "host": "host2",
+   "text": "The opening case continues a practice proposal from earlier courses, an online-only request route that aims to organize requests and reduce delay. The course points out that those are intended benefits, not measured effects. So it asks what steps would have to connect the rule with the benefit, and what might happen to people who can’t use the page."
+  },
+  {
+   "host": "host1",
+   "text": "From there, the course compares three practice routes: online only, online plus an explained second route, and an assisted conversation, all with the same purpose. The principle is that alternatives need the same comparison. You don’t judge one option only on price and another only on benefits. A balanced inquiry shows the tradeoffs and uncertainties instead of inventing a ranking."
+  },
+  {
+   "host": "host2",
+   "text": "And each route has conditions to establish. A second method might help with entry while adding a handoff, and assistance might support understanding while needing resources. The first practice situation asks you to choose the strongest comparison across these routes, so you’ll get to test whether the same questions are really being applied to each one."
+  },
+  {
+   "host": "host1",
+   "text": "Then the course traces an unintended effect. A uniform channel can shift effort onto people who need language, format, technology, or other support, and that burden can recur with every request. It also suggests rehearsing a specific breakdown, like an upload control that doesn’t work, then working backward to the condition and evidence needed."
+  },
+  {
+   "host": "host2",
+   "text": "I like that it calls that a rehearsal, not a forecast. Safeguards get the same honest treatment. Clearer words, a usable control, an explained alternative, or support might each address a different concern, and none of them is automatically the complete solution. A good safeguard responds to the mechanism instead of promising to prevent every problem."
+  },
+  {
+   "host": "host1",
+   "text": "The second situation is about workplace learning. A team proposes one common learning period, but staff who handle urgent public contacts can’t participate, even though the purpose of shared learning is still worthwhile. You’ll decide what should be compared. It’s a good example of how a uniform arrangement can create different opportunities, even with good intentions."
+  },
+  {
+   "host": "host2",
+   "text": "Resources come up too. An option might need staff time, technical work, language or access support, and communication. The course is clear that uncounted resources are unknown, not zero. A policy comparison can raise cost questions, but an official fiscal note is a different product, with its own authorized preparation and review."
+  },
+  {
+   "host": "host1",
+   "text": "There’s also a practice upload trial with twelve attempts. In the first round, eight finish without help, two finish with help, and two are blocked. After a wording change, the same participants try again. In the third practice situation, you’ll decide what the account can honestly say about the retest. The figures are invented, and the course says so."
+  },
+  {
+   "host": "host2",
+   "text": "Near the end, you’ll privately rewrite an overconfident recommendation: choose the online page because it is simpler and will reduce inequities. You’ll keep the organizational purpose, describe the actual option, name the unresolved entry concern, and identify the evidence and authority needed before adoption. A recommendation can be clear and still provisional."
+  },
+  {
+   "host": "host1",
+   "text": "As you go, think about a choice your team is weighing, whether in a service procedure or in how work is organized. Are the options being compared with the same questions? What effect hasn’t anyone traced yet? Bring that situation with you. A careful comparison supports the next authorized decision rather than replacing it."
+  }
+ ],
+ "guidance": [
+  {
+   "id": "I24-explainer",
+   "kind": "explainer",
+   "afterSlide": 7,
+   "title": "Tracing a mechanism",
+   "text": "To trace an unintended effect, describe three things: the action, what it could make harder for someone, and how that difficulty might repeat. Then ask what you would need to see to know whether it is happening. This keeps a concern specific enough to test. It also keeps you from calling a risk a demonstrated inequity before the evidence is there."
+  },
+  {
+   "id": "I24-check-in",
+   "kind": "check-in",
+   "afterSlide": 24,
+   "title": "The same questions for every option",
+   "text": "Think about two or three options your team has discussed for a service procedure or a workplace arrangement. Were they compared using the same purpose and the same questions about access, workload, and resources? Was one option described mostly by its benefits and another mostly by its costs? What is one unknown you would want named before a recommendation goes forward?"
+  }
+ ]
+}

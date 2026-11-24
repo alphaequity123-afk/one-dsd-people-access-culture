@@ -1,0 +1,73 @@
+{
+  "id": "I05",
+  "title": "Checking Bias When the Evidence Is Incomplete",
+  "status": "script-awaiting-recording",
+  "voices": {
+    "host1": "{{HOST_1}}",
+    "host2": "{{HOST_2}}"
+  },
+  "afterSlide": 1,
+  "before": "Explore how DSD staff make fairer, explainable judgments when a service, workplace, or community decision still contains uncertainty.",
+  "turns": [
+    {
+      "host": "host1",
+      "text": "This course is Checking Bias When the Evidence Is Incomplete. It’s about the judgments we make before we have everything we need, which is most of them. A first explanation can feel convincing before the relevant questions have been asked. The course asks how to keep that explanation open long enough to check it, without freezing the decision."
+    },
+    {
+      "host": "host2",
+      "text": "It starts with attribution, meaning the explanation we give for an action. A trait explanation is about the person. A situational explanation is about the conditions. Either one needs relevant support, and a delay alone doesn’t decide between them. I find it helpful just to notice which kind of explanation I reached for first."
+    },
+    {
+      "host": "host1",
+      "text": "The opening case shows why. Two service calls went unanswered, and a note says the person is “unmotivated.” Staff haven’t checked the number, the timing, or the preferred contact method. You’ll practice choosing the strongest next response. The question to keep in mind is what the note claims to know, and what nobody has looked at yet."
+    },
+    {
+      "host": "host2",
+      "text": "The course is also careful not to swap one story for another. An access barrier is possible, but so are other reasons. The suggestion is to list plausible explanations and the information that would distinguish them, then ask a narrow question relevant to the decision. A kinder story still needs support before it becomes a finding."
+    },
+    {
+      "host": "host1",
+      "text": "Confirmation bias comes in here. It can influence which evidence we seek, remember, or accept, and contrary information can get dismissed as an exception. The course offers a good contrast. “Who else had a problem?” collects more support for a belief. “When did the process work, and under what conditions?” actually tests another explanation."
+    },
+    {
+      "host": "host2",
+      "text": "Then affinity. Familiarity can make someone feel credible, while observed follow-through provides relevant evidence, and the two are easy to confuse. In a selection practice situation, two applicants offer comparable work examples. One is familiar to a panel member and gets the benefit of the doubt. The other is asked for extra proof. You’ll consider what would support a fair comparison."
+    },
+    {
+      "host": "host1",
+      "text": "There’s a nuance worth naming. Comparable doesn’t mean identical. You apply the same relevant questions while considering genuine differences in the task or circumstances, and you explain why a difference matters. The course also suggests a countercheck: would you accept the same evidence from someone familiar? That can raise a question about reasoning, though by itself it doesn’t prove discrimination."
+    },
+    {
+      "host": "host2",
+      "text": "The third practice situation involves a team that wants to remove a service information format after several complaints. They haven’t checked who used it, whether people could get it, or what the alternatives would be. You’ll decide which inquiry could genuinely test the belief. Limited feedback, on its own, isn’t a conclusion about everyone’s preference."
+    },
+    {
+      "host": "host1",
+      "text": "Records matter a lot in this course. Describe the action and the evidence behind an interpretation, and mark missing information as missing. An unsupported trait label can travel into later contacts, referrals, supervision, or development decisions. Small judgments add up, too. Repeated benefit of the doubt can give familiar people more chances to build experience, so others appear less ready."
+    },
+    {
+      "host": "host2",
+      "text": "You’ll practice an ambiguity check that separates observation, interpretation, alternatives, and next evidence. The course is clear that a longer form doesn’t automatically make a decision fairer. The check should make reasoning easier to examine. Near the end, you’ll privately rewrite a trait judgment, naming the standard, an alternative explanation, and evidence that could change your view."
+    },
+    {
+      "host": "host1",
+      "text": "As you go, think of a judgment you made recently with less information than you wanted, perhaps about a service contact, a candidate, or a colleague’s work. What explanation did you reach first? What would you have accepted as a reason to reconsider? Bring that with you. The course gives you a structure for looking at it privately."
+    }
+  ],
+  "guidance": [
+    {
+      "id": "I05-explainer",
+      "kind": "explainer",
+      "afterSlide": 7,
+      "title": "A question that could surprise you",
+      "text": "Confirmation bias rarely feels like bias. It feels like gathering evidence. The difference lies in the questions you ask. Before collecting more information, write down what answer would lead you to a different conclusion. If you cannot name one, your inquiry may only be collecting support. A useful question has a real chance of surprising you, and you are ready to act on its answer."
+    },
+    {
+      "id": "I05-check-in",
+      "kind": "check-in",
+      "afterSlide": 21,
+      "title": "The evidence you would accept",
+      "text": "Consider the trait judgment you rewrote. What standard actually applied, and did the original judgment test against it? Name one piece of evidence that would change your view, and ask whether you would look for it with the same energy as evidence that supports your first belief. What would you need to record as still unknown?"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "id": "A09",
+  "title": "From Individual Access Fixes to Accessible Systems",
+  "status": "script-awaiting-recording",
+  "voices": {
+    "host1": "{{HOST_1}}",
+    "host2": "{{HOST_2}}"
+  },
+  "afterSlide": 1,
+  "before": "Explore how to follow a complete task across handoffs, pairing immediate access help with prevention of repeated barriers.",
+  "turns": [
+    {
+      "host": "host1",
+      "text": "From Individual Access Fixes to Accessible Systems is for staff examining complete service and employee journeys, and for supervisors and managers thinking about practical access across handoffs and recurring work. The course asks you to follow the whole task, compare immediate help with preventing repeated barriers, and examine changes with the people who use them."
+    },
+    {
+      "host": "host2",
+      "text": "The opening case shows how this happens. A person reads a usable form and then receives an appointment invitation they can’t operate. Each team reviewed its own part, so the local work improved, but nobody reviewed the handoff between them. The course asks the question that matters to the person: can the whole task actually be completed?"
+    },
+    {
+      "host": "host1",
+      "text": "To answer that, the course describes access in terms of the task and its conditions. What does someone need to find, understand, operate, communicate, and confirm? Materials, tools, timing, space, and support all play a part. And it’s clear that we don’t infer a need from a disability label. The person’s stated experience and relevant testing guide the examination."
+    },
+    {
+      "host": "host2",
+      "text": "The idea I return to most is that immediate support and prevention both matter. An immediate response helps with the person’s current task, while prevention changes the condition that keeps creating the barrier. The course asks us to keep them connected without making one wait for the other, and to notice when a workaround shifts avoidable effort onto the person or onto staff."
+    },
+    {
+      "host": "host1",
+      "text": "It also asks you to know which responsibility applies. Accessible design, individual employment accommodation, service communication, and formal concerns are related but distinct. Optional learning and consultant guidance don’t supply approval or decide anyone’s entitlement, so part of the work is clarifying the applicable process and who is responsible for it."
+    },
+    {
+      "host": "host2",
+      "text": "You’ll practice in three situations. A practice form works with a keyboard, but the appointment confirmation requires dragging. A recruitment page is accessible, while the interview tool can’t be operated by keyboard and is later reused for onboarding. And community participants describe a confirmation call that was missing from the service map entirely."
+    },
+    {
+      "host": "host1",
+      "text": "For setting priorities, the course looks at the task blocked, its consequences, reach, urgency, recurring burden, and feasibility. A large count isn’t the only reason to act. A rare but serious barrier can matter a great deal, and not knowing how often something happens doesn’t mean that no one is affected by it."
+    },
+    {
+      "host": "host2",
+      "text": "Testing gets the same careful treatment. Automated checks, manual examination, assistive-technology use, and user experience each answer different questions, and a clean scan or a vendor’s assurance doesn’t certify every task. The course also notes that time, templates, expertise, and maintenance affect whether a repair lasts, or whether accessibility keeps returning as an emergency."
+    },
+    {
+      "host": "host1",
+      "text": "Near the end, you’ll rewrite a claim that says, “The form passed, so the service is accessible.” The supported version describes what the check actually showed and what still needs examination, like the appointment confirmation and the later handoff. Then you’ll decide which task and method would make the next check useful."
+    },
+    {
+      "host": "host2",
+      "text": "The reflection asks about effort the map leaves out. Think of a task that required extra help: where did the official route begin and end, and what did you do outside it? You can keep that private, and the course is clear that your experience doesn’t need to represent every user to be worth examining."
+    },
+    {
+      "host": "host1",
+      "text": "As you begin, think of a task in your work that crosses more than one team or tool, like an application followed by scheduling, or recruitment followed by onboarding. Where does one part hand off to the next? Bring that example along, and see which connection might be worth examining first."
+    }
+  ],
+  "guidance": [
+    {
+      "id": "A09-explainer",
+      "kind": "explainer",
+      "afterSlide": 7,
+      "title": "Two responses, one route",
+      "text": "When someone meets a barrier, they need help with the task in front of them now. That help matters, but if it’s the only response, the next person meets the same barrier. Prevention looks at where the barrier starts. Keeping both in view means the person isn’t asked to wait for a redesign, and a workaround isn’t mistaken for the fix."
+    },
+    {
+      "id": "A09-check-in",
+      "kind": "check-in",
+      "afterSlide": 21,
+      "title": "The connection worth checking",
+      "text": "Think of a route people follow through your work, from first learning about something to completing it. Where does one part hand off to another, and who checks that the next step is usable? What immediate help exists if it isn’t? What would you want to learn from the people who use that route before setting a priority?"
+    }
+  ]
+}

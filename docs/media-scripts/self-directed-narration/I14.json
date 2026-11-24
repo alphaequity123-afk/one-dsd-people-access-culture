@@ -1,0 +1,73 @@
+{
+ "id": "I14",
+ "title": "Language Access Across a Whole Service Encounter",
+ "status": "script-awaiting-recording",
+ "voices": {
+  "host1": "{{HOST_1}}",
+  "host2": "{{HOST_2}}"
+ },
+ "afterSlide": 1,
+ "before": "A conversation about following language access from the first notice through questions, responses, and follow-up.",
+ "turns": [
+  {
+   "host": "host1",
+   "text": "This course is Language Access Across a Whole Service Encounter. Most of us think about language access at one moment, usually when a notice gets translated. The course asks us to follow the whole route instead: the first information, the conversation, the person’s questions, their response, and whatever update comes later. Access can break down at any of those steps."
+  },
+  {
+   "host": "host2",
+   "text": "The opening case shows exactly that. Imagine understanding a notice in your preferred language and then reaching a response line you can’t use. The message arrived, but the task is unfinished. A successful translation doesn’t establish that the response, the clarification, or the later update is usable. You have to trace what the person must do next."
+  },
+  {
+   "host": "host1",
+   "text": "The course also separates two terms that often get blurred. Translation conveys written meaning across languages. Interpretation supports spoken or signed exchanges. Both need appropriate competence and a clear purpose. Someone’s conversational English, a colleague’s bilingual ability, or an automated draft doesn’t by itself make them fit for a consequential service task."
+  },
+  {
+   "host": "host2",
+   "text": "Then there’s the source text, which is something all of us control. Before anything goes to translation, the action, conditions, dates, and responsibilities should be explicit. Unexplained acronyms and expressions make the work harder. And a shorter sentence must not change eligibility, choice, or a required next step. Clear source text gives language professionals a better basis for conveying the meaning."
+  },
+  {
+   "host": "host1",
+   "text": "During a conversation with an interpreter, the guidance is to speak with the person directly and allow time for meaning to be conveyed. The staff member stays responsible for the service information, and the interpreter’s role doesn’t take over the explanation or the decision. A nod or a short answer also doesn’t establish that someone understood complex conditions."
+  },
+  {
+   "host": "host2",
+   "text": "I’d add that asking for clarification isn’t a sign of poor cooperation. The course says that plainly. The first practice situation returns to the opening case: a translated notice leads to an English-only response line, and the person can’t ask a follow-up question. You’ll choose the most useful response and see how each choice plays out."
+  },
+  {
+   "host": "host1",
+   "text": "The second situation is about a colleague. A bilingual employee keeps getting pulled from development work to interpret unrelated meetings, and a policy assignment is being displaced. Their language knowledge is being treated as an unlimited resource. You’ll consider how to respond in a way that respects both the required process and that colleague’s role and opportunities."
+  },
+  {
+   "host": "host2",
+   "text": "The course also brings in CLAS as a framework for examining the whole experience, including leadership, workforce support, community engagement, and improvement. It’s clear that the framework doesn’t certify a service as compliant because one document is translated. And it reminds us that a preferred language doesn’t settle format, hearing, vision, literacy, or other communication needs."
+  },
+  {
+   "host": "host1",
+   "text": "Community input matters here, too. People can point out an unclear expression or a response route that doesn’t work. In the third situation, participants understand a translated notice but can’t find how to ask a question, and staff propose adding more translated background pages. You’ll decide what should be examined first. Community feedback helps, but it doesn’t replace qualified language review."
+  },
+  {
+   "host": "host2",
+   "text": "Near the end, you’ll privately rewrite a practice instruction that says, respond using the contact number below, on a translated notice with no stated language route. The goal is to explain the actual assistance route, or name what must be confirmed, while keeping the service conditions and not promising support that isn’t available."
+  },
+  {
+   "host": "host1",
+   "text": "As you work through it, think about a notice, a meeting, or a handoff in your own work that involves more than one language. Where does the route keep working, and where might it stop? Bring that situation with you. Following the whole route is how we find the gaps that a single translation can’t close."
+  }
+ ],
+ "guidance": [
+  {
+   "id": "I14-explainer",
+   "kind": "explainer",
+   "afterSlide": 3,
+   "title": "Fit for the task",
+   "text": "The question is not whether someone speaks a language, but whether the arrangement fits the task. A friendly greeting in a shared language is different from explaining service conditions or a decision. When the stakes are higher, appropriate qualified support matters more. Asking for it is not a judgment of a colleague’s ability. It protects the accuracy the person is relying on."
+  },
+  {
+   "id": "I14-check-in",
+   "kind": "check-in",
+   "afterSlide": 21,
+   "title": "Where the route could stop",
+   "text": "Pick one communication you handle regularly, such as a notice, a call, or a meeting invitation. Follow it as someone who prefers another language might. Can they understand it, ask a question, and receive an answer they can use? Is one colleague quietly carrying the extra language work? What would you want to confirm before calling that route usable?"
+  }
+ ]
+}

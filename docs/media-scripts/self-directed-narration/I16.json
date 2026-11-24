@@ -1,0 +1,73 @@
+{
+ "id": "I16",
+ "title": "Clear Public Information That People Can Use",
+ "status": "script-awaiting-recording",
+ "voices": {
+  "host1": "{{HOST_1}}",
+  "host2": "{{HOST_2}}"
+ },
+ "afterSlide": 1,
+ "before": "A conversation about writing public information around the reader’s question and next step, without losing important conditions.",
+ "turns": [
+  {
+   "host": "host1",
+   "text": "This course is Clear Public Information That People Can Use. It’s for anyone who writes an explanation that someone outside the office has to act on, whether that’s a notice, a web page, a letter, or a guide. The starting point is the reader’s question. What are they trying to find, understand, or do, and can they actually do it from what we wrote?"
+  },
+  {
+   "host": "host2",
+   "text": "The opening example is one most of us have seen. A practice notice says the documentation will be reviewed upon receipt. Every word may be accurate. But who sends what, where, and for what purpose? A message can contain correct terms and still leave someone unable to act without insider knowledge."
+  },
+  {
+   "host": "host1",
+   "text": "And the course is careful about what plain language means. It organizes information around the reader’s question and action. It isn’t a promise to remove every technical term. You explain necessary terms and keep important conditions. Simpler wording should make a choice clearer, not change what’s required or available. That’s the balance the whole course works on."
+  },
+  {
+   "host": "host2",
+   "text": "A few practical habits follow from that. Name who does what, because a phrase like information must be provided hides the actor and the route. Keep a condition near the choice it affects instead of burying an exception later on. And watch for expressions like touch base or get the ball rolling, which describe a mood without identifying the action."
+  },
+  {
+   "host": "host1",
+   "text": "The first practice situation is a notice that says to follow established channels but gives no contact route. You’ll compare possible revisions. The course notes that people with an experienced helper may manage fine while others can’t identify the contact at all, so a hidden instruction can quietly favor people with institutional connections."
+  },
+  {
+   "host": "host2",
+   "text": "The same pattern shows up inside the agency. In the second situation, a new colleague knows the policy subject well but can’t find the usual channel the guide refers to. You’ll consider which response supports the work. Repeated hidden instructions can make an orientation gap look like a difference in competence, and that affects early assignments and feedback."
+  },
+  {
+   "host": "host1",
+   "text": "Structure matters as much as words. Headings, order, lists, and links help someone locate the task, and they also affect access. A clear paragraph inside an inaccessible image may still be unusable. The course also separates plain language, Easy Read, and translation. They support different needs, and one doesn’t automatically provide the others."
+  },
+  {
+   "host": "host2",
+   "text": "Then there’s how we check our work. Ask readers what they think the message means and what they’d do next, without testing their intelligence. A polite approval, or liking how it looks, doesn’t show that someone understood the important conditions. Community participants can examine a specific message, though no one should be treated as speaking for a whole community."
+  },
+  {
+   "host": "host1",
+   "text": "The third situation is a warm, welcoming draft that says every response will change the decision, when the actual process considers comments but guarantees no change. You’ll decide what the revision should do. I like this one because it shows that friendliness and accuracy aren’t competing goals. A message can be both."
+  },
+  {
+   "host": "host2",
+   "text": "Near the end, you’ll privately rewrite a sentence that says, upon receipt, the relevant documentation will be considered through established channels. Using a practice process, you’ll name the actor, the action, the route, and the important limit, then note what would need confirmation before a real message could go out."
+  },
+  {
+   "host": "host1",
+   "text": "While you work through it, keep one piece of writing from your own job in mind, public or internal. Read it as someone without your background would. Where would they have to guess? Bring that example with you. Clear information helps people act while staying honest about what the process can provide."
+  }
+ ],
+ "guidance": [
+  {
+   "id": "I16-explainer",
+   "kind": "explainer",
+   "afterSlide": 3,
+   "title": "Clearer, not different",
+   "text": "When you simplify a sentence, compare it with the original requirement. Ask whether the same people can still act, whether the same conditions apply, and whether anything they could expect has changed. If the answer shifts, the revision changed the meaning. Plain language keeps what matters and removes what gets in the way, including the guesswork about who does what next."
+  },
+  {
+   "id": "I16-check-in",
+   "kind": "check-in",
+   "afterSlide": 21,
+   "title": "Hidden knowledge in familiar writing",
+   "text": "Consider a guide, notice, or invitation that you or your team rely on. Is there a phrase that makes sense only if you already know the system, such as the usual route or the right contact? Who would struggle with it first? What would you change so that a reader, whether a member of the public or a new colleague, could act without an informal connection?"
+  }
+ ]
+}
