@@ -22,3 +22,6 @@ public/**/*.4k.webp
 
 # Verified original documents retained locally for repeat accessibility builds.
 .cache/accessible-static-assets/
+
+# Clip cache for the course podcast recorder (scripts/media/record-culture-wellbeing-podcasts.mjs)
+output/culture-wellbeing-recording/
