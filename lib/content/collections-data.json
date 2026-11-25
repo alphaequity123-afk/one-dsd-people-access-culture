@@ -1,8 +1,8 @@
 {
  "generatedFrom": "collections-placement.csv",
  "counts": {
-  "rows": 729,
-  "items": 725,
+  "rows": 735,
+  "items": 731,
   "questions": 89
  },
  "items": {
@@ -3579,6 +3579,36 @@
    "title": "Tribal Sovereignty and State Responsibilities",
    "kind": "referral",
    "minutes": 43
+  },
+  "cpn-01-understanding-organizational-culture": {
+   "title": "Understanding Organizational Culture",
+   "kind": "course",
+   "minutes": 48
+  },
+  "cpn-02-how-culture-shapes-systems": {
+   "title": "How Culture Shapes Systems",
+   "kind": "course",
+   "minutes": 48
+  },
+  "cpn-03-okun-framework-reflective-tool": {
+   "title": "Tema Okun's Framework as a Reflective Tool",
+   "kind": "course",
+   "minutes": 48
+  },
+  "cpn-04-accessibility-disability-justice-culture": {
+   "title": "Accessibility, Disability Justice, and Organizational Culture",
+   "kind": "course",
+   "minutes": 48
+  },
+  "cpn-05-building-cultures-of-belonging": {
+   "title": "Building Cultures of Belonging",
+   "kind": "course",
+   "minutes": 48
+  },
+  "cpn-06-awareness-to-action": {
+   "title": "Moving From Awareness to Action",
+   "kind": "course",
+   "minutes": 48
   }
  },
  "staff": [
@@ -3906,9 +3936,15 @@
      "ids": [
       "di-rights-policy-and-organizational-duties"
      ]
+    },
+    {
+     "subject": "Culture, power and workplace norms",
+     "ids": [
+      "cpn-04-accessibility-disability-justice-culture"
+     ]
     }
    ],
-   "itemCount": 61
+   "itemCount": 62
   },
   {
    "id": "services-choice-system",
@@ -4398,7 +4434,8 @@
     "gc-leading-with-purpose",
     "gc-accountability-public-service",
     "gc-leading-without-authority",
-    "gc-knowledge-and-continuity"
+    "gc-knowledge-and-continuity",
+    "cpn-01-understanding-organizational-culture"
    ],
    "deeper": [
     {
@@ -4594,9 +4631,19 @@
      "ids": [
       "gc-respectful-workplace"
      ]
+    },
+    {
+     "subject": "Culture, power and workplace norms",
+     "ids": [
+      "cpn-02-how-culture-shapes-systems",
+      "cpn-03-okun-framework-reflective-tool",
+      "cpn-04-accessibility-disability-justice-culture",
+      "cpn-05-building-cultures-of-belonging",
+      "cpn-06-awareness-to-action"
+     ]
     }
    ],
-   "itemCount": 113
+   "itemCount": 119
   },
   {
    "id": "policy-data-decisions",
