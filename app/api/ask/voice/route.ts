@@ -26,7 +26,7 @@ export async function POST(request: NextRequest) {
   if (typeof input?.text !== "string" || !input.text.trim() || input.text.length > 10000) return reply({ error: "Only answers of up to 10,000 characters can be read aloud." }, 400);
   const hosted = hostedVoiceSelected();
   if (hosted ? !hostedVoiceConfiguration() : !voiceWorkerReady()) return reply({ error: "Listening is not available yet. The written answer is still here." }, 503);
-  if (!reserveVoice("speech", input.text.length)) return reply({ error: "Listening has reached its limit for now. You can keep reading the written answers." }, 429);
+  if (!(await reserveVoice("speech", input.text.length))) return reply({ error: "Listening has reached its limit for now. You can keep reading the written answers." }, 429);
   try {
     const audio = hosted ? await requestHostedVoice(input.text, request.signal) : queueVoice(input.text, request.signal);
     if (!audio) return reply({ error: "This answer could not be played, but the written answer is still here." }, 503);

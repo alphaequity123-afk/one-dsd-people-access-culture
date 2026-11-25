@@ -23,7 +23,7 @@ export default async function OrchestratorPage() {
   const gen = generativeStatus();
   const scheduleReady = Boolean(process.env.CRON_SECRET?.trim());
   const clone = cloneAgentsEnabled();
-  const summary = clone ? ledgerSummary() : [];
+  const summary = clone ? await ledgerSummary() : [];
   return (
     <>
       <PageIntro kicker="You set the boundaries" title="Program reviews" lede="A program review can organize consultation requests, update heads-up packets, point out content that may be out of date, check accessibility, and prepare changes for your decision. You can reverse changes from a review. Use Stop program reviews for an immediate pause, or choose a lower work level to narrow what may happen." />
