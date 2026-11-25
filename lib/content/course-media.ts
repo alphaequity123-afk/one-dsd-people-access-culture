@@ -1,10 +1,7 @@
 import 'server-only';
-import { createHash, randomUUID } from 'node:crypto';
-import { constants } from 'node:fs';
-import { link, lstat, mkdir, open, readdir, realpath, rename, unlink } from 'node:fs/promises';
-import path from 'node:path';
+import { createHash } from 'node:crypto';
 import { Readable } from 'node:stream';
-import { hasVolumeCapacity } from './geffen-ingest';
+import { configuredPublicMediaRoot, createStoredFolders, listStoredNames, storedCapacity, storedFolderReady, writeStoredFile } from '@/lib/storage/public-media-store';
 import { safeOpen } from './geffen-volume';
 
 // Owner-published course media (explainer videos, narrated card videos, two-voice podcasts and
@@ -21,7 +18,6 @@ const PAGE = /^\/[A-Za-z0-9/_.\-]{0,200}$/;
 const NO_STORE = { 'Cache-Control': 'no-store' };
 const unavailable = (status = 404) => new Response(null, { status, headers: NO_STORE });
 const success = () => new Response(null, { status: 204, headers: NO_STORE });
-const same = (a: string, b: string) => process.platform === 'win32' ? path.normalize(a).toLowerCase() === path.normalize(b).toLowerCase() : path.normalize(a) === path.normalize(b);
 const digest = (bytes: Buffer) => createHash('sha256').update(bytes).digest('hex');
 const manifestName = (name: string) => name.endsWith('.json') && name.length <= 90 && ID.test(name.slice(0, -5));
 const asset = (value: unknown, extension: string) => typeof value === 'string' && ASSET.test(value) && value.endsWith(extension);
@@ -33,9 +29,9 @@ export type CourseMediaItem = {
   durationSeconds: number; chapters: { title: string; start: number }[];
 };
 
+/** The configured public media tree: on the volume, or in the media bucket (lib/storage/public-media-store.ts). */
 export function configuredCourseMediaRoot(root: string | undefined, mount: string | undefined) {
-  if (!root || !mount || !path.isAbsolute(root) || !path.isAbsolute(mount)) return undefined;
-  return same(path.resolve(root), path.join(path.resolve(mount), 'geffen-public')) ? path.resolve(root) : undefined;
+  return configuredPublicMediaRoot(root, mount);
 }
 
 const text = (value: unknown, max: number) => typeof value === 'string' && value.trim().length > 0 && value.length <= max && !/[\x00-\x1f\x7f]/.test(value);
@@ -90,26 +86,7 @@ async function boundedBody(request: Request, maximum: number) {
 
 export async function initializeCourseMedia(root: string | undefined, mount: string | undefined) {
   if (!configuredCourseMediaRoot(root, mount) || !root) return unavailable(503);
-  try {
-    for (const dir of [root, path.join(root, 'course-media'), path.join(root, 'course-media', 'assets'), path.join(root, 'course-media', 'manifests')]) {
-      try { await mkdir(dir, { mode: 0o700 }); } catch (e) { if ((e as NodeJS.ErrnoException).code !== 'EEXIST') throw e; }
-      const info = await lstat(dir);
-      if (!info.isDirectory() || info.isSymbolicLink() || !same(await realpath(dir), dir)) return unavailable(503);
-    }
-    return success();
-  } catch { return unavailable(503); }
-}
-
-async function checkedDir(root: string | undefined, child: 'assets' | 'manifests') {
-  if (!root || !path.isAbsolute(root)) return null;
-  try {
-    const base = path.resolve(root), parent = path.join(base, 'course-media'), dir = path.join(parent, child);
-    for (const part of [base, parent, dir]) {
-      const info = await lstat(part);
-      if (!info.isDirectory() || info.isSymbolicLink() || !same(await realpath(part), part)) return null;
-    }
-    return dir;
-  } catch { return null; }
+  return await createStoredFolders(root, [[], ['course-media'], ['course-media', 'assets'], ['course-media', 'manifests']]) ? success() : unavailable(503);
 }
 
 async function assetPresent(root: string, name: string, verify: boolean) {
@@ -123,39 +100,25 @@ async function assetPresent(root: string, name: string, verify: boolean) {
   } catch { return false; } finally { await opened.file.close(); }
 }
 
-async function publish(dir: string, name: string, bytes: Buffer, replace: boolean) {
-  const temp = path.join(dir, `.course-media-${randomUUID()}.tmp`), dest = path.join(dir, name);
-  try {
-    const file = await open(temp, constants.O_WRONLY | constants.O_CREAT | constants.O_EXCL | (constants.O_NOFOLLOW ?? 0), 0o600);
-    try { await file.writeFile(bytes); await file.sync(); } finally { await file.close(); }
-    if (!same(await realpath(dir), dir)) return false;
-    if (replace) {
-      try { const info = await lstat(dest); if (!info.isFile() || info.isSymbolicLink()) return false; } catch (e) { if ((e as NodeJS.ErrnoException).code !== 'ENOENT') return false; }
-      await rename(temp, dest);
-    } else await link(temp, dest);
-    return true;
-  } catch { return false; } finally { try { await unlink(temp); } catch { /* already renamed or absent */ } }
-}
-
 /** Receive one immutable hash-named asset, or publish an item's manifest once all its files exist. */
 export async function ingestCourseMedia(request: Request, name: string, root: string | undefined) {
   const isAsset = ASSET.test(name), isManifest = manifestName(name);
   if (!isAsset && !isManifest) return unavailable(400);
-  const dir = await checkedDir(root, isAsset ? 'assets' : 'manifests');
-  if (!dir || !root) return unavailable(503);
+  const folder = ['course-media', isAsset ? 'assets' : 'manifests'];
+  if (!root || !await storedFolderReady(root, folder)) return unavailable(503);
   const bytes = await boundedBody(request, isManifest ? MAX_MANIFEST : limitFor(name));
   if (!bytes || !bytes.length) return unavailable(413);
-  if (!await hasVolumeCapacity(dir, bytes.length)) return unavailable(503);
+  if (!await storedCapacity(root, folder, bytes.length)) return unavailable(503);
   if (isAsset) {
     if (digest(bytes) !== name.slice(0, 64) || !validContent(name, bytes)) return unavailable(400);
     if (await assetPresent(root, name, true)) return success();
-    return await publish(dir, name, bytes, false) ? success() : unavailable(409);
+    return await writeStoredFile(root, [...folder, name], bytes, false, '.course-media') ? success() : unavailable(409);
   }
   try {
     const item = cleanCourseMediaManifest(JSON.parse(bytes.toString('utf8')), name.slice(0, -5));
     if (!item) return unavailable(400);
     for (const file of [item.media, item.captions, item.transcript, ...(item.poster ? [item.poster] : [])]) if (!await assetPresent(root, file, true)) return unavailable(409);
-    return await publish(dir, name, Buffer.from(JSON.stringify(item)), true) ? success() : unavailable(409);
+    return await writeStoredFile(root, [...folder, name], Buffer.from(JSON.stringify(item)), true, '.course-media') ? success() : unavailable(409);
   } catch { return unavailable(400); }
 }
 
@@ -168,11 +131,11 @@ export const RETIRED_COURSE_MEDIA = /^leadership-film-\d{2}-/;
 export async function publishedCourseMedia(root: string | undefined, fresh = false): Promise<CourseMediaItem[]> {
   if (!root) return [];
   if (!fresh && cache && cache.root === root && Date.now() - cache.at < 60_000) return cache.items;
-  const dir = await checkedDir(root, 'manifests');
-  if (!dir) return [];
+  const names = await listStoredNames(root, ['course-media', 'manifests']);
+  if (!names) return [];
   const items: CourseMediaItem[] = [];
   try {
-    for (const name of (await readdir(dir)).filter(manifestName).sort().slice(0, 500)) {
+    for (const name of names.filter(manifestName).sort().slice(0, 500)) {
       const opened = await safeOpen(root, ['course-media', 'manifests', name]);
       if (!opened) continue;
       try {

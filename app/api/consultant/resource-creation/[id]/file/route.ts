@@ -6,8 +6,9 @@ import { Readable } from "node:stream";
 import { ownerFromRequest } from "@/lib/auth/request";
 import type { ResourceArtifact } from "@/lib/learning/resource-artifact-types";
 import {
-  creationFileNames, creationJobId, creationOutputDirectory, findCreationJob, type CreationFileKind,
+  creationFileKey, creationFileNames, creationInDatabase, creationJobId, creationOutputDirectory, findCreationJob, type CreationFileKind,
 } from "@/lib/learning/resource-creation-store";
+import { getMediaObject, headMediaObject, mediaBucketConfiguration } from "@/lib/storage/media-bucket";
 import { requestedContentScope } from "@/lib/product/request-context";
 
 export const runtime = "nodejs";
@@ -38,7 +39,7 @@ async function serve(request: NextRequest, context: { params: Promise<{ id: stri
   const key = request.nextUrl.searchParams.get("kind");
   if (!creationJobId.test(id) || !key || (key !== "pptx" && !Object.hasOwn(creationFileNames, key))) return empty(404);
   try {
-    const job = findCreationJob(id, await requestedContentScope());
+    const job = await findCreationJob(id, await requestedContentScope());
     if (job?.status !== "ready") return empty(404);
     if (key === "pptx") {
       if (job.kind !== "slides" || !job.artifact) return empty(404);
@@ -60,23 +61,36 @@ async function serve(request: NextRequest, context: { params: Promise<{ id: stri
     const kind = key as CreationFileKind;
     const definition = creationFileNames[kind];
     if (!job.files || !(JSON.parse(job.files) as CreationFileKind[]).includes(kind)) return empty(404);
-    const file = join(creationOutputDirectory(id), definition.name);
-    const stat = await lstat(file);
-    if (!stat.isFile() || stat.isSymbolicLink() || await realpath(file) !== file || stat.size <= 0) return empty(404);
+    const bucket = creationInDatabase() ? mediaBucketConfiguration() : undefined;
+    if (creationInDatabase() && !bucket) return empty(503);
+    const file = bucket ? "" : join(creationOutputDirectory(id), definition.name);
+    let size: number;
+    if (bucket) {
+      const stored = await headMediaObject(bucket, creationFileKey(id, kind));
+      if (!stored) return empty(404);
+      size = stored;
+    } else {
+      const stat = await lstat(file);
+      if (!stat.isFile() || stat.isSymbolicLink() || await realpath(file) !== file || stat.size <= 0) return empty(404);
+      size = stat.size;
+    }
     const headers = new Headers({
       ...noStore, "content-type": definition.mime, "accept-ranges": "bytes",
       "content-disposition": `${request.nextUrl.searchParams.has("download") ? "attachment" : "inline"}; filename="${definition.name}"`,
     });
     const range = head ? null : request.headers.get("range");
-    const bounds = range ? byteBounds(range, stat.size) : null;
+    const bounds = range ? byteBounds(range, size) : null;
     if (range && !bounds) {
-      headers.set("content-range", `bytes */${stat.size}`);
+      headers.set("content-range", `bytes */${size}`);
       return new Response(null, { status: 416, headers });
     }
-    const [start, end] = bounds ?? [0, stat.size - 1];
+    const [start, end] = bounds ?? [0, size - 1];
     headers.set("content-length", String(end - start + 1));
-    if (bounds) headers.set("content-range", `bytes ${start}-${end}/${stat.size}`);
-    const stream = head ? null : Readable.toWeb(createReadStream(file, { start, end })) as ReadableStream<Uint8Array>;
+    if (bounds) headers.set("content-range", `bytes ${start}-${end}/${size}`);
+    const stream = head ? null : bucket
+      ? (await getMediaObject(bucket, creationFileKey(id, kind), [start, end]))?.body ?? null
+      : Readable.toWeb(createReadStream(file, { start, end })) as ReadableStream<Uint8Array>;
+    if (!head && !stream) return empty(404);
     return new Response(stream, { status: bounds ? 206 : 200, headers });
   } catch {
     return empty(404);

@@ -1,10 +1,9 @@
 import 'server-only';
-import { createHash, randomUUID } from 'node:crypto';
-import { constants } from 'node:fs';
-import { link, lstat, mkdir, open, realpath, rename, unlink } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
+import { lstat, realpath } from 'node:fs/promises';
 import path from 'node:path';
 import { Readable } from 'node:stream';
-import { hasVolumeCapacity } from './geffen-ingest';
+import { configuredPublicMediaRoot, createStoredFolders, hasVolumeCapacity, publicMediaStore, readAloudMediaRoot, storedCapacity, storedFolderReady, writeStoredFile } from '@/lib/storage/public-media-store';
 import { safeOpen } from './geffen-volume';
 
 // This tree contains owner-published public media only. It is separate from
@@ -24,8 +23,7 @@ const relativeAsset = (name: string, extension: string) => ASSET.test(name) && n
 
 /** The public publisher never reads from an arbitrary configured directory. */
 export function configuredLeadershipRoot(root: string | undefined, mount: string | undefined) {
-  if (!root || !mount || !path.isAbsolute(root) || !path.isAbsolute(mount)) return undefined;
-  return same(path.resolve(root), path.join(path.resolve(mount), 'geffen-public')) ? path.resolve(root) : undefined;
+  return configuredPublicMediaRoot(root, mount);
 }
 
 type CapacityProbe = Parameters<typeof hasVolumeCapacity>[2];
@@ -73,32 +71,18 @@ async function boundedBody(request: Request, maximum: number) {
   } catch { return null; } finally { reader.releaseLock(); }
 }
 
-/** Creates only this publisher's fixed directory inside the dedicated public volume. */
+/** Creates only this publisher's fixed directory inside the dedicated public volume. The bucket needs no folders. */
 export async function initializeLeadershipMedia(root: string | undefined, mount: string | undefined, probe?: CapacityProbe) {
-  if (!configuredLeadershipRoot(root, mount) || !root || !mount) return unavailable(503);
+  if (!configuredLeadershipRoot(root, mount) || !root) return unavailable(503);
+  const folders = [['leadership'], ['leadership', 'assets'], ['leadership', 'manifests']];
+  if (publicMediaStore() === 'bucket') return await createStoredFolders(root, folders) ? success() : unavailable(503);
+  if (!mount) return unavailable(503);
   const base = path.resolve(mount), publicRoot = path.join(base, 'geffen-public');
   if (!same(path.resolve(root), publicRoot)) return unavailable(503);
   try {
     if (!(await lstat(base)).isDirectory() || !same(await realpath(base), base) || !(await lstat(publicRoot)).isDirectory() || !same(await realpath(publicRoot), publicRoot) || !await hasVolumeCapacity(publicRoot, 0, probe)) return unavailable(503);
-    for (const dir of [path.join(publicRoot, 'leadership'), path.join(publicRoot, 'leadership', 'assets'), path.join(publicRoot, 'leadership', 'manifests')]) {
-      try { await mkdir(dir, { mode: 0o700 }); } catch (e) { if ((e as NodeJS.ErrnoException).code !== 'EEXIST') throw e; }
-      const info = await lstat(dir);
-      if (!info.isDirectory() || info.isSymbolicLink() || !same(await realpath(dir), dir)) return unavailable(503);
-    }
-    return success();
+    return await createStoredFolders(root, folders) ? success() : unavailable(503);
   } catch { return unavailable(503); }
-}
-
-async function checkedDir(root: string | undefined, child: 'assets' | 'manifests') {
-  if (!root || !path.isAbsolute(root)) return null;
-  try {
-    const base = path.resolve(root), parent = path.join(base, 'leadership'), dir = path.join(parent, child);
-    for (const part of [base, parent, dir]) {
-      const info = await lstat(part);
-      if (!info.isDirectory() || info.isSymbolicLink() || !same(await realpath(part), part)) return null;
-    }
-    return dir;
-  } catch { return null; }
 }
 
 async function assetMatches(root: string, name: string) {
@@ -114,39 +98,25 @@ async function assetMatches(root: string, name: string) {
 
 // Hash-named assets are never overwritten; a complete manifest is replaced
 // only after its three independently validated public files exist.
-async function publish(dir: string, name: string, bytes: Buffer, replace: boolean) {
-  const temp = path.join(dir, `.leadership-${randomUUID()}.tmp`), dest = path.join(dir, name);
-  try {
-    const file = await open(temp, constants.O_WRONLY | constants.O_CREAT | constants.O_EXCL | (constants.O_NOFOLLOW ?? 0), 0o600);
-    try { await file.writeFile(bytes); await file.sync(); } finally { await file.close(); }
-    if (!same(await realpath(dir), dir)) return false;
-    if (replace) {
-      try { const info = await lstat(dest); if (!info.isFile() || info.isSymbolicLink()) return false; } catch (e) { if ((e as NodeJS.ErrnoException).code !== 'ENOENT') return false; }
-      await rename(temp, dest);
-    } else await link(temp, dest);
-    return true;
-  } catch { return false; } finally { try { await unlink(temp); } catch { /* already renamed or absent */ } }
-}
-
 /** Receives an immutable asset or atomically publishes one style's complete manifest. */
 export async function ingestLeadershipMedia(request: Request, name: string, root: string | undefined, probe?: CapacityProbe) {
   const asset = ASSET.test(name), manifest = styleName(name);
   if (!asset && !manifest) return unavailable(400);
-  const dir = await checkedDir(root, asset ? 'assets' : 'manifests');
-  if (!dir || !root) return unavailable(503);
+  const folder = ['leadership', asset ? 'assets' : 'manifests'];
+  if (!root || !await storedFolderReady(root, folder)) return unavailable(503);
   const bytes = await boundedBody(request, manifest ? MAX_MANIFEST : name.endsWith('.mp4') ? MAX_VIDEO : MAX_TEXT);
   if (!bytes || !bytes.length) return unavailable(413);
-  if (!await hasVolumeCapacity(dir, bytes.length, probe)) return unavailable(503);
+  if (!await storedCapacity(root, folder, bytes.length, probe)) return unavailable(503);
   if (asset) {
     if (digest(bytes) !== name.slice(0, 64) || !validContent(name, bytes)) return unavailable(400);
     if (await assetMatches(root, name)) return success();
-    return await publish(dir, name, bytes, false) ? success() : unavailable(409);
+    return await writeStoredFile(root, [...folder, name], bytes, false, '.leadership') ? success() : unavailable(409);
   }
   try {
     const parsed = cleanManifest(JSON.parse(bytes.toString('utf8')), name.slice(0, -5));
     if (!parsed) return unavailable(400);
     for (const item of [parsed.video, parsed.captions, parsed.transcript]) if (!await assetMatches(root, item)) return unavailable(409);
-    return await publish(dir, name, Buffer.from(JSON.stringify(parsed)), true) ? success() : unavailable(409);
+    return await writeStoredFile(root, [...folder, name], Buffer.from(JSON.stringify(parsed)), true, '.leadership') ? success() : unavailable(409);
   } catch { return unavailable(400); }
 }
 
@@ -163,7 +133,7 @@ function byteRange(value: string, size: number): [number, number] | null {
 /** Serve an independently published manifest or a hash-addressed public asset. */
 // A known style with no published video answers 204, so lessons can check quietly.
 const none = () => new Response(null, { status: 204, headers: { 'Cache-Control': 'no-store' } });
-export async function serveLeadershipMedia(request: Request, name: string, root = process.env.PAC_GEFFEN_PUBLIC_MEDIA_ROOT) {
+export async function serveLeadershipMedia(request: Request, name: string, root = readAloudMediaRoot()) {
   if (styleName(name)) {
     const opened = await safeOpen(root, ['leadership', 'manifests', name]);
     if (!opened) return none();
