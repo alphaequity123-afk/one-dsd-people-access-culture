@@ -10,3 +10,14 @@ The Ask capacity database migration `db/standalone/0071_pac_dsd_ask_capacity.sql
 
 After deployment, verify Railway's successful deployment SHA matches `main`, check `/leading/journey`, the twelve new leadership course pages and `/ask`, and send a synthetic question to `/api/ask` requesting `application/x-ndjson`. Verify both streamed text and a completed answer. A failed build should leave the previous successful release active; inspect logs and fix the source before retrying.
 
+
+## Running without the volume (storage parts 1 to 3)
+
+The `/app/.data` volume is why each deployment briefly takes the site down: Railway stops a service with a volume before starting its replacement. The steps below move everything off it. Each step is owner-approved; none deletes anything until the last.
+
+1. Apply `db/standalone/0073`, `0074` and `0075` through a privileged migration connection, in that order. Each checks itself and can be re-run.
+2. Create a Railway Storage Bucket in this project. On the service, set `PAC_MEDIA_BUCKET_ENDPOINT`, `PAC_MEDIA_BUCKET_NAME`, `PAC_MEDIA_BUCKET_ACCESS_KEY_ID` and `PAC_MEDIA_BUCKET_SECRET_ACCESS_KEY` as references to the bucket's own credentials. `PAC_OWNER_DATABASE_URL` must be the `pac_dsd_owner_writer` connection.
+3. Set `PAC_STORAGE_COPY=verify` and redeploy. The start check launches `scripts/storage/copy-to-volume-free.mjs` beside the site; it reads the volume, writes nothing and logs one `storage_copy_result` line.
+4. Set `PAC_STORAGE_COPY=copy` and redeploy. It copies the `geffen-public` tree and rendered drafts to the bucket, page edits and records to `pac_dsd`, then checks every file (size and SHA-256) and record. Run it until the result says `"ok":true`. Avoid page edits between this step and the next.
+5. Set `PAC_RUNTIME_RECORDS=postgres` and `PAC_PUBLIC_MEDIA_STORE=bucket`, keep the volume attached, and redeploy. Check pages with course media, read-aloud audio, Ask and page edits. Run step 4 once more to bring over any records written in between. To go back, unset both settings: the volume still holds everything as it was.
+6. Remove `PAC_STORAGE_COPY`, then detach the volume. Keep it, or a backup of it, until the site has run well for a while; deleting it cannot be undone.
