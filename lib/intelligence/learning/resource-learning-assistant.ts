@@ -127,12 +127,51 @@ function contextTitle(docs: Doc[], resourcePath: string): string | undefined {
   return docs.find(doc => learningResourcePath(doc.href) === resourcePath)?.title ?? docs[0]?.title;
 }
 
+/**
+ * The "Study this resource" check only decides whether to show a link; asking a question always reads
+ * the current publications again (see resourceLearningAnswer). Rebuilding the published index took
+ * 2 to 6 seconds per resource page, so the check reuses a recent index: under 30 seconds old it is used
+ * as is; up to 5 minutes old it answers at once and is rebuilt in the background for the next visitor;
+ * older than that it is rebuilt before answering. A withdrawn resource can therefore keep its link for
+ * one more visit, or at most 5 minutes, and opening it then finds nothing to answer from.
+ */
+const STUDY_INDEX_FRESH_MS = 30_000;
+const STUDY_INDEX_MAX_AGE_MS = 5 * 60_000;
+type StudyIndexEntry = { at: number; docs: Promise<Doc[]>; refreshing?: boolean };
+const studyIndexes = new Map<StaffProgramScope, StudyIndexEntry>();
+
+function keepStudyIndex(scope: StaffProgramScope, at: number, docs: Promise<Doc[]>): Promise<Doc[]> {
+  const entry: StudyIndexEntry = { at, docs };
+  studyIndexes.set(scope, entry);
+  // A failed read is never kept, so the next check reads again.
+  docs.catch(() => { if (studyIndexes.get(scope) === entry) studyIndexes.delete(scope); });
+  return docs;
+}
+
+function studyIndex(scope: StaffProgramScope, now = Date.now()): Promise<Doc[]> {
+  const cached = studyIndexes.get(scope);
+  const age = cached ? now - cached.at : Infinity;
+  if (!cached || age >= STUDY_INDEX_MAX_AGE_MS) return keepStudyIndex(scope, now, baseDocuments(scope));
+  if (age >= STUDY_INDEX_FRESH_MS && !cached.refreshing) {
+    cached.refreshing = true;
+    const refresh = baseDocuments(scope);
+    refresh.then(
+      () => { if (studyIndexes.get(scope) === cached) keepStudyIndex(scope, Date.now(), refresh); },
+      () => { cached.refreshing = false; },
+    );
+  }
+  return cached.docs;
+}
+
+/** Tests start each case without a reused index. */
+export function resetStudyAvailabilityIndex() { studyIndexes.clear(); }
+
 export async function resourceStudyAvailability(value: string): Promise<ResourceAvailability> {
   const resourcePath = learningResourcePath(value);
   if (!resourcePath || !process.env.GEMINI_API_KEY?.trim()) return { available: false };
   try {
     const scope = await requestedContentScope();
-    const base = await baseDocuments(scope);
+    const base = await studyIndex(scope);
     const docs = scopedDocuments(base, resourcePath);
     const title = contextTitle(docs.length ? docs : scopedDocuments(await withSupplements(scope, base), resourcePath), resourcePath);
     return title ? { available: true, title } : { available: false };
