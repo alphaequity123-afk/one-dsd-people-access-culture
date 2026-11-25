@@ -1,5 +1,7 @@
 import type { CoursePack, Source } from '../../source-types';
 import plan from '../gap-plan.json';
+// Podcast conversations whose audio isn't recorded yet; the course page shows them as text.
+import conversations from './podcast-conversations.json';
 
 /** One lesson as authored in a gap-completion spec file. */
 export type GapLesson = {
@@ -45,6 +47,7 @@ export function gapCourse(spec: GapSpec): CoursePack {
       scope: `${spec.audience} Participation is voluntary and lessons can be opened in any order. Examples are practice. Keep reflection notes without identifying coworkers or members of the public. This course supports learning; formal employment, accommodation, civil-rights, eligibility and licensing decisions stay with the responsible office.`,
       treatment: `${spec.lessons.length} lessons with explanations, practice cases, practice decisions and feedback, knowledge checks, private reflection, flashcards, and a practical job aid.`,
       duration: `About ${total} minutes, plus optional practice`, author: OWNER,
+      ...((conversations as Record<string, string>)[spec.id] ? { introTranscript: (conversations as Record<string, string>)[spec.id] } : {}),
       coverImage: row.coverImage, coverAlt: row.coverAlt, kind: 'course', contentType: row.contentType as CoursePack['course']['contentType'],
       learning: {
         objectives: spec.lessons.map(l => l.objectives[0]),
