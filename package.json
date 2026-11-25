@@ -15,6 +15,7 @@
     "lint": "eslint",
     "typecheck": "next typegen && tsc --noEmit --incremental false",
     "test": "node scripts/testing/run-tests.mjs",
+    "record:culture-wellbeing-podcasts": "node scripts/media/record-culture-wellbeing-podcasts.mjs",
     "test:corpus:local": "node scripts/testing/run-local-corpus.mjs",
     "corpus:fixtures:bootstrap": "node scripts/corpus/bootstrap-local-fixtures.mjs",
     "verify:environment": "node scripts/verify-environment.mjs",

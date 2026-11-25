@@ -26,6 +26,22 @@ Every lesson opens its practice case with a photograph of the people in it, made
 
 Roles: C1 county partner, C2 program manager, C3 narrator or facilitator, C4 colleague, C5 case manager, C6 supervisor, C7 newer colleague, C8 director or colleague. In cw-learning-organization, C8 plays the director.
 
-## Before publishing audio
+## Recording the podcasts
 
-Recording uses the voice service, which has its own budget and owner credentials. Once recorded, each episode needs its MP3, captions and transcript under `public/learning/course-podcasts/<course>/` and an entry in the course media manifest.
+One command records all six episodes, writes their audio, captions and transcripts to `public/learning/course-podcasts/<course>/`, and registers them in `lib/content/courses/completed-podcasts.json`, which puts the player on each course page. Run it on the computer that has the approved voice references, because they are not in Git.
+
+1. **Voice service (once).** The recorder uses the overview voice service, `cloud/voice/overview_app.py`, which has both podcast voices. If it isn't deployed yet, stage the approved references and deploy it with Modal 1.6.4:
+   ```
+   python cloud/voice/prepare_overview_bundle.py <folder with the approved voice profile locks>
+   modal deploy cloud/voice/overview_app.py
+   ```
+   It runs on two CPU cores and stops 30 seconds after the last request. Recording six short episodes should stay well inside Modal's included $30 monthly credit (an estimate; the Modal dashboard shows the real figure).
+2. **Credentials.** Add three lines to `.env.local` in this folder (Git ignores it): `PAC_OVERVIEW_VOICE_URL` (the deployed app's `https://….modal.run` address with `/speech` on the end), `PAC_HOSTED_VOICE_KEY` and `PAC_HOSTED_VOICE_SECRET` (the Modal proxy token the site already uses). The recorder never prints them.
+3. **Check, then record.**
+   ```
+   npm install
+   npm run record:culture-wellbeing-podcasts -- --check
+   npm run record:culture-wellbeing-podcasts
+   ```
+   `--check` only confirms the service has both voices. A full run records every line in its approved voice, refuses any clip the service hasn't verified, and caches finished lines in `output/culture-wellbeing-recording/`, so running it again after a stop continues where it left off. `--course <id>` records one course.
+4. **Listen, then send.** Play each `episode.mp3`. The recorder prints the Git commands that put the files on a new branch for review. The MP3s are committed as plain files, like the course images.
