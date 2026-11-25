@@ -58,7 +58,7 @@ export default function ReflectionEditor() {
     try {
       url = URL.createObjectURL(new Blob([text], { type: "text/plain;charset=utf-8" }));
       anchor = document.createElement("a");
-      anchor.href = url; anchor.download = "One-DHS-practice-reflection.txt";
+      anchor.href = url; anchor.download = "One-DSD-practice-reflection.txt";
       document.body.appendChild(anchor); anchor.click();
       setManualCopy(false);
       setState(current => ({ ...current, status: "Download requested. Check your downloads for the text file." }));

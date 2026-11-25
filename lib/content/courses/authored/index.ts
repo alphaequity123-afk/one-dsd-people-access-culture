@@ -168,12 +168,18 @@ import course163 from "./gap-completion/gc-foresight-and-stewardship";
 import course164 from "./gap-completion/gc-knowledge-and-continuity";
 import course165 from "./gap-completion/gc-disability-led-leadership";
 import course166 from "./gap-completion/gc-coaching-conversations";
-import course167 from "./gap-completion/cpn-01-understanding-organizational-culture";
-import course168 from "./gap-completion/cpn-02-how-culture-shapes-systems";
-import course169 from "./gap-completion/cpn-03-okun-framework-reflective-tool";
-import course170 from "./gap-completion/cpn-04-accessibility-disability-justice-culture";
-import course171 from "./gap-completion/cpn-05-building-cultures-of-belonging";
-import course172 from "./gap-completion/cpn-06-awareness-to-action";
+import course167 from "./gap-completion/cw-everyday-norms";
+import course168 from "./gap-completion/cw-sustainable-pace";
+import course169 from "./gap-completion/cw-pace-pressure-decisions";
+import course170 from "./gap-completion/cw-workload-burnout";
+import course171 from "./gap-completion/cw-learning-organization";
+import course172 from "./gap-completion/cw-trauma-informed-teams";
+import course173 from "./gap-completion/cpn-01-understanding-organizational-culture";
+import course174 from "./gap-completion/cpn-02-how-culture-shapes-systems";
+import course175 from "./gap-completion/cpn-03-okun-framework-reflective-tool";
+import course176 from "./gap-completion/cpn-04-accessibility-disability-justice-culture";
+import course177 from "./gap-completion/cpn-05-building-cultures-of-belonging";
+import course178 from "./gap-completion/cpn-06-awareness-to-action";
 import staffUnconsciousBias from "./staff-foundation/sf-unconscious-bias-everyday-decisions";
 
 /**
@@ -181,4 +187,4 @@ import staffUnconsciousBias from "./staff-foundation/sf-unconscious-bias-everyda
  * collection but are kept apart from it so the recovered source bytes, counts
  * and hashes stay exactly as preserved. Order follows the original, diversity and gap-completion plans.
  */
-export const AUTHORED_COURSE_PACKS: readonly CoursePack[] = [course1, course2, course3, course4, course5, course6, course7, course8, course9, course10, course11, course12, course13, course14, course15, course16, course17, course18, course19, course20, course21, course22, course23, course24, course25, course26, course27, course28, course29, course30, course31, course32, course33, course34, course35, course36, course37, course38, course39, course40, course41, course42, course43, course44, course45, course46, course47, course48, course49, course50, course51, course52, course53, course54, course55, course56, course57, course58, course59, course60, course61, course62, course63, course64, course65, course66, course67, course68, course69, course70, course71, course72, course73, course74, course75, course76, course77, course78, course79, course80, course81, course82, course83, course84, course85, course86, course87, course88, course89, course90, course91, course92, course93, course94, course95, course96, course97, course98, course99, course100, course101, course102, course103, course104, course105, course106, course107, course108, course109, course110, course111, course112, course113, course114, course115, course116, course117, course118, course119, course120, course121, course122, course123, course124, course125, course126, course127, course128, course129, course130, course131, course132, course133, course134, course135, course136, course137, course138, course139, course140, course141, course142, course143, course144, course145, course146, course147, course148, course149, course150, course151, course152, course153, course154, course155, course156, course157, course158, course159, course160, course161, course162, course163, course164, course165, course166, course167, course168, course169, course170, course171, course172, staffUnconsciousBias, ...EMOTIONS_VALUES_COURSES, ...DEIA_CATALOG_COURSE_PACKS, ...SUPERVISOR_MANAGER_COURSE_PACKS];
+export const AUTHORED_COURSE_PACKS: readonly CoursePack[] = [course1, course2, course3, course4, course5, course6, course7, course8, course9, course10, course11, course12, course13, course14, course15, course16, course17, course18, course19, course20, course21, course22, course23, course24, course25, course26, course27, course28, course29, course30, course31, course32, course33, course34, course35, course36, course37, course38, course39, course40, course41, course42, course43, course44, course45, course46, course47, course48, course49, course50, course51, course52, course53, course54, course55, course56, course57, course58, course59, course60, course61, course62, course63, course64, course65, course66, course67, course68, course69, course70, course71, course72, course73, course74, course75, course76, course77, course78, course79, course80, course81, course82, course83, course84, course85, course86, course87, course88, course89, course90, course91, course92, course93, course94, course95, course96, course97, course98, course99, course100, course101, course102, course103, course104, course105, course106, course107, course108, course109, course110, course111, course112, course113, course114, course115, course116, course117, course118, course119, course120, course121, course122, course123, course124, course125, course126, course127, course128, course129, course130, course131, course132, course133, course134, course135, course136, course137, course138, course139, course140, course141, course142, course143, course144, course145, course146, course147, course148, course149, course150, course151, course152, course153, course154, course155, course156, course157, course158, course159, course160, course161, course162, course163, course164, course165, course166, course167, course168, course169, course170, course171, course172, course173, course174, course175, course176, course177, course178, staffUnconsciousBias, ...EMOTIONS_VALUES_COURSES, ...DEIA_CATALOG_COURSE_PACKS, ...SUPERVISOR_MANAGER_COURSE_PACKS];

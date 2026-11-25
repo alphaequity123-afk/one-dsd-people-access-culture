@@ -1,8 +1,8 @@
 {
  "generatedFrom": "collections-placement.csv",
  "counts": {
-  "rows": 735,
-  "items": 731,
+  "rows": 741,
+  "items": 737,
   "questions": 89
  },
  "items": {
@@ -3580,6 +3580,36 @@
    "kind": "referral",
    "minutes": 43
   },
+  "cw-everyday-norms": {
+   "title": "Culture: How Everyday Norms Shape the Work",
+   "kind": "course",
+   "minutes": 48
+  },
+  "cw-sustainable-pace": {
+   "title": "Well-Being at Work: Sustainable Pace and Meaningful Work",
+   "kind": "course",
+   "minutes": 48
+  },
+  "cw-pace-pressure-decisions": {
+   "title": "Pace, Pressure and Decision Quality",
+   "kind": "course",
+   "minutes": 48
+  },
+  "cw-workload-burnout": {
+   "title": "Workload, Burnout and Team Practices That Help",
+   "kind": "course",
+   "minutes": 48
+  },
+  "cw-learning-organization": {
+   "title": "Building a Learning Organization",
+   "kind": "course",
+   "minutes": 48
+  },
+  "cw-trauma-informed-teams": {
+   "title": "Trauma-Informed Practice for Teams and Leaders",
+   "kind": "course",
+   "minutes": 48
+  },
   "cpn-01-understanding-organizational-culture": {
    "title": "Understanding Organizational Culture",
    "kind": "course",
@@ -4435,7 +4465,8 @@
     "gc-accountability-public-service",
     "gc-leading-without-authority",
     "gc-knowledge-and-continuity",
-    "cpn-01-understanding-organizational-culture"
+    "cpn-01-understanding-organizational-culture",
+    "cw-sustainable-pace"
    ],
    "deeper": [
     {
@@ -4641,9 +4672,19 @@
       "cpn-05-building-cultures-of-belonging",
       "cpn-06-awareness-to-action"
      ]
+    },
+    {
+     "subject": "Culture and well-being at work",
+     "ids": [
+      "cw-everyday-norms",
+      "cw-learning-organization",
+      "cw-pace-pressure-decisions",
+      "cw-trauma-informed-teams",
+      "cw-workload-burnout"
+     ]
     }
    ],
-   "itemCount": 119
+   "itemCount": 125
   },
   {
    "id": "policy-data-decisions",
