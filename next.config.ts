@@ -85,7 +85,13 @@ const downloadRuntimeIncludes = [
 
 const nextConfig: NextConfig = {
   ...(agencyZone ? { assetPrefix: "/dsd-static" } : {}),
-  async rewrites() { return agencyZone ? [{ source: "/dsd-api/ask", destination: "/api/ask" }] : []; },
+  async rewrites() {
+    return [
+      ...(agencyZone ? [{ source: "/dsd-api/ask", destination: "/api/ask" }] : []),
+      // Browsers and the One DSD front door ask for /favicon.ico; the program's tab icon is app/icon.svg.
+      { source: "/favicon.ico", destination: "/icon.svg" },
+    ];
+  },
   // Send the full page head before the status, so a missing page really answers 404.
   htmlLimitedBots: /.*/,
   // Each build worker holds its own database pool. Bound prerender concurrency
@@ -144,7 +150,9 @@ const nextConfig: NextConfig = {
     return [
       // Owner decision 2026-11-22: the old address opens the current One DSD site. Requests the front door passes
       // through carry x-one-dsd-front-door and are served as before; owner upload tools under /api keep working.
-      ...["/", "/:path((?!api(?:/|$)).+)"].map(source => ({
+      // The front door forwards /favicon.ico without that header, so redirecting it sent the browser in a loop
+      // between the two sites and the tab icon never loaded. The tab icon is always answered here instead.
+      ...["/", "/:path((?!api(?:/|$)|favicon\\.ico$).+)"].map(source => ({
         source,
         has: [{ type: "host" as const, value: "one-people-access-culture.up.railway.app" }],
         missing: [{ type: "header" as const, key: "x-one-dsd-front-door" }],
