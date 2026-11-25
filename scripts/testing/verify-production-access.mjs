@@ -18,7 +18,7 @@ const login = await request("/api/consultant/login", {
   body: new URLSearchParams({ key, returnTo: "/consultant" }),
 });
 const cookie = login.headers.get("set-cookie")?.split(";")[0];
-if (login.status !== 303 || !cookie?.startsWith("pac_owner=") || login.headers.get("location")?.includes("denied")) {
+if (login.status !== 303 || !cookie?.startsWith("pac_dsd_owner=") || login.headers.get("location")?.includes("denied")) {
   throw new Error(`Production sign-in failed with status ${login.status}.`);
 }
 checks.push({ check: "Owner sign-in", passed: true });

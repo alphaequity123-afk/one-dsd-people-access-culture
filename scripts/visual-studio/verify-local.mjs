@@ -7,7 +7,7 @@ process.loadEnvFile(path.join(root, '.env.local'));
 const key = process.env.PAC_OWNER_KEY;
 if (!key) throw new Error('Local owner key is unavailable');
 const login = await fetch(origin + '/api/consultant/login', {method:'POST',redirect:'manual',headers:{Origin:origin,'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams({key,returnTo:'/consultant/studio'})});
-const rawCookie = login.headers.getSetCookie().find(value => value.startsWith('pac_owner='));
+const rawCookie = login.headers.getSetCookie().find(value => value.startsWith('pac_dsd_owner='));
 if (login.status !== 303 || !rawCookie || (login.headers.get('location') ?? '').includes('denied')) throw new Error('Local owner sign-in did not succeed');
 const cookie = rawCookie.split(';')[0];
 const headers = {Origin:origin,Cookie:cookie};

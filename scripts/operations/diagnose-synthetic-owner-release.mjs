@@ -16,7 +16,7 @@ try{
  const login=await send('/api/consultant/login','POST',new URLSearchParams({key,returnTo:'/consultant'}).toString(),true);
  receipt.loginStatus=login.status;
  if(login.status!==303)throw new Error('Private owner sign-in failed.');
- const session=login.headers.getSetCookie().find(value=>value.startsWith('pac_owner='));
+ const session=login.headers.getSetCookie().find(value=>value.startsWith('pac_dsd_owner='));
  if(!session)throw new Error('Owner session unavailable.');cookie=session.split(';',1)[0];
  const response=await send('/api/consultant/resources/'+state.resourceId+'/release');
  receipt.releaseReadStatus=response.status;
