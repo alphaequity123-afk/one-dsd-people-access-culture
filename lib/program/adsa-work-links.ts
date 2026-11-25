@@ -144,7 +144,7 @@ export const ADSA_WORK_GOALS = [
       },
       {
         "id": "ADSA-6.4",
-        "sourceText": "Ensure communication practices align with the National CLAS Standards."
+        "sourceText": "Ensure communication practices align with the National Culturally and Linguistically Appropriate Services Standards."
       }
     ]
   }

@@ -2,7 +2,7 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 import sharp from "sharp";
 import { execFileSync } from "node:child_process";
-import { mkdtempSync, readFileSync, unlinkSync, rmdirSync } from "node:fs";
+import { mkdtempSync, readFileSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import ffmpeg from "ffmpeg-static";
@@ -34,6 +34,6 @@ describe("staff media extraction",()=>{
    const result=await extractMediaUpload(readFileSync(file),"sample.mp4","video/mp4","staff");
    expect(result.text).toContain("Sample recording");expect(result.text).toContain("A sample frame");expect(result.note).toContain("Unsampled pictures");
    expect(calls.some(url=>url.endsWith("/audio/transcriptions"))).toBe(true);expect(calls.some(url=>url.endsWith("/responses"))).toBe(true);
-  } finally {unlinkSync(file);rmdirSync(dir);}
+  } finally {rmSync(dir,{recursive:true,force:true});}
  });
 });

@@ -31,7 +31,7 @@ const cohort = new Set(require('./fixtures/resource-organization-public-inventor
 const shelves = listAudioLibraryShelves();
 const original = JSON.stringify(shelves);
 const entries = shelves.flatMap(shelf => shelf.entries);
-assert.equal(entries.length, 16, 'Preserve the reviewed two podcasts and fourteen learning examples.');
+assert.equal(entries.length, 2, 'Staff listening lists the two published podcasts; lesson audio samples stay in their lessons.');
 assert.deepEqual(filterAudioShelves(shelves), shelves);
 assert.deepEqual(filterAudioShelves(shelves, 'unknown'), shelves);
 const union = new Set();
