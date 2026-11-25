@@ -1,9 +1,9 @@
-import cast from './cast.json';
+import cast from './cast-roles.json';
 import type { GapSpec } from './build';
 
 /**
  * Courses written for the program's own cast use {{ROLE}} tokens, such as {{SUPERVISOR}}.
- * cast.json says how each role is written. The recurring cast has no character names, so each
+ * cast-roles.json says how each role is written. The recurring cast has no character names, so each
  * role is written as a role ("the supervisor"), capitalized where it starts a sentence.
  */
 const names = cast as Record<string, string>;
