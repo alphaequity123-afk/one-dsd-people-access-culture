@@ -23,8 +23,8 @@ if(!process.argv.includes('--isolated')) {
     const cookie=owner.issueSessionCookieValue();assert.ok(cookie);assert.equal(owner.ownerKeyIsDevDefault(),true);
     const origin='http://localhost:59999';const url=origin+'/api/consultant/program';
     const results=[];
-    async function post(body,options={}){const request=new NextRequest(url,{method:'POST',headers:{'content-type':'application/json',...(options.origin===false?{}:{origin:options.origin??origin}),...(options.auth===false?{}:{cookie:'pac_owner='+cookie})},body:JSON.stringify(body)});const response=await handlers.handleProgramPost(request);return {status:response.status,body:await response.json()};}
-    async function get(auth=true){const response=await handlers.handleProgramGet(new NextRequest(url,{headers:auth?{cookie:'pac_owner='+cookie}:{}}));return {status:response.status,body:await response.json()};}
+    async function post(body,options={}){const request=new NextRequest(url,{method:'POST',headers:{'content-type':'application/json',...(options.origin===false?{}:{origin:options.origin??origin}),...(options.auth===false?{}:{cookie:'pac_dsd_owner='+cookie})},body:JSON.stringify(body)});const response=await handlers.handleProgramPost(request);return {status:response.status,body:await response.json()};}
+    async function get(auth=true){const response=await handlers.handleProgramGet(new NextRequest(url,{headers:auth?{cookie:'pac_dsd_owner='+cookie}:{}}));return {status:response.status,body:await response.json()};}
     assert.equal((await get(false)).status,401);
     assert.equal((await post({action:'create'},{auth:false})).status,401);
     assert.equal((await post({action:'create'},{origin:false})).status,403);
@@ -110,7 +110,7 @@ if(!process.argv.includes('--isolated')) {
     results.push('Closed feedback/survey endpoints do not inspect payload; consent/strict fields/privacy/private-belief scoring and direct-store scoring payload refuse without persistence');
     // Actual React components in jsdom: presentation, keyboard semantics and failure recovery.
     const {JSDOM}=require('jsdom');const dom=new JSDOM('<!doctype html><html><body></body></html>',{url:origin});
-    globalThis.window=dom.window;globalThis.document=dom.window.document;globalThis.HTMLElement=dom.window.HTMLElement;globalThis.FormData=dom.window.FormData;Object.defineProperty(globalThis,'navigator',{value:dom.window.navigator,configurable:true});globalThis.IS_REACT_ACT_ENVIRONMENT=true;
+    globalThis.window=dom.window;globalThis.self=dom.window;globalThis.document=dom.window.document;globalThis.HTMLElement=dom.window.HTMLElement;globalThis.FormData=dom.window.FormData;Object.defineProperty(globalThis,'navigator',{value:dom.window.navigator,configurable:true});globalThis.IS_REACT_ACT_ENVIRONMENT=true;
     let refreshed=0;const previousLoad=Module._load;Module._load=function(name,...args){if(name==='next/navigation')return {useRouter:()=>({refresh(){refreshed++;}})};return previousLoad.call(this,name,...args);};
     const React=require('react');const {render,fireEvent,act,cleanup,waitFor}=require('@testing-library/react');
     const {ManualPreparationForm}=require(path.join(root,'components/program-work-controls.tsx'));
@@ -129,8 +129,8 @@ if(!process.argv.includes('--isolated')) {
     let completeRequest;globalThis.fetch=()=>new Promise(resolve=>{completeRequest=resolve;});await act(async()=>{fireEvent.submit(conflictForm);});assert.equal(conflictForm.querySelector('fieldset').disabled,true);await act(async()=>{completeRequest({ok:false,status:503,json:async()=>({error:'Save unavailable'})});});assert.equal(conflictForm.querySelector('fieldset').disabled,false);assert.equal(conflictForm.querySelector('[name="body"]').value,typed.body);cleanup();
     // Complete the visible forms against actual isolated handlers and storage, not mocked success responses.
     const freshCookie=owner.issueSessionCookieValue();
-    async function actualPost(body){return handlers.handleProgramPost(new NextRequest(url,{method:'POST',headers:{'content-type':'application/json',origin,cookie:'pac_owner='+freshCookie},body:JSON.stringify(body)}));}
-    async function actualCurrent(taskId){const response=await handlers.handleProgramGet(new NextRequest(url,{headers:{cookie:'pac_owner='+freshCookie}}));return (await response.json()).items.find(task=>task.id===taskId);}
+    async function actualPost(body){return handlers.handleProgramPost(new NextRequest(url,{method:'POST',headers:{'content-type':'application/json',origin,cookie:'pac_dsd_owner='+freshCookie},body:JSON.stringify(body)}));}
+    async function actualCurrent(taskId){const response=await handlers.handleProgramGet(new NextRequest(url,{headers:{cookie:'pac_dsd_owner='+freshCookie}}));return (await response.json()).items.find(task=>task.id===taskId);}
     const {ADSA_WORK_ACTIONS}=require(path.join(root,'lib/program/adsa-work-links.ts'));
     const {ADSA_IMPLEMENTATION_ACTIONS}=require(path.join(root,'lib/program/adsa-implementation.ts'));
     assert.deepEqual(ADSA_WORK_ACTIONS.map(a=>[a.id,a.sourceText]),ADSA_IMPLEMENTATION_ACTIONS.map(a=>[a.id,a.sourceText]));assert.equal(ADSA_WORK_ACTIONS.length,28);
