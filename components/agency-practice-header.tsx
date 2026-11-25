@@ -10,7 +10,8 @@ import { useLearningTrail, trailHref } from "./use-learning-trail";
 
 // Owner decision 2026-11-22: these pages now reach people only through the One DSD site, so they carry its menu
 // (same items and order as the front door's components/site-header.tsx for One DSD; Ask and Search sit in the banner).
-const sections = [["Home", "/"], ["Your work", "/work"], ["Begin with equity", "/start"], ["Learn", "/learn"], ["Leadership", "/learn/leadership"], ["Library", "/library"], ["Communities", "/minnesota-communities"]];
+// v2 rebuild (2026-11-25): Home plus five pillars; Ask and one Search sit in the banner.
+const sections = [["Home", "/home"], ["Practice", "/practice"], ["Leadership", "/leadership"], ["Communities", "/communities"], ["Knowledge", "/knowledge"], ["Charter", "/charter"]];
 
 /** Agency branding spans the connected program; the learning trail survives related-page visits. */
 export function AgencyPracticeHeader({ children }: { children: ReactNode }) {
@@ -41,9 +42,9 @@ export function AgencyPracticeHeader({ children }: { children: ReactNode }) {
           <img src="/images/dhs-logo.png" width={319} height={68} alt="Minnesota Department of Human Services" />
           <span><strong className="pac-unit-dhs">One DHS</strong><strong className="pac-unit-dsd">One DSD</strong><span>People, Access and Culture</span></span>
         </a>
-        <div className="agency-practice-tools"><a href="/ask">Ask</a><a href="/library">Search</a></div>
+        <div className="agency-practice-tools"><a href="/ask">Ask</a><a href="/search">Search</a></div>
       </div>
-      <nav aria-label="Program"><ul className="agency-practice-shell">{sections.map(([label, href]) => <li key={label}><a href={href} aria-current={pathname === href ? "page" : label === "Learn" && trail ? "location" : undefined}>{label}</a></li>)}</ul></nav>
+      <nav aria-label="Program"><ul className="agency-practice-shell">{sections.map(([label, href]) => <li key={label}><a href={href} aria-current={pathname === href ? "page" : label === "Knowledge" && trail ? "location" : undefined}>{label}</a></li>)}</ul></nav>
     </header>
     {title ? <aside className="agency-practice-return" aria-label="Learning pathway">
       <a href={returnHref}>Back to learning pathway: {title}</a>

@@ -8,10 +8,13 @@ import { publishedCalendar } from "@/lib/content/cultural-calendar";
 import { CALENDAR_PATH, chicagoToday, compactCalendar, shortDateRange, upcomingObservances } from "@/lib/content/culture-calendar-grid";
 import "./task-home.css";
 
-const pathways = [
-  { image: "learn", alt: "State staff of different ages and backgrounds talk around a table in a sunlit meeting room.", title: "Learn", description: "Courses, readings and collections to build your understanding.", href: "/learn", action: "Open Learn" },
-  { image: "apply-a-tool", alt: "Four colleagues planning together around a table and arranging ideas on a board.", title: "Apply a tool", description: "Work through a real decision, meeting, process or review.", href: "/practice", action: "Open Practice" },
-  { image: "communities", alt: "Neighbors of different ages share food at a community meal.", title: "Communities", description: "Minnesota communities, their history and how to connect well.", href: "/minnesota-communities", action: "Open Communities" },
+// v2 rebuild (2026-11-25): Home leads with the task finder, then the five pillars.
+const pillars = [
+  { title: "Practice", description: "Work through a real decision, meeting, form, process or review with guided tools.", href: "/practice" },
+  { title: "Leadership", description: "Team kits, leadership approaches and paths for supervisors, managers and directors.", href: "/leadership" },
+  { title: "Communities", description: "Minnesota communities, the Culture Calendar, Tribal Nations and community outreach.", href: "/communities" },
+  { title: "Knowledge", description: "Courses, readings, podcasts and the library, with Ask and Search for quick answers.", href: "/knowledge" },
+  { title: "Charter", description: "The principles and responsibilities that guide the program.", href: "/charter" },
 ] as const;
 
 export default async function HomePage() {
@@ -35,15 +38,10 @@ export default async function HomePage() {
         <p>People, programs and partnerships across the Department of Human Services.</p>
       </section>
 
-      <section className="pilot-section" aria-labelledby="pilot-pathways">
-        <h2 id="pilot-pathways">Three ways in</h2>
-        <ul className="pilot-pathways">{pathways.map(item => <li key={item.href}>
-          <Image src={`/images/pilot-home/${item.image}.jpg`} alt={item.alt} width={900} height={600} sizes="(min-width: 760px) 33vw, 100vw" />
-          <div>
-            <h3>{item.title}</h3>
-            <p>{item.description}</p>
-            <Link className="pilot-secondary" href={item.href}>{item.action}</Link>
-          </div>
+      <section className="pilot-section" aria-labelledby="pilot-pillars">
+        <h2 id="pilot-pillars">Where to go next</h2>
+        <ul className="pilot-list">{pillars.map(item => <li key={item.href}>
+          <Link href={item.href}><strong>{item.title}</strong><span>{item.description}</span></Link>
         </li>)}</ul>
       </section>
 
@@ -59,12 +57,12 @@ export default async function HomePage() {
 
       <div className="pilot-section"><WaterCollectionFeature withPhoto /></div>
 
-      <section className="pilot-section" aria-labelledby="pilot-leadership">
-        <h2 id="pilot-leadership">Leadership and the program</h2>
+      <section className="pilot-section" aria-labelledby="pilot-more">
+        <h2 id="pilot-more">More from One DSD</h2>
         <ul className="pilot-list">
-          <li><Link href="/leading"><strong>Leadership</strong><span>Decisions, paths and tools for leading equity work.</span></Link></li>
+          <li><Link href="/start"><strong>Begin here</strong><span>A short helper that suggests a first step for your role and time.</span></Link></li>
           <li><Link href="/one-dsd"><strong>About One DSD</strong><span>The program, the division’s work and the people behind it.</span></Link></li>
-          <li><Link href="/team-kits"><strong>Team kits</strong><span>Ready-to-run sessions for a staff meeting.</span></Link></li>
+          <li><Link href="/my-work"><strong>My work</strong><span>Plans and notes saved on your own computer.</span></Link></li>
         </ul>
       </section>
     </div>

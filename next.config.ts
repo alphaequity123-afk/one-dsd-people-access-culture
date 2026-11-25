@@ -185,7 +185,7 @@ const nextConfig: NextConfig = {
       { source: "/toolkit-studio", destination: "/learn/equity-toolkit", permanent: false },
       { source: "/toolkit-studio/:path*", destination: "/learn/equity-toolkit", permanent: false },
       { source: "/one-dsd/team/learning-lab", destination: "/one-dsd/team", permanent: false },
-      { source: "/communities", destination: "/minnesota-communities", permanent: true },
+      // v2 rebuild (2026-11-25): /communities is now the Communities pillar page, so its old redirect is removed.
       { source: "/communities/from-the-list", destination: "/minnesota-communities", permanent: true },
       { source: "/professional-support", destination: "/support", permanent: true },
       { source: "/library/course-:id", destination: "/courses/:id", permanent: true },

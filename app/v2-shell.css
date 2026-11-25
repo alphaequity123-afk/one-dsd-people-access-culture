@@ -1,0 +1,13 @@
+/* v2 rebuild (2026-11-25): shared look for the five-pillar shell, combining the program requirements with the
+   Nov 20 handoff's visual direction — white header, #F5F5F3 canvas, Montserrat headings, Source Sans 3 body,
+   sentence case and one dark-slate primary action per screen. Loaded last so it settles the shell only. */
+:root {
+  --v2-heading-font: "Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --v2-body-font: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --sans: var(--v2-body-font);
+}
+body.program-design { background: #f5f5f3; font-family: var(--v2-body-font); }
+body.program-design h1, body.program-design h2 { font-family: var(--v2-heading-font); }
+.dsd-header { background: #ffffff; }
+.dsd-header .dsd-brand strong { font-family: var(--v2-heading-font); }
+.dsd-header .dsd-nav a { font-family: var(--v2-heading-font); font-weight: 600; }

@@ -1,12 +1,14 @@
-/** Shared navigation describes the work, without changing access or page content. */
+/** v2 rebuild (2026-11-25): Home plus five pillars — Practice, Leadership, Communities, Knowledge, Charter. Ask sits in the banner on every page; one Search.
+ * Shared navigation describes the work, without changing access or page content. */
 export const PAGE_AREAS = {
   start: { label: "Start", home: "/start", links: [["Start", "/start"], ["New to DSD", "/start#new-to-dsd"], ["How to use this site", "/user-guide"]] },
-  learn: { label: "Learn", home: "/learn", links: [["Learning", "/learn"], ["Library", "/library"], ["Courses", "/courses"], ["Themes and collections", "/collections"], ["Course collections", "/learn/collections"], ["Paths", "/learn/paths"], ["Listen", "/audio-library"]] },
+  learn: { label: "Knowledge", home: "/knowledge", links: [["Learning", "/learn"], ["Library", "/library"], ["Courses", "/courses"], ["Themes and collections", "/collections"], ["Course collections", "/learn/collections"], ["Paths", "/learn/paths"], ["Listen", "/audio-library"]] },
   tools: { label: "Practice", home: "/practice", links: [["Guided practices", "/practice"], ["Equity Analysis Toolkit", "/learn/equity-toolkit"], ["Equity reviews", "/equity-review"], ["Tools", "/program/resources"]] },
   support: { label: "Support", home: "/support", links: [["Support", "/support"], ["Ask", "/ask"], ["Minnesota communities", "/minnesota-communities"]] },
   programs: { label: "One DSD", home: "/one-dsd", links: [["One DSD", "/one-dsd"], ["Programs and services", "/one-dsd/programs"], ["Planning and progress", "/one-dsd/planning"], ["Equity leadership and growth", "/one-dsd/leadership"], ["Understanding DHS", "/understanding-dhs"], ["About", "/about"]] },
-  leading: { label: "For leaders, supervisors, managers, and directors", home: "/leading", links: [["What are you deciding?", "/leading"], ["Suggested paths", "/leading/paths"], ["Your leadership journey", "/leading/journey"], ["How this works", "/leading/how-this-works"]] },
-  about: { label: "About the program", home: "/about", links: [["About", "/about"], ["How the program works", "/program/model"], ["Program charter", "/program-foundation"]] },
+  leading: { label: "Leadership", home: "/leadership", links: [["Leadership", "/leadership"], ["What are you deciding?", "/leading"], ["Suggested paths", "/leading/paths"], ["Your leadership journey", "/leading/journey"], ["How this works", "/leading/how-this-works"]] },
+  about: { label: "Charter", home: "/charter", links: [["Program charter", "/charter"], ["About", "/about"], ["How the program works", "/program/model"]] },
+  communities: { label: "Communities", home: "/communities", links: [["Communities", "/communities"], ["Minnesota communities", "/minnesota-communities"], ["Culture Calendar", "/minnesota-communities/calendar"], ["Community Outreach and Engagement", "/community-outreach"], ["Employee resource groups", "/employee-resource-groups"]] },
   consultant: { label: "Consultant workspace", home: "/consultant", links: [["Workspace", "/consultant"], ["My work", "/my-work"], ["Return to the program", "/home"]] },
 } as const;
 export type PageArea = keyof typeof PAGE_AREAS;
@@ -15,16 +17,18 @@ export type PageArea = keyof typeof PAGE_AREAS;
  * Support stays in the menu. Ask is available in the banner and the Support row;
  * Themes and collections sits under Learn; Community Outreach and Engagement sits under Cultural Intelligence. */
 export const PRIMARY_SECTIONS: ReadonlyArray<readonly [string, string, PageArea]> = [
-  ["Start", "/start", "start"], ["Learn", "/learn", "learn"], ["Practice", "/practice", "tools"], ["Support", "/support", "support"], ["One DSD", "/one-dsd", "programs"],
+  ["Practice", "/practice", "tools"], ["Leadership", "/leadership", "leading"], ["Communities", "/communities", "communities"], ["Knowledge", "/knowledge", "learn"], ["Charter", "/charter", "about"],
 ];
 export function pageArea(path: string): PageArea {
   if (/^\/consultant(?:\/|$)/.test(path)) return "consultant";
-  if (/^\/leading(?:\/|$)/.test(path)) return "leading";
+  if (/^\/(leadership|leading|team-kits)(?:\/|$)/.test(path) || /^\/learn\/leadership-styles(?:\/|$)/.test(path) || /^\/one-dsd\/leadership(?:\/|$)/.test(path)) return "leading";
+  if (/^\/(communities|minnesota-communities|community-outreach|employee-resource-groups|minnesota-agencies)(?:\/|$)/.test(path) || /^\/learn\/tribal-referral(?:\/|$)/.test(path)) return "communities";
+  if (/^\/(charter|program-foundation|about)(?:\/|$)/.test(path) || /^\/program\/model(?:\/|$)/.test(path)) return "about";
   if (/^\/(start|orientation|user-guide)(?:\/|$)/.test(path)) return "start";
   if (/^\/(one-dsd|administrations|understanding-dhs)(?:\/|$)/.test(path)) return "programs";
-  if (/^\/(support|ask|minnesota-communities|employee-resource-groups|contribute)(?:\/|$)/.test(path)) return "support";
+  if (/^\/(support|ask|contribute)(?:\/|$)/.test(path)) return "support";
   if (/^\/learn\/equity-toolkit(?:\/|$)/.test(path) || /^\/(practice|practice-guides|toolkit-studio|equity-policy|equity-review|operationalizing-equity|my-work)(?:\/|$)/.test(path) || /^\/program\/(resources|practice|progress|impact)(?:\/|$)/.test(path)) return "tools";
-  if (/^\/(learn|collections|courses|paths|journeys|resources|library|audio-library|podcasts)(?:\/|$)/.test(path)) return "learn";
+  if (/^\/(knowledge|learn|collections|courses|paths|journeys|resources|library|audio-library|podcasts)(?:\/|$)/.test(path)) return "learn";
   return "about";
 }
 export function internalPage(path: string) { return path !== "/" && path !== "/home" && !path.startsWith("/embedded-tools/"); }

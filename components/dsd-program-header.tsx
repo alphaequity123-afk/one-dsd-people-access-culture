@@ -26,12 +26,10 @@ export function DsdProgramHeader(props: HeaderProps = {}) {
   return <Header key={pathname} pathname={pathname} {...props} />;
 }
 
-function Header({ pathname, culturalIntelligenceAvailable = false, ask }: HeaderProps & { pathname: string }) {
+function Header({ pathname, ask }: HeaderProps & { pathname: string }) {
   const active = stageForPath(pathname);
   const area = pathname === "/" || pathname === "/home" ? undefined : pageArea(pathname);
   const divisionPage = pathname === "/one-dsd" || pathname.startsWith("/one-dsd/");
-  const collectionPage = pathname === "/learn/cultural-intelligence" || pathname.startsWith("/learn/cultural-intelligence/") || pathname === "/community-outreach" || pathname.startsWith("/community-outreach/");
-  const themeCollectionPage = pathname === "/collections" || pathname.startsWith("/collections/");
   const [open, setOpen] = useState(false);
   const [tool, setTool] = useState<Tool | null>(null);
   const [compose, setCompose] = useState(true);
@@ -95,7 +93,7 @@ function Header({ pathname, culturalIntelligenceAvailable = false, ask }: Header
       </div>
     </div>
     <nav id="dsd-navigation" aria-label="Program" className={`dsd-nav ${open ? "is-open" : ""}`}>
-      <div className="dsd-shell">{PRIMARY_SECTIONS.map(([label, href, section]) => <Link key={href} href={href} data-tone={section} aria-current={pathname === href ? "page" : !collectionPage && (area === section || (section === "learn" && themeCollectionPage)) ? "location" : undefined} onClick={() => setOpen(false)}>{label}</Link>)}{culturalIntelligenceAvailable ? <Link href="/learn/cultural-intelligence" data-tone="communities" aria-current={pathname === "/learn/cultural-intelligence" ? "page" : collectionPage ? "location" : undefined} onClick={() => setOpen(false)}>Cultural Intelligence</Link> : null}<Link className="dsd-mobile-utility" href="/my-work" onClick={() => setOpen(false)}>My work</Link><Link className="dsd-mobile-utility" href="/leading" onClick={() => setOpen(false)} title="For leaders, supervisors, managers, and directors">Leadership</Link></div>
+      <div className="dsd-shell"><Link href="/home" aria-current={pathname === "/home" ? "page" : undefined} onClick={() => setOpen(false)}>Home</Link>{PRIMARY_SECTIONS.map(([label, href, section]) => <Link key={href} href={href} data-tone={section} aria-current={pathname === href ? "page" : area === section ? "location" : undefined} onClick={() => setOpen(false)}>{label}</Link>)}<Link className="dsd-mobile-utility" href="/my-work" onClick={() => setOpen(false)}>My work</Link></div>
     </nav>
     <section id="dsd-ask-panel" ref={tool === "ask" ? panel : undefined} hidden={tool !== "ask"}
       tabIndex={-1} className="dsd-tool-panel" aria-label="Ask a question"
