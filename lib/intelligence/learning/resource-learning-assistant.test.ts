@@ -2,7 +2,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import type { NextRequest } from "next/server";
 import type { Doc } from "@/lib/intelligence/retrieval/search";
 import { POST } from "@/app/api/learn/resources/route";
-import { learningResourcePath, resourceStudyAvailability } from "./resource-learning-assistant";
+import { learningResourcePath, resetStudyAvailabilityIndex, resourceStudyAvailability } from "./resource-learning-assistant";
 
 const fixtures = vi.hoisted(() => ({
   staff: [] as Doc[],
@@ -58,9 +58,10 @@ describe("published resource learning endpoint", () => {
     fixtures.supplements = [];
     fixtures.reads.mockClear();
     fixtures.scope = "dsd";
+    resetStudyAvailabilityIndex();
     vi.stubEnv("GEMINI_API_KEY", "fixture-not-a-real-credential");
   });
-  afterEach(() => { vi.unstubAllEnvs(); vi.unstubAllGlobals(); });
+  afterEach(() => { vi.unstubAllEnvs(); vi.unstubAllGlobals(); vi.useRealTimers(); });
 
   it("scopes to the published resource and PDF page, and screens contact, draft and private text before sending", async () => {
     const text = "Appointment notices offer accessible formats and direct confirmation.";
@@ -144,6 +145,40 @@ describe("published resource learning endpoint", () => {
     expect(await resourceStudyAvailability("/library/self-directed-F05")).toEqual({ available: true, title: "F05 course" });
     expect(await resourceStudyAvailability("/%63onsultant/draft")).toEqual({ available: false });
     expect(learningResourcePath("//other.example/library/access-aid")).toBeUndefined();
-    expect(fixtures.reads.mock.calls).toEqual([["one-dhs"], ["one-dhs"]]);
+    // The second check reuses the index the first one built.
+    expect(fixtures.reads.mock.calls).toEqual([["one-dhs"]]);
+  });
+
+  it("reuses a recent study index, refreshes it in the background, and drops a withdrawn resource", async () => {
+    vi.useFakeTimers({ now: new Date("2026-11-25T12:00:00Z") });
+    expect(await resourceStudyAvailability("/library/access-aid")).toMatchObject({ available: true });
+    expect(fixtures.reads).toHaveBeenCalledTimes(1);
+
+    // Withdrawn within 30 seconds: the link can stay for this visit without a new read.
+    fixtures.staff = [];
+    vi.advanceTimersByTime(10_000);
+    expect(await resourceStudyAvailability("/library/access-aid")).toMatchObject({ available: true });
+    expect(fixtures.reads).toHaveBeenCalledTimes(1);
+
+    // Older than 30 seconds: this visit still gets the kept answer at once, and the index is rebuilt behind it.
+    vi.advanceTimersByTime(30_000);
+    expect(await resourceStudyAvailability("/library/access-aid")).toMatchObject({ available: true });
+    expect(fixtures.reads).toHaveBeenCalledTimes(2);
+    await vi.waitFor(async () => expect(await resourceStudyAvailability("/library/access-aid")).toEqual({ available: false }));
+
+    // Older than 5 minutes: the check reads again before answering.
+    fixtures.staff = [doc()];
+    vi.advanceTimersByTime(5 * 60_000);
+    expect(await resourceStudyAvailability("/library/access-aid")).toMatchObject({ available: true });
+  });
+
+  it("asking a question still reads the current publications", async () => {
+    expect(await resourceStudyAvailability("/library/access-aid")).toMatchObject({ available: true });
+    fixtures.staff = [];
+    const fetcher = vi.fn();
+    vi.stubGlobal("fetch", fetcher);
+    const response = await send("What does this resource say?", "/library/access-aid");
+    expect(await response.json()).toMatchObject({ grounded: false, sources: [] });
+    expect(fetcher).not.toHaveBeenCalled();
   });
 });
