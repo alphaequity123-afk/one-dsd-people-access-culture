@@ -1,0 +1,255 @@
+{
+ "id": "gc-accessibility-barrier-remediation",
+ "subtitle": "Respond to a reported accessibility barrier so the person gets effective access now, judge whether an alternative is truly as effective, fix the barrier where it is made rather than in one copy, tell the person what changed, and use the pattern of reports to improve the program.",
+ "audience": "For DHS and DSD staff, supervisors, program and policy leads, and web, communications, facilities and contract staff who receive, route or resolve reports that a document, system, meeting, building or process cannot be used by a person with a disability.",
+ "lessons": [
+  {
+   "title": "Access now: the first response to a reported barrier",
+   "objectives": [
+    "Separate the two jobs a barrier report creates: the person's access to the task now and the repair of the barrier.",
+    "Apply the effective communication duty, including primary consideration, timeliness, privacy and independence, to the first response.",
+    "Check whether a deadline, appointment or right is at risk, and raise it with the person or area that owns it.",
+    "Route the report so the person does not have to repeat their account or explain a diagnosis."
+   ],
+   "teaching": "A barrier report creates two jobs, and they run on different clocks. The first is the person's access to the task they were trying to do, which usually cannot wait for a repair. The second is the repair of the barrier itself, which may take days or months. Teams that merge the two jobs tend to make one of two mistakes: they tell the person to wait until the fix is done, or they solve the person's problem once and never fix the cause. This lesson is about the first job, and the later lessons take up the second.\n\nFor members of the public dealing with DHS, the Title II regulation sets the floor. Under 28 CFR 35.160, a public entity must take appropriate steps to ensure that communications with people with disabilities, including companions with disabilities, are as effective as communications with others, and must furnish appropriate auxiliary aids and services where necessary. To be effective, those aids must be provided in accessible formats, in a timely manner and in a way that protects the person's privacy and independence, and the entity must give primary consideration to the aid the person requests. ADA.gov's guidance explains that the entity should honor that choice unless it can show that another equally effective method is available or that the choice would cause a fundamental alteration or undue burden, a decision for an official no lower than a department head, documented with written reasons. Even then, an effective alternative must be offered if one exists. The guidance adds that an entity may ask for reasonable advance notice but not excessive notice, should honor walk-in requests where possible, cannot require a person to bring their own interpreter, and may rely on a minor child to interpret only in an emergency involving an imminent threat when no qualified interpreter is available.\n\nThe first practical question is what is at stake and by when. If the barrier sits in a notice with a response deadline, an application with a closing date or a meeting next week, the person's access may need to come before anything else. Ask what they were trying to do, what format or aid works for them and by when. Do not ask about a diagnosis, which the task rarely needs. If a deadline could pass because of the barrier, raise it at once with the person or area that owns the deadline. Title II also requires reasonable modifications in policies, practices or procedures unless they would fundamentally alter the program (35.130(b)(7)), but whether an extension is available is their decision, not a promise to make on your own. Keep the person in control by offering the format they asked for, not the one that is easiest to produce.\n\nRoute the report so the person tells their account once. Record the task, the barrier, the format or aid requested, the deadline and how to reach the person, and pass that record to whoever acts next. A barrier that a DHS employee meets in their own work goes through Minnesota Management and Budget Policy 1433 and the agency ADA coordinator, under which medical information stays confidential and separate. A member of the public who wants to complain should be told how; an entity with 50 or more employees must publish grievance procedures that provide for prompt and equitable resolution of complaints (35.107). A quick fix does not replace that right, and no one should be steered away from it. This course supports good practice; formal accommodation, effective communication, burden and civil-rights decisions stay with the person or area responsible.",
+   "keyPoint": "Give the person access to the task now, on their timeline and in the format they ask for, and treat the repair as a separate job. Protect any deadline the barrier puts at risk.",
+   "example": "Practice case: {{COMMUNITY_PARTNER}} calls {{CASE_MANAGER}} on behalf of a person who uses a screen reader. The person received a notice about a change in their services as a scanned PDF, cannot read it and has twelve days left to ask for a meeting about the change. {{CASE_MANAGER}} knows the notice comes from a template that another unit manages and that fixing it will take time.",
+   "question": "What should {{CASE_MANAGER}} do first?",
+   "choices": [
+    "Report the template to the unit that owns it, and tell the partner the person will get an accessible copy once it is fixed.",
+    "Ask what format works and by when, get it to the person before the deadline, flag the deadline, then report the template.",
+    "Read the notice aloud to the partner over the phone right away, so the partner can explain it to the person before the deadline."
+   ],
+   "feedback": [
+    "Reporting the template matters, but this ties the person's access to a repair with no date. The twelve days may run out while the person still cannot read the notice.",
+    "This handles the two jobs on their own clocks. The person gets the format that works for them in time to act, the deadline owner knows the risk, and the template still goes to the unit that can fix it.",
+    "This is fast and well meant, but the person receives the notice secondhand, without control over it and with private details passing through someone else. Ask what format the person wants instead."
+   ],
+   "recommended": 1,
+   "reflection": "Privately consider how a barrier report reaches your team today. Would the person have to explain their situation more than once, and would anyone notice a deadline at risk? You may use the practice case instead.",
+   "action": "Write a short intake note template for barrier reports in your area: the task, the barrier, the format or aid requested, any deadline and who owns it, how to reach the person, and who acts next. Leave out any field for diagnosis.",
+   "check": {
+    "question": "Under 28 CFR 35.160, to whose request must a public entity give primary consideration when choosing an auxiliary aid?",
+    "correct": "The person with a disability who needs the aid or service.",
+    "wrong": [
+     "The staff member who will deliver the communication.",
+     "The unit that pays for the aid or service."
+    ],
+    "feedback": "Primary consideration goes to the person's request. The entity honors it unless another equally effective method is available or the choice would cause a fundamental alteration or undue burden, and it must still offer an effective alternative."
+   }
+  },
+  {
+   "title": "Equally effective, not just available: judging an alternative",
+   "objectives": [
+    "Explain what makes an alternative as effective as what others receive: the same information, interactions and transactions.",
+    "Use timeliness, privacy, independence and ease of use to test an alternative before offering it.",
+    "Recognize near-miss alternatives, such as a limited phone line, a read-aloud by a companion or a summary that drops key details.",
+    "Decide when an interim alternative is acceptable and what keeps it from becoming permanent."
+   ],
+   "teaching": "Once a person needs an alternative, the question is not whether something was offered but whether it works as well as what others receive. The Title II regulation is direct about this. Under 28 CFR 35.130(b)(1), a public entity may not give a person with a disability an opportunity to participate that is not equal to what others receive, or an aid, benefit or service that is not as effective in affording equal opportunity to obtain the same result or gain the same benefit. Different or separate aids are allowed only when necessary to provide services as effective as those provided to others, and services must be administered in the most integrated setting appropriate (35.130(d)). ADA.gov's effective communication guidance asks entities to consider the nature, length, complexity and context of the communication and the person's usual way of communicating.\n\nThe web rule offers a practical test. Its minimal-impact provision, 28 CFR 35.205, asks whether people with disabilities can access the same information, engage in the same interactions, conduct the same transactions and otherwise participate in the same services, with substantially equivalent timeliness, privacy, independence and ease of use. That provision is a narrow legal rule about web content, but its four qualities make a useful checklist for any alternative, offered here as a practice suggestion. Timeliness asks whether the person gets the content when others do and has the same time to act. Privacy asks whether they must disclose more than others, such as reading account details aloud to a stranger. Independence asks whether they can act without relying on another person when others do not. Ease of use asks whether the route takes far more effort, time or attempts.\n\nNear-miss alternatives usually fail one of those qualities. A phone line open two hours a day fails timeliness and may fail privacy. A coworker or family member reading a form aloud fails independence and privacy, and ADA.gov cautions against relying on a companion whose impartiality or effectiveness is in doubt. A plain-language summary that leaves out appeal rights fails the test of the same information. For web content, 28 CFR 35.202 allows a conforming alternate version only where it is not possible to make the content directly accessible because of technical or legal limitations, and the DOJ fact sheet says governments generally should not keep an inaccessible main page alongside an accessible copy. Separate versions tend to fall out of date, and the people who rely on them learn that they are a second audience.\n\nInterim alternatives are still often the right answer, because repair takes time and the person cannot wait. What matters is that the interim route meets the four qualities as nearly as possible, is written down with an end condition, and has an owner for the repair behind it. Physical access works the same way. Under 28 CFR 35.133, accessible features of facilities and equipment must be kept in operable working condition, and isolated or temporary interruptions for maintenance or repairs are allowed. An elevator out for a day of repair is a temporary interruption. An elevator out for months, with public meetings still scheduled upstairs, is a barrier that calls for moving the meetings or another route. Ask the person whether the interim route works for them, and change it if it does not.",
+   "keyPoint": "Test an alternative by whether it gives the same information, interactions and transactions with comparable timeliness, privacy, independence and ease of use. An interim route needs an end condition and a repair behind it.",
+   "example": "Practice case: {{PROGRAM_MANAGER}} learns that the online form for requesting a change in a service plan cannot be completed by keyboard. While the vendor works on a fix, {{NEW_COLLEAGUE}} proposes adding a line to the page inviting anyone having trouble to call the main number, which is staffed on weekday mornings, so that a staff member can fill in the form with them over the phone.",
+   "question": "How should {{PROGRAM_MANAGER}} respond to the proposal?",
+   "choices": [
+    "Keep a phone route for now, test it for wait, privacy and caller control, add another option and set an end date.",
+    "Accept the proposal as written, since a staffed phone line gives every person a way to submit the very same request.",
+    "Decline any interim route and take the form offline until the vendor's fix makes it fully accessible to everyone."
+   ],
+   "feedback": [
+    "This keeps an interim route while testing it against the qualities that matter. Limited hours, reading details aloud and staff typing on the caller's behalf can each fall short, and an end date keeps the workaround from becoming the program.",
+    "A phone route can help, but morning-only hours and a staff member entering information change the timing, privacy and control the person has. Offering it is a start, not proof that it is as effective.",
+    "Taking the form down removes the barrier by removing the service for everyone, including people who could use it. People still need a way to make requests while the fix is underway."
+   ],
+   "recommended": 0,
+   "reflection": "Privately consider an alternative your team offers when something is not accessible. Measured against timeliness, privacy, independence and ease of use, which quality is weakest? You may use the practice case instead.",
+   "action": "Choose one alternative route your team offers, such as a phone option, an alternative format or an accessible meeting room. Test it against the four qualities, note who owns the underlying repair, and write the condition that will end the interim route.",
+   "check": {
+    "question": "When does the web rule allow a conforming alternate version instead of making the content itself accessible?",
+    "correct": "Only when technical or legal limits make direct access impossible.",
+    "wrong": [
+     "Whenever producing an accessible copy is quicker than repairing the original.",
+     "Whenever a phone number is listed on the page as another option."
+    ],
+    "feedback": "Under 28 CFR 35.202, a conforming alternate version is allowed only where technical or legal limitations prevent direct accessibility. DOJ's fact sheet notes that governments generally should not keep an inaccessible main page alongside an accessible copy."
+   }
+  },
+  {
+   "title": "Triage and fixing the source, not one copy",
+   "objectives": [
+    "Triage competing reports by consequence, reach, deadline, repeat reports and whether the barrier sits in a shared source.",
+    "Trace a barrier to where it is made: a template, a source file, a vendor product, a process or a building feature.",
+    "Assign the repair to the owner who can change the source, and verify it by doing the task.",
+    "Prevent the same barrier from returning through copies, new content and product updates."
+   ],
+   "teaching": "Most barriers are not made in the copy a person receives. They are made upstream: in a template that produces hundreds of notices, a system that outputs untagged files, a habit of scanning signed pages, a vendor screen that every user meets, a form field that accepts only one kind of answer, or a meeting routine that shares slides at the last minute. Fixing the reported copy is necessary for that person and does little for the program, because the next copy carries the same barrier. A remediation response therefore asks two questions every time: what does this person need now, and where is this barrier made?\n\nTriage sets the order when reports compete for the same people. Useful questions include whether someone is blocked from a task tied to a deadline, a right or a health and safety need; how many people meet the same source; whether the barrier sits in a shared template, component or vendor product; whether a known, quick repair exists; and whether it has been reported before. DOJ's first-steps guidance for the web rule points the same way, suggesting priority for key tasks, content flagged by people with disabilities, new content in development, shared elements and template-based content. A simple severity scale, agreed in advance with the people who will use it, keeps urgent cases from waiting behind easy ones. That scale is a local practice rather than a rule, and it should never delay the access response from the first lesson.\n\nTracing a barrier means following it back until you reach something a person can change. Ask where the item was created, which tool or template produced it, who owns that source, how many copies exist and where they were posted or sent, and whether a contract covers the product. Then assign the repair to the owner of the source rather than to whoever happened to receive the report. For a vendor product, that means the contract owner and procurement staff, working from what the contract requires. MNIT's procurement guidance notes that conformance reports do not replace acceptance testing on delivery, which matters when a vendor reports that a fix is done. For a building, it means the facilities owner and the program that schedules the space.\n\nA repair is finished when the task works, not when a ticket closes. Verify it by doing the task the way the person would, including keyboard use and assistive technology where relevant, and invite the person who reported it to confirm if they wish, without making their help a condition of closing. Then look for copies: other postings, attachments in old emails, printed stock and translated versions. Finally, close the route the barrier came through. Update the template and its instructions, add the check to the review step that missed it, and tell the people who create similar content what changed. Product updates and new releases can bring a barrier back, so a vendor fix needs another check after the next update. Trade-offs remain. Fixing a source can take far longer than fixing a copy, and a team may be tempted to skip the copy while the source waits. Do both: the person's access does not wait for the source, and the source does not wait for the next report.",
+   "keyPoint": "Fix the copy for the person and the source for everyone else. Assign the repair to whoever owns the source, verify it by doing the task, and close the route the barrier came through.",
+   "example": "Practice case: Over two months, {{SUPERVISOR}}'s unit receives three separate reports that service authorization letters cannot be read with a screen reader. Each time, a staff member converted the one letter by hand and mailed an accessible copy. {{CASE_MANAGER}} notices that all three letters came from the same template in the notice system, which another unit maintains.",
+   "question": "What should {{SUPERVISOR}} do next?",
+   "choices": [
+    "Keep converting letters by hand when people report them, since each person has received an accessible copy within days.",
+    "Ask staff to convert every letter from the template by hand before mailing, so no one has to report the barrier again.",
+    "Keep hand conversion as the interim route, take the three cases to the template owner, and agree on a fix and a check."
+   ],
+   "feedback": [
+    "Each person was helped, which matters. But the barrier is still made in the template, so every new letter starts inaccessible and only people who report it get a usable copy.",
+    "This tries to prevent the barrier, but it moves the template's problem onto staff time indefinitely and depends on every conversion being done right. The source still needs to change.",
+    "This protects the people who need letters now while sending the evidence to the owner who can change the source. Agreeing on a check after the fix shows whether the repair actually works."
+   ],
+   "recommended": 2,
+   "reflection": "Privately consider a barrier you or your team have fixed more than once. Where was it actually made, and who could change that source? You may use the practice case instead.",
+   "action": "Take one barrier report from your area, or the practice case, and trace it: where the item was created, the tool or template, the owner of the source, the number and location of copies, and the check that would have caught it. Name who should receive the repair request.",
+   "check": {
+    "question": "When is an accessibility repair finished?",
+    "correct": "When the task works for a person using it as they would, and copies are found.",
+    "wrong": [
+     "When the person who reported the barrier receives a corrected copy.",
+     "When the vendor reports that the fix has been released."
+    ],
+    "feedback": "A corrected copy helps one person, and a vendor report is a claim to check. A repair is complete when the task has been verified, other copies have been addressed and the source that produced the barrier has changed."
+   }
+  },
+  {
+   "title": "Closing the loop and learning from the pattern of reports",
+   "objectives": [
+    "Tell the person what changed, what did not and what to do if the barrier returns, in the format they use.",
+    "Keep report records that support learning while protecting personal and medical information.",
+    "Read a set of reports for patterns by source, task and response time, without treating silence as success.",
+    "Turn a recurring pattern into a change in a template, contract, review step or training, with an owner and a date."
+   ],
+   "teaching": "A barrier report is closed for the person only when they know what happened. Tell them what was fixed and where, whether other copies were fixed, what interim route remains if the repair is not finished, and how to reach someone if the barrier comes back. Send that message in the format they use, because the effective communication duty applies to the reply as much as to the original notice. Be honest about what did not change. A person who hears that their copy was fixed and the template behind it is scheduled for repair next month can plan around that. A person who hears nothing learns that reporting does not work.\n\nRecords of barrier reports are valuable and sensitive at once. Record the barrier, the task, the source, the response and the dates, and leave out a diagnosis, which the record rarely needs. When a report involves an employee's own work, MMB Policy 1433 requires medical information to be kept confidential and stored separately from personnel files, and information about an accommodation may be shared only with those who need it to carry it out. Keep report logs apart from any performance record, and limit access to the people who act on them. If a person wants to make a formal complaint, the grievance procedure required by 28 CFR 35.107 remains available, and a quick fix does not replace it.\n\nRead reports in sets as well as one at a time. Group them by the source of the barrier, the task, the type of barrier and the time it took to give access and to repair. Repeats from the same template or vendor show where one fix would prevent many reports. Long times to access show where interim routes are missing. Then ask what the reports cannot show. ADA.gov's web guidance recommends giving the public a way to report problems so owners can fix them, and that route has to be accessible itself. If the only route is a web form that fails with a screen reader, an absence of reports from screen reader users means little. Low numbers can also reflect low trust or the effort reporting takes. Treat silence as a question to investigate, never as proof that access is good.\n\nA pattern is useful only when it changes something upstream, with an owner and a date: a template, a procurement requirement, a review step, training for the people who produce a kind of content, or a rule for booking meeting rooms. Bring the pattern into the program's self-evaluation, since section 35.105 expects a public entity to evaluate its services, policies and practices, make needed modifications and give people with disabilities and the organizations representing them an opportunity to take part. Keep the review focused on processes rather than individual staff, because a blame-free review brings in more honest reports. Then report back to the people and partners who raised the barriers, so they can see that what they reported changed the program.",
+   "keyPoint": "Close the loop with the person in a format they use, and say what did not change. Read reports as a pattern, treat silence as a question, and turn repeats into upstream changes with owners.",
+   "example": "Practice case: {{PROGRAM_MANAGER}} reviews a year of barrier reports for a DSD program. Most concern documents, and nearly half trace back to two templates. There are no reports about the online portal from people who use screen readers, although {{COMMUNITY_PARTNER}} has mentioned that members of a self-advocacy group find the portal hard to use. The only way to report a barrier is a web form inside the portal.",
+   "question": "What should {{PROGRAM_MANAGER}} take from the review?",
+   "choices": [
+    "Fix the two templates with their owners, test the portal and its report form, add other report routes, and report back.",
+    "Conclude the portal works for screen reader users, since none of them reported a problem through the form all year.",
+    "Ask {{COMMUNITY_PARTNER}} to gather formal written complaints from the group, so portal concerns can be counted properly."
+   ],
+   "feedback": [
+    "This acts on the clear pattern and treats the silence about the portal as a signal to test. Adding report routes that do not depend on the portal makes future patterns more trustworthy, and reporting back shows people that reports matter.",
+    "No reports through an inaccessible form tells you little about access. The partner's comment and the reporting route itself both suggest the silence reflects the barrier rather than its absence.",
+    "Listening to the group is right, but asking members to produce formal written complaints puts the burden on them and uses a demanding format. The program can test the portal and open easier routes itself."
+   ],
+   "recommended": 0,
+   "reflection": "Privately consider how people tell your area about barriers. Who would find that route hardest to use, and what might you be missing because of it? You may use the practice case instead.",
+   "action": "Review the last set of barrier reports you can access, or the practice case. Group them by source and task, note the time to access and to repair, list one thing the reports cannot show, and name one upstream change with an owner and a date. Draft a short note back to reporters on what changed.",
+   "check": {
+    "question": "What does a lack of barrier reports from one group of users usually tell you?",
+    "correct": "Little on its own; check whether the reporting route works for them.",
+    "wrong": [
+     "That the service is accessible for that group.",
+     "That the group has chosen not to use the service."
+    ],
+    "feedback": "Silence can come from an inaccessible reporting route, low trust or the effort of reporting. Treat it as a question to investigate by testing the service and the reporting route, and by asking through other channels."
+   }
+  }
+ ],
+ "cards": [
+  {
+   "front": "Two jobs, two clocks",
+   "back": "A barrier report calls for access to the task now and a repair of the barrier later. Do not make the first wait for the second."
+  },
+  {
+   "front": "Primary consideration",
+   "back": "Under ADA Title II, the entity gives primary consideration to the aid the person requests, and honors it unless an equally effective method exists or a formal burden finding is made."
+  },
+  {
+   "front": "Timely, private, independent",
+   "back": "Title II auxiliary aids must be provided in accessible formats, in a timely manner and in a way that protects the person's privacy and independence."
+  },
+  {
+   "front": "Four qualities test",
+   "back": "Ask whether an alternative gives comparable timeliness, privacy, independence and ease of use, drawn from the web rule's minimal-impact provision and used here as a practice check."
+  },
+  {
+   "front": "Conforming alternate version",
+   "back": "Allowed under the web rule only when technical or legal limits make direct access impossible. Not a substitute for repairing the main content."
+  },
+  {
+   "front": "Temporary interruption",
+   "back": "Title II allows isolated or temporary interruptions to accessible features for maintenance or repairs. A long outage is a barrier that needs another route."
+  },
+  {
+   "front": "Fix the source",
+   "back": "Trace the barrier to the template, tool, product, process or building feature that produced it, and assign the repair to its owner."
+  },
+  {
+   "front": "Silence is a question",
+   "back": "No reports may mean an inaccessible reporting route or low trust. Test the service and the route instead of assuming access."
+  }
+ ],
+ "aid": [
+  {
+   "heading": "First response",
+   "items": [
+    "Ask what the person was trying to do, what format or aid works and by when.",
+    "Raise any deadline at risk with the person or area that owns it.",
+    "Record the report once, without a diagnosis, and say who acts next.",
+    "Tell the person how to file a complaint if they want to."
+   ]
+  },
+  {
+   "heading": "Test the alternative",
+   "items": [
+    "Check for the same information, interactions and transactions.",
+    "Check timeliness, privacy, independence and ease of use.",
+    "Write an end condition and name the owner of the repair.",
+    "Ask the person whether the interim route works for them."
+   ]
+  },
+  {
+   "heading": "Fix the source",
+   "items": [
+    "Trace the barrier to the template, tool, product, process or building feature.",
+    "Assign the repair to the source owner, involving contract and procurement staff for vendor products.",
+    "Verify by doing the task, find other copies and recheck after updates."
+   ]
+  },
+  {
+   "heading": "Close the loop and learn",
+   "items": [
+    "Tell the person what changed and what did not, in the format they use.",
+    "Group reports by source, task and time to access and repair.",
+    "Test the reporting route and open other routes before trusting low numbers.",
+    "Turn repeats into an upstream change with an owner and a date."
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "title": "eCFR, 28 CFR Part 35, Nondiscrimination on the Basis of Disability in State and Local Government Services",
+   "href": "https://www.ecfr.gov/current/title-28/chapter-I/part-35",
+   "note": "Checked as up to date as of October 23, 2026. Supports the equal and as-effective requirements and reasonable modifications (35.130), maintenance of accessible features (35.133), the self-evaluation and grievance procedure (35.105, 35.107), effective communication (35.160 to 35.164), conforming alternate versions (35.202) and minimal impact (35.205). Using the minimal-impact qualities beyond web content is this course's suggestion, not the rule's."
+  },
+  {
+   "title": "ADA.gov, ADA Requirements: Effective Communication",
+   "href": "https://www.ada.gov/resources/effective-communication/",
+   "note": "Supports primary consideration, examples of auxiliary aids, companions, limits on relying on accompanying adults and children, advance notice and walk-in requests, and the department-head level for undue burden decisions. The page was last updated in 2020 and covers communication disabilities rather than every kind of barrier."
+  },
+  {
+   "title": "ADA.gov, Fact Sheet: New Rule on the Accessibility of Web Content and Mobile Apps Provided by State and Local Governments",
+   "href": "https://www.ada.gov/resources/2024-03-08-web-rule/",
+   "note": "Supports the narrow use of conforming alternate versions and the statement that governments generally should not keep an inaccessible main page alongside an accessible copy, and that effective communication duties continue. Compliance dates on the page reflect the April 2026 extension; recheck before relying on them."
+  },
+  {
+   "title": "ADA.gov, State and Local Governments: First Steps Toward Complying with the ADA Title II Web and Mobile Application Accessibility Rule",
+   "href": "https://www.ada.gov/resources/web-rule-first-steps/",
+   "note": "Supports the prioritization factors used in triage, including key tasks, content flagged by people with disabilities, shared elements and templates. DOJ presents these as suggestions; the severity scale in this course is a local practice idea."
+  },
+  {
+   "title": "ADA.gov, Guidance on Web Accessibility and the ADA",
+   "href": "https://www.ada.gov/resources/web-guidance/",
+   "note": "Supports the recommendation to give the public a way to report accessibility problems so owners can fix them, and the caution that a clean automated report does not mean content is accessible. Dated March 2022 and written before the 2024 web rule."
+  },
+  {
+   "title": "MMB HR/LR Policy 1433: ADA reasonable accommodation",
+   "href": "https://mn.gov/mmb-stat/equal-opportunity/ada/1433-reasonable-accommodation.pdf",
+   "note": "Supports the route for barriers an executive branch employee meets in their own work, the ADA coordinator's role and the confidentiality of medical and accommodation information. It does not govern communication with members of the public."
+  },
+  {
+   "title": "MNIT procurement for accessible IT products and services",
+   "href": "https://mn.gov/mnit/about-mnit/accessibility/it-procurement.jsp",
+   "note": "Supports the statement that conformance reports do not replace acceptance testing on delivery, which bears on verifying a vendor's fix. Contract remedies remain with authorized procurement staff."
+  }
+ ]
+}

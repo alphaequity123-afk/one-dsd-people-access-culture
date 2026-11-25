@@ -1,0 +1,255 @@
+{
+ "id": "gc-accessibility-program-governance",
+ "subtitle": "Govern an accessibility program that covers digital and physical access: match each duty to an owner and a decision maker, set priorities you can defend from an incomplete inventory, keep exceptions narrow and reviewed, use procurement to prevent barriers, and report progress in terms a reader can check.",
+ "audience": "For DHS and DSD leaders, managers, program and policy leads, and accessibility, procurement, facilities and communications staff who own or coordinate digital and physical access across a program, and who already know the basics of the ADA Title II web rule and Minnesota's digital accessibility standard.",
+ "lessons": [
+  {
+   "title": "One program, several sources of duty: who answers for what",
+   "objectives": [
+    "Map the federal and state sources of accessibility duty that bear on a DSD program and the decisions each one assigns.",
+    "Distinguish a coordinating role from the authority to decide burden findings, exceptions, accommodations and contracts.",
+    "Find the gaps where a duty has no owner, such as a vendor-hosted form or a public meeting room.",
+    "Explain why a later federal compliance date does not set the program's starting line."
+   ],
+   "teaching": "An accessibility program answers to several sources of duty at once, and each assigns decisions to different people. The Title II regulation for state and local governments, 28 CFR Part 35, contains administrative expectations that are easy to lose once work is underway. A public entity with 50 or more employees must designate at least one employee to coordinate its compliance efforts and publish grievance procedures that provide for prompt and equitable resolution of complaints (section 35.107). It must evaluate its services, policies and practices, give interested persons, including people with disabilities and organizations representing them, an opportunity to take part, and keep a record of who was consulted, what was examined, what problems were found and what was changed (section 35.105). For existing facilities, each program viewed in its entirety must be accessible, and a transition plan for structural changes must name the official responsible for it (section 35.150). The effective communication duties in sections 35.160 to 35.164 apply to every exchange, digital or not.\n\nSubpart H adds a technical standard for web content and mobile apps, WCAG 2.1 Levels A and AA, and its dates have already moved once. A Department of Justice interim final rule effective April 20, 2026 extended them. As the eCFR showed the regulation in October 2026, the date is April 26, 2027 for public entities with a total population of 50,000 or more, other than special district governments, and April 26, 2028 for smaller entities and special districts. The definition measures an instrumentality of a state by the state's population, which points a state agency to the earlier date. HHS has a parallel Section 504 rule for recipients of its funding, extended to May 11, 2027 for recipients with 15 or more employees, and HHS has said it may propose changes to the rule's substance. Check ada.gov and the Federal Register, and ask the person or area responsible for legal interpretation, before any date goes into a plan. DOJ's fact sheet on the rule also states that existing duties, including effective communication and reasonable modifications, continue whatever the rule's timeline.\n\nMinnesota adds its own layer, which already applies. Minnesota Statutes, section 16E.03, subdivision 9, directs the state chief information officer to develop accessibility standards for technology, software and hardware procurement, other than infrastructure hardware, and to require agencies to adhere to them unless an exception is approved under subdivision 10. The Minnesota State Digital Accessibility Standard, version 4.0, effective July 1, 2024, adopts WCAG 2.1 Levels A and AA and specified Section 508 requirements for technology that executive branch agencies procure, develop or substantially modify, for internal and external use.\n\nThe practical work is matching each duty to the person who decides it, because coordinating is not deciding. A Title II finding of fundamental alteration or undue burden belongs to the head of the public entity or a designee, with written reasons. State standard exceptions follow MNIT's documented process. Employee accommodation follows Minnesota Management and Budget Policy 1433 through the agency ADA coordinator, and contracts belong to procurement staff. This course helps you organize and question that work; formal accommodation, civil-rights, burden, exception and contract decisions stay with the person or area responsible. The usual governance failure is a missing owner rather than a missing rule. A vendor-hosted form, slides shown at a public meeting or a hearing room with unreliable assistive listening can each fall between digital, facilities and program teams. An accountability map listing each duty, its owner, its decision maker, its evidence and its next review date makes those gaps visible before a member of the public finds them.",
+   "keyPoint": "Match every duty to an owner and a decision maker, and keep the two roles distinct. The program's starting line is the duty that already applies today, not the next federal compliance date.",
+   "example": "Practice case: {{PROGRAM_MANAGER}} has been asked to lead accessibility work for a group of DSD waiver services. The web team tracks pages and documents, a facilities contact books public meeting rooms, and a vendor runs the online intake form. At the first planning meeting, {{SUPERVISOR}} suggests waiting to build the program until the federal compliance date is closer, since the date has already moved once and could move again.",
+   "question": "What is the strongest first step for {{PROGRAM_MANAGER}}?",
+   "choices": [
+    "Agree to wait, and use the time to train staff on WCAG so the team is ready once the date is settled.",
+    "Start repairing the most-visited web pages now and leave the rooms and the vendor form for a later phase.",
+    "Map the duties that apply now, with an owner and decision maker for each, including the form and rooms."
+   ],
+   "feedback": [
+    "Training is useful, but waiting treats the federal date as the start of the duty. Minnesota's standard and existing Title II obligations already apply, and a person blocked by the intake form today is not helped by a future date.",
+    "Early repair shows good intent, yet it starts with what one team can see. The vendor form and meeting rooms are where ownership is least clear, which is exactly where barriers tend to persist.",
+    "This starts from duties that already bind the program and shows where no one owns a piece of the service. It also separates who coordinates from who decides, which the program will need when a hard case arrives."
+   ],
+   "recommended": 2,
+   "reflection": "Privately consider one service you touch. If a barrier in it turned out to be hard or costly to fix, could you name who decides what happens next, and not only who coordinates? You may use the practice case instead.",
+   "action": "For one DSD service, list its accessibility duties (communication, web and documents, facilities, contracted tools and staff use), the owner of each, the person or area that decides exceptions or burden questions, and the date you will review the map. Mark any duty that has no owner.",
+   "check": {
+    "question": "What does a later federal web compliance date mean for a DSD program's current accessibility duties?",
+    "correct": "They continue; Minnesota's standard and existing Title II duties apply now.",
+    "wrong": [
+     "They pause until the compliance date, when every duty begins together.",
+     "They apply only to web content first posted after the compliance date."
+    ],
+    "feedback": "The compliance date governs when the web rule's technical standard applies. Minnesota's digital standard has applied since July 1, 2024, and DOJ's fact sheet states that existing Title II duties, such as effective communication and reasonable modifications, continue whatever the web rule's timeline."
+   }
+  },
+  {
+   "title": "Inventories and priorities when you cannot fix everything at once",
+   "objectives": [
+    "Build an inventory that is complete enough to act on and honest about what it leaves out.",
+    "Set priorities by weighing task consequence, reach, reported barriers, upcoming change and shared components.",
+    "Reason through the trade-off between high-traffic content and low-traffic, high-stakes tasks.",
+    "Keep a priority order from becoming a quiet exception by giving lower-priority items a working interim route."
+   ],
+   "teaching": "No accessibility program starts with a complete picture. The Department of Justice's first-steps guidance for the web rule suggests identifying the websites, pages, file types, social media and mobile apps an entity provides, including content provided through third parties, and it acknowledges that an entity may not be able to address every issue for every type of content at once. A DSD inventory also needs items outside the web: rooms where public meetings happen, printed notices, phone lines and the internal tools staff use. The first governance choice is how complete is complete enough. An inventory that waits for perfection delays every repair, while one that quietly omits a category, such as vendor-hosted tools or documents sent by email, produces a plan that looks finished and is not. Record what the inventory covers, how it was gathered and what is known to be missing, so that later reports can be honest about scope.\n\nDOJ's guidance suggests starting with content that enables key tasks, such as registering or submitting forms, content that is frequently used or essential, content that people with disabilities have flagged, new content still in development, shared elements such as navigation and search, and template-based content. These factors pull in different directions, and that is where leadership judgment matters. Usage data favors high-traffic pages, but a reconsideration form used by a few dozen people a year may carry higher stakes, because being blocked from it can mean missing a deadline that protects a service. Usage data also has a blind spot: people who cannot use a page often stop trying, so low traffic can partly reflect the barrier itself. A defensible approach weighs at least two things together, how many people meet an item and what happens to a person who cannot use it, and it gives extra weight to shared templates and components, because one repair there prevents many future barriers.\n\nPhysical access involves a similar trade-off. Under 28 CFR 35.150, each program viewed in its entirety must be accessible, and an entity may use methods other than structural change, such as moving a service to an accessible location, when those methods achieve access. In choosing among methods, the regulation gives priority to providing services in the most integrated setting appropriate. Moving a listening session to an accessible building can be a quick and sound answer. Holding an accessible version of a meeting in a separate room while the main discussion happens elsewhere is a different choice, and it can fall short of that priority on integration.\n\nA priority list is a plan for repair work, not a decision about who may go without access. Every item lower on the list still needs a working interim route, because effective communication and reasonable modification duties apply now. Write down why the order is what it is, so that the people affected and reviewers can question it. Section 35.105 already expects people with disabilities and organizations representing them to have an opportunity to take part in a self-evaluation, and a draft priority order is one of the most useful things to put in front of them. When a new barrier report arrives, check whether it should change the order rather than filing it under the existing plan.",
+   "keyPoint": "Weigh how many people meet an item against what happens to a person who cannot use it, and favor shared sources. A priority order organizes repair; it never decides who may go without access.",
+   "example": "Practice case: {{PROGRAM_MANAGER}} and {{CASE_MANAGER}} have an inventory of about 900 pages and documents for a DSD program and capacity to repair about 150 this quarter. Analytics show that a set of general information pages receives most of the traffic. {{CASE_MANAGER}} points out that the fillable form people use to ask for reconsideration of a service decision is rarely downloaded, has a firm deadline and was named in two barrier reports last year.",
+   "question": "How should they set the first quarter's priorities?",
+   "choices": [
+    "Put the reconsideration form and shared templates first, then busy pages, with an interim route for the rest.",
+    "Start with the busiest general pages, since repairing them helps the most people in the shortest possible time.",
+    "Work through the inventory in its listed order, so that no one can claim the team picked favorites unfairly."
+   ],
+   "feedback": [
+    "This weighs consequence as well as reach, uses the barrier reports as evidence, and gets the most from shared templates. Naming an interim route for everything else keeps the order from becoming a quiet exception.",
+    "Reach matters, and the busy pages belong high on the list. Ranking by traffic alone, though, overlooks a form where a blocked person can miss a deadline, and low use may partly reflect the barrier.",
+    "A neutral-looking order can feel fair, but it is not a reason. It ignores the stakes, the reports and the reach, and it leaves the team unable to explain its choices to the people affected."
+   ],
+   "recommended": 0,
+   "reflection": "Privately consider which items in your own area would rank highest if you weighed consequence as heavily as traffic. Is anything you think of as minor actually a gateway to a deadline or a right? You may use the practice case instead.",
+   "action": "Take a small slice of an inventory you know, about ten items. For each, note how many people likely meet it, what happens to a person who cannot use it, whether it is a shared template or component, and its current interim route. Rank the ten and write one sentence explaining the top three.",
+   "check": {
+    "question": "Why can website traffic alone mislead an accessibility priority order?",
+    "correct": "It ignores consequence, and people blocked by a barrier may stop visiting.",
+    "wrong": [
+     "Traffic data is not allowed in accessibility planning under the web rule.",
+     "Low-traffic content is exempt from the web rule's technical standard."
+    ],
+    "feedback": "Traffic is a useful signal of reach, and DOJ's guidance lists frequently used content as a factor. It needs to be weighed with what happens to a person who is blocked, and with the possibility that the barrier itself is suppressing use."
+   }
+  },
+  {
+   "title": "Exceptions, burden claims and the purchases that create them",
+   "objectives": [
+    "Distinguish a Title II fundamental alteration or undue burden finding, a Minnesota standard exception and an informal delay.",
+    "Explain what each formal route requires, including who decides, written reasons and the continuing duty to provide access.",
+    "Govern a portfolio of exceptions with owners, interim access routes and review triggers.",
+    "Use solicitation, contract, acceptance and renewal steps to keep barriers from being bought in."
+   ],
+   "teaching": "Exceptions are where accessibility programs most often lose ground, usually without anyone deciding to. Three different things are commonly called an exception. The first is a Title II finding that an action would fundamentally alter a program or impose undue financial and administrative burdens. Sections 35.150(a)(3), 35.164 and 35.204 of 28 CFR Part 35 place the burden of proof on the public entity, require the decision to be made by the head of the entity or a designee after considering all resources available for funding and operation, and require a written statement of reasons. Even then, the entity must take other action that does not cause that result but still gives people with disabilities the benefits or access to the greatest extent possible. ADA.gov's effective communication guidance describes this as a decision for an official no lower than a department head. The second is an exception under Minnesota's digital standard. The third is an informal delay, meaning a barrier no one has fixed yet. Only the first two carry defined authority, and neither ends the duty to provide access.\n\nThe state standard's exceptions are narrow by design. Version 4.0 recognizes undue burden, documented by the funding agency; a best-meets exception when every available option has evident barriers and the product is still needed; and fundamental alteration. It states that single source alone is not grounds for an exception, and that an owner who cannot bring technology into compliance must file an exception and provide reasonable accommodation. It helps to name what an approved exception is. The agency has chosen to procure, build or keep technology with known barriers, and people with disabilities will carry most of the resulting risk. That deserves the same seriousness as any other decision about risk.\n\nA program leader usually cannot grant exceptions but can govern the portfolio. Keep a register of exceptions, burden findings and known unresolved barriers. Describe each by the blocked task and who is likely affected, the interim route that provides access now, who approved it and when, and a review trigger such as contract renewal, a major upgrade or a set date. Ask what would have to change for the exception to close. Without a register, exceptions accumulate. Each one is reasonable on the day it is filed, and together they describe a program that has accepted barriers it no longer tracks.\n\nMany exceptions are bought rather than discovered. MNIT's procurement guidance asks agencies to tell vendors about accessibility requirements, to request an Accessibility Conformance Report that in most cases is no more than two years old and addresses every interface, including administrator and end-user screens, to require demonstrations of keyboard operation and magnification to 200 and 400 percent, and to include accessibility language in contracts. It states that conformance reports do not replace acceptance testing on delivery, and DOJ's guidance notes that the public entity stays responsible for content a vendor provides. The hard case is a needed product that is the best available and still has barriers. Ask procurement and legal staff what the contract can require, such as repair timelines, reporting on fixes and testing before acceptance, and treat renewal as the point to revisit the exception rather than roll it forward.",
+   "keyPoint": "Only defined authorities can grant an exception, and none of them ends the duty to provide access. Track every exception as an accepted risk with an interim route, an owner and a review trigger.",
+   "example": "Practice case: A DSD unit needs a new scheduling tool for provider trainings. Procurement staff found two products that meet the business need, and both conformance reports show that key booking steps cannot be completed by keyboard. {{SUPERVISOR}} wants to file an exception and move on, since every option has the same problem. {{PROGRAM_MANAGER}}, who keeps the program's exception register, is asked for a recommendation.",
+   "question": "What should {{PROGRAM_MANAGER}} recommend?",
+   "choices": [
+    "Pick either product, and note in the project file that no accessible option existed so the gap is on record.",
+    "File the documented exception with an interim booking route, seek contract fix terms and set a review.",
+    "Delay the purchase until a conforming product exists, and keep booking trainings by email in the meantime."
+   ],
+   "feedback": [
+    "A file note records the problem but is not an exception under the state standard, names no interim access route and sets no review. It is the informal delay this lesson warns about, made to look official.",
+    "This uses the formal route the standard provides, keeps access available while the barrier exists, and uses the contract and the review date to push the barrier toward closure instead of accepting it indefinitely.",
+    "Waiting can seem principled, but it leaves the business need unmet and may not produce a better product. Email booking can also become an unexamined permanent alternative with its own barriers."
+   ],
+   "recommended": 1,
+   "reflection": "Privately consider whether you know how many accessibility exceptions, formal or informal, exist in your area. Which one would you be least comfortable explaining to a person who is blocked by it? You may use the practice case instead.",
+   "action": "Draft an exception register entry, using the practice case or a real item without identifying anyone. Include the blocked task, who is likely affected, the interim access route, the person or area that approved it, the review trigger and what would have to change for it to close.",
+   "check": {
+    "question": "Under Minnesota's digital accessibility standard, is single source by itself grounds for an exception?",
+    "correct": "No; the standard says single source alone is not grounds for an exception.",
+    "wrong": [
+     "Yes; a single source automatically qualifies a product for an exception.",
+     "Yes, provided the vendor supplies a current conformance report."
+    ],
+    "feedback": "Version 4.0 states that single source by itself is not grounds for an exception. If a single-source product cannot be made accessible and that is documented, an undue burden exception may apply, and the owner must still provide reasonable accommodation."
+   }
+  },
+  {
+   "title": "Reporting progress honestly",
+   "objectives": [
+    "Write progress statements whose scope, total and limits a reader can check.",
+    "Distinguish activity measures from measures of usable tasks and timely access.",
+    "Report unresolved barriers, open exceptions and unchecked areas alongside gains.",
+    "Answer pressure to declare compliance without overstating or understating what is known."
+   ],
+   "teaching": "Accessibility reporting is under steady pressure to sound finished. A leader asked whether the program will be compliant by a date has an incentive to say yes, and a team that has worked hard wants credit for it. The most common distortion is not a false number but a misleading total. A statement that 92 percent of pages pass may describe 60 scanned pages out of 900, checked by a tool that cannot detect many barriers. Another distortion reports activity, such as documents remediated or staff trained, as if it were an outcome. An honest report lets a reader check three things: what was examined and how, out of what whole, and what remains unknown.\n\nThe regulations offer a model. A Title II self-evaluation record under section 35.105 lists the interested persons consulted, describes the areas examined and the problems identified, and describes the modifications made, and an entity with 50 or more employees keeps it available for public inspection for at least three years. That structure names problems alongside fixes, and it works as a template for any progress report. The web rule's minimal-impact provision in section 35.205 shows how high the bar for close enough is. An entity that does not fully conform is treated as meeting the standard only in the limited circumstance where it can show the gap would not affect a person's ability to access the same information, engage in the same interactions, conduct the same transactions and otherwise participate, with substantially equivalent timeliness, privacy, independence and ease of use. A program that cannot show that for a known gap should report the gap.\n\nUseful measures describe whether people can complete tasks and how quickly they get access when they cannot. Examples include the share of high-priority tasks verified with keyboard and assistive technology testing, the time from a request to delivery of an alternative format or communication aid, the number of open exceptions and how many are past their review date, the number of barrier reports and the time taken to resolve them, and the parts of the inventory not yet reviewed. Measures should describe the process rather than individuals and should never identify who asked for an accommodation. A low complaint count is not evidence of access, because an inaccessible reporting channel or low trust can produce the same silence.\n\nReporting upward is where honesty costs the most and matters most. If the truthful answer to a question about meeting the deadline is that the whole program will not, say what is on track, what is at risk, what the risk means for people who use the service and what decision or resource would change the outlook. Bad news delivered early is a request for a decision while there is still time to make one, and it protects leaders from learning about a gap from a complaint. Understating is also a distortion; a team that hides real progress loses support for the next phase. The same honesty is owed outward. People who reported barriers and partners who helped set priorities should hear what changed, what did not and why, in formats they can use.",
+   "keyPoint": "Report scope, the whole and the unknowns alongside the gains. Measure usable tasks and timely access rather than activity, and bring bad news early enough for a decision to matter.",
+   "example": "Practice case: {{SUPERVISOR}} is preparing a quarterly briefing for division leadership. The draft headline reads, Our web content is 92 percent compliant. {{NEW_COLLEAGUE}}, who ran the checks, notes that the figure comes from an automated scan of 60 pages out of an inventory of about 900, that the vendor intake form was not tested and that four exceptions are past their review dates.",
+   "question": "How should {{SUPERVISOR}} revise the briefing?",
+   "choices": [
+    "Keep the headline because leadership wants one simple figure, and move the testing limits into a footnote below.",
+    "Drop the percentage entirely and report only how many documents the team remediated during the quarter.",
+    "Say 60 of about 900 pages were scanned, name the untested form and overdue exceptions, and ask for a decision."
+   ],
+   "feedback": [
+    "A simple figure is appealing, but this one describes a small automated sample as if it were the whole program. A footnote does not correct a headline that most readers will repeat.",
+    "Counting remediated documents is accurate, but it reports effort rather than access and hides the untested form and overdue exceptions that leadership most needs to know about.",
+    "This keeps the real progress visible while stating the scope, the whole and the open risks. Asking for a specific decision turns the bad news into something leadership can act on while there is time."
+   ],
+   "recommended": 2,
+   "reflection": "Privately consider the last progress statement about accessibility, or any compliance work, that you wrote or heard. What was its total, and what did it leave unchecked? You may use the practice case instead.",
+   "action": "Rewrite one accessibility progress statement from your area, or the practice headline, so that it names what was examined and how, the whole it was drawn from, what remains unchecked or open, and one decision or resource that would change the outlook.",
+   "check": {
+    "question": "Which statement best reflects honest accessibility reporting?",
+    "correct": "Sixty of about 900 pages scanned; the intake form is untested.",
+    "wrong": [
+     "Our web content is 92 percent compliant.",
+     "We received no accessibility complaints, so the content is accessible."
+    ],
+    "feedback": "An honest statement gives the scope, the whole and what is still unknown. A percentage without its base overstates progress, and an absence of complaints can reflect an inaccessible reporting route or low trust rather than access."
+   }
+  }
+ ],
+ "cards": [
+  {
+   "front": "Accountability map",
+   "back": "A list of each accessibility duty with its owner, its decision maker, its evidence and its next review date. It shows where a duty has no owner."
+  },
+  {
+   "front": "Coordinating is not deciding",
+   "back": "An accessibility or ADA coordinator organizes work. Burden findings, exceptions, accommodations and contracts are decided by the person or area with that authority."
+  },
+  {
+   "front": "Title II burden finding",
+   "back": "Made by the head of the public entity or a designee after considering all available resources, with written reasons. The entity must still provide access to the greatest extent possible."
+  },
+  {
+   "front": "Priority is not exception",
+   "back": "A priority order organizes repair work. Every lower-priority item still needs a working interim route, because current duties apply now."
+  },
+  {
+   "front": "Best meets",
+   "back": "A Minnesota standard exception for when every available option has evident barriers and the product is still needed. It is documented, and access must still be provided."
+  },
+  {
+   "front": "Exception register",
+   "back": "A record of each exception, burden finding and known barrier: blocked task, who is affected, interim route, approver, review trigger and what would close it."
+  },
+  {
+   "front": "Honest total",
+   "back": "Report what was examined and how, out of what whole, and what remains unknown. A percentage without its base can overstate progress."
+  },
+  {
+   "front": "Minimal impact (web rule)",
+   "back": "A narrow provision: a gap counts as meeting the standard only if people can still use the content with substantially equivalent timeliness, privacy, independence and ease of use."
+  }
+ ],
+ "aid": [
+  {
+   "heading": "Map the duties and the deciders",
+   "items": [
+    "List duties for communication, web and documents, facilities, contracted tools and staff use.",
+    "Name an owner and a decision maker for each, and keep the two roles distinct.",
+    "Check current compliance dates on ada.gov and the Federal Register, and confirm them with the person or area responsible.",
+    "Mark any duty with no owner and raise it before the next review date."
+   ]
+  },
+  {
+   "heading": "Set priorities you can explain",
+   "items": [
+    "Record what the inventory covers, how it was gathered and what is missing.",
+    "Weigh reach against what happens to a person who is blocked, and favor shared templates.",
+    "Give every lower-priority item a working interim route.",
+    "Share the draft order with people affected and revisit it when new reports arrive."
+   ]
+  },
+  {
+   "heading": "Govern exceptions as accepted risk",
+   "items": [
+    "Use only the formal routes, and keep informal delays visible as open barriers.",
+    "Record the blocked task, interim route, approver and review trigger for each exception.",
+    "Build accessibility evidence, demonstrations, contract terms and acceptance testing into purchases with procurement staff.",
+    "Revisit each exception at renewal or upgrade instead of rolling it forward."
+   ]
+  },
+  {
+   "heading": "Report so a reader can check",
+   "items": [
+    "State scope, method, the whole and what remains unchecked.",
+    "Measure verified tasks, time to access and open exceptions, not activity alone.",
+    "Bring risks upward early with the decision needed, and report back to the people affected."
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "title": "eCFR, 28 CFR Part 35, Nondiscrimination on the Basis of Disability in State and Local Government Services",
+   "href": "https://www.ecfr.gov/current/title-28/chapter-I/part-35",
+   "note": "Checked as up to date as of October 23, 2026. Supports the self-evaluation (35.105), designated employee and grievance procedure (35.107), program access and transition plan (35.150), effective communication and burden findings (35.160 to 35.164), and web rule dates, burden decisions and minimal impact (35.200, 35.204, 35.205), and the total population definition (35.104). The eCFR is an unofficial compilation; legal interpretation belongs to counsel."
+  },
+  {
+   "title": "ADA.gov, Fact Sheet: New Rule on the Accessibility of Web Content and Mobile Apps Provided by State and Local Governments",
+   "href": "https://www.ada.gov/resources/2024-03-08-web-rule/",
+   "note": "Supports the current compliance dates as extended by the April 20, 2026 interim final rule, the narrow exceptions and conforming alternate versions, and the statement that effective communication and reasonable modification duties continue. The page shows its 2024 issue date though it has been updated; recheck dates before planning."
+  },
+  {
+   "title": "Department of Health and Human Services, Extension of Compliance Dates for Web Content and Mobile Applications of Recipients of Departmental Financial Assistance (May 2026)",
+   "href": "https://www.federalregister.gov/documents/2026/05/11/2026-09266/extension-of-compliance-dates-for-nondiscrimination-on-the-basis-of-disability-accessibility-of-web",
+   "note": "Supports the parallel Section 504 extension in 45 CFR 84.84 to May 11, 2027 for recipients with 15 or more employees, and HHS's statement that it may propose substantive changes. How it applies to DHS is a question for legal counsel."
+  },
+  {
+   "title": "ADA.gov, State and Local Governments: First Steps Toward Complying with the ADA Title II Web and Mobile Application Accessibility Rule",
+   "href": "https://www.ada.gov/resources/web-rule-first-steps/",
+   "note": "Supports the inventory step, the prioritization factors, responsibility for vendor-provided content and suggested contract practices. DOJ describes these steps as suggestions; the rule itself is mandatory. It does not address physical access."
+  },
+  {
+   "title": "Minnesota Statutes, section 16E.03",
+   "href": "https://www.revisor.mn.gov/statutes/cite/16E.03",
+   "note": "Supports subdivision 9, under which the chief information officer develops accessibility standards that agencies must follow unless an exception is approved, and subdivision 10, under which the chief information officer may grant exceptions on an agency's request. Read from the 2026 edition."
+  },
+  {
+   "title": "Minnesota State Digital Accessibility Standard, version 4",
+   "href": "https://mn.gov/mnit/assets/MinnesotaStateAccessibilityStandard-v.4.0_tcm38-607575.pdf",
+   "note": "Supports the effective date of July 1, 2024, the adopted WCAG 2.1 and Section 508 requirements, the undue burden, best-meets and fundamental alteration exceptions, the single-source statement, and the duty to provide reasonable accommodation when an exception is filed. It does not set a reporting process."
+  },
+  {
+   "title": "MNIT procurement for accessible IT products and services",
+   "href": "https://mn.gov/mnit/about-mnit/accessibility/it-procurement.jsp",
+   "note": "Supports the guidance on conformance report age and coverage of every interface, demonstrations of keyboard use and magnification, contract language, and the statement that conformance reports do not replace acceptance testing. Contract decisions remain with authorized procurement staff."
+  }
+ ]
+}

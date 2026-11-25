@@ -1,0 +1,255 @@
+{
+  "id": "gc-integration-mandate-practice",
+  "subtitle": "Reason through integration questions after the 2026 federal changes by separating the ADA, the HCBS settings rule and Minnesota law, and work through hard cases on isolating settings, informed choice and provider capacity.",
+  "audience": "For DSD and DHS leaders, managers, policy and program staff, and lead workers who shape services, review settings or provider questions, or advise county, Tribal and community partners on community integration.",
+  "lessons": [
+    {
+      "title": "Four layers of the integration duty after 2026",
+      "objectives": [
+        "Distinguish the federal ADA layer, the Medicaid settings rule, Minnesota law and Minnesota's Olmstead Plan as separate sources for an integration question.",
+        "Explain what the June 18, 2026 Office of Legal Counsel opinion and the July 20, 2026 Department of Justice notice did and did not change.",
+        "Avoid both overstating and understating a legal requirement when you advise a provider, partner or colleague.",
+        "Name the layer, its date and status, and the person or area responsible each time you rely on a source."
+      ],
+      "teaching": "Many DSD leaders learned community integration as a legal duty with one settled source. In 2026 that picture changed, and careful leadership now means holding several layers at once. This course assumes you know the basic Olmstead story and the conditions the Supreme Court attached to its holding. The question here is practical: when a person's setting, a provider's practice or a program design raises an integration question, which source governs it, how firm is that source today, and who can say?\n\nStart with the federal ADA layer. In Olmstead v. L.C. (1999), the Court held that unjustified isolation can be discrimination under Title II of the ADA, and it described when community placement is required: the state's treatment professionals find it appropriate, the person does not oppose it, and it can be reasonably accommodated considering the state's resources and the needs of others with disabilities. The Title II regulation at 28 CFR 35.130(d), which requires a public entity to administer services in the most integrated setting appropriate to the needs of qualified individuals with disabilities, remained in the current Code of Federal Regulations as of October 2026. On June 18, 2026, the Department of Justice Office of Legal Counsel issued an opinion concluding that neither Title II nor Section 504 of the Rehabilitation Act imposes an integration mandate on states, and that Olmstead did not hold that they require treatment in the most integrated setting. On July 20, 2026, the Civil Rights Division published a Federal Register notice stating that its 2011 Olmstead guidance is not enforceable, that the department will not rely on it in enforcing Title II, and that it plans to revisit that guidance. An Office of Legal Counsel opinion directs the federal executive branch; it does not overturn a Supreme Court decision. What they mean for a specific matter is a question for legal counsel, and federal positions may keep moving.\n\nOther layers did not change with that opinion. The federal home and community-based services (HCBS) settings rule at 42 CFR 441.301(c) is a condition of Medicaid waiver funding rather than an interpretation of the ADA. Its current text still requires settings that are integrated in the greater community and support full access to it, selected by the person from options that include settings not limited to people with disabilities. Minnesota law adds its own requirements. Minnesota Statutes section 256B.4905 states that adults with disabilities can live in communities of their choosing, and it requires that waiver recipients be offered, after an informed decision-making process, the opportunity to live as independently as possible in a setting a provider does not control. Minnesota's Olmstead Implementation Office describes the June opinion as a significant departure from longstanding interpretation and says Minnesota remains committed to its work on a new Olmstead Plan. In November 2026, that plan was a posted draft being revised after public feedback.\n\nThe leadership skill is calibration. Overstating the law, such as telling a provider that federal law requires a change when counsel has not said so, can damage trust. Understating it, such as treating the federal opinion as the end of integration work, ignores binding Medicaid and Minnesota requirements and the state's stated commitments. Name the layer you rely on, its date and status, and who applies it: legal counsel for ADA questions, the people who own HCBS settings policy and compliance for settings questions, and lead agencies for individual support planning. Formal compliance, licensing, eligibility and civil-rights determinations stay with the responsible people and areas; this course helps you reach the right question, not decide those matters.",
+      "keyPoint": "An integration question now rests on separate layers with different status: the ADA as courts and federal agencies read it, the Medicaid settings rule, Minnesota law and Minnesota's Olmstead Plan. Name the layer, its date and who applies it before you give advice.",
+      "example": "Practice case: {{COMMUNITY_PARTNER}}, a county partner, emails {{PROGRAM_MANAGER}} after reading news coverage of the June 2026 federal opinion. A residential provider in the county has told case managers that \"the integration mandate is gone,\" and that it no longer needs to support residents' community activities outside the provider's group outings. {{COMMUNITY_PARTNER}} asks whether DSD agrees and what to tell case managers.",
+      "question": "How should {{PROGRAM_MANAGER}} respond?",
+      "choices": [
+        "Reply that the Supreme Court decision still controls, so the provider's position is unlawful and the county should tell the provider that directly.",
+        "Separate the ADA question from the settings rule and Minnesota law, send the ADA part to counsel, and confirm settings expectations.",
+        "Explain that federal law is unsettled, so DSD cannot comment until counsel finishes reviewing the opinion and its effect on programs."
+      ],
+      "feedback": [
+        "This understates the change and overstates certainty. Whether the provider's position violates any law is a determination for counsel and the responsible areas, and the reply skips the layers that most directly govern the provider.",
+        "This answers the partner's real question. The settings rule and Minnesota's informed choice law speak to community access whatever the federal ADA reading, and the uncertain part goes to the people who can resolve it.",
+        "Waiting on the ADA question leaves case managers without guidance on requirements that did not change. Silence may also let the provider's claim spread as if DSD accepted it."
+      ],
+      "recommended": 1,
+      "reflection": "Privately recall a time you, or someone you worked with, cited a law or case as the reason for a decision. Which layer was it really resting on, and how confident were you about its current status?",
+      "action": "Pick one integration-related expectation your team communicates to providers or partners. Write down which layer it rests on (ADA, HCBS settings rule, Minnesota statute, Olmstead Plan or DHS policy), the date you last confirmed it, and the person or area responsible for it. Share the list with your supervisor or team lead.",
+      "check": {
+        "question": "What did the July 20, 2026 Department of Justice Federal Register notice state?",
+        "correct": "That the department's 2011 Olmstead guidance is not enforceable and will not be relied on in enforcing Title II.",
+        "wrong": [
+          "That the Supreme Court's Olmstead decision has been overturned and no longer applies to states.",
+          "That the federal HCBS settings rule at 42 CFR 441.301(c) is withdrawn for Medicaid waiver programs."
+        ],
+        "feedback": "The notice addressed the department's own guidance and its enforcement approach. It did not overturn a Supreme Court decision, which only the courts can do, and it did not address the Medicaid HCBS settings rule, which is a separate funding condition."
+      }
+    },
+    {
+      "title": "Settings that isolate and the rights modification test",
+      "objectives": [
+        "Apply the settings qualities in 42 CFR 441.301(c)(4) to a practice residential setting.",
+        "Distinguish an individualized rights modification that meets federal and Minnesota conditions from a blanket house rule.",
+        "Recognize the features that trigger the federal presumption of institutional qualities.",
+        "Raise a settings concern with the people who own compliance without making the determination yourself."
+      ],
+      "teaching": "Settings questions are where integration becomes concrete. The HCBS settings rule describes qualities, not building types. A setting must be integrated in and support full access to the greater community, including work, community life and control of personal resources, to the same degree as people who do not receive Medicaid HCBS. The person selects it from options. It must protect privacy, dignity and respect and freedom from coercion and restraint, support autonomy in daily life choices, and support choice of services and of who provides them. A residential setting that a provider owns or controls must also offer a legally enforceable agreement with eviction protections, a unit door the person can lock, a choice of roommates, freedom to furnish and decorate, control over one's own schedule and activities, access to food at any time, visitors of the person's choosing at any time, and physical accessibility.\n\nSome limits are allowed, but the rule sets a demanding test. A modification of the residential conditions, such as access to food or visitors, must be supported by a specific assessed need and documented in the person-centered service plan. The plan must show the positive interventions and less intrusive methods tried first, describe a condition proportionate to the need, provide for regular data on whether the modification works, set time limits for review, and record the person's informed consent and an assurance that the modification will cause no harm. Minnesota's 245D standards point the same way. Under Minnesota Statutes section 245D.04, a restriction of protection-related rights is allowed only when necessary for the person's health, safety and well-being. It must use the least restrictive alternative, state objective measures for ending it, be reviewed at least semiannually and have signed approval from the person or their legal representative before it begins. A rule that applies to everyone in a house, like a locked pantry or fixed visiting hours, is a blanket restriction by design. It cannot meet an individualized test.\n\nIsolation can be subtle. The federal rule presumes that a setting has institutional qualities if it is in a building that also provides inpatient institutional treatment, on the grounds of or next to a public institution, or if it otherwise isolates people receiving Medicaid HCBS from the broader community. The presumption can be overcome only if the federal Secretary determines, through a process called heightened scrutiny, that the setting has the qualities of a home and community-based setting. In daily life, isolation often looks ordinary: everyone leaves together in one van on the provider's schedule, outings happen only with housemates, or the house sits far from transit with no plan for getting where people want to go. A building can look like a home and still function as a small institution.\n\nFor DSD leaders and program staff, the hard part is role. You may learn about a setting through a complaint, a data review, a provider question or a county partner. You can describe the features you observed, ask whether a modification is individualized and documented, and bring the pattern to the people who own settings compliance, licensing or the person's support plan. You should not declare a setting noncompliant, promise a resident an outcome, or quietly accept a blanket rule because a provider is short of staff. Staffing pressure is real and deserves a response, but both the federal rule and Minnesota's standards tie a modification to the individual person's assessed need, not to what is easiest for the setting.",
+      "keyPoint": "A setting is judged by how people actually live there, not by its address or appearance. Limits on food, visitors, schedules or privacy must be individualized, documented and reviewed; a house-wide rule cannot meet that test.",
+      "example": "Practice case: During a review of provider questions, {{CASE_MANAGER}} tells {{SUPERVISOR}} about a four-person residential setting where the kitchen is locked between meals and visitors are welcome only on weekend afternoons. The provider says the rules keep everyone safe and that staffing is too thin to supervise an open kitchen. Only one resident's support plan mentions a food-related concern, and it does not describe a modification.",
+      "question": "What should {{SUPERVISOR}} do with this information?",
+      "choices": [
+        "Treat the house rules as reasonable for now, since the provider gave a safety reason and staffing shortages are common across the state.",
+        "Ask the provider to add a rights modification for each resident so the locked kitchen and visiting hours are documented in every plan.",
+        "Note the house-wide rules and missing individual documentation, and raise them with the people who own compliance and the plans."
+      ],
+      "feedback": [
+        "A safety reason offered for everyone at once is exactly what the individualized test is designed to examine. Accepting it leaves four people's rights limited without the assessment, consent and review the rules require.",
+        "This sounds like compliance but turns a blanket rule into four copies of the same paperwork. A modification has to start from one person's assessed need and less intrusive options tried first, not from the house rule.",
+        "This describes what was observed against the rule's qualities, leaves the determination with the people who make it, and keeps each resident's plan as the place where any real need is addressed."
+      ],
+      "recommended": 2,
+      "reflection": "Privately think about a setting, program or service you know, or use the practice case. Which features would you notice on a first visit, and which isolating patterns would you see only by asking how a typical day goes?",
+      "action": "Using the job aid, write five questions you could ask a provider or case manager to learn how a typical day works in a setting: food, visitors, schedule, transportation and privacy. Check each question against the settings qualities in this lesson, and keep them ready for your next settings conversation.",
+      "check": {
+        "question": "Under 42 CFR 441.301(c)(4), which of these is required before a provider-controlled residential setting modifies a person's access to food?",
+        "correct": "A specific assessed need for that person, documented in the plan with less intrusive methods tried and the person's informed consent.",
+        "wrong": [
+          "A written house policy that applies the same limit to every resident and is posted where residents can read it.",
+          "A finding by the provider's staff that the limit is needed because of staffing levels on certain shifts."
+        ],
+        "feedback": "The rule ties every modification to one person's assessed need, with documentation of what was tried first, review over time and the person's informed consent. A posted house policy and a staffing reason do not meet that individualized test."
+      }
+    },
+    {
+      "title": "Informed choice when the person's choice surprises you",
+      "objectives": [
+        "Describe the elements of an informed decision-making process under Minnesota Statutes section 256B.4905.",
+        "Explain how Olmstead's not-opposed condition, the HCBS settings rule and Minnesota law protect a person's choice in both directions.",
+        "Evaluate the quality of a choice process without second-guessing the choice itself.",
+        "Design program measures that do not reward moves regardless of what people chose."
+      ],
+      "teaching": "Informed choice is where the integration principle meets a person's authority over their own life. Olmstead's conditions included that the person does not oppose community placement. The HCBS settings rule makes the setting the person's selection from options that include settings not limited to people with disabilities. Minnesota Statutes section 256B.4905 defines informed choice as a choice that best meets the person's needs and preferences, made after the person has the tools, information and opportunities to understand all of their options. Together these sources ask leaders to hold two commitments at once. People should not be steered into segregated settings by default, and people should not be pushed out of a setting they chose with full information.\n\nMinnesota spells out what an informed decision-making process involves. Under section 256B.4905, lead agencies must provide complete and accurate information about available home and community-based services and settings, present and discuss all options with the person, document each option discussed in the manner the commissioner prescribes, and give the person ample time and timely opportunity to consider options before making or changing a choice. The statute requires that adults be offered, at least annually, an informed choice to live outside a provider-controlled setting. It also requires that working-age waiver recipients be offered the opportunity to work and earn a competitive wage before being offered only day services. These are requirements about process. They describe what a good choice record contains, not what the choice must be.\n\nThe hard case is a person who, after a real informed process, chooses a disability-specific setting: a group residence where friends live, or a day program the person values. Respecting that choice fits Olmstead's not-opposed condition and Minnesota's informed choice law. The questions a leader asks are about the quality of the process. Were options actually presented, including ones the person had never seen or visited? Was information accessible, in the person's language and preferred format? Did the person have time? Was the choice the person's own, or did a family member, guardian or provider make it for them? Was an alternative real, or described as unavailable before anyone checked? A choice made because nothing else was offered is not informed choice. It is a capacity gap recorded as a preference.\n\nThe mirror risk is overriding a choice in the name of integration. Pressuring a person to leave a setting they chose, or treating a disability-specific choice as a failure, can repeat the paternalism integration work set out to end. At the program level, avoid goals or measures that count moves without asking what people chose. Pair counts of transitions with evidence about the decision-making process and the person's own account of whether the outcome matched what they wanted. Be careful with the reverse, too: a high rate of people choosing to stay can reflect satisfaction, or it can reflect options that were never made real. When a guardian or other legal decision-maker is involved, the person's own preference still belongs in the record, and the decision-maker's authority comes from the court order or legal document, not from assumption. The companion course on guardianship and supported decision-making covers that ground in detail.",
+      "keyPoint": "Informed choice protects people in both directions: from being steered into segregated settings and from being pushed out of a setting they chose with full information. Judge the quality of the process, not whether you agree with the result.",
+      "example": "Practice case: {{NEW_COLLEAGUE}} is reviewing transition data for a program report. One region shows that most people offered a move to their own apartment chose to stay in their current group settings. {{NEW_COLLEAGUE}} suggests to {{PROGRAM_MANAGER}} that the report call the region a strong performer on choice, since people's preferences were respected.",
+      "question": "How should {{PROGRAM_MANAGER}} guide the report?",
+      "choices": [
+        "Ask what the records show about the choice process, such as options discussed and formats used, before describing the region.",
+        "Describe the region as a strong performer on choice, since the data show people's stated preferences were documented and honored.",
+        "Flag the region as underperforming on integration, since few people moved, and recommend higher transition targets for the next year."
+      ],
+      "feedback": [
+        "This keeps the report honest about what the data can show. A high rate of staying could reflect satisfied, informed choices or options that were never real, and only the process evidence can tell them apart.",
+        "Respecting preferences matters, but a documented preference is not the same as an informed choice. Calling the region strong before looking at the process could hide a capacity gap behind a positive label.",
+        "Treating staying as a failure can lead to pressure on people who chose with full information. Targets for moves without attention to choice can repeat the paternalism integration work is meant to end."
+      ],
+      "recommended": 0,
+      "reflection": "Privately consider a decision someone made about their own life that you would not have made, at work or elsewhere. What would you have needed to know about how they decided before you felt confident it was their informed choice?",
+      "action": "Choose one measure your team uses that touches settings, transitions or employment. Write down what it counts and what it leaves out about the person's choice process. Draft one companion question, such as whether all options were discussed in an accessible format, that could be reported alongside it, and bring it to the measure's owner.",
+      "check": {
+        "question": "Under Minnesota Statutes section 256B.4905, what must an informed decision-making process include?",
+        "correct": "Presentation and discussion of all options with the person, documentation of each option discussed, and ample time to consider them.",
+        "wrong": [
+          "A recommendation from the lead agency about which setting is most integrated, which the person then accepts or declines.",
+          "A requirement that the person try a community setting at least once before choosing a disability-specific one."
+        ],
+        "feedback": "The statute sets process requirements: complete and accurate information, discussion of all options, documentation and time to decide. It does not require a recommended outcome or a trial placement, and it leaves the choice with the person."
+      }
+    },
+    {
+      "title": "Provider capacity: when a choice exists only on paper",
+      "objectives": [
+        "Explain how Olmstead and the Title II regulation address resource limits, and why legal counsel must weigh their current effect.",
+        "Record a choice that cannot yet be met without converting it into a preference for what was available.",
+        "Use combined, de-identified records to show where capacity is thin and who waits longest.",
+        "Separate the parts of a capacity gap within your authority from the parts you must escalate with evidence."
+      ],
+      "teaching": "The most common integration problem in practice is not a person who refuses community living. It is a person who chooses it and cannot get it, because no provider has staff for the needed shifts, no accessible unit is open in that county, or the transportation does not exist. In those moments the system's capacity shapes the person's life more than the person's choice does. Leaders need to name that honestly instead of letting it disappear into the record as a preference.\n\nOlmstead anticipated limits. The Court described the obligation to provide community placement as subject to reasonable accommodation, taking into account the state's resources and the needs of others with disabilities. Justice Ginsburg's opinion for a plurality added that a state could show it was meeting that obligation with a comprehensive, effectively working plan for placing qualified people in less restrictive settings and a waiting list that moved at a reasonable pace. The Title II regulation at 28 CFR 35.130(b)(7) requires reasonable modifications of policies, practices and procedures unless the public entity can show they would fundamentally alter the service or program. These ideas limit what can be demanded of the state, and they also set expectations: a plan that actually works and progress that actually moves. How the 2026 federal opinion affects these standards is a question for legal counsel. Minnesota's informed choice law and its Olmstead Plan commitments remain the frame for DSD's own work.\n\nPractical leadership starts with the record. When a person chooses a setting or service that cannot be arranged, the plan should say so: what the person chose, what was tried, what is missing, and what interim arrangement the person agreed to while the search continues. Recording an available setting as the person's choice when they wanted something else erases the evidence the system needs to close the gap. Section 256B.4905 already requires lead agencies to document each option discussed, which gives that honesty a home. Individual records, combined carefully and without identifying anyone, become the data that shows where capacity is thin: which counties, which support needs, which languages and which times of day. That information belongs with the people who own provider capacity, rates and workforce work, and with Olmstead Plan reporting where it fits.\n\nCapacity limits are not spread evenly. A person in a rural county, a person whose support needs are intensive, a person who needs staff who speak their language, or a person whose history makes providers hesitate may wait far longer for the same choice. Ask who waits longest and why, rather than treating an average as the whole story. Accountability means owning the parts of the gap within your authority, such as a procedure that delays authorizations or a requirement that discourages small or culturally specific providers, and escalating the rest with evidence. It also means telling people and partners what is being done and what is not yet possible, without promising an outcome you cannot deliver. A provider shortage explains a delay; it does not make the delay acceptable, and it never makes a restriction on someone's rights acceptable.",
+      "keyPoint": "When a person's choice cannot be met, record the unmet choice honestly, combine those records to show where capacity is thin and who waits longest, act on what you control and escalate the rest with evidence.",
+      "example": "Practice case: {{CASE_MANAGER}}, a lead worker on a DSD team that supports lead agencies, hears from {{COMMUNITY_PARTNER}} that a person who chose to move into their own apartment has waited eight months because no provider in the county can staff overnight support. A provider has an opening in a four-person home, and a county colleague has suggested recording the home as the person's choice so the plan can move forward.",
+      "question": "What should {{CASE_MANAGER}} encourage?",
+      "choices": [
+        "Record the home as the choice for now, since the person needs support and the plan can be revised once an apartment provider is found.",
+        "Wait to update the plan until an apartment provider is found, so the record shows only the person's actual choice and nothing else at all.",
+        "Record the apartment as the choice, document any interim support the person agrees to, and share the gap with capacity owners."
+      ],
+      "feedback": [
+        "This may get support in place, but it rewrites the person's choice and erases the evidence of an unmet need. The system then cannot see the gap it needs to close, and the person may stay in the home indefinitely.",
+        "Keeping the record accurate matters, but leaving the plan unchanged can delay support the person may want in the meantime. An interim arrangement can be documented as interim without replacing the choice.",
+        "This keeps the person's choice visible, respects whatever interim support they agree to, and turns one person's wait into information the people responsible for capacity can act on."
+      ],
+      "recommended": 2,
+      "reflection": "Privately think about a time a resource limit shaped an outcome at work, or use the practice case. How was the limit described in the record, and who could see from that description that something was missing?",
+      "action": "With a colleague, map one capacity gap your team hears about often. List what is within your team's authority to change, what belongs to another person or area, and what de-identified evidence would show that area who waits longest. Agree on one step you will take and a date to check back.",
+      "check": {
+        "question": "Why should a plan record the person's unmet choice rather than the available option?",
+        "correct": "Because recording the available option as the choice hides the unmet need and the evidence needed to address the capacity gap.",
+        "wrong": [
+          "Because a plan cannot include any interim arrangement until the person's first choice of setting is available.",
+          "Because recording the unmet choice requires the lead agency to arrange that setting within a set deadline."
+        ],
+        "feedback": "An honest record keeps the person's choice and the gap visible, and an agreed interim arrangement can sit alongside it. This lesson does not describe a fixed deadline; the value of the record is the evidence it gives the people responsible for capacity."
+      }
+    }
+  ],
+  "cards": [
+    {
+      "front": "Four layers",
+      "back": "The ADA as courts and federal agencies read it, the Medicaid HCBS settings rule, Minnesota statutes such as 256B.4905, and Minnesota's Olmstead Plan. Each has its own status and owner."
+    },
+    {
+      "front": "June 18, 2026 opinion",
+      "back": "An Office of Legal Counsel opinion concluding that Title II and Section 504 do not impose an integration mandate on states. It directs the federal executive branch; it does not overturn a Supreme Court decision."
+    },
+    {
+      "front": "July 20, 2026 notice",
+      "back": "A Department of Justice Federal Register notice stating that its 2011 Olmstead guidance is not enforceable and will not be relied on in enforcing Title II."
+    },
+    {
+      "front": "HCBS settings qualities",
+      "back": "Integrated in and supporting full access to the community, chosen by the person, protective of privacy, dignity and freedom from coercion, and supportive of autonomy and choice of services and providers."
+    },
+    {
+      "front": "Individualized modification",
+      "back": "A limit on food, visitors, schedule or privacy that rests on one person's assessed need, documented with less intrusive methods tried, data, review dates and informed consent."
+    },
+    {
+      "front": "Presumption of institutional qualities",
+      "back": "A setting in or next to an institution, or one that otherwise isolates people, is presumed institutional unless the federal Secretary finds otherwise through heightened scrutiny."
+    },
+    {
+      "front": "Informed choice",
+      "back": "Under Minnesota Statutes 256B.4905, a choice that best meets the person's needs and preferences, made after they have the tools, information and opportunities to understand all options."
+    },
+    {
+      "front": "Unmet choice",
+      "back": "A choice the system cannot yet meet. Record it as the choice, document any interim arrangement as interim, and share the gap with the people who own capacity."
+    }
+  ],
+  "aid": [
+    {
+      "heading": "Name the layer",
+      "items": [
+        "Ask whether the question rests on the ADA, the HCBS settings rule, a Minnesota statute, the Olmstead Plan or DHS policy.",
+        "Note the date you last confirmed the source and whether it has changed since.",
+        "Send ADA interpretation to legal counsel and settings compliance to the people who own it.",
+        "Do not tell a partner a requirement is gone or unchanged until the responsible area confirms it."
+      ]
+    },
+    {
+      "heading": "Look at the setting as people live in it",
+      "items": [
+        "Ask how a typical day works: food, visitors, schedule, transportation and privacy.",
+        "Check whether any limit rests on one person's assessed need and is documented in that person's plan.",
+        "Treat a house-wide rule as a question for the people who own compliance, not as a modification.",
+        "Notice location and daily patterns that may isolate people from the broader community."
+      ]
+    },
+    {
+      "heading": "Check the choice process",
+      "items": [
+        "Were all options presented, in an accessible format and language, with time to decide?",
+        "Was the choice the person's own, and is their preference recorded even when someone else has legal authority?",
+        "Were alternatives checked before being described as unavailable?",
+        "Pair counts of moves or stays with evidence about the process and the person's own account."
+      ]
+    },
+    {
+      "heading": "Make capacity gaps visible",
+      "items": [
+        "Record the unmet choice and any interim arrangement the person agrees to.",
+        "Combine de-identified records to show where capacity is thin and who waits longest.",
+        "Act on what is within your authority and escalate the rest with evidence and a date to check back."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "U.S. Supreme Court: Olmstead v. L.C., 527 U.S. 581 (1999)",
+      "href": "https://www.govinfo.gov/content/pkg/USREPORTS-527/pdf/USREPORTS-527-581.pdf",
+      "note": "The decision, its three conditions for community placement, and the plurality's discussion of a comprehensive, effectively working plan and a waiting list moving at a reasonable pace. Later executive-branch readings of the decision are separate documents."
+    },
+    {
+      "title": "eCFR: 28 CFR 35.130, General prohibitions against discrimination (ADA Title II)",
+      "href": "https://www.ecfr.gov/current/title-28/chapter-I/part-35/subpart-B/section-35.130",
+      "note": "Current text of the integration regulation in paragraph (d) and the reasonable modifications and fundamental alteration provision in paragraph (b)(7), as the eCFR showed it in October 2026. How federal agencies and courts now apply it is a question for counsel."
+    },
+    {
+      "title": "U.S. Department of Justice, Office of Legal Counsel: Application of the Rehabilitation Act and Americans with Disabilities Act to State Institutionalization (June 18, 2026)",
+      "href": "https://www.justice.gov/olc/opinion/application-rehabilitation-act-and-americans-disabilities-act-state",
+      "note": "Supports the description of the opinion's conclusions about an integration mandate and its reading of Olmstead. It binds the federal executive branch, not courts, and this course does not assess its legal merits."
+    },
+    {
+      "title": "Federal Register: Clarification on Department of Justice Guidance on Enforcement of the Integration Mandate of Title II of the ADA and Olmstead v. L.C. (FR Doc. 2026-14566, July 20, 2026)",
+      "href": "https://public-inspection.federalregister.gov/2026-14566.pdf",
+      "note": "Supports the statements that the 2011 guidance is not enforceable, that the department will not rely on it in enforcing Title II and that it plans to revisit it. It does not address the Medicaid HCBS settings rule."
+    },
+    {
+      "title": "eCFR: 42 CFR 441.301, Contents of request for a waiver (HCBS settings requirements in paragraph (c))",
+      "href": "https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-C/part-441/subpart-G/section-441.301",
+      "note": "Supports the settings qualities, the added conditions for provider-owned or controlled residential settings, the eight requirements for modifications, and the presumption of institutional qualities. Text as current in October 2026; confirm current requirements with the people who own HCBS settings policy."
+    },
+    {
+      "title": "Minnesota Statutes section 256B.4905, Informed choice and informed decision making",
+      "href": "https://www.revisor.mn.gov/statutes/cite/256B.4905",
+      "note": "Supports the definitions of informed choice and informed decision making, lead agency duties to present, discuss and document options, and the annual offers of community living and competitive employment. It assigns duties to lead agencies; it does not describe DSD's internal procedures."
+    },
+    {
+      "title": "Minnesota Olmstead Implementation Office: Updating the Olmstead Plan",
+      "href": "https://mn.gov/olmstead/plan-update/",
+      "note": "Supports the status of the next Olmstead Plan as a draft revised after public feedback, as reviewed in November 2026. The office's home page describes the June 2026 federal opinion as a significant departure and states Minnesota's continued commitment. Check current status before citing it."
+    }
+  ]
+}

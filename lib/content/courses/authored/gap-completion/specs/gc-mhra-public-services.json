@@ -1,0 +1,255 @@
+{
+  "id": "gc-mhra-public-services",
+  "subtitle": "Apply the Minnesota Human Rights Act's public services provisions to program design: test a new or revised rule for disparate treatment, unequal effects and disability access, and build reasonable modification and a record of reasoning in before the rule goes out.",
+  "audience": "For DHS and DSD leaders, program and policy managers, and staff who write or revise program rules, notices, forms and procedures that the public, counties and providers must use.",
+  "lessons": [
+    {
+      "title": "When a program is a public service under the Act",
+      "objectives": [
+        "Explain how the Minnesota Human Rights Act defines a public service and why DHS and county programs fall within it.",
+        "Use the four steps named in the public services provision, access, admission, full utilization and benefit, as a design checklist.",
+        "Recognize that the public services list differs from the lists in federal laws such as Section 1557, so a rule must be checked against every law that applies.",
+        "Describe the routes the Act gives people, including the one-year charge period and protection from reprisal."
+      ],
+      "teaching": "The Minnesota Human Rights Act, Minnesota Statutes chapter 363A, reaches government programs through its public services provision. Section 363A.12 makes it an unfair discriminatory practice to discriminate against a person in the access to, admission to, full utilization of or benefit from any public service because of race, color, creed, religion, national origin, disability, sex, gender identity, sexual orientation or status with regard to public assistance. The Act defines a public service as any public facility, department, agency, board or commission owned, operated or managed by or on behalf of the state or its subdivisions, including counties. DHS programs fall within that description, and so does county work in human services. The words on behalf of matter when a lead agency or provider carries out a function for a public body, although whether a particular contractor's work counts is a question for legal counsel.\n\nA related course, on protected classes under the Act, explains each class and the difference between public services and public accommodations. This course takes the program designer's view, and the four steps in the provision make a useful checklist. Access asks whether people can reach the program at all, through its hours, locations, channels and languages. Admission asks who gets in, through eligibility rules, verification, waiting lists and deadlines. Full utilization asks whether people who are in can use every part of the program, including appeals, service options and changes to a plan. Benefit asks whether the program delivers its results equally once people are using it. A rule can look fair at the front door and still fail at the third or fourth step. A review that stops at eligibility misses much of what the Act covers.\n\nTwo features of the public services list deserve a leader's attention. First, status with regard to public assistance is protected. The Act defines it as being a recipient of federal, state or local assistance, including medical assistance. Many DSD services are themselves public assistance, and applying an eligibility rule that law sets is a different matter from treating someone worse because they receive assistance. The hard cases sit between those two, such as a program feature that assumes people on assistance need more scrutiny than others when nothing in law requires it. Second, the list is not the same as the lists in federal law. Section 1557 includes age, for example, and the public services list in section 363A.12 does not. A rule reviewed against only one list may miss a protection another law supplies, so check every law that applies to the program.\n\nThe Act also gives people ways to act. A person aggrieved by a violation may file a charge with the Commissioner of Human Rights within one year after the practice occurred, or bring a civil action, and the Act prohibits reprisal against people who oppose a forbidden practice or take part in a proceeding. For a program leader the practical point is that the Act is a standard to design against, not only a complaint process to respond to. Formal determinations about whether a practice violates the Act belong to the Minnesota Department of Human Rights, the courts and legal counsel, and inside DHS to the Equal Opportunity and Access Division and the person or area responsible for civil rights. This course helps you notice the questions early and bring them to the people who answer them.",
+      "keyPoint": "DHS and county programs are public services under the Minnesota Human Rights Act. Test a rule at all four steps the Act names, access, admission, full utilization and benefit, and check it against every law that applies, not one list.",
+      "example": "Practice case: {{PROGRAM_MANAGER}} is reviewing a draft rule for a DSD service that lets people change their service plan once a year. The draft was checked carefully for eligibility, and the team is satisfied that everyone eligible can enroll. {{CASE_MANAGER}} points out that the only way to request a mid-year change is a written request mailed to the county, and that people who rely on interpreters or who have limited reading ability have rarely used it.",
+      "question": "How should {{PROGRAM_MANAGER}} treat the point about mid-year changes?",
+      "choices": [
+        "Note it for a later revision, since the eligibility review already shows that the rule treats everyone the same.",
+        "Treat it as a full utilization question and test the change request route before the rule is final.",
+        "Ask counties to accept phone requests informally while keeping the written mailed request as the official rule."
+      ],
+      "feedback": [
+        "The eligibility review answers the admission question well. The Act also covers full use of and benefit from the service, and a change route that some people cannot use is a design question to settle now.",
+        "This applies the Act's four steps as a checklist. It catches a barrier after admission while the draft can still change, and it uses the case manager's observation as evidence to test.",
+        "An informal workaround may help some people, but it makes access depend on which county a person uses and leaves the rule itself unchanged. The fix belongs in the rule."
+      ],
+      "recommended": 1,
+      "reflection": "Privately consider a program you touch, or use the service plan rule in the practice case. At which of the four steps, access, admission, full utilization or benefit, do you know the least about how people actually fare?",
+      "action": "Choose one rule or procedure your team owns. Write one question about it for each of the four steps the Act names: access, admission, full utilization and benefit. Mark which questions you can answer with evidence and which you cannot yet answer.",
+      "check": {
+        "question": "Under section 363A.12, which part of a program does the public services provision cover?",
+        "correct": "Access to, admission to, full utilization of and benefit from the public service.",
+        "wrong": [
+          "Only the eligibility decision that admits a person to the program.",
+          "Only physical access to the buildings where the program operates."
+        ],
+        "feedback": "The provision names access, admission, full utilization and benefit. Eligibility is one part of admission, and physical access is one part of what the Act requires for people with disabilities. A rule can meet both and still fail at a later step."
+      }
+    },
+    {
+      "title": "Disparate treatment and disparate impact in program rules",
+      "objectives": [
+        "Recognize three forms of disparate treatment in program design: a rule that names a class, a stand-in that closely tracks a class, and discretion applied unevenly.",
+        "Explain that the Act's definition of program access for disabled persons reaches criteria and methods with discriminatory effects.",
+        "Explain why a 2026 change in federal Title VI regulations does not settle questions under Minnesota law, and route effects questions to legal counsel.",
+        "Keep a program review of a rule separate from any concern about one person's conduct."
+      ],
+      "teaching": "Disparate treatment means treating a person differently because of a protected characteristic. In program design it takes three common forms. The first is a rule that names a class, such as a service limited to one sex or one religion without a lawful basis. The second is a stand-in that closely tracks a class when the program's purpose does not require it. The Act defines national origin as the place of birth of a person or of any of their lineal ancestors, so a rule keyed to place of birth, or a requirement that serves as a proxy for it, deserves a hard look. The third is discretion. A rule that lets staff decide case by case who gets an extension, a home visit or a second chance can be applied differently to different groups even when its text is neutral. That form is the hardest to see in the policy and the easiest to see in data and complaints, which is why discretion needs written criteria and a way to review how it is used.\n\nDisparate impact means that a rule neutral on its face falls more heavily on a protected group. Here the law depends on which law you are reading, and leaders should be careful not to overstate it in either direction. HHS removed the disparate-impact provisions from its Title VI regulations effective July 24, 2026, stating that Title VI prohibits only intentional discrimination. That federal change did not rewrite Minnesota's statute. For disability, the Act's own text is effects-based. It defines program access to include the absence of criteria or methods of administration that, directly, indirectly or through contractual or other arrangements, have the effect of subjecting qualified disabled persons to discrimination, or of defeating or impairing the accomplishment of the program's objectives. For the other protected classes in public services, whether and how an effects-based theory applies is a question for legal counsel. Do not announce an answer either way in a meeting or a memo.\n\nFor design, the legal uncertainty matters less than it first appears. A careful program team asks the effect question whether or not a particular law requires it, because a rule that quietly screens out a group fails the program's own purpose. Ask what the rule is for and where its authority comes from, who it touches, whether results differ by group where data exist, what might explain any difference, and whether another approach would meet the same goal. The evidence may support keeping the rule as written. It may point to a better design that serves everyone. Either way the team ends up with a record of its reasoning rather than an assumption, and that record is what the person or area responsible for civil rights will want to see.\n\nKeep the program review separate from any concern about a person. If a pattern or a report suggests that someone was treated differently because of a protected characteristic, that concern goes promptly to the person or area responsible, such as the Equal Opportunity and Access Division or Human Resources, and the program team does not investigate it. A program review examines how a rule works; it does not decide whether anyone discriminated. The two can run side by side, and neither should wait for the other to finish.",
+      "keyPoint": "Look for disparate treatment in what a rule names, what it uses as a stand-in and how discretion is used. For disability, the Act's own definition of program access reaches unequal effects; for other classes, leave the legal question to counsel and ask the effect question anyway.",
+      "example": "Practice case: A DSD unit lets staff grant a 30-day extension on a required form when they judge that a person has a good reason. {{SUPERVISOR}} reviews a year of extension decisions and sees that people whose records list a language other than English received extensions much less often than others. The records do not explain why. {{NEW_COLLEAGUE}} asks whether the unit should simply tell staff to grant more extensions to people who speak other languages.",
+      "question": "What should {{SUPERVISOR}} do with the pattern?",
+      "choices": [
+        "Write extension criteria for everyone, review the pattern with the civil rights lead, and recheck later.",
+        "Tell staff to grant extensions more often to people whose records list another language, to even out the numbers.",
+        "Treat the pattern as proof of discrimination and begin interviewing staff about their individual extension decisions."
+      ],
+      "feedback": [
+        "This addresses the discretion that may be producing the pattern, keeps one standard for everyone, brings the question to the person or area responsible and sets up evidence to see whether the change worked.",
+        "This aims at the right concern but sorts people by a characteristic tied to national origin instead of fixing the open-ended discretion. It can create a new disparate treatment problem.",
+        "The pattern is a reason to look closely, not proof of a cause. Interviewing staff about possible discrimination is an investigation, which belongs to the person or area responsible, not the program team."
+      ],
+      "recommended": 0,
+      "reflection": "Privately think of a decision in your work that relies on staff judgment, or use the extension decisions in the practice case. What written criteria guide that judgment now, and how would anyone know if it were being used differently for different groups?",
+      "action": "Find one place in a program you work on where staff use discretion, such as extensions, exceptions or priority. Write down the criteria that guide it, whether its use is recorded, and who could review the pattern. Bring any gap to the rule's owner.",
+      "check": {
+        "question": "Which statement about disparate impact and the Minnesota Human Rights Act is accurate?",
+        "correct": "The Act's definition of program access for disabled persons includes criteria or methods with discriminatory effects.",
+        "wrong": [
+          "Because HHS changed its Title VI regulations in 2026, effects no longer matter under Minnesota law.",
+          "The Act lets any team member decide whether a rule's unequal effects amount to a violation."
+        ],
+        "feedback": "For disability, the Act's own definition of program access reaches criteria and methods that have discriminatory effects. A federal regulatory change does not rewrite a state statute, and whether a practice violates the Act is a formal determination, not a team member's call."
+      }
+    },
+    {
+      "title": "Reasonable modification, program access and undue hardship in services",
+      "objectives": [
+        "Distinguish the Act's public services terms, reasonable modifications, barrier removal and auxiliary aids, from reasonable accommodation in employment.",
+        "Name the undue hardship factors in section 363A.12 and explain why two of them depend on records made before a request arrives.",
+        "Build common modifications into a program's default design and keep an individual request route for the rest.",
+        "Make a modification request route work across DHS, counties and providers."
+      ],
+      "teaching": "The Act's disability provisions in public services use different words from its employment provisions, and the difference is worth keeping. In employment, the Act speaks of reasonable accommodation that lets a person perform the essential functions of a job. In public services, it defines a qualified disabled person as someone who, with or without reasonable modifications to rules, policies or practices, removal of architectural, communications or transportation barriers, or the provision of auxiliary aids and services, meets the essential eligibility requirements for the services and programs. Section 363A.12 makes it an unfair discriminatory practice to fail to ensure physical and program access for disabled persons unless the public service can demonstrate that providing the access would impose an undue hardship on its operation. Leaders often say accommodation for both settings. The different terms point to different processes, and an employee's accommodation request follows the state's employment process rather than this one.\n\nUndue hardship is a high bar, and the statute names the factors for weighing it. They are the type and purpose of the public service's operation; the nature and cost of the needed accommodation; documented good-faith efforts to explore less restrictive or less expensive alternatives; and the extent of consultation with knowledgeable disabled persons and organizations. Notice what the last two factors require. They are records that exist only if a program created them before the question arose. A program that never explored alternatives, or never asked disabled people and disability organizations about its design, cannot point to those efforts later. In that sense the statute rewards design-stage work. It is hard to claim hardship for a barrier no one tried to avoid. Whether a particular access request would impose undue hardship is a formal determination for the person or area responsible, with legal counsel.\n\nProgram access is broader than any single request. The Act defines it to include auxiliary aids and services that ensure full and equal use of or benefit from a program, together with the absence of criteria or methods of administration with discriminatory effects. A program that relies on individual requests to remove every barrier puts the work on the person and leaves behind everyone who did not know to ask. A stronger design builds common modifications into the default. It offers more than one way to apply and respond, offers accessible formats up front, allows flexible timelines where the program's goal permits, and provides help completing forms. Individual requests then cover the needs no default can anticipate, which is the job they do best.\n\nWhen a request does come, the program needs a route that works for everyone who carries it out. Staff at DHS, in counties and at providers should know how to recognize a request even when the person does not use legal terms, where to send it, how quickly it should move and how the person will hear the outcome. Decisions about individual requests stay with the person or area responsible, often the ADA coordinator or a designated reviewer. A program leader's part is to make the route visible, to read what the requests reveal about the default rules, and to change a rule that keeps generating the same request.",
+      "keyPoint": "In public services the Act speaks of reasonable modifications, barrier removal and auxiliary aids, with undue hardship as the limit. Two of its hardship factors are records of alternatives explored and disabled people consulted, so the strongest defense of a design is the work done before launch.",
+      "example": "Practice case: A DSD team is finalizing a new grant application that community organizations led by disabled people can use to fund peer support. The application is an online form with a timed session that logs out after twenty minutes. {{COMMUNITY_PARTNER}} tells {{PROGRAM_MANAGER}} that several applicants who use screen readers or need breaks will struggle with it. A colleague replies that the team can handle problems through individual accommodation requests after the form opens.",
+      "question": "What should {{PROGRAM_MANAGER}} do before the form opens?",
+      "choices": [
+        "Open the form as planned and post a notice that applicants can ask for an accommodation if they need one.",
+        "Exempt organizations led by disabled people from the online form and accept their applications on paper only.",
+        "Test with screen reader users, allow saving or drop the timeout, offer other formats, keep a request route."
+      ],
+      "feedback": [
+        "A request route is necessary, and posting it helps. On its own it leaves a known barrier in the default design and asks every affected applicant to raise the same problem one at a time.",
+        "This removes one barrier but replaces it with a separate track that may be less convenient and treats applicants differently by who leads them. The better fix is a form that works for all applicants.",
+        "This acts on the partner's information while the design can change, removes the barrier for everyone, records the alternatives explored and the people consulted, and keeps a route for needs no default covers."
+      ],
+      "recommended": 2,
+      "reflection": "Privately consider a form, deadline or format in your work that people often ask to have changed, or use the grant application in the practice case. If it were built for the people who now have to ask, what would be different about the default?",
+      "action": "For one program you work on, list the modifications people request most often. Choose one that could become part of the default for everyone, and write a short proposal for the rule's owner that names the change, the people you consulted and the alternatives you considered.",
+      "check": {
+        "question": "Which of these is one of the undue hardship factors named in section 363A.12, subdivision 1?",
+        "correct": "Documented good-faith efforts to explore less restrictive or less expensive alternatives.",
+        "wrong": [
+          "Whether the person has requested the same access before.",
+          "Whether most people who use the service are satisfied with it."
+        ],
+        "feedback": "The statute names the type and purpose of the operation, the nature and cost of the accommodation, documented good-faith efforts to explore alternatives, and consultation with knowledgeable disabled persons and organizations. Prior requests and general satisfaction are not among them."
+      }
+    },
+    {
+      "title": "Testing a rule before it goes out",
+      "objectives": [
+        "Run a five-question pre-release test on a new or revised rule, notice, form, rate or procedure: purpose, treatment, effect, access and voice.",
+        "Record the answers, evidence, alternatives and approval so the reasoning can be reviewed.",
+        "Plan follow-up after release that uses results, requests and complaints as evidence.",
+        "Treat concerns raised by staff and partners as information the Act protects from reprisal."
+      ],
+      "teaching": "A rule is easiest to fix before anyone has to live with it. A pre-release test is a short, structured review that a program leader runs on a new or revised rule, notice, form, rate or procedure before it is published or sent to counties and providers. It does not replace legal review, the State of Minnesota Equity Analysis Toolkit or the DHS process for approving policy. Its purpose is narrower. It makes sure the civil rights questions are asked while the answers can still change the draft, and it produces a record that the person or area responsible for civil rights can review quickly.\n\nThe test has five questions. Purpose: what is the rule for, and does its authority come from law, rule, policy, contract or habit? Treatment: does it name a protected class, use a stand-in that closely tracks one, or give staff discretion that could be applied unevenly, and if so, what is the lawful basis and what criteria guide the discretion? Effect: who will find the rule hardest to meet, what evidence exists about that, and is there another way to reach the same goal? Access: does the rule work for people with disabilities at each of the four steps, access, admission, full utilization and benefit, and what route exists for modifications? Voice: who outside the team has seen the draft, including people it affects and disabled people or organizations with knowledge of access, and what did they say? Each question is short, but answering it honestly can take a conversation with a county partner, a look at program data or a call to the ADA coordinator.\n\nThe test is useful only if it is written down and owned. Record the answers, the evidence, the alternatives considered, the reason for the final choice and the name of the person who approved it. That record does three jobs. It explains the reasoning to the people who will carry out the rule. It gives the person or area responsible for civil rights something concrete to review instead of a general assurance. And for disability access, it may be part of the documentation of good-faith efforts and consultation that the statute's undue hardship factors describe. A test that lives only in a meeting cannot do any of those jobs.\n\nAfter release, keep testing. Set a date to look at results by group where data allow and privacy can be protected, review modification requests and complaints for patterns, and ask counties and providers what they are seeing. Expect that some staff and partners will raise concerns about the rule. The Act prohibits reprisal against people who oppose a practice it forbids or take part in a proceeding under it, and a leader should treat concerns about a rule as information to weigh, not as disloyalty. Leaders who welcome those concerns hear about problems while they are small. Leaders who resist them tend to hear about the same problems later, through a charge or a complaint, when the fix costs more and trust is harder to rebuild.",
+      "keyPoint": "Before a rule goes out, test its purpose, treatment, effect, access and voice, write down the reasoning and who approved it, and set a date to look again. Concerns from staff and partners are evidence to weigh, and the Act protects the people who raise them.",
+      "example": "Practice case: {{PROGRAM_MANAGER}} has a revised waiting list rule ready for approval. It gives priority to people who can show that a current caregiver will stop providing care within 90 days, proven by a signed letter from the caregiver. {{CASE_MANAGER}} runs the pre-release test with the team and notes that people whose caregivers have limited English, or whose caregiver is a family member who may not want to sign such a letter, may struggle to prove the change. The approval meeting is in three days.",
+      "question": "What should {{PROGRAM_MANAGER}} bring to the approval meeting?",
+      "choices": [
+        "The rule as drafted, since the 90-day standard is the same for everyone and the team has no data yet on who it will affect.",
+        "The rule with the test record, other ways to show the change and a date to review who is getting priority.",
+        "A request to postpone approval until a full equity analysis and legal review of the waiting list are complete."
+      ],
+      "feedback": [
+        "A uniform standard is a fair starting point, and missing data is a real limit. The test has already surfaced a likely barrier in how the change must be proven, and that is worth addressing before approval.",
+        "This keeps the goal of the rule, widens the ways to meet it, shows the decision-maker the reasoning and sets up evidence to learn from after release. Legal questions can still go to counsel alongside it.",
+        "A fuller review may be valuable later. Postponing everything, though, can leave the old rule in place and ignores a specific fix the team can propose now within the rule's purpose."
+      ],
+      "recommended": 1,
+      "reflection": "Privately recall a rule or procedure you saw released, or use the waiting list rule in the practice case. Which of the five questions, purpose, treatment, effect, access or voice, was answered before release, and which only came up afterward?",
+      "action": "Use the job aid to run the five-question test on one rule, notice, form or procedure your team is drafting or revising. Record the answers, the alternatives and who approves it, set a review date after release, and share the record with the person or area responsible for civil rights.",
+      "check": {
+        "question": "Why should a pre-release test be written down and include who approved the rule?",
+        "correct": "So the reasoning can be reviewed, and so it can document alternatives explored and people consulted.",
+        "wrong": [
+          "So the team can show that the rule is legally compliant without further review.",
+          "So staff who later raise concerns can be shown that the matter is already closed."
+        ],
+        "feedback": "A written test shows the reasoning to the people who carry out and review the rule, and it can document the good-faith efforts and consultation the undue hardship factors describe. It is not a legal determination, and it should invite later concerns rather than close them off."
+      }
+    }
+  ],
+  "cards": [
+    {
+      "front": "Public service",
+      "back": "Under Minnesota Statutes 363A.03, any public facility, department, agency, board or commission owned, operated or managed by or on behalf of the state or its subdivisions, including counties."
+    },
+    {
+      "front": "Four steps in section 363A.12",
+      "back": "Access to, admission to, full utilization of and benefit from a public service. A rule can be fair at one step and fail at another."
+    },
+    {
+      "front": "Disparate treatment in design",
+      "back": "A rule that names a protected class, a stand-in that closely tracks one, or discretion applied differently to different groups."
+    },
+    {
+      "front": "Disparate impact",
+      "back": "A rule neutral on its face that falls more heavily on a protected group. How the law treats it depends on which law applies; route the legal question to counsel and ask the effect question anyway."
+    },
+    {
+      "front": "Program access",
+      "back": "The Act's term for auxiliary aids and services that ensure full and equal use or benefit, and for the absence of criteria or methods with discriminatory effects on qualified disabled persons."
+    },
+    {
+      "front": "Reasonable modification in services",
+      "back": "A change to a rule, policy or practice, barrier removal or an auxiliary aid that lets a qualified disabled person use a public service. Employment uses the separate term reasonable accommodation."
+    },
+    {
+      "front": "Undue hardship factors",
+      "back": "Type and purpose of the operation, nature and cost of the accommodation, documented good-faith efforts to explore alternatives, and consultation with knowledgeable disabled persons and organizations."
+    },
+    {
+      "front": "Pre-release test",
+      "back": "Five questions asked before a rule goes out: purpose, treatment, effect, access and voice, recorded with the evidence, alternatives and approver."
+    }
+  ],
+  "aid": [
+    {
+      "heading": "Place the rule under the Act",
+      "items": [
+        "Confirm whether the program is a public service and who carries it out on the state's behalf.",
+        "Check the rule at access, admission, full utilization and benefit.",
+        "Check it against every law that applies, not only the public services list.",
+        "Note where its authority comes from: law, rule, policy, contract or habit."
+      ]
+    },
+    {
+      "heading": "Test treatment and effect",
+      "items": [
+        "Look for a named class, a close stand-in or open-ended discretion.",
+        "Write criteria for any discretion and a way to review how it is used.",
+        "Ask who will find the rule hardest to meet and whether another approach meets the same goal.",
+        "Send concerns about one person's conduct to the person or area responsible; do not investigate them."
+      ]
+    },
+    {
+      "heading": "Build access in",
+      "items": [
+        "Put common modifications into the default: more than one channel, accessible formats, flexible timelines where possible.",
+        "Consult disabled people and disability organizations before the rule is final, and record it.",
+        "Make the modification request route visible at DHS, counties and providers."
+      ]
+    },
+    {
+      "heading": "Record, release and revisit",
+      "items": [
+        "Write down the answers, evidence, alternatives and who approved the rule.",
+        "Share the record with the person or area responsible for civil rights.",
+        "Set a date to review results, requests and complaints after release.",
+        "Treat concerns from staff and partners as evidence the Act protects."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Minnesota Statutes 363A.12 — Public services",
+      "href": "https://www.revisor.mn.gov/statutes/cite/363A.12",
+      "note": "Subdivision 1 lists the protected classes in public services, names access, admission, full utilization and benefit, requires physical and program access for disabled persons and sets the undue hardship factors (lessons 1, 3 and 4). Checked in the 2026 statutes. Applying it to a specific program is a legal question."
+    },
+    {
+      "title": "Minnesota Statutes 363A.03 — Definitions",
+      "href": "https://www.revisor.mn.gov/statutes/cite/363A.03",
+      "note": "Definitions of public service, program access, physical access, disability, qualified disabled person in public services, national origin and status with regard to public assistance (lessons 1 to 3). Definitions apply within the chapter and are read with the provision at issue."
+    },
+    {
+      "title": "Minnesota Statutes 363A.28 — Grievances",
+      "href": "https://www.revisor.mn.gov/statutes/cite/363A.28",
+      "note": "A person aggrieved may file a verified charge or bring a civil action; subdivision 3 sets a one-year charge period with stated tolling (lesson 1). Procedural details and deadlines in a particular matter are for the Department of Human Rights and counsel."
+    },
+    {
+      "title": "Minnesota Statutes 363A.15 — Reprisals",
+      "href": "https://www.revisor.mn.gov/statutes/cite/363A.15",
+      "note": "Prohibits reprisal by a public service and others against people who oppose a forbidden practice or take part in a proceeding, or who associate with protected persons (lessons 1 and 4). Statutory conditions still apply."
+    },
+    {
+      "title": "Minnesota Department of Human Rights — Public Services",
+      "href": "https://mn.gov/mdhr/yourrights/government-services/",
+      "note": "The enforcing agency's plain-language description of public services coverage, with examples and how to report discrimination (lesson 1). It does not state filing deadlines; the statute does."
+    },
+    {
+      "title": "United States Department of Health and Human Services — Rescinding Portions of the Department of Health and Human Services Title VI Regulations, Federal Register document 2026-15000 (effective July 24, 2026)",
+      "href": "https://public-inspection.federalregister.gov/2026-15000.pdf",
+      "note": "Removes disparate-impact provisions from HHS's federal Title VI regulations (lesson 2). It concerns federal regulations only and does not address Minnesota law."
+    },
+    {
+      "title": "State of Minnesota — Equity Analysis Toolkit: A Quick Guide",
+      "href": "https://mn.gov/mmb-stat/equal-opportunity/office-of-inclusion/equity-analysis-toolkit.pdf",
+      "note": "Cited, as in an existing course, as the state's broader equity analysis process that a pre-release civil rights test supports rather than replaces (lesson 4). The five-question test is this course's practice suggestion, not part of the toolkit."
+    }
+  ]
+}
