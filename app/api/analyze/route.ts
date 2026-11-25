@@ -6,8 +6,7 @@ import { readBoundedJson } from "@/lib/http/request";
 import { isSameOriginMutation } from "@/lib/auth/mutation";
 import { consumeRequestLimit, rateLimitHeaders } from "@/lib/security/rate-limit";
 import { paused } from "@/lib/intelligence/orchestrator";
-import { admitRun, finishRun, openLedger } from "@/lib/intelligence/clone/ledger";
-import type { DatabaseSync } from "node:sqlite";
+import { admitRun, finishRun, openLedger, type Ledger } from "@/lib/intelligence/clone/ledger";
 import { analysisRequestSchema } from "@/lib/analysis/contract";
 import { plainIssue } from "@/lib/analysis/issues";
 import { analyze, isRefusal, promptTooLarge } from "@/lib/analysis/service";
@@ -64,10 +63,10 @@ function patientJson(work: () => Promise<unknown>) {
 }
 
 /** The ledger never turns a finished analysis into a failed response: a write that fails is logged by name only. */
-function settleRun(db: DatabaseSync, runId: string, status: "completed" | "refused" | "failed") {
-  try { finishRun(db, runId, status); } catch (error) { console.error("analyze_ledger_failed", error instanceof Error ? error.name : "unknown"); }
+async function settleRun(db: Ledger, runId: string, status: "completed" | "refused" | "failed") {
+  try { await finishRun(db, runId, status); } catch (error) { console.error("analyze_ledger_failed", error instanceof Error ? error.name : "unknown"); }
 }
-function closeLedger(db: DatabaseSync) {
+function closeLedger(db: Ledger) {
   try { db.close(); } catch (error) { console.error("analyze_ledger_failed", error instanceof Error ? error.name : "unknown"); }
 }
 
@@ -88,7 +87,7 @@ export async function POST(request: NextRequest) {
   const db = openLedger();
   let id: string | null;
   try {
-    id = admitRun(db);
+    id = await admitRun(db);
   } catch (error) {
     closeLedger(db);
     console.error("analyze_failed", error instanceof Error ? error.name : "unknown");
@@ -103,13 +102,13 @@ export async function POST(request: NextRequest) {
   return patientJson(async () => {
     try {
       const outcome = await analyze(data);
-      if (await paused()) { settleRun(db, runId, "failed"); return { error: "Analyze a document was paused, so no result was shared." }; }
-      if (isRefusal(outcome)) { settleRun(db, runId, "refused"); return outcome; }
-      settleRun(db, runId, "completed");
+      if (await paused()) { await settleRun(db, runId, "failed"); return { error: "Analyze a document was paused, so no result was shared." }; }
+      if (isRefusal(outcome)) { await settleRun(db, runId, "refused"); return outcome; }
+      await settleRun(db, runId, "completed");
       return outcome;
     } catch (error) {
       console.error("analyze_failed", error instanceof Error ? error.name : "unknown");
-      settleRun(db, runId, "failed");
+      await settleRun(db, runId, "failed");
       return { error: FAILED_MESSAGE };
     } finally { closeLedger(db); }
   });

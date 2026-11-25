@@ -1,22 +1,19 @@
 import "server-only";
-import { openLedger } from "./ledger";
+import { claimDailyReview, settleDailyReview } from "./ledger";
 import { getPolicy } from "../policy";
 import { runCycle } from "../agents/cycle";
 
 const state = globalThis as typeof globalThis & { cloneSchedulerStarted?: boolean };
 export async function runDailyReview() {
   if ((await getPolicy()).killed) return;
-  const db = openLedger();
+  const day = new Date().toISOString().slice(0, 10);
+  if (!(await claimDailyReview(day))) return;
+  let status: "completed" | "needs_review" | "failed";
   try {
-    db.exec("CREATE TABLE IF NOT EXISTS daily_review (day TEXT PRIMARY KEY,status TEXT NOT NULL)");
-    const day = new Date().toISOString().slice(0, 10);
-    const claim = db.prepare("INSERT OR IGNORE INTO daily_review(day,status) VALUES(?,'running')").run(day);
-    if (!claim.changes) return;
-    try {
-      const result = await runCycle("cron");
-      db.prepare("UPDATE daily_review SET status=? WHERE day=?").run(result.exceptions.length ? "needs_review" : "completed", day);
-    } catch { db.prepare("UPDATE daily_review SET status='failed' WHERE day=?").run(day); }
-  } finally { db.close(); }
+    const result = await runCycle("cron");
+    status = result.exceptions.length ? "needs_review" : "completed";
+  } catch { status = "failed"; }
+  await settleDailyReview(day, status);
 }
 
 export function startCloneScheduler() {

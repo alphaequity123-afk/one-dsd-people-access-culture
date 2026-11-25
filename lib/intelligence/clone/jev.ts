@@ -24,7 +24,7 @@ async function decision(questions: unknown, state: unknown, ctx: ToolContext, ru
     const provider = decisionProvider();
     const key = (provider === "gemini" ? process.env.GEMINI_API_KEY : process.env.TYPESAFE_API_KEY)?.trim();
     if (!cloneAgentsEnabled() || !key) throw new Error("jev_unavailable");
-    if (runId) recordDecision(runId); // Count attempts, including network failures.
+    if (runId) await recordDecision(runId); // Count attempts, including network failures.
     const response = await fetch(provider === "gemini" ? "https://generativelanguage.googleapis.com/v1beta/decisions" : "https://api.typesafe.ai/v1/systemone", {
       method: "POST", redirect: "error",
       headers: provider === "gemini" ? { "x-goog-api-key": key, "content-type": "application/json" } : { Authorization: `Bearer ${key}`, "content-type": "application/json" },

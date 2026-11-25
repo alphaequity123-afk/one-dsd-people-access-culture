@@ -27,7 +27,7 @@ export async function POST(request: NextRequest) {
       chunks.push(item.value);
     }
     if (!size) return reply({ error: "The recording was empty. Please try again." }, 400);
-    if (!reserveVoice("transcribe", 1)) return reply({ error: "Speaking questions has reached its limit for now. You can type your question." }, 429);
+    if (!(await reserveVoice("transcribe", 1))) return reply({ error: "Speaking questions has reached its limit for now. You can type your question." }, 429);
     const bytes = Buffer.concat(chunks);
     const data = new FormData();
     data.append("file", new Blob([bytes], { type }), `question.${type.split("/")[1]}`);

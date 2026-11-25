@@ -100,7 +100,7 @@ export async function POST(request: NextRequest) {
   const db = openLedger();
   let id: string | null;
   try {
-    id = admitRun(db);
+    id = await admitRun(db);
   } catch (error) {
     db.close();
     console.error("ask_route_failed", error instanceof Error ? `${error.name}: ${error.message}` : "unknown");
@@ -114,11 +114,11 @@ export async function POST(request: NextRequest) {
   const answer = async (onProgress?: AskProgressSink) => {
     try {
       const result = await ask({ ...input.data, contextPreference: DEFAULT_PRODUCT_CONTEXT, researchMode: input.data.researchMode ?? "auto", cloneRunId: runId, onProgress }, "staff", runId);
-      if (await paused()) { finishRun(db, runId, "failed"); return { error: "Ask was paused, so no answer was shared." }; }
-      if (result.kind === "refusal") { finishRun(db, runId, "refused"); return toStaffAskResult(result); }
+      if (await paused()) { await finishRun(db, runId, "failed"); return { error: "Ask was paused, so no answer was shared." }; }
+      if (result.kind === "refusal") { await finishRun(db, runId, "refused"); return toStaffAskResult(result); }
       const answer = result.answer;
       if (answer.failureCode) {
-        finishRun(db, runId, "failed");
+        await finishRun(db, runId, "failed");
         onProgress?.({ type: "reset" });
         const evidenceFailure = /evidence|review|source_link/.test(answer.failureCode);
         return {
@@ -129,11 +129,11 @@ export async function POST(request: NextRequest) {
           retryable: true,
         };
       }
-      finishRun(db, runId, answer.degraded ? "needs_review" : "completed");
+      await finishRun(db, runId, answer.degraded ? "needs_review" : "completed");
       return toStaffAskResult(result);
     } catch (error) {
       console.error("ask_route_failed", error instanceof Error ? `${error.name}: ${error.message}` : "unknown");
-      finishRun(db, runId, "failed");
+      await finishRun(db, runId, "failed");
       return { error: "Ask could not finish this answer. Please try again later, or browse the Library." };
     } finally { db.close(); }
   };

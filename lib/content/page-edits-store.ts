@@ -5,6 +5,8 @@ import { promises as fs } from "node:fs";
 import path from "node:path";
 import { setTimeout as pause } from "node:timers/promises";
 import { z } from "zod";
+import { ownerDatabase } from "@/lib/db/owner-client";
+import { runtimeRecordsSql, runtimeRecordsStore } from "@/lib/db/runtime-records";
 import {
   isPageEditKey,
   PAGE_EDIT_LIMITS,
@@ -15,10 +17,18 @@ import {
 } from "@/lib/content/page-edit-keys";
 
 /**
- * The owner's page edits, in one JSON file on the persistent data folder. It does not use the
- * database, so it works whichever content source production runs on. On Railway `.data` under
- * the working directory is the mounted volume (scripts/verify-clone-agent-pilot.mjs refuses to
- * start otherwise); locally it is excluded from the release archive.
+ * The owner's page edits, kept as one JSON document.
+ *
+ * With PAC_RUNTIME_RECORDS unset or "volume" (today's default) the document is a file on the
+ * persistent data folder. On Railway `.data` under the working directory is the mounted volume
+ * (scripts/verify-clone-agent-pilot.mjs refuses to start otherwise); locally it is excluded from
+ * the release archive.
+ *
+ * With PAC_RUNTIME_RECORDS=postgres the same document is a row in pac_dsd
+ * (db/standalone/0073_pac_dsd_volume_free_runtime_records.sql). Readers use the restricted runtime
+ * connection; saves use the owner writer connection, as every other owner edit does. Each save
+ * names the revision it started from, so two servers can never overwrite each other's edits, and
+ * the database keeps the last 40 versions as the file store's backups folder does.
  */
 const StoredEditSchema = z.object({
   kind: z.enum(["text", "link"]),
@@ -73,8 +83,27 @@ function storeFile(): string {
 }
 
 let cached: { file: string; mtimeMs: number; size: number; store: PageEditStore } | null = null;
+let cachedDocument: { revision: number; store: PageEditStore } | null = null;
 
-async function readStore(): Promise<PageEditStore> {
+/** Another server saved first. The turn reads the newer document and tries again. */
+class PageEditConflictError extends Error {
+  constructor() {
+    super("The saved page edits changed while this change was being saved.");
+    this.name = "PageEditConflictError";
+  }
+}
+
+type LoadedStore = { store: PageEditStore; revision: number | null };
+
+function parseStore(value: unknown): PageEditStore {
+  try {
+    return StoreSchema.parse(value);
+  } catch {
+    throw new PageEditStoreUnreadableError();
+  }
+}
+
+async function readFileStore(): Promise<PageEditStore> {
   const file = storeFile();
   let details;
   try {
@@ -91,6 +120,31 @@ async function readStore(): Promise<PageEditStore> {
   } catch {
     throw new PageEditStoreUnreadableError();
   }
+}
+
+/** One short query per read: the database sends the document only when it changed since the last read. */
+async function readDatabaseStore(): Promise<LoadedStore> {
+  const known = cachedDocument?.revision ?? -1;
+  const rows = await runtimeRecordsSql().unsafe<{ revision: string | number; body: unknown }[]>(
+    "select revision,body from pac_dsd.read_page_edit_document($1::bigint)", [known],
+  );
+  const row = rows[0];
+  if (!row) {
+    cachedDocument = { revision: 0, store: emptyStore() };
+    return cachedDocument;
+  }
+  const revision = Number(row.revision);
+  if (row.body === null || row.body === undefined) {
+    if (cachedDocument && cachedDocument.revision === revision) return cachedDocument;
+    throw new PageEditStoreUnreadableError();
+  }
+  cachedDocument = { revision, store: parseStore(typeof row.body === "string" ? JSON.parse(row.body) : row.body) };
+  return cachedDocument;
+}
+
+async function loadStore(): Promise<LoadedStore> {
+  if (runtimeRecordsStore() === "postgres") return readDatabaseStore();
+  return { store: await readFileStore(), revision: null };
 }
 
 /** Replace the file in one step: readers see the whole old file or the whole new file. */
@@ -138,10 +192,26 @@ async function backUpCurrentFile(now: string): Promise<void> {
   }
 }
 
-async function writeStore(store: PageEditStore, now: string): Promise<void> {
+function storeContents(store: PageEditStore): string {
   const contents = JSON.stringify(store, null, 1);
   if (Buffer.byteLength(contents, "utf8") > PAGE_EDIT_LIMITS.storeBytes) {
     throw new PageEditLimitError("The saved page edits have reached their size limit. Undo some edits before adding more.");
+  }
+  return contents;
+}
+
+async function writeStore(store: PageEditStore, now: string, revision: number | null): Promise<void> {
+  const contents = storeContents(store);
+  if (revision !== null) {
+    const sql = await ownerDatabase();
+    try {
+      await sql.unsafe("select pac_dsd.write_page_edit_document($1::bigint,$2::text::jsonb)", [revision, JSON.stringify(store)]);
+    } catch (error) {
+      if ((error as { code?: string }).code === "40001") throw new PageEditConflictError();
+      throw error;
+    }
+    cachedDocument = null;
+    return;
   }
   await fs.mkdir(pageEditsDirectory(), { recursive: true, mode: 0o700 });
   await backUpCurrentFile(now);
@@ -149,13 +219,34 @@ async function writeStore(store: PageEditStore, now: string): Promise<void> {
   cached = null;
 }
 
-/** One replica writes this file. Saves take turns so none is lost to a read-modify-write race. */
+/**
+ * Saves on this server take turns so none is lost to a read-modify-write race. In the database the
+ * revision check does the same across servers: a save that lost the race reads again and retries.
+ */
 const lockHolder = globalThis as typeof globalThis & { __pacPageEditLock?: Promise<unknown> };
 
 function inTurn<T>(work: () => Promise<T>): Promise<T> {
   const next = (lockHolder.__pacPageEditLock ?? Promise.resolve()).then(work, work);
   lockHolder.__pacPageEditLock = next.catch(() => undefined);
   return next;
+}
+
+/** Read, change and save in one turn. `change` returns no `next` when nothing needs saving. */
+function changeStore<T>(now: string, change: (store: PageEditStore) => { result: T; next?: PageEditStore }): Promise<T> {
+  return inTurn(async () => {
+    for (let attempt = 0; ; attempt += 1) {
+      const { store, revision } = await loadStore();
+      const { result, next } = change(store);
+      if (!next) return result;
+      try {
+        await writeStore(next, now, revision);
+        return result;
+      } catch (error) {
+        if (error instanceof PageEditConflictError && attempt < 2) continue;
+        throw error;
+      }
+    }
+  });
 }
 
 function withLog(store: PageEditStore, entry: PageEditStore["log"][number]): PageEditStore["log"] {
@@ -191,7 +282,7 @@ export type PageEditsView = {
  * history stay on the server, and edits to owner-only pages are not sent at all.
  */
 export async function readPageEdits(pagePath: string, options: { owner: boolean }): Promise<PageEditsView> {
-  const store = await readStore();
+  const { store } = await loadStore();
   const pageEdits = Object.hasOwn(store.pages, pagePath) ? store.pages[pagePath] : undefined;
   const siteEdits = Object.hasOwn(store.pages, SITE_WIDE_PATH) ? store.pages[SITE_WIDE_PATH] : undefined;
   const hidden = pagePathIsOwnerOnly(pagePath) && !options.owner;
@@ -219,9 +310,8 @@ export type SavePageEditInput = {
 
 /** Save one edit. Callers validate the value first; the key is always computed here. */
 export function savePageEdit(input: SavePageEditInput, nowDate = new Date()): Promise<string> {
-  return inTurn(async () => {
-    const store = await readStore();
-    const now = nowDate.toISOString();
+  const now = nowDate.toISOString();
+  return changeStore(now, (store) => {
     const occurrence = input.scope === "site" ? 0 : input.occurrence;
     const key = pageEditKey(input.kind, input.original, occurrence);
     const target = input.scope === "site" ? SITE_WIDE_PATH : input.path;
@@ -249,19 +339,17 @@ export function savePageEdit(input: SavePageEditInput, nowDate = new Date()): Pr
         else delete pages[input.path];
       }
     }
-    await writeStore({ ...store, updatedAt: now, pages, log: withLog(store, { at: now, action: "save", path: input.path, key }) }, now);
-    return key;
+    return { result: key, next: { ...store, updatedAt: now, pages, log: withLog(store, { at: now, action: "save", path: input.path, key }) } };
   });
 }
 
 /** Remove one edit so the original shows again. Works for edits whose original is gone from the page. */
 export function undoPageEdit(input: { path: string; key: string; scope: "page" | "site" }, nowDate = new Date()): Promise<boolean> {
-  return inTurn(async () => {
-    if (!isPageEditKey(input.key)) return false;
-    const store = await readStore();
+  if (!isPageEditKey(input.key)) return Promise.resolve(false);
+  const now = nowDate.toISOString();
+  return changeStore(now, (store) => {
     const target = input.scope === "site" ? SITE_WIDE_PATH : input.path;
-    if (!Object.hasOwn(store.pages, target) || !Object.hasOwn(store.pages[target], input.key)) return false;
-    const now = nowDate.toISOString();
+    if (!Object.hasOwn(store.pages, target) || !Object.hasOwn(store.pages[target], input.key)) return { result: false };
     const pages = { ...store.pages };
     const remaining = { ...pages[target] };
     delete remaining[input.key];
@@ -273,7 +361,6 @@ export function undoPageEdit(input: { path: string; key: string; scope: "page" |
       if (Object.keys(origins).length) pages[SITE_ORIGINS_PATH] = origins;
       else delete pages[SITE_ORIGINS_PATH];
     }
-    await writeStore({ ...store, updatedAt: now, pages, log: withLog(store, { at: now, action: "undo", path: input.path, key: input.key }) }, now);
-    return true;
+    return { result: true, next: { ...store, updatedAt: now, pages, log: withLog(store, { at: now, action: "undo", path: input.path, key: input.key }) } };
   });
 }
