@@ -1,6 +1,6 @@
 import "server-only";
 
-import { lstat } from "node:fs/promises";
+import { lstat, readFile, rm } from "node:fs/promises";
 import { join } from "node:path";
 import { paused } from "@/lib/intelligence/orchestrator";
 import {
@@ -8,8 +8,9 @@ import {
 } from "@/lib/intelligence/learning/resource-artifact-generation";
 import { overviewVoiceAvailable } from "@/lib/intelligence/clone/overview-voice";
 import type { ResourceArtifact } from "./resource-artifact-types";
+import { mediaBucketConfiguration, putMediaObject } from "@/lib/storage/media-bucket";
 import {
-  claimCreation, creationFileNames, creationRoot, ensureCreationOutputDirectory,
+  claimCreation, creationFileKey, creationFileNames, creationInDatabase, creationRoot, ensureCreationOutputDirectory,
   finishCreation, hasClaimableCreation, renewCreation, saveCreationArtifact,
   type CreationFileKind, type CreationLease,
 } from "./resource-creation-store";
@@ -23,15 +24,21 @@ export function resourceCreationAvailable() {
   return !!creationRoot() && !!process.env.GEMINI_API_KEY?.trim();
 }
 
+/** Without a volume, rendered files go to the private media bucket and the temporary folder is removed. */
+async function keepRenderedFiles(id: string, directory: string, files: CreationFileKind[]) {
+  const bucket = mediaBucketConfiguration();
+  if (!bucket) throw new Error("Resource creation storage is unavailable");
+  for (const kind of files) {
+    const bytes = await readFile(join(directory, creationFileNames[kind].name));
+    await putMediaObject(bucket, creationFileKey(id, kind), bytes, creationFileNames[kind].mime, false);
+  }
+}
+
 async function processCreation(job: CreationLease, apiKey: string) {
   const leaseLost = new AbortController();
   const signal = AbortSignal.any([leaseLost.signal, AbortSignal.timeout(30 * 60_000)]);
   const heartbeat = setInterval(() => {
-    try {
-      if (!renewCreation(job)) leaseLost.abort();
-    } catch {
-      leaseLost.abort();
-    }
+    renewCreation(job).then(renewed => { if (!renewed) leaseLost.abort(); }, () => leaseLost.abort());
   }, 25_000);
   heartbeat.unref();
   try {
@@ -40,14 +47,14 @@ async function processCreation(job: CreationLease, apiKey: string) {
     }, apiKey, AbortSignal.any([signal, AbortSignal.timeout(95_000)]));
     signal.throwIfAborted();
     if (artifact.sourceRevision !== job.revision || !(await verifyArtifactSources(artifact, job.scope))) {
-      finishCreation(job, "stale", [], "The resource changed while this draft was being made. Start a new draft from the current version.");
+      await finishCreation(job, "stale", [], "The resource changed while this draft was being made. Start a new draft from the current version.");
       return;
     }
-    if (!saveCreationArtifact(job, artifact)) return;
+    if (!(await saveCreationArtifact(job, artifact))) return;
     const files: CreationFileKind[] = [];
     if (artifact.kind === "audio-overview" || artifact.kind === "video-overview") {
       if (!overviewVoiceAvailable(artifact.kind === "video-overview" ? "geffen" : "host1")) {
-        finishCreation(job, "failed", [], "The approved voice service is unavailable. Your draft script is ready to review.");
+        await finishCreation(job, "failed", [], "The approved voice service is unavailable. Your draft script is ready to review.");
         return;
       }
       const directory = ensureCreationOutputDirectory(job.id);
@@ -69,24 +76,29 @@ async function processCreation(job: CreationLease, apiKey: string) {
       }
       signal.throwIfAborted();
       if (!(await verifyArtifactSources(artifact, job.scope))) {
-        finishCreation(job, "stale", [], "The source changed before the recording was ready. Start a new draft from the current version.");
+        await finishCreation(job, "stale", [], "The source changed before the recording was ready. Start a new draft from the current version.");
         return;
       }
+      if (creationInDatabase()) await keepRenderedFiles(job.id, directory, files);
     }
-    finishCreation(job, "ready", files);
+    await finishCreation(job, "ready", files);
     console.info("resource_creation_ready", { kind: job.kind, files: files.length });
   } catch (error) {
     if (leaseLost.signal.aborted) return;
     if (error instanceof ResourceArtifactError && error.code === "stale") {
-      finishCreation(job, "stale", [], "The source changed before generation finished. Start a new draft from the current version.");
+      await finishCreation(job, "stale", [], "The source changed before generation finished. Start a new draft from the current version.");
     } else {
       console.warn("resource_creation_failed", { kind: job.kind, code: error instanceof ResourceArtifactError ? error.code : "processing" });
-      finishCreation(job, "failed", [], error instanceof ResourceArtifactError && error.code === "insufficient"
+      await finishCreation(job, "failed", [], error instanceof ResourceArtifactError && error.code === "insufficient"
         ? "This resource does not have enough published text for the requested draft."
         : "The draft could not finish. If a script is available, you can still review it and try a new draft later.");
     }
   } finally {
     clearInterval(heartbeat);
+    if (creationInDatabase()) {
+      const root = creationRoot();
+      if (root) await rm(join(root, job.id), { recursive: true, force: true }).catch(() => undefined);
+    }
   }
 }
 
@@ -95,8 +107,8 @@ async function tick() {
   state.resourceCreationWorkerRunning = true;
   try {
     const key = process.env.GEMINI_API_KEY?.trim();
-    if (!key || !hasClaimableCreation() || await paused()) return;
-    const job = claimCreation();
+    if (!key || !(await hasClaimableCreation()) || await paused()) return;
+    const job = await claimCreation();
     if (job) await processCreation(job, key);
   } catch {
     console.warn("resource_creation_worker_unavailable");

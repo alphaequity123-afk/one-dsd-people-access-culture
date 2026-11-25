@@ -25,7 +25,7 @@ export async function GET(request: NextRequest) {
     const query = request.nextUrl.searchParams;
     const id = query.get("id");
     if (id !== null) {
-      const job = creationJobId.test(id) ? findCreationJob(id, scope) : undefined;
+      const job = creationJobId.test(id) ? await findCreationJob(id, scope) : undefined;
       return job ? reply({ job: creationJobView(job) }) : reply({ error: "Draft not found." }, 404);
     }
     const search = query.get("search");
@@ -37,7 +37,7 @@ export async function GET(request: NextRequest) {
       return reply(await searchArtifactResources(search, offset, scope));
     }
     startResourceCreationWorker();
-    return reply({ jobs: listCreationJobs(scope).map(creationJobView) });
+    return reply({ jobs: (await listCreationJobs(scope)).map(creationJobView) });
   } catch {
     return reply({ error: unavailable }, 503);
   }
@@ -62,7 +62,7 @@ export async function POST(request: NextRequest) {
     const scope = await requestedContentScope();
     const source = await captureArtifactSourceRevision(resourcePath, scope);
     if (!source) return reply({ error: "Choose a published resource with readable source material." }, 404);
-    const result = enqueueCreation({
+    const result = await enqueueCreation({
       scope, resourcePath: source.resourcePath, title: source.title, kind, revision: source.sourceRevision,
     });
     if (!result) return reply({ error: "The creation queue is at its limit. Try again after the current drafts finish." }, 429);

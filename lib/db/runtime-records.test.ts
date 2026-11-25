@@ -8,6 +8,7 @@ import {
   admitRun, claimDailyReview, finishRun, ledgerSummary, openLedger, recordDecision, recordVoiceUse, settleDailyReview,
 } from "@/lib/intelligence/clone/ledger";
 import { readPageEdits, savePageEdit, undoPageEdit } from "@/lib/content/page-edits-store";
+import { claimCreation, enqueueCreation, finishCreation, findCreationJob, listCreationJobs, renewCreation, saveCreationArtifact } from "@/lib/learning/resource-creation-store";
 
 // The database half runs only against a disposable database that has migration 0073 applied, for
 // example: PAC_TEST_RECORDS_RUNTIME_URL=postgres://pac_dsd_app_runtime:...@localhost/test
@@ -118,5 +119,23 @@ describe.skipIf(!runtimeUrl || !ownerUrl)("runtime records in the database", () 
 
     expect(await undoPageEdit({ path: "/about", key, scope: "page" })).toBe(true);
     expect((await readPageEdits("/about", { owner: false })).page[key]).toBeUndefined();
+  });
+
+  it("keeps the resource creation queue in pac_dsd with one leased job at a time", async () => {
+    const marker = `test-${Date.now()}`;
+    const input = { scope: "dsd" as const, resourcePath: `/library/${marker}`, title: "Queue test", kind: "quiz" as const, revision: marker };
+    const first = await enqueueCreation(input);
+    expect(first?.reused).toBe(false);
+    expect((await enqueueCreation(input))?.job.id).toBe(first?.job.id);
+    expect((await listCreationJobs("dsd")).some(job => job.id === first?.job.id)).toBe(true);
+    expect(await findCreationJob(first!.job.id, "one-dhs")).toBeUndefined();
+    const lease = await claimCreation();
+    expect(lease?.token).toMatch(/^[0-9a-f-]{36}$/);
+    expect(await claimCreation()).toBeNull(); // another job is running
+    expect(await renewCreation(lease!)).toBe(true);
+    expect(await saveCreationArtifact(lease!, { version: 1 } as never)).toBe(true);
+    expect(await finishCreation(lease!, "ready", [])).toBe(true);
+    expect(await finishCreation(lease!, "ready", [])).toBe(false);
+    if (lease!.id === first!.job.id) expect((await findCreationJob(first!.job.id, "dsd"))?.status).toBe("ready");
   });
 });
