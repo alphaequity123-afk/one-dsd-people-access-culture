@@ -35,19 +35,19 @@
 
 Each practice slide ends with: "In Slide Show view, select a response to explore its effects."
 
-**Practice 1.** Rosa tells Nadia that families describe the lobby as "like a police station." What does Nadia do?
+**Practice 1.** The county partner tells the program manager that families describe the lobby as "like a police station." What does the program manager do?
 
 - **A.** Explains that the security setup is required. *Feedback: It may be required, and the explanation leaves families' experience unchanged.*
-- **B.** Walks through the lobby with Rosa and two parents, and asks what would help them feel safer. *Feedback: This uses collaboration and choice, and finds changes that can work within security rules.*
+- **B.** Walks through the lobby with the county partner and two parents, and asks what would help them feel safer. *Feedback: This uses collaboration and choice, and finds changes that can work within security rules.*
 - **C.** Orders new lobby furniture. *Feedback: It may help, and it skips asking the people affected what matters most.*
 
-**Practice 2.** Priya's team handled a child fatality review this week. What does Nadia do?
+**Practice 2.** The supervisor's team handled a child fatality review this week. What does the program manager do?
 
 - **A.** Sends a thank-you email. *Feedback: Thanks matter, and an email alone may not reach what people are carrying.*
 - **B.** Offers a facilitated debrief, lighter assignments for a few days and a reminder about the Employee Assistance Program. *Feedback: This treats the effect of the work as real and gives people choices about support.*
-- **C.** Asks Priya to check that everyone is okay. *Feedback: Delegating care is reasonable, and Priya was exposed too.*
+- **C.** Asks the supervisor to check that everyone is okay. *Feedback: Delegating care is reasonable, and the supervisor was exposed too.*
 
-**Practice 3.** A leadership meeting will cover a staff assault that happened last month. How does Nadia open?
+**Practice 3.** A leadership meeting will cover a staff assault that happened last month. How does the program manager open?
 
 - **A.** Goes straight to the details. *Feedback: Efficient, and it can catch people off guard.*
 - **B.** Says what will be discussed, why, and that anyone can step out without explaining. *Feedback: Transparency and choice let people take part without being overwhelmed.*
@@ -62,6 +62,18 @@ Each practice slide ends with: "In Slide Show view, select a response to explore
 
 ### Video script: "The First Visit" (about 3 minutes)
 
+**Cast:**
+
+- **Narrator:** C3 (Host voice)
+- **Supervisor:** C6 (Co-host voice)
+- **Case manager:** C5 (Host voice)
+- **Program manager:** C2 (Host voice)
+- **New colleague:** C7 (Co-host voice)
+- **County partner:** C1 (Co-host voice)
+- **Parent:** C4 (on screen, no lines)
+- **Security officer:** voice only (Co-host voice)
+- **Staff member:** voice only (Host voice)
+
 **Scene 1. Lobby.**
 
 NARRATOR: A parent arrives for an eligibility interview. Watch the first ten minutes through their eyes.
@@ -74,13 +86,13 @@ STAFF MEMBER (voice only): Have you ever been evicted?
 
 (The parent stands up and leaves.)
 
-**Scene 2. Nadia and Rosa, walking through the lobby.**
+**Scene 2. The program manager and the county partner, walking through the lobby.**
 
-ROSA: Families tell us it feels like a police station.
+COUNTY PARTNER: Families tell us it feels like a police station.
 
-NADIA: Security has to stay. What else could change?
+PROGRAM MANAGER: Security has to stay. What else could change?
 
-ROSA: Ask them. I can bring two parents next week.
+COUNTY PARTNER: Ask them. I can bring two parents next week.
 
 **Scene 3. Same lobby, after changes.**
 
@@ -88,13 +100,13 @@ NARRATOR: Some changes cost almost nothing.
 
 SECURITY OFFICER (voice only): Morning. I just need a quick look in your bag, then you're all set.
 
-SAM: Hi, I'm Sam. Here's what we'll do today, and it takes about thirty minutes. You can stop any time. Would you like water first?
+CASE MANAGER: Hi, I'm your case manager. Here's what we'll do today, and it takes about thirty minutes. You can stop any time. Would you like water first?
 
 **Scene 4. Team room, after a hard call.**
 
-PRIYA: Jordan, that was a tough one. Take fifteen minutes before your next case. Want to talk it through after?
+SUPERVISOR: (to the new colleague) That was a tough one. Take fifteen minutes before your next case. Want to talk it through after?
 
-JORDAN: Yeah. Thanks.
+NEW COLLEAGUE: Yeah. Thanks.
 
 NARRATOR: Safety, trust and choice, for the people we serve and the people who serve them.
 

@@ -9,7 +9,7 @@
 ### Slide outline
 
 1. **Title:** One DSD People, Access and Culture / Pace, Pressure and Decision Quality / When everything is urgent / Intermediate self-directed learning
-2. **Opening case:** Nadia's division is asked to roll out a new eligibility process in two weeks. The team hits the date. A month later, Rosa reports that families who speak Somali never got the notice in their language.
+2. **Opening case:** The program manager's division is asked to roll out a new eligibility process in two weeks. The team hits the date. A month later, the county partner reports that families who speak Somali never got the notice in their language.
 3. **Real deadlines and urgency as a habit:** Some deadlines come from law, funding or a person in crisis. Others come from habit. Both feel the same in the moment, which is why the difference is worth checking.
 4. **What urgency costs:** Rushing cuts the steps that are easiest to skip: checking with partners, testing with the people affected and translating. Those are often the steps that protect access.
 5. **Quantity over quality:** Teams measure what is easy to count, such as cases closed, emails answered or trainings held. When the count becomes the goal, the outcome for the person can drop out of view.
@@ -35,22 +35,22 @@
 
 Each practice slide ends with: "In Slide Show view, select a response to explore its effects."
 
-**Practice 1.** Priya gets a request at 4 p.m. to send updated guidance to all case managers by end of day. What does she do first?
+**Practice 1.** The supervisor gets a request at 4 p.m. to send updated guidance to all case managers by end of day. What do they do first?
 
 - **A.** Sends it out as is. *Feedback: The deadline is met, but nobody checked whether it had to be today.*
 - **B.** Asks the sender what happens if it goes out at 10 a.m. tomorrow. *Feedback: One question shows whether the deadline is fixed, and buys time to check the guidance if it isn't.*
 - **C.** Stays late to rewrite it fully. *Feedback: Dedicated, and it may not be needed. Pace set this way is hard to sustain.*
 
-**Practice 2.** The division's monthly report shows 400 cases closed, a record. What does Nadia ask?
+**Practice 2.** The division's monthly report shows 400 cases closed, a record. What does the program manager ask?
 
 - **A.** "Can we hit 450 next month?" *Feedback: It rewards the count, and the count may already hide a problem.*
 - **B.** "How many of those families came back within 30 days?" *Feedback: This pairs the count with an outcome and shows whether closing fast meant closing well.*
 - **C.** "Great work, everyone." *Feedback: Recognition matters, and it is stronger when it is tied to outcomes.*
 
-**Practice 3.** The launch date is set by law and can't move. Translation won't be ready. What does Nadia do?
+**Practice 3.** The launch date is set by law and can't move. Translation won't be ready. What does the program manager do?
 
 - **A.** Launches and says nothing about the gap. *Feedback: Families who can't read the notice won't know what they missed.*
-- **B.** Launches, tells partners like Rosa which languages are late and sets a date for the rest. *Feedback: The deadline is met and the gap is named, so partners can help families in the meantime.*
+- **B.** Launches, tells county partners which languages are late and sets a date for the rest. *Feedback: The deadline is met and the gap is named, so partners can help families in the meantime.*
 - **C.** Delays the launch anyway. *Feedback: This breaks a legal requirement and creates a new risk.*
 
 ### Narration
@@ -62,35 +62,43 @@ Each practice slide ends with: "In Slide Show view, select a response to explore
 
 ### Video script: "Two Weeks" (about 3 minutes)
 
-**Scene 1. Nadia's office.**
+**Cast:**
 
-NARRATOR: Nadia's division has a new process to launch. The date came from the top.
+- **Narrator:** C3 (Host voice)
+- **Supervisor:** C6 (Co-host voice)
+- **Case manager:** C5 (Host voice)
+- **Program manager:** C2 (Host voice)
+- **County partner:** C1 (Co-host voice)
 
-NADIA: Two weeks. Can we do it?
+**Scene 1. The program manager's office.**
 
-PRIYA: We can launch in two weeks. We can't translate everything and test it with families in two weeks.
+NARRATOR: The program manager's division has a new process to launch. The date came from the top.
 
-NADIA: Then let's launch and catch up.
+PROGRAM MANAGER: Two weeks. Can we do it?
 
-**Scene 2. One month later, a call with Rosa.**
+SUPERVISOR: We can launch in two weeks. We can't translate everything and test it with families in two weeks.
 
-ROSA: Three families came to us this week. They didn't know their renewal had changed. The notice was only in English.
+PROGRAM MANAGER: Then let's launch and catch up.
 
-NADIA: (pause) We meant to follow up on the translations.
+**Scene 2. One month later, a call with the county partner.**
 
-ROSA: I know. But they lost a month.
+COUNTY PARTNER: Three families came to us this week. They didn't know their renewal had changed. The notice was only in English.
+
+PROGRAM MANAGER: (pause) We meant to follow up on the translations.
+
+COUNTY PARTNER: I know. But they lost a month.
 
 **Scene 3. Team huddle.**
 
-NADIA: I want to talk about what happened. We hit the date. We missed people.
+PROGRAM MANAGER: I want to talk about what happened. We hit the date. We missed people.
 
-SAM: Was the two weeks fixed?
+CASE MANAGER: Was the two weeks fixed?
 
-NADIA: I didn't ask. I should have.
+PROGRAM MANAGER: I didn't ask. I should have.
 
-PRIYA: Next time, can we run the three questions first? Who's affected, who haven't we heard from, and what would one more day change?
+SUPERVISOR: Next time, can we run the three questions first? Who's affected, who haven't we heard from, and what would one more day change?
 
-NADIA: Yes. And if the date is real, we tell partners what's late before we launch.
+PROGRAM MANAGER: Yes. And if the date is real, we tell partners what's late before we launch.
 
 **Scene 4. Narrator close.**
 

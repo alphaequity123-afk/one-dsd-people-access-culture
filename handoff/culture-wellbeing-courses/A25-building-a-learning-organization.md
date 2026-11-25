@@ -9,7 +9,7 @@
 ### Slide outline
 
 1. **Title:** One DSD People, Access and Culture / Building a Learning Organization / Leading so the whole division can learn / Advanced self-directed learning
-2. **Opening case:** A policy change Nadia's director approved has caused confusion for months. Frontline staff knew in week one. The news reached the director in month four, in a complaint from a legislator's office.
+2. **Opening case:** A policy change the program manager's director approved has caused confusion for months. Frontline staff knew in week one. The news reached the director in month four, in a complaint from a legislator's office.
 3. **What a learning organization is:** A learning organization notices what isn't working and changes, without waiting for a crisis. It depends less on smart individuals and more on routines that move what people know to where decisions are made.
 4. **Culture is built by systems:** Leaders teach culture through what they pay attention to, how they react to bad news and who they promote. Those signals outweigh any values statement.
 5. **Power and information:** When decisions sit with a few people, so does information. Staff stop sharing what leaders can't act on, and leaders decide with half the picture.
@@ -47,10 +47,10 @@ Each practice slide ends with: "In Slide Show view, select a response to explore
 - **B.** Gently redirects: "Let's stay with what the process made easy or hard." *Feedback: This keeps the ground rules and keeps people willing to speak.*
 - **C.** Ends the review. *Feedback: It avoids conflict and loses the learning.*
 
-**Practice 3.** Nadia has a draft policy ready to send. Rosa's county partners haven't seen it. What does Nadia do?
+**Practice 3.** The program manager has a draft policy ready to send. County partners haven't seen it. What does the program manager do?
 
 - **A.** Sends it and invites feedback afterward. *Feedback: Feedback after a decision is final rarely changes it, and partners know that.*
-- **B.** Shares the draft with Rosa's group for one week, with two questions. *Feedback: A short, focused review catches problems early and builds trust.*
+- **B.** Shares the draft with the county partner's group for one week, with two questions. *Feedback: A short, focused review catches problems early and builds trust.*
 - **C.** Holds it until every partner agrees. *Feedback: Consensus can stall urgent work. Sharing before deciding is not the same as needing agreement.*
 
 ### Narration
@@ -62,39 +62,48 @@ Each practice slide ends with: "In Slide Show view, select a response to explore
 
 ### Video script: "Month Four" (about 3 minutes)
 
+**Cast:**
+
+- **Narrator:** C3 (Host voice)
+- **Supervisor:** C6 (Co-host voice)
+- **Case manager:** C5 (Host voice)
+- **Program manager:** C2 (Host voice)
+- **County partner:** C1 (Co-host voice)
+- **Director:** voice only (Co-host voice)
+
 **Scene 1. Front desk, week one.**
 
 NARRATOR: A new intake rule starts on Monday. By Wednesday, the front line knows something is wrong.
 
-SAM: (to Priya) Families are coming back twice because the checklist asks for a form they don't have yet.
+CASE MANAGER: (to the supervisor) Families are coming back twice because the checklist asks for a form they don't have yet.
 
-PRIYA: I'll mention it up the chain.
+SUPERVISOR: I'll mention it up the chain.
 
-**Scene 2. Priya and Nadia, hallway, week two.**
+**Scene 2. The supervisor and the program manager, hallway, week two.**
 
-PRIYA: The checklist is causing return visits.
+SUPERVISOR: The checklist is causing return visits.
 
-NADIA: Leadership signed off on it. Let's give it a few weeks.
+PROGRAM MANAGER: Leadership signed off on it. Let's give it a few weeks.
 
 **Scene 3. Director's office, month four.**
 
 NARRATOR: Month four. The news arrives another way.
 
-NADIA: (reading) A legislator's office is asking why families are waiting twice as long.
+PROGRAM MANAGER: (reading) A legislator's office is asking why families are waiting twice as long.
 
 DIRECTOR (voice only): Why am I hearing about this now?
 
-NADIA: Honestly? Because we made it hard to hear sooner.
+PROGRAM MANAGER: Honestly? Because we made it hard to hear sooner.
 
 **Scene 4. Blameless review.**
 
-NADIA: Ground rules: we're here to understand what happened, not who to blame. Sam, what did you see first?
+PROGRAM MANAGER: Ground rules: we're here to understand what happened, not who to blame. (to the case manager) What did you see first?
 
-SAM: The form problem, in week one.
+CASE MANAGER: The form problem, in week one.
 
-ROSA: Our county staff saw it too. We didn't know where to send it.
+COUNTY PARTNER: Our county staff saw it too. We didn't know where to send it.
 
-NADIA: So two changes. A 60-day check on every new process. And a direct line for partners, with a named owner. Me.
+PROGRAM MANAGER: So two changes. A 60-day check on every new process. And a direct line for partners, with a named owner. Me.
 
 NARRATOR: The problem was found in week one. The system took four months to hear it.
 

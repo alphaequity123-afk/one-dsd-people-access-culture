@@ -9,7 +9,7 @@
 ### Slide outline
 
 1. **Title:** One DSD People, Access and Culture / Workload, Burnout and Team Practices That Help / Fixing the work, not just the worker / Intermediate self-directed learning
-2. **Opening case:** Priya's team lost two positions last year and the work stayed the same. Two people are on leave. The ones left are covering, and the most reliable person, Sam, is covering most.
+2. **Opening case:** The supervisor's team lost two positions last year and the work stayed the same. Two people are on leave. The ones left are covering, and the most reliable person, the case manager, is covering most.
 3. **What burnout is:** Burnout is long-term exhaustion, growing distance from the work and a sense that effort doesn't make a difference. It comes from chronic work stress that hasn't been managed.
 4. **Burnout is a work condition:** Research points to drivers such as workload, lack of control, too little recognition, unfairness and values that clash with the job. Most of them sit with how work is organized.
 5. **Why wellness tips aren't enough:** Breathing exercises help people cope. They don't change a caseload. When a team only gets tips, people hear that the problem is theirs.
@@ -21,7 +21,7 @@
 11. **What you can and can't change:** You may not control staffing. You can control what gets dropped, delayed or shared, and you can make the case upward with numbers.
 12. **Practice 2:** see below.
 13. **Team practices that protect recovery:** A rotation for the hardest cases. A no-meeting block each week. Coverage plans so time off is real time off.
-14. **Recognition that lands:** Specific thanks, given soon, for the work and its effect on someone. "Your call got the Lee family housed before winter" lands better than "great job."
+14. **Recognition that lands:** Specific thanks, given soon, for the work and its effect on someone. "Your call got a family housed before winter" lands better than "great job."
 15. **Practice 3:** see below.
 16. **Making the case upward:** Bring the trend, the risk and a request. "Caseloads are up 30 percent since spring. We're at risk of losing staff. I need one temporary position or permission to pause two programs."
 17. **What this is not:** This isn't about lowering expectations or promising things you can't deliver. It is about being honest about capacity and acting on it.
@@ -35,23 +35,23 @@
 
 Each practice slide ends with: "In Slide Show view, select a response to explore its effects."
 
-**Practice 1.** A difficult new case comes in. Sam always handles these well. What does Priya do?
+**Practice 1.** A difficult new case comes in. The case manager always handles these well. What does the supervisor do?
 
-- **A.** Gives it to Sam. *Feedback: The case gets handled, and Sam's load grows again. The pattern continues.*
-- **B.** Checks the tracker and offers it to the person with the most room, with Sam available to advise. *Feedback: This spreads the load and still uses Sam's skill without making it Sam's case.*
-- **C.** Takes it herself. *Feedback: Generous, and it pulls Priya away from the supervising the team needs.*
+- **A.** Gives it to the case manager. *Feedback: The case gets handled, and the case manager's load grows again. The pattern continues.*
+- **B.** Checks the tracker and offers it to the person with the most room, with the case manager available to advise. *Feedback: This spreads the load and still uses the case manager's skill without making it the case manager's case.*
+- **C.** Takes it on themselves. *Feedback: Generous, and it pulls the supervisor away from the supervising the team needs.*
 
-**Practice 2.** In a one-on-one, Sam says, "I'm fine, it's just a busy season." Priya has seen the late emails. What does she say?
+**Practice 2.** In a one-on-one, the case manager says, "I'm fine, it's just a busy season." The supervisor has seen the late emails. What do they say?
 
-- **A.** "Okay, let me know if that changes." *Feedback: It respects Sam's answer and leaves the real issue untouched.*
-- **B.** "I've noticed you're working late a lot. What's one thing we could take off your plate this month?" *Feedback: It names what Priya has seen, without judgment, and turns the talk toward a change.*
-- **C.** "You need to take better care of yourself." *Feedback: Kind in intent, and it puts the problem back on Sam.*
+- **A.** "Okay, let me know if that changes." *Feedback: It respects the case manager's answer and leaves the real issue untouched.*
+- **B.** "I've noticed you're working late a lot. What's one thing we could take off your plate this month?" *Feedback: It names what the supervisor has seen, without judgment, and turns the talk toward a change.*
+- **C.** "You need to take better care of yourself." *Feedback: Kind in intent, and it puts the problem back on the case manager.*
 
-**Practice 3.** Nadia asks Priya how her team is doing. What does Priya say?
+**Practice 3.** The program manager asks the supervisor how their team is doing. What does the supervisor say?
 
 - **A.** "We're managing." *Feedback: It protects the team's image and hides the risk from the person who can help.*
-- **B.** "Caseloads are up 30 percent and two people are out. I need one of two things from you." *Feedback: Clear facts and a specific ask give Nadia something to act on.*
-- **C.** Sends Nadia a long email listing every problem. *Feedback: Honest, and hard to act on without a clear request.*
+- **B.** "Caseloads are up 30 percent and two people are out. I need one of two things from you." *Feedback: Clear facts and a specific ask give the program manager something to act on.*
+- **C.** Sends the program manager a long email listing every problem. *Feedback: Honest, and hard to act on without a clear request.*
 
 ### Narration
 
@@ -62,37 +62,45 @@ Each practice slide ends with: "In Slide Show view, select a response to explore
 
 ### Video script: "Who Covers?" (about 3 minutes)
 
+**Cast:**
+
+- **Narrator:** C3 (Host voice)
+- **Supervisor:** C6 (Co-host voice)
+- **Case manager:** C5 (Host voice)
+- **Program manager:** C2 (Host voice)
+- **New colleague:** C7 (Co-host voice)
+
 **Scene 1. Team huddle.**
 
-NARRATOR: Priya's team is down two people. The work hasn't gone anywhere.
+NARRATOR: The supervisor's team is down two people. The work hasn't gone anywhere.
 
-PRIYA: New case in, family of six, housing emergency. Who has room?
+SUPERVISOR: New case in, family of six, housing emergency. Who has room?
 
-(Silence. Everyone looks at Sam.)
+(Silence. Everyone looks at the case manager.)
 
-SAM: I'll take it.
+CASE MANAGER: I'll take it.
 
-**Scene 2. Priya at her desk, looking at the team tracker.**
+**Scene 2. The supervisor at their desk, looking at the team tracker.**
 
-NARRATOR: Later, Priya looks at the numbers.
+NARRATOR: Later, the supervisor looks at the numbers.
 
-PRIYA: (to herself) Sam has twenty-eight. Jordan has nineteen.
+SUPERVISOR: (reading the tracker) One case manager has twenty-eight. The newest has nineteen.
 
-**Scene 3. Priya and Jordan.**
+**Scene 3. The supervisor and the new colleague.**
 
-PRIYA: I'd like you to take the new housing case. Sam can advise, but it's yours.
+SUPERVISOR: I'd like you to take the new housing case. Your more experienced teammate can advise, but it's yours.
 
-JORDAN: I haven't done one that complex.
+NEW COLLEAGUE: I haven't done one that complex.
 
-PRIYA: That's why Sam's there. And it's how you'll learn.
+SUPERVISOR: That's why your teammate is there. And it's how you'll learn.
 
-**Scene 4. Priya and Nadia.**
+**Scene 4. The supervisor and the program manager.**
 
-PRIYA: Caseloads are up thirty percent. I've rebalanced what I can. I need either a temporary position or permission to pause the follow-up calls program until spring.
+SUPERVISOR: Caseloads are up thirty percent. I've rebalanced what I can. I need either a temporary position or permission to pause the follow-up calls program until spring.
 
-NADIA: Send me the numbers. I'll take it to the director this week.
+PROGRAM MANAGER: Send me the numbers. I'll take it to the director this week.
 
-NARRATOR: Priya couldn't add staff. She could make the load visible, share it and ask.
+NARRATOR: The supervisor couldn't add staff. They could make the load visible, share it and ask.
 
 ### Put this course to work
 

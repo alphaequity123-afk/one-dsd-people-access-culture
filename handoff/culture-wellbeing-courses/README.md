@@ -17,17 +17,33 @@ These six courses fill the two framework domains that have no outcome area of th
 - `catalog-entries.json`: the six courses in the same shape as `lib/content/self-directed-data.json` (number, title, level, curriculum, audience, outcomes, family, summary, body, cover). It also carries a `practice` list with each option's feedback, which the slide decks need for their answer slides.
 - `narration/<course>.json`: narration drafts in the shape of `public/learning/audio-discussions/<course>.json`. They hold text only. The opening is a single `host1` turn for now. The `src` and `durationSeconds` fields are added once the approved voices record it.
 
+## Cast and voices
+
+The video scripts use the program's eight-person recurring cast, the same one as `docs/media-scripts/CAST.md` in the other course script pull requests: portraits C1 to C8 from the narrated trainings in the One DHS PAC code (`lib/trainings/schema.ts`, `data/trainings/BRIEF.md`). Nobody has a name. People are described by role and, where a pronoun is needed, "they". The women (C2, C3, C5, C8) use the Host voice (`host1`) and the men (C1, C4, C6, C7) use the Co-host voice (`host2`), the pairing in `scripts/trainings/prepare-recording.mjs`.
+
+| Role in these scripts | Cast member | Voice |
+| --- | --- | --- |
+| Narrator | C3 | host1 (Host) |
+| Supervisor | C6 | host2 (Co-host) |
+| Case manager | C5 | host1 (Host) |
+| Program manager | C2 | host1 (Host) |
+| New colleague | C7 | host2 (Co-host) |
+| County partner | C1 | host2 (Co-host) |
+
+C8 and C4 host the audio discussions. In A26, C4 also plays a parent with no lines. A25 has a voice-only director, and A26 a voice-only security officer and staff member. Each course file lists who appears in its video under the video script heading.
+
+Some scenes pair speakers who share a voice, such as the supervisor and the new colleague in I26. The recording should keep them distinct by delivery, or the program owner may recast one of them.
+
 ## Not live yet
 
 Nothing in this folder is read by the application, so the live catalog, the course viewer and the downloads are unchanged. The courses are kept out of `self-directed-data.json` on purpose. An entry there shows in the catalog, and it would point to slide images and course data that don't exist yet.
 
 To publish the courses, these steps remain:
 
-1. **Characters and voices:** swap the stand-in cast (Priya, Sam, Nadia, Jordan, Rosa and the Narrator) for the owner's characters and voices, which the owner will supply.
-2. **Slide decks:** build each `courses/One DSD - <number> - <title>.pptx` with linked answer slides for each practice response, then render `build/<number>/renders/slide-NNN.png` and the per-course data file the viewer loads.
-3. **Narration:** record the opening and guidance audio in the approved voices, and move each narration file to `public/learning/audio-discussions/`.
-4. **Video:** produce each scenario video with captions, a transcript and a poster, and publish it to the course media store.
-5. **Catalog:** add the entries from `catalog-entries.json` to `lib/content/self-directed-data.json`, without the `practice` field. Then check how `lib/content/self-directed.ts` maps the two new family names to themes, roles and areas.
+1. **Slide decks:** build each `courses/One DSD - <number> - <title>.pptx` with linked answer slides for each practice response, then render `build/<number>/renders/slide-NNN.png` and the per-course data file the viewer loads.
+2. **Narration:** record the opening and guidance audio in the approved voices, and move each narration file to `public/learning/audio-discussions/`.
+3. **Video:** produce each scenario video with the recurring cast as listed in each course with captions, a transcript and a poster, and publish it to the course media store.
+4. **Catalog:** add the entries from `catalog-entries.json` to `lib/content/self-directed-data.json`, without the `practice` field. Then check how `lib/content/self-directed.ts` maps the two new family names to themes, roles and areas.
 
 ## Still to confirm
 

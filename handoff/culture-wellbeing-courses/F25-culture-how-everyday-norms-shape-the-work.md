@@ -9,7 +9,7 @@
 ### Slide outline
 
 1. **Title:** One DSD People, Access and Culture / Culture: How Everyday Norms Shape the Work / The habits nobody wrote down / Foundation self-directed learning
-2. **Opening case:** Jordan, three months in, sends a client letter with one typo. Within an hour it is mentioned in a team chat, a reply-all and a one-on-one. Nobody is unkind. Jordan stops sending anything without three people checking it.
+2. **Opening case:** The new colleague, three months in, sends a client letter with one typo. Within an hour it is mentioned in a team chat, a reply-all and a one-on-one. Nobody is unkind. The new colleague stops sending anything without three people checking it.
 3. **What culture means here:** Culture is what people do when the policy is silent. It shows in who speaks first, what gets praised and what gets quietly corrected. You learn it by watching, long before anyone explains it.
 4. **Norms are not good or bad by themselves:** Double-checking a benefits letter protects a family. Double-checking every email slows the team and teaches people to fear small errors. The same habit can help in one place and harm in another.
 5. **Where norms come from:** Most norms started as a fix for a real problem. Over time the problem fades and the habit stays. Asking where a norm came from is often the fastest way to see whether it still fits.
@@ -35,22 +35,22 @@
 
 Each practice slide ends with: "In Slide Show view, select a response to explore its effects."
 
-**Practice 1.** Sam notices Jordan has started asking three people to review every routine email. What does Sam do?
+**Practice 1.** The case manager notices the new colleague has started asking three people to review every routine email. What does the case manager do?
 
-- **A.** Says nothing, since extra checking can't hurt. *Feedback: Extra checking has a cost. Jordan's work slows, and the habit of fear goes unnamed.*
-- **B.** Tells Jordan, "You don't need to run everything by us. Routine emails are fine to send." *Feedback: Helpful, and clear. It may not reach the reason Jordan started checking.*
-- **C.** Asks Jordan what prompted the extra checks, then shares which messages truly need a second look. *Feedback: This names the norm, finds where it came from and gives Jordan a clear line between a standard and a fear.*
+- **A.** Says nothing, since extra checking can't hurt. *Feedback: Extra checking has a cost. The new colleague's work slows, and the habit of fear goes unnamed.*
+- **B.** Tells the new colleague, "You don't need to run everything by us. Routine emails are fine to send." *Feedback: Helpful, and clear. It may not reach the reason the new colleague started checking.*
+- **C.** Asks the new colleague what prompted the extra checks, then shares which messages truly need a second look. *Feedback: This names the norm, finds where it came from and gives the new colleague a clear line between a standard and a fear.*
 
-**Practice 2.** A client's appointment notice went out with the wrong office address. In the team meeting, what does Priya ask first?
+**Practice 2.** A client's appointment notice went out with the wrong office address. In the team meeting, what does the supervisor ask first?
 
 - **A.** "Who sent this?" *Feedback: It finds the person, but not the step that made the error easy.*
 - **B.** "What in our process made this easy to miss?" *Feedback: This treats the error as information and points the team at a fix that protects the next client.*
 - **C.** "Let's just be more careful." *Feedback: It sounds reasonable, but it changes nothing and adds pressure.*
 
-**Practice 3.** Rosa, a county partner, tells Nadia that families say the team's letters are hard to understand. Nadia's first response?
+**Practice 3.** The county partner tells the program manager that families say the team's letters are hard to understand. The program manager's first response?
 
-- **A.** Explains that the letters follow the required template. *Feedback: True, and it closes the conversation before Nadia learns what families find hard.*
-- **B.** Thanks Rosa and asks which parts families struggle with. *Feedback: This keeps the concern open and gets the detail needed to act.*
+- **A.** Explains that the letters follow the required template. *Feedback: True, and it closes the conversation before the program manager learns what families find hard.*
+- **B.** Thanks the county partner and asks which parts families struggle with. *Feedback: This keeps the concern open and gets the detail needed to act.*
 - **C.** Promises to rewrite every letter. *Feedback: Well meant, but it commits before understanding the problem.*
 
 ### Narration
@@ -62,41 +62,48 @@ Each practice slide ends with: "In Slide Show view, select a response to explore
 
 ### Video script: "The Typo" (about 3 minutes)
 
+**Cast:**
+
+- **Narrator:** C3 (Host voice)
+- **Supervisor:** C6 (Co-host voice)
+- **Case manager:** C5 (Host voice)
+- **New colleague:** C7 (Co-host voice)
+
 **Scene 1. Team room, morning.**
 
-NARRATOR: This is Priya's unit. They're good at their jobs. Watch what happens after one small mistake.
+NARRATOR: This is the supervisor's unit. They're good at their jobs. Watch what happens after one small mistake.
 
-SAM: (reading a screen) Jordan, the letter to the Alvarez family says "recieve."
+CASE MANAGER: (reading a screen, to the new colleague) The letter to the family says "recieve."
 
-JORDAN: Oh no. I'll fix it.
+NEW COLLEAGUE: Oh no. I'll fix it.
 
-SAM: It's fine, just flagging it.
+CASE MANAGER: It's fine, just flagging it.
 
-**Scene 2. Jordan's desk, later that day.**
+**Scene 2. The new colleague's desk, later that day.**
 
-JORDAN: (to Sam) Could you look at this email before I send it? And this one?
+NEW COLLEAGUE: (to the case manager) Could you look at this email before I send it? And this one?
 
-SAM: That's a meeting reminder.
+CASE MANAGER: That's a meeting reminder.
 
-JORDAN: I just want to be sure.
+NEW COLLEAGUE: I just want to be sure.
 
-**Scene 3. Priya's office, one-on-one.**
+**Scene 3. The supervisor's office, one-on-one.**
 
-PRIYA: Sam mentioned you've been asking for a lot of reviews. What's going on?
+SUPERVISOR: I hear you've been asking for a lot of reviews. What's going on?
 
-JORDAN: After the typo, it felt like everyone saw it. I don't want to be the person who makes mistakes.
+NEW COLLEAGUE: After the typo, it felt like everyone saw it. I don't want to be the person who makes mistakes.
 
-PRIYA: Everyone here makes mistakes. I sent the wrong form to a whole caseload my first year. What matters is that we catch them and learn from them.
+SUPERVISOR: Everyone here makes mistakes. I sent the wrong form to a whole caseload my first year. What matters is that we catch them and learn from them.
 
-JORDAN: So what should I have someone check?
+NEW COLLEAGUE: So what should I have someone check?
 
-PRIYA: Benefit amounts, dates and anything with a deadline. The rest, send it.
+SUPERVISOR: Benefit amounts, dates and anything with a deadline. The rest, send it.
 
 **Scene 4. Team meeting.**
 
-PRIYA: Quick one. I got the deadline wrong in last week's update. It's the 15th, not the 12th. Thanks to Sam for catching it.
+SUPERVISOR: Quick one. I got the deadline wrong in last week's update. It's the 15th, not the 12th. Thanks to the colleague who caught it.
 
-NARRATOR: Norms are learned by watching. What did Jordan just learn?
+NARRATOR: Norms are learned by watching. What did the new colleague just learn?
 
 ### Put this course to work
 
