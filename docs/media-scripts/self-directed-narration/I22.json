@@ -1,0 +1,73 @@
+{
+ "id": "I22",
+ "title": "Reading Disparities With Numbers and Lived Experience",
+ "status": "script-awaiting-recording",
+ "voices": {
+  "host1": "C8, Host voice (docs/media-scripts/CAST.md)",
+  "host2": "C4, Co-host voice (docs/media-scripts/CAST.md)"
+ },
+ "afterSlide": 1,
+ "before": "A conversation about reading counts, denominators, and lived experience together before drawing any conclusion about a disparity.",
+ "turns": [
+  {
+   "host": "host1",
+   "text": "This course is Reading Disparities With Numbers and Lived Experience. It’s for anyone who reads or reports findings, and that’s more of us than we might think. The course asks you to slow down before drawing a conclusion about a gap. Check what was counted, which groups are compared, and what the relevant denominator is, then read the numbers alongside people’s accounts."
+  },
+  {
+   "host": "host2",
+   "text": "The opening example is deceptively simple. A practice summary says Setting A had 30 acknowledgments and Setting B had 18. The question is which setting had more request opportunities, and you can’t answer it from those counts alone. An acknowledgment also isn’t the same event as service access or benefit, which is easy to lose sight of."
+  },
+  {
+   "host": "host1",
+   "text": "So the course builds the vocabulary. A count records events. A proportion divides those events by the relevant included total. A percentage expresses that proportion out of 100. Then it supplies the missing totals, 40 requests in Setting A and 30 in Setting B. You’ll work through what those proportions show and what they leave unexplained."
+  },
+  {
+   "host": "host2",
+   "text": "It also shows how an overall figure can hide a difference. Combine the two settings and you get one proportion that answers a different question than the comparison between them. The course recommends showing both the numerator and the denominator, because a percentage alone can hide the size and stability of the evidence underneath it."
+  },
+  {
+   "host": "host1",
+   "text": "Missing information gets careful attention too. In the practice data there are no records from a later window, so you don’t display a zero or claim the gap disappeared. And there’s a deeper question about who reaches the recorded population at all. If a log starts when a request is entered, people who couldn’t reach that step aren’t in the denominator."
+  },
+  {
+   "host": "host2",
+   "text": "The survey example makes that concrete for the workplace. Two groups of staff respond at very different rates, but the people who responded report similar access to learning. You’ll practice deciding what that does and doesn’t support. Nonrespondents’ views are unknown, and it matters not to fill that gap in either direction."
+  },
+  {
+   "host": "host1",
+   "text": "Then lived experience comes in. One participant says an earlier call happened before the logged request, and the acknowledgment didn’t explain the next step. That account can reveal a question the count leaves out. It doesn’t establish every request’s timeline or prove the cause of the difference. Both sources answer something, and neither answers everything."
+  },
+  {
+   "host": "host2",
+   "text": "The course is also clear about consent and scope. Invite relevant experience without asking for private history, and explain how what people share will be used. One account doesn’t represent a whole category. Culture briefs can help prepare respectful questions, but they shouldn’t predict someone’s story or its explanation before you’ve heard it."
+  },
+  {
+   "host": "host1",
+   "text": "A later practice situation gives you two accounts: one participant found the acknowledgment unclear, and another found it useful. You’ll decide how to interpret them. The broader idea is that a gap can have many possible explanations, including access, task differences, recording practices, timing, and eligibility. A numerical difference is an observation, and a cause needs more evidence."
+  },
+  {
+   "host": "host2",
+   "text": "Near the end, you’ll privately rewrite a claim that outruns the numbers: Setting A’s 30 responses prove its process is fairer than Setting B’s 18. You’ll include the event, the denominators, the proportions, the shared window, and the unknown explanation, then name one useful next question without inventing an outcome."
+  },
+  {
+   "host": "host1",
+   "text": "As you go, think of a number you’ve seen in a report, dashboard, or meeting at work. Do you know its denominator, its time window, and who might be missing from it? Was there an account that added something the number couldn’t? Bring that example with you. A faithful comparison opens a better inquiry instead of closing one."
+  }
+ ],
+ "guidance": [
+  {
+   "id": "I22-explainer",
+   "kind": "explainer",
+   "afterSlide": 3,
+   "title": "Same event, same window",
+   "text": "Before comparing two figures, ask three questions. Is the event defined the same way in both? Does the denominator include the same kind of people or requests? Do both cover the same time window? If any answer is no, the arithmetic can be correct and the comparison still misleading. Writing the definitions next to the numbers makes that visible to every reader."
+  },
+  {
+   "id": "I22-check-in",
+   "kind": "check-in",
+   "afterSlide": 24,
+   "title": "Who is in the denominator?",
+   "text": "Think about a workplace record you know, such as survey responses, training completions, applications, or reviews. Who is counted, and who might never reach the step where counting begins? If participation was optional, whose views are missing? Consider how you would describe one of those figures to a colleague so that its limits are as visible as the number itself."
+  }
+ ]
+}

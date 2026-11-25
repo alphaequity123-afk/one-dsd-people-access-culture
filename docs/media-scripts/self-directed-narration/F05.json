@@ -1,0 +1,73 @@
+{
+  "id": "F05",
+  "title": "Unconscious Bias",
+  "status": "script-awaiting-recording",
+  "voices": {
+    "host1": "C8, Host voice (docs/media-scripts/CAST.md)",
+    "host2": "C4, Co-host voice (docs/media-scripts/CAST.md)"
+  },
+  "afterSlide": 1,
+  "before": "How automatic associations and quick impressions can shape DSD decisions, and how evidence and clear criteria help interrupt them.",
+  "turns": [
+    {
+      "host": "host1",
+      "text": "Unconscious Bias looks at how assumptions can influence DSD services, workplace opportunities, and the everyday routines that connect them, often without our deliberate awareness. The course is not about proving that anyone is a biased person. It is about noticing where an impression enters a decision, testing it against evidence, and seeing what happens when the same shortcut repeats."
+    },
+    {
+      "host": "host2",
+      "text": "It opens with two service proposals, one from a familiar colleague and the other from a newer employee who brings community feedback the team has not heard. The course asks which you would trust first, and then asks you to name the evidence that could change your view. If familiarity settles the choice, a useful concern may never reach the decision."
+    },
+    {
+      "host": "host1",
+      "text": "And that leads into what a quick impression cannot tell us. Appearance, accent, disability, and communication style do not establish competence, motivation, or priorities. Yet an impression can affect how much explanation someone receives or whose work gets considered. So the course keeps asking you to separate what you observe from what you infer, and to ask what evidence the decision actually needs."
+    },
+    {
+      "host": "host2",
+      "text": "The definitions in the course are careful. Unconscious bias involves associations or assumptions that can shape interpretation without deliberate awareness, and implicit bias often describes related ideas. The course also distinguishes an association, a decision, and a disparity as different kinds of evidence. One does not automatically prove the other, which helps keep the conversation precise rather than accusatory."
+    },
+    {
+      "host": "host1",
+      "text": "It is equally careful about research. Findings depend on the setting, the people studied, and what was measured. Awareness of bias, the quality of a decision, and an outcome in services or employment are separate questions. Research can point to a mechanism worth examining, but you still check the actual decision and local evidence before claiming a pattern."
+    },
+    {
+      "host": "host2",
+      "text": "Then you meet four common patterns, starting with affinity bias, which favors people who feel familiar and can keep mentoring and development inside the same circle. Confirmation bias favors information that supports a belief we already hold. The halo effect lets one strong impression, such as a polished proposal, color judgments about unrelated qualities. Perception bias lets assumptions about a group shape how behavior is understood."
+    },
+    {
+      "host": "host1",
+      "text": "Each of these patterns shows up in ordinary DSD tasks, not just in theory. A label like “uncooperative” can make a missed call seem decisive, and if the label follows the person, later decisions may repeat the barrier. That shows up in the first practice case, where two unanswered calls lead to a record saying the person “does not care.” You will decide how to respond without turning that assumption into a service barrier."
+    },
+    {
+      "host": "host2",
+      "text": "The other practice cases look at a polished policy proposal that hears only from the team’s usual partners, and a supervisor who offers legislative-analysis assignments to familiar employees and later cites that experience in advancement decisions. The course traces how early access can shape experience, recognition, advancement, and retention, while asking you not to claim a cause before the evidence supports it."
+    },
+    {
+      "host": "host1",
+      "text": "There are two short rewriting exercises too. One asks you to turn “the person does not care” into a note that records only what is known. The other asks what the role actually needs when a supervisor calls the employee who talks most in meetings “the most engaged.” When visibility becomes the standard, careful written analysis can quietly lose credit."
+    },
+    {
+      "host": "host2",
+      "text": "I appreciate that none of this depends on proving someone intended harm. The practices are concrete: separate observations from interpretations, define criteria before comparing people or proposals, hear perspectives that test the preferred answer, and then check whether the change reduced the barrier. The practice is private, and you can reconsider an answer after reading the feedback."
+    },
+    {
+      "host": "host1",
+      "text": "As you start, think of one routine decision in your own work, perhaps a referral note, a follow-up call, or how development opportunities get shared. Where could a first impression enter it, and what evidence would you want before acting on it? Keep that example in mind, because the course closes by asking you to trace exactly that."
+    }
+  ],
+  "guidance": [
+    {
+      "id": "F05-explainer",
+      "kind": "explainer",
+      "afterSlide": 7,
+      "title": "Association, decision, disparity",
+      "text": "It helps to keep three things apart. An association is a pattern in how we tend to connect ideas. A decision is what someone actually did, such as ending follow-up or choosing whom to invite. A disparity is a difference in results across people. Each needs its own evidence. Looking at how an impression may have shaped a specific decision is usually the most useful place to start."
+    },
+    {
+      "id": "F05-check-in",
+      "kind": "check-in",
+      "afterSlide": 21,
+      "title": "A decision you can examine",
+      "text": "Choose one decision from the practice, or a suitable example within your own responsibility. What impression could have entered it, and at what point? What criteria would you set out before comparing people or proposals, and whose perspective would test your preferred answer? Finally, what would you look for afterward to know whether the change reduced a barrier, and what would remain uncertain?"
+    }
+  ]
+}

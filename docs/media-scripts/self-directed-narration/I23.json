@@ -1,0 +1,73 @@
+{
+ "id": "I23",
+ "title": "Finding Barriers Across Service Procedures and Handoffs",
+ "status": "script-awaiting-recording",
+ "voices": {
+  "host1": "C8, Host voice (docs/media-scripts/CAST.md)",
+  "host2": "C4, Co-host voice (docs/media-scripts/CAST.md)"
+ },
+ "afterSlide": 1,
+ "before": "A conversation about tracing every step and handoff a person must complete, and separating real requirements from local habits.",
+ "turns": [
+  {
+   "host": "host1",
+   "text": "This course is Finding Barriers Across Service Procedures and Handoffs. It’s for policy, service, administrative, and supervisory staff, really anyone whose work is one step in a longer process. The idea is that barriers often hide in the handoffs. So instead of looking at one form in isolation, you trace every step a person has to complete to get through a service."
+  },
+  {
+   "host": "host2",
+   "text": "The opening case shows why. A practice log starts when a request is entered, but the person describes an earlier call and a document they were told to obtain first. The log may be accurate and still not describe the person’s first effort to reach the service. Those earlier steps are invisible to anyone reading only the record."
+  },
+  {
+   "host": "host1",
+   "text": "The course frames a procedure as something that distributes work. It tells people what they must find, provide, understand, or wait for, and handoffs move the task between roles or settings. It’s careful about tools, too. A process map is a learning aid. It doesn’t certify that a real procedure is lawful, necessary, or complete."
+  },
+  {
+   "host": "host2",
+   "text": "The first practice situation is a small detail with real consequences. A notice and the receiving role use different names for the same supporting item, so the person is sent back to obtain it again. You’ll choose a useful response. Repeated confusion like that adds contacts and effort, and it doesn’t fall evenly on everyone."
+  },
+  {
+   "host": "host1",
+   "text": "Then the course separates sources. Law, policy, guidance, and a local instruction are different things, and a routine’s age doesn’t establish that it’s required. The source gets verified through the appropriate role. A wording change can’t waive a condition, and any uncertainty about authority should stay visible in the recommendation rather than being smoothed over."
+  },
+  {
+   "host": "host2",
+   "text": "Handoffs need content. The next role needs the question, the material, the status, and the limits of the request, and a phrase like take it from here can hide what’s expected. The course has a helpful table on this. A message sent, a task clarified, a task accepted, and work completed are different events, so treating delivery as completion can hide an unresolved responsibility."
+  },
+  {
+   "host": "host1",
+   "text": "The second situation brings this into the workplace. An employee moves to a new team and keeps losing the information needed for an assignment, and the delay gets described as slow adaptation. You’ll decide what should be examined. Repeated transition gaps can affect feedback and opportunity before anyone looks at the arrangement itself."
+  },
+  {
+   "host": "host2",
+   "text": "Records matter too, because a label can travel to readers who never saw the event. Did not submit the item and refused to engage are very different claims. The course asks us to describe what occurred, keep the explanation bounded, and look at the instruction and the route before attaching a motive to anyone’s action."
+  },
+  {
+   "host": "host1",
+   "text": "Community experience helps locate burdens the office map misses, like repeat contacts or an unclear transition. In the third practice situation, staff start using one document name consistently after community input. The person can now identify the item but still can’t find the next contact. You’ll decide what staff can accurately report about that."
+  },
+  {
+   "host": "host2",
+   "text": "Near the end, you’ll privately rewrite a motive label as a route question: the person failed to engage after we sent the notice. You’ll name what was sent, what response is known, and what next-step information is missing. The concern stays real, without assuming that delivery proves either understanding or refusal."
+  },
+  {
+   "host": "host1",
+   "text": "As you go, think about a process your work touches, especially the step right before yours and the step right after. What does a person have to carry from one to the other? Bring that situation with you. You may not control the whole route, but you can help make the burden visible to the people who can change it."
+  }
+ ],
+ "guidance": [
+  {
+   "id": "I23-explainer",
+   "kind": "explainer",
+   "afterSlide": 3,
+   "title": "Following the work, not the office",
+   "text": "One way to trace a procedure is to list what the person must do at each step, in their own order, rather than by which office acts. Include what they need to find, who they contact, and what they wait for. Steps that look small inside one office can add up across the route, especially when travel, language, or contact hours enter the picture."
+  },
+  {
+   "id": "I23-check-in",
+   "kind": "check-in",
+   "afterSlide": 23,
+   "title": "Describing a change honestly",
+   "text": "Think about a recent improvement to a process you work with, such as a revised notice, a clearer form, or a new handoff. What can you say it changed, based on what you’ve seen or heard? What remains unknown, such as whether people now understand the next step or whether later results changed for other reasons? How would you describe it to a colleague?"
+  }
+ ]
+}

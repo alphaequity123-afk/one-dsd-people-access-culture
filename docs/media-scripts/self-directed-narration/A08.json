@@ -1,0 +1,73 @@
+{
+  "id": "A08",
+  "title": "Designing and Evaluating Changes that Reduce Bias",
+  "status": "script-awaiting-recording",
+  "voices": {
+    "host1": "C8, Host voice (docs/media-scripts/CAST.md)",
+    "host2": "C4, Co-host voice (docs/media-scripts/CAST.md)"
+  },
+  "afterSlide": 1,
+  "before": "Explore how to locate where bias could enter a decision, and how to evaluate a change by its use, benefit, and burden.",
+  "turns": [
+    {
+      "host": "host1",
+      "text": "Designing and Evaluating Changes that Reduce Bias is for staff examining service or selection practices, and for supervisors and managers comparing changes to judgment, evidence, and opportunity within their actual responsibilities. The course asks you to find the specific decision condition where bias could operate, compare a focused response, and evaluate what that response actually does."
+    },
+    {
+      "host": "host2",
+      "text": "The opening case is a practice triage note that calls one request “cooperative” and another “difficult” without describing what happened. The course asks what action follows those labels and what relevant evidence they contain. I think it’s a good example of how ambiguity can let familiar expectations quietly replace the actual question being decided."
+    },
+    {
+      "host": "host1",
+      "text": "So the course starts with the mechanism, asking you to name the decision, the unclear criterion or unequal opportunity, and the consequence it could produce. Good intentions don’t settle that inquiry, and a concern doesn’t establish motive, population effects, or a legal finding either. Whatever change you propose should address the condition you’ve identified."
+    },
+    {
+      "host": "host2",
+      "text": "That raises the question of learning versus process change. A lesson can deepen understanding, but if the undefined labels stay in place, the decision condition hasn’t changed. The course also distinguishes reported understanding, attitudes, behavior, and results. A different answer right after training doesn’t establish lasting change in how decisions get made."
+    },
+    {
+      "host": "host1",
+      "text": "It also warns against swapping one problem for another, since replacing a label with relevant evidence helps, but a rigid script can be consistent while failing to hear someone’s question. A second review may improve consistency and add delay. Structure should serve the purpose, so you compare necessary safeguards with the practical burden they create."
+    },
+    {
+      "host": "host2",
+      "text": "You’ll practice with three situations: a service team completes a bias lesson but still prioritizes requests using undefined labels. A practice hiring panel scores “overall fit” while its members mean different things by the phrase. And community participants describe a standard explanation that omits fewer details but leaves no usable route for questions."
+    },
+    {
+      "host": "host1",
+      "text": "For evaluating a change, the course offers three questions I find easy to remember. Use asks whether the step happened as intended, benefit asks whether the relevant decision or experience improved, and burden asks what else became harder. A good answer to one doesn’t answer the others, and each measure should fit the mechanism and the permissions you actually have."
+    },
+    {
+      "host": "host2",
+      "text": "Comparisons need care as well, since before-and-after results might reflect the change, but they might also reflect different cases, workload, recording, or another improvement. The course asks you to separate feasibility from a causal effect, and temporary change from sustained use. It also says plainly not to withhold required support or run unauthorized experiments for course practice."
+    },
+    {
+      "host": "host1",
+      "text": "Near the end, you’ll rewrite a claim that says, “The workshop eliminated bias in our decisions.” The supported version connects the learning to ambiguous criteria and says what still needs evidence. Then you’ll consider which observation would support a stronger claim that still stays bounded. A mixed result can support a focused revision rather than a verdict."
+    },
+    {
+      "host": "host2",
+      "text": "The reflection asks you to choose a criterion like readiness, cooperation, or professionalism, and to ask what it means for the actual task. You can keep it private, and the aim is to identify relevant evidence, one alternative explanation, and a response that could address the decision condition itself."
+    },
+    {
+      "host": "host1",
+      "text": "As you begin, think of a judgment your work relies on that’s rarely spelled out, perhaps how a request is prioritized or how someone is described as ready. What evidence supports it, and what might it leave out? Bring that example along, and see what a focused, honestly examined change could look like."
+    }
+  ],
+  "guidance": [
+    {
+      "id": "A08-explainer",
+      "kind": "explainer",
+      "afterSlide": 3,
+      "title": "Start with the decision condition",
+      "text": "It’s tempting to start with a solution, like a training or a new form. Naming the mechanism first keeps the response honest. Which decision is affected, what makes it unclear or uneven, and what could result? Once that’s described, you can ask whether a proposed change actually reaches that condition, or only sits beside it while the decision stays the same."
+    },
+    {
+      "id": "A08-check-in",
+      "kind": "check-in",
+      "afterSlide": 21,
+      "title": "Use, benefit, and burden",
+      "text": "Think of a change your team has made or is considering to a decision process. How would you know whether the step is being used as intended? What would show a real benefit for the people affected, and what might have become harder? Which of those three questions do you currently have the least evidence to answer?"
+    }
+  ]
+}
