@@ -210,7 +210,7 @@ function courseSources(pack: CoursePack) {
 function courseDocument(pack: CoursePack, scope: StaffProgramScope): ResourceDocument {
   const course = pack.course;
   const transcript = course.introTranscript?.trim();
-  const conversation = Boolean((completedPodcasts as Record<string, Podcast>)[course.id]) || /^(ei-|cv-)/.test(course.id);
+  const conversation = Boolean((completedPodcasts as Record<string, Podcast>)[course.id]) || /^(ei-|cv-|cw-)/.test(course.id);
   return {
     kicker: kicker(scope, plain(course.seriesLabel) || "Course"),
     title: plain(course.title),
