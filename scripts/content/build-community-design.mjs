@@ -17,6 +17,10 @@ const communities=rows.filter(r=>r.assetKind==='community_brief'||r.assetKind===
  const titles={black:'African American Minnesota','native-american':'Native American Minnesotans',lao:'Lao Minnesota','european-american':'European American Minnesota'};
  return {id:aliases[r.assetId]||r.assetId,sourceId:r.assetId,title:titles[r.assetId]||r.title,sections};
 });
+// Readings written in this app (not in the donor snapshot) are kept in their own file and
+// appended here, so rebuilding from the snapshot does not drop them.
+const authored=JSON.parse(fs.readFileSync('lib/content/community-design-authored.json','utf8'));
+for(const a of authored){if(communities.some(c=>c.id===a.id))throw new Error('Authored reading duplicates a snapshot community: '+a.id);communities.push(a);}
 fs.writeFileSync('lib/content/community-design-data.json',JSON.stringify(communities,null,2)+'\n');
 fs.writeFileSync('evidence/community-design-accounting.json',JSON.stringify({source,communityCount:communities.length,canonicalCommunityBriefs:40,additionalPopulationGuide:1,communities:communities.map(c=>({id:c.id,sourceId:c.sourceId,chapters:c.sections.length,characters:c.sections.reduce((n,s)=>n+s.body.length,0)})),otherResources:rows.filter(r=>!communities.some(c=>c.sourceId===r.assetId)).map(r=>({id:r.assetId,kind:r.assetKind,title:r.title})),internalParagraphsExcludedFromPreview:omitted},null,2)+'\n');
 console.log(JSON.stringify({communities:communities.length,chapters:communities.reduce((n,c)=>n+c.sections.length,0),internalParagraphs:omitted.length}));
