@@ -1,8 +1,8 @@
 {
  "generatedFrom": "collections-placement.csv",
  "counts": {
-  "rows": 741,
-  "items": 737,
+  "rows": 753,
+  "items": 749,
   "questions": 89
  },
  "items": {
@@ -3639,6 +3639,66 @@
    "title": "Moving From Awareness to Action",
    "kind": "course",
    "minutes": 48
+  },
+  "gc-workforce-data-life-cycle": {
+   "title": "Reading Workforce Data Across the Employee Life Cycle",
+   "kind": "course",
+   "minutes": 48
+  },
+  "gc-role-design-qualifications": {
+   "title": "Role Design and Minimum Qualifications That Measure the Job",
+   "kind": "course",
+   "minutes": 48
+  },
+  "gc-classification-pay-equity": {
+   "title": "Classification, Pay and Unrecognized Work",
+   "kind": "course",
+   "minutes": 48
+  },
+  "gc-workforce-change-equity": {
+   "title": "Reorganizations, Reassignments and Layoffs With an Equity Lens",
+   "kind": "course",
+   "minutes": 48
+  },
+  "gc-disability-employment-goals": {
+   "title": "Employing and Keeping People With Disabilities in State Service",
+   "kind": "course",
+   "minutes": 48
+  },
+  "gc-affirmative-action-workforce-goals": {
+   "title": "Affirmative Action Plans and Workforce Goals in Minnesota State Government",
+   "kind": "course",
+   "minutes": 48
+  },
+  "gc-civil-rights-federally-funded-programs": {
+   "title": "Civil Rights in Federally Funded Programs: Title VI, Section 504 and Section 1557",
+   "kind": "course",
+   "minutes": 48
+  },
+  "gc-mhra-public-services": {
+   "title": "The Minnesota Human Rights Act in Public Services and Program Design",
+   "kind": "course",
+   "minutes": 48
+  },
+  "gc-integration-mandate-practice": {
+   "title": "The Integration Mandate in Practice: Olmstead and the HCBS Settings Rule",
+   "kind": "course",
+   "minutes": 48
+  },
+  "gc-guardianship-supported-decisions": {
+   "title": "Guardianship, Supported Decision-Making and Less Restrictive Alternatives",
+   "kind": "course",
+   "minutes": 48
+  },
+  "gc-accessibility-program-governance": {
+   "title": "Running an Accessibility Program: Standards, Exceptions and Accountability",
+   "kind": "course",
+   "minutes": 48
+  },
+  "gc-accessibility-barrier-remediation": {
+   "title": "When an Accessibility Barrier Is Reported: Triage, Remediation and Equally Effective Access",
+   "kind": "course",
+   "minutes": 48
   }
  },
  "staff": [
@@ -4008,7 +4068,8 @@
       "dc-l11-the-olmstead-decision-and-minnesota-s-olmstead-p",
       "dc-l12-leading-toward-the-most-integrated-setting",
       "dc-s24-integrated-settings-and-community-living",
-      "dc-t82-the-olmstead-plan-as-cross-agency-work"
+      "dc-t82-the-olmstead-plan-as-cross-agency-work",
+      "gc-integration-mandate-practice"
      ]
     },
     {
@@ -4031,6 +4092,7 @@
       "dc-s27-dignity-of-risk",
       "dc-s28-supported-decision-making-basics",
       "dsd-03-self-direction-independent-living",
+      "gc-guardianship-supported-decisions",
       "self-directed-A10",
       "self-directed-F12"
      ]
@@ -4080,7 +4142,7 @@
      ]
     }
    ],
-   "itemCount": 51
+   "itemCount": 53
   },
   {
    "id": "culture-language",
@@ -4642,9 +4704,16 @@
     {
      "subject": "How do my people decisions connect?",
      "ids": [
+      "gc-workforce-data-life-cycle",
       "ipe-31-inclusive-workforce-culture",
       "self-directed-A17",
       "self-directed-F17"
+     ]
+    },
+    {
+     "subject": "Who is doing the work nobody counts?",
+     "ids": [
+      "gc-classification-pay-equity"
      ]
     },
     {
@@ -4684,7 +4753,7 @@
      ]
     }
    ],
-   "itemCount": 125
+   "itemCount": 127
   },
   {
    "id": "policy-data-decisions",
@@ -4727,6 +4796,7 @@
      "ids": [
       "dc-i91-an-intercultural-lens-for-policy",
       "dc-s92-equity-in-policy-writing-and-guidance",
+      "gc-civil-rights-federally-funded-programs",
       "ipe-12-policy-writing-equity-lens",
       "ipe-14-documentation-and-narrative",
       "ipe-30-policy-procedure-governance",
@@ -4742,6 +4812,7 @@
       "dc-i92-intercultural-design-of-programs-and-services",
       "dc-i93-culturally-responsive-outreach-and-materials",
       "dc-s96-equity-in-provider-and-lead-agency-communication",
+      "gc-mhra-public-services",
       "ipe-13-program-service-design",
       "self-directed-A02"
      ]
@@ -4818,7 +4889,7 @@
      ]
     }
    ],
-   "itemCount": 69
+   "itemCount": 71
   }
  ],
  "doors": [
@@ -4832,6 +4903,7 @@
      "question": "How do I write the role and post the job?",
      "startId": "job-design-and-the-posting",
      "deeperIds": [
+      "gc-role-design-qualifications",
       "sourcing-and-outreach"
      ]
     },
@@ -4857,7 +4929,9 @@
      "startId": "dc-l51-affirmative-action-in-state-employment",
      "deeperIds": [
       "dc-l52-using-connect-700-to-hire-people-with-disabiliti",
-      "equal-opportunity-in-employment"
+      "equal-opportunity-in-employment",
+      "gc-affirmative-action-workforce-goals",
+      "gc-disability-employment-goals"
      ]
     },
     {
@@ -4876,6 +4950,7 @@
      "question": "How do my people decisions connect?",
      "startId": "employee-life-cycle-as-a-system",
      "deeperIds": [
+      "gc-workforce-data-life-cycle",
       "ipe-31-inclusive-workforce-culture",
       "self-directed-A17",
       "self-directed-F17"
@@ -4885,7 +4960,7 @@
    "relatedIds": [
     "dc-t71-how-dsd-is-organized-and-how-the-work-connects"
    ],
-   "itemCount": 20
+   "itemCount": 24
   },
   {
    "slug": "who-does-what",
@@ -4926,11 +5001,13 @@
      "key": "hidden",
      "question": "Who is doing the work nobody counts?",
      "startId": "dc-t26-recognizing-hidden-and-invisible-work",
-     "deeperIds": []
+     "deeperIds": [
+      "gc-classification-pay-equity"
+     ]
     }
    ],
    "relatedIds": [],
-   "itemCount": 9
+   "itemCount": 10
   },
   {
    "slug": "feedback",
@@ -5122,6 +5199,8 @@
       "dc-l66-accessible-procurement-of-technology-and-service",
       "di-leadership-case-for-inclusion",
       "di-rights-policy-and-organizational-duties",
+      "gc-accessibility-barrier-remediation",
+      "gc-accessibility-program-governance",
       "self-directed-A09"
      ]
     }
@@ -5133,7 +5212,7 @@
     "dc-s83-requesting-a-reasonable-accommodation",
     "gc-deaf-minnesota"
    ],
-   "itemCount": 29
+   "itemCount": 31
   },
   {
    "slug": "concern",
@@ -5436,7 +5515,8 @@
       "dc-l11-the-olmstead-decision-and-minnesota-s-olmstead-p",
       "dc-l12-leading-toward-the-most-integrated-setting",
       "dc-s24-integrated-settings-and-community-living",
-      "dc-t82-the-olmstead-plan-as-cross-agency-work"
+      "dc-t82-the-olmstead-plan-as-cross-agency-work",
+      "gc-integration-mandate-practice"
      ]
     },
     {
@@ -5479,6 +5559,7 @@
       "dc-l30-writing-equity-impact-statements-leaders-can-sta",
       "dc-s92-equity-in-policy-writing-and-guidance",
       "dc-t77-coordinating-policy-changes-across-units",
+      "gc-civil-rights-federally-funded-programs",
       "ipe-12-policy-writing-equity-lens",
       "ipe-14-documentation-and-narrative",
       "ipe-30-policy-procedure-governance",
@@ -5497,6 +5578,7 @@
       "dc-i93-culturally-responsive-outreach-and-materials",
       "dc-l29-equity-in-transitions-and-implementation-timelin",
       "dc-s96-equity-in-provider-and-lead-agency-communication",
+      "gc-mhra-public-services",
       "ipe-13-program-service-design",
       "self-directed-A02"
      ]
@@ -5616,7 +5698,7 @@
     "gc-advising-decision-makers",
     "gc-disability-led-leadership"
    ],
-   "itemCount": 113
+   "itemCount": 116
   },
   {
    "slug": "keep-going",
@@ -5696,7 +5778,8 @@
      "question": "Budget cuts, reassignment or separation are coming. What do I do?",
      "startId": "sm-budget-cuts-separation",
      "deeperIds": [
-      "dc-l100-sustaining-equity-work-when-resources-are-tight"
+      "dc-l100-sustaining-equity-work-when-resources-are-tight",
+      "gc-workforce-change-equity"
      ]
     }
    ],
@@ -5705,7 +5788,7 @@
     "gc-leading-with-purpose",
     "gc-accountability-public-service"
    ],
-   "itemCount": 25
+   "itemCount": 26
   },
   {
    "slug": "direction",

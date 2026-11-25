@@ -1,0 +1,252 @@
+{
+  "id": "gc-workforce-data-life-cycle",
+  "subtitle": "Read workforce data from application to separation as a chain of decisions, protect people where numbers are small, account for missing data such as disability self-identification, and turn a pattern into a question for the process rather than a verdict on a person.",
+  "audience": "For DHS and DSD leaders, managers, Human Resources partners, workforce analysts and People, Access and Culture staff who receive, interpret or present workforce reports about hiring, advancement, discipline and separation.",
+  "lessons": [
+    {
+      "title": "The life cycle as a chain of decisions",
+      "objectives": [
+        "Map the employee life cycle as a sequence of decision points, each with its own population and denominator.",
+        "Distinguish workforce composition on a given date from rates of movement through each stage.",
+        "Choose a comparison group that fits the question asked at each stage.",
+        "Locate the earliest stage where a gap opens before proposing a response."
+      ],
+      "teaching": "Most workforce reports that leaders receive are snapshots: how many people work in a division on a given date, and who they are. A snapshot is the end product of many decisions made over years. People heard about a posting or did not, applied or did not, met the minimum qualifications, were interviewed, received offers, accepted them, were given acting assignments, were promoted, were disciplined, and stayed or left. Each of those steps is a decision point with its own population. Reading workforce data across the employee life cycle means following people through that chain, rather than looking only at who remains at the end.\n\nThe discipline that makes this work is the denominator. An interview rate is the share of qualified applicants who were interviewed, not the share of all applicants or of the workforce. A promotion rate is the share of eligible employees promoted in a period, and \"eligible\" has to be defined before anyone looks at the result. A separation rate needs a defined group at the start of the period and a count of who left, broken out by type, because a retirement, a move to another state job, a release during probation and a dismissal are different events with different causes. When a report mixes stages or types, a real gap can disappear into an average, or an apparent gap can appear where none exists. Composition and flow also answer different questions. A division can look representative overall while people from one group enter steadily and leave within two years, which a snapshot hides and a flow view shows.\n\nEach stage also needs its own comparison. Applicants are compared with the people in the recruiting area likely to have the needed skills, interviewees with qualified applicants, and promotions with the eligible pool. Minnesota's statewide affirmative action program, set out in Minnesota Statutes section 43A.19, already points toward this structure: it ties goals to the share of each protected class in the recruiting area who have the necessary skills, and it calls for an analysis of separation patterns to determine their impact on protected group members. That statute is among the state requirements challenged in a lawsuit the United States Department of Justice filed in January 2026, so ask Human Resources how agency plans and reports currently apply, rather than assuming either that nothing has changed or that the requirements have ended.\n\nSome stages are harder to see than others, and they are often where opportunity is decided. Acting assignments, work out of class, informal lead duties and special projects may not be posted or recorded the way hires and promotions are, yet experience in them often shapes who is competitive later. Informal discipline, such as coaching memos and expectation conversations, may be documented unevenly from one unit to the next. When a leader asks why promotion results differ, the most useful first move is to find the earliest stage where the numbers begin to separate and ask what records exist for it. A gap that opens at the acting stage calls for a different response than one that opens at the interview, and effort aimed at the wrong stage can be spent without changing the result.",
+      "keyPoint": "Follow people through each decision point, each with its own denominator and comparison, and find the earliest stage where a gap opens before deciding what to change.",
+      "example": "Practice case: {{PROGRAM_MANAGER}} receives a division report showing that, over three years, employees of color were promoted into lead and supervisory roles at a lower rate than white employees. A director proposes a leadership training series for employees of color. Before the next meeting, {{PROGRAM_MANAGER}} asks Human Resources for the same period's interview and selection results and finds that rates are similar once people reach the interview. The difference appears earlier: employees of color held far fewer acting lead assignments, which supervisors arrange informally and which are recorded only as pay adjustments.",
+      "question": "What should {{PROGRAM_MANAGER}} bring to the director?",
+      "choices": [
+        "Support the training series as proposed, since it responds directly to the promotion gap and clearly shows commitment to the employees affected.",
+        "Show where the gap first opens, note the limits of the acting records, and propose reviewing how acting roles are offered.",
+        "Recommend waiting for another full year of promotion data, since the similar interview results suggest that the selection process is already fair."
+      ],
+      "feedback": [
+        "Training may have value, but it treats the gap as a shortfall in the employees rather than in the step where it opens. The acting process would stay as it is, and next year's report would likely look the same.",
+        "This uses the chain of decisions. It points the conversation at the stage where the difference appears, is honest about thin records, and proposes a review that applies to everyone who could be offered an acting role.",
+        "Similar interview rates rule out one stage, not the whole chain. Waiting leaves an unexamined on-ramp in place, and another year of the same data will not explain how acting roles are assigned."
+      ],
+      "recommended": 1,
+      "reflection": "Privately think about a workforce report you have seen, or use the practice case. Which stages of the life cycle did it show, which did it leave out, and where might the earliest gap have been hiding?",
+      "action": "Choose one outcome your area cares about, such as promotion into lead roles or separations in the first two years. Sketch the chain of stages that leads to it, write the denominator and comparison group for each stage, and note which stages have reliable records. Ask Human Resources what data exist for the stages you cannot see.",
+      "check": {
+        "question": "A report shows that a division's workforce closely matches the skilled population of its recruiting area. What can that report not tell you?",
+        "correct": "Whether people from some groups are entering and then leaving faster than others.",
+        "wrong": [
+          "How many people worked in the division on the date of the report.",
+          "How the division's composition compares with its recruiting area."
+        ],
+        "feedback": "A snapshot of composition says who is present on one date and how that compares with a benchmark. It cannot show movement through the chain. Steady entry followed by early exits can produce a representative snapshot while a real problem continues."
+      }
+    },
+    {
+      "title": "Small numbers, linkage and privacy at later stages",
+      "objectives": [
+        "Explain why rates built on small counts at later life cycle stages are unstable and easy to over-read.",
+        "Recognize how public personnel data can be linked with demographic data to expose private information.",
+        "Apply need-to-know access and aggregation choices before a stage-level result is shared.",
+        "Weigh timely detail against protection when deciding how to report, and state the choice."
+      ],
+      "teaching": "The further a stage sits along the life cycle, the smaller its counts usually become. A division may receive hundreds of applications in a year but make a few dozen hires, a handful of promotions to supervisor and only a few formal disciplinary actions. Rates built on counts that small swing sharply from chance alone. Two promotions instead of one can double a rate, and one resignation can make a small group's separation rate look alarming. Before reading a late-stage rate, look at the counts underneath it and ask how much the rate would move if one person's outcome were different. If the answer is a lot, the number is a prompt to keep watching, not evidence of a trend. Pooling several years or moving up to the division level steadies the number, at the cost of timeliness and local detail. That trade-off should be made on purpose and stated in the report.\n\nSmall counts also create a privacy risk that reporting floors for surveys do not fully address. The supervisor course Reading Patterns and Reviewing Process covers floors and suppression for survey results; administrative workforce data add a further risk, which is linkage. Under Minnesota Statutes section 13.43, some personnel data are public, including an employee's name, job title, the existence and status of complaints or charges, and the final disposition of any disciplinary action with the specific reasons for it. All other personnel data are private unless the law provides otherwise. Self-identified race, ethnicity and disability status do not appear on the statute's list of public data, so treat them as private as a starting point and confirm with your data practices contact. A table showing two dismissals in a unit by race, read beside the public record of who was dismissed, can reveal a person's private demographic information. A table of separations by disability in a small unit, where coworkers know who left, carries the same risk.\n\nAccess is part of the answer. Minnesota rules limit access to private data to people whose work assignments reasonably require it, so detailed stage-level tables should go to the people who will use them for a defined review, not to everyone on a distribution list. For wider audiences, report at a level where no single person's outcome can be inferred, combine stages or years where needed, and describe the finding in words when a number would expose someone. Discipline and separation data deserve the most care, because they concern events that are personal, sometimes contested and often known to coworkers.\n\nNone of this is a reason to stop looking. A leader who suppresses everything small may protect privacy while leaving a pattern in a process unexamined. A more useful approach separates two activities. A small, authorized group, usually working with Human Resources, examines detailed data to understand where a process may be producing different results. A wider group hears what was learned, what will change in the process and when it will be checked, in a form that identifies no one. This course supports that analysis; formal employment, labor and civil-rights decisions, including any concern about an individual action, stay with the person or area responsible, such as Human Resources, labor relations or the Equal Opportunity and Access Division.",
+      "keyPoint": "Late stages have small counts that swing by chance and can be linked with public personnel records. Decide who needs the detail, report at a level that protects people, and keep examining the process.",
+      "example": "Practice case: {{SUPERVISOR}} is preparing a section briefing on the past two years of formal discipline. The section of about forty staff had five formal actions, and the draft table shows them by race and by work unit. One unit had two dismissals, both of employees from the same racial group, and the final dispositions are public records that several staff already know about. A manager asks for the full table to be sent to all unit leads so that everyone can see the problem.",
+      "question": "How should {{SUPERVISOR}} handle the table?",
+      "choices": [
+        "Send the full table to all unit leads as the manager asked, since the dispositions are already public and openness builds trust.",
+        "Remove the table and the topic from the briefing entirely, since five actions are far too few to say anything useful.",
+        "Review the detail with Human Resources, give leads a summary that identifies no one, and name process questions to examine."
+      ],
+      "feedback": [
+        "Being public does not make the combination safe. Pairing public dispositions with private demographic data can expose people, and five actions cannot support a claim about a group.",
+        "The counts are too small for a rate, but not too small to prompt a review of how warnings, documentation and steps are applied. Dropping the topic leaves that review undone.",
+        "This keeps the detail with people whose work requires it, protects the individuals involved, and still gives leads a reason and a way to examine how discipline steps are applied across units."
+      ],
+      "recommended": 2,
+      "reflection": "Privately consider a small number at work that people seemed to read too much into, or use the discipline table in the practice case. What would one person's different outcome have done to the result, and who could have been identified?",
+      "action": "Before you next share a stage-level workforce table, list each cell's count, mark any result that would change sharply if one person's outcome differed, and check whether any cell could be linked with public records or common knowledge. Decide with Human Resources who needs the detail and what summary others will receive.",
+      "check": {
+        "question": "Why can a table of disciplinary outcomes by race in a small unit expose private information even with names removed?",
+        "correct": "Public final dispositions can be matched to the table, revealing private demographic data.",
+        "wrong": [
+          "All discipline data, including final outcomes and reasons, are private under Minnesota law.",
+          "Any table showing fewer than one hundred actions is unlawful to share with leaders."
+        ],
+        "feedback": "Some discipline data, including the final disposition and its reasons, are public personnel data, while self-identified demographic data are generally private. Linking the two is the risk. No rule sets a minimum of one hundred actions."
+      }
+    },
+    {
+      "title": "Missing data and the unknown column",
+      "objectives": [
+        "Explain why missing demographic data, especially disability status, are rarely missing at random.",
+        "Identify how differences in response across stages and changes in collection can create false patterns.",
+        "Use a simple bounds check to judge whether a conclusion survives the unknowns.",
+        "Improve data through trust and process rather than guessing or pressure on individuals."
+      ],
+      "teaching": "Every workforce report contains people whose information is unknown. Some declined to answer, some were never asked, and some answered once years ago when their situation was different. Disability status is the clearest example. It depends on people choosing to self-identify, often at application or hire, and many disabilities begin or are recognized later. People also weigh what disclosure might cost them and whether anything useful will come of it, and those judgments are not spread evenly. People with less visible disabilities, people who have experienced stigma and people in units where trust is low may answer less often. Missing data that follow those lines are not random, and treating the unknown column as if it held the same mix as everyone else can mislead.\n\nMissing data distort the life cycle in specific ways. Applicant information and employee information are often collected at different times, on different forms, with different response rates, and an applicant's answer may never carry into the employee record. If many applicants decline to answer but most new hires do, a group can appear to be hired at a higher rate than it applied, simply because more of its members were counted at the later stage. Rates for disabled employees rest on those who chose to disclose, who may differ from those who did not. A change in collection can look like a change in the workforce: after a campaign inviting staff to update their records, the recorded share of employees with disabilities may rise sharply with no change in who works there. Race and ethnicity data raise similar issues, including broad categories that combine very different communities and options such as \"two or more\" or \"prefer not to answer\" that systems report differently.\n\nA simple bounds check helps. Suppose 12 of 75 separations in a period involve employees who identify as having a disability, and another 15 have unknown status. If none of the unknowns had a disability, the share would be 12 of 75, or 16 percent; if all of them did, it would be 27 of 75, or 36 percent. If the conclusion you were about to draw holds across that whole range, the unknowns do not change it. If it would reverse within the range, the honest finding is that the data cannot yet answer the question. Report the size of the unknown group beside every rate, and say plainly what changed in how data were collected during the period.\n\nLeaders cannot repair missing data by filling the gaps themselves. Do not infer anyone's disability, race or other status from appearance, names, schedules or accommodation requests, and do not ask a particular person to confirm or update their information. Federal guidance from the Equal Employment Opportunity Commission describes self-identification for affirmative action as voluntary and confidential, with assurance that declining brings no adverse treatment. Accommodation and medical information are confidential under the executive branch's accommodation policy and are not a substitute source for counting anyone. What a leader can influence is the process that makes answering feel safe and worthwhile: a clear explanation of why data are collected and who sees them, invitations offered to everyone through Human Resources, and visible evidence that aggregate results led to barriers being removed.",
+      "keyPoint": "Missing demographic data usually follow patterns of trust, timing and collection. Report the unknown group, test whether conclusions survive it, and improve collection through process, never through guessing or pressure.",
+      "example": "Practice case: After a division campaign inviting staff to update their demographic records, the recorded share of employees who identify as having a disability nearly doubled within six months. There was no unusual hiring. {{PROGRAM_MANAGER}} drafts a newsletter item announcing strong progress on disability representation. {{NEW_COLLEAGUE}}, who helped plan the campaign, points out that the share of employees with unknown disability status fell by about the same amount.",
+      "question": "How should {{PROGRAM_MANAGER}} revise the newsletter item?",
+      "choices": [
+        "Report that more staff chose to self-identify, explain how the data are protected, and say what the division will do with them.",
+        "Keep the progress message as drafted, since the new figure is more accurate and celebrating it may encourage still more people to respond.",
+        "Drop the item altogether, since any public mention of disability data could make the staff who just disclosed feel exposed."
+      ],
+      "feedback": [
+        "This describes what actually changed, treats disclosure as a sign of trust rather than a hiring result, and keeps the campaign's implied promise by showing how the information will be used.",
+        "The figure is likely more accurate, but calling it progress on representation misstates what happened. If the share shifts again as records change, staff may lose trust in both the data and the campaign.",
+        "Aggregate reporting that identifies no one can be done safely, and silence after a campaign can suggest the information went nowhere. Explaining protections usually supports trust."
+      ],
+      "recommended": 0,
+      "reflection": "Privately consider whether you would feel comfortable answering a voluntary demographic question at work, and what would make it feel safer or more worthwhile. You may use the practice case instead.",
+      "action": "Find one workforce report you use and note how it handles unknown or declined responses. Record the size of the unknown group for each measure, run a bounds check on one rate, note any change in collection during the period, and bring one question about the process to Human Resources.",
+      "check": {
+        "question": "A rate looks different for one group, but a large share of records have unknown status. What does a bounds check tell you?",
+        "correct": "Whether the conclusion would hold no matter how the unknown records were distributed.",
+        "wrong": [
+          "Which individuals in the unknown group most likely belong to the group.",
+          "The true rate for the group once unknowns are removed from the count."
+        ],
+        "feedback": "A bounds check recalculates the rate as if none and then all of the unknowns belonged to the group. It tests the robustness of a conclusion without guessing about anyone. Dropping unknowns does not reveal a true rate, because they are rarely a random slice."
+      }
+    },
+    {
+      "title": "What a leader can conclude, and turning a pattern into a question",
+      "objectives": [
+        "State what a life cycle pattern can and cannot establish about causes, legal compliance and individuals.",
+        "Write a pattern statement that names the stage, the counts, the uncertainty and the open question.",
+        "Give a process question to the person or area that owns the stage, with a date to look again.",
+        "Respond to pressure to turn a pattern into a verdict on a person or a group."
+      ],
+      "teaching": "A pattern in workforce data establishes less than people often want it to. It can show where outcomes differ, at which stage, by how much and with how much uncertainty. It cannot, on its own, show why the difference exists, whether a law was violated, or whether any individual decision was wrong. The Minnesota Human Rights Act makes it an unfair employment practice to maintain a system of employment that unreasonably excludes a person seeking employment, and whether any practice meets that description is a legal question, not something a chart settles. The state's affirmative action requirements are also the subject of the federal lawsuit filed in January 2026. Leaders should not announce a legal conclusion in either direction; that question belongs to legal counsel.\n\nWhat a leader can do is write a pattern statement that is honest and useful. A strong statement names the stage where the difference appears, the counts and comparison behind it, the period, the size of any unknown group and the limits of the data. Then it turns the pattern into a question about the process at that stage. For example: employees of color held fewer acting lead roles over three years; acting roles are arranged informally and recorded only as pay adjustments; how are acting opportunities made known and offered, and what record shows who was considered? That statement describes a process, invites the people who run it to examine it, and assigns no motive to anyone.\n\nThe hardest pressure usually comes after the pattern is shown. Someone asks which supervisor is responsible, proposes adjusting individual outcomes to close the gap, or argues that nothing can be done because no one intended harm. Each of these turns a pattern into a verdict. A unit-level difference rarely supports a conclusion about one supervisor, and changing a person's assignment, rating or discipline because of their group treats that person differently because of a protected trait, whatever the intention. Doing nothing is also a choice with consequences. If a leader has separate reasons for concern about someone's conduct, such as a report or a direct observation, that concern goes through the established route with Human Resources and labor relations on its own evidence, not on the strength of a chart.\n\nAccountability belongs with the process owner. Each stage of the life cycle has someone who can change it: how recruitment reaches people, how interviews are built, how acting assignments are offered, how informal discipline is documented, how exit conversations are held. Give the process question to that owner along with a proposed change that applies to everyone who passes through the stage, a date to look again and a statement of what will count as a result, including the possibility that nothing changes or that the data stay too thin to tell. Then report back to the people who raised the concern. A leader who does this consistently builds something more valuable than any single finding: a workforce that trusts data will be used to fix processes rather than to judge people.",
+      "keyPoint": "A life cycle pattern shows where to look, not why, whether the law was broken or who is at fault. Write a pattern statement, turn it into a question for the stage owner and set a date to look again.",
+      "example": "Practice case: A section's separation data show that, over three years, employees in their first two years who identify as people of color left at a higher rate than other staff in their first two years. The counts are modest but consistent from year to year. In a leadership meeting, a director asks {{SUPERVISOR}}, who leads the section, which supervisors are driving people out and whether each departure should be reviewed one by one.",
+      "question": "What is the strongest response for {{SUPERVISOR}}?",
+      "choices": [
+        "Name the two supervisors whose teams had the most early departures, so that the director can follow up with each of them directly.",
+        "Describe the pattern and its limits, propose reviewing onboarding and early support for new staff, and offer a report-back date.",
+        "Explain that each departure was a personal choice and that data this modest cannot support any review, so the topic should close."
+      ],
+      "feedback": [
+        "Modest counts spread across teams cannot show that a supervisor caused departures, and naming people turns a pattern into a verdict. Any separate concern about conduct needs its own evidence and route.",
+        "This answers the question the data can support. It moves attention to the early stages every new employee passes through, keeps individuals out of it, and commits to checking whether anything changed.",
+        "Each departure is a personal decision, but a consistent pattern across years is a reason to review the conditions new staff meet. Closing the topic leaves that review undone."
+      ],
+      "recommended": 1,
+      "reflection": "Privately recall a time a number at work was used as a verdict on a person or a group, or use the practice case. What would a pattern statement and a process question have sounded like instead?",
+      "action": "Write a pattern statement for one workforce result you have seen: the stage, the counts and comparison, the period, the unknown group and the limits. Turn it into one question about the process at that stage, name who owns that stage, and propose a date to look again.",
+      "check": {
+        "question": "Which statement can a well-built life cycle pattern support on its own?",
+        "correct": "Outcomes differ at a particular stage by a stated amount, with stated uncertainty.",
+        "wrong": [
+          "A specific supervisor's decisions caused the difference observed at that stage.",
+          "The agency's process at that stage violates the Minnesota Human Rights Act."
+        ],
+        "feedback": "Data can locate and size a difference. Finding a cause requires examining the process, a conduct concern needs its own evidence, and legal conclusions belong to legal counsel and the people or areas responsible."
+      }
+    }
+  ],
+  "cards": [
+    {
+      "front": "Decision point",
+      "back": "A stage in the employee life cycle where someone decides who moves forward, such as screening, interview, offer, acting assignment, promotion, discipline or separation. Each has its own population."
+    },
+    {
+      "front": "Denominator",
+      "back": "The group a rate is calculated from at a stage, such as qualified applicants for interviews or the eligible pool for promotion. Define it before looking at results."
+    },
+    {
+      "front": "Composition and flow",
+      "back": "Composition is who is present on a date. Flow is how people move through stages over time. A representative snapshot can hide early exits."
+    },
+    {
+      "front": "Linkage risk",
+      "back": "Combining public personnel data, such as a final disciplinary disposition, with private demographic data in a small table can reveal a person's private information."
+    },
+    {
+      "front": "Unknown column",
+      "back": "Records with missing or declined status. Report its size beside every rate; it rarely holds the same mix as everyone else."
+    },
+    {
+      "front": "Bounds check",
+      "back": "Recalculating a rate as if none and then all of the unknown records belonged to a group. If the conclusion holds across the range, the unknowns do not change it."
+    },
+    {
+      "front": "Pattern statement",
+      "back": "A description of a difference that names the stage, counts, comparison, period, unknowns and limits, followed by one question for the owner of that stage's process."
+    }
+  ],
+  "aid": [
+    {
+      "heading": "Map the chain",
+      "items": [
+        "List the stages that lead to the outcome you care about, including acting roles and informal discipline.",
+        "Write the denominator and comparison group for each stage before looking at results.",
+        "Break separations out by type, such as retirement, transfer, resignation, release during probation and dismissal.",
+        "Find the earliest stage where the numbers begin to separate."
+      ]
+    },
+    {
+      "heading": "Protect people at small stages",
+      "items": [
+        "Check each count and ask how much one person's outcome would move the rate.",
+        "Look for links between the table and public records or common knowledge.",
+        "Give detail only to people whose work requires it; give others a summary that identifies no one.",
+        "State when you pooled years or moved up a level, and why."
+      ]
+    },
+    {
+      "heading": "Read the unknowns",
+      "items": [
+        "Report the size of the unknown or declined group for every measure and stage.",
+        "Note any change in how data were collected during the period.",
+        "Run a bounds check before drawing a conclusion about a group.",
+        "Never infer anyone's status or ask an individual to confirm it; take process questions to Human Resources."
+      ]
+    },
+    {
+      "heading": "Turn the pattern into a question",
+      "items": [
+        "Write what the data show and what they cannot show.",
+        "Name the owner of the stage's process and give them one question.",
+        "Propose a change that applies to everyone at that stage, with a date to look again.",
+        "Route any conduct or legal concern separately, on its own evidence."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Minnesota Statutes section 43A.19 — Statewide affirmative action program",
+      "href": "https://www.revisor.mn.gov/statutes/cite/43A.19",
+      "note": "Supports the program's goals based on the skilled recruiting-area population and its required analysis of separation patterns (lesson 1). Checked in its 2026 edition; the statute is among the requirements challenged in the pending federal suit, so confirm current application with Human Resources."
+    },
+    {
+      "title": "United States Department of Justice — Lawsuit against Minnesota's affirmative action requirements (press release, January 14, 2026)",
+      "href": "https://www.justice.gov/opa/pr/united-states-department-justice-files-lawsuit-against-minnesotas-affirmative-action-regime",
+      "note": "Supports the filing date, court and Title VII basis of the suit (lessons 1 and 4). It states the department's position, not a court finding; check the case's current status with legal counsel."
+    },
+    {
+      "title": "Minnesota Statutes 13.43 — Personnel data",
+      "href": "https://www.revisor.mn.gov/statutes/cite/13.43",
+      "note": "Supports the list of public personnel data, including final dispositions of disciplinary action, and the rule that other personnel data are private (lesson 2). The course's treatment of self-identified data as private is a starting point to confirm with the data practices contact."
+    },
+    {
+      "title": "Minn. R. 1205.0400",
+      "href": "https://www.revisor.mn.gov/rules/1205.0400/",
+      "note": "Supports limiting access to private data to people whose work assignments reasonably require it (lesson 2). How the rule applies to a particular report is a question for the data practices contact."
+    },
+    {
+      "title": "U.S. Equal Employment Opportunity Commission — Informal Discussion Letter 304 (September 17, 2015)",
+      "href": "https://www.eeoc.gov/foia/eeoc-informal-discussion-letter-304",
+      "note": "Summarizes EEOC guidance that disability self-identification for affirmative action is voluntary and confidential and that declining brings no adverse treatment (lesson 3). It is an informal letter, not an official opinion of the Commission."
+    },
+    {
+      "title": "Minnesota Management and Budget, HR/LR Policy 1433, ADA Reasonable Accommodations",
+      "href": "https://mn.gov/mmb-stat/equal-opportunity/ada/1433-reasonable-accommodation.pdf",
+      "note": "Supports the confidentiality of medical information gathered for accommodation (lesson 3). Using accommodation records as a source of demographic counts is outside the policy's purpose; the course says not to."
+    },
+    {
+      "title": "Minnesota Statutes 363A.08 — Unfair discriminatory practices relating to employment",
+      "href": "https://www.revisor.mn.gov/statutes/cite/363A.08",
+      "note": "Supports the statement that maintaining a system of employment that unreasonably excludes a person seeking employment is an unfair employment practice (lesson 4). How courts apply this language today was not reviewed; questions go to legal counsel."
+    }
+  ]
+}
