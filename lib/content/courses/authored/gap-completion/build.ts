@@ -15,6 +15,8 @@ export type GapLesson = {
   reflection: string;
   action: string;
   check: { question: string; correct: string; wrong: [string, string]; feedback: string };
+  /** Optional picture of the people in the practice case, shown just before it. */
+  image?: { src: string; alt: string; caption?: string };
 };
 export type GapSpec = {
   id: string;
@@ -72,6 +74,7 @@ export function gapCourse(spec: GapSpec): CoursePack {
             { type: 'text' as const, heading: l.title, body: html(l.teaching) },
             { type: 'statement' as const, body: l.keyPoint },
             ...(i === 0 ? [{ type: 'flashcards' as const, heading: 'Concepts to carry forward', cards: spec.cards }] : []),
+            ...(l.image ? [{ type: 'image' as const, src: l.image.src, alt: l.image.alt, ...(l.image.caption ? { caption: l.image.caption } : {}) }] : []),
             { type: 'text' as const, heading: 'A practice example to examine', body: html(l.example) },
             { type: 'text' as const, heading: 'Practice and review', body: html(l.action) },
             { type: 'text' as const, heading: 'Private reflection', body: html(l.reflection) },
