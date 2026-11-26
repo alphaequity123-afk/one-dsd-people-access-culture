@@ -1,12 +1,20 @@
 import type { Metadata } from "next";
+import Link from "@/components/app-link";
 import { PillarHub } from "@/components/pillar-hub";
+import styles from "@/components/pillar-hub.module.css";
+import { KnowledgeBrowser } from "@/components/knowledge-browser";
+import { knowledgeRows, learningPaths } from "@/lib/program/knowledge-index";
 
 export const metadata: Metadata = { title: "Knowledge" };
 
 /**
  * Knowledge pillar. Owner decision 2026-11-25: follows the Gemini overhaul's progressive learning — start, apply,
  * lead — and its single library. Learning here is voluntary: nothing is tracked or scored.
+ * v2 prototype (2026-11-26): a filterable browser of every course, guide, reading, policy reference and podcast,
+ * then the curated groups, then the official routing block. Policy numbers, titles and contacts are those the DHS
+ * Equity Policy, Version 2.0 lists (checked against the published policy, 2026-11-26).
  */
+const POLICY_URL = "https://mn.gov/dhs/assets/equity-policy_tcm1053-646921.pdf";
 export default function KnowledgePillar() {
   return <PillarHub
     id="knowledge"
@@ -45,5 +53,18 @@ export default function KnowledgePillar() {
         { label: "Find the right person", href: "/support/right-person", description: "Official decisions stay with DHS HR, learning systems and equity leaders. Find who to contact." },
       ] },
     ]}
-  />;
+    lead={<KnowledgeBrowser rows={knowledgeRows()} paths={learningPaths()} />}
+  >
+    <section className={styles.panel} aria-labelledby="routing-title">
+      <h2 id="routing-title">When something is formal, it goes to the office responsible</h2>
+      <p>Everything here is voluntary learning and preparation. Required training, formal equity analysis approvals, accommodations and workplace concerns stay with the offices that own them.</p>
+      <ul>
+        <li><strong>Equity analysis approvals:</strong> your supervisor and your business area&apos;s Equity Director, at <a href="mailto:equity.directors.dhs@state.mn.us">equity.directors.dhs@state.mn.us</a>.</li>
+        <li><strong>Disability access and accommodations:</strong> HR/LR Policy #1358, Americans with Disabilities Act (ADA), Title II, and HR/LR Policy #1433, ADA Reasonable Accommodation.</li>
+        <li><strong>Workplace concerns:</strong> HR/LR Policy #1432, Respectful Workplace; #1436, Harassment and Discrimination Prohibited; #1329, Sexual Harassment Prohibited; and #1444, Workplace Violence Prohibited. Contact <a href="mailto:workplace_policies@state.mn.us">workplace_policies@state.mn.us</a>.</li>
+        <li><strong>Required training and credit:</strong> the agency&apos;s learning system. Nothing in this program counts toward it.</li>
+      </ul>
+      <p>These policies and contacts are listed in the <Link href={POLICY_URL} original>DHS Equity Policy, Version 2.0</Link>. To find the right person for anything else, see <Link href="/support/right-person">find the person or area responsible</Link>.</p>
+    </section>
+  </PillarHub>;
 }
