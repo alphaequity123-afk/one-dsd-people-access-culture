@@ -5,7 +5,7 @@ import RemovedDirectorToolkitTemplates from "@/app/equity-review/director-toolki
 
 describe("retired Equity Director Toolkit", () => {
   it("does not fall through to generic downloads in either program", async () => {
-    for (const scope of ["dsd", "dhs"] as const) {
+    for (const scope of ["dsd", "one-dhs"] as const) {
       expect(await equityReviewDocument("director-toolkit", scope)).toBeNull();
       expect(await equityReviewDocument("templates", scope)).toBeNull();
     }
@@ -18,3 +18,4 @@ describe("retired Equity Director Toolkit", () => {
     expect(RemovedDirectorToolkitTemplates).toThrow("NEXT_HTTP_ERROR_FALLBACK;404");
   });
 });
+
