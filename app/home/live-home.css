@@ -232,3 +232,32 @@ main .dsd-home a.pilot-primary[href], main .dsd-home a.pilot-primary[href]:hover
 body.program-design .od.dsd-home, body.program-design .od.dsd-home :is(h1, h2, h3, p, a, button, strong, span) { font-family: Aptos, "Aptos Display", "Segoe UI", Calibri, system-ui, -apple-system, Arial, sans-serif; }
 /* The featured button keeps white text over this app's site-wide link colors. */
 body.program-design .od.dsd-home a.pilot-primary[href], body.program-design .od.dsd-home a.pilot-primary[href]:hover, body.program-design .od.dsd-home a.pilot-primary[href]:visited { color: #fff !important; }
+
+/* v2 prototype (owner decision 2026-11-26): the Home command center and the start, apply, lead strip,
+   in the landing page's own look — 3D card, navy accent line, navy pill actions, no icons or glyphs. */
+.dsd-home .home-command { padding: 22px 24px; background: var(--s3-face); border: 1px solid var(--s3-line); border-top: 3px solid #003865; border-radius: 20px; box-shadow: var(--s3-shadow); }
+.dsd-home .home-command h2 { margin: 0 0 4px; }
+.dsd-home .home-command-lede { margin: 0 0 14px; color: #43566a; max-width: 62ch; }
+.dsd-home .home-command-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; border-bottom: 1px solid #dfe6ee; padding-bottom: 10px; }
+.dsd-home .home-command-tabs button { min-height: 44px; padding: 8px 18px; border: 1px solid #b9c7d5; border-radius: 999px; background: #fff; color: #003865; font: inherit; font-weight: 600; cursor: pointer; }
+.dsd-home .home-command-tabs button:hover { border-color: #003865; }
+.dsd-home .home-command-tabs button.is-chosen { background: #003865; border-color: #003865; color: #fff; }
+.dsd-home .home-command-tabs button:focus-visible { outline: 3px solid #005793; outline-offset: 3px; }
+.dsd-home .home-command-panel > p { max-width: 68ch; }
+.dsd-home .home-command-examples-title { margin: 14px 0 6px; font-weight: 600; color: #0b2a4a; }
+.dsd-home .home-command-examples { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.dsd-home .home-command-examples a { display: inline-block; min-height: 40px; padding: 8px 14px; border: 1px solid #cdd9e5; border-radius: 999px; background: #fff; color: #003865; font-weight: 600; text-decoration: none; }
+.dsd-home .home-command-examples a:hover { border-color: #003865; background: #f3f7fb; }
+.dsd-home .home-command-search label { display: block; margin-bottom: 6px; font-weight: 600; color: #0b2a4a; }
+.dsd-home .home-command-search div { display: flex; flex-wrap: wrap; gap: 10px; }
+.dsd-home .home-command-search input { flex: 1 1 260px; min-height: 48px; padding: 10px 14px; border: 1px solid #8a9aab; border-radius: 12px; font: inherit; }
+.dsd-home .home-command-search input:focus-visible { outline: 3px solid #005793; outline-offset: 2px; }
+.dsd-home .home-command-search button { border: 0; cursor: pointer; font: inherit; }
+.dsd-home .home-tiers-note { margin: -4px 0 12px; color: #43566a; }
+.dsd-home .home-tiers ol { display: grid; gap: 16px; margin: 0; padding: 0; list-style: none; }
+@media (min-width: 760px) { .dsd-home .home-tiers ol { grid-template-columns: repeat(3, 1fr); } }
+.dsd-home .home-tiers li { display: flex; flex-direction: column; gap: 6px; padding: 18px 20px; background: var(--s3-face); border: 1px solid var(--s3-line); border-top: 3px solid #003865; border-radius: 16px; box-shadow: var(--s3-shadow); }
+.dsd-home .home-tiers li h3 { margin: 0; color: #003865; font-size: 1.2rem; }
+.dsd-home .home-tiers li p { margin: 0; color: #43566a; }
+.dsd-home .home-tiers li .pilot-secondary { align-self: flex-start; margin-top: auto; }
+.dsd-home .home-tier-label { font-size: .8rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #3e6b0c !important; }

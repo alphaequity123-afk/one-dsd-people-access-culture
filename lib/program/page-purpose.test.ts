@@ -21,7 +21,7 @@ it("shows a short menu: no Themes and collections or Community Outreach tab", ()
 it("keeps the live One DSD landing page on Home and does not speak as 'us'", () => {
   const home = readFileSync(path.join(process.cwd(), "app/home/page.tsx"), "utf8");
   // Owner decision 2026-11-25: Home is the live One DSD landing page; Ask opens from the banner on every page.
-  expect(home.indexOf("<HomeTaskChips")).toBeLessThan(home.indexOf('aria-labelledby="pilot-pathways"'));
+  expect(home.indexOf("<HomeCommandCenter")).toBeLessThan(home.indexOf('aria-labelledby="pilot-pathways"'));
   expect(home).toContain("One DSD Leadership");
   expect(home).not.toMatch(/Tell us|we&apos;ll|we'll/);
 });

@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "@/components/app-link";
 import { HeroMotion } from "./hero-motion";
-import { HomeTaskChips, type FinderTask } from "@/components/home-task-chips";
+import { HomeCommandCenter } from "@/components/home-command-center";
+import { prepareAsk } from "@/app/ask/ask-view";
 import { publishedCalendar } from "@/lib/content/cultural-calendar";
 import { CALENDAR_PATH, chicagoToday, compactCalendar, shortDateRange, upcomingObservances } from "@/lib/content/culture-calendar-grid";
 import "./live-home.css";
@@ -27,38 +28,15 @@ const EQUITY_ZONES = [
   { id: "advances", label: "Most directly advances equity", styles: [["transformative", "Transformative or equity-centered"], ["inclusive", "Inclusive"]] },
 ] as const;
 
-/** Tasks for the home-page finder (live site: lib/task-finder.ts, One DSD). */
-const TASKS: FinderTask[] = [
-  { id: "meeting", label: "Plan a meeting with a community", picks: [
-    { title: "Prepare for a conversation", text: "Get a plan with questions to ask and access arrangements to make.", href: "/minnesota-communities/prepare" },
-    { title: "Check your assumptions", text: "Twelve common assumptions, and what tends to be true instead.", href: "/minnesota-communities/assumptions" },
-    { title: "Culture Calendar", text: "Check the date against observances and holidays.", href: CALENDAR_PATH },
-  ] },
-  { id: "notice", label: "Write a notice or letter", picks: [
-    { title: "Rewrite it in plain language", text: "Practice turning dense notice language into words people can act on.", href: "/practice/plain-language" },
-    { title: "Prepare for a conversation", text: "Plan a review of your draft with the people who will read it.", href: "/minnesota-communities/prepare" },
-  ] },
-  { id: "lead", label: "Lead or support my team", picks: [
-    { title: "One DSD Leadership", text: "Explore leadership styles and how each one affects your team.", href: LEADERSHIP },
-    { title: "Which styles do you reach for?", text: "Six quick situations that point to styles worth exploring.", href: `${LEADERSHIP}#find-a-style` },
-    { title: "Team discussion kits", text: "A printable 20-minute discussion for your next team meeting.", href: `${LEADERSHIP}/team-kits` },
-  ] },
-  { id: "decision", label: "Review a decision or policy for fairness", picks: [
-    { title: "Equity Analysis Toolkit", text: "Work through who a decision affects and how.", href: "/learn/equity-toolkit" },
-    { title: "Practice guides", text: "Guides for real decisions, with scenarios and feedback.", href: "/practice/disability" },
-  ] },
-  { id: "learn", label: "Find learning for my role", picks: [
-    { title: "Your work", text: "Learning and resources for your responsibilities.", href: "/my-work" },
-    { title: "Learn", text: "Courses, pathways and readings.", href: "/learn" },
-  ] },
-  { id: "question", label: "Get an answer to a question", picks: [
-    { title: "Ask", text: "Ask a question in your own words and get a clear answer with sources.", href: "/ask" },
-    { title: "How to use this site", text: "A quick tour of where everything is.", href: "/user-guide" },
-  ] },
-];
+/** Start, apply, lead (v2 prototype): where to begin, by how far into the work someone is. Learning stays voluntary. */
+const TIERS = [
+  { tier: "Start", title: "Everyday habits", text: "Begin with the five shared values, the DHS Equity Policy in plain language, Cultural Humility and the podcasts.", href: "/knowledge#knowledge-start", action: "Open Start" },
+  { tier: "Apply", title: "Practice for your work", text: "Use the nine applied tools, the equity scan, Disability services in practice and the community briefs.", href: "/practice", action: "Open Practice" },
+  { tier: "Lead", title: "Systems and stewardship", text: "Work through six leadership stages, sixteen leadership styles and decisions about resources and change.", href: "/leadership", action: "Open Leadership" },
+] as const;
 
 export default async function HomePage() {
-  const upcoming = await upcomingFromCalendar();
+  const [upcoming, ask] = await Promise.all([upcomingFromCalendar(), askForHome()]);
   const heroImage = <Image className="home-hero-image" src="/images/home/people-access-culture-hero.webp" width={3840} height={1748} alt="Eight colleagues sharing perspectives around a conference table." preload quality={90} sizes="(max-width: 3840px) 100vw, 3840px" />;
   return <div className="dsd-home od">
     <section className="home-hero" aria-labelledby="home-title">
@@ -72,7 +50,18 @@ export default async function HomePage() {
     </section>
 
     <div className="pilot-wrap">
-      <HomeTaskChips tasks={TASKS} />
+      <HomeCommandCenter copy={ask?.copy ?? {}} askAvailable={Boolean(ask?.enabled)} researchAvailable={Boolean(ask?.research?.enabled)} />
+
+      <section className="pilot-section home-tiers" aria-labelledby="home-tiers-title">
+        <h2 id="home-tiers-title">Choose where you are in the work</h2>
+        <p className="home-tiers-note">Learning here is voluntary. Nothing is tracked or counted toward training credit.</p>
+        <ol>{TIERS.map(item => <li key={item.tier}>
+          <p className="home-tier-label">{item.tier}</p>
+          <h3>{item.title}</h3>
+          <p>{item.text}</p>
+          <Link className="pilot-secondary" href={item.href}>{item.action}</Link>
+        </li>)}</ol>
+      </section>
 
       <section className="pilot-section" aria-labelledby="pilot-pathways">
         <h2 id="pilot-pathways">Explore learning, tools and communities</h2>
@@ -123,6 +112,14 @@ export default async function HomePage() {
       </section>
     </div>
   </div>;
+}
+
+/** Ask on Home must never break the page: if it cannot be prepared, the command center links to the Ask page. */
+async function askForHome() {
+  try { return await prepareAsk(); } catch (error) {
+    console.error("home Ask unavailable", error instanceof Error ? `${error.name}: ${error.message}` : error);
+    return null;
+  }
 }
 
 /** The calendar preview must never break the home page: if the calendar cannot be read, it shows the link only. */
