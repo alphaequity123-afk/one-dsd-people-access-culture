@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Record the Culture and Well-Being course podcasts, and the Cultural Navigation podcast, with the approved voices.
+ * Record the Culture and Well-Being and Cultural Navigation course podcasts with the approved voices.
  *
  *   npm run record:culture-wellbeing-podcasts            record them all (resumes where it stopped)
  *   npm run record:culture-wellbeing-podcasts -- --check  check the voice service only; records nothing
@@ -35,9 +35,15 @@ export const COURSES = [
   "cw-learning-organization",
   "cw-trauma-informed-teams",
   "cn-what-a-navigator-does",
+  "cn-working-alongside-a-navigator",
+  "cn-navigating-disability-services-with-a-family",
+  "cn-culture-in-informed-choice",
+  "cn-building-a-navigator-role",
+  "cn-navigators-and-system-change",
+  "cn-sustaining-the-navigator",
 ];
 /** Where each course's script lives under docs/media-scripts; courses not listed use culture-wellbeing. */
-export const SCRIPT_FOLDERS = { "cn-what-a-navigator-does": "cultural-navigation" };
+export const SCRIPT_FOLDERS = Object.fromEntries(COURSES.filter((id) => id.startsWith("cn-")).map((id) => [id, "cultural-navigation"]));
 const scriptFolder = (id) => SCRIPT_FOLDERS[id] ?? "culture-wellbeing";
 export const VOICES = { host1: "Host", geffen: "Co-host" };
 const SAMPLE_RATE = 24_000;

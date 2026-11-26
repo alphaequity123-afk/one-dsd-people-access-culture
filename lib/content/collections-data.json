@@ -1,8 +1,8 @@
 {
  "generatedFrom": "collections-placement.csv",
  "counts": {
-  "rows": 754,
-  "items": 750,
+  "rows": 760,
+  "items": 756,
   "questions": 89
  },
  "items": {
@@ -3704,6 +3704,36 @@
    "title": "What a Cultural Navigator Does",
    "kind": "course",
    "minutes": 48
+  },
+  "cn-working-alongside-a-navigator": {
+   "title": "Working Alongside a Cultural Navigator",
+   "kind": "course",
+   "minutes": 48
+  },
+  "cn-navigating-disability-services-with-a-family": {
+   "title": "Navigating Disability Services with a Family",
+   "kind": "course",
+   "minutes": 48
+  },
+  "cn-culture-in-informed-choice": {
+   "title": "Culture in Informed Choice",
+   "kind": "course",
+   "minutes": 48
+  },
+  "cn-building-a-navigator-role": {
+   "title": "Building a Cultural Navigator Role",
+   "kind": "course",
+   "minutes": 48
+  },
+  "cn-navigators-and-system-change": {
+   "title": "Navigators and System Change",
+   "kind": "course",
+   "minutes": 48
+  },
+  "cn-sustaining-the-navigator": {
+   "title": "Sustaining the Navigator",
+   "kind": "course",
+   "minutes": 24
   }
  },
  "staff": [
@@ -4059,6 +4089,7 @@
     {
      "subject": "How Minnesota disability services work",
      "ids": [
+      "cn-navigating-disability-services-with-a-family",
       "dc-s30-rights-of-people-receiving-services",
       "dsd-02-service-coordination-navigation",
       "dsd-04-personal-outcomes-quality",
@@ -4091,6 +4122,7 @@
     {
      "subject": "Informed choice, dignity of risk and supported decisions",
      "ids": [
+      "cn-culture-in-informed-choice",
       "dc-l16-informed-choice-as-a-leadership-responsibility",
       "dc-l19-dignity-of-risk-in-policy-and-program-decisions",
       "dc-l20-supported-decision-making-and-alternatives-to-gu",
@@ -4147,7 +4179,7 @@
      ]
     }
    ],
-   "itemCount": 53
+   "itemCount": 55
   },
   {
    "id": "culture-language",
@@ -4347,6 +4379,7 @@
      "subject": "Working with interpreters and cultural brokers",
      "ids": [
       "cn-what-a-navigator-does",
+      "cn-working-alongside-a-navigator",
       "cultural-broker-as-a-role",
       "dc-i89-interpreters-as-cultural-brokers",
       "dc-s53-requesting-translations-at-dhs",
@@ -4372,7 +4405,7 @@
      ]
     }
    ],
-   "itemCount": 140
+   "itemCount": 141
   },
   {
    "id": "minnesota-communities",
@@ -4687,6 +4720,7 @@
     {
      "subject": "How do I keep people well when the work is hard?",
      "ids": [
+      "cn-sustaining-the-navigator",
       "dc-s100-caring-for-yourself-while-doing-equity-work",
       "dc-t96-team-wellbeing-and-sustainable-workloads",
       "dc-t97-supporting-each-other-through-hard-work",
@@ -4759,7 +4793,7 @@
      ]
     }
    ],
-   "itemCount": 127
+   "itemCount": 128
   },
   {
    "id": "policy-data-decisions",
@@ -4815,6 +4849,7 @@
     {
      "subject": "How do I design or change a program?",
      "ids": [
+      "cn-navigators-and-system-change",
       "dc-i92-intercultural-design-of-programs-and-services",
       "dc-i93-culturally-responsive-outreach-and-materials",
       "dc-s96-equity-in-provider-and-lead-agency-communication",
@@ -4895,7 +4930,7 @@
      ]
     }
    ],
-   "itemCount": 71
+   "itemCount": 72
   }
  ],
  "doors": [
@@ -4909,6 +4944,7 @@
      "question": "How do I write the role and post the job?",
      "startId": "job-design-and-the-posting",
      "deeperIds": [
+      "cn-building-a-navigator-role",
       "gc-role-design-qualifications",
       "sourcing-and-outreach"
      ]
@@ -4966,7 +5002,7 @@
    "relatedIds": [
     "dc-t71-how-dsd-is-organized-and-how-the-work-connects"
    ],
-   "itemCount": 24
+   "itemCount": 25
   },
   {
    "slug": "who-does-what",
@@ -5580,6 +5616,7 @@
      "question": "How do I design or change a program?",
      "startId": "dc-l22-equity-in-waiver-and-hcbs-program-design",
      "deeperIds": [
+      "cn-navigators-and-system-change",
       "dc-i92-intercultural-design-of-programs-and-services",
       "dc-i93-culturally-responsive-outreach-and-materials",
       "dc-l29-equity-in-transitions-and-implementation-timelin",
@@ -5704,7 +5741,7 @@
     "gc-advising-decision-makers",
     "gc-disability-led-leadership"
    ],
-   "itemCount": 116
+   "itemCount": 117
   },
   {
    "slug": "keep-going",
@@ -5724,6 +5761,7 @@
      "question": "How do I keep people well when the work is hard?",
      "startId": "gc-sustaining-the-work",
      "deeperIds": [
+      "cn-sustaining-the-navigator",
       "dc-l92-preventing-burnout-and-moral-distress",
       "dc-s100-caring-for-yourself-while-doing-equity-work",
       "dc-t96-team-wellbeing-and-sustainable-workloads",
@@ -5794,7 +5832,7 @@
     "gc-leading-with-purpose",
     "gc-accountability-public-service"
    ],
-   "itemCount": 26
+   "itemCount": 27
   },
   {
    "slug": "direction",
