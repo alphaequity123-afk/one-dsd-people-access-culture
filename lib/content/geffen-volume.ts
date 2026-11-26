@@ -1,47 +1,34 @@
 import 'server-only';
 import { createHash } from 'node:crypto';
-import { constants } from 'node:fs';
-import { lstat, open, realpath } from 'node:fs/promises';
-import path from 'node:path';
 import { Readable } from 'node:stream';
+import { openStoredFile, readAloudMediaRoot } from '@/lib/storage/public-media-store';
 
-// This directory must be dedicated to public, publisher-controlled files only.
-// Publishers write complete files under temporary names and atomically rename them;
-// hash-named audio comes first, then a complete index is renamed into place.
+// This tree must be dedicated to public, publisher-controlled files only.
+// Publishers write complete files under temporary names and atomically rename them (or write
+// whole objects to the media bucket); hash-named audio comes first, then a complete index.
 const SHA = /^[a-f0-9]{64}$/;
 const COURSE = /^[A-Za-z0-9_-]+$/;
 const MAX_INDEX_BYTES = 2 * 1024 * 1024;
 const missing = () => new Response(null, { status: 404, headers: { 'Cache-Control': 'no-store' } });
 
-function samePath(a: string, b: string) {
-  const x = path.normalize(a), y = path.normalize(b);
-  return process.platform === 'win32' ? x.toLowerCase() === y.toLowerCase() : x === y;
-}
-
+/**
+ * Open one stored public media file, on the volume or in the media bucket
+ * (lib/storage/public-media-store.ts). The shape matches a file handle, so every reader works the
+ * same way in either store. On the volume symbolic links and junctions are refused anywhere in the
+ * root or the requested path.
+ */
 export async function safeOpen(root: string | undefined, segments: string[]) {
-  if (!root || !path.isAbsolute(root) || !segments.length || segments.some(s => !/^[A-Za-z0-9_-][A-Za-z0-9._-]*$/.test(s) || s.includes('..'))) return null;
-  try {
-    const base = path.resolve(root);
-    // Refuse symlinks/junctions anywhere in the configured root or requested path.
-    if (!samePath(await realpath(base), base) || !(await lstat(base)).isDirectory()) return null;
-    let current = base;
-    for (let i = 0; i < segments.length; i++) {
-      current = path.join(current, segments[i]);
-      const info = await lstat(current);
-      if (info.isSymbolicLink() || (i < segments.length - 1 ? !info.isDirectory() : !info.isFile())) return null;
-    }
-    if (!samePath(await realpath(current), current)) return null;
-    const file = await open(current, constants.O_RDONLY | (constants.O_NOFOLLOW ?? 0));
-    const info = await file.stat();
-    if (!info.isFile()) { await file.close(); return null; }
-    // Linux verifies the open descriptor as well, closing a parent-path race.
-    if (process.platform === 'linux') {
-      try {
-        if (!samePath(await realpath(`/proc/self/fd/${file.fd}`), current)) { await file.close(); return null; }
-      } catch { await file.close(); return null; }
-    }
-    return { file, info };
-  } catch { return null; }
+  const stored = await openStoredFile(root, segments);
+  if (!stored) return null;
+  const file = {
+    readFile: (async (encoding?: BufferEncoding) => {
+      const bytes = await stored.bytes();
+      return encoding ? bytes.toString(encoding) : bytes;
+    }) as { (): Promise<Buffer>; (encoding: BufferEncoding): Promise<string> },
+    createReadStream: ({ start, end }: { start: number; end: number; autoClose?: boolean }) => stored.stream(start, end),
+    close: () => stored.close(),
+  };
+  return { file, info: { size: stored.size } };
 }
 
 type Recording = { id: string; voice: 'geffen'; sourceTextHash: string; audioSha256: string; src: string; verified: true; parentSourceTextHash?: string };
@@ -73,7 +60,7 @@ async function readGeffenIndex(name: string, root: string | undefined) {
   } catch { return null; } finally { await opened.file.close(); }
 }
 
-export async function serveGeffenIndex(request: Request, name: string, root = process.env.PAC_GEFFEN_PUBLIC_MEDIA_ROOT) {
+export async function serveGeffenIndex(request: Request, name: string, root = readAloudMediaRoot()) {
   const index = await readGeffenIndex(name, root);
   if (index === undefined) return none();
   if (!index) return missing();
@@ -82,7 +69,7 @@ export async function serveGeffenIndex(request: Request, name: string, root = pr
 }
 
 /** Only use a publisher-verified recording of the currently displayed text. */
-export async function getGeffenPassageRecordings(course: string, passages: readonly { id: string; text: string }[], root = process.env.PAC_GEFFEN_PUBLIC_MEDIA_ROOT) {
+export async function getGeffenPassageRecordings(course: string, passages: readonly { id: string; text: string }[], root = readAloudMediaRoot()) {
   const index = await readGeffenIndex(`${course}.json`, root);
   const byId = new Map(index?.recordings.map(recording => [recording.id, recording]));
   const sources = new Map<string, string>();
@@ -107,7 +94,7 @@ function byteRange(value: string, size: number): [number, number] | null {
   return [first, Math.min(last ?? size - 1, size - 1)];
 }
 
-export async function serveGeffenAudio(request: Request, segments: string[], root = process.env.PAC_GEFFEN_PUBLIC_MEDIA_ROOT) {
+export async function serveGeffenAudio(request: Request, segments: string[], root = readAloudMediaRoot()) {
   if (segments.length !== 1 || !/^[a-f0-9]{64}\.(mp3|wav)$/.test(segments[0])) return missing();
   const opened = await safeOpen(root, ['audio', ...segments]);
   if (!opened) return missing();

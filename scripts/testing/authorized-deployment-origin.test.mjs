@@ -48,3 +48,22 @@ test('an unrecognized service is still rejected', () => {
 test('the existing agency service keeps its own authorized address', () => {
   assert.match(check('https://one-dhs-dsd-web-production.up.railway.app', { RAILWAY_SERVICE_ID: 'dc09906d-494f-49cb-8c19-916db3ec1931' }), /gate passed/);
 });
+const volumeFree = {
+  RAILWAY_VOLUME_MOUNT_PATH: '', RAILWAY_VOLUME_ID: '',
+  PAC_RUNTIME_RECORDS: 'postgres', PAC_PUBLIC_MEDIA_STORE: 'bucket',
+  PAC_RUNTIME_DATABASE_URL: 'postgres://test-only@localhost/test', PAC_OWNER_DATABASE_URL: 'postgres://test-only@localhost/test',
+  PAC_MEDIA_BUCKET_ENDPOINT: 'https://t3.storageapi.dev', PAC_MEDIA_BUCKET_NAME: 'test-only',
+  PAC_MEDIA_BUCKET_ACCESS_KEY_ID: 'test-only', PAC_MEDIA_BUCKET_SECRET_ACCESS_KEY: 'test-only',
+};
+test('with records in the database and media in the bucket the service starts without a volume', () => {
+  assert.match(check('https://one-people-access-culture.up.railway.app', volumeFree), /database records, media bucket/);
+});
+test('volume-free storage with an incomplete bucket setting is refused', () => {
+  assert.throws(() => check('https://one-people-access-culture.up.railway.app', { ...volumeFree, PAC_MEDIA_BUCKET_SECRET_ACCESS_KEY: '' }), /settings are incomplete/);
+});
+test('without volume-free storage a missing volume is still refused', () => {
+  assert.throws(() => check('https://one-people-access-culture.up.railway.app', { RAILWAY_VOLUME_MOUNT_PATH: '', RAILWAY_VOLUME_ID: '' }), /durable volume is not mounted/);
+});
+test('a storage copy asked for without the volume reports that and does not start', () => {
+  assert.match(check('https://one-people-access-culture.up.railway.app', { ...volumeFree, PAC_STORAGE_COPY: 'verify' }), /nothing to copy from/);
+});
