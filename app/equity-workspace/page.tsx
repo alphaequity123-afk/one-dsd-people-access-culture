@@ -21,7 +21,7 @@ export default async function EquityWorkspaceHome() {
         <div className="grid gap-6 md:grid-cols-2">
           <section className="card" aria-labelledby="toolkit-card">
             <h2 id="toolkit-card" className="text-xl font-bold">Equity Analysis Toolkit</h2>
-            <p>Use it for any document: a plan, a proposal, a program change, a report or a set of meeting notes.</p>
+            <p>It works for any document: a plan, a proposal, a program change, a report or a set of meeting notes.</p>
             <ol className="list-decimal pl-6">
               <li>Attach a document or paste its text.</li>
               <li>The toolkit sets up the analysis and lists the information still needed.</li>
@@ -31,7 +31,7 @@ export default async function EquityWorkspaceHome() {
           </section>
           <section className="card" aria-labelledby="analyzer-card">
             <h2 id="analyzer-card" className="text-xl font-bold">Equity Policy Analyzer</h2>
-            <p>Use it when the subject is a policy and the goal is to change it.</p>
+            <p>Choose it when the subject is a policy and you want to change it.</p>
             <ol className="list-decimal pl-6">
               <li>Choose a policy from the catalog of policies that shape disability services, or attach one that is not in the catalog.</li>
               <li>Analyze it with equity principles, with every finding tied to quoted evidence.</li>

@@ -26,7 +26,7 @@ export default function KnowledgePillar() {
         { label: "National CLAS Standards", href: "/learn/clas", description: "Culturally and Linguistically Appropriate Services, explained for daily work." },
         { label: "Rewrite it in plain language", href: "/practice/plain-language", description: "Practice turning dense notice language into words people can act on." },
       ] },
-      { title: "Lead", intro: "Examine and change the conditions people work and live in.", links: [
+      { title: "Lead", intro: "Understand and change the conditions people work and live in.", links: [
         { label: "Racism and anti-racism in practice", href: "/learn/racism-and-antiracism", description: "Cases and work tools for service access, workplace concerns and organizational change." },
         { label: "One DSD Leadership", href: "/leadership", description: "Six stages of leadership practice and sixteen leadership styles." },
         { label: "Intercultural learning", href: "/learn/intercultural", description: "How culture shapes communication, decisions and services." },

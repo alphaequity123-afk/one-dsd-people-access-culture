@@ -67,7 +67,7 @@ export default async function SharedCoursePage({ params }: { params: Promise<{ c
       {course.introAudio ? (
         <FeaturedMediaPanel kind="audio" label="Listen"><section className={styles.introduction}>
           <h2>Listen to the introduction</h2>
-          <audio controls preload="none" src={course.introAudio}>This recording cannot play here. Use the transcript below.</audio>
+          <audio controls preload="none" src={course.introAudio}>This recording can&apos;t play here, but the transcript below has every word.</audio>
           {course.introTranscript ? <details><summary>Read the introduction</summary><p>{course.introTranscript}</p></details> : null}
         </section></FeaturedMediaPanel>
       ) : course.introTranscript ? <details className={styles.introduction}><summary>Read the introduction</summary><p>{course.introTranscript}</p></details> : null}

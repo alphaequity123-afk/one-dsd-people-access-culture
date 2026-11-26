@@ -29,7 +29,7 @@ export function CulturalLeadershipStyles() {
       <h4 className="text-xl font-semibold">Bring the comparison to DSD work</h4>
       <p>In a service decision or workplace change, ask: Whose experience shapes the problem? Who has the authority to change the process? Can people disagree without retaliation? How do race, gender, disability, language, income and other circumstances affect access and influence? Ask people what works for them; do not assume a person speaks for a whole community.</p>
       <p>For example, a supervisor, manager and director supporting a team updating a notice could clarify their respective decisions, set a clear safety deadline, invite disabled people and communities affected to identify access barriers, share which choices are open, and report back on changes. Compare the approach taken with the effect on participation and the decision—not with a score on a leader.</p>
-      <p>Leadership research uses these terms in different ways, and evidence from one setting does not prove an outcome in another. Use this comparison for reflection and discussion, alongside applicable policies and responsibilities.</p>
+      <p>Leadership research uses these terms in different ways, and evidence from one setting does not prove an outcome in another. Treat this comparison as a starting point for reflection and discussion, alongside the policies and responsibilities that apply.</p>
     </div>
     <details className="max-w-4xl rounded-xl border border-line p-5">
       <summary className="cursor-pointer font-semibold">Sources for leadership learning</summary>

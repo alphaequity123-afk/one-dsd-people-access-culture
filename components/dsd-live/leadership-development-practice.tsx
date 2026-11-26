@@ -67,7 +67,7 @@ export function LeadershipDevelopmentPractice({ module: m }: { module: Developme
       <div id={`${uid}-perspective`} hidden={!draft.revealed}><h3>What changes your judgment?</h3><p>{m.reveal}</p></div>
       <label htmlFor={`${uid}-response`}>Rehearse and revise your response</label><p>{m.rehearsal}</p><textarea id={`${uid}-response`} maxLength={5000} value={draft.response} onChange={e => update({ response: e.target.value })} />
     </section>
-    <section className="development-work" id="work-tool"><h2>{m.tool.title}</h2><p>Use an example without identifying details. Your draft stays in this browser tab; download a copy to keep it. If you choose feedback from Ask, you can review your draft before sending it.</p>
+    <section className="development-work" id="work-tool"><h2>{m.tool.title}</h2><p>Choose an example without identifying details. Your draft stays in this browser tab; download a copy to keep it. If you choose feedback from Ask, you can review your draft before sending it.</p>
       <label htmlFor={`${uid}-role`}>Apply this at your level of responsibility</label><select id={`${uid}-role`} value={draft.role} onChange={e => update({ role: e.target.value })}>{RESPONSIBILITIES.map(r => <option key={r.id} value={r.id}>{r.title}</option>)}</select><p>{role.task}</p>
       {draft.role === "program" || draft.role === "executive" ? <p className="development-note"><strong>Extend the work:</strong> {m.advanced}</p> : null}
       <details><summary>See an example</summary><p>{m.tool.example}</p></details>

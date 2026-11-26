@@ -12,7 +12,7 @@ export function JobAidSheet({ aid, lessonTitle, part, standards }: { aid: JobAid
       </div>
       {aid.remember.length > 0 && <section><h2>Remember</h2><ul>{aid.remember.map(item => <li key={item}>{item}</li>)}</ul></section>}
       {aid.askWho.length > 0 && <section><h2>Who to ask</h2><ul>{aid.askWho.map(item => <li key={item}>{item}</li>)}</ul></section>}
-      <p className="clas-job-aid-foot">CLAS standard{standards.length === 1 ? '' : 's'} {standards.join(', ')}. Use the current procedures applicable to your role and program when taking action. Leave names, case details and other private information out of your notes.</p>
+      <p className="clas-job-aid-foot">CLAS standard{standards.length === 1 ? '' : 's'} {standards.join(', ')}. When you act, follow the current procedures for your role and program. Leave names, case details and other private information out of your notes.</p>
     </article>
   );
 }

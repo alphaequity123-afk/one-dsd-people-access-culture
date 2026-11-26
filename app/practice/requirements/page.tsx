@@ -17,13 +17,13 @@ export default function RequirementsPage() {
       ]}>
         <section id="requirements-start" className="space-y-4">
           <h2 className="text-2xl font-semibold">Begin with the governing source</h2>
-          <p>When a policy, service or practice is changing, the people responsible need to see both what is required and how the proposed work addresses it. Use this crosswalk to make those connections visible, including missing evidence and questions about authority.</p>
-          <p>Begin with applicable law and binding requirements, then current approved agency policy and delegated procedures. Keep guidance, examples and proposed commitments clearly identified. If sources conflict or applicability is uncertain, record the question and seek the responsible review before relying on an interpretation.</p>
+          <p>When a policy, service or practice is changing, the people responsible need to see both what is required and how the proposed work addresses it. This crosswalk helps you make those connections easy to see, including any missing evidence and questions about who has authority.</p>
+          <p>Start with the law and other binding requirements that apply, then current approved agency policy and delegated procedures. Keep guidance, examples and proposed commitments clearly labeled as such. If sources conflict or you are unsure whether something applies, write down the question and ask the people responsible to review it before you rely on an interpretation.</p>
         </section>
         <RequirementsCrosswalkWorksheet />
         <section id="requirements-next" className="border-t border-line pt-6">
           <h2 className="text-xl font-semibold">Use the crosswalk with the work it supports</h2>
-          <p className="my-3">Download the summary and keep it with the draft analysis or recommendation through the appropriate review channel. Carry unresolved requirements, responsible roles and next actions into implementation planning. When the work changes, reopen the editable file and revise the affected entries.</p>
+          <p className="my-3">Download the summary and keep it with the draft analysis or recommendation as it moves through review. Bring any open requirements, who is responsible and the next actions into your implementation planning. When the work changes, reopen the editable file and update the entries it affects.</p>
           <nav aria-label="Related work"><ul className="mt-4 space-y-3">
             <li><Link href="/practice/gp-2">Policy, form or notice change</Link></li>
             <li><Link href="/learn/equity-toolkit">Equity Analysis Toolkit</Link></li>

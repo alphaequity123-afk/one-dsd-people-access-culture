@@ -23,7 +23,7 @@ export function SupportContextOptions({ copy }: { intakeEnabled?: boolean; copy:
     <section className={styles.supportOption} aria-labelledby="dsd-consult-title">
       <p className="kicker">{textValue(copy, "oneDsdKicker")}</p>
       <h2 id="dsd-consult-title" className="text-xl font-extrabold">Browse published DSD material</h2>
-      <p>Use the Library, or find the right person.</p>
+      <p>Try the Library, or find the right person.</p>
       <div className="flex flex-wrap gap-3">
         <Link href="/support/right-person" className="btn btn--light">Find the right person</Link>
       </div>

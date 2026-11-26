@@ -66,7 +66,7 @@ function PartPlayer({ part }: { part: PlayerPart }) {
             Your browser cannot play this audio. The transcript is on this page.
           </audio>}
       {mode === "video" ? <CaptionsBelow media={media} label={part.title} /> : null}
-      <p id={helpId} className="meta">Use the player controls to play, pause or adjust volume. Captions appear under the video while watching. <a href={part.transcript}>Read the transcript for {part.title}</a>.</p>
+      <p id={helpId} className="meta">The player controls let you play, pause or adjust the volume. Captions appear under the video while watching. <a href={part.transcript}>Read the transcript for {part.title}</a>.</p>
       <p className="meta" role="status" aria-live="polite">{message}</p>
       <div className="listen-choice" role="group" aria-label={`${part.title}: watch or listen`}>
         <button type="button" className="choice" aria-pressed={mode === "video"} onClick={() => switchTo("video")}>Watch</button>

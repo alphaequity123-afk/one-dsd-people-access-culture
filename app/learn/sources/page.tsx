@@ -82,7 +82,7 @@ export default async function SourcesPage({ searchParams }: { searchParams: Prom
             <button type="submit">Show sources</button>
             {filtered ? <Link href={BASE}>View all sources</Link> : null}
           </form>
-          {theme && !selectedTheme ? <p>This subject is not available. Choose a subject above or view all sources.</p> : null}
+          {theme && !selectedTheme ? <p>We couldn’t find that subject. Choose one above, or view all sources.</p> : null}
         </section>
         {surface.available ? <details className="max-w-4xl border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download the source register</summary><ResourceDownloads kind="sources" id="register" noun="source register" scope={scope} /></details> : null}
         <nav aria-label="Source groups"><ul className={styles.groupNav}>{groups.map(({ group, sources }) => <li key={group} id={`group-${group}`}><Link href={catHref(BASE, choices, { group })} aria-current={group === selectedGroup ? "page" : undefined}>{AUTHORITY_GROUP_LABEL[group]} ({sources.length})</Link></li>)}</ul></nav>
