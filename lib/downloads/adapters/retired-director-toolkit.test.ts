@@ -18,3 +18,4 @@ describe("retired Equity Director Toolkit", () => {
     expect(RemovedDirectorToolkitTemplates).toThrow("NEXT_HTTP_ERROR_FALLBACK;404");
   });
 });
+
