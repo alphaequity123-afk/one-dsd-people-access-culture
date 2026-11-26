@@ -1,0 +1,4 @@
+import Link from "next/link";
+export function EngagementContext() {
+ return <aside aria-label="Applying this guidance" className="reading" style={{borderLeft:"3px solid #38745b",paddingLeft:"1rem",marginBlock:"1.5rem"}}><p><strong>Applying this guidance with the capacity available.</strong> Community engagement capacity is limited. These resources support preparation; they do not establish that staff, funding, participation arrangements or community partnerships are available. Consultation requires actual input on an open decision. Co-design requires people affected to help develop and revise options with meaningful influence.</p><p>Confirm a responsible owner, time, accessible arrangements and follow-through before inviting participation. Community profiles and AI-generated perspectives cannot substitute for people affected. <Link href="/equity-centered-practice">Use the shared practice framework</Link>.</p></aside>;
+}
