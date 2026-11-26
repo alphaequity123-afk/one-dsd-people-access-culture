@@ -39,7 +39,7 @@ if (process.env.PAC_CLONE_AGENTS === "on") {
 // The one-time storage copy runs beside the site, never in front of it, so a long upload cannot
 // hold up the health check. It needs the volume still mounted, and only reads from it.
 const storageCopy = process.env.PAC_STORAGE_COPY?.trim().toLowerCase();
-if (storageCopy === "verify" || storageCopy === "copy") {
+if (storageCopy === "verify" || storageCopy === "copy" || storageCopy === "inventory") {
   if (process.env.RAILWAY_VOLUME_MOUNT_PATH !== resolve(".data")) {
     console.log(`storage_copy_result ${JSON.stringify({ ok: false, error: "The volume is not mounted, so there is nothing to copy from." })}`);
   } else {

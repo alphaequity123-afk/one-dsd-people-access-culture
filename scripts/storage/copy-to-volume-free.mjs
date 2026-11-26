@@ -4,6 +4,7 @@
 //
 // PAC_STORAGE_COPY=verify  compares and reports; it writes nothing.
 // PAC_STORAGE_COPY=copy    copies what is missing or different, then runs the same check.
+// PAC_STORAGE_COPY=inventory  lists the size of every top-level folder on the volume; it writes nothing.
 //
 // It only reads the volume and never deletes from it. Every step can be run again: files already
 // in the bucket with the same bytes are skipped, and database rows already present are left alone.
@@ -74,9 +75,31 @@ function sqliteRows(file, query) {
   try { return db.prepare(query).all(); } catch { return []; } finally { db.close(); }
 }
 
+/** Size and file count of each top-level folder on the volume, hidden ones included, so nothing is left unseen. */
+async function inventory(dataRoot) {
+  const totals = {};
+  async function walk(dir, top) {
+    for (const name of await readdir(dir)) {
+      const full = path.join(dir, name);
+      const info = await lstat(full);
+      const key = top ?? name;
+      totals[key] ??= { files: 0, bytes: 0 };
+      if (info.isDirectory() && !info.isSymbolicLink()) await walk(full, key);
+      else { totals[key].files += 1; totals[key].bytes += info.size; }
+    }
+  }
+  if (existsSync(dataRoot)) await walk(dataRoot, null);
+  return totals;
+}
+
 export async function copyToVolumeFree(environment = process.env, dataRoot = path.resolve(".data")) {
   const mode = environment.PAC_STORAGE_COPY?.trim().toLowerCase();
-  if (mode !== "verify" && mode !== "copy") throw new Error("PAC_STORAGE_COPY must be verify or copy.");
+  if (mode !== "verify" && mode !== "copy" && mode !== "inventory") throw new Error("PAC_STORAGE_COPY must be verify, copy or inventory.");
+  if (mode === "inventory") {
+    const folders = await inventory(dataRoot);
+    console.log(`storage_copy_result ${JSON.stringify({ ok: true, mode, folders })}`);
+    return { ok: true, mode, folders };
+  }
   const copy = mode === "copy";
   const bucket = mediaBucketConfiguration(environment);
   const ownerUrl = environment.PAC_OWNER_DATABASE_URL?.trim();
