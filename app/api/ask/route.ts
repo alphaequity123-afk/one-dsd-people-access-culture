@@ -11,7 +11,7 @@ import { ask, paused } from "@/lib/intelligence/orchestrator";
 import { toStaffAskResult } from "@/lib/intelligence/agents/ask";
 import { PracticeArtifactSchema } from "@/lib/content/practice-artifact";
 import { AskWorkProductSchema } from "@/lib/ask/work-product";
-import { admitRun, finishRun, openLedger } from "@/lib/intelligence/clone/ledger";
+import { admitRun, finishRun, openLedger, type Ledger, type RunStatus } from "@/lib/intelligence/clone/ledger";
 import type { AskProgress, AskProgressSink } from "@/lib/intelligence/agents/ask-progress";
 import { ASK_PROGRESS_TYPE } from "@/lib/ask/progress-stream";
 
@@ -30,6 +30,15 @@ const Input = z.object({
 }).strict();
 const json = (body: unknown, status = 200) => NextResponse.json(body, { status, headers: { "cache-control": "no-store" } });
 const KEEP_ALIVE_MS = 10_000;
+const FAILED_MESSAGE = "Ask could not finish this answer. Please try again later, or browse the Library.";
+
+/** The run ledger now lives in the database. A failed write is logged by name and never holds up or hides the answer. */
+async function settleRun(db: Ledger, runId: string, status: RunStatus) {
+  try { await finishRun(db, runId, status); } catch (error) { console.error("ask_ledger_failed", error instanceof Error ? error.name : "unknown"); }
+}
+function closeLedger(db: Ledger) {
+  try { db.close(); } catch (error) { console.error("ask_ledger_failed", error instanceof Error ? error.name : "unknown"); }
+}
 
 /**
  * An answer can take over 30 seconds, and some networks cut a silent connection at about that point.
@@ -39,6 +48,7 @@ const KEEP_ALIVE_MS = 10_000;
 function patientJson(work: () => Promise<unknown>) {
   const encoder = new TextEncoder();
   let open = true;
+  let beat: ReturnType<typeof setInterval> | undefined;
   const stream = new ReadableStream<Uint8Array>({
     start(controller) {
       const send = (text: string) => {
@@ -46,14 +56,17 @@ function patientJson(work: () => Promise<unknown>) {
         try { controller.enqueue(encoder.encode(text)); } catch { open = false; }
       };
       send(" ");
-      const beat = setInterval(() => send(" "), KEEP_ALIVE_MS);
-      void work().then(body => {
-        clearInterval(beat);
-        send(JSON.stringify(body));
-        if (open) { open = false; controller.close(); }
-      });
+      beat = setInterval(() => send(" "), KEEP_ALIVE_MS);
+      // A rejected answer still ends the response: without this the keep-alive would run forever.
+      void work()
+        .then(body => body, () => ({ error: FAILED_MESSAGE }))
+        .then(body => { send(JSON.stringify(body)); }, () => undefined)
+        .finally(() => {
+          if (beat) { clearInterval(beat); beat = undefined; }
+          if (open) { open = false; try { controller.close(); } catch { /* already closed by the client */ } }
+        });
     },
-    cancel() { open = false; },
+    cancel() { open = false; if (beat) { clearInterval(beat); beat = undefined; } },
   });
   return new Response(stream, { headers: { "content-type": "application/json; charset=utf-8", "cache-control": "no-store, no-transform", "x-accel-buffering": "no" } });
 }
@@ -66,6 +79,7 @@ function patientJson(work: () => Promise<unknown>) {
 function progressLines(work: (report: AskProgressSink) => Promise<unknown>) {
   const encoder = new TextEncoder();
   let open = true;
+  let beat: ReturnType<typeof setInterval> | undefined;
   const stream = new ReadableStream<Uint8Array>({
     start(controller) {
       const line = (value: AskProgress | { type: "wait" } | { type: "done"; result: unknown }) => {
@@ -73,15 +87,17 @@ function progressLines(work: (report: AskProgressSink) => Promise<unknown>) {
         try { controller.enqueue(encoder.encode(JSON.stringify(value) + "\n")); } catch { open = false; }
       };
       line({ type: "wait" });
-      const beat = setInterval(() => line({ type: "wait" }), KEEP_ALIVE_MS);
-      void work(line).then(result => {
-        clearInterval(beat);
-        line({ type: "done", result });
-        if (open) { open = false; controller.close(); }
-      });
+      beat = setInterval(() => line({ type: "wait" }), KEEP_ALIVE_MS);
+      void work(line)
+        .then(result => result, () => ({ error: FAILED_MESSAGE }))
+        .then(result => { line({ type: "done", result }); }, () => undefined)
+        .finally(() => {
+          if (beat) { clearInterval(beat); beat = undefined; }
+          if (open) { open = false; try { controller.close(); } catch { /* already closed by the client */ } }
+        });
     },
     // The page went away. The answer is still finished and recorded as usual; nothing more is sent.
-    cancel() { open = false; },
+    cancel() { open = false; if (beat) { clearInterval(beat); beat = undefined; } },
   });
   return new Response(stream, { headers: { "content-type": `${ASK_PROGRESS_TYPE}; charset=utf-8`, "cache-control": "no-store, no-transform", "x-accel-buffering": "no" } });
 }
@@ -95,30 +111,40 @@ export async function POST(request: NextRequest) {
   if (!body.ok) return json({ error: body.message }, body.status);
   const input = Input.safeParse(body.value);
   if (!input.success) return json({ error: "Please shorten your question or start a new conversation." }, 400);
-  const limit = await consumeRequestLimit(request, { scope: "staff-ask", limit: 120, windowSeconds: 600 });
+  let limit;
+  try { limit = await consumeRequestLimit(request, { scope: "staff-ask", limit: 120, windowSeconds: 600 }); }
+  catch (error) {
+    console.error("ask_route_failed", error instanceof Error ? `${error.name}: ${error.message}` : "unknown");
+    return json({ error: FAILED_MESSAGE }, 503);
+  }
   if (!limit.allowed) return NextResponse.json({ error: "Please wait a moment before asking another question." }, { status: 429, headers: rateLimitHeaders(limit) });
-  const db = openLedger();
+  let ledger: Ledger;
+  try { ledger = openLedger(); }
+  catch (error) {
+    console.error("ask_route_failed", error instanceof Error ? `${error.name}: ${error.message}` : "unknown");
+    return json({ error: FAILED_MESSAGE }, 503);
+  }
   let id: string | null;
   try {
-    id = await admitRun(db);
+    id = await admitRun(ledger);
   } catch (error) {
-    db.close();
+    closeLedger(ledger);
     console.error("ask_route_failed", error instanceof Error ? `${error.name}: ${error.message}` : "unknown");
-    return json({ error: "Ask could not finish this answer. Please try again later, or browse the Library." }, 503);
+    return json({ error: FAILED_MESSAGE }, 503);
   }
   if (!id) {
-    db.close();
+    closeLedger(ledger);
     return json({ error: "Ask has reached its limit for now. You can browse resources, or try again a little later." }, 429);
   }
   const runId = id;
   const answer = async (onProgress?: AskProgressSink) => {
     try {
       const result = await ask({ ...input.data, contextPreference: DEFAULT_PRODUCT_CONTEXT, researchMode: input.data.researchMode ?? "auto", cloneRunId: runId, onProgress }, "staff", runId);
-      if (await paused()) { await finishRun(db, runId, "failed"); return { error: "Ask was paused, so no answer was shared." }; }
-      if (result.kind === "refusal") { await finishRun(db, runId, "refused"); return toStaffAskResult(result); }
+      if (await paused()) { await settleRun(ledger, runId, "failed"); return { error: "Ask was paused, so no answer was shared." }; }
+      if (result.kind === "refusal") { await settleRun(ledger, runId, "refused"); return toStaffAskResult(result); }
       const answer = result.answer;
       if (answer.failureCode) {
-        await finishRun(db, runId, "failed");
+        await settleRun(ledger, runId, "failed");
         onProgress?.({ type: "reset" });
         const evidenceFailure = /evidence|review|source_link/.test(answer.failureCode);
         return {
@@ -129,13 +155,13 @@ export async function POST(request: NextRequest) {
           retryable: true,
         };
       }
-      await finishRun(db, runId, answer.degraded ? "needs_review" : "completed");
+      await settleRun(ledger, runId, answer.degraded ? "needs_review" : "completed");
       return toStaffAskResult(result);
     } catch (error) {
       console.error("ask_route_failed", error instanceof Error ? `${error.name}: ${error.message}` : "unknown");
-      await finishRun(db, runId, "failed");
-      return { error: "Ask could not finish this answer. Please try again later, or browse the Library." };
-    } finally { db.close(); }
+      await settleRun(ledger, runId, "failed");
+      return { error: FAILED_MESSAGE };
+    } finally { closeLedger(ledger); }
   };
   // A page that asks for progress gets it line by line; anything else gets the single finished answer as before.
   return request.headers.get("accept")?.includes(ASK_PROGRESS_TYPE) ? progressLines(answer) : patientJson(() => answer());

@@ -110,3 +110,24 @@ it("clears partial streamed text when the final answer failed verification", asy
   expect(lines.at(-1)?.result?.error).toContain("verify");
   expect(lines.at(-1)?.result?.answer).toBeUndefined();
 });
+
+// The run ledger is in the database now. A failed ledger write must never leave the connection open.
+it("still sends the answer and ends the response when the ledger cannot record the finish", async () => {
+  const error = vi.spyOn(console, "error").mockImplementation(() => undefined);
+  f.finish.mockRejectedValue(new Error("connection reset"));
+  const body = await (await POST(request({ question: "hello" }))).json();
+  expect(body.answer.shortAnswer).toBe("Consider another perspective.");
+  expect(error).toHaveBeenCalledWith("ask_ledger_failed", "Error");
+  expect(f.close).toHaveBeenCalledOnce();
+  error.mockRestore();
+});
+it("ends a progress response with an error line when the answer fails and the ledger is down", async () => {
+  const error = vi.spyOn(console, "error").mockImplementation(() => undefined);
+  f.ask.mockRejectedValue(new Error("synthetic"));
+  f.finish.mockRejectedValue(new Error("connection reset"));
+  const lines = await progressLines(await POST(progressRequest({ question: "hello" })));
+  expect(lines.at(-1)!.type).toBe("done");
+  expect(lines.at(-1)!.result!.error).toBeTruthy();
+  expect(f.close).toHaveBeenCalledOnce();
+  error.mockRestore();
+});
