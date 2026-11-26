@@ -1,0 +1,37 @@
+{
+  "course": "cn-sustaining-the-navigator",
+  "sourceSha256": "061eb7fa8951471bc87e93fc5caa4ad8073eca1e1638a1dc67c1e8e63b6c4a73",
+  "voiceProfile": "approved-eight-character-voices-20261126",
+  "cast": {
+    "NARRATOR": "C3",
+    "NAVIGATOR": "C1",
+    "SUPERVISOR": "C6"
+  },
+  "assets": {
+    "media": "620f6aef8e5d8cfc2b1b2eddadd2b3c5d8d6e7f7066761475da2b70cd5cafe28.mp4",
+    "captions": "8697953e7c8cf9520c831af946b28c96d285632124ef9dbc284ce638641dc397.vtt",
+    "transcript": "766d94fe0ff1edeb7138c3bf60bb2ada843ff76bc42136a579bd2abeeb8e0dc6.txt",
+    "poster": "7958be865c2af45f43b67836453807abb15a853901e2f42dc8b9a5c803062b4e.png"
+  },
+  "captionTiming": "Source words mapped to recognition word timestamps",
+  "speechDifferences": [],
+  "durationSeconds": 54.4,
+  "portraitHashes": {
+    "C1": "af42ef36a0db32e799fd0073226e704905cf3189ad2bc9d6820b8a0a450ae8a0",
+    "C2": "4c7446c17d0572d35db9f665e43c6383f128e4f0ee30ea5d1c172bb35f644e1e",
+    "C3": "056f228f12826f16f5045e735847f8a886b0e5426f50e04cc058237b70f3e7fd",
+    "C4": "3cb112ffcc5215d9f81fb3046efa103ad0778bf5199a0e364dea5563da87b71f",
+    "C5": "477566c44d6a2c0dc72d441494619c4ca8d447a6f0fa72c2b4a7d98490d1ef05",
+    "C6": "7c1e21374a0a25c4145122ea63cdd410e0616234401744670c398cc9346a24d5",
+    "C7": "80eac646012831b31713c0476ac0f92e492e90b6d8825ae9f78dd78f0a6f79a3",
+    "C8": "ba7013f2e1f0309f7a9d96d3adc7e9879c87b91fc6aa7bc5143932856fa41419"
+  },
+  "videoVerified": {
+    "resolution": "1280x720",
+    "video": "H.264",
+    "audio": "AAC",
+    "fullDecode": "passed",
+    "captions": "ordered, non-overlapping and within duration",
+    "hashes": "all assets match manifest"
+  }
+}

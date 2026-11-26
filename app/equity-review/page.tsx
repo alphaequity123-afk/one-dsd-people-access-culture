@@ -23,7 +23,6 @@ export default function EquityReviewPage() {
         <li><Link href="/equity-review/toolkit">DHS Equity Analysis Toolkit<span>Work through a decision with your evidence and the people it affects.</span></Link></li>
         <li id="analyze-document"><Link href="/equity-review/analyze">Analyze a document<span>Use one of six methods to identify evidence, inferences, and gaps.</span></Link></li>
         <li id="working-group-plan"><Link href="/equity-review/working-group-plan">Plan a legislatively required working group<span>Turn a statutory charge into a work plan.</span></Link></li>
-        <li id="director-toolkit"><Link href="/equity-review/director-toolkit">Equity Director toolkit<span>Find guidance and templates for leading equity work across DHS.</span></Link></li>
       </ul>
     </section>
     <section aria-label="Guidance and support">
@@ -41,7 +40,6 @@ export default function EquityReviewPage() {
           <p>The consultant workspace brings supplied evidence, affected perspectives, alternatives, and practical actions together. Explore a practice situation, examine gaps, and connect the work to ADSA equity goals when relevant.</p>
           <ul className="pilot-topic-rows">
             <li><Link href="/consultant/analysis">Research and policy analysis<span>Consultant sign-in required</span></Link></li>
-            <li><Link href="/equity-review/director-toolkit/templates">Printable templates</Link></li>
             <li><Link href="/equity-policy">DHS equity policy</Link></li>
             <li><Link href="/one-dsd/planning">Planning and reviewing progress</Link></li>
             <li><Link href="/support/right-person">Support and guidance</Link></li>

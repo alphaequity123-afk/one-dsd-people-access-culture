@@ -7,8 +7,6 @@ import { LEADERSHIP_CAPSTONE_LESSON_ID, LEADERSHIP_SCENARIO_LESSON_ID } from "@/
 
 vi.mock("@/components/tutor-panel", () => ({ default: ({ lessonId }: { lessonId: string }) => <div data-guided-practice={lessonId} /> }));
 
-import ToolkitPage from "@/app/equity-review/director-toolkit/page";
-import TemplatesPage from "@/app/equity-review/director-toolkit/templates/page";
 import PathwayPage from "./page";
 import StylePage from "./[style]/page";
 import ScenariosPage from "./scenarios/page";
@@ -37,7 +35,7 @@ describe("Equity Director toolkit and leadership pathway carry no status labels"
     for (const text of texts) expect(text, text.slice(0, 80)).not.toMatch(STATUS_LANGUAGE);
   });
   it("on every rendered toolkit and pathway page, with no tier badges", async () => {
-    const pages = [ToolkitPage(), TemplatesPage(), PathwayPage(), ScenariosPage(), RacePage(), LifecyclePage(), CapstonePage(),
+    const pages = [PathwayPage(), ScenariosPage(), RacePage(), LifecyclePage(), CapstonePage(),
       ...await Promise.all(LEADERSHIP_STYLE_LESSONS.map(lesson => StylePage({ params: Promise.resolve({ style: lesson.slug }) })))];
     for (const page of pages) {
       const html = renderToStaticMarkup(page);
