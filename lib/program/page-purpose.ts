@@ -1,4 +1,4 @@
-/** v2 rebuild (2026-11-25): Home plus five pillars — Practice, Leadership, Communities, Knowledge, Charter. Ask sits in the banner on every page; one Search.
+/** v2 rebuild (2026-11-25): Home plus four pillars — Practice, Leadership, Communities, Knowledge (Gemini overhaul). About, help, support and the charter share one page, /about. Ask sits in the banner on every page; one Search.
  * Shared navigation describes the work, without changing access or page content. */
 export const PAGE_AREAS = {
   start: { label: "Start", home: "/start", links: [["Start", "/start"], ["New to DSD", "/start#new-to-dsd"], ["How to use this site", "/user-guide"]] },
@@ -7,17 +7,17 @@ export const PAGE_AREAS = {
   support: { label: "Support", home: "/support", links: [["Support", "/support"], ["Ask", "/ask"], ["Minnesota communities", "/minnesota-communities"]] },
   programs: { label: "One DSD", home: "/one-dsd", links: [["One DSD", "/one-dsd"], ["Programs and services", "/one-dsd/programs"], ["Planning and progress", "/one-dsd/planning"], ["Equity leadership and growth", "/one-dsd/leadership"], ["Understanding DHS", "/understanding-dhs"], ["About", "/about"]] },
   leading: { label: "Leadership", home: "/leadership", links: [["Leadership", "/leadership"], ["What are you deciding?", "/leading"], ["Suggested paths", "/leading/paths"], ["Your leadership journey", "/leading/journey"], ["How this works", "/leading/how-this-works"]] },
-  about: { label: "Charter", home: "/charter", links: [["Program charter", "/charter"], ["About", "/about"], ["How the program works", "/program/model"]] },
+  about: { label: "About and help", home: "/about", links: [["About and help", "/about"], ["Program charter", "/about#charter"], ["How the program works", "/program/model"]] },
   communities: { label: "Communities", home: "/communities", links: [["Communities", "/communities"], ["Minnesota communities", "/minnesota-communities"], ["Culture Calendar", "/minnesota-communities/calendar"], ["Community Outreach and Engagement", "/community-outreach"], ["Employee resource groups", "/employee-resource-groups"]] },
   consultant: { label: "Consultant workspace", home: "/consultant", links: [["Workspace", "/consultant"], ["My work", "/my-work"], ["Return to the program", "/home"]] },
 } as const;
 export type PageArea = keyof typeof PAGE_AREAS;
 /**
- * The five main menu sections. My work and For leaders, supervisors, managers, and directors are header utilities; About lives in the footer and under One DSD.
+ * The four main menu sections. My work and For leaders, supervisors, managers, and directors are header utilities; About lives in the footer and under One DSD.
  * Support stays in the menu. Ask is available in the banner and the Support row;
  * Themes and collections sits under Learn; Community Outreach and Engagement sits under Cultural Intelligence. */
 export const PRIMARY_SECTIONS: ReadonlyArray<readonly [string, string, PageArea]> = [
-  ["Practice", "/practice", "tools"], ["Leadership", "/leadership", "leading"], ["Communities", "/communities", "communities"], ["Knowledge", "/knowledge", "learn"], ["Charter", "/charter", "about"],
+  ["Practice", "/practice", "tools"], ["Leadership", "/leadership", "leading"], ["Communities", "/communities", "communities"], ["Knowledge", "/knowledge", "learn"],
 ];
 export function pageArea(path: string): PageArea {
   if (/^\/consultant(?:\/|$)/.test(path)) return "consultant";

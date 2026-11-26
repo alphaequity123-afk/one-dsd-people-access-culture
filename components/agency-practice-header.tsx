@@ -11,7 +11,7 @@ import { useLearningTrail, trailHref } from "./use-learning-trail";
 // Owner decision 2026-11-22: these pages now reach people only through the One DSD site, so they carry its menu
 // (same items and order as the front door's components/site-header.tsx for One DSD; Ask and Search sit in the banner).
 // v2 rebuild (2026-11-25): Home plus five pillars; Ask and one Search sit in the banner.
-const sections = [["Home", "/home"], ["Practice", "/practice"], ["Leadership", "/leadership"], ["Communities", "/communities"], ["Knowledge", "/knowledge"], ["Charter", "/charter"]];
+const sections = [["Home", "/home"], ["Practice", "/practice"], ["Leadership", "/leadership"], ["Communities", "/communities"], ["Knowledge", "/knowledge"]];
 
 /** Agency branding spans the connected program; the learning trail survives related-page visits. */
 export function AgencyPracticeHeader({ children }: { children: ReactNode }) {

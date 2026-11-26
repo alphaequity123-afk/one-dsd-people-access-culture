@@ -2,7 +2,7 @@ import Link from "@/components/app-link";
 import "./pac-footer.css";
 
 /** Owner decision 2026-11-22: navy footer with a thin DHS-green top line on every page. Same markup and links as the One DSD front door's SiteFooter; keep the two identical. */
-// v2 rebuild (2026-11-25): the footer follows the five pillars.
+// v2 rebuild (2026-11-25): the footer follows the four pillars; About, help, support and the charter share one page.
 const EXPLORE = [
   { href: "/practice", label: "Practice" },
   { href: "/leadership", label: "Leadership" },
@@ -13,10 +13,9 @@ const EXPLORE = [
 ];
 const HELP = [
   { href: "/start", label: "Begin here" },
-  { href: "/user-guide", label: "How to use this site" },
-  { href: "/support", label: "Support" },
-  { href: "/about", label: "About" },
-  { href: "/charter", label: "Program charter" },
+  { href: "/about", label: "About and help" },
+  { href: "/about#how-to-use", label: "How to use this site" },
+  { href: "/about#charter", label: "Program charter" },
   { href: "/site-map", label: "Site map" },
 ];
 

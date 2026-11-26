@@ -4,7 +4,7 @@ import { expect, it } from "vitest";
 import { PAGE_AREAS, PRIMARY_SECTIONS } from "@/lib/program/page-purpose";
 
 it("shows Home plus the five v2 pillars, with Ask and Themes and collections one link away", () => {
-  expect(PRIMARY_SECTIONS.map(([label]) => label)).toEqual(["Practice", "Leadership", "Communities", "Knowledge", "Charter"]);
+  expect(PRIMARY_SECTIONS.map(([label]) => label)).toEqual(["Practice", "Leadership", "Communities", "Knowledge"]);
   for (const [, href] of PRIMARY_SECTIONS) expect(href === "/practice" || existsSync(path.join(process.cwd(), "app", href, "page.tsx")), href).toBe(true);
   expect(PAGE_AREAS.support.links.slice(0, 2)).toEqual([["Support", "/support"], ["Ask", "/ask"]]);
   expect(PAGE_AREAS.learn.links).toContainEqual(["Themes and collections", "/collections"]);

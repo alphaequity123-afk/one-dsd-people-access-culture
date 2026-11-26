@@ -145,7 +145,7 @@ describe("the Equity Analysis Toolkit", () => {
 
 describe("navigation", () => {
   it("adds a separate area without a sixth main menu item", () => {
-    expect(PRIMARY_SECTIONS).toHaveLength(5);
+    expect(PRIMARY_SECTIONS).toHaveLength(4);
     expect(pageArea("/leading")).toBe("leading");
     expect(pageArea("/leading/policy")).toBe("leading");
     expect(pageArea("/learn/collections")).toBe("learn");
