@@ -14,6 +14,9 @@ Voices come from the approved podcast voice profile (`one-dsd-selected-preview-p
 | Community partner | C1 | man, sage shirt, glasses | host2 (Co-host) |
 | Discussion host 1 | C8 | woman, mauve hijab | host1 (Host) |
 | Discussion host 2 | C4 | man, navy polo | host2 (Co-host) |
+| Cultural navigator (Cultural Navigation pathway) | C1 | man, sage shirt, glasses | host2 (Co-host) |
+| Assessor (Cultural Navigation pathway) | C8 | woman, mauve hijab | host1 (Host) |
+| Peer supporter (Cultural Navigation pathway) | C4 | man, navy polo | host2 (Co-host) |
 
 Casting follows the front door app's rules: authority is spread across the cast, and no role is given to a figure because its trait matches a common stereotype of how that figure looks. The learner is never cast. Dialogue refers to people by role and uses "they" or the role, never a guessed pronoun.
 

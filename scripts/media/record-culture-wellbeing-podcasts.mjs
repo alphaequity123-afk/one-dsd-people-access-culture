@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 /**
- * Record the six Culture and Well-Being course podcasts with the approved voices.
+ * Record the Culture and Well-Being and Cultural Navigation course podcasts with the approved voices.
  *
- *   npm run record:culture-wellbeing-podcasts            record all six (resumes where it stopped)
+ *   npm run record:culture-wellbeing-podcasts            record them all (resumes where it stopped)
  *   npm run record:culture-wellbeing-podcasts -- --check  check the voice service only; records nothing
  *   npm run record:culture-wellbeing-podcasts -- --course cw-everyday-norms
  *
- * Each turn of docs/media-scripts/culture-wellbeing/<course>.podcast.json is spoken by the hosted
+ * Each turn of docs/media-scripts/<folder>/<course>.podcast.json (SCRIPT_FOLDERS) is spoken by the hosted
  * overview voice service (cloud/voice/overview_app.py) in its approved voice: host1 (Host, female)
  * or geffen (Co-host, male). Every clip must arrive verified by the service, in order, as 16-bit
  * 24 kHz mono WAV. Finished clips are cached under output/, so a stopped run resumes without
@@ -34,7 +34,17 @@ export const COURSES = [
   "cw-workload-burnout",
   "cw-learning-organization",
   "cw-trauma-informed-teams",
+  "cn-what-a-navigator-does",
+  "cn-working-alongside-a-navigator",
+  "cn-navigating-disability-services-with-a-family",
+  "cn-culture-in-informed-choice",
+  "cn-building-a-navigator-role",
+  "cn-navigators-and-system-change",
+  "cn-sustaining-the-navigator",
 ];
+/** Where each course's script lives under docs/media-scripts; courses not listed use culture-wellbeing. */
+export const SCRIPT_FOLDERS = Object.fromEntries(COURSES.filter((id) => id.startsWith("cn-")).map((id) => [id, "cultural-navigation"]));
+const scriptFolder = (id) => SCRIPT_FOLDERS[id] ?? "culture-wellbeing";
 export const VOICES = { host1: "Host", geffen: "Co-host" };
 const SAMPLE_RATE = 24_000;
 const BYTES_PER_FRAME = 2;
@@ -348,7 +358,7 @@ export async function checkService(config, fetchImpl = fetch) {
 }
 
 export function loadScript(root, id) {
-  const file = path.join(root, "docs", "media-scripts", "culture-wellbeing", `${id}.podcast.json`);
+  const file = path.join(root, "docs", "media-scripts", scriptFolder(id), `${id}.podcast.json`);
   const script = JSON.parse(readFileSync(file, "utf8"));
   if (script.id !== id || !Array.isArray(script.turns) || !script.turns.length) throw new Error(`The script for ${id} is not complete.`);
   for (const turn of script.turns) {
@@ -403,8 +413,8 @@ async function main() {
   console.log(`\nDone: ${Object.keys(entries).length} episodes are in public/learning/course-podcasts and registered on their course pages.`);
   console.log("Next: listen to each episode.mp3, then send the new files with:\n" +
     "  git checkout -b media/culture-wellbeing-podcasts\n" +
-    "  git add public/learning/course-podcasts/cw-* lib/content/courses/completed-podcasts.json\n" +
-    "  git commit -m \"Record the six Culture and Well-Being course podcasts\"\n" +
+    "  git add public/learning/course-podcasts/cw-* public/learning/course-podcasts/cn-* lib/content/courses/completed-podcasts.json\n" +
+    "  git commit -m \"Record the course podcasts\"\n" +
     "  git push -u origin media/culture-wellbeing-podcasts");
 }
 

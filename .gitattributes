@@ -9,6 +9,9 @@ public/learning/water-we-swim-in/*/office-hero.webp !filter !diff !merge -text
 public/images/courses/culture-wellbeing/*.webp !filter !diff !merge -text
 public/images/covers/cw-*.webp !filter !diff !merge -text
 public/learning/course-podcasts/cw-*/episode.mp3 !filter !diff !merge -text
+public/images/courses/cultural-navigation/*.webp !filter !diff !merge -text
+public/images/covers/cn-*.webp !filter !diff !merge -text
+public/learning/course-podcasts/cn-*/episode.mp3 !filter !diff !merge -text
 public/images/course-sm/observation-inquiry-service.svg text eol=lf
 *.pptx filter=lfs diff=lfs merge=lfs -text
 *.mp4 filter=lfs diff=lfs merge=lfs -text

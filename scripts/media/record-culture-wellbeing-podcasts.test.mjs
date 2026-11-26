@@ -13,6 +13,7 @@ const repo = process.cwd();
 const root = mkdtempSync(path.join(tmpdir(), "cw-recorder-"));
 try {
   cpSync(path.join(repo, "docs/media-scripts/culture-wellbeing"), path.join(root, "docs/media-scripts/culture-wellbeing"), { recursive: true });
+  cpSync(path.join(repo, "docs/media-scripts/cultural-navigation"), path.join(root, "docs/media-scripts/cultural-navigation"), { recursive: true });
   mkdirSync(path.join(root, "lib/content/courses"), { recursive: true });
   cpSync(path.join(repo, "lib/content/courses/completed-podcasts.json"), path.join(root, "lib/content/courses/completed-podcasts.json"));
   cpSync(path.join(repo, "package.json"), path.join(root, "package.json"));
