@@ -30,6 +30,7 @@ export default function KnowledgePillar() {
         { label: "Racism and anti-racism in practice", href: "/learn/racism-and-antiracism", description: "Cases and work tools for service access, workplace concerns and organizational change." },
         { label: "One DSD Leadership", href: "/leadership", description: "Six stages of leadership practice and sixteen leadership styles." },
         { label: "Intercultural learning", href: "/learn/intercultural", description: "How culture shapes communication, decisions and services." },
+        { label: "People and Growth", href: "/people-and-growth", description: "Mentoring, career growth and strong teams." },
       ] },
       { title: "Library and listening", links: [
         { label: "Library", href: "/library", description: "Resources, guides and policy summaries, each with its source." },

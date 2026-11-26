@@ -69,6 +69,7 @@ export default function LeadershipPillar() {
         { label: "What are you deciding?", href: "/leading", description: "Start from the decision or team moment in front of you." },
         { label: "Suggested paths", href: "/leading/paths", description: "Paths for first-year supervisors, experienced leaders, managers of managers and senior leaders." },
         { label: "Equity leadership and growth in DSD", href: "/one-dsd/leadership", description: "How leaders in the Disability Services Division carry this work forward." },
+        { label: "People and Growth", href: "/people-and-growth", description: "Mentoring, career growth, coaching and team development." },
     ] },
     ]}
   />;

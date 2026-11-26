@@ -21,7 +21,7 @@ export const PRIMARY_SECTIONS: ReadonlyArray<readonly [string, string, PageArea]
 ];
 export function pageArea(path: string): PageArea {
   if (/^\/consultant(?:\/|$)/.test(path)) return "consultant";
-  if (/^\/(leadership|leading|team-kits)(?:\/|$)/.test(path) || /^\/learn\/(leadership|leadership-styles)(?:\/|$)/.test(path) || /^\/one-dsd\/leadership(?:\/|$)/.test(path)) return "leading";
+  if (/^\/(leadership|leading|team-kits|people-and-growth|growth)(?:\/|$)/.test(path) || /^\/learn\/(leadership|leadership-styles)(?:\/|$)/.test(path) || /^\/one-dsd\/leadership(?:\/|$)/.test(path)) return "leading";
   if (/^\/(communities|minnesota-communities|community-outreach|employee-resource-groups|minnesota-agencies)(?:\/|$)/.test(path) || /^\/learn\/tribal-referral(?:\/|$)/.test(path)) return "communities";
   if (/^\/(charter|program-foundation|about)(?:\/|$)/.test(path) || /^\/program\/model(?:\/|$)/.test(path)) return "about";
   if (/^\/(start|orientation|user-guide)(?:\/|$)/.test(path)) return "start";

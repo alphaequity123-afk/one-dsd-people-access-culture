@@ -7,6 +7,7 @@ import dynamic from "next/dynamic";
 import { PRIMARY_SECTIONS, pageArea } from "@/lib/program/page-purpose";
 import { stageForPath } from "@/lib/program/dsd-logic-model";
 import { SiteSearch } from "@/components/site-search";
+import { RoleBar } from "@/components/role-bar";
 import type { EditableSurfaceValues } from "@/lib/content/editable-surface-contract";
 import "./dsd-header-tools.css";
 import { agencyZoneEnabled, agencyHref } from "@/lib/program/agency-zone";
@@ -95,6 +96,7 @@ function Header({ pathname, ask }: HeaderProps & { pathname: string }) {
     <nav id="dsd-navigation" aria-label="Program" className={`dsd-nav ${open ? "is-open" : ""}`}>
       <div className="dsd-shell"><Link href="/home" aria-current={pathname === "/home" ? "page" : undefined} onClick={() => setOpen(false)}>Home</Link>{PRIMARY_SECTIONS.map(([label, href, section]) => <Link key={href} href={href} data-tone={section} aria-current={pathname === href ? "page" : area === section ? "location" : undefined} onClick={() => setOpen(false)}>{label}</Link>)}<Link className="dsd-mobile-utility" href="/my-work" onClick={() => setOpen(false)}>My work</Link></div>
     </nav>
+    <RoleBar />
     <section id="dsd-ask-panel" ref={tool === "ask" ? panel : undefined} hidden={tool !== "ask"}
       tabIndex={-1} className="dsd-tool-panel" aria-label="Ask a question"
       data-compose={compose} onSubmitCapture={() => setCompose(false)}>

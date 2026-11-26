@@ -8,6 +8,7 @@ const EXPLORE = [
   { href: "/leadership", label: "Leadership" },
   { href: "/communities", label: "Communities" },
   { href: "/knowledge", label: "Knowledge" },
+  { href: "/people-and-growth", label: "People and Growth" },
   { href: "/minnesota-communities/calendar", label: "Culture Calendar" },
   { href: "/audio-library", label: "Audio library" },
 ];

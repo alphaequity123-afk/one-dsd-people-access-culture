@@ -147,6 +147,12 @@ export default async function AboutPage() {
           {foundationArticles.map(article => <details className="dsd-model-note" key={article.id}><summary><strong>Article {article.id}. {article.title}</strong></summary>{foundationProvisions.filter(provision => provision.article === article.id).map(provision => <section key={provision.id} style={{ marginBlock: "1.5rem" }}><h3>{provision.id} {provision.title}</h3><p>{provision.summary}</p></section>)}</details>)}
           <p><Link href="/charter">Open the charter on its own page, with its explainer video</Link></p>
         </section>
+
+        <section id="stewardship" className="border-t border-line pt-6" aria-labelledby="stewardship-title">
+          <h2 id="stewardship-title" className="text-2xl font-extrabold">Looking after the program</h2>
+          <p className="max-w-3xl">One DHS People, Access and Culture is the larger home, and One DSD is the fully built model inside it, so other equity directors can bring their own resources alongside it. Every resource carries an owner, a steward, a review cycle and the date it was last checked, so the program keeps going through changes in leadership and staff.</p>
+          <p><Link href="/program/inventory">See the program inventory</Link></p>
+        </section>
       </div>
     </EditableSurfaceRegion>
   );

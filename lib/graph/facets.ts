@@ -252,6 +252,9 @@ function build(): Map<string, FacetValue> {
   return (built = out);
 }
 
+/** Every item the graph knows, once each (v2 rebuild: the program catalog builds its index on this). */
+export function allFacetItems(): FacetItem[] { return [...itemPool().items.values()]; }
+
 export function facetValues(facet: FacetId): FacetValue[] {
   return [...build().values()].filter(entry => entry.facet === facet);
 }
