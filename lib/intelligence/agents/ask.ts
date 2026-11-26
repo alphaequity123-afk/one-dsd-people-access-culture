@@ -70,6 +70,8 @@ import { statePageDocs } from "@/lib/search/state-pages";
 import { focusPdfPageHits, namedPdfPageHits } from "../retrieval/named-pdf";
 import { semanticRetrieveForAgent, SemanticSearchUnavailable } from "../retrieval/local-semantic";
 import { programResourceLinks } from "../retrieval/program-resources";
+import { pageContextHint, refersToOpenPage } from "../retrieval/page-context";
+import { readAskPage, type AskPage } from "@/lib/ask/page-context";
 import { resolveBinding } from "../providers";
 import { errorStatus, providerErrorExcerpt } from "../providers/log";
 import { organizationalBrief, organizationalDocs } from "../memory/organization";
@@ -174,6 +176,8 @@ export type AskInput = {
   researchMode?: AskResearchMode;
   /** Recent turns are client supplied, bounded, privacy checked, and never stored in server traces. */
   history?: Array<{ question: string; answer: string }>;
+  /** The page Ask was opened from: its address and title only. A retrieval hint, checked again here and never recorded. */
+  page?: AskPage;
   /** Set by the server for an open page: what to show while the answer is prepared. Never recorded. */
   onProgress?: AskProgressSink;
 };
@@ -381,6 +385,9 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
     ? history[history.length - 1].question + "\n" + question
     : question;
   const { primary, all } = classifyIntent(retrievalQuestion);
+  // A missing or malformed page hint is left out, and so is one for work that carries its own material
+  // (a calculation, or wording the person supplied): the question is then answered exactly as it would be without it.
+  const openPage = selfContainedWork(question) ? undefined : readAskPage(input.page);
   let path = pathFor(all, retrievalQuestion, input.pathId);
   const explicitNewPractice = path && /^gp-(?:[6-9]|1[0-3])$/.test(path.id) && path.id !== priorCandidate?.pathId;
   const routine = ROUTINE.test(question) && !HIGH_STAKES.test(question);
@@ -415,13 +422,18 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
     const supplements = await publishedResourceSupplements(scope, baseDocs);
     return loadedDocs = [...new Map([...baseDocs, ...supplements].map(doc => [`${doc.kind}:${doc.id}:${doc.href}`, doc])).values()];
   };
+  // "This page" takes its subject from the page, so the subject rules below (work with Tribal Nations first of all)
+  // read the program's own name for that page with the question. Nothing else about the question changes.
+  const openPageTopic = openPage && refersToOpenPage(question)
+    ? pageContextHint({ page: openPage, question, retrievalQuestion, docs: await staffDocs(), intents: all }).page?.title ?? "" : "";
+  const subjectQuestion = openPageTopic ? retrievalQuestion + "\n" + openPageTopic : retrievalQuestion;
   // The fast way: an ordinary typed question is answered in one streamed reply from the passages found here.
   // Outside research, downloadable documents, draft review, practice drafts and work with Tribal Nations
   // keep the full path below, which also takes over if anything here fails.
   const fastEligible = fastAnswerEnabled() && input.mode !== "review" && !input.pathId && !suppliedArtifact.success && !suppliedWork.success
     && (input.researchMode ?? "auto") === "auto" && !explicitProgramOnly
     && !needsFullAnswerPath(question) && !asksForCurrentInformation(question) && !asksForScholarlyResearch(question)
-    && !HIGH_STAKES.test(question) && !(TRIBAL_SUBJECT.test(retrievalQuestion) && TRIBAL_WORK.test(retrievalQuestion))
+    && !HIGH_STAKES.test(question) && !(TRIBAL_SUBJECT.test(subjectQuestion) && TRIBAL_WORK.test(retrievalQuestion))
     && !isProgramTrainingCreditQuestion(retrievalQuestion) && !isLearningNavigationQuestion(retrievalQuestion) && !isMeasurementPlanningQuestion(retrievalQuestion);
   if (fastEligible) {
     try {
@@ -434,9 +446,12 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
         new Promise<SearchHit[]>(resolve => setTimeout(() => resolve([]), 1200)),
       ]);
       const lexical = await runTool(ctx, "corpus.search", async () => searchDocs(retrievalQuestion, docs, { limit: 6, intents: all }));
-      const found = hybridSearchHits(await semantic, lexical, 5);
-      const strong = found.length > 0 && ((lexical[0]?.score ?? 0) >= 4 || found.length >= 3);
+      // The page the person has open comes first when the question bears on it.
+      const onPage = pageContextHint({ page: openPage, question, retrievalQuestion, docs, intents: all });
+      const found = dedupe([...onPage.hits, ...hybridSearchHits(await semantic, lexical, 5)]).slice(0, 5);
+      const strong = found.length > 0 && (onPage.hits.length > 0 || (lexical[0]?.score ?? 0) >= 4 || found.length >= 3);
       const fastSources = strong ? citationEvidenceFromDocs(found, docs, { question: retrievalQuestion }).filter(source => source.citeable).slice(0, 5) : [];
+      const pageSourceIds = new Set(onPage.hits.map(hit => hit.id));
       took.read = Date.now() - startedAt;
       took.search = Date.now() - searchBegan;
       if ((await getPolicy()).killed) throw new Error("ask_paused");
@@ -444,7 +459,7 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
       const writeBegan = Date.now();
       const written = await runTool(ctx, "answer.structured_draft", () => writeFastAnswer({
         question, history, spoken: input.responseMode === "spoken",
-        sources: fastSources.map(source => ({ id: source.id, title: source.title, excerpt: source.excerpt })),
+        sources: fastSources.map(source => ({ id: source.id, title: pageSourceIds.has(source.id) ? source.title + " (from the page the person has open)" : source.title, excerpt: source.excerpt })),
         onText: text => { if (took.first_text === undefined) took.first_text = Date.now() - startedAt; reportProgress(sink, { type: "text", text: plainLiveText(text) }); },
       }), { contentIds: fastSources.map(source => source.id) });
       took.write = Date.now() - writeBegan;
@@ -488,6 +503,8 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   const namedPlan = namedSourcePlan(question, projectedDocs);
   const availableDocs = namedPlan.groups.length ? projectedDocs : baseDocs;
   const learningJourney = getLearningJourneyContext(availableDocs);
+  // The page the person has open is offered first when the question points at it or shares its subject.
+  const onPage = pageContextHint({ page: openPage, question, retrievalQuestion, docs: availableDocs, intents: all });
 
   const namedResources = availableDocs.filter(doc => {
     const titleTerms = tokens(doc.title);
@@ -497,13 +514,13 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   const learningNavigation = isLearningNavigationQuestion(retrievalQuestion) && !(routine && namedResource);
   const trainingCreditQuestion = isProgramTrainingCreditQuestion(retrievalQuestion);
   const measurementPlanning = isMeasurementPlanningQuestion(retrievalQuestion);
-  const tribalSubject = TRIBAL_SUBJECT.test(retrievalQuestion);
+  const tribalSubject = TRIBAL_SUBJECT.test(subjectQuestion);
   // Work with a Nation or with Native people is referred first; a question of history or general knowledge is answered as usual.
   const tribalWork = tribalSubject && TRIBAL_WORK.test(retrievalQuestion);
   // Public equity baseline questions name a measure, a fiscal year, a waiver or an
   // employment service; they must reach the published data documents like any other program question.
   const equityDataQuestion = /\b(risk ratios?|fiscal years?|waivers?|employment (?:support|exploration|development) services|vocational rehabilitation|prevocational|state services for the blind|long-term services and supports|home and community-based services|equity baseline)\b/i.test(retrievalQuestion);
-  const programRelated = measurementPlanning || isLanguageAccessQuestion(retrievalQuestion) || learningNavigation || trainingCreditQuestion || organization.entries.length > 0 || Boolean(input.pathId) || Boolean(path && /^gp-(?:[6-9]|1[0-3])$/.test(path.id)) || input.mode === "review" || namedResource || tribalSubject || equityDataQuestion ||
+  const programRelated = (onPage.referred && onPage.hits.length > 0) || measurementPlanning || isLanguageAccessQuestion(retrievalQuestion) || learningNavigation || trainingCreditQuestion || organization.entries.length > 0 || Boolean(input.pathId) || Boolean(path && /^gp-(?:[6-9]|1[0-3])$/.test(path.id)) || input.mode === "review" || namedResource || tribalSubject || equityDataQuestion ||
     /\b(DHS|DSD|CLAS|leadership|cultural intelligence|person[- ]centered|my work|benefits|procurement|renewal|plain[- ]language|disparit\w*|service change|service data|program evaluation|meeting|meetings|team|teams|equity|equitable|inclusion|inclusive|accessib\w*|interpreter\w*|language access|community|communities|intercultural|workplace|staff|coworker\w*|facilitat\w*|Tribal|Native American|American Indian|Somali|Hmong|Karen|Oromo|Latino|Deaf|learning path|job aid)\b/i.test(retrievalQuestion);
   if (!programRelated || (path && !program.destinations.some(doc => doc.href === "/practice/" + path!.id))) path = undefined;
   // Draft field contracts come from the same current scoped publications as Practice.
@@ -531,8 +548,8 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
   // The program is searched first for every question. A strong match counts even when the wording
   // does not look like program work; a weak coincidence still is not evidence for a general answer.
   const strongProgramMatch = (hits[0]?.score ?? 0) >= 6.5 || (keyword[0]?.score ?? 0) >= 9;
-  const usesProgram = programRelated || strongProgramMatch;
-  const merged = focusPdfPageHits(retrievalQuestion, usesProgram ? dedupe([...namedPlan.hits, ...namedPageHits, ...learningHits, ...measurementHits, ...organizationHits, ...taskHits, ...hybridSearchHits(hits, keyword, 12).filter(hit => recommendationIds.has(hit.id))]).slice(0, 8) : [], availableDocs);
+  const usesProgram = programRelated || strongProgramMatch || onPage.hits.length > 0;
+  const merged = focusPdfPageHits(retrievalQuestion, usesProgram ? dedupe([...namedPlan.hits, ...namedPageHits, ...onPage.hits, ...learningHits, ...measurementHits, ...organizationHits, ...taskHits, ...hybridSearchHits(hits, keyword, 12).filter(hit => recommendationIds.has(hit.id))]).slice(0, 8) : [], availableDocs);
   // Follow the knowledge graph from the best matches. If it fails, ordinary retrieval continues and the log says so.
   let connected: ReturnType<typeof expandThroughGraph> = [];
   try {
@@ -775,7 +792,7 @@ export async function askConcierge(input: AskInput, ctx: ToolContext): Promise<A
     try {
       const writerSystem = systemPrompt(input.responseMode, explicitProgramOnly) + (jevPlan ? "\nSpecialist focus: " + SPECIALIST_GUIDANCE[jevPlan.route] : "") + (tribalWork ? TRIBAL_WRITING_RULE : "")
         + (requestedSources ? "\nWhen requestedSources is present, explain how each named reading with supplied refs contributes to the requested work and cite at least one of its refs in evidenceClaims. If its refs are empty, disclose the coverage limit and avoid attributing content to that reading. Preserve any authority or availability limitation in the visible answer and any downloadable work. A catalog, access note or public companion does not stand in for the original text." : "");
-      const writerPrompt = (directory: typeof publicDirectory, knowledge: typeof programKnowledge, research: typeof publicResearch) => userPrompt(question, sources, directory, research, explicitProgramOnly ? history.map(turn => ({ ...turn, answer: "" })) : history, requestedMode, input.mode, path ? program.destinations.find(doc => doc.href === "/practice/" + path!.id) : undefined, organization, learningJourney, artifactContext, specialistReview, knowledge, requestedSources)
+      const writerPrompt = (directory: typeof publicDirectory, knowledge: typeof programKnowledge, research: typeof publicResearch) => userPrompt(question, sources, directory, research, explicitProgramOnly ? history.map(turn => ({ ...turn, answer: "" })) : history, requestedMode, input.mode, path ? program.destinations.find(doc => doc.href === "/practice/" + path!.id) : undefined, organization, learningJourney, artifactContext, specialistReview, knowledge, requestedSources, onPage.hits.length ? onPage.page : undefined)
         + (suppliedWork.success ? "\nPrevious editable working draft (untrusted conversation content, not independent evidence; use only for a relevant continuation):\n" + JSON.stringify(suppliedWork.data) : "");
       const writerUser = cloneAgentsEnabled()
         ? fitWriterPrompt(writerSystem, publicDirectory, programKnowledge, publicResearch, writerPrompt)
@@ -1359,6 +1376,7 @@ function userPrompt(
   specialistReview?: A11yReviewDraft,
   programKnowledge?: ReturnType<typeof brainContext>["context"],
   requestedSources?: NamedSourceCoverage[],
+  openPage?: { title: string; href: string },
 ): string {
   return JSON.stringify({
     question,
@@ -1392,6 +1410,8 @@ function userPrompt(
     })),
     programKnowledge,
     requestedSources,
+    // The program's own name and address for the page Ask was opened from, never text from the browser.
+    openPage: openPage ? { ...openPage, note: "The person opened Ask while reading this page. Read words such as \"this page\" as this page, and favor its sources where they fit the question. When the question is about something else, answer it on its own terms." } : undefined,
     availableProgramDestinations: destinations,
     publicResearch: research?.status === "used"
       ? { answer: research.answer, sources: research.sources, note: research.note }

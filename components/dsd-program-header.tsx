@@ -11,6 +11,7 @@ import { RoleBar } from "@/components/role-bar";
 import type { EditableSurfaceValues } from "@/lib/content/editable-surface-contract";
 import "./dsd-header-tools.css";
 import { agencyZoneEnabled, agencyHref } from "@/lib/program/agency-zone";
+import { askPageFor, type AskPage } from "@/lib/ask/page-context";
 
 const AskClient = dynamic(() => import("@/components/ask-client").then(module => module.AskClient), {
   loading: () => <p role="status">Opening Ask…</p>,
@@ -39,6 +40,8 @@ function Header({ pathname, ask }: HeaderProps & { pathname: string }) {
   const searchButton = useRef<HTMLButtonElement>(null);
   const panel = useRef<HTMLElement>(null);
   const [draft, setDraft] = useState("");
+  // The page being read when Ask opens: its address and heading, so answers can start from it.
+  const [askPage, setAskPage] = useState<AskPage | undefined>();
 
   function toggleTool(name: Tool) {
     if (tool === "ask") {
@@ -52,6 +55,7 @@ function Header({ pathname, ask }: HeaderProps & { pathname: string }) {
     }
     setOpen(false);
     setCompose(true);
+    if (name === "ask") setAskPage(askPageFor(pathname, document));
     setTool(name);
   }
 
@@ -102,7 +106,7 @@ function Header({ pathname, ask }: HeaderProps & { pathname: string }) {
       data-compose={compose} onSubmitCapture={() => setCompose(false)}>
       {tool === "ask" && ask ? <div className="dsd-shell">
         <div className="dsd-tool-heading"><h2>Ask a question</h2><button type="button" onClick={() => toggleTool("ask")}>Close Ask</button></div>
-        <AskClient compact initialQuestion={draft} researchAvailable={ask.researchAvailable} intakeEnabled={false} copy={ask.copy} />
+        <AskClient compact page={askPage} initialQuestion={draft} researchAvailable={ask.researchAvailable} intakeEnabled={false} copy={ask.copy} />
       </div> : null}
     </section>
     <section id="dsd-search-panel" ref={tool === "search" ? panel : undefined} hidden={tool !== "search"}

@@ -14,6 +14,7 @@ import { AskWorkProductSchema } from "@/lib/ask/work-product";
 import { admitRun, finishRun, openLedger } from "@/lib/intelligence/clone/ledger";
 import type { AskProgress, AskProgressSink } from "@/lib/intelligence/agents/ask-progress";
 import { ASK_PROGRESS_TYPE } from "@/lib/ask/progress-stream";
+import { readAskPage } from "@/lib/ask/page-context";
 
 export const maxDuration = 180;
 export const runtime = "nodejs";
@@ -27,6 +28,8 @@ const Input = z.object({
   history: z.array(z.object({ question: z.string().max(1000), answer: z.string().max(2500) }).strict()).max(4).optional(),
   priorArtifact: PracticeArtifactSchema.optional(),
   priorWorkProduct: AskWorkProductSchema.optional(),
+  // The page Ask was opened from, as a hint for finding sources. Anything that is not a clean page address and title is left out.
+  page: z.unknown().optional(),
 }).strict();
 const json = (body: unknown, status = 200) => NextResponse.json(body, { status, headers: { "cache-control": "no-store" } });
 const KEEP_ALIVE_MS = 10_000;
@@ -113,7 +116,7 @@ export async function POST(request: NextRequest) {
   const runId = id;
   const answer = async (onProgress?: AskProgressSink) => {
     try {
-      const result = await ask({ ...input.data, contextPreference: DEFAULT_PRODUCT_CONTEXT, researchMode: input.data.researchMode ?? "auto", cloneRunId: runId, onProgress }, "staff", runId);
+      const result = await ask({ ...input.data, page: readAskPage(input.data.page), contextPreference: DEFAULT_PRODUCT_CONTEXT, researchMode: input.data.researchMode ?? "auto", cloneRunId: runId, onProgress }, "staff", runId);
       if (await paused()) { await finishRun(db, runId, "failed"); return { error: "Ask was paused, so no answer was shared." }; }
       if (result.kind === "refusal") { await finishRun(db, runId, "refused"); return toStaffAskResult(result); }
       const answer = result.answer;

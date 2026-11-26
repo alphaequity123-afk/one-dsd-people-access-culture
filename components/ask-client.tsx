@@ -21,6 +21,7 @@ import type { ProductContextId } from "@/lib/product/federation";
 import { activePracticeArtifact, PracticeArtifactSchema, type PracticeArtifact } from "@/lib/content/practice-artifact";
 import { ASK_PROGRESS_TYPE, readAskProgress, stageLine, type AskStage } from "@/lib/ask/progress-stream";
 import { AskWorkDownload } from "@/components/ask-work-download";
+import type { AskPage } from "@/lib/ask/page-context";
 
 type Turn = { at: string; question: string; result: StaffAskResult; context?: ProductContextId };
 type Session = { id: string; turns: Turn[] };
@@ -45,6 +46,7 @@ export function AskClient({
   intakeEnabled,
   copy,
   compact = false,
+  page,
 }: {
   publishedPath?: GraduationPath;
   initialMode?: "question" | "review";
@@ -54,6 +56,8 @@ export function AskClient({
   copy: EditableSurfaceValues;
   /** One column without the side notes, for the Ask panel on the landing page. */
   compact?: boolean;
+  /** The page Ask was opened from. Only its address and title go with a question, and only while the reader keeps it. */
+  page?: AskPage;
 }) {
   const { context } = useProgramContext();
   const [question, setQuestion] = useState(initialQuestion ?? "");
@@ -74,6 +78,9 @@ export function AskClient({
   const [listenSlot, setListenSlot] = useState<HTMLElement | null>(null);
   const hydrated = useHydrated();
   const handoffTaken = useRef(false);
+  // The reader can ask without the page they were reading, and bring it back.
+  const [aboutPage, setAboutPage] = useState(true);
+  const askingAbout = page && aboutPage ? page : undefined;
 
   // A question typed on the landing page arrives through this browser's session storage, never in the
   // page address, and is asked once, after the conversation kept in this browser has been read.
@@ -119,7 +126,7 @@ export function AskClient({
         method: "POST",
         // Ask for progress as the answer is prepared; a single finished answer is still accepted.
         headers: { "content-type": "application/json", accept: `${ASK_PROGRESS_TYPE}, application/json` },
-        body: JSON.stringify({ question: q, responseMode, pathId: path?.id, mode: initialMode, researchMode, contextPreference: context, history, priorArtifact, priorWorkProduct }),
+        body: JSON.stringify({ question: q, responseMode, pathId: path?.id, mode: initialMode, researchMode, contextPreference: context, history, priorArtifact, priorWorkProduct, page: askingAbout }),
       });
       const payload = res.ok && res.body && res.headers.get("content-type")?.includes(ASK_PROGRESS_TYPE)
         ? await readAskProgress(res.body, event => setLive(current => !current ? current
@@ -173,6 +180,14 @@ export function AskClient({
             {copyText(copy, reviewDraft ? "reviewDraftHelp" : "questionHelp")} {path ? `${copyText(copy, "connectedPathLead")} "${path.staffLabel}" path.` : ""}
             <span className="sr-only"> Press Enter to send. Press Shift and Enter to start a new line.</span>
           </p>
+          {page ? (
+            <p id={`${textId}-page`} className="ask-box-small ask-box-small--above" aria-live="polite">
+              {aboutPage ? <>Asking about: <strong>{page.title}</strong></> : "Your question will be answered on its own."}{" "}
+              <button type="button" className="underline" disabled={busy} onClick={() => setAboutPage(!aboutPage)}>
+                {aboutPage ? "Ask without this page" : `Ask about ${page.title} instead`}
+              </button>
+            </p>
+          ) : null}
           <AskBox
             id={textId}
             value={question}
@@ -180,7 +195,7 @@ export function AskClient({
             placeholder={reviewDraft ? copyText(copy, "reviewDraftPlaceholder") : path ? path.askStarters[0] : copyText(copy, "questionExample")}
             sendLabel={copyText(copy, reviewDraft ? "reviewDraftLabel" : "answerButton")}
             busy={busy}
-            describedBy={`${textId}-help ${textId}-research-privacy${error ? ` ${textId}-error` : ""}`}
+            describedBy={`${textId}-help${page ? ` ${textId}-page` : ""} ${textId}-research-privacy${error ? ` ${textId}-error` : ""}`}
             invalid={Boolean(error)}
           >
             <AskVoice busy={busy} busyLabel={live ? undefined : busyLabel(researchMode, copy)} onDictation={setQuestion} onQuestion={text => sendQuestion(text, "spoken")} latestAnswer={session.turns[0]?.result.kind === "answer" ? session.turns[0].result.answer.shortAnswer : undefined} listenSlot={listenSlot} />
