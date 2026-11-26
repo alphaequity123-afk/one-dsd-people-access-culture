@@ -1,0 +1,38 @@
+{
+  "course": "cn-culture-in-informed-choice",
+  "sourceSha256": "3d82d842f10add76d8e20d0ff0133bd70ce5bda50fd278b98c8c647d483db157",
+  "voiceProfile": "approved-eight-character-voices-20261126",
+  "cast": {
+    "NARRATOR": "C3",
+    "ASSESSOR": "C8",
+    "CASE MANAGER": "C5",
+    "NEWER COLLEAGUE": "C7"
+  },
+  "assets": {
+    "media": "928bf0259f383d9f55ca6e6319f028aae35cb8ff83c8c115891410a203c463bf.mp4",
+    "captions": "d50792f24552e5131fd9c20c9bf7d1d181aab4780ae23517fd3de0bb0b1e90da.vtt",
+    "transcript": "da492f17e9c01723adfb315b5ae20066083099c7445456c50808ffed52003b1e.txt",
+    "poster": "2bdbadb1cfa1e3e4bd1cc511e39377ff27de69f3d6f92ab296be66c92bf06c08.png"
+  },
+  "captionTiming": "Source words mapped to recognition word timestamps",
+  "speechDifferences": [],
+  "durationSeconds": 63.39,
+  "portraitHashes": {
+    "C1": "af42ef36a0db32e799fd0073226e704905cf3189ad2bc9d6820b8a0a450ae8a0",
+    "C2": "4c7446c17d0572d35db9f665e43c6383f128e4f0ee30ea5d1c172bb35f644e1e",
+    "C3": "056f228f12826f16f5045e735847f8a886b0e5426f50e04cc058237b70f3e7fd",
+    "C4": "3cb112ffcc5215d9f81fb3046efa103ad0778bf5199a0e364dea5563da87b71f",
+    "C5": "477566c44d6a2c0dc72d441494619c4ca8d447a6f0fa72c2b4a7d98490d1ef05",
+    "C6": "7c1e21374a0a25c4145122ea63cdd410e0616234401744670c398cc9346a24d5",
+    "C7": "80eac646012831b31713c0476ac0f92e492e90b6d8825ae9f78dd78f0a6f79a3",
+    "C8": "ba7013f2e1f0309f7a9d96d3adc7e9879c87b91fc6aa7bc5143932856fa41419"
+  },
+  "videoVerified": {
+    "resolution": "1280x720",
+    "video": "H.264",
+    "audio": "AAC",
+    "fullDecode": "passed",
+    "captions": "ordered, non-overlapping and within duration",
+    "hashes": "all assets match manifest"
+  }
+}

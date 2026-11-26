@@ -24,7 +24,6 @@ import { publicRouteDocs } from "./public-route-docs";
 import { publicCourseMediaDocs } from "./public-course-media-docs";
 import { publicExplainerMediaDocs } from "./public-explainer-media-docs";
 import { publicPracticeDocs } from "./public-practice-docs";
-import { directorToolkitDocs } from "./director-toolkit-docs";
 import { leadershipStylesPathwayDocs } from "./leadership-styles-pathway-docs";
 import { equityDataDocs } from "./equity-data-docs";
 import { countyAgencyDocs, officialProviderDocs, organizationDocs, policyDocs, sourcingDocs, systemConnectionDocs } from "./organization-docs";
@@ -203,9 +202,9 @@ export async function indexedProgramResources(scope: StaffProgramScope): Promise
   // Public code-defined additions are indexed only while their parent surface
   // is published. Theme descriptions are public and context links are gated.
   destinations.push(...leadershipLearningDocs(scope, publishedIds), ...leadershipVideos, ...themeCollectionDocs(scope, publishedIds), ...learningNavigationDocs(scope, publishedIds), ...programFrameworkDocs(scope), ...publicPracticeDocs(scope), ...publicRouteDocs(scope), ...additionalPublicRouteDocs(scope, publishedIds), ...dynamicPublicRouteDocs(scope, publications));
-  // Code-defined public pages: the Equity Director toolkit and the leadership styles pathway, one document per anchored passage.
+  // Code-defined public leadership styles pathway, one document per anchored passage.
   // Aggregate equity baseline figures, one document per measure and year, citing the leaders dashboard.
-  destinations.push(...directorToolkitDocs(scope), ...leadershipStylesPathwayDocs(scope), ...equityDataDocs(scope), ...organizationDocs(scope), ...countyAgencyDocs(scope), ...sourcingDocs(scope), ...systemConnectionDocs(scope), ...officialProviderDocs(scope), ...policyDocs(scope));
+  destinations.push(...leadershipStylesPathwayDocs(scope), ...equityDataDocs(scope), ...organizationDocs(scope), ...countyAgencyDocs(scope), ...sourcingDocs(scope), ...systemConnectionDocs(scope), ...officialProviderDocs(scope), ...policyDocs(scope));
   const communityDocs = destinations.filter(d => d.kind === "brief");
   // Everything readable on the site belongs in the search. A failure here is visible and leaves the rest working.
   try {

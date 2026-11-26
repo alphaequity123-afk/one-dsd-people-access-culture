@@ -1,6 +1,6 @@
 # Cultural Navigation: media scripts and casting
 
-Scripts for the seven-course Cultural Navigation pathway proposed in the November 2026 cultural navigators research brief. All seven podcasts have been recorded with Kelly and John; their audio, captions, transcripts and voice-verification receipts are in `public/learning/course-podcasts/`. Scenario videos remain scripts.
+Scripts for the seven-course Cultural Navigation pathway proposed in the November 2026 cultural navigators research brief. All seven podcasts have been recorded with Kelly and John; their audio, captions, transcripts and voice-verification receipts are in `public/learning/course-podcasts/`. Scenario videos are recorded with the assigned character voices and approved portraits; release receipts are in `config/scenario-video-releases/`.
 
 | Course | Level | Audience |
 | --- | --- | --- |
@@ -19,7 +19,7 @@ Scripts for the seven-course Cultural Navigation pathway proposed in the Novembe
 
 ## Voices
 
-All two-voice training and module podcasts use Kelly (C3) and John (C4), as confirmed by Gary on November 26, 2026. The legacy script speaker IDs `host1` and `geffen` map to those local references for these recordings. Each of the eight recurring characters uses their own approved voice in scenario recordings. See `config/character-voices.json` and `docs/media-scripts/CAST.md`.
+These 13 previously recorded podcasts use Kelly (C3) and John (C4). Future courses may use any approved pair, including Brian/LaToya, Susan/Robert and Takoda/Noor; see the updated CAST.md. The legacy script speaker IDs `host1` and `geffen` map to those local references for these recordings. Each of the eight recurring characters uses their own approved voice in scenario recordings. See `config/character-voices.json` and `docs/media-scripts/CAST.md`.
 
 ## Who appears
 
@@ -39,6 +39,8 @@ Roles: C1 navigator, C2 program manager, C3 narrator, C4 peer supporter, C5 case
 
 ## Recording the podcasts
 
-Use `scripts/media/record-approved-local.py --references <private-reference-folder>` with the local Qwen/Whisper Python environment. Add `--check` to verify all eight reference checksums and the podcast casting without recording, or `--course <id>` to record one episode. The recorder uses only Kelly and John for every two-voice episode, verifies speech against the script and checks speaker similarity, and resumes from compressed sentence caches. It writes the MP3, captions, transcripts and voice-verification receipt, then registers the course player. Private voice references stay outside the repository.
+Use `scripts/media/record-approved-local.py --references <private-reference-folder>` with the local Qwen/Whisper Python environment. Add `--check` to verify all eight reference checksums and the podcast casting without recording, or `--course <id>` to record one episode. The recorder follows each script’s explicit approved voice assignments, verifies speech against the script and checks speaker similarity, and resumes from compressed sentence caches. It writes the MP3, captions, transcripts and voice-verification receipt, then registers the course player. Private voice references stay outside the repository.
 
 The legacy hosted recorder refuses these scripts because it cannot verify the newly approved local voice profile. Generated episodes require review before publication.
+
+The scenario videos are illustrated scenes with static approved portraits, spoken scene descriptions, captions and transcripts. See `scripts/media/README-scenarios.md` for recording, verification and publication.

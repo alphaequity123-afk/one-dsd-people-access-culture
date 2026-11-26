@@ -15,6 +15,9 @@ class RecognitionNormalization(unittest.TestCase):
             ('Caseloads up thirty percent', 'Case loads up 30%'),
             ('any time', 'anytime'),
             ('a coworker', 'a co-worker'),
+            ('The family is OK with that', 'The family is okay with that'),
+            ('The letter says recieve', 'The letter says receive'),
+            ('It is the 15th, not the 12th', 'It is the fifteenth, not the twelfth'),
             ('Know where support lives.', 'Nowhere support lives.'),
         ]:
             with self.subTest(source=source):
