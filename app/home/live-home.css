@@ -230,3 +230,5 @@ main .dsd-home a.pilot-primary[href], main .dsd-home a.pilot-primary[href]:hover
 .dsd-home .task-finder-picks span { display: block; color: #3b4048; font-size: .95rem; line-height: 1.5; }
 /* The live landing page's type: Aptos, the Microsoft 365 default, with the same fallbacks. */
 body.program-design .od.dsd-home, body.program-design .od.dsd-home :is(h1, h2, h3, p, a, button, strong, span) { font-family: Aptos, "Aptos Display", "Segoe UI", Calibri, system-ui, -apple-system, Arial, sans-serif; }
+/* The featured button keeps white text over this app's site-wide link colors. */
+body.program-design .od.dsd-home a.pilot-primary[href], body.program-design .od.dsd-home a.pilot-primary[href]:hover, body.program-design .od.dsd-home a.pilot-primary[href]:visited { color: #fff !important; }
