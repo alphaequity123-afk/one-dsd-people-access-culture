@@ -1,8 +1,8 @@
 {
  "generatedFrom": "collections-placement.csv",
  "counts": {
-  "rows": 753,
-  "items": 749,
+  "rows": 754,
+  "items": 750,
   "questions": 89
  },
  "items": {
@@ -3699,6 +3699,11 @@
    "title": "When an Accessibility Barrier Is Reported: Triage, Remediation and Equally Effective Access",
    "kind": "course",
    "minutes": 48
+  },
+  "cn-what-a-navigator-does": {
+   "title": "What a Cultural Navigator Does",
+   "kind": "course",
+   "minutes": 48
   }
  },
  "staff": [
@@ -4341,6 +4346,7 @@
     {
      "subject": "Working with interpreters and cultural brokers",
      "ids": [
+      "cn-what-a-navigator-does",
       "cultural-broker-as-a-role",
       "dc-i89-interpreters-as-cultural-brokers",
       "dc-s53-requesting-translations-at-dhs",
@@ -4366,7 +4372,7 @@
      ]
     }
    ],
-   "itemCount": 139
+   "itemCount": 140
   },
   {
    "id": "minnesota-communities",
