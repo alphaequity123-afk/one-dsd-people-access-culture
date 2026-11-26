@@ -8,13 +8,9 @@ import { PODCASTS } from "@/lib/content/podcasts";
  * removed: items come from the program catalog as they are. The tier is the catalog's suggestion only; every item
  * stays open to everyone.
  */
-export const FORMATS = ["course", "guide", "reading", "policy", "audio"] as const;
-export type Format = (typeof FORMATS)[number];
-export const FORMAT_LABEL: Record<Format, string> = { course: "Course", guide: "Guide", reading: "Reading", policy: "Policy reference", audio: "Audio" };
-
-export type LearningPath = { id: string; title: string };
-/** Compact rows: [title, href, format, tier, path ids]. Kept short because the whole list is sent to the browser. */
-export type KnowledgeRow = [string, string, Format, Tier, string[]];
+export { FORMATS, FORMAT_LABEL } from "@/lib/program/knowledge-formats";
+export type { Format, LearningPath, KnowledgeRow } from "@/lib/program/knowledge-formats";
+import type { Format, LearningPath, KnowledgeRow } from "@/lib/program/knowledge-formats";
 
 const KIND_FORMAT: Partial<Record<string, Format>> = { course: "course", lesson: "course", resource: "guide", reading: "reading", policy: "policy" };
 

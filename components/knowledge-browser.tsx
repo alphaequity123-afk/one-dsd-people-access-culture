@@ -3,7 +3,7 @@
 import { useId, useMemo, useState } from "react";
 import Link from "@/components/app-link";
 import type { Tier } from "@/lib/program/catalog";
-import { FORMATS, FORMAT_LABEL, type Format, type KnowledgeRow, type LearningPath } from "@/lib/program/knowledge-index";
+import { FORMATS, FORMAT_LABEL, type Format, type KnowledgeRow, type LearningPath } from "@/lib/program/knowledge-formats";
 import styles from "./knowledge-browser.module.css";
 
 /**
