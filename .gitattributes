@@ -38,3 +38,7 @@ public/images/trainings/** !filter !diff !merge -text
 public/images/leadership-development/** !filter !diff !merge -text
 public/audio/organizational-culture/** !filter !diff !merge -text
 public/audio/racism-dsd/** !filter !diff !merge -text
+
+# Small approved leadership guides travel as exact Git blobs.
+public/downloads/leadership/one-dsd-leadership-styles-guide.docx !filter !diff !merge -text
+public/downloads/leadership/one-dsd-leadership-styles-guide.pdf !filter !diff !merge -text
