@@ -92,7 +92,7 @@ export default function LeadingJourneyPage() {
       <ul className="list-disc pl-6">
         {END_OF_PATH_QUESTIONS.map(question => <li key={question}>{question}</li>)}
       </ul>
-      <p className={styles.plain}>Nothing on this optional path is submitted when you finish, and no score goes to a supervisor. Related lessons may save progress or practice responses in your browser profile. If you want something to bring to a development conversation, review and download your action plans and reflections from <Link href="/my-work">My work</Link>. What you share, and with whom, is your choice.</p>
+      <p className={styles.plain}>This path is optional: there is no completion submission or supervisor score report. Related lessons may save progress or practice responses in your browser profile. If you want something to bring to a development conversation, review and download your action plans and reflections from <Link href="/my-work">My work</Link>. What you share, and with whom, is your choice.</p>
     </section>
   </div></div>;
 }
