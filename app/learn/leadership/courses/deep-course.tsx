@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { existsSync } from "node:fs";
+import { publicFileAvailable } from "@/lib/storage/public-offload-manifest";
 import { join } from "node:path";
 import { deepCourses, type DeepCourse } from "@/lib/dsd-live/leadership/deep";
 import { courseHref, root } from "@/lib/dsd-live/leadership/collection";
@@ -11,8 +11,8 @@ import Plan from "./plan";
 
 const media = (id: string) => "/learning-media/leading-others/deep/" + id;
 const ready = (path: string) =>
-  existsSync(join(process.cwd(), "public", path, "audio.mp3")) &&
-  existsSync(join(process.cwd(), "public", path, "captions.vtt"));
+  publicFileAvailable(join(process.cwd(), "public", path, "audio.mp3")) &&
+  publicFileAvailable(join(process.cwd(), "public", path, "captions.vtt"));
 
 export default function DeepCoursePage({ c }: { c: DeepCourse }) {
   const audio = media(c.id);

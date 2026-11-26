@@ -20,6 +20,7 @@ import equityCaptions from "./equity-practice-video-captions.json";
 import { publicMediaPassages } from "./public-course-media-docs";
 import type { Doc } from "./search";
 import { sourceReadingDocs } from "./source-reading-docs";
+import { offloadedFileAt } from "@/lib/storage/public-offload-manifest";
 
 const TRAINING_HUB = "/learning/training-companions/index.html";
 const EQUITY_IN_PRACTICE = "/learn/equity-in-practice";
@@ -41,11 +42,22 @@ async function publicAsset(publicRoot: string, href: string, maxBytes: number) {
   }
 }
 
+/** A file the Docker build moved to the media bucket, with the identity recorded after the build's checks. */
+function movedAsset(publicRoot: string, href: string, maxBytes: number) {
+  if (!href.startsWith("/") || href.split("/").some(part => part === "." || part === ".." || part.includes("\\"))) return null;
+  const moved = offloadedFileAt(path.resolve(publicRoot, "." + href));
+  return moved && moved.bytes <= maxBytes ? moved : null;
+}
+
+async function publicAssetPresent(publicRoot: string, href: string, maxBytes: number) {
+  return (await publicAsset(publicRoot, href, maxBytes)) !== null || movedAsset(publicRoot, href, maxBytes) !== null;
+}
+
 const verified = new Map<string, { time: number; size: number; hash: string }>();
 
 async function matchesExtraction(publicRoot: string, href: string, sha256: string, maxBytes = 20 * 1024 * 1024) {
   const asset = await publicAsset(publicRoot, href, maxBytes);
-  if (!asset) return false;
+  if (!asset) return movedAsset(publicRoot, href, maxBytes)?.sha256 === sha256;
   const cached = verified.get(asset.file);
   if (cached?.time === asset.stat.mtimeMs && cached.size === asset.stat.size) return cached.hash === sha256;
   try {
@@ -92,7 +104,7 @@ async function downloadDocs(scope: StaffProgramScope, paths: ReadonlyMap<string,
   const groups = await Promise.all(extracts.map(async resource => {
     const parent = paths.get(resource.parent);
     const companion = resource.parent === TRAINING_HUB;
-    if (!parent && (!companion || !await publicAsset(publicRoot, TRAINING_HUB, MAX_TEXT))) return [];
+    if (!parent && (!companion || !await publicAssetPresent(publicRoot, TRAINING_HUB, MAX_TEXT))) return [];
     if (!await matchesExtraction(publicRoot, resource.path, resource.sha256)) return [];
     const download = localUrl(resource.path);
     return resource.passages.map((passage, index) => evidenceDoc(
@@ -148,7 +160,7 @@ async function recordingDocs(scope: StaffProgramScope, docs: readonly Doc[], pub
     const transcript = publishedRecordingTranscript(podcast.id);
     const audio = pathOnly(podcast.src);
     if (!parent || !revision || !transcript || transcript.source !== podcast.src ||
-      !await publicAsset(publicRoot, audio, 64 * 1024 * 1024)) return [];
+      !await publicAssetPresent(publicRoot, audio, 64 * 1024 * 1024)) return [];
     return timedDocs(scope, `public-podcast:${podcast.id}`, `${parent.title} — unofficial transcript`,
       podcast.src, transcript.segments, revision.payloadHash, [podcast.href, `/podcasts/${podcast.id}`, audio], parent);
   }));
@@ -182,7 +194,7 @@ function transcriptDocs(scope: StaffProgramScope, key: string, title: string, hr
 
 async function readStaticRecording(scope: StaffProgramScope, source: StaticRecording, paths: ReadonlyMap<string, Doc>, publicRoot: string) {
   const parent = paths.get(source.parent);
-  if (!parent || !await publicAsset(publicRoot, pathOnly(source.media), 256 * 1024 * 1024)) return [];
+  if (!parent || !await publicAssetPresent(publicRoot, pathOnly(source.media), 256 * 1024 * 1024)) return [];
   const related = [source.parent, pathOnly(source.media), pathOnly(source.transcript)];
   try {
     const captions = await publicAsset(publicRoot, pathOnly(source.captions), MAX_TEXT);

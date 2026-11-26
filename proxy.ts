@@ -2,11 +2,25 @@ import { NextResponse, type NextRequest } from "next/server";
 import { applyRequestedView } from "@/lib/product/view-proxy";
 import { retiredFeatureDestination } from "@/lib/program/retired-features";
 import { upgradedImagePath } from "@/lib/content/image-4k";
+import { offloadedPublicFile } from "@/lib/storage/public-offload-manifest";
+
+/** A public file the Docker build moved to the media bucket is answered by /api/public-offload. */
+function offloadRewrite(request: NextRequest, pathname: string) {
+  let decoded: string;
+  try { decoded = decodeURIComponent(pathname); } catch { return undefined; }
+  if (!offloadedPublicFile(decoded)) return undefined;
+  const target = request.nextUrl.clone();
+  target.pathname = "/api/public-offload" + decoded.split("/").map(encodeURIComponent).join("/");
+  target.search = "";
+  return NextResponse.rewrite(target);
+}
 
 /** Retires excluded staff features and applies an explicitly requested program view. */
 export function proxy(request: NextRequest) {
   // 4K image upgrade: a listed image is answered with its "<name>.4k.webp" sibling; the original stays for old links.
   const upgraded = upgradedImagePath(request.nextUrl.pathname);
+  const offloaded = offloadRewrite(request, upgraded ?? request.nextUrl.pathname);
+  if (offloaded) return offloaded;
   if (upgraded) {
     const target = request.nextUrl.clone();
     target.pathname = upgraded;
@@ -58,6 +72,8 @@ export const config = {
     // Public images that may have a 4K sibling (see lib/content/image-4k.ts).
     "/learning/self-directed/covers/index.json",
     "/((?:images|learning|library|documents|videos|toolkit-work)/.+\\.(?:png|jpe?g|webp))",
+    // Large public files the Docker build may have moved to the media bucket (scripts/public-offload.mjs).
+    "/((?!api/|_next/).+\\.(?:png|jpe?g|webp|gif|avif|mp4|webm|mp3|wav|ogg|m4a|pdf|zip|pptx|docx|xlsx))",
     {
       // Pages only: never API routes, Next.js assets, or public files such as images and audio.
       // Only real file extensions are excluded, so a page id that contains a dot still matches.

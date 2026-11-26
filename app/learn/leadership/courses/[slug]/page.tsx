@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound, permanentRedirect } from "next/navigation";
-import { existsSync } from "node:fs";
+import { publicFileAvailable } from "@/lib/storage/public-offload-manifest";
 import { join } from "node:path";
 import {
   courses,
@@ -43,8 +43,8 @@ export default async function CoursePage({ params }: Props) {
   const audio = "/learning-media/leading-others/" + c.id;
   const lesson = guidedLessons.find((l) => l.id === c.id);
   const canPlay = (path: string) =>
-    existsSync(join(process.cwd(), "public", path, "audio.mp3")) &&
-    existsSync(join(process.cwd(), "public", path, "captions.vtt"));
+    publicFileAvailable(join(process.cwd(), "public", path, "audio.mp3")) &&
+    publicFileAvailable(join(process.cwd(), "public", path, "captions.vtt"));
   const podcast = podcasts.find((p) => p.courseIds.includes(c.id));
   const related = courses
     .filter(
@@ -174,7 +174,7 @@ export default async function CoursePage({ params }: Props) {
               discuss the decision from their different positions.
             </p>
             <Listen
-              available={existsSync(join(process.cwd(), "public/learning-media/leading-others/podcasts", podcast.id + ".mp3")) && existsSync(join(process.cwd(), "public/learning-media/leading-others/podcasts", podcast.id + ".vtt"))}
+              available={publicFileAvailable(join(process.cwd(), "public/learning-media/leading-others/podcasts", podcast.id + ".mp3")) && publicFileAvailable(join(process.cwd(), "public/learning-media/leading-others/podcasts", podcast.id + ".vtt"))}
               title={podcast.title}
               src={
                 "/learning-media/leading-others/podcasts/" + podcast.id + ".mp3"

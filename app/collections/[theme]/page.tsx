@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "@/components/app-link";
 import { notFound } from "next/navigation";
-import { existsSync } from "node:fs";
+import { publicFileAvailable } from "@/lib/storage/public-offload-manifest";
 import path from "node:path";
 import { ResourceThemePathway } from "@/components/resource-theme-pathway";
 import { prepareEditableSurface } from "@/lib/content/prepare-editable-surface";
@@ -45,7 +45,7 @@ export default async function ThemeCollectionPage({ params }: { params: Promise<
     || (link.gate === "programs" && programs?.available)
     || (link.gate === "cultural" && cultural));
   const videoFile = path.join(process.cwd(), "public", video.companion.src.replace(/^\/+/, ""));
-  const videoAvailable = existsSync(videoFile);
+  const videoAvailable = publicFileAvailable(videoFile);
   const itemHref = (id: string) => selfDirectedHref(id) ?? (id.startsWith("course-") ? courseHref(id.slice(7)) : `/library/${encodeURIComponent(id)}`);
   return <div className={base.page}><div className={base.content}>
     <p className={base.back}><Link href="/collections">All themes</Link></p>
