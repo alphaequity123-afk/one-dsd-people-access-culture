@@ -226,7 +226,7 @@ function structuralFieldBlocks(field: StructuralField): DocumentBlock[] {
 function structuralDocument(scope: StaffProgramScope): ResourceDocument {
   return reviewDocument(scope, "Equity in practice", {
     title: "Structural equity analysis",
-    subtitle: "Look closely at a process, identify where barriers arise, and connect evidence with a practical change.",
+    subtitle: "Look closely at a process, find where barriers show up, and connect the evidence with a practical change.",
     meta: [{ label: "Steps", value: String(STRUCTURAL_STEPS.length) }],
     sections: compactSections([
       section(undefined, [

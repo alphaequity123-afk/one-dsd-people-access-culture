@@ -125,7 +125,7 @@ function administrationDocument(id: string, scope: StaffProgramScope): ResourceD
   const topics = topicSections(division ? DIVISION_BRANCH_TOPICS : area!.topics);
   return pageDocument(scope, division ? "Aging and Disability Services Administration" : "Organizational context", {
     title: division ? "Disability Services Division" : area!.name,
-    subtitle: division ? "The Disability Services Division brings together service knowledge, workplace practice and practical equity resources in the standalone One DSD program." : area!.description,
+    subtitle: division ? "One DSD brings together what the Disability Services Division knows about services, workplace practice and practical equity resources, all in one place." : area!.description,
     meta: [{ label: "Page", value: division ? "program page /administrations/adsa/divisions/dsd" : `program page /administrations/${area!.id}` }],
     sections: compactSections([
       section(division ? "Disability services context" : "Services and working relationships", topics.blocks),

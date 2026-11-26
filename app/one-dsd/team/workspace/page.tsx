@@ -27,7 +27,7 @@ export default async function OneDsdTeamWorkspacePage() {
         <PageIntro
           kicker={PROGRAM.oneDsdProgramName}
           title={`${PROGRAM.oneDsdTeamName} space`}
-          lede="This working space is for reading and downloading; it does not take or save what you write."
+          lede="This space is for reading and downloading. Nothing you write here is taken or saved."
         />
         {role ? (
           <EquityWorkspaceLinks intro={teamMember ? "You are signed in as the One DSD Team. Your shared work happens in the Equity workspace: analyze documents and policies for equity, decide on recommended changes, and download the finished documents." : "The Equity workspace is open: analyze documents and policies for equity, decide on recommended changes, and download the finished documents."} />

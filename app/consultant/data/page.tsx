@@ -10,7 +10,7 @@ export const dynamic = "force-dynamic";
 export default async function ConsultantDataPage() {
   if (!(await ownerPageGuard())) return null;
   return <>
-    <PageIntro tone="business" kicker="Consultant toolkit" title="Explore data and differences" lede="Compare aggregate figures, examine their sources, and connect the findings with research and equity analysis.">
+    <PageIntro tone="business" kicker="Consultant toolkit" title="Explore data and differences" lede="Compare the overall figures, see where they come from, and connect what you find with research and equity analysis.">
       <p className="mt-4 max-w-3xl">Explore the six ADSA equity goals or data from any DHS program or service line. Begin with a practice example, or open a file prepared for this purpose.</p>
     </PageIntro>
     <div className="wrap py-8">

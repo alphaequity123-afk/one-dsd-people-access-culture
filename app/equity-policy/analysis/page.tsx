@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function EquityAnalysisPage() {
   return (
     <>
-      <PageIntro kicker="Equity Policy" title="Practice with the toolkit" lede="Use a published example to explore the equity analysis questions before applying the official toolkit to your own work." />
+      <PageIntro kicker="Equity Policy" title="Practice with the toolkit" lede="Try the equity analysis questions on a worked example first, then use the official toolkit on your own work." />
       <div className="wrap max-w-3xl space-y-6 py-8">
         <Notice>
           This practice does not submit an official equity analysis. Use the Equity Analysis Toolkit to try the eight questions with a published example and download a copy.

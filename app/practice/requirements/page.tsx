@@ -8,7 +8,7 @@ export const metadata: Metadata = { title: "Requirements and review evidence" };
 
 export default function RequirementsPage() {
   return <>
-    <PageIntro title="Requirements and review evidence" lede="Keep a requirement, its governing source, the work it affects and the evidence for review together." />
+    <PageIntro title="Requirements and review evidence" lede="Keep a requirement, the source behind it, the work it affects and the evidence together in one place." />
     <div className="wrap" style={{ paddingBlock: "2rem 4rem" }}>
       <PageContents items={[
         { href: "#requirements-start", label: "Before you begin" },

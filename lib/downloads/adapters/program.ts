@@ -264,7 +264,7 @@ export function supportDirectoryDocument(scope: StaffProgramScope): ResourceDocu
   return {
     kicker: kicker(scope, "Find support"),
     title: "DHS offices and guidance",
-    subtitle: "Find a useful starting point for your question, with separate guidance for workplace needs, public services and program responsibilities.",
+    subtitle: "Find a good place to start with your question. There's separate guidance for workplace needs, public services and program responsibilities.",
     meta: [],
     sections: compactSections([
       section(undefined, [paragraph("These DHS pages can help you find an office or understand a process. Your team may have a specific contact for the next step.")]),
