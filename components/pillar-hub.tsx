@@ -10,13 +10,17 @@ import styles from "./pillar-hub.module.css";
 export type PillarLink = { label: string; href: string; description?: string; ask?: string };
 export type PillarGroup = { title: string; intro?: string; links: PillarLink[] };
 
-export function PillarHub({ id, title, lede, primary, groups, note }: {
+export function PillarHub({ id, title, lede, primary, groups, note, lead, children }: {
   id: string;
   title: string;
   lede: string;
   primary: { label: string; href: string };
   groups: PillarGroup[];
   note?: React.ReactNode;
+  /** Shown right after the introduction, before the cards: a reminder or a search box. */
+  lead?: React.ReactNode;
+  /** Sections shown after the cards, before the closing note. */
+  children?: React.ReactNode;
 }) {
   return <div className={styles.hub}>
     <header className={styles.intro} aria-labelledby={`${id}-title`}>
@@ -24,6 +28,7 @@ export function PillarHub({ id, title, lede, primary, groups, note }: {
       <p className={styles.lede}>{lede}</p>
       <p><Link className={styles.primary} href={primary.href}>{primary.label}</Link></p>
     </header>
+    {lead ? <div className={styles.lead}>{lead}</div> : null}
     <div className={styles.groups}>
       {groups.map(group => <section key={group.title} className={styles.group} aria-labelledby={`${id}-${slug(group.title)}`}>
         <h2 id={`${id}-${slug(group.title)}`}>{group.title}</h2>
@@ -33,6 +38,7 @@ export function PillarHub({ id, title, lede, primary, groups, note }: {
         </li>)}</ul>
       </section>)}
     </div>
+    {children ? <div className={styles.extra}>{children}</div> : null}
     <aside className={styles.note} aria-label="Using Ask on this page">
       {note ? <div>{note}</div> : null}
       <p>Have a question about this work? Open <strong>Ask</strong> at the top of any page. Leave out client, case, health and personnel details.</p>

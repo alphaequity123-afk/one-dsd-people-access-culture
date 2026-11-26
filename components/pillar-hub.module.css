@@ -117,3 +117,20 @@
 /* "Ask about this tool": a quiet second link under a tool, outside the card's main link. */
 .group a.askLink { display: inline-block; margin: -6px 0 12px 20px; padding: 4px 12px; border: 1px solid #cdd9e5; border-radius: 99px; font-size: .875rem; font-weight: 600; color: var(--od-navy); background: #fff; }
 .group a.askLink:hover { border-color: var(--od-navy); background: var(--u-tint); }
+
+/* Optional sections before and after the cards (Communities: reminder and search; co-creation loop; partners). */
+.lead, .extra { max-width: 1040px; margin: 24px auto 0; }
+.lead { display: grid; gap: 14px; }
+.extra { display: grid; gap: 20px; margin-top: 28px; }
+.panel { padding: 20px 22px; background: var(--s3-face); border: 1px solid var(--s3-line); border-top: 3px solid var(--od-navy); border-radius: 20px; box-shadow: var(--s3-shadow); }
+.panel h2 { margin: 0 0 6px; font-size: 1.3rem; font-weight: 600; color: var(--u-navy); }
+.panel > p { margin: 0 0 10px; color: var(--od-muted); max-width: 70ch; }
+.panel ol, .panel ul { margin: 0; padding-left: 22px; display: grid; gap: 8px; }
+.panel li strong { color: var(--u-navy); }
+.reminder { padding: 14px 18px; border-left: 4px solid #78be21; background: #fff; border-radius: 0 12px 12px 0; box-shadow: 0 1px 2px rgba(11,42,74,.06); }
+.reminder p { margin: 0; }
+.search { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 10px; }
+.search label { display: grid; gap: 6px; flex: 1 1 280px; font-weight: 600; color: var(--u-navy); }
+.search input { min-height: 48px; padding: 10px 14px; border: 1px solid #8a9aab; border-radius: 12px; font: inherit; font-weight: 400; }
+.search input:focus-visible, .search button:focus-visible { outline: 3px solid var(--od-link); outline-offset: 2px; }
+.search button { min-height: 48px; padding: 10px 24px; border: 0; border-radius: 99px; background: var(--od-navy); color: #fff; font: inherit; font-weight: 600; cursor: pointer; }
