@@ -124,6 +124,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
           </ChromeGate>
           <main id="main" tabIndex={-1} className="flex-1">
             <ChromeGate hideOnPrefixes={["/share/", "/embedded-tools/"]} hideOnExact={["/"]}><DsdResourceActions canCreate={owner} /></ChromeGate>
+            <ChromeGate onlyOnPrefixes={["/minnesota-communities", "/equity-framework", "/courses/dc-l43", "/courses/dc-t32", "/leading/community"]}><aside aria-label="Participation capacity" style={{maxWidth:"75ch",margin:"1rem auto",padding:"1rem"}}><p><strong>Prepare within the capacity available.</strong> Community engagement capacity is limited. Confirm an open decision, responsible owner, staff time, accessible arrangements and follow-through before inviting participation. Community profiles, internal discussion and AI are preparation, not community participation. Co-design requires people affected to help develop and revise options with meaningful influence.</p><a href="/equity-centered-practice">Use the equity-centered practice framework</a></aside></ChromeGate>
             <InternalPage>{children}</InternalPage>
             <ChromeGate hideOnPrefixes={["/share/", "/embedded-tools/"]} hideOnExact={["/"]}><CourseMediaForPage /></ChromeGate>
             <OpenDetailsForHash />
