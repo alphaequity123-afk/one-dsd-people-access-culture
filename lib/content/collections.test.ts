@@ -173,6 +173,6 @@ describe("the promises on these pages", () => {
   });
   it("states plainly what is and is not recorded", () => {
     const page = readFileSync(path.join(root, "app/leading/how-this-works/page.tsx"), "utf8");
-    for (const words of ["does not give supervisors a learner scoreboard", "keep those items in this browser profile", "does not send those saved items to supervisors or program staff", "Exporting or sharing a copy is a separate action", "go to outside services", "does not intentionally save a question-and-answer copy", "earlier versions may have retained separate records", "does not replace training the state requires", "TRAINING_CREDIT_NOTICE", "does not assign or certify required agency training"]) expect(page).toContain(words);
+    for (const words of ["Nothing here gives supervisors a scoreboard of learners", "they stay in this browser profile", "We never send those saved items to supervisors or program staff", "A copy leaves your browser only if you choose to export or share it", "goes to outside services", "does not set out to keep a copy of your questions and answers", "earlier versions may have kept separate records", "replace the training the state requires", "TRAINING_CREDIT_NOTICE", "assign or certify required agency training"]) expect(page).toContain(words);
   });
 });

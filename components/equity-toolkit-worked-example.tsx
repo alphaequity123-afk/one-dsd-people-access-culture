@@ -18,7 +18,7 @@ export function EquityToolkitWorkedExample() {
       <SequenceVideo className={styles.player} src={media.src} poster={media.poster} title={example.title} captions={media.captions} transcript={media.transcript} />
       {media.transcript ? <p className={styles.runtime}><SourceLink href={media.transcript}>Read the video transcript</SourceLink></p> : null}
     </div></FeaturedMediaPanel> : null}
-    <p className={styles.note}>Use these five questions to build confidence alongside the Equity Analysis Toolkit training. For an actual review, follow the official toolkit and the approval steps that apply to your work.</p>
+    <p className={styles.note}>These five questions help you build confidence alongside the Equity Analysis Toolkit training. For a real review, follow the official toolkit and the approval steps that apply to your work.</p>
     <details className={styles.example}>
       <summary>Read the completed example</summary>
       <p className={styles.exampleIntro}>This example shows how a notice review could begin. The notes raise questions for the team to explore; they are not findings about CFSS participants or an approved decision.</p>

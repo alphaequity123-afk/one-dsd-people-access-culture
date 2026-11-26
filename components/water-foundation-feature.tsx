@@ -10,7 +10,7 @@ export function WaterFoundationFeature() {
     <div>
       <p className={styles.eyebrow}>Featured course · About 1 hour</p>
       <h2 id="water-foundation-title">The Water We Swim In</h2>
-      <p>Examine how familiar cultural assumptions shape public services, workplace decisions and whose experience counts. Connect that understanding to culturally responsive action.</p>
+      <p>Look at how familiar cultural assumptions shape public services, workplace decisions and whose experience counts. Connect that understanding to culturally responsive action.</p>
       <Link className={styles.primary} href={WATER_FOUNDATION.href}>Open the course</Link>
       <p className={styles.related}><Link href="/learn/water-we-swim-in/collection">Explore the briefs and practice collection</Link></p>
     </div>

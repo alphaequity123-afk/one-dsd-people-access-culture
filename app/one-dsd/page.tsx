@@ -19,13 +19,13 @@ const PROGRAM_DOORS = [
   },
   {
     title: "Apply the work",
-    description: "Use questions, checklists, reviews, and working tools to shape a program, policy, service, meeting, or workforce decision.",
+    description: "Questions, checklists, reviews and working tools to help you shape a program, policy, service, meeting or workforce decision.",
     href: "/practice",
     label: "Open Practice",
   },
   {
     title: "Prepare with community context",
-    description: "Use reviewed, question-led material to plan access and engagement without treating group information as a label for a person.",
+    description: "Reviewed material, built around good questions, to help you plan access and engagement without turning group information into a label for a person.",
     href: "/minnesota-communities",
     label: "Explore Minnesota Communities",
   },
@@ -184,7 +184,7 @@ export default async function OneDsdPage({ searchParams }: { searchParams?: Prom
             <p className="kicker">{stringValue(copy, "consultKicker")}</p>
             <h2 id="consult-title" className="text-2xl font-extrabold">Finding support for DSD work</h2>
             <p>
-              Use the learning, tools and library to prepare your DSD work. When it needs another perspective or a decision, involve the responsible supervisor, Equity Director or Specialist, policy owner, or other office.
+              The learning, tools and library can help you prepare your DSD work. When it needs another perspective or a decision, bring in the supervisor, Equity Director or Specialist, policy owner or other office responsible.
             </p>
             <p className="m-0">
               {stringValue(copy, "consultBoundary")}

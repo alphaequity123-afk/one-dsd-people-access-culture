@@ -28,7 +28,7 @@ export default async function ProgramModel() {
       <h2 id="work-start">What are you working on?</h2>
       <ul className="pilot-topic-rows">
         <li><Link href="/learn">Build your understanding<span>Find learning, perspectives, and examples.</span></Link></li>
-        <li><Link href="/learn/equity-toolkit">Work through a decision<span>Examine who is affected, compare options, and prepare a recommendation.</span></Link></li>
+        <li><Link href="/learn/equity-toolkit">Work through a decision<span>See who is affected, compare options and prepare a recommendation.</span></Link></li>
         <li><Link href="/practice/measurement">Understand what helped<span>Look at what changed for people.</span></Link></li>
       </ul>
     </section>
@@ -48,8 +48,8 @@ export default async function ProgramModel() {
           <details className="pilot-supporting">
             <summary>How the five areas support your work</summary>
             <div className="pilot-supporting-body space-y-3">
-              <p>These resources support equity in Disability Services Division services, policies, workplace culture, and everyday decisions. Begin with your actual responsibility and the people affected by the work. <Link href="/one-dsd">Explore DSD programs and services</Link> for context.</p>
-              <p>A prepared document does not establish approval or implementation. Identify the people affected by the work and the office responsible for the decision.</p>
+              <p>These resources support equity in Disability Services Division services, policies, workplace culture, and everyday decisions. Begin with what you are responsible for and the people your work affects. <Link href="/one-dsd">Explore DSD programs and services</Link> for context.</p>
+              <p>A prepared document is not the same as approval or implementation. Keep in mind the people your work affects and the office responsible for the decision.</p>
             </div>
           </details>
           <details className="pilot-supporting">
@@ -62,17 +62,17 @@ export default async function ProgramModel() {
             </div>
           </details>
           <details className="pilot-supporting">
-            <summary>Use related resources together</summary>
+            <summary>Bring related resources together</summary>
             <div className="pilot-supporting-body space-y-3">
-              <p>For a policy or service question, begin with the applicable requirements and available evidence. <Link href="/equity-policy">DHS equity policy</Link> provides policy context; the person or area responsible clarifies which requirements apply to the work.</p>
-              <p><Link href="/minnesota-communities">Community knowledge</Link> can help you prepare thoughtful questions and identify perspectives to seek. Use the <Link href="/equity-review">equity review tools</Link> to examine effects, compare alternatives and prepare a recommendation that makes uncertainties and needed decisions visible.</p>
-              <p>After the appropriate decision and implementation, <Link href="/practice/measurement">measurement guidance</Link> and <Link href="/program/reflection">practice reflection</Link> help you distinguish what was done from what changed. Return what you learn to the people who contributed and to the next analysis. No tool substitutes for their participation or for authorized review.</p>
+              <p>For a policy or service question, begin with the requirements that apply and the evidence you have. <Link href="/equity-policy">DHS equity policy</Link> provides policy context; the person or area responsible clarifies which requirements apply to the work.</p>
+              <p><Link href="/minnesota-communities">Community knowledge</Link> can help you prepare thoughtful questions and identify perspectives to seek. The <Link href="/equity-review">equity review tools</Link> help you look at effects, compare alternatives and prepare a recommendation that is open about what is uncertain and what still needs deciding.</p>
+              <p>Once a decision is made and put in place, <Link href="/practice/measurement">measurement guidance</Link> and <Link href="/program/reflection">practice reflection</Link> help you tell what was done apart from what changed. Return what you learn to the people who contributed and to the next analysis. No tool substitutes for their participation or for authorized review.</p>
             </div>
           </details>
           <section className="space-y-3" aria-labelledby="operational-spine">
             <h3 id="operational-spine">How this program operates</h3>
             <p>The <Link href="/program-foundation">Program charter</Link> connects the purpose, operating principles, consultant responsibilities, authority boundaries and evidence needed to carry work forward. It guides the whole program, including equity work beyond the ADSA implementation plan.</p>
-            <p>Use the <Link href="/practice/requirements">requirements and review evidence workspace</Link> to identify applicable requirements, connect them with sources and prepare evidence for the person responsible. A prepared document does not establish approval or implementation.</p>
+            <p>The <Link href="/practice/requirements">requirements and review evidence workspace</Link> helps you find the requirements that apply, connect them with their sources and prepare evidence for the person responsible. A prepared document is not the same as approval or implementation.</p>
             <p>Where an ADSA action step applies, the <Link href="/program/implementation">six-goal implementation map</Link> connects it with practical work products, participation, tools and questions about results. Divisions can adapt their approach to their responsibilities; these twenty-eight steps do not limit the program’s broader equity work.</p>
           </section>
           <section className="space-y-3">

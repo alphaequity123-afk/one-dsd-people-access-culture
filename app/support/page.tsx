@@ -63,7 +63,7 @@ export default async function SupportPage({ searchParams }: { searchParams?: Pro
         </div>
         <details className={styles.resultInvitation}>
           <summary className="cursor-pointer font-semibold">About support</summary>
-          <p>Use the Library, common questions, or Find the right person for guidance with your work.</p>
+          <p>For guidance with your work, try the Library, the common questions or Find the right person.</p>
         </details>
       </div>
     </EditableSurfaceRegion>

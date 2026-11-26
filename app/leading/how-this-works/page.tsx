@@ -16,41 +16,41 @@ export default function LeadingHowThisWorksPage() {
     <header className={base.intro}>
       <p className={base.eyebrow}>{LEADING_LABEL}</p>
       <h1>How this works</h1>
-      <p className={base.lede}>What is recorded, what is not, and what this space does not do.</p>
+      <p className={base.lede}>Here is what we record, what we don&apos;t, and what this space is not meant to do.</p>
     </header>
     <div className={styles.plain}>
       <h2>There is no team view</h2>
       <p>{LEADING_PRIVACY_SENTENCE}</p>
       <ul>
         <li>There is no sign-in for this space. All of it is public, and staff can read every page.</li>
-        <li>This leadership area does not give supervisors a learner scoreboard or assign these optional courses.</li>
-        <li>This area does not provide supervisors with individual course visits, progress or answers. Anyone using the same browser profile may still see information saved there.</li>
+        <li>Nothing here gives supervisors a scoreboard of learners, and these optional courses are never assigned to you.</li>
+        <li>Supervisors can&apos;t see which courses you visit, how far you have gone or what you answer. Anyone who uses the same browser profile as you may still see what is saved there.</li>
       </ul>
       <h2>What stays in your browser</h2>
       <ul>
-        <li>Features that save a place on a suggested path, lesson progress or practice answers keep those items in this browser profile when storage is available.</li>
-        <li>The learning-progress feature does not send those saved items to supervisors or program staff. Exporting or sharing a copy is a separate action.</li>
-        <li>Anyone using the same browser profile may see saved items. Use the relevant feature to clear them; downloaded, printed or shared copies remain separate.</li>
+        <li>When you save your place on a suggested path, your lesson progress or your practice answers, they stay in this browser profile, as long as the browser allows saving.</li>
+        <li>We never send those saved items to supervisors or program staff. A copy leaves your browser only if you choose to export or share it.</li>
+        <li>Anyone using the same browser profile may see saved items. You can clear them where you saved them. Copies you download, print or share are separate and stay as they are.</li>
       </ul>
       <h2>What happens to a question in Ask</h2>
       <ul>
-        <li>Questions typed into Ask go to outside services so that it can answer.</li>
-        <li>The current service does not intentionally save a question-and-answer copy in the owner workspace. Operational activity may be recorded, and earlier versions may have retained separate records. Supervisors do not receive your browser conversation from Ask.</li>
+        <li>When you type a question into Ask, it goes to outside services so that Ask can answer.</li>
+        <li>The current version of Ask does not set out to keep a copy of your questions and answers in the owner workspace. Some operational activity may be recorded, and earlier versions may have kept separate records. Your supervisor never receives your Ask conversation from your browser.</li>
         <li>Please do not type anyone&apos;s name, case, health or personnel details. Ask general questions.</li>
       </ul>
       <h2>What this does not replace</h2>
       <ul>
-        <li>This app does not replace training the state requires. It does not count as the training Minn. Stat. 43A.21 requires of supervisors and managers. The state&apos;s own training does that.</li>
+        <li>This site doesn&apos;t replace the training the state requires, and it doesn&apos;t count as the training Minn. Stat. 43A.21 requires of supervisors and managers. The state&apos;s own training does that.</li>
         <li>It is general information, not legal advice. For a real situation, ask Human Resources, labor relations or your ADA coordinator.</li>
         <li>It does not make or record any personnel, accommodation or complaint decision.</li>
       </ul>
       <h2>Required responsibilities and optional learning</h2>
       <p>{TRAINING_CREDIT_NOTICE}</p>
-      <p>The label &ldquo;{REQUIRED_COURSE_LABEL}&rdquo; refers to the agency responsibility associated with the Equity Analysis Toolkit. This local companion course does not assign or certify required agency training. Follow the designated agency process for training and the applicable policy requirements for equity analysis. <Link href="/courses/dhs-equity-analysis-toolkit">Open the Equity Analysis Toolkit course</Link>.</p>
+      <p>The label &ldquo;{REQUIRED_COURSE_LABEL}&rdquo; points to the agency responsibility that comes with the Equity Analysis Toolkit. This companion course doesn&apos;t assign or certify required agency training. For that, follow the agency&apos;s own training process and the policy requirements for equity analysis. <Link href="/courses/dhs-equity-analysis-toolkit">Open the Equity Analysis Toolkit course</Link>.</p>
       <h2>Using the learning</h2>
-      <p>Use these courses as guidance for your work, alongside current policy and the person or area responsible for a decision.</p>
+      <p>Let these courses guide your work, alongside current policy and the person or area responsible for each decision.</p>
       <h2>Tribal and Native American learning</h2>
-      <p>This space does not offer Tribal curriculum. One DSD refers Native American and Tribal-specific learning, questions and engagement to ADSA and the responsible Tribal liaison. <Link href={TRIBAL_REFERRAL_HREF}>Native American and Tribal-specific guidance</Link>.</p>
+      <p>We don&apos;t offer Tribal curriculum here. For Native American and Tribal-specific learning, questions and engagement, One DSD connects you with ADSA and the responsible Tribal liaison. <Link href={TRIBAL_REFERRAL_HREF}>Native American and Tribal-specific guidance</Link>.</p>
     </div>
     <aside className={base.continue}>
       <h2>Keep exploring</h2>

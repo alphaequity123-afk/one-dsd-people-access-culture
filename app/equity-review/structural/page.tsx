@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function StructuralReviewPage() {
   return <>
     <PageIntro tone="business" kicker="One DSD People, Access and Culture" title="Structural equity analysis" lede="Look closely at a process, find where barriers show up, and connect the evidence with a practical change.">
-      <p className="mt-4 max-w-3xl">Use these eight steps for a policy, service, or workplace process anywhere in DHS. Work independently or with colleagues, and ask the Equity and Inclusion Operations Consultant for guidance when helpful.</p>
+      <p className="mt-4 max-w-3xl">These eight steps work for a policy, service or workplace process anywhere in DHS. Work on your own or with colleagues, and reach out to the Equity and Inclusion Operations Consultant whenever guidance would help.</p>
       <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this page</summary><ResourceDownloads kind="equity-review" id="structural" noun="blank analysis" /></details>
     </PageIntro>
     <div className="wrap py-8">

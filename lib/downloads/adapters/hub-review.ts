@@ -57,7 +57,7 @@ function reviewDocument(scope: StaffProgramScope, noun: string, rest: Omit<Resou
 function workingGroupPlanDocument(scope: StaffProgramScope): ResourceDocument {
   return reviewDocument(scope, "Equity in practice", {
     title: "Plan a legislatively required working group",
-    subtitle: "When the Legislature creates a working group or task force, the law sets its purpose, members, meetings, duties and report date. This page turns that charge into a month-by-month plan, using the Waiver Case Management Advisory Working Group as the worked example, and shows how to reuse the plan for another group.",
+    subtitle: "When the Legislature creates a working group or task force, the law sets its purpose, members, meetings, duties and report date. Here we turn that charge into a month-by-month plan, using the Waiver Case Management Advisory Working Group as the worked example, and show how to reuse the plan for another group.",
     meta: [
       { label: "Law", value: LAW.title },
       { label: "Checked", value: dateText(WORKING_GROUP_PLAN_CHECKED) },
@@ -230,7 +230,7 @@ function structuralDocument(scope: StaffProgramScope): ResourceDocument {
     meta: [{ label: "Steps", value: String(STRUCTURAL_STEPS.length) }],
     sections: compactSections([
       section(undefined, [
-        paragraph("Use these eight steps for a policy, service, or workplace process anywhere in the Department of Human Services. Work independently or with colleagues, and ask the Equity and Inclusion Operations Consultant for guidance when helpful."),
+        paragraph("These eight steps work for a policy, service or workplace process anywhere in the Department of Human Services. Work on your own or with colleagues, and reach out to the Equity and Inclusion Operations Consultant whenever guidance would help."),
         callout("This copy is blank. Use roles, not names, and keep personnel, client, case and complaint details out of the record. An answered checklist is a preparation aid, not an approval or a finding that inequity has been established."),
       ]),
       ...STRUCTURAL_STEPS.map((step, index) => {

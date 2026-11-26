@@ -89,7 +89,7 @@ export default function EquityFrameworkPage() {
 
         <section aria-labelledby="cycle" className="mt-14">
           <H2 id="cycle">Put the improvement cycle into practice</H2>
-          <p className="max-w-3xl">The framework runs as a continuous cycle: assess, plan, implement, measure, learn, improve. Each stage matches one step of the program’s value sequence,¹¹ and each stage names where the work happens in One DHS and in One DSD. Use evidence, readiness and the responsible decision-maker’s approval to plan the next stage, while meeting applicable deadlines.</p>
+          <p className="max-w-3xl">The framework runs as a continuous cycle: assess, plan, implement, measure, learn, improve. Each stage matches one step of the program’s value sequence,¹¹ and each stage names where the work happens in One DHS and in One DSD. Plan each next stage from the evidence, your readiness and the approval of the person who makes the decision, while still meeting the deadlines that apply.</p>
           <ol className="mt-4 flex flex-wrap gap-2 p-0 text-sm font-semibold" aria-label="Cycle stages">{F.cycle.map((c, i) => <li key={c.stage} className="list-none rounded-full border border-line bg-white px-3 py-1">{i + 1}. {c.stage}</li>)}</ol>
           <details className="mt-5 border-t border-line py-3"><summary>Explore the full cycle</summary>
           <div tabIndex={0} className="mt-4 overflow-x-auto rounded border border-line bg-white">
@@ -128,7 +128,7 @@ export default function EquityFrameworkPage() {
 
         <section aria-labelledby="pillars" className="mt-14">
           <H2 id="pillars">Six pillars</H2>
-          <p className="max-w-3xl">Each pillar connects objectives, suggested actions, sample measures and related program resources. Use those connections to examine how equity considerations enter everyday decisions, responsibilities and review.</p>
+          <p className="max-w-3xl">Each pillar connects objectives, suggested actions, sample measures and related program resources. Together, they show how equity can become part of everyday decisions, responsibilities and review.</p>
           <div className="mt-6 space-y-2">{F.pillars.map((p, i) => (
             <article key={p.id} id={`pillar-${p.id}`} aria-labelledby={`pillar-${p.id}-title`} className="min-w-0 scroll-mt-24 border-t border-line py-5">
               <p className="kicker m-0">Pillar {i + 1}</p>
@@ -197,7 +197,7 @@ export default function EquityFrameworkPage() {
 
         <section aria-labelledby="stages" className="mt-14">
           <H2 id="stages">Three stages with readiness conditions</H2>
-          <p className="max-w-3xl">The proposed sequence moves through foundations, integration and sustainment. Set timing with the people or areas responsible, considering readiness, resources and applicable deadlines. These planning stages do not postpone an existing duty.</p>
+          <p className="max-w-3xl">The proposed sequence moves through foundations, integration and sustainment. Work out the timing with the people or areas responsible, with readiness, resources and deadlines in mind. These planning stages never postpone a duty that already exists.</p>
           <div className="mt-6 grid gap-6 lg:grid-cols-3">{F.stages.map((s, i) => (
             <article key={s.title} className="card min-w-0">
               <p className="kicker m-0">Stage {i + 1}</p>
@@ -219,7 +219,7 @@ export default function EquityFrameworkPage() {
 
         <section aria-labelledby="tools" className="mt-14">
           <H2 id="tools">Resource and tool suite</H2>
-          <p className="max-w-3xl">Start with tools that support a defined task and connect to the applicable requirements. Check the status, linked resource and scope before using a tool; a proposed resource does not establish an available service or authority.</p>
+          <p className="max-w-3xl">Start with tools that help with a clear task and connect to the requirements that apply. Before you use a tool, check its status, linked resource and scope. A proposed resource is not yet an available service, and it carries no authority.</p>
           <div tabIndex={0} className="mt-4 overflow-x-auto rounded border border-line bg-white">
             <table className="data w-full min-w-[60rem] text-sm">
               <thead><tr><th scope="col">Tool or resource</th><th scope="col">Primary users</th><th scope="col">What it does</th><th scope="col">Format</th><th scope="col">In this program</th></tr></thead>
@@ -253,17 +253,17 @@ export default function EquityFrameworkPage() {
 
           <h3 className="mt-10 text-2xl font-bold">Equity, accessibility and decision tools</h3>
           <details className="card mt-3" open><summary className="cursor-pointer text-lg font-bold">Equity Analysis Toolkit</summary>
-            <p>Run an equity analysis before a significant decision, not after implementation has begun. The State of Minnesota toolkit and the DHS Equity Policy describe it as a way to examine how decisions affect different groups, prevent unanticipated harm and address persistent racial disparities that routine decisions can otherwise reproduce.⁵ Use the <Link href="/equity-policy/analysis">guided walkthrough</Link> to prepare the analysis and read the <Link href="/equity-policy">DHS Equity Policy</Link> for its requirements. Review the tool’s saving and export controls; completing a walkthrough does not itself establish approval or an equitable outcome.</p>
+            <p>Run an equity analysis before a significant decision, not after implementation has begun. The State of Minnesota toolkit and the DHS Equity Policy describe it as a way to examine how decisions affect different groups, prevent unanticipated harm and address persistent racial disparities that routine decisions can otherwise reproduce.⁵ Use the <Link href="/equity-policy/analysis">guided walkthrough</Link> to prepare the analysis and read the <Link href="/equity-policy">DHS Equity Policy</Link> for its requirements. Check how the tool saves and exports your work. Completing a walkthrough does not, on its own, mean approval or an equitable outcome.</p>
             <div className="grid gap-6 lg:grid-cols-2"><div className="min-w-0"><h4 className="m-0 text-base font-bold">Core questions</h4><ol className="mt-2 list-decimal space-y-1 pl-5 text-sm">{F.analysisQuestions.map((q) => <li key={q}>{q}</li>)}</ol></div><div className="min-w-0"><h4 className="m-0 text-base font-bold">Decision categories</h4><Pairs head={["Decision type", "Minimum review"]} rows={F.decisionCategories} /></div></div>
           </details>
           <details className="card mt-3"><summary className="cursor-pointer text-lg font-bold">Accessibility review checklist</summary>
-            <p>Plan accessibility from the start and confirm the standards and obligations that apply to the work. This program uses WCAG 2.2 Level AA as a design goal; that goal is not a claim of verified conformance or a substitute for applicable legal requirements.⁶</p>
+            <p>Plan accessibility from the start and confirm the standards and obligations that apply to the work. We use WCAG 2.2 Level AA as our design goal. That goal is not a claim of verified conformance, and it does not replace the legal requirements that apply.⁶</p>
             <Pairs head={["Domain", "Example review questions"]} rows={F.accessibilityDomains} />
             <h4 className="mt-4 text-base font-bold">Minimum standard for every major initiative</h4>
             <Bullets items={F.accessibilityMinimum} />
           </details>
           <details className="card mt-3"><summary className="cursor-pointer text-lg font-bold">Inclusive hiring and workforce equity toolkit</summary>
-            <p>Supports workforce equity, retention, equitable advancement and workplace culture.⁷ Use only authorized, appropriately aggregated workforce information for this planning exercise. Keep personnel records and confidential case details out of the learning tools.</p>
+            <p>Supports workforce equity, retention, equitable advancement and workplace culture.⁷ For this planning exercise, use only workforce information you are authorized to use, combined so that no one person can be identified. Keep personnel records and confidential case details out of the learning tools.</p>
             <Pairs head={["Tool", "Use"]} rows={F.hiringTools} />
           </details>
 
@@ -308,10 +308,10 @@ export default function EquityFrameworkPage() {
 
         <section aria-labelledby="launch" className="mt-14">
           <H2 id="launch">Minimum launch package</H2>
-          <p className="max-w-3xl">Use this proposed set of twelve tools to identify what the work needs, what is available and what requires authorization or development. Expand it when evidence and readiness justify the addition.</p>
+          <p className="max-w-3xl">This proposed set of twelve tools helps you see what the work needs, what is already available and what still needs authorization or development. Add to it when the evidence and your readiness support it.</p>
           <ol className="mt-4 grid list-decimal gap-2 pl-6 md:grid-cols-2">{F.launchPackage.map((t) => <li key={t.name} className="text-sm">{t.href ? <Link href={t.href}>{t.name}</Link> : t.name} <span className="text-muted">({TOOL_STATUS_LABEL[t.status].toLowerCase()})</span></li>)}</ol>
           <p className="mt-6 max-w-3xl font-semibold">{F.designPrinciple}</p>
-          <p className="max-w-3xl text-sm text-muted">This framework interprets <Link href="/operationalizing-equity">operationalizing equity</Link> for the whole program.¹² Use of this proposed planning framework is voluntary; applicable workplace duties and assigned training remain required. Nothing here confers official authority or replaces decisions made by the people or areas responsible in the department.</p>
+          <p className="max-w-3xl text-sm text-muted">This framework interprets <Link href="/operationalizing-equity">operationalizing equity</Link> for the whole program.¹² Using this proposed planning framework is voluntary, and your workplace duties and assigned training still apply. Nothing here gives official authority or replaces decisions made by the people or areas responsible in the department.</p>
         </section>
 
         <section aria-labelledby="notes" className="mt-14 border-t border-line pt-6">

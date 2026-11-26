@@ -131,7 +131,7 @@ function jobAidBlocks(aid: JobAid, standards: readonly number[]): DocumentBlock[
     aid.askWho.length ? paragraph([{ text: "Who to ask", bold: true }]) : null,
     aid.askWho.length ? bullets(aid.askWho) : null,
     paragraph(
-      `Culturally and Linguistically Appropriate Services ${standardsLabel(standards).toLowerCase()}. Use the current procedures applicable to your role and program when taking action. Leave names, case details and other private information out of your notes.`,
+      `Culturally and Linguistically Appropriate Services ${standardsLabel(standards).toLowerCase()}. When you act, follow the current procedures for your role and program. Leave names, case details and other private information out of your notes.`,
     ),
   ].filter((block): block is DocumentBlock => Boolean(block));
 }
@@ -170,7 +170,7 @@ function clasLessonSections(module: ClasModule, index: number): DocumentSection[
     section("One-page job aid", practice?.jobAid ? jobAidBlocks(practice.jobAid, module.standards) : []),
     section("Sources and further guidance", [
       bullets(CLAS_SOURCES.map((source) => [{ text: source.title, bold: true }, { text: ` — ${source.href}` }])),
-      paragraph("Use the current procedures applicable to your role and program when taking action."),
+      paragraph("When you act, follow the current procedures for your role and program."),
     ]),
   ]);
 }
@@ -220,9 +220,9 @@ function clasCurriculumDocument(scope: StaffProgramScope): ResourceDocument {
         paragraph("These brief descriptions help you find the relevant part. Read the original standards for their complete wording."),
         numbered(clasCurriculum.standards.map((standard) => `${standard.focus} (Part ${Number(standard.lesson)})`)),
       ]),
-      section("Use the standards alongside current guidance", [
+      section("The standards alongside current guidance", [
         paragraph(
-          "This curriculum connects the National Culturally and Linguistically Appropriate Services Standards to individual work. It does not replace agency requirements, specialist guidance or approval processes. Identify what you can change and where coordination is needed.",
+          "This curriculum connects the National Culturally and Linguistically Appropriate Services Standards to individual work. It does not replace agency requirements, specialist guidance or approval processes. Notice what you can change yourself and where you will need to coordinate with others.",
         ),
       ]),
       ...clasCurriculum.modules.map((module, index) => asPart(partLabel(module.id, module.title), clasLessonSections(module, index).filter((entry) => entry.heading !== "Sources and further guidance"))),
@@ -294,7 +294,7 @@ async function toolkitCurriculumDocument(scope: StaffProgramScope): Promise<Reso
     meta: [{ label: "Parts", value: String(toolkit.modules.length) }],
     sections: compactSections([
       section("A connected path at your own pace", [
-        paragraph("Use a work example that matters to you, or follow the example in the lessons. Each part offers guidance, a transcript, an individual decision to practice, and a prompt for your own work."),
+        paragraph("Bring a work example that matters to you, or follow the example in the lessons. Each part offers guidance, a transcript, an individual decision to practice, and a prompt for your own work."),
         paragraph("Participation in this learning is voluntary. You do not need a group or need to share personal experiences. Leave names, case details, and other confidential information out of learning notes."),
         paragraph("The learning supports your work. Follow applicable policy and review requirements, and consult the responsible people when a decision needs their approval. A quick check does not replace a full analysis when one is required."),
       ]),

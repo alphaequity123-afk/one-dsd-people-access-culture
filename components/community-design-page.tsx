@@ -100,7 +100,7 @@ export async function CommunityDesignPage({ id, part }: { id: string; part?: str
   const opening = b?.level0.whoAndWhere ?? (firstParagraph?.type === "paragraph" ? firstParagraph.text : undefined);
   const question = COMMUNITY_QUESTIONS[id] ?? {
     question: `A team is preparing an outreach meeting with people whose experiences are discussed in ${title}. Before choosing one format, what would you want to learn from the people who might attend?`,
-    response: "Use the community context to prepare questions, not to decide the answers for participants. Ask about language, access, timing, and how people want to contribute. Explain what they can influence and how the team will respond to their input.",
+    response: "Let the community context help you prepare questions, not decide the answers for participants. Ask about language, access, timing, and how people want to contribute. Explain what they can influence and how the team will respond to their input.",
   };
   const spotlight = surface ? stringValue(surface.values, "spotlightTitle") : "";
   const available = [surface, readingSurface].every(area => !area || area.available);

@@ -19,13 +19,13 @@ export type EquityGoalExperienceProps = {
 type FieldKey = "implementation" | "decision" | "barrier" | "perspectives" | "action" | "owner" | "support" | "review" | "evidence";
 type Draft = Partial<Record<FieldKey, string>>;
 const fields: { key: FieldKey; label: string; help: string }[] = [
-  { key: "implementation", label: "ADSA action steps this work supports", help: "Connect your work to applicable steps below, or describe the connection in your own words. A connection records the purpose of the work, not completion." },
+  { key: "implementation", label: "ADSA action steps this work supports", help: "Connect your work to the steps below that apply, or describe the connection in your own words. A connection records the purpose of the work, not completion." },
   { key: "decision", label: "Work decision, process or practice", help: "Name a real piece of work and what you want to improve." },
   { key: "barrier", label: "Barrier, disparity and open questions", help: "Describe the concern, what supports it and what is still unknown. Distinguish reported experience from verified findings." },
   { key: "perspectives", label: "Affected perspectives and influence", help: "Who needs to shape the work? How can they influence the options, and what participation supports are needed?" },
-  { key: "action", label: "Toolkit analysis, alternatives and next action", help: "Use the current official toolkit and source requirements. Record alternatives to examine and a feasible next step; do not treat this plan as a completed analysis." },
+  { key: "action", label: "Toolkit analysis, alternatives and next action", help: "Work from the current official toolkit and source requirements. Note the alternatives worth exploring and a next step you can manage; this plan is not a completed analysis." },
   { key: "owner", label: "Accountable role and decision authority", help: "Name the responsible role and who can authorize a change. Do not assume an approval has been given." },
-  { key: "support", label: "Time, resources and support", help: "Identify workload adjustments, data, accessibility, consultation or partner support needed to proceed." },
+  { key: "support", label: "Time, resources and support", help: "Note any workload adjustments, data, accessibility, consultation or partner support you need to move ahead." },
   { key: "review", label: "Review point", help: "Set a realistic date or milestone to revisit the work and say who should participate." },
   { key: "evidence", label: "Evidence of progress and reasons to revise", help: "What would show whether the change helps? Include feedback, evidence limits and what would trigger a different approach." },
 ];
@@ -156,8 +156,8 @@ export function EquityGoalExperience({ resourceLinks = [], linkPrefix = "", scop
       <p style={paragraph}>Using the DHS Equity Policy and its Equity Analysis Toolkit is part of every staff member’s responsibility. Equity professionals can help you work through it.</p>
       <details style={{ margin: "18px 0" }}><summary style={{ cursor: "pointer", color: navy, fontWeight: 700 }}>About these goals and the toolkit</summary>
         <p style={paragraph}>These six goals come from the Aging and Disability Services Administration Equity and Inclusion Implementation Plan. All six guide every unit in the Disability Services Division. They are not department-wide DHS goals.</p>
-        <p style={paragraph}>This companion learning does not replace required agency training. Staff apply the current policy and toolkit to their work; the equity consultant and appropriate partners provide guidance, facilitation and analysis support. That support does not transfer staff responsibility or grant approval authority.</p>
-        <p style={paragraph}>The goals describe what to improve. The official toolkit guides how to examine a decision. The plan below helps record action and follow-through. Use the current official decision guidance to determine the appropriate review; a short timeline alone does not establish that a scan is sufficient.</p>
+        <p style={paragraph}>This companion learning does not replace required agency training. You apply the current policy and toolkit to your own work, and the equity consultant and other partners offer guidance, facilitation and analysis support. That support does not move your responsibility to anyone else or give approval authority.</p>
+        <p style={paragraph}>The goals describe what to improve. The official toolkit guides how to examine a decision. The plan below helps you keep track of action and follow-through. Let the current official decision guidance tell you which review fits; a short timeline alone does not mean a scan is enough.</p>
         <p style={paragraph}>In DSD, the <strong>One DSD Team</strong> is the division equity team. DHS and ADSA committees retain their own names and responsibilities.</p>
       </details>
       <button type="button" onClick={() => { planner.current?.focus({ preventScroll: true }); planner.current?.scrollIntoView({ behavior: "auto", block: "start" }); }} style={{ ...button, color: "#fff", background: navy }}>Open the three-goal work plan</button>
@@ -217,9 +217,9 @@ export function EquityGoalExperience({ resourceLinks = [], linkPrefix = "", scop
 
     <section ref={planner} tabIndex={-1} id="equity-work-plan" style={{ ...panel, background: "#f5f8fb", borderLeft: "5px solid #4667a5", scrollMarginTop: 24 }} aria-label="Manager and supervisor three-goal planner">
       <h2 style={heading}>Three-goal work plan</h2>
-      <p style={paragraph}>Directors, managers, supervisors, and staff can use this plan together to connect priorities with practical work and the outcomes they seek. The constitution guides the whole program; these ADSA goals provide one path through its wider learning, tools and implementation support.</p>
-      <p style={paragraph}>Select exactly three focus goals and prepare a practical next step for each. Three priorities help organize agreed work; they do not waive responsibilities under the other goals or applicable policies. Use this working draft to prepare for review; it is not an approved agency work plan.</p>
-      <p style={{ ...paragraph, padding: 14, background: "#edf3f8", borderLeft: `4px solid ${navy}` }}>Your plan saves automatically on this device so you can return to it. It is not shared with the program or available on another device. Anyone using this browser may see it. Download a copy to keep or share, and clear the draft when using a shared device. Use role descriptions and appropriate aggregate evidence; leave out private personnel or case details.</p>
+      <p style={paragraph}>Directors, managers, supervisors and staff can work on this plan together, connecting priorities with practical work and the outcomes you are hoping for. The constitution guides the whole program; these ADSA goals provide one path through its wider learning, tools and implementation support.</p>
+      <p style={paragraph}>Choose exactly three focus goals and plan a practical next step for each. Three priorities help organize the work you agree on; they don&apos;t set aside your responsibilities under the other goals or the policies that apply. This working draft helps you prepare for review; it is not an approved agency work plan.</p>
+      <p style={{ ...paragraph, padding: 14, background: "#edf3f8", borderLeft: `4px solid ${navy}` }}>Your plan saves automatically on this device so you can return to it. It is not shared with the program or available on another device. Anyone using this browser may see it. Download a copy to keep or share, and clear the draft when using a shared device. Describe roles rather than people, use overall evidence that is fine to share, and leave out private personnel or case details.</p>
       <p role="status">{loadedKey !== draftKey ? "Opening your plan…" : saveProblem || "Your plan is saved on this device."}</p>
       <fieldset style={{ margin: "20px 0", padding: 16, border: "1px solid #94a3b8", borderRadius: 4 }}>
         <legend style={{ fontWeight: 700, padding: "0 8px" }}>Choose three focus goals</legend>

@@ -57,7 +57,7 @@ export default async function ProvidersPage({ searchParams }: { searchParams: Pr
 
     <section className={styles.section} aria-labelledby="licensed-title">
       <h2 id="licensed-title">Finding licensed providers</h2>
-      <p>Providers of home and community-based services are licensed under Minnesota Statutes chapter 245D by the Department of Human Services. There are too many to list here; use the official lookups below to find current licensed providers by county and service.</p>
+      <p>Providers of home and community-based services are licensed under Minnesota Statutes chapter 245D by the Department of Human Services. There are too many to list here, but the official lookups below will help you find current licensed providers by county and service.</p>
       {licensed ? <>
         <p>Active licenses by county, from <SourceLink href={licensed.source.url}>{licensed.source.title}</SourceLink>{licensed.date ? ` (${licensed.date})` : ""}:</p>
         <div role="region" aria-label="Licensed providers by county" tabIndex={0} style={{ overflowX: "auto" }}>

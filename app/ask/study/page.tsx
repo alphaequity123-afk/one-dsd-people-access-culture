@@ -35,7 +35,7 @@ export default async function ResourceStudyPage({ searchParams }: {
         ? <ResourceLearningAssistant key={resourcePath ?? "library"} resourcePath={resourcePath} embedded />
         : <p className="my-6" role="status">{resource === undefined
           ? "The learning assistant is unavailable right now."
-          : "This resource is unavailable for study. You can search across the published library instead."}</p>}
+          : "We can’t open this resource for study, but you can search the whole published library instead."}</p>}
     </div>
   </>;
 }

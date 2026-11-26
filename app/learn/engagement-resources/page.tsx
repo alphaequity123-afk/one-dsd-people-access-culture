@@ -13,6 +13,6 @@ export default function Page(){return <>
     </ol></section>
     <EngagementResourceLinks />
     <section className="space-y-3"><h2 className="text-2xl font-semibold">Put the resources to work</h2><ul className="list-disc space-y-3 pl-6"><li><Link href="/learn/community-connections">Community engagement: from input to action</Link></li><li><Link href="/practice/clas">Cultural and language access planning</Link></li><li><Link href="/learn/equity-toolkit">Equity Analysis Toolkit</Link></li><li><Link href="/practice/measurement">Plan how to learn from results</Link></li><li><Link href="/ask">Ask a question about these resources</Link></li></ul></section>
-    <p className="text-sm text-muted">The original documents are preserved. ADSA materials describe their administration’s context, including internal processes and contacts. Their inclusion for staff and public readers does not make every example a requirement for every service. Use the source dates and applicable current processes when planning.</p>
+    <p className="text-sm text-muted">The original documents are preserved. ADSA materials describe their administration’s context, including internal processes and contacts. Including them here for staff and public readers doesn’t make every example a requirement for every service. When you plan, go by the source dates and the current processes that apply to you.</p>
   </div>
   </>;}

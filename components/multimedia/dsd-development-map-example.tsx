@@ -4,7 +4,7 @@ type WorkedMap = { goal: string; practice: string; support: string; evidence: st
 const maps: Record<string, WorkedMap> = {
   evidence: {
     goal: "Explain the difference between an observation and an interpretation when reviewing a proposed process change.",
-    practice: "Use a practice intake example to mark what a small review group knows, assumes and still needs to ask.",
+    practice: "With a practice intake example, mark what a small review group knows, assumes and still needs to ask.",
     support: "A colleague helps choose a manageable example and makes time for a practice review. Use a format everyone can work with.",
     evidence: "A revised comparison that separates recorded facts from assumptions and identifies one unresolved question.",
     feedback: "Ask the colleague which conclusion was supported and where the reasoning still made a leap.",

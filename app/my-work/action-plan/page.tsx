@@ -13,10 +13,10 @@ export default async function ActionPlanPage({ searchParams }: Props) {
     <nav className="calm-crumbs" aria-label="Breadcrumb"><Link href="/my-work">My work</Link></nav>
     <p className="calm-kicker">Put it into practice</p>
     <h1>Your action plan</h1>
-    <p className="calm-lede">Connect one learning insight with a next step within your responsibility. Identify what you need to retain, examine or revise, who should be involved, and when to review the result. The form starts with a thirty-day review date; adjust it to fit the work.</p>
+    <p className="calm-lede">Take one thing you learned and turn it into a next step that is yours to take. Note what you want to keep, look into or change, who should be involved, and when you will check the result. The form suggests a review in thirty days; change it to fit the work.</p>
     <details>
       <summary>Make the plan specific enough to review</summary>
-      <p>A specific step gives you something to examine later: what you did, what happened, and what remains uncertain. Use the plan to prepare rather than to claim authority or predict success. Follow required review and approval processes before changing actual work, and use the review to decide whether to retain, adjust or stop an approach.</p>
+      <p>A specific step gives you something to look back on: what you did, what happened and what is still uncertain. The plan is for preparing, not for claiming authority or predicting success. Before you change real work, go through any review and approval it requires, and use your review to decide whether to keep, adjust or stop an approach.</p>
     </details>
     <RecordWorkbench kind="action-plan" prefill={source ? { source, title: `Plan: ${source}`.slice(0, 160) } : {}} />
   </div>;

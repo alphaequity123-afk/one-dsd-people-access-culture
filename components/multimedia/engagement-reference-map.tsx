@@ -11,7 +11,7 @@ const examples: Record<string, ReferenceExample> = {
     ["A service question", "Begin with the relevant service area in the agency directory."],
     ["A payment or budget question", "Explore the financial operations information."],
     ["A workforce or technology question", "Distinguish Employee Culture responsibilities from MNIT support."],
-    ["Before making a handoff", "Use the current directory to confirm the responsible function; a division name is a starting point."],
+    ["Before making a handoff", "Check the current directory to confirm who is responsible; a division name is only a starting point."],
   ] },
   "dsd-placement": { title: "Keep the responsibilities distinct", rows: [
     ["Aging and Disability Services", "The organizational context in which the cited sources place Disability Services."],

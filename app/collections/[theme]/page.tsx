@@ -49,7 +49,7 @@ export default async function ThemeCollectionPage({ params }: { params: Promise<
   const itemHref = (id: string) => selfDirectedHref(id) ?? (id.startsWith("course-") ? courseHref(id.slice(7)) : `/library/${encodeURIComponent(id)}`);
   return <div className={base.page}><div className={base.content}>
     <p className={base.back}><Link href="/collections">All themes</Link></p>
-    <header className={base.intro}><p className={base.eyebrow}>Explore by theme</p><h1>{theme.title}</h1><p className={base.lede}>{theme.description}</p><p>Choose a way to learn or begin with a practical question. This is a selection from available material, not a claim that every relevant resource appears here.</p></header>
+    <header className={base.intro}><p className={base.eyebrow}>Explore by theme</p><h1>{theme.title}</h1><p className={base.lede}>{theme.description}</p><p>Choose a way to learn or begin with a practical question. This is a selection from what is available, so not every relevant resource will appear here.</p></header>
     <ResourceThemePathway theme={theme.id} items={items} className={styles.section} />
     <section className={styles.section} aria-labelledby="theme-formats-title"><h2 id="theme-formats-title">Explore this theme in different ways</h2>
       <ul className={styles.doors}>

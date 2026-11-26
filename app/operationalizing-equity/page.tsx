@@ -11,8 +11,8 @@ import { FormJourneyExample, MeetingReflectionExample } from "@/components/multi
 export const metadata: Metadata = { title: "Operationalizing equity", description: "Connect equity to everyday decisions, workplace practices, policies and services through shared inquiry, practical examples and useful resources." };
 const examples = [
   { title: "Participation in meetings", situation: "A team is considering how its meetings support participation and shared work.", questions: "Who can help shape the agenda? What formats make it easier to contribute? How do contributions influence the decisions that follow?", practice: "Explore accessible materials and ways to contribute before, during and after a meeting. Agree on how people will hear what happened to their input.", href: "/practice", label: "Explore guided practice" },
-  { title: "Forms and service processes", situation: "A workgroup is reviewing a form or the steps people follow to use a service.", questions: "What must a person understand, provide or do? Where might language, disability access, technology or documentation requirements create different burdens?", practice: "Examine the process with people who use it. Consider alternatives that preserve necessary requirements while improving access, and learn whether people can complete the intended task.", href: "/learn/equity-toolkit", label: "Explore the Equity Analysis Toolkit companion" },
-  { title: "Workplace opportunities", situation: "Colleagues are exploring how people learn about and participate in developmental opportunities.", questions: "How are opportunities communicated? Which criteria shape access? What support would help people participate, and whose experience would help explain the options?", practice: "Bring relevant experience and available information into the discussion. Examine how communication, selection practices and support can strengthen access to opportunity.", href: "/areas", label: "Explore areas of work" },
+  { title: "Forms and service processes", situation: "A workgroup is reviewing a form or the steps people follow to use a service.", questions: "What must a person understand, provide or do? Where might language, disability access, technology or documentation requirements create different burdens?", practice: "Walk through the process with the people who use it. Look for alternatives that keep the necessary requirements while improving access, and find out whether people can complete what they set out to do.", href: "/learn/equity-toolkit", label: "Explore the Equity Analysis Toolkit companion" },
+  { title: "Workplace opportunities", situation: "Colleagues are exploring how people learn about and participate in developmental opportunities.", questions: "How are opportunities communicated? Which criteria shape access? What support would help people participate, and whose experience would help explain the options?", practice: "Bring relevant experience and the information you have into the discussion. Look at how communication, selection practices and support can open up access to opportunity.", href: "/areas", label: "Explore areas of work" },
 ];
 const questions = [
   ["Clarify the work", "What decision, process or practice is open to change? What is already established, and who can influence the choices?"],
@@ -38,8 +38,8 @@ export default async function OperationalizingEquityPage({ searchParams }: { sea
       <section aria-labelledby="connected-practice" className="mt-10 max-w-4xl">
         <h2 id="connected-practice" className="text-3xl font-bold">Knowledge, relationships and practical action</h2>
         <p>Cultural awareness, intercultural learning, relationship-building, social justice, restorative practice and structural analysis offer connected ways to understand and advance equity. Each can contribute useful perspectives to the work people share.</p>
-        <p>Operationalizing equity brings attention to how that understanding informs a particular decision or practice. It invites people to examine who can participate, how resources and opportunities are distributed, and what helps an approach work well in its setting.</p>
-        <p>Structural inequities concern patterns in policies, processes and institutions that create or sustain unequal access and opportunity. Examining those patterns helps people identify practical points for change. The focus is on understanding how the work functions and considering its effects.</p>
+        <p>Operationalizing equity brings attention to how that understanding informs a particular decision or practice. It invites us to look at who can participate, how resources and opportunities are shared out, and what helps an approach work well in its setting.</p>
+        <p>Structural inequities concern patterns in policies, processes and institutions that create or sustain unequal access and opportunity. Looking closely at those patterns helps us find practical places to make a change. The focus is on understanding how the work functions and considering its effects.</p>
         <p>Different situations call for different knowledge and support. Professional experience, community knowledge, respectful inquiry and evidence all have a place. Racial equity, disability access, language access and other dimensions may intersect; learning directly from people helps clarify what matters in a particular situation.</p>
       </section>
       <section aria-labelledby="everyday-examples" className="mt-12">
@@ -52,7 +52,7 @@ export default async function OperationalizingEquityPage({ searchParams }: { sea
       <OpportunityPathway />
       <section aria-labelledby="useful-questions" className="mt-12">
         <h2 id="useful-questions" className="text-3xl font-bold">Questions that help move the work forward</h2>
-        <p className="max-w-3xl">Use the questions that fit your work. They can support individual reflection, a conversation with colleagues or a shared examination of a decision.</p>
+        <p className="max-w-3xl">Pick the questions that fit your work. They can help with your own reflection, a conversation with colleagues or a decision you look at together.</p>
         <dl className="mt-6 grid gap-6 md:grid-cols-2">{questions.map(([title,question])=><div key={title} className="border-t border-line pt-4"><dt className="text-xl font-bold">{title}</dt><dd className="ml-0 mt-2 leading-relaxed">{question}</dd></div>)}</dl>
       </section>
       <section aria-labelledby="choose-support" className="mt-12 rounded-xl border border-line bg-white p-6 md:p-8">
@@ -73,7 +73,7 @@ export default async function OperationalizingEquityPage({ searchParams }: { sea
       <section aria-labelledby="foundation-sources" className="mt-12 border-t border-line pt-6">
         <h2 id="foundation-sources" className="text-2xl font-bold">Sources and further reading</h2>
         <ul className="space-y-3 pl-5">{OPERATIONALIZING_EQUITY.sources.map(source=><li key={source.url}><SourceLink href={source.url}>{source.title}</SourceLink></li>)}</ul>
-        <p className="text-sm text-muted">This page offers a program interpretation and illustrative examples. Refer to original guidance for applicable responsibilities and requirements.</p>
+        <p className="text-sm text-muted">This page shares the program&apos;s interpretation and some illustrative examples. For the responsibilities and requirements that apply to you, go to the original guidance.</p>
         <p><Link href="/">Return to the program home</Link></p>
       </section>
     </div></>;

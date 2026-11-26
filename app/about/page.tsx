@@ -68,7 +68,7 @@ export default async function AboutPage() {
 
         <section aria-labelledby="dhs-connection-title" className="border-t border-line pt-6"><h2 id="dhs-connection-title" className="text-2xl font-extrabold">Our connection to DHS</h2><p>One DSD People, Access and Culture supports the Disability Services Division within the Aging and Disability Services Administration at Minnesota DHS. Understanding our programs, partners and shared responsibilities helps connect equity, accessibility and inclusion with service delivery and workplace decisions.</p><Link href="/understanding-dhs" className="font-semibold">Explore Understanding DHS</Link></section>
 
-        <section aria-labelledby="how-it-works-title" className="border-t border-line pt-6"><h2 id="how-it-works-title" className="text-2xl font-extrabold">How the program works</h2><p>The program connects learning, practice and review, with three pillars of equity practice and commitments to the people who use it. Read the program model alongside the proposed charter. The charter is a planning framework; applicable law, policy and assigned responsibilities continue to govern the work.</p><p><Link href="/program/model" className="font-semibold">Read how the program works</Link> · <Link href="/program-foundation" className="font-semibold">Read the Program charter</Link></p></section>
+        <section aria-labelledby="how-it-works-title" className="border-t border-line pt-6"><h2 id="how-it-works-title" className="text-2xl font-extrabold">How the program works</h2><p>The program connects learning, practice and review, with three pillars of equity practice and commitments to the people who use it. Read the program model alongside the proposed charter. The charter is a planning framework; the law, policy and assigned responsibilities that apply still govern the work.</p><p><Link href="/program/model" className="font-semibold">Read how the program works</Link> · <Link href="/program-foundation" className="font-semibold">Read the Program charter</Link></p></section>
 
         <section aria-labelledby="participation-title">
           <p className="kicker">{stringValue(copy, "participationKicker")}</p>
@@ -143,7 +143,7 @@ export default async function AboutPage() {
 
         <section id="charter" className="border-t border-line pt-6" aria-labelledby="charter-title">
           <h2 id="charter-title" className="text-2xl font-extrabold">Program charter</h2>
-          <p className="max-w-3xl">The principles and responsibilities that guide One DSD People, Access and Culture. This is a proposed charter. Applicable law, approved DHS policies and existing decision authority continue to govern official work.</p>
+          <p className="max-w-3xl">The principles and responsibilities that guide One DSD People, Access and Culture. This is a proposed charter. The law, approved DHS policies and existing decision-making authority still govern official work.</p>
           {foundationArticles.map(article => <details className="dsd-model-note" key={article.id}><summary><strong>Article {article.id}. {article.title}</strong></summary>{foundationProvisions.filter(provision => provision.article === article.id).map(provision => <section key={provision.id} style={{ marginBlock: "1.5rem" }}><h3>{provision.id} {provision.title}</h3><p>{provision.summary}</p></section>)}</details>)}
           <p><Link href="/charter">Open the charter on its own page, with its explainer video</Link></p>
         </section>

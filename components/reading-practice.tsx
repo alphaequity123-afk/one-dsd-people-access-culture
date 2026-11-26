@@ -7,7 +7,7 @@ export function ReadingPractice() {
   const [downloadStatus,setDownloadStatus]=useState('');
   const options=[
     {text:'Shorten the notice and keep the online-only response.',feedback:'Shorter wording may help, but a person could still be unable to respond. Examine the response options, language, accessibility and support as well as the length.'},
-    {text:'Ask people who use the service to test the notice and its response options before deciding what to change.',feedback:'This brings people’s experience into the decision and tests the whole task. Include people with different communication and access needs; record what their feedback changes and check the applicable requirements.'},
+    {text:'Ask people who use the service to test the notice and its response options before deciding what to change.',feedback:'This brings people’s experience into the decision and tests the whole task. Include people with different communication and access needs; note what their feedback changes and check the requirements that apply.'},
     {text:'Add a longer explanation of why the online response is convenient for staff.',feedback:'An explanation of staff convenience does not establish whether the process works for the person receiving the notice. Investigate barriers and practical alternatives before choosing an approach.'},
   ];
   function download() {

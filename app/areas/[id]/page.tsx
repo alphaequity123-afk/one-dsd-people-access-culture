@@ -50,7 +50,7 @@ const CULTURAL_WORK_PROMPTS: Record<string, { prompt: string; practices: readonl
     practices: [
       { text: "Before asking for input, say whether it will shape the decision or only gauge opinion, and whose views will count more. Afterward, say what was decided.", applied: "Label community engagement by the power people really have over the result. Tribal Nations are governments, so this is no model for that relationship; that work goes through the Office of Indian Affairs and DHS Tribal offices." },
       { text: "Give advance notice and more than one way to respond.", applied: "Plan interpreters, accessible formats, plain language and timing that works for people on shifts." },
-      { text: "Audit routines and policies, because gaps leave managers improvising.", applied: "Look at forms, appointment and no-show rules, interpreter scheduling, and who counts as a contact or natural support. This adds questions to the Equity Analysis Toolkit and does not replace it." },
+      { text: "Audit routines and policies, because gaps leave managers improvising.", applied: "Look at forms, appointment and no-show rules, interpreter scheduling, and who counts as a contact or natural support. These questions add to the Equity Analysis Toolkit; they don't replace it." },
       { text: "Separate the common standard from how it is practiced locally.", applied: "Statewide duties can leave room for county and lead agency practice, and rights do not vary." },
     ],
   },

@@ -32,14 +32,14 @@ export default async function LeadingPathPage({ params }: { params: Promise<{ pa
       <p className={base.eyebrow}>{LEADING_LABEL} · optional</p>
       <h1>{path.title}</h1>
       <p className={base.lede}>{path.description}</p>
-      <p>{path.courseIds.length} courses, about {pathHours(path)} hours in all, at your own pace. This sequence is a suggestion; it does not replace assigned training or applicable equity-analysis duties. Choose a starting point that fits your work. Saved completion marks remain in this browser profile and may be visible to anyone using it. This feature does not submit those marks to a supervisor or employer. <Link href="/leading/how-this-works">How this works</Link>.</p>
+      <p>{path.courseIds.length} courses, about {pathHours(path)} hours in all, at your own pace. This order is only a suggestion; it doesn&apos;t replace assigned training or the equity-analysis duties that apply to you. Start wherever fits your work. Any courses you mark complete stay in this browser profile, and anyone using it may see them. We never send those marks to a supervisor or employer. <Link href="/leading/how-this-works">How this works</Link>.</p>
     </header>
     {journey ? <section className={styles.section} aria-labelledby="path-question-title">
       <h2 id="path-question-title">The question this path keeps asking</h2>
       <p>{journey.question}</p>
       <h3 className="mt-4">Something to try in your own work</h3>
       <p>{journey.tryThis}</p>
-      <p className={styles.plain}>What to keep: {journey.keep} Use the appropriate place for your notes. The linked action-plan and reflection tools explain browser storage and any available sharing controls.</p>
+      <p className={styles.plain}>What to keep: {journey.keep} Keep your notes somewhere suited to them. The linked action-plan and reflection tools explain what they save in your browser and how you can share.</p>
       <p className="mt-3 flex flex-wrap gap-x-6 gap-y-2">
         <Link href={`/my-work/action-plan?from=${encodeURIComponent(path.title + " path")}`}>Start an action plan</Link>
         <Link href={`/my-work/reflections?from=${encodeURIComponent(path.title + " path")}`}>Open your reflection notebook</Link>
