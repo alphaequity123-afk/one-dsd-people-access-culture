@@ -13,6 +13,7 @@ const EXPLORE = [
   { href: "/audio-library", label: "Audio library" },
 ];
 const HELP = [
+  { href: "/equity-centered-practice", label: "Equity-centered practice" },
   { href: "/start", label: "Begin here" },
   { href: "/about", label: "About and help" },
   { href: "/about#how-to-use", label: "How to use this site" },
