@@ -435,7 +435,7 @@ function journeyBuilder(journeyId: string): Builder {
       subtitle: journey.summary,
       meta: [],
       sections: compactSections([
-        section(undefined, [paragraph("Use the steps that help with your question. There is no enrollment or required completion order.")]),
+        section(undefined, [paragraph("Use whichever steps help with your question. There's nothing to enroll in and no set order.")]),
         ...developmentModel.stages.map((stage, index) =>
           section(`Step ${index + 1}: ${stage.title}`, [
             paragraph(stage.purpose),
@@ -448,10 +448,10 @@ function journeyBuilder(journeyId: string): Builder {
         section("Make room for another perspective", [
           paragraph(journey.social),
           linkList([{ label: journey.connection.label, href: journey.connection.href }]),
-          paragraph("Choose whether and how to participate. Confirm available opportunities with the people or group involved."),
+          paragraph("Whether and how you take part is up to you. Check what's on offer with the people or group involved."),
         ]),
         section("Explore more within this pathway", [
-          paragraph("These resources are available in your current program view. Each can support a different part of the question; you do not need to complete the whole collection."),
+          paragraph("Each of these can help with a different part of your question. There's no need to work through the whole collection."),
           resources.length ? table(["Resource", "How it helps", "Program page"], resources.map((record) => [record.title, record.contribution, record.href])) : null,
         ]),
       ]),
