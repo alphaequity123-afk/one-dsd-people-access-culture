@@ -1,0 +1,32 @@
+/* Equity Scan Companion, in the live One DSD look: 3D card, navy accent line, navy pill action, no icons. */
+.scan { margin: 32px 0; padding: 24px; background: linear-gradient(180deg, #ffffff 0%, #fbfcfe 55%, #f5f8fb 100%); border: 1px solid #cdd9e5; border-top: 3px solid #003865; border-radius: 20px; box-shadow: 0 1px 0 rgba(255,255,255,.95) inset, 0 2px 4px rgba(11,42,74,.08), 0 12px 24px -8px rgba(11,42,74,.16); color: #172b3c; font-family: Aptos, "Aptos Display", "Segoe UI", Calibri, system-ui, -apple-system, Arial, sans-serif; }
+.kicker { margin: 0; font-size: .8rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #3e6b0c; }
+.scan h2 { margin: 4px 0 6px; color: #003865; font-size: 1.6rem; }
+.lede { margin: 0 0 18px; max-width: 70ch; color: #43566a; }
+.form { display: grid; gap: 16px; }
+.row { display: grid; gap: 12px; }
+@media (min-width: 760px) { .row { grid-template-columns: 1fr 1fr; } }
+.form label { display: grid; gap: 6px; font-weight: 600; color: #0b2a4a; }
+.form select, .form input:not([type=checkbox]):not([type=radio]), .form textarea { min-height: 44px; padding: 8px 12px; border: 1px solid #8a9aab; border-radius: 10px; background: #fff; color: #172b3c; font: inherit; font-weight: 400; }
+.form textarea { resize: vertical; }
+.form select:focus-visible, .form input:focus-visible, .form textarea:focus-visible, .actions button:focus-visible, .summary pre:focus-visible { outline: 3px solid #005793; outline-offset: 2px; }
+.question { margin: 0; padding: 16px 18px; border: 1px solid #dfe6ee; border-left: 4px solid #78be21; border-radius: 12px; background: #fff; display: grid; gap: 12px; }
+.question > legend { padding: 0 6px; font-weight: 700; color: #003865; font-size: 1.05rem; }
+.question blockquote { margin: 0; padding: 10px 14px; background: #f3f7fb; border-radius: 8px; color: #172b3c; }
+.checks { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+.checks label, .radios label { display: flex; align-items: center; gap: 8px; font-weight: 400; color: #172b3c; }
+.checks input, .radios input { width: 20px; height: 20px; accent-color: #003865; }
+.radios { margin: 0; padding: 0; border: 0; display: grid; gap: 8px; }
+.radios legend { margin-bottom: 6px; font-weight: 600; color: #0b2a4a; }
+.help { margin: 0; color: #43566a; font-size: .95rem; }
+.reminder { margin: 0; padding: 10px 14px; border-left: 4px solid #003865; background: #eef3f9; border-radius: 0 8px 8px 0; }
+.summary { margin-top: 20px; }
+.summary h3 { margin: 0 0 8px; color: #003865; }
+.summary pre { margin: 0; padding: 14px 16px; max-height: 360px; overflow: auto; white-space: pre-wrap; background: #fff; border: 1px solid #cdd9e5; border-radius: 10px; font: inherit; font-size: .95rem; line-height: 1.5; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+.primary, .secondary { min-height: 48px; padding: 10px 22px; border-radius: 99px; font: inherit; font-weight: 600; cursor: pointer; }
+.primary { border: 0; background: #003865; color: #fff; }
+.primary:hover { background: #17527d; }
+.secondary { border: 1px solid #003865; background: #fff; color: #003865; }
+.status { min-height: 1.5em; margin: 8px 0 0; color: #3e6b0c; font-weight: 600; }
+@media print { .actions, .form { display: none; } .scan { box-shadow: none; } }

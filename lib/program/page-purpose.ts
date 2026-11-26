@@ -28,7 +28,7 @@ export function pageArea(path: string): PageArea {
   if (/^\/(one-dsd|administrations|understanding-dhs)(?:\/|$)/.test(path)) return "programs";
   if (/^\/(support|ask|contribute)(?:\/|$)/.test(path)) return "support";
   if (/^\/learn\/(equity-toolkit|tools)(?:\/|$)/.test(path) || /^\/(practice|practice-guides|toolkit-studio|equity-policy|equity-review|operationalizing-equity|my-work)(?:\/|$)/.test(path) || /^\/program\/(resources|practice|progress|impact)(?:\/|$)/.test(path)) return "tools";
-  if (/^\/(knowledge|learn|collections|courses|paths|journeys|resources|library|audio-library|podcasts)(?:\/|$)/.test(path)) return "learn";
+  if (/^\/(begin-with-equity|knowledge|learn|collections|courses|paths|journeys|resources|library|audio-library|podcasts)(?:\/|$)/.test(path)) return "learn";
   return "about";
 }
 export function internalPage(path: string) { return path !== "/" && path !== "/home" && !path.startsWith("/embedded-tools/"); }

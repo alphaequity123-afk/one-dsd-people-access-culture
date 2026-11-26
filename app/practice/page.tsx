@@ -15,7 +15,9 @@ import { requestedContentScope } from "@/lib/product/request-context";
 import { normalizeWorkOrigin, workOriginForPath, withWorkOrigin, type WorkOriginInput } from "@/lib/product/work-origin";
 import styles from "./practice-entry.module.css";
 import { PillarCards } from "@/components/pillar-hub";
-import { APPLIED_TOOLS } from "@/lib/content/applied-tools";
+import { APPLIED_TOOLS, PLANNING_TOOLS } from "@/lib/content/applied-tools";
+import { EquityScanCompanion } from "@/components/equity-scan-companion";
+import { FiveValues } from "@/components/five-values";
 
 export const metadata: Metadata = { title: "Practice" };
 
@@ -77,6 +79,9 @@ export default async function PracticePage({ searchParams }: { searchParams?: Pr
       <div className="pilot-topic space-y-6">
         <WorkOriginLinks origin={origin} />
         <PillarCards id="applied-tools" title="Applied tools for your work" intro="Start with the situation in front of you. Each tool gives you a practical next step, and Ask is there if you want to talk it through." groups={APPLIED_TOOLS} />
+        <EquityScanCompanion />
+        <PillarCards id="planning-tools" title="Planning tools for larger work" intro="For working groups, administration goals and decisions that need the right office involved." groups={PLANNING_TOOLS} />
+        <FiveValues />
         <p><Link href="/practice/disability">Disability services in practice</Link> · <Link href="/practice/plain-language">Rewrite a notice in plain language</Link></p>
         <section className={styles.choices} aria-labelledby="practice-choices-title">
           <h2 id="practice-choices-title" className="mb-3 text-2xl font-bold">{stringValue(copy, "choicesTitle")}</h2>

@@ -113,3 +113,7 @@
 .cards .groups { max-width: none; margin-top: 12px; }
 .cards > h2 { margin: 0 0 4px; font-size: 1.5rem; font-weight: 600; color: var(--u-navy); }
 .cards > p { margin: 0 0 8px; color: var(--od-muted); max-width: 62ch; }
+
+/* "Ask about this tool": a quiet second link under a tool, outside the card's main link. */
+.group a.askLink { display: inline-block; margin: -6px 0 12px 20px; padding: 4px 12px; border: 1px solid #cdd9e5; border-radius: 99px; font-size: .875rem; font-weight: 600; color: var(--od-navy); background: #fff; }
+.group a.askLink:hover { border-color: var(--od-navy); background: var(--u-tint); }

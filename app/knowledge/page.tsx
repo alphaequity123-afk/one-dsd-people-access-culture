@@ -15,6 +15,7 @@ export default function KnowledgePillar() {
     primary={{ label: "Open Learn", href: "/learn" }}
     groups={[
       { title: "Start", intro: "Shared understanding for everyone.", links: [
+        { label: "Begin with equity", href: "/begin-with-equity", description: "Five values to guide the work, and a situation to practise applying them." },
         { label: "Core courses", href: "/learn/core-15", description: "The short set of courses most staff start with." },
         { label: "DHS Equity Policy in plain language", href: "/equity-policy", description: "What the policy asks of DHS staff, with the official source." },
         { label: "Disability, Rights, Identity, and Belonging", href: "/learning/self-directed/index.html?course=F09", description: "See disability as part of a person's identity and culture." },

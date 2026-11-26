@@ -1,0 +1,13 @@
+.values { margin: 32px 0; color: #172b3c; font-family: Aptos, "Aptos Display", "Segoe UI", Calibri, system-ui, -apple-system, Arial, sans-serif; }
+.kicker { margin: 0; font-size: .8rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #3e6b0c; }
+.values h2 { margin: 4px 0 6px; color: #003865; font-size: 1.6rem; }
+.lede { margin: 0 0 16px; color: #43566a; max-width: 62ch; }
+.values ol { display: grid; gap: 14px; margin: 0 0 18px; padding: 0; list-style: none; }
+@media (min-width: 760px) { .values ol { grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); } }
+.values li { padding: 16px 18px; background: linear-gradient(180deg, #ffffff 0%, #fbfcfe 55%, #f5f8fb 100%); border: 1px solid #cdd9e5; border-top: 3px solid #003865; border-radius: 16px; box-shadow: 0 2px 4px rgba(11,42,74,.08), 0 12px 24px -8px rgba(11,42,74,.16); }
+.values li h3 { margin: 0 0 6px; color: #003865; font-size: 1.15rem; }
+.values li p { margin: 0 0 8px; }
+.action { color: #43566a; font-size: .95rem; padding-top: 8px; border-top: 1px solid #edf1f5; }
+.primary { display: inline-flex; align-items: center; min-height: 48px; padding: 10px 24px; border-radius: 99px; background: #003865; color: #fff !important; font-weight: 600; text-decoration: none !important; }
+.primary:hover { background: #17527d; }
+.primary:focus-visible { outline: 3px solid #005793; outline-offset: 3px; }

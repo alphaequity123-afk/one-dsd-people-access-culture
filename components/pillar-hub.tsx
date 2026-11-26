@@ -6,7 +6,8 @@ import styles from "./pillar-hub.module.css";
  * action, and groups the existing pages beneath it so anything useful stays within three selections.
  * Ask opens from the banner on every page, so a pillar page only reminds people it is there.
  */
-export type PillarLink = { label: string; href: string; description?: string };
+/** `ask` adds an "Ask about this tool" link that opens Ask with that question filled in. */
+export type PillarLink = { label: string; href: string; description?: string; ask?: string };
 export type PillarGroup = { title: string; intro?: string; links: PillarLink[] };
 
 export function PillarHub({ id, title, lede, primary, groups, note }: {
@@ -50,6 +51,7 @@ export function PillarCards({ id, title, intro, groups }: { id: string; title: s
         {group.intro ? <p className={styles.groupIntro}>{group.intro}</p> : null}
         <ul>{group.links.map(link => <li key={link.href}>
           <Link href={link.href}><strong>{link.label}</strong>{link.description ? <span>{link.description}</span> : null}</Link>
+          {link.ask ? <Link className={styles.askLink} href={`/ask?q=${encodeURIComponent(link.ask)}`} aria-label={`Ask about ${link.label}`}>Ask about this tool</Link> : null}
         </li>)}</ul>
       </section>)}
     </div>

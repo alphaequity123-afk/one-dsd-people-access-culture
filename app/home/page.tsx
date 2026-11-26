@@ -44,7 +44,7 @@ export default async function HomePage() {
       <div className="pilot-wrap home-title">
         <h1 id="home-title">People, Access and Culture</h1>
         <p>People with disabilities should have a meaningful say in their lives and opportunities to belong, contribute and grow. Together, we can make our services and our workplace more responsive to the people who rely on them.</p>
-        <p><Link className="home-guide-link" href="/start">Begin with equity in practice</Link></p>
+        <p><Link className="home-guide-link" href="/begin-with-equity">Begin with equity in practice</Link></p>
         <p className="home-guide"><Link className="home-guide-link" href="/user-guide">How to use this site</Link></p>
       </div>
     </section>
