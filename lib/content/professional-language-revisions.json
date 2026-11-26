@@ -356,7 +356,21 @@
             "introLede"
           ],
           "before": "Come in through the decision or practice you are responsible for. Each area connects what is known, the questions worth asking, the tools, a guided practice and the people who hold the relevant authority.",
-          "after": "Explore learning and tools connected to a decision or responsibility. Each area brings together relevant evidence, practical questions and the offices or partners who can help move the work forward."
+          "after": "Start from the decision or responsibility in front of you. Each area brings together the evidence, the questions worth asking and the offices and partners who can help move the work forward."
+        },
+        {
+          "path": [
+            "boundaryBeforeStart"
+          ],
+          "before": "You can use more than one area. If you are not sure where to begin,",
+          "after": "You can use more than one area. If you're not sure where to begin,"
+        },
+        {
+          "path": [
+            "boundaryAfterStart"
+          ],
+          "before": "will suggest a place to begin based on your role, task, and timing.",
+          "after": "will suggest a good place based on your role, your task and your timing."
         }
       ],
       "status": "reviewed",
@@ -608,28 +622,49 @@
             "introKicker"
           ],
           "before": "Answers you can rely on",
-          "after": "Questions, evidence, and next steps"
+          "after": "Questions, sources and next steps"
         },
         {
           "path": [
             "privacyNotice"
           ],
           "before": "Browsing here leaves no trace: choosing a topic opens a published answer, and nothing is recorded as a question from you. Please keep names, case details, medical or personnel information and other confidential material out of any notes you take.",
-          "after": "Opening a published answer is different from submitting your own question to Ask. Keep names, case details, medical or personnel information, and other confidential material out of questions and working notes."
+          "after": "Reading a published answer is different from asking your own question. Please keep names, case details, medical or personnel information and anything else confidential out of your questions and notes."
         },
         {
           "path": [
             "introLede"
           ],
           "before": "The questions staff ask most often, each with a considered answer, its sources and its limits, and a copy you can download. Choose one close to yours; the answer will show you where to go next.",
-          "after": "Use the published answers to examine a work question, locate relevant sources, and identify a practical next step. Read the stated limits before applying an answer to a policy, service, or workforce decision."
+          "after": "Bring a question from your work and get an answer you can use, with the sources behind it and a practical next step. Each answer also says what it can't settle, so you know when to check further before a policy, service or staffing decision."
         },
         {
           "path": [
             "reviewDraftHelp"
           ],
           "before": "Paste a draft for feedback on equity, access, plain language, sources, and burden. Leave out confidential or personal material.",
-          "after": "Request feedback on the reasoning, evidence, equity implications, access, and usability of a draft. Include the intended audience and purpose, but leave out confidential or identifying information."
+          "after": "Get feedback on the reasoning, evidence, equity, access and readability of a draft. Say who it's for and what it's meant to do, and leave out anything confidential or identifying."
+        },
+        {
+          "path": [
+            "researchUnavailableHelp"
+          ],
+          "before": "Current public sources are not available right now. Ask can still help with general knowledge and available program resources, and will identify facts it cannot verify.",
+          "after": "Current public sources aren't available right now. Ask can still help from general knowledge and the program's own resources, and will tell you what it couldn't check."
+        },
+        {
+          "path": [
+            "howDsdOpenSupport"
+          ],
+          "before": "You will see what you can do yourself before you are offered a DSD consultation request.",
+          "after": "You'll see what you can do yourself first, before you're offered a DSD consultation request."
+        },
+        {
+          "path": [
+            "humanJudgmentBody"
+          ],
+          "before": "Use Find the right person to reach the person or office responsible for this work.",
+          "after": "Find the right person will help you reach whoever looks after this work."
         }
       ],
       "status": "reviewed",
@@ -807,7 +842,14 @@
             "introLede"
           ],
           "before": "Everything you choose to keep lives here: the resources you saved, the plans you are working on, your reflection, and the courses you left off in. It stays on this computer, private to you.",
-          "after": "Return to saved resources, working plans, reflection notes, and course progress. These items are stored in this browser on this computer, so someone else using the same browser may be able to see them."
+          "after": "Pick up where you left off with your saved resources, plans, reflection notes and course progress. Everything here is kept in this browser on this computer, so anyone else using the same browser may be able to see it."
+        },
+        {
+          "path": [
+            "introKicker"
+          ],
+          "before": "Your own workspace",
+          "after": "Your own space"
         }
       ],
       "status": "reviewed",
