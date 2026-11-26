@@ -24,6 +24,11 @@ def sha(data):
 
 def words(text):
     text = text.replace('%', ' percent ')
+    text = re.sub(r'\bokay\b', 'ok', text, flags=re.I)
+    # The scenario deliberately displays a misspelling; its spoken form is unchanged.
+    text = re.sub(r'\brecieve\b', 'receive', text, flags=re.I)
+    ordinals = dict(zip('first second third fourth fifth sixth seventh eighth ninth tenth eleventh twelfth thirteenth fourteenth fifteenth sixteenth seventeenth eighteenth nineteenth twentieth'.split(), ['1st','2nd','3rd']+[str(n)+'th' for n in range(4,21)]))
+    text = re.sub(r'\b(?:'+ '|'.join(ordinals) +r')\b', lambda m: ordinals[m[0].lower()], text, flags=re.I)
     text = re.sub(r'\bcase\s+loads?\b', lambda m: m[0].replace(' ', ''), text, flags=re.I)
     text = re.sub(r'\bany\s+time\b', 'anytime', text, flags=re.I)
     text = re.sub(r'\bco[- ]worker', 'coworker', text, flags=re.I)
@@ -73,6 +78,7 @@ def main():
     parser.add_argument('--references', type=Path, required=True)
     parser.add_argument('--course')
     parser.add_argument('--check', action='store_true')
+    parser.add_argument('--scenarios', action='store_true')
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[2]
     profile = json.loads((root/'config/character-voices.json').read_text())
@@ -80,19 +86,31 @@ def main():
         if sha((args.references/voice['referenceFile']).read_bytes()) != voice['sha256']:
             raise RuntimeError('Reference identity mismatch: ' + character)
     scripts = sorted(p for folder in ['culture-wellbeing', 'cultural-navigation']
-                     for p in (root/'docs/media-scripts'/folder).glob('*.podcast.json'))
+                     for p in (root/'docs/media-scripts'/folder).glob('*.video.md' if args.scenarios else '*.podcast.json'))
     if args.course:
-        scripts = [p for p in scripts if p.name == args.course + '.podcast.json']
+        scripts = [p for p in scripts if p.name == args.course + ('.video.md' if args.scenarios else '.podcast.json')]
     if not scripts:
         raise RuntimeError('No matching scripts')
+    from scenario_scripts import parse as parse_scenario
+    def read_script(file):
+        return parse_scenario(file, profile) if args.scenarios else json.loads(file.read_text(encoding='utf8'))
+    def speaker_characters(script):
+        if args.scenarios:
+            return script['voiceAssignments']
+        return {speaker: assignment['character'] for speaker, assignment in script['voiceAssignments'].items()}
+    used_characters = set()
     for file in scripts:
-        script = json.loads(file.read_text(encoding='utf8'))
+        script = read_script(file)
+        assignments = speaker_characters(script)
+        used_characters.update(assignments.values())
+        if not args.scenarios and len(set(assignments.values())) != 2:
+            raise RuntimeError('A two-voice podcast requires two distinct approved characters')
         if script.get('voiceProfile') != profile['id']:
             raise RuntimeError('Script has not adopted approved voices: ' + file.name)
         for turn in script['turns']:
-            if turn['speaker'] not in profile['podcastSpeakers']:
+            if assignments.get(turn['speaker']) not in profile['characters']:
                 raise RuntimeError('Unknown podcast voice')
-    print(f'Checked all eight references; {len(scripts)} scripts use Kelly and John.', flush=True)
+    print(f'Checked all eight references; {len(scripts)} scripts have approved voice assignments.', flush=True)
     if args.check:
         return
     if shutil.disk_usage(root).free < 100 * 1024**2:
@@ -115,7 +133,7 @@ def main():
     asr = WhisperModel(str(next((hub/'models--Systran--faster-whisper-small.en/snapshots').iterdir())),
                        device='cpu', compute_type='int8', cpu_threads=3)
     prompts = {}
-    for char in ['C3', 'C4']:
+    for char in (list(profile['characters']) if args.scenarios else sorted(used_characters)):
         prompts[char] = model.model.create_voice_clone_prompt(
             ref_audio=str(args.references/profile['characters'][char]['referenceFile']),
             ref_text='', x_vector_only_mode=True)
@@ -187,7 +205,7 @@ def main():
                     segments, heard, agreement = alternate, alternate_heard, alternate_agreement
                     transcription_model = 'base.en'
             wanted_tokens, heard_tokens = words(sentence), words(heard)
-            if (attempt == 4 and len(wanted_tokens) >= 8 and
+            if (not args.scenarios and attempt == 4 and len(wanted_tokens) >= 8 and
                 wanted_tokens[:-1] == heard_tokens[:-1] and wanted_tokens[-1] != heard_tokens[-1]):
                 # Correct an isolated final-word substitution with a separately verified pickup.
                 # The source words are unchanged; both retained audio pieces are transcribed.
@@ -205,12 +223,13 @@ def main():
                     pickup_timings = [{'text':w.word.strip(),'start':w.start,'end':min(w.end,boundary)}
                                       for s in prefix_segments for w in (s.words or [])]
                     pickup_timings += [{**w,'start':boundary+w['start'],'end':boundary+w['end']} for w in pickup_receipt['words']]
-                    other = 'C4' if char == 'C3' else 'C3'
                     scores[char] = min(scores[char], pickup_receipt['speakerScores'][char])
-                    scores[other] = max(scores[other], pickup_receipt['speakerScores'][other])
+                    for other in scores:
+                        if other != char:
+                            scores[other] = max(scores[other], pickup_receipt['speakerScores'][other])
                     correction = {'method':'separately verified final-word pickup','text':sentence.split()[-1]}
                     transcription_model = 'small.en + verified pickup'
-            if agreement < .94 or scores[char] < .6 or scores[char] <= scores['C4' if char == 'C3' else 'C3']:
+            if agreement < .94 or scores[char] < .6 or scores[char] <= max(v for c,v in scores.items() if c != char):
                 print(f'Retry {char}: speech={agreement:.3f}, voice={scores[char]:.3f}; heard: {heard}', flush=True)
                 continue
             timings = pickup_timings if pickup_timings is not None else [
@@ -228,8 +247,10 @@ def main():
         raise RuntimeError(f'Speech or voice verification failed: {char}: {sentence}')
 
     for file in scripts:
-        script = json.loads(file.read_text(encoding='utf8'))
-        folder = root/'public/learning/course-podcasts'/script['id']
+        script = read_script(file)
+        assignments = speaker_characters(script)
+        labels = {role:role.title() for role in assignments} if args.scenarios else {role:profile['characters'][char]['name'] for role,char in assignments.items()}
+        folder = root/('output/scenario-recordings' if args.scenarios else 'public/learning/course-podcasts')/script['id']
         folder.mkdir(parents=True, exist_ok=True)
         audio = [np.zeros(round(.25*rate), dtype=np.float32)]
         elapsed = .25
@@ -238,7 +259,7 @@ def main():
             if i:
                 audio.append(np.zeros(round(.45*rate), dtype=np.float32)); elapsed += .45
             start = elapsed
-            char = profile['podcastSpeakers'][turn['speaker']]
+            char = assignments[turn['speaker']]
             sentences = re.split(r'(?<=[.!?])\s+', turn['text'].strip())
             for j, sentence in enumerate(sentences):
                 if j:
@@ -278,6 +299,9 @@ def main():
             'transcriptJsonSrc': f'{web}/transcript.json?v={version}', 'captionsSrc': f'{web}/captions.vtt?v={version}'})
         save(folder/'voice-verification.json', {'profile': profile['id'], 'sentences': evidence,
             'audioSha256': sha(result.stdout), 'captionTiming': 'Audited sentence boundaries; words distributed within each sentence.'})
+        if args.scenarios:
+            print(f'COMPLETE SCENARIO {script["id"]}: {elapsed:.1f} seconds', flush=True)
+            continue
         registryfile = root/'lib/content/courses/completed-podcasts.json'
         registry = json.loads(registryfile.read_text(encoding='utf8'))
         registry[script['id']] = {'src': f'{web}/episode.mp3?v={version}', 'transcript': transcript, 'seconds': round(elapsed,3)}

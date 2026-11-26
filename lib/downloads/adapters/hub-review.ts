@@ -1,20 +1,5 @@
 import "server-only";
 import {
-  CHECKLIST_ANSWERS,
-  DIRECTOR_FIRST_90_DAYS,
-  DIRECTOR_STARTER_PACKAGE,
-  DIRECTOR_TEMPLATES,
-  DIRECTOR_TOOLKIT_INTRO,
-  DIRECTOR_TOOLKIT_REVIEWED_ON,
-  DIRECTOR_TOOLKIT_SECTIONS,
-  TEMPLATE_KEEP_OUT,
-  directorTemplate,
-  templateHref,
-  type DirectorTemplate,
-  type TemplateField,
-  type ToolkitItem,
-} from "@/lib/content/director-toolkit";
-import {
   CHARGE,
   CHECKPOINTS,
   KICKOFF_DECISIONS,
@@ -106,109 +91,6 @@ function workingGroupPlanDocument(scope: StaffProgramScope): ResourceDocument {
       section("What this program can supply to the duties", [table(["Duties", "Resource", "Page"], PROGRAM_SUPPORT.map(item => [item.duties, item.resource, item.href]))]),
     ]),
     sources: [{ title: LAW.title, href: LAW.url, note: `${LAW.section53} ${LAW.section54} Checked ${dateText(WORKING_GROUP_PLAN_CHECKED)}.` }],
-  });
-}
-
-// ---------------------------------------------------------------- Equity Director toolkit
-
-function toolkitItemBlocks(item: ToolkitItem): DocumentBlock[] {
-  const template = item.templateId ? directorTemplate(item.templateId) : undefined;
-  return [
-    heading(item.name),
-    ...(item.publisher ? [paragraph([{ text: item.publisher, italic: true }])] : []),
-    paragraph([{ text: "What it is for: ", bold: true }, { text: item.purpose }]),
-    paragraph([{ text: "How an Equity Director uses it: ", bold: true }, { text: item.use }]),
-    ...(template || item.href || item.url
-      ? [
-          linkList([
-            ...(template ? [{ label: `Fill in the ${template.title.replaceAll("\"", "")} template`, href: templateHref(template.id) }] : []),
-            ...(item.href ? [{ label: "Open the related page", href: item.href }] : []),
-            ...(item.url ? [{ label: "Open the published resource", href: item.url }] : []),
-          ])!,
-        ]
-      : []),
-  ];
-}
-
-function directorToolkitDocument(scope: StaffProgramScope): ResourceDocument {
-  const sources = DIRECTOR_TOOLKIT_SECTIONS.flatMap(entry => entry.items.filter(item => item.url).map(item => ({ title: item.name, href: item.url, note: item.publisher })));
-  return reviewDocument(scope, "Equity in practice", {
-    title: DIRECTOR_TOOLKIT_INTRO.title,
-    subtitle: DIRECTOR_TOOLKIT_INTRO.lede,
-    meta: [{ label: "Reviewed", value: dateText(DIRECTOR_TOOLKIT_REVIEWED_ON) }],
-    sections: compactSections([
-      section("Overview", [...DIRECTOR_TOOLKIT_INTRO.summary.map(text => paragraph(text)), callout(DIRECTOR_TOOLKIT_INTRO.privacy)]),
-      section("Start here", [
-        paragraph("New to the role, or starting a new equity effort? Begin with two things."),
-        bullets([
-          "The first 90 days: what to do in each 30-day period, and what each period should produce.",
-          "The 12-item priority starter package: three foundational resources and nine practical supports to build with the people responsible for each area.",
-          "The printable templates: fill them in on screen, then print, copy or download. Nothing is saved or sent. Program page /equity-review/director-toolkit/templates",
-        ]),
-      ]),
-      ...DIRECTOR_TOOLKIT_SECTIONS.map(entry =>
-        section(`${entry.number}. ${entry.title}`, [
-          paragraph([{ text: entry.question, italic: true }]),
-          ...entry.intro.map(text => paragraph(text)),
-          entry.id === "first-90-days" ? table(["Period", "Priority actions", "Deliverables"], DIRECTOR_FIRST_90_DAYS.map(period => [period.period, period.actions.join("\n"), period.deliverables.join("\n")])) : null,
-          entry.id === "starter-package" ? table(["Number", "Item", "What it does", "Page"], DIRECTOR_STARTER_PACKAGE.map(item => [String(item.number), item.title, item.detail, item.href])) : null,
-          ...entry.items.flatMap(toolkitItemBlocks),
-          ...(entry.lists ?? []).flatMap((list): DocumentBlock[] => [heading(list.heading), bullets(list.items), ...(list.note ? [paragraph(list.note)] : [])]),
-          entry.caution ? callout(entry.caution, "Important") : null,
-          ...(entry.notes ?? []).map(text => paragraph(text)),
-          entry.related?.length ? linkList(entry.related) : null,
-        ]),
-      ),
-    ]),
-    sources,
-  });
-}
-
-// ---------------------------------------------------------------- Printable templates
-
-function templateFieldBlocks(field: TemplateField): DocumentBlock[] {
-  const help = field.help ? [paragraph([{ text: field.help, italic: true }])] : [];
-  switch (field.kind) {
-    case "text":
-    case "long":
-      return [heading(field.label), ...help, paragraph(BLANK_LINE), ...(field.kind === "long" ? [paragraph(BLANK_LINE)] : [])];
-    case "choice":
-      return [heading(field.label), ...help, bullets(field.options.map(option => `☐ ${option}`))];
-    case "checklist":
-      return [heading(field.label), ...help, table(["Question", `Answer (${CHECKLIST_ANSWERS.join(", ")})`], field.items.map(item => [item, ""]))];
-    case "table":
-      return [heading(field.label), ...help, table(["Row", ...field.columns], Array.from({ length: field.rows }, (_, row) => [String(row + 1), ...field.columns.map(() => "")]))];
-  }
-}
-
-function templateSection(template: DirectorTemplate) {
-  const parent = DIRECTOR_TOOLKIT_SECTIONS.find(entry => entry.id === template.sectionId)?.title ?? "Equity Director toolkit";
-  return section(template.title, [
-    paragraph(template.purpose),
-    paragraph(template.howToUse),
-    paragraph(`Part of ${parent} in the toolkit.`),
-    ...template.fields.flatMap(templateFieldBlocks),
-    callout(`${TEMPLATE_KEEP_OUT} Nothing you write on this copy is saved or sent.`),
-  ]);
-}
-
-function templatesDocument(scope: StaffProgramScope): ResourceDocument {
-  return reviewDocument(scope, "Equity Director toolkit", {
-    title: "Printable templates",
-    subtitle: "Fill-in templates for equity reviews at the Minnesota Department of Human Services. Fill them in on screen, then print, copy or download.",
-    meta: [
-      { label: "Templates", value: String(DIRECTOR_TEMPLATES.length) },
-      { label: "Reviewed", value: dateText(DIRECTOR_TOOLKIT_REVIEWED_ON) },
-    ],
-    sections: compactSections([
-      section("Before you start", [
-        paragraph("These templates put the Department of Human Services Equity Policy, the Department of Human Services Equity Analysis Toolkit and the State of Minnesota Equity Analysis Toolkit into practice. They do not replace them. Adapt each one with the people responsible for the work it covers."),
-        callout(`This copy is blank. Nothing you write on it is saved, stored or sent anywhere. ${TEMPLATE_KEEP_OUT}`),
-        heading(`The ${DIRECTOR_TEMPLATES.length} templates`),
-        numbered(DIRECTOR_TEMPLATES.map(template => template.title)),
-      ]),
-      ...DIRECTOR_TEMPLATES.map(templateSection),
-    ]),
   });
 }
 
@@ -366,16 +248,15 @@ async function equityBaselineDocument(scope: StaffProgramScope): Promise<Resourc
   });
 }
 
-export const EQUITY_REVIEW_IDS = ["working-group-plan", "director-toolkit", "templates", "structural", "equity-policy", "equity-baseline"] as const;
+export const EQUITY_REVIEW_IDS = ["working-group-plan", "structural", "equity-policy", "equity-baseline"] as const;
 
 export async function equityReviewDocument(id: string, scope: StaffProgramScope): Promise<ResourceDocument | null> {
   switch (id) {
     case "working-group-plan":
       return workingGroupPlanDocument(scope);
     case "director-toolkit":
-      return directorToolkitDocument(scope);
     case "templates":
-      return templatesDocument(scope);
+      return null; // Owner removed the toolkit, including its downloadable templates.
     case "structural":
       return structuralDocument(scope);
     case "equity-policy":

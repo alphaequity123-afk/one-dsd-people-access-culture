@@ -41,4 +41,9 @@ Treat the document's descriptions, counts, privacy promises and statements of of
 
 ## Two-voice training and module podcasts
 
-Every training or module that requires a two-voice podcast uses Kelly (C3) and John (C4). This applies across One DSD and One DHS, including existing podcasts being updated and all future two-voice podcasts. Use the approved local references identified in `config/character-voices.json`. Verify voice identity before publishing recordings.
+Owner update, November 26, 2026: future two-voice podcasts may use Kelly/John, Brian/LaToya, Susan/Robert, Takoda/Noor, or other combinations of the eight approved characters. Select the pair for the course. Do not retroactively recast existing podcasts solely to add variety. This supersedes the earlier Kelly/John-only rule. Preserve the approved portrait and reference voice of each character in `config/character-voices.json`; verify voice identity before publishing recordings.
+
+
+## Owner-approved casting context
+
+John (C4, the white man in the blue polo) and Kelly (C3, the white woman in the white blouse) are an approved pairing for equity learning, including videos and podcasts addressing the dominant community or equity generally. Do not treat their shared race as a casting defect or replace the approved pairing to manufacture demographic balance. Keep each character's approved portrait and voice paired. Kelly and John remain an approved option among the saved podcast pairings; scenario roles keep their assigned individual voices.
