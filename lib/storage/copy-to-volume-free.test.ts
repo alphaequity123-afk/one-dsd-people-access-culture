@@ -58,9 +58,25 @@ describe.skipIf(!ownerUrl || !bucketEndpoint)("the one-time copy off the volume"
 
     const copied = await copyToVolumeFree({ ...environment, PAC_STORAGE_COPY: "copy" } as unknown as NodeJS.ProcessEnv, data);
     expect(copied).toMatchObject({ files: 1, filesCopied: 1, filesDifferent: 0, runsPresent: 1, reviewsPresent: 1, voiceImported: true });
-    expect(["same", "different"]).toContain(copied.pageEdits); // another test may already hold a document
+    expect(["same", "different"]).toContain((copied as { pageEdits: string }).pageEdits); // another test may already hold a document
 
     const again = await copyToVolumeFree({ ...environment, PAC_STORAGE_COPY: "copy" } as unknown as NodeJS.ProcessEnv, data);
     expect(again).toMatchObject({ filesCopied: 0, filesDifferent: 0, runsPresent: 1 });
+  });
+});
+
+describe("the volume inventory", () => {
+  it("lists every top-level folder, hidden ones included, and writes nothing", async () => {
+    const data = mkdtempSync(path.join(os.tmpdir(), "volume-inventory-"));
+    folders.push(data);
+    mkdirSync(path.join(data, "geffen-public", "audio"), { recursive: true });
+    writeFileSync(path.join(data, "geffen-public", "audio", "a.mp3"), "1234");
+    mkdirSync(path.join(data, ".cache"));
+    writeFileSync(path.join(data, ".cache", "x"), "12");
+    writeFileSync(path.join(data, "clone-agents.sqlite"), "123");
+    const result = await copyToVolumeFree({ PAC_STORAGE_COPY: "inventory" } as unknown as NodeJS.ProcessEnv, data);
+    expect(result).toEqual({ ok: true, mode: "inventory", folders: {
+      "geffen-public": { files: 1, bytes: 4 }, ".cache": { files: 1, bytes: 2 }, "clone-agents.sqlite": { files: 1, bytes: 3 },
+    } });
   });
 });
