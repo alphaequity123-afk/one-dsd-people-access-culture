@@ -37,6 +37,6 @@ RUN npm ci --no-audit --no-fund \
 
 ENV NODE_ENV=production
 EXPOSE 8080
-# Railway's start command (service settings) runs the pilot check first and
-# then starts Next on 0.0.0.0; this is the same command for local use.
-CMD ["sh", "-c", "node scripts/verify-clone-agent-pilot.mjs && npm run start -- --hostname 0.0.0.0"]
+# Railway's start command (service settings) is "sh scripts/railway-start.sh":
+# the pilot check first, then Next on 0.0.0.0.
+CMD ["sh", "scripts/railway-start.sh"]
