@@ -91,7 +91,7 @@ export default async function HomePage() {
 
       <section className="pilot-section home-feature-lead" aria-labelledby="featured-title">
         <div className="home-water home-featured">
-          <Image src="/images/home/featured-leadership.4k.webp" alt="A supervisor listens as a colleague explains an idea to a small team gathered by tall office windows; one team member uses a wheelchair." width={3840} height={2560} sizes="(min-width: 760px) 560px, 100vw" />
+          <Image src="/images/home/featured-leadership-hd.webp" alt="A supervisor listens as a colleague explains an idea to a small team gathered by tall office windows; one team member uses a wheelchair." width={3840} height={2560} sizes="(min-width: 760px) 560px, 100vw" />
           <div><p className="home-featured-kicker">Featured</p><h2 id="featured-title">One DSD Leadership</h2>
             <p>Leadership shapes whether people get service that is fair, respectful and easy to understand. Explore leadership styles, how each one affects the people you lead, and what to try next.</p>
             <Link className="pilot-primary" href={LEADERSHIP}>Explore One DSD Leadership</Link>

@@ -4,6 +4,7 @@ public/images/pilot-home/*.jpg !filter !diff !merge -text
 *.docx filter=lfs diff=lfs merge=lfs -text
 *.zip filter=lfs diff=lfs merge=lfs -text
 *.webp filter=lfs diff=lfs merge=lfs -text
+public/images/home/*.webp !filter !diff !merge -text
 public/learning/water-we-swim-in/*/office-hero.webp !filter !diff !merge -text
 public/images/courses/culture-wellbeing/*.webp !filter !diff !merge -text
 public/images/covers/cw-*.webp !filter !diff !merge -text
