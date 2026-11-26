@@ -1,0 +1,147 @@
+{
+  "id": "cn-navigators-and-system-change",
+  "courseId": "cn-navigators-and-system-change",
+  "courseHref": "/courses/cn-navigators-and-system-change",
+  "title": "The Letter Five Families Misread",
+  "summary": "Two colleagues talk through how to turn what navigators see into fixes, test them in small steps and measure results honestly.",
+  "learningObjective": "Two colleagues talk through how to turn what navigators see into fixes, test them in small steps and measure results honestly.",
+  "sources": [
+    {
+      "title": "Institute for Healthcare Improvement — Plan-Do-Study-Act (PDSA) Worksheet",
+      "url": "https://www.ihi.org/resources/tools/plan-do-study-act-pdsa-worksheet"
+    },
+    {
+      "title": "Feinberg and others — Effect of Family Navigation on Diagnostic Ascertainment Among Children at Risk for Autism: A Randomized Clinical Trial From DBPNet, JAMA Pediatrics (2021)",
+      "url": "https://www.pubmed.gov/33427861/"
+    },
+    {
+      "title": "The Sacramento Observer — Sacramento County's Cultural Broker program and the decrease in child foster care (April 2025)",
+      "url": "https://sacobserver.com/2025/04/sacramento-county-child-foster-care-decrease"
+    }
+  ],
+  "turns": [
+    {
+      "speaker": "host1",
+      "chapter": "A pattern",
+      "text": "A navigator tells a program manager that five families this month misread the same renewal letter and thought their services were ending.",
+      "speakerLabel": "Kelly",
+      "start": 0.25,
+      "end": 6.73
+    },
+    {
+      "speaker": "geffen",
+      "chapter": "A pattern",
+      "text": "And the easy answer is, that letter uses required wording.",
+      "speakerLabel": "John",
+      "start": 7.18,
+      "end": 11.58
+    },
+    {
+      "speaker": "host1",
+      "chapter": "A pattern",
+      "text": "Some of it might. But the explanation around it, the headings, a plain summary at the top, the translations, those usually can change. And if the navigator hears, nothing we can do, they'll stop reporting. Feeding back is part of a navigator's job. Listening is part of ours.",
+      "speakerLabel": "Kelly",
+      "start": 12.03,
+      "end": 27.91
+    },
+    {
+      "speaker": "geffen",
+      "chapter": "Fixing it",
+      "text": "So we rewrite every letter the program sends?",
+      "speakerLabel": "John",
+      "start": 28.36,
+      "end": 30.76
+    },
+    {
+      "speaker": "host1",
+      "chapter": "Fixing it",
+      "text": "Start smaller. The Institute for Healthcare Improvement describes the Plan-Do-Study-Act cycle: plan a test, try it, study what happened and decide what to change. Try the new renewal letter with ten families before ten thousand. Navigators can tell you quickly whether people understood it.",
+      "speakerLabel": "Kelly",
+      "start": 31.21,
+      "end": 47.34
+    },
+    {
+      "speaker": "geffen",
+      "chapter": "Measuring it",
+      "text": "Then we can announce that the new letter cut missed renewals by half.",
+      "speakerLabel": "John",
+      "start": 47.79,
+      "end": 51.71
+    },
+    {
+      "speaker": "host1",
+      "chapter": "Measuring it",
+      "text": "Careful there. Measure the step you meant to change, and say what you compared with and what else changed at the same time. There's a real difference between strong evidence and program-reported results.",
+      "speakerLabel": "Kelly",
+      "start": 52.16,
+      "end": 62.62
+    },
+    {
+      "speaker": "geffen",
+      "chapter": "Measuring it",
+      "text": "What's an example?",
+      "speakerLabel": "John",
+      "start": 63.07,
+      "end": 64.11
+    },
+    {
+      "speaker": "host1",
+      "chapter": "Measuring it",
+      "text": "The 2021 autism family navigation trial assigned families by chance, so it's strong evidence. A newspaper reported that 96 percent of 499 families served by Sacramento County's Cultural Broker program had emergency referrals closed without court involvement. That figure came from the program. Useful, but there's no comparison group, so it can't show how much the brokers caused.",
+      "speakerLabel": "Kelly",
+      "start": 64.56,
+      "end": 87.25
+    },
+    {
+      "speaker": "geffen",
+      "chapter": "Sharing it",
+      "text": "And when the fix works?",
+      "speakerLabel": "John",
+      "start": 87.7,
+      "end": 89.38
+    },
+    {
+      "speaker": "host1",
+      "chapter": "Sharing it",
+      "text": "Give credit to the navigator who spotted it and the organization they work for. Tell them what changed, and what couldn't. That's what keeps the next report coming.",
+      "speakerLabel": "Kelly",
+      "start": 89.83,
+      "end": 98.13
+    },
+    {
+      "speaker": "geffen",
+      "chapter": "Sharing it",
+      "text": "Listen, test small, measure honestly and share the credit.",
+      "speakerLabel": "John",
+      "start": 98.58,
+      "end": 103.14
+    }
+  ],
+  "speakerLabels": {
+    "host1": "Kelly",
+    "geffen": "John"
+  },
+  "speakers": {
+    "host1": "Kelly",
+    "geffen": "John"
+  },
+  "status": "ready",
+  "scriptSha256": "1678731592824f4eceef21cee7f9fc9b8cd49c5c078266bba1c22ee7419cc313",
+  "estimatedSeconds": 112,
+  "voiceProfile": "approved-eight-character-voices-20261126",
+  "voiceAssignments": {
+    "host1": {
+      "character": "C3",
+      "name": "Kelly"
+    },
+    "geffen": {
+      "character": "C4",
+      "name": "John"
+    }
+  },
+  "durationSeconds": 103.74,
+  "audioSrc": "/learning/course-podcasts/cn-navigators-and-system-change/episode.mp3?v=306c4e7e50eb",
+  "transcriptSrc": "/learning/course-podcasts/cn-navigators-and-system-change/transcript.txt?v=306c4e7e50eb",
+  "transcriptJsonSrc": "/learning/course-podcasts/cn-navigators-and-system-change/transcript.json?v=306c4e7e50eb",
+  "captionsSrc": "/learning/course-podcasts/cn-navigators-and-system-change/captions.vtt?v=306c4e7e50eb"
+}

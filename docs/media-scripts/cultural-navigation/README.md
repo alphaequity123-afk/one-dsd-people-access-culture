@@ -1,6 +1,6 @@
 # Cultural Navigation: media scripts and casting
 
-Scripts for the seven-course Cultural Navigation pathway proposed in the November 2026 cultural navigators research brief. Nothing here is recorded yet.
+Scripts for the seven-course Cultural Navigation pathway proposed in the November 2026 cultural navigators research brief. All seven podcasts have been recorded with Kelly and John; their audio, captions, transcripts and voice-verification receipts are in `public/learning/course-podcasts/`. Scenario videos remain scripts.
 
 | Course | Level | Audience |
 | --- | --- | --- |
@@ -14,12 +14,12 @@ Scripts for the seven-course Cultural Navigation pathway proposed in the Novembe
 
 ## What is here
 
-- `<course>.podcast.md` and `<course>.podcast.json`: a two-voice audio discussion of about three minutes. The JSON follows `public/learning/course-podcasts/<id>/episode.json`, without the audio, caption and transcript fields that recording adds. Its `status` is `script`. Until it is recorded, the course page shows the conversation as text (`lib/content/courses/authored/gap-completion/podcast-conversations.json`).
+- `<course>.podcast.md` and `<course>.podcast.json`: a two-voice audio discussion of about three minutes. The JSON follows `public/learning/course-podcasts/<id>/episode.json`, without the audio, caption and transcript fields that recording adds. The source script retains `status: script`; the recorded package has `status: ready`. The course page uses the completed-podcast registry for its audio and transcript, while the original conversation text remains available in the course pack.
 - `<course>.video.md`: a short scenario video for the recurring cast.
 
 ## Voices
 
-The podcast uses one female voice and one male voice: `host1` (Host, female) and `geffen` (Co-host, male), the approved podcast pair. The hosts are not named on air. In the video, women in the cast (C2, C3, C5, C8) use the female voice and men (C1, C4, C6, C7) the male voice.
+All two-voice training and module podcasts use Kelly (C3) and John (C4), as confirmed by Gary on November 26, 2026. The legacy script speaker IDs `host1` and `geffen` map to those local references for these recordings. Each of the eight recurring characters uses their own approved voice in scenario recordings. See `config/character-voices.json` and `docs/media-scripts/CAST.md`.
 
 ## Who appears
 
@@ -37,10 +37,8 @@ Each lesson opens its practice case with a photograph of the people in it, made 
 
 Roles: C1 navigator, C2 program manager, C3 narrator, C4 peer supporter, C5 case manager, C6 supervisor, C7 newer colleague, C8 assessor. The navigator is C1, the figure who plays the community partner elsewhere, because a navigator usually works from a community organization. The assessor is C8, so authority is spread across the cast. People served are described but not shown, so no cast member is placed in a particular community. The program owner may recast any role.
 
-## Recording the podcast
+## Recording the podcasts
 
-The Culture and Well-Being recorder also records these episodes, with the same voices and steps (see `docs/media-scripts/culture-wellbeing/README.md`). Record one course at a time with `--course`, or all of them with no option:
+Use `scripts/media/record-approved-local.py --references <private-reference-folder>` with the local Qwen/Whisper Python environment. Add `--check` to verify all eight reference checksums and the podcast casting without recording, or `--course <id>` to record one episode. The recorder uses only Kelly and John for every two-voice episode, verifies speech against the script and checks speaker similarity, and resumes from compressed sentence caches. It writes the MP3, captions, transcripts and voice-verification receipt, then registers the course player. Private voice references stay outside the repository.
 
-```
-npm run record:culture-wellbeing-podcasts -- --course cn-what-a-navigator-does
-```
+The legacy hosted recorder refuses these scripts because it cannot verify the newly approved local voice profile. Generated episodes require review before publication.
