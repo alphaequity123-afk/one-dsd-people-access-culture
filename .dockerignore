@@ -1,0 +1,12 @@
+.git
+node_modules
+.next
+.vitest
+.data
+.env*
+!.env.example
+*.tsbuildinfo
+output/
+cloud/voice/.private-voice/
+cloud/voice/.private-overview-voices/
+cloud/voice/.private-geffen-public/
