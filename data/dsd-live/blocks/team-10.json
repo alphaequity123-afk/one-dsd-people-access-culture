@@ -1,0 +1,322 @@
+{
+ "id": "team-10",
+ "name": "Team track: Recognition, growth and wellbeing",
+ "kind": "courses",
+ "version": 1,
+ "owner": "Gary Banks",
+ "review_date": null,
+ "sort": 19,
+ "items": [
+  {
+   "id": "dc-t91-recognition-that-is-fair-and-meaningful",
+   "kind": "course",
+   "title": "Recognition that is fair and meaningful",
+   "level": "intermediate",
+   "topic": "performance-assignments-and-promotion",
+   "competency": "leading-others",
+   "skill": "talent development",
+   "priority": "enrichment",
+   "alignment": "needs_revision",
+   "sequence": 1,
+   "all_job_families": true,
+   "job_families": [
+    "supervisors",
+    "enterprise-services"
+   ],
+   "links": [
+    {
+     "to": "dc-t92-celebrating-cultural-and-heritage-observances-re",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-l57-equitable-access-to-stretch-assignments-and-prom",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-t92-celebrating-cultural-and-heritage-observances-re",
+   "kind": "course",
+   "title": "Celebrating cultural and heritage observances respectfully",
+   "level": "intermediate",
+   "topic": "religious-and-cultural-observance",
+   "competency": "leading-with-deai",
+   "skill": "cultural awareness, competence and humility",
+   "priority": "enrichment",
+   "alignment": "needs_revision",
+   "sequence": 2,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-t93-employee-resource-groups-at-the-state-of-minneso",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s79-religious-and-cultural-inclusion-at-work",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-l90-religious-and-cultural-observance-at-work",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-i69-religious-diversity-in-minnesota",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-t93-employee-resource-groups-at-the-state-of-minneso",
+   "kind": "course",
+   "title": "Employee resource groups at the State of Minnesota",
+   "level": "intermediate",
+   "topic": "employee-resource-groups",
+   "competency": "leading-with-deai",
+   "skill": "creating a culture of inclusion",
+   "priority": "reference",
+   "alignment": "needs_revision",
+   "sequence": 3,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-t94-mentoring-and-peer-learning",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-l60-employee-resource-groups-and-leaders-role",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-t94-mentoring-and-peer-learning",
+   "kind": "course",
+   "title": "Mentoring and peer learning",
+   "level": "intermediate",
+   "topic": "mentoring-career-growth-and-coaching",
+   "competency": "leading-others",
+   "skill": "talent development",
+   "priority": "enrichment",
+   "alignment": "needs_revision",
+   "sequence": 4,
+   "all_job_families": true,
+   "job_families": [
+    "supervisors",
+    "enterprise-services"
+   ],
+   "links": [
+    {
+     "to": "dc-t95-career-growth-conversations",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-l59-mentoring-and-sponsorship-across-difference",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-t95-career-growth-conversations",
+   "kind": "course",
+   "title": "Career growth conversations",
+   "level": "intermediate",
+   "topic": "mentoring-career-growth-and-coaching",
+   "competency": "leading-others",
+   "skill": "talent development",
+   "priority": "enrichment",
+   "alignment": "needs_revision",
+   "sequence": 5,
+   "all_job_families": true,
+   "job_families": [
+    "supervisors",
+    "enterprise-services"
+   ],
+   "links": [
+    {
+     "to": "dc-t96-team-wellbeing-and-sustainable-workloads",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-l59-mentoring-and-sponsorship-across-difference",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-t96-team-wellbeing-and-sustainable-workloads",
+   "kind": "course",
+   "title": "Team wellbeing and sustainable workloads",
+   "level": "intermediate",
+   "topic": "wellbeing-and-sustainable-workloads",
+   "competency": "leading-self",
+   "skill": "adaptability",
+   "priority": "enrichment",
+   "alignment": "needs_revision",
+   "sequence": 6,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-t97-supporting-each-other-through-hard-work",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s100-caring-for-yourself-while-doing-equity-work",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-l92-preventing-burnout-and-moral-distress",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-t97-supporting-each-other-through-hard-work",
+   "kind": "course",
+   "title": "Supporting each other through hard work",
+   "level": "intermediate",
+   "topic": "wellbeing-and-sustainable-workloads",
+   "competency": "leading-self",
+   "skill": "adaptability",
+   "priority": "enrichment",
+   "alignment": "needs_revision",
+   "sequence": 7,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-t98-using-engagement-survey-results-with-your-team",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s100-caring-for-yourself-while-doing-equity-work",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-l92-preventing-burnout-and-moral-distress",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-t98-using-engagement-survey-results-with-your-team",
+   "kind": "course",
+   "title": "Using engagement survey results with your team",
+   "level": "intermediate",
+   "topic": "equity-data-disparities-and-measurement",
+   "competency": "job-knowledge",
+   "skill": "statistics",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 8,
+   "all_job_families": true,
+   "job_families": [
+    "data-research"
+   ],
+   "links": [
+    {
+     "to": "dc-t99-measuring-team-culture-over-time",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s93-equity-in-data-analysis",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-l31-understanding-disparities-in-disability-services",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-i95-intercultural-skills-for-data-and-research",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-t99-measuring-team-culture-over-time",
+   "kind": "course",
+   "title": "Measuring team culture over time",
+   "level": "intermediate",
+   "topic": "equity-data-disparities-and-measurement",
+   "competency": "job-knowledge",
+   "skill": "statistics",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 9,
+   "all_job_families": true,
+   "job_families": [
+    "data-research"
+   ],
+   "links": [
+    {
+     "to": "dc-t100-keeping-culture-strong-through-turnover-and-chan",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s93-equity-in-data-analysis",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-l31-understanding-disparities-in-disability-services",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-i95-intercultural-skills-for-data-and-research",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-t100-keeping-culture-strong-through-turnover-and-chan",
+   "kind": "course",
+   "title": "Keeping culture strong through turnover and change",
+   "level": "intermediate",
+   "topic": "retention-age-and-the-employee-life-cycle",
+   "competency": "leading-others",
+   "skill": "talent development",
+   "priority": "enrichment",
+   "alignment": "needs_revision",
+   "sequence": 10,
+   "all_job_families": true,
+   "job_families": [
+    "supervisors",
+    "enterprise-services"
+   ],
+   "links": [
+    {
+     "to": "dc-l56-retaining-employees-from-underrepresented-groups",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  }
+ ]
+}

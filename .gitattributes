@@ -27,3 +27,11 @@ models/** -text
 config/standalone-public-overrides/files/** -text
 config/reviewed-public-assets/files/** -text
 models/bge-small-en-v1.5/public-document-vectors.json filter=lfs diff=lfs merge=lfs -text
+# v2 rebuild (2026-11-25): media carried over from the live One DSD site is stored directly, as it is there.
+public/learning-media/** !filter !diff !merge -text
+public/images/leading-others/** !filter !diff !merge -text
+public/images/learning-guides/** !filter !diff !merge -text
+public/images/trainings/** !filter !diff !merge -text
+public/images/leadership-development/** !filter !diff !merge -text
+public/audio/organizational-culture/** !filter !diff !merge -text
+public/audio/racism-dsd/** !filter !diff !merge -text

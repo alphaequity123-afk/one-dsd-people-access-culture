@@ -4,21 +4,18 @@ import { HeroMotion } from "./hero-motion";
 import { HomeTaskChips, type FinderTask } from "@/components/home-task-chips";
 import { publishedCalendar } from "@/lib/content/cultural-calendar";
 import { CALENDAR_PATH, chicagoToday, compactCalendar, shortDateRange, upcomingObservances } from "@/lib/content/culture-calendar-grid";
-import { leadershipStyleHref } from "@/lib/content/leadership-styles-pathway";
 import "./live-home.css";
 
 /**
  * Owner decision 2026-11-25: Home is the live One DSD landing page (one-dhs-pac, branch dsd/approved-20261121,
  * app/page.tsx), carried over as it appears there. Only the menu above it follows the five pillars.
- * Links point to the matching page in this application. Three features exist only on the live One DSD site,
- * so those links open it there.
+ * Its pages were carried over too, so every link opens in this application.
  */
-const LIVE_DSD = "https://dsd-web-production-3080eb48.up.railway.app";
-const LEADERSHIP = "/learn/leadership-styles";
+const LEADERSHIP = "/learn/leadership";
 
 const pathways = [
   { image: "/images/pilot-home/learn.jpg", alt: "State staff of different ages and backgrounds talk around a table in a sunlit meeting room.", title: "Learn", description: "Find courses and learning pathways connected to your role, responsibilities and interests.", href: "/learn", action: "Open Learn" },
-  { image: "/images/pilot-home/apply-a-tool.jpg", alt: "Four colleagues planning together around a table and arranging ideas on a board.", title: "Apply a tool", description: "Use guided tools to plan a meeting, examine a decision or improve a service.", href: "/practice", action: "Open Practice" },
+  { image: "/images/pilot-home/apply-a-tool.jpg", alt: "Four colleagues planning together around a table and arranging ideas on a board.", title: "Apply a tool", description: "Use guided tools to plan a meeting, examine a decision or improve a service.", href: "/practice/disability", action: "Open Practice" },
   { image: "/images/pilot-home/communities.jpg", alt: "Neighbors of different ages share food at a community meal.", title: "Communities", description: "Learn about Minnesota communities, their histories and perspectives, and considerations for working together.", href: "/minnesota-communities", action: "Open Communities" },
 ] as const;
 
@@ -33,22 +30,22 @@ const EQUITY_ZONES = [
 /** Tasks for the home-page finder (live site: lib/task-finder.ts, One DSD). */
 const TASKS: FinderTask[] = [
   { id: "meeting", label: "Plan a meeting with a community", picks: [
-    { title: "Prepare for a conversation", text: "Get a plan with questions to ask and access arrangements to make.", href: "/community-outreach/plan" },
-    { title: "Check your assumptions", text: "Twelve common assumptions, and what tends to be true instead.", href: `${LIVE_DSD}/minnesota-communities/assumptions` },
+    { title: "Prepare for a conversation", text: "Get a plan with questions to ask and access arrangements to make.", href: "/minnesota-communities/prepare" },
+    { title: "Check your assumptions", text: "Twelve common assumptions, and what tends to be true instead.", href: "/minnesota-communities/assumptions" },
     { title: "Culture Calendar", text: "Check the date against observances and holidays.", href: CALENDAR_PATH },
   ] },
   { id: "notice", label: "Write a notice or letter", picks: [
-    { title: "Rewrite it in plain language", text: "Practice turning dense notice language into words people can act on.", href: `${LIVE_DSD}/practice/plain-language` },
-    { title: "Prepare for a conversation", text: "Plan a review of your draft with the people who will read it.", href: "/community-outreach/plan" },
+    { title: "Rewrite it in plain language", text: "Practice turning dense notice language into words people can act on.", href: "/practice/plain-language" },
+    { title: "Prepare for a conversation", text: "Plan a review of your draft with the people who will read it.", href: "/minnesota-communities/prepare" },
   ] },
   { id: "lead", label: "Lead or support my team", picks: [
     { title: "One DSD Leadership", text: "Explore leadership styles and how each one affects your team.", href: LEADERSHIP },
-    { title: "Leadership scenarios", text: "Practice a realistic situation before you face a similar one.", href: `${LEADERSHIP}/scenarios` },
-    { title: "Team discussion kits", text: "A printable 20-minute discussion for your next team meeting.", href: "/team-kits" },
+    { title: "Which styles do you reach for?", text: "Six quick situations that point to styles worth exploring.", href: `${LEADERSHIP}#find-a-style` },
+    { title: "Team discussion kits", text: "A printable 20-minute discussion for your next team meeting.", href: `${LEADERSHIP}/team-kits` },
   ] },
   { id: "decision", label: "Review a decision or policy for fairness", picks: [
     { title: "Equity Analysis Toolkit", text: "Work through who a decision affects and how.", href: "/learn/equity-toolkit" },
-    { title: "Practice guides", text: "Guides for real decisions, with scenarios and feedback.", href: "/practice" },
+    { title: "Practice guides", text: "Guides for real decisions, with scenarios and feedback.", href: "/practice/disability" },
   ] },
   { id: "learn", label: "Find learning for my role", picks: [
     { title: "Your work", text: "Learning and resources for your responsibilities.", href: "/my-work" },
@@ -102,7 +99,7 @@ export default async function HomePage() {
           <div className="home-equity-scale" aria-hidden="true"><span>Works against equity</span><span>Most directly advances equity</span></div>
           <ol>{EQUITY_ZONES.map(zone => <li key={zone.id} className={`home-zone home-zone-${zone.id}`}>
             <strong>{zone.label}</strong>
-            <ul>{zone.styles.map(([slug, name]) => <li key={slug}><Link href={leadershipStyleHref(slug)}>{name}</Link></li>)}</ul>
+            <ul>{zone.styles.map(([slug, name]) => <li key={slug}><Link href={`${LEADERSHIP}/styles/${slug}`}>{name}</Link></li>)}</ul>
           </li>)}</ol>
         </div>
       </section>
@@ -118,8 +115,8 @@ export default async function HomePage() {
           </li>)}</ul>
           <ul className="pilot-list">
             <li><Link href="/my-work"><strong>Your work</strong><span>Find learning and resources for your responsibilities, with room to explore other roles.</span></Link></li>
-            <li><Link href="/community-outreach/plan"><strong>Prepare for a conversation</strong><span>Plan a community meeting or a conversation about services, with questions and access arrangements ready.</span></Link></li>
-            <li><Link href={`${LIVE_DSD}/trainings/cultural-humility`} original><strong>Cultural Humility</strong><span>Interactive training with a version for each job family.</span></Link></li>
+            <li><Link href="/minnesota-communities/prepare"><strong>Prepare for a conversation</strong><span>Plan a community meeting or a conversation about services, with questions and access arrangements ready.</span></Link></li>
+            <li><Link href="/trainings/cultural-humility"><strong>Cultural Humility</strong><span>Interactive training with a version for each job family.</span></Link></li>
             <li><Link href="/learning/self-directed/index.html?course=F09"><strong>Disability, Rights, Identity, and Belonging</strong><span>See disability as part of a person&apos;s identity and culture.</span></Link></li>
           </ul>
         </div>

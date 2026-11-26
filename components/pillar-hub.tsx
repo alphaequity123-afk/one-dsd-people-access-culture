@@ -6,7 +6,7 @@ import styles from "./pillar-hub.module.css";
  * action, and groups the existing pages beneath it so anything useful stays within three selections.
  * Ask opens from the banner on every page, so a pillar page only reminds people it is there.
  */
-export type PillarLink = { label: string; href: string; description: string };
+export type PillarLink = { label: string; href: string; description?: string };
 export type PillarGroup = { title: string; intro?: string; links: PillarLink[] };
 
 export function PillarHub({ id, title, lede, primary, groups, note }: {
@@ -28,7 +28,7 @@ export function PillarHub({ id, title, lede, primary, groups, note }: {
         <h2 id={`${id}-${slug(group.title)}`}>{group.title}</h2>
         {group.intro ? <p className={styles.groupIntro}>{group.intro}</p> : null}
         <ul>{group.links.map(link => <li key={link.href}>
-          <Link href={link.href}><strong>{link.label}</strong><span>{link.description}</span></Link>
+          <Link href={link.href}><strong>{link.label}</strong>{link.description ? <span>{link.description}</span> : null}</Link>
         </li>)}</ul>
       </section>)}
     </div>
@@ -37,6 +37,23 @@ export function PillarHub({ id, title, lede, primary, groups, note }: {
       <p>Have a question about this work? Open <strong>Ask</strong> at the top of any page. Leave out client, case, health and personnel details.</p>
     </aside>
   </div>;
+}
+
+/** Pillar cards inside an existing page, such as the applied tools at the top of Practice. */
+export function PillarCards({ id, title, intro, groups }: { id: string; title: string; intro?: string; groups: PillarGroup[] }) {
+  return <section className={styles.cards} aria-labelledby={`${id}-title`}>
+    <h2 id={`${id}-title`}>{title}</h2>
+    {intro ? <p>{intro}</p> : null}
+    <div className={styles.groups}>
+      {groups.map(group => <section key={group.title} className={styles.group} aria-labelledby={`${id}-${slug(group.title)}`}>
+        <h3 id={`${id}-${slug(group.title)}`}>{group.title}</h3>
+        {group.intro ? <p className={styles.groupIntro}>{group.intro}</p> : null}
+        <ul>{group.links.map(link => <li key={link.href}>
+          <Link href={link.href}><strong>{link.label}</strong>{link.description ? <span>{link.description}</span> : null}</Link>
+        </li>)}</ul>
+      </section>)}
+    </div>
+  </section>;
 }
 
 function slug(value: string) {

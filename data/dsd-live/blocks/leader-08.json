@@ -1,0 +1,345 @@
+{
+ "id": "leader-08",
+ "name": "Leader track: Respectful workplace and repair",
+ "kind": "courses",
+ "version": 1,
+ "owner": "Gary Banks",
+ "review_date": null,
+ "sort": 27,
+ "items": [
+  {
+   "id": "dc-l71-leaders-duties-under-the-respectful-workplace-po",
+   "kind": "course",
+   "title": "Leaders' duties under the Respectful Workplace Policy",
+   "level": "advanced",
+   "topic": "respectful-workplace-harassment-and-retaliation",
+   "competency": "leading-self",
+   "skill": "integrity",
+   "priority": "starting_point",
+   "alignment": "aligns",
+   "sequence": 1,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "enterprise-services"
+   ],
+   "links": [
+    {
+     "to": "dc-l72-responding-to-discrimination-and-harassment-repo",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s81-the-respectful-workplace-policy-for-staff",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-t4-respectful-workplace-policy-in-team-life",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l72-responding-to-discrimination-and-harassment-repo",
+   "kind": "course",
+   "title": "Responding to discrimination and harassment reports",
+   "level": "advanced",
+   "topic": "respectful-workplace-harassment-and-retaliation",
+   "competency": "leading-self",
+   "skill": "integrity",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 2,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "enterprise-services"
+   ],
+   "links": [
+    {
+     "to": "dc-l73-preventing-retaliation",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s81-the-respectful-workplace-policy-for-staff",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-t4-respectful-workplace-policy-in-team-life",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l73-preventing-retaliation",
+   "kind": "course",
+   "title": "Preventing retaliation",
+   "level": "advanced",
+   "topic": "respectful-workplace-harassment-and-retaliation",
+   "competency": "leading-self",
+   "skill": "integrity",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 3,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "enterprise-services"
+   ],
+   "links": [
+    {
+     "to": "dc-l74-building-psychological-safety-on-teams",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s81-the-respectful-workplace-policy-for-staff",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-t4-respectful-workplace-policy-in-team-life",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l74-building-psychological-safety-on-teams",
+   "kind": "course",
+   "title": "Building psychological safety on teams",
+   "level": "advanced",
+   "topic": "trust-and-psychological-safety",
+   "competency": "leading-others",
+   "skill": "trust",
+   "priority": "starting_point",
+   "alignment": "needs_revision",
+   "sequence": 4,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-l75-leading-through-conflict-across-difference",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-t11-building-trust-on-a-team",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l75-leading-through-conflict-across-difference",
+   "kind": "course",
+   "title": "Leading through conflict across difference",
+   "level": "advanced",
+   "topic": "conflict-across-cultures",
+   "competency": "leading-others",
+   "skill": "conflict resolution",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 5,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-l76-responding-when-someone-says-that-was-harmful",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s85-navigating-conflict-across-difference",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-t61-healthy-conflict-on-teams",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-i36-saying-no-and-disagreeing-across-cultures",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l76-responding-when-someone-says-that-was-harmful",
+   "kind": "course",
+   "title": "Responding when someone says \"that was harmful\"",
+   "level": "advanced",
+   "topic": "harm-apology-and-repair",
+   "competency": "leading-others",
+   "skill": "conflict resolution; empathy",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 6,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-l77-addressing-microaggressions-as-a-leader",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s75-when-you-ve-caused-harm-apologizing-well",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-t65-separating-intent-and-impact",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-i40-repairing-intercultural-misunderstandings",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l77-addressing-microaggressions-as-a-leader",
+   "kind": "course",
+   "title": "Addressing microaggressions as a leader",
+   "level": "advanced",
+   "topic": "microaggressions-and-how-to-respond",
+   "competency": "leading-with-deai",
+   "skill": "creating a culture of inclusion; allyship",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 7,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-l78-restorative-approaches-to-workplace-harm",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s73-recognizing-microaggressions",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l78-restorative-approaches-to-workplace-harm",
+   "kind": "course",
+   "title": "Restorative approaches to workplace harm",
+   "level": "advanced",
+   "topic": "harm-apology-and-repair",
+   "competency": "leading-others",
+   "skill": "conflict resolution; empathy",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 8,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-l79-facilitating-difficult-conversations-about-race",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s75-when-you-ve-caused-harm-apologizing-well",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-t65-separating-intent-and-impact",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-i40-repairing-intercultural-misunderstandings",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l79-facilitating-difficult-conversations-about-race",
+   "kind": "course",
+   "title": "Facilitating difficult conversations about race and equity",
+   "level": "advanced",
+   "topic": "race-and-talking-about-race",
+   "competency": "leading-outside",
+   "skill": "anti-racism",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 9,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-l80-understanding-and-responding-to-resistance-to-eq",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s89-talking-about-race-at-work",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l80-understanding-and-responding-to-resistance-to-eq",
+   "kind": "course",
+   "title": "Understanding and responding to resistance to equity work",
+   "level": "advanced",
+   "topic": "leading-change-and-responding-to-resistance",
+   "competency": "leading-others",
+   "skill": "change management",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 10,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "executive"
+   ],
+   "links": [
+    {
+     "to": "dc-l91-leading-equity-through-organizational-change",
+     "kind": "related",
+     "note": "Covers the same topic."
+    }
+   ]
+  }
+ ]
+}

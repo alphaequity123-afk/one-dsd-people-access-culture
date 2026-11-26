@@ -14,6 +14,8 @@ import { applyGraduationPathValues, graduationPathSurfaceId, linkListValue, stri
 import { requestedContentScope } from "@/lib/product/request-context";
 import { normalizeWorkOrigin, workOriginForPath, withWorkOrigin, type WorkOriginInput } from "@/lib/product/work-origin";
 import styles from "./practice-entry.module.css";
+import { PillarCards } from "@/components/pillar-hub";
+import { APPLIED_TOOLS } from "@/lib/content/applied-tools";
 
 export const metadata: Metadata = { title: "Practice" };
 
@@ -74,6 +76,8 @@ export default async function PracticePage({ searchParams }: { searchParams?: Pr
       <PageIntro title={stringValue(copy, "introTitle")} lede={withoutPublishedSaveClaims(stringValue(copy, "introLede"))} />
       <div className="pilot-topic space-y-6">
         <WorkOriginLinks origin={origin} />
+        <PillarCards id="applied-tools" title="Applied tools for your work" intro="Start with the situation in front of you. Each tool gives you a practical next step, and Ask is there if you want to talk it through." groups={APPLIED_TOOLS} />
+        <p><Link href="/practice/disability">Disability services in practice</Link> · <Link href="/practice/plain-language">Rewrite a notice in plain language</Link></p>
         <section className={styles.choices} aria-labelledby="practice-choices-title">
           <h2 id="practice-choices-title" className="mb-3 text-2xl font-bold">{stringValue(copy, "choicesTitle")}</h2>
           <details className={styles.group} id="equity-analysis">

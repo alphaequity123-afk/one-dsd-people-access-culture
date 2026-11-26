@@ -1,0 +1,24 @@
+.dsd-practice { max-width: 76rem; padding-bottom: 4rem; }
+.dsd-practice > p, .dsd-practice .reading, .dsd-scenario { max-width: 52rem; }
+.dsd-practice section { margin-block: 2rem; }
+.dsd-practice li { margin-block: .8rem; }
+.dsd-practice-links { margin-block: 2rem; }
+.dsd-scenario { border: 1px solid #aebfba; background: #f4f8f6; padding: clamp(1rem, 3vw, 2rem); border-radius: 1rem; }
+.dsd-scenario fieldset { border: 0; padding: 0; margin: 1.5rem 0; }
+.dsd-scenario legend { font-weight: 700; margin-bottom: .7rem; }
+.dsd-choice { display: flex; align-items: start; gap: .8rem; padding: 1rem; border: 1px solid #aebfba; border-radius: .5rem; margin-bottom: .6rem; background: white; cursor: pointer; }
+.dsd-choice input { flex: 0 0 auto; margin-top: .3rem; }
+.dsd-scenario textarea { display: block; width: 100%; max-width: 100%; margin-block: .5rem; }
+.dsd-feedback { border-left: 4px solid #006b54; padding: 1rem; background: white; }
+@media print { .dsd-scenario button, .dsd-scenario textarea { display: none; } }
+
+/* Owner decision 2026-11-22: calmer practice index. */
+.practice-groups { display: grid; gap: 8px 32px; max-width: 64rem; }
+@media (min-width: 760px) { .practice-groups { grid-template-columns: 1fr 1fr; } }
+.practice-groups section { margin-block: 1rem; }
+.practice-groups h2 { font-size: 1.15rem; margin: 0 0 .4rem; }
+.practice-groups ul { margin: 0; padding-left: 1.1rem; }
+.practice-groups li { margin-block: .4rem; }
+.practice-sources { max-width: 52rem; margin-top: 2rem; border-top: 1px solid #d5dde3; padding-top: 1rem; }
+.practice-sources summary { cursor: pointer; font-weight: 600; color: #003865; }
+.practice-sources li { margin-block: .45rem; }

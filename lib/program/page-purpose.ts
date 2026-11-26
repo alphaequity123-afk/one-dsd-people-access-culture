@@ -21,13 +21,13 @@ export const PRIMARY_SECTIONS: ReadonlyArray<readonly [string, string, PageArea]
 ];
 export function pageArea(path: string): PageArea {
   if (/^\/consultant(?:\/|$)/.test(path)) return "consultant";
-  if (/^\/(leadership|leading|team-kits)(?:\/|$)/.test(path) || /^\/learn\/leadership-styles(?:\/|$)/.test(path) || /^\/one-dsd\/leadership(?:\/|$)/.test(path)) return "leading";
+  if (/^\/(leadership|leading|team-kits)(?:\/|$)/.test(path) || /^\/learn\/(leadership|leadership-styles)(?:\/|$)/.test(path) || /^\/one-dsd\/leadership(?:\/|$)/.test(path)) return "leading";
   if (/^\/(communities|minnesota-communities|community-outreach|employee-resource-groups|minnesota-agencies)(?:\/|$)/.test(path) || /^\/learn\/tribal-referral(?:\/|$)/.test(path)) return "communities";
   if (/^\/(charter|program-foundation|about)(?:\/|$)/.test(path) || /^\/program\/model(?:\/|$)/.test(path)) return "about";
   if (/^\/(start|orientation|user-guide)(?:\/|$)/.test(path)) return "start";
   if (/^\/(one-dsd|administrations|understanding-dhs)(?:\/|$)/.test(path)) return "programs";
   if (/^\/(support|ask|contribute)(?:\/|$)/.test(path)) return "support";
-  if (/^\/learn\/equity-toolkit(?:\/|$)/.test(path) || /^\/(practice|practice-guides|toolkit-studio|equity-policy|equity-review|operationalizing-equity|my-work)(?:\/|$)/.test(path) || /^\/program\/(resources|practice|progress|impact)(?:\/|$)/.test(path)) return "tools";
+  if (/^\/learn\/(equity-toolkit|tools)(?:\/|$)/.test(path) || /^\/(practice|practice-guides|toolkit-studio|equity-policy|equity-review|operationalizing-equity|my-work)(?:\/|$)/.test(path) || /^\/program\/(resources|practice|progress|impact)(?:\/|$)/.test(path)) return "tools";
   if (/^\/(knowledge|learn|collections|courses|paths|journeys|resources|library|audio-library|podcasts)(?:\/|$)/.test(path)) return "learn";
   return "about";
 }

@@ -1,0 +1,406 @@
+{
+ "id": "leader-04",
+ "name": "Leader track: Data and disparities",
+ "kind": "courses",
+ "version": 1,
+ "owner": "Gary Banks",
+ "review_date": null,
+ "sort": 23,
+ "items": [
+  {
+   "id": "dc-l31-understanding-disparities-in-disability-services",
+   "kind": "course",
+   "title": "Understanding disparities in disability services",
+   "level": "advanced",
+   "topic": "equity-data-disparities-and-measurement",
+   "competency": "job-knowledge",
+   "skill": "statistics",
+   "priority": "important",
+   "alignment": "aligns",
+   "sequence": 1,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "data-research"
+   ],
+   "links": [
+    {
+     "to": "dc-l32-reading-disparity-data-as-a-leader",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s93-equity-in-data-analysis",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-t98-using-engagement-survey-results-with-your-team",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-i95-intercultural-skills-for-data-and-research",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l32-reading-disparity-data-as-a-leader",
+   "kind": "course",
+   "title": "Reading disparity data as a leader",
+   "level": "advanced",
+   "topic": "equity-data-disparities-and-measurement",
+   "competency": "job-knowledge",
+   "skill": "statistics",
+   "priority": "starting_point",
+   "alignment": "needs_revision",
+   "sequence": 2,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "data-research"
+   ],
+   "links": [
+    {
+     "to": "dc-l33-asking-better-questions-of-your-data",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s93-equity-in-data-analysis",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-t98-using-engagement-survey-results-with-your-team",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-i95-intercultural-skills-for-data-and-research",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l33-asking-better-questions-of-your-data",
+   "kind": "course",
+   "title": "Asking better questions of your data",
+   "level": "advanced",
+   "topic": "equity-data-disparities-and-measurement",
+   "competency": "job-knowledge",
+   "skill": "statistics",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 3,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "data-research"
+   ],
+   "links": [
+    {
+     "to": "dc-l34-disaggregated-data-why-averages-hide-inequity",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s93-equity-in-data-analysis",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-t98-using-engagement-survey-results-with-your-team",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-i95-intercultural-skills-for-data-and-research",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l34-disaggregated-data-why-averages-hide-inequity",
+   "kind": "course",
+   "title": "Disaggregated data: why averages hide inequity",
+   "level": "advanced",
+   "topic": "equity-data-disparities-and-measurement",
+   "competency": "job-knowledge",
+   "skill": "statistics",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 4,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "data-research"
+   ],
+   "links": [
+    {
+     "to": "dc-l35-data-equity-and-responsible-use-of-demographic-d",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s93-equity-in-data-analysis",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-t98-using-engagement-survey-results-with-your-team",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-i95-intercultural-skills-for-data-and-research",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l35-data-equity-and-responsible-use-of-demographic-d",
+   "kind": "course",
+   "title": "Data equity and responsible use of demographic data",
+   "level": "advanced",
+   "topic": "equity-data-disparities-and-measurement",
+   "competency": "job-knowledge",
+   "skill": "statistics",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 5,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "data-research"
+   ],
+   "links": [
+    {
+     "to": "dc-l36-pairing-numbers-with-lived-experience",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s93-equity-in-data-analysis",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-t98-using-engagement-survey-results-with-your-team",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-i95-intercultural-skills-for-data-and-research",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l36-pairing-numbers-with-lived-experience",
+   "kind": "course",
+   "title": "Pairing numbers with lived experience",
+   "level": "advanced",
+   "topic": "equity-data-disparities-and-measurement",
+   "competency": "job-knowledge",
+   "skill": "statistics",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 6,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "data-research"
+   ],
+   "links": [
+    {
+     "to": "dc-l37-setting-equity-measures-and-targets",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s93-equity-in-data-analysis",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-t98-using-engagement-survey-results-with-your-team",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-i95-intercultural-skills-for-data-and-research",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l37-setting-equity-measures-and-targets",
+   "kind": "course",
+   "title": "Setting equity measures and targets",
+   "level": "advanced",
+   "topic": "equity-data-disparities-and-measurement",
+   "competency": "job-knowledge",
+   "skill": "statistics",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 7,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "data-research"
+   ],
+   "links": [
+    {
+     "to": "dc-l38-equity-in-program-evaluation",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s93-equity-in-data-analysis",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-t98-using-engagement-survey-results-with-your-team",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-i95-intercultural-skills-for-data-and-research",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l38-equity-in-program-evaluation",
+   "kind": "course",
+   "title": "Equity in program evaluation",
+   "level": "advanced",
+   "topic": "equity-data-disparities-and-measurement",
+   "competency": "job-knowledge",
+   "skill": "statistics",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 8,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "data-research"
+   ],
+   "links": [
+    {
+     "to": "dc-l39-communicating-disparity-findings-with-care",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s93-equity-in-data-analysis",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-t98-using-engagement-survey-results-with-your-team",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-i95-intercultural-skills-for-data-and-research",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l39-communicating-disparity-findings-with-care",
+   "kind": "course",
+   "title": "Communicating disparity findings with care",
+   "level": "advanced",
+   "topic": "equity-data-disparities-and-measurement",
+   "competency": "job-knowledge",
+   "skill": "statistics",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 9,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "data-research"
+   ],
+   "links": [
+    {
+     "to": "dc-l40-equity-dashboards-from-display-to-decisions",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s93-equity-in-data-analysis",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-t98-using-engagement-survey-results-with-your-team",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-i95-intercultural-skills-for-data-and-research",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l40-equity-dashboards-from-display-to-decisions",
+   "kind": "course",
+   "title": "Equity dashboards: from display to decisions",
+   "level": "advanced",
+   "topic": "equity-data-disparities-and-measurement",
+   "competency": "job-knowledge",
+   "skill": "statistics",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 10,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "data-research"
+   ],
+   "links": [
+    {
+     "to": "dc-s93-equity-in-data-analysis",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-t98-using-engagement-survey-results-with-your-team",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-i95-intercultural-skills-for-data-and-research",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  }
+ ]
+}

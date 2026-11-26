@@ -1,0 +1,253 @@
+{
+ "id": "leader-10",
+ "name": "Leader track: Sustaining the work",
+ "kind": "courses",
+ "version": 1,
+ "owner": "Gary Banks",
+ "review_date": null,
+ "sort": 29,
+ "items": [
+  {
+   "id": "dc-l91-leading-equity-through-organizational-change",
+   "kind": "course",
+   "title": "Leading equity through organizational change",
+   "level": "advanced",
+   "topic": "leading-change-and-responding-to-resistance",
+   "competency": "leading-others",
+   "skill": "change management",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 1,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "executive"
+   ],
+   "links": [
+    {
+     "to": "dc-l92-preventing-burnout-and-moral-distress",
+     "kind": "next_step",
+     "note": "Next in this block."
+    }
+   ]
+  },
+  {
+   "id": "dc-l92-preventing-burnout-and-moral-distress",
+   "kind": "course",
+   "title": "Preventing burnout and moral distress",
+   "level": "advanced",
+   "topic": "wellbeing-and-sustainable-workloads",
+   "competency": "leading-self",
+   "skill": "adaptability",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 2,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-l95-plain-language-as-an-equity-practice",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s100-caring-for-yourself-while-doing-equity-work",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-t96-team-wellbeing-and-sustainable-workloads",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l95-plain-language-as-an-equity-practice",
+   "kind": "course",
+   "title": "Plain language as an equity practice",
+   "level": "advanced",
+   "topic": "plain-language",
+   "competency": "job-knowledge",
+   "skill": "technical writing",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 3,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "admin-support",
+    "enterprise-services"
+   ],
+   "links": [
+    {
+     "to": "dc-l96-language-access-as-a-leadership-responsibility",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s55-plain-language-basics",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-i39-intercultural-writing-for-public-audiences",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l96-language-access-as-a-leadership-responsibility",
+   "kind": "course",
+   "title": "Language access as a leadership responsibility",
+   "level": "advanced",
+   "topic": "language-access-interpreters-and-translation",
+   "competency": "leading-with-deai",
+   "skill": "accessibility",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 4,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "eligibility-public"
+   ],
+   "links": [
+    {
+     "to": "dc-l97-building-an-equity-learning-culture",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s51-language-access-rights-and-duties",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-i60-the-national-clas-standards",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l97-building-an-equity-learning-culture",
+   "kind": "course",
+   "title": "Building an equity learning culture",
+   "level": "advanced",
+   "topic": "building-a-learning-culture",
+   "competency": "leading-others",
+   "skill": "talent development",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 5,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-l98-coaching-staff-on-equity-skills",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-i99-building-an-intercultural-learning-culture",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l98-coaching-staff-on-equity-skills",
+   "kind": "course",
+   "title": "Coaching staff on equity skills",
+   "level": "advanced",
+   "topic": "building-a-learning-culture",
+   "competency": "leading-others",
+   "skill": "talent development",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 6,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-l99-sharing-equity-stories-and-progress",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-i99-building-an-intercultural-learning-culture",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l99-sharing-equity-stories-and-progress",
+   "kind": "course",
+   "title": "Sharing equity stories and progress",
+   "level": "advanced",
+   "topic": "building-a-learning-culture",
+   "competency": "leading-others",
+   "skill": "talent development",
+   "priority": "enrichment",
+   "alignment": "needs_revision",
+   "sequence": 7,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-l100-sustaining-equity-work-when-resources-are-tight",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-i99-building-an-intercultural-learning-culture",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l100-sustaining-equity-work-when-resources-are-tight",
+   "kind": "course",
+   "title": "Sustaining equity work when resources are tight",
+   "level": "advanced",
+   "topic": "leading-change-and-responding-to-resistance",
+   "competency": "leading-others",
+   "skill": "change management",
+   "priority": "enrichment",
+   "alignment": "aligns",
+   "sequence": 8,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "executive"
+   ],
+   "links": [
+    {
+     "to": "dc-l80-understanding-and-responding-to-resistance-to-eq",
+     "kind": "related",
+     "note": "Covers the same topic."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,269 @@
+{
+ "id": "team-02",
+ "name": "Team track: Trust and belonging",
+ "kind": "courses",
+ "version": 1,
+ "owner": "Gary Banks",
+ "review_date": null,
+ "sort": 11,
+ "items": [
+  {
+   "id": "dc-t11-building-trust-on-a-team",
+   "kind": "course",
+   "title": "Building trust on a team",
+   "level": "intermediate",
+   "topic": "trust-and-psychological-safety",
+   "competency": "leading-others",
+   "skill": "trust",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 1,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-t12-psychological-safety-for-team-members",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-l48-repairing-trust-after-harm",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-t12-psychological-safety-for-team-members",
+   "kind": "course",
+   "title": "Psychological safety for team members",
+   "level": "intermediate",
+   "topic": "trust-and-psychological-safety",
+   "competency": "leading-others",
+   "skill": "trust",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 2,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-t13-creating-psychological-safety-as-a-leader",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-l48-repairing-trust-after-harm",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-t13-creating-psychological-safety-as-a-leader",
+   "kind": "course",
+   "title": "Creating psychological safety as a leader",
+   "level": "intermediate",
+   "topic": "trust-and-psychological-safety",
+   "competency": "leading-others",
+   "skill": "trust",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 3,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-t14-welcoming-new-team-members",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-l48-repairing-trust-after-harm",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-t14-welcoming-new-team-members",
+   "kind": "course",
+   "title": "Welcoming new team members",
+   "level": "intermediate",
+   "topic": "onboarding",
+   "competency": "leading-others",
+   "skill": "talent development",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 4,
+   "all_job_families": true,
+   "job_families": [
+    "supervisors",
+    "enterprise-services"
+   ],
+   "links": [
+    {
+     "to": "dc-t15-including-quieter-voices",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-l55-inclusive-onboarding-for-new-employees",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-t15-including-quieter-voices",
+   "kind": "course",
+   "title": "Including quieter voices",
+   "level": "intermediate",
+   "topic": "inclusive-meetings-and-shared-decisions",
+   "competency": "getting-work-done",
+   "skill": "transparency",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 5,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-t16-belonging-for-employees-with-disabilities",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s76-inclusive-meetings",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-t16-belonging-for-employees-with-disabilities",
+   "kind": "course",
+   "title": "Belonging for employees with disabilities",
+   "level": "intermediate",
+   "topic": "belonging",
+   "competency": "leading-with-deai",
+   "skill": "creating a culture of inclusion",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 6,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-t17-belonging-across-race-culture-and-language",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s80-belonging-on-hybrid-teams",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-t17-belonging-across-race-culture-and-language",
+   "kind": "course",
+   "title": "Belonging across race, culture, and language",
+   "level": "intermediate",
+   "topic": "belonging",
+   "competency": "leading-with-deai",
+   "skill": "creating a culture of inclusion",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 7,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-t18-being-the-only-one-on-a-team",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s80-belonging-on-hybrid-teams",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-t18-being-the-only-one-on-a-team",
+   "kind": "course",
+   "title": "Being the only one on a team",
+   "level": "intermediate",
+   "topic": "belonging",
+   "competency": "leading-with-deai",
+   "skill": "creating a culture of inclusion",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 8,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-t19-rebuilding-trust-after-a-setback",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s80-belonging-on-hybrid-teams",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-t19-rebuilding-trust-after-a-setback",
+   "kind": "course",
+   "title": "Rebuilding trust after a setback",
+   "level": "intermediate",
+   "topic": "trust-and-psychological-safety",
+   "competency": "leading-others",
+   "skill": "trust",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 9,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-t20-trust-during-uncertainty-and-change",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-l48-repairing-trust-after-harm",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-t20-trust-during-uncertainty-and-change",
+   "kind": "course",
+   "title": "Trust during uncertainty and change",
+   "level": "intermediate",
+   "topic": "trust-and-psychological-safety",
+   "competency": "leading-others",
+   "skill": "trust",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 10,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-l48-repairing-trust-after-harm",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,308 @@
+{
+ "id": "leader-09",
+ "name": "Leader track: Intercultural leadership",
+ "kind": "courses",
+ "version": 1,
+ "owner": "Gary Banks",
+ "review_date": null,
+ "sort": 28,
+ "items": [
+  {
+   "id": "dc-l81-intercultural-development-for-leaders",
+   "kind": "course",
+   "title": "Intercultural development for leaders",
+   "level": "advanced",
+   "topic": "intercultural-development-the-continuum-from-denial-to-adaptation",
+   "competency": "leading-self",
+   "skill": "cultural humility",
+   "priority": "starting_point",
+   "alignment": "needs_revision",
+   "sequence": 1,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-l82-cultural-intelligence-cq-for-leaders",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s87-intercultural-development-for-staff",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-i7-what-intercultural-competence-means",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l82-cultural-intelligence-cq-for-leaders",
+   "kind": "course",
+   "title": "Cultural intelligence for leaders",
+   "level": "advanced",
+   "topic": "cultural-intelligence-cq",
+   "competency": "leading-with-deai",
+   "skill": "cultural awareness, competence and humility",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 2,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-l83-leading-multicultural-and-multilingual-teams",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s88-cultural-intelligence-cq-in-daily-work",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-i21-cultural-intelligence-cq-in-depth",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l83-leading-multicultural-and-multilingual-teams",
+   "kind": "course",
+   "title": "Leading multicultural and multilingual teams",
+   "level": "advanced",
+   "topic": "leading-multicultural-and-multilingual-teams",
+   "competency": "leading-others",
+   "skill": "intercultural communication; talent development",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 3,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-l84-linguistic-equity-and-communication-bias",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-i20-leading-teams-at-different-points-of-development",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l84-linguistic-equity-and-communication-bias",
+   "kind": "course",
+   "title": "Linguistic equity and communication bias",
+   "level": "advanced",
+   "topic": "linguistic-and-accent-bias",
+   "competency": "leading-others",
+   "skill": "intercultural communication",
+   "priority": "important",
+   "alignment": "aligns",
+   "sequence": 4,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-l85-understanding-minnesota-s-immigrant-and-refugee",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s60-linguistic-bias-at-work",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-t36-communicating-with-colleagues-who-use-english-as",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-i88-language-accent-and-dialect-bias",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l85-understanding-minnesota-s-immigrant-and-refugee",
+   "kind": "course",
+   "title": "Understanding Minnesota's immigrant and refugee communities",
+   "level": "advanced",
+   "topic": "minnesota-communities",
+   "competency": "leading-outside",
+   "skill": "engagement; inclusion",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 5,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-l87-understanding-structural-racism-in-human-service",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s33-working-respectfully-with-somali-communities",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-i61-how-migration-shaped-minnesota",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l87-understanding-structural-racism-in-human-service",
+   "kind": "course",
+   "title": "Understanding structural racism in human services",
+   "level": "advanced",
+   "topic": "how-systems-and-neutral-rules-create-unequal-outcomes",
+   "competency": "getting-work-done",
+   "skill": "anti-racism; continuous improvement",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 6,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-l88-leading-for-lgbtq-inclusion",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s5-how-systems-create-unequal-outcomes",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-i68-whiteness-and-european-american-cultures",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l88-leading-for-lgbtq-inclusion",
+   "kind": "course",
+   "title": "Leading for LGBTQ+ inclusion",
+   "level": "advanced",
+   "topic": "inclusive-language-pronouns-and-lgbtq-inclusion",
+   "competency": "leading-with-deai",
+   "skill": "pronouns",
+   "priority": "important",
+   "alignment": "aligns",
+   "sequence": 7,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-l89-generational-and-life-stage-differences-at-work",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s77-inclusive-language-at-work",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l89-generational-and-life-stage-differences-at-work",
+   "kind": "course",
+   "title": "Generational and life-stage differences at work",
+   "level": "advanced",
+   "topic": "retention-age-and-the-employee-life-cycle",
+   "competency": "leading-others",
+   "skill": "talent development",
+   "priority": "enrichment",
+   "alignment": "needs_revision",
+   "sequence": 8,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "enterprise-services"
+   ],
+   "links": [
+    {
+     "to": "dc-l90-religious-and-cultural-observance-at-work",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-t100-keeping-culture-strong-through-turnover-and-chan",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l90-religious-and-cultural-observance-at-work",
+   "kind": "course",
+   "title": "Religious and cultural observance at work",
+   "level": "advanced",
+   "topic": "religious-and-cultural-observance",
+   "competency": "leading-with-deai",
+   "skill": "cultural awareness, competence and humility",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 9,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-s79-religious-and-cultural-inclusion-at-work",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-t92-celebrating-cultural-and-heritage-observances-re",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-i69-religious-diversity-in-minnesota",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  }
+ ]
+}

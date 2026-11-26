@@ -1,0 +1,296 @@
+{
+ "id": "leader-01",
+ "name": "Leader track: Leading equity",
+ "kind": "courses",
+ "version": 1,
+ "owner": "Gary Banks",
+ "review_date": null,
+ "sort": 20,
+ "items": [
+  {
+   "id": "dc-l1-leading-equity-at-dsd-what-the-dhs-equity-policy",
+   "kind": "course",
+   "title": "Leading equity at DSD: what the DHS Equity Policy asks of leaders",
+   "level": "advanced",
+   "topic": "program-purpose-the-dhs-equity-policy-and-executive-order-23-12",
+   "competency": "getting-work-done",
+   "skill": "following procedure; anti-racism",
+   "priority": "starting_point",
+   "alignment": "needs_revision",
+   "sequence": 1,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-l2-from-commitment-to-practice-building-equity-into",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s1-deia-at-dsd-what-it-means-and-why-it-matters",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l2-from-commitment-to-practice-building-equity-into",
+   "kind": "course",
+   "title": "From commitment to practice: building equity into team goals",
+   "level": "advanced",
+   "topic": "your-role-in-equity-and-where-to-get-help",
+   "competency": "leading-self",
+   "skill": "integrity; self-awareness",
+   "priority": "important",
+   "alignment": "aligns",
+   "sequence": 2,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-l3-executive-order-23-12-in-plain-language",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s6-your-role-in-equity-whatever-your-job",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-t7-everyone-shapes-culture-not-just-leaders",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l3-executive-order-23-12-in-plain-language",
+   "kind": "course",
+   "title": "Executive Order 23-12 in plain language",
+   "level": "advanced",
+   "topic": "program-purpose-the-dhs-equity-policy-and-executive-order-23-12",
+   "competency": "getting-work-done",
+   "skill": "following procedure; anti-racism",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 3,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-l4-leading-deia-as-systems-change-not-a-one-time-ev",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s1-deia-at-dsd-what-it-means-and-why-it-matters",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l4-leading-deia-as-systems-change-not-a-one-time-ev",
+   "kind": "course",
+   "title": "Leading People, Access and Culture as systems change, not a one-time event",
+   "level": "advanced",
+   "topic": "leading-equity-commitment-modeling-and-accountability",
+   "competency": "leading-organization",
+   "skill": "advocacy; influence; strategic planning",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 4,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "executive"
+   ],
+   "links": [
+    {
+     "to": "dc-l5-equity-informed-decision-making-under-time-press",
+     "kind": "next_step",
+     "note": "Next in this block."
+    }
+   ]
+  },
+  {
+   "id": "dc-l5-equity-informed-decision-making-under-time-press",
+   "kind": "course",
+   "title": "Equity-informed decision-making under time pressure",
+   "level": "advanced",
+   "topic": "bias-in-everyday-decisions",
+   "competency": "leading-self",
+   "skill": "self-awareness",
+   "priority": "important",
+   "alignment": "aligns",
+   "sequence": 5,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-l6-accountability-without-blame-tracking-equity-com",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s71-understanding-implicit-bias",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-t38-checking-assumptions-before-you-react",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l6-accountability-without-blame-tracking-equity-com",
+   "kind": "course",
+   "title": "Accountability without blame: tracking equity commitments",
+   "level": "advanced",
+   "topic": "leading-equity-commitment-modeling-and-accountability",
+   "competency": "leading-organization",
+   "skill": "advocacy; influence; strategic planning",
+   "priority": "starting_point",
+   "alignment": "needs_revision",
+   "sequence": 6,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "executive"
+   ],
+   "links": [
+    {
+     "to": "dc-l7-modeling-inclusive-leadership-behavior",
+     "kind": "next_step",
+     "note": "Next in this block."
+    }
+   ]
+  },
+  {
+   "id": "dc-l7-modeling-inclusive-leadership-behavior",
+   "kind": "course",
+   "title": "Modeling inclusive leadership behavior",
+   "level": "advanced",
+   "topic": "leading-equity-commitment-modeling-and-accountability",
+   "competency": "leading-organization",
+   "skill": "advocacy; influence; strategic planning",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 7,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "executive"
+   ],
+   "links": [
+    {
+     "to": "dc-l8-using-your-influence-equity-at-the-management-ta",
+     "kind": "next_step",
+     "note": "Next in this block."
+    }
+   ]
+  },
+  {
+   "id": "dc-l8-using-your-influence-equity-at-the-management-ta",
+   "kind": "course",
+   "title": "Using your influence: equity at the management table",
+   "level": "advanced",
+   "topic": "your-role-in-equity-and-where-to-get-help",
+   "competency": "leading-self",
+   "skill": "integrity; self-awareness",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 8,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-l9-leading-with-values-when-guidance-shifts",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s6-your-role-in-equity-whatever-your-job",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-t7-everyone-shapes-culture-not-just-leaders",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l9-leading-with-values-when-guidance-shifts",
+   "kind": "course",
+   "title": "Leading with values when guidance shifts",
+   "level": "advanced",
+   "topic": "leading-equity-commitment-modeling-and-accountability",
+   "competency": "leading-organization",
+   "skill": "advocacy; influence; strategic planning",
+   "priority": "enrichment",
+   "alignment": "aligns",
+   "sequence": 9,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "executive"
+   ],
+   "links": [
+    {
+     "to": "dc-l10-equity-leadership-self-assessment-and-growth-pla",
+     "kind": "next_step",
+     "note": "Next in this block."
+    }
+   ]
+  },
+  {
+   "id": "dc-l10-equity-leadership-self-assessment-and-growth-pla",
+   "kind": "course",
+   "title": "Equity leadership self-assessment and growth plan",
+   "level": "advanced",
+   "topic": "leading-equity-commitment-modeling-and-accountability",
+   "competency": "leading-organization",
+   "skill": "advocacy; influence; strategic planning",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 10,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "executive"
+   ],
+   "links": [
+    {
+     "to": "dc-l6-accountability-without-blame-tracking-equity-com",
+     "kind": "related",
+     "note": "Covers the same topic."
+    }
+   ]
+  }
+ ]
+}

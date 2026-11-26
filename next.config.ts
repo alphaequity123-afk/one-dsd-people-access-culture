@@ -25,8 +25,11 @@ const contentSecurityPolicy = [
 // which does not load a new document, so the page they started on must already allow both. The browser still asks
 // the person before any microphone use, and only the Ask page requests it.
 const askVoiceAllowed = process.env.PAC_CLONE_AGENTS === "on";
+// v2 rebuild (2026-11-25): training video from the live One DSD site plays from its course-media bucket.
+const LIVE_DSD_ORIGIN = "https://dsd-web-production-3080eb48.up.railway.app";
+const LIVE_DSD_MEDIA_HOST = "https://course-media-qpf0wdbqg8pl.t3.storageapi.dev";
 const securityHeaders = [
-  { key: "Content-Security-Policy", value: contentSecurityPolicy + "; media-src 'self' blob:" },
+  { key: "Content-Security-Policy", value: contentSecurityPolicy + `; media-src 'self' blob: ${LIVE_DSD_MEDIA_HOST}` },
   { key: "Cross-Origin-Opener-Policy", value: "same-origin" },
   { key: "Cross-Origin-Resource-Policy", value: "same-origin" },
   { key: "Permissions-Policy", value: `camera=(), microphone=(${askVoiceAllowed ? "self" : ""}), geolocation=(), browsing-topics=()` },
@@ -90,6 +93,9 @@ const nextConfig: NextConfig = {
       ...(agencyZone ? [{ source: "/dsd-api/ask", destination: "/api/ask" }] : []),
       // Browsers and the One DSD front door ask for /favicon.ico; the program's tab icon is app/icon.svg.
       { source: "/favicon.ico", destination: "/icon.svg" },
+      // v2 rebuild: Cultural Humility, Psychological Safety and Assertive Communication media live in the live
+      // One DSD site's course-media bucket; its /media route answers with a short-lived signed address.
+      { source: "/media/:path((?:cultural-humility|psychological-safety|assertive-communication).*)", destination: `${LIVE_DSD_ORIGIN}/media/:path` },
     ];
   },
   // Send the full page head before the status, so a missing page really answers 404.
@@ -159,6 +165,12 @@ const nextConfig: NextConfig = {
         destination: source === "/" ? "https://dsd-web-production-3080eb48.up.railway.app/" : "https://dsd-web-production-3080eb48.up.railway.app/:path",
         permanent: false,
       })),
+      // v2 rebuild (2026-11-25): links carried over from the live One DSD site. Its resource readers (/r/…) use
+      // the live site's own database, so they open there; the calendar and Your work have pages here.
+      { source: "/r/:slug", destination: `${LIVE_DSD_ORIGIN}/r/:slug`, permanent: false },
+      { source: "/api/downloads/r/:slug", destination: `${LIVE_DSD_ORIGIN}/api/downloads/r/:slug`, permanent: false },
+      { source: "/calendar", destination: "/minnesota-communities/calendar", permanent: false },
+      { source: "/work", destination: "/my-work", permanent: false },
       ...legacyCourseDataRedirects,
       // Owner decision 2026-11-21: The Water We Swim In is a reading now; the course pages open the essay.
       // Owner decision 2026-11-22: The Water We Swim In is removed entirely, essay included.
@@ -228,7 +240,7 @@ const nextConfig: NextConfig = {
       { source: "/(.*)", headers: securityHeaders },
       ...(process.env.PAC_CLONE_AGENTS === "on" ? [{ source: "/ask/:path*", headers: [
         { key: "Permissions-Policy", value: "camera=(), microphone=(self), geolocation=(), browsing-topics=()" },
-        { key: "Content-Security-Policy", value: contentSecurityPolicy + "; media-src 'self' blob:" },
+        { key: "Content-Security-Policy", value: contentSecurityPolicy + `; media-src 'self' blob: ${LIVE_DSD_MEDIA_HOST}` },
       ] }] : []),
       // Video URLs include the media hash, so reviewed copies can be cached safely.
       { source: "/videos/:path*", headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }] },
@@ -237,7 +249,7 @@ const nextConfig: NextConfig = {
       { source: "/videos/equity-toolkit-worked-example/:version/video-4k.mp4", headers: [{ key: "Content-Disposition", value: 'attachment; filename="Equity-Analysis-Toolkit-Worked-Example-4K.mp4"' }] },
       { source: "/learning/self-directed/data/:path*", headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }] },
       { source: "/embedded-tools/:path*", headers: [
-        { key: "Content-Security-Policy", value: contentSecurityPolicy.replace("frame-ancestors 'none'", "frame-ancestors 'self'") + "; media-src 'self' blob:" },
+        { key: "Content-Security-Policy", value: contentSecurityPolicy.replace("frame-ancestors 'none'", "frame-ancestors 'self'") + `; media-src 'self' blob: ${LIVE_DSD_MEDIA_HOST}` },
         { key: "X-Frame-Options", value: "SAMEORIGIN" },
       ] },
       // Only these public workspaces may appear inside this app's own pages.

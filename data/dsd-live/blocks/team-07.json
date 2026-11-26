@@ -1,0 +1,336 @@
+{
+ "id": "team-07",
+ "name": "Team track: Conflict, feedback and repair",
+ "kind": "courses",
+ "version": 1,
+ "owner": "Gary Banks",
+ "review_date": null,
+ "sort": 16,
+ "items": [
+  {
+   "id": "dc-t61-healthy-conflict-on-teams",
+   "kind": "course",
+   "title": "Healthy conflict on teams",
+   "level": "intermediate",
+   "topic": "conflict-across-cultures",
+   "competency": "leading-others",
+   "skill": "conflict resolution",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 1,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-t62-early-conversations-before-conflict-grows",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s85-navigating-conflict-across-difference",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-l75-leading-through-conflict-across-difference",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-i36-saying-no-and-disagreeing-across-cultures",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-t62-early-conversations-before-conflict-grows",
+   "kind": "course",
+   "title": "Early conversations before conflict grows",
+   "level": "intermediate",
+   "topic": "conflict-across-cultures",
+   "competency": "leading-others",
+   "skill": "conflict resolution",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 2,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-t63-peer-to-peer-feedback",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s85-navigating-conflict-across-difference",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-l75-leading-through-conflict-across-difference",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-i36-saying-no-and-disagreeing-across-cultures",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-t63-peer-to-peer-feedback",
+   "kind": "course",
+   "title": "Peer-to-peer feedback",
+   "level": "intermediate",
+   "topic": "feedback-across-difference",
+   "competency": "leading-others",
+   "skill": "talent development",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 3,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-t64-feedback-across-power-differences",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s86-giving-and-receiving-feedback-across-cultures",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-t64-feedback-across-power-differences",
+   "kind": "course",
+   "title": "Feedback across power differences",
+   "level": "intermediate",
+   "topic": "feedback-across-difference",
+   "competency": "leading-others",
+   "skill": "talent development",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 4,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-t65-separating-intent-and-impact",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s86-giving-and-receiving-feedback-across-cultures",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-t65-separating-intent-and-impact",
+   "kind": "course",
+   "title": "Separating intent and impact",
+   "level": "intermediate",
+   "topic": "harm-apology-and-repair",
+   "competency": "leading-others",
+   "skill": "conflict resolution; empathy",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 5,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-t66-supporting-a-team-after-a-harmful-incident",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s75-when-you-ve-caused-harm-apologizing-well",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-l76-responding-when-someone-says-that-was-harmful",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-i40-repairing-intercultural-misunderstandings",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-t66-supporting-a-team-after-a-harmful-incident",
+   "kind": "course",
+   "title": "Supporting a team after a harmful incident",
+   "level": "intermediate",
+   "topic": "harm-apology-and-repair",
+   "competency": "leading-others",
+   "skill": "conflict resolution; empathy",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 6,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-t67-team-repair-conversations",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s75-when-you-ve-caused-harm-apologizing-well",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-l76-responding-when-someone-says-that-was-harmful",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-i40-repairing-intercultural-misunderstandings",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-t67-team-repair-conversations",
+   "kind": "course",
+   "title": "Team repair conversations",
+   "level": "intermediate",
+   "topic": "harm-apology-and-repair",
+   "competency": "leading-others",
+   "skill": "conflict resolution; empathy",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 7,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-t68-when-to-seek-outside-help",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s75-when-you-ve-caused-harm-apologizing-well",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-l76-responding-when-someone-says-that-was-harmful",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-i40-repairing-intercultural-misunderstandings",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-t68-when-to-seek-outside-help",
+   "kind": "course",
+   "title": "When to seek outside help",
+   "level": "intermediate",
+   "topic": "harm-apology-and-repair",
+   "competency": "leading-others",
+   "skill": "conflict resolution; empathy",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 8,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-t69-conflict-between-teams-and-units",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s75-when-you-ve-caused-harm-apologizing-well",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-l76-responding-when-someone-says-that-was-harmful",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-i40-repairing-intercultural-misunderstandings",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-t69-conflict-between-teams-and-units",
+   "kind": "course",
+   "title": "Conflict between teams and units",
+   "level": "intermediate",
+   "topic": "conflict-across-cultures",
+   "competency": "leading-others",
+   "skill": "conflict resolution",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 9,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-t70-gossip-cliques-and-exclusion",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s85-navigating-conflict-across-difference",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-l75-leading-through-conflict-across-difference",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-i36-saying-no-and-disagreeing-across-cultures",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-t70-gossip-cliques-and-exclusion",
+   "kind": "course",
+   "title": "Gossip, cliques, and exclusion",
+   "level": "intermediate",
+   "topic": "everyday-team-communication",
+   "competency": "leading-self",
+   "skill": "emotional intelligence",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 10,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-t32-listening-to-understand",
+     "kind": "related",
+     "note": "Covers the same topic."
+    }
+   ]
+  }
+ ]
+}

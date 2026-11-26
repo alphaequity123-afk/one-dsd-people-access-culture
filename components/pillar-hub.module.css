@@ -1,72 +1,115 @@
-/* v2 rebuild: restrained light palette from the Nov 20 handoff — #F5F5F3 canvas, white surfaces,
-   Montserrat headings, Source Sans 3 body, one dark-slate primary action per screen. */
+/* v2 rebuild: pillar pages use the live One DSD look (owner decision 2026-11-25) — satin background, Aptos type,
+   navy headings, 3D cards with a navy accent line, and the navy pill action from the landing page. */
+.hub, .cards {
+  --od-navy: #003865;
+  --od-ink: #172b3c;
+  --od-muted: #43566a;
+  --od-link: #005793;
+  --u-navy: #0b2a4a;
+  --u-muted: #5a6b7d;
+  --u-tint: #f3f7fb;
+  --u-accent: #5f9a1a;
+  --s3-face: linear-gradient(180deg, #ffffff 0%, #fbfcfe 55%, #f5f8fb 100%);
+  --s3-line: #cdd9e5;
+  --s3-shadow: 0 1px 0 rgba(255,255,255,.95) inset, 0 2px 4px rgba(11,42,74,.08), 0 12px 24px -8px rgba(11,42,74,.16), 0 34px 64px -30px rgba(11,42,74,.42);
+  --s3-band: linear-gradient(180deg, #eef3f9, #e7eef7);
+  --satin: radial-gradient(1200px 600px at 15% -10%, rgba(255,255,255,.95), rgba(255,255,255,0) 60%), radial-gradient(900px 500px at 100% 20%, rgba(214,226,238,.55), rgba(214,226,238,0) 65%), linear-gradient(165deg, #f7f9fc 0%, #eef2f7 38%, #f6f8fb 62%, #ebeff5 100%);
+  color: var(--od-ink);
+  font-family: Aptos, "Aptos Display", "Segoe UI", Calibri, system-ui, -apple-system, Arial, sans-serif;
+}
 .hub {
-  --v2-canvas: #f5f5f3;
-  --v2-surface: #ffffff;
-  --v2-ink: #1f2a37;
-  --v2-muted: #4b5563;
-  --v2-line: #dcdcd7;
-  --v2-focus: #005793;
-  background: var(--v2-canvas);
-  color: var(--v2-ink);
-  font-family: var(--v2-body-font, "Source Sans 3", system-ui, sans-serif);
-  padding: 40px 16px 56px;
+  background-color: #f1f4f8;
+  background-image: var(--satin);
+  background-attachment: fixed;
+  line-height: 1.55;
+  padding: 28px 20px 48px;
 }
-.intro, .groups, .note { max-width: 1120px; margin: 0 auto; }
-.intro h1, .group h2 {
-  font-family: var(--v2-heading-font, "Montserrat", system-ui, sans-serif);
-  letter-spacing: -0.01em;
-  color: var(--v2-ink);
+.intro, .groups, .note { max-width: 1040px; margin: 0 auto; }
+.intro h1 {
+  margin: 0 0 6px;
+  font-family: inherit;
+  font-size: clamp(2rem, 4.4vw, 3rem);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -.02em;
+  color: var(--od-navy);
 }
-.intro h1 { font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 700; margin: 0 0 12px; }
-.lede { font-size: 1.2rem; line-height: 1.55; max-width: 46rem; margin: 0 0 24px; color: var(--v2-ink); }
+.lede { margin: 0 0 18px; max-width: 62ch; color: var(--od-muted); font-size: 1.12rem; }
 .primary {
-  display: inline-block;
-  background: var(--v2-ink);
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 10px 24px;
+  border-radius: 99px;
+  background: var(--od-navy);
   color: #fff !important;
   font-weight: 600;
-  padding: 12px 22px;
-  border-radius: 6px;
   text-decoration: none !important;
-  min-height: 44px;
+  box-shadow: 0 1px 0 rgba(255,255,255,.25) inset, 0 6px 14px -6px rgba(0,56,101,.55);
 }
-.primary:hover { background: #111827; }
-.primary:focus-visible, .group a:focus-visible { outline: 3px solid var(--v2-focus); outline-offset: 3px; }
+.primary::after { content: "\203A"; display: inline-block; margin-left: 7px; }
+.primary:hover { background: #17527d; }
+.primary:focus-visible, .group a:focus-visible { outline: 3px solid var(--od-link); outline-offset: 3px; }
 .groups {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
-  margin-top: 40px;
+  margin-top: 36px;
 }
 .group {
-  background: var(--v2-surface);
-  border: 1px solid var(--v2-line);
-  border-radius: 10px;
-  padding: 22px 22px 14px;
+  overflow: hidden;
+  background: var(--s3-face);
+  border: 1px solid var(--s3-line);
+  border-top: 3px solid var(--od-navy);
+  border-radius: 20px;
+  box-shadow: var(--s3-shadow);
 }
-.group h2 { font-size: 1.2rem; font-weight: 700; margin: 0 0 6px; }
-.groupIntro { color: var(--v2-muted); margin: 0 0 8px; }
-.group ul { list-style: none; margin: 0; padding: 0; }
-.group li + li { border-top: 1px solid var(--v2-line); }
+.group h2, .group h3 {
+  margin: 0;
+  padding: 14px 20px;
+  background: var(--s3-band);
+  border-bottom: 1px solid #d6e0eb;
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -.01em;
+  color: var(--u-navy);
+}
+.groupIntro { margin: 12px 20px 0; color: var(--u-muted); }
+.group ul { list-style: none; margin: 6px 0 0; padding: 0; }
+.group li + li { border-top: 1px solid #edf1f5; }
 .group a {
+  position: relative;
   display: block;
-  padding: 12px 0;
-  color: var(--v2-ink);
+  padding: 14px 40px 14px 20px;
+  color: var(--od-ink);
   text-decoration: none;
+  transition: background .15s ease;
 }
-.group a strong { display: block; color: #005793; font-weight: 600; }
-.group a:hover strong { text-decoration: underline; }
-.group a span { display: block; color: var(--v2-muted); font-size: 0.97rem; line-height: 1.45; margin-top: 2px; }
+.group a::after { content: "\203A"; position: absolute; right: 18px; top: 50%; transform: translateY(-50%); font-size: 1.15rem; color: #8a9aab; transition: transform .15s ease, color .15s ease; }
+.group a:hover { background: var(--u-tint); }
+.group a:hover::after { color: var(--u-navy); transform: translate(2px, -50%); }
+.group a strong { display: block; font-weight: 600; color: var(--u-navy); }
+.group a strong::before { content: ""; display: inline-block; width: 7px; height: 7px; margin-right: 9px; vertical-align: middle; border-radius: 50%; background: var(--u-accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--u-accent) 16%, transparent); }
+.group a span { display: block; padding-left: 16px; margin-top: 2px; color: var(--od-muted); font-size: .9375rem; }
 .note {
-  margin-top: 32px;
-  border-left: 4px solid var(--v2-ink);
-  background: var(--v2-surface);
-  padding: 14px 18px;
-  border-radius: 0 8px 8px 0;
+  margin-top: 28px;
+  padding: 16px 20px;
+  background: var(--s3-face);
+  border: 1px solid var(--s3-line);
+  border-left: 4px solid var(--od-navy);
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(11,42,74,.05);
 }
-.note p { margin: 0; }
+.note p { margin: 0; color: var(--od-ink); }
 .note div + p { margin-top: 10px; }
+@media (prefers-reduced-motion: reduce) { .group a, .group a::after { transition: none; } }
 @media print {
   .hub { background: #fff; padding: 0; }
-  .group { break-inside: avoid; }
+  .group { break-inside: avoid; box-shadow: none; }
 }
+
+/* The same cards inside an existing page (Practice). */
+.cards .groups { max-width: none; margin-top: 12px; }
+.cards > h2 { margin: 0 0 4px; font-size: 1.5rem; font-weight: 600; color: var(--u-navy); }
+.cards > p { margin: 0 0 8px; color: var(--od-muted); max-width: 62ch; }

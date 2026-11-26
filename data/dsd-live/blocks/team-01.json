@@ -1,0 +1,248 @@
+{
+ "id": "team-01",
+ "name": "Team track: Team culture",
+ "kind": "courses",
+ "version": 1,
+ "owner": "Gary Banks",
+ "review_date": null,
+ "sort": 10,
+ "items": [
+  {
+   "id": "dc-t1-what-makes-a-dsd-team-inclusive",
+   "kind": "course",
+   "title": "What makes a DSD team inclusive",
+   "level": "intermediate",
+   "topic": "what-an-inclusive-team-culture-is",
+   "competency": "leading-with-deai",
+   "skill": "creating a culture of inclusion",
+   "priority": "starting_point",
+   "alignment": "needs_revision",
+   "sequence": 1,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-t2-culture-is-what-we-do-every-day",
+     "kind": "next_step",
+     "note": "Next in this block."
+    }
+   ]
+  },
+  {
+   "id": "dc-t2-culture-is-what-we-do-every-day",
+   "kind": "course",
+   "title": "Culture is what we do every day",
+   "level": "intermediate",
+   "topic": "what-an-inclusive-team-culture-is",
+   "competency": "leading-with-deai",
+   "skill": "creating a culture of inclusion",
+   "priority": "starting_point",
+   "alignment": "needs_revision",
+   "sequence": 2,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-t3-belonging-at-work-what-it-is-and-why-it-matters",
+     "kind": "next_step",
+     "note": "Next in this block."
+    }
+   ]
+  },
+  {
+   "id": "dc-t3-belonging-at-work-what-it-is-and-why-it-matters",
+   "kind": "course",
+   "title": "Belonging at work: what it is and why it matters",
+   "level": "intermediate",
+   "topic": "belonging",
+   "competency": "leading-with-deai",
+   "skill": "creating a culture of inclusion",
+   "priority": "starting_point",
+   "alignment": "needs_revision",
+   "sequence": 3,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-t4-respectful-workplace-policy-in-team-life",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s80-belonging-on-hybrid-teams",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-t4-respectful-workplace-policy-in-team-life",
+   "kind": "course",
+   "title": "Respectful Workplace Policy in team life",
+   "level": "intermediate",
+   "topic": "respectful-workplace-harassment-and-retaliation",
+   "competency": "leading-self",
+   "skill": "integrity",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 4,
+   "all_job_families": true,
+   "job_families": [
+    "enterprise-services"
+   ],
+   "links": [
+    {
+     "to": "dc-t5-naming-your-team-s-unwritten-rules",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s81-the-respectful-workplace-policy-for-staff",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-l71-leaders-duties-under-the-respectful-workplace-po",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-t5-naming-your-team-s-unwritten-rules",
+   "kind": "course",
+   "title": "Naming your team's unwritten rules",
+   "level": "intermediate",
+   "topic": "what-an-inclusive-team-culture-is",
+   "competency": "leading-with-deai",
+   "skill": "creating a culture of inclusion",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 5,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-t6-team-values-that-guide-real-decisions",
+     "kind": "next_step",
+     "note": "Next in this block."
+    }
+   ]
+  },
+  {
+   "id": "dc-t6-team-values-that-guide-real-decisions",
+   "kind": "course",
+   "title": "Team values that guide real decisions",
+   "level": "intermediate",
+   "topic": "what-an-inclusive-team-culture-is",
+   "competency": "leading-with-deai",
+   "skill": "creating a culture of inclusion",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 6,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-t7-everyone-shapes-culture-not-just-leaders",
+     "kind": "next_step",
+     "note": "Next in this block."
+    }
+   ]
+  },
+  {
+   "id": "dc-t7-everyone-shapes-culture-not-just-leaders",
+   "kind": "course",
+   "title": "Everyone shapes culture, not just leaders",
+   "level": "intermediate",
+   "topic": "your-role-in-equity-and-where-to-get-help",
+   "competency": "leading-self",
+   "skill": "integrity; self-awareness",
+   "priority": "starting_point",
+   "alignment": "needs_revision",
+   "sequence": 7,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-t8-leaders-as-culture-carriers",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s6-your-role-in-equity-whatever-your-job",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-l2-from-commitment-to-practice-building-equity-into",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-t8-leaders-as-culture-carriers",
+   "kind": "course",
+   "title": "Leaders as culture carriers",
+   "level": "intermediate",
+   "topic": "what-an-inclusive-team-culture-is",
+   "competency": "leading-with-deai",
+   "skill": "creating a culture of inclusion",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 8,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-t9-assessing-your-team-s-culture",
+     "kind": "next_step",
+     "note": "Next in this block."
+    }
+   ]
+  },
+  {
+   "id": "dc-t9-assessing-your-team-s-culture",
+   "kind": "course",
+   "title": "Assessing your team's culture",
+   "level": "intermediate",
+   "topic": "what-an-inclusive-team-culture-is",
+   "competency": "leading-with-deai",
+   "skill": "creating a culture of inclusion",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 9,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-t10-connecting-team-culture-to-the-people-dsd-serves",
+     "kind": "next_step",
+     "note": "Next in this block."
+    }
+   ]
+  },
+  {
+   "id": "dc-t10-connecting-team-culture-to-the-people-dsd-serves",
+   "kind": "course",
+   "title": "Connecting team culture to the people DSD serves",
+   "level": "intermediate",
+   "topic": "what-an-inclusive-team-culture-is",
+   "competency": "leading-with-deai",
+   "skill": "creating a culture of inclusion",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 10,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-t1-what-makes-a-dsd-team-inclusive",
+     "kind": "related",
+     "note": "Covers the same topic."
+    }
+   ]
+  }
+ ]
+}
