@@ -1,0 +1,64 @@
+{
+  "id": "approved-eight-character-voices-20261126",
+  "approvedOn": "2026-11-26",
+  "engine": "Qwen3-TTS local",
+  "characters": {
+    "C1": {
+      "name": "Brian",
+      "referenceFile": "reference-cast-1.wav",
+      "sha256": "d115810358ce9e2eee93c4361063fc6cfc69c9d7e2e0c788437599b2b0843279"
+    },
+    "C2": {
+      "name": "LaToya",
+      "referenceFile": "reference-cast-2.wav",
+      "sha256": "a634f1230c5c546a7e6696991e92864f47fd0012f76a569a73a2d81a869db24e"
+    },
+    "C3": {
+      "name": "Kelly",
+      "referenceFile": "reference-2.wav",
+      "sha256": "cfb9359a42e980dd839fa62eb1a7f7a49912f7fb7d3f33f72a205acfb89fb546"
+    },
+    "C4": {
+      "name": "John",
+      "referenceFile": "reference-1.wav",
+      "sha256": "b66b1c34a6aa25d52d47c1f51ff2e2fd0ebf7da16ef4b9a8afa85aa802e8ba86"
+    },
+    "C5": {
+      "name": "Susan",
+      "referenceFile": "reference-cast-5.wav",
+      "sha256": "975c77f4585a6dc133d4605a966c864a2258d8d5296cbcac42e1486608662fd1"
+    },
+    "C6": {
+      "name": "Robert",
+      "referenceFile": "reference-cast-6.wav",
+      "sha256": "8fc5e6ec6c27bf2e8eef03715cade0bb6828c0f6fa55e3b7124bfd28d0d91801"
+    },
+    "C7": {
+      "name": "Takoda",
+      "referenceFile": "reference-cast-7.wav",
+      "sha256": "2cbd0c5d7b82ac1b2a42f625808748fc56f29a979ebe2905c8c027ed8c9a12a0"
+    },
+    "C8": {
+      "name": "Noor",
+      "referenceFile": "reference-cast-8.wav",
+      "sha256": "5b9cb65d7f7ff739fabf8e82676107eea5f7b63fec7e849121555b35afc14a70"
+    }
+  },
+  "podcastSpeakers": {
+    "host1": "C3",
+    "geffen": "C4"
+  },
+  "note": "Legacy script speaker IDs are retained for compatibility. In this profile geffen means John for podcast dialogue only; the separate GEFen read-aloud service is unchanged.",
+  "twoVoicePodcastPolicy": {
+    "scope": "All One DSD and One DHS training and module podcasts with two voices",
+    "requiredCharacters": [
+      "C3",
+      "C4"
+    ],
+    "requiredNames": [
+      "Kelly",
+      "John"
+    ],
+    "rule": "Every training or module that requires a two-voice podcast uses Kelly (C3) and John (C4). This applies across One DSD and One DHS, including existing podcasts being updated and all future two-voice podcasts."
+  }
+}
