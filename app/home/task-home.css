@@ -98,3 +98,64 @@ body.dsd-calm .od .home-hero-image{display:block;width:100%;max-width:none;heigh
 @media (prefers-reduced-motion: reduce), print {
   .home-hero-video[data-visible="true"] { visibility: hidden; }
 }
+
+/* Calm refresh (2026-11): fewer sections, lighter borders and one filled button per screen. */
+.dsd-home .pilot-pathways li, .dsd-home .pilot-list, .dsd-home .home-tasks { border-radius: 16px; border-color: #d9dfe5; }
+.dsd-home .pilot-section h2 { font-size: 1.375rem; }
+
+.dsd-home .home-tasks { margin-top: 28px; padding: 24px; border: 1px solid #d9dfe5; background: #fff; }
+.dsd-home .home-tasks h2 { margin: 0; font-size: 1.5rem; font-weight: 600; line-height: 1.2; color: var(--od-ink); }
+.dsd-home .home-tasks-lede { margin: 6px 0 0; color: var(--od-muted); }
+.dsd-home .home-task-grid { display: grid; gap: 10px; margin: 18px 0 0; padding: 0; list-style: none; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+.dsd-home .home-task {
+  width: 100%;
+  height: 100%;
+  min-height: 64px;
+  padding: 12px 16px;
+  border: 1.5px solid #c3ccd6;
+  border-radius: 12px;
+  background: #fff;
+  color: var(--od-ink);
+  font: inherit;
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: left;
+  cursor: pointer;
+}
+.dsd-home .home-task:hover { border-color: var(--od-navy); background: #f7f9fb; }
+body.dsd-calm main .dsd-home .home-task[aria-pressed="true"] { border-color: var(--od-navy); border-left-width: 6px; padding-left: 12px; background: var(--od-soft); color: var(--od-ink); }
+.dsd-home .home-task:focus-visible { outline: 3px solid var(--od-link); outline-offset: 2px; }
+.dsd-home .home-task-answer { margin-top: 16px; padding: 18px 20px; border: 1px solid #d9dfe5; border-left: 4px solid var(--od-navy); border-radius: 12px; background: #fbfcfd; }
+.dsd-home .home-task-answer h3 { margin: 0; font-size: 1.2rem; font-weight: 600; }
+.dsd-home .home-task-answer p { margin: 6px 0 14px; color: var(--od-muted); max-width: 68ch; }
+.dsd-home .home-task-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 20px; }
+.dsd-home .home-task-actions a { display: inline-flex; align-items: center; min-height: 44px; color: var(--od-link); text-decoration: underline; text-underline-offset: 3px; }
+.dsd-calm main .dsd-home .home-task-actions a.home-task-primary { padding: 10px 22px; border-radius: 99px; background: var(--od-navy); color: #fff; font-weight: 600; text-decoration: none; }
+.dsd-calm main .dsd-home .home-task-actions a.home-task-primary:hover { background: #17527d; color: #fff; }
+.dsd-home .home-tasks-new { margin: 14px 0 0; }
+.dsd-home .home-tasks-new a { display: inline-flex; align-items: center; min-height: 44px; color: var(--od-link); text-decoration: underline; text-underline-offset: 3px; }
+
+.dsd-home .home-pair { display: grid; gap: 20px; }
+.dsd-home .home-pair > * { min-width: 0; }
+.dsd-home .home-pair .pilot-section-heading h2 { margin-bottom: 14px; }
+@media (min-width: 860px) { .dsd-home .home-pair { grid-template-columns: 1fr 1fr; align-items: stretch; } }
+
+@media (forced-colors: active) {
+  body.dsd-calm main .dsd-home .home-task[aria-pressed="true"] { border-left-width: 6px; border-color: Highlight; }
+}
+
+/* Beside "Coming up", the featured collection uses a small photo so the two boxes stay balanced. */
+@media (min-width: 480px) {
+  .dsd-home .home-feature > section { grid-template-columns: 160px 1fr; align-items: center; }
+  .dsd-home .home-feature > section img { aspect-ratio: 4/3; }
+}
+
+/* This week's course: the one part of the page that changes. */
+.dsd-home .home-weekly-card { display: grid; gap: 14px; padding: 18px; border: 1px solid #d9dfe5; border-radius: 16px; background: #fff; }
+.dsd-home .home-weekly-card img { display: block; width: 100%; height: auto; aspect-ratio: 16/9; object-fit: cover; border-radius: 10px; background: var(--od-soft); }
+.dsd-home .home-weekly-card > div { display: grid; gap: 8px; justify-items: start; align-content: center; }
+@media (min-width: 640px) { .dsd-home .home-weekly-card { grid-template-columns: 300px 1fr; gap: 24px; align-items: center; } }
+.dsd-home .home-weekly-card h3 { margin: 0; font-size: 1.2rem; font-weight: 600; line-height: 1.25; }
+.dsd-home .home-weekly-card p { margin: 0; color: var(--od-muted); }
+.dsd-home .home-weekly-card .home-weekly-level { font-size: .875rem; font-weight: 600; color: var(--od-link); }
+.dsd-home .home-pair .pilot-section-heading a { min-height: 44px; }
