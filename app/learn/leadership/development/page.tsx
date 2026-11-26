@@ -8,7 +8,7 @@ import { AskForm } from "@/components/dsd-live/ask-form";
 export const metadata = { title: PROGRAM_TITLE };
 export default function DevelopmentHome() {
   return <>
-    <nav aria-label="Breadcrumb" className="crumbs"><Link href="/learn/leadership">{currentUnit().short} Leadership</Link> › Development program</nav>
+    <nav aria-label="Breadcrumb" className="crumbs"><Link href="/learn/leadership">{currentUnit().short} Leadership</Link> / Development program</nav>
     <header className="development-hero development-intro"><div><p className="development-kicker">Leadership development</p><h1>{PROGRAM_TITLE}</h1>
       <p>Develop the judgment and skills to use authority responsibly, work across cultural differences and change conditions that limit opportunity and access.</p>
       <p>Begin with a decision you can influence. Practice with a case, apply a tool, and return to what happened. Build toward changes in how teams, programs and the organization work.</p>

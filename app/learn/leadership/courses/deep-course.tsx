@@ -22,7 +22,7 @@ export default function DeepCoursePage({ c }: { c: DeepCourse }) {
   return (
     <>
       <nav className="crumbs" aria-label="Breadcrumb">
-        <Link href="/learn">Learn</Link> › <Link href={root}>Leadership courses</Link> ›
+        <Link href="/learn">Learn</Link> / <Link href={root}>Leadership courses</Link> ›
         Course
       </nav>
       <header className="lo-course-heading">

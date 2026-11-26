@@ -6,7 +6,7 @@ import reference from "@/data/organization/minnesota-dhs.json";
 
 export function OrganizationBreadcrumb({ items }: { items: { label: string; href?: string }[] }) {
   return <nav aria-label="Organization breadcrumb" className="mb-7 text-sm"><ol className="flex list-none flex-wrap items-center gap-2 p-0">
-    {items.map((item, index) => <li key={item.label} className="flex items-center gap-2">{index > 0 && <span aria-hidden="true">›</span>}{item.href ? <Link href={item.href}>{item.label}</Link> : <span aria-current="page">{item.label}</span>}</li>)}
+    {items.map((item, index) => <li key={item.label} className="flex items-center gap-2">{index > 0 && <span aria-hidden="true">/</span>}{item.href ? <Link href={item.href}>{item.label}</Link> : <span aria-current="page">{item.label}</span>}</li>)}
   </ol></nav>;
 }
 

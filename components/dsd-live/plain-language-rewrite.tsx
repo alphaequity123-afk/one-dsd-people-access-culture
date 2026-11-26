@@ -14,7 +14,7 @@ function Measures({ text, label }: { text: string; label: string }) {
   return <dl className="rewrite-measures" aria-label={label}>
     <div><dt>Words</dt><dd>{words(text)}</dd></div>
     <div><dt>Longest sentence</dt><dd>{longestSentence(text)} words</dd></div>
-    <div><dt>Harder words</dt><dd>{hard.length ? hard.map(([w, plain]) => <span key={w} className="rewrite-hard" title={`Try: ${plain}`}>{w} <small>→ {plain}</small></span>) : "None found"}</dd></div>
+    <div><dt>Harder words</dt><dd>{hard.length ? hard.map(([w, plain]) => <span key={w} className="rewrite-hard" title={`Try: ${plain}`}>{w} <small>(try: {plain})</small></span>) : "None found"}</dd></div>
   </dl>;
 }
 

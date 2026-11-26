@@ -90,7 +90,7 @@
 .group a:hover { background: var(--u-tint); }
 .group a:hover::after { color: var(--u-navy); transform: translate(2px, -50%); }
 .group a strong { display: block; font-weight: 600; color: var(--u-navy); }
-.group a strong::before { content: ""; display: inline-block; width: 7px; height: 7px; margin-right: 9px; vertical-align: middle; border-radius: 50%; background: var(--u-accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--u-accent) 16%, transparent); }
+
 .group a span { display: block; padding-left: 16px; margin-top: 2px; color: var(--od-muted); font-size: .9375rem; }
 .note {
   margin-top: 28px;

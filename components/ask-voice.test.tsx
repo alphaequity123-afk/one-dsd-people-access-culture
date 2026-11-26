@@ -47,33 +47,34 @@ it("delivers a completed recording to the latest committed dictation callback", 
   const latest = vi.fn();
   const question = vi.fn(async () => undefined);
   await act(async () => { root.render(<AskVoice busy={false} onDictation={first} onQuestion={question} />); });
-  const button = (label: string) => Array.from(document.querySelectorAll("button")).find(item => item.textContent === label)!;
-  expect(button("Dictate question").disabled).toBe(false);
-  await act(async () => { button("Dictate question").click(); });
+  const button = (label: string) => Array.from(document.querySelectorAll("button")).find(item => (item.getAttribute("aria-label") ?? item.textContent) === label)!;
+  expect(button("Speak your question").disabled).toBe(false);
+  await act(async () => { button("Speak your question").click(); });
   await act(async () => { root.render(<AskVoice busy={false} onDictation={latest} onQuestion={question} />); });
-  await act(async () => { button("Finish speaking").click(); });
+  await act(async () => { button("Done speaking").click(); });
   expect(first).not.toHaveBeenCalled();
   expect(latest).toHaveBeenCalledWith("A general question");
 });
 
-const control = (label: string) => Array.from(document.querySelectorAll("button")).find(item => item.textContent === label);
+const control = (label: string) => Array.from(document.querySelectorAll("button")).find(item => (item.getAttribute("aria-label") ?? item.textContent) === label);
 
-it("shows the voice controls as icons that keep their names for screen readers and as tooltips", async () => {
+it("shows the voice controls as short words, with a fuller name for screen readers", async () => {
   await act(async () => { root.render(<AskVoice busy={false} onDictation={vi.fn()} onQuestion={vi.fn(async () => undefined)} latestAnswer="An answer." />); });
-  for (const name of ["Dictate question", "Talk with Ask", "Listen to answer"]) {
+  for (const [word, name] of [["Speak", "Speak your question"], ["Talk", "Talk with Ask"], ["Listen", "Listen to the answer"]]) {
     const found = control(name);
     expect(found, name).toBeDefined();
-    expect(found!.title).toBe(name);
-    expect(found!.querySelector("svg[aria-hidden='true']"), name).not.toBeNull();
+    expect(found!.textContent).toBe(word);
+    expect(name.startsWith(word)).toBe(true);
+    expect(found!.querySelector("svg"), name).toBeNull();
     expect(found!.getAttribute("type")).toBe("button");
   }
 });
 
 it("offers dictation alone on the landing page, and leaves the microphone out when dictation cannot work", async () => {
   await act(async () => { root.render(<AskVoice mode="dictate" busy={false} onDictation={vi.fn()} onQuestion={vi.fn(async () => undefined)} latestAnswer="An answer." />); });
-  expect(control("Dictate question")).toBeDefined();
+  expect(control("Speak your question")).toBeDefined();
   expect(control("Talk with Ask")).toBeUndefined();
-  expect(control("Listen to answer")).toBeUndefined();
+  expect(control("Listen to the answer")).toBeUndefined();
   await act(async () => root.unmount());
   root = createRoot(document.getElementById("root")!);
   vi.stubGlobal("fetch", vi.fn(async () => new Response(JSON.stringify({ transcription: false, speech: false, paused: false }))));
@@ -86,10 +87,10 @@ it("offers dictation alone on the landing page, and leaves the microphone out wh
 it("puts the read-aloud control under the latest answer when the page gives it a place", async () => {
   const slot = document.createElement("span"); document.body.appendChild(slot);
   await act(async () => { root.render(<AskVoice busy={false} onDictation={vi.fn()} onQuestion={vi.fn(async () => undefined)} latestAnswer="An answer." listenSlot={slot} />); });
-  expect(slot.querySelector("button")?.textContent).toBe("Listen to answer");
-  expect(document.getElementById("root")!.textContent).not.toContain("Listen to answer");
+  expect(slot.querySelector("button")?.getAttribute("aria-label")).toBe("Listen to the answer");
+  expect(document.getElementById("root")!.querySelector("[aria-label='Listen to the answer']")).toBeNull();
   await act(async () => { root.render(<AskVoice busy={false} onDictation={vi.fn()} onQuestion={vi.fn(async () => undefined)} latestAnswer="An answer." listenSlot={null} />); });
-  expect(control("Listen to answer")).toBeUndefined();
+  expect(control("Listen to the answer")).toBeUndefined();
 });
 
 class BrowserRecognition {
@@ -120,8 +121,8 @@ function browserSpeech(services = { transcription: false, speech: false, paused:
 it("shows the words in the question box while the person is still speaking, using the browser's own speech", async () => {
   browserSpeech(); const dictation = vi.fn();
   await act(async () => { root.render(<AskVoice busy={false} onDictation={dictation} onQuestion={vi.fn(async () => undefined)} />); });
-  expect(control("Dictate question")!.disabled).toBe(false);
-  await act(async () => { control("Dictate question")!.click(); });
+  expect(control("Speak your question")!.disabled).toBe(false);
+  await act(async () => { control("Speak your question")!.click(); });
   const listening = BrowserRecognition.latest;
   expect(listening.interimResults).toBe(true);
   await act(async () => { listening.hear("How do I plan", false); });
@@ -134,9 +135,9 @@ it("shows the words in the question box while the person is still speaking, usin
 it("never substitutes a browser voice when Geffen is offline", async () => {
   const synthesis = browserSpeech();
   await act(async () => { root.render(<AskVoice busy={false} onDictation={vi.fn()} onQuestion={vi.fn(async () => undefined)} latestAnswer="An answer." />); });
-  expect(control("Listen to answer")!.disabled).toBe(true);
+  expect(control("Listen to the answer")!.disabled).toBe(true);
   expect(control("Talk with Ask")!.disabled).toBe(true);
-  expect(control("Dictate question")!.disabled).toBe(false);
+  expect(control("Speak your question")!.disabled).toBe(false);
   expect(synthesis.speak).not.toHaveBeenCalled();
 });
 
@@ -146,7 +147,7 @@ it("keeps the written answer without switching voices when Geffen rejects playba
     ? new Response(JSON.stringify({ error: "Geffen is busy. Please try again." }), { status: 503 })
     : new Response(JSON.stringify({ transcription: true, speech: true, paused: false }))));
   await act(async () => { root.render(<AskVoice busy={false} onDictation={vi.fn()} onQuestion={vi.fn(async () => undefined)} latestAnswer="An answer." />); });
-  await act(async () => { control("Listen to answer")!.click(); });
+  await act(async () => { control("Listen to the answer")!.click(); });
   expect(synthesis.speak).not.toHaveBeenCalled();
   expect(document.body.textContent).toContain("Geffen is busy. Please try again.");
 });
@@ -162,8 +163,8 @@ it("shows a muted microphone icon until the microphone is allowed, with no Allow
   await act(async () => { root.render(<AskVoice busy={false} onDictation={vi.fn()} onQuestion={vi.fn(async () => undefined)} />); });
   await settle();
   expect(document.body.textContent).not.toContain("Allow microphone");
-  expect(control("Dictate question (microphone is off; select to turn it on)")!.title).toBe("Microphone is off. Select to turn it on and dictate");
-  await act(async () => { control("Dictate question (microphone is off; select to turn it on)")!.click(); });
+  expect(control("Speak your question (the microphone is off; select to turn it on)")!.textContent).toBe("Speak");
+  await act(async () => { control("Speak your question (the microphone is off; select to turn it on)")!.click(); });
   await settle();
   expect(asked).toHaveBeenCalledWith({ audio: true });
   expect(BrowserRecognition.latest.start).toHaveBeenCalledOnce();
@@ -175,7 +176,7 @@ it("explains a blocked microphone after a press and does not start listening", a
   await act(async () => { root.render(<AskVoice busy={false} onDictation={vi.fn()} onQuestion={vi.fn(async () => undefined)} />); });
   await settle();
   expect(document.body.textContent).not.toContain("Allow microphone");
-  await act(async () => { control("Dictate question (microphone is off; select to turn it on)")!.click(); });
+  await act(async () => { control("Speak your question (the microphone is off; select to turn it on)")!.click(); });
   await settle();
   expect(BrowserRecognition.latest).toBeUndefined();
   expect(document.body.textContent).toContain("The microphone is blocked for this site");
@@ -185,11 +186,11 @@ it("shows the plain microphone once it is allowed, and mutes spoken answers from
   browserSpeech({ transcription: true, speech: true, paused: false }); micState("granted");
   await act(async () => { root.render(<AskVoice busy={false} onDictation={vi.fn()} onQuestion={vi.fn(async () => undefined)} latestAnswer="An answer." />); });
   await settle();
-  expect(control("Dictate question")).toBeDefined();
+  expect(control("Speak your question")).toBeDefined();
   await act(async () => { control("Mute spoken answers")!.click(); });
-  expect(control("Spoken answers are muted. Select to turn sound on")!.getAttribute("aria-pressed")).toBe("true");
+  expect(control("Unmute spoken answers")!.getAttribute("aria-pressed")).toBe("true");
   expect(window.localStorage.getItem("ask-voice-muted")).toBe("1");
-  await act(async () => { control("Spoken answers are muted. Select to turn sound on")!.click(); });
+  await act(async () => { control("Unmute spoken answers")!.click(); });
   expect(control("Mute spoken answers")!.getAttribute("aria-pressed")).toBe("false");
 });
 
@@ -201,10 +202,10 @@ it("does not play an in-flight speech response after muting and unmuting", async
     : new Response(JSON.stringify({ transcription: true, speech: true, paused: false }))));
   const player = vi.fn(); vi.stubGlobal("Audio", player);
   await act(async () => { root.render(<AskVoice busy={false} onDictation={vi.fn()} onQuestion={vi.fn(async () => undefined)} latestAnswer="An answer." />); });
-  await act(async () => { control("Listen to answer")!.click(); });
+  await act(async () => { control("Listen to the answer")!.click(); });
   await act(async () => { control("Mute spoken answers")!.click(); });
-  await act(async () => { control("Spoken answers are muted. Select to turn sound on")!.click(); });
+  await act(async () => { control("Unmute spoken answers")!.click(); });
   await act(async () => { finish(new Response('{"audio":"UklGRg=="}\n{"done":true}\n')); });
   expect(player).not.toHaveBeenCalled();
-  expect(control("Listen to answer")).toBeDefined();
+  expect(control("Listen to the answer")).toBeDefined();
 });

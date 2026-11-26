@@ -384,7 +384,7 @@
 /* Disability services in practice: four groups as cards */
 .dsd-live .practice-groups section { background: #fff; border: 1px solid var(--u-line); border-radius: var(--u-radius-md); box-shadow: var(--u-shadow); padding: 18px 20px; }
 .dsd-live .practice-groups ul { list-style: none; padding-left: 0; }
-.dsd-live .practice-groups li::before { content: ""; display: inline-block; width: 7px; height: 7px; margin-right: 10px; vertical-align: middle; border-radius: 50%; background: var(--u-accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--u-accent) 16%, transparent); }
+
 .dsd-live .practice-sources { background: #fff; border: 1px solid var(--u-line); border-radius: var(--u-radius-md); padding: 14px 20px; }
 
 @media (prefers-reduced-motion: reduce) {
@@ -406,7 +406,7 @@
 .dsd-live .style-page #helps, .dsd-live .style-page #do { background: #fff; border: 1px solid var(--u-line); border-radius: var(--u-radius); box-shadow: var(--u-shadow); padding: 1.4rem 1.6rem .8rem; }
 .dsd-live .style-page .style-point { border-left: 0; padding: 12px 0 4px; }
 .dsd-live .style-page .style-point + .style-point { border-top: 1px solid var(--u-row-line); }
-.dsd-live .style-page .style-point h3::before { content: ""; display: inline-block; width: 8px; height: 8px; margin-right: 10px; vertical-align: middle; border-radius: 50%; background: #8a9aab; }
+
 .dsd-live .style-page .style-point-help h3::before { background: #3f7a0e; box-shadow: 0 0 0 3px rgba(63,122,14,.16); }
 .dsd-live .style-page .style-point-risk h3::before { background: #c9603f; box-shadow: 0 0 0 3px rgba(201,96,63,.16); }
 .dsd-live .style-page .style-next { border-top: 0; }

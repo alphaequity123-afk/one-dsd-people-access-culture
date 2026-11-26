@@ -14,8 +14,7 @@
 .ask-voice-options { order: 10; flex: 1 1 100%; margin: 0 0 4px; font-size: .85rem; color: #42525f; text-align: left; }
 .ask-voice-options select { font: inherit; margin-left: 6px; }
 
-button.ask-icon.ask-icon { display: inline-flex; align-items: center; justify-content: center; flex: none; width: 40px; height: 40px; min-height: 0; margin: 0; padding: 0; border: 0; border-radius: 999px; background: transparent; color: #33475b; font: inherit; cursor: pointer; transition: background-color .15s ease, color .15s ease; }
-button.ask-icon.ask-icon svg { width: 21px; height: 21px; }
+button.ask-icon.ask-icon { display: inline-flex; align-items: center; justify-content: center; flex: none; min-width: 44px; height: 40px; min-height: 0; margin: 0; padding: 0 12px; border: 0; border-radius: 999px; white-space: nowrap; background: transparent; color: #33475b; font: inherit; font-size: .9rem; font-weight: 600; cursor: pointer; transition: background-color .15s ease, color .15s ease; }
 button.ask-icon.ask-icon:hover:not(:disabled) { background: #e7edf2; color: #003865; }
 button.ask-icon.ask-icon:focus-visible { outline: 3px solid #003865; outline-offset: 2px; box-shadow: 0 0 0 2px #fff; }
 button.ask-icon.ask-icon:disabled { opacity: .4; cursor: not-allowed; }

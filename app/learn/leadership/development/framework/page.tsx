@@ -4,7 +4,7 @@ import { ORIENTATIONS, PROGRAM_ROOT, SOURCES } from "@/lib/dsd-live/leadership/d
 import { AskForm } from "@/components/dsd-live/ask-form";
 export const metadata = { title: "Intercultural development and leadership: the crosswalk" };
 export default function FrameworkPage() {
-  return <><nav className="crumbs" aria-label="Breadcrumb"><Link href={PROGRAM_ROOT}>Inclusive leadership in practice</Link> › Intercultural crosswalk</nav>
+  return <><nav className="crumbs" aria-label="Breadcrumb"><Link href={PROGRAM_ROOT}>Inclusive leadership in practice</Link> / Intercultural crosswalk</nav>
     <header className="development-hero"><h1>Intercultural development belongs in every leadership decision</h1><p>Explore how different ways of interpreting cultural similarities and differences can shape a leadership decision. Then practice a response that makes participation and access possible.</p></header>
     <section className="development-reading"><h2>What the framework contributes</h2><p>The Intercultural Development Inventory (IDI) uses the Intercultural Development Continuum to describe approaches to cultural similarities and differences. The cases here show how those approaches can inform leadership decisions.</p><p>Your IDI results, debrief and development plan are yours to reflect on privately. These examples help you explore the framework; they cannot identify anyone's orientation.</p></section>
     <section><h2>Five orientations, questions for practice</h2>{ORIENTATIONS.map(o => <article key={o.id} className="development-stage" id={o.id}><h3>{o.name}</h3><p>{o.meaning}</p><p><strong>Ask:</strong> {o.question}</p><p><strong>Practice:</strong> {o.practice}</p></article>)}</section>

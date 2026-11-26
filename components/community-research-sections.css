@@ -1,8 +1,8 @@
 /* Full community research set. Builds on the community-editorial reading styles. */
 .community-editorial .community-research-disclosure>summary{position:relative;display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 12px;padding-left:26px}
 /* A flex summary loses the browser's disclosure triangle, so this draws the open and closed state. */
-.community-editorial .community-research-disclosure>summary::before{content:"";position:absolute;left:6px;top:16px;width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(-45deg)}
-.community-editorial .community-research-disclosure[open]>summary::before{top:13px;transform:rotate(45deg)}
+
+
 .community-editorial .community-research-disclosure>summary>:is(h3,h4){display:inline;margin:0;font-size:19px;line-height:1.4;font-weight:600;color:#254b63}
 .community-editorial .community-research-disclosure>summary>span{font-size:15px;font-weight:400;color:#426174}
 .community-editorial .community-research-story{display:grid;grid-template-columns:200px minmax(0,1fr);gap:28px;align-items:start}

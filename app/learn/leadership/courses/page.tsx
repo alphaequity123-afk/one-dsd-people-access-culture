@@ -11,8 +11,8 @@ export default function LeadershipCourses() {
   return (
     <>
       <nav className="crumbs" aria-label="Breadcrumb">
-        <Link href="/learn">Learn</Link> ›{" "}
-        <Link href="/learn/leadership">One DSD Leadership</Link> › Leadership
+        <Link href="/learn">Learn</Link> /{" "}
+        <Link href="/learn/leadership">One DSD Leadership</Link> / Leadership
         courses
       </nav>
       <div className="leadership-hero lo-hero">

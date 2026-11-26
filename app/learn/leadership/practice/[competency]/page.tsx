@@ -16,7 +16,7 @@ export default async function Simulation({ params }: Props) {
   const item = practiceCases.find(value => value.id === areaIdFromSlug(competency));
   if (!item) notFound();
   return <article className="leadership-section article-layout">
-    <nav className="crumbs" aria-label="Breadcrumb"><Link href="/learn/leadership">One DSD Leadership</Link> › <Link href={practiceHome}>Simulations</Link> › {item.competency}</nav>
+    <nav className="crumbs" aria-label="Breadcrumb"><Link href="/learn/leadership">One DSD Leadership</Link> / <Link href={practiceHome}>Simulations</Link> / {item.competency}</nav>
     <h1>{item.title}</h1><p className="learning-lede">{item.scenario}</p>
     <PracticeWorkspace key={item.id} scenario={item} />
     <h2 id="related-reading">Go further</h2><ul className="leadership-links">{item.articleIds.map(number => {

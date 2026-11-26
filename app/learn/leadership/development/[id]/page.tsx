@@ -21,7 +21,7 @@ export default async function ModulePage({ params }: { params: Promise<{ id: str
   const photo = (photos as Record<string, {src:string;alt:string}>)[m.photo];
   const podcastStyle = m.styles.find(s => podcastFor(s)); const podcast = podcastStyle ? podcastFor(podcastStyle) : undefined;
   return <article>
-    <nav className="crumbs" aria-label="Breadcrumb"><Link href="/learn/leadership">Leadership</Link> › <Link href={PROGRAM_ROOT}>Development sequence</Link> › Module {index + 1}</nav>
+    <nav className="crumbs" aria-label="Breadcrumb"><Link href="/learn/leadership">Leadership</Link> / <Link href={PROGRAM_ROOT}>Development sequence</Link> / Module {index + 1}</nav>
     <header className="development-hero"><p className="development-kicker">{stage.title} · Module {index + 1} of {MODULES.length}</p><h1>{m.title}</h1><p>{m.objective}</p><div className="development-actions"><a href="#practice">Try the decision</a><a href="#work-tool">Use the work tool</a><a href="#module-ask">Ask about this module</a></div></header>
     {photo ? <figure className="development-figure"><Image src={photo.src} alt={photo.alt} width={1200} height={675} sizes="(max-width:760px) 95vw, 1100px"/></figure> : null}
     {podcast && podcastStyle ? <section><p>Listen to a conversation about this leadership approach, then consider how it applies to the case.</p><StylePodcast podcast={podcast} styleName={getStyle(podcastStyle)!.name}/></section> : null}
