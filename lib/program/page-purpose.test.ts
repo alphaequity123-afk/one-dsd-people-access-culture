@@ -18,10 +18,10 @@ it("shows a short menu: no Themes and collections or Community Outreach tab", ()
   expect(readFileSync(path.join(process.cwd(), "app/learn/cultural-intelligence/page.tsx"), "utf8")).toContain('href="/community-outreach"');
 });
 
-it("orders the landing page: cards, then the finder, and does not speak as 'us'", () => {
+it("keeps the live One DSD landing page on Home and does not speak as 'us'", () => {
   const home = readFileSync(path.join(process.cwd(), "app/home/page.tsx"), "utf8");
-  expect(home.indexOf('className="w doors"')).toBeLessThan(home.indexOf("<HomeTaskFinder />"));
-  // Ask opens from the banner on every page (since 2026-11-12), so the landing page itself holds the finder only.
-  expect(home).toContain("<HomeTaskFinder />");
+  // Owner decision 2026-11-25: Home is the live One DSD landing page; Ask opens from the banner on every page.
+  expect(home.indexOf("<HomeTaskChips")).toBeLessThan(home.indexOf('aria-labelledby="pilot-pathways"'));
+  expect(home).toContain("One DSD Leadership");
   expect(home).not.toMatch(/Tell us|we&apos;ll|we'll/);
 });
