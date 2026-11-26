@@ -13,15 +13,15 @@ const ABBREVIATIONS = /\b(?:St|Mt|Ft|Dr|Ave|Blvd|Rd|No|Nos|Jan|Feb|Mar|Apr|Jun|J
 const PROTECTED = "\u0000";
 function protect(text: string): string {
   return text
-    .replace(/\]\([^)]*\)/g, match => match.replace(/[.!?]/g, PROTECTED))
-    .replace(/https?:\/\/[^\s)\]]*[^\s)\].,;:!?]/g, match => match.replace(/[.!?]/g, PROTECTED))
+    .replace(/\]\([^)]*\)/g, match => match.replace(/[.!?]/g, character => character === "." ? PROTECTED : character === "!" ? "\u0001" : "\u0002"))
+    .replace(/https?:\/\/[^\s)\]]*[^\s)\].,;:!?]/g, match => match.replace(/[.!?]/g, character => character === "." ? PROTECTED : character === "!" ? "\u0001" : "\u0002"))
     .replace(/\b[\w-]+(?:\.[\w-]+)+\.(?:com|org|net|gov|edu|us|io)\b/gi, match => match.replace(/\./g, PROTECTED))
     .replace(ABBREVIATIONS, match => match.replace(/\./g, PROTECTED))
     // single-letter initials and street directions: "W. Lake Dr.", "J. K. Sports"
     .replace(/(^|[\s(])([A-Z])\.(?=\s+[A-Z0-9])/g, `$1$2${PROTECTED}`)
     .replace(/(\d)\.(\d)/g, `$1${PROTECTED}$2`);
 }
-const restore = (text: string) => text.replace(/\u0000/g, ".");
+const restore = (text: string) => text.replace(/\u0000/g, ".").replace(/\u0001/g, "!").replace(/\u0002/g, "?");
 
 function cleanLine(line: string): string {
   if (!line.trim() || /^\s*#/.test(line)) return line;
