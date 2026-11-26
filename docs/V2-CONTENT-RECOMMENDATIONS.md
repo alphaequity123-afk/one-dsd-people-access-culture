@@ -19,7 +19,7 @@ Prepared November 26, 2026, from the v2-rebuild branch and the live One DSD site
 
 - **569 entries**, but only **427 distinct observances**. 45 observances are entered once per community (187 entries in all). Easter and Christmas each appear 20 times.
 - Each copy has its own community note (for example, Easter for African American, Colombian and Karen communities each say something different), so nothing should be deleted.
-- **Recommendation: show each observance once on its date, with every community's note under it.** The calendar would go from 569 rows to 427, and every note stays. **Should I make this change?**
+- **Done (owner decision Nov 26, "Just once. Only once."):** each observance now shows once on its date, with every community's note under it. The calendar shows 438 observances (some same-named observances fall on different dates or are a different kind, so they stay separate), and all 569 community entries are kept.
 
 | Observance | Entries now | Communities |
 |---|---|---|

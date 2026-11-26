@@ -2,7 +2,7 @@
 import { SourceLink } from "@/components/app-link";
 import type { Metadata } from "next";
 import Link from "@/components/app-link";
-import { CALENDAR_TITLES, publishedCalendar, type CalendarDate, type CalendarEntry } from "@/lib/content/cultural-calendar";
+import { CALENDAR_TITLES, calendarEntryFor, publishedCalendar, type CalendarDate, type CalendarEntry } from "@/lib/content/cultural-calendar";
 import { calendarMonthHref, CALENDAR_ICS_PATH, dateCovers, dateStateKind, dateStateText, entryAnchor, validDay } from "@/lib/content/culture-calendar-grid";
 import { ResearchInline } from "@/components/research-markdown";
 import "@/components/community-editorial.css";
@@ -31,7 +31,19 @@ function Entry({ entry, date, open }: { entry: CalendarEntry; date?: CalendarDat
         {date?.date ? <span className="calendar-entry-state">{dateState(entry, date)}</span> : null}
       </span>
     </summary>
-    <div>
+    {entry.members?.length ? <div>
+      {entry.alsoKnownAs.length ? <p>Also known as: {entry.alsoKnownAs.join("; ")}</p> : null}
+      {entry.dateRule ? <p><strong>How the date is set.</strong> {entry.dateRule}</p> : null}
+      {entry.members.map(member => <section key={member.id} id={entryAnchor(member.id)} className="calendar-community-note" aria-label={`${entry.name}: ${member.communities.map(id => CALENDAR_TITLES[id] ?? id).join(", ")}`}>
+        <h4>{member.communities.map((id, index) => <span key={id}>{index ? ", " : ""}<Link href={`/minnesota-communities/${id}`}>{CALENDAR_TITLES[id] ?? id}</Link></span>)}</h4>
+        <p>{member.capsule}</p>
+        {member.whatItMarks ? <p><strong>What it marks.</strong> {member.whatItMarks}</p> : null}
+        {member.howCelebrated ? <p><strong>In Minnesota.</strong> {member.howCelebrated}</p> : null}
+        {member.workplaceNote ? <p><strong>At work.</strong> {member.workplaceNote}</p> : null}
+        {member.events.length ? <><p className="community-research-label">Events in Minnesota</p><ul>{member.events.map((event, index) => <li key={index}>{event.href ? <SourceLink href={event.href}>{event.name}</SourceLink> : event.name}{event.place ? `, ${event.place}` : ""}{event.dates ? `. ${event.dates}` : ""}</li>)}</ul></> : null}
+      </section>)}
+      {entry.sources.length ? <p className="community-research-sources">Sources: {entry.sources.map((source, index) => <span key={index}>{index ? "; " : ""}<SourceLink href={source.href}><ResearchInline text={source.title} /></SourceLink></span>)}</p> : null}
+    </div> : <div>
       <p>{entry.capsule}</p>
       {entry.alsoKnownAs.length ? <p>Also known as: {entry.alsoKnownAs.join("; ")}</p> : null}
       {entry.dateRule ? <p><strong>How the date is set.</strong> {entry.dateRule}</p> : null}
@@ -41,7 +53,7 @@ function Entry({ entry, date, open }: { entry: CalendarEntry; date?: CalendarDat
       {entry.events.length ? <><p className="community-research-label">Events in Minnesota</p><ul>{entry.events.map((event, index) => <li key={index}>{event.href ? <SourceLink href={event.href}>{event.name}</SourceLink> : event.name}{event.place ? `, ${event.place}` : ""}{event.dates ? `. ${event.dates}` : ""}</li>)}</ul></> : null}
       <p>Communities: {entry.communities.map((id, index) => <span key={id}>{index ? ", " : ""}<Link href={`/minnesota-communities/${id}`}>{CALENDAR_TITLES[id] ?? id}</Link></span>)}</p>
       {entry.sources.length ? <p className="community-research-sources">Sources: {entry.sources.map((source, index) => <span key={index}>{index ? "; " : ""}<SourceLink href={source.href}><ResearchInline text={source.title} /></SourceLink></span>)}</p> : null}
-    </div>
+    </div>}
   </details>;
 }
 
@@ -57,7 +69,7 @@ export default async function CulturalCalendarPage({ searchParams }: { searchPar
   const kind = params.kind && KINDS[params.kind] ? params.kind : "";
   const filtered = entries.filter(entry => (!community || entry.communities.includes(community)) && (!kind || entry.kind === kind));
   const day = validDay(year, month, params.day);
-  const openEntry = entries.some(entry => entry.id === params.entry) ? params.entry : undefined;
+  const openEntry = calendarEntryFor(entries, params.entry)?.id;
   const dated = filtered.flatMap(entry => entry.dates.filter(date => day ? dateCovers(date, day) : date.year === year && date.date).map(date => ({ entry, date })))
     .filter(({ date }) => day || month === "all" || Number(date.date!.slice(5, 7)) === month)
     .sort((a, b) => a.date.date!.localeCompare(b.date.date!) || a.entry.name.localeCompare(b.entry.name));

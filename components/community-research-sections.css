@@ -20,3 +20,6 @@
 .community-editorial .community-research-meta{font-size:14px;color:#426174}
 @media(max-width:640px){.community-editorial .community-research-story{grid-template-columns:1fr;gap:12px}.community-editorial .community-research-story .community-research-figure{max-width:220px}}
 @media print{.community-editorial .community-research-disclosure>div{display:block}}
+/* v2 rebuild (2026-11-26): one observance, each community's own note beneath it. */
+.community-editorial .calendar-community-note{border-top:1px solid #d5dde4;padding-top:.75rem;margin-top:.75rem}
+.community-editorial .calendar-community-note h4{margin:0 0 .35rem;font-size:1rem}

@@ -135,7 +135,9 @@ describe("the data reaching the browser", () => {
     it("has no excluded community in the real data the grid receives", async () => {
       const { publishedCalendar } = await import("@/lib/content/cultural-calendar");
       const published = await publishedCalendar();
-      expect(published.length).toBeGreaterThan(500);
+      // Owner decision 2026-11-26: each observance shows once; every community's entry is kept inside it.
+      expect(published.flatMap(item => item.members ?? [item]).length).toBeGreaterThan(500);
+      expect(published.length).toBeLessThan(450);
       expect(published.flatMap(item => item.communities).filter(id => ["native-american", "tribal-nations", "alaska-native"].includes(id))).toEqual([]);
       const list = compactCalendar(published);
       const allowed = new Set(published.map(item => item.id));
