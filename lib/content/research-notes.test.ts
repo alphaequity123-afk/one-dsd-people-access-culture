@@ -38,3 +38,11 @@ describe("sentence edges", () => {
     }
   });
 });
+
+
+describe("URL punctuation preservation", () => {
+  it("preserves query strings, exclamation marks and fragments while removing notes", () => {
+    const content = "See [the article](https://example.org/a!?id=12&lang=en#part-2). The page could not be confirmed. Read https://example.org/search?q=services!&page=2#results for more.";
+    expect(withoutResearchNotes(content)).toBe("See [the article](https://example.org/a!?id=12&lang=en#part-2). Read https://example.org/search?q=services!&page=2#results for more.");
+  });
+});

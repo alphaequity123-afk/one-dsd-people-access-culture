@@ -11,7 +11,6 @@ const tasks = [
   ["/practice-guides/review-a-change", "Review a change"],
   ["/learn", "Build my understanding"],
   ["/support/right-person", "Find who decides"],
-  ["/equity-review/director-toolkit", "Lead equity work across DHS"],
 ] as const;
 
 export function HomeTaskFinder() {

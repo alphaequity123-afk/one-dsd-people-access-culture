@@ -12,6 +12,15 @@ it("finds published courses from the same program library as Ask", async () => {
   expect(hits.some(hit => hit.href === course.href)).toBe(true);
   expect(library.program).toHaveBeenCalledWith("dsd");
 });
+it("keeps each excerpt attached to its own destination when document ids repeat", async () => {
+  library.program.mockResolvedValue({ destinations: [
+    { ...course, href: "/courses/first", text: "Coaching through questions." },
+    { ...course, href: "/courses/second", text: "Coaching through practice." },
+  ] });
+  const hits = await siteSearch("coaching", "dsd");
+  expect(hits.find(hit => hit.href === "/courses/first")?.excerpt).toBe("Coaching through questions.");
+  expect(hits.find(hit => hit.href === "/courses/second")?.excerpt).toBe("Coaching through practice.");
+});
 it("refreshes program publications instead of retaining withdrawn courses forever", async () => {
   expect((await siteSearch("coaching", "dsd")).some(hit => hit.href === course.href)).toBe(true);
   library.program.mockResolvedValue({ destinations: [] });

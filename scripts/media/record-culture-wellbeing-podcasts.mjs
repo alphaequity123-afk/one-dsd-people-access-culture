@@ -377,6 +377,9 @@ async function main() {
   if (only && !COURSES.includes(only)) throw new Error("Choose one of: " + COURSES.join(", "));
   const courses = only ? [only] : COURSES;
   const scripts = courses.map((id) => loadScript(root, id));
+  if (scripts.some(({ script }) => script.voiceProfile === "approved-eight-character-voices-20261126")) {
+    throw new Error("These scripts require the approved Kelly and John local references. The legacy hosted recorder cannot verify that profile; do not record with its older voices.");
+  }
   const lines = scripts.reduce((sum, { script }) => sum + script.turns.length, 0);
 
   const config = voiceConfiguration(root);

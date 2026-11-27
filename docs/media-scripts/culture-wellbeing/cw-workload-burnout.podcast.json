@@ -139,5 +139,16 @@
  },
  "status": "script",
  "scriptSha256": "7e2f5ed1881c8d22044d269c95ca0dc33f7f255ba3da5598bc0e0f31d7289026",
- "estimatedSeconds": 152
+ "estimatedSeconds": 152,
+ "voiceProfile": "approved-eight-character-voices-20261126",
+ "voiceAssignments": {
+  "host1": {
+   "character": "C3",
+   "name": "Kelly"
+  },
+  "geffen": {
+   "character": "C4",
+   "name": "John"
+  }
+ }
 }

@@ -4,15 +4,15 @@
 - **Publish on:** /courses/cw-everyday-norms (Culture: How Everyday Norms Shape the Work)
 - **Length:** about 3 minutes
 - **Source:** the approved draft in handoff/culture-wellbeing-courses (F25), unchanged.
-- **Voices:** women in the cast use the female Host voice (`host1`), men use the male Co-host voice (`geffen`).
+- **Voices:** Each character uses their approved named reference from `config/character-voices.json`; see `docs/media-scripts/CAST.md`.
 - **Accessibility:** captions and a full transcript are required before publishing (docs/ACCESSIBILITY-STANDARD.md). On-screen text must also be spoken.
 
 **Cast:**
 
-- **Narrator:** C3 (Host voice)
-- **Supervisor:** C6 (Co-host voice)
-- **Case manager:** C5 (Host voice)
-- **New colleague:** C7 (Co-host voice)
+- **Narrator:** C3 (Kelly voice)
+- **Supervisor:** C6 (Robert voice)
+- **Case manager:** C5 (Susan voice)
+- **New colleague:** C7 (Takoda voice)
 
 **Scene 1. Team room, morning.**
 

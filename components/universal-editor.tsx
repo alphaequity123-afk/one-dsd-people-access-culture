@@ -237,6 +237,13 @@ function PageEditor({ owner, pathname }: { owner: boolean; pathname: string }) {
 
   const index = useCallback((overrides: Override[], imageOverrides: ImageOverride[]) => {
     const usable = overrides.filter((item) => normalize(item.text) && normalize(item.original));
+    // Ordinary readers with no saved edits need neither a DOM index nor an
+    // observer. Keep indexing for owners and when previously applied edits
+    // need to be restored or new saved edits need to be displayed.
+    if (!owner && !usable.length && !imageOverrides.length && !textOverrides.current.length && !images.current.size) {
+      setHasSaved(false);
+      return;
+    }
     const list = candidates();
     const matches = matchOverrides(list, usable);
     const map = new Map<HTMLElement, { key: string; original: string; shown: string; html: string }>();
@@ -266,7 +273,7 @@ function PageEditor({ owner, pathname }: { owner: boolean; pathname: string }) {
     images.current = imageMap;
     imagesChanged.current = false;
     setHasSaved(usable.length > 0 || imageOverrides.length > 0);
-  }, []);
+  }, [owner]);
 
   /** Load the saved changes for this page. A failure or a degraded store is reported, never applied as "nothing saved". */
   const loadOverrides = useCallback(async (): Promise<boolean> => {
@@ -320,6 +327,7 @@ function PageEditor({ owner, pathname }: { owner: boolean; pathname: string }) {
   // arriving nodes, but never interfere with an owner's unsaved editing session.
   useEffect(() => {
     if (loadState !== "ready" || editing) return;
+    if (!owner && !hasSaved) return;
     let stopped = false;
     let queued = false;
     const options = { childList: true, characterData: true, subtree: true };
@@ -343,7 +351,7 @@ function PageEditor({ owner, pathname }: { owner: boolean; pathname: string }) {
     index(textOverrides.current, Array.from(images.current.values()));
     observer.observe(document.body, options);
     return () => { stopped = true; observer.disconnect(); };
-  }, [loadState, editing, pathname, index]);
+  }, [loadState, editing, pathname, index, owner, hasSaved]);
 
   const retryLoad = () => {
     setLoadState("loading");

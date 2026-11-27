@@ -3,14 +3,14 @@
 - **Status:** Script only, written for the recurring cast. Not recorded.
 - **Publish on:** /courses/cn-sustaining-the-navigator (Sustaining the Navigator)
 - **Length:** about 2 minutes
-- **Voices:** women in the cast use the female Host voice (`host1`), men use the male Co-host voice (`geffen`).
+- **Voices:** Each character uses their approved named reference from `config/character-voices.json`; see `docs/media-scripts/CAST.md`.
 - **Accessibility:** captions and a full transcript are required before publishing (docs/ACCESSIBILITY-STANDARD.md). On-screen text must also be spoken.
 
 **Cast:**
 
-- **Narrator:** C3 (Host voice)
-- **Navigator:** C1 (Co-host voice)
-- **Supervisor:** C6 (Co-host voice)
+- **Narrator:** C3 (Kelly voice)
+- **Navigator:** C1 (Brian voice)
+- **Supervisor:** C6 (Robert voice)
 - **People served:** described or off camera, so no cast member is placed in a particular community.
 
 **Scene 1. Night. The navigator's phone lights up again.**

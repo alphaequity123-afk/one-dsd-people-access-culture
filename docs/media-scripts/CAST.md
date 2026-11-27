@@ -1,23 +1,29 @@
-# Recurring cast for course videos and narration
+# Approved character voices
 
-These scripts use the program's eight-person recurring cast, the same figures used in the front door app's trainings and User Guide (`public/images/learning-guides/C1.png` to `C8.png` in one-dhs-pac; casting rules in its `data/trainings/BRIEF.md`). The cast has no character names in either codebase: each person is identified by role, and the owner's rule of November 15, 2026 for the trainings is that people are described by role. If names are chosen later, they replace the role labels below.
+Confirmed by Gary on November 26, 2026. These assignments supersede the older two-voice casting instructions below. Each recurring character uses their own reference voice; do not choose a voice from the character’s appearance.
 
-Voices come from the approved podcast voice profile (`one-dsd-selected-preview-podcast-voices-v1`), which has two voices: `host1`, the Host voice, and `host2`, the Co-host voice. The pairing of figure to voice is the one the front door app's recording scripts use (`scripts/trainings/prepare-recording.mjs`).
+| Character | Voice |
+| --- | --- |
+| C1 | Brian |
+| C2 | LaToya |
+| C3 | Kelly |
+| C4 | John |
+| C5 | Susan |
+| C6 | Robert |
+| C7 | Takoda |
+| C8 | Noor |
 
-| Role in these scripts | Cast member | Figure | Voice |
-|---|---|---|---|
-| Narrator | C3 | woman, white blouse, curly hair | host1 (Host) |
-| Supervisor | C6 | man, maroon polo | host2 (Co-host) |
-| Case manager | C5 | woman, royal blue blouse | host1 (Host) |
-| Program manager | C2 | woman, coral blouse, locs | host1 (Host) |
-| Newer colleague | C7 | man, olive shirt, hair tied back | host2 (Co-host) |
-| Community partner | C1 | man, sage shirt, glasses | host2 (Co-host) |
-| Discussion host 1 | C8 | woman, mauve hijab | host1 (Host) |
-| Discussion host 2 | C4 | man, navy polo | host2 (Co-host) |
-| Cultural navigator (Cultural Navigation pathway) | C1 | man, sage shirt, glasses | host2 (Co-host) |
-| Assessor (Cultural Navigation pathway) | C8 | woman, mauve hijab | host1 (Host) |
-| Peer supporter (Cultural Navigation pathway) | C4 | man, navy polo | host2 (Co-host) |
+Future podcasts may use Kelly/John, Brian/LaToya, Susan/Robert, Takoda/Noor, or other combinations of the approved eight voices. These four pairs are saved in `config/character-voices.json`. Choose for the course and audience without inferring beliefs or experience from appearance. Existing podcasts remain unchanged. This owner update supersedes the earlier Kelly/John-only rule.
 
-Casting follows the front door app's rules: authority is spread across the cast, and no role is given to a figure because its trait matches a common stereotype of how that figure looks. The learner is never cast. Dialogue refers to people by role and uses "they" or the role, never a guessed pronoun.
+The 13 recorded navigator and wellbeing podcasts retain their approved Kelly/John mapping (`host1` → C3, `geffen` → C4). The separate GEFen read-aloud service is unchanged. Private reference recordings stay local.
 
-Two scenes pair speakers who share a voice (for example the case manager and the program manager, both host1). Where that happens, the recording should keep them distinct by delivery, or the program owner may recast one of them.
+## Role assignments
+
+Characters retain the roles assigned in each course. Narration uses C3 (Kelly); the Cultural Navigator uses C1 (Brian), and the assessor uses C8 (Noor). Character names identify voice references, while scene dialogue may continue to identify people by their professional role. Authority remains spread across the cast.
+
+Future two-voice podcasts use an explicitly selected pair from the approved cast. Do not reuse a generic male or female voice for another character.
+
+
+## Owner-approved casting context
+
+John (C4, the white man in the blue polo) and Kelly (C3, the white woman in the white blouse) are an approved pairing for equity learning, including videos and podcasts addressing the dominant community or equity generally. Do not treat their shared race as a casting defect or replace the approved pairing to manufacture demographic balance. Keep each character's approved portrait and voice paired. Kelly and John remain an approved option among the saved podcast pairings; scenario roles keep their assigned individual voices.
