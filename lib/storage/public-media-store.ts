@@ -67,6 +67,42 @@ export type StoredFile = {
   close(): Promise<void>;
 };
 
+/** Read a small current file without a separate bucket HEAD round trip.
+ * The byte limit is enforced while streaming, even if Content-Length is absent
+ * or incorrect. Volume reads retain all of openStoredFile's path checks. */
+export async function readStoredFile(root: string | undefined, segments: string[], maximum: number): Promise<Buffer | null> {
+  if (!segments.length || !validSegments(segments) || !Number.isSafeInteger(maximum) || maximum <= 0) return null;
+  const bucket = bucketFor(root);
+  if (bucket) {
+    try {
+      const response = await getMediaObject(bucket, bucketKey(segments));
+      if (!response?.body) return null;
+      const length = response.headers.get("content-length");
+      if (length !== null && (!/^\d+$/.test(length) || !Number.isSafeInteger(Number(length)) || Number(length) > maximum)) {
+        await response.body.cancel(); return null;
+      }
+      const reader = response.body.getReader();
+      try {
+        const chunks: Uint8Array[] = []; let size = 0;
+        for (;;) {
+          const { done, value } = await reader.read();
+          if (done) return size ? Buffer.concat(chunks, size) : null;
+          size += value.byteLength;
+          if (size > maximum) { await reader.cancel(); return null; }
+          chunks.push(value);
+        }
+      } finally { reader.releaseLock(); }
+    } catch { return null; }
+  }
+  const opened = await openStoredFile(root, segments);
+  if (!opened) return null;
+  try {
+    if (!opened.size || opened.size > maximum) return null;
+    const bytes = await opened.bytes();
+    return bytes.length > 0 && bytes.length <= maximum ? bytes : null;
+  } catch { return null; } finally { await opened.close(); }
+}
+
 /**
  * Open one stored file. On the volume it refuses symbolic links and junctions anywhere in the root
  * or the requested path, and on Linux checks the open descriptor too, closing a parent-path race.

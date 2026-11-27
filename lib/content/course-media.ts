@@ -1,7 +1,7 @@
 import 'server-only';
 import { createHash } from 'node:crypto';
 import { Readable } from 'node:stream';
-import { configuredPublicMediaRoot, createStoredFolders, listStoredNames, storedCapacity, storedFolderReady, writeStoredFile } from '@/lib/storage/public-media-store';
+import { configuredPublicMediaRoot, createStoredFolders, listStoredNames, readStoredFile, storedCapacity, storedFolderReady, writeStoredFile } from '@/lib/storage/public-media-store';
 import { safeOpen } from './geffen-volume';
 import { mapConcurrent } from '@/lib/async/map-concurrent';
 
@@ -140,16 +140,17 @@ export async function publishedCourseMedia(root: string | undefined, fresh = fal
     // serialize hundreds of independent network round trips. Each worker has
     // only one storage read active, so concurrency stays bounded at eight.
     const checked = await mapConcurrent(names.filter(manifestName).sort().slice(0, 500), 8, async name => {
-      const opened = await safeOpen(root, ['course-media', 'manifests', name]);
-      if (!opened) return null;
+      // The filename must match the manifest ID, so retired IDs need no reads.
+      if (RETIRED_COURSE_MEDIA.test(name.slice(0, -5))) return null;
       try {
-        if (!opened.info.size || opened.info.size > MAX_MANIFEST) return null;
-        const item = cleanCourseMediaManifest(JSON.parse(await opened.file.readFile('utf8')), name.slice(0, -5));
+        const bytes = await readStoredFile(root, ['course-media', 'manifests', name], MAX_MANIFEST);
+        if (!bytes) return null;
+        const item = cleanCourseMediaManifest(JSON.parse(bytes.toString('utf8')), name.slice(0, -5));
         if (!item || RETIRED_COURSE_MEDIA.test(item.id)) return null;
         let present = true;
         for (const file of [item.media, item.captions, item.transcript]) if (!await assetPresent(root, file, false)) { present = false; break; }
         return present ? item : null;
-      } catch { return null; /* skip unreadable manifest */ } finally { await opened.file.close(); }
+      } catch { return null; /* skip unreadable manifest */ }
     });
     items = checked.filter((item): item is CourseMediaItem => item !== null);
   } catch { return []; }
