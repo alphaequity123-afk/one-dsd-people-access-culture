@@ -8,6 +8,6 @@ The configuration extends existing build caches. It changes no build commands, p
 
 Validation used Railpack 0.44.0 (the production build version) to generate before/after plans from the application's package and version files. After normalizing the planner's verbose logging flag, the only plan difference was the new cache definition and its reference in the build step. Source inspection found that only the accessibility build script reads this cache; application routes do not use it.
 
-Runtime image size and deployment duration must be checked on the next deployment; the manifest size is an expected reduction in uncompressed duplicate files, not a measured compressed image saving.
+A read-only SSH check of deployment 85b2658c confirmed du -sb /app/.cache/accessible-static-assets reports 1,684,136,898 bytes in the current runtime. Cache absence and deployment duration must be checked on the next deployment; this is uncompressed duplicate-file size, not a measured compressed image saving.
 
 Reference: [Railpack cache configuration](https://railpack.com/config/file#caches).
