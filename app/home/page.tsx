@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import Image from "next/image";
 import Link from "@/components/app-link";
-import { HeroMotion } from "./hero-motion";
+import { HeroMotion, type HeroSource } from "./hero-motion";
 import { HomeCommandCenter } from "@/components/home-command-center";
 import { prepareAsk } from "@/app/ask/ask-view";
 import { publishedCalendar } from "@/lib/content/cultural-calendar";
@@ -36,12 +36,21 @@ const TIERS = [
   { tier: "Lead", title: "Systems and stewardship", text: "Work through six leadership stages, sixteen leadership styles and decisions about resources and change.", href: "/leadership", action: "Open Leadership" },
 ] as const;
 
+// The same five-second animation at four sizes (2026-11-27). The smaller files are re-encodings of
+// the approved 4K original (SSIM 0.99 at their size); the original still serves the largest screens.
+const heroSources: readonly HeroSource[] = [
+  { src: "/videos/one-dsd-hero-720.mp4", width: 1280 },
+  { src: "/videos/one-dsd-hero-1080.mp4", width: 1920 },
+  { src: "/videos/one-dsd-hero-1440.mp4", width: 2560 },
+  { src: "/videos/one-dsd-hero.mp4", width: 3840 },
+];
+
 export default async function HomePage() {
   const ask = await askForHome();
   const heroImage = <Image className="home-hero-image" src="/images/home/people-access-culture-hero.webp" width={3840} height={1748} alt="Eight colleagues sharing perspectives around a conference table." preload quality={90} sizes="(max-width: 3840px) 100vw, 3840px" />;
   return <div className="dsd-home od">
     <section className="home-hero" aria-labelledby="home-title">
-      <HeroMotion src="/videos/one-dsd-hero.mp4">{heroImage}</HeroMotion>
+      <HeroMotion sources={heroSources}>{heroImage}</HeroMotion>
       <div className="pilot-wrap home-title">
         <h1 id="home-title">People, Access and Culture</h1>
         <p>People with disabilities should have a meaningful say in their lives and opportunities to belong, contribute and grow. Together, we can make our services and our workplace more responsive to the people who rely on them.</p>
