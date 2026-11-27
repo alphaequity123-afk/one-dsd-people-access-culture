@@ -5,7 +5,7 @@ import { link, lstat, mkdir, open, readdir, realpath, rename, statfs, unlink } f
 import path from "node:path";
 import { PassThrough, Readable } from "node:stream";
 import type { ReadableStream as NodeReadableStream } from "node:stream/web";
-import { getMediaObject, headMediaObject, listMediaNames, mediaBucketConfiguration, putMediaObject, type MediaBucketConfiguration } from "./media-bucket";
+import { getMediaObject, headMediaObject, listMediaNames, listMediaSizes, mediaBucketConfiguration, putMediaObject, type MediaBucketConfiguration } from "./media-bucket";
 
 /**
  * Where the owner-published public media lives: course media, leadership videos and the read-aloud
@@ -172,6 +172,18 @@ export async function listStoredNames(root: string | undefined, segments: string
   }
   if (!await storedFolderReady(root, segments) || !root) return null;
   try { return await readdir(path.join(path.resolve(root), ...segments)); } catch { return null; }
+}
+
+/**
+ * Sizes of the files in one bucket folder from a single listing, or null when that is not
+ * available (the volume store, an unreadable bucket, or a listing too long to read whole). Callers
+ * fall back to opening files one at a time when this is null.
+ */
+export async function listStoredSizes(root: string | undefined, segments: string[]): Promise<Map<string, number> | null> {
+  if (!validSegments(segments)) return null;
+  const bucket = bucketFor(root);
+  if (!bucket) return null;
+  try { return await listMediaSizes(bucket, `${bucketKey(segments)}/`); } catch { return null; }
 }
 
 type CapacityProbe = (path: string) => Promise<{ bavail: number; bsize: number }>;

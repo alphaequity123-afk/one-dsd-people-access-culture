@@ -1,0 +1,39 @@
+{
+  "course": "cn-what-a-navigator-does",
+  "sourceSha256": "d77442e4b819bf682b8dc5c2a5802cc5956a7b3f1a42ace8deadac900b08ba24",
+  "voiceProfile": "approved-eight-character-voices-20261126",
+  "cast": {
+    "NARRATOR": "C3",
+    "ASSESSOR": "C8",
+    "NAVIGATOR": "C1",
+    "CASE MANAGER": "C5",
+    "MOTHER": "C3"
+  },
+  "assets": {
+    "media": "5a7ec6ce7b4997c76770a8bd5308d334f3247a76d5db100b0ab59f5b7890dc92.mp4",
+    "captions": "2749843caf74f162030613f2c065dc7f9873c292bdf04d14d695dd9706ef68e3.vtt",
+    "transcript": "880e0ea17f4186102d232a960f4caa03da75e0a837a7bdacbe50d30eab51d82c.txt",
+    "poster": "ceac99906d614feaeca2034917e7f142b05955ecb2eacb10478371fc239583dd.png"
+  },
+  "captionTiming": "Source words mapped to recognition word timestamps",
+  "speechDifferences": [],
+  "durationSeconds": 137.81,
+  "portraitHashes": {
+    "C1": "af42ef36a0db32e799fd0073226e704905cf3189ad2bc9d6820b8a0a450ae8a0",
+    "C2": "4c7446c17d0572d35db9f665e43c6383f128e4f0ee30ea5d1c172bb35f644e1e",
+    "C3": "056f228f12826f16f5045e735847f8a886b0e5426f50e04cc058237b70f3e7fd",
+    "C4": "3cb112ffcc5215d9f81fb3046efa103ad0778bf5199a0e364dea5563da87b71f",
+    "C5": "477566c44d6a2c0dc72d441494619c4ca8d447a6f0fa72c2b4a7d98490d1ef05",
+    "C6": "7c1e21374a0a25c4145122ea63cdd410e0616234401744670c398cc9346a24d5",
+    "C7": "80eac646012831b31713c0476ac0f92e492e90b6d8825ae9f78dd78f0a6f79a3",
+    "C8": "ba7013f2e1f0309f7a9d96d3adc7e9879c87b91fc6aa7bc5143932856fa41419"
+  },
+  "videoVerified": {
+    "resolution": "1280x720",
+    "video": "H.264",
+    "audio": "AAC",
+    "fullDecode": "passed",
+    "captions": "ordered, non-overlapping and within duration",
+    "hashes": "all assets match manifest"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "course": "cw-learning-organization",
+  "sourceSha256": "b8141ab56419aecf99ea3c6b0b1eb193c537c68bfd0a471459b83e35ba99c569",
+  "voiceProfile": "approved-eight-character-voices-20261126",
+  "cast": {
+    "NARRATOR": "C3",
+    "SUPERVISOR": "C6",
+    "CASE MANAGER": "C5",
+    "PROGRAM MANAGER": "C2",
+    "COUNTY PARTNER": "C1",
+    "DIRECTOR": "C4"
+  },
+  "assets": {
+    "media": "efd9858d51b39854a700ffde5070b28022ccdd5cc3cc59ed23e8b9bbe309e2b1.mp4",
+    "captions": "b949f178f393e986031fac5bcd2678bd5234a3a258d27c601a32deb3d94dca33.vtt",
+    "transcript": "feb84b8fcb75206651847b76b04241d87bc196e3666891476e622772f9841aab.txt",
+    "poster": "f123abf19956102c1b8bc7dea9593e37731530c616eed39be2b1b911e5b6fb77.png"
+  },
+  "captionTiming": "Source words mapped to recognition word timestamps",
+  "speechDifferences": [],
+  "durationSeconds": 83.93,
+  "portraitHashes": {
+    "C1": "af42ef36a0db32e799fd0073226e704905cf3189ad2bc9d6820b8a0a450ae8a0",
+    "C2": "4c7446c17d0572d35db9f665e43c6383f128e4f0ee30ea5d1c172bb35f644e1e",
+    "C3": "056f228f12826f16f5045e735847f8a886b0e5426f50e04cc058237b70f3e7fd",
+    "C4": "3cb112ffcc5215d9f81fb3046efa103ad0778bf5199a0e364dea5563da87b71f",
+    "C5": "477566c44d6a2c0dc72d441494619c4ca8d447a6f0fa72c2b4a7d98490d1ef05",
+    "C6": "7c1e21374a0a25c4145122ea63cdd410e0616234401744670c398cc9346a24d5",
+    "C7": "80eac646012831b31713c0476ac0f92e492e90b6d8825ae9f78dd78f0a6f79a3",
+    "C8": "ba7013f2e1f0309f7a9d96d3adc7e9879c87b91fc6aa7bc5143932856fa41419"
+  },
+  "videoVerified": {
+    "resolution": "1280x720",
+    "video": "H.264",
+    "audio": "AAC",
+    "fullDecode": "passed",
+    "captions": "ordered, non-overlapping and within duration",
+    "hashes": "all assets match manifest"
+  }
+}

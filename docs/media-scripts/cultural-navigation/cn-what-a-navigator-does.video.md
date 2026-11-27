@@ -3,15 +3,15 @@
 - **Status:** Script only, written for the recurring cast. Not recorded.
 - **Publish on:** /courses/cn-what-a-navigator-does (What a Cultural Navigator Does)
 - **Length:** about 3 minutes
-- **Voices:** women in the cast use the female Host voice (`host1`), men use the male Co-host voice (`geffen`).
+- **Voices:** Each character uses their approved named reference from `config/character-voices.json`; see `docs/media-scripts/CAST.md`.
 - **Accessibility:** captions and a full transcript are required before publishing (docs/ACCESSIBILITY-STANDARD.md). On-screen text must also be spoken.
 
 **Cast:**
 
-- **Narrator:** C3 (Host voice)
-- **Assessor:** C8 (Host voice)
-- **Navigator:** C1 (Co-host voice)
-- **Case manager:** C5 (Host voice)
+- **Narrator:** C3 (Kelly voice)
+- **Assessor:** C8 (Noor voice)
+- **Navigator:** C1 (Brian voice)
+- **Case manager:** C5 (Susan voice)
 - **The person's mother:** voice only, off camera (Host voice, a different delivery from the assessor). The family is not shown, so no cast member is placed in a community.
 - **Interpreter:** present in the scene, off camera, no separate lines. The mother's words are heard as the interpreter renders them.
 

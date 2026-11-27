@@ -1,8 +1,9 @@
 import 'server-only';
 import { createHash } from 'node:crypto';
 import { Readable } from 'node:stream';
-import { configuredPublicMediaRoot, createStoredFolders, listStoredNames, storedCapacity, storedFolderReady, writeStoredFile } from '@/lib/storage/public-media-store';
+import { configuredPublicMediaRoot, createStoredFolders, listStoredNames, listStoredSizes, storedCapacity, storedFolderReady, writeStoredFile } from '@/lib/storage/public-media-store';
 import { safeOpen } from './geffen-volume';
+import { mapConcurrent } from '@/lib/async/map-concurrent';
 
 // Owner-published course media (explainer videos, narrated card videos, two-voice podcasts and
 // narration). Public files only, in their own directory of the public media volume. Each item has a
@@ -131,22 +132,32 @@ export const RETIRED_COURSE_MEDIA = /^leadership-film-\d{2}-/;
 export async function publishedCourseMedia(root: string | undefined, fresh = false): Promise<CourseMediaItem[]> {
   if (!root) return [];
   if (!fresh && cache && cache.root === root && Date.now() - cache.at < 60_000) return cache.items;
-  const names = await listStoredNames(root, ['course-media', 'manifests']);
+  // In the bucket, one listing of the asset folder replaces a size request per file. It is read on
+  // every fresh check, so a deleted asset is still noticed at once. Null means check file by file.
+  const [names, assetSizes] = await Promise.all([listStoredNames(root, ['course-media', 'manifests']), listStoredSizes(root, ['course-media', 'assets'])]);
   if (!names) return [];
-  const items: CourseMediaItem[] = [];
+  const present = async (file: string) => {
+    if (!assetSizes) return assetPresent(root, file, false);
+    const size = assetSizes.get(file);
+    return !!size && size <= limitFor(file);
+  };
+  let items: CourseMediaItem[];
   try {
-    for (const name of names.filter(manifestName).sort().slice(0, 500)) {
+    // Storage may be remote. Keep fresh manifest and file checks, but do not
+    // serialize hundreds of independent network round trips. Each worker has
+    // only one storage read active, so concurrency stays bounded at eight.
+    const checked = await mapConcurrent(names.filter(manifestName).sort().slice(0, 500), 8, async name => {
       const opened = await safeOpen(root, ['course-media', 'manifests', name]);
-      if (!opened) continue;
+      if (!opened) return null;
       try {
-        if (!opened.info.size || opened.info.size > MAX_MANIFEST) continue;
+        if (!opened.info.size || opened.info.size > MAX_MANIFEST) return null;
         const item = cleanCourseMediaManifest(JSON.parse(await opened.file.readFile('utf8')), name.slice(0, -5));
-        if (!item || RETIRED_COURSE_MEDIA.test(item.id)) continue;
-        let present = true;
-        for (const file of [item.media, item.captions, item.transcript]) if (!await assetPresent(root, file, false)) { present = false; break; }
-        if (present) items.push(item);
-      } catch { /* skip unreadable manifest */ } finally { await opened.file.close(); }
-    }
+        if (!item || RETIRED_COURSE_MEDIA.test(item.id)) return null;
+        for (const file of [item.media, item.captions, item.transcript]) if (!await present(file)) return null;
+        return item;
+      } catch { return null; /* skip unreadable manifest */ } finally { await opened.file.close(); }
+    });
+    items = checked.filter((item): item is CourseMediaItem => item !== null);
   } catch { return []; }
   cache = { at: Date.now(), root, items };
   return items;

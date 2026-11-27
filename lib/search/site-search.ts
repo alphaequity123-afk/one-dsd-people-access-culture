@@ -17,6 +17,7 @@ import { availableSourceDocs } from "@/lib/intelligence/retrieval/available-sour
 import { htmlToText } from "@/lib/downloads/html-text";
 
 export type SiteSearchResult = { id: string; title: string; href: string; excerpt: string; area: PageArea | "state"; external: boolean };
+export type SearchTiming = (stage: "library" | "supplements" | "ranking", milliseconds: number) => void;
 
 /** The agencies as documents. Ask leaves out link-only agencies (Tribal matters): it points to them but never answers from them. */
 const agencyDocsByUse = new Map<boolean, Doc[]>();
@@ -47,20 +48,25 @@ function buildAgencyDocs(forAnswers: boolean): Doc[] {
   }));
 }
 
-async function allDocs(scope: StaffProgramScope): Promise<Doc[]> {
+async function allDocs(scope: StaffProgramScope, timing?: SearchTiming): Promise<Doc[]> {
+  const started = performance.now();
   const [staff, program] = await Promise.all([recentStaffDocs(scope), recentProgramResources(scope)]);
   const base = availableSourceDocs([...staff, ...program.destinations, ...agencyDocs(), ...statePageDocs()]);
+  const loaded = performance.now();
+  timing?.("library", loaded - started);
   const supplements = await publishedResourceSupplements(scope, base);
+  timing?.("supplements", performance.now() - loaded);
   return [...new Map([...base, ...supplements].map(doc => [`${doc.kind}:${doc.id}:${doc.href}`, doc])).values()];
 }
 
-export async function siteSearch(query: string, scope: StaffProgramScope, limit = 20): Promise<SiteSearchResult[]> {
+export async function siteSearch(query: string, scope: StaffProgramScope, limit = 20, timing?: SearchTiming): Promise<SiteSearchResult[]> {
   const q = query.trim().slice(0, 200);
   if (q.length < 2) return [];
-  const docs = await allDocs(scope);
-  const byIdentity = new Map(docs.map(doc => [`${doc.kind}:${doc.id}`, doc]));
+  const docs = await allDocs(scope, timing);
+  const ranked = performance.now();
+  const byIdentity = new Map(docs.map(doc => [`${doc.kind}:${doc.id}:${doc.href}`, doc]));
   // Program material leads; State of Minnesota pages follow close behind, weighted a little lower.
-  const hits = searchDocs(q, docs, { limit: limit * 3 })
+  const hits = searchDocs(q, docs, { limit: limit * 3, rankOnly: true })
     .map(hit => ({ ...hit, score: /^https?:\/\//.test(hit.href) ? hit.score * 0.7 : hit.score }))
     .sort((a, b) => b.score - a.score);
   const seen = new Set<string>(), out: SiteSearchResult[] = [];
@@ -72,15 +78,16 @@ export async function siteSearch(query: string, scope: StaffProgramScope, limit 
     const originalIsExternal = /^https?:\/\//.test(hit.href);
     const [kind, id] = hit.id.split(":", 2);
     const destination = kind === "agency" ? agencyPageHref(id) : kind === "state-page" ? stateReadingHref(id) : externalReadingHref(hit.href) ?? externalSourceHref(hit.href) ?? hit.href;
-    const doc = byIdentity.get(`${hit.kind}:${hit.id}`);
+    const doc = byIdentity.get(`${hit.kind}:${hit.id}:${hit.href}`);
     const sourceText = doc?.text || doc?.summary || "";
     // Strip authored HTML before selecting the display window: a window cut
     // inside a long link attribute cannot be cleaned safely afterwards. Ranking
     // and evidence continue to use the unchanged source document.
     const excerpt = /<\/?[a-z][^>]*>/i.test(sourceText)
-      ? searchExcerpt(htmlToText(sourceText), q, hit.title) : hit.excerpt;
+      ? searchExcerpt(htmlToText(sourceText), q, hit.title) : searchExcerpt(sourceText, q, hit.title);
     out.push({ id: hit.id, title: hit.title, href: destination, excerpt, area: originalIsExternal ? "state" : pageArea(href), external: /^https?:\/\//.test(destination) });
     if (out.length === limit) break;
   }
+  timing?.("ranking", performance.now() - ranked);
   return out;
 }

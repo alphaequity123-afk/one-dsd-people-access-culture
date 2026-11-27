@@ -32,3 +32,11 @@ describe("reviewed publisher destinations", () => {
     vi.resetModules();
   });
 });
+
+
+it("applies the audited source replacements and retires only the missing click target", () => {
+  expect(externalSourceHref("https://archive.mpr.org/search.q=bosnian")).toBe("https://archive.mpr.org/search?q=bosnian");
+  expect(externalSourceHref("https://www.primewest.org/")).toBe("https://www.primewest.org/eligibility-benefits/programs");
+  expect(externalSourceHref("https://www.nass.usda.gov/Publications/Todays_Reports/reports/tuky0925.pdf")).toContain("/cj82n825c/tuky0925.pdf");
+  expect(externalSourceHref("https://www.kscmn.org/35th-anniversary")).toBeUndefined();
+});

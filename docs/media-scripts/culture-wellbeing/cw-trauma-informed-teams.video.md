@@ -4,17 +4,17 @@
 - **Publish on:** /courses/cw-trauma-informed-teams (Trauma-Informed Practice for Teams and Leaders)
 - **Length:** about 3 minutes
 - **Source:** the approved draft in handoff/culture-wellbeing-courses (A26), unchanged.
-- **Voices:** women in the cast use the female Host voice (`host1`), men use the male Co-host voice (`geffen`).
+- **Voices:** Each character uses their approved named reference from `config/character-voices.json`; see `docs/media-scripts/CAST.md`.
 - **Accessibility:** captions and a full transcript are required before publishing (docs/ACCESSIBILITY-STANDARD.md). On-screen text must also be spoken.
 
 **Cast:**
 
-- **Narrator:** C3 (Host voice)
-- **Supervisor:** C6 (Co-host voice)
-- **Case manager:** C5 (Host voice)
-- **Program manager:** C2 (Host voice)
-- **New colleague:** C7 (Co-host voice)
-- **County partner:** C1 (Co-host voice)
+- **Narrator:** C3 (Kelly voice)
+- **Supervisor:** C6 (Robert voice)
+- **Case manager:** C5 (Susan voice)
+- **Program manager:** C2 (LaToya voice)
+- **New colleague:** C7 (Takoda voice)
+- **County partner:** C1 (Brian voice)
 - **Parent:** C4 (on screen, no lines)
 - **Security officer:** voice only (Co-host voice)
 - **Staff member:** voice only (Host voice)

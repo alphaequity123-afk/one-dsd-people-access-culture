@@ -3,15 +3,15 @@
 - **Status:** Script only, written for the recurring cast. Not recorded.
 - **Publish on:** /courses/cn-culture-in-informed-choice (Culture in Informed Choice)
 - **Length:** about 2 minutes
-- **Voices:** women in the cast use the female Host voice (`host1`), men use the male Co-host voice (`geffen`).
+- **Voices:** Each character uses their approved named reference from `config/character-voices.json`; see `docs/media-scripts/CAST.md`.
 - **Accessibility:** captions and a full transcript are required before publishing (docs/ACCESSIBILITY-STANDARD.md). On-screen text must also be spoken.
 
 **Cast:**
 
-- **Narrator:** C3 (Host voice)
-- **Assessor:** C8 (Host voice)
-- **Case manager:** C5 (Host voice)
-- **Newer colleague:** C7 (Co-host voice)
+- **Narrator:** C3 (Kelly voice)
+- **Assessor:** C8 (Noor voice)
+- **Case manager:** C5 (Susan voice)
+- **Newer colleague:** C7 (Takoda voice)
 - **People served:** described or off camera, so no cast member is placed in a particular community.
 
 **Scene 1. An office. The assessor scrolls through plans.**

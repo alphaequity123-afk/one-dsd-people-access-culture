@@ -38,3 +38,12 @@ Use `docs/ONE-DHS-APPLIED-LEARNING-STANDARD.md` to design context-sensitive lear
 The owner-provided `docs/ONE-DHS-PROGRAM-REQUIREMENTS.txt` records the program's governing purpose and requirements. Design and review across One DHS around practical cultural development: help staff consider different perspectives, examine assumptions, adapt their work and learn from effects in services, programs, decisions, communication and workplace relationships. Connect learning to appropriate practice, guidance and follow-through. Preserve the owner's words as source material.
 
 Treat the document's descriptions, counts, privacy promises and statements of official requirements as claims to verify against the application and authoritative sources, not as evidence that a capability, policy or outcome has already been established. Do not infer or label a person's or the agency's intercultural orientation, score employees, equate course completion with cultural change, or claim an assessment result without authorized evidence. Protect privacy, accessibility, source attribution, Tribal sovereignty and existing stop and spending safeguards. Keep a person's question useful on its own terms; do not force a cultural lesson into unrelated work.
+
+## Two-voice training and module podcasts
+
+Owner update, November 26, 2026: future two-voice podcasts may use Kelly/John, Brian/LaToya, Susan/Robert, Takoda/Noor, or other combinations of the eight approved characters. Select the pair for the course. Do not retroactively recast existing podcasts solely to add variety. This supersedes the earlier Kelly/John-only rule. Preserve the approved portrait and reference voice of each character in `config/character-voices.json`; verify voice identity before publishing recordings.
+
+
+## Owner-approved casting context
+
+John (C4, the white man in the blue polo) and Kelly (C3, the white woman in the white blouse) are an approved pairing for equity learning, including videos and podcasts addressing the dominant community or equity generally. Do not treat their shared race as a casting defect or replace the approved pairing to manufacture demographic balance. Keep each character's approved portrait and voice paired. Kelly and John remain an approved option among the saved podcast pairings; scenario roles keep their assigned individual voices.

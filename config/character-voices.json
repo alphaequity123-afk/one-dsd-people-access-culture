@@ -1,0 +1,131 @@
+{
+  "id": "approved-eight-character-voices-20261126",
+  "approvedOn": "2026-11-26",
+  "engine": "Qwen3-TTS local",
+  "characters": {
+    "C1": {
+      "name": "Brian",
+      "referenceFile": "reference-cast-1.wav",
+      "sha256": "d115810358ce9e2eee93c4361063fc6cfc69c9d7e2e0c788437599b2b0843279",
+      "portraitFile": "C1.png",
+      "portraitSha256": "af42ef36a0db32e799fd0073226e704905cf3189ad2bc9d6820b8a0a450ae8a0"
+    },
+    "C2": {
+      "name": "LaToya",
+      "referenceFile": "reference-cast-2.wav",
+      "sha256": "a634f1230c5c546a7e6696991e92864f47fd0012f76a569a73a2d81a869db24e",
+      "portraitFile": "C2.png",
+      "portraitSha256": "4c7446c17d0572d35db9f665e43c6383f128e4f0ee30ea5d1c172bb35f644e1e"
+    },
+    "C3": {
+      "name": "Kelly",
+      "referenceFile": "reference-2.wav",
+      "sha256": "cfb9359a42e980dd839fa62eb1a7f7a49912f7fb7d3f33f72a205acfb89fb546",
+      "appearance": "White woman in a white blouse with curly hair; approved C3 portrait",
+      "portraitFile": "C3.png",
+      "portraitSha256": "056f228f12826f16f5045e735847f8a886b0e5426f50e04cc058237b70f3e7fd"
+    },
+    "C4": {
+      "name": "John",
+      "referenceFile": "reference-1.wav",
+      "sha256": "b66b1c34a6aa25d52d47c1f51ff2e2fd0ebf7da16ef4b9a8afa85aa802e8ba86",
+      "appearance": "White man in a blue polo shirt; approved C4 portrait",
+      "portraitFile": "C4.png",
+      "portraitSha256": "3cb112ffcc5215d9f81fb3046efa103ad0778bf5199a0e364dea5563da87b71f"
+    },
+    "C5": {
+      "name": "Susan",
+      "referenceFile": "reference-cast-5.wav",
+      "sha256": "975c77f4585a6dc133d4605a966c864a2258d8d5296cbcac42e1486608662fd1",
+      "portraitFile": "C5.png",
+      "portraitSha256": "477566c44d6a2c0dc72d441494619c4ca8d447a6f0fa72c2b4a7d98490d1ef05"
+    },
+    "C6": {
+      "name": "Robert",
+      "referenceFile": "reference-cast-6.wav",
+      "sha256": "8fc5e6ec6c27bf2e8eef03715cade0bb6828c0f6fa55e3b7124bfd28d0d91801",
+      "portraitFile": "C6.png",
+      "portraitSha256": "7c1e21374a0a25c4145122ea63cdd410e0616234401744670c398cc9346a24d5"
+    },
+    "C7": {
+      "name": "Takoda",
+      "referenceFile": "reference-cast-7.wav",
+      "sha256": "2cbd0c5d7b82ac1b2a42f625808748fc56f29a979ebe2905c8c027ed8c9a12a0",
+      "portraitFile": "C7.png",
+      "portraitSha256": "80eac646012831b31713c0476ac0f92e492e90b6d8825ae9f78dd78f0a6f79a3"
+    },
+    "C8": {
+      "name": "Noor",
+      "referenceFile": "reference-cast-8.wav",
+      "sha256": "5b9cb65d7f7ff739fabf8e82676107eea5f7b63fec7e849121555b35afc14a70",
+      "portraitFile": "C8.png",
+      "portraitSha256": "ba7013f2e1f0309f7a9d96d3adc7e9879c87b91fc6aa7bc5143932856fa41419"
+    }
+  },
+  "podcastSpeakers": {
+    "host1": "C3",
+    "geffen": "C4"
+  },
+  "note": "Legacy script speaker IDs are retained for compatibility. In this profile geffen means John for podcast dialogue only; the separate GEFen read-aloud service is unchanged.",
+  "twoVoicePodcastPolicy": {
+    "scope": "Future One DSD and One DHS training and module podcasts",
+    "defaultCharacters": [
+      "C3",
+      "C4"
+    ],
+    "defaultNames": [
+      "Kelly",
+      "John"
+    ],
+    "rule": "Use an appropriate approved pair for each future course. Kelly and John remain available but are not the only option. Other combinations of the approved eight voices are allowed. Do not retroactively change existing podcasts solely to vary the cast.",
+    "supersedes": "Earlier requirement that every two-voice podcast use only Kelly and John; owner updated November 26, 2026."
+  },
+  "castingContext": "John and Kelly are an approved pairing for equity content, including material addressing the dominant community or equity generally. Their shared race is not a reason to replace them.",
+  "podcastPairings": [
+    {
+      "id": "kelly-john",
+      "characters": [
+        "C3",
+        "C4"
+      ],
+      "names": [
+        "Kelly",
+        "John"
+      ]
+    },
+    {
+      "id": "brian-latoya",
+      "characters": [
+        "C1",
+        "C2"
+      ],
+      "names": [
+        "Brian",
+        "LaToya"
+      ]
+    },
+    {
+      "id": "susan-robert",
+      "characters": [
+        "C5",
+        "C6"
+      ],
+      "names": [
+        "Susan",
+        "Robert"
+      ]
+    },
+    {
+      "id": "takoda-noor",
+      "characters": [
+        "C7",
+        "C8"
+      ],
+      "names": [
+        "Takoda",
+        "Noor"
+      ]
+    }
+  ],
+  "pairingFlexibility": "Any two approved characters may be paired for future courses. Choose for the script and audience without inferring beliefs, lived experience or expertise from appearance. Preserve each approved portrait and reference voice."
+}
