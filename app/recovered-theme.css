@@ -198,3 +198,21 @@ html body .pac-footer a { font-size: var(--r-small); }
 
 @media (prefers-reduced-motion: reduce) { html body main :is(.card, li.rounded-lg.border) { transition: none; } }
 @media (forced-colors: active) { html body main .card { border-top-color: CanvasText; } }
+
+/* Phones: logo and program name share one row; Ask and Search sit below. */
+@media (max-width: 480px) {
+  html body .agency-practice-header .agency-practice-brand { flex-direction: row; align-items: center; gap: 12px; }
+  html body .agency-practice-brand img { width: 124px; }
+  html body .agency-practice-brand > span { border-left: 1px solid var(--r-line); padding-left: 12px; }
+  html body .agency-practice-brand strong { font-size: 1.25rem; }
+  html body .agency-practice-brand span span { font-size: .8125rem; }
+}
+
+/* Square corners throughout, as in the recovered build. Earlier layers set many different radii at high
+   specificity, so this one rule settles them. The landing page keeps its own shapes; round markers stay round. */
+html body main :is(section, article, aside, form, fieldset, details, summary, div, ul, ol, li, p, label, nav, h2, h3, img, figure, video, textarea, input, select, a, button, span):not(.dsd-home, .dsd-home *, .rounded-full, .equity-node, [class*="avatar"], [class*="portrait"], [class*="dot"], [class*="number"], [class*="Number"], .rewrite-step, .water-path-stage-name span) {
+  border-radius: 0 !important;
+}
+
+/* The study and save bar sits quietly on the page tone instead of a white band. */
+html body.dsd-calm .dsd-resource-actions { background: transparent; border-color: var(--r-line); }
