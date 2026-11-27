@@ -139,6 +139,33 @@ export async function listMediaNames(config: MediaBucketConfiguration, prefix: s
   return names;
 }
 
+/**
+ * Object names and sizes directly under a prefix, read with one list request per thousand objects.
+ * Returns null instead of a partial answer when the listing is longer than `maxPages` pages, so a
+ * caller never mistakes an unlisted object for a missing one.
+ */
+export async function listMediaSizes(config: MediaBucketConfiguration, prefix: string, maxPages = 20): Promise<Map<string, number> | null> {
+  if (prefix && !MEDIA_KEY.test(prefix.replace(/\/$/, ""))) throw new Error("Invalid media prefix");
+  const sizes = new Map<string, number>();
+  let token: string | undefined;
+  for (let page = 0; page < maxPages; page++) {
+    const response = await send(config, {
+      method: "GET", key: null,
+      query: { "list-type": "2", prefix, delimiter: "/", "max-keys": "1000", ...(token ? { "continuation-token": token } : {}) },
+    });
+    if (!response.ok) { await response.body?.cancel(); throw new MediaBucketError(response.status); }
+    const xml = await response.text();
+    for (const match of xml.matchAll(/<Contents>([\s\S]*?)<\/Contents>/g)) {
+      const key = unescapeXml(/<Key>([^<]+)<\/Key>/.exec(match[1])?.[1] ?? "");
+      const size = Number(/<Size>(\d+)<\/Size>/.exec(match[1])?.[1]);
+      if (key.startsWith(prefix) && !key.slice(prefix.length).includes("/") && Number.isSafeInteger(size)) sizes.set(key.slice(prefix.length), size);
+    }
+    token = /<IsTruncated>true<\/IsTruncated>/.test(xml) ? unescapeXml(/<NextContinuationToken>([^<]+)<\/NextContinuationToken>/.exec(xml)?.[1] ?? "") || undefined : undefined;
+    if (!token) return sizes;
+  }
+  return null;
+}
+
 function unescapeXml(value: string) {
   return value.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&apos;/g, "'").replace(/&amp;/g, "&");
 }
