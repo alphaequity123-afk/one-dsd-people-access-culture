@@ -4,6 +4,7 @@ import { createHash } from "node:crypto";
 import { createReadStream } from "node:fs";
 import { lstat, readFile, realpath } from "node:fs/promises";
 import path from "node:path";
+import { mapConcurrent } from "@/lib/async/map-concurrent";
 import { configuredCourseMediaRoot, publicCourseMedia, publishedCourseMedia } from "@/lib/content/course-media";
 import { safeOpen } from "@/lib/content/geffen-volume";
 import { EQUITY_IN_PRACTICE_EXAMPLES } from "@/lib/content/learn-page-copy";
@@ -235,25 +236,21 @@ async function readVolumeText(root: string, filename: string) {
 async function volumeMediaDocs(scope: StaffProgramScope, paths: ReadonlyMap<string, Doc>) {
   const root = configuredCourseMediaRoot(process.env.PAC_GEFFEN_PUBLIC_MEDIA_ROOT, process.env.RAILWAY_VOLUME_MOUNT_PATH);
   if (!root) return [];
-  const result: Doc[] = [];
   // The learner index requires the current manifest even when the player is
   // allowed to retain its previous one-minute list.
-  for (const item of await publishedCourseMedia(root, true)) {
+  const groups = await mapConcurrent(await publishedCourseMedia(root, true), 8, async item => {
     const related = item.pages.map(pathOnly).filter(page => paths.has(page));
-    if (!related.length) continue;
+    if (!related.length) return [];
     const publicItem = publicCourseMedia(item);
     const captions = await readVolumeText(root, item.captions);
     const parent = paths.get(related[0]);
     const owners = [...new Set([...related, publicItem.media, publicItem.transcript])];
     const timed = captions ? timedCaptionDocs(scope, `course-media:${item.id}`, item.title, publicItem.media, captions, owners, parent) : [];
-    if (timed.length) {
-      result.push(...timed);
-      continue;
-    }
+    if (timed.length) return timed;
     const transcript = await readVolumeText(root, item.transcript);
-    if (transcript) result.push(...transcriptDocs(scope, `course-media:${item.id}`, item.title, publicItem.transcript, transcript, owners, parent));
-  }
-  return result;
+    return transcript ? transcriptDocs(scope, `course-media:${item.id}`, item.title, publicItem.transcript, transcript, owners, parent) : [];
+  });
+  return groups.flat();
 }
 
 /** Augment the app's current scoped Ask corpus with missing original passages. */

@@ -9,6 +9,10 @@ export const dynamic = "force-dynamic";
 export async function GET(request: NextRequest) {
   const q = request.nextUrl.searchParams.get("q") ?? "";
   const limit = Math.min(Math.max(Number(request.nextUrl.searchParams.get("limit")) || 8, 1), 20);
-  const results = await siteSearch(q, await requestedContentScope(), limit);
-  return NextResponse.json({ results }, { headers: { "Cache-Control": "no-store" } });
+  const timings: string[] = [];
+  const results = await siteSearch(q, await requestedContentScope(), limit, (stage, ms) => {
+    timings.push(`${stage};dur=${ms.toFixed(1)}`);
+  });
+  // Durations only: no query text, source content or user information is logged.
+  return NextResponse.json({ results }, { headers: { "Cache-Control": "no-store", "Server-Timing": timings.join(", ") } });
 }
