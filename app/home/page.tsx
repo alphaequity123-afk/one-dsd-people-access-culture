@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import Image from "next/image";
 import Link from "@/components/app-link";
 import { HeroMotion } from "./hero-motion";
@@ -36,7 +37,7 @@ const TIERS = [
 ] as const;
 
 export default async function HomePage() {
-  const [upcoming, ask] = await Promise.all([upcomingFromCalendar(), askForHome()]);
+  const ask = await askForHome();
   const heroImage = <Image className="home-hero-image" src="/images/home/people-access-culture-hero.webp" width={3840} height={1748} alt="Eight colleagues sharing perspectives around a conference table." preload quality={90} sizes="(max-width: 3840px) 100vw, 3840px" />;
   return <div className="dsd-home od">
     <section className="home-hero" aria-labelledby="home-title">
@@ -96,12 +97,7 @@ export default async function HomePage() {
       <section className="pilot-section" aria-labelledby="pilot-more">
         <div className="pilot-section-heading"><h2 id="pilot-more">Coming up and keep learning</h2><Link href={CALENDAR_PATH}>Open the Culture Calendar</Link></div>
         <div className="home-row">
-          <ul className="pilot-list">{upcoming.map(item => <li key={item.id}>
-            <Link className="pilot-calendar-row" href={item.href}>
-              <span className="pilot-date" aria-hidden="true"><span>{new Date(item.start).toLocaleString("en-US", { month: "short", timeZone: "UTC" })}</span><strong>{Number(item.start.slice(-2))}</strong></span>
-              <span><strong>{item.name}</strong><span>{shortDateRange(item.start, item.end)}</span></span>
-            </Link>
-          </li>)}</ul>
+          <Suspense fallback={<p role="status">Loading upcoming observances…</p>}><UpcomingCalendar /></Suspense>
           <ul className="pilot-list">
             <li><Link href="/my-work"><strong>Your work</strong><span>Find learning and resources for your responsibilities, with room to explore other roles.</span></Link></li>
             <li><Link href="/minnesota-communities/prepare"><strong>Prepare for a conversation</strong><span>Plan a community meeting or a conversation about services, with questions and access arrangements ready.</span></Link></li>
@@ -112,6 +108,17 @@ export default async function HomePage() {
       </section>
     </div>
   </div>;
+}
+
+/** The calendar streams in after the rest of Home, so a slow calendar read never holds the page back. */
+async function UpcomingCalendar() {
+  const upcoming = await upcomingFromCalendar();
+  return upcoming.length ? <ul className="pilot-list">{upcoming.map(item => <li key={item.id}>
+    <Link className="pilot-calendar-row" href={item.href}>
+      <span className="pilot-date" aria-hidden="true"><span>{new Date(item.start).toLocaleString("en-US", { month: "short", timeZone: "UTC" })}</span><strong>{Number(item.start.slice(-2))}</strong></span>
+      <span><strong>{item.name}</strong><span>{shortDateRange(item.start, item.end)}</span></span>
+    </Link>
+  </li>)}</ul> : <p>See the full calendar for observances across Minnesota communities.</p>;
 }
 
 /** Ask on Home must never break the page: if it cannot be prepared, the command center links to the Ask page. */
