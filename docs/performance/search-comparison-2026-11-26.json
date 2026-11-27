@@ -1,0 +1,28 @@
+{
+  "baselineCommit": "7cda443f",
+  "environment": "Local Windows runner with connected runtime database and Railway media bucket; sparse source checkout; not deployed HTTP timings",
+  "queries": [
+    {
+      "query": "leadership",
+      "baselineMs": 56217,
+      "optimizedMs": 9228,
+      "results": 8,
+      "phases": {
+        "library": 1797,
+        "supplements": 7339,
+        "ranking": 79
+      }
+    },
+    {
+      "query": "accessibility",
+      "baselineMs": 37068,
+      "optimizedMs": 7009,
+      "results": 8,
+      "phases": {
+        "library": 1671,
+        "supplements": 5261,
+        "ranking": 65
+      }
+    }
+  ]
+}
