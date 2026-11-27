@@ -1,0 +1,24 @@
+[
+  {
+    "query": "leadership",
+    "baselineMs": 44735,
+    "optimizedMs": 8447,
+    "resultCount": 8,
+    "stages": {
+      "library": 2119,
+      "supplements": 6258,
+      "ranking": 59
+    }
+  },
+  {
+    "query": "accessibility",
+    "baselineMs": 8276,
+    "optimizedMs": 6264,
+    "resultCount": 8,
+    "stages": {
+      "library": 1675,
+      "supplements": 4428,
+      "ranking": 144
+    }
+  }
+]
