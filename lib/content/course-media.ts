@@ -1,7 +1,7 @@
 import 'server-only';
 import { createHash } from 'node:crypto';
 import { Readable } from 'node:stream';
-import { configuredPublicMediaRoot, createStoredFolders, listStoredNames, storedCapacity, storedFolderReady, writeStoredFile } from '@/lib/storage/public-media-store';
+import { configuredPublicMediaRoot, createStoredFolders, listStoredNames, listStoredSizes, storedCapacity, storedFolderReady, writeStoredFile } from '@/lib/storage/public-media-store';
 import { safeOpen } from './geffen-volume';
 import { mapConcurrent } from '@/lib/async/map-concurrent';
 
@@ -132,8 +132,15 @@ export const RETIRED_COURSE_MEDIA = /^leadership-film-\d{2}-/;
 export async function publishedCourseMedia(root: string | undefined, fresh = false): Promise<CourseMediaItem[]> {
   if (!root) return [];
   if (!fresh && cache && cache.root === root && Date.now() - cache.at < 60_000) return cache.items;
-  const names = await listStoredNames(root, ['course-media', 'manifests']);
+  // In the bucket, one listing of the asset folder replaces a size request per file. It is read on
+  // every fresh check, so a deleted asset is still noticed at once. Null means check file by file.
+  const [names, assetSizes] = await Promise.all([listStoredNames(root, ['course-media', 'manifests']), listStoredSizes(root, ['course-media', 'assets'])]);
   if (!names) return [];
+  const present = async (file: string) => {
+    if (!assetSizes) return assetPresent(root, file, false);
+    const size = assetSizes.get(file);
+    return !!size && size <= limitFor(file);
+  };
   let items: CourseMediaItem[];
   try {
     // Storage may be remote. Keep fresh manifest and file checks, but do not
@@ -146,9 +153,8 @@ export async function publishedCourseMedia(root: string | undefined, fresh = fal
         if (!opened.info.size || opened.info.size > MAX_MANIFEST) return null;
         const item = cleanCourseMediaManifest(JSON.parse(await opened.file.readFile('utf8')), name.slice(0, -5));
         if (!item || RETIRED_COURSE_MEDIA.test(item.id)) return null;
-        let present = true;
-        for (const file of [item.media, item.captions, item.transcript]) if (!await assetPresent(root, file, false)) { present = false; break; }
-        return present ? item : null;
+        for (const file of [item.media, item.captions, item.transcript]) if (!await present(file)) return null;
+        return item;
       } catch { return null; /* skip unreadable manifest */ } finally { await opened.file.close(); }
     });
     items = checked.filter((item): item is CourseMediaItem => item !== null);

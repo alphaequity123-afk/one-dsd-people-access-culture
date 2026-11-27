@@ -1,0 +1,14 @@
+{
+  "$schema": "https://schema.railpack.com",
+  "caches": {
+    "accessible-static-originals": {
+      "directory": "/app/.cache/accessible-static-assets",
+      "type": "locked"
+    }
+  },
+  "steps": {
+    "build": {
+      "caches": ["...", "accessible-static-originals"]
+    }
+  }
+}

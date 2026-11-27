@@ -4,7 +4,7 @@ import { Suspense } from "react";
 import Image from "next/image";
 import Link from "@/components/app-link";
 import { HomeTaskFinder } from "@/components/home-task-finder";
-import { HeroMotion } from "./hero-motion";
+import { HeroMotion, type HeroSource } from "./hero-motion";
 import { publishedCalendar } from "@/lib/content/cultural-calendar";
 import { CALENDAR_PATH, chicagoToday, compactCalendar, shortDateRange, upcomingObservances } from "@/lib/content/culture-calendar-grid";
 import "./task-home.css";
@@ -15,6 +15,15 @@ const pathways = [
   { image: "communities", alt: "Neighbors of different ages share food at a community meal.", title: "Communities", description: "Minnesota communities, their history and how to connect well.", href: "/minnesota-communities", action: "Open Communities" },
 ] as const;
 
+// The same five-second animation at four sizes (2026-11-27). The smaller files are re-encodings of
+// the approved 4K original (SSIM 0.99 at their size); the original still serves the largest screens.
+const heroSources: readonly HeroSource[] = [
+  { src: "/videos/one-dsd-hero-720.mp4", width: 1280 },
+  { src: "/videos/one-dsd-hero-1080.mp4", width: 1920 },
+  { src: "/videos/one-dsd-hero-1440.mp4", width: 2560 },
+  { src: "/videos/one-dsd-hero.mp4", width: 3840 },
+];
+
 export default function HomePage() {
   const heroImage = <Image className="home-hero-image" src="/images/people-access-culture-hero-20261025.webp" width={3840} height={1748} alt="Eight colleagues sharing perspectives around a conference table." preload quality={90} sizes="(max-width: 3840px) 100vw, 3840px" />;
   return <div className="dsd-home od">
@@ -24,7 +33,7 @@ export default function HomePage() {
         <p>Learning, guidance and tools for equity in the work and workplace of the Disability Services Division.</p>
         <p className="home-guide"><Link className="home-guide-link" href="/user-guide">How to use this site</Link></p>
       </div>
-      <HeroMotion src="/videos/one-dsd-hero.mp4">{heroImage}</HeroMotion>
+      <HeroMotion sources={heroSources}>{heroImage}</HeroMotion>
     </section>
 
     <div className="pilot-wrap">
