@@ -75,22 +75,37 @@ function remember() {
   const focus = inView(main);
   if (focus) remembered = { path: window.location.pathname, focus };
 }
+
+/* Where Ask is its own page, the person leaves the page they were reading to ask about it. The page they leave
+   for Ask is kept in this browser tab only (session storage, gone when the tab closes) and read on the Ask page. */
+const LAST_SCREEN = "ask-last-screen";
+const LAST_SCREEN_MINUTES = 20;
+const onAskPage = (path: string) => /^\/(ask|embedded-tools\/ask)(\/|$)/.test(path);
+function keepForAskPage() {
+  const screen = currentScreen();
+  if (!screen) return;
+  try { window.sessionStorage.setItem(LAST_SCREEN, JSON.stringify({ at: Date.now(), screen })); } catch { /* storage is optional */ }
+}
+function leadsToAsk(target: EventTarget | null) {
+  const link = target instanceof Element ? target.closest("a[href]") : null;
+  if (!link) return false;
+  try { return onAskPage(new URL(link.getAttribute("href")!, window.location.href).pathname); } catch { return false; }
+}
+
 if (typeof window !== "undefined") {
   let timer: number | undefined;
   const soon = () => { window.clearTimeout(timer); timer = window.setTimeout(remember, 250); };
   window.addEventListener("scroll", soon, { passive: true });
   window.addEventListener("resize", soon, { passive: true });
-  // Pressing Ask (or anything else) records the view before the panel opens.
-  window.addEventListener("pointerdown", remember, { capture: true, passive: true });
-  window.addEventListener("keydown", event => { if (event.key === "Enter" || event.key === " ") remember(); }, { capture: true });
+  // Pressing Ask (or anything else) records the view before the panel opens or the Ask page loads.
+  window.addEventListener("pointerdown", event => { remember(); if (leadsToAsk(event.target)) keepForAskPage(); }, { capture: true, passive: true });
+  window.addEventListener("keydown", event => { if (event.key === "Enter" || event.key === " ") { remember(); if (leadsToAsk(event.target)) keepForAskPage(); } }, { capture: true });
   window.addEventListener("load", remember);
 }
 
-export function captureScreen(): ScreenContext | undefined {
-  if (typeof document === "undefined") return undefined;
+function currentScreen(): ScreenContext | undefined {
   const path = window.location.pathname;
-  // On the Ask page itself the screen is the conversation; there is nothing else to see.
-  if (/^\/(ask|embedded-tools\/ask)(\/|$)/.test(path)) return undefined;
+  if (onAskPage(path)) return undefined;
   const main = mainArea();
   if (!main) return undefined;
   const live = askPanelOpen() ? "" : inView(main);
@@ -101,4 +116,17 @@ export function captureScreen(): ScreenContext | undefined {
     focus: focus || undefined,
     text: clean(readable(main), 6000) || undefined,
   };
+}
+
+export function captureScreen(): ScreenContext | undefined {
+  if (typeof document === "undefined") return undefined;
+  // On the Ask page, the screen is the page the person just came from, if they came within the last few minutes.
+  if (onAskPage(window.location.pathname)) {
+    try {
+      const kept = JSON.parse(window.sessionStorage.getItem(LAST_SCREEN) ?? "null") as { at: number; screen: ScreenContext } | null;
+      if (kept && Date.now() - kept.at < LAST_SCREEN_MINUTES * 60_000 && kept.screen?.path?.startsWith("/")) return kept.screen;
+    } catch { /* storage is optional */ }
+    return undefined;
+  }
+  return currentScreen();
 }
