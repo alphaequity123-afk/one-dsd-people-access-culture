@@ -15,7 +15,7 @@ describe("leadership curriculum", () => {
       expect(within(lesson!).getByText("Try it")).toBeTruthy();
       expect(lesson!.querySelectorAll("ol li")).toHaveLength(3);
     }
-    expect(screen.getByText(/does not collect responses or score people/i)).toBeTruthy();
+    expect(screen.getByText(/don't collect responses or score people/i)).toBeTruthy();
     expect(screen.getByText(/for leaders, supervisors, managers and directors/i)).toBeTruthy();
     expect(container.querySelectorAll("input, textarea, select")).toHaveLength(0);
     expect(screen.getByRole("link", { name: /disability justice/i }).getAttribute("href")).toContain("sinsinvalid.org");

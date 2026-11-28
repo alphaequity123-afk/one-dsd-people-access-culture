@@ -87,9 +87,9 @@ export default async function CulturalIntelligencePage() {
           </>}
           <h3 className="mt-6 text-xl font-semibold">Communities you serve</h3>
           {communities.length ? <>
-            <p className="mt-2 max-w-4xl leading-7">Use a brief to prepare questions about what matters to people and what support works for them.</p>
+            <p className="mt-2 max-w-4xl leading-7">A community brief can help you prepare questions about what matters to people and what support works for them.</p>
             <p className="mt-3"><Link className="font-semibold underline" href="/minnesota-communities">Find a community brief</Link></p>
-            {communities.some(community => community.standingTribalDeference) ? <p className="mt-3 max-w-4xl leading-7">For Tribal consultation, follow the applicable Tribal processes and contact the Office of Indian Affairs or the DHS office responsible for Tribal relations.</p> : null}
+            {communities.some(community => community.standingTribalDeference) ? <p className="mt-3 max-w-4xl leading-7">For Tribal consultation, follow the Tribal processes that apply and contact the Office of Indian Affairs or the DHS office responsible for Tribal relations.</p> : null}
           </> : <p className="mt-2">Community briefs are unavailable right now.</p>}
           <h3 className="mt-6 text-xl font-semibold">Community Outreach and Engagement</h3>
           <p className="mt-2 max-w-4xl leading-7">Plan an engagement, find the organizations connected with the division, and see where to reach people. <Link className="font-semibold underline" href="/community-outreach">Open Community Outreach and Engagement</Link></p>
@@ -100,7 +100,7 @@ export default async function CulturalIntelligencePage() {
           <p className="mt-3 max-w-4xl leading-7">{text("applyRoutine")}</p>
           {interculturalAvailable && <p className="mt-4"><Link className="font-semibold underline" href="/learn/intercultural/curriculum">Practice a decision in the learning path</Link></p>}
           {resources.length > 0 && <><h3 className="mt-6 text-xl font-semibold">Related tools</h3><ul className="mt-3 space-y-2">{resources.map(resource => <li key={resource.href}><Link className="underline" href={resource.href}>{resource.title}</Link></li>)}</ul></>}
-          {facilitation.length > 0 && <><h3 className="mt-6 text-xl font-semibold">Practice with other people</h3><p className="mt-2 max-w-4xl leading-7">Use these resources to connect a group discussion with a decision in your work, including the evidence, perspectives and responsibilities that need consideration.</p><ul className="mt-3 space-y-3">{facilitation.map(route => <li key={route.href}><Link className="underline" href={route.href}>{route.title}</Link><p className="mt-1">{route.use}</p></li>)}</ul></>}
+          {facilitation.length > 0 && <><h3 className="mt-6 text-xl font-semibold">Practice with other people</h3><p className="mt-2 max-w-4xl leading-7">These resources help a group discussion lead to a decision in your work, with the evidence, perspectives and responsibilities it needs to weigh.</p><ul className="mt-3 space-y-3">{facilitation.map(route => <li key={route.href}><Link className="underline" href={route.href}>{route.title}</Link><p className="mt-1">{route.use}</p></li>)}</ul></>}
         </Hub2More>
         <Hub2More id="leaders" headingId="leaders-title" title="For leaders">
           <p className="mt-4 max-w-4xl leading-7"><Link className="font-semibold underline" href={LEADERSHIP_PATHWAY_HREF}>Explore the leadership styles pathway</Link>: sixteen approaches, how each one handles conflict and affects equity and inclusion, scenarios, a practice rubric and a capstone.</p>

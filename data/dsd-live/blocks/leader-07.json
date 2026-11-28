@@ -1,0 +1,344 @@
+{
+ "id": "leader-07",
+ "name": "Leader track: Accessibility and accommodation",
+ "kind": "courses",
+ "version": 1,
+ "owner": "Gary Banks",
+ "review_date": null,
+ "sort": 26,
+ "items": [
+  {
+   "id": "dc-l61-leading-an-accessible-organization",
+   "kind": "course",
+   "title": "Leading an accessible organization",
+   "level": "advanced",
+   "topic": "accessible-documents-and-digital-accessibility",
+   "competency": "leading-with-deai",
+   "skill": "accessibility",
+   "priority": "important",
+   "alignment": "aligns",
+   "sequence": 1,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "admin-support",
+    "enterprise-services"
+   ],
+   "links": [
+    {
+     "to": "dc-l62-reasonable-accommodation-the-supervisor-s-role",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s61-why-digital-accessibility-matters",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-t59-accessibility-in-microsoft-teams",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l62-reasonable-accommodation-the-supervisor-s-role",
+   "kind": "course",
+   "title": "Reasonable accommodation: the supervisor's role",
+   "level": "advanced",
+   "topic": "reasonable-accommodation-and-supporting-a-coworker",
+   "competency": "leading-with-deai",
+   "skill": "accessibility",
+   "priority": "starting_point",
+   "alignment": "aligns",
+   "sequence": 2,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-l63-the-interactive-process-done-well",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s83-requesting-a-reasonable-accommodation",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l63-the-interactive-process-done-well",
+   "kind": "course",
+   "title": "The interactive process done well",
+   "level": "advanced",
+   "topic": "reasonable-accommodation-and-supporting-a-coworker",
+   "competency": "leading-with-deai",
+   "skill": "accessibility",
+   "priority": "important",
+   "alignment": "aligns",
+   "sequence": 3,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-l64-ada-title-ii-web-and-document-accessibility-for",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s83-requesting-a-reasonable-accommodation",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l64-ada-title-ii-web-and-document-accessibility-for",
+   "kind": "course",
+   "title": "ADA Title II web and document accessibility for leaders",
+   "level": "advanced",
+   "topic": "accessible-documents-and-digital-accessibility",
+   "competency": "leading-with-deai",
+   "skill": "accessibility",
+   "priority": "important",
+   "alignment": "aligns",
+   "sequence": 4,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "admin-support",
+    "enterprise-services"
+   ],
+   "links": [
+    {
+     "to": "dc-l65-minnesota-accessibility-standards-for-state-agen",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s61-why-digital-accessibility-matters",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-t59-accessibility-in-microsoft-teams",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l65-minnesota-accessibility-standards-for-state-agen",
+   "kind": "course",
+   "title": "Minnesota accessibility standards for state agencies",
+   "level": "advanced",
+   "topic": "accessible-documents-and-digital-accessibility",
+   "competency": "leading-with-deai",
+   "skill": "accessibility",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 5,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "admin-support",
+    "enterprise-services"
+   ],
+   "links": [
+    {
+     "to": "dc-l66-accessible-procurement-of-technology-and-service",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s61-why-digital-accessibility-matters",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-t59-accessibility-in-microsoft-teams",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l66-accessible-procurement-of-technology-and-service",
+   "kind": "course",
+   "title": "Accessible procurement of technology and services",
+   "level": "advanced",
+   "topic": "accessible-documents-and-digital-accessibility",
+   "competency": "leading-with-deai",
+   "skill": "accessibility",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 6,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "admin-support",
+    "enterprise-services"
+   ],
+   "links": [
+    {
+     "to": "dc-l67-accessibility-in-hybrid-and-remote-work",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s61-why-digital-accessibility-matters",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-t59-accessibility-in-microsoft-teams",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l67-accessibility-in-hybrid-and-remote-work",
+   "kind": "course",
+   "title": "Accessibility in hybrid and remote work",
+   "level": "advanced",
+   "topic": "accessible-meetings-and-events",
+   "competency": "leading-with-deai",
+   "skill": "accessibility",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 7,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-l68-supporting-employees-with-non-apparent-disabilit",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s68-accessible-meetings-in-teams",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-t43-accessible-meetings-for-all-abilities",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l68-supporting-employees-with-non-apparent-disabilit",
+   "kind": "course",
+   "title": "Supporting employees with non-apparent disabilities",
+   "level": "advanced",
+   "topic": "specific-disability-communities-non-apparent-deaf-blind-mental-health-",
+   "competency": "leading-with-deai",
+   "skill": "accessibility",
+   "priority": "important",
+   "alignment": "aligns",
+   "sequence": 8,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-l69-neuroinclusive-leadership",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s16-non-apparent-disabilities",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-i53-deaf-culture-as-a-cultural-and-linguistic-commun",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l69-neuroinclusive-leadership",
+   "kind": "course",
+   "title": "Neuroinclusive leadership",
+   "level": "advanced",
+   "topic": "specific-disability-communities-non-apparent-deaf-blind-mental-health-",
+   "competency": "leading-with-deai",
+   "skill": "accessibility",
+   "priority": "important",
+   "alignment": "aligns",
+   "sequence": 9,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-l70-mental-health-disability-and-workplace-support",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s16-non-apparent-disabilities",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-i53-deaf-culture-as-a-cultural-and-linguistic-commun",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l70-mental-health-disability-and-workplace-support",
+   "kind": "course",
+   "title": "Mental health, disability, and workplace support",
+   "level": "advanced",
+   "topic": "specific-disability-communities-non-apparent-deaf-blind-mental-health-",
+   "competency": "leading-with-deai",
+   "skill": "accessibility",
+   "priority": "important",
+   "alignment": "aligns",
+   "sequence": 10,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-s16-non-apparent-disabilities",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-i53-deaf-culture-as-a-cultural-and-linguistic-commun",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  }
+ ]
+}

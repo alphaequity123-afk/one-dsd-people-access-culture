@@ -103,7 +103,7 @@ export function StaffAskBrowse({
         </div>
         <div className={styles.railNote}>
           <p className="kicker">If a card is not enough</p>
-          <p className="text-sm">Use Find the right person to match the work with its responsible supervisor, Equity Director or Specialist, policy owner, or office.</p>
+          <p className="text-sm">Find the right person can match the work with the supervisor, Equity Director or Specialist, policy owner or office responsible for it.</p>
           <p className="mt-2"><Link href="/support/right-person">Find the right person</Link></p>
         </div>
         </aside>

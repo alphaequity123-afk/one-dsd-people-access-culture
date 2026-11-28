@@ -30,7 +30,7 @@ export default function LeadingJourneyPage() {
       <ol className="list-decimal space-y-2 pl-6">
         {JOURNEY_STEPS.map(step => <li key={step.id}><strong>{step.title}.</strong> {step.body} <Link href={step.href}>{step.link}</Link>.</li>)}
       </ol>
-      <p className={styles.plain}>Combine structured learning with workplace experience and feedback from colleagues. A lesson can introduce a concept; applying it requires attention to the situation, your authority and the people affected. Review what happened before deciding what to retain or change.</p>
+      <p className={styles.plain}>Growth comes from combining structured learning with experience at work and feedback from colleagues. A lesson can introduce an idea; putting it to work means paying attention to the situation, your authority and the people affected. Look back at what happened before you decide what to keep or change.</p>
     </section>
 
     <section className={styles.section} aria-labelledby="journey-start-title">
@@ -63,7 +63,7 @@ export default function LeadingJourneyPage() {
 
     <section className={styles.section} aria-labelledby="journey-reflect-title">
       <h2 id="journey-reflect-title">Looking back</h2>
-      <p>Use reflection to compare your intention with what happened. Record the observations, their significance and what remains uncertain, then decide what to retain, revise or refer to someone with the relevant responsibility. <Link href="/my-work/reflections">Open your reflection notebook</Link>.</p>
+      <p>Reflection lets you compare what you meant to do with what happened. Note what you observed, why it matters and what is still uncertain, then decide what to keep, what to revise and what to pass to the person responsible for it. <Link href="/my-work/reflections">Open your reflection notebook</Link>.</p>
       <ul className="list-disc space-y-2 pl-6">
         {REFLECTION_PROMPTS.map(prompt => <li key={prompt.kind}><strong>{prompt.kind}.</strong> {prompt.when} {prompt.questions.join(" ")}</li>)}
       </ul>
@@ -80,7 +80,7 @@ export default function LeadingJourneyPage() {
 
     <section className={styles.section} aria-labelledby="journey-elsewhere-title">
       <h2 id="journey-elsewhere-title">Free courses elsewhere</h2>
-      <p>For anyone who wants more. These belong to other organizations, open on their sites, and may ask you to create an account there. Confirm any required-training credit through the agency process responsible for that requirement; do not assume that completing an external course satisfies it.</p>
+      <p>For anyone who wants more. These belong to other organizations, open on their sites, and may ask you to create an account there. If you need required-training credit, confirm it through the agency process for that requirement; please don&apos;t assume an outside course counts toward it.</p>
       <ul className="list-disc pl-6">
         {LEARNING_ELSEWHERE.map(course => <li key={course.href}><SourceLink className="underline" href={course.href} target="_blank" rel="noreferrer">{course.title}</SourceLink>, {course.provider}. {course.body}</li>)}
       </ul>
@@ -92,7 +92,7 @@ export default function LeadingJourneyPage() {
       <ul className="list-disc pl-6">
         {END_OF_PATH_QUESTIONS.map(question => <li key={question}>{question}</li>)}
       </ul>
-      <p className={styles.plain}>This optional path has no completion submission or supervisor score report. Related lessons may save progress or practice responses in your browser profile. If you want something to bring to a development conversation, review and download your action plans and reflections from <Link href="/my-work">My work</Link>. What you share, and with whom, is your choice.</p>
+      <p className={styles.plain}>This path is optional: there is no completion submission or supervisor score report. Related lessons may save progress or practice responses in your browser profile. If you want something to bring to a development conversation, review and download your action plans and reflections from <Link href="/my-work">My work</Link>. What you share, and with whom, is your choice.</p>
     </section>
   </div></div>;
 }

@@ -2,21 +2,22 @@ import Link from "@/components/app-link";
 import "./pac-footer.css";
 
 /** Owner decision 2026-11-22: navy footer with a thin DHS-green top line on every page. Same markup and links as the One DSD front door's SiteFooter; keep the two identical. */
+// v2 rebuild (2026-11-25): the footer follows the four pillars; About, help, support and the charter share one page.
 const EXPLORE = [
-  { href: "/learn", label: "Learn" },
-  { href: "/learn/leadership", label: "Leadership" },
-  { href: "/library", label: "Library" },
-  { href: "/minnesota-communities", label: "Communities" },
-  { href: "/calendar", label: "Culture Calendar" },
+  { href: "/practice", label: "Practice" },
+  { href: "/leadership", label: "Leadership" },
+  { href: "/communities", label: "Communities" },
+  { href: "/knowledge", label: "Knowledge" },
+  { href: "/people-and-growth", label: "People and Growth" },
+  { href: "/minnesota-communities/calendar", label: "Culture Calendar" },
   { href: "/audio-library", label: "Audio library" },
 ];
 const HELP = [
   { href: "/equity-centered-practice", label: "Equity-centered practice" },
-  { href: "/start", label: "Begin with equity" },
-  { href: "/user-guide", label: "How to use this site" },
-  { href: "/support", label: "Support" },
-  { href: "/about", label: "About" },
-  { href: "/program-foundation", label: "Program charter" },
+  { href: "/start", label: "Begin here" },
+  { href: "/about", label: "About and help" },
+  { href: "/about#how-to-use", label: "How to use this site" },
+  { href: "/about#charter", label: "Program charter" },
   { href: "/site-map", label: "Site map" },
 ];
 

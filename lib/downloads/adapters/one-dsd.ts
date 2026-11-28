@@ -106,7 +106,7 @@ export function leadershipDocument(): ResourceDocument {
           [{ text: "Learn: ", bold: true }, { text: "Explore a resource and the leadership decision it can inform." }],
           [{ text: "Reflect: ", bold: true }, { text: "Separate what you observed from what you assumed. Consider whose perspective is missing." }],
           [{ text: "Practice: ", bold: true }, { text: "Try a supported change or work through a realistic situation." }],
-          [{ text: "Return: ", bold: true }, { text: "Seek feedback, examine what happened, and decide what to keep or change." }],
+          [{ text: "Return: ", bold: true }, { text: "Ask for feedback, look at what happened, and decide what to keep or change." }],
         ]),
       ]),
       ...DEVELOPMENT_ENTRIES.map((entry) =>

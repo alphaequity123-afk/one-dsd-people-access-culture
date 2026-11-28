@@ -145,7 +145,7 @@ describe("the Equity Analysis Toolkit", () => {
 
 describe("navigation", () => {
   it("adds a separate area without a sixth main menu item", () => {
-    expect(PRIMARY_SECTIONS).toHaveLength(5);
+    expect(PRIMARY_SECTIONS).toHaveLength(4);
     expect(pageArea("/leading")).toBe("leading");
     expect(pageArea("/leading/policy")).toBe("leading");
     expect(pageArea("/learn/collections")).toBe("learn");
@@ -154,8 +154,9 @@ describe("navigation", () => {
     expect(PAGE_AREAS.programs.links.map(([, href]) => href)).toContain("/one-dsd/leadership");
     for (const [, href] of PAGE_AREAS.leading.links) expect(destinationExists(href), href).toBe(true);
     const header = readFileSync(path.join(root, "components/dsd-program-header.tsx"), "utf8");
-    // Owner decision 2026-11-11: the menu says "Leadership"; the full wording stays as the tooltip.
-    expect(header).toContain('title="For leaders, supervisors, managers, and directors">Leadership</Link>');
+    // v2 rebuild (2026-11-25): Leadership is one of the five pillars in the main menu.
+    expect(PRIMARY_SECTIONS.map(([label, href]) => [label, href])).toContainEqual(["Leadership", "/leadership"]);
+    expect(header).toContain("PRIMARY_SECTIONS.map");
   });
   it("sends the supervisor or manager role to the space, and no other role", () => {
     const intake = (role: string) => ({ contextPreference: "one_dsd", task: "workforce_equity", urgency: "exploratory", role }) as Parameters<typeof buildStartRecommendation>[0];
@@ -172,6 +173,6 @@ describe("the promises on these pages", () => {
   });
   it("states plainly what is and is not recorded", () => {
     const page = readFileSync(path.join(root, "app/leading/how-this-works/page.tsx"), "utf8");
-    for (const words of ["does not give supervisors a learner scoreboard", "keep those items in this browser profile", "does not send those saved items to supervisors or program staff", "Exporting or sharing a copy is a separate action", "go to outside services", "does not intentionally save a question-and-answer copy", "earlier versions may have retained separate records", "does not replace training the state requires", "TRAINING_CREDIT_NOTICE", "does not assign or certify required agency training"]) expect(page).toContain(words);
+    for (const words of ["Nothing here gives supervisors a scoreboard of learners", "they stay in this browser profile", "We never send those saved items to supervisors or program staff", "A copy leaves your browser only if you choose to export or share it", "goes to outside services", "does not set out to keep a copy of your questions and answers", "earlier versions may have kept separate records", "replace the training the state requires", "TRAINING_CREDIT_NOTICE", "assign or certify required agency training"]) expect(page).toContain(words);
   });
 });

@@ -76,9 +76,9 @@ export default function EquityDecisionsCurriculum({ lessonId, downloads }: { les
     {!lesson ? <>
       <section aria-labelledby="start">
         <h2 id="start">A connected path at your own pace</h2>
-        <p>Use a work example that matters to you, or follow the example in the lessons. Each part offers guidance, a visible transcript, an individual decision to practice, and a prompt for your own work.</p>
+        <p>Bring a work example that matters to you, or follow the example in the lessons. Each part offers guidance, a visible transcript, an individual decision to practice, and a prompt for your own work.</p>
         <p>Participation in this learning is voluntary. You do not need a group or need to share personal experiences. Leave names, case details, and other confidential information out of learning notes.</p>
-        <p>The learning supports your work. Follow applicable policy and review requirements, and consult the people or areas responsible when a decision needs their approval. A quick check does not replace a full analysis when one is required.</p>
+        <p>This learning is here to support your work. Follow the policy and review requirements that apply, and check with the people or areas responsible when a decision needs their approval. A quick check does not replace a full analysis when one is required.</p>
         <SourceLink className="equity-decisions-primary text-white" href={`${base}/01`}>Start the learning</SourceLink>{' '}
         <button type="button" onClick={downloadCompanion}>Download the companion working notes</button>
       </section>

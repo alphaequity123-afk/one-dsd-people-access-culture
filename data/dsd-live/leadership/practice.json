@@ -1,0 +1,606 @@
+{
+  "version": 1,
+  "introduction": "Choose a decision that resembles work you do or hope to do. You can start anywhere, take either path, and replay a different choice. These are fictional Minnesota human services situations. Each offers a short debrief, a sample goal, and a small experiment you can adapt. You decide whether to practice alone, invite feedback, or return later.",
+  "goalGuide": "For a SMART goal, name a specific action you control, a way to measure it, a scope you can achieve, the reason it matters, and a date. Each example is a starting point. Adjust its target to fit the decision and the people involved.",
+  "practiceGuide": "Plan a small test and predict what will happen. Do the test and note surprises. Study the difference between the prediction and what people experienced. Act by trying again, revising the idea, or setting it aside. A small test gives you a reason for the next decision. It cannot establish how a whole program performs.",
+  "sources": [
+    {
+      "id": "metacognition",
+      "title": "Chua, Morris and Mor (2012) · Collaborating across cultures",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0749597812000453",
+      "finding": "Across studies of managers and collaborative tasks, questioning one's own cultural assumptions was associated with sharing ideas and developing trust across differences.",
+      "limit": "The studies concerned creative collaboration. They do not describe the preferences of a community or demonstrate a service outcome in Minnesota.",
+      "application": "Before offering a fix, write the assumption behind it and ask the other person a question that could change your explanation."
+    },
+    {
+      "id": "perspective",
+      "title": "Eyal, Steffel and Epley (2018) · Perspective mistaking",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29620401/",
+      "finding": "Across experiments, instructions to imagine another person's perspective did not consistently improve accuracy. In the final experiment, a direct conversation helped people learn the other person's answers.",
+      "limit": "These were research tasks with particular participants. Asking is useful only if the person can choose how to respond and whether to share.",
+      "application": "Identify what the evidence actually shows. Then offer a specific, answerable question and a way for the person to correct the account."
+    },
+    {
+      "id": "review",
+      "title": "DeRue, Nahrgang, Hollenbeck and Workman (2012) · After-event reviews and leadership development",
+      "url": "https://ecommons.cornell.edu/entities/publication/950c59a4-6f93-4879-8c81-278de56b0c86",
+      "finding": "In a nine-month quasi-experimental study following 173 participants through four developmental experiences, structured review after an event helped participants develop as leaders.",
+      "limit": "The participants and learning setting differed from Minnesota human services. Reflection alone cannot show a change in workplace practice or resident outcomes.",
+      "application": "After a decision, compare what you expected with what occurred. Identify a piece of evidence and one different action for the next attempt."
+    },
+    {
+      "id": "olmstead",
+      "title": "ACET for the Minnesota Olmstead Implementation Office (2024) · Community conversations",
+      "url": "https://mn.gov/olmstead/assets/ACET_OIO-_Community_Conversations_Final_Report_12-9-24_tcm1143-661440.pdf",
+      "finding": "In 20 conversations involving 304 participants, people described barriers in state services and wanted greater influence over decisions affecting people with disabilities. Community partners helped organize and facilitate the conversations.",
+      "limit": "Participants were recruited for conversations. Their accounts identify questions and priorities, rather than statewide prevalence or an individual's preference.",
+      "application": "Give participants a real choice with consequences, explain who holds decision authority, and return with evidence of what happened to their input."
+    },
+    {
+      "id": "pdsa",
+      "title": "Institute for Healthcare Improvement · Testing changes with the Model for Improvement",
+      "url": "https://www.ihi.org/library/model-for-improvement/testing-changes",
+      "finding": "The method asks a team to state a prediction, test on a small scale, compare expected and observed effects, and decide how to modify or extend the next test.",
+      "limit": "This is the method owner's instructional guidance. Using the cycle does not establish that a particular intervention works.",
+      "application": "Keep the first test small and reversible. Include an observation about who did extra work or who could not participate."
+    },
+    {
+      "id": "learner-choice",
+      "title": "Baldwin, Magjuka and Loher (1991) · Choice of training, motivation and learning",
+      "url": "https://doi.org/10.1111/j.1744-6570.1991.tb00690.x",
+      "finding": "Researchers randomly assigned 207 trainees to different experiences of choosing training. All received the same module. Motivation was higher when trainees received their choice. When a choice was offered and then overridden, participants learned less and had lower motivation than those offered no choice.",
+      "limit": "This single experiment compared ways of offering a particular training module. It cannot predict how many Minnesota employees will take part or whether a chosen course will improve a service.",
+      "application": "Choose the competency, decision, and level of practice that fit your situation. You can switch paths or return directly to the articles."
+    },
+    {
+      "id": "smart",
+      "title": "Centers for Disease Control and Prevention (2026) · Design training learning objectives",
+      "url": "https://www.cdc.gov/training-development/php/about/design-training-learning-objectives.html",
+      "finding": "CDC recommends writing an observable learning objective with a specific action, a measure, a feasible scope, relevance to the learner and a deadline.",
+      "limit": "This is design guidance for training developers. A written objective supplies a target. Evidence of practice comes from attempting the work.",
+      "application": "Turn a broad intention into one action you can attempt and ask who could observe its effect."
+    }
+  ],
+  "simulations": [
+    {
+      "id": "leading-self",
+      "competency": "Self-awareness and judgment",
+      "title": "When feedback sounds like a personal criticism",
+      "articleIds": [
+        1,
+        8,
+        9,
+        11
+      ],
+      "scenario": "You wrote instructions for changing a callback number. A colleague brings three examples of people reaching the wrong office. At the team huddle they say, “People keep telling us the letter sends them in circles.” You hear a public challenge to your work. The next print run closes tomorrow.",
+      "decisionPrompt": "How will you handle the first minute of the conversation?",
+      "start": "opening",
+      "steps": [
+        {
+          "id": "opening",
+          "prompt": "People are waiting for you to respond. Which opening do you choose?",
+          "choices": [
+            {
+              "label": "Ask the colleague to walk through one fictionalized call with the team.",
+              "feedback": "The colleague shows the sequence. The number on the letter works, but the recorded menu uses a different name for the office. You have found a mismatch the text review missed.",
+              "next": "handoff"
+            },
+            {
+              "label": "Thank the colleague, keep the huddle on schedule, and set a one-to-one conversation for today.",
+              "feedback": "The colleague brings a concern they had avoided raising publicly. The examples came from the evening shift, which rarely attends the huddle. They worry the wording will be fixed while their shift still lacks a route to report problems.",
+              "next": "voice"
+            }
+          ]
+        },
+        {
+          "id": "handoff",
+          "prompt": "The phone menu belongs to a different team. What can you do before the print deadline?",
+          "choices": [
+            {
+              "label": "Invite the phone team to try the same call, then agree who can correct which instruction.",
+              "feedback": "The phone team hears the mismatch and can verify its own wording. The letter owner now has evidence for a change and the team knows who will check the full route. If the deadline arrives first, they must still decide how to handle this print run.",
+              "next": "finish"
+            },
+            {
+              "label": "Ask the letter owner to put a short explanation beside the number for this print run.",
+              "feedback": "Residents may get a usable instruction sooner. The workaround depends on the phone menu staying as it is. Someone still needs to check the route and take ownership if the menu changes.",
+              "next": "finish"
+            }
+          ]
+        },
+        {
+          "id": "voice",
+          "prompt": "How will you use what the evening worker disclosed?",
+          "choices": [
+            {
+              "label": "Ask what can be shared and invite the shift to choose a way to flag future problems.",
+              "feedback": "The colleague agrees to share the process problem without identifying the callers. The shift proposes a short handoff note. A named reader and a reply deadline will determine whether that effort is worthwhile.",
+              "next": "finish"
+            },
+            {
+              "label": "Offer to bring today's examples to the letter owner yourself.",
+              "feedback": "You take immediate work off the colleague and can protect the details they want kept private. The next concern still depends on reaching you. Return with the decision and discuss how another shift can raise the next issue.",
+              "next": "finish"
+            }
+          ]
+        }
+      ],
+      "debrief": "Your first explanation was about the colleague's tone. The call sequence and the shift schedule point to two different problems you can act on. Think through what each path revealed and which person you would still need to hear from.",
+      "reflection": [
+        "Which words did you hear, and which intention did you supply yourself?",
+        "How might rank, timing, or your own expectation of a polite opening affect what you notice? Write one question that could disprove your first interpretation."
+      ],
+      "smart": "Within ten working days, I will use a clarifying question in two feedback conversations and ask each colleague whether my account captures the consequence they raised. I will record one change I made to an instruction or handoff.",
+      "pdsa": {
+        "plan": "Choose one mock callback instruction. Predict where a reader unfamiliar with the office will turn next.",
+        "do": "Ask a willing colleague from another shift to follow it and narrate their next step. Note the first place they need extra knowledge.",
+        "study": "Compare their route with your prediction. Locate the mismatch in wording, timing, or ownership.",
+        "act": "Revise one instruction or send the mismatch to its owner. Try the route again with a second colleague."
+      },
+      "roles": {
+        "aspiring": "Practice the first question with a peer and bring one verified mismatch to the person who owns it.",
+        "supervisor": "Give a colleague room to question your current instructions and return with a specific response.",
+        "senior": "Examine a cross-unit handoff where staff can see a problem but neither unit owns the full route."
+      },
+      "sources": [
+        "perspective",
+        "metacognition",
+        "review",
+        "pdsa",
+        "smart"
+      ]
+    },
+    {
+      "id": "leading-others",
+      "competency": "Developing people",
+      "title": "Who gets the acting assignment?",
+      "articleIds": [
+        17,
+        18,
+        22,
+        25,
+        26
+      ],
+      "scenario": "A supervisor will be away for three weeks. The acting lead will coordinate two shifts and make decisions about difficult handoffs. One employee has run the morning huddle repeatedly. An evening worker has quietly resolved problems both shifts hand off. Two days remain to prepare cover.",
+      "decisionPrompt": "How will you balance readiness, access to the opportunity, and continuity of service?",
+      "start": "opening",
+      "steps": [
+        {
+          "id": "opening",
+          "prompt": "How will the team fill the role?",
+          "choices": [
+            {
+              "label": "Invite interest on both shifts and publish the actual decisions the acting lead will make.",
+              "feedback": "The evening worker expresses interest in writing. The morning lead asks whether the appointment requires being present at 8 a.m. You discover the time was a custom rather than a stated duty.",
+              "next": "criteria"
+            },
+            {
+              "label": "Name an experienced lead for the first two days and arrange a second decision about the remaining weeks.",
+              "feedback": "Immediate coverage is in place. The temporary lead is already receiving questions and being introduced as the replacement. The second decision may feel settled before anyone else can express interest.",
+              "next": "interim"
+            }
+          ]
+        },
+        {
+          "id": "criteria",
+          "prompt": "You can assess two candidates before the supervisor leaves. What evidence will you seek?",
+          "choices": [
+            {
+              "label": "Give each the same handoff decision and let them explain their reasoning aloud or in writing.",
+              "feedback": "Both applicants can demonstrate how they handle a missed response. The panel can compare their evidence against the same criteria and check any genuine duty that requires live communication.",
+              "next": "finish"
+            },
+            {
+              "label": "Review past handoffs and ask each person which decision was theirs and what happened afterward.",
+              "feedback": "Actual work can reveal judgment a presentation would miss. The number of examples also reflects who received past assignments. Ask for a comparable work sample where an applicant lacked the opportunity.",
+              "next": "finish"
+            }
+          ]
+        },
+        {
+          "id": "interim",
+          "prompt": "How will you keep the remaining assignment open?",
+          "choices": [
+            {
+              "label": "Announce the interim end date, selection criteria and protected preparation time on both shifts.",
+              "feedback": "People can decide whether to compete, and the interim lead can explain when authority transfers. Someone still needs to check that the evening shift received the invitation in time.",
+              "next": "finish"
+            },
+            {
+              "label": "Invite the evening worker to shadow the interim lead pending the decision.",
+              "feedback": "Shadowing can reveal the job and build confidence. It also asks the evening worker to do extra work while the interim lead is paid to practice. Clarify coverage, time and how the final choice will be made.",
+              "next": "finish"
+            }
+          ]
+        }
+      ],
+      "debrief": "Readiness depends partly on who was allowed to practice before today. A leader can protect service continuity while making the selection criteria, decision date, and support visible to both shifts.",
+      "reflection": [
+        "Where did you use visibility, confidence, or an immediate spoken answer as evidence of judgment?",
+        "If one colleague wanted to question the criteria privately, what route could they actually use before selection?"
+      ],
+      "smart": "Before the next acting assignment is filled this month, I will send one description of duties and criteria to both shifts, offer two response formats, and check with one person on each shift that the invitation reached them before the deadline.",
+      "pdsa": {
+        "plan": "Select one short acting opportunity. Predict which shift would usually hear first and identify an achievable common response window.",
+        "do": "Test the same notice on both shifts and ask an available colleague on each to identify how to apply.",
+        "study": "Compare when each person actually received the notice and which criteria each understood. Check whether applying would require unpaid preparation.",
+        "act": "Change the delivery time, coverage, or criteria that caused a gap. Explain the adjustment and use it on the next opportunity."
+      },
+      "roles": {
+        "aspiring": "Ask which decisions you could practice and what evidence would count in a future selection.",
+        "supervisor": "Design the assignment, assessment and coverage so both shifts can take part.",
+        "senior": "Review who gets paid acting work across units and which roles lack fair access to qualifying experiences."
+      },
+      "sources": [
+        "metacognition",
+        "review",
+        "pdsa",
+        "smart"
+      ]
+    },
+    {
+      "id": "leading-the-organization",
+      "competency": "Direction and priorities",
+      "title": "A faster dashboard and a longer wait",
+      "articleIds": [
+        32,
+        33,
+        34,
+        36,
+        43
+      ],
+      "scenario": "A director must decide whether to expand a redesigned callback queue. Its dashboard shows faster completion. Staff now close an item when it goes to the language-support desk. A community partner says residents sometimes call back days later to ask who will contact them. The partner can describe experiences but cannot tell how common they are.",
+      "decisionPrompt": "What would justify expansion or a narrower test?",
+      "start": "opening",
+      "steps": [
+        {
+          "id": "opening",
+          "prompt": "A budget decision is due Friday. What question will you put before the group first?",
+          "choices": [
+            {
+              "label": "Track a small set of handoffs from the first request to a usable reply.",
+              "feedback": "The trace shows that forwarding a request and completing a reply are different events. Some completed replies are missing from the records, so a gap in the data is also possible.",
+              "next": "measure"
+            },
+            {
+              "label": "Ask staff and a partner to reconstruct what the process looked like from the resident's end.",
+              "feedback": "One participant describes a callback from an unfamiliar number during their work shift. Staff explain that they cannot tell which contact options were offered. The discussion identifies a plausible barrier with an unknown frequency.",
+              "next": "test"
+            }
+          ]
+        },
+        {
+          "id": "measure",
+          "prompt": "The records cannot show every outcome. How will you frame the budget decision?",
+          "choices": [
+            {
+              "label": "Propose limited funding for a trial that checks both routing time and confirmed replies.",
+              "feedback": "The group can test a better measure before a wider commitment. The trial needs an owner to trace missing outcomes and a rule for including language-support cases in the review.",
+              "next": "finish"
+            },
+            {
+              "label": "Keep the decision date and report routing speed separately from outcomes the records cannot verify.",
+              "feedback": "The budget owner can see exactly which performance claim is supported. Without a funded or assigned follow-up, the unanswered service question could disappear after the spending decision.",
+              "next": "finish"
+            }
+          ]
+        },
+        {
+          "id": "test",
+          "prompt": "The proposed fix is to offer a choice of callback times. What will you do with it?",
+          "choices": [
+            {
+              "label": "Try the choice on one staffed route and check whether the promised times can be met.",
+              "feedback": "The team may learn whether the offer is meaningful and who bears any extra scheduling work. It will need feedback from people whose needs fall outside the available times.",
+              "next": "finish"
+            },
+            {
+              "label": "First ask the downstream desk to map when it can return calls with the requested language support.",
+              "feedback": "The team avoids offering an appointment it cannot keep. Residents still face the current delay while capacity is being checked. Name a deadline and a responsible person for the next decision.",
+              "next": "finish"
+            }
+          ]
+        }
+      ],
+      "debrief": "The director controls what a successful handoff means on the dashboard. If the measure rewards forwarding, a unit can meet its target while the person waits elsewhere. A partner account identifies a question worth investigating. Trace the actual route before estimating its scale.",
+      "reflection": [
+        "Whose definition of a completed service interaction made it onto the dashboard?",
+        "What evidence might you miss if only people able to call again in English can tell you what happened?"
+      ],
+      "smart": "In the next four weeks, I will review ten permitted, de-identified handoffs with the receiving team, distinguish confirmed replies from unknown outcomes, and bring one decision about the expansion to the budget owner.",
+      "pdsa": {
+        "plan": "Predict how often a forwarded item will have a confirmed reply in a small authorized sample. Agree what counts as a reply and what must remain unknown.",
+        "do": "Trace the sample with the receiving team using the appropriate work system; use aggregate counts in the learning exercise.",
+        "study": "Compare the two counts, the unknowns and the effort required to verify a reply. Ask whether one route is especially hard to observe.",
+        "act": "Revise the measure or the handoff, then repeat the test on a different shift before deciding about expansion."
+      },
+      "roles": {
+        "aspiring": "Trace one fictional handoff and identify where the meaning of completion changes.",
+        "supervisor": "Agree with the receiving unit who will check whether a person gets a usable next step.",
+        "senior": "Fund the measure or service change, and tell partners what evidence will govern the expansion."
+      },
+      "sources": [
+        "olmstead",
+        "review",
+        "pdsa",
+        "smart"
+      ]
+    },
+    {
+      "id": "leading-outside-the-organization",
+      "competency": "Partners and communities",
+      "title": "The invitation arrived after the choice was made",
+      "articleIds": [
+        34,
+        37,
+        38,
+        47
+      ],
+      "scenario": "A community organization agrees to host a conversation about evening access to a services office. Two days before the event, the program manager says the office location and staffing budget are fixed. There is still room to decide how people can reach staff after hours. A partner has already advertised a conversation about the location.",
+      "decisionPrompt": "What do you owe people before they give their time and expertise?",
+      "start": "opening",
+      "steps": [
+        {
+          "id": "opening",
+          "prompt": "How will you handle the invitation?",
+          "choices": [
+            {
+              "label": "Speak with the partner now and offer to reschedule or narrow the purpose together.",
+              "feedback": "The partner says people have arranged transportation and would prefer to meet. They want the invitation corrected today and a named official available for questions about the closed location decision.",
+              "next": "scope"
+            },
+            {
+              "label": "Keep the meeting time and ask the budget owner whether any part of the location decision can reopen.",
+              "feedback": "The budget owner can promise a written explanation of the location decision. Moving the office is outside this cycle. There is room to test one staffed evening option for six weeks.",
+              "next": "options"
+            }
+          ]
+        },
+        {
+          "id": "scope",
+          "prompt": "A resident says an evening call is useless from a shared phone. How will their contribution shape the choice?",
+          "choices": [
+            {
+              "label": "Ask what would make the route usable and whether the resident wants the idea taken to the decision maker.",
+              "feedback": "The resident wants an appointment time they can arrange away from home. The partner offers to check whether more people want that option. The resident has offered one account and controls how it is shared.",
+              "next": "finish"
+            },
+            {
+              "label": "Ask permission to record the limitation and give everyone time to respond individually after the meeting.",
+              "feedback": "A person may welcome space to consider a sensitive access problem. Without a reachable contact route, a deadline and an answer afterward, a written invitation could add work for the very people seeking access.",
+              "next": "finish"
+            }
+          ]
+        },
+        {
+          "id": "options",
+          "prompt": "The pilot can cover only one option initially. How will you use the remaining decision space?",
+          "choices": [
+            {
+              "label": "Share the resource limit and ask participants what tradeoff they would test first, including an option they devise.",
+              "feedback": "The group proposes fewer hours with guaranteed appointments. A leader must now test whether that arrangement helps people with unpredictable schedules and report who would still lack an option.",
+              "next": "finish"
+            },
+            {
+              "label": "Offer two feasible options first, then return with cost information on an alternative raised by the partner.",
+              "feedback": "The group gets concrete choices. The partner's alternative will be taken seriously only if someone owns the costing and the decision remains open until the answer is back.",
+              "next": "finish"
+            }
+          ]
+        }
+      ],
+      "debrief": "A leader can lose trust before the meeting even starts if the invitation promises influence the agency cannot grant. The service question is whether a person's contribution changes an available option and whether they can find out what became of it.",
+      "reflection": [
+        "Who could reasonably have thought the location was still open, and what created that expectation?",
+        "Which assumptions about work hours, privacy, language, or travel shaped the options you called feasible?"
+      ],
+      "smart": "For the next partner session within thirty days, I will send a joint invitation naming one open decision, one fixed constraint, who decides, and the date participants can expect an answer. I will return a decision and reason through the partner's agreed channel by that date.",
+      "pdsa": {
+        "plan": "Ask one partner to explain in their own words what the draft invitation lets participants influence. Predict which point could be misunderstood.",
+        "do": "Revise the invitation, test it with an interested reader, and record what they expect to happen after speaking.",
+        "study": "Compare the reader’s expectation with the authority the program owner actually has. Identify any unseen costs of participation.",
+        "act": "Correct the invitation and decision date before expanding outreach. After the meeting, check whether the promised answer was reachable."
+      },
+      "roles": {
+        "aspiring": "Review the invitation with a partner and flag any promise the team cannot evidence.",
+        "supervisor": "Arrange accessible participation and ensure someone owns the follow-up.",
+        "senior": "Name the decision authority, free up a real option, and communicate the disposition of the partner's alternative."
+      },
+      "sources": [
+        "olmstead",
+        "perspective",
+        "metacognition",
+        "pdsa",
+        "smart"
+      ]
+    },
+    {
+      "id": "getting-work-done",
+      "competency": "Planning and delivery",
+      "title": "Two deadlines and an invisible queue",
+      "articleIds": [
+        39,
+        40,
+        41,
+        42,
+        46
+      ],
+      "scenario": "A service team can complete eighteen routine follow-ups this week. Twenty-five are waiting, including requests moved from a phone queue into a shared inbox. The inbox shows arrival time but has no field for a person's agreed contact method. A policy specialist also needs two staff hours to correct a confusing notice before it goes out.",
+      "decisionPrompt": "How will you allocate a limited week of work without losing people in a handoff?",
+      "start": "opening",
+      "steps": [
+        {
+          "id": "opening",
+          "prompt": "Which step will you take while today's replies are due?",
+          "choices": [
+            {
+              "label": "Review commitments and time-sensitive cases with the team before assigning the eighteen slots.",
+              "feedback": "The review catches a promised contact due today. A worker can complete it if someone else handles the desk. It also shows that some requests are hard to prioritize because nobody can see what was promised.",
+              "next": "coverage"
+            },
+            {
+              "label": "Ask the notice owner to estimate the rework prevented by assigning two hours to the correction.",
+              "feedback": "The owner identifies a sentence that triggers repeat contacts but cannot estimate the count reliably. Printing can still be adjusted tomorrow. The team must decide what evidence is enough to protect two hours today.",
+              "next": "capacity"
+            }
+          ]
+        },
+        {
+          "id": "coverage",
+          "prompt": "How will staff know which work can wait and who still needs an answer?",
+          "choices": [
+            {
+              "label": "Assign an owner and next contact for each deferred item, using the team's authorized work process.",
+              "feedback": "Staff can identify a named next action. Someone must still verify the contact method through the proper record and handle time-sensitive items according to current procedures.",
+              "next": "finish"
+            },
+            {
+              "label": "Ask another shift to take a bounded set of handoffs and confirm receipt before reallocating further.",
+              "feedback": "The receiving shift can make a specific commitment and flag missing information. If it lacks the right information or staffing, the original team still needs an owner for the next contact.",
+              "next": "finish"
+            }
+          ]
+        },
+        {
+          "id": "capacity",
+          "prompt": "The team asks whether editing the notice is worth a longer queue. What will you authorize?",
+          "choices": [
+            {
+              "label": "Protect one short edit-and-test period and recheck urgent commitments with the desk afterward.",
+              "feedback": "The change can be tested against a sample question before wider use. Capture the time spent, the clarity gain and any displaced commitment before deciding whether to protect more time.",
+              "next": "finish"
+            },
+            {
+              "label": "Handle the due commitments first and seek a named reviewer and decision time before tomorrow's print run.",
+              "feedback": "The team protects today's promises. The notice fix has a chance only if a specific person accepts the task in time. If nobody can, tell the decision maker what competing work is displacing it.",
+              "next": "finish"
+            }
+          ]
+        }
+      ],
+      "debrief": "First-in order can be appropriate within an agreed queue. It cannot resolve missing commitments or reveal a request that moved into a different system. Make the tradeoff and ownership visible to the worker who inherits it and to the person waiting for a response.",
+      "reflection": [
+        "Whose access depends on leaving a second message or using the team's preferred channel?",
+        "Which deadline felt most credible, and did the rank of the person asking affect your reasoning?"
+      ],
+      "smart": "During the next two weekly planning meetings, I will review five authorized handoffs with the receiving shift, check for a named next owner and contact commitment, and bring one recurring gap and a proposed fix to the workload owner.",
+      "pdsa": {
+        "plan": "Pick one handoff between shifts. Predict whether each shift can independently name the next action from the information it normally sees.",
+        "do": "Try a short handoff description in the approved work process and have the receiving worker restate who acts and when.",
+        "study": "Compare the two accounts. Record any extra time spent finding the agreed contact channel and any work shifted to the next day.",
+        "act": "Keep, shorten, or revise the handoff description. Test on another shift before making a wider workload change."
+      },
+      "roles": {
+        "aspiring": "Show where a handoff loses the next action and suggest one wording change.",
+        "supervisor": "Set a realistic priority order, protect time, and assign a person to follow deferred work.",
+        "senior": "Resolve the capacity conflict across units and check whether faster processing has moved work to residents."
+      },
+      "sources": [
+        "review",
+        "olmstead",
+        "pdsa",
+        "smart"
+      ]
+    },
+    {
+      "id": "leading-with-deai",
+      "competency": "Fair access and inclusion",
+      "title": "Who gets to say what independence means?",
+      "articleIds": [
+        9,
+        37,
+        47,
+        48,
+        50
+      ],
+      "scenario": "At a planning conversation, a resident says they want their cousin involved when comparing support options. A colleague wants time alone with the resident to protect their ability to speak freely. The resident uses a communication device and starts a reply. After a brief pause, someone asks the cousin to explain what the resident means. You are facilitating the conversation.",
+      "decisionPrompt": "How can you protect the person's ability to decide who participates and how their wishes are heard?",
+      "start": "opening",
+      "steps": [
+        {
+          "id": "opening",
+          "prompt": "The cousin begins answering. How do you respond?",
+          "choices": [
+            {
+              "label": "Return the floor to the resident and ask how they would like everyone to take turns.",
+              "feedback": "Given time, the resident asks the cousin to restate two technical terms and then wants to answer personally. Participation by a trusted person and control of the decision can coexist.",
+              "next": "support"
+            },
+            {
+              "label": "Offer the resident a choice of a joint conversation, private time, or another way to respond.",
+              "feedback": "The resident chooses private time for one question and asks the cousin to return for the options discussion. The people in the room need a shared understanding of which decision remains the resident's.",
+              "next": "privacy"
+            }
+          ]
+        },
+        {
+          "id": "support",
+          "prompt": "The colleague now proposes listing “living alone” as the goal. What do you do?",
+          "choices": [
+            {
+              "label": "Ask what a good week would look like and which part, if any, the resident wants help changing.",
+              "feedback": "The resident describes deciding when guests come over and having reliable support on weekends. Living alone was someone else's interpretation. Check the wording with the resident before using it in the next step.",
+              "next": "finish"
+            },
+            {
+              "label": "Offer concrete living arrangements to compare and ask whether the list leaves out their preference.",
+              "feedback": "Concrete options can make abstract language usable. They can also narrow the answer to arrangements already familiar to the agency. Leave time to propose another arrangement and say who can investigate it.",
+              "next": "finish"
+            }
+          ]
+        },
+        {
+          "id": "privacy",
+          "prompt": "During private time the resident says they want to keep their current home. How will you handle the return to the joint discussion?",
+          "choices": [
+            {
+              "label": "Ask what may be shared when the cousin returns and who the resident wants to say it.",
+              "feedback": "The resident chooses to explain their own goal, then have the cousin help compare practical options. Their decision about sharing remains separate from the team's ideas about family involvement.",
+              "next": "finish"
+            },
+            {
+              "label": "Offer the resident a chance to write or record their preferred wording for use during the joint conversation.",
+              "feedback": "This can reduce the effort of repeating a difficult point. It helps only if the resident chooses the format, controls who will receive it, and has enough time to make or correct it.",
+              "next": "finish"
+            }
+          ]
+        }
+      ],
+      "debrief": "The assumption that independence means living alone belongs to a decision system as well as to individuals. Directing one's life can include choosing interdependence and trusted support. A pause, a relative's presence, and a request for privacy can each have several meanings. The person can tell you which applies here.",
+      "reflection": [
+        "Which default shaped your first move: speaking quickly, answering alone, or treating a professional’s idea of independence as the goal?",
+        "What will you do if the person's preferred way to take part uses more meeting time than the schedule allows? Who has authority to change that condition?"
+      ],
+      "smart": "Over the next three practice conversations within four weeks, I will offer each participant a choice about turn-taking and support, use their own wording for one goal, and ask whether my record reflects what they meant. I will adjust one facilitation habit based on their feedback.",
+      "pdsa": {
+        "plan": "In a fictional planning exercise, predict whether a participant can choose who assists, how to answer, and how to correct the final goal.",
+        "do": "Invite a colleague to role-play the person and choose their own preferences. Provide a way to pause, respond later, or correct the record.",
+        "study": "Compare the goal you captured with the goal the participant intended. Ask which feature of the meeting made correction easier or harder.",
+        "act": "Change one feature such as turn-taking, the agenda, or the confirmation step. Try it again with someone who prefers a different way to participate."
+      },
+      "roles": {
+        "aspiring": "Practice a question that lets a person choose their own support and pace.",
+        "supervisor": "Observe one practice meeting, check the person's account of its outcome, and coach the facilitator on the moment authority shifted.",
+        "senior": "Review whether scheduling, documentation and meeting formats give staff the means to honor individual choices. Assign ownership to a barrier that spans teams."
+      },
+      "sources": [
+        "olmstead",
+        "perspective",
+        "metacognition",
+        "pdsa",
+        "smart"
+      ]
+    }
+  ],
+  "supportingSources": {
+    "choice": [
+      "learner-choice"
+    ],
+    "goal": [
+      "smart"
+    ],
+    "experimentation": [
+      "pdsa"
+    ]
+  }
+}

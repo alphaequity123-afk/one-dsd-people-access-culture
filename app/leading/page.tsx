@@ -41,7 +41,7 @@ export default async function LeadingPage({ searchParams }: { searchParams?: Pro
       <p className={base.eyebrow}>{LEADING_LABEL}</p>
       <h1>Lead equity in everyday work</h1>
       <p className={base.lede}>Whether you are exploring leadership, leading a team or shaping direction across the division, find learning and practical tools for the decisions and responsibilities in front of you.</p>
-      <p>The learning collection is open to everyone. Choose a starting point that fits your work; designated management resources require an access key. Follow any formal duties or assigned training that apply to your role. {LEADING_PRIVACY_SENTENCE} <Link href="/leading/how-this-works">How this works</Link>.</p>
+      <p>The learning collection is open to everyone. Choose a starting point that fits your work; a few resources set aside for managers need an access key. Any formal duties or assigned training for your role still apply. {LEADING_PRIVACY_SENTENCE} <Link href="/leading/how-this-works">How this works</Link>.</p>
     </header>
     <section className={styles.section} aria-labelledby="leadership-start-title">
       <h2 id="leadership-start-title">Start where you are</h2>
@@ -52,7 +52,7 @@ export default async function LeadingPage({ searchParams }: { searchParams?: Pro
         <li><Link className={styles.door} href={LEADERSHIP_PATHWAY_HREF}><span className={styles.doorTitle}>Compare leadership approaches</span><span>See how sixteen leadership approaches handle conflict and affect equity and inclusion, with scenarios, a practice rubric and a capstone.</span><span className={styles.doorAction}>Leadership styles pathway</span></Link></li>
         <li><Link className={styles.door} href="/data/equity-baseline"><span className={styles.doorTitle}>See the equity baseline</span><span>For managers, supervisors and the consultant (access key required). Who gets each employment service, by race and ethnicity, fiscal years 2022 to 2024.</span><span className={styles.doorAction}>Open the baseline</span></Link></li>
         <li><Link className={styles.door} href="/leading/community-coverage"><span className={styles.doorTitle}>See community coverage</span><span>For managers, supervisors and the consultant (access key required). Which communities have organizations on record, figures, and a completed community review.</span><span className={styles.doorAction}>Open community coverage</span></Link></li>
-        <li><Link className={styles.door} href="/leading/direction"><span className={styles.doorTitle}>Lead leaders and set direction</span><span>Support supervisors and managers, examine organizational practices, and connect decisions to accountability.</span><span className={styles.doorAction}>Explore direction</span></Link></li>
+        <li><Link className={styles.door} href="/leading/direction"><span className={styles.doorTitle}>Lead leaders and set direction</span><span>Support supervisors and managers, look closely at how the organization works, and connect decisions to accountability.</span><span className={styles.doorAction}>Explore direction</span></Link></li>
         <li><Link className={styles.door} href="/one-dsd/leadership#continuity-plan"><span className={styles.doorTitle}>Build future leadership</span><span>Plan for continuity, share knowledge and make development opportunities visible and accessible.</span><span className={styles.doorAction}>Practice succession planning</span></Link></li>
         <li><Link className={styles.door} href="/leading/journey"><span className={styles.doorTitle}>Follow your own journey</span><span>Learn, reflect, try it in your real work and note what changed, at your own pace and in any order.</span><span className={styles.doorAction}>See how it works</span></Link></li>
       </ul>
@@ -87,14 +87,14 @@ export default async function LeadingPage({ searchParams }: { searchParams?: Pro
     </section>
     <section className={styles.section} aria-labelledby="leadership-tools-title">
       <h2 id="leadership-tools-title">Tools for the work</h2>
-      <p>Use a tool to prepare for a real conversation or decision. Include the people affected, follow the applicable policy and work with the office responsible for the decision.</p>
+      <p>These tools help you prepare for a real conversation or decision. Include the people affected, follow the policy that applies and work with the office responsible for the decision.</p>
       <ul className={styles.doors}>
-        <li><Link className={styles.door} href="/learn/equity-toolkit"><span className={styles.doorTitle}>Examine a decision</span><span>Consider effects, evidence, alternatives and who needs to be involved.</span><span className={styles.doorAction}>Equity Analysis Toolkit</span></Link></li>
+        <li><Link className={styles.door} href="/learn/equity-toolkit"><span className={styles.doorTitle}>Think through a decision</span><span>Consider effects, evidence, alternatives and who needs to be involved.</span><span className={styles.doorAction}>Equity Analysis Toolkit</span></Link></li>
         <li><Link className={styles.door} href="/one-dsd/leadership#life-cycle"><span className={styles.doorTitle}>Practice across the employee life cycle</span><span>Explore role design, development, advancement, retention, succession and transitions.</span><span className={styles.doorAction}>Open the life-cycle explorer</span></Link></li>
         <li><Link className={styles.door} href="/one-dsd/amplify/mentoring#mentoring-tool"><span className={styles.doorTitle}>Prepare a mentoring conversation</span><span>Name a question, consider the support you need and choose a useful next step.</span><span className={styles.doorAction}>Prepare a conversation</span></Link></li>
         <li><Link className={styles.door} href="/one-dsd/leadership#continuity-plan"><span className={styles.doorTitle}>Plan for continuity</span><span>Connect critical work, a development opportunity, knowledge sharing and follow-up.</span><span className={styles.doorAction}>Create a succession draft</span></Link></li>
       </ul>
-      <p>Development and continuity drafts stay on their page until you copy or download them. Do not enter names or private personnel details. They do not replace the applicable Human Resources or selection process.</p>
+      <p>Development and continuity drafts stay on their page until you copy or download them. Please leave out names and private personnel details. These drafts don&apos;t replace the Human Resources or selection process that applies.</p>
     </section>
     <Hub2More title="Keep exploring">
       {culturalLearningAvailable && <p><Link href="/learn/cultural-intelligence#leaders">Explore leadership approaches, power and inclusive practice</Link></p>}

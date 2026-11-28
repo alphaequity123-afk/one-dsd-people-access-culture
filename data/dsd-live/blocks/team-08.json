@@ -1,0 +1,238 @@
+{
+ "id": "team-08",
+ "name": "Team track: Working across units",
+ "kind": "courses",
+ "version": 1,
+ "owner": "Gary Banks",
+ "review_date": null,
+ "sort": 17,
+ "items": [
+  {
+   "id": "dc-t71-how-dsd-is-organized-and-how-the-work-connects",
+   "kind": "course",
+   "title": "How DSD is organized and how the work connects",
+   "level": "intermediate",
+   "topic": "working-across-units-and-agencies",
+   "competency": "getting-work-done",
+   "skill": "project management",
+   "priority": "reference",
+   "alignment": "needs_revision",
+   "sequence": 1,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-t72-dsd-within-adsa",
+     "kind": "next_step",
+     "note": "Next in this block."
+    }
+   ]
+  },
+  {
+   "id": "dc-t72-dsd-within-adsa",
+   "kind": "course",
+   "title": "DSD within ADSA",
+   "level": "intermediate",
+   "topic": "working-across-units-and-agencies",
+   "competency": "getting-work-done",
+   "skill": "project management",
+   "priority": "reference",
+   "alignment": "needs_revision",
+   "sequence": 2,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-t73-breaking-down-silos",
+     "kind": "next_step",
+     "note": "Next in this block."
+    }
+   ]
+  },
+  {
+   "id": "dc-t73-breaking-down-silos",
+   "kind": "course",
+   "title": "Breaking down silos",
+   "level": "intermediate",
+   "topic": "working-across-units-and-agencies",
+   "competency": "getting-work-done",
+   "skill": "project management",
+   "priority": "enrichment",
+   "alignment": "needs_revision",
+   "sequence": 3,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-t74-shared-ownership-of-cross-unit-work",
+     "kind": "next_step",
+     "note": "Next in this block."
+    }
+   ]
+  },
+  {
+   "id": "dc-t74-shared-ownership-of-cross-unit-work",
+   "kind": "course",
+   "title": "Shared ownership of cross-unit work",
+   "level": "intermediate",
+   "topic": "working-across-units-and-agencies",
+   "competency": "getting-work-done",
+   "skill": "project management",
+   "priority": "enrichment",
+   "alignment": "needs_revision",
+   "sequence": 4,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-t75-handoffs-that-work",
+     "kind": "next_step",
+     "note": "Next in this block."
+    }
+   ]
+  },
+  {
+   "id": "dc-t75-handoffs-that-work",
+   "kind": "course",
+   "title": "Handoffs that work",
+   "level": "intermediate",
+   "topic": "working-across-units-and-agencies",
+   "competency": "getting-work-done",
+   "skill": "project management",
+   "priority": "enrichment",
+   "alignment": "needs_revision",
+   "sequence": 5,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-t76-cross-unit-communication-habits",
+     "kind": "next_step",
+     "note": "Next in this block."
+    }
+   ]
+  },
+  {
+   "id": "dc-t76-cross-unit-communication-habits",
+   "kind": "course",
+   "title": "Cross-unit communication habits",
+   "level": "intermediate",
+   "topic": "working-across-units-and-agencies",
+   "competency": "getting-work-done",
+   "skill": "project management",
+   "priority": "enrichment",
+   "alignment": "needs_revision",
+   "sequence": 6,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-t77-coordinating-policy-changes-across-units",
+     "kind": "next_step",
+     "note": "Next in this block."
+    }
+   ]
+  },
+  {
+   "id": "dc-t77-coordinating-policy-changes-across-units",
+   "kind": "course",
+   "title": "Coordinating policy changes across units",
+   "level": "intermediate",
+   "topic": "equity-lens-and-equity-analysis-of-policy",
+   "competency": "job-knowledge",
+   "skill": "policy and legislative work",
+   "priority": "enrichment",
+   "alignment": "needs_revision",
+   "sequence": 7,
+   "all_job_families": true,
+   "job_families": [
+    "policy-program"
+   ],
+   "links": [
+    {
+     "to": "dc-t78-communities-of-practice-at-dsd",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s91-using-an-equity-lens-in-your-work",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-l21-applying-an-equity-analysis-to-policy-changes",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-i91-an-intercultural-lens-for-policy",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-t78-communities-of-practice-at-dsd",
+   "kind": "course",
+   "title": "Communities of practice at DSD",
+   "level": "intermediate",
+   "topic": "working-across-units-and-agencies",
+   "competency": "getting-work-done",
+   "skill": "project management",
+   "priority": "enrichment",
+   "alignment": "needs_revision",
+   "sequence": 8,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-t79-working-with-shared-services",
+     "kind": "next_step",
+     "note": "Next in this block."
+    }
+   ]
+  },
+  {
+   "id": "dc-t79-working-with-shared-services",
+   "kind": "course",
+   "title": "Working with shared services",
+   "level": "intermediate",
+   "topic": "working-across-units-and-agencies",
+   "competency": "getting-work-done",
+   "skill": "project management",
+   "priority": "enrichment",
+   "alignment": "needs_revision",
+   "sequence": 9,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-t80-resolving-cross-unit-priority-conflicts",
+     "kind": "next_step",
+     "note": "Next in this block."
+    }
+   ]
+  },
+  {
+   "id": "dc-t80-resolving-cross-unit-priority-conflicts",
+   "kind": "course",
+   "title": "Resolving cross-unit priority conflicts",
+   "level": "intermediate",
+   "topic": "working-across-units-and-agencies",
+   "competency": "getting-work-done",
+   "skill": "project management",
+   "priority": "enrichment",
+   "alignment": "needs_revision",
+   "sequence": 10,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-t71-how-dsd-is-organized-and-how-the-work-connects",
+     "kind": "related",
+     "note": "Covers the same topic."
+    }
+   ]
+  }
+ ]
+}

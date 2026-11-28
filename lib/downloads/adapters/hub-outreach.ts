@@ -354,7 +354,7 @@ function providersDocument(scope: StaffProgramScope): ResourceDocument {
         ]);
       }),
       section("Finding licensed providers", [
-        paragraph("Providers of home and community-based services are licensed under Minnesota Statutes chapter 245D by the Department of Human Services. There are too many to list here; use the official lookups below to find current licensed providers by county and service."),
+        paragraph("Providers of home and community-based services are licensed under Minnesota Statutes chapter 245D by the Department of Human Services. There are too many to list here, but the official lookups below will help you find current licensed providers by county and service."),
         heading("Official lookups"),
         bullets(data.lookups.map(lookup => `${lookup.name}: ${lookup.what} (${lookup.url})`)),
       ]),
@@ -387,7 +387,7 @@ function systemConnectionsDocument(scope: StaffProgramScope): ResourceDocument {
   ].filter(Boolean);
   return outreachDocument(scope, {
     title: "How the system connects",
-    subtitle: "Minnesota disability services are state-supervised and county-administered. The Department of Human Services sets policy and pays for services; the Disability Services Division leads the disability programs; lead agencies assess people and manage their services; and licensed providers deliver them. This page shows how those parts connect, with a source for each point.",
+    subtitle: "Minnesota disability services are state-supervised and county-administered. The Department of Human Services sets policy and pays for services; the Disability Services Division leads the disability programs; lead agencies assess people and manage their services; and licensed providers deliver them. Here you can see how those parts connect, with a source for each point.",
     meta: [{ label: "Facts checked", value: dateText(data.checked) }],
     sections: compactSections([
       section("Inside the Department of Human Services", [

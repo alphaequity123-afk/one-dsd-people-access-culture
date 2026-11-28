@@ -9,7 +9,7 @@ import { LEADERSHIP_PATHWAY_HREF } from "@/lib/content/leadership-styles-pathway
 export function CulturalLeadershipCurriculum() {
   return <section aria-labelledby="leadership-learning-title" className="space-y-5 border-t border-line pt-8">
     <h3 id="leadership-learning-title" className="text-2xl font-semibold">Leadership learning: from awareness to accountable action</h3>
-    <p className="max-w-4xl leading-7">These four connected lessons are for leaders, supervisors, managers and directors. Explore them in any order. Each uses a fictional DSD example to consider leadership, power, access and organizational change. Take notes in your own preferred format; this page does not collect responses or score people. Do not include identifiable case, medical or personnel details in an informal exercise.</p>
+    <p className="max-w-4xl leading-7">These four connected lessons are for leaders, supervisors, managers and directors. Explore them in any order. Each uses a fictional DSD example to consider leadership, power, access and organizational change. Take notes however you like; we don&apos;t collect responses or score people. Do not include identifiable case, medical or personnel details in an informal exercise.</p>
     <p className="max-w-4xl leading-7">This learning supports your judgment and responsibilities; it does not replace current policy, a person&apos;s choices, consultation with the person or area responsible, or required organizational processes.</p>
     <div className="space-y-4">{culturalLeadershipLessons.map(lesson => <details key={lesson.id} id={lesson.id} className="rounded-xl border border-line p-5">
       <summary className="cursor-pointer text-lg font-semibold">{lesson.title}</summary>
@@ -24,7 +24,7 @@ export function CulturalLeadershipCurriculum() {
     </details>)}</div>
     <div className="max-w-4xl space-y-3 leading-7">
       <h4 className="text-xl font-semibold">Continue with the work</h4>
-      <p>Use a real decision only in an appropriate setting, involve the people affected and follow up on what changed. These lessons do not award training credit or evaluate an individual&apos;s performance.</p>
+      <p>Bring a real decision only into a setting where it is appropriate to discuss, involve the people affected and follow up on what changed. These lessons do not award training credit or evaluate an individual&apos;s performance.</p>
       <ul className="list-disc space-y-1 pl-6"><li><Link className="underline" href={LEADERSHIP_PATHWAY_HREF}>Go deeper with the leadership styles pathway</Link></li><li><Link className="underline" href="/leading">Explore supervisor and manager guidance</Link></li><li><Link className="underline" href="/learn/equity-toolkit">Use the Equity Analysis Toolkit</Link></li><li><Link className="underline" href="/my-work/plan">Make a plan in My Work</Link></li></ul>
     </div>
     <details className="max-w-4xl rounded-xl border border-line p-5">

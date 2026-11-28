@@ -19,6 +19,8 @@ export type CalendarEntry = {
   events: Array<{ name: string; place: string; href: string | null; dates: string }>;
   workplaceNote: string | null;
   sources: Array<{ title: string; href: string }>;
+  /** Owner decision 2026-11-26: an observance listed for several communities shows once; each community's own entry is kept here. */
+  members?: CalendarEntry[];
 };
 
 export const CALENDAR_TITLES = data.titles as Record<string, string>;
@@ -31,7 +33,44 @@ export async function publishedCalendar(): Promise<CalendarEntry[]> {
   return ENTRIES.flatMap(entry => {
     const communities = entry.communities.filter(id => published.has(id));
     return communities.length ? [{ ...entry, communities }] : [];
-  });
+  }).reduce<CalendarEntry[]>(mergeRepeated, []);
+}
+
+export function mergeRepeatedObservances(entries: CalendarEntry[]): CalendarEntry[] {
+  return entries.reduce<CalendarEntry[]>(mergeRepeated, []);
+}
+
+const nameKey = (entry: CalendarEntry) => entry.name.normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+const datesKey = (entry: CalendarEntry) => entry.dates.map(date => `${date.year}:${date.date ?? ""}:${date.endDate ?? ""}`).join("|");
+
+/**
+ * Owner decision 2026-11-26 ("Just once. Only once."): the same observance on the same dates appears once, listing
+ * every community, with each community's own description, Minnesota notes, workplace note and events kept in full.
+ * The first community's entry keeps its id, so existing links still open the observance.
+ */
+function mergeRepeated(merged: CalendarEntry[], entry: CalendarEntry): CalendarEntry[] {
+  const match = merged.find(item => nameKey(item) === nameKey(entry) && item.kind === entry.kind && datesKey(item) === datesKey(entry));
+  if (!match) { merged.push(entry); return merged; }
+  const members = match.members ?? [{ ...match }];
+  const index = merged.indexOf(match);
+  const all = [...members, entry];
+  const dates = match.dates.map((date, i) => ({ ...date, confirmed: all.every(member => member.dates[i]?.confirmed) }));
+  merged[index] = {
+    ...match,
+    dates,
+    dateCertainty: all.every(member => member.dateCertainty === match.dateCertainty) ? match.dateCertainty : members[0].dateCertainty,
+    alsoKnownAs: [...new Set(all.flatMap(member => member.alsoKnownAs))],
+    communities: [...new Set(all.flatMap(member => member.communities))],
+    sources: all.flatMap(member => member.sources).filter((source, i, list) => list.findIndex(other => other.href === source.href) === i),
+    events: all.flatMap(member => member.events).filter((event, i, list) => list.findIndex(other => other.name === event.name && other.dates === event.dates) === i),
+    members: all,
+  };
+  return merged;
+}
+
+/** Find the observance that holds an entry id, whether it is the observance itself or one community's entry within it. */
+export function calendarEntryFor(entries: CalendarEntry[], id: string | undefined): CalendarEntry | undefined {
+  return id ? entries.find(entry => entry.id === id || entry.members?.some(member => member.id === id)) : undefined;
 }
 
 function dateLine(value: string) {

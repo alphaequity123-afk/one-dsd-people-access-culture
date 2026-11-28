@@ -116,6 +116,6 @@ export function jobAidText(lessonTitle: string, aid: JobAid): string {
   for (const section of aid.sections) { lines.push(section.heading.toUpperCase()); section.items.forEach(item => lines.push(`- ${item}`)); lines.push(''); }
   if (aid.remember.length) { lines.push('REMEMBER'); aid.remember.forEach(item => lines.push(`- ${item}`)); lines.push(''); }
   if (aid.askWho.length) { lines.push('WHO TO ASK'); aid.askWho.forEach(item => lines.push(`- ${item}`)); lines.push(''); }
-  lines.push('Use the current procedures applicable to your role and program when taking action.');
+  lines.push('When you act, follow the current procedures for your role and program.');
   return lines.join('\n');
 }

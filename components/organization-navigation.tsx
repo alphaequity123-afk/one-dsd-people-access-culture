@@ -6,7 +6,7 @@ import reference from "@/data/organization/minnesota-dhs.json";
 
 export function OrganizationBreadcrumb({ items }: { items: { label: string; href?: string }[] }) {
   return <nav aria-label="Organization breadcrumb" className="mb-7 text-sm"><ol className="flex list-none flex-wrap items-center gap-2 p-0">
-    {items.map((item, index) => <li key={item.label} className="flex items-center gap-2">{index > 0 && <span aria-hidden="true">›</span>}{item.href ? <Link href={item.href}>{item.label}</Link> : <span aria-current="page">{item.label}</span>}</li>)}
+    {items.map((item, index) => <li key={item.label} className="flex items-center gap-2">{index > 0 && <span aria-hidden="true">/</span>}{item.href ? <Link href={item.href}>{item.label}</Link> : <span aria-current="page">{item.label}</span>}</li>)}
   </ol></nav>;
 }
 
@@ -22,7 +22,7 @@ export function OrganizationTopicCards({ ids }: { ids: readonly string[] }) {
 }
 
 export function SharedAgencyResources() {
-  return <section className="mt-12 border-t border-line pt-6" aria-labelledby="shared-agency-resources"><h2 id="shared-agency-resources" className="text-2xl font-bold">Resources shared across DHS</h2><p>Use the same learning, practical tools and community knowledge across organizational boundaries, while keeping the responsibilities and circumstances of your work in view.</p><ul className="flex list-none flex-wrap gap-x-7 gap-y-3 p-0"><li><Link href="/learn">Learn</Link></li><li><Link href="/practice">Practice</Link></li><li><Link href="/minnesota-communities">Community knowledge</Link></li><li><Link href="/practice/requirements">Requirements and implementation</Link></li></ul></section>;
+  return <section className="mt-12 border-t border-line pt-6" aria-labelledby="shared-agency-resources"><h2 id="shared-agency-resources" className="text-2xl font-bold">Resources shared across DHS</h2><p>The same learning, practical tools and community knowledge work across organizational boundaries. Keep the responsibilities and circumstances of your own work in view as you use them.</p><ul className="flex list-none flex-wrap gap-x-7 gap-y-3 p-0"><li><Link href="/learn">Learn</Link></li><li><Link href="/practice">Practice</Link></li><li><Link href="/minnesota-communities">Community knowledge</Link></li><li><Link href="/practice/requirements">Requirements and implementation</Link></li></ul></section>;
 }
 
 export function OrganizationSourceNote() {

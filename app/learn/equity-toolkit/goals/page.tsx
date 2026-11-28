@@ -22,7 +22,7 @@ export default async function ToolkitGoalsPage() {
         <Link href="/learn/equity-toolkit">Toolkit introduction and podcast</Link>
         <h1 className="text-4xl font-semibold">Aging and Disability Services Administration six goals and work plan</h1>
         <p className="max-w-3xl text-xl">Explore the Aging and Disability Services Administration’s six equity goals, find related resources, and prepare a three-goal work plan where this implementation plan applies.</p>
-      <p className="max-w-3xl">These are ADSA goals, not an agency-wide requirement to choose three goals. DHS staff outside ADSA can learn from this example while confirming their own applicable priorities, requirements and decision authority. The proposed program charter describes how this resource fits within One DSD learning. It does not replace applicable policy, assigned responsibilities or decision authority.</p>
+      <p className="max-w-3xl">These are ADSA goals, not an agency-wide requirement to choose three goals. If you work in DHS outside ADSA, you can still learn from this example; just confirm your own priorities, requirements and who holds decision authority. The proposed program charter describes how this resource fits within One DSD learning. It doesn’t replace the policy, assigned responsibilities or decision authority that apply.</p>
       <details className="border-b border-line pb-3 print:hidden"><summary className="min-h-11 cursor-pointer py-2 font-semibold text-[#183247]">Download or share this page</summary><ResourceDownloads kind="learn-page" id="equity-toolkit-goals" noun="guide" scope={scope} /></details>
       </header>
       <p><Link href="/learn/equity-in-practice#put-it-into-practice">See the goals in a DSD video example</Link></p>

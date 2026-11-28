@@ -168,7 +168,7 @@ export default async function LibraryPage({ searchParams }: { searchParams: Prom
           <label htmlFor="q" className="block text-lg font-bold">
             {stringValue(copy, "searchLabel")}
           </label>
-          <p id="resource-search-help" className={styles.searchHelp}>Search by topic, resource title, or a decision you are working on.</p>
+          <p id="resource-search-help" className={styles.searchHelp}>Search by topic, title or a decision you're working on.</p>
           <div className={styles.searchBar}>
             <input id="q" name="q" type="search" defaultValue={q} aria-describedby="resource-search-help" placeholder={stringValue(copy, "searchPlaceholder")} />
             <button type="submit" className="btn btn--primary">
@@ -215,7 +215,7 @@ export default async function LibraryPage({ searchParams }: { searchParams: Prom
             <Link className={styles.clearFilters} href={clearFiltersHref}>{stringValue(copy, "clearFiltersLabel")}</Link>
           </div> : null}
         </form>
-        {q && destinations.length ? <section className={styles.startingPoints} aria-labelledby="suggested-destinations"><h2 id="suggested-destinations">Go straight to the work</h2><p>These program pages may help alongside the Library results below.</p><ul>{destinations.map(link => <li key={link.href}><Link href={withWorkOrigin(link.href, origin)}>{link.label}</Link><p>{link.reason}</p></li>)}</ul></section> : null}
+        {q && destinations.length ? <section className={styles.startingPoints} aria-labelledby="suggested-destinations"><h2 id="suggested-destinations">Go straight to the work</h2><p>These pages may help too, alongside the Library results below.</p><ul>{destinations.map(link => <li key={link.href}><Link href={withWorkOrigin(link.href, origin)}>{link.label}</Link><p>{link.reason}</p></li>)}</ul></section> : null}
         {q ? (
           <section className={styles.collection} aria-labelledby="results-title">
             <div className={styles.collectionHeading}><div>
@@ -253,7 +253,7 @@ export default async function LibraryPage({ searchParams }: { searchParams: Prom
         {libraryLanding ? <p className="pilot-catalog-link"><Link href={pageHref(1)}>Browse the Library ({items.length} resources)</Link></p> : null}
         {matchedGuides.length ? <details id="practical-guides" className={`${styles.programGuides} ${layout.guides}`} open={Boolean(q)}>
           <summary>Practical guides <span>({matchedGuides.length})</span></summary>
-          <p>Connect existing guidance with a practical task, then prepare a next step for your work.</p>
+          <p>Bring existing guidance to a practical task, then plan a next step for your work.</p>
           <ul className={styles.guideList}>{matchedGuides.map(guide => <li key={guide.slug}>
             <p className={styles.guidePurpose}>{guide.purpose}</p>
             <h3><Link href={`/practice-guides/${guide.slug}`}>{guide.title}</Link></h3>

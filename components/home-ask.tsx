@@ -4,7 +4,6 @@ import { useEffect, useId, useRef, useState } from "react";
 import { AskBox } from "@/components/ask-box";
 import { AskClient } from "@/components/ask-client";
 import { AskVoice } from "@/components/ask-voice";
-import { WaveIcon } from "@/components/ask-icons";
 import { writeStored } from "@/lib/client/storage";
 import { BROWSER_STORAGE_KEYS } from "@/lib/client/storage-keys";
 import type { EditableSurfaceValues } from "@/lib/content/editable-surface-contract";
@@ -69,7 +68,7 @@ export function HomeAsk({ copy, researchAvailable }: { copy: EditableSurfaceValu
         invalid={Boolean(error)}
       >
         <AskVoice mode="dictate" busy={false} onDictation={setQuestion} onQuestion={async () => undefined} />
-        <button type="button" className="ask-icon" title="Talk with Ask" aria-haspopup="dialog" onClick={event => show(event.currentTarget)}><WaveIcon /><span className="sr-only">Talk with Ask</span></button>
+        <button type="button" className="ask-icon" aria-label="Talk with Ask" aria-haspopup="dialog" onClick={event => show(event.currentTarget)}>Talk</button>
       </AskBox>
       {error ? <p id={`${id}-error`} role="alert" className="ask-box-small error">{error}</p> : null}
       <p id={`${id}-note`} className="ask-box-small">Please leave out names, case details and anything private. Your question, and your recording when you speak, go to outside services to be answered. No audio is saved on this site.</p>

@@ -68,13 +68,13 @@ export function CultureCalendar({ entries, initialToday }: { entries: CompactEnt
     <p className={styles.note}>A date does not tell you whether a particular person observes it.</p>
     <div className={styles.toolbar}>
       <div className={styles.controls}>
-        <NavButton control={controls.previousYear} ready={ready} onMove={move}><span aria-hidden="true">«</span> Year</NavButton>
-        <NavButton control={controls.previousMonth} ready={ready} onMove={move}><span aria-hidden="true">‹</span> Month</NavButton>
+        <NavButton control={controls.previousYear} ready={ready} onMove={move}>Previous year</NavButton>
+        <NavButton control={controls.previousMonth} ready={ready} onMove={move}>Previous month</NavButton>
       </div>
       <h3 id="culture-calendar-month" className={styles.month}>{monthLabel(view)}</h3>
       <div className={styles.controls}>
-        <NavButton control={controls.nextMonth} ready={ready} onMove={move}>Month <span aria-hidden="true">›</span></NavButton>
-        <NavButton control={controls.nextYear} ready={ready} onMove={move}>Year <span aria-hidden="true">»</span></NavButton>
+        <NavButton control={controls.nextMonth} ready={ready} onMove={move}>Next month</NavButton>
+        <NavButton control={controls.nextYear} ready={ready} onMove={move}>Next year</NavButton>
         <button type="button" className={styles.control} aria-label={todayAvailable ? `Today, ${monthLabel(todayMonth)}` : "Today, not available. Dates are loaded from January 2026 through 2028."} aria-disabled={!ready || !todayAvailable || undefined} onClick={() => { if (ready && todayAvailable) move(monthOf(chicagoToday())); }}>Today</button>
       </div>
     </div>

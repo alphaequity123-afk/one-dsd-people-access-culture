@@ -1,0 +1,53 @@
+{
+ "id": "emotional-intelligence",
+ "name": "Emotional intelligence",
+ "kind": "courses",
+ "version": 1,
+ "owner": "Gary Banks",
+ "review_date": null,
+ "sort": 49,
+ "items": [
+  {
+   "id": "ei-conversations-and-leadership",
+   "kind": "course",
+   "title": "Emotional Intelligence in Conversations, Teams, and Leadership",
+   "level": "intermediate",
+   "topic": "everyday-team-communication",
+   "competency": "leading-self",
+   "skill": "emotional intelligence",
+   "priority": "enrichment",
+   "alignment": "needs_revision",
+   "sequence": 1,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-t32-listening-to-understand",
+     "kind": "related",
+     "note": "Covers the same topic."
+    }
+   ]
+  },
+  {
+   "id": "ei-understanding-emotions",
+   "kind": "course",
+   "title": "Emotional Intelligence: Understanding Emotions and Choosing a Response",
+   "level": "intermediate",
+   "topic": "everyday-team-communication",
+   "competency": "leading-self",
+   "skill": "emotional intelligence",
+   "priority": "enrichment",
+   "alignment": "needs_revision",
+   "sequence": 2,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-t32-listening-to-understand",
+     "kind": "related",
+     "note": "Covers the same topic."
+    }
+   ]
+  }
+ ]
+}

@@ -19,7 +19,7 @@ export type CommunityOption = { id: string; title: string };
 /** Native community pages get no added content, so they are never offered here. */
 const EXCLUDED_COMMUNITY_IDS = new Set(["native-american", "tribal-nations", "alaska-native"]);
 const KEEP_KEY = "one-dsd-analyze-document-v1";
-export const PRIVACY_LINE = "Use only public or appropriately de-identified material approved for this purpose. Attaching a file sends it for text extraction; Analyze sends the supplied text and question for processing and may use an outside answer service. Leave out names, case details and other confidential information.";
+export const PRIVACY_LINE = "Please use only material that is public, or de-identified and approved for this purpose. Attaching a file sends it for text extraction; Analyze sends the supplied text and question for processing and may use an outside answer service. Leave out names, case details and other confidential information.";
 export const BUSY_LINE = "Reading the material and preparing the analysis. This can take up to a minute.";
 /** Shown over the worksheet when the answer service cannot run on this site. */
 export const UNAVAILABLE_REASON = "The analysis service is not available on this site right now. You can still work through the questions below yourself.";
@@ -232,7 +232,7 @@ export function AnalyzeWorkspace({ communities, analyzeUrl = "/api/analyze", upl
       <button type="button" className={styles.secondary} disabled={busy} onClick={addExample}>Add the service-scheduling example</button>
       <p className={styles.help}>The example is a practice situation. It adds to your sources without replacing your work. It does not contain real scheduling results.</p>
       <h3>Long-term services and supports data</h3>
-      <p>Use published data to understand who receives services. Add relevant rows or figures, including their measure, location, period and source. These data alone do not establish scheduling barriers or their causes.</p>
+      <p>Published data can help you see who receives services. Add the rows or figures that matter, with their measure, location, period and source. These data alone do not establish scheduling barriers or their causes.</p>
       <button type="button" className={styles.secondary} disabled={busy} onClick={addLtssSnapshot}>Add statewide LTSS data</button>
       <p className={styles.help}>{snapshotDate}: a public, statewide snapshot for context; it does not measure scheduling. Source files checked {checkedDate} (UTC). The reporting period changes only when DHS publishes newer figures.</p>
       <ul>{LTSS_RESOURCES.map(resource => <li key={resource.id}><a href={resource.url} target="_blank" rel="noreferrer">{resource.title}</a>{resource.id === "ltss-demographics" ? <> · <a href={ltssData.sources.demographics.url}>Download DHS data</a></> : resource.id === "ltss-performance" ? <> · <a href={ltssData.sources.performance.url}>Download DHS data</a></> : null}</li>)}</ul>
@@ -254,7 +254,7 @@ export function AnalyzeWorkspace({ communities, analyzeUrl = "/api/analyze", upl
     <section className={`${styles.step} ${styles.noPrint}`} aria-labelledby={`${id}-material`}>
       <p className={styles.stepNumber}>{toolkit ? "Step 1" : "Step 2"}</p>
       <h2 id={`${id}-material`}>Bring in the material</h2>
-      <p className={styles.privacy}>{toolkit ? "Use public or appropriately de-identified material approved for this purpose. Leave out names, case details and other confidential information." : PRIVACY_LINE}</p>
+      <p className={styles.privacy}>{toolkit ? "Please use material that is public, or de-identified and approved for this purpose. Leave out names, case details and other confidential information." : PRIVACY_LINE}</p>
       <SourceIntake sources={sources} onChange={setSources} disabled={busy} uploadUrl={toolkit ? "/api/ask-attachment" : uploadUrl} multimedia={toolkit} maxSources={ANALYSIS_LIMITS.sources} />
     </section>
 
@@ -291,7 +291,7 @@ export function AnalyzeWorkspace({ communities, analyzeUrl = "/api/analyze", upl
       <p className={styles.notice}>{ANALYSIS_NOTICE}</p>
       <AnalysisResult result={analyzed.result} instrument={analyzedInstrument} sources={analyzed.request.sources} />
       {toolkit ? <AskReviewHandoff practiceId="equity-toolkit" title="Equity analysis" notes={analysisResultText(analyzed.result, analyzedInstrument, analyzed.request.sources)} hasNotes={!analyzed.result.unavailable} returnState={analyzed} /> : null}
-      {toolkit ? <p className={styles.help}>Review the source passages and missing perspectives, then use the findings to identify actions, a responsible person and a review date. <Link href="/ask">Continue the discussion in Ask</Link> · <Link href="/learn/equity-toolkit">Return to toolkit learning</Link></p> : null}
+      {toolkit ? <p className={styles.help}>Look over the source passages and the perspectives that are missing, then use what you found to choose actions, a responsible person and a review date. <Link href="/ask">Continue the discussion in Ask</Link> · <Link href="/learn/equity-toolkit">Return to toolkit learning</Link></p> : null}
       <section className={`${styles.step} ${styles.noPrint}`} aria-labelledby={`${id}-after`}>
         <h2 id={`${id}-after`}>Keep or share the result</h2>
         <div className={styles.actions}>

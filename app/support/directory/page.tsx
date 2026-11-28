@@ -8,7 +8,7 @@ export const metadata: Metadata = { title: "DHS offices and guidance" };
 
 export default function SupportDirectoryPage() {
   return <>
-    <PageIntro kicker="Find support" title="DHS offices and guidance" lede="Find a useful starting point for your question, with separate guidance for workplace needs, public services and program responsibilities." />
+    <PageIntro kicker="Find support" title="DHS offices and guidance" lede="Find a good place to start with your question. There's separate guidance for workplace needs, public services and program responsibilities." />
     <div className="pilot-topic pilot-reading-width">
       <p><Link href="/support/right-person">Find the right person for your work</Link></p>
       <p>These DHS pages can help you find an office or understand a process. Your team may have a specific contact for the next step.</p>

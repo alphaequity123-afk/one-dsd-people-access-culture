@@ -25,7 +25,7 @@ export function publicPracticeDocs(scope: StaffProgramScope): Doc[] {
     make("public-equity-policy", EQUITY_POLICY.title, "/equity-policy", EQUITY_POLICY.lede, policy, ["/learn/equity-toolkit", "/equity-review/structural", "/practice/requirements"]),
     make("public-structural-equity-review", structuralReviewResource.title, structuralReviewResource.href, structuralReviewResource.summary,
       `${structuralReviewResource.summary} This public tool helps examine barriers in a process and connect evidence with a practical change. It does not make or approve a decision.`, ["/equity-review", "/learn/equity-toolkit", "/support/right-person"]),
-    make("public-requirements-crosswalk", "Requirements and review evidence", "/practice/requirements", "Keep a requirement, its governing source, the work it affects and the evidence for review together.",
+    make("public-requirements-crosswalk", "Requirements and review evidence", "/practice/requirements", "Keep a requirement, the source behind it, the work it affects and the evidence together in one place.",
       "Begin with applicable law and binding requirements, then current approved agency policy and delegated procedures. Keep guidance, examples and proposed commitments clearly identified. If sources conflict or applicability is uncertain, record the question and seek the responsible review. Connect each requirement with its source, affected work, evidence, responsible role and next action.", ["/practice/gp-2", "/learn/equity-toolkit", "/practice/measurement", "/support/right-person"]),
   ];
 }

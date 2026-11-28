@@ -1,0 +1,321 @@
+{
+ "id": "leader-02",
+ "name": "Leader track: Disability rights and policy leadership",
+ "kind": "courses",
+ "version": 1,
+ "owner": "Gary Banks",
+ "review_date": null,
+ "sort": 21,
+ "items": [
+  {
+   "id": "dc-l11-the-olmstead-decision-and-minnesota-s-olmstead-p",
+   "kind": "course",
+   "title": "The Olmstead decision and Minnesota's Olmstead Plan for leaders",
+   "level": "advanced",
+   "topic": "olmstead-and-integrated-settings",
+   "competency": "job-knowledge",
+   "skill": "applying federal and state rules",
+   "priority": "important",
+   "alignment": "aligns",
+   "sequence": 1,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-l12-leading-toward-the-most-integrated-setting",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s23-minnesota-s-olmstead-plan-for-staff",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-t82-the-olmstead-plan-as-cross-agency-work",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l12-leading-toward-the-most-integrated-setting",
+   "kind": "course",
+   "title": "Leading toward the most integrated setting",
+   "level": "advanced",
+   "topic": "olmstead-and-integrated-settings",
+   "competency": "job-knowledge",
+   "skill": "applying federal and state rules",
+   "priority": "important",
+   "alignment": "aligns",
+   "sequence": 2,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-l13-disability-history-and-the-disability-rights-mov",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s23-minnesota-s-olmstead-plan-for-staff",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-t82-the-olmstead-plan-as-cross-agency-work",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l13-disability-history-and-the-disability-rights-mov",
+   "kind": "course",
+   "title": "Disability history and the disability rights movement",
+   "level": "advanced",
+   "topic": "disability-history-and-the-rights-movement",
+   "competency": "leading-with-deai",
+   "skill": "accessibility (the model also names ableism)",
+   "priority": "important",
+   "alignment": "aligns",
+   "sequence": 3,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-l14-disability-justice-and-intersectionality",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s11-disability-history-in-minnesota-and-the-u-s",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l14-disability-justice-and-intersectionality",
+   "kind": "course",
+   "title": "Disability justice and intersectionality",
+   "level": "advanced",
+   "topic": "intersectionality",
+   "competency": "leading-others",
+   "skill": "intersectionality",
+   "priority": "important",
+   "alignment": "aligns",
+   "sequence": 4,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-l15-leading-person-centered-organizations",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s9-intersectionality-in-everyday-work",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-i81-multiple-and-intersecting-cultural-identities",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l15-leading-person-centered-organizations",
+   "kind": "course",
+   "title": "Leading person-centered organizations",
+   "level": "advanced",
+   "topic": "person-centered-practice-and-informed-choice",
+   "competency": "job-knowledge",
+   "skill": "developing and monitoring programs",
+   "priority": "important",
+   "alignment": "aligns",
+   "sequence": 5,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-l16-informed-choice-as-a-leadership-responsibility",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s21-person-centered-practices-in-minnesota",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-i59-culturally-responsive-person-centered-planning-i",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l16-informed-choice-as-a-leadership-responsibility",
+   "kind": "course",
+   "title": "Informed choice as a leadership responsibility",
+   "level": "advanced",
+   "topic": "person-centered-practice-and-informed-choice",
+   "competency": "job-knowledge",
+   "skill": "developing and monitoring programs",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 6,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-l17-employment-first-leading-for-competitive-integra",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s21-person-centered-practices-in-minnesota",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-i59-culturally-responsive-person-centered-planning-i",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l17-employment-first-leading-for-competitive-integra",
+   "kind": "course",
+   "title": "Employment First: leading for competitive integrated employment",
+   "level": "advanced",
+   "topic": "employment-first",
+   "competency": "job-knowledge",
+   "skill": "developing and monitoring programs",
+   "priority": "important",
+   "alignment": "aligns",
+   "sequence": 7,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-l18-positive-supports-and-reducing-restrictive-pract",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s25-employment-first-for-staff",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l18-positive-supports-and-reducing-restrictive-pract",
+   "kind": "course",
+   "title": "Positive supports and reducing restrictive practices",
+   "level": "advanced",
+   "topic": "positive-supports-and-reducing-restrictive-practices",
+   "competency": "job-knowledge",
+   "skill": "applying federal and state rules",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 8,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-l19-dignity-of-risk-in-policy-and-program-decisions",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s26-positive-supports-for-staff",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l19-dignity-of-risk-in-policy-and-program-decisions",
+   "kind": "course",
+   "title": "Dignity of risk in policy and program decisions",
+   "level": "advanced",
+   "topic": "dignity-of-risk-and-supported-decision-making",
+   "competency": "job-knowledge",
+   "skill": "developing and monitoring programs",
+   "priority": "important",
+   "alignment": "aligns",
+   "sequence": 9,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-l20-supported-decision-making-and-alternatives-to-gu",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s27-dignity-of-risk",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l20-supported-decision-making-and-alternatives-to-gu",
+   "kind": "course",
+   "title": "Supported decision-making and alternatives to guardianship",
+   "level": "advanced",
+   "topic": "dignity-of-risk-and-supported-decision-making",
+   "competency": "job-knowledge",
+   "skill": "developing and monitoring programs",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 10,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-s27-dignity-of-risk",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  }
+ ]
+}

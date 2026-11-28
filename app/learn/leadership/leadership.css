@@ -1,0 +1,199 @@
+.leadership-shell { padding-bottom: 3.5rem; background: white; }
+.leadership-hero { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(1.25rem, 4vw, 3rem); align-items: center; padding: 1.7rem 0 2.25rem; border-bottom: 1px solid var(--line); }
+.leadership-hero p { font-size: 1.16rem; line-height: 1.55; max-width: 40rem; }
+.leadership-hero img { display: block; width: 100%; height: auto; }
+.leadership-actions { display: flex; gap: .65rem 1.25rem; flex-wrap: wrap; align-items: center; margin: 1rem 0; }
+.leadership-roles, .leadership-library { display: grid; gap: 1rem; }
+.leadership-roles { grid-template-columns: repeat(3, minmax(0,1fr)); }
+.leadership-library { grid-template-columns: repeat(2,minmax(0,1fr)); }
+.leadership-card { border: 1px solid var(--line); border-top: 3px solid var(--blue); padding: 1.1rem 1.25rem; background: white; min-width: 0; }
+.leadership-card p { margin: .4rem 0 .7rem; }
+.leadership-card details { margin-top:.8rem; }
+.leadership-card summary, .leadership-section summary { cursor:pointer; color:var(--blue); text-decoration: underline; text-underline-offset: .15em; font-weight:600; padding: .4rem 0; }
+.leadership-card ul, .leadership-links { list-style: disc; padding-inline-start:1.35rem; }
+.leadership-card li, .leadership-links li { margin:.4rem 0; }
+.leadership-section { max-width: 52rem; }
+.leadership-section h1 { max-width: 22ch; }
+.leadership-section h2:focus { outline-offset: .2rem; }
+.leadership-section fieldset { border: 0; margin:1rem 0; padding:0; min-width: 0; }
+.leadership-section legend, .leadership-section label { font-weight: 600; }
+.leadership-section textarea, .leadership-section select { display:block; width:100%; max-width:45rem; background:white; color:var(--ink); padding:.7rem; border:1px solid #626d74; border-radius:4px; font: inherit; box-sizing:border-box; }
+.leadership-section textarea { min-height:6.2rem; }
+.leadership-section .leadership-choice { display:flex; align-items:baseline; gap:.75rem; border:1px solid var(--line); border-radius: .25rem; padding:.7rem .9rem; margin:.6rem 0; font-weight:400; cursor:pointer; }
+.leadership-choice input { flex: 0 0 1rem; inline-size: 1rem; block-size: 1rem; margin: 0; }
+.leadership-section .choice-response { border-left: 4px solid var(--blue); padding:.25rem 1rem; margin-block:1rem; }
+.leadership-form-row { margin:1.2rem 0; }
+.leadership-form-row label { display:block; }
+.leadership-form-row p { font-size:.97rem; margin:.2rem 0 .5rem; }
+.leadership-card[id], .leadership-shell [id] { scroll-margin-top:1rem; }
+@media(max-width: 720px) { .leadership-hero, .leadership-library, .leadership-roles { grid-template-columns: 1fr; } .leadership-hero{padding-top:.5rem;} .leadership-hero img { max-height: 15rem; object-fit:contain; } }
+
+/* Leadership styles: the spine of the section */
+.leadership-styles { max-width: 60rem; margin-inline: auto; padding-top: .5rem; }
+.leadership-why { padding: .5rem 0 1rem; }
+.style-group-block { margin: 1.6rem 0 1.2rem; }
+.style-group-block h3 { margin-bottom: .2rem; }
+.style-cards { list-style: none; padding: 0; margin: .8rem 0 0; display: grid; gap: 1rem; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.style-card-title { font-weight: 600; font-size: 1.1rem; }
+.style-cards .meta { color: var(--muted); font-size: .97rem; }
+.style-page { padding-bottom: 1rem; }
+.style-head { padding-bottom: 1.25rem; border-bottom: 1px solid var(--line); }
+.style-group { color: var(--muted); font-weight: 600; margin: 0; }
+.style-head h1 { margin: .2rem 0 .5rem; }
+.style-brief { border-left: 4px solid var(--blue); padding: .3rem 1rem; margin: 1rem 0; background: #f6f8fa; }
+.style-brief h2 { font-size: 1rem; margin: .3rem 0; }
+.style-brief p { margin: .2rem 0 .4rem; }
+.style-contents { display: flex; flex-wrap: wrap; gap: .4rem 1.2rem; font-size: .97rem; }
+.style-page section { padding-top: 1.2rem; }
+.style-page p, .style-page li { line-height: 1.6; }
+.style-list { padding-inline-start: 1.3rem; }
+.style-list li { margin: .5rem 0; }
+.style-swot { display: grid; gap: .25rem 1.5rem; }
+.style-point { border-top: 1px solid var(--line); padding-top: .6rem; margin-top: .9rem; }
+.style-tone { font-size: .9rem; font-weight: 600; color: var(--muted); margin: 0; }
+.style-point h3 { margin: .15rem 0 .3rem; }
+.style-next { border-top: 3px solid var(--blue); margin-top: 1.5rem; }
+.style-related { list-style: none; padding: 0; }
+.style-related li { margin: .6rem 0; }
+.style-related a { font-weight: 600; display: block; }
+.style-related span { color: var(--muted); }
+.style-pager { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .6rem 1rem; border-top: 1px solid var(--line); margin-top: 1.5rem; padding-top: 1rem; }
+.style-download { color: var(--muted); }
+@media (max-width: 720px) { .style-cards { grid-template-columns: 1fr; } .style-pager { flex-direction: column; } }
+@media print { .style-contents, .style-pager, .leadership-actions { display: none; } }
+
+/* Lighter emphasis in the leadership section (owner, 2026-11-21): semibold instead of bold. */
+.leadership-shell :is(strong, b), .style-page :is(strong, b) { font-weight: 600; }
+.leadership-shell :is(h1, h2, h3) { font-weight: 600; }
+
+/* Structural contrast on the leadership pages (owner-approved 2026-11-21). Text colors unchanged. */
+.leadership-shell .article-head h1::after, .style-page .article-head h1::after { content: ""; display: block; width: 5rem; height: 4px; background: #78BE21; margin-top: .9rem; border-radius: 2px; }
+.leadership-why { background: #eef3f8; border-radius: 8px; padding: 1.6rem 1.8rem 1rem; margin-top: 1.5rem; }
+.style-cards .leadership-card { border: 1px solid #c3ced9; border-top: 4px solid var(--blue); border-radius: 6px; box-shadow: 0 1px 3px rgba(0, 34, 68, .08); transition: border-color .15s, box-shadow .15s; }
+.style-cards .leadership-card:hover, .style-cards .leadership-card:focus-within { border-color: var(--blue); box-shadow: 0 4px 12px rgba(0, 34, 68, .14); }
+.style-group-block h3 { border-left: 4px solid #78BE21; padding-left: .7rem; }
+.style-page #helps, .style-page #do { background: #f3f6f9; border-radius: 8px; padding: 1.2rem 1.5rem .6rem; margin-top: 1.6rem; }
+.style-page #helps h2, .style-page #do h2 { margin-top: .2rem; }
+.style-point { border-top: 0; border-left: 4px solid #c3ced9; padding: .3rem 0 .2rem 1rem; }
+.style-point-help { border-left-color: #2f6b3a; }
+.style-point-risk { border-left-color: #a8620a; }
+.style-point-help .style-tone { color: #2f6b3a; }
+.style-point-risk .style-tone { color: #8a4b00; }
+.style-brief { background: #eef3f8; border-left-width: 5px; border-radius: 0 6px 6px 0; }
+
+/* Focused landing page: the leadership styles lead, everything else is one click away (owner, 2026-11-21). */
+.leadership-focus { max-width: 72rem; margin-inline: auto; padding: 1.8rem 0 2.5rem; }
+.leadership-focus-head { max-width: 46rem; margin-bottom: 1.6rem; }
+.leadership-focus-head h1 { font-size: clamp(2.1rem, 4.5vw, 2.8rem); line-height: 1.15; margin: 0 0 .6rem; }
+.leadership-focus-head h1::after { content: ""; display: block; width: 5rem; height: 4px; background: #78BE21; margin-top: .8rem; border-radius: 2px; }
+.leadership-focus-head p { font-size: 1.15rem; line-height: 1.55; margin: 0; }
+.style-group-block { --accent: #003865; --tint: #eef3f8; margin: 0 0 1.6rem; }
+.style-group-vision { --accent: #1f6fb2; --tint: #e8f1fa; }
+.style-group-participation { --accent: #2b6777; --tint: #e7f1f3; }
+.style-group-people { --accent: #4a7a1c; --tint: #eef5e6; }
+.style-group-name { display: inline-block; font-size: 1rem; font-weight: 600; color: var(--accent); background: var(--tint); border-left: 5px solid var(--accent); border-radius: 0 6px 6px 0; padding: .35rem .8rem; margin: 0 0 .7rem; }
+.style-cards { list-style: none; padding: 0; margin: 0; display: grid; gap: .9rem; grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.style-tile { position: relative; background: #fff; border: 1px solid #c3ced9; border-top: 5px solid var(--accent); border-radius: 10px; padding: 1rem 1.1rem; box-shadow: 0 1px 3px rgba(0, 34, 68, .08); transition: transform .15s, box-shadow .15s, border-color .15s; }
+.style-tile:hover, .style-tile:focus-within { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0, 34, 68, .14); border-color: var(--accent); }
+.style-tile h3 { margin: 0 0 .35rem; font-size: 1.15rem; line-height: 1.25; border: 0; padding: 0; }
+.style-tile-link { color: var(--blue); text-decoration: none; font-weight: 600; }
+.style-tile-link::after { content: ""; position: absolute; inset: 0; border-radius: 10px; }
+.style-tile-link:focus-visible { outline: none; }
+.style-tile:focus-within { outline: 3px solid var(--green); outline-offset: 2px; }
+.style-tile p { margin: 0; font-size: .97rem; line-height: 1.45; color: #2b3540; }
+.leadership-more-row { border-top: 1px solid var(--line); margin-top: 1.4rem; padding-top: 1.2rem; display: flex; flex-wrap: wrap; align-items: center; gap: .6rem 1.4rem; }
+.leadership-more-row h2 { font-size: 1.05rem; margin: 0; color: var(--muted); }
+.leadership-more-row ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .6rem; }
+.leadership-more-row a { display: inline-block; border: 1px solid var(--blue); border-radius: 999px; padding: .4rem 1rem; text-decoration: none; font-weight: 600; }
+.leadership-more-row a:hover { background: var(--blue); color: #fff; }
+@media (max-width: 1000px) { .style-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .style-cards { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { .style-tile { transition: none; } .style-tile:hover { transform: none; } }
+
+/* Equity bar: where each style tends to sit in relation to advancing equity (owner-approved 2026-11-21). */
+.equity-bar { margin: 0 0 2rem; padding: 1.3rem 1.4rem 1.1rem; background: #fff; border: 1px solid #c3ced9; border-radius: 12px; box-shadow: 0 1px 3px rgba(0, 34, 68, .06); }
+.equity-bar > h2 { font-size: 1.25rem; margin: 0 0 .8rem; }
+.equity-scale { display: flex; justify-content: space-between; gap: 1rem; height: 14px; border-radius: 999px; margin-bottom: .5rem; background: linear-gradient(90deg, #a9b4bf 0%, #6f8fb0 32%, #1f6fb2 64%, #003865 100%); }
+.equity-scale span { position: relative; top: 18px; font-size: .85rem; font-weight: 600; color: #3f4850; white-space: nowrap; }
+.equity-zones { list-style: none; padding: 0; margin: 1.9rem 0 0; display: grid; gap: .8rem; grid-template-columns: 2fr 5fr 7fr 2fr; }
+.equity-zone { --zone: #8795a3; --zone-tint: #f2f4f6; background: var(--zone-tint); border-top: 4px solid var(--zone); border-radius: 0 0 8px 8px; padding: .7rem .75rem .8rem; }
+.equity-zone-mixed { --zone: #6f8fb0; --zone-tint: #edf2f8; }
+.equity-zone-foundation { --zone: #1f6fb2; --zone-tint: #e8f1fa; }
+.equity-zone-advances { --zone: #003865; --zone-tint: #e4ecf4; }
+.equity-zone h3 { font-size: .98rem; margin: 0 0 .15rem; color: #1b2530; border: 0; padding: 0; }
+.equity-zone > p { font-size: .85rem; color: #3f4850; margin: 0 0 .55rem; line-height: 1.35; }
+.equity-zone ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: .4rem; }
+.equity-chip { --accent: #003865; }
+.equity-chip a { display: inline-block; background: #fff; border: 1px solid #c3ced9; border-left: 4px solid var(--accent); border-radius: 6px; padding: .25rem .55rem; font-size: .9rem; font-weight: 600; color: var(--blue); text-decoration: none; }
+.equity-chip a:hover { border-color: var(--accent); background: #f6f8fa; }
+.equity-chip.style-group-vision { --accent: #1f6fb2; }
+.equity-chip.style-group-participation { --accent: #2b6777; }
+.equity-chip.style-group-people { --accent: #4a7a1c; }
+.equity-note { font-size: .88rem; color: var(--muted); margin: .9rem 0 0; line-height: 1.45; }
+@media (max-width: 900px) { .equity-zones { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .equity-zones { grid-template-columns: 1fr; } .equity-scale span { font-size: .78rem; } }
+.leadership-focus .leadership-styles { max-width: none; }
+.equity-zone-advances h3 { color: #003865; }
+.equity-zone-advances { box-shadow: inset 0 -3px 0 #78BE21; }
+
+/* Refined finish (owner review 2026-11-21): calmer surfaces, rounder shapes, color as small accents. */
+.style-group-block { --accent: #0b3b66; }
+.style-group-vision { --accent: #1c6db5; }
+.style-group-participation { --accent: #2a6f80; }
+.style-group-people { --accent: #4c7f22; }
+.equity-chip { --accent: #0b3b66; }
+.equity-chip.style-group-vision { --accent: #1c6db5; }
+.equity-chip.style-group-participation { --accent: #2a6f80; }
+.equity-chip.style-group-people { --accent: #4c7f22; }
+
+.equity-bar { background: linear-gradient(180deg, #f5f8fb 0%, #eef3f8 100%); border: 0; border-radius: 18px; box-shadow: none; padding: 1.6rem 1.7rem 1.3rem; }
+.equity-bar > h2 { font-size: 1.35rem; margin: 0 0 .2rem; }
+.equity-sub { margin: 0 0 1.1rem; color: #3f4850; font-size: 1rem; }
+.equity-scale { height: 8px; background: linear-gradient(90deg, #b6c1cc 0%, #7f9cbb 33%, #1c6db5 67%, #0b3b66 100%); box-shadow: inset 0 0 0 1px rgba(11, 59, 102, .06); }
+.equity-scale span { top: 14px; font-size: .8rem; font-weight: 600; letter-spacing: .01em; color: #55606e; }
+.equity-zones { margin-top: 2rem; gap: 1rem; }
+.equity-zone { position: relative; background: #fff; border: 1px solid #dde4ec; border-top: 1px solid #dde4ec; border-radius: 14px; padding: 1.05rem 1rem 1rem; box-shadow: 0 1px 2px rgba(11, 59, 102, .05), 0 6px 18px rgba(11, 59, 102, .06); }
+.equity-zone { --zone: #9aa8b6; }
+.equity-zone-mixed { --zone: #7f9cbb; }
+.equity-zone-foundation { --zone: #1c6db5; }
+.equity-zone-advances { --zone: #0b3b66; box-shadow: 0 1px 2px rgba(11, 59, 102, .05), 0 6px 18px rgba(11, 59, 102, .06), inset 0 -3px 0 #78BE21; }
+.equity-node { display: block; width: 12px; height: 12px; border-radius: 50%; background: var(--zone); box-shadow: 0 0 0 4px #fff, 0 0 0 5px #dde4ec; margin: 0 0 .65rem; }
+.equity-zone h3 { font-size: 1rem; color: #0b3b66; }
+.equity-zone > p { color: #55606e; }
+.equity-chip a { display: inline-flex; align-items: center; gap: .45rem; background: #f3f6fa; border: 1px solid transparent; border-left: 1px solid transparent; border-radius: 999px; padding: .3rem .75rem .3rem .6rem; font-size: .88rem; color: #0b3b66; }
+
+.equity-chip a:hover { background: #fff; border-color: var(--accent); }
+.equity-note { color: #55606e; }
+
+.style-group-name { display: inline-flex; align-items: center; gap: .5rem; background: #f3f6fa; border: 0; border-radius: 999px; padding: .35rem .9rem .35rem .75rem; color: #0b3b66; font-size: .95rem; }
+
+.style-tile { border: 1px solid #dde4ec; border-top: 1px solid #dde4ec; border-radius: 14px; padding: 1.15rem 1.2rem 1.15rem; box-shadow: 0 1px 2px rgba(11, 59, 102, .05), 0 6px 18px rgba(11, 59, 102, .05); }
+.style-tile::before { content: ""; display: block; width: 2.25rem; height: 4px; border-radius: 2px; background: var(--accent); margin-bottom: .75rem; }
+.style-tile:hover, .style-tile:focus-within { border-color: var(--accent); box-shadow: 0 2px 4px rgba(11, 59, 102, .06), 0 12px 28px rgba(11, 59, 102, .12); }
+.style-tile-link { color: #0b3b66; }
+.equity-zones { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.equity-chip a { white-space: nowrap; }
+@media (max-width: 1100px) { .equity-zones { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .equity-zones { grid-template-columns: 1fr; } .equity-chip a { white-space: normal; border-radius: 12px; } }
+.equity-chip { max-width: 100%; }
+.equity-chip a { white-space: normal; max-width: 100%; border-radius: 14px; line-height: 1.3; }
+
+/* Equity bar palette "Sunrise to growth" (owner-approved 2026-11-21): color carries meaning, from caution (works against equity) to go (most directly advances it).
+   Zone names and order carry the meaning too, so color is never the only cue. */
+.equity-bar[data-palette="2"] { --z1: #c9603f; --z2: #e3a93b; --z3: #78BE21; --z4: #3f7a0e; --t1: #fbede7; --t2: #fdf5e3; --t3: #f0f8e6; --t4: #e7f1de; }
+.equity-bar[data-palette] .equity-scale { height: 10px; background: linear-gradient(90deg, var(--z1) 0%, var(--z2) 34%, var(--z3) 68%, var(--z4) 100%); }
+.equity-bar[data-palette] .equity-zone { --zone: var(--z1); background: linear-gradient(180deg, var(--t1) 0, #fff 3.2rem); }
+.equity-bar[data-palette] .equity-zone-mixed { --zone: var(--z2); background: linear-gradient(180deg, var(--t2) 0, #fff 3.2rem); }
+.equity-bar[data-palette] .equity-zone-foundation { --zone: var(--z3); background: linear-gradient(180deg, var(--t3) 0, #fff 3.2rem); }
+.equity-bar[data-palette] .equity-zone-advances { --zone: var(--z4); background: linear-gradient(180deg, var(--t4) 0, #fff 3.2rem); box-shadow: 0 1px 2px rgba(11, 59, 102, .05), 0 6px 18px rgba(11, 59, 102, .06); }
+.equity-bar[data-palette] .equity-zone { border-top: 4px solid var(--zone); }
+.equity-bar[data-palette] .equity-node { background: var(--zone); }
+
+/* Owner decision 2026-11-22: style buttons match the Home styles section (white button, colored dot for its place on the scale, arrow, deeper fill on hover). */
+.equity-bar[data-palette] .equity-zone ul { gap: 6px; }
+.equity-bar[data-palette] .equity-chip a { display: inline-flex; align-items: center; gap: 8px; padding: 7px 10px; background: #fff; border: 1px solid color-mix(in srgb, var(--zone) 30%, #e3e8ee); border-radius: 8px; color: #0b2a4a; font-size: .88rem; font-weight: 600; line-height: 1.3; box-shadow: 0 1px 2px rgba(11,42,74,.05); transition: transform .15s ease, background-color .15s ease, color .15s ease, box-shadow .15s ease; }
+
+.equity-bar[data-palette] .equity-chip a::after { content: "\203A"; font-size: 1.05rem; line-height: 1; color: color-mix(in srgb, var(--zone) 75%, #0b2a4a); }
+.equity-bar[data-palette] .equity-chip a:hover, .equity-bar[data-palette] .equity-chip a:focus-visible { transform: translateY(-1px); background: color-mix(in srgb, var(--zone) 72%, #10202f); border-color: transparent; color: #fff; box-shadow: 0 6px 14px -6px color-mix(in srgb, var(--zone) 70%, transparent); }
+.equity-bar[data-palette] .equity-chip a:hover::after, .equity-bar[data-palette] .equity-chip a:focus-visible::after { color: #fff; }
+@media (prefers-reduced-motion: reduce) { .equity-bar[data-palette] .equity-chip a { transition: none; } }

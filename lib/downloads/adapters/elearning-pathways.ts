@@ -470,7 +470,7 @@ function readingDocument(id: string, scope: StaffProgramScope): ResourceDocument
         ]),
       ),
       section("About these reading notes", [
-        paragraph("These notes summarize and discuss the book; they do not reproduce the full text. Ideas attributed to the author are perspectives for consideration, not statements of Department of Human Services policy. Consult the book for its complete argument and the applicable guidance for decisions in your work."),
+        paragraph("These notes summarize and discuss the book; they do not reproduce the full text. Ideas attributed to the author are perspectives for consideration, not statements of Department of Human Services policy. For the complete argument, go to the book itself, and for decisions in your work, follow the guidance that applies."),
         book.editionNote ? paragraph(book.editionNote) : null,
       ]),
     ]),
@@ -487,7 +487,7 @@ function readingPathwaysDocument(scope: StaffProgramScope): ResourceDocument {
     meta: [],
     sections: compactSections([
       section(undefined, [
-        paragraph("Directors, managers, supervisors and staff can use these suggestions individually or with colleagues. Choose by the work you are doing, not by your job title. Use practice examples or information appropriate to share."),
+        paragraph("Whether you are a director, manager, supervisor or staff member, you can try these suggestions on your own or with colleagues. Choose by the work you are doing, not by your job title, and stick to practice examples or information that is fine to share."),
       ]),
       ...readingPathways.map((path) =>
         section(path.title, [

@@ -1,5 +1,6 @@
 import "server-only";
-import { existsSync, readFileSync } from "node:fs";
+import { readFileSync } from "node:fs";
+import { publicFileAvailable } from "@/lib/storage/public-offload-manifest";
 import path from "node:path";
 import type { ContentItem } from "./types";
 import type { CoursePack } from "./courses/source-types";
@@ -17,7 +18,7 @@ export function listCourseListening(packs: readonly CoursePack[], publishedSelfD
     try { pathname = decodeURIComponent(src.split(/[?#]/)[0]); } catch { return false; }
     if (!/\.(mp3|wav|m4a)$/i.test(pathname)) return false;
     const resolved = path.resolve(root, "." + pathname);
-    return resolved.startsWith(root + path.sep) && existsSync(resolved);
+    return resolved.startsWith(root + path.sep) && publicFileAvailable(resolved);
   };
   const approvedSelfDirected = new Set(publishedSelfDirected.filter(item => item.status === "approved").map(item => item.id));
   const results: CourseListening[] = [];

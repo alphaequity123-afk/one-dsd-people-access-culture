@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef, type ReactNode } from "react";
-import { SendIcon } from "@/components/ask-icons";
 import "@/components/ask-box.css";
 
 /**
@@ -45,7 +44,7 @@ export function AskBox({ id, value, onChange, placeholder, sendLabel, busy = fal
     />
     <div className="ask-box-bar">
       {children}
-      <button type="submit" className="ask-icon ask-icon--send" disabled={busy} title={sendLabel}><SendIcon /><span className="sr-only">{sendLabel}</span></button>
+      <button type="submit" className="ask-icon ask-icon--send" disabled={busy} aria-label={sendLabel}>Send</button>
     </div>
   </div>;
 }

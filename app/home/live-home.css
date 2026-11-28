@@ -1,0 +1,263 @@
+/* Landing-page spacing, cards, and colors from the approved pilot. */
+.od.dsd-home {
+  --od-navy: #003865;
+  --od-ink: #172b3c;
+  --od-muted: #43566a;
+  --od-link: #005793;
+  --od-line: #cdd7e2;
+  --od-soft: #e5edf6;
+  color: var(--od-ink);
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.55;
+  padding-bottom: 40px;
+}
+.dsd-home .pilot-wrap { max-width: 1040px; margin-inline: auto; padding-inline: 20px; }
+.dsd-home .pilot-section { margin-top: 40px; }
+.dsd-home .pilot-section h2 { margin: 0 0 14px; font-size: 1.5rem; line-height: 1.2; font-weight: 600; }
+.dsd-home .pilot-section-heading { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px 12px; }
+.dsd-home .pilot-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; }
+.dsd-home .pilot-actions a, .dsd-home .pilot-section-heading a, .dsd-home .pilot-task > a, .dsd-home .pilot-agency-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--od-link);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.dsd-home .pilot-task {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+  padding: 22px;
+  border: 1px solid var(--od-line);
+  border-radius: 24px;
+  background: #fff;
+}
+.dsd-home .pilot-task label { font-size: 1.125rem; font-weight: 600; }
+.dsd-home .pilot-task-fields { display: grid; gap: 10px; }
+.dsd-home .pilot-task select {
+  width: 100%;
+  min-width: 0;
+  min-height: 48px;
+  padding: 11px 12px;
+  border: 1.5px solid var(--od-muted);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--od-ink);
+  font: inherit;
+}
+.dsd-home .pilot-primary, .dsd-home .pilot-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: start;
+  border-radius: 99px;
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}
+.dsd-home .pilot-primary { min-height: 48px; padding: 10px 24px; background: var(--od-navy); color: #fff; }
+.dsd-home .pilot-primary:hover { background: #17527d; color: #fff; }
+/* One DHS colors ordinary links site-wide; the landing page's filled buttons keep white text. */
+main .dsd-home a.pilot-primary[href], main .dsd-home a.pilot-primary[href]:hover { color: #fff; }
+.dsd-home .pilot-secondary { min-height: 44px; margin-top: 6px; padding: 8px 20px; border: 1.5px solid var(--od-link); color: var(--od-link); }
+.dsd-home .pilot-secondary:hover { background: var(--od-soft); }
+.dsd-home .pilot-pathways { display: grid; gap: 16px; margin: 0; padding: 0; list-style: none; }
+.dsd-home .pilot-pathways li { display: grid; grid-template-rows: auto 1fr; overflow: hidden; border: 1px solid var(--od-line); border-radius: 24px; background: #fff; }
+.dsd-home .pilot-pathways img { display: block; width: 100%; height: auto; aspect-ratio: 3/2; object-fit: cover; }
+.dsd-home .pilot-pathways li > div { display: grid; gap: 8px; align-content: start; padding: 18px 20px 20px; }
+.dsd-home .pilot-pathways h3 { margin: 0; font-size: 1.25rem; font-weight: 600; }
+.dsd-home .pilot-pathways p, .dsd-home .pilot-section p { margin: 0; color: var(--od-muted); }
+.dsd-home .pilot-list { margin: 0; padding: 0; border: 1px solid var(--od-line); border-radius: 20px; overflow: hidden; background: #fff; list-style: none; }
+.dsd-home .pilot-list li + li { border-top: 1px solid var(--od-line); }
+.dsd-home .pilot-list a { display: grid; align-items: center; gap: 14px; min-height: 60px; padding: 14px 16px; color: var(--od-ink); text-decoration: none; }
+.dsd-home .pilot-list a:hover, .dsd-home .pilot-list a:focus-visible { background: var(--od-soft); }
+.dsd-home .pilot-list a:focus-visible { outline-offset: -4px; }
+.dsd-home .pilot-list a.pilot-calendar-row { grid-template-columns: auto 1fr; }
+.dsd-home .pilot-list strong { display: block; font-weight: 600; color: var(--od-navy); }
+.dsd-home .pilot-list strong + span { display: block; color: var(--od-muted); font-size: .9375rem; }
+.dsd-home .pilot-date { width: 52px; padding: 6px 0; border-radius: 12px; background: var(--od-soft); text-align: center; line-height: 1.1; }
+.dsd-home .pilot-date span { font-size: .6875rem; font-weight: 600; color: var(--od-link); }
+.dsd-home .pilot-date strong { font-size: 1.25rem; }
+.dsd-home .home-guide { margin: 8px 0 0; }
+.dsd-home .home-guide-link { display: inline-flex; align-items: center; min-height: 44px; color: var(--od-link); font-size: .95rem; text-decoration: underline; text-underline-offset: 3px; }
+@media (min-width: 640px) { .dsd-home .pilot-task-fields { grid-template-columns: 1fr auto; } }
+@media (min-width: 760px) { .dsd-home .pilot-pathways { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+
+.od.dsd-home{margin-top:0;background:#f3f5f8!important;--collection-surface:#e5edf6;--collection-border:#cdd7e2;--collection-accent:#a9bbce;--od-line:#cdd7e2;--od-soft:#e5edf6;--od-muted:#43566a}
+.od .home-hero{background:inherit}
+.od .home-title{padding-block:28px 22px}
+.od .home-title h1{margin:0 0 6px;font-family:inherit;font-size:clamp(2rem,4.4vw,3rem);font-weight:600;line-height:1.1;letter-spacing:-.02em;color:var(--od-navy)}
+.od .home-title p{color:var(--od-muted);font-size:1.12rem;max-width:62ch}
+/* Keep the pilot’s full-width crop for both the photo and video. */
+.od .home-hero-image{display:block;width:100%;max-width:none;height:auto;aspect-ratio:3840/1748;object-fit:cover;object-position:center;margin:0 auto}
+.home-hero-motion { position: relative; margin-inline: auto; }
+.home-hero-frame { position: relative; }
+.home-hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 40%; visibility: hidden; }
+.home-hero-video[data-visible="true"] { visibility: visible; }
+@media (prefers-reduced-motion: reduce), print {
+  .home-hero-video[data-visible="true"] { visibility: hidden; }
+}
+
+.home-water { display: grid; gap: 24px; align-items: center; border: 1px solid var(--od-line); border-radius: 24px; overflow: hidden; background: white; }
+.home-water img { width: 100%; height: auto; }
+.home-water > div { padding: 24px; }
+.home-water .pilot-primary { margin-top: 16px; }
+@media (min-width: 760px) { .home-water { grid-template-columns: 1fr 1fr; } }
+
+/* Home page starting points share a section, with distinct purposes. */
+.dsd-home .home-start { margin-top: 12px; }
+.home-start-grid { display: grid; gap: 20px; }
+.dsd-home .home-start-grid .pilot-task { margin-top: 0; align-content: start; min-width: 0; }
+.dsd-home .home-start-grid h3 { margin: 0; font-size: 1.25rem; font-weight: 600; }
+.home-task-form { display: grid; gap: 10px; margin-top: 8px; }
+.dsd-home .home-start-grid .pilot-task-fields { grid-template-columns: minmax(0, 1fr); }
+.home-task-form label { display: block; }
+.dsd-home .home-ask .ask-box { flex-wrap: wrap; }
+.dsd-home .home-ask .ask-box textarea { flex-basis: 100%; min-width: 0; }
+.dsd-home .home-ask .meta { margin-top: 10px; }
+.dsd-home .pilot-pathways li > div { grid-template-rows: auto 1fr auto; }
+.dsd-home .pilot-pathways .pilot-secondary { align-self: end; }
+@media (min-width: 900px) {
+  .home-start-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+}
+
+.home-featured-kicker { margin: 0 0 6px; font-size: .875rem; font-weight: 600; letter-spacing: .02em; color: var(--od-link); }
+
+.dsd-home .pilot-wrap > .home-featured:first-child { margin-top: 28px; }
+
+/* Owner decision 2026-11-22: unified, polished home. One card surface, one section-label pattern,
+   one action style (navy + arrow), one row style. The four-color scale appears only in the styles section. */
+.dsd-home { --u-line: #dfe6ee; --u-radius: 20px; --u-radius-sm: 12px; --u-shadow: 0 1px 2px rgba(11,42,74,.04), 0 18px 40px -24px rgba(11,42,74,.22); --u-shadow-sm: 0 1px 2px rgba(11,42,74,.05); --u-navy: #0b2a4a; --u-muted: #5a6b7d; --u-tint: #f3f7fb; --u-accent: #5f9a1a; }
+
+/* Section labels */
+.dsd-home .pilot-section > h2::before, .dsd-home .pilot-section-heading h2::before, .home-equity-bar h3::before, .home-featured-kicker { display: block; font-size: .72rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--u-muted); margin: 0 0 6px; }
+#pilot-pathways::before { content: "Start here"; }
+#pilot-more::before { content: "This month"; }
+.home-equity-bar h3::before { content: "Leadership styles"; }
+.dsd-home .pilot-section h2 { font-size: 1.5rem; letter-spacing: -.01em; color: var(--u-navy); }
+
+/* One card surface */
+.dsd-home .pilot-pathways li, .dsd-home .pilot-list, .home-feature-lead { border: 1px solid var(--u-line); border-radius: var(--u-radius); box-shadow: var(--u-shadow); background: #fff; }
+.dsd-home .pilot-pathways li { overflow: hidden; transition: transform .18s ease, box-shadow .18s ease; }
+.dsd-home .pilot-pathways li:hover { transform: translateY(-2px); box-shadow: 0 1px 2px rgba(11,42,74,.05), 0 24px 44px -24px rgba(11,42,74,.3); }
+.dsd-home .pilot-pathways h3 { color: var(--u-navy); font-size: 1.1rem; }
+
+/* Leadership: feature and styles are one panel */
+.home-feature-lead { display: grid; overflow: hidden; }
+.home-feature-lead .home-featured { border: 0; border-radius: 0; box-shadow: none; }
+.home-equity-bar { padding: 28px 28px 26px; border-top: 1px solid var(--u-line); background: linear-gradient(180deg, #fbfcfe, #fff); }
+.home-equity-bar h3 { margin: 0 0 4px; font-size: 1.3rem; font-weight: 600; letter-spacing: -.01em; color: var(--u-navy); }
+.home-equity-scale { position: relative; display: flex; justify-content: space-between; gap: 12px; padding-top: 22px; margin: 14px 0 18px; font-weight: 600; font-size: .78rem; letter-spacing: .02em; color: #4a5a6b; }
+.home-equity-scale::before { content: ""; position: absolute; left: 0; right: 0; top: 4px; height: 8px; border-radius: 999px; background: linear-gradient(90deg, #c9603f 0%, #e3a93b 34%, #78BE21 68%, #3f7a0e 100%); box-shadow: inset 0 1px 1px rgba(0,0,0,.12); }
+.home-equity-scale span:first-child::before { content: "\2190  "; }
+.home-equity-scale span:last-child::after { content: "  \2192"; }
+.home-equity-bar ol { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
+@media (min-width: 760px) { .home-equity-bar ol { grid-template-columns: repeat(4, 1fr); } }
+
+/* Columns carry their place on the scale */
+.home-zone { --tint: #fbede7; --edge: #c9603f; position: relative; overflow: hidden; background: linear-gradient(180deg, var(--tint) 0, #fff 86px); border: 1px solid color-mix(in srgb, var(--edge) 22%, #e6ebf0); border-radius: 14px; padding: 0 12px 14px; box-shadow: 0 10px 24px -20px rgba(11,42,74,.35); }
+.home-zone-mixed { --tint: #fdf3df; --edge: #c98f1f; }
+.home-zone-foundation { --tint: #eef7e2; --edge: #5f9a1a; }
+.home-zone-advances { --tint: #e6f0dc; --edge: #3f7a0e; }
+.home-zone::before { content: ""; display: block; height: 4px; margin: 0 -12px 14px; background: var(--edge); }
+.home-zone strong { display: block; min-height: 2.6em; margin-bottom: 10px; padding: 0 2px; font-size: .95rem; font-weight: 600; line-height: 1.3; color: var(--u-navy); }
+.home-zone ul { display: flex; flex-direction: column; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.home-zone li a { display: flex; align-items: center; gap: 8px; width: 100%; box-sizing: border-box; padding: 9px 10px; background: #fff; border: 1px solid color-mix(in srgb, var(--edge) 30%, #e3e8ee); border-radius: 8px; color: var(--u-navy); font-size: .84rem; font-weight: 600; line-height: 1.3; text-decoration: none; box-shadow: var(--u-shadow-sm); transition: transform .15s ease, box-shadow .15s ease, background-color .15s ease, color .15s ease; }
+.home-zone li a::before { content: ""; flex: none; width: 8px; height: 8px; border-radius: 50%; background: var(--edge); box-shadow: 0 0 0 3px color-mix(in srgb, var(--edge) 18%, transparent); }
+.home-zone li a::after { content: "\203A"; margin-left: auto; font-size: 1.1rem; line-height: 1; color: color-mix(in srgb, var(--edge) 75%, #0b2a4a); transition: transform .15s ease; }
+/* Darkened fill keeps white text readable on every column */
+.home-zone li a:hover, .home-zone li a:focus-visible { transform: translateY(-1px); background-color: color-mix(in srgb, var(--edge) 72%, #10202f); border-color: transparent; color: #fff; box-shadow: 0 6px 14px -6px color-mix(in srgb, var(--edge) 70%, transparent); }
+.home-zone li a:hover::before, .home-zone li a:focus-visible::before { background: #fff; box-shadow: none; }
+.home-zone li a:hover::after, .home-zone li a:focus-visible::after { color: #fff; transform: translateX(2px); }
+
+/* One action style: navy + arrow */
+.dsd-home .pilot-pathways .pilot-secondary { border: 1px solid color-mix(in srgb, var(--u-navy) 25%, #fff); color: var(--u-navy); background: #fff; box-shadow: var(--u-shadow-sm); padding-inline: 16px 14px; }
+.dsd-home .pilot-pathways .pilot-secondary:hover, .dsd-home .pilot-pathways .pilot-secondary:focus-visible { background: var(--u-navy); color: #fff; }
+.dsd-home .pilot-pathways .pilot-secondary::after, .home-featured .pilot-primary::after, .dsd-home .pilot-section-heading a::after { content: "\203A"; display: inline-block; margin-left: 7px; }
+.dsd-home .pilot-section-heading a { font-weight: 600; color: var(--u-navy); text-decoration-color: color-mix(in srgb, var(--u-navy) 30%, transparent); text-underline-offset: 4px; }
+
+/* Lists share the row pattern */
+.home-row { display: grid; gap: 16px; }
+@media (min-width: 760px) { .home-row { grid-template-columns: 1fr 1fr; } }
+.dsd-home .pilot-list li + li { border-top: 1px solid #edf1f5; }
+.dsd-home .pilot-list a { position: relative; padding-right: 36px; transition: background .15s ease; }
+.dsd-home .pilot-list a::after { content: "\203A"; position: absolute; right: 16px; top: 50%; transform: translateY(-50%); font-size: 1.15rem; color: #8a9aab; transition: transform .15s ease, color .15s ease; }
+.dsd-home .pilot-list a:hover { background: var(--u-tint); }
+.dsd-home .pilot-list a:hover::after { color: var(--u-navy); transform: translate(2px, -50%); }
+.dsd-home .pilot-list strong { color: var(--u-navy); font-weight: 600; }
+.dsd-home .pilot-list a:not(.pilot-calendar-row) strong::before { content: ""; display: inline-block; width: 7px; height: 7px; margin-right: 9px; vertical-align: middle; border-radius: 50%; background: var(--u-accent); box-shadow: 0 0 0 3px color-mix(in srgb, var(--u-accent) 16%, transparent); }
+.dsd-home .pilot-list a:not(.pilot-calendar-row) strong + span { padding-left: 16px; }
+.dsd-home .pilot-date { overflow: hidden; padding-top: 0; background: #fff; border: 1px solid var(--u-line); border-radius: var(--u-radius-sm); box-shadow: var(--u-shadow-sm); }
+.dsd-home .pilot-date > span { display: block; margin-bottom: 2px; padding: 2px 0; background: var(--u-navy); color: #fff; font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; }
+.dsd-home .pilot-date strong { color: var(--u-navy); }
+@media (prefers-reduced-motion: reduce) { .dsd-home .pilot-pathways li, .home-zone li a, .dsd-home .pilot-list a::after { transition: none; } }
+
+/* From the live One DSD site's unified.css (owner decisions 2026-11-22), scoped to the landing page only:
+   satin background, 3D cards with a navy accent line, and the task finder chips. */
+.dsd-home {
+  --s3-face: linear-gradient(180deg, #ffffff 0%, #fbfcfe 55%, #f5f8fb 100%);
+  --s3-line: #cdd9e5;
+  --s3-shadow: 0 1px 0 rgba(255,255,255,.95) inset, 0 2px 4px rgba(11,42,74,.08), 0 12px 24px -8px rgba(11,42,74,.16), 0 34px 64px -30px rgba(11,42,74,.42);
+  --s3-shadow-hover: 0 1px 0 rgba(255,255,255,.95) inset, 0 3px 6px rgba(11,42,74,.09), 0 16px 30px -8px rgba(11,42,74,.2), 0 40px 72px -30px rgba(11,42,74,.48);
+  --s3-shadow-sm: 0 1px 0 rgba(255,255,255,.95) inset, 0 1px 2px rgba(11,42,74,.08), 0 3px 6px -3px rgba(11,42,74,.12);
+  --satin: radial-gradient(1200px 600px at 15% -10%, rgba(255,255,255,.95), rgba(255,255,255,0) 60%), radial-gradient(900px 500px at 100% 20%, rgba(214,226,238,.55), rgba(214,226,238,0) 65%), linear-gradient(165deg, #f7f9fc 0%, #eef2f7 38%, #f6f8fb 62%, #ebeff5 100%);
+}
+.od.dsd-home { background-color: #f1f4f8 !important; background-image: var(--satin) !important; background-attachment: fixed; }
+.dsd-home .pilot-pathways li, .dsd-home .pilot-list, .home-feature-lead { background: var(--s3-face); border: 1px solid var(--s3-line); box-shadow: var(--s3-shadow); }
+.dsd-home .pilot-list, .home-feature-lead { border-top: 3px solid #003865; }
+.dsd-home .pilot-pathways li:hover { box-shadow: var(--s3-shadow-hover); transform: translateY(-3px); }
+.home-equity-bar { background: linear-gradient(180deg, rgba(251,252,254,.85), rgba(255,255,255,.6)); }
+.home-zone { box-shadow: 0 1px 0 rgba(255,255,255,.9) inset, 0 2px 6px -2px rgba(11,42,74,.10), 0 14px 26px -18px rgba(11,42,74,.32); }
+.home-zone li a { background: linear-gradient(180deg, #fff, #f7f9fc); box-shadow: var(--s3-shadow-sm); }
+.home-zone li a:hover, .home-zone li a:focus-visible { background: color-mix(in srgb, var(--edge) 72%, #10202f); }
+.dsd-home .pilot-date { box-shadow: 0 1px 0 rgba(255,255,255,.9) inset, 0 2px 5px -1px rgba(11,42,74,.14); }
+.dsd-home .pilot-secondary { box-shadow: var(--s3-shadow-sm); }
+@media (prefers-reduced-motion: reduce) { .dsd-home .pilot-pathways li:hover { transform: none; } }
+.dsd-home .task-finder h2 { margin-bottom: 12px; }
+.dsd-home .task-finder-chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.dsd-home .task-chip { min-height: 44px; padding: 10px 16px; background: #fff; border: 1px solid #b9c7d5; border-radius: 999px; color: #003865; font: inherit; font-weight: 600; cursor: pointer; box-shadow: 0 1px 2px rgba(11,42,74,.06); transition: border-color .15s ease, background .15s ease, box-shadow .15s ease; }
+.dsd-home .task-chip:hover { border-color: #003865; }
+.dsd-home .task-chip.is-chosen { background: #003865; border-color: #003865; color: #fff; }
+.dsd-home .task-chip:focus-visible { outline: 3px solid #005793; outline-offset: 3px; }
+.dsd-home .task-finder-picks { list-style: none; margin: 14px 0 0; padding: 0; display: grid; gap: 10px; }
+@media (min-width: 760px) { .dsd-home .task-finder-picks { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); } }
+.dsd-home .task-finder-picks a { display: block; height: 100%; padding: 14px 16px; background: #fff; border: 1px solid #dfe6ee; border-top: 3px solid #003865; border-radius: 12px; text-decoration: none; color: inherit; box-shadow: var(--s3-shadow); transition: box-shadow .15s ease, transform .15s ease; }
+.dsd-home .task-finder-picks a:hover { box-shadow: var(--s3-shadow-hover); transform: translateY(-1px); }
+.dsd-home .task-finder-picks strong { display: block; color: #003865; margin-bottom: 4px; }
+.dsd-home .task-finder-picks span { display: block; color: #3b4048; font-size: .95rem; line-height: 1.5; }
+/* The live landing page's type: Aptos, the Microsoft 365 default, with the same fallbacks. */
+body.program-design .od.dsd-home, body.program-design .od.dsd-home :is(h1, h2, h3, p, a, button, strong, span) { font-family: Aptos, "Aptos Display", "Segoe UI", Calibri, system-ui, -apple-system, Arial, sans-serif; }
+/* The featured button keeps white text over this app's site-wide link colors. */
+body.program-design .od.dsd-home a.pilot-primary[href], body.program-design .od.dsd-home a.pilot-primary[href]:hover, body.program-design .od.dsd-home a.pilot-primary[href]:visited { color: #fff !important; }
+
+/* v2 prototype (owner decision 2026-11-26): the Home command center and the start, apply, lead strip,
+   in the landing page's own look — 3D card, navy accent line, navy pill actions, no icons or glyphs. */
+.dsd-home .home-command { padding: 22px 24px; background: var(--s3-face); border: 1px solid var(--s3-line); border-top: 3px solid #003865; border-radius: 20px; box-shadow: var(--s3-shadow); }
+.dsd-home .home-command h2 { margin: 0 0 4px; }
+.dsd-home .home-command-lede { margin: 0 0 14px; color: #43566a; max-width: 62ch; }
+.dsd-home .home-command-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; border-bottom: 1px solid #dfe6ee; padding-bottom: 10px; }
+.dsd-home .home-command-tabs button { min-height: 44px; padding: 8px 18px; border: 1px solid #b9c7d5; border-radius: 999px; background: #fff; color: #003865; font: inherit; font-weight: 600; cursor: pointer; }
+.dsd-home .home-command-tabs button:hover { border-color: #003865; }
+.dsd-home .home-command-tabs button.is-chosen { background: #003865; border-color: #003865; color: #fff; }
+.dsd-home .home-command-tabs button:focus-visible { outline: 3px solid #005793; outline-offset: 3px; }
+.dsd-home .home-command-panel > p { max-width: 68ch; }
+.dsd-home .home-command-examples-title { margin: 14px 0 6px; font-weight: 600; color: #0b2a4a; }
+.dsd-home .home-command-examples { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.dsd-home .home-command-examples a { display: inline-block; min-height: 40px; padding: 8px 14px; border: 1px solid #cdd9e5; border-radius: 999px; background: #fff; color: #003865; font-weight: 600; text-decoration: none; }
+.dsd-home .home-command-examples a:hover { border-color: #003865; background: #f3f7fb; }
+.dsd-home .home-command-search label { display: block; margin-bottom: 6px; font-weight: 600; color: #0b2a4a; }
+.dsd-home .home-command-search div { display: flex; flex-wrap: wrap; gap: 10px; }
+.dsd-home .home-command-search input { flex: 1 1 260px; min-height: 48px; padding: 10px 14px; border: 1px solid #8a9aab; border-radius: 12px; font: inherit; }
+.dsd-home .home-command-search input:focus-visible { outline: 3px solid #005793; outline-offset: 2px; }
+.dsd-home .home-command-search button { border: 0; cursor: pointer; font: inherit; }
+.dsd-home .home-tiers-note { margin: -4px 0 12px; color: #43566a; }
+.dsd-home .home-tiers ol { display: grid; gap: 16px; margin: 0; padding: 0; list-style: none; }
+@media (min-width: 760px) { .dsd-home .home-tiers ol { grid-template-columns: repeat(3, 1fr); } }
+.dsd-home .home-tiers li { display: flex; flex-direction: column; gap: 6px; padding: 18px 20px; background: var(--s3-face); border: 1px solid var(--s3-line); border-top: 3px solid #003865; border-radius: 16px; box-shadow: var(--s3-shadow); }
+.dsd-home .home-tiers li h3 { margin: 0; color: #003865; font-size: 1.2rem; }
+.dsd-home .home-tiers li p { margin: 0; color: #43566a; }
+.dsd-home .home-tiers li .pilot-secondary { align-self: flex-start; margin-top: auto; }
+.dsd-home .home-tier-label { font-size: .8rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: #3e6b0c !important; }

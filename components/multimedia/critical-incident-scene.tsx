@@ -37,7 +37,7 @@ export function CriticalIncidentScene() {
     <div className="p-5 sm:p-8">
       <p className="text-sm font-semibold uppercase tracking-wider text-[#005ea8]">Practice scene · optional practice</p>
       <h2 id={uid + "-heading"} className="mt-3 text-2xl font-bold text-[#123f60] sm:text-3xl">The papers arrive just before the decision</h2>
-      <p className="mt-4 leading-7">Use the scene to practice the lesson’s four lines. Look for the timing, materials and requests that can be described. The dialogue below supplies the facts of this practice event.</p>
+      <p className="mt-4 leading-7">Practice the lesson’s four lines with this scene. Look for the timing, materials and requests that can be described. The dialogue below supplies the facts of this practice event.</p>
     </div>
     <figure className="m-0">
       <Image src="/images/media-critical-incident-late-handout-v1.png" width={1672} height={941} sizes="(min-width: 1024px) 760px, 100vw" alt="Four colleagues sit around a meeting table as two pass a stack of printed pages between them; notebooks and a laptop are on the table." className="block h-auto w-full" />

@@ -25,6 +25,12 @@ public/**/*.4k.webp
 
 # Clip cache for the course podcast recorder (scripts/media/record-culture-wellbeing-podcasts.mjs)
 output/culture-wellbeing-recording/
+# v2 rebuild (2026-11-25): the live One DSD site's 4K images are part of its pages, so they are kept here.
+!public/images/leading-others/**/*.4k.webp
+!public/images/learning-guides/**/*.4k.webp
+!public/images/trainings/**/*.4k.webp
+!public/images/leadership-development/**/*.4k.webp
+!public/learning-media/**/*.4k.webp
 output/rise-recording/
 output/*.log
 output/rise-jobs*.json

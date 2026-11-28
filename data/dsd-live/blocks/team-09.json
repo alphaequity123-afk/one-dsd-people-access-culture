@@ -1,0 +1,254 @@
+{
+ "id": "team-09",
+ "name": "Team track: Partnership",
+ "kind": "courses",
+ "version": 1,
+ "owner": "Gary Banks",
+ "review_date": null,
+ "sort": 18,
+ "items": [
+  {
+   "id": "dc-t81-interagency-collaboration-basics",
+   "kind": "course",
+   "title": "Interagency collaboration basics",
+   "level": "intermediate",
+   "topic": "working-across-units-and-agencies",
+   "competency": "getting-work-done",
+   "skill": "project management",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 1,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-t82-the-olmstead-plan-as-cross-agency-work",
+     "kind": "next_step",
+     "note": "Next in this block."
+    }
+   ]
+  },
+  {
+   "id": "dc-t82-the-olmstead-plan-as-cross-agency-work",
+   "kind": "course",
+   "title": "The Olmstead Plan as cross-agency work",
+   "level": "intermediate",
+   "topic": "olmstead-and-integrated-settings",
+   "competency": "job-knowledge",
+   "skill": "applying federal and state rules",
+   "priority": "important",
+   "alignment": "aligns",
+   "sequence": 2,
+   "all_job_families": true,
+   "job_families": [],
+   "links": [
+    {
+     "to": "dc-t83-partnering-with-counties-and-lead-agencies",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s23-minnesota-s-olmstead-plan-for-staff",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-l11-the-olmstead-decision-and-minnesota-s-olmstead-p",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-t83-partnering-with-counties-and-lead-agencies",
+   "kind": "course",
+   "title": "Partnering with counties and lead agencies",
+   "level": "intermediate",
+   "topic": "partnership-with-counties-providers-and-other-agencies",
+   "competency": "leading-outside",
+   "skill": "partnership; coalitions",
+   "priority": "important",
+   "alignment": "aligns",
+   "sequence": 3,
+   "all_job_families": true,
+   "job_families": [
+    "policy-program"
+   ],
+   "links": [
+    {
+     "to": "dc-t85-working-with-providers-as-partners",
+     "kind": "next_step",
+     "note": "Next in this block."
+    }
+   ]
+  },
+  {
+   "id": "dc-t85-working-with-providers-as-partners",
+   "kind": "course",
+   "title": "Working with providers as partners",
+   "level": "intermediate",
+   "topic": "partnership-with-counties-providers-and-other-agencies",
+   "competency": "leading-outside",
+   "skill": "partnership; coalitions",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 4,
+   "all_job_families": true,
+   "job_families": [
+    "policy-program"
+   ],
+   "links": [
+    {
+     "to": "dc-t86-co-designing-with-people-with-disabilities-and-f",
+     "kind": "next_step",
+     "note": "Next in this block."
+    }
+   ]
+  },
+  {
+   "id": "dc-t86-co-designing-with-people-with-disabilities-and-f",
+   "kind": "course",
+   "title": "Designing with people with disabilities and families",
+   "level": "intermediate",
+   "topic": "community-engagement-and-designing-with-people",
+   "competency": "leading-outside",
+   "skill": "engagement; inclusion",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 5,
+   "all_job_families": true,
+   "job_families": [
+    "policy-program"
+   ],
+   "links": [
+    {
+     "to": "dc-t87-collaborating-with-community-organizations",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s95-hearing-community-voices",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-l43-meaningful-community-engagement-for-leaders",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-i96-intercultural-partnership-with-communities",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-t87-collaborating-with-community-organizations",
+   "kind": "course",
+   "title": "Collaborating with community organizations",
+   "level": "intermediate",
+   "topic": "community-engagement-and-designing-with-people",
+   "competency": "leading-outside",
+   "skill": "engagement; inclusion",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 6,
+   "all_job_families": true,
+   "job_families": [
+    "policy-program"
+   ],
+   "links": [
+    {
+     "to": "dc-t88-managing-power-differences-in-partnerships",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-s95-hearing-community-voices",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-l43-meaningful-community-engagement-for-leaders",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    },
+    {
+     "to": "dc-i96-intercultural-partnership-with-communities",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-t88-managing-power-differences-in-partnerships",
+   "kind": "course",
+   "title": "Managing power differences in partnerships",
+   "level": "intermediate",
+   "topic": "partnership-with-counties-providers-and-other-agencies",
+   "competency": "leading-outside",
+   "skill": "partnership; coalitions",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 7,
+   "all_job_families": true,
+   "job_families": [
+    "policy-program"
+   ],
+   "links": [
+    {
+     "to": "dc-t89-joint-workgroups-and-task-forces",
+     "kind": "next_step",
+     "note": "Next in this block."
+    }
+   ]
+  },
+  {
+   "id": "dc-t89-joint-workgroups-and-task-forces",
+   "kind": "course",
+   "title": "Joint workgroups and task forces",
+   "level": "intermediate",
+   "topic": "partnership-with-counties-providers-and-other-agencies",
+   "competency": "leading-outside",
+   "skill": "partnership; coalitions",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 8,
+   "all_job_families": true,
+   "job_families": [
+    "policy-program"
+   ],
+   "links": [
+    {
+     "to": "dc-t90-keeping-partners-informed-and-closing-the-loop",
+     "kind": "next_step",
+     "note": "Next in this block."
+    }
+   ]
+  },
+  {
+   "id": "dc-t90-keeping-partners-informed-and-closing-the-loop",
+   "kind": "course",
+   "title": "Keeping partners informed and closing the loop",
+   "level": "intermediate",
+   "topic": "partnership-with-counties-providers-and-other-agencies",
+   "competency": "leading-outside",
+   "skill": "partnership; coalitions",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 9,
+   "all_job_families": true,
+   "job_families": [
+    "policy-program"
+   ],
+   "links": [
+    {
+     "to": "dc-t83-partnering-with-counties-and-lead-agencies",
+     "kind": "related",
+     "note": "Covers the same topic."
+    }
+   ]
+  }
+ ]
+}

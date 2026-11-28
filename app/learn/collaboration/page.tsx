@@ -64,7 +64,7 @@ export default async function CollaborationLearningPage({ searchParams }: { sear
         <h2 id="courses-title">{selectedFocus?.title ?? "Explore the courses"}</h2>
         {selectedFocus ? <p className={styles.example}>{selectedFocus.example}</p> : <p>Open a topic to explore its courses, or choose a path above to focus on a particular kind of work.</p>}
         <p role="status" className={styles.count}>{visible.length} {visible.length === 1 ? "course" : "courses"}{selectedLevel ? ` · ${selectedLevel.title}` : " · All levels"}{selectedFocus ? ` · ${selectedFocus.title}` : " · All three paths"}</p>
-        {!visible.length ? <div className={styles.empty}><h3>No courses are available in this selection.</h3><p>Choose another level or return to <Link href={collaborationHref()}>all collaboration learning</Link>.</p></div> : null}
+        {!visible.length ? <div className={styles.empty}><h3>There are no courses in this selection yet.</h3><p>Choose another level or return to <Link href={collaborationHref()}>all collaboration learning</Link>.</p></div> : null}
         {COLLABORATION_FOCUSES.filter(focus => !filters.focus || focus.id === filters.focus).map(focus => {
           const rows = visible.filter(course => course.focus === focus.id);
           if (!rows.length) return null;

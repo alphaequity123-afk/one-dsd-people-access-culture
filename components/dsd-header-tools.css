@@ -90,3 +90,7 @@
   .dsd-calm .dsd-header .dsd-utilities { gap: 4px; }
   .dsd-calm .dsd-header .dsd-menu { padding-inline: 7px; }
 }
+/* v2 rebuild (2026-11-26): the quiet role choice under the menu. Words only. */
+.dsd-role-bar{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem 1rem;padding-block:.45rem;font-size:.9rem;color:#33475b}
+.dsd-role-bar select{margin-left:.4rem;min-height:2.25rem;font:inherit}
+.dsd-role-bar a{font-weight:600}

@@ -21,7 +21,7 @@ export default function EquityReviewPage() {
       <h2 id="review-tools">Tools for your review</h2>
       <ul className="pilot-topic-rows">
         <li><Link href="/equity-review/toolkit">DHS Equity Analysis Toolkit<span>Work through a decision with your evidence and the people it affects.</span></Link></li>
-        <li id="analyze-document"><Link href="/equity-review/analyze">Analyze a document<span>Use one of six methods to identify evidence, inferences, and gaps.</span></Link></li>
+        <li id="analyze-document"><Link href="/equity-review/analyze">Analyze a document<span>Choose one of six methods and see the evidence, inferences and gaps in your document.</span></Link></li>
         <li id="working-group-plan"><Link href="/equity-review/working-group-plan">Plan a legislatively required working group<span>Turn a statutory charge into a work plan.</span></Link></li>
       </ul>
     </section>
@@ -36,8 +36,8 @@ export default function EquityReviewPage() {
       </details>
       <details className="pilot-supporting" id="consultant-analysis"><summary>Guidance and related resources</summary>
         <div className="pilot-supporting-body space-y-4">
-          <p>Staff anywhere in DHS can use the reviews independently. The Equity and Inclusion Operations Consultant offers guidance and feedback.</p>
-          <p>The consultant workspace brings supplied evidence, affected perspectives, alternatives, and practical actions together. Explore a practice situation, examine gaps, and connect the work to ADSA equity goals when relevant.</p>
+          <p>Anyone in DHS can use these reviews on their own, and the Equity and Inclusion Operations Consultant is there for guidance and feedback.</p>
+          <p>The consultant workspace brings supplied evidence, affected perspectives, alternatives, and practical actions together. You can explore a practice situation, look at the gaps and connect the work to ADSA equity goals when they apply.</p>
           <ul className="pilot-topic-rows">
             <li><Link href="/consultant/analysis">Research and policy analysis<span>Consultant sign-in required</span></Link></li>
             <li><Link href="/equity-policy">DHS equity policy</Link></li>

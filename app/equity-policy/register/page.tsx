@@ -8,7 +8,7 @@ export const metadata: Metadata = { title: "Equity analysis register" };
 export default function RegisterPage() {
   return (
     <>
-      <PageIntro kicker="Equity Policy" title="Equity analysis records" lede="Completed analyses are not available on this page. For an example you can work through, use the Equity Analysis Toolkit." />
+      <PageIntro kicker="Equity Policy" title="Equity analysis records" lede="Finished analyses aren't shown here. For an example you can work through, try the Equity Analysis Toolkit." />
       <div className="wrap max-w-3xl space-y-6 py-8">
         <Notice>
           This page does not provide completed analyses. The Equity Analysis Toolkit lets you practice with a published decision and download the example.

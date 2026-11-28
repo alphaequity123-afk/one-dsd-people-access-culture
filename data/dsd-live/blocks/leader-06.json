@@ -1,0 +1,285 @@
+{
+ "id": "leader-06",
+ "name": "Leader track: Workforce equity",
+ "kind": "courses",
+ "version": 1,
+ "owner": "Gary Banks",
+ "review_date": null,
+ "sort": 25,
+ "items": [
+  {
+   "id": "dc-l51-affirmative-action-in-state-employment",
+   "kind": "course",
+   "title": "Affirmative action in state employment",
+   "level": "advanced",
+   "topic": "hiring-and-selection",
+   "competency": "leading-others",
+   "skill": "talent development",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 1,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "enterprise-services"
+   ],
+   "links": [
+    {
+     "to": "dc-l52-using-connect-700-to-hire-people-with-disabiliti",
+     "kind": "next_step",
+     "note": "Next in this block."
+    }
+   ]
+  },
+  {
+   "id": "dc-l52-using-connect-700-to-hire-people-with-disabiliti",
+   "kind": "course",
+   "title": "Using Connect 700 to hire people with disabilities",
+   "level": "advanced",
+   "topic": "hiring-and-selection",
+   "competency": "leading-others",
+   "skill": "talent development",
+   "priority": "important",
+   "alignment": "aligns",
+   "sequence": 2,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "enterprise-services"
+   ],
+   "links": [
+    {
+     "to": "dc-l53-reducing-bias-in-hiring-and-selection",
+     "kind": "next_step",
+     "note": "Next in this block."
+    }
+   ]
+  },
+  {
+   "id": "dc-l53-reducing-bias-in-hiring-and-selection",
+   "kind": "course",
+   "title": "Reducing bias in hiring and selection",
+   "level": "advanced",
+   "topic": "hiring-and-selection",
+   "competency": "leading-others",
+   "skill": "talent development",
+   "priority": "starting_point",
+   "alignment": "needs_revision",
+   "sequence": 3,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "enterprise-services"
+   ],
+   "links": [
+    {
+     "to": "dc-l54-inclusive-interview-panels-and-structured-interv",
+     "kind": "next_step",
+     "note": "Next in this block."
+    }
+   ]
+  },
+  {
+   "id": "dc-l54-inclusive-interview-panels-and-structured-interv",
+   "kind": "course",
+   "title": "Inclusive interview panels and structured interviews",
+   "level": "advanced",
+   "topic": "hiring-and-selection",
+   "competency": "leading-others",
+   "skill": "talent development",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 4,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "enterprise-services"
+   ],
+   "links": [
+    {
+     "to": "dc-l55-inclusive-onboarding-for-new-employees",
+     "kind": "next_step",
+     "note": "Next in this block."
+    }
+   ]
+  },
+  {
+   "id": "dc-l55-inclusive-onboarding-for-new-employees",
+   "kind": "course",
+   "title": "Inclusive onboarding for new employees",
+   "level": "advanced",
+   "topic": "onboarding",
+   "competency": "leading-others",
+   "skill": "talent development",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 5,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "enterprise-services"
+   ],
+   "links": [
+    {
+     "to": "dc-l56-retaining-employees-from-underrepresented-groups",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-t14-welcoming-new-team-members",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l56-retaining-employees-from-underrepresented-groups",
+   "kind": "course",
+   "title": "Retaining employees from underrepresented groups",
+   "level": "advanced",
+   "topic": "retention-age-and-the-employee-life-cycle",
+   "competency": "leading-others",
+   "skill": "talent development",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 6,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "enterprise-services"
+   ],
+   "links": [
+    {
+     "to": "dc-l57-equitable-access-to-stretch-assignments-and-prom",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-t100-keeping-culture-strong-through-turnover-and-chan",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l57-equitable-access-to-stretch-assignments-and-prom",
+   "kind": "course",
+   "title": "Equitable access to stretch assignments and promotion",
+   "level": "advanced",
+   "topic": "performance-assignments-and-promotion",
+   "competency": "leading-others",
+   "skill": "talent development",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 7,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "enterprise-services"
+   ],
+   "links": [
+    {
+     "to": "dc-l58-fair-and-bias-aware-performance-reviews",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-t91-recognition-that-is-fair-and-meaningful",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l58-fair-and-bias-aware-performance-reviews",
+   "kind": "course",
+   "title": "Fair and bias-aware performance reviews",
+   "level": "advanced",
+   "topic": "performance-assignments-and-promotion",
+   "competency": "leading-others",
+   "skill": "talent development",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 8,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "enterprise-services"
+   ],
+   "links": [
+    {
+     "to": "dc-l59-mentoring-and-sponsorship-across-difference",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-t91-recognition-that-is-fair-and-meaningful",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l59-mentoring-and-sponsorship-across-difference",
+   "kind": "course",
+   "title": "Mentoring and sponsorship across difference",
+   "level": "advanced",
+   "topic": "mentoring-career-growth-and-coaching",
+   "competency": "leading-others",
+   "skill": "talent development",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 9,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "enterprise-services"
+   ],
+   "links": [
+    {
+     "to": "dc-l60-employee-resource-groups-and-leaders-role",
+     "kind": "next_step",
+     "note": "Next in this block."
+    },
+    {
+     "to": "dc-t94-mentoring-and-peer-learning",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  },
+  {
+   "id": "dc-l60-employee-resource-groups-and-leaders-role",
+   "kind": "course",
+   "title": "Employee resource groups and leaders' role",
+   "level": "advanced",
+   "topic": "employee-resource-groups",
+   "competency": "leading-with-deai",
+   "skill": "creating a culture of inclusion",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 10,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-t93-employee-resource-groups-at-the-state-of-minneso",
+     "kind": "role_variant_of",
+     "note": "The same topic written for another role."
+    }
+   ]
+  }
+ ]
+}

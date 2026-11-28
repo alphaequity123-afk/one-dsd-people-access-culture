@@ -11,8 +11,8 @@ vi.mock('@/lib/content/culture-calendar-grid', () => ({
 }));
 vi.mock('@/components/app-link', () => ({default: ({children,href}: {children:React.ReactNode;href:string}) => React.createElement('a',{href},children)}));
 vi.mock('next/image', () => ({default: () => null}));
-vi.mock('@/components/water-collection-feature', () => ({WaterCollectionFeature:()=>null}));
-vi.mock('@/components/home-task-finder', () => ({HomeTaskFinder:()=>null}));
+vi.mock('@/components/home-command-center', () => ({HomeCommandCenter:()=>null}));
+vi.mock('@/app/ask/ask-view', () => ({prepareAsk: async () => null}));
 vi.mock('./hero-motion', () => ({HeroMotion:({children}: {children:React.ReactNode})=>children}));
 import HomePage from './page';
 

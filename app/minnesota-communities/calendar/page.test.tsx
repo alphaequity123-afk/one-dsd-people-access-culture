@@ -5,6 +5,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it, vi } from "vitest";
 import { calendarDayHref, calendarEntryHref, entryAnchor } from "@/lib/content/culture-calendar-grid";
 import CulturalCalendarPage from "./page";
+import { mergeRepeatedObservances, type CalendarEntry } from "@/lib/content/cultural-calendar";
 
 vi.mock("@/lib/content/cultural-intelligence-publication", () => ({ communityPagePublished: async () => true }));
 // The published data has no observance spanning New Year, so add one to keep that path tested.
@@ -62,7 +63,8 @@ describe("full calendar page", () => {
 
   it("shows only that day's entries, including ones that began earlier, with a way back", async () => {
     const { entries } = JSON.parse(readFileSync(path.join(process.cwd(), "lib", "content", "cultural-calendar.json"), "utf8")) as { entries: Array<{ id: string; communities: string[]; dates: Array<{ date: string | null; endDate: string | null }> }> };
-    const covers = (iso: string) => entries.filter(entry => entry.dates.some(date => date.date && date.date <= iso && (date.endDate ?? date.date) >= iso)).map(entry => entryAnchor(entry.id)).sort();
+    // Owner decision 2026-11-26: an observance listed for several communities shows once, under its first community's id.
+    const covers = (iso: string) => mergeRepeatedObservances(entries as unknown as CalendarEntry[]).filter(entry => entry.dates.some(date => date.date && date.date <= iso && (date.endDate ?? date.date) >= iso)).map(entry => entryAnchor(entry.id)).sort();
     const params = Object.fromEntries(new URL(calendarDayHref(2026, 6, 19), "https://example.org").searchParams);
     const html = await page(params);
     expect(anchors(html).sort()).toEqual(covers("2026-06-19"));

@@ -1,0 +1,626 @@
+{
+ "id": "leadership-growth",
+ "name": "Leadership and growth",
+ "kind": "courses",
+ "version": 1,
+ "owner": "Gary Banks",
+ "review_date": null,
+ "sort": 43,
+ "items": [
+  {
+   "id": "gc-accommodation-transitions",
+   "kind": "course",
+   "title": "Accommodations Across Transitions and Accessible Leadership Pathways",
+   "level": "advanced",
+   "topic": "reasonable-accommodation-and-supporting-a-coworker",
+   "competency": "leading-with-deai",
+   "skill": "accessibility",
+   "priority": "retire_candidate",
+   "alignment": "needs_revision",
+   "sequence": 1,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-s83-requesting-a-reasonable-accommodation",
+     "kind": "related",
+     "note": "Covers the same topic."
+    }
+   ]
+  },
+  {
+   "id": "gc-advising-decision-makers",
+   "kind": "course",
+   "title": "Advising the Person Who Decides",
+   "level": "advanced",
+   "topic": "equity-lens-and-equity-analysis-of-policy",
+   "competency": "job-knowledge",
+   "skill": "policy and legislative work",
+   "priority": "enrichment",
+   "alignment": "aligns",
+   "sequence": 2,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "policy-program"
+   ],
+   "links": [
+    {
+     "to": "dc-s91-using-an-equity-lens-in-your-work",
+     "kind": "related",
+     "note": "Covers the same topic."
+    }
+   ]
+  },
+  {
+   "id": "gc-age-inclusion",
+   "kind": "course",
+   "title": "Age Inclusion and Ageism",
+   "level": "advanced",
+   "topic": "retention-age-and-the-employee-life-cycle",
+   "competency": "leading-others",
+   "skill": "talent development",
+   "priority": "important",
+   "alignment": "needs_revision",
+   "sequence": 3,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "enterprise-services"
+   ],
+   "links": [
+    {
+     "to": "dc-t100-keeping-culture-strong-through-turnover-and-chan",
+     "kind": "related",
+     "note": "Covers the same topic."
+    }
+   ]
+  },
+  {
+   "id": "gc-career-pathways-succession",
+   "kind": "course",
+   "title": "Career Pathways, Succession and Advancement",
+   "level": "advanced",
+   "topic": "mentoring-career-growth-and-coaching",
+   "competency": "leading-others",
+   "skill": "talent development",
+   "priority": "retire_candidate",
+   "alignment": "needs_revision",
+   "sequence": 4,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "enterprise-services"
+   ],
+   "links": [
+    {
+     "to": "dc-t94-mentoring-and-peer-learning",
+     "kind": "related",
+     "note": "Covers the same topic."
+    }
+   ]
+  },
+  {
+   "id": "gc-coaching-conversations",
+   "kind": "course",
+   "title": "Coaching Conversations That Help People Grow",
+   "level": "advanced",
+   "topic": "mentoring-career-growth-and-coaching",
+   "competency": "leading-others",
+   "skill": "talent development",
+   "priority": "enrichment",
+   "alignment": "aligns",
+   "sequence": 5,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "enterprise-services"
+   ],
+   "links": [
+    {
+     "to": "dc-t94-mentoring-and-peer-learning",
+     "kind": "related",
+     "note": "Covers the same topic."
+    }
+   ]
+  },
+  {
+   "id": "gc-deaf-minnesota",
+   "kind": "course",
+   "title": "Deaf Minnesota: ASL, Language and Culture",
+   "level": "advanced",
+   "topic": "specific-disability-communities-non-apparent-deaf-blind-mental-health-",
+   "competency": "leading-with-deai",
+   "skill": "accessibility",
+   "priority": "retire_candidate",
+   "alignment": "aligns",
+   "sequence": 6,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-s16-non-apparent-disabilities",
+     "kind": "related",
+     "note": "Covers the same topic."
+    }
+   ]
+  },
+  {
+   "id": "gc-delegation-and-development",
+   "kind": "course",
+   "title": "Delegating Well and Growing Your Team",
+   "level": "advanced",
+   "topic": "mentoring-career-growth-and-coaching",
+   "competency": "leading-others",
+   "skill": "talent development",
+   "priority": "enrichment",
+   "alignment": "aligns",
+   "sequence": 7,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "enterprise-services"
+   ],
+   "links": [
+    {
+     "to": "dc-t94-mentoring-and-peer-learning",
+     "kind": "related",
+     "note": "Covers the same topic."
+    }
+   ]
+  },
+  {
+   "id": "gc-employee-resource-groups",
+   "kind": "course",
+   "title": "Employee Resource Groups and Affinity Spaces",
+   "level": "advanced",
+   "topic": "employee-resource-groups",
+   "competency": "leading-with-deai",
+   "skill": "creating a culture of inclusion",
+   "priority": "retire_candidate",
+   "alignment": "needs_revision",
+   "sequence": 8,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-t93-employee-resource-groups-at-the-state-of-minneso",
+     "kind": "related",
+     "note": "Covers the same topic."
+    }
+   ]
+  },
+  {
+   "id": "gc-equity-committee-roles",
+   "kind": "course",
+   "title": "Equity Committee and Unit Equity Team Roles",
+   "level": "advanced",
+   "topic": "your-role-in-equity-and-where-to-get-help",
+   "competency": "leading-self",
+   "skill": "integrity; self-awareness",
+   "priority": "important",
+   "alignment": "aligns",
+   "sequence": 9,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-s6-your-role-in-equity-whatever-your-job",
+     "kind": "related",
+     "note": "Covers the same topic."
+    }
+   ]
+  },
+  {
+   "id": "gc-automated-decisions",
+   "kind": "course",
+   "title": "Equity in Automated and Algorithm-Assisted Decisions",
+   "level": "advanced",
+   "topic": "equity-lens-and-equity-analysis-of-policy",
+   "competency": "job-knowledge",
+   "skill": "policy and legislative work",
+   "priority": "important",
+   "alignment": "aligns",
+   "sequence": 10,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "policy-program"
+   ],
+   "links": [
+    {
+     "to": "dc-s91-using-an-equity-lens-in-your-work",
+     "kind": "related",
+     "note": "Covers the same topic."
+    }
+   ]
+  },
+  {
+   "id": "gc-faith-in-minnesota",
+   "kind": "course",
+   "title": "Faith and Religious Life in Minnesota",
+   "level": "advanced",
+   "topic": "religious-and-cultural-observance",
+   "competency": "leading-with-deai",
+   "skill": "cultural awareness, competence and humility",
+   "priority": "retire_candidate",
+   "alignment": "aligns",
+   "sequence": 11,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-s79-religious-and-cultural-inclusion-at-work",
+     "kind": "related",
+     "note": "Covers the same topic."
+    }
+   ]
+  },
+  {
+   "id": "gc-structural-racism",
+   "kind": "course",
+   "title": "How Neutral Rules Can Produce Unequal Results",
+   "level": "advanced",
+   "topic": "how-systems-and-neutral-rules-create-unequal-outcomes",
+   "competency": "getting-work-done",
+   "skill": "anti-racism; continuous improvement",
+   "priority": "retire_candidate",
+   "alignment": "aligns",
+   "sequence": 12,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-s5-how-systems-create-unequal-outcomes",
+     "kind": "related",
+     "note": "Covers the same topic."
+    }
+   ]
+  },
+  {
+   "id": "gc-leading-culture-at-scale",
+   "kind": "course",
+   "title": "Leading Culture Across a Division",
+   "level": "advanced",
+   "topic": "what-an-inclusive-team-culture-is",
+   "competency": "leading-with-deai",
+   "skill": "creating a culture of inclusion",
+   "priority": "enrichment",
+   "alignment": "aligns",
+   "sequence": 13,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-t1-what-makes-a-dsd-team-inclusive",
+     "kind": "related",
+     "note": "Covers the same topic."
+    }
+   ]
+  },
+  {
+   "id": "gc-leading-with-purpose",
+   "kind": "course",
+   "title": "Leading With Purpose and Values",
+   "level": "advanced",
+   "topic": "leading-equity-commitment-modeling-and-accountability",
+   "competency": "leading-organization",
+   "skill": "advocacy; influence; strategic planning",
+   "priority": "enrichment",
+   "alignment": "aligns",
+   "sequence": 14,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "executive"
+   ],
+   "links": [
+    {
+     "to": "dc-l6-accountability-without-blame-tracking-equity-com",
+     "kind": "related",
+     "note": "Covers the same topic."
+    }
+   ]
+  },
+  {
+   "id": "gc-leading-without-authority",
+   "kind": "course",
+   "title": "Leading Without Formal Authority",
+   "level": "advanced",
+   "topic": "leading-equity-commitment-modeling-and-accountability",
+   "competency": "leading-organization",
+   "skill": "advocacy; influence; strategic planning",
+   "priority": "enrichment",
+   "alignment": "aligns",
+   "sequence": 15,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "executive"
+   ],
+   "links": [
+    {
+     "to": "dc-l6-accountability-without-blame-tracking-equity-com",
+     "kind": "related",
+     "note": "Covers the same topic."
+    }
+   ]
+  },
+  {
+   "id": "gc-disability-led-leadership",
+   "kind": "course",
+   "title": "Learning From Disability-Led Leadership",
+   "level": "advanced",
+   "topic": "community-engagement-and-designing-with-people",
+   "competency": "leading-outside",
+   "skill": "engagement; inclusion",
+   "priority": "enrichment",
+   "alignment": "aligns",
+   "sequence": 16,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "policy-program"
+   ],
+   "links": [
+    {
+     "to": "dc-s95-hearing-community-voices",
+     "kind": "related",
+     "note": "Covers the same topic."
+    }
+   ]
+  },
+  {
+   "id": "gc-foresight-and-stewardship",
+   "kind": "course",
+   "title": "Looking Ahead: Foresight and Stewardship",
+   "level": "advanced",
+   "topic": "leading-change-and-responding-to-resistance",
+   "competency": "leading-others",
+   "skill": "change management",
+   "priority": "enrichment",
+   "alignment": "aligns",
+   "sequence": 17,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "executive"
+   ],
+   "links": [
+    {
+     "to": "dc-l80-understanding-and-responding-to-resistance-to-eq",
+     "kind": "related",
+     "note": "Covers the same topic."
+    }
+   ]
+  },
+  {
+   "id": "gc-new-supervisor-inclusive-leadership",
+   "kind": "course",
+   "title": "New Supervisor Foundations: Inclusive Leadership Basics",
+   "level": "advanced",
+   "topic": "onboarding",
+   "competency": "leading-others",
+   "skill": "talent development",
+   "priority": "starting_point",
+   "alignment": "aligns",
+   "sequence": 18,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "enterprise-services"
+   ],
+   "links": [
+    {
+     "to": "sm-first-week",
+     "kind": "related",
+     "note": "Covers the same topic."
+    }
+   ]
+  },
+  {
+   "id": "gc-accountability-public-service",
+   "kind": "course",
+   "title": "Personal Accountability in Public Service",
+   "level": "advanced",
+   "topic": "your-role-in-equity-and-where-to-get-help",
+   "competency": "leading-self",
+   "skill": "integrity; self-awareness",
+   "priority": "enrichment",
+   "alignment": "aligns",
+   "sequence": 19,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-s6-your-role-in-equity-whatever-your-job",
+     "kind": "related",
+     "note": "Covers the same topic."
+    }
+   ]
+  },
+  {
+   "id": "gc-respectful-workplace",
+   "kind": "course",
+   "title": "Respectful Workplace: Harassment, Bystander Action and Psychological Safety",
+   "level": "advanced",
+   "topic": "respectful-workplace-harassment-and-retaliation",
+   "competency": "leading-self",
+   "skill": "integrity",
+   "priority": "retire_candidate",
+   "alignment": "needs_revision",
+   "sequence": 20,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "enterprise-services"
+   ],
+   "links": [
+    {
+     "to": "dc-s81-the-respectful-workplace-policy-for-staff",
+     "kind": "related",
+     "note": "Covers the same topic."
+    }
+   ]
+  },
+  {
+   "id": "gc-setting-direction",
+   "kind": "course",
+   "title": "Setting Direction and Priorities With an Equity Lens",
+   "level": "advanced",
+   "topic": "equity-lens-and-equity-analysis-of-policy",
+   "competency": "job-knowledge",
+   "skill": "policy and legislative work",
+   "priority": "retire_candidate",
+   "alignment": "aligns",
+   "sequence": 21,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "policy-program"
+   ],
+   "links": [
+    {
+     "to": "dc-s91-using-an-equity-lens-in-your-work",
+     "kind": "related",
+     "note": "Covers the same topic."
+    }
+   ]
+  },
+  {
+   "id": "gc-knowledge-and-continuity",
+   "kind": "course",
+   "title": "Sharing Knowledge and Learning Across Generations",
+   "level": "advanced",
+   "topic": "retention-age-and-the-employee-life-cycle",
+   "competency": "leading-others",
+   "skill": "talent development",
+   "priority": "enrichment",
+   "alignment": "aligns",
+   "sequence": 22,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "enterprise-services"
+   ],
+   "links": [
+    {
+     "to": "dc-t100-keeping-culture-strong-through-turnover-and-chan",
+     "kind": "related",
+     "note": "Covers the same topic."
+    }
+   ]
+  },
+  {
+   "id": "gc-sustaining-the-work",
+   "kind": "course",
+   "title": "Sustaining the Work: Secondary Trauma and Staff Well-Being",
+   "level": "advanced",
+   "topic": "wellbeing-and-sustainable-workloads",
+   "competency": "leading-self",
+   "skill": "adaptability",
+   "priority": "retire_candidate",
+   "alignment": "needs_revision",
+   "sequence": 23,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-s100-caring-for-yourself-while-doing-equity-work",
+     "kind": "related",
+     "note": "Covers the same topic."
+    }
+   ]
+  },
+  {
+   "id": "gc-systems-thinking",
+   "kind": "course",
+   "title": "Systems Thinking for Human Services Leaders",
+   "level": "advanced",
+   "topic": "leading-change-and-responding-to-resistance",
+   "competency": "leading-others",
+   "skill": "change management",
+   "priority": "important",
+   "alignment": "aligns",
+   "sequence": 24,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors",
+    "executive"
+   ],
+   "links": [
+    {
+     "to": "dc-l80-understanding-and-responding-to-resistance-to-eq",
+     "kind": "related",
+     "note": "Covers the same topic."
+    }
+   ]
+  },
+  {
+   "id": "gc-using-community-briefs",
+   "kind": "course",
+   "title": "Using Community Briefs Well: Questions, Not Descriptions",
+   "level": "advanced",
+   "topic": "minnesota-communities",
+   "competency": "leading-outside",
+   "skill": "engagement; inclusion",
+   "priority": "important",
+   "alignment": "aligns",
+   "sequence": 25,
+   "all_job_families": false,
+   "job_families": [
+    "managers",
+    "supervisors"
+   ],
+   "links": [
+    {
+     "to": "dc-s33-working-respectfully-with-somali-communities",
+     "kind": "related",
+     "note": "Covers the same topic."
+    }
+   ]
+  }
+ ]
+}

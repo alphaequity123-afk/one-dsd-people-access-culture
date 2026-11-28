@@ -14,11 +14,11 @@ import { ToolDecisionQuestions } from "@/components/tool-decision-questions";
 export const metadata = { title: "Equity analysis for your work" };
 
 const resources = [
-  { title: "Connect an analysis with applicable requirements", href: "/practice/requirements", description: "Use the requirements crosswalk to distinguish the program constitution, published policy, service standards and local implementation priorities. Record what applies, what needs confirmation and who can authorize a decision." },
+  { title: "Connect an analysis with applicable requirements", href: "/practice/requirements", description: "The requirements crosswalk helps you tell apart the program constitution, published policy, service standards and local implementation priorities. Note what applies, what still needs confirming and who can authorize a decision." },
   { title: "See the toolkit in everyday work", href: "/learn/equity-in-practice", description: "Follow DSD examples connecting the Equity Outcome Map and ADSA goals with a service notice, support planning, contracting, and workforce learning." },
-  { title: "Examine barriers in a process", href: "/equity-review/structural", description: "Use the structural analysis workspace to map decision points, examine requirements and responsibilities, and turn evidence into an action with an owner and a review date." },
-  { title: "Plan cultural and language access", href: "/practice/clas", description: "Use the National Culturally and Linguistically Appropriate Services Standards to prepare service-specific actions, distinguish requirements to confirm, and identify the people responsible and ways to learn from the change." },
-  { title: "Equity analysis for policy review", href: "/learn/equity-toolkit/policy-review", description: "Use the One DSD presentation to explore equity analysis in policy work. Read the slides here or download a copy for a team discussion." },
+  { title: "Examine barriers in a process", href: "/equity-review/structural", description: "Map the decision points in a process, look at the requirements and who is responsible for each, and turn the evidence into an action with an owner and a review date." },
+  { title: "Plan cultural and language access", href: "/practice/clas", description: "Draw on the National Culturally and Linguistically Appropriate Services Standards to plan actions for a particular service, sort out which requirements to confirm, and decide who is responsible and how you will learn from the change." },
+  { title: "Equity analysis for policy review", href: "/learn/equity-toolkit/policy-review", description: "Explore equity analysis in policy work through the One DSD presentation. Read the slides here or download a copy for a team discussion." },
 ];
 
 export default async function Page() {
@@ -69,7 +69,7 @@ export default async function Page() {
         <ToolDecisionQuestions tool="equity-toolkit" />
         <section id="supporting-tools" className={styles.section}>
           <h2>Choose the support your work needs</h2>
-          <p>Use these resources alongside an analysis. Begin with the question you are working on; you can return to the others as needed.</p>
+          <p>These resources work alongside an analysis. Start with the question in front of you, and come back to the others whenever you need them.</p>
           <ul className={styles.resources}>{resources.map(resource => <li key={resource.href}>
             <h3><Link href={resource.href}>{resource.title}</Link></h3>
             <p>{resource.description}</p>
@@ -81,7 +81,7 @@ export default async function Page() {
         </div>
         <section id="toolkit-context" className={`${styles.section} ${styles.support}`}>
           <h2>Connect the analysis with your wider work</h2>
-          <p>The ADSA goals and work plan provide context for applying an analysis. They are available whenever useful; you can start the example or your own draft directly.</p>
+          <p>The ADSA goals and work plan give you context when you apply an analysis. They are here whenever they help, and you can go straight to the example or your own draft.</p>
           {culturalIntelligenceAvailable && <p><Link href="/learn/cultural-intelligence">Explore cultural context for your analysis</Link></p>}
           <p><Link href="/learn/equity-toolkit/goals">Aging and Disability Services Administration six goals and work plan</Link></p>
           <details><summary>About this companion</summary><p>{text("companionNote")}</p><p><Link href="/operationalizing-equity">Explore operationalizing equity in everyday work</Link></p></details>

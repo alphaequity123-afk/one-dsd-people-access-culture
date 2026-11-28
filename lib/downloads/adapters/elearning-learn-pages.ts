@@ -176,18 +176,18 @@ const equityInPractice: Builder = async (scope) => ({
   subtitle: "Begin with the Equity Outcome Map. Then follow examples from disability services to see how people, decisions, and practical resources connect.",
   meta: [],
   sections: compactSections([
-    section(undefined, [paragraph("Use the DSD examples to connect the six Aging and Disability Services Administration goals with your responsibilities, relevant learning, and the resources already available in One DSD.")]),
+    section(undefined, [paragraph("The DSD examples show how the six Aging and Disability Services Administration goals connect with your responsibilities, the learning that fits and the resources already here in One DSD.")]),
     section("Part one: Equity Outcome Map", [
       paragraph("Explore the shared direction for equity work across the Department of Human Services, the intended outcomes, and why everyday decisions matter."),
       paragraph(`Video, ${media.foundation.runtime}. Watch it on the program page /learn/equity-in-practice.`),
     ]),
     section("Part two: People, Access and Culture in Practice: A Disability Services Division Example", [
-      paragraph("Follow four situations in Disability Services Division work. See how the six Aging and Disability Services Administration goals, policy, learning, and practical tools can help a team examine a decision and its effects."),
+      paragraph("Follow four situations in Disability Services Division work. See how the six Aging and Disability Services Administration goals, policy, learning and practical tools can help a team think through a decision and its effects."),
       paragraph(`Video, ${media.companion.runtime}. Watch it on the program page /learn/equity-in-practice.`),
-      callout("The Outcome Map describes intended outcomes. The six implementation goals belong to the Aging and Disability Services Administration. The Disability Services Division situations are illustrative examples that other teams can adapt to their responsibilities and applicable goals."),
+      callout("The Outcome Map describes intended outcomes. The six implementation goals belong to the Aging and Disability Services Administration. The Disability Services Division situations are examples, and other teams can adapt them to their own responsibilities and goals."),
     ]),
     section("Choose the example that connects with your work", [
-      paragraph("The links below open existing guidance, learning, and practical tools. Begin with a real question, use the resources that fit, and involve the people whose experience can help."),
+      paragraph("The links below open guidance, learning and practical tools you can use now. Begin with a real question, use the resources that fit, and bring in the people whose experience can help."),
       ...EQUITY_IN_PRACTICE_EXAMPLES.flatMap((example) => [
         heading(example.title),
         paragraph(example.situation),
@@ -198,12 +198,12 @@ const equityInPractice: Builder = async (scope) => ({
       ]),
     ]),
     section("When the question involves policy or legislation", [
-      paragraph("Distinguish a proposed change, enacted law, and current program guidance. Clarify who could be affected and which choices remain open. Separate the source policy or legislation from analysis, learning, and recommendations."),
+      paragraph("Be clear about what is a proposed change, what is enacted law and what is current program guidance. Work out who could be affected and which choices are still open. Keep the source policy or legislation separate from analysis, learning and recommendations."),
       usedLinks(EQUITY_IN_PRACTICE_POLICY_LINKS),
     ]),
     section("Start with one useful next step", [
-      paragraph("Choose a decision or piece of work. Name a barrier worth examining, involve relevant perspectives, and use one resource to develop a possible improvement. Ask what would tell you whether it helped, for whom, and what still needs attention."),
-      paragraph("Directors, managers, supervisors, and staff contribute through their responsibilities, knowledge, and relationships. These resources support preparation and learning; decisions remain with the responsible people and offices."),
+      paragraph("Choose a decision or piece of work. Name a barrier worth a closer look, bring in the perspectives that matter, and use one resource to develop a possible improvement. Ask what would tell you whether it helped, for whom, and what still needs attention."),
+      paragraph("Directors, managers, supervisors, and staff contribute through their responsibilities, knowledge, and relationships. These resources help you prepare and learn; decisions stay with the people and offices responsible."),
       linkList([
         { label: "Explore the six goals", href: "/learn/equity-toolkit/goals" },
         { label: "Connect goals to implementation", href: "/program/implementation" },
@@ -288,7 +288,7 @@ const equityToolkitGoals: Builder = async (scope) => {
     meta: [],
     sections: compactSections([
       section(undefined, [
-        paragraph("These are ADSA goals, not an agency-wide requirement to choose three goals. DHS staff outside ADSA can learn from this example while confirming their own applicable priorities, requirements and decision authority. The program constitution governs how this resource supports the whole One DSD program."),
+        paragraph("These are ADSA goals, not an agency-wide requirement to choose three goals. If you work in DHS outside ADSA, you can still learn from this example; just confirm your own priorities, requirements and who holds decision authority. The program constitution governs how this resource supports the whole One DSD program."),
         callout(`${goalModel.goalAuthority} ${goalModel.mappingAuthority}`, "Where the goals come from"),
       ]),
       ...goalModel.goals.map((goal) => {
@@ -324,7 +324,7 @@ const equityToolkitPolicyReview: Builder = async (scope) => ({
     ]),
     ...presentation.slides.map((slide) => section(`Slide ${slide.number}: ${slide.title}`, slide.text.length ? [bullets(slide.text)] : [])),
     section("Bring the analysis into your work", [
-      paragraph("Identify the policy decision, the people affected, and which options remain open. Use the toolkit to examine those options and agree who will follow through."),
+      paragraph("Name the policy decision, the people affected and the options that are still open. Then work through those options with the toolkit and agree who will follow through."),
       linkList([
         { label: "Practice with the toolkit", href: "/learn/equity-toolkit/practice" },
         { label: "Find support for your work", href: "/support/right-person" },
@@ -352,7 +352,7 @@ const clas: Builder = async (scope) => {
     sections: compactSections([
       section(undefined, [
         paragraph("Explore One DSD’s training, planning tools and references together. Start with the foundations, follow a service encounter, or consider how your team can improve access."),
-        callout("Culturally and Linguistically Appropriate Services connects respectful communication with workforce preparation, leadership, community participation and improvement. Confirm which standards and separate legal, policy or contract requirements apply to your work.", "A shared reference for thoughtful practice"),
+        callout("Culturally and Linguistically Appropriate Services connects respectful communication with workforce preparation, leadership, community participation and improvement. Check which standards, and which separate legal, policy or contract requirements, apply to your work.", "A shared reference for thoughtful practice"),
       ]),
       section("Put the standards into your work", [
         paragraph("Follow nine connected lessons with individual practice and a personal improvement plan. Move at your own pace and use a work example that matters to you."),
@@ -367,11 +367,11 @@ const clas: Builder = async (scope) => {
       section("Planning, checklists and reference material", [
         table(
           ["Resource", "What it offers", "Program page"],
-          [["Cultural and language access planning", "Consider the service, relevant standards, changes, review, implementation and results.", "/practice/clas"], ...resources.map((item) => [item.title, item.summary, `/library/${item.id}`])],
+          [["Cultural and language access planning", "Think through the service, the standards that matter for it, the changes, review, implementation and results.", "/practice/clas"], ...resources.map((item) => [item.title, item.summary, `/library/${item.id}`])],
         ),
       ]),
       section("Courses that discuss Culturally and Linguistically Appropriate Services", [
-        paragraph(`${teaching.length} courses include CLAS in their teaching or accompanying job aid. Each opens with its existing lessons, activities and available media.`),
+        paragraph(`${teaching.length} courses include CLAS in their teaching or accompanying job aid. Each one opens with its lessons, activities and any media that come with it.`),
         courseTable(teaching, withLessons),
       ]),
       section("Related courses using CLAS as a source", [
@@ -417,7 +417,7 @@ const engagementResources: Builder = async (scope) => ({
         { label: "Plan how to learn from results", href: "/practice/measurement" },
         { label: "Ask a question about these resources", href: "/ask" },
       ]),
-      paragraph("The original documents are preserved. ADSA materials describe their administration’s context, including internal processes and contacts. Their inclusion for staff and public readers does not make every example a requirement for every service. Use the source dates and applicable current processes when planning."),
+      paragraph("The original documents are preserved. ADSA materials describe their administration’s context, including internal processes and contacts. Including them here for staff and public readers doesn’t make every example a requirement for every service. When you plan, go by the source dates and the current processes that apply to you."),
     ]),
   ]),
   attribution: programName(scope),
@@ -435,7 +435,7 @@ function journeyBuilder(journeyId: string): Builder {
       subtitle: journey.summary,
       meta: [],
       sections: compactSections([
-        section(undefined, [paragraph("Use the steps that help with your question. There is no enrollment or required completion order.")]),
+        section(undefined, [paragraph("Use whichever steps help with your question. There's nothing to enroll in and no set order.")]),
         ...developmentModel.stages.map((stage, index) =>
           section(`Step ${index + 1}: ${stage.title}`, [
             paragraph(stage.purpose),
@@ -448,10 +448,10 @@ function journeyBuilder(journeyId: string): Builder {
         section("Make room for another perspective", [
           paragraph(journey.social),
           linkList([{ label: journey.connection.label, href: journey.connection.href }]),
-          paragraph("Choose whether and how to participate. Confirm available opportunities with the people or group involved."),
+          paragraph("Whether and how you take part is up to you. Check what's on offer with the people or group involved."),
         ]),
         section("Explore more within this pathway", [
-          paragraph("These resources are available in your current program view. Each can support a different part of the question; you do not need to complete the whole collection."),
+          paragraph("Each of these can help with a different part of your question. There's no need to work through the whole collection."),
           resources.length ? table(["Resource", "How it helps", "Program page"], resources.map((record) => [record.title, record.contribution, record.href])) : null,
         ]),
       ]),

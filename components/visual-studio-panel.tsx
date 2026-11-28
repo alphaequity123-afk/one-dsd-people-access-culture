@@ -77,21 +77,12 @@ function assetUrl(project: StudioProject, kind: "preview" | "project" | "receipt
   return `/api/consultant/studio/${encodeURIComponent(project.id)}/${kind}`;
 }
 
-function StudioMark({ className = "h-7 w-7" }: { className?: string }) {
-  return (
-    <svg className={className} viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true">
-      <rect x="3" y="5" width="26" height="20" rx="3" />
-      <path d="M10 29h12M16 25v4M3 11h26M8 8h1m3 0h1M10 20l6-6 6 6M16 14v8" />
-    </svg>
-  );
-}
 
 function ProjectPreview({ project }: { project: StudioProject }) {
   const [imageFailed, setImageFailed] = useState(false);
   if (!project.previewAvailable || imageFailed) {
     return (
       <div className="flex aspect-video flex-col items-center justify-center gap-3 bg-[#eef2f5] px-6 text-center text-muted">
-        <StudioMark className="h-10 w-10" />
         <p className="m-0 max-w-sm text-sm leading-6">
           {imageFailed ? "The preview could not be loaded. Refresh the studio to check the connection." : project.status === "rendering" ? "Blender is building the scene and rendering its preview." : "A rendered preview is not available for this scene."}
         </p>
@@ -230,7 +221,7 @@ export function VisualStudioPanel() {
     <div className="space-y-8">
       <section aria-labelledby="studio-connection" className="flex flex-wrap items-center justify-between gap-5 rounded-2xl border border-[#c6cfd3] bg-[#fbf8f0] p-5 md:px-7">
         <div className="flex max-w-2xl items-start gap-4">
-          <span className="hidden rounded-xl bg-white p-3 text-navy sm:block"><StudioMark /></span>
+          <span className="hidden rounded-xl bg-white p-3 text-navy sm:block"></span>
           <div>
             <h2 id="studio-connection" className="text-lg font-bold">
               {loading ? "Checking Blender connection…" : loadError ? "Connection needs attention" : localReady ? "Blender is ready on this computer" : "Local Blender connection unavailable"}
@@ -329,7 +320,7 @@ export function VisualStudioPanel() {
             {actionError ? <p role="alert" className="mx-5 mb-5 mt-0 rounded-xl border border-[#9b7467] bg-[#f7f5ef] p-4 text-sm leading-6 text-[#833c26] md:mx-7">{actionError}</p> : null}
             {selected ? <ProjectPreview key={`${selected.id}-${selected.updatedAt}-${previewRevision}`} project={selected} /> : (
               <div className="flex aspect-video flex-col items-center justify-center gap-4 bg-[#eef2f5] px-7 text-center">
-                <span className="rounded-2xl border border-[#c6cfd3] bg-[#fbf8f0] p-5 text-[#183247]"><StudioMark className="h-12 w-12" /></span>
+                <span className="rounded-2xl border border-[#c6cfd3] bg-[#fbf8f0] p-5 text-[#183247]"></span>
                 <div><p className="m-0 text-lg font-bold text-navy">A conversation, made visible</p><p className="mb-0 mt-2 max-w-sm text-sm leading-6 text-muted">Create a scene from your brief to see its rendered preview here.</p></div>
               </div>
             )}

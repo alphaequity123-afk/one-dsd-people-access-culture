@@ -1,0 +1,11 @@
+{
+  "note": "Governance defaults for the program catalog (lib/program/catalog.ts). Owner direction 2026-11-26: every resource carries an owner, a steward, a review cycle and the date it was last verified, so the program survives leadership and staff changes. These are role-level defaults for the owner to confirm; an item's own recorded owner and review date take precedence, and lastVerified stays empty until someone verifies the item. Add per-item entries under overrides, keyed by catalog id.",
+  "engines": {
+    "practice": { "owner": "Program owner, One DSD People, Access and Culture", "steward": "DSD Equity and Inclusion Operations", "reviewCycleMonths": 12 },
+    "learning": { "owner": "Program owner, One DSD People, Access and Culture", "steward": "DSD Equity and Inclusion Operations", "reviewCycleMonths": 24 },
+    "leadership": { "owner": "Program owner, One DSD People, Access and Culture", "steward": "DSD Equity and Inclusion Operations", "reviewCycleMonths": 12 },
+    "people-growth": { "owner": "Program owner, One DSD People, Access and Culture", "steward": "DSD Equity and Inclusion Operations, with the Office of Employee Culture where shared", "reviewCycleMonths": 12 },
+    "communities": { "owner": "Program owner, One DSD People, Access and Culture", "steward": "DSD Equity and Inclusion Operations, with community partners", "reviewCycleMonths": 12 }
+  },
+  "overrides": {}
+}

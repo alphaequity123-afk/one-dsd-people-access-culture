@@ -111,6 +111,28 @@ it("clears partial streamed text when the final answer failed verification", asy
   expect(lines.at(-1)?.result?.answer).toBeUndefined();
 });
 
+// The page Ask was opened from is a hint for finding sources: passed on when clean, left out when not.
+it("passes a clean page hint on to Ask", async () => {
+  await (await POST(request({ question: "What is this page about?", page: { path: "/minnesota-communities/somali/", title: " Somali  Minnesotans " } }))).json();
+  expect(f.ask.mock.calls[0][0].page).toEqual({ path: "/minnesota-communities/somali", title: "Somali Minnesotans" });
+});
+it.each([
+  { path: "https://example.org/page", title: "Elsewhere" },
+  { path: "/library", title: 7 },
+  { path: "/library", title: "Library", body: "text typed on the page" },
+  "/library",
+  42,
+])("still answers, without the page, when the hint is malformed: %j", async page => {
+  const response = await POST(request({ question: "What is this page about?", page }));
+  expect(response.status).toBe(200);
+  await response.json();
+  expect(f.ask).toHaveBeenCalledOnce();
+  expect(f.ask.mock.calls[0][0].page).toBeUndefined();
+});
+it("still sends no page when none was given", async () => {
+  await (await POST(request({ question: "hello" }))).json();
+  expect(f.ask.mock.calls[0][0].page).toBeUndefined();
+});
 // The run ledger is in the database now. A failed ledger write must never leave the connection open.
 it("still sends the answer and ends the response when the ledger cannot record the finish", async () => {
   const error = vi.spyOn(console, "error").mockImplementation(() => undefined);

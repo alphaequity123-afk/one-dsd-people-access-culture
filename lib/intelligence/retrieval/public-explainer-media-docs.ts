@@ -9,6 +9,7 @@ import { FIRST_CONTACT_CLIPS } from "@/components/multimedia/dsd-first-contact-d
 import type { StaffProgramScope } from "@/lib/content/staff-publications";
 import type { Doc } from "./search";
 import { publicMediaPassages } from "./public-course-media-docs";
+import { offloadedFileAt, type OffloadedPublicFile } from "@/lib/storage/public-offload-manifest";
 
 type Clip = { title: string; summary: string; src: string; poster: string; captions: string; transcript: string };
 type Entry = { id: string; href: string; related: string[]; gates?: string[] };
@@ -26,7 +27,7 @@ const ENTRIES: Entry[] = [
 ];
 
 /** Only fixed public video paths may enter this projection; no owner or volume data. */
-function resolvePublicMedia(root: string, url: string): { file: string; hashPrefix?: string } | null {
+function resolvePublicMedia(root: string, url: string): { file: string; hashPrefix?: string; moved?: OffloadedPublicFile } | null {
   if (typeof url !== "string" || !/^\/videos\/[a-zA-Z0-9._/-]+(?:\?v=[a-f0-9]{12,64})?$/.test(url)) return null;
   const [pathname, query] = url.split("?");
   if (pathname.split("/").some(part => part === "." || part === "..")) return null;
@@ -34,12 +35,17 @@ function resolvePublicMedia(root: string, url: string): { file: string; hashPref
     const base = realpathSync(root); const file = realpathSync(path.resolve(base, "." + pathname));
     if (!file.startsWith(base + path.sep)) return null;
     return { file, hashPrefix: query?.slice(2) };
-  } catch { return null; }
+  } catch {
+    // Not on disk: the Docker build may have moved it to the media bucket after checking its bytes.
+    const file = path.resolve(root, "." + pathname);
+    const moved = offloadedFileAt(file);
+    return moved ? { file, hashPrefix: query?.slice(2), moved } : null;
+  }
 }
 
 function readPublic(root: string, url: string, maximum: number): Buffer | null {
   try {
-    const resolved = resolvePublicMedia(root, url); if (!resolved) return null;
+    const resolved = resolvePublicMedia(root, url); if (!resolved || resolved.moved) return null;
     const stat = statSync(resolved.file); if (!stat.isFile() || stat.size <= 0 || stat.size > maximum) return null;
     const bytes = readFileSync(resolved.file);
     if (resolved.hashPrefix && !createHash("sha256").update(bytes).digest("hex").startsWith(resolved.hashPrefix)) return null;
@@ -47,16 +53,31 @@ function readPublic(root: string, url: string, maximum: number): Buffer | null {
   } catch { return null; }
 }
 
+/** A poster or video is present: on disk with readable, matching bytes, or moved with a matching identity. */
+function publicMediaPresent(root: string, url: string, maximum: number): boolean {
+  const resolved = resolvePublicMedia(root, url); if (!resolved) return false;
+  if (resolved.moved) return resolved.moved.bytes > 0 && resolved.moved.bytes <= maximum && (!resolved.hashPrefix || resolved.moved.sha256.startsWith(resolved.hashPrefix));
+  return readPublic(root, url, maximum) !== null;
+}
+
 function availableTranscript(root: string, clip: Clip): string | null {
   try {
     const video = resolvePublicMedia(root, clip.src); if (!video) return null;
-    const stat = statSync(video.file); if (!stat.isFile() || stat.size < 1024 || stat.size > 64 * 1024 * 1024) return null;
-    // Check full bytes for a versioned asset; otherwise only inspect its header.
-    if (video.hashPrefix && !readPublic(root, clip.src, 64 * 1024 * 1024)) return null;
-    const fd = openSync(video.file, "r"); const header = Buffer.alloc(8);
-    try { if (readSync(fd, header) !== 8 || header.subarray(4).toString("ascii") !== "ftyp") return null; }
-    finally { closeSync(fd); }
-    if (!readPublic(root, clip.poster, 8 * 1024 * 1024)) return null;
+    if (video.moved) {
+      // Same checks against the identity recorded when the build checked and moved the bytes.
+      const moved = video.moved;
+      if (moved.bytes < 1024 || moved.bytes > 64 * 1024 * 1024) return null;
+      if (video.hashPrefix && !moved.sha256.startsWith(video.hashPrefix)) return null;
+      if (Buffer.from(moved.head, "base64").subarray(4, 8).toString("ascii") !== "ftyp") return null;
+    } else {
+      const stat = statSync(video.file); if (!stat.isFile() || stat.size < 1024 || stat.size > 64 * 1024 * 1024) return null;
+      // Check full bytes for a versioned asset; otherwise only inspect its header.
+      if (video.hashPrefix && !readPublic(root, clip.src, 64 * 1024 * 1024)) return null;
+      const fd = openSync(video.file, "r"); const header = Buffer.alloc(8);
+      try { if (readSync(fd, header) !== 8 || header.subarray(4).toString("ascii") !== "ftyp") return null; }
+      finally { closeSync(fd); }
+    }
+    if (!publicMediaPresent(root, clip.poster, 8 * 1024 * 1024)) return null;
     const captions = readPublic(root, clip.captions, 1024 * 1024);
     if (!captions?.toString("utf8").startsWith("WEBVTT")) return null;
     const transcript = readPublic(root, clip.transcript, 512 * 1024); if (!transcript) return null;

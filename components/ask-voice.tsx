@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
-import { CloseIcon, MicIcon, MicOffIcon, SpeakerIcon, SpeakerOffIcon, StopIcon, WaveIcon } from "@/components/ask-icons";
 import { observeVoiceActivity, recordVoiceTurnTiming, voiceAvailabilityNotice, voiceCaptureAction, type VoiceActivity, type VoiceAvailability, type VoiceHealth, type VoiceTurnTiming } from "@/lib/voice/turn";
 
 /** The microphone for this site, as the browser reports it. */
@@ -203,7 +202,7 @@ export function AskVoice({ busy, onDictation, onQuestion, latestAnswer, mode = "
             player.onended = () => resolve();
             player.onpause = () => resolve();
             player.onerror = () => reject(new Error("The audio could not play, but the written answer is still here."));
-            void player.play().catch(() => reject(new Error("Your browser held back the audio. Select Listen to answer to hear it.")));
+            void player.play().catch(() => reject(new Error("Your browser held back the audio. Select Listen to hear it.")));
           });
         } finally {
           URL.revokeObjectURL(url); if (audioUrl.current === url) audioUrl.current = null;
@@ -392,19 +391,19 @@ export function AskVoice({ busy, onDictation, onQuestion, latestAnswer, mode = "
   const availabilityNotice = dictateOnly || health === "checking" ? "" : voiceAvailabilityNotice(health, usable);
   const shownStatus = voiceActive ? status : busy && busyLabel ? busyLabel : "";
   const dictate = dictateOnly && (unavailable || !usable.transcription) ? null
-    : <button type="button" className="ask-icon" title={mic === "granted" ? "Dictate question" : "Microphone is off. Select to turn it on and dictate"} disabled={unavailable || busy || working || !usable.transcription} onClick={() => void start(false)}>{mic === "granted" ? <MicIcon /> : <MicOffIcon />}<span className="sr-only">Dictate question{mic === "granted" ? "" : " (microphone is off; select to turn it on)"}</span></button>;
+    : <button type="button" className="ask-icon" aria-label={mic === "granted" ? "Speak your question" : "Speak your question (the microphone is off; select to turn it on)"} disabled={unavailable || busy || working || !usable.transcription} onClick={() => void start(false)}>Speak</button>;
   const listenControl = dictateOnly || !latestAnswer ? null : reading
-    ? <button type="button" className="ask-icon ask-icon--on" title="Stop reading aloud" onClick={stop}><StopIcon /><span className="sr-only">Stop reading aloud</span></button>
-    : <button type="button" className="ask-icon" title="Listen to answer" disabled={unavailable || busy || working || !usable.speech} onClick={() => void listen()}><SpeakerIcon /><span className="sr-only">Listen to answer</span></button>;
+    ? <button type="button" className="ask-icon ask-icon--on" aria-label="Stop reading aloud" onClick={stop}>Stop</button>
+    : <button type="button" className="ask-icon" aria-label="Listen to the answer" disabled={unavailable || busy || working || !usable.speech} onClick={() => void listen()}>Listen</button>;
   return <>
     <p role="status" className={shownStatus ? "ask-voice-status" : "sr-only"}>{shownStatus || status}</p>
     <div className="ask-voice-icons" role="group" aria-label={dictateOnly ? "Dictation" : "Voice conversation"}>
       {voiceActive ? null : dictate}
-      {voiceActive || dictateOnly ? null : <button type="button" className="ask-icon" title="Talk with Ask" disabled={unavailable || busy || working || !usable.transcription || !usable.speech} onClick={() => void start(true)}><WaveIcon /><span className="sr-only">Talk with Ask</span></button>}
-      {recording ? <button type="button" className="ask-icon ask-icon--on" title="Finish speaking" onClick={() => { if (recognition.current) recognition.current.stop(); else capture.current?.stop(); }}><StopIcon /><span className="sr-only">Finish speaking</span></button> : null}
-      {live && !recording && !busy ? <button type="button" className="ask-icon" title="Interrupt and speak" onClick={() => void start(true)}><MicIcon /><span className="sr-only">Interrupt and speak</span></button> : null}
-      {working || live ? <button type="button" className="ask-icon" title="Stop and turn off the microphone" onClick={stop}><CloseIcon /><span className="sr-only">Stop and turn off the microphone</span></button> : null}
-      {dictateOnly ? null : <button type="button" className="ask-icon" aria-pressed={muted} title={muted ? "Spoken answers are muted. Select to turn sound on" : "Mute spoken answers"} disabled={!usable.speech} onClick={() => setSpeakerMuted(!muted)}>{muted ? <SpeakerOffIcon /> : <SpeakerIcon />}<span className="sr-only">{muted ? "Spoken answers are muted. Select to turn sound on" : "Mute spoken answers"}</span></button>}
+      {voiceActive || dictateOnly ? null : <button type="button" className="ask-icon" aria-label="Talk with Ask" disabled={unavailable || busy || working || !usable.transcription || !usable.speech} onClick={() => void start(true)}>Talk</button>}
+      {recording ? <button type="button" className="ask-icon ask-icon--on" aria-label="Done speaking" onClick={() => { if (recognition.current) recognition.current.stop(); else capture.current?.stop(); }}>Done</button> : null}
+      {live && !recording && !busy ? <button type="button" className="ask-icon" aria-label="Speak now, interrupting the answer" onClick={() => void start(true)}>Speak</button> : null}
+      {working || live ? <button type="button" className="ask-icon" aria-label="End the conversation and turn off the microphone" onClick={stop}>End</button> : null}
+      {dictateOnly ? null : <button type="button" className="ask-icon" aria-pressed={muted} aria-label={muted ? "Unmute spoken answers" : "Mute spoken answers"} disabled={!usable.speech} onClick={() => setSpeakerMuted(!muted)}>{muted ? "Unmute" : "Mute"}</button>}
       {listenSlot === undefined ? listenControl : null}
     </div>
     {availabilityNotice ? <p role="status" className="ask-voice-note">{availabilityNotice}</p> : null}

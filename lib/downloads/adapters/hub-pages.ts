@@ -39,10 +39,10 @@ function practiceGuideDocument(slug: string, scope: StaffProgramScope): Resource
       section("What this could look like", [paragraph(guide.example)]),
       section("Bring it back to your work", [
         paragraph(guide.review),
-        paragraph("After the appropriate decision and use of an approach, record an observation and its limits (program page /program/reflection). Bring what you learn back to the people who contributed and to the next review."),
+        paragraph("Once a decision has been made and you have tried an approach, record an observation and its limits (program page /program/reflection). Bring what you learn back to the people who contributed and to the next review."),
       ]),
       section("Keep the guidance close", [
-        paragraph("Use these resources to prepare for the task in front of you. It supports preparation and reflection; it does not replace policy or required approval."),
+        paragraph("These resources can help you prepare for the task in front of you. They support preparation and reflection; they don't replace policy or any approval that is required."),
         table(["Resource", "What it helps with", "Page"], guide.resources.map(resource => [resource.title, resource.purpose, resource.href])),
       ]),
     ]),
@@ -69,7 +69,7 @@ function programStageDocument(slug: string, scope: StaffProgramScope): ResourceD
 function implementationDocument(scope: StaffProgramScope): ResourceDocument {
   return pageDocument(scope, "How the program connects learning with work", {
     title: "From equity goals to implementation",
-    subtitle: "Connect an action step from the Aging and Disability Services Administration Equity and Inclusion Implementation Plan with the work, knowledge, participation and evidence needed to carry it forward.",
+    subtitle: "Take an action step from the Aging and Disability Services Administration Equity and Inclusion Implementation Plan and line up the work, knowledge, people and evidence it needs to move forward.",
     meta: [
       { label: "Goals", value: String(ADSA_IMPLEMENTATION_GOALS.length) },
       { label: "Action steps", value: String(ADSA_IMPLEMENTATION_GOALS.reduce((sum, goal) => sum + goal.actions.length, 0)) },
@@ -77,8 +77,8 @@ function implementationDocument(scope: StaffProgramScope): ResourceDocument {
     sections: compactSections([
       section("One connected piece of work", [
         paragraph("The Aging and Disability Services Administration Equity and Inclusion Implementation Plan sets out six goals and twenty-eight action steps for administration and division work. The supporting tools help people prepare, review, implement and learn from that work."),
-        paragraph("Begin with an actual question, responsibility or desired outcome. Where an action step applies, connect it to that work. Choose a useful work product, involve the people whose knowledge is needed, and seek the responsible decision. Revisit the work to examine implementation, barriers and results."),
-        callout("The action steps below keep the wording of the supplied plan. Divisions choose approaches suited to their work while staying aligned with the plan and applicable requirements. The suggested work products, questions and resource connections can be adapted; they are not a prescribed sequence or an additional set of mandates."),
+        paragraph("Start with a real question, a responsibility or an outcome you want. Where an action step applies, connect it to that work. Choose a work product that will be useful, bring in the people whose knowledge you need, and take it to the person who makes the decision. Then come back to see how it was carried out, what got in the way and what resulted."),
+        callout("The action steps below keep the plan's own wording. Each division can choose approaches that suit its work, as long as they stay in line with the plan and the requirements that apply. You can adapt the suggested work products, questions and resource connections; they are not a set sequence or extra mandates."),
       ]),
       ...ADSA_IMPLEMENTATION_GOALS.map(goal =>
         section(`Goal ${goal.number}: ${goal.title}`, goal.actions.flatMap((action): DocumentBlock[] => [
@@ -93,7 +93,7 @@ function implementationDocument(scope: StaffProgramScope): ResourceDocument {
         ])),
       ),
       section("Carry the work forward", [
-        paragraph("Keep the selected action step with the analysis or plan, its source references, open questions, responsible roles and agreed next action. A completed worksheet records preparation. An implementation record describes what was actually done. Evidence of results explains what changed, for whom, and what remains uncertain."),
+        paragraph("Keep the action step you chose together with the analysis or plan, its source references, open questions, who is responsible and the next action you agreed on. A completed worksheet shows your preparation. An implementation record describes what was actually done. Evidence of results explains what changed, for whom, and what is still uncertain."),
       ]),
     ]),
   });
@@ -125,7 +125,7 @@ function administrationDocument(id: string, scope: StaffProgramScope): ResourceD
   const topics = topicSections(division ? DIVISION_BRANCH_TOPICS : area!.topics);
   return pageDocument(scope, division ? "Aging and Disability Services Administration" : "Organizational context", {
     title: division ? "Disability Services Division" : area!.name,
-    subtitle: division ? "The Disability Services Division brings together service knowledge, workplace practice and practical equity resources in the standalone One DSD program." : area!.description,
+    subtitle: division ? "One DSD brings together what the Disability Services Division knows about services, workplace practice and practical equity resources, all in one place." : area!.description,
     meta: [{ label: "Page", value: division ? "program page /administrations/adsa/divisions/dsd" : `program page /administrations/${area!.id}` }],
     sections: compactSections([
       section(division ? "Disability services context" : "Services and working relationships", topics.blocks),

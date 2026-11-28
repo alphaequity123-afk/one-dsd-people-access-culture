@@ -7,7 +7,7 @@ import { ADMINISTRATION_NAVIGATION } from "@/lib/product/organization-navigation
 export const metadata: Metadata = { title: "DHS administrations", description: "Explore DHS organizational context and the Disability Services Division within Aging and Disability Services." };
 
 export default function AdministrationsPage() {
-  return <><PageIntro kicker="One DSD · DHS organizational context" title="DHS administrations" lede="Explore the organizational setting of DSD and its relationships with other DHS administrations. This directory supports context; the standalone One DSD program remains your starting point." />
+  return <><PageIntro kicker="One DSD · DHS organizational context" title="DHS administrations" lede="See where DSD sits within DHS and how it works with the other administrations. This directory gives you context; One DSD is still your home base." />
     <div className="wrap max-w-6xl py-10"><OrganizationBreadcrumb items={[{label:"Home",href:"/"},{label:"Administrations"}]} />
       <div className="grid gap-6 md:grid-cols-2">{ADMINISTRATION_NAVIGATION.map(area => <article key={area.id} className="rounded-xl border border-line bg-white p-6"><h2 className="m-0 text-2xl font-bold"><Link href={`/administrations/${area.id}`}>{area.name}</Link></h2><p>{area.description}</p><Link href={`/administrations/${area.id}`}>Explore this administration</Link>{area.id === "adsa" && <p className="mb-0 text-sm">Includes the Disability Services Division branch of this program.</p>}</article>)}</div>
       <SharedAgencyResources /><OrganizationSourceNote />

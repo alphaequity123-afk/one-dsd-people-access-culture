@@ -161,7 +161,7 @@ const serviceSteps: Step[] = [
   {
     id: "access", title: "Make access possible",
     question: "What language, format, communication support or other accommodation does the person prefer?",
-    guidance: "Ask what works for the person, check the options you can offer, and follow applicable requirements for language access and accessibility. CLAS offers a way to consider culturally and linguistically appropriate services.",
+    guidance: "Ask what works for the person, check the options you can offer, and follow the requirements that apply for language access and accessibility. CLAS offers a way to consider culturally and linguistically appropriate services.",
     practices: [
       "Clear means different things to different people. Some want the action list and some want the reasons, so offer plain language, Easy Read, ASL or layered information.",
       "Slow down, drop idioms, repeat key points, use short sentences and visuals, leave pauses and give a written summary. Add captions and interpreters. This is access for everyone.",
@@ -174,7 +174,7 @@ const serviceSteps: Step[] = [
   {
     id: "participation", title: "Include the people affected",
     question: "Whose perspective is needed while there is still an opportunity to shape the work?",
-    guidance: "Explain the purpose and what can be influenced. Ask about a useful and accessible way to participate, and follow the appropriate process for the situation. Observe the existing direction for Native American individuals, communities and Tribal Nations.",
+    guidance: "Explain the purpose and what can be influenced. Ask about a useful and accessible way to participate, and follow the process that fits the situation. Respect the existing direction for Native American individuals, communities and Tribal Nations.",
     practices: [
       "Say what the input will do. Is it to hear reactions, or to shape the decision? Whose view will count for more?",
       "Assume the picture reaching you is partial. People hold back for many reasons, including the power an agency has over them.",
@@ -185,7 +185,7 @@ const serviceSteps: Step[] = [
   {
     id: "decision", title: "Examine the decision",
     question: "What is being decided, who might be affected differently, and what level of review applies?",
-    guidance: "Check current DHS policy and the Equity Analysis Toolkit user guide, and consult the person or area responsible or your equity director about what applies. The Toolkit supports the required process. The decision workspace can help you prepare; use the required official process for review and documentation. A brief learning check does not replace a required review. Compare options and identify what you still need to learn. Leaders can bring the same questions to policy, program and resource decisions.",
+    guidance: "Check current DHS policy and the Equity Analysis Toolkit user guide, and consult the person or area responsible or your equity director about what applies. The Toolkit supports the required process. The decision workspace can help you prepare; review and documentation still go through the required official process. A brief learning check does not replace a required review. Compare options and identify what you still need to learn. Leaders can bring the same questions to policy, program and resource decisions.",
     practices: [
       "The less familiar the setting, the slower you should be to settle on a judgment. Pause and consider what information may be missing.",
       "Compare your plan with what you would usually do, and ask someone who knows the setting to read it.",
@@ -339,7 +339,7 @@ export function CulturalIntelligenceWorkJourney({ resources, title = "Connect le
   return <section aria-labelledby={`${instanceId}-title`} className="space-y-5 rounded-xl border border-line p-6">
     <h3 id={`${instanceId}-title`} className="text-2xl font-semibold">{title}</h3>
     <p>Choose what the work is about and where to begin. This optional guide brings your own culture, the people affected and relevant tools into the same work question. Nothing you choose here is saved; if you leave or reload the page, choose again.</p>
-    <p>Use what you learn in everyday conversations and choices, and work directly with the people and communities affected by a decision. Learning and community briefs do not replace that engagement, or the everyday work of a welcoming, inclusive workplace.</p>
+    <p>Bring what you learn into everyday conversations and choices, and work directly with the people and communities affected by a decision. Learning and community briefs do not replace that engagement, or the everyday work of a welcoming, inclusive workplace.</p>
 
     <fieldset className="space-y-2">
       <legend className="font-semibold">What is the work about?</legend>

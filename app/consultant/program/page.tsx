@@ -19,7 +19,7 @@ export default async function ProgramWorkPage(){
   try{items=await listProgramWork();}catch{return <div className="wrap py-10"><h1>Program work</h1><p role="alert">Program work could not be opened. Refresh this page to try again.</p></div>;}
   const summary=summarizeProgramWork(items);
   return <>
-    <PageIntro kicker="Consultant Workspace" title="Priorities, preparation and follow-through" lede="Connect an approved priority with evidence, affected perspectives, a reasoned recommendation and the responsible next step."/>
+    <PageIntro kicker="Consultant Workspace" title="Priorities, preparation and follow-through" lede="Take an approved priority and bring together the evidence, the perspectives of the people affected, a well-reasoned recommendation and a clear next step."/>
     <div className="wrap space-y-8 py-8">
       <ProgramWorkControls/>
       {(()=>{const key=leadersKey();return <section className="card p-6" aria-labelledby="leaders-key-heading"><h2 id="leaders-key-heading" className="text-2xl font-semibold">Equity baseline access for managers and supervisors</h2><p>The <Link href="/data/equity-baseline">equity baseline</Link> is for Disability Services Division managers and supervisors and for you. They open it with the leaders access key below. Share it in person or by direct message, not in a group post. The key changes only when the owner key changes.</p>{key?<details className="mt-3"><summary>Show the leaders access key</summary><p className="mt-2"><code>{key}</code></p></details>:<p role="alert">Leaders access is not set up, so the equity baseline is locked.</p>}</section>;})()}

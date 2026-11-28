@@ -7,7 +7,7 @@ export function LearningPracticeNotebook({ stops }: {stops: Pick<LearningStop,"i
     <h2 id="practice-notebook-title" className="text-3xl font-semibold">Put one idea into practice</h2>
     <p className="notice mt-3 max-w-3xl leading-7" role="note">
       <strong>Read it here, then download it to use. </strong>
-      This page does not save anything you write. Work through the prompts below, then download the related tools from the Library and keep your notes in your own file.
+      Nothing you write here is saved. Work through the prompts below, then download the related tools from the Library and keep your notes in your own file.
     </p>
     <ol className="mt-6 list-none space-y-6 p-0">
       {stops.map(stop => (

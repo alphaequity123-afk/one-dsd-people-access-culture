@@ -27,6 +27,7 @@ it("keeps script reading still until the learner chooses to follow",()=>{
 });
 it("allows in-memory caption tracks independently of Ask configuration",()=>{
  const config=readFileSync("next.config.ts","utf8");
- expect(config).toContain('value: contentSecurityPolicy + "; media-src \'self\' blob:"');
+ // v2 rebuild: the page may also play training video from the live One DSD course-media bucket.
+ expect(config).toContain("value: contentSecurityPolicy + `; media-src 'self' blob: ${LIVE_DSD_MEDIA_HOST}`");
  expect(config).not.toContain('contentSecurityPolicy + (askVoiceAllowed ?');
 });
