@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState, useSyncExternalStore } from "react";
 import Image from "next/image";
 import Link from "@/components/app-link";
 import { LearningAudio } from "@/components/learning-audio";
+import { CourseMediaSlot } from "@/components/course-media-for-page";
 import type { RiseBlock, RiseCourse, RiseLesson } from "@/lib/content/courses/rise/types";
 
 /* Progress stays in this browser only (owner rule: no one's learning activity is recorded). */
@@ -39,26 +40,43 @@ export function RiseCourseOverview({ course }: { course: RiseCourse }) {
   const lessons = allLessons(course);
   const next = lessons.find(l => !done.includes(l.id)) ?? lessons[0];
   const started = done.length > 0;
-  return <div className="rise">
-    <header className="rise-cover">
+  const compactIntro = course.id === "dhs-equity-analysis-toolkit";
+  const startLabel = started && done.length < lessons.length ? "Resume course" : "Start course";
+  const introVideo = course.introVideo ? <figure className="rise-intro-video">
+    <video controls preload="metadata" poster={course.introVideo.poster} src={course.introVideo.src}>{course.introVideo.captions ? <track kind="captions" src={course.introVideo.captions} srcLang="en" label="English" default /> : null}</video>
+  </figure> : null;
+  const courseDetails = <>
+    {course.description.map((p, i) => <p key={i}>{p}</p>)}
+    <h2 className="rise-ov-h">By the end, you’ll be able to</h2>
+    <ul className="rise-ov-outcomes">{course.outcomes.map((o, i) => <li key={i}>{o}</li>)}</ul>
+  </>;
+  return <div className={`rise${compactIntro ? " rise-toolkit-overview" : ""}`}>
+    {compactIntro ? <header className="rise-toolkit-intro">
+      <div className="rise-toolkit-photo">
+        <Image src={course.cover.src} alt={course.cover.alt} width={1536} height={1024} priority sizes="(min-width: 720px) 720px, 100vw" />
+      </div>
+      <div className="rise-toolkit-intro-copy">
+        <h1>{course.title}</h1>
+        <p>{course.summary}</p>
+        <Link className="rise-pill" href={lessonHref(course.id, next.id)}>{startLabel}</Link>
+      </div>
+    </header> : <header className="rise-cover">
       <Image src={course.cover.src} alt="" fill priority sizes="100vw" className="rise-cover-img" />
       <div className="rise-cover-in">
         <p className="rise-eyebrow">{course.eyebrow}</p>
         <h1>{course.title}</h1>
         <p className="rise-cover-sum">{course.summary}</p>
         <div className="rise-cover-actions">
-          <Link className="rise-pill rise-pill--white" href={lessonHref(course.id, next.id)}>{started && done.length < lessons.length ? "Resume course" : "Start course"}</Link>
+          <Link className="rise-pill rise-pill--white" href={lessonHref(course.id, next.id)}>{startLabel}</Link>
           <a className="rise-details" href="#course-details">Details</a>
         </div>
       </div>
-    </header>
+    </header>}
     <div className="rise-ov" id="course-details">
-      {course.introVideo ? <figure className="rise-intro-video">
-        <video controls preload="metadata" poster={course.introVideo.poster} src={course.introVideo.src}>{course.introVideo.captions ? <track kind="captions" src={course.introVideo.captions} srcLang="en" label="English" default /> : null}</video>
-      </figure> : null}
-      {course.description.map((p, i) => <p key={i}>{p}</p>)}
-      <h2 className="rise-ov-h">By the end, you’ll be able to</h2>
-      <ul className="rise-ov-outcomes">{course.outcomes.map((o, i) => <li key={i}>{o}</li>)}</ul>
+      {compactIntro ? <>
+        <details className="rise-toolkit-disclosure"><summary>Watch or listen</summary><div className="rise-toolkit-disclosure-content">{introVideo}<CourseMediaSlot /></div></details>
+        <details className="rise-toolkit-disclosure"><summary>Course details</summary><div className="rise-toolkit-disclosure-content">{courseDetails}</div></details>
+      </> : <>{introVideo}{courseDetails}</>}
       <p className="rise-ov-meta">{lessons.length} lessons · about {lessons.reduce((n, l) => n + l.minutes, 0)} minutes{started ? ` · ${done.length} of ${lessons.length} finished` : ""}</p>
       <nav aria-label="Course outline" className="rise-ov-list">
         {course.sections.map(section => <div key={section.title}>

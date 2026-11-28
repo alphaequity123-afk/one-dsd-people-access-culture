@@ -42,6 +42,18 @@
 .rise-sources summary{cursor:pointer;font-weight:700}
 .rise-sources p{color:var(--rz-muted);margin:.2em 0 1em}
 
+/* The Toolkit introduction keeps its photo clear and its opening concise. */
+.rise-toolkit-overview .rise-toolkit-photo{max-width:720px;margin:0 auto}
+.rise-toolkit-overview .rise-toolkit-photo img{display:block;width:100%;height:auto}
+.rise-toolkit-overview .rise-toolkit-intro-copy{max-width:700px;margin:0 auto;padding:24px 32px 28px}
+.rise-toolkit-overview .rise-toolkit-intro-copy h1{font-size:clamp(1.5rem,3vw,2rem);line-height:1.2;font-weight:700;margin:0 0 10px}
+.rise-toolkit-overview .rise-toolkit-intro-copy p{font-size:1rem;line-height:1.6;margin:0 0 20px}
+html body main .rise.rise-toolkit-overview .rise-ov{padding-top:0!important}
+.rise-toolkit-overview .rise-toolkit-disclosure{border-top:1px solid var(--rz-line)}
+.rise-toolkit-overview .rise-toolkit-disclosure>summary{cursor:pointer;font-weight:700;padding:14px 0}
+.rise-toolkit-overview .rise-toolkit-disclosure>summary:focus-visible{outline:2px solid var(--rz-accent);outline-offset:4px}
+.rise-toolkit-overview .rise-toolkit-disclosure-content{padding-bottom:20px}
+
 /* Lesson shell */
 .rise-shell{display:grid;grid-template-columns:280px minmax(0,1fr);align-items:start}
 .rise-shell.is-closed{grid-template-columns:minmax(0,1fr)}
