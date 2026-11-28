@@ -38,6 +38,7 @@ export default async function Page() {
         <nav className={styles.starts} aria-label="Start with the toolkit">
           <div><Link href="/equity-review/toolkit">Analyze a decision with the toolkit</Link><p>Bring your own evidence or explore a service-scheduling example.</p></div>
           <div><Link href="/learn/equity-toolkit/practice#worked-example">Watch the worked example</Link><p>Follow a practice CFSS notice revision, see the completed notes, and try a different decision.</p></div>
+          <div><Link href="/courses/dhs-equity-analysis-toolkit">Take the Toolkit course</Link><p>Follow one DHS team through preparation and all six steps, with scenarios and narration.</p></div>
           <div><Link href="/learn/equity-toolkit/practice#toolkit-draft">Work through a decision</Link><p>Choose a starting question, compare options, and save your analysis with a practice plan.</p></div>
         </nav>
         <p>Follow one decision through eight connected lessons, individual practice and working notes. <Link href="/learn/equity-toolkit/curriculum">Explore equity in everyday decisions</Link></p>

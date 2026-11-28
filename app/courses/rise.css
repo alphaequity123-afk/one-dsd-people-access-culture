@@ -199,3 +199,17 @@ html body main .rise h1{color:var(--rz-ink)}
   html body main .rise .rise-scen-card.has-character{grid-template-columns:1fr;text-align:center;padding:22px}
   html body main .rise .rise-scen-person{width:110px;margin:0 auto}
 }
+
+/* Spoken scenario lines, lesson narration and the "Use this at work" card */
+html body main .rise .rise-lines{list-style:none;margin:6px 0 18px;padding:0;display:grid;gap:12px;text-align:left}
+html body main .rise .rise-lines li{display:grid;grid-template-columns:44px minmax(0,1fr);gap:12px;align-items:start}
+html body main .rise .rise-line-face{width:44px;height:78px;object-fit:cover;object-position:top}
+html body main .rise .rise-line-role{font-size:.72rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--rz-muted);margin:0}
+html body main .rise .rise-line-text{margin:2px 0 6px;font-size:.95rem;line-height:1.55}
+html body main .rise .rise-line-play{border:1px solid var(--rz-accent);background:#fff;color:var(--rz-accent);font-family:inherit;font-size:.75rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:4px 12px;cursor:pointer}
+html body main .rise .rise-line-play[aria-pressed=true]{background:var(--rz-accent);color:#fff}
+html body main .rise .rise-work{border:2px solid var(--rz-accent);border-left-width:6px;background:#f5f8fb;padding:24px 28px}
+html body main .rise .rise-work h3{margin:0 0 8px}
+html body main .rise .rise-work-links{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;margin-top:12px}
+html body main .rise .rise-work-also{font-weight:700;color:var(--rz-accent)!important}
+html body main .rise .rise-scen-card.has-character .rise-scen-text{max-height:none}
