@@ -12,6 +12,7 @@ import { AnalysisResult, analysisResultText } from "./analysis-result";
 import styles from "./analyze.module.css";
 import { LTSS_RESOURCES } from "@/lib/consultant-toolkit/ltss";
 import bundledLtssData from "@/public/data/ltss/metadata.json";
+import { TOOLKIT_STEP_LESSONS } from "@/lib/content/courses/rise/equity-analysis-toolkit";
 
 export type CommunityOption = { id: string; title: string };
 
@@ -227,6 +228,7 @@ export function AnalyzeWorkspace({ communities, analyzeUrl = "/api/analyze", upl
     {toolkit ? <section className={`${styles.step} ${styles.noPrint}`} aria-labelledby={`${id}-start`}>
       <h2 id={`${id}-start`}>Start with a decision</h2>
       <p>Bring a decision and the information you have. This initial scan follows the six DHS equity analysis steps: outcomes, data, community engagement, benefits and burdens, implementation, and accountability.</p>
+      <details className={styles.help}><summary>Learn each step in the DHS Equity Analysis Toolkit course</summary><ol>{TOOLKIT_STEP_LESSONS.map(item => <li key={item.lesson}><Link href={item.href}>{item.step}</Link></li>)}</ol><p>For the groups your decision touches, the <Link href="/minnesota-communities">Minnesota Communities briefs</Link> help with results and engagement.</p></details>
       <button type="button" className={styles.secondary} disabled={busy} onClick={addExample}>Add the service-scheduling example</button>
       <p className={styles.help}>The example is a practice situation. It adds to your sources without replacing your work. It does not contain real scheduling results.</p>
       <h3>Long-term services and supports data</h3>
