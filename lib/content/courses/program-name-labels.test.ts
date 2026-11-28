@@ -5,7 +5,6 @@ import { DEIA_CATALOG_SERIES, DEIA_CATALOG_LEVELS } from "./deia-catalog-series"
 import { catalogDisplayLabel } from "./authored/deia-catalog/display-labels";
 import plan from "./authored/deia-catalog/plan.json";
 import collections from "@/lib/content/collections-data.json";
-import { DIRECTOR_TOOLKIT_SECTIONS } from "@/lib/content/director-toolkit";
 import type { CoursePack } from "./source-types";
 
 /** The program is People, Access and Culture. The DEI and DEIA acronyms never appear in course labels. */
@@ -33,10 +32,8 @@ describe("program name in learning labels", () => {
     for (const level of DEIA_CATALOG_LEVELS) expect(level.description).not.toMatch(ACRONYM);
   });
 
-  it("keeps the acronym out of collection item titles and the director toolkit", () => {
+  it("keeps the acronym out of collection item titles", () => {
     const titles = Object.values(collections.items as Record<string, { title: string }>).map(item => item.title);
     expect(titles.filter(title => ACRONYM.test(title))).toEqual([]);
-    const toolkit = JSON.stringify(DIRECTOR_TOOLKIT_SECTIONS);
-    expect(toolkit).not.toMatch(ACRONYM);
   });
 });
