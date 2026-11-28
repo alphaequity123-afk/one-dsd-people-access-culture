@@ -50,3 +50,20 @@ export type RiseCourse = {
 export function riseLessons(course: RiseCourse): RiseLesson[] {
   return course.sections.flatMap(section => section.lessons);
 }
+
+const plain = (text: string) => text.replace(/[“”]/g, "\"").replace(/[‘’]/g, "'");
+/**
+ * The narration Kelly reads for a lesson: its teaching text in order. The recorder (scripts/media/record-rise-course.py)
+ * builds its script the same way, so the transcript shown beside the audio matches what is heard.
+ */
+export function narrationScript(title: string, blocks: RiseBlock[]): string {
+  const parts: string[] = [title + "."];
+  for (const b of blocks) {
+    if (b.kind === "text") { if (b.heading) parts.push(b.heading + "."); parts.push(...b.paragraphs); }
+    else if (b.kind === "statement") parts.push(b.text);
+    else if (b.kind === "twoColumn") for (const c of b.columns) parts.push(`${c.heading}: ${c.text}`);
+    else if (b.kind === "numbered") parts.push("To keep in mind. " + b.items.join(" "));
+    else if (b.kind === "note") parts.push(`${b.lead} ${b.text}`);
+  }
+  return plain(parts.join("\n\n"));
+}

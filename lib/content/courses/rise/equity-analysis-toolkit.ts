@@ -393,6 +393,14 @@ export const equityAnalysisToolkit: RiseCourse = {
             ] },
             { kind: "image", image: img("l11", "A staff member drafts a short summary.") },
             { kind: "quote", text: "We are moving county visit requests online. Rural households without broadband, people who need an interpreter, Deaf callers and night staff would feel this first. Call data and two lobby sessions show these groups rely on the phone. We will keep a staffed phone path, with interpreters and relay, from launch. The remaining risk is evening coverage.", who: "A summary only this proposal could wear" },
+            { kind: "scenario", image: img("l11", "A staff member drafts a short summary."), character: person(EQUITY), title: "The first draft", setup: "The program manager brings a draft summary to the equity director, the day before it goes to the leadership meeting.", lines: [
+              say(PM, "I wrote that the project will improve access and advance equity for all Minnesotans."),
+              say(EQUITY, "That sentence would fit any project we have ever done. Name who told us they rely on the phone, and the one thing we changed because of it."),
+            ], question: "What should the program manager do with the draft?", options: [
+              { text: "Keep the opening sentence and put the data in an appendix.", feedback: "Leaders read the summary first and may read no further. The specifics belong in it." },
+              { text: "Replace the general claim with the groups, the evidence, the change made and the risk that remains.", feedback: "Yes. That is a summary only this proposal could wear, and it gives leaders something real to decide on.", best: true },
+              { text: "Leave out the remaining risk so the proposal reads well.", feedback: "Hiding the risk means nobody plans for it, and the burden still lands on evening callers." },
+            ] },
             { kind: "continue" },
             { kind: "sorting", heading: "Specific or a slogan?", intro: "Place each sentence.", categories: ["Specific to this work", "Could fit any project"], items: [
               { text: "Call data shows rural households rely on the phone for nearly half of requests.", category: 0 },
