@@ -11,7 +11,7 @@ describe("connected pages for Ask", () => {
     expect(screenConnections("/equity-review/toolkit")).toHaveLength(7);
   });
   it("points community briefs to the results and engagement lessons", () => {
-    expect(screenConnections("/minnesota-communities/somali").map(link => link.label).join(" ")).toMatch(/results.*Engaging/s);
+    expect(screenConnections("/minnesota-communities/somali").map(link => link.label).join(" ")).toMatch(/results[\s\S]*Engaging/);
   });
   it("adds nothing for unrelated pages", () => {
     expect(screenConnections("/learn/leadership")).toEqual([]);
