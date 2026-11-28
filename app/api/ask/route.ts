@@ -27,6 +27,13 @@ const Input = z.object({
   history: z.array(z.object({ question: z.string().max(1000), answer: z.string().max(2500) }).strict()).max(4).optional(),
   priorArtifact: PracticeArtifactSchema.optional(),
   priorWorkProduct: AskWorkProductSchema.optional(),
+  /** Ask Live: what is on the person's screen. Used for this answer only, never stored. */
+  screen: z.object({
+    path: z.string().regex(/^\/\S{0,299}$/),
+    title: z.string().max(300),
+    focus: z.string().max(1500).optional(),
+    text: z.string().max(6000).optional(),
+  }).strict().optional(),
 }).strict();
 const json = (body: unknown, status = 200) => NextResponse.json(body, { status, headers: { "cache-control": "no-store" } });
 const KEEP_ALIVE_MS = 10_000;
