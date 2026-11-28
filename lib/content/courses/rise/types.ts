@@ -18,13 +18,21 @@ export type RiseBlock =
   | { kind: "flashcards"; heading: string; intro?: string; cards: { front: string; back: string }[] }
   | { kind: "process"; title: string; intro: string; steps: { title: string; body: string }[] }
   | { kind: "sorting"; heading: string; intro: string; categories: string[]; items: { text: string; category: number }[]; done: string }
-  | { kind: "scenario"; image: RiseImage; character?: RiseImage & { role: string }; title: string; setup: string; question: string; options: { text: string; feedback: string; best?: boolean }[] }
+  | { kind: "scenario"; image: RiseImage; character?: RiseImage & { role: string }; title: string; setup: string;
+      /** Spoken lines before the question. Each is voiced by its cast member (C1–C8, docs/media-scripts/CAST.md) and named by role. */
+      lines?: RiseLine[];
+      question: string; options: { text: string; feedback: string; best?: boolean }[] }
+  /** Where this lesson's skill is used at work: a tool, and the step in it. */
+  | { kind: "useAtWork"; tool: string; step?: string; href: string; text: string; also?: { label: string; href: string }[] }
   | { kind: "check"; question: string; options: { text: string; correct?: boolean }[]; right: string; wrong: string }
   | { kind: "numbered"; heading: string; items: string[] }
   | { kind: "quote"; text: string; who: string }
   | { kind: "continue" };
 
-export type RiseLesson = { id: string; title: string; minutes: number; blocks: RiseBlock[] };
+export type RiseLine = { cast: number; role: string; text: string; audio?: string };
+/** Lesson narration, read by the narrator voice (Kelly, C3). The script is kept beside the audio as its transcript. */
+export type RiseNarration = { src?: string; seconds?: number; script: string };
+export type RiseLesson = { id: string; title: string; minutes: number; blocks: RiseBlock[]; narration?: RiseNarration };
 export type RiseSection = { title: string; lessons: RiseLesson[] };
 export type RiseCourse = {
   id: string;

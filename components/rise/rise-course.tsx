@@ -111,6 +111,7 @@ export function RiseLessonView({ course, lessonId }: { course: RiseCourse; lesso
         <span className="rise-lh-bar" />
       </div>
       <div className="rise-rule" />
+      {lesson.narration?.src ? <section className="rise-b"><div className="rise-col rise-audio"><p className="rise-label">Listen to this lesson</p><LearningAudio src={lesson.narration.src} title={`Listen to the lesson: ${lesson.title}`} /><details><summary>Read the narration</summary>{lesson.narration.script.split(/\n\n/).map((t, k) => <p key={k}>{t}</p>)}</details></div></section> : null}
       <LessonBlocks key={lesson.id} lesson={lesson} />
       {next
         ? <Link className="rise-next" href={lessonHref(course.id, next.id)} onClick={() => mark(lesson.id)}>Lesson {index + 2} – {next.title}<span className="rise-chev" aria-hidden="true" /></Link>
@@ -142,6 +143,7 @@ function Block({ block, id }: { block: RiseBlock; id: string }) {
     case "statement": return <section className="rise-b"><div className="rise-col rise-statement"><span /><p>{block.text}</p></div></section>;
     case "note": return <section className="rise-b"><div className="rise-col"><div className="rise-note"><p><strong>{block.lead}</strong> {block.text}</p></div></div></section>;
     case "numbered": return <section className="rise-b"><div className="rise-col"><h3>{block.heading}</h3><ol className="rise-num">{block.items.map((t, i) => <li key={i}>{t}</li>)}</ol></div></section>;
+    case "useAtWork": return <section className="rise-b"><div className="rise-col"><div className="rise-work"><p className="rise-label">Use this at work</p><h3>{block.step ? `${block.tool}: ${block.step}` : block.tool}</h3><p>{block.text}</p><div className="rise-work-links"><Link className="rise-pill" href={block.href}>Open {block.step ?? block.tool}</Link>{block.also?.map(a => <Link key={a.href} className="rise-work-also" href={a.href}>{a.label}</Link>)}</div></div></div></section>;
     case "quote": return <section className="rise-b"><div className="rise-col"><blockquote className="rise-quote"><p>“{block.text}”</p><footer>{block.who}</footer></blockquote></div></section>;
     case "accordion": return <Accordion block={block} id={id} />;
     case "tabs": return <Tabs block={block} id={id} />;
@@ -219,12 +221,24 @@ function Scenario({ block }: { block: Extract<RiseBlock, { kind: "scenario" }> }
     <div className={`rise-card rise-scen-card${block.character ? " has-character" : ""}`}>
       {block.character ? <figure className="rise-scen-person"><Image src={block.character.src} alt={block.character.alt} width={600} height={1066} sizes="180px" /><figcaption>{block.character.role}</figcaption></figure> : null}
       <div className="rise-scen-text" aria-live="polite">
-      {stage === "setup" ? <><h3>{block.title}</h3><p>{block.setup}</p><button type="button" className="rise-pill" onClick={() => setStage("ask")}>Continue</button></>
+      {stage === "setup" ? <><h3>{block.title}</h3><p>{block.setup}</p>{block.lines?.length ? <ol className="rise-lines">{block.lines.map((line, i) => <li key={i}><Image src={`/images/cast/C${line.cast}.webp`} alt="" width={600} height={1066} sizes="44px" className="rise-line-face" /><div><p className="rise-line-role">{line.role}</p><p className="rise-line-text">“{line.text}”</p>{line.audio ? <LineAudio src={line.audio} label={`Hear the ${line.role.toLowerCase()}`} /> : null}</div></li>)}</ol> : null}<button type="button" className="rise-pill" onClick={() => setStage("ask")}>Continue</button></>
         : stage === "ask" ? <><h3>{block.question}</h3><div className="rise-opts">{block.options.map((o, i) => <button key={i} type="button" onClick={() => setStage(i)}>{o.text}</button>)}</div></>
         : <><h3>{block.options[stage].best ? "That’s the one" : "Think about it"}</h3><p>{block.options[stage].feedback}</p><button type="button" className="rise-pill" onClick={() => setStage(block.options[stage].best ? "setup" : "ask")}>{block.options[stage].best ? "Play again" : "Try again"}</button></>}
       </div>
     </div>
   </section>;
+}
+
+/** One spoken line: a small play button, so a scenario can be heard line by line. */
+function LineAudio({ src, label }: { src: string; label: string }) {
+  const [playing, setPlaying] = useState(false);
+  return <button type="button" className="rise-line-play" aria-label={label} aria-pressed={playing} onClick={event => {
+    const audio = event.currentTarget.querySelector("audio");
+    if (!audio) return;
+    if (playing) { audio.pause(); return; }
+    document.querySelectorAll<HTMLMediaElement>("audio, video").forEach(media => { if (media !== audio) media.pause(); });
+    audio.currentTime = 0; void audio.play();
+  }}>{playing ? "Pause" : "Play"}<audio src={src} preload="none" onPlay={() => setPlaying(true)} onPause={() => setPlaying(false)} onEnded={() => setPlaying(false)} /></button>;
 }
 
 function Check({ block, id }: { block: Extract<RiseBlock, { kind: "check" }>; id: string }) {
