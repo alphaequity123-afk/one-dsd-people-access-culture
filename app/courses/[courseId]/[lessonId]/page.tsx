@@ -16,10 +16,14 @@ import { courseHref, courseText, sanitizedLesson, lessonObjectives } from "@/lib
 import type { Metadata } from "next";
 import { requestedContentScope } from "@/lib/product/request-context";
 import "../../courses.css";
+import "../../rise.css";
+import { riseCourse, riseLessons } from "@/lib/content/courses/rise";
+import { RiseLessonView } from "@/components/rise/rise-course";
 export const dynamic="force-dynamic";
 /** A shared lesson link previews with the lesson's own title and summary. */
 export async function generateMetadata({params}:{params:Promise<{courseId:string;lessonId:string}>}):Promise<Metadata> {
   const {courseId,lessonId}=await params;
+  const rise=riseCourse(courseId);if(rise){const l=riseLessons(rise).find(x=>x.id===lessonId);return l?{title:`${l.title} · ${rise.title}`}:{};}
   if(!getEditableSurfaceDefinition(`course.${courseId}`))return {};
   const surface=await prepareEditableSurface(`course.${courseId}`,{scope:await requestedContentScope(),includeOwner:false});
   if(!surface.available)return {};
@@ -28,6 +32,7 @@ export async function generateMetadata({params}:{params:Promise<{courseId:string
 }
 export default async function LessonPage({params}:{params:Promise<{courseId:string;lessonId:string}>}) {
   const {courseId,lessonId}=await params;
+  const rise=riseCourse(courseId);if(rise){if(!riseLessons(rise).some(l=>l.id===lessonId))notFound();return <RiseLessonView course={rise} lessonId={lessonId} />;}
   if(!getEditableSurfaceDefinition(`course.${courseId}`))notFound();
   const scope=await requestedContentScope();
   const surface=await prepareEditableSurface(`course.${courseId}`,{scope,includeOwner:false});
