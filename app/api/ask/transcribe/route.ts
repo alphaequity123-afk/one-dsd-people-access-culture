@@ -15,7 +15,10 @@ export async function POST(request: NextRequest) {
   if (await paused()) return reply({ error: "Ask is paused for now." }, 503);
   const key = process.env.OPENAI_API_KEY?.trim();
   if (!key) return reply({ error: "Speaking your question is not available right now. You can type it instead." }, 503);
-  if (!(await consumeRequestLimit(request, { scope: "ask-transcribe", limit: 80, windowSeconds: 600 })).allowed) return reply({ error: "Please wait a moment before recording again." }, 429);
+  let allowed: boolean;
+  try { allowed = (await consumeRequestLimit(request, { scope: "ask-transcribe", limit: 80, windowSeconds: 600 })).allowed; }
+  catch { return reply({ error: "Speaking your question is not available right now. You can type it instead." }, 503); }
+  if (!allowed) return reply({ error: "Please wait a moment before recording again." }, 429);
   const type = request.headers.get("content-type")?.split(";")[0] ?? "";
   if (!TYPES.has(type)) return reply({ error: "This browser records in a format we cannot use. Please type your question instead." }, 415);
   const reader = request.body?.getReader();
