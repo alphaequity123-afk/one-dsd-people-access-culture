@@ -134,4 +134,13 @@ describe("POST /api/analyze", () => {
     expect(body.answers).toBeUndefined();
     expect(f.finish).toHaveBeenCalledWith(expect.anything(), "server-run", "failed");
   });
+  it("answers 503, not a server error, when the request limit store cannot be reached", async () => {
+    const error = vi.spyOn(console, "error").mockImplementation(() => undefined);
+    f.limit.mockRejectedValue(new Error("connection refused"));
+    const response = await POST(request(valid));
+    expect(response.status).toBe(503);
+    expect(f.admit).not.toHaveBeenCalled();
+    expect(f.analyze).not.toHaveBeenCalled();
+    error.mockRestore();
+  });
 });

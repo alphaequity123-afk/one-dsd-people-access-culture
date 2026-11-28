@@ -82,9 +82,13 @@ export async function POST(request: NextRequest) {
   // before the request limit and the ledger are charged.
   const tooLarge = promptTooLarge(input.data);
   if (tooLarge) return json({ error: tooLarge }, 413);
-  const limit = await consumeRequestLimit(request, RATE_LIMIT);
+  let limit;
+  try { limit = await consumeRequestLimit(request, RATE_LIMIT); }
+  catch (error) { console.error("analyze_failed", error instanceof Error ? error.name : "unknown"); return json({ error: FAILED_MESSAGE }, 503); }
   if (!limit.allowed) return NextResponse.json({ error: "Please wait a few minutes before analyzing another document." }, { status: 429, headers: rateLimitHeaders(limit) });
-  const db = openLedger();
+  let db: Ledger;
+  try { db = openLedger(); }
+  catch (error) { console.error("analyze_failed", error instanceof Error ? error.name : "unknown"); return json({ error: FAILED_MESSAGE }, 503); }
   let id: string | null;
   try {
     id = await admitRun(db);
