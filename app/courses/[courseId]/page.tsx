@@ -28,10 +28,14 @@ import { CourseMediaJumpSlot, CourseMediaSlot } from "@/components/course-media-
 import { FeaturedMediaPanel, mediaLength } from "@/components/featured-media-panel";
 import type { Metadata } from "next";
 import "../courses.css";
+import "../rise.css";
+import { riseCourse } from "@/lib/content/courses/rise";
+import { RiseCourseOverview } from "@/components/rise/rise-course";
 export const dynamic="force-dynamic";
 /** A shared course link previews with the course's own title and summary. */
 export async function generateMetadata({params}:{params:Promise<{courseId:string}>}):Promise<Metadata> {
   const {courseId}=await params;
+  const rise=riseCourse(courseId);if(rise)return {title:rise.title,description:rise.summary};
   if(!getEditableSurfaceDefinition(`course.${courseId}`))return {};
   const surface=await prepareEditableSurface(`course.${courseId}`,{scope:await requestedContentScope(),includeOwner:false});
   if(!surface.available)return {};
@@ -40,6 +44,7 @@ export async function generateMetadata({params}:{params:Promise<{courseId:string
 }
 export default async function CoursePage({params}:{params:Promise<{courseId:string}>}) {
   const {courseId}=await params;
+  const rise=riseCourse(courseId);if(rise)return <RiseCourseOverview course={rise} />;
   if(!getEditableSurfaceDefinition(`course.${courseId}`))notFound();
   const scope=await requestedContentScope();
   const surface=await prepareEditableSurface(`course.${courseId}`,{scope});
