@@ -29,7 +29,7 @@ export const MeasureDefinitionSchema = MeasureDefinitionInputSchema.extend({
 }).strict();
 export const ProgramTaskSchema = z.object({
   recordType: z.literal("program_task"), id: z.string().regex(/^task-[a-f0-9]{32}$/), createdAt: z.iso.datetime(),
-  functionId: z.string().min(1).max(60), goalActionIds:GoalActionIdsSchema.optional(), outcomeIds: z.array(z.string().max(60)).max(7),
+  functionId: z.string().min(1).max(60), goalActionIds:GoalActionIdsSchema.optional(), outcomeIds: z.array(z.string().max(60)).max(8),
   kind: z.enum(["work_preparation", "cadence_review", "outcome_followup", "source_review", "resource_review"]),
   title: z.string().min(5).max(180), objective: z.string().min(10).max(3000),
   agentId: z.enum(["program_orchestrator", "ask_concierge", "ci_guide", "librarian", "a11y_reviewer", "consult_intake", "graduation_coach", "embed_advisor", "content_sentinel", "eval_steward"]),

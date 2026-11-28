@@ -62,7 +62,7 @@ begin
   end if;
   begin
     select net.http_get(
-      url := 'https://one-dsd-people-access-culture-production.up.railway.app/api/cron/orchestrate',
+      url := 'https://one-people-access-culture.up.railway.app/api/cron/orchestrate?mode=retention',
       headers := jsonb_build_object('Authorization','Bearer ' || credential,'Accept','application/json'),
       timeout_milliseconds := 300000
     ) into network_request;
@@ -117,6 +117,10 @@ begin
         elsif payload->'retention'->'completed' is distinct from 'true'::jsonb then
           reason_code := 'retention_incomplete';
         elsif payload->'retention'->'security_cleanup_completed' is distinct from 'true'::jsonb then
+          reason_code := 'cleanup_incomplete';
+        elsif payload->'retention'->'named_session_cleanup_completed' is distinct from 'true'::jsonb then
+          reason_code := 'cleanup_incomplete';
+        elsif payload->'retention'->'ask_response_cleanup_completed' is distinct from 'true'::jsonb then
           reason_code := 'cleanup_incomplete';
         end if;
       end if;
