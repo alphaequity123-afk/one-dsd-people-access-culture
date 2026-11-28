@@ -72,7 +72,7 @@ export const equityVsEquality: RiseCourse = {
               { text: "Everyone in this group needs the same help.", category: 2 },
               { text: "Sending the same link proves equal access.", category: 2 },
             ], done: "All sorted. The standards and the access questions sit side by side: you need both." },
-            { kind: "scenario", image: img("l1-a", "Two coworkers compare the same form."), character: cast(2, "A program specialist", "A colleague in a coral blouse, speaking."), title: "Your team’s online form", setup: "Your team calls its online-only invitation equitable because everyone got the same link. Nobody has looked at whether people could use it.", question: "What’s the most useful next step?", options: [
+            { kind: "scenario", image: img("l1-a", "Two coworkers compare the same form."), character: cast(2, "A program specialist", "A colleague in a coral blouse, speaking."), title: "Your team’s online form", setup: "Your team calls its online-only invitation equitable because everyone got the same link. Nobody has looked at whether people could use it.", lines: [{ cast: 2, role: "A program specialist", text: "Everyone got the same link and the same deadline. That's equal, isn't it?" }, { cast: 6, role: "A case manager", text: "Equal to send, maybe. I'm not sure everyone could open it, read it or finish it." }], question: "What’s the most useful next step?", options: [
               { text: "Agree that the shared link settles it.", feedback: "Sending the link matters, but it doesn’t show that people could use it." },
               { text: "Confirm which requirements must stay the same, and find out whether the form is usable.", feedback: "Good choice. This keeps the rules steady and asks a real access question, without jumping to exceptions.", best: true },
               { text: "Send everyone over 65 a paper version instead.", feedback: "Age alone doesn’t tell you what someone needs or prefers. Some would rather use the form." },
@@ -88,6 +88,7 @@ export const equityVsEquality: RiseCourse = {
               "Offering everyone the same method doesn’t show that everyone could use it.",
               "Who someone is doesn’t tell you what they need. Ask.",
             ] },
+            { kind: "useAtWork", tool: "DHS Equity Analysis Toolkit", step: "Step 1: Set desired results and outcomes", href: "/equity-review/toolkit", text: "Use the equality and equity questions to name who a change in your work affects differently." },
             { kind: "note", lead: "Try it this week.", text: "Think of one process in your work that everyone goes through the same way. What is it for, and what’s one question about whether everyone can actually use it?" },
           ],
         },
@@ -134,7 +135,7 @@ export const equityVsEquality: RiseCourse = {
               { text: "Who can approve another way to send it?", category: 2 },
               { text: "Which access responsibilities apply to this service?", category: 2 },
             ], done: "Nicely done. Keeping these three apart is what makes a fix possible." },
-            { kind: "scenario", image: img("l2-a", "Colleagues working through a process."), character: cast(6, "A case manager", "A colleague in a maroon polo, speaking."), title: "Stuck at the upload", setup: "A person has the document but can’t get through the upload step. A colleague suggests either denying the request right away or waiving every requirement.", question: "What’s a sound next step?", options: [
+            { kind: "scenario", image: img("l2-a", "Colleagues working through a process."), character: cast(6, "A case manager", "A colleague in a maroon polo, speaking."), title: "Stuck at the upload", setup: "A person has the document but can’t get through the upload step. A colleague suggests either denying the request right away or waiving every requirement.", lines: [{ cast: 6, role: "A case manager", text: "She has the document right here. The upload button just won't work for her." }, { cast: 2, role: "A program specialist", text: "Then we either deny it today or waive everything. Which is faster?" }], question: "What’s a sound next step?", options: [
               { text: "Pick whichever option is faster.", feedback: "Neither shortcut looks at the actual barrier or at who can decide." },
               { text: "Describe the step, look at the permitted ways to send the document and keep the decision rules the same.", feedback: "Yes. This ties the access problem to the real process without promising an outcome.", best: true },
               { text: "Guess what the person can do based on a group they belong to.", feedback: "A label can’t tell you what happened when this person tried the task." },
@@ -150,6 +151,7 @@ export const equityVsEquality: RiseCourse = {
               "Trace the task instead of explaining the difficulty through who someone is.",
               "Any fix has to fit what the program requires and who can approve it.",
             ] },
+            { kind: "useAtWork", tool: "DHS Equity Analysis Toolkit", step: "Step 4: Benefits and burdens", href: "/equity-review/toolkit", text: "Separate the requirement from the route in your own analysis, and change the route where it creates the burden." },
             { kind: "note", lead: "Try it this week.", text: "Pick a task in your work and sketch it in five parts: the requirement, the route, a possible barrier, the handoff and who would review a change." },
           ],
         },
@@ -194,7 +196,7 @@ export const equityVsEquality: RiseCourse = {
               { text: "Everyone in this group has the same barrier.", category: 2 },
               { text: "Sharing more personal history makes a concern more valid.", category: 2 },
             ], done: "That’s it. Hear the specific experience, follow through, and don’t stretch one account into a rule about a group." },
-            { kind: "scenario", image: img("l3-a", "A conversation in a meeting room."), character: cast(8, "A Human Services Supervisor", "A colleague in a mauve hijab, speaking."), title: "The follow-up question", setup: "A participant points out a navigation barrier. A team member asks them to explain what everyone with the same disability needs.", question: "How should the question change?", options: [
+            { kind: "scenario", image: img("l3-a", "A conversation in a meeting room."), character: cast(8, "A Human Services Supervisor", "A colleague in a mauve hijab, speaking."), title: "The follow-up question", setup: "A participant points out a navigation barrier. A team member asks them to explain what everyone with the same disability needs.", lines: [{ cast: 8, role: "A Human Services Supervisor", text: "Thank you for telling us about the navigation problem." }, { cast: 1, role: "A team lead", text: "Could you also tell us what everyone with your disability needs?" }], question: "How should the question change?", options: [
               { text: "Ask about this specific task and what might help, without asking them to speak for a group.", feedback: "Exactly. This respects what they shared and gives the team something it can test.", best: true },
               { text: "Ask for a detailed diagnosis before looking into the concern.", feedback: "Medical details aren’t needed to look at how a task works." },
               { text: "Treat the first account as the answer for everyone.", feedback: "One account can’t show how common something is or what everyone prefers." },
@@ -210,6 +212,7 @@ export const equityVsEquality: RiseCourse = {
               "One account can reveal a concern without speaking for everyone.",
               "Collect and share only the information your role and purpose call for.",
             ] },
+            { kind: "useAtWork", tool: "DHS Equity Analysis Toolkit", step: "Step 3: Engaging communities", href: "/equity-review/toolkit", text: "Plan engagement that asks about the task, not about who people are." },
             { kind: "note", lead: "Try it this week.", text: "Write one question you could ask about a task in your work that focuses on what happened, not on who the person is." },
           ],
         },
@@ -255,7 +258,7 @@ export const equityVsEquality: RiseCourse = {
               { text: "A different route is always fairer.", category: 2 },
               { text: "The same route is always good enough.", category: 2 },
             ], done: "Good. Benefits and conditions belong together; shortcuts skip the checking." },
-            { kind: "scenario", image: img("l4-a", "A team weighing options."), character: cast(5, "A program manager", "A colleague in a royal blue blouse, speaking."), title: "The assisted route", setup: "Your team wants to offer an assisted route, but hasn’t checked appointment times, privacy, handoffs or whether people would choose it.", question: "What should happen before calling it a good response?", options: [
+            { kind: "scenario", image: img("l4-a", "A team weighing options."), character: cast(5, "A program manager", "A colleague in a royal blue blouse, speaking."), title: "The assisted route", setup: "Your team wants to offer an assisted route, but hasn’t checked appointment times, privacy, handoffs or whether people would choose it.", lines: [{ cast: 5, role: "A program manager", text: "Let's offer assisted submission. Problem solved." }, { cast: 7, role: "A management analyst", text: "Have we checked appointment times, privacy and whether people would even choose it?" }], question: "What should happen before calling it a good response?", options: [
               { text: "Call it a success because another route now exists.", feedback: "Offering a route doesn’t show that it works in practice." },
               { text: "Check that it fits the barrier, who approves it, any new burdens and the full handoff, while still reviewing the main form.", feedback: "Right. You’re testing the response itself, not just its label.", best: true },
               { text: "Require everyone with a disability to use assistance.", feedback: "Assigning people to a route by group can create a new barrier and takes away their choice." },
@@ -271,6 +274,7 @@ export const equityVsEquality: RiseCourse = {
               "Check who carries any new burden, and how the route reaches a decision.",
               "Every recommendation needs a reason and the right approval.",
             ] },
+            { kind: "useAtWork", tool: "DHS Equity Analysis Toolkit", step: "Step 5: Implementation", href: "/equity-review/toolkit", text: "Turn the option you chose into a plan with a responsible role, a date and resources." },
             { kind: "note", lead: "Try it this week.", text: "Take one change you’re considering and compare two or three options by purpose, barrier, burden, choice and who would approve it." },
           ],
         },
@@ -314,7 +318,7 @@ export const equityVsEquality: RiseCourse = {
               { text: "The gap proves the group wasn’t motivated.", category: 2 },
               { text: "Removing names makes any table safe to share.", category: 2 },
             ], done: "That’s the habit: say what was recorded, ask good questions and stop short of claims the numbers can’t carry." },
-            { kind: "scenario", image: img("l5-a", "An analyst reviewing results."), character: cast(7, "A management analyst", "A colleague in an olive shirt, speaking."), title: "The team update", setup: "A colleague is about to tell the team that the 75 and 50 percent rates prove one group doesn’t care about the service.", question: "What should they say instead?", options: [
+            { kind: "scenario", image: img("l5-a", "An analyst reviewing results."), character: cast(7, "A management analyst", "A colleague in an olive shirt, speaking."), title: "The team update", setup: "A colleague is about to tell the team that the 75 and 50 percent rates prove one group doesn’t care about the service.", lines: [{ cast: 7, role: "A management analyst", text: "Seventy-five percent in one group, fifty in the other." }, { cast: 5, role: "A program manager", text: "So the second group just doesn't care about the service?" }], question: "What should they say instead?", options: [
               { text: "Describe the rates, say what can’t be concluded and ask a question about the process.", feedback: "Yes. The finding stays useful without inventing a cause or a motive.", best: true },
               { text: "Offer a different explanation about the group, with no new evidence.", feedback: "Swapping one stereotype for another doesn’t improve the evidence." },
               { text: "Reassure everyone because 30 people finished in each group.", feedback: "The same count doesn’t mean the same rate, or the same real access." },
@@ -330,6 +334,7 @@ export const equityVsEquality: RiseCourse = {
               "A difference can start an inquiry without explaining itself.",
               "Use evidence that’s right for the purpose, and protect small groups.",
             ] },
+            { kind: "useAtWork", tool: "DHS Equity Analysis Toolkit", step: "Step 2: Data", href: "/equity-review/toolkit", text: "Break your numbers apart by group, and record what they can and can't tell you." },
             { kind: "note", lead: "Try it this week.", text: "Find one number you report or rely on. What’s its denominator, what can’t it tell you and what question does it raise?" },
           ],
         },
@@ -387,7 +392,7 @@ export const equityVsEquality: RiseCourse = {
               { text: "Six answers in a course fulfill every policy duty.", category: 2 },
               { text: "Finishing the course proves equal service results.", category: 2 },
             ], done: "Well sorted. Prepare honestly, name the next step and leave certification to the processes built for it." },
-            { kind: "scenario", image: img("l6-a", "A staff member reviewing her notes."), character: cast(1, "A team lead", "A colleague in a sage shirt and glasses, speaking."), title: "Wrapping up", setup: "Your team finishes its note and wants to mark every access and equity obligation as complete, without the reviews that apply.", question: "How should you describe the result?", options: [
+            { kind: "scenario", image: img("l6-a", "A staff member reviewing her notes."), character: cast(1, "A team lead", "A colleague in a sage shirt and glasses, speaking."), title: "Wrapping up", setup: "Your team finishes its note and wants to mark every access and equity obligation as complete, without the reviews that apply.", lines: [{ cast: 1, role: "A team lead", text: "Our note is done. Can we mark every access and equity duty complete?" }, { cast: 8, role: "A Human Services Supervisor", text: "The note is good preparation. The formal reviews still have to happen." }], question: "How should you describe the result?", options: [
               { text: "As full compliance, because the note is done.", feedback: "Writing the note doesn’t fulfill the other duties." },
               { text: "As good preparation, with clear evidence, limits and next steps, and the required processes kept separate.", feedback: "That’s it. You recognize real progress and keep the actual responsibilities in view.", best: true },
               { text: "As worthless until an actual agency decision is made.", feedback: "Practice builds real understanding, even before a live decision." },
