@@ -32,14 +32,14 @@ const work = (step: string, text: string, also?: { label: string; href: string }
 
 export const equityAnalysisToolkit: RiseCourse = {
   id: "dhs-equity-analysis-toolkit",
-  title: "DHS Equity Analysis Toolkit",
+  title: "Equity Analysis Toolkit",
   eyebrow: "Start here · For all staff",
-  summary: "Use the Toolkit while a decision can still change: name who is affected, look at the evidence, hear the people who carry the burden, change the design and plan who follows through.",
+  summary: "Bring equity into your everyday work. Use evidence and people’s experiences to make decisions that improve access.",
   description: [
     "The DHS Equity Analysis Toolkit is a method, not a form. Used before a decision is final, it shows who a change will help, who will carry its costs, and what to change while there is still time. Used after the vote, it only decorates a choice that was already made.",
     "In this course you'll follow one DHS team as it moves county visit requests from the phone to an online form. You'll work through the Toolkit's preparation and its six steps with them, and each lesson ends with a link to the same step in the analysis tool, so you can do it on your own work.",
   ],
-  cover: img("cover", "A team works through a proposal together at a table."),
+  cover: img("cover-planning-board", "Two colleagues discuss notes on a planning board."),
   outcomes: [
     "Explain what the Toolkit is for, and when a full analysis or a scan fits.",
     "Spot the common ways an analysis turns into a cover sheet.",
