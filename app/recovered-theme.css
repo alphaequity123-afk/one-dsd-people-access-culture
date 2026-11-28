@@ -1,0 +1,218 @@
+/*
+ * Owner decision 2026-11-27: the recovered One DHS build is the visual reference for the whole program.
+ * Its shape (agency strip, white brand bar, navy menu with a green active line, square surfaces with a green
+ * top edge, soft section bands) and its navy-and-green palette, set in Google Sans Flex with a calm, roomy
+ * type scale. Loaded last so it settles the earlier layers (globals, dsd-calm, unified-borrowed and the rest).
+ * These pages also appear inside the One DHS and One DSD front doors (one-dhs-pac), which carry the same
+ * theme in app/recovered-theme.css, so keep the two files in step.
+ */
+
+@font-face {
+  font-family: "Google Sans Flex";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 1000;
+  src: url("/fonts/google-sans-flex/google-sans-flex-latin-opsz-normal.woff2") format("woff2-variations");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Google Sans Flex";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 1000;
+  src: url("/fonts/google-sans-flex/google-sans-flex-latin-ext-opsz-normal.woff2") format("woff2-variations");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+:root, html body.dsd-calm {
+  --r-navy: #003865;
+  --r-navy-deep: #00263e;
+  --r-blue: #005a8b;
+  --r-green: #78be20;
+  --r-green-text: #436e12;
+  --r-ink: #183247;
+  --r-muted: #52697b;
+  --r-line: #c9d6df;
+  --r-field: #6b7f8f;
+  --r-soft: #f2f6f8;
+  --r-softblue: #e8f1f6;
+  --r-shadow: 0 3px 12px rgba(0, 38, 62, .05);
+  --r-shadow-hover: 0 10px 30px rgba(0, 38, 62, .10);
+  --r-site: 1180px;
+  --r-font: "Google Sans Flex", Aptos, "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  --r-h1: clamp(2.125rem, 3.6vw, 2.625rem);
+  --r-h2: clamp(1.5rem, 2.4vw, 1.75rem);
+  --r-h3: 1.1875rem;
+  --r-body: 1.0625rem;
+  --r-small: .9375rem;
+  --r-label: .75rem;
+
+  /* Earlier layers read these names; point them at the recovered palette. */
+  --blue: var(--r-navy);
+  --blue-dark: var(--r-navy-deep);
+  --blue-mid: var(--r-blue);
+  --green-strong: var(--r-navy);
+  --green-stronger: var(--r-navy-deep);
+  --green-soft: var(--r-softblue);
+  --line: var(--r-line);
+  --text: var(--r-ink);
+  --muted: var(--r-muted);
+  --gray-200: var(--r-line);
+  --gray-50: var(--r-soft);
+  --sans: var(--r-font);
+  --font-sans: var(--r-font);
+  --radius: 0px;
+  --radius-lg: 0px;
+  --shadow: var(--r-shadow);
+  --maxw: var(--r-site);
+  --u-page: var(--r-soft);
+  --u-line: var(--r-line);
+  --u-row-line: #e1e9ee;
+  --u-radius: 0px;
+  --u-radius-md: 0px;
+  --u-radius-sm: 0px;
+  --u-shadow: var(--r-shadow);
+  --u-shadow-hover: var(--r-shadow-hover);
+  --u-shadow-sm: none;
+  --u-navy: var(--r-navy);
+  --u-muted: var(--r-muted);
+  --u-tint: var(--r-softblue);
+  --u-accent: var(--r-green-text);
+  --s3-shadow: var(--r-shadow);
+  --s3-shadow-hover: var(--r-shadow-hover);
+}
+
+/* ---------- Typography ---------- */
+html { font-family: var(--r-font); font-optical-sizing: auto; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+html body, html body.dsd-calm { font-family: var(--r-font); font-size: var(--r-body); line-height: 1.6; letter-spacing: 0; color: var(--r-ink); background: var(--r-soft); }
+html body :is(button, input, select, textarea) { font-family: inherit; letter-spacing: 0; }
+html body :is(h1, h2, h3, h4) { font-family: var(--r-font); letter-spacing: 0; color: var(--r-navy); }
+html body main h1 { font-size: var(--r-h1); line-height: 1.2; font-weight: 600; letter-spacing: 0; color: var(--r-navy); }
+html body main h2 { line-height: 1.3; font-weight: 600; letter-spacing: 0; color: var(--r-navy); }
+html body main h3 { line-height: 1.4; font-weight: 600; letter-spacing: 0; color: var(--r-navy); }
+html body main :is(p, li) { line-height: 1.6; }
+html body main :is(.font-extrabold, .font-black) { font-weight: 700; }
+html body main :is(.tracking-tight, .tracking-tighter) { letter-spacing: 0; }
+html body a { color: var(--r-blue); text-underline-offset: .2em; }
+html body a:hover { color: var(--r-navy); }
+html body :focus-visible { outline: 3px solid var(--r-blue); outline-offset: 2px; }
+html body main .text-muted { color: var(--r-muted); }
+
+/* Small uppercase labels, as in the recovered build */
+html body main :is(.kicker, .community-eyebrow, .eyebrow) { font-size: var(--r-label); line-height: 1.4; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--r-green-text); }
+
+/* ---------- Width and breathing room ---------- */
+html body.dsd-calm :is(.wrap, .dsd-shell) { width: min(var(--r-site), calc(100% - 48px)); max-width: var(--r-site); }
+html body main, html body.dsd-calm main, html body.dsd-calm main .internal-page { background: var(--r-soft); }
+html body main { padding-bottom: 4.5rem; }
+
+/* ---------- Agency header (pages shown inside the One DHS and One DSD front doors) ---------- */
+html body .agency-practice-header { background: #fff; color: var(--r-navy); border-bottom: 0; font-family: var(--r-font); }
+html body .agency-practice-header .agency-practice-shell { max-width: var(--r-site); padding-inline: 24px; }
+html body .agency-practice-header .agency-strip { background: var(--r-navy-deep); color: #fff; font-size: .8125rem; line-height: 1.4; }
+html body .agency-practice-header .agency-strip > div { display: flex; justify-content: space-between; gap: 1rem; padding-block: .45rem; }
+html body .agency-practice-brand-row { min-height: 96px; padding-block: 16px; }
+html body .agency-practice-header .agency-practice-brand { color: var(--r-navy); gap: 24px; }
+html body .agency-practice-brand img { background: transparent; padding: 0; width: 190px; }
+html body .agency-practice-brand > span { border-left-color: var(--r-line); padding-left: 24px; }
+html body .agency-practice-brand strong { font-size: 1.625rem; font-weight: 650; letter-spacing: 0; color: var(--r-navy); }
+html body .agency-practice-brand span span { color: var(--r-muted); font-size: .875rem; }
+html body .agency-practice-header .agency-practice-tools { gap: .6rem; }
+html body .agency-practice-header .agency-practice-tools a { border-radius: 0; border: 2px solid var(--r-navy); background: #fff; color: var(--r-navy); font-weight: 650; padding: .5rem 1.1rem; font-size: .9375rem; }
+html body .agency-practice-header .agency-practice-tools a:hover { background: var(--r-softblue); color: var(--r-navy); }
+html body .agency-practice-header .agency-practice-tools a[href="/library"] { background: var(--r-green); border-color: var(--r-green); color: #09273b; }
+html body .agency-practice-header .agency-practice-tools a[href="/library"]:hover { background: #8fd23a; border-color: #8fd23a; }
+html body .agency-practice-header nav { background: var(--r-navy); border-top: 0; }
+html body .agency-practice-header nav ul { padding-inline: 24px; gap: 2px; }
+html body .agency-practice-header nav a { color: #fff; font-size: .9375rem; font-weight: 500; padding: .85rem .8rem; border-bottom: 4px solid transparent; box-shadow: none; }
+html body .agency-practice-header nav a:hover, html body .agency-practice-header nav a[aria-current] { background: rgba(255, 255, 255, .08); box-shadow: none; border-bottom-color: var(--r-green); }
+html body .agency-practice-header a:focus-visible { outline: 3px solid var(--r-blue); outline-offset: 3px; }
+html body .agency-practice-header nav a:focus-visible { outline: 3px solid #fff; outline-offset: -3px; }
+html body .agency-practice-return { max-width: var(--r-site); box-sizing: border-box; border-left: 5px solid var(--r-navy); background: var(--r-softblue); color: var(--r-ink); }
+@media (max-width: 760px) { html body .agency-practice-header .agency-strip > div > span:last-child { display: none; } }
+
+/* ---------- Division header (this app's own address) ---------- */
+html body .dsd-header { background: #fff; border-bottom: 0; }
+html body .dsd-header .dsd-brand, html body .dsd-header .dsd-brand strong { color: var(--r-navy); letter-spacing: 0; }
+html body .dsd-header .dsd-brand span span { color: var(--r-muted); }
+html body .dsd-header .dsd-brand > span { border-left-color: var(--r-line); }
+html body .dsd-header .dsd-utilities a { color: var(--r-navy); }
+html body .dsd-header :is(.dsd-tool-button, .dsd-tool-link, .dsd-menu) { border-radius: 0; border: 2px solid var(--r-navy); background: #fff; color: var(--r-navy); font-weight: 650; min-height: 44px; }
+html body .dsd-header :is(.dsd-tool-button, .dsd-tool-link, .dsd-menu):hover { background: var(--r-softblue); color: var(--r-navy); }
+html body .dsd-header .dsd-nav { background: var(--r-navy); border-top: 0; }
+html body .dsd-header .dsd-nav a { color: #fff; font-size: .9375rem; border-bottom: 4px solid transparent; }
+html body .dsd-header .dsd-nav a:hover, html body .dsd-header .dsd-nav a[aria-current] { color: #fff; background: rgba(255, 255, 255, .08); border-bottom-color: var(--r-green); }
+html body .dsd-header .dsd-breadcrumb { font-size: var(--r-small); }
+
+/* ---------- Surfaces: square, quiet borders, green top edge ---------- */
+html body main :is(.rounded, .rounded-md, .rounded-lg, .rounded-xl, .rounded-2xl, .rounded-3xl) { border-radius: 0; }
+html body main :is(.card, .rounded-lg.border, .rounded-xl.border, .featured-media-panel, .dsd-model-note) {
+  border: 1px solid var(--r-line);
+  border-top: 4px solid var(--r-green);
+  border-radius: 0;
+  background: #fff;
+  box-shadow: var(--r-shadow);
+}
+html body main li.rounded-lg.border:has(a):hover, html body main .card:has(a):hover { transform: none; box-shadow: var(--r-shadow-hover); }
+html body main .panel { border: 1px solid var(--r-line); border-radius: 0; background: var(--r-softblue); box-shadow: none; }
+html body main :is(.community-search, .audio-filter) { border: 1px solid var(--r-line); border-top: 4px solid var(--r-navy); border-radius: 0; background: #fff; box-shadow: var(--r-shadow); }
+html body main :is(.dsd-model-list, .community-directory, .audio-course-rows) { border: 1px solid var(--r-line); border-radius: 0; box-shadow: var(--r-shadow); }
+html body main .notice { border-radius: 0; border-width: 0 0 0 5px; border-left-color: var(--r-green); background: #eaf4dd; color: var(--r-ink); }
+html body main .notice--warn { border-left-color: #e0a800; background: var(--amber-soft); color: var(--amber-strong); }
+html body main .notice--stop { border-left-color: var(--red-strong); }
+html body main .podcast-chapters, html body main .audio-podcasts .rounded-xl.border { border-radius: 0; }
+
+/* ---------- Actions ---------- */
+html body main .btn { border-radius: 0; font-weight: 650; box-shadow: none; min-height: 44px; border-width: 2px; line-height: 1.3; }
+html body main .btn--primary { background: var(--r-navy); border-color: var(--r-navy); color: #fff; }
+html body main .btn--primary:hover { background: var(--r-navy-deep); border-color: var(--r-navy-deep); color: #fff; }
+html body main .btn--secondary { background: var(--r-green); border-color: var(--r-green); color: #09273b; }
+html body main .btn--secondary:hover { background: #8fd23a; border-color: #8fd23a; color: #09273b; }
+html body main .btn--light { background: #fff; color: var(--r-navy); border: 2px solid var(--r-navy); }
+html body main .btn--light:hover { background: var(--r-softblue); color: var(--r-navy); }
+
+/* ---------- Form fields ---------- */
+html body main :is(input[type=text], input[type=search], input[type=email], input[type=url], input[type=password], input[type=date], input[type=number], textarea, select) {
+  border-radius: 0;
+  border: 1px solid var(--r-field);
+  color: var(--r-ink);
+}
+html body main :is(input, textarea, select):focus-visible { outline: 3px solid var(--r-blue); outline-offset: 1px; border-color: var(--r-navy); }
+html body main :is(label, .field label) { color: var(--r-navy); }
+
+/* ---------- Footer ---------- */
+html body .pac-footer { background: var(--r-navy-deep); border-top: 4px solid var(--r-green); font-family: var(--r-font); }
+html body .pac-footer-inner, html body .pac-footer-base p { max-width: var(--r-site); padding-inline: 24px; }
+html body .pac-footer-inner { padding-block: 56px 36px; }
+html body .pac-footer h2 { font-size: var(--r-label); letter-spacing: .08em; font-weight: 700; color: #b6e779; }
+html body .pac-footer a { font-size: var(--r-small); }
+
+/* ---------- Narrow screens ---------- */
+@media (max-width: 800px) {
+  html body .agency-practice-brand-row { min-height: 0; padding-block: 14px; }
+  html body .agency-practice-brand img { width: 160px; }
+  html body .agency-practice-brand strong { font-size: 1.375rem; }
+  html body .agency-practice-header :is(.agency-practice-shell, nav ul) { padding-inline: 16px; }
+  html body.dsd-calm :is(.wrap, .dsd-shell) { width: calc(100% - 32px); }
+}
+
+@media (prefers-reduced-motion: reduce) { html body main :is(.card, li.rounded-lg.border) { transition: none; } }
+@media (forced-colors: active) { html body main .card { border-top-color: CanvasText; } }
+
+/* Phones: logo and program name share one row; Ask and Search sit below. */
+@media (max-width: 480px) {
+  html body .agency-practice-header .agency-practice-brand { flex-direction: row; align-items: center; gap: 12px; }
+  html body .agency-practice-brand img { width: 124px; }
+  html body .agency-practice-brand > span { border-left: 1px solid var(--r-line); padding-left: 12px; }
+  html body .agency-practice-brand strong { font-size: 1.25rem; }
+  html body .agency-practice-brand span span { font-size: .8125rem; }
+}
+
+/* Square corners throughout, as in the recovered build. Earlier layers set many different radii at high
+   specificity, so this one rule settles them. The landing page keeps its own shapes; round markers stay round. */
+html body main :is(section, article, aside, form, fieldset, details, summary, div, ul, ol, li, p, label, nav, h2, h3, img, figure, video, textarea, input, select, a, button, span):not(.dsd-home, .dsd-home *, .rounded-full, .equity-node, [class*="avatar"], [class*="portrait"], [class*="dot"], [class*="number"], [class*="Number"], .rewrite-step, .water-path-stage-name span) {
+  border-radius: 0 !important;
+}
+
+/* The study and save bar sits quietly on the page tone instead of a white band. */
+html body.dsd-calm .dsd-resource-actions { background: transparent; border-color: var(--r-line); }

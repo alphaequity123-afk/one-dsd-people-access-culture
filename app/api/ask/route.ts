@@ -30,6 +30,13 @@ const Input = z.object({
   priorWorkProduct: AskWorkProductSchema.optional(),
   // The page Ask was opened from, as a hint for finding sources. Anything that is not a clean page address and title is left out.
   page: z.unknown().optional(),
+  /** Ask Live: what is on the person's screen. Used for this answer only, never stored. */
+  screen: z.object({
+    path: z.string().regex(/^\/\S{0,299}$/),
+    title: z.string().max(300),
+    focus: z.string().max(1500).optional(),
+    text: z.string().max(6000).optional(),
+  }).strict().optional(),
 }).strict();
 const json = (body: unknown, status = 200) => NextResponse.json(body, { status, headers: { "cache-control": "no-store" } });
 const KEEP_ALIVE_MS = 10_000;

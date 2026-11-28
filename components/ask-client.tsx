@@ -20,6 +20,7 @@ import { useProgramContext } from "@/components/program-context";
 import type { ProductContextId } from "@/lib/product/federation";
 import { activePracticeArtifact, PracticeArtifactSchema, type PracticeArtifact } from "@/lib/content/practice-artifact";
 import { ASK_PROGRESS_TYPE, readAskProgress, stageLine, type AskStage } from "@/lib/ask/progress-stream";
+import { captureScreen } from "@/lib/ask/screen-context";
 import { AskWorkDownload } from "@/components/ask-work-download";
 import type { AskPage } from "@/lib/ask/page-context";
 
@@ -126,7 +127,7 @@ export function AskClient({
         method: "POST",
         // Ask for progress as the answer is prepared; a single finished answer is still accepted.
         headers: { "content-type": "application/json", accept: `${ASK_PROGRESS_TYPE}, application/json` },
-        body: JSON.stringify({ question: q, responseMode, pathId: path?.id, mode: initialMode, researchMode, contextPreference: context, history, priorArtifact, priorWorkProduct, page: askingAbout }),
+        body: JSON.stringify({ question: q, responseMode, pathId: path?.id, mode: initialMode, researchMode, contextPreference: context, history, priorArtifact, priorWorkProduct, page: askingAbout, screen: page && !aboutPage ? undefined : captureScreen() }),
       });
       const payload = res.ok && res.body && res.headers.get("content-type")?.includes(ASK_PROGRESS_TYPE)
         ? await readAskProgress(res.body, event => setLive(current => !current ? current

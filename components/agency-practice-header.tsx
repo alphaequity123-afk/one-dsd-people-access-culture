@@ -35,6 +35,7 @@ export function AgencyPracticeHeader({ children }: { children: ReactNode }) {
 
   return <>
     <header className="agency-practice-header">
+      <div className="agency-strip"><div className="agency-practice-shell"><span>Minnesota Department of Human Services</span><span>Staff learning and practice resource</span></div></div>
       <div className="agency-practice-shell agency-practice-brand-row">
         <a className="agency-practice-brand" href="/">
           {/* The existing DHS logo is kept at its original aspect ratio. */}
