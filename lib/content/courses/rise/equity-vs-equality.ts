@@ -336,7 +336,7 @@ export const equityVsEquality: RiseCourse = {
         {
           id: "dc-s3-equity-vs-equality-6",
           title: "Your equity question and next step",
-          minutes: 7,
+          minutes: 9,
           blocks: [
             { kind: "text", paragraphs: [
               "Equality and equity become most useful when they sharpen a real question about your work. In this last lesson you’ll pull everything together into a short note: the purpose, what must stay the same, the possible barrier, what you know, an option worth reviewing and who takes the next step.",
@@ -350,6 +350,22 @@ export const equityVsEquality: RiseCourse = {
               { title: "An option to review", body: "What change might help, and what would it cost or require?" },
               { title: "Next step and who takes it", body: "Who can look at this, and how will you check whether a change worked?" },
             ] },
+            { kind: "text", heading: "A completed practice note", paragraphs: [
+              "Here is one possible note for the fictional upload problem. It models a question to investigate and a next step, not a finding about an actual DHS service.",
+            ] },
+            { kind: "numbered", heading: "From the question to a useful next step", items: [
+              "Purpose: Collect the information needed to review the request and tell the person what happens next.",
+              "What stays the same: The program's information requirements and decision criteria. Confirm the source of each requirement before proposing a change.",
+              "Possible barrier: A person reports having the required document but being unable to operate the upload control. We need to test that step and ask which permitted route would work for them.",
+              "Evidence and limits: We have a specific report about the upload step. The practice completion rates raise a further question, but they do not show that this control caused the gap or explain every person's experience.",
+              "Option to review: Repair and test the upload control. Check whether an approved alternative is needed while that work happens, including privacy, staff time, confirmation of receipt and the handoff to the decision-maker.",
+              "Next step: The process owner checks the requirements and available alternatives with the relevant staff. Agree who will test the revised task, when the team will review the result and how people who raised the concern will hear what changed.",
+            ] },
+            { kind: "text", heading: "Try the same reasoning in your role", paragraphs: [
+              "The task might be an application, a meeting invitation, a training session or a staff handoff. Choose one small step you can describe accurately. Write one sentence for each part of the note using the fictional example or public, non-identifying details.",
+              "Then check your draft: Have I separated a requirement from a method? Have I described a barrier without guessing someone's needs or motives? Have I named what I still need to learn, who can act and how we will check the result?",
+            ] },
+            { kind: "note", lead: "Use Ask to develop your reasoning.", text: "Open Ask from this lesson and try: Help me test this equity note. Ask one question at a time about the requirement, the barrier, missing evidence and the next step. Share only fictional or public, non-identifying details. Use the response to improve your draft and check it against the sources and the person responsible for the process." },
             { kind: "statement", text: "A good note is a strong start. It doesn’t replace the formal analysis some decisions require." },
             { kind: "accordion", heading: "Where your note fits", intro: "Select each heading to read more.", items: [
               { title: "Formal analysis", body: "The DHS Equity Policy calls for a formal analysis for actions with long-term impact that go to leadership for approval, using the DHS Analysis or Scan or a tool developed with an equity director. Your note prepares you for that work; it’s separate from it." },
